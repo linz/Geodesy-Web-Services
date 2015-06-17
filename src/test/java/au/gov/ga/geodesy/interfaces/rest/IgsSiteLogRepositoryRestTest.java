@@ -14,46 +14,30 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.testng.AbstractTransactionalTestNGSpringContextTests;
 import org.springframework.test.context.web.AnnotationConfigWebContextLoader;
 import org.springframework.test.context.web.WebAppConfiguration;
-import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-import org.springframework.web.context.WebApplicationContext;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLog;
 import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLogRepository;
 import au.gov.ga.geodesy.igssitelog.interfaces.xml.IgsSiteLogXmlMarshaller;
-import au.gov.ga.geodesy.igssitelog.support.marshalling.moxy.IgsSiteLogMoxyMarshaller;
+import au.gov.ga.geodesy.support.spring.GeodesyConfig;
 import au.gov.ga.geodesy.support.spring.PersistenceJpaConfig;
 
-@ContextConfiguration(
-        classes = {RestConfig.class, PersistenceJpaConfig.class},
-        loader = AnnotationConfigWebContextLoader.class)
-@WebAppConfiguration
+/* @ContextConfiguration( */
+/*         classes = {GeodesyConfig.class, RestConfig.class, PersistenceJpaConfig.class}, */
+/*         loader = AnnotationConfigWebContextLoader.class) */
+/* @WebAppConfiguration */
 @Transactional
-public class IgsSiteLogRepositoryRestTest extends AbstractTransactionalTestNGSpringContextTests {
+public class IgsSiteLogRepositoryRestTest extends RestTest {
 
     private static final Logger log = LoggerFactory.getLogger(IgsSiteLogRepositoryRestTest.class);
 
     @Autowired
-    private WebApplicationContext webApplicationContext;
-
-    private static MockMvc mvc;
-
-    @Autowired
     private IgsSiteLogRepository siteLogs;
 
+    @Autowired
     private IgsSiteLogXmlMarshaller moxy;
-
-    @BeforeClass
-    public void setUp() throws Exception {
-        mvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
-        moxy = new IgsSiteLogMoxyMarshaller();
-    }
 
     @Test
     @Rollback(false)

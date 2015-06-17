@@ -7,7 +7,7 @@ import org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguratio
 import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLog;
 
 @Configuration
-public class RestConfiguration extends RepositoryRestMvcConfiguration {
+public class RestConfig extends RepositoryRestMvcConfiguration {
 
    @Override
     protected void configureRepositoryRestConfiguration(RepositoryRestConfiguration config) {

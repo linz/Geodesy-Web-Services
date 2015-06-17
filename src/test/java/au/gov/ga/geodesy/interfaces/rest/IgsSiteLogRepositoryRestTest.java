@@ -31,7 +31,7 @@ import au.gov.ga.geodesy.igssitelog.support.marshalling.moxy.IgsSiteLogMoxyMarsh
 import au.gov.ga.geodesy.support.spring.PersistenceJpaConfig;
 
 @ContextConfiguration(
-        classes = {RestConfiguration.class, PersistenceJpaConfig.class},
+        classes = {RestConfig.class, PersistenceJpaConfig.class},
         loader = AnnotationConfigWebContextLoader.class)
 @WebAppConfiguration
 @Transactional

@@ -1,7 +1,5 @@
 package au.gov.ga.geodesy.interfaces.rest;
 
-import javax.transaction.Transactional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.testng.AbstractTransactionalTestNGSpringContextTests;
@@ -18,8 +16,8 @@ import au.gov.ga.geodesy.support.spring.PersistenceJpaConfig;
 @ContextConfiguration(
         classes = {GeodesyConfig.class, RestConfig.class, PersistenceJpaConfig.class},
         loader = AnnotationConfigWebContextLoader.class)
+
 @WebAppConfiguration
-@Transactional
 public class RestTest extends AbstractTransactionalTestNGSpringContextTests {
 
     @Autowired

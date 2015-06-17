@@ -13,19 +13,20 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import au.gov.ga.geodesy.domain.service.IgsSiteLogService;
 import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLog;
-import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLogRepository;
 import au.gov.ga.geodesy.igssitelog.interfaces.xml.IgsSiteLogXmlMarshaller;
 
 @Controller
 @RequestMapping("/siteLog")
 @Transactional("geodesyTransactionManager")
-public class IgsSiteLogUploadEndpoint {
+public class IgsSiteLogEndpoint {
 
-    private static final Logger log = LoggerFactory.getLogger(IgsSiteLogUploadEndpoint.class);
+    @SuppressWarnings("unused")
+    private static final Logger log = LoggerFactory.getLogger(IgsSiteLogEndpoint.class);
 
     @Autowired
-    private IgsSiteLogRepository siteLogs;
+    private IgsSiteLogService service;
 
     @Autowired
     private IgsSiteLogXmlMarshaller siteLogMarshaller;
@@ -33,8 +34,7 @@ public class IgsSiteLogUploadEndpoint {
     @RequestMapping(value = "/upload", method = RequestMethod.POST)
     public void upload(HttpServletRequest req, HttpServletResponse rsp) throws Exception {
         IgsSiteLog siteLog = siteLogMarshaller.unmarshal(new InputStreamReader(req.getInputStream()));
-        siteLogs.save(siteLog);
-        log.info("Saving " + siteLog.getSiteIdentification().getFourCharacterId());
+        service.upload(siteLog);
     }
 
 }

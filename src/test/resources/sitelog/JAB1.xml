@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Bob Twilley</mi:preparedBy>
+    <mi:datePrepared>2001-04-12</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>jab1_20070222.log</mi:previousLog>
+    <mi:modifiedSections>3.14,3.15,4.7,4.8</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>Jabiru AU043</mi:siteName>
+    <mi:fourCharacterID>JAB1</mi:fourCharacterID>
+    <mi:monumentInscription>National Geodetic Fiducial Network</mi:monumentInscription>
+    <mi:iersDOMESNumber>50136M001</mi:iersDOMESNumber>
+    <mi:cdpNumber>Not Available</mi:cdpNumber>
+    <mi:monumentDescription>Concrete Pillar</mi:monumentDescription>
+    <mi:heightOfTheMonument>0.5</mi:heightOfTheMonument>
+    <mi:monumentFoundation>CONCRETE BLOCK</mi:monumentFoundation>
+    <mi:foundationDepth>3</mi:foundationDepth>
+    <mi:markerDescription>Stainless Steel Plate</mi:markerDescription>
+    <mi:dateInstalled>1997-02-18</mi:dateInstalled>
+    <mi:geologicCharacteristic>GRAVEL</mi:geologicCharacteristic>
+    <mi:bedrockType>(IGNEOUS/METAMORPHIC/SEDIMENTARY)</mi:bedrockType>
+    <mi:bedrockCondition>(FRESH/JOINTED/WEATHERED)</mi:bedrockCondition>
+    <mi:fractureSpacing>(1-10 cm/11-50 cm/51-200 cm/over 200 cm)</mi:fractureSpacing>
+    <mi:faultZonesNearby>(YES/NO/Name of the zone)</mi:faultZonesNearby>
+    <mi:distance-Activity>(multiple lines)</mi:distance-Activity>
+    <mi:notes>(multiple lines) Monument is a 600mm dia concrete pillar, 0.5 metres above ground surface.</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Jabiru</mi:city>
+    <mi:state>Northern Territory</mi:state>
+    <mi:country>Australia</mi:country>
+    <mi:tectonicPlate>Australian</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>-4236442.67509</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>4559929.626</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>-1388624.813</mi:zCoordinateInMeters>
+      <mi:latitude-North>-123931.68</mi:latitude-North>
+      <mi:longitude-East>+1325338.04</mi:longitude-East>
+      <mi:elevation-m_ellips.>82.114</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>ARGN (Australian Regional GPS Network)</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>339</equip:serialNumber>
+    <equip:firmwareVersion>1e95</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>1997-08-07T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>4272</equip:serialNumber>
+    <equip:firmwareVersion>1F60</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>1998-06-04T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1999-07-27T06:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>4272</equip:serialNumber>
+    <equip:firmwareVersion>CC00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>1999-07-27T06:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2000-01-10T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>Model Number 700570-6(C)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>2907</equip:serialNumber>
+    <equip:firmwareVersion>CD00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>2000-02-25T04:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2001-01-03T08:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>4259</equip:serialNumber>
+    <equip:firmwareVersion>CD00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>2001-01-08T03:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2001-01-12T10:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>4268</equip:serialNumber>
+    <equip:firmwareVersion>CD00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>2001-04-12T01:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2001-06-03T23:50Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>4272</equip:serialNumber>
+    <equip:firmwareVersion>CD00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>2001-06-04T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2001-11-27T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>4271</equip:serialNumber>
+    <equip:firmwareVersion>CD00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>2001-11-27T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2001-12-27T23:59Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>AOA ICS-4000Z ACT</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>C 125U</equip:serialNumber>
+    <equip:firmwareVersion>3.3.32.3</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>2002-06-08T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2003-02-03T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>AOA ICS-4000Z ACT</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>C 322U</equip:serialNumber>
+    <equip:firmwareVersion>3.3.32.3</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>2003-03-04T05:30Z</equip:dateInstalled>
+    <equip:dateRemoved>2003-09-24T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>2090</equip:serialNumber>
+    <equip:firmwareVersion>CD00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2003-09-25T02:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2003-11-19T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH UZ-12</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>ZR520013901</equip:serialNumber>
+    <equip:firmwareVersion>ZC00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2003-11-19T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2005-01-01T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>(multiple lines</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>4259</equip:serialNumber>
+    <equip:firmwareVersion>CD00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2005-01-12T06:59Z</equip:dateInstalled>
+    <equip:dateRemoved>2006-03-20T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH UZ-12</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>ZR220012404</equip:serialNumber>
+    <equip:firmwareVersion>CJ11</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2006-03-21T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2007-11-28T23:59Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH UZ-12</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>IR2200350017</equip:serialNumber>
+    <equip:firmwareVersion>CQ00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2007-11-29T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>ASH700936E      NONE</equip:antennaType>
+    <equip:serialNumber>CR13554</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0090</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>1997-08-07T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2000-01-10</equip:dateRemoved>
+    <equip:notes>Model Number 700936(D)</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>ASH700936E      NONE</equip:antennaType>
+    <equip:serialNumber>CR13327</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0090</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>2000-02-25T04:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2001-01-03T08:00Z</equip:dateRemoved>
+    <equip:notes>Model Number 700936(D)</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>ASH700936D_M    NONE</equip:antennaType>
+    <equip:serialNumber>CR13554</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0090</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>2001-01-08T03:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2001-12-27T23:59Z</equip:dateRemoved>
+    <equip:notes>Model Number 700936(D)</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>ASH700936D_M    NONE</equip:antennaType>
+    <equip:serialNumber>CR14327</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0090</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>2002-06-08T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2003-02-02T23:59Z</equip:dateRemoved>
+    <equip:notes>Model Number 700936(D)</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>ASH701945C_M    NONE</equip:antennaType>
+    <equip:serialNumber>CR620024329</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0090</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>2003-03-04T05:35Z</equip:dateInstalled>
+    <equip:dateRemoved>2005-01-01T00:00Z</equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>ASH701945C_M    NONE</equip:antennaType>
+    <equip:serialNumber>CR620013901</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0025</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType></equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>2005-01-12T06:59Z</equip:dateInstalled>
+    <equip:dateRemoved>2007-02-21T23:59Z</equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>ASH701945G_M    NONE</equip:antennaType>
+    <equip:serialNumber>CR5200417002</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0030</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType></equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>2007-02-22T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2007-11-28T23:59Z</equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>LEIAT504        NONE</equip:antennaType>
+    <equip:serialNumber>103313</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0030</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType></equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>2007-11-29T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>RM1</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>(SLR/VLBI/LOCAL CONTROL/FOOTPRINT/etc)</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>N/A</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber></equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX></equip:dX>
+      <equip:dY></equip:dY>
+      <equip:dZ></equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>+-1mm</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>(GPS CAMPAIGN/TRILATERATION/TRIANGULATION/etc)</equip:surveyMethod>
+    <equip:dateMeasured>(CCYY-MM-DDThh:mmZ)</equip:dateMeasured>
+    <equip:notes>(multiple lines)</equip:notes>
+  </surveyedLocalTies>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>RM2</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>(SLR/VLBI/LOCAL CONTROL/FOOTPRINT/etc)</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>N/A</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber></equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX></equip:dX>
+      <equip:dY></equip:dY>
+      <equip:dZ></equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>+-1mm</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>(GPS CAMPAIGN/TRILATERATION/TRIANGULATION/etc)</equip:surveyMethod>
+    <equip:dateMeasured>(CCYY-MM-DDThh:mmZ)</equip:dateMeasured>
+    <equip:notes>(multiple lines)</equip:notes>
+  </surveyedLocalTies>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>RM3</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>(SLR/VLBI/LOCAL CONTROL/FOOTPRINT/etc)</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>N/A</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber></equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX></equip:dX>
+      <equip:dY></equip:dY>
+      <equip:dZ></equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>+-1mm</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>(GPS CAMPAIGN/TRILATERATION/TRIANGULATION/etc)</equip:surveyMethod>
+    <equip:dateMeasured>(CCYY-MM-DDThh:mmZ)</equip:dateMeasured>
+    <equip:notes>(multiple lines)</equip:notes>
+  </surveyedLocalTies>
+  <frequencyStandard>
+    <equip:standardType>QUARTZ/INTERNAL</equip:standardType>
+    <equip:inputFrequency></equip:inputFrequency>
+    <equip:effectiveDates>1997-08-07/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </frequencyStandard>
+  <humiditySensor>
+    <equip:type></equip:type>
+    <equip:manufacturer></equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>CCYY-MM-DD/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval></equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>(% rel h)</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </humiditySensor>
+  <pressureSensor>
+    <equip:type></equip:type>
+    <equip:manufacturer></equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>CCYY-MM-DD/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval></equip:dataSamplingInterval>
+    <equip:accuracy-hPa>(mbar)</equip:accuracy-hPa>
+    <equip:notes>(multiple lines)</equip:notes>
+  </pressureSensor>
+  <temperatureSensor>
+    <equip:type></equip:type>
+    <equip:manufacturer></equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>CCYY-MM-DD/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval></equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>(deg C)</equip:accuracy-degreesCelcius>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </temperatureSensor>
+  <waterVaporSensor>
+    <equip:type></equip:type>
+    <equip:manufacturer></equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>CCYY-MM-DD/CCYY-MM-DD</equip:effectiveDates>
+    <equip:distanceToAntenna></equip:distanceToAntenna>
+    <equip:notes>(multiple lines)</equip:notes>
+  </waterVaporSensor>
+  <contactAgency>
+    <contact:agency>Geoscience Australia</contact:agency>
+    <contact:preferredAbbreviation>GA</contact:preferredAbbreviation>
+    <contact:mailingAddress>Geoscience Australia</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Michael Moore</contact:name>
+      <contact:telephonePrimary>+61 2 62499052</contact:telephonePrimary>
+      <contact:telephoneSecondary>0413 604169</contact:telephoneSecondary>
+      <contact:fax>+61 2 62499929</contact:fax>
+      <contact:e-mail>michael.moore@ga.gov.au</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Bob Twilley</contact:name>
+      <contact:telephonePrimary>+61 2 62499066</contact:telephonePrimary>
+      <contact:telephoneSecondary>0413 604180 (mobile)</contact:telephoneSecondary>
+      <contact:fax>+61 2 62499929</contact:fax>
+      <contact:e-mail>bob.twilley@ga.gov.au</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>(multiple lines)</contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>Geoscience Australia</contact:agency>
+    <contact:preferredAbbreviation>GA</contact:preferredAbbreviation>
+    <contact:mailingAddress>(multiple lines)</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>(multiple lines)</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter></mi:primaryDataCenter>
+    <mi:secondaryDataCenter></mi:secondaryDataCenter>
+    <mi:urlForMoreInformation></mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>(Y or URL)</mi:siteMap>
+    <mi:siteDiagram>Y</mi:siteDiagram>
+    <mi:horizonMask>Y</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>Y</mi:sitePictures>
+    <mi:notes>(multiple lines)</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

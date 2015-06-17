@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Nick Dando</mi:preparedBy>
+    <mi:datePrepared>2010-10-17</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>bur2_20100723.log</mi:previousLog>
+    <mi:modifiedSections>3.5,3.6</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>Burnie</mi:siteName>
+    <mi:fourCharacterID>BUR2</mi:fourCharacterID>
+    <mi:monumentInscription>ST1164</mi:monumentInscription>
+    <mi:iersDOMESNumber>50144M003</mi:iersDOMESNumber>
+    <mi:cdpNumber>n/a</mi:cdpNumber>
+    <mi:monumentDescription>PILLAR</mi:monumentDescription>
+    <mi:heightOfTheMonument></mi:heightOfTheMonument>
+    <mi:monumentFoundation>CONCRETE BLOCK</mi:monumentFoundation>
+    <mi:foundationDepth></mi:foundationDepth>
+    <mi:markerDescription>STAINLESS STEEL THREADED SPIGOT</mi:markerDescription>
+    <mi:dateInstalled>2008-03-14T00</mi:dateInstalled>
+    <mi:geologicCharacteristic></mi:geologicCharacteristic>
+    <mi:bedrockType></mi:bedrockType>
+    <mi:bedrockCondition></mi:bedrockCondition>
+    <mi:fractureSpacing></mi:fractureSpacing>
+    <mi:faultZonesNearby></mi:faultZonesNearby>
+    <mi:distance-Activity></mi:distance-Activity>
+    <mi:notes>Monument is approximately a 400mm dia metal stanchion driven into sea bed and located next to Burnie tide gauge. A steel plate, approximately 400mm dia is welded to top of stanchion. The mark is a 5/8" threaded steel bolt in the centre of the top plate.</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Burnie</mi:city>
+    <mi:state>Tasmania</mi:state>
+    <mi:country>Australia</mi:country>
+    <mi:tectonicPlate>Australian</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>-3989419.935924</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>2699532.809968</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>-4166620.936693</mi:zCoordinateInMeters>
+      <mi:latitude-North>-410300.26</mi:latitude-North>
+      <mi:longitude-East>+1455453.45</mi:longitude-East>
+      <mi:elevation-m_ellips.>3.9</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes></mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200PRO</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>462887</equip:serialNumber>
+    <equip:firmwareVersion>4.0</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2008-03-14T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2008-11-17T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200GGPRO</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>356542</equip:serialNumber>
+    <equip:firmwareVersion>6.02</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2008-11-17T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2009-09-24T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200GGPRO</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>356542</equip:serialNumber>
+    <equip:firmwareVersion>7.50</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2009-09-24T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2010-05-04T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200GGPRO</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>356542</equip:serialNumber>
+    <equip:firmwareVersion>7.50/3.019</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2010-05-04T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2010-07-29T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>ME upgrade due to GLONASS tracking problem.</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200GGPRO</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>356542</equip:serialNumber>
+    <equip:firmwareVersion>8.00/3.019</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2010-07-29T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2010-10-17T23:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200GGPRO</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>356542</equip:serialNumber>
+    <equip:firmwareVersion>8.01/3.019</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2010-10-17T23:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>LEIAT504        SCIS</equip:antennaType>
+    <equip:serialNumber>103322</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0005</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>SCIS</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType></equip:antennaCableType>
+    <equip:antennaCableLength>30</equip:antennaCableLength>
+    <equip:dateInstalled>2008-03-14T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes></equip:notes>
+  </gnssAntenna>
+  <frequencyStandard>
+    <equip:standardType>QUARTZ/INTERNAL</equip:standardType>
+    <equip:inputFrequency></equip:inputFrequency>
+    <equip:effectiveDates>2008-03-14/(CCYY-MM-DD)</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </frequencyStandard>
+  <contactAgency>
+    <contact:agency>Geoscience Australia</contact:agency>
+    <contact:preferredAbbreviation>GA</contact:preferredAbbreviation>
+    <contact:mailingAddress>GPO Box 378, Canberra ACT 2601, Australia</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Ryan Ruddick</contact:name>
+      <contact:telephonePrimary>+61 2 6249 9426</contact:telephonePrimary>
+      <contact:telephoneSecondary>+61 409 385 903</contact:telephoneSecondary>
+      <contact:fax>+61 2 6249 9929</contact:fax>
+      <contact:e-mail>Ryan.Ruddick@ga.gov.au</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Michael Moore</contact:name>
+      <contact:telephonePrimary>+61 2 6249 9052</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>+61 2 6249 9929</contact:fax>
+      <contact:e-mail>Michael.Moore@ga.gov.au</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>(multiple lines)</contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>Geoscience Australia</contact:agency>
+    <contact:preferredAbbreviation>GA</contact:preferredAbbreviation>
+    <contact:mailingAddress>(multiple lines)</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>(multiple lines)</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter></mi:primaryDataCenter>
+    <mi:secondaryDataCenter></mi:secondaryDataCenter>
+    <mi:urlForMoreInformation></mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>Y</mi:siteMap>
+    <mi:siteDiagram>Y</mi:siteDiagram>
+    <mi:horizonMask>Y</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>Y</mi:sitePictures>
+    <mi:notes>(multiple lines)</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

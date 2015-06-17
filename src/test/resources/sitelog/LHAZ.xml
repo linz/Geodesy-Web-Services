@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Rudi Stoeger</mi:preparedBy>
+    <mi:datePrepared>2013-09-12</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>lhaz_20100326.log</mi:previousLog>
+    <mi:modifiedSections>4.2, 4.3</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>Lhasa / Tibet / China</mi:siteName>
+    <mi:fourCharacterID>LHAZ</mi:fourCharacterID>
+    <mi:monumentInscription></mi:monumentInscription>
+    <mi:iersDOMESNumber>21613M002</mi:iersDOMESNumber>
+    <mi:cdpNumber></mi:cdpNumber>
+    <mi:monumentDescription>CONCRETE PILLAR ON THE ROOF</mi:monumentDescription>
+    <mi:heightOfTheMonument>1.06</mi:heightOfTheMonument>
+    <mi:monumentFoundation>CONCRETE PILLAR ANCHORED ON THE ROOF</mi:monumentFoundation>
+    <mi:foundationDepth></mi:foundationDepth>
+    <mi:markerDescription>SURVEY MARKER BOLT</mi:markerDescription>
+    <mi:dateInstalled>1999-09-22T00</mi:dateInstalled>
+    <mi:geologicCharacteristic>Gravel</mi:geologicCharacteristic>
+    <mi:bedrockType>None</mi:bedrockType>
+    <mi:bedrockCondition>None</mi:bedrockCondition>
+    <mi:fractureSpacing>None</mi:fractureSpacing>
+    <mi:faultZonesNearby></mi:faultZonesNearby>
+    <mi:distance-Activity></mi:distance-Activity>
+    <mi:notes>The concrete survey pillar is anchored on the roof on the building of the TBSM Tibet Autonomus Regional Bureau of Surveying and Mapping. The top of the pillar is 12.4 m above the ground. Also an AOA SNR-8000 ACT, Four character ID LHAS, on pillar LS 12, DOMES No. 21613M001 was observing from 1995-02-02 until 2007-01-30.</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Lhasa</mi:city>
+    <mi:state>Tibet</mi:state>
+    <mi:country>China</mi:country>
+    <mi:tectonicPlate>Asian Plate</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>-106943.50</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>5549296.14</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>3139212.60</mi:zCoordinateInMeters>
+      <mi:latitude-North>+293926.39</mi:latitude-North>
+      <mi:longitude-East>+0910614.48</mi:longitude-East>
+      <mi:elevation-m_ellips.>03622.0</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes></mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z18</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>199909108</equip:serialNumber>
+    <equip:firmwareVersion>0064</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1999-09-22T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2001-11-28T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z18</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>199909108</equip:serialNumber>
+    <equip:firmwareVersion>0065</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2001-11-28T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2003-10-19T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>JPS LEGACY</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>AG0XLFRDTZ4</equip:serialNumber>
+    <equip:firmwareVersion>2.2 Jun,13,2002 p3</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2003-10-19T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2003-11-24T10:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>Additional number 235-0365 on the type level</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>JPS LEGACY</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>AG0XLFRDTZ4</equip:serialNumber>
+    <equip:firmwareVersion>2.3 Oct,17,2003 p3</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2003-11-24T10:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2006-05-16T09:36Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>/par/lock/notvis switched to "on". Additional number 235-0365 on the type level</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TPS E_GGD</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>AE7PEWVFA4G</equip:serialNumber>
+    <equip:firmwareVersion>2.5 Jun,22,2005 p1</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2006-05-16T09:36Z</equip:dateInstalled>
+    <equip:dateRemoved>2008-01-18T07:14Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>/par/lock/notvis switched to "on".</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TPS E_GGD</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>AE7PEWVFA4G</equip:serialNumber>
+    <equip:firmwareVersion>2.6.1 Jan,10,2008</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2008-01-18T07:15Z</equip:dateInstalled>
+    <equip:dateRemoved>2010-03-26T10:09Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>/par/lock/notvis switched to "on".</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TPS E_GGD</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>AE7PEWVFA4G</equip:serialNumber>
+    <equip:firmwareVersion>3.4 DEC,12,2009 P2</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2010-03-26T10:10Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>/par/lock/notvis switched to "on".</equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>ASH701941.B     SNOW</equip:antennaType>
+    <equip:serialNumber>2199911007</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.1350</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>SNOW</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>RG214</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>1999-09-22T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2007-02-28T09:00Z</equip:dateRemoved>
+    <equip:notes>Ashtech Choke Ring Antenna GG, Part No. 701941 REV B with dome SNOW.</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>ASH701941.B     SNOW</equip:antennaType>
+    <equip:serialNumber>2199911007</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.1330</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>SNOW</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>RG214</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>2007-02-28T09:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2013-09-12T08:09Z</equip:dateRemoved>
+    <equip:notes>Ashtech Choke Ring Antenna GG, Part No. 701941 REV B with dome SNOW.</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>ASH701941.B     NONE</equip:antennaType>
+    <equip:serialNumber>2199911007</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.1330</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>RG214</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>2013-09-12T08:10Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>Ashtech Choke Ring Antenna GG, Part No. 701941 REV B without radome.</equip:notes>
+  </gnssAntenna>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>LHAS</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>GPS</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber></equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>21613M001</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>3.4007</equip:dX>
+      <equip:dY>-0.3697</equip:dY>
+      <equip:dZ>0.8643</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>0.0007</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>GPS</equip:surveyMethod>
+    <equip:dateMeasured>2000-02-25</equip:dateMeasured>
+    <equip:notes>AOA SNR-8000 ACT</equip:notes>
+  </surveyedLocalTies>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL</equip:standardType>
+    <equip:inputFrequency>       Input Frequency        :</equip:inputFrequency>
+    <equip:effectiveDates>1999-09-22/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>       Notes                  :</equip:notes>
+  </frequencyStandard>
+  <collocationInformation>
+    <equip:instrumentType>AOA SNR-8000 ACT GPS LHAS</equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates>1995-05-02/2007-01-30</equip:effectiveDates>
+    <equip:notes>Four character ID LHAS</equip:notes>
+  </collocationInformation>
+  <humiditySensor>
+    <equip:type>MP440-020</equip:type>
+    <equip:manufacturer></equip:manufacturer>
+    <equip:serialNumber>176 2000/10</equip:serialNumber>
+    <equip:heightDiffToAntenna>-0.5</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>1995-05-02/1996-09-22</equip:effectiveDates>
+    <equip:dataSamplingInterval>900</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>1.5</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>CAPACITANCE PROBE</equip:aspiration>
+    <equip:notes>Humidity Sensor is above the antenna. Meteorological data site LHAS</equip:notes>
+  </humiditySensor>
+  <humiditySensor>
+    <equip:type>MP408A-T4-W4W</equip:type>
+    <equip:manufacturer>ROTRONIC</equip:manufacturer>
+    <equip:serialNumber>1972 026</equip:serialNumber>
+    <equip:heightDiffToAntenna>-0.5</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>1996-09-22/1999-08-27</equip:effectiveDates>
+    <equip:dataSamplingInterval>900</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>1.5</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>CAPACITANCE PROBE</equip:aspiration>
+    <equip:notes>Humidity Sensor is above the antenna. Meteorological data site LHAS</equip:notes>
+  </humiditySensor>
+  <humiditySensor>
+    <equip:type>MP410-T4-W4W</equip:type>
+    <equip:manufacturer>ROTRONIC</equip:manufacturer>
+    <equip:serialNumber>9984 009</equip:serialNumber>
+    <equip:heightDiffToAntenna>-0.5</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>1999-08-27/2003-10-19</equip:effectiveDates>
+    <equip:dataSamplingInterval>900</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>1.5</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>CAPACITANCE PROBE</equip:aspiration>
+    <equip:notes>Humidity Sensor is above the antenna. Meteorological data site LHAS</equip:notes>
+  </humiditySensor>
+  <humiditySensor>
+    <equip:type>MP408A-T4-W4W</equip:type>
+    <equip:manufacturer>ROTRONIC</equip:manufacturer>
+    <equip:serialNumber>21206 005</equip:serialNumber>
+    <equip:heightDiffToAntenna>-0.5</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2003-10-19/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>900</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>1.5</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>CAPACITANCE PROBE</equip:aspiration>
+    <equip:notes>Humidity Sensor is above the antenna. Meteorological data site LHAS</equip:notes>
+  </humiditySensor>
+  <pressureSensor>
+    <equip:type>APS</equip:type>
+    <equip:manufacturer>ROESSLER + CIE</equip:manufacturer>
+    <equip:serialNumber>11 5A011 95</equip:serialNumber>
+    <equip:heightDiffToAntenna>3</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>1995-05-02/1999-08-27</equip:effectiveDates>
+    <equip:dataSamplingInterval>900</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>1</equip:accuracy-hPa>
+    <equip:notes>Pressure Sensor is below the antenna. Meteorological data site LHAS</equip:notes>
+  </pressureSensor>
+  <pressureSensor>
+    <equip:type>APS</equip:type>
+    <equip:manufacturer>ROESSLER + CIE</equip:manufacturer>
+    <equip:serialNumber>11 5A011 95</equip:serialNumber>
+    <equip:heightDiffToAntenna>5.7</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>1999-08-27/2003-10-19</equip:effectiveDates>
+    <equip:dataSamplingInterval>900</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>1</equip:accuracy-hPa>
+    <equip:notes>Pressure Sensor is below the antenna. Meteorological data site LHAS</equip:notes>
+  </pressureSensor>
+  <pressureSensor>
+    <equip:type>APS</equip:type>
+    <equip:manufacturer>ROESSLER + CIE</equip:manufacturer>
+    <equip:serialNumber>11 5A011 95</equip:serialNumber>
+    <equip:heightDiffToAntenna>4.9</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2003-10-19/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>900</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>1</equip:accuracy-hPa>
+    <equip:notes>Pressure Sensor is below the antenna. Meteorological data site LHAS</equip:notes>
+  </pressureSensor>
+  <temperatureSensor>
+    <equip:type>MP440-020</equip:type>
+    <equip:manufacturer></equip:manufacturer>
+    <equip:serialNumber>176 2000/10</equip:serialNumber>
+    <equip:heightDiffToAntenna>-0.5</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>1995-05-02/1996-09-22</equip:effectiveDates>
+    <equip:dataSamplingInterval>900</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>0.3</equip:accuracy-degreesCelcius>
+    <equip:aspiration>PLATINUM PROBE</equip:aspiration>
+    <equip:notes>Temperature Sensor is above the antenna. Meteorological data site LHAS.</equip:notes>
+  </temperatureSensor>
+  <temperatureSensor>
+    <equip:type>MP408A-T4-W4W</equip:type>
+    <equip:manufacturer>ROTRONIC</equip:manufacturer>
+    <equip:serialNumber>1972 026</equip:serialNumber>
+    <equip:heightDiffToAntenna>-0.5</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>1996-09-22/1999-08-27</equip:effectiveDates>
+    <equip:dataSamplingInterval>900</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>0.3</equip:accuracy-degreesCelcius>
+    <equip:aspiration>PLATINUM PROBE</equip:aspiration>
+    <equip:notes>Temperature Sensor is above the antenna. Meteorological data site LHAS.</equip:notes>
+  </temperatureSensor>
+  <temperatureSensor>
+    <equip:type>MP410-T4-W4W</equip:type>
+    <equip:manufacturer>ROTRONIC</equip:manufacturer>
+    <equip:serialNumber>9984 009</equip:serialNumber>
+    <equip:heightDiffToAntenna>-0.5</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>1999-08-27/2003-10-19</equip:effectiveDates>
+    <equip:dataSamplingInterval>900</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>0.3</equip:accuracy-degreesCelcius>
+    <equip:aspiration>PLATINUM PROBE</equip:aspiration>
+    <equip:notes>Temperature Sensor is above the antenna. Meteorological data site LHAS.</equip:notes>
+  </temperatureSensor>
+  <temperatureSensor>
+    <equip:type>MP408A-T4-W4W</equip:type>
+    <equip:manufacturer>ROTRONIC</equip:manufacturer>
+    <equip:serialNumber>21206 005</equip:serialNumber>
+    <equip:heightDiffToAntenna>-0.5</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2003-10-19/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>900</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>0.3</equip:accuracy-degreesCelcius>
+    <equip:aspiration>PLATINUM PROBE</equip:aspiration>
+    <equip:notes>Temperature Sensor is above the antenna. Meteorological data site LHAS.</equip:notes>
+  </temperatureSensor>
+  <contactAgency>
+    <contact:agency>Tibet Autonomous Regional Buerau</contact:agency>
+    <contact:preferredAbbreviation>TBSM</contact:preferredAbbreviation>
+    <contact:mailingAddress>Tibet Autonomous Regional Buerau of</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Mr. Tsam Dorge</contact:name>
+      <contact:telephonePrimary>++86-891-6839393</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>++86-891-6833980</contact:fax>
+      <contact:e-mail>tsam-dorge@vip.sina.com</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Mr. Wang Yongshang in Beijing</contact:name>
+      <contact:telephonePrimary>++86-10-68730901</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>++86-10-68424101</contact:fax>
+      <contact:e-mail>wys@nsdi.gov.cn</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>of Surveying and Mapping Surveying and Mapping No. 36 Beijing Middle Road Lhasa, Tibet 850001 China </contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>Bundesamt fuer Kartographie</contact:agency>
+    <contact:preferredAbbreviation>BKG</contact:preferredAbbreviation>
+    <contact:mailingAddress>Bundesamt fuer Kartographie</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Uwe Hessels</contact:name>
+      <contact:telephonePrimary>++49-9941-603208</contact:telephonePrimary>
+      <contact:telephoneSecondary>++49-9941-6030</contact:telephoneSecondary>
+      <contact:fax>++49-9941-603222</contact:fax>
+      <contact:e-mail>uwe.hessels@bkg.bund.de</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>und Geodaesie Geodetical Observatory Wettzell und Geodaesie Geodetical Observatory Wettzell Sackenrieder Strasse 25 D-93444 Bad Koetzting Germany Klaus Roettcher ++49-9941-603115 klaus.roettcher@bkg.bund.de Rudi Stoeger ++49-9941-603117 rudolf.stoeger@bkg.bund.de</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter>www.bkg.bund.de, www.wettzell.ifag.de</mi:primaryDataCenter>
+    <mi:secondaryDataCenter>www.bkg.bund.de, www.wettzell.ifag.de</mi:secondaryDataCenter>
+    <mi:urlForMoreInformation>www.bkg.bund.de, www.wettzell.ifag.de</mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>(Y or URL)</mi:siteMap>
+    <mi:siteDiagram>(Y or URL)</mi:siteDiagram>
+    <mi:horizonMask>(Y or URL)</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>Y</mi:sitePictures>
+    <mi:notes>(multiple lines)</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Rudi Stoeger</mi:preparedBy>
+    <mi:datePrepared>2013-10-11</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>hofn_20130506.log</mi:previousLog>
+    <mi:modifiedSections>3.9, 3.10</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>Hoefn / Iceland</mi:siteName>
+    <mi:fourCharacterID>HOFN</mi:fourCharacterID>
+    <mi:monumentInscription>CHIMNEY PILLAR NO. 1</mi:monumentInscription>
+    <mi:iersDOMESNumber>10204M002</mi:iersDOMESNumber>
+    <mi:cdpNumber>(A4)</mi:cdpNumber>
+    <mi:monumentDescription>PILLAR</mi:monumentDescription>
+    <mi:heightOfTheMonument>4.36</mi:heightOfTheMonument>
+    <mi:monumentFoundation>CONCRETE BOLTED TO BEDROCK</mi:monumentFoundation>
+    <mi:foundationDepth></mi:foundationDepth>
+    <mi:markerDescription>SURVEY MARKER BOLT</mi:markerDescription>
+    <mi:dateInstalled>1997-05-27T00</mi:dateInstalled>
+    <mi:geologicCharacteristic>BEDROCK</mi:geologicCharacteristic>
+    <mi:bedrockType>(IGNEOUS/METAMORPHIC/SEDIMENTARY)</mi:bedrockType>
+    <mi:bedrockCondition>(FRESH/JOINTED/WEATHERED)</mi:bedrockCondition>
+    <mi:fractureSpacing>(0 cm/1-10 cm/11-50 cm/51-200 cm/over 200 cm)</mi:fractureSpacing>
+    <mi:faultZonesNearby>(YES/NO/Name of the zone)</mi:faultZonesNearby>
+    <mi:distance-Activity>(multiple lines)</mi:distance-Activity>
+    <mi:notes>The survey marker bolt is anchored on the top of the concrete chimney pillar No.1 in the Maelingarhus in Hofn. The height of the chimey pillar No.1 is 4.36 m. It is bolted to the bedrock. The antenna on the chimney pillar is 4.47 m above the ground and 1.4 m above the roof.</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Hoefn</mi:city>
+    <mi:state></mi:state>
+    <mi:country>Iceland</mi:country>
+    <mi:tectonicPlate>EURASIAN</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>2679689.848</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>-727951.343</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>5722788.898</mi:zCoordinateInMeters>
+      <mi:latitude-North>+641602.20</mi:latitude-North>
+      <mi:longitude-East>-0151112.50</mi:longitude-East>
+      <mi:elevation-m_ellips.>82.5</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>(multiple lines)</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE 4000SSI</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>3503A09374</equip:serialNumber>
+    <equip:firmwareVersion>7.12</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1997-05-27T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1999-07-31T14:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE 4000SSI</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>3503A09374</equip:serialNumber>
+    <equip:firmwareVersion>00729|00304|00333</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1999-07-31T14:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2004-10-11T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE 4000SSI</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>00009374</equip:serialNumber>
+    <equip:firmwareVersion>00719|00304|00333</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2004-10-11T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2007-02-13T08:20Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>the serial number format has been modified on 2006-08-04T08 (the old format was 3503A09374)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE 4000SSI</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>00024908</equip:serialNumber>
+    <equip:firmwareVersion>00729|00307|00334</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2007-02-13T08:20Z</equip:dateInstalled>
+    <equip:dateRemoved>2007-09-22T10:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TPS E_GGD</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>AGL2LHV3XMO</equip:serialNumber>
+    <equip:firmwareVersion>2.6.0 APR,18,2007</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2007-09-23T17:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2008-01-17T16:14Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TPS E_GGD</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>AGL2LHV3XMO</equip:serialNumber>
+    <equip:firmwareVersion>2.6.1 JAN,10,2008</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2008-01-17T16:15Z</equip:dateInstalled>
+    <equip:dateRemoved>2010-03-26T09:54Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TPS E_GGD</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>AGL2LHV3XMO</equip:serialNumber>
+    <equip:firmwareVersion>3.4 DEC,12,2009 P2</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2010-03-26T09:55Z</equip:dateInstalled>
+    <equip:dateRemoved>2010-03-30T13:14Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TPS E_GGD</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>AGL2LHV3XMO</equip:serialNumber>
+    <equip:firmwareVersion>2.6.1 JAN,10,2008</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2010-03-30T13:15Z</equip:dateInstalled>
+    <equip:dateRemoved>2013-05-05T11:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GR25</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO+GAL+SBAS</equip:satelliteSystem>
+    <equip:serialNumber>1830199</equip:serialNumber>
+    <equip:firmwareVersion>3.00/6.113</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2013-05-05T12:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2013-10-09T14:29Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GR25</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO+GAL+SBAS</equip:satelliteSystem>
+    <equip:serialNumber>1830199</equip:serialNumber>
+    <equip:firmwareVersion>3.01/6.212</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2013-10-09T14:30Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>TRM22020.00+GP  DOME</equip:antennaType>
+    <equip:serialNumber>0220008914</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0550</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>DOME</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>RG214</equip:antennaCableType>
+    <equip:antennaCableLength>30</equip:antennaCableLength>
+    <equip:dateInstalled>1997-05-27T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2000-03-13T00:00Z</equip:dateRemoved>
+    <equip:notes>TRIMBLE 24490-00 Prod Ass Ext Dome</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>TRM22020.00+GP  DOME</equip:antennaType>
+    <equip:serialNumber>0220008914</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0554</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>DOME</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>RG214</equip:antennaCableType>
+    <equip:antennaCableLength>30</equip:antennaCableLength>
+    <equip:dateInstalled>2000-03-13T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2000-05-25T13:45Z</equip:dateRemoved>
+    <equip:notes>TRIMBLE 24490-00 Prod Ass Ext Dome</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>TRM22020.00+GP  DOME</equip:antennaType>
+    <equip:serialNumber>0220008914</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0550</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>DOME</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>RG214</equip:antennaCableType>
+    <equip:antennaCableLength>30</equip:antennaCableLength>
+    <equip:dateInstalled>2000-05-25T13:45Z</equip:dateInstalled>
+    <equip:dateRemoved>2001-09-21T18:00Z</equip:dateRemoved>
+    <equip:notes>TRIMBLE 24490-00 Prod Ass Ext Dome</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>TRM29659.00     NONE</equip:antennaType>
+    <equip:serialNumber>0220181800</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0510</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>RG214</equip:antennaCableType>
+    <equip:antennaCableLength>30</equip:antennaCableLength>
+    <equip:dateInstalled>2001-09-21T18:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2007-09-22T10:00Z</equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>TPSCR3_GGD      CONE</equip:antennaType>
+    <equip:serialNumber>217-0218</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0675</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>CONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>Ecoflex 10</equip:antennaCableType>
+    <equip:antennaCableLength>30</equip:antennaCableLength>
+    <equip:dateInstalled>2007-09-23T17:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2013-05-05T11:00Z</equip:dateRemoved>
+    <equip:notes>The serial number format has been modified on 2007-10-01T 09 The old format was 217 0218.</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>LEIAR25.R4      LEIT</equip:antennaType>
+    <equip:serialNumber>725283</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0319</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>LEIT</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>Ecoflex 10</equip:antennaCableType>
+    <equip:antennaCableLength>30</equip:antennaCableLength>
+    <equip:dateInstalled>2013-05-05T12:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>VLBI PLATFORM</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>VLBI</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>7635</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>10204M001</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>(m)</equip:dX>
+      <equip:dY>(m)</equip:dY>
+      <equip:dZ>(m)</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>(mm)</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>TRIANGULATION</equip:surveyMethod>
+    <equip:dateMeasured>CCYY-MM-DDThh:mmZ</equip:dateMeasured>
+    <equip:notes>(multiple lines)</equip:notes>
+  </surveyedLocalTies>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>CHIMNEY PILLAR NO. 2</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>GPS</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>(A4)</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>10204M003</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>(m)</equip:dX>
+      <equip:dY>(m)</equip:dY>
+      <equip:dZ>(m)</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>(mm)</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>TRIANGULATION</equip:surveyMethod>
+    <equip:dateMeasured>CCYY-MM-DDThh:mmZ</equip:dateMeasured>
+    <equip:notes>(multiple lines)</equip:notes>
+  </surveyedLocalTies>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>PRARE PILLAR</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>PRARE</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>(A4)</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>10204M004</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>(m)</equip:dX>
+      <equip:dY>(m)</equip:dY>
+      <equip:dZ>(m)</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>(mm)</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>TRIANGULATION</equip:surveyMethod>
+    <equip:dateMeasured>CCYY-MM-DDThh:mmZ</equip:dateMeasured>
+    <equip:notes>(multiple lines)</equip:notes>
+  </surveyedLocalTies>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>EUREF PILLAR</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>GPS</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>(A4)</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>10204M005</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>(m)</equip:dX>
+      <equip:dY>(m)</equip:dY>
+      <equip:dZ>(m)</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>(mm)</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>TRIANGULATION</equip:surveyMethod>
+    <equip:dateMeasured>CCYY-MM-DDThh:mmZ</equip:dateMeasured>
+    <equip:notes>(multiple lines)</equip:notes>
+  </surveyedLocalTies>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL </equip:standardType>
+    <equip:inputFrequency>(if external)</equip:inputFrequency>
+    <equip:effectiveDates>1997-05-27/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </frequencyStandard>
+  <collocationInformation>
+    <equip:instrumentType>VLBI</equip:instrumentType>
+    <equip:status>MOBILE</equip:status>
+    <equip:effectiveDates>1992-07-20/1992-07-28</equip:effectiveDates>
+    <equip:notes>Mobile VLBI Observations. Occupying system MV-2, monument number 7635, occupation designator 76355201</equip:notes>
+  </collocationInformation>
+  <collocationInformation>
+    <equip:instrumentType>PRARE</equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates>1997-06-01/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>Statens Kartverk Norway</equip:notes>
+  </collocationInformation>
+  <collocationInformation>
+    <equip:instrumentType>GPS</equip:instrumentType>
+    <equip:status>MOBILE</equip:status>
+    <equip:effectiveDates>1990-07-23/1990-07-28</equip:effectiveDates>
+    <equip:notes>EUREF PILLAR. EUREFNW GPS camapign</equip:notes>
+  </collocationInformation>
+  <collocationInformation>
+    <equip:instrumentType>GPS</equip:instrumentType>
+    <equip:status>MOBILE</equip:status>
+    <equip:effectiveDates>1993-08-03/1993-08-14</equip:effectiveDates>
+    <equip:notes>EUREF PILLAR. ISNET93 GPS camapaign</equip:notes>
+  </collocationInformation>
+  <collocationInformation>
+    <equip:instrumentType>GPS</equip:instrumentType>
+    <equip:status>MOBILE</equip:status>
+    <equip:effectiveDates>1995-07-17/1995-07-28</equip:effectiveDates>
+    <equip:notes>EUREF PILLAR. ISLAND95 GPS Campaign</equip:notes>
+  </collocationInformation>
+  <collocationInformation>
+    <equip:instrumentType>GPS</equip:instrumentType>
+    <equip:status>MOBILE</equip:status>
+    <equip:effectiveDates>1997-05-27/1997-05-28</equip:effectiveDates>
+    <equip:notes>EUREF PILLAR. EUVN GPS Campaign Also a GPS Campaign 1985, dates not known yet</equip:notes>
+  </collocationInformation>
+  <humiditySensor>
+    <equip:type>MP408A-T4-W4W</equip:type>
+    <equip:manufacturer>ROTRONIC</equip:manufacturer>
+    <equip:serialNumber>1456 4016</equip:serialNumber>
+    <equip:heightDiffToAntenna>0.4</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2001-09-22/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>900 s</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>1.5</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>CAPACITANCE PROBE</equip:aspiration>
+    <equip:notes>The Humidity Sensor is 0.4 m below the antenna</equip:notes>
+  </humiditySensor>
+  <pressureSensor>
+    <equip:type>APS 9215</equip:type>
+    <equip:manufacturer>L-TEC LEIBENGUTH</equip:manufacturer>
+    <equip:serialNumber>05050400A</equip:serialNumber>
+    <equip:heightDiffToAntenna>3.26</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2001-09-22/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>900 s</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>0.1 hPa</equip:accuracy-hPa>
+    <equip:notes>The Pressure Sensor is 3.26 m below the antenna</equip:notes>
+  </pressureSensor>
+  <temperatureSensor>
+    <equip:type>MP408A-T4-W4W</equip:type>
+    <equip:manufacturer>ROTRONIC</equip:manufacturer>
+    <equip:serialNumber>14564 016</equip:serialNumber>
+    <equip:heightDiffToAntenna>0.4</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2001-09-22/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>900 s</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>0.3 deg C</equip:accuracy-degreesCelcius>
+    <equip:aspiration>PLATINUM PROBE</equip:aspiration>
+    <equip:notes>The Temperature Sensor is 0.4 m below the antenna</equip:notes>
+  </temperatureSensor>
+  <contactAgency>
+    <contact:agency>Landmaelingar Islands</contact:agency>
+    <contact:preferredAbbreviation>LMI</contact:preferredAbbreviation>
+    <contact:mailingAddress>Stillholti 16 - 18</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Gudmundur Valsson</contact:name>
+      <contact:telephonePrimary>00354-4309040</contact:telephonePrimary>
+      <contact:telephoneSecondary>00354-4309000</contact:telephoneSecondary>
+      <contact:fax>00354-4309090</contact:fax>
+      <contact:e-mail>gudmundur@lmi.is</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>National Land Survey of Iceland IS-300 Akranes Iceland (multiple lines)</contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>Bundesamt fuer Kartographie</contact:agency>
+    <contact:preferredAbbreviation>BKG</contact:preferredAbbreviation>
+    <contact:mailingAddress>Bundesamt fuer Kartographie</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Uwe Hessels</contact:name>
+      <contact:telephonePrimary>++49-9941-603212</contact:telephonePrimary>
+      <contact:telephoneSecondary>++49-9941-6030</contact:telephoneSecondary>
+      <contact:fax>++49-9941-603222</contact:fax>
+      <contact:e-mail>uwe.hessels@bkg.bund.de</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>und Geodaesie Geodetical Observatory Wettzell und Geodaesie Geodetical Observatory Wettzell Sackenrieder Strasse 25 D-93444 Bad Koetzting Germany Klaus Roettcher ++49-9941-603115 klaus.roettcher@bkg.bund.de Rudi Stoeger ++49-9941-603117 rudolf.stoeger@bkg.bund.de</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter>http</mi:primaryDataCenter>
+    <mi:secondaryDataCenter>http</mi:secondaryDataCenter>
+    <mi:urlForMoreInformation>http</mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>(Y or URL)</mi:siteMap>
+    <mi:siteDiagram>(Y or URL)</mi:siteDiagram>
+    <mi:horizonMask>(Y or URL)</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>Y</mi:sitePictures>
+    <mi:notes>(multiple lines)</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

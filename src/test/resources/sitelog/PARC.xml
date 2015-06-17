@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Eric C. Kendrick</mi:preparedBy>
+    <mi:datePrepared>2012-08-10</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>parc_20100818.log</mi:previousLog>
+    <mi:modifiedSections>3.8,3.9,3.10,11,13</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>Punta Arenas</mi:siteName>
+    <mi:fourCharacterID>PARC</mi:fourCharacterID>
+    <mi:monumentInscription>none</mi:monumentInscription>
+    <mi:iersDOMESNumber>41716S001</mi:iersDOMESNumber>
+    <mi:cdpNumber>(A4)</mi:cdpNumber>
+    <mi:monumentDescription>STEEL MAST</mi:monumentDescription>
+    <mi:heightOfTheMonument></mi:heightOfTheMonument>
+    <mi:monumentFoundation>ROOF</mi:monumentFoundation>
+    <mi:foundationDepth></mi:foundationDepth>
+    <mi:markerDescription>(CHISELLED CROSS/DIVOT/BRASS NAIL/etc)</mi:markerDescription>
+    <mi:dateInstalled>1999-01-01T00</mi:dateInstalled>
+    <mi:geologicCharacteristic>SOIL</mi:geologicCharacteristic>
+    <mi:bedrockType>(IGNEOUS/METAMORPHIC/SEDIMENTARY)</mi:bedrockType>
+    <mi:bedrockCondition>(FRESH/JOINTED/WEATHERED)</mi:bedrockCondition>
+    <mi:fractureSpacing>(1-10 cm/11-50 cm/51-200 cm/over 200 cm)</mi:fractureSpacing>
+    <mi:faultZonesNearby>(YES/NO/Name of the zone)</mi:faultZonesNearby>
+    <mi:distance-Activity>(multiple lines)</mi:distance-Activity>
+    <mi:notes>Antenna is fixed to a steel post approximately 1.5 m high. Post is on the roof of a one-story building, attached to the building's steel frame. Building's foundation is a concrete pad resting on sediment. Geodetic reference point is top-center of steel coupler atop steel mast.</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Punta Arenas</mi:city>
+    <mi:state>Region XII</mi:state>
+    <mi:country>Chile</mi:country>
+    <mi:tectonicPlate>South America</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>1255992.</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>-3622975.</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>-5079719.</mi:zCoordinateInMeters>
+      <mi:latitude-North>-530813.20</mi:latitude-North>
+      <mi:longitude-East>-0705247.64</mi:longitude-East>
+      <mi:elevation-m_ellips.>22</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>Reference frame used is ITRF97. Coordinate system used is WGS84.</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3</equip:receiverType>
+    <equip:satelliteSystem>(GPS+GLO+GAL+CMP+QZSS+SBAS)</equip:satelliteSystem>
+    <equip:serialNumber>LP01073</equip:serialNumber>
+    <equip:firmwareVersion>1E95</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>1999-01-01T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1999-03-20T14:50Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>LP01073</equip:serialNumber>
+    <equip:firmwareVersion>CC00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>1999-03-21T00:01Z</equip:dateInstalled>
+    <equip:dateRemoved>2001-10-05T02:22Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>firmware upgrade to CC00 21Mar1999 no data after 2001-10-03T22</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>00645</equip:serialNumber>
+    <equip:firmwareVersion>CD00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>2001-12-11T20:42Z</equip:dateInstalled>
+    <equip:dateRemoved>2002-01-14T23:59Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>213</equip:serialNumber>
+    <equip:firmwareVersion>CD00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>2002-01-16T13:37Z</equip:dateInstalled>
+    <equip:dateRemoved>2002-01-17T00:01Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>01921</equip:serialNumber>
+    <equip:firmwareVersion>CD00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>2002-01-19T23:33Z</equip:dateInstalled>
+    <equip:dateRemoved>2006-08-23</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>full serial # LP01921 The Ashtech RX was replaced by a NetRS in order to put the station on the internet</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETRS</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>4420233986</equip:serialNumber>
+    <equip:firmwareVersion>1.13</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>7</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2006-08-23T14:56Z</equip:dateInstalled>
+    <equip:dateRemoved>2009-11-01T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETR8</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>4852K33887</equip:serialNumber>
+    <equip:firmwareVersion>4.02</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>2009-11-01T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2010-02-12T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETR8</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>4852K33887</equip:serialNumber>
+    <equip:firmwareVersion>4.14</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>2010-02-12T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2010-08-13T12:07Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETR8</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>4852K33887</equip:serialNumber>
+    <equip:firmwareVersion>4.15</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>2010-08-13T12:07Z</equip:dateInstalled>
+    <equip:dateRemoved>2011-10-05T18:16Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETR8</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>4852K33887</equip:serialNumber>
+    <equip:firmwareVersion>4.43</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>2011-10-05T18:16Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>GLONASS observables included starting on 2012-08-06</equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>ASH700936D_M    SNOW</equip:antennaType>
+    <equip:serialNumber>12472</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>SNOW</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>1999-01-01T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2001-12-11</equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>ASH700936D_M    SNOW</equip:antennaType>
+    <equip:serialNumber>12465</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>SNOW</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>2001-12-11T20:42Z</equip:dateInstalled>
+    <equip:dateRemoved>2009-11-01T00:00Z</equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>TRM57971.00     NONE</equip:antennaType>
+    <equip:serialNumber>31051052</equip:serialNumber>
+    <equip:antennaReferencePoint>BAM</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>2009-11-01T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL</equip:standardType>
+    <equip:inputFrequency>       Input Frequency        :</equip:inputFrequency>
+    <equip:effectiveDates>1999-01-01/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </frequencyStandard>
+  <humiditySensor>
+    <equip:type></equip:type>
+    <equip:manufacturer></equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>CCYY-MM-DD/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval></equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>(% rel h)</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </humiditySensor>
+  <pressureSensor>
+    <equip:type></equip:type>
+    <equip:manufacturer></equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>CCYY-MM-DD/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval></equip:dataSamplingInterval>
+    <equip:accuracy-hPa>(mbar)</equip:accuracy-hPa>
+    <equip:notes>(multiple lines)</equip:notes>
+  </pressureSensor>
+  <temperatureSensor>
+    <equip:type></equip:type>
+    <equip:manufacturer></equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>CCYY-MM-DD/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval></equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>(deg C)</equip:accuracy-degreesCelcius>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </temperatureSensor>
+  <waterVaporSensor>
+    <equip:type></equip:type>
+    <equip:manufacturer></equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>CCYY-MM-DD/CCYY-MM-DD</equip:effectiveDates>
+    <equip:distanceToAntenna></equip:distanceToAntenna>
+    <equip:notes>(multiple lines)</equip:notes>
+  </waterVaporSensor>
+  <contactAgency>
+    <contact:agency>Geodesy and Geodynamics Group</contact:agency>
+    <contact:preferredAbbreviation>G2</contact:preferredAbbreviation>
+    <contact:mailingAddress>Geodesy and Geodynamics Group</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Eric Kendrick</contact:name>
+      <contact:telephonePrimary>614-247-5036</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>614-247-5042</contact:fax>
+      <contact:e-mail>kendrick.42@osu.edu</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Dana Caccamise</contact:name>
+      <contact:telephonePrimary>614-247-5067</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>614-247-5042</contact:fax>
+      <contact:e-mail>danac@osu.edu</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>275 Mendenhall 125 S. Oval Mall Columbus, OH 43210 USA </contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>Geodesy and Geodynamics Group</contact:agency>
+    <contact:preferredAbbreviation>G2</contact:preferredAbbreviation>
+    <contact:mailingAddress>(multiple lines)</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>(multiple lines)</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter></mi:primaryDataCenter>
+    <mi:secondaryDataCenter></mi:secondaryDataCenter>
+    <mi:urlForMoreInformation></mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>(Y or URL)</mi:siteMap>
+    <mi:siteDiagram>()</mi:siteDiagram>
+    <mi:horizonMask>()</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>()</mi:sitePictures>
+    <mi:notes>(multiple lines)</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

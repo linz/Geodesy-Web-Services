@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Toni Hollingsworth</mi:preparedBy>
+    <mi:datePrepared>2009-05-29</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>zhn1_20090528.log</mi:previousLog>
+    <mi:modifiedSections>3.1</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>Honolulu WAAS 1</mi:siteName>
+    <mi:fourCharacterID>ZHN1</mi:fourCharacterID>
+    <mi:monumentInscription></mi:monumentInscription>
+    <mi:iersDOMESNumber>USM000086</mi:iersDOMESNumber>
+    <mi:cdpNumber>(A4)</mi:cdpNumber>
+    <mi:monumentDescription>(PILLAR/BRASS PLATE/STEEL MAST/etc)</mi:monumentDescription>
+    <mi:heightOfTheMonument></mi:heightOfTheMonument>
+    <mi:monumentFoundation>(STEEL RODS, CONCRETE BLOCK, ROOF, etc)</mi:monumentFoundation>
+    <mi:foundationDepth></mi:foundationDepth>
+    <mi:markerDescription>(CHISELLED CROSS/DIVOT/BRASS NAIL/etc)</mi:markerDescription>
+    <mi:dateInstalled>2003-02-21</mi:dateInstalled>
+    <mi:geologicCharacteristic>(BEDROCK/CLAY/CONGLOMERATE/GRAVEL/SAND/etc)</mi:geologicCharacteristic>
+    <mi:bedrockType>(IGNEOUS/METAMORPHIC/SEDIMENTARY)</mi:bedrockType>
+    <mi:bedrockCondition>(FRESH/JOINTED/WEATHERED)</mi:bedrockCondition>
+    <mi:fractureSpacing>(1-10 cm/11-50 cm/51-200 cm/over 200 cm)</mi:fractureSpacing>
+    <mi:faultZonesNearby>(YES/NO/Name of the zone)</mi:faultZonesNearby>
+    <mi:distance-Activity>(multiple lines)</mi:distance-Activity>
+    <mi:notes>Note-'Date Installed' is the first date CORS</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Honolulu</mi:city>
+    <mi:state>Hawaii</mi:state>
+    <mi:country>USA</mi:country>
+    <mi:tectonicPlate></mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>-5508636.511</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>-2234494.101</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>2303721.540</mi:zCoordinateInMeters>
+      <mi:latitude-North>211846.80</mi:latitude-North>
+      <mi:longitude-East>-1575514.87</mi:longitude-East>
+      <mi:elevation-m_ellips.>24.201</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>ARP ITRF00 POSITION (EPOCH 1997.0) computed in</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>NOV WAASGII</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>72C1</equip:serialNumber>
+    <equip:firmwareVersion>2.003</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>2003-02-21T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>Install date is first day of CORS online data. Corrected receiver type and entered firmware on 05-28-2009 per confirmation from FAA.</equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>MPL_WAAS_2224NW </equip:antennaType>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType></equip:antennaRadomeType>
+    <equip:radomeSerialNumber>(A4 from rcvr_ant.tab; see instructions)</equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>2003-02-21T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2003-04-16</equip:dateRemoved>
+    <equip:notes>Install date is first day of CORS online data.</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>NOV_WAAS_600    NONE</equip:antennaType>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber>(A4 from rcvr_ant.tab; see instructions)</equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>2003-04-17T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2007-07-04</equip:dateRemoved>
+    <equip:notes>Antenna replaced.</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>MPL_WAAS_2225NW NONE</equip:antennaType>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber>(A4 from rcvr_ant.tab; see instructions)</equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>2007-07-04T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <frequencyStandard>
+    <equip:standardType>CESIUM</equip:standardType>
+    <equip:inputFrequency>(if external)</equip:inputFrequency>
+    <equip:effectiveDates>(CCYY-MM-DD/CCYY-MM-DD)</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </frequencyStandard>
+  <contactAgency>
+    <contact:agency>FAA</contact:agency>
+    <contact:preferredAbbreviation>FAA</contact:preferredAbbreviation>
+    <contact:mailingAddress>(multiple lines)</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Tom McHugh</contact:name>
+      <contact:telephonePrimary>609-485-5183</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail>Tom.McHugh@faa.gov</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Jean-Christophe Geffard</contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail>Jean-Christophe.CTR.Geffard@tc.faa.gov</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>(multiple lines)</contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>FAA</contact:agency>
+    <contact:preferredAbbreviation>FAA</contact:preferredAbbreviation>
+    <contact:mailingAddress>(multiple lines)</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>(multiple lines)</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter></mi:primaryDataCenter>
+    <mi:secondaryDataCenter></mi:secondaryDataCenter>
+    <mi:urlForMoreInformation></mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>(Y or URL)</mi:siteMap>
+    <mi:siteDiagram>(Y or URL)</mi:siteDiagram>
+    <mi:horizonMask>(Y or URL)</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>(Y or URL)</mi:sitePictures>
+    <mi:notes>(multiple lines)</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Heui Young Park</mi:preparedBy>
+    <mi:datePrepared>2012-03-07</mi:datePrepared>
+    <mi:reportType>NEW</mi:reportType>
+    <mi:previousLog></mi:previousLog>
+    <mi:modifiedSections></mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>YONGSAN</mi:siteName>
+    <mi:fourCharacterID>YONS</mi:fourCharacterID>
+    <mi:monumentInscription>SEOUL GNSS STATION</mi:monumentInscription>
+    <mi:iersDOMESNumber>23906M001</mi:iersDOMESNumber>
+    <mi:cdpNumber>NONE</mi:cdpNumber>
+    <mi:monumentDescription>PILLAR</mi:monumentDescription>
+    <mi:heightOfTheMonument>2</mi:heightOfTheMonument>
+    <mi:monumentFoundation>CONCRETE BLOCK</mi:monumentFoundation>
+    <mi:foundationDepth>1</mi:foundationDepth>
+    <mi:markerDescription>(CHISELLED CROSS/DIVOT/BRASS NAIL/etc)</mi:markerDescription>
+    <mi:dateInstalled>2010-11-01T00</mi:dateInstalled>
+    <mi:geologicCharacteristic>BEDROCK</mi:geologicCharacteristic>
+    <mi:bedrockType>IGNEOUS</mi:bedrockType>
+    <mi:bedrockCondition>JOINTED</mi:bedrockCondition>
+    <mi:fractureSpacing>1-10 cm</mi:fractureSpacing>
+    <mi:faultZonesNearby>(YES/NO/Name of the zone)</mi:faultZonesNearby>
+    <mi:distance-Activity></mi:distance-Activity>
+    <mi:notes></mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>SEOUL</mi:city>
+    <mi:state></mi:state>
+    <mi:country>Korea</mi:country>
+    <mi:tectonicPlate>Eurasian</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>-3047506.741</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>+4043980.580</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>+3865243.010</mi:zCoordinateInMeters>
+      <mi:latitude-North>+373228.04</mi:latitude-North>
+      <mi:longitude-East>+1270004.84</mi:longitude-East>
+      <mi:elevation-m_ellips.>96.849</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes></mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETR9</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>5016K66897</equip:serialNumber>
+    <equip:firmwareVersion>4.42</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>(5 deg)</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2010-11-01T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>TRM59800.00     SCIS</equip:antennaType>
+    <equip:serialNumber>5007353</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>SCIS</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>2010-11-01T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>Radome is Half Sphere</equip:notes>
+  </gnssAntenna>
+  <humiditySensor>
+    <equip:type>WXT 520</equip:type>
+    <equip:manufacturer>VAISALA</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>2</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2010-11-01/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>15 (min)</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>( 2 (% rel h)</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </humiditySensor>
+  <pressureSensor>
+    <equip:type>WXT 520</equip:type>
+    <equip:manufacturer>VAISALA</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>2</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2010-11-01/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>60</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>0.1 (mbar)</equip:accuracy-hPa>
+    <equip:notes>(multiple lines)</equip:notes>
+  </pressureSensor>
+  <temperatureSensor>
+    <equip:type>WXT 520</equip:type>
+    <equip:manufacturer>VAISALA</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>2</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2010-11-01/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>15 (min)</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>0.5 (deg C)</equip:accuracy-degreesCelcius>
+    <equip:aspiration>(UNSPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </temperatureSensor>
+  <waterVaporSensor>
+    <equip:type>NONE</equip:type>
+    <equip:manufacturer></equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>CCYY-MM-DD/CCYY-MM-DD</equip:effectiveDates>
+    <equip:distanceToAntenna></equip:distanceToAntenna>
+    <equip:notes>(multiple lines)</equip:notes>
+  </waterVaporSensor>
+  <contactAgency>
+    <contact:agency>Seoul Metropolitan Government</contact:agency>
+    <contact:preferredAbbreviation>SMG</contact:preferredAbbreviation>
+    <contact:mailingAddress>15, Ducksugung-Kil, Jung-gu, Seoul 100-739,</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Heui-Young Park</contact:name>
+      <contact:telephonePrimary>+82-2-3707-8058</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>+82-42-861-5610</contact:fax>
+      <contact:e-mail>park2002@seoul.go.kr</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Gun-Suk Cha</contact:name>
+      <contact:telephonePrimary>+82-2-6361-3947</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>+82-42-861-5610</contact:fax>
+      <contact:e-mail>cgs2298@seoul.go.kr</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>Korea </contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>Seoul Metropolitan Government</contact:agency>
+    <contact:preferredAbbreviation>SMG</contact:preferredAbbreviation>
+    <contact:mailingAddress>(multiple lines)</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>(multiple lines)</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter></mi:primaryDataCenter>
+    <mi:secondaryDataCenter></mi:secondaryDataCenter>
+    <mi:urlForMoreInformation></mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>(Y or URL)</mi:siteMap>
+    <mi:siteDiagram>NONE</mi:siteDiagram>
+    <mi:horizonMask>NONE</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>Y</mi:sitePictures>
+    <mi:notes>(multiple lines)</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

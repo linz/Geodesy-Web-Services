@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Hans van der Marel</mi:preparedBy>
+    <mi:datePrepared>2011-01-25</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>ntus_20101005.log</mi:previousLog>
+    <mi:modifiedSections>3.8, 3.9, 13</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>Nanyang Technological University</mi:siteName>
+    <mi:fourCharacterID>NTUS</mi:fourCharacterID>
+    <mi:monumentInscription>NTUS-01</mi:monumentInscription>
+    <mi:iersDOMESNumber>22601M001</mi:iersDOMESNumber>
+    <mi:cdpNumber>not assigned</mi:cdpNumber>
+    <mi:monumentDescription>PILLAR</mi:monumentDescription>
+    <mi:heightOfTheMonument>1.50</mi:heightOfTheMonument>
+    <mi:monumentFoundation>ROOF</mi:monumentFoundation>
+    <mi:foundationDepth></mi:foundationDepth>
+    <mi:markerDescription>TRIBRACH</mi:markerDescription>
+    <mi:dateInstalled>1997-06-26T03</mi:dateInstalled>
+    <mi:geologicCharacteristic>(BEDROCK/CLAY/CONGLOMERATE/GRAVEL/SAND/etc)</mi:geologicCharacteristic>
+    <mi:bedrockType>(IGNEOUS/METAMORPHIC/SEDIMENTARY)</mi:bedrockType>
+    <mi:bedrockCondition>(FRESH/JOINTED/WEATHERED)</mi:bedrockCondition>
+    <mi:fractureSpacing>(1-10 cm/10-50 cm/50-200 cm/over 200 cm)</mi:fractureSpacing>
+    <mi:faultZonesNearby>(YES/NO/Name of the zone)</mi:faultZonesNearby>
+    <mi:distance-Activity>(multiple lines)</mi:distance-Activity>
+    <mi:notes>The NTUS station is operated jointly for IGS by Singapore Land Authority (SLA) and the Delft University of Technology (DUT/DEOS).</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Singapore</mi:city>
+    <mi:state></mi:state>
+    <mi:country>Republic of Singapore</mi:country>
+    <mi:tectonicPlate></mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>-1508022</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>6195580</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>148800</mi:zCoordinateInMeters>
+      <mi:latitude-North>+012044.88</mi:latitude-North>
+      <mi:longitude-East>+1034047.64</mi:longitude-East>
+      <mi:elevation-m_ellips.>79.0</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>(multiple lines)</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-8000</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>T175</equip:serialNumber>
+    <equip:firmwareVersion>3.2.32.1</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1997-06-26T03:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1999-09-02T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>AOA SNR-12 ACT</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>229</equip:serialNumber>
+    <equip:firmwareVersion>3.3.32.3</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1999-10-28T06:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2000-10-20T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>AOA SNR-12 ACT</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>224</equip:serialNumber>
+    <equip:firmwareVersion>3.3.32.3</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2001-02-22T05:20Z</equip:dateInstalled>
+    <equip:dateRemoved>2001-03-11T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>AOA SNR-12 ACT</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>225</equip:serialNumber>
+    <equip:firmwareVersion>3.3.32.3</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2001-06-18T03:40Z</equip:dateInstalled>
+    <equip:dateRemoved>2006-11-03T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200GGPRO</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>352729</equip:serialNumber>
+    <equip:firmwareVersion>5.10/3.013</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2007-06-25T06:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2009-09-03T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200GGPRO</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>352729</equip:serialNumber>
+    <equip:firmwareVersion>7.53/3.015</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2009-09-03T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2010-04-05T08:30Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200GGPRO</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>352729</equip:serialNumber>
+    <equip:firmwareVersion>7.80/3.018</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2010-04-05T08:30Z</equip:dateInstalled>
+    <equip:dateRemoved>2010-05-10T06:53Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200GGPRO</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>352729</equip:serialNumber>
+    <equip:firmwareVersion>7.80/3.019</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2010-05-10T07:04Z</equip:dateInstalled>
+    <equip:dateRemoved>2011-01-25T03:14Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200GGPRO</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>352729</equip:serialNumber>
+    <equip:firmwareVersion>8.10/3.019</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2011-01-25T06:28Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        NONE</equip:antennaType>
+    <equip:serialNumber>177</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0776</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength>100</equip:antennaCableLength>
+    <equip:dateInstalled>1997-06-26T03:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1998-05-07T08:00Z</equip:dateRemoved>
+    <equip:notes>The antenna is mounted on a pillar with a SOKIA Tribrach. The pillar (approx. 1.50m high) is located on the building of the Survey Laboratory of the School of Civil &amp; Structural Engineering of the Nanyang Technological University at Singapore</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        NONE</equip:antennaType>
+    <equip:serialNumber>222</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0776</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength>100</equip:antennaCableLength>
+    <equip:dateInstalled>1998-06-08T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2007-05-16T00:00Z</equip:dateRemoved>
+    <equip:notes>The antenna is mounted on a pillar with a SOKIA Tribrach. The pillar (approx. 1.50m high) is located on the building of the Survey Laboratory of the School of Civil &amp; Structural Engineering of the Nanyang Technological University at Singapore</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>LEIAT504GG      NONE</equip:antennaType>
+    <equip:serialNumber>200240</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0776</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength>100</equip:antennaCableLength>
+    <equip:dateInstalled>2007-05-16T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>The antenna is mounted on a pillar with a LEICA GDF 111-1 Tribrach and rotatable Tribrach adapter. The pillar (approx. 1.50m high) is located on the building of the Survey Laboratory of the School of Civil &amp; Structural Engineering of the Nanyang Technological University at Singapore</equip:notes>
+  </gnssAntenna>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL</equip:standardType>
+    <equip:inputFrequency></equip:inputFrequency>
+    <equip:effectiveDates>1997-06-26/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </frequencyStandard>
+  <contactAgency>
+    <contact:agency>Singapore Land Authority</contact:agency>
+    <contact:preferredAbbreviation>SLA</contact:preferredAbbreviation>
+    <contact:mailingAddress>55 Newton Road, Revenue House</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Tan Hua Seng</contact:name>
+      <contact:telephonePrimary>+65 64783599</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>+65 63239937</contact:fax>
+      <contact:e-mail>TAN_Hua_Seng@sla.gov.sg</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Rashid Mohd Noor</contact:name>
+      <contact:telephonePrimary>+65 64783605</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>+65 63239937</contact:fax>
+      <contact:e-mail>Rahis_md_Noor@sla.gov.sg</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>#12-01 Singapore 307987 Republic of Singapore (multiple lines)</contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>Delft University of Technology</contact:agency>
+    <contact:preferredAbbreviation>DUT</contact:preferredAbbreviation>
+    <contact:mailingAddress>Faculty of Aerospace Engineering TU Delft</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>Earth Observation and Space Systems (DEOS) Kluyverweg 1, NL-2629 HS Delft Netherlands (multiple lines)</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter>http</mi:primaryDataCenter>
+    <mi:secondaryDataCenter>http</mi:secondaryDataCenter>
+    <mi:urlForMoreInformation>http</mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>(Y or URL)</mi:siteMap>
+    <mi:siteDiagram>X</mi:siteDiagram>
+    <mi:horizonMask>X</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>X</mi:sitePictures>
+    <mi:notes>(multiple lines)</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

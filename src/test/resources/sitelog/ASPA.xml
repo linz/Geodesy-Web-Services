@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>cors-adm</mi:preparedBy>
+    <mi:datePrepared>2013-08-05</mi:datePrepared>
+    <mi:reportType>Updated</mi:reportType>
+    <mi:previousLog>aspa_20121016.log</mi:previousLog>
+    <mi:modifiedSections>2 4</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>American Samoa Power Authority</mi:siteName>
+    <mi:fourCharacterID>ASPA</mi:fourCharacterID>
+    <mi:monumentInscription>none</mi:monumentInscription>
+    <mi:iersDOMESNumber>50503S006</mi:iersDOMESNumber>
+    <mi:cdpNumber>none</mi:cdpNumber>
+    <mi:monumentDescription>CONCRETE PILLAR</mi:monumentDescription>
+    <mi:heightOfTheMonument>6</mi:heightOfTheMonument>
+    <mi:monumentFoundation>(STEEL RODS, CONCRETE BLOCK, ROOF, etc)</mi:monumentFoundation>
+    <mi:foundationDepth>2.5</mi:foundationDepth>
+    <mi:markerDescription>none</mi:markerDescription>
+    <mi:dateInstalled>2001-08-12</mi:dateInstalled>
+    <mi:geologicCharacteristic>BEDROCK</mi:geologicCharacteristic>
+    <mi:bedrockType>IGNEOUS/METAMORPHIC</mi:bedrockType>
+    <mi:bedrockCondition>FRESH</mi:bedrockCondition>
+    <mi:fractureSpacing>(1-10 cm/11-50 cm/51-200 cm/over 200 cm)</mi:fractureSpacing>
+    <mi:faultZonesNearby>NO</mi:faultZonesNearby>
+    <mi:distance-Activity>(multiple lines)</mi:distance-Activity>
+    <mi:notes>The antenna is attached to a pillar via a tribrach adaptor. The pillar is of reinforced concrete and is 6m tall and ~0.75m wide with an additional 2.5m deep base. The base was dug out with a backhoe and has ~2x2x2 frame using 1 cm thick rebar was built with rebar attached to bedrock. Concrete was poured to fill the entire frame.</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Pago Pago</mi:city>
+    <mi:state>American Samoa</mi:state>
+    <mi:country>USA</mi:country>
+    <mi:tectonicPlate>Pacific</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>-6100260.096</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>-996503.510</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>-1567977.812</mi:zCoordinateInMeters>
+      <mi:latitude-North>-141933.94</mi:latitude-North>
+      <mi:longitude-East>-1704320.76</mi:longitude-East>
+      <mi:elevation-m_ellips.>53.7</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>ARP IGS08 POSITION (EPOCH 2005.00)</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE 4700</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>0220227236</equip:serialNumber>
+    <equip:firmwareVersion>7.29</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2001-08-12T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2008-10-01</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETR5</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>4733K06635</equip:serialNumber>
+    <equip:firmwareVersion>NP 3.50 / SP 0.00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2008-10-01T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2009-06-19</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETR5</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>4733K06635</equip:serialNumber>
+    <equip:firmwareVersion>NP 3.50 / SP 0.00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2009-06-19T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2009-08-25T19:31Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>Switched on GLONASS tracking</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETR5</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>4733K06635</equip:serialNumber>
+    <equip:firmwareVersion>4.03</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2009-08-25T19:31Z</equip:dateInstalled>
+    <equip:dateRemoved>2011-01-10T18:31Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETR5</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>4733K06635</equip:serialNumber>
+    <equip:firmwareVersion>4.19</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2011-01-10T18:31Z</equip:dateInstalled>
+    <equip:dateRemoved>2012-10-16T18:46Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETR5</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>4733K06635</equip:serialNumber>
+    <equip:firmwareVersion>4.22</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2012-10-16T18:46Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>TRM33429.20+GP  UNAV</equip:antennaType>
+    <equip:serialNumber>0220238085</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>UNAV</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>2001-08-12T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2008-10-01</equip:dateRemoved>
+    <equip:notes>radome is 15-inch clear hemispherical plastic</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>TRM55971.00     NONE</equip:antennaType>
+    <equip:serialNumber>30517456</equip:serialNumber>
+    <equip:antennaReferencePoint>BAM</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>Trimble thick yellow cable</equip:antennaCableType>
+    <equip:antennaCableLength>30</equip:antennaCableLength>
+    <equip:dateInstalled>2008-10-01T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>FSF 1 AS 65 ASPA 2002</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>LOCAL CONTROL</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>(A4)</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>(A9)</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>-1.5782</equip:dX>
+      <equip:dY>-27.3256</equip:dY>
+      <equip:dZ>46.1267</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>4.3, 2.7, 1.6 mm</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>GPS CAMPAIGN</equip:surveyMethod>
+    <equip:dateMeasured>2002-08-01</equip:dateMeasured>
+    <equip:notes>Marker is an NGS disk set in rock outcrop in Tafuna Village on Tutuila Island at the American Samoa Power Authority Wastewater Division offices.  Vector is weighted average of three 8-hr measurement sessions during 2002-07-30 thru 2002-08-02.</equip:notes>
+  </surveyedLocalTies>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>SATELLITE TRIANG STATION 022 1966</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>LOCAL CONTROL</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>(A4)</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>(A9)</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>311.2465</equip:dX>
+      <equip:dY>-845.8187</equip:dY>
+      <equip:dZ>-603.4822</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>9.0, 1.2, 3.0 mm</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>GPS CAMPAIGN</equip:surveyMethod>
+    <equip:dateMeasured>2002-08-01</equip:dateMeasured>
+    <equip:notes>Benchmark disk set in top of concrete monument in the SW corner of the Weather Bureau Station grounds in Tafuna Village, about 0.2 mile SW of the Tafuna Airport Terminal Bldg.  Tie vector from same sessions as FSF 1 AS 65 ASPA.</equip:notes>
+  </surveyedLocalTies>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL</equip:standardType>
+    <equip:inputFrequency>(if external)</equip:inputFrequency>
+    <equip:effectiveDates>(CCYY-MM-DD/CCYY-MM-DD)</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </frequencyStandard>
+  <contactAgency>
+    <contact:agency>American Samoa Power Authority</contact:agency>
+    <contact:preferredAbbreviation>ASDOC</contact:preferredAbbreviation>
+    <contact:mailingAddress>Tafuna Power Plant</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Connie Shimisaki</contact:name>
+      <contact:telephonePrimary>684-699-8924</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>684-699-8070</contact:fax>
+      <contact:e-mail>connies@aspower.com</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Momotu Laie-Togia</contact:name>
+      <contact:telephonePrimary>684-699-8924</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail>momotu@aspower.com</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>Pago Pago, AS  96799 (multiple lines)</contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>NOAA-National Geodetic Survey</contact:agency>
+    <contact:preferredAbbreviation>NOAA-NGS</contact:preferredAbbreviation>
+    <contact:mailingAddress>NOAA, N/NGS6, SSMC3-9111</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>1315 East-West Hwy. Silver Spring, MD 20896, USA (multiple lines)</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter>www.ngs.noaa.gov/CORS</mi:primaryDataCenter>
+    <mi:secondaryDataCenter>www.ngs.noaa.gov/CORS</mi:secondaryDataCenter>
+    <mi:urlForMoreInformation>www.ngs.noaa.gov/CORS</mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>(Y or URL)</mi:siteMap>
+    <mi:siteDiagram>(Y or URL)</mi:siteDiagram>
+    <mi:horizonMask>(Y or URL)</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>(Y or URL)</mi:sitePictures>
+    <mi:notes>(multiple lines)</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

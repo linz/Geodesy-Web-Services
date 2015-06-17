@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Cyrille DUMAS-PILHOU</mi:preparedBy>
+    <mi:datePrepared>2004-03-22</mi:datePrepared>
+    <mi:reportType>UPDATED</mi:reportType>
+    <mi:previousLog>noum_20020806.log</mi:previousLog>
+    <mi:modifiedSections>3.6,11</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>NOUMEA</mi:siteName>
+    <mi:fourCharacterID>NOUM</mi:fourCharacterID>
+    <mi:monumentInscription>NONE</mi:monumentInscription>
+    <mi:iersDOMESNumber>92701M003</mi:iersDOMESNumber>
+    <mi:cdpNumber>(A4)</mi:cdpNumber>
+    <mi:monumentDescription>MAST</mi:monumentDescription>
+    <mi:heightOfTheMonument>2.50</mi:heightOfTheMonument>
+    <mi:monumentFoundation>CONCRETE BLOCK</mi:monumentFoundation>
+    <mi:foundationDepth>3.50</mi:foundationDepth>
+    <mi:markerDescription>(CHISELLED CROSS/DIVOT/BRASS NAIL/etc)</mi:markerDescription>
+    <mi:dateInstalled>1997-12-08</mi:dateInstalled>
+    <mi:geologicCharacteristic>BEDROCK</mi:geologicCharacteristic>
+    <mi:bedrockType>SEDIMENTARY</mi:bedrockType>
+    <mi:bedrockCondition>WEATHERED on the surface, UNALTERED below</mi:bedrockCondition>
+    <mi:fractureSpacing>10-50 cm on the first meters, >200 cm</mi:fractureSpacing>
+    <mi:faultZonesNearby>(YES/NO/Name of the zone)</mi:faultZonesNearby>
+    <mi:distance-Activity>(multiple lines)</mi:distance-Activity>
+    <mi:notes>(multiple lines) Local number 3D 33-68b Set on the western coast of New Caledonia Island, on top of a hill at the sea site, in the old accretionary prism of a former, tertiary, subduction margin. The 4" steel pilar which sustain the (set at 2.5 m above ground level) goes deep down to the unaltered bedrock to which been anchored</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>NOUMEA</mi:city>
+    <mi:state>New Caledonia</mi:state>
+    <mi:country>FRANCE</mi:country>
+    <mi:tectonicPlate>Indo-Australian</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>-5739971.533</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>1387563.675</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>-2402123.573</mi:zCoordinateInMeters>
+      <mi:latitude-North>-221611.64</mi:latitude-North>
+      <mi:longitude-East>+1662436.72</mi:longitude-East>
+      <mi:elevation-m_ellips.>83.079 (HAE) and 20.835 (MSL)</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>ITRF97 coordinates. Epoch 1997.0 Located at the communication centre of Caledonia France Cables et Radio site at Nouville</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE 4000SSI</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>3618A15567</equip:serialNumber>
+    <equip:firmwareVersion>7.29</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>1997-12-08T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2000-05-22T23:59Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE 4700</equip:receiverType>
+    <equip:satelliteSystem>(GPS+GLO+GAL+CMP+QZSS+SBAS)</equip:satelliteSystem>
+    <equip:serialNumber>0220134837</equip:serialNumber>
+    <equip:firmwareVersion>Nav 1.20   Sig 1.42</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>2000-05-23T09:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2000-07-12T06:05Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>Temporary change beetween 4000ssi and</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE 4000SSI</equip:receiverType>
+    <equip:satelliteSystem>(GPS+GLO+GAL+CMP+QZSS+SBAS)</equip:satelliteSystem>
+    <equip:serialNumber>3618A15567</equip:serialNumber>
+    <equip:firmwareVersion>7.19</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>2000-07-12T06:25Z</equip:dateInstalled>
+    <equip:dateRemoved>2001-11-23T03:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>TRIMBLE support put firmware 7.19  new problem</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE 5700</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>0220264714</equip:serialNumber>
+    <equip:firmwareVersion>1.04</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>10</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2001-11-23T03:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>L1/L2 receiver with Maxwell-4 ASIC</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE 5700</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>0220264714</equip:serialNumber>
+    <equip:firmwareVersion>1.20</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>10</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2002-08-06T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>L1/L2 receiver with Maxwell-4 ASIC</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE 5700</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>0220264714</equip:serialNumber>
+    <equip:firmwareVersion>2.01</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2004-03-16T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>L1/L2 receiver with Maxwell-4 ASIC</equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>TRM29659.00     NONE</equip:antennaType>
+    <equip:serialNumber>0220094218</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>1997-12-08T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2001-11-23T03:00Z</equip:dateRemoved>
+    <equip:notes>The antenna is fixed at the centre of stainless steel plate at the top of 4" steel pillar</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>TRM41249.00     NONE</equip:antennaType>
+    <equip:serialNumber>11889097</equip:serialNumber>
+    <equip:antennaReferencePoint>BAM</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>(deg; + is clockwise/east)</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>Trimble</equip:antennaCableType>
+    <equip:antennaCableLength>60</equip:antennaCableLength>
+    <equip:dateInstalled>2001-11-23T03:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>Zephyr 4 -point feed antenna - Stealth Ground Plane Exactly the same position (axe and height) that the precedent antenna (TRM29659.00)</equip:notes>
+  </gnssAntenna>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>DORIS Mark RBGM  ( Local number</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>(SLR/VLBI/LOCAL CONTROL/FOOTPRINT/etc)</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber></equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>92701M002</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>-17.558</equip:dX>
+      <equip:dY>-16.416</equip:dY>
+      <equip:dZ>40.214</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>3</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>(GPS</equip:surveyMethod>
+    <equip:dateMeasured>1997-07-28</equip:dateMeasured>
+    <equip:notes>(multiple lines)</equip:notes>
+  </surveyedLocalTies>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>DORIS  ARP (Ant. Reference point)</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>(SLR/VLBI/LOCAL CONTROL/FOOTPRINT/etc)</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber></equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>92701S001</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>-22.223</equip:dX>
+      <equip:dY></equip:dY>
+      <equip:dZ>38.253</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>3</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>(GPS</equip:surveyMethod>
+    <equip:dateMeasured>1997-07-28</equip:dateMeasured>
+    <equip:notes>(multiple lines)</equip:notes>
+  </surveyedLocalTies>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>PRARE ARP  (Ant. Reference point)</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>(SLR/VLBI/LOCAL CONTROL/FOOTPRINT/etc)</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber></equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber></equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>7.823</equip:dX>
+      <equip:dY>7.551</equip:dY>
+      <equip:dZ>-9.455</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>3</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>(GPS</equip:surveyMethod>
+    <equip:dateMeasured>1997-07-28</equip:dateMeasured>
+    <equip:notes>(multiple lines)</equip:notes>
+  </surveyedLocalTies>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>DORIS2 ARP (Ant. Reference point)</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>DORIS</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber></equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber></equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>3.286</equip:dX>
+      <equip:dY>14.333</equip:dY>
+      <equip:dZ>1.370</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>2</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>GPS CAMPAIGN + LEVELLING + TRILATERATION</equip:surveyMethod>
+    <equip:dateMeasured>2001-10-30</equip:dateMeasured>
+    <equip:notes>New DORIS station (december 2001) DITTT file Old one (õ 5.2) is decontaminated</equip:notes>
+  </surveyedLocalTies>
+  <collocationInformation>
+    <equip:instrumentType>DORIS</equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates>1987-11-20/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </collocationInformation>
+  <collocationInformation>
+    <equip:instrumentType>PRARE</equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates>1997-08-01/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </collocationInformation>
+  <humiditySensor>
+    <equip:type></equip:type>
+    <equip:manufacturer></equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>CCYY-MM-DD/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval></equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>(% rel h)</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </humiditySensor>
+  <pressureSensor>
+    <equip:type></equip:type>
+    <equip:manufacturer></equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>CCYY-MM-DD/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval></equip:dataSamplingInterval>
+    <equip:accuracy-hPa>(mbar)</equip:accuracy-hPa>
+    <equip:notes>(multiple lines)</equip:notes>
+  </pressureSensor>
+  <temperatureSensor>
+    <equip:type></equip:type>
+    <equip:manufacturer></equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>CCYY-MM-DD/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval></equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>(deg C)</equip:accuracy-degreesCelcius>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </temperatureSensor>
+  <waterVaporSensor>
+    <equip:type></equip:type>
+    <equip:manufacturer></equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>CCYY-MM-DD/CCYY-MM-DD</equip:effectiveDates>
+    <equip:distanceToAntenna></equip:distanceToAntenna>
+    <equip:notes>(multiple lines)</equip:notes>
+  </waterVaporSensor>
+  <contactAgency>
+    <contact:agency>DEPARTMENT of LAND (DITTT/ST/BGN)</contact:agency>
+    <contact:preferredAbbreviation>DITTT</contact:preferredAbbreviation>
+    <contact:mailingAddress>1 bis rue Edouard UNGER</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Cyrille DUMAS-PILHOU (Geodetic depart.)</contact:name>
+      <contact:telephonePrimary>687 - 28 03 27</contact:telephonePrimary>
+      <contact:telephoneSecondary>687 - 28 03 22</contact:telephoneSecondary>
+      <contact:fax>687 - 24 90 49</contact:fax>
+      <contact:e-mail>cyrille.dumas-pilhou@gouv.nc</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Pierre LEBELLEGARD (IRD)</contact:name>
+      <contact:telephonePrimary>687 - 26 07 70</contact:telephonePrimary>
+      <contact:telephoneSecondary>687 - 26 10 00</contact:telephoneSecondary>
+      <contact:fax>687 - 26 43 26</contact:fax>
+      <contact:e-mail>lebelleg@noumea.ird.nc</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>1er vallee du Tir BP A2 - 98848 NOUMEA Cedex NEW CALEDONIA (multiple lines)</contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>DEPARTMENT of LAND (DITTT/ST/BGN)</contact:agency>
+    <contact:preferredAbbreviation>DITTT</contact:preferredAbbreviation>
+    <contact:mailingAddress>(multiple lines)</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>(multiple lines)</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter></mi:primaryDataCenter>
+    <mi:secondaryDataCenter></mi:secondaryDataCenter>
+    <mi:urlForMoreInformation></mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>(Y or URL)</mi:siteMap>
+    <mi:siteDiagram>(Y)</mi:siteDiagram>
+    <mi:horizonMask>(Y or URL)</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>(Y)</mi:sitePictures>
+    <mi:notes>(multiple lines)</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>David Maggert</mi:preparedBy>
+    <mi:datePrepared>2013-01-31</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>artu_20000214.log</mi:previousLog>
+    <mi:modifiedSections>10.1</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>Arti</mi:siteName>
+    <mi:fourCharacterID>ARTU</mi:fourCharacterID>
+    <mi:monumentInscription>(none)</mi:monumentInscription>
+    <mi:iersDOMESNumber>12362M001</mi:iersDOMESNumber>
+    <mi:cdpNumber>(A4)</mi:cdpNumber>
+    <mi:monumentDescription>(PILLAR/BRASS PLATE/STEEL MAST/etc)</mi:monumentDescription>
+    <mi:heightOfTheMonument></mi:heightOfTheMonument>
+    <mi:monumentFoundation>(STEEL RODS, CONCRETE BLOCK, ROOF, etc)</mi:monumentFoundation>
+    <mi:foundationDepth></mi:foundationDepth>
+    <mi:markerDescription>(CHISELLED CROSS/DIVOT/BRASS NAIL/etc)</mi:markerDescription>
+    <mi:dateInstalled>1999-08-06</mi:dateInstalled>
+    <mi:geologicCharacteristic>Pre-Uralian foredeep</mi:geologicCharacteristic>
+    <mi:bedrockType>Accretionary complex</mi:bedrockType>
+    <mi:bedrockCondition>Jointed</mi:bedrockCondition>
+    <mi:fractureSpacing>Over 200 cm</mi:fractureSpacing>
+    <mi:faultZonesNearby>(YES/NO/Name of the zone)</mi:faultZonesNearby>
+    <mi:distance-Activity>(multiple lines)</mi:distance-Activity>
+    <mi:notes>Arti is located about 150 km to the west of the Main Uralian fault dividing Europe and Asia.  This station is part of NEDA Deformation Array created and run by RUSEG by GPS Technology. NEDA operational control is provided by RDAAC Acquisition/Analysis Center (Moscow). RDAAC is also IGS Operational Center for NEDA. RUSEG is a collaborative project of Lamont- Doherty Earth Observatory and Russian Academy of Sciences supported through the IRIS Consortium and JPL.  The GPS reference mark consists of 5/8-11" diameter, vertical rod of the stainless steel. The rod is glued into the flat roof of Geophysical Observatory Arti. The Observatory belongs to Institute of Geophysics, the Urals Division of Russian Academy of Sci. The roof is made of the reinforced concrete. The 1-floor building is made of bricks. Vertical datum of the rod. The antenna is attached to the rod with UNAVCO compact leveling mount. The antenna and the choke-ring assembly are protected with the JPL hemispherical radome.</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Arti</mi:city>
+    <mi:state>Ekaterinburg region</mi:state>
+    <mi:country>Russian Federation</mi:country>
+    <mi:tectonicPlate>Eurasia</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>1843956.968</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>3016202.970</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>5291261.660</mi:zCoordinateInMeters>
+      <mi:latitude-North>+562547.36</mi:latitude-North>
+      <mi:longitude-East>+0583337.63</mi:longitude-East>
+      <mi:elevation-m_ellips.>247.511</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>GAMIT Solution ITRF94. Epoch 1996.5845</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>LP03316</equip:serialNumber>
+    <equip:firmwareVersion>NAV CC00 CH 1D02</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>1999-08-05T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>Model 700845-10F (Z-12 CGRS)</equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>ASH700936D_M    DOME</equip:antennaType>
+    <equip:serialNumber>CR13077</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0796</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>DOME</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>1999-08-06T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>Antenna Diagram below</equip:notes>
+  </gnssAntenna>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>ARTB</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>(SLR/VLBI/LOCAL CONTROL/FOOTPRINT/etc)</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber></equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber></equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>-72.608</equip:dX>
+      <equip:dY>-4.469</equip:dY>
+      <equip:dZ>26.138</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>1 mm</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>(GPS CAMPAIGN/TRILATERATION/TRIANGULATION/etc)</equip:surveyMethod>
+    <equip:dateMeasured>1999-10-01</equip:dateMeasured>
+    <equip:notes>GAMIT solution of simultaneous GPS observations (baseline mode in sestbl.).</equip:notes>
+  </surveyedLocalTies>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL</equip:standardType>
+    <equip:inputFrequency></equip:inputFrequency>
+    <equip:effectiveDates>(CCYY-MM-DD/CCYY-MM-DD)</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </frequencyStandard>
+  <humiditySensor>
+    <equip:type></equip:type>
+    <equip:manufacturer></equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>CCYY-MM-DD/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval></equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>(% rel h)</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </humiditySensor>
+  <pressureSensor>
+    <equip:type></equip:type>
+    <equip:manufacturer></equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>CCYY-MM-DD/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval></equip:dataSamplingInterval>
+    <equip:accuracy-hPa>(mbar)</equip:accuracy-hPa>
+    <equip:notes>(multiple lines)</equip:notes>
+  </pressureSensor>
+  <temperatureSensor>
+    <equip:type></equip:type>
+    <equip:manufacturer></equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>CCYY-MM-DD/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval></equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>(deg C)</equip:accuracy-degreesCelcius>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </temperatureSensor>
+  <waterVaporSensor>
+    <equip:type></equip:type>
+    <equip:manufacturer></equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>CCYY-MM-DD/CCYY-MM-DD</equip:effectiveDates>
+    <equip:distanceToAntenna></equip:distanceToAntenna>
+    <equip:notes>(multiple lines)</equip:notes>
+  </waterVaporSensor>
+  <localEpisodicEvents>
+    <li:date>2012-02-07/2012-02-07</li:date>
+    <li:event>Transition from .soc to .ash data types.</li:event>
+  </localEpisodicEvents>
+  <contactAgency>
+    <contact:agency>Geophysical Observatory Arti</contact:agency>
+    <contact:preferredAbbreviation></contact:preferredAbbreviation>
+    <contact:mailingAddress>2A Geofizicheskaya ul.</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Oleg Kusonskiy</contact:name>
+      <contact:telephonePrimary>+7 343-952-1638 work</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail>zavlab@aru.gssc.rssi.ru</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Mikhail Kogan</contact:name>
+      <contact:telephonePrimary>+1 914 365-8882</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>+1 914 365-8150</contact:fax>
+      <contact:e-mail>kogan@ldeo.columbia.edu</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>623350 Arti Ekaterinburg Region, RUSSIA (multiple lines)</contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>RDAAC/JPL/IRIS</contact:agency>
+    <contact:preferredAbbreviation></contact:preferredAbbreviation>
+    <contact:mailingAddress>6-3 Universitetskiy Prospect</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>117333 Moscow, RUSSIA (multiple lines)</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter>http</mi:primaryDataCenter>
+    <mi:secondaryDataCenter>http</mi:secondaryDataCenter>
+    <mi:urlForMoreInformation>http</mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>(Y or URL)</mi:siteMap>
+    <mi:siteDiagram>(Y)</mi:siteDiagram>
+    <mi:horizonMask>(Y)</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>(Y)</mi:sitePictures>
+    <mi:notes>Hardcopy Information available from Responsible Agency</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

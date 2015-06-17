@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>David Maggert</mi:preparedBy>
+    <mi:datePrepared>2013-01-31</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>bogt_20100826.log</mi:previousLog>
+    <mi:modifiedSections>10.2</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>Bogota, Colombia</mi:siteName>
+    <mi:fourCharacterID>BOGT</mi:fourCharacterID>
+    <mi:monumentInscription>4022-S</mi:monumentInscription>
+    <mi:iersDOMESNumber>41901M001</mi:iersDOMESNumber>
+    <mi:cdpNumber>None</mi:cdpNumber>
+    <mi:monumentDescription>STEEL PLATE</mi:monumentDescription>
+    <mi:heightOfTheMonument>0.1</mi:heightOfTheMonument>
+    <mi:monumentFoundation>CONCRETE BLOCK</mi:monumentFoundation>
+    <mi:foundationDepth></mi:foundationDepth>
+    <mi:markerDescription>DIVOT</mi:markerDescription>
+    <mi:dateInstalled>1994-11-04</mi:dateInstalled>
+    <mi:geologicCharacteristic>(BEDROCK/CLAY/CONGLOMERATE/GRAVEL/SAND/etc)</mi:geologicCharacteristic>
+    <mi:bedrockType>(IGNEOUS/METAMORPHIC/SEDIMENTARY)</mi:bedrockType>
+    <mi:bedrockCondition>(FRESH/JOINTED/WEATHERED)</mi:bedrockCondition>
+    <mi:fractureSpacing>(1-10 cm/10-50 cm/50-200 cm/over 200 cm)</mi:fractureSpacing>
+    <mi:faultZonesNearby>(YES/NO/Name of the zone)</mi:faultZonesNearby>
+    <mi:distance-Activity>(multiple lines)</mi:distance-Activity>
+    <mi:notes>GPS station is located at the INGEOMINAS complex- Bogota, Colombia.</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Bogota</mi:city>
+    <mi:state></mi:state>
+    <mi:country>Colombia</mi:country>
+    <mi:tectonicPlate>South American plate</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>1744399.0397</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>-6116037.5577</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>512731.7532</mi:zCoordinateInMeters>
+      <mi:latitude-North>+043824.2631</mi:latitude-North>
+      <mi:longitude-East>-0740451.3824</mi:longitude-East>
+      <mi:elevation-m_ellips.>2576.7782, WGS84</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>(multiple lines)</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-8000</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>T251</equip:serialNumber>
+    <equip:firmwareVersion>2.8.32.1</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>4</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1994-11-04T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1996-05-01T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-8000</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>T348</equip:serialNumber>
+    <equip:firmwareVersion>3.2</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>4</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1996-05-01T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1997-08-01T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-8000</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>T208</equip:serialNumber>
+    <equip:firmwareVersion>3.2</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>4</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1997-08-01T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1999-08-18T20:20Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-8000</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>T208</equip:serialNumber>
+    <equip:firmwareVersion>3.2.32.8</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>4</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1999-08-18T20:20Z</equip:dateInstalled>
+    <equip:dateRemoved>2000-09-28T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>LP019990513</equip:serialNumber>
+    <equip:firmwareVersion>CC00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>4</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2000-09-28T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2005-07-06T17:59Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH UZ-12</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>ZR220014901</equip:serialNumber>
+    <equip:firmwareVersion>CJ12</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>4</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2005-07-12T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2007-12-13T20:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH UZ-12</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>UC120031609</equip:serialNumber>
+    <equip:firmwareVersion>CQ00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>4</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2007-12-13T20:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2010-08-10T16:46Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>Using port B on receiver</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETRS</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>4730135923</equip:serialNumber>
+    <equip:firmwareVersion>1.2-0 26 Apr 2007</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2010-08-10T16:46Z</equip:dateInstalled>
+    <equip:dateRemoved>2010-08-24T20:50Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH UZ-12</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>UC120031609</equip:serialNumber>
+    <equip:firmwareVersion>CQ00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>4</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2010-08-24T20:50Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>Using port B on receiver</equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        NONE</equip:antennaType>
+    <equip:serialNumber>296</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0610</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>1994-11-04T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2003-06-23T15:00Z</equip:dateRemoved>
+    <equip:notes>see section 10.1 re damaged antenna</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        NONE</equip:antennaType>
+    <equip:serialNumber>UNMARKED</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0610</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>2003-06-23T16:20Z</equip:dateInstalled>
+    <equip:dateRemoved>2005-07-06T17:59Z</equip:dateRemoved>
+    <equip:notes>S/N worn off of available on-site antenna</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>ASH701945G_M    NONE</equip:antennaType>
+    <equip:serialNumber>CR5200404032</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0610</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>2005-07-12T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2007-08-02T20:00Z</equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>ASH701945G_M    NONE</equip:antennaType>
+    <equip:serialNumber>CR5200404024</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0610</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>2007-08-16T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2007-12-13T20:00Z</equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>ASH701945E_M    NONE</equip:antennaType>
+    <equip:serialNumber>CR620024311</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0610</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength>30</equip:antennaCableLength>
+    <equip:dateInstalled>2007-12-13T20:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2008-06-06T12:59Z</equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>ASH701945G_M    NONE</equip:antennaType>
+    <equip:serialNumber>CR5200404024</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0610</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength>30</equip:antennaCableLength>
+    <equip:dateInstalled>2008-06-07T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2009-09-09T14:59Z</equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>ASH701945E_M    NONE</equip:antennaType>
+    <equip:serialNumber>CR620024311</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0610</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength>30</equip:antennaCableLength>
+    <equip:dateInstalled>2009-09-09T15:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>Other radio's were installed plus new null adapter Yagi antennas were installed at master and slave Power level on radio's set to 4</equip:notes>
+  </gnssAntenna>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL</equip:standardType>
+    <equip:inputFrequency>(if external)</equip:inputFrequency>
+    <equip:effectiveDates>1994-11-04/2000-09-27</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>EXTERNAL RUBIDIUM</equip:standardType>
+    <equip:inputFrequency>5 MHz</equip:inputFrequency>
+    <equip:effectiveDates>2000-09-28/2002-02-14</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL</equip:standardType>
+    <equip:inputFrequency>(if external)</equip:inputFrequency>
+    <equip:effectiveDates>2002-02-14/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </frequencyStandard>
+  <humiditySensor>
+    <equip:type></equip:type>
+    <equip:manufacturer></equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>CCYY-MM-DD/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval></equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>(% rel h)</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </humiditySensor>
+  <pressureSensor>
+    <equip:type></equip:type>
+    <equip:manufacturer></equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>CCYY-MM-DD/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval></equip:dataSamplingInterval>
+    <equip:accuracy-hPa>(mbar)</equip:accuracy-hPa>
+    <equip:notes>(multiple lines)</equip:notes>
+  </pressureSensor>
+  <temperatureSensor>
+    <equip:type></equip:type>
+    <equip:manufacturer></equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>CCYY-MM-DD/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval></equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>(deg C)</equip:accuracy-degreesCelcius>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </temperatureSensor>
+  <waterVaporSensor>
+    <equip:type></equip:type>
+    <equip:manufacturer></equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>CCYY-MM-DD/CCYY-MM-DD</equip:effectiveDates>
+    <equip:distanceToAntenna></equip:distanceToAntenna>
+    <equip:notes>(multiple lines)</equip:notes>
+  </waterVaporSensor>
+  <localEpisodicEvents>
+    <li:date>2003-04-15/2003-06-23</li:date>
+    <li:event>Increase in residuals reported,</li:event>
+  </localEpisodicEvents>
+  <localEpisodicEvents>
+    <li:date>2012-02-01/2012-02-01</li:date>
+    <li:event>Transition from .soc to .ash data types.</li:event>
+  </localEpisodicEvents>
+  <contactAgency>
+    <contact:agency>Jet Propulsion Laboratory</contact:agency>
+    <contact:preferredAbbreviation>JPL</contact:preferredAbbreviation>
+    <contact:mailingAddress>4800 Oak Grove Drive</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>David A. Stowers</contact:name>
+      <contact:telephonePrimary>818-354-7055</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>818-393-4965</contact:fax>
+      <contact:e-mail>dstowers@jpl.nasa.gov</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>UNAVCO Network Engineer</contact:name>
+      <contact:telephonePrimary>303-381-7500</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>303-381-7451</contact:fax>
+      <contact:e-mail>ggn-ops@ls.unavco.org</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>Pasadena, CA  91109  USA </contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>Jet Propulsion Laboratory</contact:agency>
+    <contact:preferredAbbreviation>JPL</contact:preferredAbbreviation>
+    <contact:mailingAddress>(multiple lines)</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>(multiple lines)</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter></mi:primaryDataCenter>
+    <mi:secondaryDataCenter></mi:secondaryDataCenter>
+    <mi:urlForMoreInformation></mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>Y</mi:siteMap>
+    <mi:siteDiagram>Y</mi:siteDiagram>
+    <mi:horizonMask>N</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>Y</mi:sitePictures>
+    <mi:notes>(multiple lines)</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

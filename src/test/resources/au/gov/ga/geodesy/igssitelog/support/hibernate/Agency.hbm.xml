@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class
+    name="au.gov.ga.geodesy.igssitelog.domain.model.Agency"
+    table="SITELOG_AGENCY">
+    <id
+      name="id"
+      type="java.lang.Integer">
+      <column
+        name="AGENCYNO"
+        precision="9"
+        scale="0" />
+	  
+	  <generator class="sequence">
+		  <param name="sequence">SEQ_AGENCY</param>
+	  </generator>
+    </id>
+
+    <property name="name" column="AGENCY"/>
+    <property name="preferredAbbreviation" column="PREFERRED_ABBREV"/>
+    <property name="mailingAddress" column="MAILING_ADDRESS"/>
+    <property name="notes" column="NOTES" length="1024"/>
+
+    <many-to-one name="primaryContact" class="au.gov.ga.geodesy.igssitelog.domain.model.Contact" column="PRIMARY_CONTACTNO" unique="true" cascade="all-delete-orphan"/>
+    <many-to-one name="secondaryContact" class="au.gov.ga.geodesy.igssitelog.domain.model.Contact" column="SECONDARY_CONTACTNO" unique="true" cascade="all-delete-orphan"/>
+
+  </class>
+</hibernate-mapping>

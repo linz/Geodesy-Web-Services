@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Nick Dando</mi:preparedBy>
+    <mi:datePrepared>2012-08-02</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>cedu_20120516.log</mi:previousLog>
+    <mi:modifiedSections>3.10, 3.11</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>Ceduna</mi:siteName>
+    <mi:fourCharacterID>CEDU</mi:fourCharacterID>
+    <mi:monumentInscription>AU019</mi:monumentInscription>
+    <mi:iersDOMESNumber>50138M001</mi:iersDOMESNumber>
+    <mi:cdpNumber>n/a</mi:cdpNumber>
+    <mi:monumentDescription>PILLAR</mi:monumentDescription>
+    <mi:heightOfTheMonument>0.0</mi:heightOfTheMonument>
+    <mi:monumentFoundation>CONCRETE BLOCK</mi:monumentFoundation>
+    <mi:foundationDepth>2.5</mi:foundationDepth>
+    <mi:markerDescription>STAINLESS STEEL THREADED SPIGOT</mi:markerDescription>
+    <mi:dateInstalled>1993-08-01T00</mi:dateInstalled>
+    <mi:geologicCharacteristic>BEDROCK</mi:geologicCharacteristic>
+    <mi:bedrockType>IGNEOUS</mi:bedrockType>
+    <mi:bedrockCondition>FRESH</mi:bedrockCondition>
+    <mi:fractureSpacing></mi:fractureSpacing>
+    <mi:faultZonesNearby></mi:faultZonesNearby>
+    <mi:distance-Activity></mi:distance-Activity>
+    <mi:notes>0.6 metre diameter concrete pillar (flush with ground surface) with stainless steel plate and centred 5/8" threaded spigot. Bedrock under alluvium or soil.</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Ceduna</mi:city>
+    <mi:state>South Australia</mi:state>
+    <mi:country>Australia</mi:country>
+    <mi:tectonicPlate>Australian</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>-3753472.1430</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>3912741.0403</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>-3347961.0368</mi:zCoordinateInMeters>
+      <mi:latitude-North>-315200.02</mi:latitude-North>
+      <mi:longitude-East>+1334835.38</mi:longitude-East>
+      <mi:elevation-m_ellips.>144.8155</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes></mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>AOA ICS-4000Z</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>C129</equip:serialNumber>
+    <equip:firmwareVersion>3.2.33.1</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1994-05-15T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1997-09-10T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>AOA ICS-4000Z</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>C122</equip:serialNumber>
+    <equip:firmwareVersion>3.2.33.1</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1997-09-10T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1998-08-19T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>AOA ICS-4000Z</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>C133</equip:serialNumber>
+    <equip:firmwareVersion>3.2.33.1</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1998-08-19T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1999-08-04T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>AOA ICS-4000Z</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>C133</equip:serialNumber>
+    <equip:firmwareVersion>3.2.32.9</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1999-08-04T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2000-05-11T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>AOA ICS-4000Z ACT</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>C129U</equip:serialNumber>
+    <equip:firmwareVersion>3.3.32.3</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2000-05-11T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2005-06-02T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH UZ-12</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>ZR520013901</equip:serialNumber>
+    <equip:firmwareVersion>ZC00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2005-06-02T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2006-02-26T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH UZ-12</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>UC2200524003</equip:serialNumber>
+    <equip:firmwareVersion>CQ00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2006-02-27T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2006-07-15T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH UZ-12</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>UC2200302004</equip:serialNumber>
+    <equip:firmwareVersion>CQ00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2006-07-15T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2007-04-25T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH UZ-12</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>UC2200302006</equip:serialNumber>
+    <equip:firmwareVersion>CN00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2007-04-25T05:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2011-05-18T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETR8</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>4906K34411</equip:serialNumber>
+    <equip:firmwareVersion>4.41</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2011-05-18T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2012-08-02T00:15Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETR8</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>4906K34411</equip:serialNumber>
+    <equip:firmwareVersion>4.48</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2012-08-02T00:15Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        AUST</equip:antennaType>
+    <equip:serialNumber>308</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0060</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>AUST</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>LDF4-50hm</equip:antennaCableType>
+    <equip:antennaCableLength>80</equip:antennaCableLength>
+    <equip:dateInstalled>1994-05-15T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1997-09-10T00:00Z</equip:dateRemoved>
+    <equip:notes></equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        AUST</equip:antennaType>
+    <equip:serialNumber>194</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0060</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>AUST</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>LDF4-50hm</equip:antennaCableType>
+    <equip:antennaCableLength>80</equip:antennaCableLength>
+    <equip:dateInstalled>1997-09-10T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2006-06-27T00:00Z</equip:dateRemoved>
+    <equip:notes></equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>LEIAT504        AUST</equip:antennaType>
+    <equip:serialNumber>103320</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0060</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>AUST</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>LDF4-50hm</equip:antennaCableType>
+    <equip:antennaCableLength>80</equip:antennaCableLength>
+    <equip:dateInstalled>2006-06-27T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2006-07-15T05:00Z</equip:dateRemoved>
+    <equip:notes></equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        AUST</equip:antennaType>
+    <equip:serialNumber>194</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0060</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>AUST</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>LDF4-50hm</equip:antennaCableType>
+    <equip:antennaCableLength>80</equip:antennaCableLength>
+    <equip:dateInstalled>2006-07-15T05:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes></equip:notes>
+  </gnssAntenna>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>RM1</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>LOCAL CONTROL</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>N/A</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber></equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>-15.628</equip:dX>
+      <equip:dY>5.394</equip:dY>
+      <equip:dZ>25.975</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>+-1mm</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>TRILATERATION/TRIANGULATION</equip:surveyMethod>
+    <equip:dateMeasured>(CCYY-MM-DDThh:mmZ)</equip:dateMeasured>
+    <equip:notes>(multiple lines)</equip:notes>
+  </surveyedLocalTies>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>RM2</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>LOCAL CONTROL</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>N/A</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber></equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>-11.130</equip:dX>
+      <equip:dY>-20.379</equip:dY>
+      <equip:dZ>-10.761</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>+-1mm</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>TRILATERATION/TRIANGULATION</equip:surveyMethod>
+    <equip:dateMeasured>(CCYY-MM-DDThh:mmZ)</equip:dateMeasured>
+    <equip:notes>(multiple lines)</equip:notes>
+  </surveyedLocalTies>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>RM3</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>LOCAL CONTROL</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>N/A</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber></equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>21.070</equip:dX>
+      <equip:dY>13.806</equip:dY>
+      <equip:dZ>-6.962</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>+-1mm</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>TRILATERATION/TRIANGULATION</equip:surveyMethod>
+    <equip:dateMeasured>(CCYY-MM-DDThh:mmZ)</equip:dateMeasured>
+    <equip:notes>(multiple lines)</equip:notes>
+  </surveyedLocalTies>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>RM1</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>LOCAL</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>N/A</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber></equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>-15.6294</equip:dX>
+      <equip:dY>5.3963</equip:dY>
+      <equip:dZ>25.9759</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>+-1mm</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>TRILATERATION/TRIANGULATION</equip:surveyMethod>
+    <equip:dateMeasured>2007-04-24T00:00Z</equip:dateMeasured>
+    <equip:notes>(multiple lines)</equip:notes>
+  </surveyedLocalTies>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>RM2</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>LOCAL</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>N/A</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber></equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>-11.1307</equip:dX>
+      <equip:dY>-20.3782</equip:dY>
+      <equip:dZ>-10.7625</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>+-1mm</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>TRILATERATION/TRIANGULATION</equip:surveyMethod>
+    <equip:dateMeasured>2007-04-24T00:00Z</equip:dateMeasured>
+    <equip:notes>(multiple lines)</equip:notes>
+  </surveyedLocalTies>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>RM3</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>LOCAL</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>N/A</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber></equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>21.0670</equip:dX>
+      <equip:dY>13.8048</equip:dY>
+      <equip:dZ>-6.9628</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>+-1mm</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>TRILATERATION/TRIANGULATION</equip:surveyMethod>
+    <equip:dateMeasured>2007-04-24T00:00Z</equip:dateMeasured>
+    <equip:notes>(multiple lines)</equip:notes>
+  </surveyedLocalTies>
+  <frequencyStandard>
+    <equip:standardType>QUARTZ/INTERNAL</equip:standardType>
+    <equip:inputFrequency></equip:inputFrequency>
+    <equip:effectiveDates>1994-05-15/2005-06-01</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>H-MASER</equip:standardType>
+    <equip:inputFrequency>10Mhz</equip:inputFrequency>
+    <equip:effectiveDates>2005-06-02/2005-09-01</equip:effectiveDates>
+    <equip:notes>Make: Vremya-ch (Russian) Model: VCH-1005</equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>RUBIDIUM/EXTERNAL</equip:standardType>
+    <equip:inputFrequency>10Mhz</equip:inputFrequency>
+    <equip:effectiveDates>2005-09-02/2006-02-26)</equip:effectiveDates>
+    <equip:notes>HP Model 5065A</equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>QUARTZ/INTERNAL</equip:standardType>
+    <equip:inputFrequency></equip:inputFrequency>
+    <equip:effectiveDates>2006-02-27/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>H-MASER</equip:standardType>
+    <equip:inputFrequency>10Mhz </equip:inputFrequency>
+    <equip:effectiveDates>2007-04-27/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>Make: Vremya-ch (Russian) Model: VCH-1005</equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>QUARTZ/INTERNAL</equip:standardType>
+    <equip:inputFrequency></equip:inputFrequency>
+    <equip:effectiveDates>2012-05-16/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>Switched to Trimble NetR8 internal oscillator 2012-05-16T05:40Z External H-MASER freq possible unstable since  2012-05-03T</equip:notes>
+  </frequencyStandard>
+  <humiditySensor>
+    <equip:type>PAROSCIENTIFIC MET3A</equip:type>
+    <equip:manufacturer>PAROSCIENTIFIC</equip:manufacturer>
+    <equip:serialNumber>101677</equip:serialNumber>
+    <equip:heightDiffToAntenna>3.223</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2007-04-25/2011-05-18</equip:effectiveDates>
+    <equip:dataSamplingInterval>30</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>2% rel h</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>FAN</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </humiditySensor>
+  <humiditySensor>
+    <equip:type>PAROSCIENTIFIC MET4</equip:type>
+    <equip:manufacturer>PAROSCIENTIFIC</equip:manufacturer>
+    <equip:serialNumber>DQ107263</equip:serialNumber>
+    <equip:heightDiffToAntenna>3.223</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2011-05-18/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>30</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>2% rel h</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>UNASPIRATED</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </humiditySensor>
+  <pressureSensor>
+    <equip:type>PAROSCIENTIFIC MET3A</equip:type>
+    <equip:manufacturer>PAROSCIENTIFIC</equip:manufacturer>
+    <equip:serialNumber>101677</equip:serialNumber>
+    <equip:heightDiffToAntenna>3.223</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2007-04-25/2011-05-18</equip:effectiveDates>
+    <equip:dataSamplingInterval>30</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>0.1 mbar</equip:accuracy-hPa>
+    <equip:notes>(multiple lines)</equip:notes>
+  </pressureSensor>
+  <pressureSensor>
+    <equip:type>PAROSCIENTIFIC MET4</equip:type>
+    <equip:manufacturer>PAROSCIENTIFIC</equip:manufacturer>
+    <equip:serialNumber>DQ107263</equip:serialNumber>
+    <equip:heightDiffToAntenna>3.223</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2011-05-18/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>30</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>0.08 mbar</equip:accuracy-hPa>
+    <equip:notes>(multiple lines)</equip:notes>
+  </pressureSensor>
+  <temperatureSensor>
+    <equip:type>PAROSCIENTIFIC MET3A</equip:type>
+    <equip:manufacturer>PAROSCIENTIFIC</equip:manufacturer>
+    <equip:serialNumber>101677</equip:serialNumber>
+    <equip:heightDiffToAntenna>3.223</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2007-04-25/2011-05-18</equip:effectiveDates>
+    <equip:dataSamplingInterval>30</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>0.5 deg C</equip:accuracy-degreesCelcius>
+    <equip:aspiration>FAN</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </temperatureSensor>
+  <temperatureSensor>
+    <equip:type>PAROSCIENTIFIC MET4</equip:type>
+    <equip:manufacturer>PAROSCIENTIFIC</equip:manufacturer>
+    <equip:serialNumber>DQ107263</equip:serialNumber>
+    <equip:heightDiffToAntenna>3.223</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2011-05-18/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>30</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>0.5 deg C</equip:accuracy-degreesCelcius>
+    <equip:aspiration>UNASPIRATED</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </temperatureSensor>
+  <waterVaporSensor>
+    <equip:type></equip:type>
+    <equip:manufacturer></equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>CCYY-MM-DD/CCYY-MM-DD</equip:effectiveDates>
+    <equip:distanceToAntenna></equip:distanceToAntenna>
+    <equip:notes>(multiple lines)</equip:notes>
+  </waterVaporSensor>
+  <radioInterferences>
+    <li:possibleProblemSources>(TV/CELL PHONE ANTENNA/RADAR/etc)</li:possibleProblemSources>
+    <li:effectiveDates>(CCYY-MM-DD/CCYY-MM-DD)</li:effectiveDates>
+    <li:observedDegredation></li:observedDegredation>
+    <li:notes>(multiple lines)</li:notes>
+  </radioInterferences>
+  <contactAgency>
+    <contact:agency>Geoscience Australia</contact:agency>
+    <contact:preferredAbbreviation>GA</contact:preferredAbbreviation>
+    <contact:mailingAddress>Geoscience Australia</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Ryan Ruddick</contact:name>
+      <contact:telephonePrimary>+61 2 6249 9426</contact:telephonePrimary>
+      <contact:telephoneSecondary>+61 2 6249 9111</contact:telephoneSecondary>
+      <contact:fax>+61 2 6249 9929</contact:fax>
+      <contact:e-mail>ryan.ruddick@ga.gov.au</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Bob Twilley</contact:name>
+      <contact:telephonePrimary>+61 2 6249 9066</contact:telephonePrimary>
+      <contact:telephoneSecondary>+61 2 6249 9111</contact:telephoneSecondary>
+      <contact:fax>+61 2 6249 9929</contact:fax>
+      <contact:e-mail>bob.twilley@ga.gov.au</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>(multiple lines)</contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>Geoscience Australia</contact:agency>
+    <contact:preferredAbbreviation>GA</contact:preferredAbbreviation>
+    <contact:mailingAddress>Geoscience Australia</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Bob Twilley</contact:name>
+      <contact:telephonePrimary>+61 2 6249 9066</contact:telephonePrimary>
+      <contact:telephoneSecondary>+61 2 6249 9111</contact:telephoneSecondary>
+      <contact:fax>+61 2 6249 9929</contact:fax>
+      <contact:e-mail>bob.twilley@ga.gov.au</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>(multiple lines)</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter></mi:primaryDataCenter>
+    <mi:secondaryDataCenter></mi:secondaryDataCenter>
+    <mi:urlForMoreInformation></mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>Y</mi:siteMap>
+    <mi:siteDiagram>Y</mi:siteDiagram>
+    <mi:horizonMask>Y</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>Y</mi:sitePictures>
+    <mi:notes>(multiple lines)</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

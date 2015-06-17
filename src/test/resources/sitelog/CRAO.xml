@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>David Maggert</mi:preparedBy>
+    <mi:datePrepared>2013-01-31</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>crao_20090415.log</mi:previousLog>
+    <mi:modifiedSections>10.1, 12</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>Crimean Astrophysical Observatory</mi:siteName>
+    <mi:fourCharacterID>CRAO</mi:fourCharacterID>
+    <mi:monumentInscription></mi:monumentInscription>
+    <mi:iersDOMESNumber>12337M002</mi:iersDOMESNumber>
+    <mi:cdpNumber></mi:cdpNumber>
+    <mi:monumentDescription>IRON PIPE filled with concrete</mi:monumentDescription>
+    <mi:heightOfTheMonument>4.5</mi:heightOfTheMonument>
+    <mi:monumentFoundation>CONCRETE BLOCK</mi:monumentFoundation>
+    <mi:foundationDepth>1.5</mi:foundationDepth>
+    <mi:markerDescription>DIVOT in STAINLESS STEEL PIN in concrete</mi:markerDescription>
+    <mi:dateInstalled>2000-04-27</mi:dateInstalled>
+    <mi:geologicCharacteristic>BEDROCK</mi:geologicCharacteristic>
+    <mi:bedrockType>SEDIMENTARY</mi:bedrockType>
+    <mi:bedrockCondition>(FRESH/JOINTED/WEATHERED)</mi:bedrockCondition>
+    <mi:fractureSpacing>51-200 cm</mi:fractureSpacing>
+    <mi:faultZonesNearby>YES</mi:faultZonesNearby>
+    <mi:distance-Activity>30 km/underwater.</mi:distance-Activity>
+    <mi:notes>Concrete filled iron pipe is 40 cm in diameter, and is anchored to a 2x2x1.5m concrete pad set in bedrock. The iron pipe monument extends 4.5 m above the pad.</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Simeiz</mi:city>
+    <mi:state></mi:state>
+    <mi:country>Ukraine</mi:country>
+    <mi:tectonicPlate>Eurasia</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>3783897.0146</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>2551404.4833</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>4441264.3100</mi:zCoordinateInMeters>
+      <mi:latitude-North>+442447.74</mi:latitude-North>
+      <mi:longitude-East>+0335927.54</mi:longitude-East>
+      <mi:elevation-m_ellips.>365.8</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes></mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-8000</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>T315</equip:serialNumber>
+    <equip:firmwareVersion>3.2.32.8</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>4</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2000-04-27T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2004-08-02T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-8000</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>T362</equip:serialNumber>
+    <equip:firmwareVersion>3.2.32.11</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>4</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2004-08-02T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2008-05-26T23:59Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH UZ-12</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>UC120031621</equip:serialNumber>
+    <equip:firmwareVersion>CQ00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>4</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2009-03-04T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        SCIS</equip:antennaType>
+    <equip:serialNumber>386</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0800</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>SCIS</equip:antennaRadomeType>
+    <equip:radomeSerialNumber>139</equip:radomeSerialNumber>
+    <equip:antennaCableType>AOA p/n 7490045</equip:antennaCableType>
+    <equip:antennaCableLength>10</equip:antennaCableLength>
+    <equip:dateInstalled>2000-04-27T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2008-05-26T23:59Z</equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>ASH701945C_M    SCIS</equip:antennaType>
+    <equip:serialNumber>CR520003501</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0800</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>SCIS</equip:antennaRadomeType>
+    <equip:radomeSerialNumber>139</equip:radomeSerialNumber>
+    <equip:antennaCableType>LMR 400</equip:antennaCableType>
+    <equip:antennaCableLength>10</equip:antennaCableLength>
+    <equip:dateInstalled>2009-03-04T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>SIML</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>SLR</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>1873</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>12337S003</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>5.034</equip:dX>
+      <equip:dY>0.555</equip:dY>
+      <equip:dZ>-6.895</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>(mm)</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>TRIANGULATION</equip:surveyMethod>
+    <equip:dateMeasured>2003-08-01T00:00Z</equip:dateMeasured>
+    <equip:notes>(multiple lines)</equip:notes>
+  </surveyedLocalTies>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL</equip:standardType>
+    <equip:inputFrequency>       Input Frequency        :</equip:inputFrequency>
+    <equip:effectiveDates>2000-04-27/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </frequencyStandard>
+  <collocationInformation>
+    <equip:instrumentType>SLR  </equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates>1988-05-01/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>SIML, 1873</equip:notes>
+  </collocationInformation>
+  <collocationInformation>
+    <equip:instrumentType>SLR  </equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates>(CCYY-MM-DD/CCYY-MM-DD)</equip:effectiveDates>
+    <equip:notes>Katzively 1893</equip:notes>
+  </collocationInformation>
+  <collocationInformation>
+    <equip:instrumentType>VLBI  </equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates>1969-01-01/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>RT22 7332</equip:notes>
+  </collocationInformation>
+  <humiditySensor>
+    <equip:type>THGR918N</equip:type>
+    <equip:manufacturer>Oregon Scientific</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>0</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2004-01-10/2008-05-26</equip:effectiveDates>
+    <equip:dataSamplingInterval>30</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>1</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </humiditySensor>
+  <humiditySensor>
+    <equip:type>Capacitance Probe</equip:type>
+    <equip:manufacturer>Paroscientific</equip:manufacturer>
+    <equip:serialNumber>73589</equip:serialNumber>
+    <equip:heightDiffToAntenna>0</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2009-03-04/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>1 minute</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>+/- 2</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>NATURAL</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </humiditySensor>
+  <pressureSensor>
+    <equip:type>BTHR918N</equip:type>
+    <equip:manufacturer>Oregon Scientific</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>0</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2004-01-10/2008-05-26</equip:effectiveDates>
+    <equip:dataSamplingInterval>30</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>1 mbar</equip:accuracy-hPa>
+    <equip:notes>(multiple lines)</equip:notes>
+  </pressureSensor>
+  <pressureSensor>
+    <equip:type>Digiquartz Barometric Standard</equip:type>
+    <equip:manufacturer>Paroscientific</equip:manufacturer>
+    <equip:serialNumber>73589</equip:serialNumber>
+    <equip:heightDiffToAntenna>0</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2009-03-04/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>1 minute</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>0.010%</equip:accuracy-hPa>
+    <equip:notes>(multiple lines)</equip:notes>
+  </pressureSensor>
+  <temperatureSensor>
+    <equip:type>THGR918N</equip:type>
+    <equip:manufacturer>Oregon Scientific</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>0</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2004-01-10/2008-05-26</equip:effectiveDates>
+    <equip:dataSamplingInterval>30</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>1 deg C</equip:accuracy-degreesCelcius>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </temperatureSensor>
+  <temperatureSensor>
+    <equip:type>Platinum Resistance Temperature Probe</equip:type>
+    <equip:manufacturer>Paroscientific</equip:manufacturer>
+    <equip:serialNumber>73589</equip:serialNumber>
+    <equip:heightDiffToAntenna>0</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2009-03-04/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>1 minute</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>0.5 deg C</equip:accuracy-degreesCelcius>
+    <equip:aspiration>NATURAL</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </temperatureSensor>
+  <radioInterferences>
+    <li:possibleProblemSources>CELL PHONE ANTENNA</li:possibleProblemSources>
+    <li:effectiveDates>(CCYY-MM-DD/CCYY-MM-DD)</li:effectiveDates>
+    <li:observedDegredation></li:observedDegredation>
+    <li:notes>(multiple lines)</li:notes>
+  </radioInterferences>
+  <localEpisodicEvents>
+    <li:date>2012-02-07/2012-02-07</li:date>
+    <li:event>Transitioned from .soc to .ash data types.  For</li:event>
+  </localEpisodicEvents>
+  <contactAgency>
+    <contact:agency>Crimean Astrophysical Observatory</contact:agency>
+    <contact:preferredAbbreviation>CRAO</contact:preferredAbbreviation>
+    <contact:mailingAddress>Nauchny, Crimea</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Dmytrotsa Andrew</contact:name>
+      <contact:telephonePrimary>+38-0654-240-370</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail>dmytrotsa@gmail.com</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Robert Reilinger</contact:name>
+      <contact:telephonePrimary>617-253-7860</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>617-253-6385</contact:fax>
+      <contact:e-mail>reilinge@erl.mit.edu</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>334413, Ukraine (multiple lines)</contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>UNAVCO, Inc.</contact:agency>
+    <contact:preferredAbbreviation>UNAVCO</contact:preferredAbbreviation>
+    <contact:mailingAddress>6350 Nautilus Drive</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>Boulder, CO 80301 </contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter></mi:primaryDataCenter>
+    <mi:secondaryDataCenter></mi:secondaryDataCenter>
+    <mi:urlForMoreInformation></mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>Y</mi:siteMap>
+    <mi:siteDiagram>Y</mi:siteDiagram>
+    <mi:horizonMask>Y</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>Y</mi:sitePictures>
+    <mi:notes>(multiple lines)</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

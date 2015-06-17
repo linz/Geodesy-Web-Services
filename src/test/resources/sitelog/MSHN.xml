@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Ryan Ruddick</mi:preparedBy>
+    <mi:datePrepared>2012-01-10</mi:datePrepared>
+    <mi:reportType>NEW</mi:reportType>
+    <mi:previousLog></mi:previousLog>
+    <mi:modifiedSections></mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName></mi:siteName>
+    <mi:fourCharacterID>MSHN</mi:fourCharacterID>
+    <mi:monumentInscription></mi:monumentInscription>
+    <mi:iersDOMESNumber>IRM000249</mi:iersDOMESNumber>
+    <mi:cdpNumber></mi:cdpNumber>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:heightOfTheMonument></mi:heightOfTheMonument>
+    <mi:monumentFoundation></mi:monumentFoundation>
+    <mi:foundationDepth></mi:foundationDepth>
+    <mi:markerDescription></mi:markerDescription>
+    <mi:dateInstalled></mi:dateInstalled>
+    <mi:geologicCharacteristic></mi:geologicCharacteristic>
+    <mi:bedrockType></mi:bedrockType>
+    <mi:bedrockCondition></mi:bedrockCondition>
+    <mi:fractureSpacing></mi:fractureSpacing>
+    <mi:faultZonesNearby></mi:faultZonesNearby>
+    <mi:distance-Activity></mi:distance-Activity>
+    <mi:notes></mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city></mi:city>
+    <mi:state></mi:state>
+    <mi:country>Iran</mi:country>
+    <mi:tectonicPlate>EUROASIAN</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>2612823.7390</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>4432123.8360</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>3758820.3200</mi:zCoordinateInMeters>
+      <mi:latitude-North>+362005.0082</mi:latitude-North>
+      <mi:longitude-East>+592847.3457</mi:longitude-East>
+      <mi:elevation-m_ellips.>1087.404</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>AUSPOS Coordinates</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH UZ-12</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>IR1200405011</equip:serialNumber>
+    <equip:firmwareVersion>CN00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2010-01-01T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>Install Dates Unknown</equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>ASH701945B_M    SNOW</equip:antennaType>
+    <equip:serialNumber>CR5200348007</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>SNOW</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType></equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>2010-01-01T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>Install Dates Unknown</equip:notes>
+  </gnssAntenna>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL</equip:standardType>
+    <equip:inputFrequency></equip:inputFrequency>
+    <equip:effectiveDates>2010-01-01/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes></equip:notes>
+  </frequencyStandard>
+  <collocationInformation>
+    <equip:instrumentType>(GPS/GLONASS/DORIS/PRARE/SLR/VLBI/TIME/etc)</equip:instrumentType>
+    <equip:status>(PERMANENT/MOBILE)</equip:status>
+    <equip:effectiveDates>(CCYY-MM-DD/CCYY-MM-DD)</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </collocationInformation>
+  <humiditySensor>
+    <equip:type></equip:type>
+    <equip:manufacturer></equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>(CCYY-MM-DD/CCYY-MM-DD)</equip:effectiveDates>
+    <equip:dataSamplingInterval></equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>(% rel h)</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </humiditySensor>
+  <pressureSensor>
+    <equip:type></equip:type>
+    <equip:manufacturer></equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>(CCYY-MM-DD/CCYY-MM-DD)</equip:effectiveDates>
+    <equip:dataSamplingInterval></equip:dataSamplingInterval>
+    <equip:accuracy-hPa>(hPa)</equip:accuracy-hPa>
+    <equip:notes>(multiple lines)</equip:notes>
+  </pressureSensor>
+  <temperatureSensor>
+    <equip:type></equip:type>
+    <equip:manufacturer></equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>(CCYY-MM-DD/CCYY-MM-DD)</equip:effectiveDates>
+    <equip:dataSamplingInterval></equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>(deg C)</equip:accuracy-degreesCelcius>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </temperatureSensor>
+  <waterVaporSensor>
+    <equip:type></equip:type>
+    <equip:manufacturer></equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>(CCYY-MM-DD/CCYY-MM-DD)</equip:effectiveDates>
+    <equip:distanceToAntenna></equip:distanceToAntenna>
+    <equip:notes>(multiple lines)</equip:notes>
+  </waterVaporSensor>
+  <radioInterferences>
+    <li:possibleProblemSources>(TV/CELL PHONE ANTENNA/RADAR/etc)</li:possibleProblemSources>
+    <li:effectiveDates>(CCYY-MM-DD/CCYY-MM-DD)</li:effectiveDates>
+    <li:observedDegredation></li:observedDegredation>
+    <li:notes>(multiple lines)</li:notes>
+  </radioInterferences>
+  <localEpisodicEvents>
+    <li:date>(CCYY-MM-DD/CCYY-MM-DD)</li:date>
+    <li:event>(TREE CLEARING/CONSTRUCTION/etc)</li:event>
+  </localEpisodicEvents>
+  <contactAgency>
+    <contact:agency>National Cartographic Centre</contact:agency>
+    <contact:preferredAbbreviation>NCC</contact:preferredAbbreviation>
+    <contact:mailingAddress></contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Hamid Reza Nankali</contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail>nankali@ncc.org.ir</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Farokh Tavakoli</contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail>favokh.tavakoli@ncc.org.ir</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes></contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>National Cartographic Centre</contact:agency>
+    <contact:preferredAbbreviation>NCC</contact:preferredAbbreviation>
+    <contact:mailingAddress>(multiple lines)</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>(multiple lines)</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter>ftp.ga.gov.au</mi:primaryDataCenter>
+    <mi:secondaryDataCenter>ftp.ga.gov.au</mi:secondaryDataCenter>
+    <mi:urlForMoreInformation>ftp.ga.gov.au</mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap></mi:siteMap>
+    <mi:siteDiagram></mi:siteDiagram>
+    <mi:horizonMask></mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures></mi:sitePictures>
+    <mi:notes>(multiple lines)</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

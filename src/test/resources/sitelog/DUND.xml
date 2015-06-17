@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>John Beavan / Simon Edwards</mi:preparedBy>
+    <mi:datePrepared>2010-11-24</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>dund_20070806.log</mi:previousLog>
+    <mi:modifiedSections>3.3, 3.4, 4.1, 4.2, 13</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>Dunedin GPS</mi:siteName>
+    <mi:fourCharacterID>DUND</mi:fourCharacterID>
+    <mi:monumentInscription>none</mi:monumentInscription>
+    <mi:iersDOMESNumber>50212M003</mi:iersDOMESNumber>
+    <mi:cdpNumber>not assigned</mi:cdpNumber>
+    <mi:monumentDescription>SHORT-BRACED (UNAVCO STYLE)</mi:monumentDescription>
+    <mi:heightOfTheMonument>1.25</mi:heightOfTheMonument>
+    <mi:monumentFoundation>FIVE STAINLESS STEEL RODS</mi:monumentFoundation>
+    <mi:foundationDepth>1.8</mi:foundationDepth>
+    <mi:markerDescription>TOP CENTRE OF STAINLESS BLOCK THAT</mi:markerDescription>
+    <mi:dateInstalled>2005-08-12</mi:dateInstalled>
+    <mi:geologicCharacteristic>Mid-Miocene volcanics</mi:geologicCharacteristic>
+    <mi:bedrockType>Basaltic</mi:bedrockType>
+    <mi:bedrockCondition>Good</mi:bedrockCondition>
+    <mi:fractureSpacing>(1-10 cm/10-50 cm/50-200 cm/over 200 cm)</mi:fractureSpacing>
+    <mi:faultZonesNearby>(YES/NO/Name of the zone)</mi:faultZonesNearby>
+    <mi:distance-Activity>(multiple lines)</mi:distance-Activity>
+    <mi:notes>FORMS THE TOP OF THE MONUMENT </mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Dunedin</mi:city>
+    <mi:state>Otago</mi:state>
+    <mi:country>New Zealand</mi:country>
+    <mi:tectonicPlate>PAC</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>-4388121.17</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>726671.05</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>-4556535.63</mi:zCoordinateInMeters>
+      <mi:latitude-North>-455301.23</mi:latitude-North>
+      <mi:longitude-East>+1703549.83</mi:longitude-East>
+      <mi:elevation-m_ellips.>389</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes></mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETRS</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>4435237669</equip:serialNumber>
+    <equip:firmwareVersion>1.03</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>4</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2005-08-24T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2006-03-10T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETRS</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>4435237669</equip:serialNumber>
+    <equip:firmwareVersion>1.15</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>4</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2006-03-10T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2007-02-22T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>receiver failure</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETRS</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>4635120796</equip:serialNumber>
+    <equip:firmwareVersion>1.15</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>4</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2007-02-22T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2010-11-23T23:50Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETR9</equip:receiverType>
+    <equip:satelliteSystem>GPS + GLONASS</equip:satelliteSystem>
+    <equip:serialNumber>5034K69680</equip:serialNumber>
+    <equip:firmwareVersion>4.17</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>3</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2010-11-24T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>TRM41249.00     NONE</equip:antennaType>
+    <equip:serialNumber>12626150</equip:serialNumber>
+    <equip:antennaReferencePoint>BAM</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0020</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType></equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>2005-08-24T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2010-11-23T23:59Z</equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>TRM55971.00     NONE</equip:antennaType>
+    <equip:serialNumber>1441031186</equip:serialNumber>
+    <equip:antennaReferencePoint>BAM</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0020</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType></equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>2010-11-24T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>OUSD</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>CONTINUOUS GPS</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>(A4)</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>50212M001</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX></equip:dX>
+      <equip:dY></equip:dY>
+      <equip:dZ></equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>(mm)</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>CONTINUOUS GPS</equip:surveyMethod>
+    <equip:dateMeasured>(CCYY-MM-DDThh:mmZ)</equip:dateMeasured>
+    <equip:notes>OUSD is running continuously.</equip:notes>
+  </surveyedLocalTies>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>DUNT</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>CGPS @ TIDE GAUGE</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>(A4)</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>50212S001</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX></equip:dX>
+      <equip:dY></equip:dY>
+      <equip:dZ></equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>(mm)</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>CONTINUOUS GPS</equip:surveyMethod>
+    <equip:dateMeasured>(CCYY-MM-DDThh:mmZ)</equip:dateMeasured>
+    <equip:notes>DUNT is running continuously.</equip:notes>
+  </surveyedLocalTies>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL</equip:standardType>
+    <equip:inputFrequency>       Input Frequency        :</equip:inputFrequency>
+    <equip:effectiveDates>2005-08-24</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </frequencyStandard>
+  <contactAgency>
+    <contact:agency>GNS Science</contact:agency>
+    <contact:preferredAbbreviation>GNS</contact:preferredAbbreviation>
+    <contact:mailingAddress>GNS Science</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>GeoNet Reception</contact:name>
+      <contact:telephonePrimary>+64 4 570 1444</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>+64 4 570 4676</contact:fax>
+      <contact:e-mail>info@geonet.org.nz</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>1 Fairway Drive, Avalon PO Box 30368, Lower Hutt New Zealand </contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>GNS Science</contact:agency>
+    <contact:preferredAbbreviation>GNS</contact:preferredAbbreviation>
+    <contact:mailingAddress>(multiple lines)</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>(multiple lines)</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter>www.geonet.org.nz</mi:primaryDataCenter>
+    <mi:secondaryDataCenter>www.geonet.org.nz</mi:secondaryDataCenter>
+    <mi:urlForMoreInformation>www.geonet.org.nz</mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>GNS file 45/1/4-DUND</mi:siteMap>
+    <mi:siteDiagram>GNS file 45/1/4-DUND</mi:siteDiagram>
+    <mi:horizonMask>No obstructions.</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>GNS file 45/1/4-DUND</mi:sitePictures>
+    <mi:notes>GNS file 45/1/4-DUND</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

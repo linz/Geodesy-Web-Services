@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Oleg Khoda</mi:preparedBy>
+    <mi:datePrepared>2012-11-08</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>uzhl_20101222.log</mi:previousLog>
+    <mi:modifiedSections>4.2, 4.3</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>Uzhgorod</mi:siteName>
+    <mi:fourCharacterID>UZHL</mi:fourCharacterID>
+    <mi:monumentInscription></mi:monumentInscription>
+    <mi:iersDOMESNumber>12301M001</mi:iersDOMESNumber>
+    <mi:cdpNumber>(A4)</mi:cdpNumber>
+    <mi:monumentDescription>STEEL PILLAR</mi:monumentDescription>
+    <mi:heightOfTheMonument></mi:heightOfTheMonument>
+    <mi:monumentFoundation>ROOF</mi:monumentFoundation>
+    <mi:foundationDepth></mi:foundationDepth>
+    <mi:markerDescription>(CHISELLED CROSS/DIVOT/BRASS NAIL/etc)</mi:markerDescription>
+    <mi:dateInstalled>1998-04-01</mi:dateInstalled>
+    <mi:geologicCharacteristic>(BEDROCK/CLAY/CONGLOMERATE/GRAVEL/SAND/etc)</mi:geologicCharacteristic>
+    <mi:bedrockType>(IGNEOUS/METAMORPHIC/SEDIMENTARY)</mi:bedrockType>
+    <mi:bedrockCondition>(FRESH/JOINTED/WEATHERED)</mi:bedrockCondition>
+    <mi:fractureSpacing>(0 cm/1-10 cm/11-50 cm/51-200 cm/over 200 cm)</mi:fractureSpacing>
+    <mi:faultZonesNearby>(YES/NO/Name of the zone)</mi:faultZonesNearby>
+    <mi:distance-Activity>(multiple lines)</mi:distance-Activity>
+    <mi:notes>Top of steel pillar on the roof. Exact date in Apr 1998 not known. There are some markers in Uzhgorod occupied during different GPS campaigns - UZLD (GEODUC'95), - UZHG (GEODUC'93, GEODUC'95, Ext.SAGET'93), - UZHD (EUREF-UKR'95, GEODUC'95, CEGRN campaigns).</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Uzhgorod</mi:city>
+    <mi:state>Zakarpattia</mi:state>
+    <mi:country>Ukraine</mi:country>
+    <mi:tectonicPlate>EURASIAN</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>3907587.6652</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>1602428.5337</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>4763783.6858</mi:zCoordinateInMeters>
+      <mi:latitude-North>+483755.20</mi:latitude-North>
+      <mi:longitude-East>+0221751.36</mi:longitude-East>
+      <mi:elevation-m_ellips.>232.0</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>(multiple lines)</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE 4000SSI</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>18426</equip:serialNumber>
+    <equip:firmwareVersion>7.15</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1999-02-05T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1999-06-16</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE 4000SSI</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>18426</equip:serialNumber>
+    <equip:firmwareVersion>7.29</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1999-06-16T14:40Z</equip:dateInstalled>
+    <equip:dateRemoved>2000-04-25T09:30Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE 4000SSI</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>18426</equip:serialNumber>
+    <equip:firmwareVersion>7.19A</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2000-04-25T10:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2006-12-14T10:36Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE 4000SSI</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>18426</equip:serialNumber>
+    <equip:firmwareVersion>7.19B</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2006-12-14T11:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2010-10-07T23:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE 4000SSI</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>18424</equip:serialNumber>
+    <equip:firmwareVersion>7.19B</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2010-10-08T06:20Z</equip:dateInstalled>
+    <equip:dateRemoved>2010-12-20T06:10Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>NOV OEMV3</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>60002</equip:serialNumber>
+    <equip:firmwareVersion>3.803</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2010-12-20T11:40Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>TRM29659.00     NONE</equip:antennaType>
+    <equip:serialNumber>85216</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>180</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>Trimble</equip:antennaCableType>
+    <equip:antennaCableLength>30</equip:antennaCableLength>
+    <equip:dateInstalled>1999-02-04T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2010-12-20T06:10Z</equip:dateRemoved>
+    <equip:notes>There is not a north point on the Choke Rings antenna (TRM29659.00).</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>NOV702GG        NONE</equip:antennaType>
+    <equip:serialNumber>70023</equip:serialNumber>
+    <equip:antennaReferencePoint>BAM</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>270</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>Belden H-1000</equip:antennaCableType>
+    <equip:antennaCableLength>30</equip:antennaCableLength>
+    <equip:dateInstalled>2010-12-20T11:40Z</equip:dateInstalled>
+    <equip:dateRemoved>2012-11-07T09:00Z</equip:dateRemoved>
+    <equip:notes>There is not a north point on the NOV702GG antenna. The antenna connector is used as the reference point.</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>NOV702GG        NONE</equip:antennaType>
+    <equip:serialNumber>70013</equip:serialNumber>
+    <equip:antennaReferencePoint>BAM</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>270</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>Belden H-1000</equip:antennaCableType>
+    <equip:antennaCableLength>25</equip:antennaCableLength>
+    <equip:dateInstalled>2012-11-07T09:20Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>There is not a north point on the NOV702GG antenna. The antenna connector is used as the reference point.</equip:notes>
+  </gnssAntenna>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL </equip:standardType>
+    <equip:inputFrequency>(if external)</equip:inputFrequency>
+    <equip:effectiveDates>1999-02-05/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </frequencyStandard>
+  <contactAgency>
+    <contact:agency>Space Research Laboratory,</contact:agency>
+    <contact:preferredAbbreviation>LKD UzhNU</contact:preferredAbbreviation>
+    <contact:mailingAddress>2A, Daleka Str.</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Vitaliy P.Yepishev</contact:name>
+      <contact:telephonePrimary>380 (3122) 36065</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>380 (3122) 36136</contact:fax>
+      <contact:e-mail>space@univ.uzhgorod.ua</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>Uzhgorod National University 88000, Uzhgorod UKRAINE (multiple lines)</contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>Main Astronomical Observatory of the</contact:agency>
+    <contact:preferredAbbreviation>MAO</contact:preferredAbbreviation>
+    <contact:mailingAddress>27, Ac. Zabolotny Str.</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Mikhailo Lytvyn</contact:name>
+      <contact:telephonePrimary>380 (44) 526 4759</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>380 (44) 526 2147</contact:fax>
+      <contact:e-mail>misha@mao.kiev.ua</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>National Academy of Sciences of Ukraine 03680, Kiev UKRAINE (multiple lines)</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter></mi:primaryDataCenter>
+    <mi:secondaryDataCenter></mi:secondaryDataCenter>
+    <mi:urlForMoreInformation></mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>(Y or URL)</mi:siteMap>
+    <mi:siteDiagram>(Y or URL)</mi:siteDiagram>
+    <mi:horizonMask>(Y or URL)</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>(Y or URL)</mi:sitePictures>
+    <mi:notes>IGNI is the third Data Center</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Giovanni Sella</mi:preparedBy>
+    <mi:datePrepared>2011-04-18</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>wuhn_20110331.log</mi:previousLog>
+    <mi:modifiedSections>1</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>WUHAN</mi:siteName>
+    <mi:fourCharacterID>WUHN</mi:fourCharacterID>
+    <mi:monumentInscription>I.G.S. Reference Station</mi:monumentInscription>
+    <mi:iersDOMESNumber>21602M001</mi:iersDOMESNumber>
+    <mi:cdpNumber>A4</mi:cdpNumber>
+    <mi:monumentDescription>PILLAR</mi:monumentDescription>
+    <mi:heightOfTheMonument>2.46</mi:heightOfTheMonument>
+    <mi:monumentFoundation>GRANITE BLOCK</mi:monumentFoundation>
+    <mi:foundationDepth>2.99</mi:foundationDepth>
+    <mi:markerDescription>CHISELLED BRASS NAIL</mi:markerDescription>
+    <mi:dateInstalled>1993-01-08</mi:dateInstalled>
+    <mi:geologicCharacteristic>GRAVEL</mi:geologicCharacteristic>
+    <mi:bedrockType>SEDIMENTARY</mi:bedrockType>
+    <mi:bedrockCondition>FRESH</mi:bedrockCondition>
+    <mi:fractureSpacing>1-10 cm</mi:fractureSpacing>
+    <mi:faultZonesNearby>NO</mi:faultZonesNearby>
+    <mi:distance-Activity></mi:distance-Activity>
+    <mi:notes>The monument is a solid granite pillar ~5.5m in length it sits on a buried brick rampart built in 1957. 3m are buried and 2 meters are exposed. The surface extension of the pillar consists of a series of steps starting with a width of 1.24x1.24m and stepping through 0.72x0.72m, 0.70x0.70m, 0.56x0.56m, 0.50x0.50m, 0.455x0.455m. The antenna is attached to the top of the pillar. The entire pillar is enclosed inside a building with a dome that functions as part of the roof of the building (see photos).</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Wuhan</mi:city>
+    <mi:state>HuBei</mi:state>
+    <mi:country>P.R. China</mi:country>
+    <mi:tectonicPlate>Eurasia</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>-2267749.14</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>5009154.34</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>3221290.73</mi:zCoordinateInMeters>
+      <mi:latitude-North>+303154.12</mi:latitude-North>
+      <mi:longitude-East>+1142126.28</mi:longitude-East>
+      <mi:elevation-m_ellips.>25.8</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>(multiple lines)</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>MINIMAC 2816AT</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>0113-01</equip:serialNumber>
+    <equip:firmwareVersion>1.65</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>15</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1993-01-08T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1995-01-26</equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-8000</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>T400</equip:serialNumber>
+    <equip:firmwareVersion>3.2.32.8</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>15</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1995-01-26T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1999-09-22</equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-8000</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>T400</equip:serialNumber>
+    <equip:firmwareVersion>3.2.32.9</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>10</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1999-09-22T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2000-06-07</equip:dateRemoved>
+    <equip:temperatureStabilization>25</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>LP03210</equip:serialNumber>
+    <equip:firmwareVersion>CD00-1D02</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>10</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2000-06-08T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2011-03-23T08:35Z</equip:dateRemoved>
+    <equip:temperatureStabilization>16</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETR8</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>4918K35018</equip:serialNumber>
+    <equip:firmwareVersion>4.17</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2011-03-23T08:35Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        NONE</equip:antennaType>
+    <equip:serialNumber>255</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>002.3200</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType></equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>1994-10-01T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1995-01-26</equip:dateRemoved>
+    <equip:notes>A MAC4647942 antenna with no radome was used at WUHN from 1993-01-08 to 1994-09-30, at an antenna height of 2.243m. Contact WHU for more information.</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        NONE</equip:antennaType>
+    <equip:serialNumber>255</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>002.3200</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType></equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>1995-01-27T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2000-06-07</equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>ASH700936E      SNOW</equip:antennaType>
+    <equip:serialNumber>CR15810</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>002.3200</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>SNOW</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>2000-06-08T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2002-01-23</equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>ASH700936E      ENCL</equip:antennaType>
+    <equip:serialNumber>CR15810</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>002.3610</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>-00.0094</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>-00.0022</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>ENCL</equip:antennaRadomeType>
+    <equip:radomeSerialNumber>DOME, Outer Fiber Reinforced Plastic Dome,</equip:radomeSerialNumber>
+    <equip:antennaCableType>CL2X</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>2002-01-26T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2011-03-23T08:35Z</equip:dateRemoved>
+    <equip:notes>Half Sphere, 145cm Diameter, date (multiple lines)</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>TRM59800.00     ENCL</equip:antennaType>
+    <equip:serialNumber>4852A62817</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>002.3612</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>-00.0094</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>-00.0022</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>ENCL</equip:antennaRadomeType>
+    <equip:radomeSerialNumber>DOME, Outer Fiber Reinforced Plastic Dome,</equip:radomeSerialNumber>
+    <equip:antennaCableType>TNC</equip:antennaCableType>
+    <equip:antennaCableLength>30</equip:antennaCableLength>
+    <equip:dateInstalled>2011-03-23T08:40Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>WH1A</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>CHAMP</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>(A4)</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>(A9)</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>-0.609</equip:dX>
+      <equip:dY>1.442</equip:dY>
+      <equip:dZ>-2.691</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>20 mm</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>GPS CAMPAIGN</equip:surveyMethod>
+    <equip:dateMeasured>1992-01-01</equip:dateMeasured>
+    <equip:notes>(multiple lines)</equip:notes>
+  </surveyedLocalTies>
+  <frequencyStandard>
+    <equip:standardType>CESIUM</equip:standardType>
+    <equip:inputFrequency>5MHz</equip:inputFrequency>
+    <equip:effectiveDates>1995-01-01/1999-10-31</equip:effectiveDates>
+    <equip:notes>exact date in 1995 not known</equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>Rubidium Clock Steered by GPS</equip:standardType>
+    <equip:inputFrequency>10MHz</equip:inputFrequency>
+    <equip:effectiveDates>2011-03-23</equip:effectiveDates>
+    <equip:notes>(multiple lines</equip:notes>
+  </frequencyStandard>
+  <collocationInformation>
+    <equip:instrumentType>SLR</equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates>(CCYY-MM-DD/CCYY-MM-DD)</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </collocationInformation>
+  <humiditySensor>
+    <equip:type>Weather Monitor II</equip:type>
+    <equip:manufacturer>Davis Instrument. USA</equip:manufacturer>
+    <equip:serialNumber>7440</equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2000-03-17</equip:effectiveDates>
+    <equip:dataSamplingInterval>30 minutes</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>(% rel h)</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </humiditySensor>
+  <humiditySensor>
+    <equip:type>WUSH-PTU Weather Monitor II</equip:type>
+    <equip:manufacturer>Wuxi,China</equip:manufacturer>
+    <equip:serialNumber>PQY9.059</equip:serialNumber>
+    <equip:heightDiffToAntenna>(0.2 m)</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>(2011-03-23/CCYY-MM-DD)</equip:effectiveDates>
+    <equip:dataSamplingInterval>(30sec)</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>(% rel h)</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>UNASPIRATED</equip:aspiration>
+    <equip:notes>(The Pressure and Temperature were determined)</equip:notes>
+  </humiditySensor>
+  <pressureSensor>
+    <equip:type>Weather Monitor II</equip:type>
+    <equip:manufacturer>Davis Instrument. USA</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>2</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2000-03-17/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval></equip:dataSamplingInterval>
+    <equip:accuracy-hPa>(mbar)</equip:accuracy-hPa>
+    <equip:notes>(multiple lines)</equip:notes>
+  </pressureSensor>
+  <temperatureSensor>
+    <equip:type>Weather Monitor II</equip:type>
+    <equip:manufacturer>Davis Instrument. USA</equip:manufacturer>
+    <equip:serialNumber>7440  CE98</equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2000-03-17</equip:effectiveDates>
+    <equip:dataSamplingInterval>30 minutes</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>(deg C)</equip:accuracy-degreesCelcius>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </temperatureSensor>
+  <contactAgency>
+    <contact:agency>Wuhan University</contact:agency>
+    <contact:preferredAbbreviation>WHU</contact:preferredAbbreviation>
+    <contact:mailingAddress>Prof. Guigen Nie</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Prof. Guigen Nie</contact:name>
+      <contact:telephonePrimary>86-27-87851404</contact:telephonePrimary>
+      <contact:telephoneSecondary>86-27-68779434</contact:telephoneSecondary>
+      <contact:fax>86-27-68778890</contact:fax>
+      <contact:e-mail>ggnie@whu.edu.cn</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Ms. Tu</contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail>tigerduo@whu.edu.cn</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>GNSS Research Center, Wuhan University, 129# Luoyu Road Wuhan  P.R. China  430079 (multiple lines)</contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>Wuhan University</contact:agency>
+    <contact:preferredAbbreviation>WHU</contact:preferredAbbreviation>
+    <contact:mailingAddress>Prof. Guigen Nie</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Prof. Guigen Nie</contact:name>
+      <contact:telephonePrimary>86-27-87851404</contact:telephonePrimary>
+      <contact:telephoneSecondary>86-27-68779434</contact:telephoneSecondary>
+      <contact:fax>86-27-68778890</contact:fax>
+      <contact:e-mail>ggnie@whu.edu.cn</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>GNSS Research Center, Wuhan University, 129# Luoyu Road Wuhan  P.R. China  430079 NOAA-NGS only facilitates data flow</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter></mi:primaryDataCenter>
+    <mi:secondaryDataCenter></mi:secondaryDataCenter>
+    <mi:urlForMoreInformation></mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>(Y or URL)</mi:siteMap>
+    <mi:siteDiagram>(Y)</mi:siteDiagram>
+    <mi:horizonMask>(Y)</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>(Y)</mi:sitePictures>
+    <mi:notes>(multiple lines)</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

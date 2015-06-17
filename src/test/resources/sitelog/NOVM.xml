@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Robert Khachikyan</mi:preparedBy>
+    <mi:datePrepared>2012-10-07</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>novm_20061216.log</mi:previousLog>
+    <mi:modifiedSections>4.1</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>Novosibirsk, SNIIM</mi:siteName>
+    <mi:fourCharacterID>NOVM</mi:fourCharacterID>
+    <mi:monumentInscription></mi:monumentInscription>
+    <mi:iersDOMESNumber>12367M002</mi:iersDOMESNumber>
+    <mi:cdpNumber>(A4)</mi:cdpNumber>
+    <mi:monumentDescription>stable pillar on the roof 11-floor</mi:monumentDescription>
+    <mi:heightOfTheMonument></mi:heightOfTheMonument>
+    <mi:monumentFoundation>(STEEL RODS, CONCRETE BLOCK, ROOF, etc)</mi:monumentFoundation>
+    <mi:foundationDepth></mi:foundationDepth>
+    <mi:markerDescription>(CHISELLED CROSS/DIVOT/BRASS NAIL/etc)</mi:markerDescription>
+    <mi:dateInstalled>2006-11-07</mi:dateInstalled>
+    <mi:geologicCharacteristic>(BEDROCK/CLAY/CONGLOMERATE/GRAVEL/SAND/etc)</mi:geologicCharacteristic>
+    <mi:bedrockType>SEDIMENTARY</mi:bedrockType>
+    <mi:bedrockCondition>(FRESH/JOINTED/WEATHERED)</mi:bedrockCondition>
+    <mi:fractureSpacing>(1-10 cm/11-50 cm/51-200 cm/over 200 cm)</mi:fractureSpacing>
+    <mi:faultZonesNearby>(YES/NO/Name of the zone)</mi:faultZonesNearby>
+    <mi:distance-Activity>(multiple lines)</mi:distance-Activity>
+    <mi:notes>building (multiple lines)</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Novosibirsk</mi:city>
+    <mi:state></mi:state>
+    <mi:country>RUSSIA</mi:country>
+    <mi:tectonicPlate>Eurasian Plate</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>452261.20</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>3635877.47</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>5203453.26</mi:zCoordinateInMeters>
+      <mi:latitude-North>+550149.80</mi:latitude-North>
+      <mi:longitude-East>+0825434.16</mi:longitude-East>
+      <mi:elevation-m_ellips.>149.98</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>(multiple lines)</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>JPS LEGACY</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>00202</equip:serialNumber>
+    <equip:firmwareVersion>2.2</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>10</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2001-07-24T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>JPSREGANT_SD_E1 NONE</equip:antennaType>
+    <equip:serialNumber>RA0038</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0800</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>(deg; + is clockwise/east)</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>Š-50-7-35</equip:antennaCableType>
+    <equip:antennaCableLength>55</equip:antennaCableLength>
+    <equip:dateInstalled>2006-11-07T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes> Antenna type listed in this section retro- actively changed from JPSREGANT_SD_E to JPSREGANT_SD_E1 starting with log file novm_20121007.log. See IGSMAIL-6662 and IGSMAIL-6663 for details.</equip:notes>
+  </gnssAntenna>
+  <frequencyStandard>
+    <equip:standardType>EXTERNAL H-MASER</equip:standardType>
+    <equip:inputFrequency>5MHz</equip:inputFrequency>
+    <equip:effectiveDates>2001-07-24/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </frequencyStandard>
+  <humiditySensor>
+    <equip:type></equip:type>
+    <equip:manufacturer></equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>(CCYY-MM-DD/CCYY-MM-DD)</equip:effectiveDates>
+    <equip:dataSamplingInterval></equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>(% rel h)</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </humiditySensor>
+  <pressureSensor>
+    <equip:type></equip:type>
+    <equip:manufacturer></equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>(CCYY-MM-DD/CCYY-MM-DD)</equip:effectiveDates>
+    <equip:dataSamplingInterval></equip:dataSamplingInterval>
+    <equip:accuracy-hPa>(hPa)</equip:accuracy-hPa>
+    <equip:notes>(multiple lines)</equip:notes>
+  </pressureSensor>
+  <temperatureSensor>
+    <equip:type></equip:type>
+    <equip:manufacturer></equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>(CCYY-MM-DD/CCYY-MM-DD)</equip:effectiveDates>
+    <equip:dataSamplingInterval></equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>(deg C)</equip:accuracy-degreesCelcius>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </temperatureSensor>
+  <waterVaporSensor>
+    <equip:type></equip:type>
+    <equip:manufacturer></equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>(CCYY-MM-DD/CCYY-MM-DD)</equip:effectiveDates>
+    <equip:distanceToAntenna></equip:distanceToAntenna>
+    <equip:notes>(multiple lines)</equip:notes>
+  </waterVaporSensor>
+  <radioInterferences>
+    <li:possibleProblemSources>(TV/CELL PHONE ANTENNA/RADAR/etc)</li:possibleProblemSources>
+    <li:effectiveDates>(CCYY-MM-DD/CCYY-MM-DD)</li:effectiveDates>
+    <li:observedDegredation></li:observedDegredation>
+    <li:notes>(multiple lines)</li:notes>
+  </radioInterferences>
+  <localEpisodicEvents>
+    <li:date>(CCYY-MM-DD/CCYY-MM-DD)</li:date>
+    <li:event>(TREE CLEARING/CONSTRUCTION/etc)</li:event>
+  </localEpisodicEvents>
+  <contactAgency>
+    <contact:agency>Siberian Research Institute for</contact:agency>
+    <contact:preferredAbbreviation>SNIIM</contact:preferredAbbreviation>
+    <contact:mailingAddress>4, Dimitrov str.,</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Alexandr Tolstikov</contact:name>
+      <contact:telephonePrimary>+7-383-210-1185</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail>tolstikof@sniim.siberia.net</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>Metrology (SNIIM) Novosibirsk, Russia, 630004 (multiple lines)</contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>Institute of Metrology for Time and Space</contact:agency>
+    <contact:preferredAbbreviation>IMVP</contact:preferredAbbreviation>
+    <contact:mailingAddress>IMVP / VNIIFTRI, Mendeleevo,</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>(IMVP / VNIIFTRI) Moscow region, 141570, Russia (multiple lines)</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter>ftp.imvp.ru</mi:primaryDataCenter>
+    <mi:secondaryDataCenter>ftp.imvp.ru</mi:secondaryDataCenter>
+    <mi:urlForMoreInformation>ftp.imvp.ru</mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>N</mi:siteMap>
+    <mi:siteDiagram>N</mi:siteDiagram>
+    <mi:horizonMask>N</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>N</mi:sitePictures>
+    <mi:notes>N</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

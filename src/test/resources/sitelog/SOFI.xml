@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Rudi Stoeger</mi:preparedBy>
+    <mi:datePrepared>2010-05-03</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>sofi_20100430.log</mi:previousLog>
+    <mi:modifiedSections>3.10, 3.11</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>Sofia / Bulgaria</mi:siteName>
+    <mi:fourCharacterID>SOFI</mi:fourCharacterID>
+    <mi:monumentInscription></mi:monumentInscription>
+    <mi:iersDOMESNumber>11101M002</mi:iersDOMESNumber>
+    <mi:cdpNumber>(A4)</mi:cdpNumber>
+    <mi:monumentDescription>CONCRETE PILLAR ON THE ROOF</mi:monumentDescription>
+    <mi:heightOfTheMonument>0.9</mi:heightOfTheMonument>
+    <mi:monumentFoundation>CONCRETE PILLAR ANCHORED ON THE ROOF</mi:monumentFoundation>
+    <mi:foundationDepth></mi:foundationDepth>
+    <mi:markerDescription>SURVEY MARKER BOLT</mi:markerDescription>
+    <mi:dateInstalled>1997-05-19T10</mi:dateInstalled>
+    <mi:geologicCharacteristic>(BEDROCK/CLAY/CONGLOMERATE/GRAVEL/SAND/etc)</mi:geologicCharacteristic>
+    <mi:bedrockType>(IGNEOUS/METAMORPHIC/SEDIMENTARY)</mi:bedrockType>
+    <mi:bedrockCondition>(FRESH/JOINTED/WEATHERED)</mi:bedrockCondition>
+    <mi:fractureSpacing>(0 cm/1-10 cm/11-50 cm/51-200 cm/over 200 cm)</mi:fractureSpacing>
+    <mi:faultZonesNearby>NO</mi:faultZonesNearby>
+    <mi:distance-Activity>(multiple lines)</mi:distance-Activity>
+    <mi:notes>The concrete GPS pillar is anchored on the roof on the building of the Military Geographic Service Observatory. The top of the pillar is 6.9 m above the ground. Non-consolidated continental sediments for the bedrock.</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Sofia</mi:city>
+    <mi:state></mi:state>
+    <mi:country>Bulgaria</mi:country>
+    <mi:tectonicPlate>EURASIAN</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>4319372.39</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>1868687.57</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>4292063.80</mi:zCoordinateInMeters>
+      <mi:latitude-North>+423321.96</mi:latitude-North>
+      <mi:longitude-East>+0232340.92</mi:longitude-East>
+      <mi:elevation-m_ellips.>1119.6</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>(multiple lines)</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-8000</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>T344</equip:serialNumber>
+    <equip:firmwareVersion>3.2.32.4</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1997-05-19T10:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1999-07-11T11:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-8000</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>T344</equip:serialNumber>
+    <equip:firmwareVersion>3.2.32.9</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1999-07-11T11:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2000-11-25T23:59Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>AOA SNR-8000 ACT</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>T-344U</equip:serialNumber>
+    <equip:firmwareVersion>3.3.32.2</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2001-03-09T10:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2005-06-06T12:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TPS E_GGD</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>AFUY1RUPO1S</equip:serialNumber>
+    <equip:firmwareVersion>2.3 Apr,28,2004 p4</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2005-06-06T12:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2005-07-20T11:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>Additional number LE 2130 on the type level.</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TPS E_GGD</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>AFUY1RUPO1S</equip:serialNumber>
+    <equip:firmwareVersion>2.3 APR,28,2004 P4</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2005-07-20T11:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2007-11-09T08:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>Additional number LE 2130 on the Type level. No actual change took place. /par/lock/notvis switched to 'on' for 'all in view'.</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TPS E_GGD</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>AFLQXTM48W0</equip:serialNumber>
+    <equip:firmwareVersion>2.6.0 APR,18,2007</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2007-11-09T08:40Z</equip:dateInstalled>
+    <equip:dateRemoved>2008-01-17T16:14Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>Additional number LE4567 on the Type level. /par/lock/notvis switched to 'on' for 'all in view'.</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TPS E_GGD</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>AFLQXTM48W0</equip:serialNumber>
+    <equip:firmwareVersion>2.6.1 JAN,10,2008</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2008-01-17T16:15Z</equip:dateInstalled>
+    <equip:dateRemoved>2010-03-26T09:39Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>Additional number LE4567 /par/lock/notvis switched to 'on' for 'all in view'. on the Type level.</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TPS E_GGD</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>AFLQXTM48W0</equip:serialNumber>
+    <equip:firmwareVersion>3.4 DEC,12,2009 P2</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2010-03-26T09:40Z</equip:dateInstalled>
+    <equip:dateRemoved>2010-03-30T14:29Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>Additional number LE4567 /par/lock/notvis switched to 'on' for 'all in view'. on the Type level.</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TPS E_GGD</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>AFLQXTM48W0</equip:serialNumber>
+    <equip:firmwareVersion>2.6.1 JAN,10,2008</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2010-03-30T14:30Z</equip:dateInstalled>
+    <equip:dateRemoved>2010-04-29T12:59Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>Additional number LE4567 /par/lock/notvis switched to 'on' for 'all in view'. on the Type level.</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200GGPRO</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>356544</equip:serialNumber>
+    <equip:firmwareVersion>7.80/3.018</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2010-04-29T13:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2010-05-02T15:59Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200GGPRO</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>356544</equip:serialNumber>
+    <equip:firmwareVersion>7.80/3.019</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2010-05-02T16:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        NONE</equip:antennaType>
+    <equip:serialNumber>287</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.2200</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>RG 214</equip:antennaCableType>
+    <equip:antennaCableLength>30</equip:antennaCableLength>
+    <equip:dateInstalled>1997-05-19T10:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2000-10-13T00:00Z</equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        NONE</equip:antennaType>
+    <equip:serialNumber>287</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.2203</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>RG 214</equip:antennaCableType>
+    <equip:antennaCableLength>30</equip:antennaCableLength>
+    <equip:dateInstalled>2000-10-13T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2001-03-10T00:00Z</equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        NONE</equip:antennaType>
+    <equip:serialNumber>287</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.2200</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>RG 214</equip:antennaCableType>
+    <equip:antennaCableLength>30</equip:antennaCableLength>
+    <equip:dateInstalled>2001-03-10T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2010-04-29T12:59Z</equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>LEIAR25.R3      LEIT</equip:antennaType>
+    <equip:serialNumber>09160008</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.2200</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>LEIT</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>RG 214</equip:antennaCableType>
+    <equip:antennaCableLength>30</equip:antennaCableLength>
+    <equip:dateInstalled>2010-04-29T13:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>Antenna calibrated absolute by Geo++ Garbsen, 2010-04-01.</equip:notes>
+  </gnssAntenna>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>SLR</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>SLR</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>7505</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>11101M001</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>25.2836</equip:dX>
+      <equip:dY>10.3253</equip:dY>
+      <equip:dZ>-39.0333</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>1</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>TRIANGULATION</equip:surveyMethod>
+    <equip:dateMeasured>1995-09-21</equip:dateMeasured>
+    <equip:notes>MTLRS-1</equip:notes>
+  </surveyedLocalTies>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>Pillar 0556A</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>GPS</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>(A4)</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>(A9)</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>8.2792</equip:dX>
+      <equip:dY>-42.3829</equip:dY>
+      <equip:dZ>9.3068</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>1</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>TRIANGULATION</equip:surveyMethod>
+    <equip:dateMeasured>1995-09-21</equip:dateMeasured>
+    <equip:notes>EUREF-BG-1992</equip:notes>
+  </surveyedLocalTies>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL </equip:standardType>
+    <equip:inputFrequency>(if external)</equip:inputFrequency>
+    <equip:effectiveDates>1997-05-19/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </frequencyStandard>
+  <collocationInformation>
+    <equip:instrumentType>SLR MTLRS-1</equip:instrumentType>
+    <equip:status>MOBILE</equip:status>
+    <equip:effectiveDates>1995-09-01/1995-10-01</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </collocationInformation>
+  <collocationInformation>
+    <equip:instrumentType>GPS EUREF-BG-1992</equip:instrumentType>
+    <equip:status>MOBILE</equip:status>
+    <equip:effectiveDates>1992-10-04/1992-10-08</equip:effectiveDates>
+    <equip:notes>Pillar 0556A. TEMPORARY.</equip:notes>
+  </collocationInformation>
+  <humiditySensor>
+    <equip:type>MP408A-T4-W4W</equip:type>
+    <equip:manufacturer>ROTRONIC</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>2.0</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>1997-06-01/2005-06-06</equip:effectiveDates>
+    <equip:dataSamplingInterval>900</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>1.5</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>CAPACITANCE PROBE</equip:aspiration>
+    <equip:notes>Humidity Sensor is 2.0 m below the antenna</equip:notes>
+  </humiditySensor>
+  <humiditySensor>
+    <equip:type>HD 9008 TR</equip:type>
+    <equip:manufacturer>Delta Ohm</equip:manufacturer>
+    <equip:serialNumber>04017147</equip:serialNumber>
+    <equip:heightDiffToAntenna>2.0</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2005-06-06/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>900</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>1.5</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>CAPACITANCE PROBE</equip:aspiration>
+    <equip:notes>Humidity Sensor is 2.0 m below the antenna</equip:notes>
+  </humiditySensor>
+  <pressureSensor>
+    <equip:type>APS</equip:type>
+    <equip:manufacturer>L-TEC LEIBENGUTH</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>2.0</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>1997-06-01/1999-10-26</equip:effectiveDates>
+    <equip:dataSamplingInterval>900</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>1.0</equip:accuracy-hPa>
+    <equip:notes>Pressure Sensor is 2.0 m below the antenna</equip:notes>
+  </pressureSensor>
+  <pressureSensor>
+    <equip:type>APS</equip:type>
+    <equip:manufacturer>L-TEC LEIBENGUTH</equip:manufacturer>
+    <equip:serialNumber>4895A136</equip:serialNumber>
+    <equip:heightDiffToAntenna>2.0</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>1999-10-26/2000-02-01</equip:effectiveDates>
+    <equip:dataSamplingInterval>900</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>1.0</equip:accuracy-hPa>
+    <equip:notes>Pressure Sensor is 2.0 m below the antenna</equip:notes>
+  </pressureSensor>
+  <pressureSensor>
+    <equip:type>APS</equip:type>
+    <equip:manufacturer>L-TEC LEIBENGUTH</equip:manufacturer>
+    <equip:serialNumber>4895A143</equip:serialNumber>
+    <equip:heightDiffToAntenna>2.0</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2000-02-01/2005-06-06</equip:effectiveDates>
+    <equip:dataSamplingInterval>900</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>1.0</equip:accuracy-hPa>
+    <equip:notes>Pressure Sensor is 2.0 m below the antenna</equip:notes>
+  </pressureSensor>
+  <pressureSensor>
+    <equip:type>APS</equip:type>
+    <equip:manufacturer>Roesler + Cie</equip:manufacturer>
+    <equip:serialNumber>11 5A011 95</equip:serialNumber>
+    <equip:heightDiffToAntenna>2.0</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2005-06-06/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>900</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>1.0</equip:accuracy-hPa>
+    <equip:notes>Pressure Sensor is 2.0 m below the antenna</equip:notes>
+  </pressureSensor>
+  <temperatureSensor>
+    <equip:type>MP408A</equip:type>
+    <equip:manufacturer>ROTRONIC</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>2.0</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>1997-06-01/2005-06-06</equip:effectiveDates>
+    <equip:dataSamplingInterval>900</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>0.3</equip:accuracy-degreesCelcius>
+    <equip:aspiration>PLATINUM PROBE</equip:aspiration>
+    <equip:notes>Temperature Sensor is 2.0 m below the antenna</equip:notes>
+  </temperatureSensor>
+  <temperatureSensor>
+    <equip:type>HD 9008 TR</equip:type>
+    <equip:manufacturer>Delta Ohm</equip:manufacturer>
+    <equip:serialNumber>04017147</equip:serialNumber>
+    <equip:heightDiffToAntenna>2.0</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2005-06-06/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>900</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>0.3</equip:accuracy-degreesCelcius>
+    <equip:aspiration>PLATINUM PROBE</equip:aspiration>
+    <equip:notes>Temperature Sensor is 2.0 m below the antenna</equip:notes>
+  </temperatureSensor>
+  <contactAgency>
+    <contact:agency>Ministry of Defence</contact:agency>
+    <contact:preferredAbbreviation>MGS</contact:preferredAbbreviation>
+    <contact:mailingAddress>Ministry of Defence</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Major Tsvetan Petrov Tsonev</contact:name>
+      <contact:telephonePrimary>++359-2-9224171</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>++359-2-9804691</contact:fax>
+      <contact:e-mail>mts@md.government.bg</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>MGS - COL. Georgi Tonchev Gladkov</contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>++359-2-9804691</contact:fax>
+      <contact:e-mail>mts@md.government.bg</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>Military Geographic Service Military Geographic Service 34 Totleben Boulevard 1606 Sofia Bulgaria Captain Georgi Gencev mts@md.government.bg</contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>Bundesamt fuer Kartographie</contact:agency>
+    <contact:preferredAbbreviation>BKG</contact:preferredAbbreviation>
+    <contact:mailingAddress>Bundesamt fuer Kartographie</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Uwe Hessels</contact:name>
+      <contact:telephonePrimary>++49-9941-603208</contact:telephonePrimary>
+      <contact:telephoneSecondary>++49-9941-6030</contact:telephoneSecondary>
+      <contact:fax>++49-9941-603222</contact:fax>
+      <contact:e-mail>uwe.hessels@bkg.bund.de</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>und Geodaesie Geodetical Observatory Wettzell und Geodaesie Geodetical Observatory Wettzell Sackenrieder Strasse 25 D-93444 Bad Koetzting Germany Klaus Roettcher ++49-9941-603115 klaus.roettcher@bkg.bund.de Rudi Stoeger ++49-9941-603117 rudolf.stoeger@bkg.bund.de</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter>www.bkg.bund.de, www.fs.wettzell.de</mi:primaryDataCenter>
+    <mi:secondaryDataCenter>www.bkg.bund.de, www.fs.wettzell.de</mi:secondaryDataCenter>
+    <mi:urlForMoreInformation>www.bkg.bund.de, www.fs.wettzell.de</mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>(Y or URL)</mi:siteMap>
+    <mi:siteDiagram>(Y or URL)</mi:siteDiagram>
+    <mi:horizonMask>(Y or URL)</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>Y</mi:sitePictures>
+    <mi:notes>(multiple lines)</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

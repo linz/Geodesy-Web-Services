@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Mike Craymer</mi:preparedBy>
+    <mi:datePrepared>2013-01-17</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>alrt_20120626.log</mi:previousLog>
+    <mi:modifiedSections>10.9, 10.23</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>Alert</mi:siteName>
+    <mi:fourCharacterID>ALRT</mi:fourCharacterID>
+    <mi:monumentInscription>M029001</mi:monumentInscription>
+    <mi:iersDOMESNumber>40162M001</mi:iersDOMESNumber>
+    <mi:cdpNumber>N/A</mi:cdpNumber>
+    <mi:monumentDescription>Galvanized steel pipe</mi:monumentDescription>
+    <mi:heightOfTheMonument>2</mi:heightOfTheMonument>
+    <mi:monumentFoundation>Permafrost and shale</mi:monumentFoundation>
+    <mi:foundationDepth>6</mi:foundationDepth>
+    <mi:markerDescription>Brass plate with steel centering bolt</mi:markerDescription>
+    <mi:dateInstalled>2002-07-15</mi:dateInstalled>
+    <mi:geologicCharacteristic></mi:geologicCharacteristic>
+    <mi:bedrockType>Shale</mi:bedrockType>
+    <mi:bedrockCondition></mi:bedrockCondition>
+    <mi:fractureSpacing></mi:fractureSpacing>
+    <mi:faultZonesNearby>No</mi:faultZonesNearby>
+    <mi:distance-Activity>(multiple lines)</mi:distance-Activity>
+    <mi:notes>The GPS reference mark consists of a brass plate with a forced centering stainless steel bolt cemented on top of a 12.7cm diameter, 8m long galvanized steel pipe, set in shale and permafrost to a depth of 6m. A slurry was poured into the pipe to ground level and insulation added to a 0.3m from the top. Cement was used to top off the remaining part for setting the brass plate. A 25cm diameter culvert was placed around the pipe and filed with sand, and a 0.8m high, 3m square berme built around it.</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Alert (Ellesmere Island)</mi:city>
+    <mi:state>Nunavut</mi:state>
+    <mi:country>Canada</mi:country>
+    <mi:tectonicPlate>North American</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>388042.75</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>-740382.40</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>6302001.85</mi:zCoordinateInMeters>
+      <mi:latitude-North>+822939.46</mi:latitude-North>
+      <mi:longitude-East>-0622025.66</mi:longitude-East>
+      <mi:elevation-m_ellips.>78.11</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>Located at Canada Forces Station Alert. Receiver is located in the Canadian Hydrographic Service tide gauge building.</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH UZ-12</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>ZR520021002</equip:serialNumber>
+    <equip:firmwareVersion>CJ00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2002-07-16T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2005-08-12T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>NONE</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH UZ-12</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>ZR520021002</equip:serialNumber>
+    <equip:firmwareVersion>CK00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2005-08-12T02:02Z</equip:dateInstalled>
+    <equip:dateRemoved>2009-07-28T19:33Z</equip:dateRemoved>
+    <equip:temperatureStabilization>NONE</equip:temperatureStabilization>
+    <equip:notes>Power supply failed 2009-07-28</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH UZ-12</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>ZR520021005</equip:serialNumber>
+    <equip:firmwareVersion>CK00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2009-08-20T18:24Z</equip:dateInstalled>
+    <equip:dateRemoved>2009-09-09T20:28Z</equip:dateRemoved>
+    <equip:temperatureStabilization>NONE</equip:temperatureStabilization>
+    <equip:notes>Temporary replacement</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH UZ-12</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>ZR520021002</equip:serialNumber>
+    <equip:firmwareVersion>CK00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2009-09-09T20:55Z</equip:dateInstalled>
+    <equip:dateRemoved>2011-05-20T15:45Z</equip:dateRemoved>
+    <equip:temperatureStabilization>NONE</equip:temperatureStabilization>
+    <equip:notes>Original receiver with new power supply. Tracking less than 50% of available satellites began 2010 D361. Tracking problems initially appeared October 2010.</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH UZ-12</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>UC2200511006</equip:serialNumber>
+    <equip:firmwareVersion>CQ00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2011-05-20T15:51Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>NONE</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>ASH701945D_M    NONE</equip:antennaType>
+    <equip:serialNumber>CR520020903</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.1000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>LMR-240 coaxial cable, Times Microwave System</equip:antennaCableType>
+    <equip:antennaCableLength>30</equip:antennaCableLength>
+    <equip:dateInstalled>2002-07-16T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>68999 2012-06-26 ASH701945C_M to ASH701945D_M.</equip:notes>
+  </gnssAntenna>
+  <frequencyStandard>
+    <equip:standardType>Internal</equip:standardType>
+    <equip:inputFrequency></equip:inputFrequency>
+    <equip:effectiveDates>2002-07-16/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes></equip:notes>
+  </frequencyStandard>
+  <localEpisodicEvents>
+    <li:date>2006-01-06T14</li:date>
+    <li:event>Removed hard packed snow from antenna</li:event>
+  </localEpisodicEvents>
+  <localEpisodicEvents>
+    <li:date>2006-01-15T16</li:date>
+    <li:event>Removed hard packed snow from antenna</li:event>
+  </localEpisodicEvents>
+  <localEpisodicEvents>
+    <li:date>2006-02-20T19</li:date>
+    <li:event>Removed light dry snow from antenna</li:event>
+  </localEpisodicEvents>
+  <localEpisodicEvents>
+    <li:date>2006-03-09T19</li:date>
+    <li:event>Removed light dry snow from antenna</li:event>
+  </localEpisodicEvents>
+  <localEpisodicEvents>
+    <li:date>2006-03-22T19</li:date>
+    <li:event>Removed light dry snow from antenna</li:event>
+  </localEpisodicEvents>
+  <localEpisodicEvents>
+    <li:date>2006-12-18T18</li:date>
+    <li:event>Removed hard packed snow from antenna</li:event>
+  </localEpisodicEvents>
+  <localEpisodicEvents>
+    <li:date>2007-02-02T18</li:date>
+    <li:event>Removed hard packed snow from antenna</li:event>
+  </localEpisodicEvents>
+  <localEpisodicEvents>
+    <li:date>2007-04-25T11</li:date>
+    <li:event>Removed hard packed snow from antenna</li:event>
+  </localEpisodicEvents>
+  <localEpisodicEvents>
+    <li:date>2007-10-23T15</li:date>
+    <li:event>Removed snow from antenna choke rings</li:event>
+  </localEpisodicEvents>
+  <localEpisodicEvents>
+    <li:date>2008-03-26T15</li:date>
+    <li:event>Removed snow from antenna</li:event>
+  </localEpisodicEvents>
+  <localEpisodicEvents>
+    <li:date>2008-09-22T11</li:date>
+    <li:event>Removed snow from antenna</li:event>
+  </localEpisodicEvents>
+  <localEpisodicEvents>
+    <li:date>2008-09-24T11</li:date>
+    <li:event>Removed snow from antenna</li:event>
+  </localEpisodicEvents>
+  <localEpisodicEvents>
+    <li:date>2008-10-09T11</li:date>
+    <li:event>Removed snow from antenna</li:event>
+  </localEpisodicEvents>
+  <localEpisodicEvents>
+    <li:date>2008-11-07T11</li:date>
+    <li:event>Removed 5 cm of snow from antenna choke</li:event>
+  </localEpisodicEvents>
+  <localEpisodicEvents>
+    <li:date>2008-11-10T11</li:date>
+    <li:event>Removed 5 cm of snow from antenna choke</li:event>
+  </localEpisodicEvents>
+  <localEpisodicEvents>
+    <li:date>2008-11-19T11</li:date>
+    <li:event>Removed 4 cm of snow from antenna choke</li:event>
+  </localEpisodicEvents>
+  <localEpisodicEvents>
+    <li:date>2008-12-05</li:date>
+    <li:event>Removed small amount of snow from</li:event>
+  </localEpisodicEvents>
+  <localEpisodicEvents>
+    <li:date>2008-12-17T10</li:date>
+    <li:event>Removed 2 cm of snow from antenna choke</li:event>
+  </localEpisodicEvents>
+  <localEpisodicEvents>
+    <li:date>2009-02-17T15</li:date>
+    <li:event>Removed 2 cm snow/frost from antenna choke</li:event>
+  </localEpisodicEvents>
+  <localEpisodicEvents>
+    <li:date>2009-02-24T15</li:date>
+    <li:event>Removed 1.5 cm of snow from antenna choke</li:event>
+  </localEpisodicEvents>
+  <localEpisodicEvents>
+    <li:date>2009-10-15T06</li:date>
+    <li:event>Removed 1.5 cm of snow from antenna choke</li:event>
+  </localEpisodicEvents>
+  <localEpisodicEvents>
+    <li:date>2009-10-18T18</li:date>
+    <li:event>Removed 1.5 cm of snow from antenna choke</li:event>
+  </localEpisodicEvents>
+  <localEpisodicEvents>
+    <li:date>2009-10-28T15</li:date>
+    <li:event>Removed 3 cm of snow from antenna choke rings</li:event>
+  </localEpisodicEvents>
+  <localEpisodicEvents>
+    <li:date>2010-01-11T11</li:date>
+    <li:event>Removed 2 cm of snow and ice from antenna</li:event>
+  </localEpisodicEvents>
+  <localEpisodicEvents>
+    <li:date>2010-01-25T11</li:date>
+    <li:event>Removed 2 mm of snow from antenna dome</li:event>
+  </localEpisodicEvents>
+  <localEpisodicEvents>
+    <li:date>2010-01-28T14</li:date>
+    <li:event>Removed 3 mm of snow from antenna choke rings</li:event>
+  </localEpisodicEvents>
+  <localEpisodicEvents>
+    <li:date>2010-02-08T11</li:date>
+    <li:event>Removed 4 mm of snow from antenna choke rings</li:event>
+  </localEpisodicEvents>
+  <localEpisodicEvents>
+    <li:date>2010-09-06T11</li:date>
+    <li:event>Removed 4 cm of snow from antenna choke rings</li:event>
+  </localEpisodicEvents>
+  <localEpisodicEvents>
+    <li:date>2010-09-15T10</li:date>
+    <li:event>Removed 3 cm of snow from antenna choke rings</li:event>
+  </localEpisodicEvents>
+  <localEpisodicEvents>
+    <li:date>2011-03-16T23</li:date>
+    <li:event>Removed 3 cm of snow from antenna choke rings</li:event>
+  </localEpisodicEvents>
+  <localEpisodicEvents>
+    <li:date>2011-04-28T23</li:date>
+    <li:event>Removed 1 cm of snow from antenna choke rings</li:event>
+  </localEpisodicEvents>
+  <contactAgency>
+    <contact:agency>Natural Resources Canada</contact:agency>
+    <contact:preferredAbbreviation>NRCan/GSD</contact:preferredAbbreviation>
+    <contact:mailingAddress>615 Booth Street</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Mike Craymer</contact:name>
+      <contact:telephonePrimary>613-947-1829</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>613-995-3215</contact:fax>
+      <contact:e-mail>craymer@nrcan.gc.ca</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Mike Piraszewski</contact:name>
+      <contact:telephonePrimary>613-947-0967</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>613-995-3215</contact:fax>
+      <contact:e-mail>mpirasze@nrcan.gc.ca</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>Ottawa, ON, K1A 0E9, Canada (multiple lines)</contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>Natural Resources Canada</contact:agency>
+    <contact:preferredAbbreviation>NRCan/GSD</contact:preferredAbbreviation>
+    <contact:mailingAddress>(multiple lines)</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>(multiple lines)</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter></mi:primaryDataCenter>
+    <mi:secondaryDataCenter></mi:secondaryDataCenter>
+    <mi:urlForMoreInformation></mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>Y</mi:siteMap>
+    <mi:siteDiagram>Y</mi:siteDiagram>
+    <mi:horizonMask>Y</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>Y</mi:sitePictures>
+    <mi:notes></mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

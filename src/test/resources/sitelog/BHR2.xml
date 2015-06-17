@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>James C Berra</mi:preparedBy>
+    <mi:datePrepared>2008-05-30</mi:datePrepared>
+    <mi:reportType>NEW</mi:reportType>
+    <mi:previousLog></mi:previousLog>
+    <mi:modifiedSections></mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>Bahrain NGA colocated</mi:siteName>
+    <mi:fourCharacterID>bhr2</mi:fourCharacterID>
+    <mi:monumentInscription>NIMA GEODESY &amp; GEOPHYSICS 85405</mi:monumentInscription>
+    <mi:iersDOMESNumber>24901M002</mi:iersDOMESNumber>
+    <mi:cdpNumber>n/a</mi:cdpNumber>
+    <mi:monumentDescription>BRASS SURVEY DISK</mi:monumentDescription>
+    <mi:heightOfTheMonument></mi:heightOfTheMonument>
+    <mi:monumentFoundation>CONCRETE,ROOF</mi:monumentFoundation>
+    <mi:foundationDepth></mi:foundationDepth>
+    <mi:markerDescription>STAMPED BRASS SURVEY DISK</mi:markerDescription>
+    <mi:dateInstalled>1980-05-15</mi:dateInstalled>
+    <mi:geologicCharacteristic>(BEDROCK/CLAY/CONGLOMERATE/GRAVEL/SAND/etc)</mi:geologicCharacteristic>
+    <mi:bedrockType>(IGNEOUS/METAMORPHIC/SEDIMENTARY)</mi:bedrockType>
+    <mi:bedrockCondition>(FRESH/JOINTED/WEATHERED)</mi:bedrockCondition>
+    <mi:fractureSpacing>(1-10 cm/11-50 cm/51-200 cm/over 200 cm)</mi:fractureSpacing>
+    <mi:faultZonesNearby>(YES/NO/Name of the zone)</mi:faultZonesNearby>
+    <mi:distance-Activity>(multiple lines)</mi:distance-Activity>
+    <mi:notes>(multiple lines)</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Manama</mi:city>
+    <mi:state></mi:state>
+    <mi:country>Bahrain</mi:country>
+    <mi:tectonicPlate>Arabian</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>3633910.757</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>4425277.729</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>2799862.795</mi:zCoordinateInMeters>
+      <mi:latitude-North>+261232.90</mi:latitude-North>
+      <mi:longitude-East>+0503629.32</mi:longitude-East>
+      <mi:elevation-m_ellips.>-13.9</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes></mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>3200</equip:serialNumber>
+    <equip:firmwareVersion>1Y04-0A73</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>1995-03-20T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1996-09-15</equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>Receiver 2</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>3200</equip:serialNumber>
+    <equip:firmwareVersion>1Y05-1D02</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>1996-09-15T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1998-10-20</equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>Receiver 2</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>3200</equip:serialNumber>
+    <equip:firmwareVersion>1Y06-1D04</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>1998-10-20T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2000-07-05</equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>Receiver 2</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>3200</equip:serialNumber>
+    <equip:firmwareVersion>1Y07-1DY4</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>2000-07-05T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>Receiver 2</equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>ASH700936B_M    SNOW</equip:antennaType>
+    <equip:serialNumber>11985</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>003.1220</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>(deg; + is clockwise/east)</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>SNOW</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>1995-10-01T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes></equip:notes>
+  </gnssAntenna>
+  <frequencyStandard>
+    <equip:standardType>Cesium /Rcvr2</equip:standardType>
+    <equip:inputFrequency>(if external)</equip:inputFrequency>
+    <equip:effectiveDates>2002-03-11</equip:effectiveDates>
+    <equip:notes>HP 5071A (SN-3249A00710)</equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>Cesium /Rcvr2</equip:standardType>
+    <equip:inputFrequency>(if external)</equip:inputFrequency>
+    <equip:effectiveDates>2008-04-19</equip:effectiveDates>
+    <equip:notes>HP 5071A (SN-3839A01284)</equip:notes>
+  </frequencyStandard>
+  <collocationInformation>
+    <equip:instrumentType>(GPS/GLONASS/DORIS/PRARE/SLR/VLBI/TIME/etc)</equip:instrumentType>
+    <equip:status>(PERMANENT/MOBILE)</equip:status>
+    <equip:effectiveDates>(CCYY-MM-DD/CCYY-MM-DD)</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </collocationInformation>
+  <humiditySensor>
+    <equip:type>HMP233</equip:type>
+    <equip:manufacturer>Vaisala</equip:manufacturer>
+    <equip:serialNumber>P2240004</equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>(CCYY-MM-DD/CCYY-MM-DD)</equip:effectiveDates>
+    <equip:dataSamplingInterval>900</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>(% rel h)</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </humiditySensor>
+  <pressureSensor>
+    <equip:type>PTB202A</equip:type>
+    <equip:manufacturer>Vaisala</equip:manufacturer>
+    <equip:serialNumber>P2340002</equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>(CCYY-MM-DD/CCYY-MM-DD)</equip:effectiveDates>
+    <equip:dataSamplingInterval>900</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>(hPa)</equip:accuracy-hPa>
+    <equip:notes>(multiple lines)</equip:notes>
+  </pressureSensor>
+  <temperatureSensor>
+    <equip:type>HMP233</equip:type>
+    <equip:manufacturer>Vaisala</equip:manufacturer>
+    <equip:serialNumber>P2240004</equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>(CCYY-MM-DD/CCYY-MM-DD)</equip:effectiveDates>
+    <equip:dataSamplingInterval>900</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>(deg C)</equip:accuracy-degreesCelcius>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </temperatureSensor>
+  <waterVaporSensor>
+    <equip:type></equip:type>
+    <equip:manufacturer></equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>(CCYY-MM-DD/CCYY-MM-DD)</equip:effectiveDates>
+    <equip:distanceToAntenna></equip:distanceToAntenna>
+    <equip:notes>(multiple lines)</equip:notes>
+  </waterVaporSensor>
+  <radioInterferences>
+    <li:possibleProblemSources>(TV/CELL PHONE ANTENNA/RADAR/etc)</li:possibleProblemSources>
+    <li:effectiveDates>(CCYY-MM-DD/CCYY-MM-DD)</li:effectiveDates>
+    <li:observedDegredation></li:observedDegredation>
+    <li:notes>(multiple lines)</li:notes>
+  </radioInterferences>
+  <localEpisodicEvents>
+    <li:date>(CCYY-MM-DD/CCYY-MM-DD)</li:date>
+    <li:event>(TREE CLEARING/CONSTRUCTION/etc)</li:event>
+  </localEpisodicEvents>
+  <contactAgency>
+    <contact:agency>National Geospatial-Intelligence Agency</contact:agency>
+    <contact:preferredAbbreviation>NGA</contact:preferredAbbreviation>
+    <contact:mailingAddress>3838 Vogel Rd., Arnold, MO 63010-6238</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Randall E. Taylor</contact:name>
+      <contact:telephonePrimary>(314) 676-1223</contact:telephonePrimary>
+      <contact:telephoneSecondary>(314) 676-9140</contact:telephoneSecondary>
+      <contact:fax>(314) 676-3174</contact:fax>
+      <contact:e-mail>Randall.E.Taylor@nga.mil</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>James C Berra</contact:name>
+      <contact:telephonePrimary>(314) 676-9140</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>(314) 676-3174</contact:fax>
+      <contact:e-mail>James.C.Berra@nga.mil</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes></contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>National Geospatial-Intelligence Agency</contact:agency>
+    <contact:preferredAbbreviation>NGA</contact:preferredAbbreviation>
+    <contact:mailingAddress>(multiple lines)</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes></contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter></mi:primaryDataCenter>
+    <mi:secondaryDataCenter></mi:secondaryDataCenter>
+    <mi:urlForMoreInformation></mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>(Y or URL)</mi:siteMap>
+    <mi:siteDiagram>(Y or URL)</mi:siteDiagram>
+    <mi:horizonMask>(Y or URL)</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>(Y or URL)</mi:sitePictures>
+    <mi:notes>(multiple lines)</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

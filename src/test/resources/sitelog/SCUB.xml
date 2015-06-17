@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Markus Bradke</mi:preparedBy>
+    <mi:datePrepared>2012-12-06</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>scub_20020628.log</mi:previousLog>
+    <mi:modifiedSections>1, 3, 11, 12</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>CENAIS, Santiago de Cuba</mi:siteName>
+    <mi:fourCharacterID>SCUB</mi:fourCharacterID>
+    <mi:monumentInscription></mi:monumentInscription>
+    <mi:iersDOMESNumber>40701M001</mi:iersDOMESNumber>
+    <mi:cdpNumber>(A4)</mi:cdpNumber>
+    <mi:monumentDescription>Pillar on the roof of the Observatory</mi:monumentDescription>
+    <mi:heightOfTheMonument></mi:heightOfTheMonument>
+    <mi:monumentFoundation>(STEEL RODS, CONCRETE BLOCK, ROOF, etc)</mi:monumentFoundation>
+    <mi:foundationDepth></mi:foundationDepth>
+    <mi:markerDescription>(CHISELLED CROSS/DIVOT/BRASS NAIL/etc)</mi:markerDescription>
+    <mi:dateInstalled>1995-05-31T00</mi:dateInstalled>
+    <mi:geologicCharacteristic>CLAY</mi:geologicCharacteristic>
+    <mi:bedrockType>SEDIMENTARY</mi:bedrockType>
+    <mi:bedrockCondition>JOINTED</mi:bedrockCondition>
+    <mi:fractureSpacing>10-50 cm</mi:fractureSpacing>
+    <mi:faultZonesNearby>(YES/NO/Name of the zone)</mi:faultZonesNearby>
+    <mi:distance-Activity>(multiple lines)</mi:distance-Activity>
+    <mi:notes>(multiple lines)</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Santiago de Cuba</mi:city>
+    <mi:state>Santiago</mi:state>
+    <mi:country>Cuba</mi:country>
+    <mi:tectonicPlate>NORTH AMERICAN</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>1474538.1759</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>-5811243.3797</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>2168958.8133</mi:zCoordinateInMeters>
+      <mi:latitude-North>+200043.44</mi:latitude-North>
+      <mi:longitude-East>-0754544.33</mi:longitude-East>
+      <mi:elevation-m_ellips.>21.9</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>The Observatory is situated a few tens of Km north of the Bartlett-Cayman Through which is the limit between the North America and Caribbean plates. The area has a moderate seismicity. On the Observatory Main Building is situated the Central Station of the National Seismological Service (SSSN).</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE 4000SSE</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>3349A04624</equip:serialNumber>
+    <equip:firmwareVersion>Nav 6.68</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>1995-05-31T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1996-06-21T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE 4000SSE</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>3249A02044</equip:serialNumber>
+    <equip:firmwareVersion>Nav 6.68</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>1996-10-25T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1998-01-26T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>LP00786</equip:serialNumber>
+    <equip:firmwareVersion>1E76-1D01</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>1998-04-01T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2000-12-07T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>LP00791</equip:serialNumber>
+    <equip:firmwareVersion>1D02-CD00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>2000-12-07T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>TRM22020.00+GP  NONE</equip:antennaType>
+    <equip:serialNumber>80068885</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0460</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>1995-05-31T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1996-06-21T00:00Z</equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>TRM14532.00     NONE</equip:antennaType>
+    <equip:serialNumber>327A66305</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0460</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>1996-10-25T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1998-01-26T00:00Z</equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>ASH700936C_M    SNOW</equip:antennaType>
+    <equip:serialNumber>12116</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0460</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>SNOW</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>1998-04-01T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2000-12-07T00:00Z</equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>ASH700936C_M    SNOW</equip:antennaType>
+    <equip:serialNumber>11976</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0460</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>SNOW</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>2000-12-07T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>SBG</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>(SLR/VLBI/LOCAL CONTROL/FOOTPRINT/etc)</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>2001</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>40701S001</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>10.16</equip:dX>
+      <equip:dY>0.96</equip:dY>
+      <equip:dZ>-13.76</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>10</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>(GPS CAMPAIGN/TRILATERATION/TRIANGULATION/etc)</equip:surveyMethod>
+    <equip:dateMeasured>1994-04-15T00:00Z</equip:dateMeasured>
+    <equip:notes>This is the reference point of the SLR 1953/2001 (ITRF 92 coordinates) Values given are SBG-SCUB in geocentrical coordinates</equip:notes>
+  </surveyedLocalTies>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>Doppler</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>(SLR/VLBI/LOCAL CONTROL/FOOTPRINT/etc)</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>(A4)</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>(A9)</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>-4.43</equip:dX>
+      <equip:dY>-5.04</equip:dY>
+      <equip:dZ>-5.3</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>10</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>(GPS CAMPAIGN/TRILATERATION/TRIANGULATION/etc)</equip:surveyMethod>
+    <equip:dateMeasured>1994-04-15T00:00Z</equip:dateMeasured>
+    <equip:notes>This is the reference point of the Doppler antenna base used on the 1989 IKDOK campaign (ITRF 92 coordinates). Values given are Doppler-SCUB in geocentrical coordinates. The reference point on the SCUB pillar used is the tip of baseplate screw on the pillar at 21.4 mm. over the baseplate metallic surface The measurements were carried out using classical geodetic methods (theodolite and invar tape) There is a reference local network (7 points) on the Observatory area for the monitoring of the setting of the SLR Telescope base There are 4 survey points of the National Geodetic Network in a 21 km Radius</equip:notes>
+  </surveyedLocalTies>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL</equip:standardType>
+    <equip:inputFrequency>(if external)</equip:inputFrequency>
+    <equip:effectiveDates>1995-05-31/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </frequencyStandard>
+  <collocationInformation>
+    <equip:instrumentType>SLR</equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates>1985-12-15/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>The CDP code  is1953/2001 (DOMES 40701S001) In 1993 was upgraded from a 1/6 Hz Ruby laser to a 10 Hz Nd-YAG laser at 512 nm.</equip:notes>
+  </collocationInformation>
+  <humiditySensor>
+    <equip:type>HC 500</equip:type>
+    <equip:manufacturer>TimeTech/Gresinger</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>1998-04-01/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>600</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>1</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>The humidity sensor is part of the TM200 meteo station</equip:notes>
+  </humiditySensor>
+  <pressureSensor>
+    <equip:type>PTB1OOB</equip:type>
+    <equip:manufacturer>Vaisala</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>-5.50</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>1998-04-01/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>600</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>0.5</equip:accuracy-hPa>
+    <equip:notes>The pressure sensor is part of the TM200 meteo station</equip:notes>
+  </pressureSensor>
+  <temperatureSensor>
+    <equip:type>TM 200</equip:type>
+    <equip:manufacturer>TimeTech</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>1998-04-01/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>600</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>(deg C)</equip:accuracy-degreesCelcius>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>The temperature sensor is part of the TM200 meteo station</equip:notes>
+  </temperatureSensor>
+  <contactAgency>
+    <contact:agency>Centro Nacional de Investigaciones Sismologicas</contact:agency>
+    <contact:preferredAbbreviation>CENAIS</contact:preferredAbbreviation>
+    <contact:mailingAddress>Calle 17 #61</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Dr. Jorge R. del Pino</contact:name>
+      <contact:telephonePrimary>+53 22 653949</contact:telephonePrimary>
+      <contact:telephoneSecondary>+53 22 643236</contact:telephoneSecondary>
+      <contact:fax>+53 22 642429</contact:fax>
+      <contact:e-mail>geodinamica@sssn.ciges.inf.cu</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Dr. Jose A. Zapata</contact:name>
+      <contact:telephonePrimary>+53 22 653949</contact:telephonePrimary>
+      <contact:telephoneSecondary>+53 22 643236</contact:telephoneSecondary>
+      <contact:fax>+53 22 642429</contact:fax>
+      <contact:e-mail>zapata@sssn.ciges.inf.cu</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>Vista Alegre, Santiago de Cuba 90400 Cuba (multiple lines)</contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>Helmholtz-Zentrum Potsdam</contact:agency>
+    <contact:preferredAbbreviation>GFZ</contact:preferredAbbreviation>
+    <contact:mailingAddress>Telegrafenberg A17</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Markus Bradke</contact:name>
+      <contact:telephonePrimary>(+49)331-288-1182</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>(+49)331-288-1759</contact:fax>
+      <contact:e-mail>bradke@gfz-potsdam.de</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>Deutsches GeoForschungsZentrum GFZ 14473 Potsdam / Germany (multiple lines)</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter></mi:primaryDataCenter>
+    <mi:secondaryDataCenter></mi:secondaryDataCenter>
+    <mi:urlForMoreInformation></mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>(Y or URL)</mi:siteMap>
+    <mi:siteDiagram>(Y or URL)</mi:siteDiagram>
+    <mi:horizonMask>(Y or URL)</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>(Y or URL)</mi:sitePictures>
+    <mi:notes>(multiple lines)</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

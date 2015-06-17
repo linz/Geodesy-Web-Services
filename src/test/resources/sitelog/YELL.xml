@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Mark Caissy</mi:preparedBy>
+    <mi:datePrepared>2013-07-18</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>yell_20121122.log</mi:previousLog>
+    <mi:modifiedSections>3.11 4.6</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>YELL CACS-GSD</mi:siteName>
+    <mi:fourCharacterID>YELL</mi:fourCharacterID>
+    <mi:monumentInscription>889201</mi:monumentInscription>
+    <mi:iersDOMESNumber>40127M003</mi:iersDOMESNumber>
+    <mi:cdpNumber></mi:cdpNumber>
+    <mi:monumentDescription>Concrete Pier</mi:monumentDescription>
+    <mi:heightOfTheMonument>1.80</mi:heightOfTheMonument>
+    <mi:monumentFoundation>Anchored to exposed bedrock</mi:monumentFoundation>
+    <mi:foundationDepth>3.00</mi:foundationDepth>
+    <mi:markerDescription>Brass Plate</mi:markerDescription>
+    <mi:dateInstalled>1991-01-21T00</mi:dateInstalled>
+    <mi:geologicCharacteristic>Bedrock</mi:geologicCharacteristic>
+    <mi:bedrockType></mi:bedrockType>
+    <mi:bedrockCondition>Fresh</mi:bedrockCondition>
+    <mi:fractureSpacing>10-50 cm</mi:fractureSpacing>
+    <mi:faultZonesNearby></mi:faultZonesNearby>
+    <mi:distance-Activity></mi:distance-Activity>
+    <mi:notes>The GNSS reference mark consists of a brass plate with a forced centered stainless steel bolt embedded on top of a 1.8 m high concrete pier, 0.40 m diameter. The concrete pier is anchored to exposed bedrock by steel reinforcing bars to a depth of 0.50 m.</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Yellowknife</mi:city>
+    <mi:state>NT</mi:state>
+    <mi:country>Canada</mi:country>
+    <mi:tectonicPlate>North American</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>-1224452.40</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>-2689216.00</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>5633638.20</mi:zCoordinateInMeters>
+      <mi:latitude-North>+622851.24</mi:latitude-North>
+      <mi:longitude-East>-1142850.52</mi:longitude-East>
+      <mi:elevation-m_ellips.>181.00</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>YELL is a continuously tracking GNSS station and is part of the Canadian Active Control System (CACS). The station is located at the Geological Survey of Canada's Geomagnetism Observatory and Seismic Array in Yellowknife, Northwest Territories. The station is collocated with the YEL2 GNSS station, the YEL3 GNSS station, the VLBI reference mark and the French Space Agency's DORIS beacon.</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-8</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>R116</equip:serialNumber>
+    <equip:firmwareVersion>MEENIX ?</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>10</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1991-01-21T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1992-03-19T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization></equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-8C</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>CR309/DIS</equip:serialNumber>
+    <equip:firmwareVersion>MEENIX 7.?</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>10</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1992-03-20T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1992-12-18T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization></equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-8C</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>CR309/DIS</equip:serialNumber>
+    <equip:firmwareVersion>MEENIX 7.3</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>10</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1992-12-19T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1994-03-16T18:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization></equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-8000</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>T230</equip:serialNumber>
+    <equip:firmwareVersion>TURBO 2.8.32.1</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>10</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1994-03-16T20:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1994-05-11T14:32Z</equip:dateRemoved>
+    <equip:temperatureStabilization></equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-8000</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>T302</equip:serialNumber>
+    <equip:firmwareVersion>TURBO 2.8.32.1</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>10</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1994-05-11T14:52Z</equip:dateInstalled>
+    <equip:dateRemoved>1995-10-24T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization></equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-8000</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>T302</equip:serialNumber>
+    <equip:firmwareVersion>TURBO 3.2.32.1</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>10</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1995-10-24T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1996-12-19T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization></equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-12 RM</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>T203</equip:serialNumber>
+    <equip:firmwareVersion>TURBO 3.2.32.5X</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>10</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1996-12-19T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1999-01-25T19:45Z</equip:dateRemoved>
+    <equip:temperatureStabilization></equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-8000</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>T230</equip:serialNumber>
+    <equip:firmwareVersion>TURBO 3.2.32.5X</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>10</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1999-01-25T19:45Z</equip:dateInstalled>
+    <equip:dateRemoved>1999-08-09T23:59Z</equip:dateRemoved>
+    <equip:temperatureStabilization></equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>AOA BENCHMARK ACT</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>1105</equip:serialNumber>
+    <equip:firmwareVersion>TURBO 3.3.32.2N</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>10</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1999-08-10T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2007-07-25T14:15Z</equip:dateRemoved>
+    <equip:temperatureStabilization></equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>AOA SNR-12 ACT</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>204-U</equip:serialNumber>
+    <equip:firmwareVersion>TURBO 3.3.32.2N</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>10</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2007-07-25T14:30Z</equip:dateInstalled>
+    <equip:dateRemoved>2013-07-17T19:30Z</equip:dateRemoved>
+    <equip:temperatureStabilization></equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>JAVAD TRE_G3T DELTA</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>00403</equip:serialNumber>
+    <equip:firmwareVersion>3.5.0 Nov,13,2012</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2013-07-17T20:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization></equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_B        NONE</equip:antennaType>
+    <equip:serialNumber>110</equip:serialNumber>
+    <equip:antennaReferencePoint>BCR</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.1110</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0.0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType></equip:antennaCableType>
+    <equip:antennaCableLength>0.00</equip:antennaCableLength>
+    <equip:dateInstalled>1991-01-21T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1992-03-19T00:00Z</equip:dateRemoved>
+    <equip:notes></equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_B        NONE</equip:antennaType>
+    <equip:serialNumber>117</equip:serialNumber>
+    <equip:antennaReferencePoint>BCR</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.1170</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0.0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType></equip:antennaCableType>
+    <equip:antennaCableLength>0.00</equip:antennaCableLength>
+    <equip:dateInstalled>1992-03-20T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1994-03-16T18:00Z</equip:dateRemoved>
+    <equip:notes></equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        NONE</equip:antennaType>
+    <equip:serialNumber>273</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0820</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0.0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType></equip:antennaCableType>
+    <equip:antennaCableLength>0.00</equip:antennaCableLength>
+    <equip:dateInstalled>1994-03-16T20:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1994-10-13T21:52Z</equip:dateRemoved>
+    <equip:notes></equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        NONE</equip:antennaType>
+    <equip:serialNumber>273</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.1000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0.0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType></equip:antennaCableType>
+    <equip:antennaCableLength>0.00</equip:antennaCableLength>
+    <equip:dateInstalled>1994-10-14T00:15Z</equip:dateInstalled>
+    <equip:dateRemoved>1996-08-22T00:00Z</equip:dateRemoved>
+    <equip:notes></equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        NONE</equip:antennaType>
+    <equip:serialNumber>285</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.1000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0.0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>FSJ1-50A</equip:antennaCableType>
+    <equip:antennaCableLength>50.00</equip:antennaCableLength>
+    <equip:dateInstalled>1996-08-22T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2013-07-17T19:30Z</equip:dateRemoved>
+    <equip:notes></equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        NONE</equip:antennaType>
+    <equip:serialNumber>527</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.1000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0.0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>FSJ1-50A</equip:antennaCableType>
+    <equip:antennaCableLength>50.00</equip:antennaCableLength>
+    <equip:dateInstalled>2013-07-17T20:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes></equip:notes>
+  </gnssAntenna>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>909012</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage></equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>7296</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>40127M004</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>52.933</equip:dX>
+      <equip:dY>-57.155</equip:dY>
+      <equip:dZ>-17.996</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>2.0</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod></equip:surveyMethod>
+    <equip:dateMeasured>1993-12-12T00:00Z</equip:dateMeasured>
+    <equip:notes>Source/GSD/M93-301</equip:notes>
+  </surveyedLocalTies>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>829098</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage></equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>7285</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>40127M001</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>327.855</equip:dX>
+      <equip:dY>-314.587</equip:dY>
+      <equip:dZ>-82.91</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>2.0</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod></equip:surveyMethod>
+    <equip:dateMeasured>1993-12-13T00:00Z</equip:dateMeasured>
+    <equip:notes>Source/GSD/M93-301</equip:notes>
+  </surveyedLocalTies>
+  <frequencyStandard>
+    <equip:standardType>RUBIDIUM</equip:standardType>
+    <equip:inputFrequency>5 MHZ</equip:inputFrequency>
+    <equip:effectiveDates>1992-12-19/1994-08-02</equip:effectiveDates>
+    <equip:notes></equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>H-MASER</equip:standardType>
+    <equip:inputFrequency>5 MHZ</equip:inputFrequency>
+    <equip:effectiveDates>1994-08-02/1998-02-12</equip:effectiveDates>
+    <equip:notes></equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>RUBIDIUM</equip:standardType>
+    <equip:inputFrequency>5 MHZ</equip:inputFrequency>
+    <equip:effectiveDates>1998-02-12/1998-04-24</equip:effectiveDates>
+    <equip:notes></equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>H-MASER</equip:standardType>
+    <equip:inputFrequency>5 MHZ</equip:inputFrequency>
+    <equip:effectiveDates>1998-04-24/2005-04-09</equip:effectiveDates>
+    <equip:notes></equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL</equip:standardType>
+    <equip:inputFrequency>5 MHZ</equip:inputFrequency>
+    <equip:effectiveDates>2005-04-10/2005-04-12</equip:effectiveDates>
+    <equip:notes></equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>H-MASER</equip:standardType>
+    <equip:inputFrequency>5 MHZ</equip:inputFrequency>
+    <equip:effectiveDates>2005-04-12/2006-08-16</equip:effectiveDates>
+    <equip:notes></equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL</equip:standardType>
+    <equip:inputFrequency>5 MHZ</equip:inputFrequency>
+    <equip:effectiveDates>2006-08-16/2006-08-21</equip:effectiveDates>
+    <equip:notes></equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>H-MASER</equip:standardType>
+    <equip:inputFrequency>5 MHZ</equip:inputFrequency>
+    <equip:effectiveDates>2006-08-21/2006-08-24</equip:effectiveDates>
+    <equip:notes></equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL</equip:standardType>
+    <equip:inputFrequency>5 MHZ</equip:inputFrequency>
+    <equip:effectiveDates>2006-08-24/2006-08-28</equip:effectiveDates>
+    <equip:notes></equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>H-MASER</equip:standardType>
+    <equip:inputFrequency>5 MHZ</equip:inputFrequency>
+    <equip:effectiveDates>2006-08-28/2010-06-29</equip:effectiveDates>
+    <equip:notes></equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL</equip:standardType>
+    <equip:inputFrequency></equip:inputFrequency>
+    <equip:effectiveDates>2010-06-29/2010-06-30</equip:effectiveDates>
+    <equip:notes></equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>H-MASER</equip:standardType>
+    <equip:inputFrequency>5 MHZ</equip:inputFrequency>
+    <equip:effectiveDates>2010-06-30/2012-11-20</equip:effectiveDates>
+    <equip:notes></equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL</equip:standardType>
+    <equip:inputFrequency>5 MHZ</equip:inputFrequency>
+    <equip:effectiveDates>2012-11-20/2012-11-22</equip:effectiveDates>
+    <equip:notes></equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>MASER</equip:standardType>
+    <equip:inputFrequency>5 MHZ</equip:inputFrequency>
+    <equip:effectiveDates>2012-11-22</equip:effectiveDates>
+    <equip:notes></equip:notes>
+  </frequencyStandard>
+  <collocationInformation>
+    <equip:instrumentType>VLBI</equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates>1991-01-21</equip:effectiveDates>
+    <equip:notes></equip:notes>
+  </collocationInformation>
+  <collocationInformation>
+    <equip:instrumentType>DORIS</equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates>1991-01-21</equip:effectiveDates>
+    <equip:notes></equip:notes>
+  </collocationInformation>
+  <humiditySensor>
+    <equip:type>HMP-35A</equip:type>
+    <equip:manufacturer>VAISALA</equip:manufacturer>
+    <equip:serialNumber>XXX</equip:serialNumber>
+    <equip:heightDiffToAntenna>-4.26</equip:heightDiffToAntenna>
+    <equip:calibrationDate>2002-07-30</equip:calibrationDate>
+    <equip:effectiveDates>2001-08-13/2008-12-22</equip:effectiveDates>
+    <equip:dataSamplingInterval>300</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>2.0 (% rel h)</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>NONE</equip:aspiration>
+    <equip:notes></equip:notes>
+  </humiditySensor>
+  <pressureSensor>
+    <equip:type>PTB-100A</equip:type>
+    <equip:manufacturer>VAISALA</equip:manufacturer>
+    <equip:serialNumber>XXX</equip:serialNumber>
+    <equip:heightDiffToAntenna>1.5</equip:heightDiffToAntenna>
+    <equip:calibrationDate>2002-07-30</equip:calibrationDate>
+    <equip:effectiveDates>2001-08-13/2007-06-14</equip:effectiveDates>
+    <equip:dataSamplingInterval>300</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>0.1 (hPa)</equip:accuracy-hPa>
+    <equip:notes></equip:notes>
+  </pressureSensor>
+  <pressureSensor>
+    <equip:type>PTB-100A</equip:type>
+    <equip:manufacturer>VAISALA</equip:manufacturer>
+    <equip:serialNumber>XXX</equip:serialNumber>
+    <equip:heightDiffToAntenna>1.5</equip:heightDiffToAntenna>
+    <equip:calibrationDate>2007-04-26</equip:calibrationDate>
+    <equip:effectiveDates>2007-06-14/2011-06-20</equip:effectiveDates>
+    <equip:dataSamplingInterval>300</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>0.1 (hPa)</equip:accuracy-hPa>
+    <equip:notes></equip:notes>
+  </pressureSensor>
+  <temperatureSensor>
+    <equip:type>VSI 44212</equip:type>
+    <equip:manufacturer>VSI</equip:manufacturer>
+    <equip:serialNumber>XXX</equip:serialNumber>
+    <equip:heightDiffToAntenna>-4.26</equip:heightDiffToAntenna>
+    <equip:calibrationDate>2002-07-30</equip:calibrationDate>
+    <equip:effectiveDates>2001-08-13/2008-12-22</equip:effectiveDates>
+    <equip:dataSamplingInterval>300</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>0.2 (deg C)</equip:accuracy-degreesCelcius>
+    <equip:aspiration>NONE</equip:aspiration>
+    <equip:notes></equip:notes>
+  </temperatureSensor>
+  <contactAgency>
+    <contact:agency>NRCan/GEODETIC SURVEY OF CANADA</contact:agency>
+    <contact:preferredAbbreviation>NRCan</contact:preferredAbbreviation>
+    <contact:mailingAddress>615 Booth Street, Ottawa,Ontario</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Mark Caissy</contact:name>
+      <contact:telephonePrimary>613-995-4024</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>613-995-3215</contact:fax>
+      <contact:e-mail>caissy@geod.nrcan.gc.ca</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Peter Taylor</contact:name>
+      <contact:telephonePrimary>613-992-2106</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>613-995-3215</contact:fax>
+      <contact:e-mail>peter.taylor@geod.nrcan.gc.ca</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>Canada, K1A 0E9 </contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>NRCan/GEODETIC SURVEY OF CANADA</contact:agency>
+    <contact:preferredAbbreviation>NRCan</contact:preferredAbbreviation>
+    <contact:mailingAddress></contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes></contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter>http</mi:primaryDataCenter>
+    <mi:secondaryDataCenter>http</mi:secondaryDataCenter>
+    <mi:urlForMoreInformation>http</mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap></mi:siteMap>
+    <mi:siteDiagram></mi:siteDiagram>
+    <mi:horizonMask></mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures></mi:sitePictures>
+    <mi:notes></mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

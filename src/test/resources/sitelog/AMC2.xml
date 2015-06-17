@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Tatevik Shakhbandaryan</mi:preparedBy>
+    <mi:datePrepared>2013-03-14</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>amc2_20071009.log</mi:previousLog>
+    <mi:modifiedSections>0,10.1</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>Alternate Master Clock (UTC calibrated)</mi:siteName>
+    <mi:fourCharacterID>AMC2</mi:fourCharacterID>
+    <mi:monumentInscription>no monument, GPS antenna ARP</mi:monumentInscription>
+    <mi:iersDOMESNumber>40472S004</mi:iersDOMESNumber>
+    <mi:cdpNumber>none</mi:cdpNumber>
+    <mi:monumentDescription>(PILLAR/BRASS PLATE/STEEL MAST/etc)</mi:monumentDescription>
+    <mi:heightOfTheMonument></mi:heightOfTheMonument>
+    <mi:monumentFoundation>(STEEL RODS, CONCRETE BLOCK, ROOF, etc)</mi:monumentFoundation>
+    <mi:foundationDepth></mi:foundationDepth>
+    <mi:markerDescription>(CHISELLED CROSS/DIVOT/BRASS NAIL/etc)</mi:markerDescription>
+    <mi:dateInstalled>1998-10-15</mi:dateInstalled>
+    <mi:geologicCharacteristic>(BEDROCK/CLAY/CONGLOMERATE/GRAVEL/SAND/etc)</mi:geologicCharacteristic>
+    <mi:bedrockType>(IGNEOUS/METAMORPHIC/SEDIMENTARY)</mi:bedrockType>
+    <mi:bedrockCondition>(FRESH/JOINTED/WEATHERED)</mi:bedrockCondition>
+    <mi:fractureSpacing>(1-10 cm/11-50 cm/51-200 cm/over 200 cm)</mi:fractureSpacing>
+    <mi:faultZonesNearby>(YES/NO/Name of the zone)</mi:faultZonesNearby>
+    <mi:distance-Activity>(multiple lines)</mi:distance-Activity>
+    <mi:notes>The antenna is mounted on top of the roof (flat) of Building 400 (5 stories) at Schriever Air Force Base, outside of Colorado Springs, Colorado.  There are no nearby geodetic markers or control points.</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Colorado Springs</mi:city>
+    <mi:state>Colorado</mi:state>
+    <mi:country>U.S.A.</mi:country>
+    <mi:tectonicPlate>North American</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>-1248596.252</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>-4819428.284</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>3976506.034</mi:zCoordinateInMeters>
+      <mi:latitude-North>+384811.25</mi:latitude-North>
+      <mi:longitude-East>-1043128.54</mi:longitude-East>
+      <mi:elevation-m_ellips.>1912.4898</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>Schriever Air Force Base</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-12 RM</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>T247</equip:serialNumber>
+    <equip:firmwareVersion>3.2.32.4</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>1998-03-24T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1998-10-15T22:01Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-12 RM</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>T245</equip:serialNumber>
+    <equip:firmwareVersion>3.2.32.4</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>1998-10-15T22:01Z</equip:dateInstalled>
+    <equip:dateRemoved>1999-03-08T18:54Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>AOA SNR-12 ACT</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>247-U</equip:serialNumber>
+    <equip:firmwareVersion>3.3.32.2</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>1999-03-09T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1999-05-10T17:48Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>AOA SNR-12 ACT</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>245-U</equip:serialNumber>
+    <equip:firmwareVersion>3.3.32.2</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>1999-05-11T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1999-09-01T15:09Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>AOA SNR-12 ACT</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>247-U</equip:serialNumber>
+    <equip:firmwareVersion>3.3.32.3</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>1999-09-01T15:43Z</equip:dateInstalled>
+    <equip:dateRemoved>2000-07-10T20:39Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>AOA SNR-12 ACT</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>247-U</equip:serialNumber>
+    <equip:firmwareVersion>3.3.32.4</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>2000-07-10T20:50Z</equip:dateInstalled>
+    <equip:dateRemoved>2002-06-21T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>firmware update only; no other change</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3T</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>RT920013101</equip:serialNumber>
+    <equip:firmwareVersion>IL01-1D04-MCF-12MX</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>2002-07-03T17:21Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>All pseudo-range data produced are calibrated to UTC(USNO) via the USNO Alternate Master Clock (AMC) which is typically maintained to 1 nanosecond (1 sigma) of the Primary USNO Master Clock in Washington DC.  No additional calibration corrections need to be applied to the RAW data set.</equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        NONE</equip:antennaType>
+    <equip:serialNumber>308</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>oriented North but not measured</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>1998-03-24T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2002-06-14T16:50Z</equip:dateRemoved>
+    <equip:notes>This antenna is located 28.5 inches nearly directly north of the antenna for a TTR-4P timing receiver.  NIMA surveyed the TTR-4P antenna location in August 1996 with the following results - 38 Degrees 48.2 N  ( 38.803107222 N) 255 Degrees 28.5 W  (255.475404583 E) 1911.087 m Ellipsoid Height with a stated accuracy of +/- 30 cm (1 sigma) in each component.  The TurboRogue antenna is mounted on a tripod platform. Antenna cable 25-AUG-1999 to present - Andrew FSJ1-50A (35422-33 phase stabilized) 1/4 inch Superflexible Foam Dielectric Heliax -- physical length 120 feet (36.57 m), mostly run in ceiling and floor of Bldg 400; measured electrical length is 146.9 ns +/- 30 ps specifications - Velocity factor 0.84 DC resistance 2 to 3 ohms per 1000 foot Capacitance, 24.2 pF/foot Inductance, .061 uH/foot Loss at 1250 MHz   6.77 dB/100 foot Loss at 1500 MHz   7.47 dB/100 foot Electrical Length Change verses Temperature - 400 PPM over (-40 to 30 C) or 5.7 PPM/C => 0.02 ps/m/C</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        NONE</equip:antennaType>
+    <equip:serialNumber>KW-5-0001</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>oriented North but not measured</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>Andrew FSJ1-50A (35422-33 phase stabilized)</equip:antennaCableType>
+    <equip:antennaCableLength>36.57</equip:antennaCableLength>
+    <equip:dateInstalled>2002-06-14T16:51Z</equip:dateInstalled>
+    <equip:dateRemoved>2007-10-01T18:00Z</equip:dateRemoved>
+    <equip:notes>This antenna is located 28.5 inches nearly directly north of the antenna for a TTR-4P timing receiver.  NIMA surveyed the TTR-4P antenna location in August 1996 with the following results - 38 Degrees 48.2 N  ( 38.803107222 N) 255 Degrees 28.5 W  (255.475404583 E) 1911.087 m Ellipsoid Height with a stated accuracy of +/- 30 cm (1 sigma) in each component.  The TurboRogue antenna is mounted on a tripod platform.  This antenna is a standard AOAD/M_T using a special LNA designed to have a flat group delay response at both L1 and L2.  Because of this flat group delay response the thermal sensitivity of this antenna should be much improved over the what is typically found in this antenna type. Antenna Group Delay at L1 = 23.47 NS Antenna Group Delay at L2 = 24.92 NS  Antenna cable 25-AUG-1999 to present - Andrew FSJ1-50A (35422-33 phase stabilized) 1/4 inch Superflexible Foam Dielectric Heliax -- physical length 120 feet (36.57 m), mostly run in ceiling and floor of Bldg 400; specifications - Velocity factor 0.84 DC resistance 2 to 3 ohms per 1000 foot Capacitance, 24.2 pF/foot Inductance, .061 uH/foot Loss at 1250 MHz   6.77 dB/100 foot Loss at 1500 MHz   7.47 dB/100 foot Electrical Length Change versus Temperature - 400 PPM over (-40 to 30 C) or 5.7 PPM/C => 0.02 ps/m/C  Antenna splitter - USNO specially designed antenna splitter that has > 80 db port to port isolation and flat group delay response. Antenna splitter cable - from splitter to receiver. The Antenna splitter cable is attached to a DC block and 20db PAD at the receiver input to improve impedance matching.  The measured delays through each component of the system are summarized in the table below - L1(ns)         L2(ns) ---------      --------- antenna            23.47          24.92 antenna cable     146.9  146.9 antenna splitter    6.21           6.5 cable to receiver   7.58           7.58 DC block and 20db PAD                 0.50           0.50 receiver w/ a +27.0 ns delay between on-time signal and 20MHZ.          267.4  278.6  Note - These delay have already been added to RAW psudorange data and they should not be added to any solutions.</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        NONE</equip:antennaType>
+    <equip:serialNumber>KW5-0201</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>oriented North but not measured</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>Andrew FSJ1-50A (35422-33 phase stabilized)</equip:antennaCableType>
+    <equip:antennaCableLength>36.57</equip:antennaCableLength>
+    <equip:dateInstalled>2007-10-01T18:35Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>This antenna is located 28.5 inches nearly directly north of the antenna for a TTR-4P timing receiver.  NIMA surveyed the TTR-4P antenna location in August 1996 with the following results - 38 Degrees 48.2 N  ( 38.803107222 N) 255 Degrees 28.5 W  (255.475404583 E) 1911.087 m Ellipsoid Height with a stated accuracy of +/- 30 cm (1 sigma) in each component.  The TurboRogue antenna is mounted on a tripod platform.  This antenna is a standard AOAD/M_T using a special LNA designed to have a flat group delay response at both L1 and L2.  Because of this flat group delay response the thermal sensitivity of this antenna should be much improved over the what is typically found in this antenna type. Antenna Group Delay at L1 = 25.13 NS Antenna Group Delay at L2 = 25.45 NS  Antenna cable 25-AUG-1999 to present - Andrew FSJ1-50A (35422-33 phase stabilized) 1/4 inch Superflexible Foam Dielectric Heliax -- physical length 120 feet (36.57 m), mostly run in ceiling and floor of Bldg 400; specifications - Velocity factor 0.84 DC resistance 2 to 3 ohms per 1000 foot Capacitance, 24.2 pF/foot Inductance, .061 uH/foot Loss at 1250 MHz   6.77 dB/100 foot Loss at 1500 MHz   7.47 dB/100 foot Electrical Length Change versus Temperature - 400 PPM over (-40 to 30 C) or 5.7 PPM/C => 0.02 ps/m/C  Antenna splitter - USNO specially designed antenna splitter that has > 80 db port to port isolation and flat group delay response. While troubleshooting, the splitter was replaced on 9/26/07T21 was noticed. Antenna splitter cable - from splitter to receiver. The Antenna splitter cable is attached to a DC block and 20db PAD at the receiver input to improve impedance matching.  The measured delays through each component of the system are summarized in the table below -  L1(ns)         L2(ns) ---------      --------- antenna            25.13          25.45 antenna cable     146.9  146.9 antenna splitter    7.83           7.96 cable to receiver   7.58           7.58 DC block and 20db PAD                 0.50           0.50 receiver w/ a +27.0 ns delay between on-time signal and 20MHZ.          267.4  278.6  Note - These delays have already been added to RAW psudorange data and they should not be added to any solutions.</equip:notes>
+  </gnssAntenna>
+  <frequencyStandard>
+    <equip:standardType>H-MASER</equip:standardType>
+    <equip:inputFrequency>5 MHz</equip:inputFrequency>
+    <equip:effectiveDates>1998-03-24/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>reference signal from USNO Alternate Master Clock #1, the back-up realization of UTC(USNO) via two-way satellite time transfer; All calibration delays have already been accounted for in the RAW pseudorange data produced by AMC2.</equip:notes>
+  </frequencyStandard>
+  <collocationInformation>
+    <equip:instrumentType>none</equip:instrumentType>
+    <equip:status></equip:status>
+    <equip:effectiveDates>(CCYY-MM-DD/CCYY-MM-DD)</equip:effectiveDates>
+    <equip:notes></equip:notes>
+  </collocationInformation>
+  <humiditySensor>
+    <equip:type>HUMICA H-sensor (pn 16663)</equip:type>
+    <equip:manufacturer>Vaisala</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2002-02-28/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>15 seconds</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>+/-1%(0...90%RH)</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>+/-2%(90...100%RH) NOAA GSOS # 064 Horizontal offset from GPS 527 m Vertical offset from GPS ~29 m</equip:notes>
+  </humiditySensor>
+  <pressureSensor>
+    <equip:type>PTB220</equip:type>
+    <equip:manufacturer>Vaisala</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>~29</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2002-02-28/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>15 seconds</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>+/-0.1</equip:accuracy-hPa>
+    <equip:notes>NOAA GSOS # 064 Horizontal offset from GPS ~527 m Vertical offset from GPS ~29 m</equip:notes>
+  </pressureSensor>
+  <temperatureSensor>
+    <equip:type>PT100 RTD 1/s DIN 43760B</equip:type>
+    <equip:manufacturer>Vaisala</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2002-02-28/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>15 seconds</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>+/-0.1 @ 20.0C</equip:accuracy-degreesCelcius>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>NOAA GSOS # 064 Horizontal offset from GPS ~527 m Vertical offset from GPS ~29 m</equip:notes>
+  </temperatureSensor>
+  <waterVaporSensor>
+    <equip:type>none</equip:type>
+    <equip:manufacturer></equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>CCYY-MM-DD/CCYY-MM-DD</equip:effectiveDates>
+    <equip:distanceToAntenna></equip:distanceToAntenna>
+    <equip:notes>(multiple lines)</equip:notes>
+  </waterVaporSensor>
+  <localEpisodicEvents>
+    <li:date>2013-03-11/2013-03-11</li:date>
+    <li:event>Computer replaced. There was a data outage</li:event>
+  </localEpisodicEvents>
+  <contactAgency>
+    <contact:agency>U.S. Naval Observatory, Alternate Master Clock</contact:agency>
+    <contact:preferredAbbreviation>USNO/AMC</contact:preferredAbbreviation>
+    <contact:mailingAddress>USNO/AMC</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Bill Bollwerk</contact:name>
+      <contact:telephonePrimary>719-567-6740</contact:telephonePrimary>
+      <contact:telephoneSecondary>202-359-6011</contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail>bill.bollwerk@usno.navy.mil</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Ed Powers (USNO)</contact:name>
+      <contact:telephonePrimary>202-762-1451</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>202-762-1511</contact:fax>
+      <contact:e-mail>edward.powers@usno.navy.mil</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>400 O'Malley Ave, Suite 44 Schriever AFB, CO 80912-4044 Regional Data Center is JPL  Dave Stowers (JPL) 818-354-7055  818-393-4965 dstowers@jpl.nasa.gov</contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>U.S. Naval Observatory</contact:agency>
+    <contact:preferredAbbreviation>USNO</contact:preferredAbbreviation>
+    <contact:mailingAddress>Time Service Department</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Francine Vannicola(USNO)</contact:name>
+      <contact:telephonePrimary>202-762-1455</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>202-762-1511</contact:fax>
+      <contact:e-mail>francine.vannicola@usno.navy.mil</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>3450 Massachusetts Ave., NW Wasington, D.C. 20392-5420 (multiple lines)</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter></mi:primaryDataCenter>
+    <mi:secondaryDataCenter></mi:secondaryDataCenter>
+    <mi:urlForMoreInformation></mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>N</mi:siteMap>
+    <mi:siteDiagram>N</mi:siteDiagram>
+    <mi:horizonMask>N</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>N</mi:sitePictures>
+    <mi:notes>(multiple lines)</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

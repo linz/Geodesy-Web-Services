@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Christian Baumann (AIUB)</mi:preparedBy>
+    <mi:datePrepared>2013-05-21</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>zimj_20121007.log</mi:previousLog>
+    <mi:modifiedSections>3.11, 3.12, 4.2, 5., 7.3, 7.4, 8., 11., 13.</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>Zimmerwald GPS87E</mi:siteName>
+    <mi:fourCharacterID>ZIMJ</mi:fourCharacterID>
+    <mi:monumentInscription>GPS87E</mi:monumentInscription>
+    <mi:iersDOMESNumber>14001M006</mi:iersDOMESNumber>
+    <mi:cdpNumber></mi:cdpNumber>
+    <mi:monumentDescription>STEEL MAST</mi:monumentDescription>
+    <mi:heightOfTheMonument></mi:heightOfTheMonument>
+    <mi:monumentFoundation>ROOF of the observatory</mi:monumentFoundation>
+    <mi:foundationDepth></mi:foundationDepth>
+    <mi:markerDescription>Eccentric mount on steel mast (GPS87)</mi:markerDescription>
+    <mi:dateInstalled>1995-01-01</mi:dateInstalled>
+    <mi:geologicCharacteristic>CONGLOMERATE</mi:geologicCharacteristic>
+    <mi:bedrockType>SEDIMENTARY</mi:bedrockType>
+    <mi:bedrockCondition>JOINTED</mi:bedrockCondition>
+    <mi:fractureSpacing></mi:fractureSpacing>
+    <mi:faultZonesNearby></mi:faultZonesNearby>
+    <mi:distance-Activity></mi:distance-Activity>
+    <mi:notes>Morraine Exact date in 1995 not known</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Zimmerwald</mi:city>
+    <mi:state>Bern</mi:state>
+    <mi:country>Switzerland</mi:country>
+    <mi:tectonicPlate>Eurasian Plate</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>4331294.043</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>567541.982</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>4633135.625</mi:zCoordinateInMeters>
+      <mi:latitude-North>+465237.70</mi:latitude-North>
+      <mi:longitude-East>+0072754.36</mi:longitude-East>
+      <mi:elevation-m_ellips.>954.3</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>ITRF2000, epoch 1997.0</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>JPS LEGACY</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>MT300342503</equip:serialNumber>
+    <equip:firmwareVersion>1.4 Jan 22,1999</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1999-02-03T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1999-04-16</equip:dateRemoved>
+    <equip:temperatureStabilization>None</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>JPS LEGACY</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>MT300342503</equip:serialNumber>
+    <equip:firmwareVersion>1.5 Mar,18,1999 pl3</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1999-04-17T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1999-05-05</equip:dateRemoved>
+    <equip:temperatureStabilization>None</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>JPS LEGACY</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>MT300342503</equip:serialNumber>
+    <equip:firmwareVersion>1.6 Apr,26,1999 pl1</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1999-05-06T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1999-07-05</equip:dateRemoved>
+    <equip:temperatureStabilization>None</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>JPS LEGACY</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>MT300342503</equip:serialNumber>
+    <equip:firmwareVersion>1.8 Jun,17,1999 pl2</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1999-07-06T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1999-08-16</equip:dateRemoved>
+    <equip:temperatureStabilization>None</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>JPS LEGACY</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>MT300342503</equip:serialNumber>
+    <equip:firmwareVersion>1.9 Aug,11,1999 pl2</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1999-08-17T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2000-08-08</equip:dateRemoved>
+    <equip:temperatureStabilization>None</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>JPS LEGACY</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>MT300342503</equip:serialNumber>
+    <equip:firmwareVersion>2.1 Jun,16,2000</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2000-08-09T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2003-10-08</equip:dateRemoved>
+    <equip:temperatureStabilization>None</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>JPS LEGACY</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>MT300342503</equip:serialNumber>
+    <equip:firmwareVersion>2.3 Aug,01,2003 p2</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2003-10-08T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>None</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>JPS LEGACY</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>MT300342503</equip:serialNumber>
+    <equip:firmwareVersion>2.3 APR,28,2004 p4</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2003-10-08T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2007-10-30T12:59Z</equip:dateRemoved>
+    <equip:temperatureStabilization>None</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>JPS LEGACY</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>MT300342503</equip:serialNumber>
+    <equip:firmwareVersion>2.6.0 Oct,24,2007 ob</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2007-10-30T13:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>None</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>JPS LEGACY</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>MT300342503</equip:serialNumber>
+    <equip:firmwareVersion>2.6.1 Jan,10,2008</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2008-01-16T10:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2010-10-22T13:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>None</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>JAVAD TRE_G3TH DELTA</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO+GAL+SBAS</equip:satelliteSystem>
+    <equip:serialNumber>00634</equip:serialNumber>
+    <equip:firmwareVersion>3.2.6 Feb,24,2011</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2011-06-03T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2013-04-30T16:30Z</equip:dateRemoved>
+    <equip:temperatureStabilization>None</equip:temperatureStabilization>
+    <equip:notes>Exact date in 2011 not known</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>JAVAD TRE_G3TH DELTA</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO+GAL+SBAS</equip:satelliteSystem>
+    <equip:serialNumber>00634</equip:serialNumber>
+    <equip:firmwareVersion>3.4.9 Apr,18,2013</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2013-04-30T16:32Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>None</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>JPSREGANT_SD_E1 NONE</equip:antennaType>
+    <equip:serialNumber>RA0059</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0770</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength>Approx. 10</equip:antennaCableLength>
+    <equip:dateInstalled>1999-02-03T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes> Antenna type listed in this section retro- actively changed from JPSREGANT_SD_E to JPSREGANT_SD_E1 starting with log file zimj_20121007.log. See IGSMAIL-6662 and IGSMAIL-6663 for details.</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>JAVRINGANT_DM   NONE</equip:antennaType>
+    <equip:serialNumber>00427</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0770</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>2011-06-03T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>Individual absolute antenna calibration values are available</equip:notes>
+  </gnssAntenna>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL</equip:standardType>
+    <equip:inputFrequency></equip:inputFrequency>
+    <equip:effectiveDates></equip:effectiveDates>
+    <equip:notes></equip:notes>
+  </frequencyStandard>
+  <collocationInformation>
+    <equip:instrumentType>SLR </equip:instrumentType>
+    <equip:status>PERMANENT </equip:status>
+    <equip:effectiveDates>1976-01-01 </equip:effectiveDates>
+    <equip:notes>New telescope since 1996  Exact date in 1976 not known</equip:notes>
+  </collocationInformation>
+  <collocationInformation>
+    <equip:instrumentType>Earth tide gravimeter </equip:instrumentType>
+    <equip:status>PERMANENT </equip:status>
+    <equip:effectiveDates>1995-01-01 </equip:effectiveDates>
+    <equip:notes>Swiss Federal Institute of Technology  Geodesy and Geodynamics Lab (GGL)  ETH-Hoenggerberg  CH-8093 Zurich  Exact date in 1995 not known</equip:notes>
+  </collocationInformation>
+  <collocationInformation>
+    <equip:instrumentType>GPS </equip:instrumentType>
+    <equip:status>PERMANENT </equip:status>
+    <equip:effectiveDates>1993-05-01 </equip:effectiveDates>
+    <equip:notes>Official IGS site ZIMM 14001M004  See IGS site log file zimm*.log </equip:notes>
+  </collocationInformation>
+  <collocationInformation>
+    <equip:instrumentType>GPS/GLONASS </equip:instrumentType>
+    <equip:status>PERMANENT </equip:status>
+    <equip:effectiveDates>2007-11-08</equip:effectiveDates>
+    <equip:notes>Official IGLOS site   ZIM2 14001M008  See IGS site log file zim2*.log </equip:notes>
+  </collocationInformation>
+  <radioInterferences>
+    <li:possibleProblemSources>(TV/CELL PHONE ANTENNA/RADAR/etc)</li:possibleProblemSources>
+    <li:effectiveDates>(CCYY-MM-DD/CCYY-MM-DD)</li:effectiveDates>
+    <li:observedDegredation></li:observedDegredation>
+    <li:notes>(multiple lines)</li:notes>
+  </radioInterferences>
+  <multipathSources>
+    <li:possibleProblemSources>(CCYY-MM-DD/CCYY-MM-DD)</li:possibleProblemSources>
+    <li:effectiveDates>(CCYY-MM-DD/CCYY-MM-DD)</li:effectiveDates>
+    <li:notes>(multiple lines)</li:notes>
+  </multipathSources>
+  <signalObstructions>
+    <li:possibleProblemSources>(CCYY-MM-DD/CCYY-MM-DD)</li:possibleProblemSources>
+    <li:effectiveDates>(CCYY-MM-DD/CCYY-MM-DD)</li:effectiveDates>
+    <li:notes>(multiple lines)</li:notes>
+  </signalObstructions>
+  <localEpisodicEvents>
+    <li:date>(CCYY-MM-DDThh</li:date>
+    <li:event>(TREE CLEARING/CONSTRUCTION/etc)</li:event>
+  </localEpisodicEvents>
+  <contactAgency>
+    <contact:agency>Astronomical Institute University of Berne</contact:agency>
+    <contact:preferredAbbreviation>AIUB</contact:preferredAbbreviation>
+    <contact:mailingAddress>Sidlerstrasse 5, CH-3012 Bern</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Christian Baumann</contact:name>
+      <contact:telephonePrimary>+41 31 631 38 02</contact:telephonePrimary>
+      <contact:telephoneSecondary>+41 31 631 85 91</contact:telephoneSecondary>
+      <contact:fax>+41 31 631 38 69</contact:fax>
+      <contact:e-mail>christian.baumann@aiub.unibe.ch</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Heike Bock</contact:name>
+      <contact:telephonePrimary>+41 31 631 86 02</contact:telephonePrimary>
+      <contact:telephoneSecondary>+41 31 631 85 91</contact:telephoneSecondary>
+      <contact:fax>+41 31 631 38 69</contact:fax>
+      <contact:e-mail>heike.bock@aiub.unibe.ch</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes></contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>Astronomical Institute University of Berne</contact:agency>
+    <contact:preferredAbbreviation>AIUB</contact:preferredAbbreviation>
+    <contact:mailingAddress>(multiple lines)</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>(multiple lines)</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter>http</mi:primaryDataCenter>
+    <mi:secondaryDataCenter>http</mi:secondaryDataCenter>
+    <mi:urlForMoreInformation>http</mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>(Y or URL)</mi:siteMap>
+    <mi:siteDiagram>(Y or URL)</mi:siteDiagram>
+    <mi:horizonMask>(Y or URL)</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>(Y or URL)</mi:sitePictures>
+    <mi:notes></mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>David Maggert</mi:preparedBy>
+    <mi:datePrepared>2013-01-31</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>kely_20100706.log</mi:previousLog>
+    <mi:modifiedSections>10.1, 12</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>Kellyville (Kangerlussuaq)</mi:siteName>
+    <mi:fourCharacterID>KELY</mi:fourCharacterID>
+    <mi:monumentInscription>KELLYVILLE 1995</mi:monumentInscription>
+    <mi:iersDOMESNumber>43005M002</mi:iersDOMESNumber>
+    <mi:cdpNumber>(A4)</mi:cdpNumber>
+    <mi:monumentDescription>CONCRETE PILLAR</mi:monumentDescription>
+    <mi:heightOfTheMonument>1.5</mi:heightOfTheMonument>
+    <mi:monumentFoundation>EXPOSED BEDROCK</mi:monumentFoundation>
+    <mi:foundationDepth></mi:foundationDepth>
+    <mi:markerDescription>Dimple in 5/8' bolt set in pillar</mi:markerDescription>
+    <mi:dateInstalled>1995-07-23</mi:dateInstalled>
+    <mi:geologicCharacteristic>(BEDROCK/CLAY/CONGLOMERATE/GRAVEL/SAND/etc)</mi:geologicCharacteristic>
+    <mi:bedrockType>(IGNEOUS/METAMORPHIC/SEDIMENTARY)</mi:bedrockType>
+    <mi:bedrockCondition>(FRESH/JOINTED/WEATHERED)</mi:bedrockCondition>
+    <mi:fractureSpacing>(0 cm/1-10 cm/11-50 cm/51-200 cm/over 200 cm)</mi:fractureSpacing>
+    <mi:faultZonesNearby>(YES/NO/Name of the zone)</mi:faultZonesNearby>
+    <mi:distance-Activity>(multiple lines)</mi:distance-Activity>
+    <mi:notes>UNAVCO antenna leveling mount used on (mark) bolt.</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Kangerlussuaq</mi:city>
+    <mi:state></mi:state>
+    <mi:country>Greenland</mi:country>
+    <mi:tectonicPlate>NORTH AMERICAN</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>1575559.29</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>-1941828.01</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>5848076.39</mi:zCoordinateInMeters>
+      <mi:latitude-North>+665914.70</mi:latitude-North>
+      <mi:longitude-East>-0505641.41</mi:longitude-East>
+      <mi:elevation-m_ellips.>229.8</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>The GPS site is located on the Sondrestrom fjord, at the Sondrestrom Incoherent Scatter Radar facility.  This facility is known as as Kellyville.  A 3 megawatt radar operates approximately 10% of the month. This radar operates at 1290 MHz.  Because of safety concerns, we are not currently collecting data through the radar runs.  The The nearest town is Kangerlussuaq.  We have named this site KELY so as to not confuse this site with a temporary GPS marker named KANG.</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-8000</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>T295</equip:serialNumber>
+    <equip:firmwareVersion>3.2</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>4</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1995-07-23T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1995-07-27T23:59Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-8000</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>T314</equip:serialNumber>
+    <equip:firmwareVersion>3.2</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>4</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1995-07-28T01:41Z</equip:dateInstalled>
+    <equip:dateRemoved>1996-02-03T07:34Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-8000</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>T295</equip:serialNumber>
+    <equip:firmwareVersion>3.2.32.1</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>4</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1996-02-09T11:09Z</equip:dateInstalled>
+    <equip:dateRemoved>1999-05-26T23:59Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-8000</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>T295</equip:serialNumber>
+    <equip:firmwareVersion>3.2.32.8</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>4</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1999-05-27T11:03Z</equip:dateInstalled>
+    <equip:dateRemoved>1999-08-27T11:40Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>Firmware Upgrade</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-8000</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>T295</equip:serialNumber>
+    <equip:firmwareVersion>3.2.32.9</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>4</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1999-08-27T11:52Z</equip:dateInstalled>
+    <equip:dateRemoved>2000-10-16T11:16Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>Firmware Upgrade</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-8000</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>T295</equip:serialNumber>
+    <equip:firmwareVersion>3.2.32.11</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>4</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2000-10-16T11:16Z</equip:dateInstalled>
+    <equip:dateRemoved>2001-09-14T17:18Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>LP020003804</equip:serialNumber>
+    <equip:firmwareVersion>CD00-1D02 1s soc2rnx</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>4</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2001-09-14T17:18Z</equip:dateInstalled>
+    <equip:dateRemoved>2010-06-08T13:20Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH UZ-12</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>ZR520021809</equip:serialNumber>
+    <equip:firmwareVersion>CQ00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>4</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2010-06-08T13:30Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>UNAVCO # 16196 DOWNLOAD COMPUTER REPLACED</equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        DOME</equip:antennaType>
+    <equip:serialNumber>394</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>DOME</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>1995-07-23T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1996-04-04T18:22Z</equip:dateRemoved>
+    <equip:notes>radome was conical fiberglass unit of indeterminate origin.</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        DOME</equip:antennaType>
+    <equip:serialNumber>230</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>DOME</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>1996-04-05T05:58Z</equip:dateInstalled>
+    <equip:dateRemoved>2001-09-14T17:18Z</equip:dateRemoved>
+    <equip:notes>radome was conical fiberglass unit of indeterminate origin. As requested by EUREF, the antenna reference point was changed to BPA on 2001-04-12.</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>ASH701945C_M    NONE</equip:antennaType>
+    <equip:serialNumber>CR620010504</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0762</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>2001-09-14T17:18Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>antenna height of 7.62cm measured at site (previously reported as 0.00). UNAVCO levelling mount used over monument. Cone fiberglass dome removed along with old antenna. SCIGN-type dome to be added at a later date.</equip:notes>
+  </gnssAntenna>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL </equip:standardType>
+    <equip:inputFrequency>(if external)</equip:inputFrequency>
+    <equip:effectiveDates>1995-07-23/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </frequencyStandard>
+  <localEpisodicEvents>
+    <li:date>2012-02-07/2012-02-07</li:date>
+    <li:event>Transitioned from .soc to .ash data types.  For</li:event>
+  </localEpisodicEvents>
+  <contactAgency>
+    <contact:agency>SRI International</contact:agency>
+    <contact:preferredAbbreviation>SRI</contact:preferredAbbreviation>
+    <contact:mailingAddress>Box 108</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>John Jorgensen</contact:name>
+      <contact:telephonePrimary>+299 841260</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>+299 841120</contact:fax>
+      <contact:e-mail>john.joergensen@pc.dk</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Mary McCready</contact:name>
+      <contact:telephonePrimary>650-859-5084</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>650-322-2318</contact:fax>
+      <contact:e-mail>mccready@sri.com</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>DK-3910 Kangerlussuaq Greenland Attn. John Jorgensen (multiple lines)</contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>Jet Propulsion Laboratory</contact:agency>
+    <contact:preferredAbbreviation>JPL</contact:preferredAbbreviation>
+    <contact:mailingAddress>4800 Oak Grove Drive</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>UNAVCO Network Engineer</contact:name>
+      <contact:telephonePrimary>303-381-7500</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>303-381-7451</contact:fax>
+      <contact:e-mail>ggn-ops@ls.unavco.org</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>Pasadena, CA 91109 USA </contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter>http</mi:primaryDataCenter>
+    <mi:secondaryDataCenter>http</mi:secondaryDataCenter>
+    <mi:urlForMoreInformation>http</mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>(Y or URL)</mi:siteMap>
+    <mi:siteDiagram>(Y or URL)</mi:siteDiagram>
+    <mi:horizonMask>(Y or URL)</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>(Y or URL)</mi:sitePictures>
+    <mi:notes>(multiple lines)</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

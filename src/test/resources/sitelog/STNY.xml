@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Ted Zhou</mi:preparedBy>
+    <mi:datePrepared>2013-10-02</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>stny_20130626.log</mi:previousLog>
+    <mi:modifiedSections>3.1,3.2</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>Stony Point</mi:siteName>
+    <mi:fourCharacterID>STNY</mi:fourCharacterID>
+    <mi:monumentInscription></mi:monumentInscription>
+    <mi:iersDOMESNumber>50160M002</mi:iersDOMESNumber>
+    <mi:cdpNumber>not available</mi:cdpNumber>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:heightOfTheMonument>2.0</mi:heightOfTheMonument>
+    <mi:monumentFoundation>STEEL RODS / CONCRETE BLOCK</mi:monumentFoundation>
+    <mi:foundationDepth>8.0</mi:foundationDepth>
+    <mi:markerDescription>STAINLESS STEEL PLATE, THREADED SPIGOT</mi:markerDescription>
+    <mi:dateInstalled>2011-05-31</mi:dateInstalled>
+    <mi:geologicCharacteristic>SANDY CLAY</mi:geologicCharacteristic>
+    <mi:bedrockType>TERTIARY</mi:bedrockType>
+    <mi:bedrockCondition>WEATHERED</mi:bedrockCondition>
+    <mi:fractureSpacing></mi:fractureSpacing>
+    <mi:faultZonesNearby>NO</mi:faultZonesNearby>
+    <mi:distance-Activity>(multiple lines)</mi:distance-Activity>
+    <mi:notes></mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Stony Point</mi:city>
+    <mi:state>Victoria</mi:state>
+    <mi:country>Australia</mi:country>
+    <mi:tectonicPlate>Australia</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>-4111951.910</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>2856387.625</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>-3938195.406</mi:zCoordinateInMeters>
+      <mi:latitude-North>-382230.67518</mi:latitude-North>
+      <mi:longitude-East>+1451250.52098</mi:longitude-East>
+      <mi:elevation-m_ellips.>29.412</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes></mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200+GNSS</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>495595</equip:serialNumber>
+    <equip:firmwareVersion>8.20/4.007</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2011-05-31T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2013-10-02T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200+GNSS</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>495595</equip:serialNumber>
+    <equip:firmwareVersion>8.71/6.112</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2013-10-02T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>LEIAR25.R3      LEIT</equip:antennaType>
+    <equip:serialNumber>09370007</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>LEIT</equip:antennaRadomeType>
+    <equip:radomeSerialNumber>765734</equip:radomeSerialNumber>
+    <equip:antennaCableType>CNT-400</equip:antennaCableType>
+    <equip:antennaCableLength>40</equip:antennaCableLength>
+    <equip:dateInstalled>2011-05-31T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes></equip:notes>
+  </gnssAntenna>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>RM1</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>LOCAL CONTROL</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>(A4)</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>(A9)</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>-3.3317</equip:dX>
+      <equip:dY>-10.6278</equip:dY>
+      <equip:dZ>-0.6370</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>1 mm</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>TRILATERATION/TRIANGULATION</equip:surveyMethod>
+    <equip:dateMeasured>2013-02-15T00:00Z</equip:dateMeasured>
+    <equip:notes></equip:notes>
+  </surveyedLocalTies>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>RM2</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>LOCAL CONTROL</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>(A4)</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>(A9)</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>+9.0381</equip:dX>
+      <equip:dY>+4.4214</equip:dY>
+      <equip:dZ>-2.8097</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>1 mm</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>TRILATERATION/TRIANGULATION</equip:surveyMethod>
+    <equip:dateMeasured>2013-02-15T00:00Z</equip:dateMeasured>
+    <equip:notes></equip:notes>
+  </surveyedLocalTies>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>RM3</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>LOCAL CONTROL</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>(A4)</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>(A9)</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>-3.1478</equip:dX>
+      <equip:dY>+3.9029</equip:dY>
+      <equip:dZ>+9.1839</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>1 mm</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>TRILATERATION/TRIANGULATION</equip:surveyMethod>
+    <equip:dateMeasured>2013-02-15T00:00Z</equip:dateMeasured>
+    <equip:notes></equip:notes>
+  </surveyedLocalTies>
+  <frequencyStandard>
+    <equip:standardType>QUARTZ/INTERNAL</equip:standardType>
+    <equip:inputFrequency>5Mhz</equip:inputFrequency>
+    <equip:effectiveDates>2011-05-31/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </frequencyStandard>
+  <humiditySensor>
+    <equip:type>PAROSCIENTIFIC MET4</equip:type>
+    <equip:manufacturer>Paroscientific</equip:manufacturer>
+    <equip:serialNumber>114961</equip:serialNumber>
+    <equip:heightDiffToAntenna>+0.000</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2011-05-31/2013-02-15</equip:effectiveDates>
+    <equip:dataSamplingInterval>30</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>2.0 (% rel h)</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>UNASPIRATED</equip:aspiration>
+    <equip:notes>Weather station vandalised</equip:notes>
+  </humiditySensor>
+  <humiditySensor>
+    <equip:type>PAROSCIENTIFIC MET4</equip:type>
+    <equip:manufacturer>Paroscientific</equip:manufacturer>
+    <equip:serialNumber>126332</equip:serialNumber>
+    <equip:heightDiffToAntenna>+0.000</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2013-02-15/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>30</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>2.0 (% rel h)</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>UNASPIRATED</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </humiditySensor>
+  <pressureSensor>
+    <equip:type>PAROSCIENTIFIC MET4</equip:type>
+    <equip:manufacturer>Paroscientific</equip:manufacturer>
+    <equip:serialNumber>114961</equip:serialNumber>
+    <equip:heightDiffToAntenna>+0.000</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2011-05-31/2013-02-15</equip:effectiveDates>
+    <equip:dataSamplingInterval>30</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>0.08 (mbar)</equip:accuracy-hPa>
+    <equip:notes>Weather station vandalised</equip:notes>
+  </pressureSensor>
+  <pressureSensor>
+    <equip:type>PAROSCIENTIFIC MET4</equip:type>
+    <equip:manufacturer>Paroscientific</equip:manufacturer>
+    <equip:serialNumber>126332</equip:serialNumber>
+    <equip:heightDiffToAntenna>+0.000</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2013-02-15/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>30</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>0.08 (mbar)</equip:accuracy-hPa>
+    <equip:notes>(multiple lines)</equip:notes>
+  </pressureSensor>
+  <temperatureSensor>
+    <equip:type>PAROSCIENTIFIC MET4</equip:type>
+    <equip:manufacturer>Paroscientific</equip:manufacturer>
+    <equip:serialNumber>1149761</equip:serialNumber>
+    <equip:heightDiffToAntenna>+0.000</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2011-05-31/2013-02-15</equip:effectiveDates>
+    <equip:dataSamplingInterval>30</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>0.5 deg C</equip:accuracy-degreesCelcius>
+    <equip:aspiration>UNASPIRATED</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </temperatureSensor>
+  <temperatureSensor>
+    <equip:type>PAROSCIENTIFIC MET4</equip:type>
+    <equip:manufacturer>Paroscientific</equip:manufacturer>
+    <equip:serialNumber>126332</equip:serialNumber>
+    <equip:heightDiffToAntenna>+0.000</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2013-02-15/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>30</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>0.5 (deg C)</equip:accuracy-degreesCelcius>
+    <equip:aspiration>UNASPIRATED</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </temperatureSensor>
+  <contactAgency>
+    <contact:agency>Department of Sustainability and Environment</contact:agency>
+    <contact:preferredAbbreviation>DSE</contact:preferredAbbreviation>
+    <contact:mailingAddress>Level 13, 570 Bourke St</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Hayden Asmussen</contact:name>
+      <contact:telephonePrimary>61 3 8636 2374</contact:telephonePrimary>
+      <contact:telephoneSecondary>0423 559 414 (mobile)</contact:telephoneSecondary>
+      <contact:fax>61 3 8636 2813</contact:fax>
+      <contact:e-mail>hayden.asmussen@dse.vic.gov.au</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Alex Woods</contact:name>
+      <contact:telephonePrimary>61 3 8636 2368</contact:telephonePrimary>
+      <contact:telephoneSecondary>0400 839 939 (mobile)</contact:telephoneSecondary>
+      <contact:fax>61 3 8636 2776</contact:fax>
+      <contact:e-mail>alex.woods@dse.vic.gov.au</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>Melbourne, Victoria 3000 (multiple lines)</contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>Geoscience Australia</contact:agency>
+    <contact:preferredAbbreviation>GA</contact:preferredAbbreviation>
+    <contact:mailingAddress>Geoscience Australia</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Michael Moore</contact:name>
+      <contact:telephonePrimary>+61 2 6249 9052</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>+61 2 6249 9929</contact:fax>
+      <contact:e-mail>Michael.Moore@ga.gov.au</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>GPO Box 378 Canberra ACT 2601 AUSTRALIA </contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter></mi:primaryDataCenter>
+    <mi:secondaryDataCenter></mi:secondaryDataCenter>
+    <mi:urlForMoreInformation></mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>(Y or URL)</mi:siteMap>
+    <mi:siteDiagram>X</mi:siteDiagram>
+    <mi:horizonMask>X</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>Y</mi:sitePictures>
+    <mi:notes>(multiple lines)</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

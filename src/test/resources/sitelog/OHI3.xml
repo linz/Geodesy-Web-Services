@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Rudi Stoeger</mi:preparedBy>
+    <mi:datePrepared>2013-09-30</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>ohi3_20130613.log</mi:previousLog>
+    <mi:modifiedSections>4.5, 4.6, 13</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>O'Higgins / Antarctica</mi:siteName>
+    <mi:fourCharacterID>OHI3</mi:fourCharacterID>
+    <mi:monumentInscription>Pillar K3</mi:monumentInscription>
+    <mi:iersDOMESNumber>66008M006</mi:iersDOMESNumber>
+    <mi:cdpNumber></mi:cdpNumber>
+    <mi:monumentDescription>PILLAR</mi:monumentDescription>
+    <mi:heightOfTheMonument>1.4</mi:heightOfTheMonument>
+    <mi:monumentFoundation>CONCRETE PILLAR BOLTED ON BEDROCK</mi:monumentFoundation>
+    <mi:foundationDepth>0.5</mi:foundationDepth>
+    <mi:markerDescription>SURVEY MARKER WITH THREAD</mi:markerDescription>
+    <mi:dateInstalled>2002-02-07T00</mi:dateInstalled>
+    <mi:geologicCharacteristic>Bedrock</mi:geologicCharacteristic>
+    <mi:bedrockType>Metamorphic</mi:bedrockType>
+    <mi:bedrockCondition>Weathered</mi:bedrockCondition>
+    <mi:fractureSpacing>50-200 cm</mi:fractureSpacing>
+    <mi:faultZonesNearby>(YES/NO/Name of the zone)</mi:faultZonesNearby>
+    <mi:distance-Activity>(multiple lines)</mi:distance-Activity>
+    <mi:notes>Predominant rocks at the station O'Higgins are quartz-bearing black, grey and reddish brown low-metamorphic clay slates and phylitte slates of the Trinity Peninsula Formation. They are very brittle, fine-laminated in the mm- and cm-range and incline with about 60 to 80 degrees to NW. Because of these characteristics and the high clay mineral content and the expansive force resulting from this the slates are highly susceptible to weathering and mostly covered by detrital layers. Only tectonicly less stressed parts and parts resistant to weathering stick out from these detrital masses. These have a linear geometry and show strong cleavings. The instrusions of 0.5m to 1.5m thick vein rocks, which pass through the slates, are significantly younger. The pillar with the antenna is bolted into one of these veins, which are very resistant to weathering. An ASHTECH Z18 GPS+GLONASS operated from 2001-02-09 until 2003-01-27 at the ERS/VLBI-Station GARS O'Higgins / Antarctica with the four character ID OHIZ, DOMES Number 66008M004. Because of the expansion and of construction works in the Chilenean Antarctic Base the antenna for the GPS+GLONASS Permanent Tracking Station OHIZ was moved to another pillar K3, DOMES Number 66008M006. Number 66008M005, 2003-02-06, new four character ID OHI3. In addition and parallel also a ROGUE SNR-8000 / ACT SNR-8000 ACT operated from 1995-02-14 until 2002-02-20 at the ERS/VLBI- Station GARS O'Higgins / Antarctica with the four character ID OHIG, on pillar K5, DOMES Number 66008M001. Because of the expansion and of construction works in the Chilenean Antarctic Base the antenna for the GPS Permanent Tracking Station OHIG was moved to another pillar K6, DOMES Number 66008M005, 2002-02-14, new four charcater ID OHI2. For collocation we observed from 2002-02-14 until 2002-02-20 with two AOA SNR-8000 ACT at OHIG and OHI2, and also with the Ashtech Z-18 OHIZ. 2002-02-14 OHI2 installed. 2002-02-16 DOME removed in OHIG. 2002-02-19 DOME installed in OHI2. 2002-02-20 OHIG removed. 2003-01-27 OHIZ removed. 2003-02-06 OHI3 installed. An AOA SNR-8000 ACT observed until 2007-11-12 at OHI2 and was replaced with a JPS E_GGD. From 2004-03-16 until 2009-11-23 a JPS E_GGD or a TPS_GGD, from 2009-11-23 until 2012-02-09 a LEICA GRX200GGPRO was operating at OHI3. Since 2012-02-09 a LEICA GRX1200+GNSS is operating.</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>O'Higgins</mi:city>
+    <mi:state></mi:state>
+    <mi:country>Antarctic Peninsula</mi:country>
+    <mi:tectonicPlate>Antarctican</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>1525808.90</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>-2432478.50</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>-5676166.00</mi:zCoordinateInMeters>
+      <mi:latitude-North>-631915.941</mi:latitude-North>
+      <mi:longitude-East>-0575404.987</mi:longitude-East>
+      <mi:elevation-m_ellips.>00032.15</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes></mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z18</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>ZX199909119</equip:serialNumber>
+    <equip:firmwareVersion>0064</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2003-02-06T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2004-03-15T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>New OHI3 at pillar K3 replaced OHIZ, which operated since 2001-02-09.</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>JPS E_GGD</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>AFLQXTM48W0</equip:serialNumber>
+    <equip:firmwareVersion>2.3 Oct,17,2003 p3</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2004-03-16T08:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2004-03-24T11:45Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>JPS E_GGD</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>AFLQXTM48W0</equip:serialNumber>
+    <equip:firmwareVersion>2.3 Oct,17,2003 p3</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2004-03-24T11:45Z</equip:dateInstalled>
+    <equip:dateRemoved>2006-01-18T13:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>/par/lock/notvis switched to "on".</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TPS E_GGD</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>AFLQXTM48W0</equip:serialNumber>
+    <equip:firmwareVersion>2.5 Jun,22,2005 p1</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2006-01-18T13:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2006-02-19T13:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>/par/lock/notvis switched to "on". The software on the computer identified the Receiver with the Serial Number AFLQXTM48W0, instead of AG8ZL5K4FLS.</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TPS E_GGD</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>AG8ZL5K4FLS</equip:serialNumber>
+    <equip:firmwareVersion>2.5 Jun,22,2005 p1</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2006-02-19T13:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2007-11-06T09:14Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>Additional number 235-0642 on the type level. /par/lock/notvis switched to "on". No actual replacement of the receiver. New computer and new Unix Software identify the true Serial Number AG8ZL5K4FLS.</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TPS E_GGD</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>AG8ZL5K4FLS</equip:serialNumber>
+    <equip:firmwareVersion>2.6.0 Apr,18,2007</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2007-11-06T09:15Z</equip:dateInstalled>
+    <equip:dateRemoved>2008-01-15T07:59Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>Additional number 235-0642 on the type level. /par/lock/notvis switched to "on".</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TPS E_GGD</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>AG8ZL5K4FLS</equip:serialNumber>
+    <equip:firmwareVersion>2.6.1 JAN,10,2008</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2008-01-15T08:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2009-11-23T01:59Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>Additional number 235-0642 on the type level. /par/lock/notvis switched to "on".</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200GGPRO</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>356531</equip:serialNumber>
+    <equip:firmwareVersion>7.53/3.017</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2009-11-23T02:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2010-02-01T08:49Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200GGPRO</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>356531</equip:serialNumber>
+    <equip:firmwareVersion>7.53/3.018</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2010-02-01T08:50Z</equip:dateInstalled>
+    <equip:dateRemoved>2010-02-09T10:14Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200GGPRO</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>356531</equip:serialNumber>
+    <equip:firmwareVersion>7.80/3.018</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2010-02-09T10:15Z</equip:dateInstalled>
+    <equip:dateRemoved>2010-10-04T14:39Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200GGPRO</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>356531</equip:serialNumber>
+    <equip:firmwareVersion>7.80/3.019</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2010-10-04T14:40Z</equip:dateInstalled>
+    <equip:dateRemoved>2011-04-07T14:09Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200GGPRO</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>356531</equip:serialNumber>
+    <equip:firmwareVersion>8.10/3.019</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2011-04-07T14:10Z</equip:dateInstalled>
+    <equip:dateRemoved>2012-02-09T14:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200+GNSS</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>496768</equip:serialNumber>
+    <equip:firmwareVersion>8.20/4.007</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2012-02-09T15:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2013-06-13T07:29Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200+GNSS</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO+GAL+SBAS</equip:satelliteSystem>
+    <equip:serialNumber>496768</equip:serialNumber>
+    <equip:firmwareVersion>8.71/6.112</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2013-06-13T07:30Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>ASH701941.B     SNOW</equip:antennaType>
+    <equip:serialNumber>CRL 2199911002</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0050</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>SNOW</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>RG214</equip:antennaCableType>
+    <equip:antennaCableLength>33</equip:antennaCableLength>
+    <equip:dateInstalled>2003-02-06T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2010-01-22T19:44Z</equip:dateRemoved>
+    <equip:notes></equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>LEIAR25.R3      LEIT</equip:antennaType>
+    <equip:serialNumber>9310010</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0505</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>LEIT</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>RG214</equip:antennaCableType>
+    <equip:antennaCableLength>33</equip:antennaCableLength>
+    <equip:dateInstalled>2010-01-22T19:45Z</equip:dateInstalled>
+    <equip:dateRemoved>2011-01-27T17:00Z</equip:dateRemoved>
+    <equip:notes></equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>LEIAR25.R3      LEIT</equip:antennaType>
+    <equip:serialNumber>09310010</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0668</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>LEIT</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>RG214</equip:antennaCableType>
+    <equip:antennaCableLength>33</equip:antennaCableLength>
+    <equip:dateInstalled>2011-02-03T22:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2012-09-22T00:52Z</equip:dateRemoved>
+    <equip:notes>No actual replacement of the antenna and the radome. New antenna height, Marker-> ARP Up Ecc. is 0.0668 m after a refurbishment of the fastening for the antenna. The antenna serial number is identified with an additional Zero.</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>LEIAR25.R3      LEIT</equip:antennaType>
+    <equip:serialNumber>09310010</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0668</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>270</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>LEIT</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>RG214</equip:antennaCableType>
+    <equip:antennaCableLength>33</equip:antennaCableLength>
+    <equip:dateInstalled>2012-09-22T00:53Z</equip:dateInstalled>
+    <equip:dateRemoved>2013-02-07T20:59Z</equip:dateRemoved>
+    <equip:notes>Our colleagues detected 2013-02-07 an alignment of the antenna to West, instead to North. This maybe happended 2012-09-22 when a strong storm threw the antenna from the pillar and a broken srewadapter in the mounting of the antenna was replaced. The antenna serial number is identified with an additional Zero.</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>LEIAR25.R3      LEIT</equip:antennaType>
+    <equip:serialNumber>09310010</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0660</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>LEIT</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>RG214</equip:antennaCableType>
+    <equip:antennaCableLength>33</equip:antennaCableLength>
+    <equip:dateInstalled>2013-02-07T21:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2013-09-28T15:00Z</equip:dateRemoved>
+    <equip:notes>No actual replacement of the antenna and the radome. Result for the antenna height, Marker-> ARP Up Ecc. after a control survey, 000.0660 m. Maybe the antenna height changed alredady 2012-09-22 from 000.0668 to 000.0660 ? See Additional Information at 4.4. The antenna serial number is identified with an additional Zero.</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>LEIAR25.R4      LEIT</equip:antennaType>
+    <equip:serialNumber>725282</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0660</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>LEIT</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>RG214</equip:antennaCableType>
+    <equip:antennaCableLength>33</equip:antennaCableLength>
+    <equip:dateInstalled>2013-09-28T16:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes></equip:notes>
+  </gnssAntenna>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>VLBI Radiotelescope</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>VLBI</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber></equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber></equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>-24.1229</equip:dX>
+      <equip:dY>-15.0651</equip:dY>
+      <equip:dZ>8.2146</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>1.0</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>TRIANGULATION</equip:surveyMethod>
+    <equip:dateMeasured>2002-02-12T00:00Z</equip:dateMeasured>
+    <equip:notes>Differential Components from the Marker Pillar K3 OHI3 to the Point of Axis-Intersection in the VLBI Radiotelescope. dx, dy, dz = Marker Pillar K3 OHI3 minus Axis-Intersection VLBI.</equip:notes>
+  </surveyedLocalTies>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>Pillar K5 = OHIG</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>GPS</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber></equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>66008M001</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>-63.5731</equip:dX>
+      <equip:dY>2.5741</equip:dY>
+      <equip:dZ>-20.2217</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>1.0</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>TRIANGULATION</equip:surveyMethod>
+    <equip:dateMeasured>2002-02-12T00:00Z</equip:dateMeasured>
+    <equip:notes>GPS Permanent Tracking Station OHIG at Pillar K5 from 1995-02-14 until 2002-02-20. Differential Components from the Marker Pillar K3 OHI3 to the Marker Pillar K5 OHIG. dx, dy, dz = Marker Pillar K3 OHI3 minus Marker Pillar K5 OHIG.</equip:notes>
+  </surveyedLocalTies>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>OHIZ</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>GPS+GLONASS</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber></equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>66008M004</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>-59.6051</equip:dX>
+      <equip:dY>-21.0910</equip:dY>
+      <equip:dZ>-6.2288</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>1.5</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>TRIANGULATION</equip:surveyMethod>
+    <equip:dateMeasured>2002-02-12T00:00Z</equip:dateMeasured>
+    <equip:notes>GPS+GLONASS Permanent Tracking Station OHIZ from 2001-02-09 until 2003-01-27. Differential Components from the Marker Pillar K3 OHI3 to the ARP of the OHIZ antenna, not to the OHIZ Marker. The ARP of the OHIZ antenna was 0.1215 m above the OHIZ Marker. dx, dy, dz = Marker Pillar K3 OHI3 minus ARP OHIZ antenna.</equip:notes>
+  </surveyedLocalTies>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>Pillar K6 = OHI2</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>GPS+GLONASS</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber></equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>66008M005</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>-2.8291</equip:dX>
+      <equip:dY>-0.5150</equip:dY>
+      <equip:dZ>-0.6918</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>1.0</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>TRIANGULATION</equip:surveyMethod>
+    <equip:dateMeasured>2002-02-12T00:00Z</equip:dateMeasured>
+    <equip:notes>GPS Permanent Tracking Station OHI2 at pillar K6 since 2002-02-14. Differentiel Components from the Marker Pillar K3 OHI3 to the Marker Pillar K6 OHI2. dx, dy, dz = Marker Pillar K3 OHI3 minus Marker Pillar K6 OHI2.</equip:notes>
+  </surveyedLocalTies>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL</equip:standardType>
+    <equip:inputFrequency>       Input Frequency        :</equip:inputFrequency>
+    <equip:effectiveDates>2003-02-06/2009-11-26</equip:effectiveDates>
+    <equip:notes>       Notes                  :</equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>EXTERNAL CESIUM</equip:standardType>
+    <equip:inputFrequency>5 MHz</equip:inputFrequency>
+    <equip:effectiveDates>2009-11-26/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>External input reference oscillator. Cesium.</equip:notes>
+  </frequencyStandard>
+  <collocationInformation>
+    <equip:instrumentType>VLBI</equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates>1995-01-01/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>2 VLBI-measurements in campaigns each year</equip:notes>
+  </collocationInformation>
+  <collocationInformation>
+    <equip:instrumentType>GPS ROGUE SNR-8000 / AOA SNR-8000 ACT</equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates>1995-02-14/2002-02-20</equip:effectiveDates>
+    <equip:notes>Four Character ID OHIG</equip:notes>
+  </collocationInformation>
+  <collocationInformation>
+    <equip:instrumentType>GPS+GLONASS ASHTECH Z18</equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates>2001-02-09/2003-01-27</equip:effectiveDates>
+    <equip:notes>Four Character ID OHIZ</equip:notes>
+  </collocationInformation>
+  <collocationInformation>
+    <equip:instrumentType>GPS AOA SNR-8000 ACT</equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates>2002-02-14/2007-11-12</equip:effectiveDates>
+    <equip:notes>Four Character ID OHI2</equip:notes>
+  </collocationInformation>
+  <collocationInformation>
+    <equip:instrumentType>GPS+GLONASS JPS E_GGD</equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates>2007-11-12/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>Four Character ID OHI2</equip:notes>
+  </collocationInformation>
+  <collocationInformation>
+    <equip:instrumentType>GPS+GLONASS LEICA GRX1200+GNSS</equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates>2009-11-25/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>Four Character ID OHIX</equip:notes>
+  </collocationInformation>
+  <humiditySensor>
+    <equip:type>MP408A</equip:type>
+    <equip:manufacturer>ROTRONIC</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>-1.0</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>1995-02-14/2003-02-25</equip:effectiveDates>
+    <equip:dataSamplingInterval>900</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>1.5</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>CAPACITANCE PROBE</equip:aspiration>
+    <equip:notes>The Humidity Sensor was 1.0 m above the antenna. Meteorological Data are available from OHIG until 2002-02-30, and from OHI2 since 2002-02-14.</equip:notes>
+  </humiditySensor>
+  <humiditySensor>
+    <equip:type>HUGER-WS</equip:type>
+    <equip:manufacturer>HUGER</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>-1.0</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2003-02-25/2003-11-03</equip:effectiveDates>
+    <equip:dataSamplingInterval>900</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>2</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>CAPACITANCE PROBE</equip:aspiration>
+    <equip:notes>The Humidity Sensor was 1.0 m above the antenna. Temporary replacement of damaged MP408A Sensor. Meteorological Data are available from OHI2.</equip:notes>
+  </humiditySensor>
+  <humiditySensor>
+    <equip:type>MP408A</equip:type>
+    <equip:manufacturer>ROTRONIC</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>-1.0</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2003-11-03/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>900</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>1.5</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>CAPACITANCE PROBE</equip:aspiration>
+    <equip:notes>The Humidity Sensor is 1.0 m above the antenna. Meteorological Data are available from OHI2.</equip:notes>
+  </humiditySensor>
+  <pressureSensor>
+    <equip:type>APS</equip:type>
+    <equip:manufacturer>ROESSLER + CIE</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>1.1</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>1995-02-14/2003-02-25</equip:effectiveDates>
+    <equip:dataSamplingInterval>900</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>0.1</equip:accuracy-hPa>
+    <equip:notes>The Pressure Sensor was 1.1 m below the antenna. Meteorological Data are available from OHIG until 2002-02-30, and from OHI2 since 2002-02-14.</equip:notes>
+  </pressureSensor>
+  <pressureSensor>
+    <equip:type>HUGER-WS</equip:type>
+    <equip:manufacturer>HUGER</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>0.6</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2003-02-25/2003-11-03</equip:effectiveDates>
+    <equip:dataSamplingInterval>900</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>1</equip:accuracy-hPa>
+    <equip:notes>The Pressure Sensor was 0.6 m below the antenna. Temporary replacement of damaged APS Sensor. Meteorological Data are available from OHI2.</equip:notes>
+  </pressureSensor>
+  <pressureSensor>
+    <equip:type>APS 9215</equip:type>
+    <equip:manufacturer>L-TEC Leibenguth</equip:manufacturer>
+    <equip:serialNumber>0538 3401A</equip:serialNumber>
+    <equip:heightDiffToAntenna>1.1</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2003-11-03/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>900</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>0.1</equip:accuracy-hPa>
+    <equip:notes>The Pressure Sensor is 1.1 m below the antenna. Meteorological Data are available from OHI2.</equip:notes>
+  </pressureSensor>
+  <temperatureSensor>
+    <equip:type>MP408A</equip:type>
+    <equip:manufacturer>ROTRONIC</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>-1.0</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>1995-02-14/2003-02-25</equip:effectiveDates>
+    <equip:dataSamplingInterval>900</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>0.3</equip:accuracy-degreesCelcius>
+    <equip:aspiration>PLATINUM PROBE</equip:aspiration>
+    <equip:notes>The Temperature Sensor was 1.0 m above the antenna. Meteorological Data are available from OHIG until 2002-02-30, and from OHI2 since 2002-02-14.</equip:notes>
+  </temperatureSensor>
+  <temperatureSensor>
+    <equip:type>HUGER-WS</equip:type>
+    <equip:manufacturer>HUGER</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>-1.0</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2003-02-25/2003-11-03</equip:effectiveDates>
+    <equip:dataSamplingInterval>900</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>0.5</equip:accuracy-degreesCelcius>
+    <equip:aspiration>PLATINUM PROBE</equip:aspiration>
+    <equip:notes>The Temperature Sensor was 1.0 m above the antenna. Temporary replacement for a damaged MP408A Sensor. Meteorological Data are available from OHI2.</equip:notes>
+  </temperatureSensor>
+  <temperatureSensor>
+    <equip:type>MP408A</equip:type>
+    <equip:manufacturer>ROTRONIC</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>-1.0</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2003-11-03/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>900</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>0.3</equip:accuracy-degreesCelcius>
+    <equip:aspiration>PLATINUM PROBE</equip:aspiration>
+    <equip:notes>The Temperature Sensor is 1.0 m above the antenna. Meteorological Data are available from OHI2.</equip:notes>
+  </temperatureSensor>
+  <contactAgency>
+    <contact:agency>Bundesamt fuer Kartographie</contact:agency>
+    <contact:preferredAbbreviation>BKG</contact:preferredAbbreviation>
+    <contact:mailingAddress>Bundesamt fuer Kartographie</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Uwe Hessels</contact:name>
+      <contact:telephonePrimary>++49-9941-603208</contact:telephonePrimary>
+      <contact:telephoneSecondary>++49-9941-6030</contact:telephoneSecondary>
+      <contact:fax>++49-9941-603222</contact:fax>
+      <contact:e-mail>uwe.hessels@bkg.bund.de</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>und Geodaesie Geodetical Observatory Wettzell und Geodaesie Geodetical Observatory Wettzell Sackenrieder Strasse 25 D-93444 Bad Koetzting Germany </contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>Bundesamt fuer Kartographie</contact:agency>
+    <contact:preferredAbbreviation>BKG</contact:preferredAbbreviation>
+    <contact:mailingAddress>Bundesamt fuer Kartographie</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Uwe Hessels</contact:name>
+      <contact:telephonePrimary>++49-9941-603208</contact:telephonePrimary>
+      <contact:telephoneSecondary>++49-9941-6030</contact:telephoneSecondary>
+      <contact:fax>++49-9941-603222</contact:fax>
+      <contact:e-mail>uwe.hessels@bkg.bund.de</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>und Geodaesie Geodetical Observatory Wettzell und Geodaesie Geodetical Observatory Wettzell Sackenrieder Strasse 25 D-93444 Bad Koetzting Germany Klaus Roettcher ++49-9941-603115 klaus.roettcher@bkg.bund.de Rudi Stoeger ++49-9941-603117 rudolf.stoeger@bkg.bund.de</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter>www.bkg.bund.de, www.fs.wettzell.de</mi:primaryDataCenter>
+    <mi:secondaryDataCenter>www.bkg.bund.de, www.fs.wettzell.de</mi:secondaryDataCenter>
+    <mi:urlForMoreInformation>www.bkg.bund.de, www.fs.wettzell.de</mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>Y</mi:siteMap>
+    <mi:siteDiagram>Y</mi:siteDiagram>
+    <mi:horizonMask>Y</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>Y</mi:sitePictures>
+    <mi:notes></mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

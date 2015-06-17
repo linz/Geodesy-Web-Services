@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Christophe Vigny</mi:preparedBy>
+    <mi:datePrepared>2007-03-05</mi:datePrepared>
+    <mi:reportType>NEW</mi:reportType>
+    <mi:previousLog></mi:previousLog>
+    <mi:modifiedSections></mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>Dumont d'Urville</mi:siteName>
+    <mi:fourCharacterID>DUM1</mi:fourCharacterID>
+    <mi:monumentInscription>-</mi:monumentInscription>
+    <mi:iersDOMESNumber>91501M001</mi:iersDOMESNumber>
+    <mi:cdpNumber>-</mi:cdpNumber>
+    <mi:monumentDescription>PILLAR/BRASS</mi:monumentDescription>
+    <mi:heightOfTheMonument>1</mi:heightOfTheMonument>
+    <mi:monumentFoundation>STEEL RODS and CONCRETE BLOCK</mi:monumentFoundation>
+    <mi:foundationDepth></mi:foundationDepth>
+    <mi:markerDescription>none</mi:markerDescription>
+    <mi:dateInstalled>1998-03-02</mi:dateInstalled>
+    <mi:geologicCharacteristic>BEDROCK</mi:geologicCharacteristic>
+    <mi:bedrockType>?</mi:bedrockType>
+    <mi:bedrockCondition>?</mi:bedrockCondition>
+    <mi:fractureSpacing>?</mi:fractureSpacing>
+    <mi:faultZonesNearby>?</mi:faultZonesNearby>
+    <mi:distance-Activity>-</mi:distance-Activity>
+    <mi:notes>-</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Antarctic base of "Dumont d'Urville"</mi:city>
+    <mi:state>French section of Antarctica</mi:state>
+    <mi:country>Antarctica</mi:country>
+    <mi:tectonicPlate>Antarctic</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>-1940883.7791</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>1628483.2535</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>-5833718.0282</mi:zCoordinateInMeters>
+      <mi:latitude-North>-663954.30</mi:latitude-North>
+      <mi:longitude-East>+1400006.96</mi:longitude-East>
+      <mi:elevation-m_ellips.>-1.4</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>(multiple lines)</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>700845-10(F)-LP03030</equip:serialNumber>
+    <equip:firmwareVersion>1E95-1D01</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>15</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1997-12-20T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>ASH700936E      SNOW</equip:antennaType>
+    <equip:serialNumber>CR15276</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>SNOW</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>1997-12-20T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <frequencyStandard>
+    <equip:standardType>(INTERNAL or EXTERNAL H-MASER/CESIUM/etc)</equip:standardType>
+    <equip:inputFrequency>(if external)</equip:inputFrequency>
+    <equip:effectiveDates>(CCYY-MM-DD/CCYY-MM-DD)</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </frequencyStandard>
+  <collocationInformation>
+    <equip:instrumentType>DORIS</equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates></equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </collocationInformation>
+  <humiditySensor>
+    <equip:type></equip:type>
+    <equip:manufacturer></equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>(CCYY-MM-DD/CCYY-MM-DD)</equip:effectiveDates>
+    <equip:dataSamplingInterval></equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>(% rel h)</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </humiditySensor>
+  <pressureSensor>
+    <equip:type></equip:type>
+    <equip:manufacturer></equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>(CCYY-MM-DD/CCYY-MM-DD)</equip:effectiveDates>
+    <equip:dataSamplingInterval></equip:dataSamplingInterval>
+    <equip:accuracy-hPa>(hPa)</equip:accuracy-hPa>
+    <equip:notes>(multiple lines)</equip:notes>
+  </pressureSensor>
+  <temperatureSensor>
+    <equip:type></equip:type>
+    <equip:manufacturer></equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>(CCYY-MM-DD/CCYY-MM-DD)</equip:effectiveDates>
+    <equip:dataSamplingInterval></equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>(deg C)</equip:accuracy-degreesCelcius>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </temperatureSensor>
+  <waterVaporSensor>
+    <equip:type></equip:type>
+    <equip:manufacturer></equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>(CCYY-MM-DD/CCYY-MM-DD)</equip:effectiveDates>
+    <equip:distanceToAntenna></equip:distanceToAntenna>
+    <equip:notes>(multiple lines)</equip:notes>
+  </waterVaporSensor>
+  <radioInterferences>
+    <li:possibleProblemSources>(TV/CELL PHONE ANTENNA/RADAR/etc)</li:possibleProblemSources>
+    <li:effectiveDates>(CCYY-MM-DD/CCYY-MM-DD)</li:effectiveDates>
+    <li:observedDegredation></li:observedDegredation>
+    <li:notes>(multiple lines)</li:notes>
+  </radioInterferences>
+  <multipathSources>
+    <li:possibleProblemSources>(CCYY-MM-DD/CCYY-MM-DD)</li:possibleProblemSources>
+    <li:effectiveDates>(CCYY-MM-DD/CCYY-MM-DD)</li:effectiveDates>
+    <li:notes>(multiple lines)</li:notes>
+  </multipathSources>
+  <signalObstructions>
+    <li:possibleProblemSources>(CCYY-MM-DD/CCYY-MM-DD)</li:possibleProblemSources>
+    <li:effectiveDates>(CCYY-MM-DD/CCYY-MM-DD)</li:effectiveDates>
+    <li:notes>(multiple lines)</li:notes>
+  </signalObstructions>
+  <localEpisodicEvents>
+    <li:date>(CCYY-MM-DD/CCYY-MM-DD)</li:date>
+    <li:event>(TREE CLEARING/CONSTRUCTION/etc)</li:event>
+  </localEpisodicEvents>
+  <contactAgency>
+    <contact:agency>Institut Francais pour la Recherche en</contact:agency>
+    <contact:preferredAbbreviation>IFRTP</contact:preferredAbbreviation>
+    <contact:mailingAddress>IFRTP, Technopole Brest Iroise, BP75, 29280,</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>changes every year</contact:name>
+      <contact:telephonePrimary>none</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>none</contact:fax>
+      <contact:e-mail>instrum@ifrtpddu.ifremer.fr</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Dominique Fleury</contact:name>
+      <contact:telephonePrimary>+ 33 298056500</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>+ 33 298056555</contact:fax>
+      <contact:e-mail>dfleury@ipev.fr</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>Terres Polaires Plouzane, France (multiple lines)</contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>Ecole Normale Superieure / Centre National de</contact:agency>
+    <contact:preferredAbbreviation>ENS/CNRS</contact:preferredAbbreviation>
+    <contact:mailingAddress>laboratoire de Geologie, ENS, 24 rue Lhomond,</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Marie-Noelle Bouin</contact:name>
+      <contact:telephonePrimary>+ 33 164153261</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>+ 33 164153253</contact:fax>
+      <contact:e-mail>bouin@ensg.ign.fr</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>la Recherche Scientifique 75231 Paris, France (multiple lines)</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter>http</mi:primaryDataCenter>
+    <mi:secondaryDataCenter>http</mi:secondaryDataCenter>
+    <mi:urlForMoreInformation>http</mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>(Y or URL)</mi:siteMap>
+    <mi:siteDiagram>(Y or URL)</mi:siteDiagram>
+    <mi:horizonMask>(Y or URL)</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>www.geologie.ens.fr/~vigny/dumont-log.html</mi:sitePictures>
+    <mi:notes>(multiple lines)</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

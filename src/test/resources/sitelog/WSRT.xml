@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Hans van der Marel</mi:preparedBy>
+    <mi:datePrepared>2012-05-02</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>wsrt_20120423.log</mi:previousLog>
+    <mi:modifiedSections>3.10, 3.11</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>Westerbork Synthesis Radio Telescope</mi:siteName>
+    <mi:fourCharacterID>WSRT</mi:fourCharacterID>
+    <mi:monumentInscription>--</mi:monumentInscription>
+    <mi:iersDOMESNumber>13506M005</mi:iersDOMESNumber>
+    <mi:cdpNumber>not</mi:cdpNumber>
+    <mi:monumentDescription>Steel Mast w/ Invar wire/spring height stabiliz.</mi:monumentDescription>
+    <mi:heightOfTheMonument>18</mi:heightOfTheMonument>
+    <mi:monumentFoundation>Concrete platform embedded on stable sand layer</mi:monumentFoundation>
+    <mi:foundationDepth></mi:foundationDepth>
+    <mi:markerDescription>(CHISELLED CROSS/DIVOT/BRASS NAIL/etc)</mi:markerDescription>
+    <mi:dateInstalled>1997-05-23T12</mi:dateInstalled>
+    <mi:geologicCharacteristic>SAND</mi:geologicCharacteristic>
+    <mi:bedrockType>SEDIMENTARY</mi:bedrockType>
+    <mi:bedrockCondition>(FRESH/JOINTED/WEATHERED)</mi:bedrockCondition>
+    <mi:fractureSpacing>(0 cm/1-10 cm/11-50 cm/51-200 cm/over 200 cm)</mi:fractureSpacing>
+    <mi:faultZonesNearby>NO</mi:faultZonesNearby>
+    <mi:distance-Activity>(multiple lines)</mi:distance-Activity>
+    <mi:notes>(multiple lines) WSRT is operating under responsibility of the Institute for Earth-Oriented Space research (DEOS) of the Delft University of Technology. Netherlands Triangulation Network No. RD 179811 Netherlands Height System No. NAP 0A-2628</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Westerbork</mi:city>
+    <mi:state>Drente</mi:state>
+    <mi:country>Netherlands</mi:country>
+    <mi:tectonicPlate>EURASIAN</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>3828739</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>443305</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>5064887</mi:zCoordinateInMeters>
+      <mi:latitude-North>+525452.56</mi:latitude-North>
+      <mi:longitude-East>+0063616.20</mi:longitude-East>
+      <mi:elevation-m_ellips.>86.0</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>(multiple lines)</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-12 RM</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>T209</equip:serialNumber>
+    <equip:firmwareVersion>3.2.32.1</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1997-06-01T12:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1999-08-12T10:02Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- 2.0</equip:temperatureStabilization>
+    <equip:notes>(multiples lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-12 RM</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>T209</equip:serialNumber>
+    <equip:firmwareVersion>3.2.32.9</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1999-08-12T10:12Z</equip:dateInstalled>
+    <equip:dateRemoved>2000-01-05T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- 2.0</equip:temperatureStabilization>
+    <equip:notes>(multiples lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>AOA SNR-12 ACT</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>225</equip:serialNumber>
+    <equip:firmwareVersion>3.3.32.3</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2000-01-05T14:46Z</equip:dateInstalled>
+    <equip:dateRemoved>2000-08-15T09:30Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- 2.0</equip:temperatureStabilization>
+    <equip:notes>(multiples lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>AOA SNR-12 ACT</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>225</equip:serialNumber>
+    <equip:firmwareVersion>3.3.32.4</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2000-08-15T10:02Z</equip:dateInstalled>
+    <equip:dateRemoved>2001-05-31T08:57Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- 2.0</equip:temperatureStabilization>
+    <equip:notes>(multiples lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>AOA SNR-12 ACT</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>224</equip:serialNumber>
+    <equip:firmwareVersion>3.3.32.4</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2001-05-31T13:30Z</equip:dateInstalled>
+    <equip:dateRemoved>2005-04-05T11:52Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- 2.0</equip:temperatureStabilization>
+    <equip:notes>(multiples lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>AOA SNR-12 ACT</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>251</equip:serialNumber>
+    <equip:firmwareVersion>3.3.32.4</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2005-04-12T11:30Z</equip:dateInstalled>
+    <equip:dateRemoved>2007-03-05T10:20Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- 2.0</equip:temperatureStabilization>
+    <equip:notes>(multiples lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>AOA SNR-12 ACT</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>251</equip:serialNumber>
+    <equip:firmwareVersion>3.3.32.2N</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2007-03-05T14:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2010-07-18T13:02Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- 2.0</equip:temperatureStabilization>
+    <equip:notes>(multiples lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>AOA SNR-12 ACT</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>229</equip:serialNumber>
+    <equip:firmwareVersion>3.3.32.2N</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2010-07-22T11:36Z</equip:dateInstalled>
+    <equip:dateRemoved>2012-04-20T10:45Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- 2.0</equip:temperatureStabilization>
+    <equip:notes>(multiples lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>AOA SNR-12 ACT</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>224</equip:serialNumber>
+    <equip:firmwareVersion>3.3.32.2N</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2012-04-20T11:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2012-04-23T13:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- 2.0</equip:temperatureStabilization>
+    <equip:notes>(multiples lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>AOA SNR-12 ACT</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>225</equip:serialNumber>
+    <equip:firmwareVersion>3.3.32.2N</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2012-04-23T13:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2012-05-01T14:20Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- 2.0</equip:temperatureStabilization>
+    <equip:notes>(multiples lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>AOA SNR-12 ACT</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>229</equip:serialNumber>
+    <equip:firmwareVersion>3.3.32.2N</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2012-05-01T14:20Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- 2.0</equip:temperatureStabilization>
+    <equip:notes>(multiples lines)</equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        DUTD</equip:antennaType>
+    <equip:serialNumber>273</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.3795</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>DUTD</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength>80</equip:antennaCableLength>
+    <equip:dateInstalled>1997-06-01T12:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1998-03-17T09:14Z</equip:dateRemoved>
+    <equip:notes>DUTD = polyester cone</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        DUTD</equip:antennaType>
+    <equip:serialNumber>273</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.3888</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>DUTD</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength>80</equip:antennaCableLength>
+    <equip:dateInstalled>1998-03-17T15:09Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>DUTD = polyester cone</equip:notes>
+  </gnssAntenna>
+  <frequencyStandard>
+    <equip:standardType>EXTERNAL H-MASER</equip:standardType>
+    <equip:inputFrequency>5 MHz</equip:inputFrequency>
+    <equip:effectiveDates>1997-06-01/1998-02-28</equip:effectiveDates>
+    <equip:notes>Oscilloquartz Neuchatel Type LSRH H3</equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>EXTERNAL QUARTZ</equip:standardType>
+    <equip:inputFrequency>5 MHz</equip:inputFrequency>
+    <equip:effectiveDates>1998-02-28/1998-03-26</equip:effectiveDates>
+    <equip:notes>Oscilloquartz Neuchatel Type LSRH H3</equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>EXTERNAL RUBIDIUM</equip:standardType>
+    <equip:inputFrequency>5 MHz</equip:inputFrequency>
+    <equip:effectiveDates>1998-03-26/1999-05-18</equip:effectiveDates>
+    <equip:notes>HP Rubidium standard,type 5065A,S/N 1736 A 0811</equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>EXTERNAL H-MASER</equip:standardType>
+    <equip:inputFrequency>5 MHz</equip:inputFrequency>
+    <equip:effectiveDates>1999-05-18/2000-01-06</equip:effectiveDates>
+    <equip:notes>SIGMA TAU HYDROGEN MASER, model MHM - 2010 S/N 0204</equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL </equip:standardType>
+    <equip:inputFrequency>(if external)</equip:inputFrequency>
+    <equip:effectiveDates>2000-01-06/2000-01-17</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>EXTERNAL H-MASER</equip:standardType>
+    <equip:inputFrequency>5 MHz</equip:inputFrequency>
+    <equip:effectiveDates>2000-01-17/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>SIGMA TAU HYDROGEN MASER, model MHM - 2010 S/N 0204</equip:notes>
+  </frequencyStandard>
+  <collocationInformation>
+    <equip:instrumentType>Absolute gravimeters</equip:instrumentType>
+    <equip:status>MOBILE</equip:status>
+    <equip:effectiveDates>1997-01-01/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </collocationInformation>
+  <collocationInformation>
+    <equip:instrumentType>Relative gravimeters</equip:instrumentType>
+    <equip:status>MOBILE</equip:status>
+    <equip:effectiveDates>1997-01-01/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </collocationInformation>
+  <contactAgency>
+    <contact:agency>Delft University of Technology</contact:agency>
+    <contact:preferredAbbreviation>DUT</contact:preferredAbbreviation>
+    <contact:mailingAddress>Delft University of Technology</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Hans van der Marel</contact:name>
+      <contact:telephonePrimary>+31 15 2784907</contact:telephonePrimary>
+      <contact:telephoneSecondary>+31 15 2783546</contact:telephoneSecondary>
+      <contact:fax>+31 15 2783711</contact:fax>
+      <contact:e-mail>H.vanderMarel@tudelft.nl</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>Dept. Geoscience and Remote Sensing (GRS) Stevinweg 1, NL-2628 CN Delft Netherlands (multiple lines)</contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>Delft University of Technology</contact:agency>
+    <contact:preferredAbbreviation>DUT</contact:preferredAbbreviation>
+    <contact:mailingAddress>(multiple lines)</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>(multiple lines)</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter>http</mi:primaryDataCenter>
+    <mi:secondaryDataCenter>http</mi:secondaryDataCenter>
+    <mi:urlForMoreInformation>http</mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>(Y or URL)</mi:siteMap>
+    <mi:siteDiagram>X</mi:siteDiagram>
+    <mi:horizonMask>X</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>X</mi:sitePictures>
+    <mi:notes>(multiple lines)</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

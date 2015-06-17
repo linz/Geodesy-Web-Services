@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Ingunn Skei</mi:preparedBy>
+    <mi:datePrepared>2010-07-28</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>tro1_20100723.log</mi:previousLog>
+    <mi:modifiedSections>4.5, 4.6</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>Tromsoe</mi:siteName>
+    <mi:fourCharacterID>TRO1</mi:fourCharacterID>
+    <mi:monumentInscription>None</mi:monumentInscription>
+    <mi:iersDOMESNumber>10302M006</mi:iersDOMESNumber>
+    <mi:cdpNumber>(A4)</mi:cdpNumber>
+    <mi:monumentDescription>STEEL MAST</mi:monumentDescription>
+    <mi:heightOfTheMonument>5.5</mi:heightOfTheMonument>
+    <mi:monumentFoundation>CONCRETE BLOCK</mi:monumentFoundation>
+    <mi:foundationDepth>2</mi:foundationDepth>
+    <mi:markerDescription>top center of hole mashined in</mi:markerDescription>
+    <mi:dateInstalled>1997-05-31</mi:dateInstalled>
+    <mi:geologicCharacteristic>Bedrock</mi:geologicCharacteristic>
+    <mi:bedrockType>(IGNEOUS/METAMORPHIC/SEDIMENTARY)</mi:bedrockType>
+    <mi:bedrockCondition>FRESH</mi:bedrockCondition>
+    <mi:fractureSpacing>over 200 cm</mi:fractureSpacing>
+    <mi:faultZonesNearby>NO</mi:faultZonesNearby>
+    <mi:distance-Activity>(multiple lines)</mi:distance-Activity>
+    <mi:notes>(multiple lines) A reinforced block of concrete is blasted into the bedrock and bolted to it. A steel tower of approx. 5 m. height is carrying the GPS antenna.</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Tromsoe</mi:city>
+    <mi:state></mi:state>
+    <mi:country>Norway</mi:country>
+    <mi:tectonicPlate>EURASIAN</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>2102929</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>721619</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>5958196</mi:zCoordinateInMeters>
+      <mi:latitude-North>+693945.80</mi:latitude-North>
+      <mi:longitude-East>+0185622.70</mi:longitude-East>
+      <mi:elevation-m_ellips.>138.0</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>(multiple lines)</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-8000</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>103</equip:serialNumber>
+    <equip:firmwareVersion>55/02/28</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>4</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1997-05-31T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1999-08-18</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>AOA BENCHMARK ACT</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>2018</equip:serialNumber>
+    <equip:firmwareVersion>3.3.32.2</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>1</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1999-08-18T10:10Z</equip:dateInstalled>
+    <equip:dateRemoved>2009-05-06T14:05Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETR8</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>4843K33428</equip:serialNumber>
+    <equip:firmwareVersion>3.80</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2009-05-06T14:27Z</equip:dateInstalled>
+    <equip:dateRemoved>2009-08-31T18:33Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETR8</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>4843K33428</equip:serialNumber>
+    <equip:firmwareVersion>4.03</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2009-08-31T18:38Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        NONE</equip:antennaType>
+    <equip:serialNumber>T103</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>1997-07-15T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1998-12-22</equip:dateRemoved>
+    <equip:notes>removed 22 dec 1998 at 11</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>ASH701073.1     SNOW</equip:antennaType>
+    <equip:serialNumber>CRG0110</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>SNOW</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>1998-12-22T13:20Z</equip:dateInstalled>
+    <equip:dateRemoved>2000-06-19T08:00Z</equip:dateRemoved>
+    <equip:notes>COMBINED GPS &amp; GLONASS ANTENNA. PART# 701073 rev 1</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>ASH701073.1     SCIS</equip:antennaType>
+    <equip:serialNumber>CRG0110</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>SCIS</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>2000-06-19T08:20Z</equip:dateInstalled>
+    <equip:dateRemoved>2004-07-13T07:35Z</equip:dateRemoved>
+    <equip:notes>COMBINED GPS &amp; GLONASS ANTENNA. PART# 701073 rev 1</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        NONE</equip:antennaType>
+    <equip:serialNumber>T191</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>2004-07-13T08:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2007-08-23T14:02Z</equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>TRM55971.00     NONE</equip:antennaType>
+    <equip:serialNumber>30436692</equip:serialNumber>
+    <equip:antennaReferencePoint>BAM</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>2007-08-23T14:17Z</equip:dateInstalled>
+    <equip:dateRemoved>2010-07-26T14:37Z</equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>TRM59800.00     SCIS</equip:antennaType>
+    <equip:serialNumber>5007353748</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>SCIS</equip:antennaRadomeType>
+    <equip:radomeSerialNumber>5007353748</equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>2010-07-26T16:52Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>VLBI</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>VLBI/LOCAL CONTROL/FOOTPRINT</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>7602</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>10302M002</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>-24.5648</equip:dX>
+      <equip:dY>-16.8829</equip:dY>
+      <equip:dZ>5.1438</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>1</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>TRILATERATION/TRIANGULATION</equip:surveyMethod>
+    <equip:dateMeasured>1997-08-01</equip:dateMeasured>
+    <equip:notes>exact date in Aug 1997 not known</equip:notes>
+  </surveyedLocalTies>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>TROM</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>LOCAL CONTROL/FOOTPRINT</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>None</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>10302M003</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>11.7217</equip:dX>
+      <equip:dY>-49.9995</equip:dY>
+      <equip:dZ>-4.0784</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>1</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>TRILATERATION/TRIANGULATION</equip:surveyMethod>
+    <equip:dateMeasured>1997-08-01</equip:dateMeasured>
+    <equip:notes>exact date in Aug 1997 not known</equip:notes>
+  </surveyedLocalTies>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>PRARE</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>PRARE observations</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>(A4)</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>(A9)</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>5.246</equip:dX>
+      <equip:dY>-5.728</equip:dY>
+      <equip:dZ>-1.039</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>15</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>TRILATERATION/TRIANGULATION</equip:surveyMethod>
+    <equip:dateMeasured>1997-08-01</equip:dateMeasured>
+    <equip:notes>exact date in Aug 1997 not known</equip:notes>
+  </surveyedLocalTies>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL </equip:standardType>
+    <equip:inputFrequency>(if external)</equip:inputFrequency>
+    <equip:effectiveDates>1997-05-31/2009-05-06</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>EXTERNAL RUBIDIUM</equip:standardType>
+    <equip:inputFrequency>10 MHz</equip:inputFrequency>
+    <equip:effectiveDates>2009-05-06/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </frequencyStandard>
+  <collocationInformation>
+    <equip:instrumentType>PRARE</equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates>1995-11-01/1997-05-01</equip:effectiveDates>
+    <equip:notes>exact dates in Nov 1995 and May 1997 not known</equip:notes>
+  </collocationInformation>
+  <collocationInformation>
+    <equip:instrumentType>SATREF</equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates>1995-07-01/2009-05-06</equip:effectiveDates>
+    <equip:notes>This system samples every second and is used for navigation exact date in Jul 1995 not known</equip:notes>
+  </collocationInformation>
+  <contactAgency>
+    <contact:agency>Nordlysobservatoriet</contact:agency>
+    <contact:preferredAbbreviation>NO</contact:preferredAbbreviation>
+    <contact:mailingAddress>Universitetet i Tromsoe</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>9037 TROMSOE NORWAY (multiple lines)</contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>Geodetic Institute</contact:agency>
+    <contact:preferredAbbreviation>Kartverket</contact:preferredAbbreviation>
+    <contact:mailingAddress>N-3507 Honefoss</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>SATREF Control Centre</contact:name>
+      <contact:telephonePrimary>+47-32-11-83-89</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>+47-32-11-81-01</contact:fax>
+      <contact:e-mail>satref@statkart.no</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>Norwegian Mapping Authority Norway (multiple lines)</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter></mi:primaryDataCenter>
+    <mi:secondaryDataCenter></mi:secondaryDataCenter>
+    <mi:urlForMoreInformation></mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>(Y or URL)</mi:siteMap>
+    <mi:siteDiagram>(Y or URL)</mi:siteDiagram>
+    <mi:horizonMask>(Y or URL)</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>(Y or URL)</mi:sitePictures>
+    <mi:notes>(multiple lines)</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

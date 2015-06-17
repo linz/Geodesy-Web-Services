@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Oleg Khoda, Yuriy Stopkhay</mi:preparedBy>
+    <mi:datePrepared>2013-06-12</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>polv_20130218.log</mi:previousLog>
+    <mi:modifiedSections>3.3, 3.4</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>Poltava</mi:siteName>
+    <mi:fourCharacterID>POLV</mi:fourCharacterID>
+    <mi:monumentInscription></mi:monumentInscription>
+    <mi:iersDOMESNumber>12336M001</mi:iersDOMESNumber>
+    <mi:cdpNumber>(A4)</mi:cdpNumber>
+    <mi:monumentDescription>PILLAR PLATE/STEEL MAST/etc)</mi:monumentDescription>
+    <mi:heightOfTheMonument>1</mi:heightOfTheMonument>
+    <mi:monumentFoundation>ROOF</mi:monumentFoundation>
+    <mi:foundationDepth>10</mi:foundationDepth>
+    <mi:markerDescription>center of botoom of antenna mount</mi:markerDescription>
+    <mi:dateInstalled>2000-04-01</mi:dateInstalled>
+    <mi:geologicCharacteristic>(BEDROCK/CLAY/CONGLOMERATE/GRAVEL/SAND/etc)</mi:geologicCharacteristic>
+    <mi:bedrockType>(IGNEOUS/METAMORPHIC/SEDIMENTARY)</mi:bedrockType>
+    <mi:bedrockCondition>(FRESH/JOINTED/WEATHERED)</mi:bedrockCondition>
+    <mi:fractureSpacing>(0 cm/1-10 cm/11-50 cm/51-200 cm/over 200 cm)</mi:fractureSpacing>
+    <mi:faultZonesNearby>(YES/NO/Name of the zone)</mi:faultZonesNearby>
+    <mi:distance-Activity>(multiple lines)</mi:distance-Activity>
+    <mi:notes>Top of steel pillar on the roof of main office. Marker is a point located in the center of botoom of antenna mount = top of pillar's plate</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Poltava</mi:city>
+    <mi:state></mi:state>
+    <mi:country>Ukraine</mi:country>
+    <mi:tectonicPlate>EURASIAN</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>3411557.3382</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>2348463.8352</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>4834396.6426</mi:zCoordinateInMeters>
+      <mi:latitude-North>+493609.36</mi:latitude-North>
+      <mi:longitude-East>+0343234.44</mi:longitude-East>
+      <mi:elevation-m_ellips.>178.1</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>(multiple lines)</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE 4700</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>22649</equip:serialNumber>
+    <equip:firmwareVersion>1.30</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2001-04-26T16:45Z</equip:dateInstalled>
+    <equip:dateRemoved>2013-02-13T08:01Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GR10</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>1700452</equip:serialNumber>
+    <equip:firmwareVersion>2.62/6.112</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2013-02-13T11:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2013-02-18T10:07Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GR10</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>1700452</equip:serialNumber>
+    <equip:firmwareVersion>2.62/6.112</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2013-02-18T10:07Z</equip:dateInstalled>
+    <equip:dateRemoved>2013-06-11T10:13Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GR10</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>1700452</equip:serialNumber>
+    <equip:firmwareVersion>3.00/6.113</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2013-06-11T10:16Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>TRM29659.00     NONE</equip:antennaType>
+    <equip:serialNumber>27871</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>120</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>Trimble (vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength>30</equip:antennaCableLength>
+    <equip:dateInstalled>2001-04-26T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2013-02-13T08:05Z</equip:dateRemoved>
+    <equip:notes>Marker for orientation of antenna is N-connector</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>LEIAR10         NONE</equip:antennaType>
+    <equip:serialNumber>14090099</equip:serialNumber>
+    <equip:antennaReferencePoint>BAM</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0700</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>Huber+Suhner (Vendor) SUCIFEED_3/8_HF_FR_11_21_A</equip:antennaCableType>
+    <equip:antennaCableLength>30</equip:antennaCableLength>
+    <equip:dateInstalled>2013-02-13T11:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>POLT</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>GPS</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>(A4)</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>(A9)</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>(m)</equip:dX>
+      <equip:dY>(m)</equip:dY>
+      <equip:dZ>(m)</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>(mm)</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>GPS CAMPAIGN</equip:surveyMethod>
+    <equip:dateMeasured>CCYY-MM-DDThh:mmZ</equip:dateMeasured>
+    <equip:notes>POLT is EUREF-UKR'95 point</equip:notes>
+  </surveyedLocalTies>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL </equip:standardType>
+    <equip:inputFrequency>(if external)</equip:inputFrequency>
+    <equip:effectiveDates>2001-04-26/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </frequencyStandard>
+  <collocationInformation>
+    <equip:instrumentType>Gravimeter GS-11</equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates>2005-01-01/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>Digital registration, 10 Hz, resolution 0.1 nm/s^2</equip:notes>
+  </collocationInformation>
+  <collocationInformation>
+    <equip:instrumentType>Autocompensation tiltmeter</equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates>2005-01-01/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>Digital registration, 10 Hz, resolution 1 nrad</equip:notes>
+  </collocationInformation>
+  <contactAgency>
+    <contact:agency>Poltava Gravimetric Observatory</contact:agency>
+    <contact:preferredAbbreviation>PGO</contact:preferredAbbreviation>
+    <contact:mailingAddress>27/29 Miasoedova Str.,</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Vitalij Nekrasov</contact:name>
+      <contact:telephonePrimary>380 532 272 039</contact:telephonePrimary>
+      <contact:telephoneSecondary>380 532 565 958</contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail>nekr@poltava.ukrtel.net</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>Poltava, 36029, Ukraine (multiple lines)</contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>Private Joint Stock Company 'System</contact:agency>
+    <contact:preferredAbbreviation>System.NET</contact:preferredAbbreviation>
+    <contact:mailingAddress>Boryspilska str., 9</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Volodymyr Babchenko</contact:name>
+      <contact:telephonePrimary>380 44 3695021</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>380 44 3695021</contact:fax>
+      <contact:e-mail>vladimir.babchenko@gmail.com</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>Solutions' Kiev, 02660, Ukraine Oleg Khoda (MAO) oleg@mao.kiev.ua</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter></mi:primaryDataCenter>
+    <mi:secondaryDataCenter></mi:secondaryDataCenter>
+    <mi:urlForMoreInformation></mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>(Y or URL)</mi:siteMap>
+    <mi:siteDiagram>(Y or URL)</mi:siteDiagram>
+    <mi:horizonMask>(Y or URL)</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>(Y or URL)</mi:sitePictures>
+    <mi:notes>IGNI is the third Data Center</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

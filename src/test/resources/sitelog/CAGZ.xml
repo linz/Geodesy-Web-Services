@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Aldo Banni</mi:preparedBy>
+    <mi:datePrepared>2012-10-08</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>cagz_20121007.log</mi:previousLog>
+    <mi:modifiedSections>1, 3.1, 3.2, 3.3, 3.4, 3.6, 3.7, 3.8, 3.9, 3.10,</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>CAGLIARI</mi:siteName>
+    <mi:fourCharacterID>CAGZ</mi:fourCharacterID>
+    <mi:monumentInscription></mi:monumentInscription>
+    <mi:iersDOMESNumber>12725M004</mi:iersDOMESNumber>
+    <mi:cdpNumber>(A4)</mi:cdpNumber>
+    <mi:monumentDescription>stable pillar on the ground</mi:monumentDescription>
+    <mi:heightOfTheMonument>1.5</mi:heightOfTheMonument>
+    <mi:monumentFoundation>CONCRETE BLOCK WITH STEEL RODS</mi:monumentFoundation>
+    <mi:foundationDepth>0.5</mi:foundationDepth>
+    <mi:markerDescription>BRASS FORCE FIT</mi:markerDescription>
+    <mi:dateInstalled>1995-02-01</mi:dateInstalled>
+    <mi:geologicCharacteristic>BEDROCK</mi:geologicCharacteristic>
+    <mi:bedrockType>IGNEOUS</mi:bedrockType>
+    <mi:bedrockCondition>JOINTED</mi:bedrockCondition>
+    <mi:fractureSpacing>0 cm</mi:fractureSpacing>
+    <mi:faultZonesNearby>NO</mi:faultZonesNearby>
+    <mi:distance-Activity>(multiple lines)</mi:distance-Activity>
+    <mi:notes>Exact date in Feb 1995 not known</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Capoterra</mi:city>
+    <mi:state>SARDINIA</mi:state>
+    <mi:country>Italy</mi:country>
+    <mi:tectonicPlate>EURASIAN</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>4893380.225</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>772650.197</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>4004179.763</mi:zCoordinateInMeters>
+      <mi:latitude-North>+390809.19</mi:latitude-North>
+      <mi:longitude-East>+0085821.92</mi:longitude-East>
+      <mi:elevation-m_ellips.>238.0</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>(multiple lines)</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>JPS EUROCARD</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>LE2998</equip:serialNumber>
+    <equip:firmwareVersion>MT310305520</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2001-10-01T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2003-08-11</equip:dateRemoved>
+    <equip:temperatureStabilization>20 +/- 2</equip:temperatureStabilization>
+    <equip:notes>Exact date in October not known</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>JPS E_GGD</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>LE4687</equip:serialNumber>
+    <equip:firmwareVersion>AGNV7TGA2O0</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2003-08-11T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2004-04-08</equip:dateRemoved>
+    <equip:temperatureStabilization>20 +/- 2</equip:temperatureStabilization>
+    <equip:notes>Spare receiver until repair of 3.1</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>JPS E_GGD</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>235-1757</equip:serialNumber>
+    <equip:firmwareVersion>AE82EUA01KW</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2004-04-08T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2004-05-08T10:30Z</equip:dateRemoved>
+    <equip:temperatureStabilization>20 +/- 2</equip:temperatureStabilization>
+    <equip:notes>Spare receiver until repair of 3.1</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>JPS EUROCARD</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>LE2998</equip:serialNumber>
+    <equip:firmwareVersion>MT310305520</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2004-05-17T11:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2004-07-26T13:30Z</equip:dateRemoved>
+    <equip:temperatureStabilization>20 +/- 2</equip:temperatureStabilization>
+    <equip:notes>re-installing of the receiver 3.1</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>JPS E_GGD</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>235-2098</equip:serialNumber>
+    <equip:firmwareVersion>AE6A2FQG160</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2004-07-26T14:30Z</equip:dateInstalled>
+    <equip:dateRemoved>2004-12-01T12:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>Spare receiver until repair of 3.4</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>JPS E_GGD</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>LE4687</equip:serialNumber>
+    <equip:firmwareVersion>AGNV7TGA2O0</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2004-12-01T14:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2007-11-07T15:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>20 +/- 3</equip:temperatureStabilization>
+    <equip:notes>receiver 3.2 Case label</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TPS E_GGD</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>AGNV7TGA2O0</equip:serialNumber>
+    <equip:firmwareVersion>2.4 Sep,02,2004</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2007-11-07T15:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2007-11-15T12:36Z</equip:dateRemoved>
+    <equip:temperatureStabilization>20 +/- 3</equip:temperatureStabilization>
+    <equip:notes>receiver 3.2 Case label</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TPS E_GGD</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>AGNV7TGA2O0</equip:serialNumber>
+    <equip:firmwareVersion>2.6 Mar,16,2006</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2007-11-15T12:36Z</equip:dateInstalled>
+    <equip:dateRemoved>2007-11-30T12:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>20 +/- 3</equip:temperatureStabilization>
+    <equip:notes>receiver 3.2 Case label</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TPS E_GGD</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>AGNV7TGA2O0</equip:serialNumber>
+    <equip:firmwareVersion>3.1 Mar,13,2007 p2</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2007-11-30T12:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2008-11-20T15:20Z</equip:dateRemoved>
+    <equip:temperatureStabilization>20 +/- 3</equip:temperatureStabilization>
+    <equip:notes>receiver 3.2 Case label</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TPS E_GGD</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>AGNV7TGA2O0</equip:serialNumber>
+    <equip:firmwareVersion>3.3 Jul,10,2008 p4</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2008-11-20T21:37Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>20 +/- 3</equip:temperatureStabilization>
+    <equip:notes>receiver 3.2 Case label</equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>JPSREGANT_DD_E2 NONE</equip:antennaType>
+    <equip:serialNumber>RRA052</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0945</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>RG214</equip:antennaCableType>
+    <equip:antennaCableLength>30</equip:antennaCableLength>
+    <equip:dateInstalled>2001-10-01T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>Exact date in October not known. The former valuation Marker->ARP Up Ecc. = 0.1095 was wrong (ARP misundertood).  Antenna type listed in this section retro- actively changed from JPSREGANT_DD_E to JPSREGANT_DD_E2 starting with log file cagz_20121007.log. See IGSMAIL-6662 and IGSMAIL-6663 for details.</equip:notes>
+  </gnssAntenna>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>SLR, marker O</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>MOBILE SLR</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>7545</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>12725M002</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>17.891</equip:dX>
+      <equip:dY>23.152</equip:dY>
+      <equip:dZ>-38.814</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>10</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>GPS CAMPAIGN</equip:surveyMethod>
+    <equip:dateMeasured>2003-05-12</equip:dateMeasured>
+    <equip:notes>(multiple lines)</equip:notes>
+  </surveyedLocalTies>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>CAGL</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>EPN permanent station</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>(A4)</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>12725M003</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>-1.146</equip:dX>
+      <equip:dY>-0.691</equip:dY>
+      <equip:dZ>2.137</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>5</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>GPS CAMPAIGN</equip:surveyMethod>
+    <equip:dateMeasured>2003-05-12</equip:dateMeasured>
+    <equip:notes>Responsible agency ASI</equip:notes>
+  </surveyedLocalTies>
+  <frequencyStandard>
+    <equip:standardType>EXTERNAL CAESIUM OSCILLATOR</equip:standardType>
+    <equip:inputFrequency>10 Hz</equip:inputFrequency>
+    <equip:effectiveDates>2004-12-01/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </frequencyStandard>
+  <collocationInformation>
+    <equip:instrumentType>SLR</equip:instrumentType>
+    <equip:status>MOBILE</equip:status>
+    <equip:effectiveDates>1985-05-12/1993-12-15</equip:effectiveDates>
+    <equip:notes>MTLRS, TLRS1</equip:notes>
+  </collocationInformation>
+  <collocationInformation>
+    <equip:instrumentType>SLR</equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates>1993-12-01/2002-11-01</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </collocationInformation>
+  <humiditySensor>
+    <equip:type>HMP 35D</equip:type>
+    <equip:manufacturer>VAISALA</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>0.416</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2005-02-15/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>60 s</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>3.0</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>NATURAL</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </humiditySensor>
+  <pressureSensor>
+    <equip:type>PTB 100</equip:type>
+    <equip:manufacturer>VAISALA</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>0.0</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2005-02-15/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>30 s</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>1.0 hPa</equip:accuracy-hPa>
+    <equip:notes>(multiple lines)</equip:notes>
+  </pressureSensor>
+  <temperatureSensor>
+    <equip:type>HMP 35D</equip:type>
+    <equip:manufacturer>VAISALA</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>0.416</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2005-02-15/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>60 s</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>0.1 deg C</equip:accuracy-degreesCelcius>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </temperatureSensor>
+  <contactAgency>
+    <contact:agency>INAF</contact:agency>
+    <contact:preferredAbbreviation>CAO</contact:preferredAbbreviation>
+    <contact:mailingAddress>Loc. Poggio dei Pini str54</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Aldo Banni</contact:name>
+      <contact:telephonePrimary>+39 070 675 5404</contact:telephonePrimary>
+      <contact:telephoneSecondary>+39 3463212709</contact:telephoneSecondary>
+      <contact:fax>+39 070 675 5405</contact:fax>
+      <contact:e-mail>abanni@unica.it</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Franco Buffa</contact:name>
+      <contact:telephonePrimary>+39 070 71180 245</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>+39 070 71180 222</contact:fax>
+      <contact:e-mail>fbuffa@ca.astro.it</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>ASTRONOMICAL OBSERVATORY OF CAGLIARI 09012 CAPOTERRA - ITALY (multiple lines)</contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>Universita' di Cagliari</contact:agency>
+    <contact:preferredAbbreviation>DISIG-Cagliari</contact:preferredAbbreviation>
+    <contact:mailingAddress>Piazza D'Armi -</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Aldo Banni</contact:name>
+      <contact:telephonePrimary>+39 070 675 5404</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>+39 070 675 5405</contact:fax>
+      <contact:e-mail>abanni@unica.it</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>Dip. Ingegneria Strutturale Sez. Topografia 09123 Cagliari (Italy) (multiple lines)</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter>http</mi:primaryDataCenter>
+    <mi:secondaryDataCenter>http</mi:secondaryDataCenter>
+    <mi:urlForMoreInformation>http</mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>(Y or URL)</mi:siteMap>
+    <mi:siteDiagram>(Y or URL)</mi:siteDiagram>
+    <mi:horizonMask>(Y or URL)</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>http</mi:sitePictures>
+    <mi:notes>(multiple lines)</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

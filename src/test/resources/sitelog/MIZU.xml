@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Markus Ramatschi &amp; Yoshiaki Tamura</mi:preparedBy>
+    <mi:datePrepared>2009-08-31</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>mizu_20090707.log</mi:previousLog>
+    <mi:modifiedSections>6.3</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>Mizusawa</mi:siteName>
+    <mi:fourCharacterID>MIZU</mi:fourCharacterID>
+    <mi:monumentInscription></mi:monumentInscription>
+    <mi:iersDOMESNumber>21702M002</mi:iersDOMESNumber>
+    <mi:cdpNumber>NONE</mi:cdpNumber>
+    <mi:monumentDescription>PILLAR</mi:monumentDescription>
+    <mi:heightOfTheMonument>1.4</mi:heightOfTheMonument>
+    <mi:monumentFoundation>ROOF</mi:monumentFoundation>
+    <mi:foundationDepth></mi:foundationDepth>
+    <mi:markerDescription>BRASS NAIL</mi:markerDescription>
+    <mi:dateInstalled>2000-06-13</mi:dateInstalled>
+    <mi:geologicCharacteristic>Gravel</mi:geologicCharacteristic>
+    <mi:bedrockType>(IGNEOUS/METAMORPHIC/SEDIMENTARY)</mi:bedrockType>
+    <mi:bedrockCondition>(FRESH/JOINTED/WEATHERED)</mi:bedrockCondition>
+    <mi:fractureSpacing>(1-10 cm/11-50 cm/51-200 cm/over 200 cm)</mi:fractureSpacing>
+    <mi:faultZonesNearby>(YES/NO/Name of the zone)</mi:faultZonesNearby>
+    <mi:distance-Activity>(multiple lines)</mi:distance-Activity>
+    <mi:notes>GPS Antenna mounted on the roof of the main building of National Astronomical Observatory, Mizusawa.  The building has three stories.</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Mizusawa</mi:city>
+    <mi:state>Iwate</mi:state>
+    <mi:country>Japan</mi:country>
+    <mi:tectonicPlate>Pacific</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>-3857167.6484</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>3108694.9138</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>4004041.6876</mi:zCoordinateInMeters>
+      <mi:latitude-North>+390806.61</mi:latitude-North>
+      <mi:longitude-East>+1410758.18</mi:longitude-East>
+      <mi:elevation-m_ellips.>117.0</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>(multiple lines)</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>AOA BENCHMARK ACT</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>1104</equip:serialNumber>
+    <equip:firmwareVersion>3.3.32.3</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0.5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2000-06-13T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2000-07-24</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>Broken by thunderstorm</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>AOA BENCHMARK ACT</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>1110</equip:serialNumber>
+    <equip:firmwareVersion>3.3.32.2N</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0.5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2000-09-02T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2003-11-07</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>AOA BENCHMARK ACT</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>1104</equip:serialNumber>
+    <equip:firmwareVersion>3.3.32.2N</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0.5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2003-11-07T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2005-07-13</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>SEPT POLARX2</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>232</equip:serialNumber>
+    <equip:firmwareVersion>2.5.0</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0.0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2005-07-13T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        NONE</equip:antennaType>
+    <equip:serialNumber>440</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0460</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>2000-06-13T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2000-09-02</equip:dateRemoved>
+    <equip:notes></equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        NONE</equip:antennaType>
+    <equip:serialNumber>431</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0460</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>2000-09-02T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2003-11-07</equip:dateRemoved>
+    <equip:notes></equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        NONE</equip:antennaType>
+    <equip:serialNumber>432</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0460</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>2003-11-07T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2005-07-13</equip:dateRemoved>
+    <equip:notes></equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>TPSCR3_GGD      CONE</equip:antennaType>
+    <equip:serialNumber>217-0371</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.1206</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>CONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>2005-07-13T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2006-09-12T02:00Z</equip:dateRemoved>
+    <equip:notes>only the radome was removed</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>TPSCR3_GGD      NONE</equip:antennaType>
+    <equip:serialNumber>217-0371</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.1206</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>2006-09-12T02:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>only the radome was removed</equip:notes>
+  </gnssAntenna>
+  <frequencyStandard>
+    <equip:standardType>Cesium</equip:standardType>
+    <equip:inputFrequency>5MHz</equip:inputFrequency>
+    <equip:effectiveDates>2000-06-13/2003-11-12</equip:effectiveDates>
+    <equip:notes>Type  HP 5061A Clock rate order</equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>Cesium</equip:standardType>
+    <equip:inputFrequency>5MHz</equip:inputFrequency>
+    <equip:effectiveDates>2003-11-13/2005-07-13</equip:effectiveDates>
+    <equip:notes>Type  HP 5061A Clock rate order</equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>EXTERNAL CAESIUM</equip:standardType>
+    <equip:inputFrequency>10 MHz</equip:inputFrequency>
+    <equip:effectiveDates>2009-08-31</equip:effectiveDates>
+    <equip:notes>The Septentrio receiver was not connected to an  external frequency standard before</equip:notes>
+  </frequencyStandard>
+  <collocationInformation>
+    <equip:instrumentType>VLBI</equip:instrumentType>
+    <equip:status>Permanent</equip:status>
+    <equip:effectiveDates>1993-01-01/1995-01-01</equip:effectiveDates>
+    <equip:notes>10m diameter IERS DOMES No. 21702S010 Exact dates in 1993 and 1995 not known</equip:notes>
+  </collocationInformation>
+  <collocationInformation>
+    <equip:instrumentType>VLBI</equip:instrumentType>
+    <equip:status>Permanent</equip:status>
+    <equip:effectiveDates>2001-01-01/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>20m diameter,  under construction Exact date in 2001 not known</equip:notes>
+  </collocationInformation>
+  <humiditySensor>
+    <equip:type>HMP 45</equip:type>
+    <equip:manufacturer>VAISALA</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>0</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2000-06-13/2006-09-12</equip:effectiveDates>
+    <equip:dataSamplingInterval>600</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>2</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>NATURAL</equip:aspiration>
+    <equip:notes></equip:notes>
+  </humiditySensor>
+  <humiditySensor>
+    <equip:type>HMP45A-P</equip:type>
+    <equip:manufacturer>Vaisala</equip:manufacturer>
+    <equip:serialNumber>A3720005Z2310004</equip:serialNumber>
+    <equip:heightDiffToAntenna>0</equip:heightDiffToAntenna>
+    <equip:calibrationDate>2005-09-15</equip:calibrationDate>
+    <equip:effectiveDates>2006-09-12/2008-07-10</equip:effectiveDates>
+    <equip:dataSamplingInterval>300</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>1.5</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>NATURAL</equip:aspiration>
+    <equip:notes>The humidity sensor is part of a Vaisala PTU200 meteo station</equip:notes>
+  </humiditySensor>
+  <humiditySensor>
+    <equip:type>HMP45A-P</equip:type>
+    <equip:manufacturer>Vaisala</equip:manufacturer>
+    <equip:serialNumber>A3720005Z2310004</equip:serialNumber>
+    <equip:heightDiffToAntenna>-7.6</equip:heightDiffToAntenna>
+    <equip:calibrationDate>2005-09-15</equip:calibrationDate>
+    <equip:effectiveDates>2008-07-10/2009-07-03</equip:effectiveDates>
+    <equip:dataSamplingInterval>300</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>1.5</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>NATURAL</equip:aspiration>
+    <equip:notes>The humidity sensor is part of a Vaisala PTU200 meteo station</equip:notes>
+  </humiditySensor>
+  <humiditySensor>
+    <equip:type>HMP45A-P</equip:type>
+    <equip:manufacturer>Vaisala</equip:manufacturer>
+    <equip:serialNumber>A3720005Z2310004</equip:serialNumber>
+    <equip:heightDiffToAntenna>+3.1</equip:heightDiffToAntenna>
+    <equip:calibrationDate>2005-09-15</equip:calibrationDate>
+    <equip:effectiveDates>2009-07-03/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>300</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>1.5</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>NATURAL</equip:aspiration>
+    <equip:notes>The humidity sensor is part of a Vaisala PTU200 meteo station</equip:notes>
+  </humiditySensor>
+  <pressureSensor>
+    <equip:type>PTB100-B</equip:type>
+    <equip:manufacturer>VAISALA</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>0</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2000-06-13/2006-09-12</equip:effectiveDates>
+    <equip:dataSamplingInterval>600</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>0.5</equip:accuracy-hPa>
+    <equip:notes></equip:notes>
+  </pressureSensor>
+  <pressureSensor>
+    <equip:type>PTU200</equip:type>
+    <equip:manufacturer>Vaisala</equip:manufacturer>
+    <equip:serialNumber>A3720005</equip:serialNumber>
+    <equip:heightDiffToAntenna>-1.6</equip:heightDiffToAntenna>
+    <equip:calibrationDate>2005-09-15</equip:calibrationDate>
+    <equip:effectiveDates>2006-09-12/2008-07-10</equip:effectiveDates>
+    <equip:dataSamplingInterval>300</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>0.1</equip:accuracy-hPa>
+    <equip:notes>The pressure sensor is part of a Vaisala PTU200 meteo station</equip:notes>
+  </pressureSensor>
+  <pressureSensor>
+    <equip:type>PTU200</equip:type>
+    <equip:manufacturer>Vaisala</equip:manufacturer>
+    <equip:serialNumber>A3720005</equip:serialNumber>
+    <equip:heightDiffToAntenna>-12.3</equip:heightDiffToAntenna>
+    <equip:calibrationDate>2005-09-15</equip:calibrationDate>
+    <equip:effectiveDates>2008-07-10/2009-07-03</equip:effectiveDates>
+    <equip:dataSamplingInterval>300</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>0.1</equip:accuracy-hPa>
+    <equip:notes>The pressure sensor is part of a Vaisala PTU200 meteo station</equip:notes>
+  </pressureSensor>
+  <pressureSensor>
+    <equip:type>PTU200</equip:type>
+    <equip:manufacturer>Vaisala</equip:manufacturer>
+    <equip:serialNumber>A3720005</equip:serialNumber>
+    <equip:heightDiffToAntenna>-0.8</equip:heightDiffToAntenna>
+    <equip:calibrationDate>2005-09-15</equip:calibrationDate>
+    <equip:effectiveDates>2009-07-03/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>300</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>0.1</equip:accuracy-hPa>
+    <equip:notes>The pressure sensor is part of a Vaisala PTU200 meteo station</equip:notes>
+  </pressureSensor>
+  <temperatureSensor>
+    <equip:type>PT100</equip:type>
+    <equip:manufacturer>TimeTech GmbH</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>0</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2000-06-13/2006-09-12</equip:effectiveDates>
+    <equip:dataSamplingInterval>600</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>0.25</equip:accuracy-degreesCelcius>
+    <equip:aspiration>NATURAL</equip:aspiration>
+    <equip:notes></equip:notes>
+  </temperatureSensor>
+  <temperatureSensor>
+    <equip:type>HMP45A-P</equip:type>
+    <equip:manufacturer>Vaisala</equip:manufacturer>
+    <equip:serialNumber>A3720005</equip:serialNumber>
+    <equip:heightDiffToAntenna>-7.6</equip:heightDiffToAntenna>
+    <equip:calibrationDate>2005-09-15</equip:calibrationDate>
+    <equip:effectiveDates>2006-09-12/2008-07-10</equip:effectiveDates>
+    <equip:dataSamplingInterval>300</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>0.1</equip:accuracy-degreesCelcius>
+    <equip:aspiration>NATURAL</equip:aspiration>
+    <equip:notes>The temperatur sensor is part of a Vaisala PTU200 meteo station</equip:notes>
+  </temperatureSensor>
+  <temperatureSensor>
+    <equip:type>HMP45A-P</equip:type>
+    <equip:manufacturer>Vaisala</equip:manufacturer>
+    <equip:serialNumber>A3720005</equip:serialNumber>
+    <equip:heightDiffToAntenna>0</equip:heightDiffToAntenna>
+    <equip:calibrationDate>2005-09-15</equip:calibrationDate>
+    <equip:effectiveDates>2008-07-10/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>300</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>0.1</equip:accuracy-degreesCelcius>
+    <equip:aspiration>NATURAL</equip:aspiration>
+    <equip:notes>The temperatur sensor is part of a Vaisala PTU200 meteo station</equip:notes>
+  </temperatureSensor>
+  <waterVaporSensor>
+    <equip:type>not available</equip:type>
+    <equip:manufacturer></equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>(CCYY-MM-DD/CCYY-MM-DD)</equip:effectiveDates>
+    <equip:distanceToAntenna></equip:distanceToAntenna>
+    <equip:notes></equip:notes>
+  </waterVaporSensor>
+  <contactAgency>
+    <contact:agency>National Astronomical Observatory, Mizusawa</contact:agency>
+    <contact:preferredAbbreviation>GFZ-NAO</contact:preferredAbbreviation>
+    <contact:mailingAddress>Division of Earth Rotation</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Dr. Yoshiaki Tamura</contact:name>
+      <contact:telephonePrimary>+81-197-227131</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>+81-197-227120</contact:fax>
+      <contact:e-mail>tamura@miz.nao.ac.jp</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Prof. Nobuyuki Kawano</contact:name>
+      <contact:telephonePrimary>+81-197-227122</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>+81-197-256619</contact:fax>
+      <contact:e-mail>kawano@miz.nao.ac.jp</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>2-12 Hoshigaoka Mizusawa Iwate 023-0861 Japan (multiple lines)</contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>Helmhotz-Zentrum Potsdam</contact:agency>
+    <contact:preferredAbbreviation>GFZ</contact:preferredAbbreviation>
+    <contact:mailingAddress>Telegrafenberg A17</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Mrs. Renate Romstedt</contact:name>
+      <contact:telephonePrimary>+49-331-288-1171</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>+49-331-288-1759</contact:fax>
+      <contact:e-mail>roms@gfz-potsdam.de</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>Deutsches GeoForschungsZentrum GFZ D-14473 Potsdam / Germany (multiple lines)</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter>www.gfz-potsdam.de/pb1/igs/igs_stat/mizu.htm</mi:primaryDataCenter>
+    <mi:secondaryDataCenter>www.gfz-potsdam.de/pb1/igs/igs_stat/mizu.htm</mi:secondaryDataCenter>
+    <mi:urlForMoreInformation>www.gfz-potsdam.de/pb1/igs/igs_stat/mizu.htm</mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>(Y or URL)</mi:siteMap>
+    <mi:siteDiagram>(Y or URL)</mi:siteDiagram>
+    <mi:horizonMask>(Y or URL)</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>(Y or URL)</mi:sitePictures>
+    <mi:notes>(multiple lines)</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

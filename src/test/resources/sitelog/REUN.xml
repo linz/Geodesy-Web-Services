@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>RGP Team</mi:preparedBy>
+    <mi:datePrepared>2013-02-19</mi:datePrepared>
+    <mi:reportType>UPDATED</mi:reportType>
+    <mi:previousLog>reun_20130211.log</mi:previousLog>
+    <mi:modifiedSections>3.11, 3.x</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>La Reunion - Observatoire Volcanologique</mi:siteName>
+    <mi:fourCharacterID>REUN</mi:fourCharacterID>
+    <mi:monumentInscription>NONE</mi:monumentInscription>
+    <mi:iersDOMESNumber>97401M003</mi:iersDOMESNumber>
+    <mi:cdpNumber>NONE</mi:cdpNumber>
+    <mi:monumentDescription>CONCRETE PILLAR WITH BRASS MARK ON TOP</mi:monumentDescription>
+    <mi:heightOfTheMonument>1.2</mi:heightOfTheMonument>
+    <mi:monumentFoundation>CONCRETE BLOCK</mi:monumentFoundation>
+    <mi:foundationDepth>0.8</mi:foundationDepth>
+    <mi:markerDescription>HEMISPHERIC BRASS MARKER</mi:markerDescription>
+    <mi:dateInstalled>1998-12-16T10</mi:dateInstalled>
+    <mi:geologicCharacteristic>BEDROCK</mi:geologicCharacteristic>
+    <mi:bedrockType>BASALTIC</mi:bedrockType>
+    <mi:bedrockCondition>FRESH</mi:bedrockCondition>
+    <mi:fractureSpacing>11-50 cm</mi:fractureSpacing>
+    <mi:faultZonesNearby>(YES/NO/Name of the zone)</mi:faultZonesNearby>
+    <mi:distance-Activity>(multiple lines)</mi:distance-Activity>
+    <mi:notes>(multiple lines)</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Le Tampon</mi:city>
+    <mi:state>La Reunion (974)</mi:state>
+    <mi:country>France</mi:country>
+    <mi:tectonicPlate>african tectonic plate</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>3364099.1673</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>4907944.4587</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>-2293466.8970</mi:zCoordinateInMeters>
+      <mi:latitude-North>-211230.00</mi:latitude-North>
+      <mi:longitude-East>+0553418.00</mi:longitude-East>
+      <mi:elevation-m_ellips.>1558.4</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>(multiple lines)</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z18</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>ZX00124</equip:serialNumber>
+    <equip:firmwareVersion>ZT12-0057</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1998-12-15T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2003-11-17T20:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>NONE</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z18</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>ZX00105</equip:serialNumber>
+    <equip:firmwareVersion>ZT17-0065</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2003-11-19T12:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2008-05-19T10:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>NONE</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-X</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>ZE1200350005</equip:serialNumber>
+    <equip:firmwareVersion>ZB00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2008-05-20T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2008-12-03T05:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>NONE</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETR5</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>4825K56763</equip:serialNumber>
+    <equip:firmwareVersion>3.60</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>3</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2008-12-03T12:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2009-08-11T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>NONE</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETR5</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>4917K61722</equip:serialNumber>
+    <equip:firmwareVersion>4.03</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>3</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2009-08-12T05:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2011-03-24T06:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>NONE</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETR5</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>4917K61722</equip:serialNumber>
+    <equip:firmwareVersion>4.22</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>3</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2011-03-24T06:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2011-06-17T12:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>NONE</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETR9</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>5049K72288</equip:serialNumber>
+    <equip:firmwareVersion>4.22</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>3</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2011-06-17T13:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2011-08-29T06:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>NONE</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETR9</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>5049K72288</equip:serialNumber>
+    <equip:firmwareVersion>4.42</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>3</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2011-08-29T06:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2012-03-02T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>NONE</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETR9</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO+GAL+SBAS</equip:satelliteSystem>
+    <equip:serialNumber>5049K72288</equip:serialNumber>
+    <equip:firmwareVersion>4.42</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>3</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2012-03-02T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2012-05-31T07:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>NONE</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETR9</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO+GAL+SBAS</equip:satelliteSystem>
+    <equip:serialNumber>5049K72288</equip:serialNumber>
+    <equip:firmwareVersion>4.60</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>3</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2012-05-31T07:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2013-02-11T07:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>NONE</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETR9</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO+GAL+BDS+SBAS</equip:satelliteSystem>
+    <equip:serialNumber>5049K72288</equip:serialNumber>
+    <equip:firmwareVersion>4.70</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>3</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2013-02-11T07:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>NONE</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>ASH701073.3     NONE</equip:antennaType>
+    <equip:serialNumber>CRG1998380107</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0610</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>ASHTECH</equip:antennaCableType>
+    <equip:antennaCableLength>30</equip:antennaCableLength>
+    <equip:dateInstalled>1998-12-15T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2003-04-04T10:00Z</equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>ASH701073.3     NONE</equip:antennaType>
+    <equip:serialNumber>CRG1998380106</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0610</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>ASHTECH</equip:antennaCableType>
+    <equip:antennaCableLength>30</equip:antennaCableLength>
+    <equip:dateInstalled>2003-04-04T10:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2008-12-03T05:00Z</equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>TRM55971.00     NONE</equip:antennaType>
+    <equip:serialNumber>30976568</equip:serialNumber>
+    <equip:antennaReferencePoint>BAM</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0610</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>HUBER+SUHNER</equip:antennaCableType>
+    <equip:antennaCableLength>60</equip:antennaCableLength>
+    <equip:dateInstalled>2008-12-03T12:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>Use of GPS amplifier (GPSNetworking - LA20 type)</equip:notes>
+  </gnssAntenna>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>REUA</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>DORIS</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>none</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>97401S001</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>-5.3753</equip:dX>
+      <equip:dY>-1.0432</equip:dY>
+      <equip:dZ>-15.3940</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>1</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>GPS SURVEY/LEVELLING</equip:surveyMethod>
+    <equip:dateMeasured>1998-12-17T10:00Z</equip:dateMeasured>
+    <equip:notes>Reference point for DORIS antenna is ARP</equip:notes>
+  </surveyedLocalTies>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>REUB</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>DORIS</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>none</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>97401S002</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>-5.8223</equip:dX>
+      <equip:dY>-1.6882</equip:dY>
+      <equip:dZ>-15.1210</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>1</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>GPS SURVEY/LEVELLING</equip:surveyMethod>
+    <equip:dateMeasured>1998-12-17T10:00Z</equip:dateMeasured>
+    <equip:notes>Reference point for DORIS antenna is ARP</equip:notes>
+  </surveyedLocalTies>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL</equip:standardType>
+    <equip:inputFrequency>(if external)</equip:inputFrequency>
+    <equip:effectiveDates>1997-10-14T10:00Z</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </frequencyStandard>
+  <collocationInformation>
+    <equip:instrumentType>DORIS</equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates>1987-01-01/1998-12-10</equip:effectiveDates>
+    <equip:notes>REUA station</equip:notes>
+  </collocationInformation>
+  <collocationInformation>
+    <equip:instrumentType>DORIS</equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates>1998-12-16/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>REUB station</equip:notes>
+  </collocationInformation>
+  <localEpisodicEvents>
+    <li:date>2011-07-07</li:date>
+    <li:event>TREE CLEARING</li:event>
+  </localEpisodicEvents>
+  <contactAgency>
+    <contact:agency>IPG - Observatoire volcanologique du Piton</contact:agency>
+    <contact:preferredAbbreviation>IPG</contact:preferredAbbreviation>
+    <contact:mailingAddress>14 RN3 - Bourg Murat</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Ph. KOWALSKI</contact:name>
+      <contact:telephonePrimary>00 33 (0)2 62 27 52 92</contact:telephonePrimary>
+      <contact:telephoneSecondary>00 33 (0)6 92 87 73 05</contact:telephoneSecondary>
+      <contact:fax>00 33 (0)2 62 59 12 04</contact:fax>
+      <contact:e-mail>philippe.kowalski@univ-reunion.fr</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>de la Fournaise 97418 La Plaine des Cafres La Reunion France (multiple lines)</contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>Institut Geographique National</contact:agency>
+    <contact:preferredAbbreviation>IGN-SGN</contact:preferredAbbreviation>
+    <contact:mailingAddress>2 Avenue Pasteur</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>94160 Saint-Mandé FRANCE (multiple lines)</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter>http</mi:primaryDataCenter>
+    <mi:secondaryDataCenter>http</mi:secondaryDataCenter>
+    <mi:urlForMoreInformation>http</mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>http</mi:siteMap>
+    <mi:siteDiagram>(Y)</mi:siteDiagram>
+    <mi:horizonMask>(Y)</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>(Y)</mi:sitePictures>
+    <mi:notes>(multiple lines)</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Mike Craymer</mi:preparedBy>
+    <mi:datePrepared>2009-02-24</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>qiki_20080824.log</mi:previousLog>
+    <mi:modifiedSections>10.1, 13</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>Qikiqtarjuaq</mi:siteName>
+    <mi:fourCharacterID>QIKI</mi:fourCharacterID>
+    <mi:monumentInscription>M049015</mi:monumentInscription>
+    <mi:iersDOMESNumber>40166M001</mi:iersDOMESNumber>
+    <mi:cdpNumber>N/A</mi:cdpNumber>
+    <mi:monumentDescription>Stainless steel pillar</mi:monumentDescription>
+    <mi:heightOfTheMonument>1.5</mi:heightOfTheMonument>
+    <mi:monumentFoundation>Bedrock</mi:monumentFoundation>
+    <mi:foundationDepth>1.5</mi:foundationDepth>
+    <mi:markerDescription>Steel bolt on steel plate</mi:markerDescription>
+    <mi:dateInstalled>2004-07-16</mi:dateInstalled>
+    <mi:geologicCharacteristic>Bedrock</mi:geologicCharacteristic>
+    <mi:bedrockType>Metamorphic</mi:bedrockType>
+    <mi:bedrockCondition>Weathered</mi:bedrockCondition>
+    <mi:fractureSpacing>N/A</mi:fractureSpacing>
+    <mi:faultZonesNearby>No</mi:faultZonesNearby>
+    <mi:distance-Activity></mi:distance-Activity>
+    <mi:notes>The GPS reference mark consists of a stainless</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Qikiqtarjuaq (Baffin Island)</mi:city>
+    <mi:state>Nunavut</mi:state>
+    <mi:country>Canada</mi:country>
+    <mi:tectonicPlate>North American</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>1069081.29</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>-2195214.20</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>5872519.02</mi:zCoordinateInMeters>
+      <mi:latitude-North>+673333.6</mi:latitude-North>
+      <mi:longitude-East>-0640201.2</mi:longitude-East>
+      <mi:elevation-m_ellips.>13.3</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes></mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH UZ-12</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>UC200303011</equip:serialNumber>
+    <equip:firmwareVersion>CN00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2004-07-16T10:43Z</equip:dateInstalled>
+    <equip:dateRemoved>2005-09-12T13:15Z</equip:dateRemoved>
+    <equip:temperatureStabilization>None</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH UZ-12</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>UC200303011</equip:serialNumber>
+    <equip:firmwareVersion>CQ00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2005-09-12T14:52Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>None</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>ASH701945E_M    NONE</equip:antennaType>
+    <equip:serialNumber>CR620024521</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>Belden 8214 Braid RG-8 Type 50 Ohm CMIC11</equip:antennaCableType>
+    <equip:antennaCableLength>15</equip:antennaCableLength>
+    <equip:dateInstalled>2004-07-16T10:43Z</equip:dateInstalled>
+    <equip:dateRemoved>2008-08-23T18:39Z</equip:dateRemoved>
+    <equip:notes>(UL) E108998 </equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>ASH701945E_M    NONE</equip:antennaType>
+    <equip:serialNumber>CR620024521</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>Belden 8214 Braid RG-8 Type 50 Ohm CMIC11</equip:antennaCableType>
+    <equip:antennaCableLength>15</equip:antennaCableLength>
+    <equip:dateInstalled>2008-08-23T19:04Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>(UL) E108998 Antenna cable splitter installed.</equip:notes>
+  </gnssAntenna>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL</equip:standardType>
+    <equip:inputFrequency>       Input Frequency        :</equip:inputFrequency>
+    <equip:effectiveDates>2004-07-16/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>       Notes                  :</equip:notes>
+  </frequencyStandard>
+  <collocationInformation>
+    <equip:instrumentType>TIDE GAUGE</equip:instrumentType>
+    <equip:status>Permanent</equip:status>
+    <equip:effectiveDates>2004-07-16/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </collocationInformation>
+  <localEpisodicEvents>
+    <li:date>2009-02-24T16</li:date>
+    <li:event>Removed 4 cm of snow from antenna choke</li:event>
+  </localEpisodicEvents>
+  <contactAgency>
+    <contact:agency>Natural Resources Canada</contact:agency>
+    <contact:preferredAbbreviation>NRCan/GSD</contact:preferredAbbreviation>
+    <contact:mailingAddress>615 Booth Street</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Mike Craymer</contact:name>
+      <contact:telephonePrimary>613-947-1829</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>613-995-3215</contact:fax>
+      <contact:e-mail>craymer@nrcan.gc.ca</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Mike Piraszewski</contact:name>
+      <contact:telephonePrimary>613-947-0967</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>613-995-3215</contact:fax>
+      <contact:e-mail>mpirasze@nrcan.gc.ca</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>(multiple lines)</contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>Natural Resources Canada</contact:agency>
+    <contact:preferredAbbreviation>NRCan/GSD</contact:preferredAbbreviation>
+    <contact:mailingAddress>(multiple lines)</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>(multiple lines)</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter></mi:primaryDataCenter>
+    <mi:secondaryDataCenter></mi:secondaryDataCenter>
+    <mi:urlForMoreInformation></mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>Y</mi:siteMap>
+    <mi:siteDiagram>Y</mi:siteDiagram>
+    <mi:horizonMask>Y</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>Y</mi:sitePictures>
+    <mi:notes>(multiple lines)</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

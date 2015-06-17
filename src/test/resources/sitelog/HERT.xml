@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Rob Sherwood</mi:preparedBy>
+    <mi:datePrepared>2010-05-04</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>hert_20100330.log</mi:previousLog>
+    <mi:modifiedSections>3.7, 3.8</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>Water Tower monument</mi:siteName>
+    <mi:fourCharacterID>HERT</mi:fourCharacterID>
+    <mi:monumentInscription></mi:monumentInscription>
+    <mi:iersDOMESNumber>13212M010</mi:iersDOMESNumber>
+    <mi:cdpNumber>(A4)</mi:cdpNumber>
+    <mi:monumentDescription>BRICK/CONCRETE PILLAR</mi:monumentDescription>
+    <mi:heightOfTheMonument>0.5</mi:heightOfTheMonument>
+    <mi:monumentFoundation>ROOF</mi:monumentFoundation>
+    <mi:foundationDepth>5</mi:foundationDepth>
+    <mi:markerDescription>Centre antenna mounting plate</mi:markerDescription>
+    <mi:dateInstalled>2003-03-01</mi:dateInstalled>
+    <mi:geologicCharacteristic>(BEDROCK/CLAY/CONGLOMERATE/GRAVEL/SAND/etc)</mi:geologicCharacteristic>
+    <mi:bedrockType>(IGNEOUS/METAMORPHIC/SEDIMENTARY)</mi:bedrockType>
+    <mi:bedrockCondition>(FRESH/JOINTED/WEATHERED)</mi:bedrockCondition>
+    <mi:fractureSpacing>(0 cm/1-10 cm/11-50 cm/51-200 cm/over 200 cm)</mi:fractureSpacing>
+    <mi:faultZonesNearby>(YES/NO/Name of the zone)</mi:faultZonesNearby>
+    <mi:distance-Activity>(multiple lines)</mi:distance-Activity>
+    <mi:notes>(multiple lines) Located in grounds of Herstmonceux Castle</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Hailsham</mi:city>
+    <mi:state>East Sussex</mi:state>
+    <mi:country>United Kingdom</mi:country>
+    <mi:tectonicPlate>EURASIAN</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>4033461.0378</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>23537.6625</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>4924318.1656</mi:zCoordinateInMeters>
+      <mi:latitude-North>+505202.92</mi:latitude-North>
+      <mi:longitude-East>+0002003.67</mi:longitude-East>
+      <mi:elevation-m_ellips.>83.3</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>(multiple lines)</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z18</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLONASS</equip:satelliteSystem>
+    <equip:serialNumber>ZX 199912136</equip:serialNumber>
+    <equip:firmwareVersion>0065 ZT16</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>4</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2003-03-12T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2007-12-04</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>Installation of Z-18 from HERP at new monument</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200GGPRO</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLONASS</equip:satelliteSystem>
+    <equip:serialNumber>355316</equip:serialNumber>
+    <equip:firmwareVersion>5.50/3.014</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2007-12-04T12:30Z</equip:dateInstalled>
+    <equip:dateRemoved>2008-01-25T12:30Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200GGPRO</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLONASS</equip:satelliteSystem>
+    <equip:serialNumber>355316</equip:serialNumber>
+    <equip:firmwareVersion>5.62/3.014</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2008-01-25T12:30Z</equip:dateInstalled>
+    <equip:dateRemoved>2008-09-16T09:30Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200GGPRO</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLONASS</equip:satelliteSystem>
+    <equip:serialNumber>355316</equip:serialNumber>
+    <equip:firmwareVersion>6.02/3.015</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2008-09-16T09:30Z</equip:dateInstalled>
+    <equip:dateRemoved>2009-05-19T08:30Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200GGPRO</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLONASS</equip:satelliteSystem>
+    <equip:serialNumber>355316</equip:serialNumber>
+    <equip:firmwareVersion>7.50/3.015</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2009-05-19T08:30Z</equip:dateInstalled>
+    <equip:dateRemoved>2009-06-09T15:40Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200GGPRO</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLONASS</equip:satelliteSystem>
+    <equip:serialNumber>355316</equip:serialNumber>
+    <equip:firmwareVersion>7.50/3.017</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2009-06-09T15:40Z</equip:dateInstalled>
+    <equip:dateRemoved>2010-03-30T11:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200GGPRO</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLONASS</equip:satelliteSystem>
+    <equip:serialNumber>355316</equip:serialNumber>
+    <equip:firmwareVersion>7.80/3.018</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2010-03-30T11:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2010-05-04T04:40Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200GGPRO</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLONASS</equip:satelliteSystem>
+    <equip:serialNumber>355316</equip:serialNumber>
+    <equip:firmwareVersion>7.80/3.019</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2010-05-04T04:40Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>ASH701946.2     NONE</equip:antennaType>
+    <equip:serialNumber>CR3 19993603</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>ASHTECH SUPPLIED</equip:antennaCableType>
+    <equip:antennaCableLength>30</equip:antennaCableLength>
+    <equip:dateInstalled>2003-03-12T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2007-12-04</equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>LEIAT504GG      NONE</equip:antennaType>
+    <equip:serialNumber>200429</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>LEICA</equip:antennaCableType>
+    <equip:antennaCableLength>30</equip:antennaCableLength>
+    <equip:dateInstalled>2007-12-04T12:30Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>SLR intersection</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>SLR</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>7840</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>13212S001</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>2.6863</equip:dX>
+      <equip:dY>124.8209</equip:dY>
+      <equip:dZ>-13.0074</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>2</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>GPS CAMPAIGN/TRIANGULATION</equip:surveyMethod>
+    <equip:dateMeasured>2008-06-23</equip:dateMeasured>
+    <equip:notes>site survey conducted by IGN june 2008</equip:notes>
+  </surveyedLocalTies>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>HERS</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>GPS</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>(A4)</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>13212M007</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>9.1855</equip:dX>
+      <equip:dY>135.0916</equip:dY>
+      <equip:dZ>-16.9475</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>2</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>GPS CAMPAIGN/TRIANGULATION</equip:surveyMethod>
+    <equip:dateMeasured>2008-06-23</equip:dateMeasured>
+    <equip:notes>site survey conducted by IGN june 2008</equip:notes>
+  </surveyedLocalTies>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL </equip:standardType>
+    <equip:inputFrequency>(if external)</equip:inputFrequency>
+    <equip:effectiveDates>2003-03-12/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </frequencyStandard>
+  <collocationInformation>
+    <equip:instrumentType>SLR</equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates>1984-09-01/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </collocationInformation>
+  <collocationInformation>
+    <equip:instrumentType>GPS</equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates>1992-03-24/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>IGS GPS site HERS</equip:notes>
+  </collocationInformation>
+  <humiditySensor>
+    <equip:type>MP103A-T7-W4W</equip:type>
+    <equip:manufacturer>Rotronics</equip:manufacturer>
+    <equip:serialNumber>15082004</equip:serialNumber>
+    <equip:heightDiffToAntenna>8</equip:heightDiffToAntenna>
+    <equip:calibrationDate>2001-11-20</equip:calibrationDate>
+    <equip:effectiveDates>2003-03-12/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>Every 5 min</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>1.5</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </humiditySensor>
+  <pressureSensor>
+    <equip:type>DPI 140 series</equip:type>
+    <equip:manufacturer>Druck</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>8</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2003-03-12/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>Every 5 min</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>0.1</equip:accuracy-hPa>
+    <equip:notes>(multiple lines)</equip:notes>
+  </pressureSensor>
+  <temperatureSensor>
+    <equip:type>MP103A-T7-W4W</equip:type>
+    <equip:manufacturer>Rotronics</equip:manufacturer>
+    <equip:serialNumber>15082004</equip:serialNumber>
+    <equip:heightDiffToAntenna>8</equip:heightDiffToAntenna>
+    <equip:calibrationDate>2001-11-20</equip:calibrationDate>
+    <equip:effectiveDates>2003-03-12/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>Every 5 min</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>0.3</equip:accuracy-degreesCelcius>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </temperatureSensor>
+  <contactAgency>
+    <contact:agency>NERC Space Geodesy Facility</contact:agency>
+    <contact:preferredAbbreviation>NSGF</contact:preferredAbbreviation>
+    <contact:mailingAddress>Herstmonceux Castle, Hailsham,</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Rob Sherwood</contact:name>
+      <contact:telephonePrimary>+44 (0)1323 833888</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>+44 (0)1323 833929</contact:fax>
+      <contact:e-mail>rshe@nerc.ac.uk</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>(multiple lines)</contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>NERC Space Geodesy Facility</contact:agency>
+    <contact:preferredAbbreviation>NSGF</contact:preferredAbbreviation>
+    <contact:mailingAddress>(multiple lines)</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>(multiple lines)</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter></mi:primaryDataCenter>
+    <mi:secondaryDataCenter></mi:secondaryDataCenter>
+    <mi:urlForMoreInformation></mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>(Y or URL)</mi:siteMap>
+    <mi:siteDiagram>(Y)</mi:siteDiagram>
+    <mi:horizonMask>(Y)</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>(Y)</mi:sitePictures>
+    <mi:notes>(multiple lines)</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

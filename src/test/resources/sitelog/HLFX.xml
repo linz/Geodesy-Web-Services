@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Mark Caissy</mi:preparedBy>
+    <mi:datePrepared>2013-08-13</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>hlfx_20101025.log</mi:previousLog>
+    <mi:modifiedSections>3.2,3.3,4.2,4.3</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>HLFX CACS-GSD</mi:siteName>
+    <mi:fourCharacterID>HLFX</mi:fourCharacterID>
+    <mi:monumentInscription>961000</mi:monumentInscription>
+    <mi:iersDOMESNumber>40120M001</mi:iersDOMESNumber>
+    <mi:cdpNumber></mi:cdpNumber>
+    <mi:monumentDescription>concrete pillar</mi:monumentDescription>
+    <mi:heightOfTheMonument>1.50</mi:heightOfTheMonument>
+    <mi:monumentFoundation>Anchored to exposed bedrock</mi:monumentFoundation>
+    <mi:foundationDepth>0.00</mi:foundationDepth>
+    <mi:markerDescription>brass plate</mi:markerDescription>
+    <mi:dateInstalled>2001-12-19T00</mi:dateInstalled>
+    <mi:geologicCharacteristic>Bedrock</mi:geologicCharacteristic>
+    <mi:bedrockType></mi:bedrockType>
+    <mi:bedrockCondition>Fresh</mi:bedrockCondition>
+    <mi:fractureSpacing></mi:fractureSpacing>
+    <mi:faultZonesNearby></mi:faultZonesNearby>
+    <mi:distance-Activity></mi:distance-Activity>
+    <mi:notes>The GNSS reference mark consists in a forced centered brass plate mounted on top of a 1.5 m high, 0.40 m diameter concrete pillar anchored to bedrock.</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Halifax</mi:city>
+    <mi:state>NS</mi:state>
+    <mi:country>Canada</mi:country>
+    <mi:tectonicPlate>North American</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>2018905.80</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>-4069070.52</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>4462415.41</mi:zCoordinateInMeters>
+      <mi:latitude-North>+444100.78</mi:latitude-North>
+      <mi:longitude-East>-0633640.60</mi:longitude-East>
+      <mi:elevation-m_ellips.>3.10</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>HLFX is a continuously tracking GNSS station and is part of the Canadian Active Control System (CACS). The station is located at the Bedford Institute of Oceanography in Halifax, Nova Scotia.</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>AOA BENCHMARK ACT</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>1123</equip:serialNumber>
+    <equip:firmwareVersion>3.3.32.2N</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>10</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2001-12-19T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2002-03-14T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization></equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>AOA BENCHMARK ACT</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>1119</equip:serialNumber>
+    <equip:firmwareVersion>3.3.32.2N</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>10</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2002-03-14T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2013-07-08T23:59Z</equip:dateRemoved>
+    <equip:temperatureStabilization></equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TPS NET-G3A</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>618-02366</equip:serialNumber>
+    <equip:firmwareVersion>3.6 Feb,28,2012 p1</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2013-08-09T20:23Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization></equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        NONE</equip:antennaType>
+    <equip:serialNumber>464</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.1000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0.0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>LDF4-50A</equip:antennaCableType>
+    <equip:antennaCableLength>65.00</equip:antennaCableLength>
+    <equip:dateInstalled>2001-12-19T05:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2002-03-20T15:10Z</equip:dateRemoved>
+    <equip:notes></equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        NONE</equip:antennaType>
+    <equip:serialNumber>452</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.1000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0.0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>LDF4-50A</equip:antennaCableType>
+    <equip:antennaCableLength>65.00</equip:antennaCableLength>
+    <equip:dateInstalled>2002-03-20T15:10Z</equip:dateInstalled>
+    <equip:dateRemoved>2013-07-08T23:59Z</equip:dateRemoved>
+    <equip:notes></equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>TPSCR.G3        NONE</equip:antennaType>
+    <equip:serialNumber>383-0474</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.1000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0.0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>LDF4-50A</equip:antennaCableType>
+    <equip:antennaCableLength>65.00</equip:antennaCableLength>
+    <equip:dateInstalled>2013-08-09T20:23Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes></equip:notes>
+  </gnssAntenna>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL</equip:standardType>
+    <equip:inputFrequency>5 MHZ</equip:inputFrequency>
+    <equip:effectiveDates>2001-12-19/2003-05-29</equip:effectiveDates>
+    <equip:notes></equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>RUBIDIUM</equip:standardType>
+    <equip:inputFrequency>5 MHZ</equip:inputFrequency>
+    <equip:effectiveDates>2003-05-29/2010-03-01</equip:effectiveDates>
+    <equip:notes></equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL</equip:standardType>
+    <equip:inputFrequency>5 MHZ</equip:inputFrequency>
+    <equip:effectiveDates>2010-03-01</equip:effectiveDates>
+    <equip:notes></equip:notes>
+  </frequencyStandard>
+  <humiditySensor>
+    <equip:type>HMP-35A</equip:type>
+    <equip:manufacturer>VAISALA</equip:manufacturer>
+    <equip:serialNumber>XXX</equip:serialNumber>
+    <equip:heightDiffToAntenna>0</equip:heightDiffToAntenna>
+    <equip:calibrationDate></equip:calibrationDate>
+    <equip:effectiveDates>2001-12-19/2009-11-03</equip:effectiveDates>
+    <equip:dataSamplingInterval>300</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>2.0 (% rel h)</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>NONE</equip:aspiration>
+    <equip:notes></equip:notes>
+  </humiditySensor>
+  <pressureSensor>
+    <equip:type>PTB-100A</equip:type>
+    <equip:manufacturer>VAISALA</equip:manufacturer>
+    <equip:serialNumber>XXX</equip:serialNumber>
+    <equip:heightDiffToAntenna>0</equip:heightDiffToAntenna>
+    <equip:calibrationDate></equip:calibrationDate>
+    <equip:effectiveDates>2001-12-19/2009-11-03</equip:effectiveDates>
+    <equip:dataSamplingInterval>300</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>0.1 (hPa)</equip:accuracy-hPa>
+    <equip:notes></equip:notes>
+  </pressureSensor>
+  <temperatureSensor>
+    <equip:type>YSI 44212</equip:type>
+    <equip:manufacturer>YSI</equip:manufacturer>
+    <equip:serialNumber>XXX</equip:serialNumber>
+    <equip:heightDiffToAntenna>0</equip:heightDiffToAntenna>
+    <equip:calibrationDate></equip:calibrationDate>
+    <equip:effectiveDates>2001-12-19/2009-11-03</equip:effectiveDates>
+    <equip:dataSamplingInterval>300</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>0.2 (deg C)</equip:accuracy-degreesCelcius>
+    <equip:aspiration>NONE</equip:aspiration>
+    <equip:notes></equip:notes>
+  </temperatureSensor>
+  <contactAgency>
+    <contact:agency>NRCan/GEODETIC SURVEY OF CANADA</contact:agency>
+    <contact:preferredAbbreviation>NRCan</contact:preferredAbbreviation>
+    <contact:mailingAddress>615 Booth Street, Ottawa,Ontario</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Mark Caissy</contact:name>
+      <contact:telephonePrimary>613-995-4024</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>613-995-3215</contact:fax>
+      <contact:e-mail>mark.caissy@nrcan.gc.ca</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Peter Taylor</contact:name>
+      <contact:telephonePrimary>613-992-2106</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>613-995-3215</contact:fax>
+      <contact:e-mail>peter.taylor@nrcan.gc.ca</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>Canada, K1A 0E9 </contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>JOINT NRCAN-OTTAWA/GEOFORCHUNGSZENTRUM-POTSDAM</contact:agency>
+    <contact:preferredAbbreviation>NRCan/GFZ</contact:preferredAbbreviation>
+    <contact:mailingAddress>615 Booth St., Ottawa, Ontario</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Dr. Roman Galas</contact:name>
+      <contact:telephonePrimary>(+49) -331-2881179</contact:telephonePrimary>
+      <contact:telephoneSecondary>(+49) -331-4729142</contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail>galas@gfz-potsdam.de</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>CANADA, K1A 0E9 Natural Resources Canada (NRCan) and GeoForschungsZentrum (GFZ) are jointly responsible for this site. It is being used for postglacial rebound investigation.</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter>http</mi:primaryDataCenter>
+    <mi:secondaryDataCenter>http</mi:secondaryDataCenter>
+    <mi:urlForMoreInformation>http</mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap></mi:siteMap>
+    <mi:siteDiagram></mi:siteDiagram>
+    <mi:horizonMask></mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures></mi:sitePictures>
+    <mi:notes></mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

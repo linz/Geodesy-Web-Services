@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>G.VISSER</mi:preparedBy>
+    <mi:datePrepared>2009-01-21</mi:datePrepared>
+    <mi:reportType>NEW</mi:reportType>
+    <mi:previousLog></mi:previousLog>
+    <mi:modifiedSections></mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>MAFIKENG</mi:siteName>
+    <mi:fourCharacterID>MFKG</mi:fourCharacterID>
+    <mi:monumentInscription>NONE</mi:monumentInscription>
+    <mi:iersDOMESNumber>30321M001</mi:iersDOMESNumber>
+    <mi:cdpNumber>(A4)</mi:cdpNumber>
+    <mi:monumentDescription>CONCRETE BEACON BUILT ON GRAVELSAND/CLAY</mi:monumentDescription>
+    <mi:heightOfTheMonument>2.4M ABOVE GROUND</mi:heightOfTheMonument>
+    <mi:monumentFoundation>CONCRETE</mi:monumentFoundation>
+    <mi:foundationDepth></mi:foundationDepth>
+    <mi:markerDescription>BOTTOM OF ANTENNA MOUNT</mi:markerDescription>
+    <mi:dateInstalled>2001-10-08</mi:dateInstalled>
+    <mi:geologicCharacteristic>GRAVELSAND/CLAY</mi:geologicCharacteristic>
+    <mi:bedrockType>(IGNEOUS/METAMORPHIC/SEDIMENTARY)</mi:bedrockType>
+    <mi:bedrockCondition>(FRESH/JOINTED/WEATHERED)</mi:bedrockCondition>
+    <mi:fractureSpacing>(1-10 cm/11-50 cm/51-200 cm/over 200 cm)</mi:fractureSpacing>
+    <mi:faultZonesNearby>(YES/NO/Name of the zone)</mi:faultZonesNearby>
+    <mi:distance-Activity>(multiple lines)</mi:distance-Activity>
+    <mi:notes>(multiple lines)</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>MAFIKENG</mi:city>
+    <mi:state>NORTH WEST</mi:state>
+    <mi:country>SOUTH AFRICA</mi:country>
+    <mi:tectonicPlate>AFRICAN</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>+5185375.3900</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>+2477739.1810</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>-2760201.1271</mi:zCoordinateInMeters>
+      <mi:latitude-North>-254818.05</mi:latitude-North>
+      <mi:longitude-East>+0253223.89</mi:longitude-East>
+      <mi:elevation-m_ellips.>1310.9</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>ITRF 2005 (2008-01-09 12</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETRS</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>4605204516</equip:serialNumber>
+    <equip:firmwareVersion>1.2-0</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2006-10-12T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>NONE</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>ASH701941.B     SCIS</equip:antennaType>
+    <equip:serialNumber>CRL1999100134</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>SCIS</equip:antennaRadomeType>
+    <equip:radomeSerialNumber>NONE</equip:radomeSerialNumber>
+    <equip:antennaCableType>Suhner RG 214 Hiflex</equip:antennaCableType>
+    <equip:antennaCableLength>50</equip:antennaCableLength>
+    <equip:dateInstalled>2001-10-08T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName></equip:tiedMarkerName>
+    <equip:tiedMarkerUsage></equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>(A4)</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>(A9)</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>0.0</equip:dX>
+      <equip:dY>0.0</equip:dY>
+      <equip:dZ>0.0</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>(mm)</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>(GPS CAMPAIGN/TRILATERATION/TRIANGULATION/etc)</equip:surveyMethod>
+    <equip:dateMeasured>(CCYY-MM-DDThh:mmZ)</equip:dateMeasured>
+    <equip:notes>(multiple lines)</equip:notes>
+  </surveyedLocalTies>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL</equip:standardType>
+    <equip:inputFrequency>(if external)</equip:inputFrequency>
+    <equip:effectiveDates>2008-01-29</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </frequencyStandard>
+  <collocationInformation>
+    <equip:instrumentType></equip:instrumentType>
+    <equip:status></equip:status>
+    <equip:effectiveDates></equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </collocationInformation>
+  <humiditySensor>
+    <equip:type>HMPSO</equip:type>
+    <equip:manufacturer>VAISALA</equip:manufacturer>
+    <equip:serialNumber>JAC/A/X</equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates></equip:effectiveDates>
+    <equip:dataSamplingInterval>60</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>APPROX 3% rel h</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>NATURAL</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </humiditySensor>
+  <pressureSensor>
+    <equip:type>PTB 101B</equip:type>
+    <equip:manufacturer>VAISALA</equip:manufacturer>
+    <equip:serialNumber>V3140012</equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates></equip:effectiveDates>
+    <equip:dataSamplingInterval>60</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>(hPa)</equip:accuracy-hPa>
+    <equip:notes>(multiple lines)</equip:notes>
+  </pressureSensor>
+  <temperatureSensor>
+    <equip:type>HMP 50</equip:type>
+    <equip:manufacturer>VAISALA</equip:manufacturer>
+    <equip:serialNumber>JAC 1A1X</equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>(CCYY-MM-DD/CCYY-MM-DD)</equip:effectiveDates>
+    <equip:dataSamplingInterval>60</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>(hPa)</equip:accuracy-degreesCelcius>
+    <equip:aspiration>NATURAL</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </temperatureSensor>
+  <waterVaporSensor>
+    <equip:type>NONE</equip:type>
+    <equip:manufacturer></equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates></equip:effectiveDates>
+    <equip:distanceToAntenna></equip:distanceToAntenna>
+    <equip:notes>(multiple lines)</equip:notes>
+  </waterVaporSensor>
+  <localEpisodicEvents>
+    <li:date>(CCYY-MM-DD/CCYY-MM-DD)</li:date>
+    <li:event>(TREE CLEARING/CONSTRUCTION/etc)</li:event>
+  </localEpisodicEvents>
+  <contactAgency>
+    <contact:agency>CHIEF DIR.</contact:agency>
+    <contact:preferredAbbreviation>NGI</contact:preferredAbbreviation>
+    <contact:mailingAddress>PRIVATE BAG X10,Mowbray,7705,SOUTH AFRICA</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>STEPHAN KOCH</contact:name>
+      <contact:telephonePrimary>+27 21 658 4362</contact:telephonePrimary>
+      <contact:telephoneSecondary>082 577 5663</contact:telephoneSecondary>
+      <contact:fax>+27 21 658 4357</contact:fax>
+      <contact:e-mail>skoch@ruraldevelopment.gov.za</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>R.WONNACOTT</contact:name>
+      <contact:telephonePrimary>+27 21 658 4304</contact:telephonePrimary>
+      <contact:telephoneSecondary>082 577 5667</contact:telephoneSecondary>
+      <contact:fax>+27 21 658 4357</contact:fax>
+      <contact:e-mail>rwonnacott@ruraldevelopment.gov.za</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes></contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>CHIEF DIR.</contact:agency>
+    <contact:preferredAbbreviation>NGI</contact:preferredAbbreviation>
+    <contact:mailingAddress>(multiple lines)</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>(multiple lines)</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter>www.trignet.co.za</mi:primaryDataCenter>
+    <mi:secondaryDataCenter>www.trignet.co.za</mi:secondaryDataCenter>
+    <mi:urlForMoreInformation>www.trignet.co.za</mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>URL</mi:siteMap>
+    <mi:siteDiagram>NONE</mi:siteDiagram>
+    <mi:horizonMask>(Y or URL)</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>NONE</mi:sitePictures>
+    <mi:notes></mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

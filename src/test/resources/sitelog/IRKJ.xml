@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Valeriy A. Emelyanov</mi:preparedBy>
+    <mi:datePrepared>2007-11-01</mi:datePrepared>
+    <mi:reportType>Update</mi:reportType>
+    <mi:previousLog>irkj_20020114.log</mi:previousLog>
+    <mi:modifiedSections>3.2, 8.1.1, 8.2.1, 8.3.1, 8.4.1, 11,12,13)</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>Irkutsk</mi:siteName>
+    <mi:fourCharacterID>IRKJ</mi:fourCharacterID>
+    <mi:monumentInscription>West GPS/GLONASS Geodynamical Pillar</mi:monumentInscription>
+    <mi:iersDOMESNumber>12313M002</mi:iersDOMESNumber>
+    <mi:cdpNumber>(A4)</mi:cdpNumber>
+    <mi:monumentDescription>PILLAR</mi:monumentDescription>
+    <mi:heightOfTheMonument>2.5</mi:heightOfTheMonument>
+    <mi:monumentFoundation>CONCRETE BLOCK</mi:monumentFoundation>
+    <mi:foundationDepth>2.7</mi:foundationDepth>
+    <mi:markerDescription>Metal bolt with chiseled point</mi:markerDescription>
+    <mi:dateInstalled>1995-08-23</mi:dateInstalled>
+    <mi:geologicCharacteristic>Jurassic sandstone with low fracture</mi:geologicCharacteristic>
+    <mi:bedrockType>SEDIMENTARY</mi:bedrockType>
+    <mi:bedrockCondition>WEATHERED</mi:bedrockCondition>
+    <mi:fractureSpacing>1-10 cm</mi:fractureSpacing>
+    <mi:faultZonesNearby>Baikal Rift Zone</mi:faultZonesNearby>
+    <mi:distance-Activity>Nearest deformation zone is locating</mi:distance-Activity>
+    <mi:notes>on a distance near 70 km. Distance to the nearest possible landslide spot is 1 km. Local earthquakes not observed. Transit earthquakes from Baikal Rift Zone are possible with Magnitude up to 6 and intensity 5-6 MSK64 (forecasts  up to 8 MSK64). Near 5 meters ferro-concrete pillar is installed on a bedrock. Pillar is surrounded by metal tube having diameter 1m. The space between a pillar and tube filled up by coal clinker.</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Irkutsk</mi:city>
+    <mi:state></mi:state>
+    <mi:country>RUSSIA</mi:country>
+    <mi:tectonicPlate>Eurasian Plate, Siberian Platform</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>-968328.350</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>3794426.541</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>5018167.196</mi:zCoordinateInMeters>
+      <mi:latitude-North>+521308.47</mi:latitude-North>
+      <mi:longitude-East>+1041858.24</mi:longitude-East>
+      <mi:elevation-m_ellips.>502.1</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>(multiple lines)</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>JPS LEGACY</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>00517 Rev.3</equip:serialNumber>
+    <equip:firmwareVersion>2.2</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>10</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2001-07-24T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>5-25 degrees C</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>JPS LEGACY</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>00517 Rev.3</equip:serialNumber>
+    <equip:firmwareVersion>2.6.0 OCT,24,2007 OB</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2001-07-24T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>5-25 degrees C</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>JPSREGANT_SD_E  NONE</equip:antennaType>
+    <equip:serialNumber>RA0225</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.1280</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>RG 14-008012-05</equip:antennaCableType>
+    <equip:antennaCableLength>30</equip:antennaCableLength>
+    <equip:dateInstalled>2001-07-24T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>Antenna is installed at the same position as antenna of receiver Trimble 4000SGL (IRKG station) during IGEX-98(1996-10-25/1999-11-21). We apply forced centering system for the antennas installation.</equip:notes>
+  </gnssAntenna>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>IRKT</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>GPS</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>(A4)</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>12313M001</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>-3.818</equip:dX>
+      <equip:dY>1.104</equip:dY>
+      <equip:dZ>-0.496</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>5</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>GPS CAMPAIGN</equip:surveyMethod>
+    <equip:dateMeasured>1996-09-26</equip:dateMeasured>
+    <equip:notes>(multiple lines)</equip:notes>
+  </surveyedLocalTies>
+  <frequencyStandard>
+    <equip:standardType>EXTERNAL H-MASER</equip:standardType>
+    <equip:inputFrequency>5MHz</equip:inputFrequency>
+    <equip:effectiveDates>2001-07-24/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>H-MASER CH-1-80 #216, produced by</equip:notes>
+  </frequencyStandard>
+  <collocationInformation>
+    <equip:instrumentType>GPS</equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates>1995-09-16/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>IGS global network station IRKT working on a</equip:notes>
+  </collocationInformation>
+  <humiditySensor>
+    <equip:type>Weather Station WM-918</equip:type>
+    <equip:manufacturer>Conrad (Germany)</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2003-02-01</equip:effectiveDates>
+    <equip:dataSamplingInterval></equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>(% rel h)</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </humiditySensor>
+  <pressureSensor>
+    <equip:type>Weather Station WM-918</equip:type>
+    <equip:manufacturer>Conrad (Germany)</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2003-02-01</equip:effectiveDates>
+    <equip:dataSamplingInterval></equip:dataSamplingInterval>
+    <equip:accuracy-hPa>(hPa)</equip:accuracy-hPa>
+    <equip:notes>(multiple lines)</equip:notes>
+  </pressureSensor>
+  <temperatureSensor>
+    <equip:type>Weather Station WM-918</equip:type>
+    <equip:manufacturer>Conrad (Germany)</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2003-02-01</equip:effectiveDates>
+    <equip:dataSamplingInterval></equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>(deg C)</equip:accuracy-degreesCelcius>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </temperatureSensor>
+  <waterVaporSensor>
+    <equip:type>Weather Station WM-918</equip:type>
+    <equip:manufacturer>Conrad (Germany)</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2003-02-01</equip:effectiveDates>
+    <equip:distanceToAntenna></equip:distanceToAntenna>
+    <equip:notes>(multiple lines)</equip:notes>
+  </waterVaporSensor>
+  <radioInterferences>
+    <li:possibleProblemSources>CELL PHONE BASE STATION</li:possibleProblemSources>
+    <li:effectiveDates>(CCYY-MM-DD/CCYY-MM-DD)</li:effectiveDates>
+    <li:observedDegredation></li:observedDegredation>
+    <li:notes>GSM900 base station is locating on a distance near 60 m from antenna of IRKJ and on azimuth 355 degrees. We no yet detected SN ratio degradation or data gaps caused by this station activity starting from January 1998 (after special testing before cellular phone base station installation).</li:notes>
+  </radioInterferences>
+  <contactAgency>
+    <contact:agency>East-Siberian branch of the</contact:agency>
+    <contact:preferredAbbreviation>East-Siberian branch of VNIIFTRI</contact:preferredAbbreviation>
+    <contact:mailingAddress>57, Borodina Str., Irkutsk, 664056,</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Valeriy EMELYANOV</contact:name>
+      <contact:telephonePrimary>+7-395-2-46-38-53</contact:telephonePrimary>
+      <contact:telephoneSecondary>+7-395-2-46-80-22</contact:telephoneSecondary>
+      <contact:fax>+7-395-2-46-38-48</contact:fax>
+      <contact:e-mail>eva@niiftri.irk.ru</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Galina MODESTOVA</contact:name>
+      <contact:telephonePrimary>+7-395-2-46-38-53</contact:telephonePrimary>
+      <contact:telephoneSecondary>+7-395-2-46-80-22</contact:telephoneSecondary>
+      <contact:fax>+7-395-2-46-38-48</contact:fax>
+      <contact:e-mail>mod@niiftri.irk.ru</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>All-Russian research insitute of physical-technical and radiotechnical measurements RUSSIA (multiple lines)</contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>All-Russian research insitute</contact:agency>
+    <contact:preferredAbbreviation>VNIIFTRI</contact:preferredAbbreviation>
+    <contact:mailingAddress>Mendeleevo, Moscow Region,</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>of physical-technical and radiotechnical measurements 141570, RUSSIA (multiple lines)</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter>http</mi:primaryDataCenter>
+    <mi:secondaryDataCenter>http</mi:secondaryDataCenter>
+    <mi:urlForMoreInformation>http</mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>Site Maps named IrkSitMap.gif and SITMAP.BMP</mi:siteMap>
+    <mi:siteDiagram>Site Diagram named SITEDIAG.BMP</mi:siteDiagram>
+    <mi:horizonMask>Horizon Mask named HORMASK.BMP</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>Site Pictures</mi:sitePictures>
+    <mi:notes>(About East-Siberian branch of VNIIFTRI, Russian language) http Engl) There are next pictures in electronic form attaching to this Log-file Monument Design named GGPILLAR.BMP Antenna installation on a top of pillar named ANTINST.BMP</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

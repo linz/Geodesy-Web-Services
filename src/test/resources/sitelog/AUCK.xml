@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>John Beavan</mi:preparedBy>
+    <mi:datePrepared>2012-09-27</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>auck_20110301.log</mi:previousLog>
+    <mi:modifiedSections>3.10, 3.11</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>Whangaparaoa No 3</mi:siteName>
+    <mi:fourCharacterID>AUCK</mi:fourCharacterID>
+    <mi:monumentInscription>none</mi:monumentInscription>
+    <mi:iersDOMESNumber>50209M001</mi:iersDOMESNumber>
+    <mi:cdpNumber>not assigned</mi:cdpNumber>
+    <mi:monumentDescription>CONCRETE PILLAR</mi:monumentDescription>
+    <mi:heightOfTheMonument>1.3</mi:heightOfTheMonument>
+    <mi:monumentFoundation>REINFORCED CONCRETE BLOCK</mi:monumentFoundation>
+    <mi:foundationDepth>1.2</mi:foundationDepth>
+    <mi:markerDescription>CENTER OF STAINLESS PLATE</mi:markerDescription>
+    <mi:dateInstalled>1995-09-18</mi:dateInstalled>
+    <mi:geologicCharacteristic>Sandstone/mudstone</mi:geologicCharacteristic>
+    <mi:bedrockType>Sedimentary</mi:bedrockType>
+    <mi:bedrockCondition>Weathered</mi:bedrockCondition>
+    <mi:fractureSpacing>(1-10 cm/10-50 cm/50-200 cm/over 200 cm)</mi:fractureSpacing>
+    <mi:faultZonesNearby>NO</mi:faultZonesNearby>
+    <mi:distance-Activity>(multiple lines)</mi:distance-Activity>
+    <mi:notes>The site is in an area of early Miocene (Waitemata group) sandstone and mudstone strata with occasional volcaniclastic debris flows (Parnell grit).  The strata are superficially folded.  Basement is Jurassic greywacke at about 200-300 m depth. Monument construction.  A hole was augered through clayey soil to refusal at about 1.2 m depth in compact sediments, and was widened at the bottom by spade.  A small amount of concrete was placed at the bottom, then a 2.4 m long by 30 cm O.D. concrete tube was placed vertically in the hole.  Three or four lengths of reinforcing bar bent over at their bottom end were placed inside the tube.  Concrete was poured to fill the hole external to the tube, and the inside of the tube.  A 15 cm diameter stainless plate with protruding 5/8"-11 screw was set exactly horizontal in the top of the concrete.  Height of pillar above pad is 1.27 m to top corner of pillar, 1.28 m to the level of the stainless plate.  The top concrete surface of the pillar was deliberately made uneven to reduce resonance effects between the top of the pillar and the antenna. The surface of the stainless plate serves as the height reference point.</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Whangaparaoa Peninsula</mi:city>
+    <mi:state></mi:state>
+    <mi:country>New Zealand</mi:country>
+    <mi:tectonicPlate>AUS</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>-5105681.0</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>461564.0</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>-3782181.7</mi:zCoordinateInMeters>
+      <mi:latitude-North>-363610.08</mi:latitude-North>
+      <mi:longitude-East>+1745003.84</mi:longitude-East>
+      <mi:elevation-m_ellips.>132</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>Located at the NZ MetService automatic weather station in the grounds of the Whangaparaoa Army/ Navy Camp.  Approx 1 hr drive north of Auckland. Communication is by phone.</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-8000</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>T132</equip:serialNumber>
+    <equip:firmwareVersion>3.2, field config. 8, 95/02/28</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>1995-09-18T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-8000</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>T132</equip:serialNumber>
+    <equip:firmwareVersion>3.2.32.8</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>1999-08-12T23:10Z</equip:dateInstalled>
+    <equip:dateRemoved>2001-10-27T23:59Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>LP419994102</equip:serialNumber>
+    <equip:firmwareVersion>CD00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>2001-10-28T02:17Z</equip:dateInstalled>
+    <equip:dateRemoved>2002-12-01T23:30Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>A receiver with choke-ring antenna was run at a temporary site a few metres from AUCK for two days before and after the exchange of the AUCK receiver and antenna.  The data will be used to determine whether there is any apparent position offset associated with the exchange.</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH UZ-12</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>ZR220021105</equip:serialNumber>
+    <equip:firmwareVersion>ZC00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2002-12-02T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2003-01-09T02:15Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>Hardware failure on previous receiver.</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>LP419994102</equip:serialNumber>
+    <equip:firmwareVersion>CD00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2003-01-09T02:25Z</equip:dateInstalled>
+    <equip:dateRemoved>2005-11-03T02:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>Replaced repaired receiver from item 3.3.</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETRS</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>4445240415</equip:serialNumber>
+    <equip:firmwareVersion>1.03</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>4</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2005-11-03T04:09Z</equip:dateInstalled>
+    <equip:dateRemoved>2006-02-26T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>Upgraded to Trimble NetRS</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETRS</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>4435237653</equip:serialNumber>
+    <equip:firmwareVersion>1.03</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>4</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2006-02-26T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2006-03-11T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETRS</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>4435237653</equip:serialNumber>
+    <equip:firmwareVersion>1.15</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>4</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2006-03-11T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2007-07-19T01:27Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETRS</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>4445240299</equip:serialNumber>
+    <equip:firmwareVersion>1.15</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>4</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2007-07-19T01:27Z</equip:dateInstalled>
+    <equip:dateRemoved>2011-02-28T22:48Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETR9</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>5035K69859</equip:serialNumber>
+    <equip:firmwareVersion>4.17</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>3</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2011-03-01T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2012-06-14T05:32Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>Upgraded to GNSS receiver</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETR9</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>5035K69859</equip:serialNumber>
+    <equip:firmwareVersion>4.46</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>3</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2012-06-14T05:32Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        NONE</equip:antennaType>
+    <equip:serialNumber>132</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0018</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>1995-09-18T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2001-10-27T23:59Z</equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>ASH701945C_M    NONE</equip:antennaType>
+    <equip:serialNumber>19993904</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0016</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>2001-10-28T02:17Z</equip:dateInstalled>
+    <equip:dateRemoved>2005-11-03T02:00Z</equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>TRM41249.00     NONE</equip:antennaType>
+    <equip:serialNumber>00000000</equip:serialNumber>
+    <equip:antennaReferencePoint>BAM</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0550</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>2005-11-03T04:09Z</equip:dateInstalled>
+    <equip:dateRemoved>2011-02-28T22:48Z</equip:dateRemoved>
+    <equip:notes>Nearby station 5515 was occupied for several days before and after the receiver/antenna exchange, in order to calibrate any apparent offset.</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>TRM55971.00     NONE</equip:antennaType>
+    <equip:serialNumber>1441047132</equip:serialNumber>
+    <equip:antennaReferencePoint>BAM</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0550</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>2011-02-28T23:59Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>A very nearby station was occupied for several days before and after the receiver/antenna swap, in order to calibrate any apparent offset. Contact info@geonet.org.nz for the data.</equip:notes>
+  </gnssAntenna>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>1334</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>LOCAL CONTROL</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber></equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber></equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>-161.445</equip:dX>
+      <equip:dY>224.249</equip:dY>
+      <equip:dZ>228.493</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>2</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>GPS CAMPAIGN</equip:surveyMethod>
+    <equip:dateMeasured>1995-06-01</equip:dateMeasured>
+    <equip:notes>"1334" is the Geodetic Code of this monument in the Land Information NZ Geodetic Database.</equip:notes>
+  </surveyedLocalTies>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>5515</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>LOCAL CONTROL</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber></equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber></equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>-131.026</equip:dX>
+      <equip:dY>281.946</equip:dY>
+      <equip:dZ>209.539</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>2</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>GPS CAMPAIGN</equip:surveyMethod>
+    <equip:dateMeasured>1995-06-01</equip:dateMeasured>
+    <equip:notes>"5515" is the Geodetic Code of this monument in the Land Information NZ Geodetic Database.</equip:notes>
+  </surveyedLocalTies>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>5515</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>LOCAL CONTROL</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber></equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber></equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>-131.018</equip:dX>
+      <equip:dY>281.945</equip:dY>
+      <equip:dZ>209.546</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>2</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>GPS CAMPAIGN</equip:surveyMethod>
+    <equip:dateMeasured>1996-12-30</equip:dateMeasured>
+    <equip:notes>The difference between the 1995 and 1996 differential components is almost purely in height, and is possibly a processing artifact. Additional ties were done in 2000, and all sets of ties will be reprocessed in ITRF2000 in the near future.</equip:notes>
+  </surveyedLocalTies>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL</equip:standardType>
+    <equip:inputFrequency></equip:inputFrequency>
+    <equip:effectiveDates>1995-09-18</equip:effectiveDates>
+    <equip:notes></equip:notes>
+  </frequencyStandard>
+  <humiditySensor>
+    <equip:type>MP300</equip:type>
+    <equip:manufacturer>Rotronic</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>CCYY-MM-DD/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>1 hour</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>2</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>Met sensors are at the NZ MetService automatic weather station, and predate the installation of the GPS receiver.  The sensors are calibrated annually by NZ MetService.</equip:notes>
+  </humiditySensor>
+  <pressureSensor>
+    <equip:type>ACT 30B/TX410</equip:type>
+    <equip:manufacturer>KDG Instruments</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>8 +- 2 m below GPS antenna</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>CCYY-MM-DD/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>1 hour</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>0.3</equip:accuracy-hPa>
+    <equip:notes>The height difference will be measured more accurately on a future maintenance visit.</equip:notes>
+  </pressureSensor>
+  <temperatureSensor>
+    <equip:type>YSI 703 series</equip:type>
+    <equip:manufacturer>Yellow Springs Instruments</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>CCYY-MM-DD/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>1 hour</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>0.2</equip:accuracy-degreesCelcius>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>Temperatures are reported to the nearest degree.</equip:notes>
+  </temperatureSensor>
+  <waterVaporSensor>
+    <equip:type></equip:type>
+    <equip:manufacturer></equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>CCYY-MM-DD/CCYY-MM-DD</equip:effectiveDates>
+    <equip:distanceToAntenna></equip:distanceToAntenna>
+    <equip:notes>(multiple lines)</equip:notes>
+  </waterVaporSensor>
+  <contactAgency>
+    <contact:agency>GNS Science</contact:agency>
+    <contact:preferredAbbreviation>GNS</contact:preferredAbbreviation>
+    <contact:mailingAddress>GNS Science</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>GeoNet Reception</contact:name>
+      <contact:telephonePrimary>+64 4 570 1444</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>+64 4 570 4676</contact:fax>
+      <contact:e-mail>info@geonet.org.nz</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>1 Fairway Drive, Avalon PO Box 30368, Lower Hutt New Zealand </contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>GNS Science</contact:agency>
+    <contact:preferredAbbreviation>GNS</contact:preferredAbbreviation>
+    <contact:mailingAddress>(multiple lines)</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>(multiple lines)</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter>www.geonet.org.nz</mi:primaryDataCenter>
+    <mi:secondaryDataCenter>www.geonet.org.nz</mi:secondaryDataCenter>
+    <mi:urlForMoreInformation>www.geonet.org.nz</mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>GNS file 45/1/4-AUCK</mi:siteMap>
+    <mi:siteDiagram>GNS file 45/1/4-AUCK</mi:siteDiagram>
+    <mi:horizonMask>No obstructions.</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>GNS file 45/1/4-AUCK</mi:sitePictures>
+    <mi:notes>GNS file 45/1/4-AUCK</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

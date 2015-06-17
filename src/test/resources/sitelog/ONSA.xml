@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Tina Kempe</mi:preparedBy>
+    <mi:datePrepared>2013-08-28</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>onsa_20130719.log</mi:previousLog>
+    <mi:modifiedSections>0, 4.2, 4.3</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>ONSALA</mi:siteName>
+    <mi:fourCharacterID>ONSA</mi:fourCharacterID>
+    <mi:monumentInscription>ONSALA 301</mi:monumentInscription>
+    <mi:iersDOMESNumber>10402M004</mi:iersDOMESNumber>
+    <mi:cdpNumber>(A4)</mi:cdpNumber>
+    <mi:monumentDescription>PILLAR</mi:monumentDescription>
+    <mi:heightOfTheMonument></mi:heightOfTheMonument>
+    <mi:monumentFoundation>(STEEL RODS, CONCRETE BLOCK, ROOF, etc)</mi:monumentFoundation>
+    <mi:foundationDepth></mi:foundationDepth>
+    <mi:markerDescription>(CHISELLED CROSS/DIVOT/BRASS NAIL/etc)</mi:markerDescription>
+    <mi:dateInstalled>1991-07-01</mi:dateInstalled>
+    <mi:geologicCharacteristic>BEDROCK</mi:geologicCharacteristic>
+    <mi:bedrockType>(IGNEOUS/METAMORPHIC/SEDIMENTARY)</mi:bedrockType>
+    <mi:bedrockCondition>FRESH</mi:bedrockCondition>
+    <mi:fractureSpacing>over 200 cm</mi:fractureSpacing>
+    <mi:faultZonesNearby>(YES/NO/Name of the zone)</mi:faultZonesNearby>
+    <mi:distance-Activity>(multiple lines)</mi:distance-Activity>
+    <mi:notes>GABBRO Swedish permanent GPS Network (SWEPOS) The same monument and antenna has been for the IGEX/IGLOS-site OS0G up to 2003-08-19</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Onsala</mi:city>
+    <mi:state></mi:state>
+    <mi:country>Sweden</mi:country>
+    <mi:tectonicPlate>EURASIAN</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>3370658.8318</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>711876.9387</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>5349786.7450</mi:zCoordinateInMeters>
+      <mi:latitude-North>+572343.07</mi:latitude-North>
+      <mi:longitude-East>+0115531.85</mi:longitude-East>
+      <mi:elevation-m_ellips.>45.5</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>SWEREF 99 (Swedish realisation of ETRS89). Swedish westcoast, near Gothenburg</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-8000</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>199</equip:serialNumber>
+    <equip:firmwareVersion>2.8</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1993-07-01T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1999-02-01</equip:dateRemoved>
+    <equip:temperatureStabilization>25 ± 3</equip:temperatureStabilization>
+    <equip:notes>Elevation cutoff setting unknown</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>834</equip:serialNumber>
+    <equip:firmwareVersion>1F60</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1999-02-02T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1999-07-03</equip:dateRemoved>
+    <equip:temperatureStabilization>25 ± 3</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>834</equip:serialNumber>
+    <equip:firmwareVersion>CC00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1999-07-03T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2003-08-19</equip:dateRemoved>
+    <equip:temperatureStabilization>25 ± 3</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>JPS LEGACY</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>MT301613113</equip:serialNumber>
+    <equip:firmwareVersion>2.3 May,13,2003 p1</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2003-08-19T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2004-03-10T16:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>25 ± 3</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>JPS E_GGD</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>AGOMET9N0N4</equip:serialNumber>
+    <equip:firmwareVersion>2.3 Feb,17,2004 p4b2</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2004-03-10T16:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2007-11-01T08:30Z</equip:dateRemoved>
+    <equip:temperatureStabilization>25 ± 3</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>JPS E_GGD</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>AG72YY6YV40</equip:serialNumber>
+    <equip:firmwareVersion>2.3 Feb,17,2004 p4b2</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2007-11-01T08:40Z</equip:dateInstalled>
+    <equip:dateRemoved>2008-05-15T14:30Z</equip:dateRemoved>
+    <equip:temperatureStabilization>25 ± 3</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>JPS E_GGD</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>AG72YY6YV40</equip:serialNumber>
+    <equip:firmwareVersion>2.6.1 Jan,10,2008</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2008-05-15T14:40Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>25 ± 3</equip:temperatureStabilization>
+    <equip:notes>Firmware upgrade</equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_B        DUTD</equip:antennaType>
+    <equip:serialNumber>20</equip:serialNumber>
+    <equip:antennaReferencePoint>BCR</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.9950</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>+180 degrees</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>DUTD</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>1991-07-01T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1999-02-01</equip:dateRemoved>
+    <equip:notes>Antenna correctly oriented towards North on 1994-09-11.</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_B        OSOD</equip:antennaType>
+    <equip:serialNumber>020</equip:serialNumber>
+    <equip:antennaReferencePoint>BCR</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.9950</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>OSOD</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>1999-02-02T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2013-08-28T12:00Z</equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_B        NONE</equip:antennaType>
+    <equip:serialNumber>020</equip:serialNumber>
+    <equip:antennaReferencePoint>BCR</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.9950</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>2013-08-28T12:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>Radome is temporarily removed, due to participation in IGS Radome Experiment at Co-located Stations.</equip:notes>
+  </gnssAntenna>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>ONSALA 131</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>VLBI</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>7213</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>10402S002</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>-52.631</equip:dX>
+      <equip:dY>40.464</equip:dY>
+      <equip:dZ>43.865</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>1</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>TRILATERATION/TRIANGULATION</equip:surveyMethod>
+    <equip:dateMeasured>1993-04-15</equip:dateMeasured>
+    <equip:notes>Differential coordinates from the GPS monument to the reference and other monuments. The components are parallel to the XYZ-axes of the global geocentric reference system ITRF (WGS-84).</equip:notes>
+  </surveyedLocalTies>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>ONSALA 501</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>VLBI</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>7211</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>10402M006</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>-16.704</equip:dX>
+      <equip:dY>-10.902</equip:dY>
+      <equip:dZ>9.290</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>1</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>GPS CAMPAIGN/TRILATERATION/TRIANGULATION</equip:surveyMethod>
+    <equip:dateMeasured>1993-04-15</equip:dateMeasured>
+    <equip:notes>Differential coordinates from the GPS monument to the reference and other monuments. The components are parallel to the XYZ-axes of the global geocentric reference system ITRF (WGS-84).</equip:notes>
+  </surveyedLocalTies>
+  <frequencyStandard>
+    <equip:standardType>EXTERNAL H-MASER</equip:standardType>
+    <equip:inputFrequency>5 MHz</equip:inputFrequency>
+    <equip:effectiveDates>1991-07-01/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>CLOCK STEERING has been Y since 1999-02-02. CLOCK STEERING set to N 2000-12-06 00:00 UT. AUTO-SWITCH has always been Y.</equip:notes>
+  </frequencyStandard>
+  <collocationInformation>
+    <equip:instrumentType>VLBI</equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates>1980-01-01/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>Also Mobile VLBI, Gravim</equip:notes>
+  </collocationInformation>
+  <collocationInformation>
+    <equip:instrumentType>GLONASS/GPS</equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates>1998-10-21/2003-08-19</equip:effectiveDates>
+    <equip:notes>Same pillar and antenna as the GPS station. GPS site ONSA and GPS/GLONASS site OS0G have been merged into site ONSA, equipped with a GPS/GLONASS receiver.</equip:notes>
+  </collocationInformation>
+  <collocationInformation>
+    <equip:instrumentType>GPS</equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates>2003-08-19/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>Same pillar and antenna as the GPS/GLONASS station.</equip:notes>
+  </collocationInformation>
+  <collocationInformation>
+    <equip:instrumentType>GRAVITY</equip:instrumentType>
+    <equip:status>MOBILE</equip:status>
+    <equip:effectiveDates>1995-09-26/1995-09-27</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </collocationInformation>
+  <collocationInformation>
+    <equip:instrumentType>GRAVITY</equip:instrumentType>
+    <equip:status>MOBILE</equip:status>
+    <equip:effectiveDates>1995-09-29/1995-10-01</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </collocationInformation>
+  <humiditySensor>
+    <equip:type>HMP35D HUMICAP H-sensor</equip:type>
+    <equip:manufacturer>VAISALA</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>0</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>1997-04-01/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>1800 s</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>2</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </humiditySensor>
+  <pressureSensor>
+    <equip:type>Setra 361B</equip:type>
+    <equip:manufacturer>Setra Systems</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>0</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>1991-07-01/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>1800 s</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>0.5 hPa</equip:accuracy-hPa>
+    <equip:notes>(multiple lines)</equip:notes>
+  </pressureSensor>
+  <temperatureSensor>
+    <equip:type>HMP35D pt-100</equip:type>
+    <equip:manufacturer>VAISALA</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>0</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>1997-04-01/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>1800 s</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>0.1 deg C</equip:accuracy-degreesCelcius>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </temperatureSensor>
+  <waterVaporSensor>
+    <equip:type>Astrid</equip:type>
+    <equip:manufacturer>Onsala Space Observatory</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>0</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>1991-07-01/CCYY-MM-DD</equip:effectiveDates>
+    <equip:distanceToAntenna>8</equip:distanceToAntenna>
+    <equip:notes>(multiple lines)</equip:notes>
+  </waterVaporSensor>
+  <contactAgency>
+    <contact:agency>Onsala Space Observatory/Chalmers</contact:agency>
+    <contact:preferredAbbreviation>OSO</contact:preferredAbbreviation>
+    <contact:mailingAddress>SE-439 92 Onsala</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Lars Eriksson</contact:name>
+      <contact:telephonePrimary>+46 31 772 55 67</contact:telephonePrimary>
+      <contact:telephoneSecondary>+46 31 772 55 00</contact:telephoneSecondary>
+      <contact:fax>+46 31 772 55 90</contact:fax>
+      <contact:e-mail>leson@oso.chalmers.se</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Jan Johansson</contact:name>
+      <contact:telephonePrimary>+46 31 772 55 58</contact:telephonePrimary>
+      <contact:telephoneSecondary>+46 33 16 55 04</contact:telephoneSecondary>
+      <contact:fax>+46 33 12 50 38</contact:fax>
+      <contact:e-mail>jan.johansson@sp.se</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>Sweden (multiple lines)</contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>Lantmateriet, the Swedish mapping, cadastral and</contact:agency>
+    <contact:preferredAbbreviation>LMV</contact:preferredAbbreviation>
+    <contact:mailingAddress>S-801 82 Gavle SWEDEN</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Peter Wiklund</contact:name>
+      <contact:telephonePrimary>+46 26 63 38 84</contact:telephonePrimary>
+      <contact:telephoneSecondary>+46 70 344 06 38</contact:telephoneSecondary>
+      <contact:fax>+46 26 61 06 76</contact:fax>
+      <contact:e-mail>peter.wiklund@lm.se</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>land registration authority (multiple lines)</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter></mi:primaryDataCenter>
+    <mi:secondaryDataCenter></mi:secondaryDataCenter>
+    <mi:urlForMoreInformation></mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>(Y or URL)</mi:siteMap>
+    <mi:siteDiagram>X</mi:siteDiagram>
+    <mi:horizonMask>X</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>X</mi:sitePictures>
+    <mi:notes>(multiple lines)</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

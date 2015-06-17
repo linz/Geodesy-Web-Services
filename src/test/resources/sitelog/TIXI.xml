@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Grigory Steblov</mi:preparedBy>
+    <mi:datePrepared>2010-11-07</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>tixi_20060531.log</mi:previousLog>
+    <mi:modifiedSections>3.3 3.4 4.3 4.4 11 12 13</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>Seismic Station Tixi</mi:siteName>
+    <mi:fourCharacterID>TIXI</mi:fourCharacterID>
+    <mi:monumentInscription></mi:monumentInscription>
+    <mi:iersDOMESNumber>12360M001</mi:iersDOMESNumber>
+    <mi:cdpNumber>(A4)</mi:cdpNumber>
+    <mi:monumentDescription>STAINLESS STEEL ROD</mi:monumentDescription>
+    <mi:heightOfTheMonument></mi:heightOfTheMonument>
+    <mi:monumentFoundation>(STEEL RODS, CONCRETE BLOCK, ROOF, etc)</mi:monumentFoundation>
+    <mi:foundationDepth></mi:foundationDepth>
+    <mi:markerDescription>(CHISELLED CROSS/DIVOT/BRASS NAIL/etc)</mi:markerDescription>
+    <mi:dateInstalled>1998-10-08</mi:dateInstalled>
+    <mi:geologicCharacteristic>Verkhoyansk fold-and-thrust belt</mi:geologicCharacteristic>
+    <mi:bedrockType>Thick siltstone series</mi:bedrockType>
+    <mi:bedrockCondition>Jointed</mi:bedrockCondition>
+    <mi:fractureSpacing>Over 200 cm</mi:fractureSpacing>
+    <mi:faultZonesNearby>(YES/NO/Name of the zone)</mi:faultZonesNearby>
+    <mi:distance-Activity>(multiple lines)</mi:distance-Activity>
+    <mi:notes>Tixi is about 100 km to the east of the margin of Siberian platform. This station is part of NEDA Deformation Array created and run by RUSEG by GPS Technology. NEDA operational control is provided by RDAAC Acquisition/Analysis Center (Moscow). RDAAC is also IGS Operational Center for NEDA. RUSEG is a collaborative project of Lamont- Doherty Earth Observatory and Russian Academy of Sciences supported through the IRIS Consortium.  The GPS reference mark consists of 5/8-11" diameter, vertical rod of the stainless steel. The rod is glued into the flat top of the 2-m high rectangular construction made of reinforced concrete on the roof of the apartments building. The 20-cm thick roof is also made of reinforced concrete. Seismic station computer room is in this building. The GPS receiver is located in that room and it is connected to antenna with a 30-m cable protected with a metal conduit. The 4-floors building has 30-cm thick brick walls without cracks. It is supported by 90 stilts driven into the permafrost to a depth of 10 m, about 8 m below the depth of maximum melting in summer. Vertical datum of the rod. The antenna is attached to the rod with UNAVCO compact leveling mount. The antenna and the choke-ring assembly are protected with the JPL hemispherical radome.</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Tixi</mi:city>
+    <mi:state>Yakutia - Sakha Republic</mi:state>
+    <mi:country>Russian Federation</mi:country>
+    <mi:tectonicPlate>Eurasia - North America plate boundary</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>-1264872.963</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>1569455.814</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>6031003.388</mi:zCoordinateInMeters>
+      <mi:latitude-North>+713804.11</mi:latitude-North>
+      <mi:longitude-East>+1285159.09</mi:longitude-East>
+      <mi:elevation-m_ellips.>46.9847</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>GAMIT Solution ITRF96. Epoch 1998.775</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-8000</equip:receiverType>
+    <equip:satelliteSystem>(GPS+GLO+GAL+CMP+QZSS+SBAS)</equip:satelliteSystem>
+    <equip:serialNumber>T123</equip:serialNumber>
+    <equip:firmwareVersion>3.2 95/03/08</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>1998-10-08T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1999-03-30</equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3</equip:receiverType>
+    <equip:satelliteSystem>(GPS+GLO+GAL+CMP+QZSS+SBAS)</equip:satelliteSystem>
+    <equip:serialNumber>LP01745</equip:serialNumber>
+    <equip:firmwareVersion>NAV CC00 CH 1D02</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>1999-03-30T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2005-12-22T23:59Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>Model 700845-10D (Z-12 CGRS).</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3</equip:receiverType>
+    <equip:satelliteSystem>(GPS+GLO+GAL+CMP+QZSS+SBAS)</equip:satelliteSystem>
+    <equip:serialNumber>LP020003240</equip:serialNumber>
+    <equip:firmwareVersion>NAV CD00 CH 1D02</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>2005-12-23T09:25Z</equip:dateInstalled>
+    <equip:dateRemoved>2010-10-20</equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>Model 700845-10F (Z-12 CGRS).</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>JPS EGGDT</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>8RLTBTENFGG</equip:serialNumber>
+    <equip:firmwareVersion>2.7.0 Mar,31,2008</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>2010-10-20T17:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>ASH700936D_M    UNAV</equip:antennaType>
+    <equip:serialNumber>13083</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0792</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>UNAV</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>1998-10-08T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2002-03-14</equip:dateRemoved>
+    <equip:notes>Antenna Diagram below clear spherical radome</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>ASH700936D_M    NONE</equip:antennaType>
+    <equip:serialNumber>13083</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0792</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>2002-03-14T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2002-10-14</equip:dateRemoved>
+    <equip:notes>Unauthorized radome removal was discovered about 14-MAR-2002. Precise date is unknown.</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>ASH700936D_M    SCIS</equip:antennaType>
+    <equip:serialNumber>13083</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0792</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>SCIS</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>2002-10-14T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2010-10-20</equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>TPSCR3_GGD      NONE</equip:antennaType>
+    <equip:serialNumber>00263</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0792</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>2010-10-20T17:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>The receiver is connected to the antenna via the splitter. The 2nd input of the splitter is connected with the receiver of station TIXG. The splitter provides power to the antenna independently of either TIXI or TIXG receivers.</equip:notes>
+  </gnssAntenna>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>TIX0</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>(SLR/VLBI/LOCAL CONTROL/FOOTPRINT/etc)</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber></equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber></equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>-702.787</equip:dX>
+      <equip:dY>5883.730</equip:dY>
+      <equip:dZ>-1685.430</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>1 mm</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>(GPS CAMPAIGN/TRILATERATION/TRIANGULATION/etc)</equip:surveyMethod>
+    <equip:dateMeasured>1998-10-14</equip:dateMeasured>
+    <equip:notes>GAMIT solution of simultaneous GPS observations (baseline mode in sestbl.).</equip:notes>
+  </surveyedLocalTies>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL</equip:standardType>
+    <equip:inputFrequency></equip:inputFrequency>
+    <equip:effectiveDates>(CCYY-MM-DD/CCYY-MM-DD)</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </frequencyStandard>
+  <collocationInformation>
+    <equip:instrumentType>(GPS/GLONASS/DORIS/PRARE/SLR/VLBI/TIME/etc)</equip:instrumentType>
+    <equip:status>(PERMANENT/MOBILE)</equip:status>
+    <equip:effectiveDates>(CCYY-MM-DD/CCYY-MM-DD)</equip:effectiveDates>
+    <equip:notes>       Notes                  :</equip:notes>
+  </collocationInformation>
+  <humiditySensor>
+    <equip:type>Polymer Capacitance Element</equip:type>
+    <equip:manufacturer>Paroscientific, Inc.</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2004-08-18/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>300 s.</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>+-2% rel h</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>UNASPIRATED</equip:aspiration>
+    <equip:notes>The sensor is incorporated in the MET3 Meteorological System</equip:notes>
+  </humiditySensor>
+  <pressureSensor>
+    <equip:type>Digiquartz (R) Barometric Pressure Transducer</equip:type>
+    <equip:manufacturer>Paroscientific, Inc.Paroscientific, Inc.</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2004-08-18/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>300 s.</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>+-0.01%</equip:accuracy-hPa>
+    <equip:notes>The sensor is incorporated in the MET3 Meteorological System</equip:notes>
+  </pressureSensor>
+  <temperatureSensor>
+    <equip:type>Thin-film Platinum 1000-ohm Resistor</equip:type>
+    <equip:manufacturer>Paroscientific, Inc.</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2004-08-18/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>300 s.</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>+-0.5 deg C</equip:accuracy-degreesCelcius>
+    <equip:aspiration>UNASPIRATED</equip:aspiration>
+    <equip:notes>The sensor is incorporated in the MET3 Meteorological System</equip:notes>
+  </temperatureSensor>
+  <waterVaporSensor>
+    <equip:type></equip:type>
+    <equip:manufacturer></equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>CCYY-MM-DD/CCYY-MM-DD</equip:effectiveDates>
+    <equip:distanceToAntenna></equip:distanceToAntenna>
+    <equip:notes>(multiple lines)</equip:notes>
+  </waterVaporSensor>
+  <contactAgency>
+    <contact:agency>Seismic Station Tixi</contact:agency>
+    <contact:preferredAbbreviation>SST YEMSP GS SB RAS</contact:preferredAbbreviation>
+    <contact:mailingAddress>30 Akademika Fedorova Street</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>678400 Tixi Yakutia - Sakha Republic, RUSSIA (multiple lines)</contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>RDAAC,GS RAS,JPL</contact:agency>
+    <contact:preferredAbbreviation>SST YEMSP GS SB RAS</contact:preferredAbbreviation>
+    <contact:mailingAddress>189 Lenina Street</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>Obninsk 249030, Kaluga Region, RUSSIA (multiple lines)</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter>http</mi:primaryDataCenter>
+    <mi:secondaryDataCenter>http</mi:secondaryDataCenter>
+    <mi:urlForMoreInformation>http</mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>(Y or URL)</mi:siteMap>
+    <mi:siteDiagram>(Y)</mi:siteDiagram>
+    <mi:horizonMask>(Y)</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>(Y)</mi:sitePictures>
+    <mi:notes>Hardcopy Information available from www.site or from Responsible Agency</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

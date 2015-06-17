@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Volker Janssen</mi:preparedBy>
+    <mi:datePrepared>2013-08-28</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>armd_20111221.log</mi:previousLog>
+    <mi:modifiedSections>4.1</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>Armidale</mi:siteName>
+    <mi:fourCharacterID>ARMD</mi:fourCharacterID>
+    <mi:monumentInscription></mi:monumentInscription>
+    <mi:iersDOMESNumber>AUM000143</mi:iersDOMESNumber>
+    <mi:cdpNumber></mi:cdpNumber>
+    <mi:monumentDescription>STEEL BUILDING STRUCTURE</mi:monumentDescription>
+    <mi:heightOfTheMonument></mi:heightOfTheMonument>
+    <mi:monumentFoundation>BUILDING</mi:monumentFoundation>
+    <mi:foundationDepth></mi:foundationDepth>
+    <mi:markerDescription>STAINLESS STEEL PLATE, THREADED SPIGOT</mi:markerDescription>
+    <mi:dateInstalled>2009-10-27T00</mi:dateInstalled>
+    <mi:geologicCharacteristic></mi:geologicCharacteristic>
+    <mi:bedrockType></mi:bedrockType>
+    <mi:bedrockCondition></mi:bedrockCondition>
+    <mi:fractureSpacing></mi:fractureSpacing>
+    <mi:faultZonesNearby></mi:faultZonesNearby>
+    <mi:distance-Activity></mi:distance-Activity>
+    <mi:notes>TS 10983 (SCIMS Number)</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Armidale</mi:city>
+    <mi:state>New South Wales</mi:state>
+    <mi:country>Australia</mi:country>
+    <mi:tectonicPlate>Australian</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>-4841423.298</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>2610563.909</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>-3220176.250</mi:zCoordinateInMeters>
+      <mi:latitude-North>-303052.62719</mi:latitude-North>
+      <mi:longitude-East>+1513956.97386</mi:longitude-East>
+      <mi:elevation-m_ellips.>1034.780</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>GDA94 coordinates (Reg 13)</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200+GNSS</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>495425</equip:serialNumber>
+    <equip:firmwareVersion>7.53/4.003</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2009-10-27T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2011-03-16T03:47Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200+GNSS</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>495425</equip:serialNumber>
+    <equip:firmwareVersion>8.10/4.007</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2011-03-16T03:47Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>LEIAX1203+GNSS  NONE</equip:antennaType>
+    <equip:serialNumber>09240064</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0760</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>-38</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>LMR400 / LMR195</equip:antennaCableType>
+    <equip:antennaCableLength>80 m / 1</equip:antennaCableLength>
+    <equip:dateInstalled>2009-10-27T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>Surge Protection (Polyphaser MR50LNZ+15) and Divider (Rojone AMA23012N) installed at receiver end.</equip:notes>
+  </gnssAntenna>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL</equip:standardType>
+    <equip:inputFrequency></equip:inputFrequency>
+    <equip:effectiveDates></equip:effectiveDates>
+    <equip:notes></equip:notes>
+  </frequencyStandard>
+  <contactAgency>
+    <contact:agency>NSW Land and Property Information</contact:agency>
+    <contact:preferredAbbreviation>LPI</contact:preferredAbbreviation>
+    <contact:mailingAddress>346 Panorama Avenue</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Simon McElroy</contact:name>
+      <contact:telephonePrimary>+61 2 6332 8300</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail>Simon.McElroy@lpi.nsw.gov.au</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Thomas Yan</contact:name>
+      <contact:telephonePrimary>+61 2 6332 8389</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail>Thomas.Yan@lpi.nsw.gov.au</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>Bathurst NSW 2795 AUSTRALIA (multiple lines)</contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>NSW Land and Property Information</contact:agency>
+    <contact:preferredAbbreviation>LPI</contact:preferredAbbreviation>
+    <contact:mailingAddress></contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>(multiple lines)</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter>http</mi:primaryDataCenter>
+    <mi:secondaryDataCenter>http</mi:secondaryDataCenter>
+    <mi:urlForMoreInformation>http</mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>(Y or URL)</mi:siteMap>
+    <mi:siteDiagram>(Y or URL)</mi:siteDiagram>
+    <mi:horizonMask>(Y or URL)</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>(Y or URL)</mi:sitePictures>
+    <mi:notes>(multiple lines)</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

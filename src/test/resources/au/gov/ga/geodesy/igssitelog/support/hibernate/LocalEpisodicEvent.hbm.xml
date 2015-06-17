@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class
+    name="au.gov.ga.geodesy.igssitelog.domain.model.LocalEpisodicEvent"
+    table="SITELOG_LOCALEPISODICEVENT">
+    <id
+      name="id"
+      type="java.lang.Integer">
+      <column
+        name="LOCAL_EPISODIC_EVENTNO"
+        precision="9"
+        scale="0" />
+	  
+	  <generator class="sequence">
+		  <param name="sequence">SEQ_EPISODICEVENT</param>
+	  </generator>
+    </id>
+
+    <property name="date" column="EVENT_DATE"/>
+    <property name="event" column="EVENT"/>
+
+  </class>
+</hibernate-mapping>

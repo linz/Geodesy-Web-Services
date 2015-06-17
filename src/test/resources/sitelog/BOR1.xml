@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Marek Lehmann &amp; Leszek Jaworski</mi:preparedBy>
+    <mi:datePrepared>2008-03-10</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>bor1_20080306.log</mi:previousLog>
+    <mi:modifiedSections>3.3, 3.5</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>BOROWIEC</mi:siteName>
+    <mi:fourCharacterID>BOR1</mi:fourCharacterID>
+    <mi:monumentInscription>stable geodynamical pillar on the roof</mi:monumentInscription>
+    <mi:iersDOMESNumber>12205M002</mi:iersDOMESNumber>
+    <mi:cdpNumber></mi:cdpNumber>
+    <mi:monumentDescription>PILLAR</mi:monumentDescription>
+    <mi:heightOfTheMonument></mi:heightOfTheMonument>
+    <mi:monumentFoundation>ROOF</mi:monumentFoundation>
+    <mi:foundationDepth></mi:foundationDepth>
+    <mi:markerDescription>BRASS SCREW</mi:markerDescription>
+    <mi:dateInstalled>1994-01-01</mi:dateInstalled>
+    <mi:geologicCharacteristic>CLAY</mi:geologicCharacteristic>
+    <mi:bedrockType>SEDIMENTARY</mi:bedrockType>
+    <mi:bedrockCondition>JOINTED</mi:bedrockCondition>
+    <mi:fractureSpacing>1-10 cm</mi:fractureSpacing>
+    <mi:faultZonesNearby>Teisseyre</mi:faultZonesNearby>
+    <mi:distance-Activity>(multiple lines)</mi:distance-Activity>
+    <mi:notes>point of POLREF, EPOCH-92, CERGOP, point of geodyn. network SAGET &amp; EXTENDED SAGET</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Borowiec</mi:city>
+    <mi:state>Wielkopolska</mi:state>
+    <mi:country>Poland</mi:country>
+    <mi:tectonicPlate>Eurasian</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>3738359</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>1148174</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>5021816</mi:zCoordinateInMeters>
+      <mi:latitude-North>+520600.72</mi:latitude-North>
+      <mi:longitude-East>+0170400.48</mi:longitude-East>
+      <mi:elevation-m_ellips.>00124.0</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>Near KORNIK &amp; POZNAN</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-8000</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>00196</equip:serialNumber>
+    <equip:firmwareVersion>2.8</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>10</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1994-01-10T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1999-08-22T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>4</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-8000</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>T196</equip:serialNumber>
+    <equip:firmwareVersion>3.2.32.9</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>4</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1999-08-27T18:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2002-03-05T23:24Z</equip:dateRemoved>
+    <equip:temperatureStabilization>4</equip:temperatureStabilization>
+    <equip:notes>correction of the Receiver Number Style from S/N 196 to T-196 was made on 31 May 2001</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-8000</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>T196</equip:serialNumber>
+    <equip:firmwareVersion>3.2.32.11</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>4</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2002-03-06T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2007-07-07T23:59Z</equip:dateRemoved>
+    <equip:temperatureStabilization>4</equip:temperatureStabilization>
+    <equip:notes>firmware upgrade</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETRS</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>4623116529</equip:serialNumber>
+    <equip:firmwareVersion>1.1-3</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>4</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2007-07-08T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2008-03-06T13:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>2</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETRS</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>4623116529</equip:serialNumber>
+    <equip:firmwareVersion>1.2-0  Apr 26 2007</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>4</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2008-03-06T13:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>2</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        NONE</equip:antennaType>
+    <equip:serialNumber>00271</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0621</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>AOA 7490045</equip:antennaCableType>
+    <equip:antennaCableLength>10</equip:antennaCableLength>
+    <equip:dateInstalled>1994-01-10T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1999-05-31T18:10Z</equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        NONE</equip:antennaType>
+    <equip:serialNumber>418</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0624</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>AOA 7490045</equip:antennaCableType>
+    <equip:antennaCableLength>10</equip:antennaCableLength>
+    <equip:dateInstalled>1999-05-31T18:40Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>Model 7490582-2 correction of the Antenna Number Style from S/N 418 to 418 was made on 31 May 2001</equip:notes>
+  </gnssAntenna>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>EUREF 216</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>LOCAL CONTROL, SPECIAL CAMPAIGNS</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber></equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>12205M001</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>38.388</equip:dX>
+      <equip:dY>112.238</equip:dY>
+      <equip:dZ>-63.394</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>3</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>GPS CAMPAIGN</equip:surveyMethod>
+    <equip:dateMeasured>1994-01-10</equip:dateMeasured>
+    <equip:notes>campaigns EUREF-POL'92, BSL-93, POLREF.</equip:notes>
+  </surveyedLocalTies>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>BORL</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>SLR</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>7811</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>12205S001</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>-25.767</equip:dX>
+      <equip:dY>72.908</equip:dY>
+      <equip:dZ>0.324</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>3</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>GPS CAMPAIGN</equip:surveyMethod>
+    <equip:dateMeasured>1994-01-10</equip:dateMeasured>
+    <equip:notes>(multiple lines)</equip:notes>
+  </surveyedLocalTies>
+  <frequencyStandard>
+    <equip:standardType>CESIUM</equip:standardType>
+    <equip:inputFrequency>5MHz</equip:inputFrequency>
+    <equip:effectiveDates>1994-01-10/2001-11-28</equip:effectiveDates>
+    <equip:notes>Oscilloquartz EUDICS 302</equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL</equip:standardType>
+    <equip:inputFrequency>5MHz</equip:inputFrequency>
+    <equip:effectiveDates>2001-11-29/2001-12-02</equip:effectiveDates>
+    <equip:notes>       Notes                  :</equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>CESIUM</equip:standardType>
+    <equip:inputFrequency>5MHz</equip:inputFrequency>
+    <equip:effectiveDates>2001-12-03/2007-07-07</equip:effectiveDates>
+    <equip:notes>AGILENT TECHNOLOGIES 5071 A opt 001</equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL</equip:standardType>
+    <equip:inputFrequency>       Input Frequency        :</equip:inputFrequency>
+    <equip:effectiveDates>2007-07-08/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>       Notes                  :</equip:notes>
+  </frequencyStandard>
+  <humiditySensor>
+    <equip:type>HPTL.3A</equip:type>
+    <equip:manufacturer>NAVI Ltd.,Sporna 11, PL 61-709 POZNAN</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>-4</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>1995-01-01/2002-12-31</equip:effectiveDates>
+    <equip:dataSamplingInterval>1/2 hour</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>3</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>UNASPIRATED</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </humiditySensor>
+  <humiditySensor>
+    <equip:type>HPTL.3A</equip:type>
+    <equip:manufacturer>NAVI Ltd.,Promienista 5/1, PL 60-288 POZNAN</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>0</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>(2007-07-01/CCYY-MM-DD)</equip:effectiveDates>
+    <equip:dataSamplingInterval>(600)</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>3</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>UNASPIRATED</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </humiditySensor>
+  <pressureSensor>
+    <equip:type>HPTL.3A</equip:type>
+    <equip:manufacturer>NAVI Ltd.,Sporna 11, PL 61-709 POZNAN</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>-4</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>1995-01-01/2002-12-31</equip:effectiveDates>
+    <equip:dataSamplingInterval>1/2 hour</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>0.25 hPa sigma</equip:accuracy-hPa>
+    <equip:notes>(multiple lines)</equip:notes>
+  </pressureSensor>
+  <pressureSensor>
+    <equip:type>SKPS 800/I</equip:type>
+    <equip:manufacturer>Skye Instruments Ltd.</equip:manufacturer>
+    <equip:serialNumber>31052</equip:serialNumber>
+    <equip:heightDiffToAntenna>0</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2007-07-01/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>600</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>0.25 hPa sigma</equip:accuracy-hPa>
+    <equip:notes>(multiple lines)</equip:notes>
+  </pressureSensor>
+  <temperatureSensor>
+    <equip:type>HPTL.3A</equip:type>
+    <equip:manufacturer>NAVI Ltd.,Sporna 11, PL 61-709 POZNAN</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>-4</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>1995-01-01/2002-12-31</equip:effectiveDates>
+    <equip:dataSamplingInterval>1/2 hour</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>+/- 5% in full temperature range</equip:accuracy-degreesCelcius>
+    <equip:aspiration>UNASPIRATED</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </temperatureSensor>
+  <temperatureSensor>
+    <equip:type>HPTL.3A</equip:type>
+    <equip:manufacturer>NAVI Ltd.,Promienista 5/1, PL 60-288 POZNAN</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>0</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2007-07-01/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>600</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>+/- 5% in full temperature range</equip:accuracy-degreesCelcius>
+    <equip:aspiration>UNASPIRATED</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </temperatureSensor>
+  <radioInterferences>
+    <li:possibleProblemSources>CELL PHONE RELAY, RADAR</li:possibleProblemSources>
+    <li:effectiveDates>1998-02-01/1999-05-31</li:effectiveDates>
+    <li:observedDegredation>SN RATIO/DATA GAPS</li:observedDegredation>
+    <li:notes>more details Artificial Satellites, Vol.33, No2 1998, pp.109-115. reduced by the new antenna replacing (see 4.2)</li:notes>
+  </radioInterferences>
+  <contactAgency>
+    <contact:agency>Space Research Centre of the PAS</contact:agency>
+    <contact:preferredAbbreviation>SRC PAS</contact:preferredAbbreviation>
+    <contact:mailingAddress>Astrogeodynamical Observatory</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Dr. Marek Lehmann</contact:name>
+      <contact:telephonePrimary>(+48 61) 8170187</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>(+48 61) 8170219</contact:fax>
+      <contact:e-mail>m.lehmann@cbk.poznan.pl</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>M.Sc. Leszek Jaworski</contact:name>
+      <contact:telephonePrimary>(+48 22) 8403766 ext. 419</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>(+48 22) 8403131</contact:fax>
+      <contact:e-mail>leszek@cbk.waw.pl</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>Poland, PL 62-035 Kornik, Borowiec Mailing address of secondary contact Department of Planetary Geodesy ul. Bartycka 18A, PL 00-716 Warszawa</contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>Space Research Centre of the PAS</contact:agency>
+    <contact:preferredAbbreviation>SRC PAS</contact:preferredAbbreviation>
+    <contact:mailingAddress>(multiple lines)</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>(multiple lines)</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter>http</mi:primaryDataCenter>
+    <mi:secondaryDataCenter>http</mi:secondaryDataCenter>
+    <mi:urlForMoreInformation>http</mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap></mi:siteMap>
+    <mi:siteDiagram></mi:siteDiagram>
+    <mi:horizonMask>X</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>X</mi:sitePictures>
+    <mi:notes>X</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Ingunn Skei</mi:preparedBy>
+    <mi:datePrepared>2012-01-24</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>nya1_20100723.log</mi:previousLog>
+    <mi:modifiedSections>7.6</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>Ny-Alesund</mi:siteName>
+    <mi:fourCharacterID>NYA1</mi:fourCharacterID>
+    <mi:monumentInscription></mi:monumentInscription>
+    <mi:iersDOMESNumber>10317M003</mi:iersDOMESNumber>
+    <mi:cdpNumber>(A4)</mi:cdpNumber>
+    <mi:monumentDescription>STEEL MAST</mi:monumentDescription>
+    <mi:heightOfTheMonument>5.5</mi:heightOfTheMonument>
+    <mi:monumentFoundation>CONCRETE BLOCK</mi:monumentFoundation>
+    <mi:foundationDepth>3</mi:foundationDepth>
+    <mi:markerDescription>Top center of mashined hole in</mi:markerDescription>
+    <mi:dateInstalled>1997-06-01</mi:dateInstalled>
+    <mi:geologicCharacteristic>BEDROCK</mi:geologicCharacteristic>
+    <mi:bedrockType>SEDIMENTARY</mi:bedrockType>
+    <mi:bedrockCondition>FRESH</mi:bedrockCondition>
+    <mi:fractureSpacing>over 200 cm</mi:fractureSpacing>
+    <mi:faultZonesNearby>YES</mi:faultZonesNearby>
+    <mi:distance-Activity>Under investigation</mi:distance-Activity>
+    <mi:notes>(multiple lines)</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Ny-Alesund</mi:city>
+    <mi:state>Svalbard</mi:state>
+    <mi:country>Norway</mi:country>
+    <mi:tectonicPlate>EURASIAN</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>1202434</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>252632</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>6237772</mi:zCoordinateInMeters>
+      <mi:latitude-North>+785546.40</mi:latitude-North>
+      <mi:longitude-East>+0115155.10</mi:longitude-East>
+      <mi:elevation-m_ellips.>84.0</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>(multiple lines)</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-12 RM</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>207</equip:serialNumber>
+    <equip:firmwareVersion>3.2.32.1</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>1</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1997-06-01T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1999-08-27</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>AOA BENCHMARK ACT</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>2022</equip:serialNumber>
+    <equip:firmwareVersion>3.3.32.2</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>1</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1999-08-27T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2004-12-08T14:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>AOA BENCHMARK ACT</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>2023</equip:serialNumber>
+    <equip:firmwareVersion>3.3.32.2</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>1</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2004-12-19T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2009-05-13T08:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETR8</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>4843K33429</equip:serialNumber>
+    <equip:firmwareVersion>3.80</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2009-05-13T11:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2009-08-31T17:40Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETR8</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>4843K33429</equip:serialNumber>
+    <equip:firmwareVersion>4.03</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2009-08-31T17:46Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        NONE</equip:antennaType>
+    <equip:serialNumber>T207</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>1997-06-01T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1999-06-01T23:59Z</equip:dateRemoved>
+    <equip:notes>Replaced by 4.2</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>ASH701073.1     SNOW</equip:antennaType>
+    <equip:serialNumber>CRG0117</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>SNOW</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>1999-06-02T00:40Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>COMBINED GPS &amp; GLONASS ANTENNA.</equip:notes>
+  </gnssAntenna>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>Q</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>LOCAL CONTROL/FOOTPRINT</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>(A4)</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>(A9)</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>(m)</equip:dX>
+      <equip:dY>(m)</equip:dY>
+      <equip:dZ>(m)</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>(mm)</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>GPS CAMPAIGN/TRILATERATION/TRIANGULATION</equip:surveyMethod>
+    <equip:dateMeasured>1997-09-01</equip:dateMeasured>
+    <equip:notes>Exact date in Sept 1997 not known</equip:notes>
+  </surveyedLocalTies>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>ASTRO</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>LOCAL CONTROL</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>(A4)</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>(A9)</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>(m)</equip:dX>
+      <equip:dY>(m)</equip:dY>
+      <equip:dZ>(m)</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>(mm)</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>GPS CAMPAIGN</equip:surveyMethod>
+    <equip:dateMeasured>CCYY-MM-DDThh:mmZ</equip:dateMeasured>
+    <equip:notes>(multiple lines)</equip:notes>
+  </surveyedLocalTies>
+  <frequencyStandard>
+    <equip:standardType>EXTERNAL H-MASER</equip:standardType>
+    <equip:inputFrequency>5 MZ</equip:inputFrequency>
+    <equip:effectiveDates>1997-06-01/2009-05-13</equip:effectiveDates>
+    <equip:notes>SAME CLOCK USED FOR VLBI</equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL </equip:standardType>
+    <equip:inputFrequency>(if external)</equip:inputFrequency>
+    <equip:effectiveDates>2009-05-13/2009-07-10</equip:effectiveDates>
+    <equip:notes>TEMPORARY DUE TO FREQUENCY ISSUES</equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>EXTERNAL H-MASER</equip:standardType>
+    <equip:inputFrequency>10 MZ</equip:inputFrequency>
+    <equip:effectiveDates>2009-07-10/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>SAME CLOCK USED FOR VLBI</equip:notes>
+  </frequencyStandard>
+  <collocationInformation>
+    <equip:instrumentType>VLBI</equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates>1994-10-01/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>Exact date in Oct 1994 not known. Operating.</equip:notes>
+  </collocationInformation>
+  <collocationInformation>
+    <equip:instrumentType>DORIS</equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates>1989-01-01/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>INSTALLED BY IGN, FRANCE</equip:notes>
+  </collocationInformation>
+  <collocationInformation>
+    <equip:instrumentType>PRARE</equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates>1995-11-01/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>Operating.</equip:notes>
+  </collocationInformation>
+  <collocationInformation>
+    <equip:instrumentType>TRIMBLE 4000SSI / SATREF</equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates>1995-09-01/2009-05-13</equip:effectiveDates>
+    <equip:notes>Shut down</equip:notes>
+  </collocationInformation>
+  <collocationInformation>
+    <equip:instrumentType>NYAL GNSS STATION</equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates>1993-01-01/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>Operating</equip:notes>
+  </collocationInformation>
+  <collocationInformation>
+    <equip:instrumentType>Superconducting gravimeter</equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates>1999-09-19/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>Operating.</equip:notes>
+  </collocationInformation>
+  <contactAgency>
+    <contact:agency>Ny-Alesund Geodetiske Observatorium</contact:agency>
+    <contact:preferredAbbreviation>Kartverket</contact:preferredAbbreviation>
+    <contact:mailingAddress>Boks 13</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>N-9173 Ny Alesund Norway (multiple lines)</contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>Geodetic Institute</contact:agency>
+    <contact:preferredAbbreviation>Kartverket</contact:preferredAbbreviation>
+    <contact:mailingAddress>N-3507 Honefoss</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>SATREF Control Centre</contact:name>
+      <contact:telephonePrimary>+47-32118389</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>+47-32118101</contact:fax>
+      <contact:e-mail>satref@statkart.no</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>Norwegian Mapping Authority Norway (multiple lines)</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter></mi:primaryDataCenter>
+    <mi:secondaryDataCenter></mi:secondaryDataCenter>
+    <mi:urlForMoreInformation></mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>(Y or URL)</mi:siteMap>
+    <mi:siteDiagram>(Y or URL)</mi:siteDiagram>
+    <mi:horizonMask>(Y or URL)</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>(Y or URL)</mi:sitePictures>
+    <mi:notes>(multiple lines)</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

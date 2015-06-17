@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Rudolf Stoeger</mi:preparedBy>
+    <mi:datePrepared>2013-05-27</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>conz_20121007.log</mi:previousLog>
+    <mi:modifiedSections>3.15, 3.16, 6.7, 6.8, 11</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>Concepcion - TIGO</mi:siteName>
+    <mi:fourCharacterID>CONZ</mi:fourCharacterID>
+    <mi:monumentInscription></mi:monumentInscription>
+    <mi:iersDOMESNumber>41719M002</mi:iersDOMESNumber>
+    <mi:cdpNumber></mi:cdpNumber>
+    <mi:monumentDescription>CONCRETE PILLAR STAINLESS STEAL CONSTRUCTION</mi:monumentDescription>
+    <mi:heightOfTheMonument>2.0</mi:heightOfTheMonument>
+    <mi:monumentFoundation>CONCRETE BLOCK</mi:monumentFoundation>
+    <mi:foundationDepth>3.0</mi:foundationDepth>
+    <mi:markerDescription>5/8" THREAD</mi:markerDescription>
+    <mi:dateInstalled>2002-05-16T12</mi:dateInstalled>
+    <mi:geologicCharacteristic>CLAY</mi:geologicCharacteristic>
+    <mi:bedrockType></mi:bedrockType>
+    <mi:bedrockCondition></mi:bedrockCondition>
+    <mi:fractureSpacing></mi:fractureSpacing>
+    <mi:faultZonesNearby></mi:faultZonesNearby>
+    <mi:distance-Activity></mi:distance-Activity>
+    <mi:notes>The site is located in about 20km distance to the pacific ocean and about 150km from the nearest vulcanoes of the Andes.</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Concepcion</mi:city>
+    <mi:state>VIII Region</mi:state>
+    <mi:country>Chile</mi:country>
+    <mi:tectonicPlate>South-American</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>1492007.790</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>-4887911.140</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>-3803640.120</mi:zCoordinateInMeters>
+      <mi:latitude-North>-365037.54</mi:latitude-North>
+      <mi:longitude-East>-0730131.73</mi:longitude-East>
+      <mi:elevation-m_ellips.>00181.2</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>The site is at the TIGO observatory at the campus of the Universidad de Concepcion.</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>JPS LEGACY</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>MT302041021</equip:serialNumber>
+    <equip:firmwareVersion>RE014 2.2</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2002-05-16T12:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2002-11-12T12:30Z</equip:dateRemoved>
+    <equip:temperatureStabilization>5</equip:temperatureStabilization>
+    <equip:notes>Additional number LE2130 on the type level. The receiver is located in the air conditioned gravity meter house.</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>JPS LEGACY</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>MT302041021</equip:serialNumber>
+    <equip:firmwareVersion>2.2 Jun,13,2002 p3</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2002-11-12T12:30Z</equip:dateInstalled>
+    <equip:dateRemoved>2003-10-17T08:30Z</equip:dateRemoved>
+    <equip:temperatureStabilization>5</equip:temperatureStabilization>
+    <equip:notes>Additional number LE2130 on the type level. The receiver is located in the air conditioned gravity meter house.</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>JPS LEGACY</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>MT302041021</equip:serialNumber>
+    <equip:firmwareVersion>2.3p2</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2003-10-17T08:30Z</equip:dateInstalled>
+    <equip:dateRemoved>2004-08-24T17:52Z</equip:dateRemoved>
+    <equip:temperatureStabilization>5</equip:temperatureStabilization>
+    <equip:notes>/par/lock/notvis switched to "on". Additional number LE2130 on the type level. The receiver is located in the air conditioned gravity meter house.</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>JPS LEGACY</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>AGBVRU1GGE8</equip:serialNumber>
+    <equip:firmwareVersion>2.3 Apr28,2004 p4</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2004-10-14T20:41Z</equip:dateInstalled>
+    <equip:dateRemoved>2005-07-26T08:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>5</equip:temperatureStabilization>
+    <equip:notes>/par/lock/notvis switched to "on". Additional number LE4851 on the type level. The receiver is located in the air conditioned gravity meter house.</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>JPS LEGACY</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>AGBVRU1GGE8</equip:serialNumber>
+    <equip:firmwareVersion>2.5 Jun,22,2005 p1</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2005-07-26T08:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2006-06-22T15:30Z</equip:dateRemoved>
+    <equip:temperatureStabilization>5</equip:temperatureStabilization>
+    <equip:notes>/par/lock/notvis switched to "on". Additional number LE4851 on the type level. The receiver is located in the air conditioned gravity meter house.</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TPS E_GGD</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>AGBVRU1GGE8</equip:serialNumber>
+    <equip:firmwareVersion>2.5 Jun,22,2005 p1</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2006-06-22T15:30Z</equip:dateInstalled>
+    <equip:dateRemoved>2007-05-28T14:49Z</equip:dateRemoved>
+    <equip:temperatureStabilization>5</equip:temperatureStabilization>
+    <equip:notes>/par/lock/notvis switched to "on". Additional number LE4851 on the type level. The receiver is located in the air conditioned gravity meter house.</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TPS E_GGD</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>AGBVRU1GGE8</equip:serialNumber>
+    <equip:firmwareVersion>2.6.0 Apr,18,2007</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2007-05-28T14:50Z</equip:dateInstalled>
+    <equip:dateRemoved>2008-01-18T13:59Z</equip:dateRemoved>
+    <equip:temperatureStabilization>5</equip:temperatureStabilization>
+    <equip:notes>/par/lock/notvis switched to "on". Additional number LE4851 on the type level. The receiver is located in the air conditioned gravity meter house.</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TPS E_GGD</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>AGBVRU1GGE8</equip:serialNumber>
+    <equip:firmwareVersion>2.6.1 JAN,10,2008</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2008-01-18T14:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2009-04-30T13:29Z</equip:dateRemoved>
+    <equip:temperatureStabilization>5</equip:temperatureStabilization>
+    <equip:notes>/par/lock/notvis switched to "on". Additional number LE4851 on the type level. The receiver is located in the air conditioned gravity meter house.</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200GGPRO</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>355365</equip:serialNumber>
+    <equip:firmwareVersion>7.50/3.017</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2009-04-30T13:30Z</equip:dateInstalled>
+    <equip:dateRemoved>2010-01-29T13:29Z</equip:dateRemoved>
+    <equip:temperatureStabilization>5</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200GGPRO</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>355365</equip:serialNumber>
+    <equip:firmwareVersion>7.50/3.018</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2010-01-29T13:30Z</equip:dateInstalled>
+    <equip:dateRemoved>2010-02-09T09:09Z</equip:dateRemoved>
+    <equip:temperatureStabilization>5</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200GGPRO</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>355365</equip:serialNumber>
+    <equip:firmwareVersion>7.80/3.018</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2010-02-09T09:10Z</equip:dateInstalled>
+    <equip:dateRemoved>2010-10-04T13:04Z</equip:dateRemoved>
+    <equip:temperatureStabilization>5</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200GGPRO</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>355365</equip:serialNumber>
+    <equip:firmwareVersion>7.80/3.019</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2010-10-04T13:05Z</equip:dateInstalled>
+    <equip:dateRemoved>2011-04-07T12:44Z</equip:dateRemoved>
+    <equip:temperatureStabilization>5</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200GGPRO</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>355365</equip:serialNumber>
+    <equip:firmwareVersion>8.10/3.019</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2011-04-07T12:45Z</equip:dateInstalled>
+    <equip:dateRemoved>2011-07-19T19:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>5</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200+GNSS</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>495886</equip:serialNumber>
+    <equip:firmwareVersion>8.20/4.007</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2011-07-19T20:30Z</equip:dateInstalled>
+    <equip:dateRemoved>2012-03-07T13:29Z</equip:dateRemoved>
+    <equip:temperatureStabilization>5</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200+GNSS</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>495886</equip:serialNumber>
+    <equip:firmwareVersion>8.51/6.110</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2012-03-07T13:30Z</equip:dateInstalled>
+    <equip:dateRemoved>2013-05-27T07:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>5</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200+GNSS</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO+GAL</equip:satelliteSystem>
+    <equip:serialNumber>495886</equip:serialNumber>
+    <equip:firmwareVersion>8.71/6.112</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2013-05-27T07:15Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>5</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>JPSREGANT_DD_E1 NONE</equip:antennaType>
+    <equip:serialNumber>RA0178</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>-00.0125</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>330</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>Nokia Cable M17/75-RG214</equip:antennaCableType>
+    <equip:antennaCableLength>60</equip:antennaCableLength>
+    <equip:dateInstalled>2002-05-16T12:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2005-05-17T14:30Z</equip:dateRemoved>
+    <equip:notes>The threaded reference pin is penetrating the antenna by 12.5mm. Antenna type listed in this section retro- actively changed from JPSREGANT_DD_E to JPSREGANT_DD_E1 starting with log file conz_20121007.log. See IGSMAIL-6662 and IGSMAIL-6663 for details.</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>TPSCR3_GGD      CONE</equip:antennaType>
+    <equip:serialNumber>217 0246</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0574</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>CONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>Nokia Cable M17/75-RG214</equip:antennaCableType>
+    <equip:antennaCableLength>60</equip:antennaCableLength>
+    <equip:dateInstalled>2005-05-17T14:30Z</equip:dateInstalled>
+    <equip:dateRemoved>2008-01-18T13:59Z</equip:dateRemoved>
+    <equip:notes>An error was made in the sitelog conz_20050531.log. Since 2005-05-17T14 000.0556 m was reported. The colleagues in the Transporatble Integrated Geodetic Observatory TIGO did a control survey. 000.0574 m affirm the truth.</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>TPSCR3_GGD      CONE</equip:antennaType>
+    <equip:serialNumber>217-0246</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0574</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>CONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>Nokia Cable M17/75-RG214</equip:antennaCableType>
+    <equip:antennaCableLength>60</equip:antennaCableLength>
+    <equip:dateInstalled>2008-01-18T14:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2009-04-30T13:29Z</equip:dateRemoved>
+    <equip:notes>No actual change took place. Because of the usage of the NTRIP S05 the antenna identifies itself with Serial Number 217-0246</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>TPSCR3_GGD      CONE</equip:antennaType>
+    <equip:serialNumber>2170246</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0574</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>CONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>Nokia Cable M17/75-RG214</equip:antennaCableType>
+    <equip:antennaCableLength>60</equip:antennaCableLength>
+    <equip:dateInstalled>2009-04-30T13:30Z</equip:dateInstalled>
+    <equip:dateRemoved>2009-09-26T12:59Z</equip:dateRemoved>
+    <equip:notes>No actual change took place. Because of the usage of the LEICA GRX1200GGPRO the antenna identifies itself with Serial Number 2170246</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>TPSCR3_GGD      CONE</equip:antennaType>
+    <equip:serialNumber>217 0246</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0574</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>CONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>Nokia Cable M17/75-RG214</equip:antennaCableType>
+    <equip:antennaCableLength>60</equip:antennaCableLength>
+    <equip:dateInstalled>2009-09-26T13:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2011-07-19T19:00Z</equip:dateRemoved>
+    <equip:notes>No actual change took place. Prior 2009-09-26 the LEICA GRX1200GGPRO could not identify a space character in the antenna serial number. Since 2009-09-30 the correct antenna serial number 217 0246 is identified.</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>LEIAR25.R3      LEIT</equip:antennaType>
+    <equip:serialNumber>10020007</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0574</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>LEIT</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>Nokia Cable M17/75-RG214</equip:antennaCableType>
+    <equip:antennaCableLength>60</equip:antennaCableLength>
+    <equip:dateInstalled>2011-07-19T20:30Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>Antenna and radome calibrated by Geo+++ GmbH Garbsen, 2010-04-28.</equip:notes>
+  </gnssAntenna>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>T100</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>VLBI</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>7640</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>41719S001</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>(m)</equip:dX>
+      <equip:dY>(m)</equip:dY>
+      <equip:dZ>(m)</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>(mm)</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>(GPS CAMPAIGN/TRILATERATION/TRIANGULATION/etc)</equip:surveyMethod>
+    <equip:dateMeasured>(CCYY-MM-DDThh:mmZ)</equip:dateMeasured>
+    <equip:notes>(multiple lines)</equip:notes>
+  </surveyedLocalTies>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>T200</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>SLR</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>7405</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>41719M001</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>(m)</equip:dX>
+      <equip:dY>(m)</equip:dY>
+      <equip:dZ>(m)</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>(mm)</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>(GPS CAMPAIGN/TRILATERATION/TRIANGULATION/etc)</equip:surveyMethod>
+    <equip:dateMeasured>(CCYY-MM-DDThh:mmZ)</equip:dateMeasured>
+    <equip:notes>(multiple lines)</equip:notes>
+  </surveyedLocalTies>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL</equip:standardType>
+    <equip:inputFrequency>       Input Frequency        :</equip:inputFrequency>
+    <equip:effectiveDates>2002-05-16/2009-04-30</equip:effectiveDates>
+    <equip:notes>       Notes                  :</equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>EXTERNAL H-MASER EFOS 24</equip:standardType>
+    <equip:inputFrequency>10 MHz</equip:inputFrequency>
+    <equip:effectiveDates>2009-04-30/2011-07-19</equip:effectiveDates>
+    <equip:notes>Use H-Maser for external input reference oscillator. H-Maser EFOS 24.</equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>EXTERNAL H-MASER EFOS 20</equip:standardType>
+    <equip:inputFrequency>10 MHz</equip:inputFrequency>
+    <equip:effectiveDates>2011-07-19/2011-08-16</equip:effectiveDates>
+    <equip:notes>Use H-Maser for external input reference oscillator. H-Maser EFOS 20.</equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL</equip:standardType>
+    <equip:inputFrequency>       Input Frequency        :</equip:inputFrequency>
+    <equip:effectiveDates>2011-08-16/2011-08-19</equip:effectiveDates>
+    <equip:notes>       Notes                  :</equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>EXTERNAL H-MASER EFOS 20</equip:standardType>
+    <equip:inputFrequency>10 MHz</equip:inputFrequency>
+    <equip:effectiveDates>2011-08-19/2012-03-07</equip:effectiveDates>
+    <equip:notes>Use H-Maser for external input reference oscillator. H-Maser EFOS 20.</equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL</equip:standardType>
+    <equip:inputFrequency>       Input Frequency        :</equip:inputFrequency>
+    <equip:effectiveDates>2012-03-07/2012-03-13</equip:effectiveDates>
+    <equip:notes>       Notes                  :</equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>EXTERNAL H-MASER EFOS 20</equip:standardType>
+    <equip:inputFrequency>10 MHz</equip:inputFrequency>
+    <equip:effectiveDates>2012-03-13/2013-05-27</equip:effectiveDates>
+    <equip:notes>Use H-Maser for external input reference oscillator. H-Maser EFOS 20.</equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL</equip:standardType>
+    <equip:inputFrequency>       Input Frequency        :</equip:inputFrequency>
+    <equip:effectiveDates>2013-05-27/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>       Notes                  :</equip:notes>
+  </frequencyStandard>
+  <collocationInformation>
+    <equip:instrumentType>VLBI</equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates>2002-04-23/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>       Notes                  :</equip:notes>
+  </collocationInformation>
+  <collocationInformation>
+    <equip:instrumentType>SLR</equip:instrumentType>
+    <equip:status>MOBILE</equip:status>
+    <equip:effectiveDates>2002-05-01/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>       Notes                  :</equip:notes>
+  </collocationInformation>
+  <collocationInformation>
+    <equip:instrumentType>PRARE</equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates>2002-06-15/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>       Notes                  :</equip:notes>
+  </collocationInformation>
+  <collocationInformation>
+    <equip:instrumentType>SEPT POLARX2 GPS+SBAS CONT</equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates>2005-08-17/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>       Notes                  :</equip:notes>
+  </collocationInformation>
+  <humiditySensor>
+    <equip:type>809 L 0-100</equip:type>
+    <equip:manufacturer>Lambrecht</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>10</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2002-04-01/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>60</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>2.5</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>PERNIX</equip:aspiration>
+    <equip:notes>The humidity sensor is about 10 m below GPS monument in 50 m distance.</equip:notes>
+  </humiditySensor>
+  <pressureSensor>
+    <equip:type>740-16B DIGIQUARTZ</equip:type>
+    <equip:manufacturer>PAROSCIENTIFIC</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>15</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2002-04-01/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>60</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>0.1</equip:accuracy-hPa>
+    <equip:notes>The pressure sensor is located inside TIGO-3 and about 15 m below GPS antenna.</equip:notes>
+  </pressureSensor>
+  <temperatureSensor>
+    <equip:type>809 L 0-100</equip:type>
+    <equip:manufacturer>Lambrecht</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>10</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2002-04-01/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>60</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>0.3</equip:accuracy-degreesCelcius>
+    <equip:aspiration>PLATINUM PROBE</equip:aspiration>
+    <equip:notes>The temperature sensor is about 10 m below the GPS-antenna in about 50 m distance.</equip:notes>
+  </temperatureSensor>
+  <waterVaporSensor>
+    <equip:type></equip:type>
+    <equip:manufacturer></equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>(CCYY-MM-DD/CCYY-MM-DD)</equip:effectiveDates>
+    <equip:distanceToAntenna></equip:distanceToAntenna>
+    <equip:notes>(multiple lines)</equip:notes>
+  </waterVaporSensor>
+  <contactAgency>
+    <contact:agency>Universidad de Concepcion</contact:agency>
+    <contact:preferredAbbreviation>UdeC</contact:preferredAbbreviation>
+    <contact:mailingAddress>Universidad de Concepcion</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Hayo Hase</contact:name>
+      <contact:telephonePrimary>+56-41-2207032</contact:telephonePrimary>
+      <contact:telephoneSecondary>+56-41-2207051</contact:telephoneSecondary>
+      <contact:fax>+56-41-2207031</contact:fax>
+      <contact:e-mail>hayo.hase@tigo.cl</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>Proyecto TIGO Casilla 4036, Correo 3 Concepcion CHILE </contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>Bundesamt für Kartographie</contact:agency>
+    <contact:preferredAbbreviation>BKG</contact:preferredAbbreviation>
+    <contact:mailingAddress>Bundesamt fuer Kartographie</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Uwe Hessels</contact:name>
+      <contact:telephonePrimary>++49-9941-603208</contact:telephonePrimary>
+      <contact:telephoneSecondary>++49-9941-6030</contact:telephoneSecondary>
+      <contact:fax>++49-9941-603222</contact:fax>
+      <contact:e-mail>uwe.hessels@bkg.bund.de</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>und Geodäsie und Geodeasie Geodetical Observatory Wettzell Sackenrieder Str. 25 D-93444 Bad Koetzting GERMANY Klaus Roettcher ++49-9941-603115 klaus.roettcher@bkg.bund.de Rudi Stoeger ++49-9941603117 ++49-99416030 ++49-9941603222 rudolf.stoeger@bkg.bund.de</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter>www.tigo.cl, www.fs.wettzell.de</mi:primaryDataCenter>
+    <mi:secondaryDataCenter>www.tigo.cl, www.fs.wettzell.de</mi:secondaryDataCenter>
+    <mi:urlForMoreInformation>www.tigo.cl, www.fs.wettzell.de</mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>(Y or URL)</mi:siteMap>
+    <mi:siteDiagram>(Y or URL)</mi:siteDiagram>
+    <mi:horizonMask>(Y or URL)</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>Y</mi:sitePictures>
+    <mi:notes>(multiple lines)</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

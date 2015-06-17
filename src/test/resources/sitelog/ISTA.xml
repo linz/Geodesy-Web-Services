@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Rudi Stoeger</mi:preparedBy>
+    <mi:datePrepared>2010-02-15</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>ista_20071112.log</mi:previousLog>
+    <mi:modifiedSections>12</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>Istanbul / Turkey</mi:siteName>
+    <mi:fourCharacterID>ISTA</mi:fourCharacterID>
+    <mi:monumentInscription></mi:monumentInscription>
+    <mi:iersDOMESNumber>20807M001</mi:iersDOMESNumber>
+    <mi:cdpNumber>(A4)</mi:cdpNumber>
+    <mi:monumentDescription>CONCRETE PILLAR ON THE ROOF</mi:monumentDescription>
+    <mi:heightOfTheMonument>1.122</mi:heightOfTheMonument>
+    <mi:monumentFoundation>CONCRETE PILLAR ANCHORED TO THE ROOF</mi:monumentFoundation>
+    <mi:foundationDepth></mi:foundationDepth>
+    <mi:markerDescription>SURVEY MARKER BOLT WITH THREAD</mi:markerDescription>
+    <mi:dateInstalled>1999-12-11T00</mi:dateInstalled>
+    <mi:geologicCharacteristic>(BEDROCK/CLAY/CONGLOMERATE/GRAVEL/SAND/etc)</mi:geologicCharacteristic>
+    <mi:bedrockType>(IGNEOUS/METAMORPHIC/SEDIMENTARY)</mi:bedrockType>
+    <mi:bedrockCondition>(FRESH/JOINTED/WEATHERED)</mi:bedrockCondition>
+    <mi:fractureSpacing>(0 cm/1-10 cm/11-50 cm/51-200 cm/over 200 cm)</mi:fractureSpacing>
+    <mi:faultZonesNearby>(YES/NO/Name of the zone)</mi:faultZonesNearby>
+    <mi:distance-Activity>(multiple lines)</mi:distance-Activity>
+    <mi:notes>The concrete GPS pillar is anchored on the roof of the building for the Civil Engineering Faculty in the Istanbul Technical University. The top of the pillar is 24.037 m above the ground.</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Istanbul</mi:city>
+    <mi:state></mi:state>
+    <mi:country>Turkey</mi:country>
+    <mi:tectonicPlate>EURASIAN</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>4208830.46</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>2334850.14</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>4171267.18</mi:zCoordinateInMeters>
+      <mi:latitude-North>+410615.84</mi:latitude-North>
+      <mi:longitude-East>+0290109.48</mi:longitude-East>
+      <mi:elevation-m_ellips.>147.2</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>(multiple lines)</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>LP02295</equip:serialNumber>
+    <equip:firmwareVersion>1K00-1D04</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1999-12-11T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2007-11-08T11:45Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>Ashtech GPS Receiver XII, Mdl. Z-12, P/N 700845-10 (E)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>LP00839</equip:serialNumber>
+    <equip:firmwareVersion>1K00-1D04</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2007-11-08T11:50Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>ASH700936D_M    SNOW</equip:antennaType>
+    <equip:serialNumber>CR13556</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0610</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>SNOW</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>RG214</equip:antennaCableType>
+    <equip:antennaCableLength>30</equip:antennaCableLength>
+    <equip:dateInstalled>1999-12-11T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>Ashtech Choke Ring Antenna P/N 700936 (D) with Dome</equip:notes>
+  </gnssAntenna>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL </equip:standardType>
+    <equip:inputFrequency>(if external)</equip:inputFrequency>
+    <equip:effectiveDates>1999-12-11/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </frequencyStandard>
+  <humiditySensor>
+    <equip:type>MP408A-T4-W4W</equip:type>
+    <equip:manufacturer>ROTRONIC</equip:manufacturer>
+    <equip:serialNumber>21206 010</equip:serialNumber>
+    <equip:heightDiffToAntenna>-1.15</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2002-06-10/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>900</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>1.5</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>CAPACITANCE PROBE</equip:aspiration>
+    <equip:notes>Humidity Sensor is 1.15 m above the antenna</equip:notes>
+  </humiditySensor>
+  <pressureSensor>
+    <equip:type>APS 9215</equip:type>
+    <equip:manufacturer>L-TEC LEIBENGUTH</equip:manufacturer>
+    <equip:serialNumber>0501 4599A</equip:serialNumber>
+    <equip:heightDiffToAntenna>3.52</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2002-06-10/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>900</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>1</equip:accuracy-hPa>
+    <equip:notes>Pressure Sensor is 3.52 m below the antenna</equip:notes>
+  </pressureSensor>
+  <temperatureSensor>
+    <equip:type>MP408A-T4-W4W</equip:type>
+    <equip:manufacturer>ROTRONIC</equip:manufacturer>
+    <equip:serialNumber>21206 010</equip:serialNumber>
+    <equip:heightDiffToAntenna>-1.15</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2002-06-10/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>900</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>0.3</equip:accuracy-degreesCelcius>
+    <equip:aspiration>PLATINUM PROBE</equip:aspiration>
+    <equip:notes>Temperature Sensor is 1.15 m above the antenna</equip:notes>
+  </temperatureSensor>
+  <contactAgency>
+    <contact:agency>Istanbul Technical University</contact:agency>
+    <contact:preferredAbbreviation>ITU</contact:preferredAbbreviation>
+    <contact:mailingAddress>Istanbul Technical University</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Assist. Prof. Tevfik Ozludemir</contact:name>
+      <contact:telephonePrimary>++90-212-2853824</contact:telephonePrimary>
+      <contact:telephoneSecondary>++90-212-2853822</contact:telephoneSecondary>
+      <contact:fax>++90-212-2856587</contact:fax>
+      <contact:e-mail>tozlu@itu.edu.tr</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Huyesin Mercan</contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>++90-212-2856587</contact:fax>
+      <contact:e-mail>mercan@itu.edu.tr</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>Department of Geodesy and Photogrammetry Division of Geodesy ITU Ayazaga Kampusu TR-34469 Maslak-Istanbul Turkey (multiple lines)</contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>Bundesamt fuer Kartographie</contact:agency>
+    <contact:preferredAbbreviation>BKG</contact:preferredAbbreviation>
+    <contact:mailingAddress>Bundesamt fuer Kartographie</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Uwe Hessels</contact:name>
+      <contact:telephonePrimary>++49-9941-603208</contact:telephonePrimary>
+      <contact:telephoneSecondary>++49-9941-6030</contact:telephoneSecondary>
+      <contact:fax>++49-9941-603222</contact:fax>
+      <contact:e-mail>uwe.hessels@bkg.bund.de</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>und Geodaesie Geodetical Observatory Wettzell und Geodaesie Geodetical Observatory Wettzell Sackenrieder Strasse 25 D-93444 Bad Koetzting Germany Klaus Roettcher ++49-9941-603115 klaus.roettcher@bkg.bund.de Rudi Stoeger ++49-9941-603117 rudolf.stoeger@bkg.bund.de</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter>www.bkg.bund.de, www.fs.wettzell.de</mi:primaryDataCenter>
+    <mi:secondaryDataCenter>www.bkg.bund.de, www.fs.wettzell.de</mi:secondaryDataCenter>
+    <mi:urlForMoreInformation>www.bkg.bund.de, www.fs.wettzell.de</mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>(Y or URL)</mi:siteMap>
+    <mi:siteDiagram>(Y or URL)</mi:siteDiagram>
+    <mi:horizonMask>(Y or URL)</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>Y</mi:sitePictures>
+    <mi:notes>(multiple lines)</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

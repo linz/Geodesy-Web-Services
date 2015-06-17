@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Bruyninx Carine</mi:preparedBy>
+    <mi:datePrepared>2010-11-07</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>brus_20100331.log</mi:previousLog>
+    <mi:modifiedSections>6.6, 6.7</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>Brussels</mi:siteName>
+    <mi:fourCharacterID>BRUS</mi:fourCharacterID>
+    <mi:monumentInscription></mi:monumentInscription>
+    <mi:iersDOMESNumber>13101M004</mi:iersDOMESNumber>
+    <mi:cdpNumber>(A4)</mi:cdpNumber>
+    <mi:monumentDescription>STEEL MAST</mi:monumentDescription>
+    <mi:heightOfTheMonument>5</mi:heightOfTheMonument>
+    <mi:monumentFoundation>CONCRETE BLOCK</mi:monumentFoundation>
+    <mi:foundationDepth>3</mi:foundationDepth>
+    <mi:markerDescription>BRASS NAIL</mi:markerDescription>
+    <mi:dateInstalled>1993-10-20</mi:dateInstalled>
+    <mi:geologicCharacteristic>SAND</mi:geologicCharacteristic>
+    <mi:bedrockType>SEDIMENTARY</mi:bedrockType>
+    <mi:bedrockCondition>FRESH</mi:bedrockCondition>
+    <mi:fractureSpacing>0 cm</mi:fractureSpacing>
+    <mi:faultZonesNearby>NO</mi:faultZonesNearby>
+    <mi:distance-Activity>(multiple lines)</mi:distance-Activity>
+    <mi:notes>Station located at old astrolab observ. dome.</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Brussels</mi:city>
+    <mi:state>Brabant</mi:state>
+    <mi:country>Belgium</mi:country>
+    <mi:tectonicPlate>EURASIAN</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>4027893.86</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>307045.71</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>4919475.03</mi:zCoordinateInMeters>
+      <mi:latitude-North>+504752.08</mi:latitude-North>
+      <mi:longitude-East>+0042133.12</mi:longitude-East>
+      <mi:elevation-m_ellips.>149.7</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>(multiple lines)</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-8000</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>T-174</equip:serialNumber>
+    <equip:firmwareVersion>2.8</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1993-10-20T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1994-04-24</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-8000</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>T-171</equip:serialNumber>
+    <equip:firmwareVersion>2.8</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1994-04-24T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1995-09-30</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-8000</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>T-321</equip:serialNumber>
+    <equip:firmwareVersion>2.8</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1995-09-30T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1997-01-14</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-12 RM</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>251</equip:serialNumber>
+    <equip:firmwareVersion>3.2.32.4</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1997-01-14T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1999-03-29T06:30Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-8000</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>T-321</equip:serialNumber>
+    <equip:firmwareVersion>3.2.32.1</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1999-03-29T06:30Z</equip:dateInstalled>
+    <equip:dateRemoved>1999-05-25</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-8000</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>T-321</equip:serialNumber>
+    <equip:firmwareVersion>3.2.32.9</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1999-05-25T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1999-09-20T06:30Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>AOA SNR-12 ACT</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>251-U</equip:serialNumber>
+    <equip:firmwareVersion>3.3.32.2</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1999-09-20T06:30Z</equip:dateInstalled>
+    <equip:dateRemoved>2000-01-27T06:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>18 +/- 0.5</equip:temperatureStabilization>
+    <equip:notes>Simultaneously with the receiver change the RG-223 antenna cable was replaced by a 85 m heliax LDF2-50A cable from Andrew Cooperation. This new cable has a loss of 1.05DB per 30 m.</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-8000</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>T-413</equip:serialNumber>
+    <equip:firmwareVersion>3.2.32.9</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2000-01-27T06:01Z</equip:dateInstalled>
+    <equip:dateRemoved>2000-03-27T11:15Z</equip:dateRemoved>
+    <equip:temperatureStabilization>18 +/- 0.5</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH UZ-12</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>UX219994206</equip:serialNumber>
+    <equip:firmwareVersion>UF00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2000-03-27T12:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2001-03-20T12:30Z</equip:dateRemoved>
+    <equip:temperatureStabilization>18 +/- 0.5</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3T</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>RT919994505</equip:serialNumber>
+    <equip:firmwareVersion>1L01-1D04</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2001-03-20T13:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>18 +/- 0.5</equip:temperatureStabilization>
+    <equip:notes>- Up to 27/01/2003 the filled in Firmware Version was not correct (UF00) - 2003-03-18T08 in conversion from raw data to RINEX (XYZAshRx program) on request of IGS CB</equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        NONE</equip:antennaType>
+    <equip:serialNumber>182</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>003.9702</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>RG-223</equip:antennaCableType>
+    <equip:antennaCableLength>30</equip:antennaCableLength>
+    <equip:dateInstalled>1993-10-20T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2000-04-27T12:10Z</equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>ASH701945B_M    NONE</equip:antennaType>
+    <equip:serialNumber>CR519994604</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>003.9702</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>ANDREW heliax LDF2-50A</equip:antennaCableType>
+    <equip:antennaCableLength>85</equip:antennaCableLength>
+    <equip:dateInstalled>2000-04-27T12:15Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>GPS Chimney</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>EUREF89</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>(A4)</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>13101M003</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>65.256</equip:dX>
+      <equip:dY>31.520</equip:dY>
+      <equip:dZ>-65.110</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>01</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>GPS CAMPAIGN</equip:surveyMethod>
+    <equip:dateMeasured>1995-03-15</equip:dateMeasured>
+    <equip:notes>this point is the EUREF 0045 marker</equip:notes>
+  </surveyedLocalTies>
+  <frequencyStandard>
+    <equip:standardType>EXTERNAL CESIUM</equip:standardType>
+    <equip:inputFrequency>5 MHz</equip:inputFrequency>
+    <equip:effectiveDates>1994-04-27/1994-08-23</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>EXTERNAL H-MASER</equip:standardType>
+    <equip:inputFrequency>5 MHz</equip:inputFrequency>
+    <equip:effectiveDates>1994-08-23/2001-03-19</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>EXTERNAL H-MASER</equip:standardType>
+    <equip:inputFrequency>20 MHz</equip:inputFrequency>
+    <equip:effectiveDates>2001-03-20/2003-07-03</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>EXTERNAL CESIUM</equip:standardType>
+    <equip:inputFrequency>20 MHz</equip:inputFrequency>
+    <equip:effectiveDates>2003-07-03/2003-08-01</equip:effectiveDates>
+    <equip:notes>step of 6.15 ns in the antenna cable between 2003-07-03 and 2003-07-10</equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>EXTERNAL H-MASER CH1-75</equip:standardType>
+    <equip:inputFrequency>20 MHz</equip:inputFrequency>
+    <equip:effectiveDates>2003-08-01/2010-03-31</equip:effectiveDates>
+    <equip:notes>CH1-75 active H-maser. It is the source of UTC(ORB). UTC(ORB)-BRUS_1PPS (cable delay + delay from 1PPS_in to internal reference) = 48.6 ns 10MHz from  distr. amp. HP5087A, then frequency doubler up to 20MHz.</equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>EXTERNAL H-MASER CH1-75A</equip:standardType>
+    <equip:inputFrequency>20 MHz</equip:inputFrequency>
+    <equip:effectiveDates>2010-03-31/2010-11-05</equip:effectiveDates>
+    <equip:notes>CH1-75A active H-maser. It is the source of UTC(ORB). UTC(ORB)-BRUS_1PPS (cable delay + delay from 1PPS_in to internal reference) = 47.6 ns 10MHz from  distr. amp. HP5087A, then frequency doubler up to 20MHz.</equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>EXTERNAL CESIUM</equip:standardType>
+    <equip:inputFrequency>20 MHz</equip:inputFrequency>
+    <equip:effectiveDates>2010-11-05/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </frequencyStandard>
+  <collocationInformation>
+    <equip:instrumentType>Cryogenic gravimeter</equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates>1993-10-20/2000-08-21</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </collocationInformation>
+  <collocationInformation>
+    <equip:instrumentType>Seismometer</equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates>1993-10-20/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </collocationInformation>
+  <humiditySensor>
+    <equip:type>PAROSCIENTIFIC MET3</equip:type>
+    <equip:manufacturer>PAROSCIENTIFIC</equip:manufacturer>
+    <equip:serialNumber>69855</equip:serialNumber>
+    <equip:heightDiffToAntenna>-4</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>1998-11-15/2000-07-19</equip:effectiveDates>
+    <equip:dataSamplingInterval>60 s</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>2</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>Meteo sonde delivered unreliable data at the end. Height diff 2 ant with respect to marker</equip:notes>
+  </humiditySensor>
+  <humiditySensor>
+    <equip:type>PAROSCIENTIFIC MET3</equip:type>
+    <equip:manufacturer>PAROSCIENTIFIC</equip:manufacturer>
+    <equip:serialNumber>70804</equip:serialNumber>
+    <equip:heightDiffToAntenna>-4</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2000-07-20/2001-02-19</equip:effectiveDates>
+    <equip:dataSamplingInterval>60 s</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>2</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>Height diff 2 ant with respect to marker</equip:notes>
+  </humiditySensor>
+  <humiditySensor>
+    <equip:type>PAROSCIENTIFIC MET3</equip:type>
+    <equip:manufacturer>PAROSCIENTIFIC</equip:manufacturer>
+    <equip:serialNumber>70804</equip:serialNumber>
+    <equip:heightDiffToAntenna>-3.84</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2001-02-19/2003-09-08</equip:effectiveDates>
+    <equip:dataSamplingInterval>60 s</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>2</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>Height diff 2 ant with respect to marker</equip:notes>
+  </humiditySensor>
+  <pressureSensor>
+    <equip:type>PAROSCIENTIFIC MET3</equip:type>
+    <equip:manufacturer>PAROSCIENTIFIC</equip:manufacturer>
+    <equip:serialNumber>69855</equip:serialNumber>
+    <equip:heightDiffToAntenna>-4</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>1998-11-15/2000-07-19</equip:effectiveDates>
+    <equip:dataSamplingInterval>60 s</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>0.5 hPa</equip:accuracy-hPa>
+    <equip:notes>Meteo sonde delivered unreliable data at the end. Height diff 2 ant with respect to marker</equip:notes>
+  </pressureSensor>
+  <pressureSensor>
+    <equip:type>PAROSCIENTIFIC MET3</equip:type>
+    <equip:manufacturer>PAROSCIENTIFIC</equip:manufacturer>
+    <equip:serialNumber>70804</equip:serialNumber>
+    <equip:heightDiffToAntenna>-4</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2000-07-20/2001-02-19</equip:effectiveDates>
+    <equip:dataSamplingInterval>60 s</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>0.5 hPa</equip:accuracy-hPa>
+    <equip:notes>Height diff 2 ant with respect to marker</equip:notes>
+  </pressureSensor>
+  <pressureSensor>
+    <equip:type>PAROSCIENTIFIC MET3</equip:type>
+    <equip:manufacturer>PAROSCIENTIFIC</equip:manufacturer>
+    <equip:serialNumber>70804</equip:serialNumber>
+    <equip:heightDiffToAntenna>-3.83</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2001-02-19/2003-09-08</equip:effectiveDates>
+    <equip:dataSamplingInterval>60 s</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>0.5 hPa</equip:accuracy-hPa>
+    <equip:notes>Height diff 2 ant with respect to marker</equip:notes>
+  </pressureSensor>
+  <temperatureSensor>
+    <equip:type>PAROSCIENTIFIC MET3</equip:type>
+    <equip:manufacturer>PAROSCIENTIFIC</equip:manufacturer>
+    <equip:serialNumber>69855</equip:serialNumber>
+    <equip:heightDiffToAntenna>-4</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>1998-11-15/2000-07-19</equip:effectiveDates>
+    <equip:dataSamplingInterval>60 s</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>0.5 deg C</equip:accuracy-degreesCelcius>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>Meteo sonde delivered unreliable data at the end. Height diff 2 ant with respect to marker</equip:notes>
+  </temperatureSensor>
+  <temperatureSensor>
+    <equip:type>PAROSCIENTIFIC MET3</equip:type>
+    <equip:manufacturer>PAROSCIENTIFIC</equip:manufacturer>
+    <equip:serialNumber>70804</equip:serialNumber>
+    <equip:heightDiffToAntenna>-4</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2000-07-20/2001-02-19</equip:effectiveDates>
+    <equip:dataSamplingInterval>60 s</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>0.5 deg C</equip:accuracy-degreesCelcius>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>Meteo sonde delivered unreliable data at the end. Height diff 2 ant with respect to marker</equip:notes>
+  </temperatureSensor>
+  <temperatureSensor>
+    <equip:type>PAROSCIENTIFIC MET3</equip:type>
+    <equip:manufacturer>PAROSCIENTIFIC</equip:manufacturer>
+    <equip:serialNumber>70804</equip:serialNumber>
+    <equip:heightDiffToAntenna>-3.83</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2001-02-19/2003-09-08</equip:effectiveDates>
+    <equip:dataSamplingInterval>60 s</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>0.5 deg C</equip:accuracy-degreesCelcius>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>Height diff 2 ant with respect to marker</equip:notes>
+  </temperatureSensor>
+  <waterVaporSensor>
+    <equip:type>Generation 3 ETH ZURICH and CAPTEC</equip:type>
+    <equip:manufacturer>ETH ZURICH and CAPTEC</equip:manufacturer>
+    <equip:serialNumber>WVR-III-BR-A-112000-FE</equip:serialNumber>
+    <equip:heightDiffToAntenna>7</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2001-01-24/CCYY-MM-DD</equip:effectiveDates>
+    <equip:distanceToAntenna>97</equip:distanceToAntenna>
+    <equip:notes>(multiple lines)</equip:notes>
+  </waterVaporSensor>
+  <contactAgency>
+    <contact:agency>Royal Observatory of Belgium</contact:agency>
+    <contact:preferredAbbreviation>ROB</contact:preferredAbbreviation>
+    <contact:mailingAddress>Av. Circulaire No 3</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Carine Bruyninx</contact:name>
+      <contact:telephonePrimary>32-2-373-02-92</contact:telephonePrimary>
+      <contact:telephoneSecondary>32-2-373-02-11</contact:telephoneSecondary>
+      <contact:fax>32-2-374-98-22</contact:fax>
+      <contact:e-mail>c.bruyninx@oma.be</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Dominique Mesmaker</contact:name>
+      <contact:telephonePrimary>32-2-373-02-45</contact:telephonePrimary>
+      <contact:telephoneSecondary>32-2-373-02-11</contact:telephoneSecondary>
+      <contact:fax>32-2-374-98-22</contact:fax>
+      <contact:e-mail>d.mesmaker@oma.be</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>B-1180 Brussels (multiple lines)</contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>Royal Observatory of Belgium</contact:agency>
+    <contact:preferredAbbreviation>ROB</contact:preferredAbbreviation>
+    <contact:mailingAddress>(multiple lines)</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>(multiple lines)</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter></mi:primaryDataCenter>
+    <mi:secondaryDataCenter></mi:secondaryDataCenter>
+    <mi:urlForMoreInformation></mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>(Y or URL)</mi:siteMap>
+    <mi:siteDiagram>(Y or URL)</mi:siteDiagram>
+    <mi:horizonMask>(Y or URL)</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>(Y or URL)</mi:sitePictures>
+    <mi:notes>(multiple lines)</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

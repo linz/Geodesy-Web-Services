@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Lech Kujawa, Tomasz Liwosz</mi:preparedBy>
+    <mi:datePrepared>2013-05-02</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>joz2_20110526.log</mi:previousLog>
+    <mi:modifiedSections>3.5, 3.6</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>JOZEFOSLAW</mi:siteName>
+    <mi:fourCharacterID>JOZ2</mi:fourCharacterID>
+    <mi:monumentInscription>Joze2</mi:monumentInscription>
+    <mi:iersDOMESNumber>12204M002</mi:iersDOMESNumber>
+    <mi:cdpNumber>(A4)</mi:cdpNumber>
+    <mi:monumentDescription>steel mast</mi:monumentDescription>
+    <mi:heightOfTheMonument>1.5</mi:heightOfTheMonument>
+    <mi:monumentFoundation>roof of building</mi:monumentFoundation>
+    <mi:foundationDepth></mi:foundationDepth>
+    <mi:markerDescription>forced centered plate</mi:markerDescription>
+    <mi:dateInstalled>1993-08-03</mi:dateInstalled>
+    <mi:geologicCharacteristic>CLAY</mi:geologicCharacteristic>
+    <mi:bedrockType>SEDIMENTARY</mi:bedrockType>
+    <mi:bedrockCondition>JOINTED</mi:bedrockCondition>
+    <mi:fractureSpacing>over 200 cm</mi:fractureSpacing>
+    <mi:faultZonesNearby>Teisseyre</mi:faultZonesNearby>
+    <mi:distance-Activity>(multiple lines)</mi:distance-Activity>
+    <mi:notes>point of IGS, EUREF, EPOCH-92, CERGOP, CERGOP2,geodyn. network EXTENDED SAGET IERS DOMES Number by Altamimi, 22-NOV-93</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Jozefoslaw</mi:city>
+    <mi:state>Mazovia</mi:state>
+    <mi:country>Poland</mi:country>
+    <mi:tectonicPlate>EURASIAN</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>3664881</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>1409190</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>5009618</mi:zCoordinateInMeters>
+      <mi:latitude-North>+520552.20</mi:latitude-North>
+      <mi:longitude-East>+0210156.45</mi:longitude-East>
+      <mi:elevation-m_ellips.>152.5</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>(multiple lines)</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z18</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>ZX199912127</equip:serialNumber>
+    <equip:firmwareVersion>0064</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2002-01-03T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2008-03-14T10:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>19 +/- 1</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200GGPRO</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>355045</equip:serialNumber>
+    <equip:firmwareVersion>5.62/3.014</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2008-03-14T10:10Z</equip:dateInstalled>
+    <equip:dateRemoved>2009-05-06T18:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>19.0 +/- 1</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200GGPRO</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>355045</equip:serialNumber>
+    <equip:firmwareVersion>5.62/3.017</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2009-05-10T20:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2010-05-01T10:26Z</equip:dateRemoved>
+    <equip:temperatureStabilization>19.0 +/- 1</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200GGPRO</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>355045</equip:serialNumber>
+    <equip:firmwareVersion>5.62/3.019</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2010-05-01T10:27Z</equip:dateInstalled>
+    <equip:dateRemoved>2011-05-26T14:50Z</equip:dateRemoved>
+    <equip:temperatureStabilization>19.0 +/- 1</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200GGPRO</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>355045</equip:serialNumber>
+    <equip:firmwareVersion>8.20/3.019</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2011-05-26T15:09Z</equip:dateInstalled>
+    <equip:dateRemoved>2013-05-02T11:20Z</equip:dateRemoved>
+    <equip:temperatureStabilization>19.0 +/- 1</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200GGPRO</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>355045</equip:serialNumber>
+    <equip:firmwareVersion>8.71/3.822</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2013-05-02T11:41Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>19 +/- 1</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>ASH701941.B     SNOW</equip:antennaType>
+    <equip:serialNumber>CRL20004801</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>4.0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>SNOW</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>N/A</equip:antennaCableType>
+    <equip:antennaCableLength>10</equip:antennaCableLength>
+    <equip:dateInstalled>2002-01-03T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2008-03-14T10:00Z</equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>LEIAT504GG      NONE</equip:antennaType>
+    <equip:serialNumber>200300</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0.0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>N/A</equip:antennaCableType>
+    <equip:antennaCableLength>10</equip:antennaCableLength>
+    <equip:dateInstalled>2008-03-14T10:10Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>JOZE</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>EUREF/IGS</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>(A4)</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>12204M001</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>-59.580</equip:dX>
+      <equip:dY>36.731</equip:dY>
+      <equip:dZ>47.105</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>1</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>GPS TRIANGULATION</equip:surveyMethod>
+    <equip:dateMeasured>2001-10-10</equip:dateMeasured>
+    <equip:notes>Data from permanent GPS observations</equip:notes>
+  </surveyedLocalTies>
+  <frequencyStandard>
+    <equip:standardType>EXTERNAL RUBIDIUM</equip:standardType>
+    <equip:inputFrequency>10 Mhz</equip:inputFrequency>
+    <equip:effectiveDates>1994-11-10/2008-03-14</equip:effectiveDates>
+    <equip:notes>TEMEX NEUCHATEL TIME SA</equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL </equip:standardType>
+    <equip:inputFrequency>(if external)</equip:inputFrequency>
+    <equip:effectiveDates>2008-03-14/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </frequencyStandard>
+  <collocationInformation>
+    <equip:instrumentType>GPS, GRAVITY</equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates>1993-11-01/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>gravity tidal station no. 0909</equip:notes>
+  </collocationInformation>
+  <humiditySensor>
+    <equip:type>LB-710RHMS</equip:type>
+    <equip:manufacturer>LAB-EL POLAND</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>0</equip:heightDiffToAntenna>
+    <equip:calibrationDate>2001-10-05</equip:calibrationDate>
+    <equip:effectiveDates>2001-10-20/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>900 s</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>2</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>NATURAL</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </humiditySensor>
+  <pressureSensor>
+    <equip:type>LB-716</equip:type>
+    <equip:manufacturer>LAB-EL POLAND</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>-9.0</equip:heightDiffToAntenna>
+    <equip:calibrationDate>2001-10-05</equip:calibrationDate>
+    <equip:effectiveDates>2001-10-20/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>900 s</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>0.5 hPa</equip:accuracy-hPa>
+    <equip:notes>(multiple lines)</equip:notes>
+  </pressureSensor>
+  <temperatureSensor>
+    <equip:type>LB-710RHMS</equip:type>
+    <equip:manufacturer>LAB-EL POLAND</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>0.0</equip:heightDiffToAntenna>
+    <equip:calibrationDate>2001-10-05</equip:calibrationDate>
+    <equip:effectiveDates>2001-10-20/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>900 s</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>0.2 deg C</equip:accuracy-degreesCelcius>
+    <equip:aspiration>NATURAL</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </temperatureSensor>
+  <contactAgency>
+    <contact:agency>Depatment of Geodesy and Geodetic Astronomy</contact:agency>
+    <contact:preferredAbbreviation>WUT</contact:preferredAbbreviation>
+    <contact:mailingAddress>Warsaw University of Technology</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Tomasz Liwosz</contact:name>
+      <contact:telephonePrimary>(48-22) 6214248</contact:telephonePrimary>
+      <contact:telephoneSecondary>(48-22) 2347754</contact:telephoneSecondary>
+      <contact:fax>(48-22) 6214248</contact:fax>
+      <contact:e-mail>t.liwosz@gik.pw.edu.pl</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Michal Kruczyk</contact:name>
+      <contact:telephonePrimary>(48-22) 6214248</contact:telephonePrimary>
+      <contact:telephoneSecondary>(48-22) 2347754</contact:telephoneSecondary>
+      <contact:fax>(48-22) 6214248</contact:fax>
+      <contact:e-mail>kruczyk@gik.pw.edu.pl</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>Warsaw University of Technology Poland, 00-661 Warsaw, 1 Politechniki Sq. (multiple lines)</contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>Depatment of Geodesy and Geodetic Astronomy</contact:agency>
+    <contact:preferredAbbreviation>WUT</contact:preferredAbbreviation>
+    <contact:mailingAddress>(multiple lines)</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>(multiple lines)</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter>http</mi:primaryDataCenter>
+    <mi:secondaryDataCenter>http</mi:secondaryDataCenter>
+    <mi:urlForMoreInformation>http</mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>X</mi:siteMap>
+    <mi:siteDiagram>X</mi:siteDiagram>
+    <mi:horizonMask>X</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>X</mi:sitePictures>
+    <mi:notes>X</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

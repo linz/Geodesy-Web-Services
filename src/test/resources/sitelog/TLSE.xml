@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Jean-Paul CARDALIAGUET</mi:preparedBy>
+    <mi:datePrepared>2013-02-21</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>tlse_20120917.log</mi:previousLog>
+    <mi:modifiedSections>4.6, 4.7, 13</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>Toulouse</mi:siteName>
+    <mi:fourCharacterID>TLSE</mi:fourCharacterID>
+    <mi:monumentInscription>None</mi:monumentInscription>
+    <mi:iersDOMESNumber>10003M009</mi:iersDOMESNumber>
+    <mi:cdpNumber>(A4)</mi:cdpNumber>
+    <mi:monumentDescription>STEEL MAST</mi:monumentDescription>
+    <mi:heightOfTheMonument>1</mi:heightOfTheMonument>
+    <mi:monumentFoundation>ROOF</mi:monumentFoundation>
+    <mi:foundationDepth></mi:foundationDepth>
+    <mi:markerDescription>BRASS NAIL</mi:markerDescription>
+    <mi:dateInstalled>2001-01-04</mi:dateInstalled>
+    <mi:geologicCharacteristic>(BEDROCK/CLAY/CONGLOMERATE/GRAVEL/SAND/etc)</mi:geologicCharacteristic>
+    <mi:bedrockType>SEDIMENTARY</mi:bedrockType>
+    <mi:bedrockCondition>FRESH</mi:bedrockCondition>
+    <mi:fractureSpacing>0 cm</mi:fractureSpacing>
+    <mi:faultZonesNearby>(YES/NO/Name of the zone)</mi:faultZonesNearby>
+    <mi:distance-Activity>(multiple lines)</mi:distance-Activity>
+    <mi:notes>(multiple lines)</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Toulouse</mi:city>
+    <mi:state>Haute-Garonne</mi:state>
+    <mi:country>France</mi:country>
+    <mi:tectonicPlate>EURASIAN</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>4627852.065</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>119639.756</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>4372993.321</mi:zCoordinateInMeters>
+      <mi:latitude-North>+433338.49</mi:latitude-North>
+      <mi:longitude-East>+0012851.19</mi:longitude-East>
+      <mi:elevation-m_ellips.>207.2</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>(coordinates XYZ RGF93-Lambert-93) Station located in the premises of CNES.</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-12 RM</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>244</equip:serialNumber>
+    <equip:firmwareVersion>3.2.32.9</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>4</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2001-01-04T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2002-05-02</equip:dateRemoved>
+    <equip:temperatureStabilization>18 +/- 24</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-12 RM</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>244</equip:serialNumber>
+    <equip:firmwareVersion>3.2.32.11</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>4</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2002-05-02T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2003-09-15T07:30Z</equip:dateRemoved>
+    <equip:temperatureStabilization>18 +/- 24</equip:temperatureStabilization>
+    <equip:notes>Installation of firmware version</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE 4000SSI</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>23243</equip:serialNumber>
+    <equip:firmwareVersion>7.19A</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>4</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2003-09-15T12:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2003-12-11T09:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>18 +/- 25</equip:temperatureStabilization>
+    <equip:notes>Receiver exchange</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE 4000SSI</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>30708</equip:serialNumber>
+    <equip:firmwareVersion>7.19A</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>4</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2003-12-11T09:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2005-01-20T12:30Z</equip:dateRemoved>
+    <equip:temperatureStabilization>18 +/- 25</equip:temperatureStabilization>
+    <equip:notes>Receiver exchange</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE 4000SSI</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>30708</equip:serialNumber>
+    <equip:firmwareVersion>7.32</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>4</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2005-01-20T13:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2007-09-05T13:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>18 +/- 25</equip:temperatureStabilization>
+    <equip:notes>Firmware update</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE 4000SSI</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>30708</equip:serialNumber>
+    <equip:firmwareVersion>7.32</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>3</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2007-09-05T13:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2009-12-10T15:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>19 +/- 26</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETR5</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>55790</equip:serialNumber>
+    <equip:firmwareVersion>4.03</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>3</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2009-12-10T16:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2010-03-23T14:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>18 +/- 25</equip:temperatureStabilization>
+    <equip:notes>receiver change</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETR5</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>55790</equip:serialNumber>
+    <equip:firmwareVersion>4.03</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>3</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2010-03-23T14:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2010-10-12T14:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>18 +/- 25</equip:temperatureStabilization>
+    <equip:notes>GPS + GLONASS data (Glonass navigation file missing)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETR5</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>55790</equip:serialNumber>
+    <equip:firmwareVersion>4.17</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>3</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2010-10-12T14:19Z</equip:dateInstalled>
+    <equip:dateRemoved>2011-04-18T13:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>20 +/- 25</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETR9</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>70405</equip:serialNumber>
+    <equip:firmwareVersion>4.22</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>3</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2011-04-18T13:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2011-10-05T09:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>20 +/- 25</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETR9</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>70405</equip:serialNumber>
+    <equip:firmwareVersion>4.42</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>3</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2011-10-05T12:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2012-06-08T14:45Z</equip:dateRemoved>
+    <equip:temperatureStabilization>20 +/- 25</equip:temperatureStabilization>
+    <equip:notes>Update firmware on receiver</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETR9</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO+GAL+SBAS</equip:satelliteSystem>
+    <equip:serialNumber>70405</equip:serialNumber>
+    <equip:firmwareVersion>4.60</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>3</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2012-06-08T14:45Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>20 +/- 25</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        NONE</equip:antennaType>
+    <equip:serialNumber>199</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>001.0530</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>not reference</equip:antennaCableType>
+    <equip:antennaCableLength>60</equip:antennaCableLength>
+    <equip:dateInstalled>2001-01-04T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2003-09-15</equip:dateRemoved>
+    <equip:notes>The antenna is set on a small metallic tower allowing precise centering above the mark in a small concrete pad.</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        NONE</equip:antennaType>
+    <equip:serialNumber>00199</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>001.0530</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>TRIMBLE RG-213</equip:antennaCableType>
+    <equip:antennaCableLength>60</equip:antennaCableLength>
+    <equip:dateInstalled>2003-09-15T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2003-12-01T13:00Z</equip:dateRemoved>
+    <equip:notes>Cable exchange. Cable 2x30 m with in-line amplifier.</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>TRM29659.00     NONE</equip:antennaType>
+    <equip:serialNumber>227554</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>001.0530</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>TRIMBLE RG-213</equip:antennaCableType>
+    <equip:antennaCableLength>60</equip:antennaCableLength>
+    <equip:dateInstalled>2003-12-01T13:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2009-12-10T15:00Z</equip:dateRemoved>
+    <equip:notes>Antenna exchange.</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>TRM29659.00     NONE</equip:antennaType>
+    <equip:serialNumber>227554</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>001.0530</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>TRIMBLE</equip:antennaCableType>
+    <equip:antennaCableLength>60</equip:antennaCableLength>
+    <equip:dateInstalled>2009-12-10T16:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2010-02-24T14:15Z</equip:dateRemoved>
+    <equip:notes>Trimble RG-213 cable (30m) + amplifier + trimble LM0-400 cable (30m)</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>TRM59800.00     NONE</equip:antennaType>
+    <equip:serialNumber>47086</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>001.0530</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>TRIMBLE</equip:antennaCableType>
+    <equip:antennaCableLength>60</equip:antennaCableLength>
+    <equip:dateInstalled>2010-02-24T14:25Z</equip:dateInstalled>
+    <equip:dateRemoved>2012-09-04T09:50Z</equip:dateRemoved>
+    <equip:notes>Trimble RG-213 cable (30m) + amplifier S/N 0220256439 + trimble LM0-400 cable (30m)</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>TRM59800.00     NONE</equip:antennaType>
+    <equip:serialNumber>54398</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>001.0530</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>TRIMBLE</equip:antennaCableType>
+    <equip:antennaCableLength>60</equip:antennaCableLength>
+    <equip:dateInstalled>2012-09-04T09:55Z</equip:dateInstalled>
+    <equip:dateRemoved>2013-02-14T11:30Z</equip:dateRemoved>
+    <equip:notes>Trimble RG-213 cable (30m) + amplifier S/N 0220189301 + trimble LM0-400 cable (30m)</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>TRM59800.00     NONE</equip:antennaType>
+    <equip:serialNumber>54398</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>001.0530</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>TRIMBLE</equip:antennaCableType>
+    <equip:antennaCableLength>50</equip:antennaCableLength>
+    <equip:dateInstalled>2013-02-14T11:35Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>Leica cable number 664813 GEV134</equip:notes>
+  </gnssAntenna>
+  <frequencyStandard>
+    <equip:standardType>EXTERNAL CESIUM</equip:standardType>
+    <equip:inputFrequency>5 MHz</equip:inputFrequency>
+    <equip:effectiveDates>2001-01-04/2009-10-23</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL </equip:standardType>
+    <equip:inputFrequency>(if external)</equip:inputFrequency>
+    <equip:effectiveDates>2009-10-23/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </frequencyStandard>
+  <contactAgency>
+    <contact:agency>Centre National d'Etudes Spatiales</contact:agency>
+    <contact:preferredAbbreviation>CNES</contact:preferredAbbreviation>
+    <contact:mailingAddress>CNES DCT/ME/NC - 18, avenue</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Jean-Paul Cardaliaguet</contact:name>
+      <contact:telephonePrimary>(33) 5.61.27.31.98</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>(33) 5.61.28.15.36</contact:fax>
+      <contact:e-mail>jean-paul.cardaliaguet@cnes.fr</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Alain Brissaud</contact:name>
+      <contact:telephonePrimary>(33) 5.61.28.23.66</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>(33) 5.61.28.15.36</contact:fax>
+      <contact:e-mail>alain.brissaud@cnes.fr</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>Edouard Belin 31401 Toulouse cedex 09 - France none</contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>Centre National d'Etudes Spatiales</contact:agency>
+    <contact:preferredAbbreviation>CNES</contact:preferredAbbreviation>
+    <contact:mailingAddress>(multiple lines)</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>(multiple lines)</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter></mi:primaryDataCenter>
+    <mi:secondaryDataCenter></mi:secondaryDataCenter>
+    <mi:urlForMoreInformation></mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>(Y or URL)</mi:siteMap>
+    <mi:siteDiagram>(Y or URL)</mi:siteDiagram>
+    <mi:horizonMask>(Y or URL)</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>(Y or URL)</mi:sitePictures>
+    <mi:notes>Real time RTCM send to IGN CASTER ON Mount Point TLSE1</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

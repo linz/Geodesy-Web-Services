@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Heungmuk Cho</mi:preparedBy>
+    <mi:datePrepared>2005-01-27</mi:datePrepared>
+    <mi:reportType>Update</mi:reportType>
+    <mi:previousLog>suwn_20020224.log</mi:previousLog>
+    <mi:modifiedSections>(3.3, 11.)</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>GPS-station NGI/Suwon, Korea</mi:siteName>
+    <mi:fourCharacterID>SUWN</mi:fourCharacterID>
+    <mi:monumentInscription>Pillar</mi:monumentInscription>
+    <mi:iersDOMESNumber>23903M001</mi:iersDOMESNumber>
+    <mi:cdpNumber>N/A</mi:cdpNumber>
+    <mi:monumentDescription>(PILLAR/BRASS PLATE/STEEL MAST/etc)</mi:monumentDescription>
+    <mi:heightOfTheMonument></mi:heightOfTheMonument>
+    <mi:monumentFoundation>(STEEL RODS, CONCRETE BLOCK, ROOF, etc)</mi:monumentFoundation>
+    <mi:foundationDepth></mi:foundationDepth>
+    <mi:markerDescription>(CHISELLED CROSS/DIVOT/BRASS NAIL/etc)</mi:markerDescription>
+    <mi:dateInstalled>1995-03-15T00</mi:dateInstalled>
+    <mi:geologicCharacteristic>BEDROCK</mi:geologicCharacteristic>
+    <mi:bedrockType>GRANITE</mi:bedrockType>
+    <mi:bedrockCondition>FRESH</mi:bedrockCondition>
+    <mi:fractureSpacing>N/A</mi:fractureSpacing>
+    <mi:faultZonesNearby>(YES/NO/Name of the zone)</mi:faultZonesNearby>
+    <mi:distance-Activity>(multiple lines)</mi:distance-Activity>
+    <mi:notes>N/A N/A</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Suwon-shi</mi:city>
+    <mi:state>Kyonggi-do</mi:state>
+    <mi:country>Korea</mi:country>
+    <mi:tectonicPlate>Euroasia</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>-3062023.4156</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>4055449.1662</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>3841819.3768</mi:zCoordinateInMeters>
+      <mi:latitude-North>+371631.80</mi:latitude-North>
+      <mi:longitude-East>+1270315.12</mi:longitude-East>
+      <mi:elevation-m_ellips.>83.9322</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>N/A</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-8000</equip:receiverType>
+    <equip:satelliteSystem>(GPS+GLO+GAL+CMP+QZSS+SBAS)</equip:satelliteSystem>
+    <equip:serialNumber>T-306</equip:serialNumber>
+    <equip:firmwareVersion>Ver. 3.2</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>1995-03-15T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2000-02-14</equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>N/A</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE 4000SSI</equip:receiverType>
+    <equip:satelliteSystem>(GPS+GLO+GAL+CMP+QZSS+SBAS)</equip:satelliteSystem>
+    <equip:serialNumber>3950A27345</equip:serialNumber>
+    <equip:firmwareVersion>Ver. 7.29</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>2000-02-14T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2005-01-26T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>N/A</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETRS</equip:receiverType>
+    <equip:satelliteSystem>(GPS+GLO+GAL+CMP+QZSS+SBAS)</equip:satelliteSystem>
+    <equip:serialNumber>4450241593</equip:serialNumber>
+    <equip:firmwareVersion>1.0-3 09 Mar2004</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>2005-01-28T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>N/A</equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        DOME</equip:antennaType>
+    <equip:serialNumber>153</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>001.5700</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>N/A</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>DOME</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>1995-03-15T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2000-02-14T00:00Z</equip:dateRemoved>
+    <equip:notes>The Antenna height is the vertical  from the Geodetic Marker to the ARP.  height of the Geodetic Marker on the  base is 58.634m(MSL). It is tied the  order Bench Mark. Half Sphere radome</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>TRM29659.00     DOME</equip:antennaType>
+    <equip:serialNumber>0220170420</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>001.5700</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>N/A</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>DOME</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>2000-02-14T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>The Antenna height is the vertical from the marker to the ARP of antenna. The Pillar height is 1.50cm. The othometric height of the concrete base is 58.634m(MSL). It is connected the first order Bench Mark. Half Sphere radome</equip:notes>
+  </gnssAntenna>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>Korean Datum</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>(SLR/VLBI/LOCAL CONTROL/FOOTPRINT/etc)</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>N/A</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber></equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>-20.863</equip:dX>
+      <equip:dY>12.416</equip:dY>
+      <equip:dZ>-41.492</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy></equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>(GPS CAMPAIGN/TRILATERATION/TRIANGULATION/etc)</equip:surveyMethod>
+    <equip:dateMeasured>1997-03-14</equip:dateMeasured>
+    <equip:notes>(multiple lines)</equip:notes>
+  </surveyedLocalTies>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>VLBI Observation Point</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>(SLR/VLBI/LOCAL CONTROL/FOOTPRINT/etc)</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>N/A</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber></equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>0.535</equip:dX>
+      <equip:dY>-4.630</equip:dY>
+      <equip:dZ>9.394</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy></equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>(GPS CAMPAIGN/TRILATERATION/TRIANGULATION/etc)</equip:surveyMethod>
+    <equip:dateMeasured>1997-03-14</equip:dateMeasured>
+    <equip:notes>VLBI Observation was carried out with Mobil VLBI Observation System with 3.8m Antenna in from Sep. 1995 to Nov. 1997 and Geogrpahical Survey Institute(GSI) Japan. </equip:notes>
+  </surveyedLocalTies>
+  <frequencyStandard>
+    <equip:standardType>RUBIDIUM</equip:standardType>
+    <equip:inputFrequency>5MHZ</equip:inputFrequency>
+    <equip:effectiveDates>1998-02-03/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>Allen Osborne Associate, Inc. S/N 132 </equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>CESIUM=20</equip:standardType>
+    <equip:inputFrequency>5MHZ</equip:inputFrequency>
+    <equip:effectiveDates>2002-01-23/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>Model 4065C, DATUM, Inc. S/N 0124006529</equip:notes>
+  </frequencyStandard>
+  <humiditySensor>
+    <equip:type>N/A</equip:type>
+    <equip:manufacturer></equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>CCYY-MM-DD/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval></equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>(% rel h)</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </humiditySensor>
+  <pressureSensor>
+    <equip:type>N/A</equip:type>
+    <equip:manufacturer></equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>CCYY-MM-DD/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval></equip:dataSamplingInterval>
+    <equip:accuracy-hPa>(mbar)</equip:accuracy-hPa>
+    <equip:notes>(multiple lines)</equip:notes>
+  </pressureSensor>
+  <temperatureSensor>
+    <equip:type>N/A</equip:type>
+    <equip:manufacturer></equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>CCYY-MM-DD/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval></equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>(deg C)</equip:accuracy-degreesCelcius>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </temperatureSensor>
+  <waterVaporSensor>
+    <equip:type>N/A</equip:type>
+    <equip:manufacturer></equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>CCYY-MM-DD/CCYY-MM-DD</equip:effectiveDates>
+    <equip:distanceToAntenna></equip:distanceToAntenna>
+    <equip:notes>(multiple lines)</equip:notes>
+  </waterVaporSensor>
+  <contactAgency>
+    <contact:agency>National Geographic Information Institute</contact:agency>
+    <contact:preferredAbbreviation>NGII</contact:preferredAbbreviation>
+    <contact:mailingAddress>111, Wonchon-dong, Youngtong-gu,</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Cho, Heungmuk</contact:name>
+      <contact:telephonePrimary>+82-31-210-2650</contact:telephonePrimary>
+      <contact:telephoneSecondary>+82-31-210-2651</contact:telephoneSecondary>
+      <contact:fax>+82-31-210-2756</contact:fax>
+      <contact:e-mail>hmcho@moct.go.kr</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Jung, Jaihong</contact:name>
+      <contact:telephonePrimary>+82-31-210-2655</contact:telephonePrimary>
+      <contact:telephoneSecondary>+82-31-210-2651</contact:telephoneSecondary>
+      <contact:fax>+82-31-210-2756</contact:fax>
+      <contact:e-mail>JUNGH@moct.go.kr</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>Suwon-shi, 443-772, Korea (multiple lines)</contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>National Geographic Information Institute</contact:agency>
+    <contact:preferredAbbreviation>NGII</contact:preferredAbbreviation>
+    <contact:mailingAddress>(multiple lines)</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>(multiple lines)</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter>http</mi:primaryDataCenter>
+    <mi:secondaryDataCenter>http</mi:secondaryDataCenter>
+    <mi:urlForMoreInformation>http</mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>(Y or URL)</mi:siteMap>
+    <mi:siteDiagram>(Y)</mi:siteDiagram>
+    <mi:horizonMask>(Y)</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>(Y)</mi:sitePictures>
+    <mi:notes>(multiple lines)</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

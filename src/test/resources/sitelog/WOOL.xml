@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Darren Burns</mi:preparedBy>
+    <mi:datePrepared>2013-08-20</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>wool_20110308.log</mi:previousLog>
+    <mi:modifiedSections>3.2,3.3</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>Woolloongabba SunPOZ</mi:siteName>
+    <mi:fourCharacterID>WOOL</mi:fourCharacterID>
+    <mi:monumentInscription></mi:monumentInscription>
+    <mi:iersDOMESNumber>50143M003</mi:iersDOMESNumber>
+    <mi:cdpNumber></mi:cdpNumber>
+    <mi:monumentDescription>STEEL BRACKET</mi:monumentDescription>
+    <mi:heightOfTheMonument></mi:heightOfTheMonument>
+    <mi:monumentFoundation>CONCRETE PARAPET WALL ON BUILDING ROOF</mi:monumentFoundation>
+    <mi:foundationDepth></mi:foundationDepth>
+    <mi:markerDescription>THREADED BOLT ON STEEL BRACKET</mi:markerDescription>
+    <mi:dateInstalled>2001-01-24</mi:dateInstalled>
+    <mi:geologicCharacteristic>(BEDROCK/CLAY/CONGLOMERATE/GRAVEL/SAND/etc)</mi:geologicCharacteristic>
+    <mi:bedrockType>(IGNEOUS/METAMORPHIC/SEDIMENTARY)</mi:bedrockType>
+    <mi:bedrockCondition>(FRESH/JOINTED/WEATHERED)</mi:bedrockCondition>
+    <mi:fractureSpacing>(1-10 cm/11-50 cm/51-200 cm/over 200 cm)</mi:fractureSpacing>
+    <mi:faultZonesNearby>(YES/NO/Name of the zone)</mi:faultZonesNearby>
+    <mi:distance-Activity>(multiple lines)</mi:distance-Activity>
+    <mi:notes>Monument is a Steel Bracket fixed to the inside</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Woolloongabba</mi:city>
+    <mi:state>Queensland</mi:state>
+    <mi:country>Australia</mi:country>
+    <mi:tectonicPlate>Australian</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>-5046788.3466</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>2567555.3219</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>-2926034.8014</mi:zCoordinateInMeters>
+      <mi:latitude-North>-272905.88829</mi:latitude-North>
+      <mi:longitude-East>+1530206.96448</mi:longitude-East>
+      <mi:elevation-m_ellips.>00091.0602</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>SunPOZ Network</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE R7</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>0220325960</equip:serialNumber>
+    <equip:firmwareVersion>2.01</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2004-05-01T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2011-02-18T01:30Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETRS</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>4351230308</equip:serialNumber>
+    <equip:firmwareVersion>1.2-0</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2011-02-18T02:30Z</equip:dateInstalled>
+    <equip:dateRemoved>2013-08-17T09:47Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETRS</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>4351230308</equip:serialNumber>
+    <equip:firmwareVersion>1.3-2</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2013-08-17T09:54Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>Firmware Update</equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>TRM29659.00     NONE</equip:antennaType>
+    <equip:serialNumber>0220164017</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>LMR400</equip:antennaCableType>
+    <equip:antennaCableLength>43</equip:antennaCableLength>
+    <equip:dateInstalled>2001-01-24T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL</equip:standardType>
+    <equip:inputFrequency></equip:inputFrequency>
+    <equip:effectiveDates>2004-05-01/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </frequencyStandard>
+  <radioInterferences>
+    <li:possibleProblemSources>DIRECTIONAL MICROWAVE ANTENNA</li:possibleProblemSources>
+    <li:effectiveDates>2001-01-24/CCYY-MM-DD</li:effectiveDates>
+    <li:observedDegredation></li:observedDegredation>
+    <li:notes>Directional Microwave Antenna is situated 8m North of LAND, is pointed North and has an impact on L2 signals North of the antenna up to 25 degrees above the antenna horizon</li:notes>
+  </radioInterferences>
+  <radioInterferences>
+    <li:possibleProblemSources>MOBILE PHONE ANTENNAE</li:possibleProblemSources>
+    <li:effectiveDates>2001-01-24/CCYY-MM-DD</li:effectiveDates>
+    <li:observedDegredation></li:observedDegredation>
+    <li:notes>Mobile Phone repeaters are located around the</li:notes>
+  </radioInterferences>
+  <contactAgency>
+    <contact:agency>Queensland Department of Environment and</contact:agency>
+    <contact:preferredAbbreviation>DERM</contact:preferredAbbreviation>
+    <contact:mailingAddress>GPO Box 2454</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Garry Cislowski</contact:name>
+      <contact:telephonePrimary>+61 7 3896 3030</contact:telephonePrimary>
+      <contact:telephoneSecondary>0423 029 131</contact:telephoneSecondary>
+      <contact:fax>+61 7 3896 3697</contact:fax>
+      <contact:e-mail>garry.cislowski@qld.gov.au</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Ben Cowie</contact:name>
+      <contact:telephonePrimary>+61 7 3896 3036</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>+61 7 3896 3697</contact:fax>
+      <contact:e-mail>benjamin.cowie@derm.qld.gov.au</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>(multiple lines)</contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>Queensland Department of Environment and</contact:agency>
+    <contact:preferredAbbreviation>DERM</contact:preferredAbbreviation>
+    <contact:mailingAddress>(multiple lines)</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>(multiple lines)</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter></mi:primaryDataCenter>
+    <mi:secondaryDataCenter></mi:secondaryDataCenter>
+    <mi:urlForMoreInformation></mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>(Y or URL)</mi:siteMap>
+    <mi:siteDiagram>X</mi:siteDiagram>
+    <mi:horizonMask>X</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>X</mi:sitePictures>
+    <mi:notes>(multiple lines)</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

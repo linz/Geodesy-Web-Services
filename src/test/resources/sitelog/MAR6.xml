@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Lotti Jivall</mi:preparedBy>
+    <mi:datePrepared>2012-12-06</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>mar6_20120117.log</mi:previousLog>
+    <mi:modifiedSections>0, 1, 10.1, 11</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>Maartsbo</mi:siteName>
+    <mi:fourCharacterID>MAR6</mi:fourCharacterID>
+    <mi:monumentInscription>Maartsbo SWEPOS 1993</mi:monumentInscription>
+    <mi:iersDOMESNumber>10405M002</mi:iersDOMESNumber>
+    <mi:cdpNumber>(A4)</mi:cdpNumber>
+    <mi:monumentDescription>PILLAR</mi:monumentDescription>
+    <mi:heightOfTheMonument></mi:heightOfTheMonument>
+    <mi:monumentFoundation>(STEEL RODS, CONCRETE BLOCK, ROOF, etc)</mi:monumentFoundation>
+    <mi:foundationDepth></mi:foundationDepth>
+    <mi:markerDescription>(CHISELLED CROSS/DIVOT/BRASS NAIL/etc)</mi:markerDescription>
+    <mi:dateInstalled>1993-08-01</mi:dateInstalled>
+    <mi:geologicCharacteristic>BEDROCK</mi:geologicCharacteristic>
+    <mi:bedrockType>(IGNEOUS/METAMORPHIC/SEDIMENTARY)</mi:bedrockType>
+    <mi:bedrockCondition>FRESH</mi:bedrockCondition>
+    <mi:fractureSpacing>over 200 cm</mi:fractureSpacing>
+    <mi:faultZonesNearby>(YES/NO/Name of the zone)</mi:faultZonesNearby>
+    <mi:distance-Activity>(multiple lines)</mi:distance-Activity>
+    <mi:notes>Swedish permanent GPS Network (SWEPOS) The same monument and antenna has been for the IGEX/IGLOS-site MR6G up to 2003-08-19</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Maartsbo</mi:city>
+    <mi:state></mi:state>
+    <mi:country>Sweden</mi:country>
+    <mi:tectonicPlate>EURASIAN</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>2998189.7132</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>931451.5886</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>5533398.4735</mi:zCoordinateInMeters>
+      <mi:latitude-North>+603542.51</mi:latitude-North>
+      <mi:longitude-East>+0171530.68</mi:longitude-East>
+      <mi:elevation-m_ellips.>75.4</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>SWEREF 99 (Swedish realisation of ETRS89)</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-8100</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>T-221</equip:serialNumber>
+    <equip:firmwareVersion>2.8</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>15</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1993-08-01T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1993-08-01</equip:dateRemoved>
+    <equip:temperatureStabilization>25 +/- 3</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>243</equip:serialNumber>
+    <equip:firmwareVersion>8M</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>15</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1993-08-01T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1995-09-13</equip:dateRemoved>
+    <equip:temperatureStabilization>25 +/- 3</equip:temperatureStabilization>
+    <equip:notes>Elevation cutoff set to 10 degrees on 1993-11-02.</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>243</equip:serialNumber>
+    <equip:firmwareVersion>1F00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>10</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1995-09-13T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1996-05-03</equip:dateRemoved>
+    <equip:temperatureStabilization>25 +/- 3</equip:temperatureStabilization>
+    <equip:notes>Firmware upgrade</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>243</equip:serialNumber>
+    <equip:firmwareVersion>1E86</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>10</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1996-05-03T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1996-11-15</equip:dateRemoved>
+    <equip:temperatureStabilization>25 +/- 3</equip:temperatureStabilization>
+    <equip:notes>Firmware upgrade</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>828</equip:serialNumber>
+    <equip:firmwareVersion>1G00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>10</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1996-11-15T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1996-12-19</equip:dateRemoved>
+    <equip:temperatureStabilization>25 +/- 3</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>769</equip:serialNumber>
+    <equip:firmwareVersion>1G00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>10</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1996-12-19T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1998-09-18</equip:dateRemoved>
+    <equip:temperatureStabilization>25 +/- 3</equip:temperatureStabilization>
+    <equip:notes>Elevation cutoff set to 5 degrees probably on 1997-04-23.</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>833</equip:serialNumber>
+    <equip:firmwareVersion>1G00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1998-09-18T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1999-02-02</equip:dateRemoved>
+    <equip:temperatureStabilization>25 +/- 3</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>833</equip:serialNumber>
+    <equip:firmwareVersion>1F67</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1999-02-02T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1999-07-14</equip:dateRemoved>
+    <equip:temperatureStabilization>25 +/- 3</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>833</equip:serialNumber>
+    <equip:firmwareVersion>CC00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1999-07-14T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2003-08-19</equip:dateRemoved>
+    <equip:temperatureStabilization>25 +/- 3</equip:temperatureStabilization>
+    <equip:notes>CLOCK STEERING set to N 2000-12-06</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>JPS LEGACY</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>MT300135051</equip:serialNumber>
+    <equip:firmwareVersion>2.2 Oct,15,2001 p1</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2003-08-19T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2004-07-20T13:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>25 +/- 3</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>JPS LEGACY</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>MT300135051</equip:serialNumber>
+    <equip:firmwareVersion>2.3 Apr,28,2004 p4</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2004-07-20T13:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2006-06-27T13:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>25 +/- 3</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>JPS E_GGD</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>AG3KSX1OJY8</equip:serialNumber>
+    <equip:firmwareVersion>2.4 Sep,02,2004</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2006-06-27T13:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2007-08-15T13:10Z</equip:dateRemoved>
+    <equip:temperatureStabilization>25 +/- 3</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>JPS E_GGD</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>AG3KSX1OJY8</equip:serialNumber>
+    <equip:firmwareVersion>2.5 Apr,10,2007 p3</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2007-08-15T13:10Z</equip:dateInstalled>
+    <equip:dateRemoved>2007-11-13</equip:dateRemoved>
+    <equip:temperatureStabilization>25 +/- 3</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>JPS E_GGD</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>AG3KSX1OJY8</equip:serialNumber>
+    <equip:firmwareVersion>2.6.0 Apr,18,2007</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2007-11-13T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2008-05-06T17:20Z</equip:dateRemoved>
+    <equip:temperatureStabilization>25 +/- 3</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>JPS E_GGD</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>AG3KSX1OJY8</equip:serialNumber>
+    <equip:firmwareVersion>2.6.1 Jan,10,2008</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2008-05-06T17:35Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>25 +/- 3</equip:temperatureStabilization>
+    <equip:notes>Firmware upgrade</equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        DUTD</equip:antennaType>
+    <equip:serialNumber>221</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0710</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>DUTD</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>1993-08-01T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1995-02-07</equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        DOME</equip:antennaType>
+    <equip:serialNumber>221</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0710</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>DOME</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>1995-02-07T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1995-12-14</equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        NONE</equip:antennaType>
+    <equip:serialNumber>221</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0710</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>1995-12-14T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1996-01-10</equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        SNOW</equip:antennaType>
+    <equip:serialNumber>221</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0710</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>SNOW</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>1996-01-10T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1996-05-07</equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        OSOD</equip:antennaType>
+    <equip:serialNumber>221</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0710</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>OSOD</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>1996-05-07T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL </equip:standardType>
+    <equip:inputFrequency>(if external)</equip:inputFrequency>
+    <equip:effectiveDates>1991-07-01/1997-01-01</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>EXTERNAL RUBIDIUM</equip:standardType>
+    <equip:inputFrequency>10 MHz</equip:inputFrequency>
+    <equip:effectiveDates>1997-01-01/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>CLOCK STEERING set to N 2000-12-06</equip:notes>
+  </frequencyStandard>
+  <collocationInformation>
+    <equip:instrumentType>GRAVITY MEASUREMENTS</equip:instrumentType>
+    <equip:status>MOBILE</equip:status>
+    <equip:effectiveDates>1995-09-22/1995-09-24</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </collocationInformation>
+  <collocationInformation>
+    <equip:instrumentType>GRAVITY MEASUREMENTS</equip:instrumentType>
+    <equip:status>MOBILE</equip:status>
+    <equip:effectiveDates>1995-09-25/1995-09-27</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </collocationInformation>
+  <collocationInformation>
+    <equip:instrumentType>GPS/GLONASS</equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates>1998-08-01/2003-08-19</equip:effectiveDates>
+    <equip:notes>IGLOS site MR6G utilized the same pillar and antenna as MAR6.</equip:notes>
+  </collocationInformation>
+  <localEpisodicEvents>
+    <li:date>2012-08-15/2012-08-15</li:date>
+    <li:event>The radome was removed 10</li:event>
+  </localEpisodicEvents>
+  <contactAgency>
+    <contact:agency>Lantmateriet, the Swedish mapping, cadastral and</contact:agency>
+    <contact:preferredAbbreviation>LMV</contact:preferredAbbreviation>
+    <contact:mailingAddress>S-801 82 Gavle, Sweden</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>SWEPOS Control centre</contact:name>
+      <contact:telephonePrimary>+46 26 63 37 53</contact:telephonePrimary>
+      <contact:telephoneSecondary>+46 26 63 38 84</contact:telephoneSecondary>
+      <contact:fax>+46 26 65 42 75</contact:fax>
+      <contact:e-mail>swepos@lm.se</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Peter Wiklund</contact:name>
+      <contact:telephonePrimary>+46 26 63 38 84</contact:telephonePrimary>
+      <contact:telephoneSecondary>+46 70 344 06 38</contact:telephoneSecondary>
+      <contact:fax>+46 26 61 06 76</contact:fax>
+      <contact:e-mail>peter.wiklund@lm.se</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>land registration authority (multiple lines)</contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>Lantmateriet, the Swedish mapping, cadastral and</contact:agency>
+    <contact:preferredAbbreviation>LMV</contact:preferredAbbreviation>
+    <contact:mailingAddress>(multiple lines)</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>(multiple lines)</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter></mi:primaryDataCenter>
+    <mi:secondaryDataCenter></mi:secondaryDataCenter>
+    <mi:urlForMoreInformation></mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>(Y or URL)</mi:siteMap>
+    <mi:siteDiagram>(Y or URL)</mi:siteDiagram>
+    <mi:horizonMask>(Y or URL)</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>(Y or URL)</mi:sitePictures>
+    <mi:notes>(multiple lines)</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

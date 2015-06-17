@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Brian Schofield</mi:preparedBy>
+    <mi:datePrepared>2013-08-20</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>will_20130320.log</mi:previousLog>
+    <mi:modifiedSections>2004-06-18</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>Williams Lake</mi:siteName>
+    <mi:fourCharacterID>WILL</mi:fourCharacterID>
+    <mi:monumentInscription>937011</mi:monumentInscription>
+    <mi:iersDOMESNumber>40134M001</mi:iersDOMESNumber>
+    <mi:cdpNumber>(A4)</mi:cdpNumber>
+    <mi:monumentDescription>PILLAR/BRASS</mi:monumentDescription>
+    <mi:heightOfTheMonument>2.3</mi:heightOfTheMonument>
+    <mi:monumentFoundation>STEEL RODS IN BEDROCK</mi:monumentFoundation>
+    <mi:foundationDepth>3.0</mi:foundationDepth>
+    <mi:markerDescription>BRASS FORCED CENTERED PLATE</mi:markerDescription>
+    <mi:dateInstalled>1993-10-06T19</mi:dateInstalled>
+    <mi:geologicCharacteristic>BEDROCK</mi:geologicCharacteristic>
+    <mi:bedrockType>GRANULAR VOLCANIC CONGLOMERATE</mi:bedrockType>
+    <mi:bedrockCondition>WEATHERED</mi:bedrockCondition>
+    <mi:fractureSpacing>(1-10 cm/11-50 cm/51-200 cm/over 200 cm)</mi:fractureSpacing>
+    <mi:faultZonesNearby>NO</mi:faultZonesNearby>
+    <mi:distance-Activity></mi:distance-Activity>
+    <mi:notes>This station is part of the Western Canada Deformation Array (WCDA) as well as the Canadian Active Control System (CACS). The following information is current as of 26-FEB-97 ******************************************** The GPS reference mark consists of a brass plate with a forced centered stainless steel bolt. The brass plate is embedded on top of a 2.3 metre high concrete pier, 60 cm in diameter. The concrete pier is anchored to exposed bedrock using steel re-enforcement bars to a depth of 3.0 m. The antenna is attached to the brass forced centered plate via a 10 cm high anodized aluminum base. This base provides a constant height above the brass plate and also permits the antenna to be referenced to north. ** File Audited as of 2008-06-23</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Williams Lake</mi:city>
+    <mi:state>B.C.</mi:state>
+    <mi:country>Canada</mi:country>
+    <mi:tectonicPlate>North America</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>-2084258.0160</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>-3313872.9800</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>5019853.0810</mi:zCoordinateInMeters>
+      <mi:latitude-North>+521412.84</mi:latitude-North>
+      <mi:longitude-East>-1221004.08</mi:longitude-East>
+      <mi:elevation-m_ellips.>+1096.0</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>~540km north of Vancouver, B.C.; site is ~10km north of the town of Williams Lake, B.C. located at NavCanada's VOR / TACAN site</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-8000</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>165</equip:serialNumber>
+    <equip:firmwareVersion>0.0 SFG2 lk 93/08/27</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>1993-10-06T19:03Z</equip:dateInstalled>
+    <equip:dateRemoved>1995-07-07T20:27Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>site installed</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-8000</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>340</equip:serialNumber>
+    <equip:firmwareVersion>3.2 lk 95/03/09 JPL</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>10</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1995-07-07T20:27Z</equip:dateInstalled>
+    <equip:dateRemoved>1999-06-02T22:33Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>Receiver / firmware change</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-8000</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>340</equip:serialNumber>
+    <equip:firmwareVersion>3.2.32.8 lk 98/12/28</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>10</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1999-06-03T00:44Z</equip:dateInstalled>
+    <equip:dateRemoved>2003-05-06T19:25Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>firmware change RF surge suppressor installed at receiver</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>AOA BENCHMARK ACT</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>2028</equip:serialNumber>
+    <equip:firmwareVersion>3.3.32.5</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2003-05-06T19:25Z</equip:dateInstalled>
+    <equip:dateRemoved>2004-01-07T23:30Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>No data from 2003-11-16 to 2004-01-06 inclusive</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>AOA BENCHMARK ACT</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>2026</equip:serialNumber>
+    <equip:firmwareVersion>3.3.32.5 lk 00/12/03</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2004-01-07T23:30Z</equip:dateInstalled>
+    <equip:dateRemoved>2012-06-06T04:09Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>No data from 2012-06-06 to 2012-06-11</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>AOA BENCHMARK ACT</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>2042</equip:serialNumber>
+    <equip:firmwareVersion>3.3.32.5 lk 00/12/03</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2012-06-11T19:34Z</equip:dateInstalled>
+    <equip:dateRemoved>2012-07-15T05:25Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>New Receiver</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>AOA SNR-8000 ACT</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>T381-U</equip:serialNumber>
+    <equip:firmwareVersion>3.3.32.3 lk 99/06/11</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2012-08-22T21:35Z</equip:dateInstalled>
+    <equip:dateRemoved>2013-08-09T23:59Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>New Receiver No data from 2012-07-15 to 2012-08-22</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200+GNSS</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>495008</equip:serialNumber>
+    <equip:firmwareVersion>7.80/4.004</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2013-08-10T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>New Receiver</equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        NONE</equip:antennaType>
+    <equip:serialNumber>92168</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0010</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>ANDREWS FSJ4-50B</equip:antennaCableType>
+    <equip:antennaCableLength>100</equip:antennaCableLength>
+    <equip:dateInstalled>1993-10-06T19:03Z</equip:dateInstalled>
+    <equip:dateRemoved>1994-06-21T19:17Z</equip:dateRemoved>
+    <equip:notes>ref. Antenna Diagram 'A' below degrees offset from North refers to 'True North' Antenna p/n 7490400-1</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        EMRA</equip:antennaType>
+    <equip:serialNumber>92168</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0015</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>EMRA</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>ANDREWS FSJ4-50B</equip:antennaCableType>
+    <equip:antennaCableLength>100</equip:antennaCableLength>
+    <equip:dateInstalled>1994-06-21T19:17Z</equip:dateInstalled>
+    <equip:dateRemoved>1995-07-07T20:27Z</equip:dateRemoved>
+    <equip:notes>ref. Antenna Diagram 'B' below; degrees offset from North refers to 'True North' The dome is installed using an aluminum flange ring attached to the choke ring. The flange ring extends the radius of the ground plane by 2.5 cm. Antenna p/n 7490400-1</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        EMRA</equip:antennaType>
+    <equip:serialNumber>95166</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.1000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>EMRA</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>ANDREWS FSJ4-50B</equip:antennaCableType>
+    <equip:antennaCableLength>100</equip:antennaCableLength>
+    <equip:dateInstalled>1995-07-07T20:27Z</equip:dateInstalled>
+    <equip:dateRemoved>1999-06-02T22:33Z</equip:dateRemoved>
+    <equip:notes>ref. Antenna Diagram 'C' below; degrees offset from North refers to 'True North' The dome is installed using an aluminum flange ring attached to the choke ring. The flange ring extends the radius of the ground plane by 2.5 cm. Note "RF" screening skirt Antenna p/n 7490582-1</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        EMRA</equip:antennaType>
+    <equip:serialNumber>95166</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.1000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>EMRA</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>ANDREWS FSJ4-50B</equip:antennaCableType>
+    <equip:antennaCableLength>100</equip:antennaCableLength>
+    <equip:dateInstalled>1999-06-03T00:44Z</equip:dateInstalled>
+    <equip:dateRemoved>2004-01-07T23:30Z</equip:dateRemoved>
+    <equip:notes>ref. Antenna Diagram 'C' below; The dome is installed using an aluminum flange ring attached to the choke ring. The flange ring extends the radius of the ground plane by 2.5 cm.' "RF" screening skirt replaced; Antenna p/n 7490582-1 RF surge suppressor installed at antenna</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        EMRA</equip:antennaType>
+    <equip:serialNumber>95166</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.1000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>EMRA</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>ANDREWS FSJ4-50B</equip:antennaCableType>
+    <equip:antennaCableLength>130</equip:antennaCableLength>
+    <equip:dateInstalled>2004-01-07T23:30Z</equip:dateInstalled>
+    <equip:dateRemoved>2004-06-16T02:00Z</equip:dateRemoved>
+    <equip:notes>ref. Antenna Diagram 'C' below; The dome is installed using an aluminum flange ring attached to the choke ring. The flange ring extends the radius of the ground plane by 2.5 cm.' Antenna p/n 7490582-1 Cable severed  2004-02-03T20 No data 2004-02-03T20</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        EMRA</equip:antennaType>
+    <equip:serialNumber>95166</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.1000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>EMRA</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>ANDREWS FSJ4-50B</equip:antennaCableType>
+    <equip:antennaCableLength>100</equip:antennaCableLength>
+    <equip:dateInstalled>2004-06-16T02:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>ref. Antenna Diagram 'C' below; The dome is installed using an aluminum flange ring attached to the choke ring. The flange ring extends the radius of the ground plane by 2.5 cm.' Antenna p/n 7490582-1 Antenna cable replaced</equip:notes>
+  </gnssAntenna>
+  <frequencyStandard>
+    <equip:standardType>RUBIDIUM</equip:standardType>
+    <equip:inputFrequency>5MHz</equip:inputFrequency>
+    <equip:effectiveDates>1993-10-06T19:03Z/2003-05-06T19:25Z</equip:effectiveDates>
+    <equip:notes>       Notes                  :</equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL</equip:standardType>
+    <equip:inputFrequency>       Input Frequency        :</equip:inputFrequency>
+    <equip:effectiveDates>2003-05-06T19:25Z/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>       Notes                  :</equip:notes>
+  </frequencyStandard>
+  <localEpisodicEvents>
+    <li:date>2004-01-07T23</li:date>
+    <li:event>Antenna cable replaced (temporarily) with</li:event>
+  </localEpisodicEvents>
+  <contactAgency>
+    <contact:agency>Geological Survey of Canada</contact:agency>
+    <contact:preferredAbbreviation>GSC</contact:preferredAbbreviation>
+    <contact:mailingAddress>P.O. Box 6000</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Michael Schmidt</contact:name>
+      <contact:telephonePrimary>250-363-6760</contact:telephonePrimary>
+      <contact:telephoneSecondary>250-363-6500</contact:telephoneSecondary>
+      <contact:fax>250-363-6565</contact:fax>
+      <contact:e-mail>mschmidt@nrcan.gc.ca</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Herb Dragert</contact:name>
+      <contact:telephonePrimary>250-363-6447</contact:telephonePrimary>
+      <contact:telephoneSecondary>250-363-6500</contact:telephoneSecondary>
+      <contact:fax>250-363-6565</contact:fax>
+      <contact:e-mail>hdragert@nrcan.gc.ca</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>9860 West Saanich Rd. Sidney, B.C. Canada V8L 4B2 (multiple lines)</contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>Geological Survey of Canada</contact:agency>
+    <contact:preferredAbbreviation>GSC</contact:preferredAbbreviation>
+    <contact:mailingAddress>(multiple lines)</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>(multiple lines)</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter>http</mi:primaryDataCenter>
+    <mi:secondaryDataCenter>http</mi:secondaryDataCenter>
+    <mi:urlForMoreInformation>http</mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>(Y or URL)</mi:siteMap>
+    <mi:siteDiagram>(Y)</mi:siteDiagram>
+    <mi:horizonMask>(Y)</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>(Y)</mi:sitePictures>
+    <mi:notes>Hardcopy Information available from www site or site contact</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

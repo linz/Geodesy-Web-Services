@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Matt King</mi:preparedBy>
+    <mi:datePrepared>2012-04-04</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>morp_20120403.log</mi:previousLog>
+    <mi:modifiedSections>8.1.3, 8.2.2, 8.2.3, 8.3.2, 8.3.3</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>Morpeth</mi:siteName>
+    <mi:fourCharacterID>MORP</mi:fourCharacterID>
+    <mi:monumentInscription></mi:monumentInscription>
+    <mi:iersDOMESNumber>13299S001</mi:iersDOMESNumber>
+    <mi:cdpNumber>(A4)</mi:cdpNumber>
+    <mi:monumentDescription>PILLAR</mi:monumentDescription>
+    <mi:heightOfTheMonument>0.0</mi:heightOfTheMonument>
+    <mi:monumentFoundation>CONCRETE BLOCK</mi:monumentFoundation>
+    <mi:foundationDepth>2.4</mi:foundationDepth>
+    <mi:markerDescription>Gravity force centred</mi:markerDescription>
+    <mi:dateInstalled>1996-06-01T00</mi:dateInstalled>
+    <mi:geologicCharacteristic>BOULDER CLAY</mi:geologicCharacteristic>
+    <mi:bedrockType>SEDIMENTARY</mi:bedrockType>
+    <mi:bedrockCondition>(FRESH/JOINTED/WEATHERED)</mi:bedrockCondition>
+    <mi:fractureSpacing>over 200 cm</mi:fractureSpacing>
+    <mi:faultZonesNearby>NO</mi:faultZonesNearby>
+    <mi:distance-Activity>(multiple lines)</mi:distance-Activity>
+    <mi:notes>The antenna is mounted on a 4.5t quarried trapezoidial stone (~2.4m high x ~1.5m base x ~0.7m top) and placed in a hole dug down to the sandstone bedrock. The stone was concreted to the bedrock. The marker is defined as the intersection of the vertical axis from the horizontal benchmark (forced centering plate) with the horizontal plane tangent to the height benchmark (vertical bolt)</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Morpeth</mi:city>
+    <mi:state>Northumberland</mi:state>
+    <mi:country>United Kingdom</mi:country>
+    <mi:tectonicPlate>EURASIAN</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>3645667.9</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>-107277.3</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>5215053.5</mi:zCoordinateInMeters>
+      <mi:latitude-North>+551246.04</mi:latitude-North>
+      <mi:longitude-East>-0014107.79</mi:longitude-East>
+      <mi:elevation-m_ellips.>144.4</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>(multiple lines)</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-12 RM</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>219</equip:serialNumber>
+    <equip:firmwareVersion>3.2.32.1</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>10</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1996-10-31T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1999-12-13T23:59Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>This site operated semi-continuously since the date shown. The back catologue of data are available upon request.</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>LP00105</equip:serialNumber>
+    <equip:firmwareVersion>1L00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>10</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2000-02-01T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2002-04-15T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>LP00105</equip:serialNumber>
+    <equip:firmwareVersion>1L00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2002-04-15T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2002-05-20T14:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>LP00973</equip:serialNumber>
+    <equip:firmwareVersion>6J00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2002-05-20T15:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2002-06-23T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>LP00105</equip:serialNumber>
+    <equip:firmwareVersion>CD00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2002-09-03T12:21Z</equip:dateInstalled>
+    <equip:dateRemoved>2002-10-05T16:45Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>LP00105</equip:serialNumber>
+    <equip:firmwareVersion>CD00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2002-10-05T16:45Z</equip:dateInstalled>
+    <equip:dateRemoved>2004-03-17T10:30Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>LP00970</equip:serialNumber>
+    <equip:firmwareVersion>CD00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2004-03-17T10:31Z</equip:dateInstalled>
+    <equip:dateRemoved>2004-11-18T13:15Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>LP00976</equip:serialNumber>
+    <equip:firmwareVersion>CD00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2004-11-18T13:15Z</equip:dateInstalled>
+    <equip:dateRemoved>2007-04-29T08:47Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETRS</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>4722133054</equip:serialNumber>
+    <equip:firmwareVersion>1.2-0</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2007-10-31T11:36Z</equip:dateInstalled>
+    <equip:dateRemoved>2011-10-13T12:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETR8</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>4843K3347</equip:serialNumber>
+    <equip:firmwareVersion>4.19</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2011-10-13T12:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        NONE</equip:antennaType>
+    <equip:serialNumber>221</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0330</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>Huber+Suhner</equip:antennaCableType>
+    <equip:antennaCableLength>60</equip:antennaCableLength>
+    <equip:dateInstalled>1996-10-31T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2005-06-14T16:00Z</equip:dateRemoved>
+    <equip:notes>Added LNA 2002-12-19T15</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        NONE</equip:antennaType>
+    <equip:serialNumber>221</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0330</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>Huber+Suhner</equip:antennaCableType>
+    <equip:antennaCableLength>60</equip:antennaCableLength>
+    <equip:dateInstalled>2005-06-14T16:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2009-07-26T00:00Z</equip:dateRemoved>
+    <equip:notes>antenna moved by a sheep in enclosure removal time is approximate to a few days only and is based on time series analysis</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        NONE</equip:antennaType>
+    <equip:serialNumber>221</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0330</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>Huber+Suhner</equip:antennaCableType>
+    <equip:antennaCableLength>60</equip:antennaCableLength>
+    <equip:dateInstalled>2009-07-26T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2009-08-17T13:40Z</equip:dateRemoved>
+    <equip:notes>antenna relocated to forced centred position antenna hardware was not changed</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        NONE</equip:antennaType>
+    <equip:serialNumber>221</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0330</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>Huber+Suhner</equip:antennaCableType>
+    <equip:antennaCableLength>60</equip:antennaCableLength>
+    <equip:dateInstalled>2009-08-17T13:40Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>MORG</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>GLONASS+GPS</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>(A4)</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>13299M001</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>5.1413</equip:dX>
+      <equip:dY>0.1382</equip:dY>
+      <equip:dZ>-3.2924</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>1</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>GPS CAMPAIGN/TOTAL STATION</equip:surveyMethod>
+    <equip:dateMeasured>2007-03-29T13:00Z</equip:dateMeasured>
+    <equip:notes>(multiple lines)</equip:notes>
+  </surveyedLocalTies>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL </equip:standardType>
+    <equip:inputFrequency>(if external)</equip:inputFrequency>
+    <equip:effectiveDates>1996-10-31/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </frequencyStandard>
+  <humiditySensor>
+    <equip:type>Met3</equip:type>
+    <equip:manufacturer>Paroscientific</equip:manufacturer>
+    <equip:serialNumber>101666</equip:serialNumber>
+    <equip:heightDiffToAntenna>-0.746</equip:heightDiffToAntenna>
+    <equip:calibrationDate>2007-02-26</equip:calibrationDate>
+    <equip:effectiveDates>2007-07-11/2010-01-08</equip:effectiveDates>
+    <equip:dataSamplingInterval>600</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>2</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>UNASPIRATED</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </humiditySensor>
+  <humiditySensor>
+    <equip:type>Met3</equip:type>
+    <equip:manufacturer>Paroscientific</equip:manufacturer>
+    <equip:serialNumber>101666</equip:serialNumber>
+    <equip:heightDiffToAntenna>-0.746</equip:heightDiffToAntenna>
+    <equip:calibrationDate>2010-02-15</equip:calibrationDate>
+    <equip:effectiveDates>2010-02-24/2012-04-03</equip:effectiveDates>
+    <equip:dataSamplingInterval>600</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>2</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>UNASPIRATED</equip:aspiration>
+    <equip:notes>removed to allow recalibration</equip:notes>
+  </humiditySensor>
+  <humiditySensor>
+    <equip:type>Met4</equip:type>
+    <equip:manufacturer>Paroscientific</equip:manufacturer>
+    <equip:serialNumber>118599</equip:serialNumber>
+    <equip:heightDiffToAntenna>-0.746</equip:heightDiffToAntenna>
+    <equip:calibrationDate>2012-02-01</equip:calibrationDate>
+    <equip:effectiveDates>2012-04-03/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>600</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>2</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>UNASPIRATED</equip:aspiration>
+    <equip:notes>incorrectly previously specified as Met3</equip:notes>
+  </humiditySensor>
+  <pressureSensor>
+    <equip:type>Met3</equip:type>
+    <equip:manufacturer>Paroscientific</equip:manufacturer>
+    <equip:serialNumber>101666</equip:serialNumber>
+    <equip:heightDiffToAntenna>-0.746</equip:heightDiffToAntenna>
+    <equip:calibrationDate>2007-02-26</equip:calibrationDate>
+    <equip:effectiveDates>2007-07-11/2010-01-08</equip:effectiveDates>
+    <equip:dataSamplingInterval>600</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>0.08</equip:accuracy-hPa>
+    <equip:notes>Height is from base of sensor to MORP reference point. Sensor removed for recalibration</equip:notes>
+  </pressureSensor>
+  <pressureSensor>
+    <equip:type>Met3</equip:type>
+    <equip:manufacturer>Paroscientific</equip:manufacturer>
+    <equip:serialNumber>101666</equip:serialNumber>
+    <equip:heightDiffToAntenna>-0.746</equip:heightDiffToAntenna>
+    <equip:calibrationDate>2010-02-15</equip:calibrationDate>
+    <equip:effectiveDates>2010-02-24/2012-02-01</equip:effectiveDates>
+    <equip:dataSamplingInterval>600</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>0.08</equip:accuracy-hPa>
+    <equip:notes>Height is from base of sensor to MORP reference point. Sensor removed for recalibration</equip:notes>
+  </pressureSensor>
+  <pressureSensor>
+    <equip:type>Met4</equip:type>
+    <equip:manufacturer>Paroscientific</equip:manufacturer>
+    <equip:serialNumber>118599</equip:serialNumber>
+    <equip:heightDiffToAntenna>-0.746</equip:heightDiffToAntenna>
+    <equip:calibrationDate>2012-02-01</equip:calibrationDate>
+    <equip:effectiveDates>2012-04-03/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>600</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>0.08</equip:accuracy-hPa>
+    <equip:notes>(multiple lines)</equip:notes>
+  </pressureSensor>
+  <temperatureSensor>
+    <equip:type>Met3</equip:type>
+    <equip:manufacturer>Paroscientific</equip:manufacturer>
+    <equip:serialNumber>101666</equip:serialNumber>
+    <equip:heightDiffToAntenna>-0.746</equip:heightDiffToAntenna>
+    <equip:calibrationDate>2007-02-26</equip:calibrationDate>
+    <equip:effectiveDates>2007-07-11/2010-01-08</equip:effectiveDates>
+    <equip:dataSamplingInterval>600</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>0.5</equip:accuracy-degreesCelcius>
+    <equip:aspiration>UNASPIRATED</equip:aspiration>
+    <equip:notes>Sensor removed for recalibration</equip:notes>
+  </temperatureSensor>
+  <temperatureSensor>
+    <equip:type>Met3</equip:type>
+    <equip:manufacturer>Paroscientific</equip:manufacturer>
+    <equip:serialNumber>101666</equip:serialNumber>
+    <equip:heightDiffToAntenna>-0.746</equip:heightDiffToAntenna>
+    <equip:calibrationDate>2010-02-15</equip:calibrationDate>
+    <equip:effectiveDates>2010-02-24/2012-02-01</equip:effectiveDates>
+    <equip:dataSamplingInterval>600</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>0.5</equip:accuracy-degreesCelcius>
+    <equip:aspiration>UNASPIRATED</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </temperatureSensor>
+  <temperatureSensor>
+    <equip:type>Met4</equip:type>
+    <equip:manufacturer>Paroscientific</equip:manufacturer>
+    <equip:serialNumber>118599</equip:serialNumber>
+    <equip:heightDiffToAntenna>-0.746</equip:heightDiffToAntenna>
+    <equip:calibrationDate>2012-02-01</equip:calibrationDate>
+    <equip:effectiveDates>2012-04-03/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>600</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>0.5</equip:accuracy-degreesCelcius>
+    <equip:aspiration>UNASPIRATED</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </temperatureSensor>
+  <localEpisodicEvents>
+    <li:date>2002-09-26/2002-09-26</li:date>
+    <li:event>WEED CLEARING</li:event>
+  </localEpisodicEvents>
+  <localEpisodicEvents>
+    <li:date>2003-06-06/2003-06-06</li:date>
+    <li:event>WEED CLEARING/GRAVEL DISTRIBUTION</li:event>
+  </localEpisodicEvents>
+  <localEpisodicEvents>
+    <li:date>2004-06-15/2004-06-15</li:date>
+    <li:event>WEED CLEARING</li:event>
+  </localEpisodicEvents>
+  <localEpisodicEvents>
+    <li:date>2005-06-15/2005-06-15</li:date>
+    <li:event>WEED CLEARING AND REPAIR OF FENCING</li:event>
+  </localEpisodicEvents>
+  <localEpisodicEvents>
+    <li:date>2006-06-01/2006-10-30</li:date>
+    <li:event>INSTALLATION OF NEW MONUMENT 7m SOUTH</li:event>
+  </localEpisodicEvents>
+  <localEpisodicEvents>
+    <li:date>2007-07-01/2007-07-30</li:date>
+    <li:event>WEED CLEARING</li:event>
+  </localEpisodicEvents>
+  <localEpisodicEvents>
+    <li:date>2008-11-25/2008-11-25</li:date>
+    <li:event>WEED CLEARING AND RELOCATION OF FENCE</li:event>
+  </localEpisodicEvents>
+  <localEpisodicEvents>
+    <li:date>2009-12-16/2010-01-08</li:date>
+    <li:event>Snow covered antenna for all or part of</li:event>
+  </localEpisodicEvents>
+  <localEpisodicEvents>
+    <li:date>2010-07-26/2010-07-26</li:date>
+    <li:event>Weed clearing from near antenna at</li:event>
+  </localEpisodicEvents>
+  <localEpisodicEvents>
+    <li:date>2010-11-25/2010-11-29</li:date>
+    <li:event>Snow covered antenna for all or part of</li:event>
+  </localEpisodicEvents>
+  <localEpisodicEvents>
+    <li:date>2011-02-17/2011-02-18</li:date>
+    <li:event>Work ongoing at site, do not use data</li:event>
+  </localEpisodicEvents>
+  <localEpisodicEvents>
+    <li:date>2012-03-29/2012-03-29</li:date>
+    <li:event>Weed clearing from near antenna at</li:event>
+  </localEpisodicEvents>
+  <contactAgency>
+    <contact:agency>University of Newcastle</contact:agency>
+    <contact:preferredAbbreviation>NCL</contact:preferredAbbreviation>
+    <contact:mailingAddress>Farm Manager</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>David Watson</contact:name>
+      <contact:telephonePrimary>+44 (0)1670 790227</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>+44 (0)1670 791078</contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Martin Robertson</contact:name>
+      <contact:telephonePrimary>+44 (0)191 2227834</contact:telephonePrimary>
+      <contact:telephoneSecondary>+44 (0)191 2226445</contact:telephoneSecondary>
+      <contact:fax>+44 (0)191 2228691</contact:fax>
+      <contact:e-mail>Martin.Robertson@newcastle.ac.uk</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>Cockle Park Farm Morpeth NE61 7DM UK (multiple lines)</contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>School of Civil Engineering and</contact:agency>
+    <contact:preferredAbbreviation>NCL</contact:preferredAbbreviation>
+    <contact:mailingAddress>University of Newcastle</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Matt King</contact:name>
+      <contact:telephonePrimary>+44 (0)191 2227833</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>+44 (0)191 2226502</contact:fax>
+      <contact:e-mail>m.a.king@ncl.ac.uk</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>Geosciences Newcastle Upon Tyne NE1 7RU UK (multiple lines)</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter></mi:primaryDataCenter>
+    <mi:secondaryDataCenter></mi:secondaryDataCenter>
+    <mi:urlForMoreInformation></mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>Y</mi:siteMap>
+    <mi:siteDiagram>Y</mi:siteDiagram>
+    <mi:horizonMask>Y</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>ftp</mi:sitePictures>
+    <mi:notes>(multiple lines)</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

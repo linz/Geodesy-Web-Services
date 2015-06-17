@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Kazimirs Lapushka</mi:preparedBy>
+    <mi:datePrepared>2013-01-11</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>riga_20120613.log</mi:previousLog>
+    <mi:modifiedSections>3.9, 3.10</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>RIGA permanent GPS</mi:siteName>
+    <mi:fourCharacterID>RIGA</mi:fourCharacterID>
+    <mi:monumentInscription>10371</mi:monumentInscription>
+    <mi:iersDOMESNumber>12302M002</mi:iersDOMESNumber>
+    <mi:cdpNumber>(A4)</mi:cdpNumber>
+    <mi:monumentDescription>Concrete pillar</mi:monumentDescription>
+    <mi:heightOfTheMonument>5.34</mi:heightOfTheMonument>
+    <mi:monumentFoundation>5 m diameter concrete cylinder.</mi:monumentFoundation>
+    <mi:foundationDepth>12</mi:foundationDepth>
+    <mi:markerDescription>standard geodetic mark</mi:markerDescription>
+    <mi:dateInstalled>1995-12-05T04</mi:dateInstalled>
+    <mi:geologicCharacteristic>(BEDROCK/CLAY/CONGLOMERATE/GRAVEL/SAND/etc)</mi:geologicCharacteristic>
+    <mi:bedrockType>METAMORPHIC</mi:bedrockType>
+    <mi:bedrockCondition>JOINTED</mi:bedrockCondition>
+    <mi:fractureSpacing>1-10 cm</mi:fractureSpacing>
+    <mi:faultZonesNearby>No</mi:faultZonesNearby>
+    <mi:distance-Activity>No</mi:distance-Activity>
+    <mi:notes>Concrete pillar with forced centering and levelling brass plate. The height of the monument is above local ground plane. Dolomite with a quaternary covering of alluvium and beach deposits.</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Riga</mi:city>
+    <mi:state>Vidzeme</mi:state>
+    <mi:country>Latvia</mi:country>
+    <mi:tectonicPlate>EURASIAN</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>3183899.3440</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>1421478.3780</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>5322810.7360</mi:zCoordinateInMeters>
+      <mi:latitude-North>+565655.03</mi:latitude-North>
+      <mi:longitude-East>+0240331.38</mi:longitude-East>
+      <mi:elevation-m_ellips.>34.7</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>ITRF-2000 at epoch 1997.0</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>UNKNOWN</equip:serialNumber>
+    <equip:firmwareVersion>UNKNOWN</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1995-12-05T04:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1996-03-28T23:59Z</equip:dateRemoved>
+    <equip:temperatureStabilization>18 +/- 4</equip:temperatureStabilization>
+    <equip:notes>from FGI Finnland</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-8000</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>223</equip:serialNumber>
+    <equip:firmwareVersion>2.8</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1996-03-29T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1999-09-02T13:10Z</equip:dateRemoved>
+    <equip:temperatureStabilization>18 +/- 4</equip:temperatureStabilization>
+    <equip:notes>from OSO Sweden.</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-8000</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>223</equip:serialNumber>
+    <equip:firmwareVersion>2.8.0.7</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1999-09-02T13:45Z</equip:dateInstalled>
+    <equip:dateRemoved>2005-01-13T00:30Z</equip:dateRemoved>
+    <equip:temperatureStabilization>18 +/- 4</equip:temperatureStabilization>
+    <equip:notes>from OSO Sweden.</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>AOA BENCHMARK ACT</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>2050</equip:serialNumber>
+    <equip:firmwareVersion>3.3.32.5</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>4</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2005-01-13T10:08Z</equip:dateInstalled>
+    <equip:dateRemoved>2006-06-17T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>18 +/- 4</equip:temperatureStabilization>
+    <equip:notes>LUAI property.</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-8000</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>223</equip:serialNumber>
+    <equip:firmwareVersion>2.8.0.7</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2006-06-18T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2007-01-08T13:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>18 +/- 4</equip:temperatureStabilization>
+    <equip:notes>from OSO Sweden.</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>AOA BENCHMARK ACT</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>2050</equip:serialNumber>
+    <equip:firmwareVersion>3.3.32.5</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>4</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2007-01-08T13:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2007-05-24T10:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>18 +/- 4</equip:temperatureStabilization>
+    <equip:notes>LUAI property</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-8000</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>223</equip:serialNumber>
+    <equip:firmwareVersion>2.8.0.7</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2007-05-29T11:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2007-09-10T08:30Z</equip:dateRemoved>
+    <equip:temperatureStabilization>18 +/- 4</equip:temperatureStabilization>
+    <equip:notes>from OSO Sweden.</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>AOA BENCHMARK ACT</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>2050</equip:serialNumber>
+    <equip:firmwareVersion>3.3.32.5</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>4</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2007-09-10T09:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2007-12-06T12:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>18 +/- 4</equip:temperatureStabilization>
+    <equip:notes>LUAI property</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200PRO</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>453321</equip:serialNumber>
+    <equip:firmwareVersion>5.60/2.125</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>4</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2007-12-16T12:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2012-12-12T15:20Z</equip:dateRemoved>
+    <equip:temperatureStabilization>18 +/- 4</equip:temperatureStabilization>
+    <equip:notes>none</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200PRO</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>453321</equip:serialNumber>
+    <equip:firmwareVersion>5.60/2.127</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>4</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2012-12-12T15:20Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>18 +/- 4</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        NONE</equip:antennaType>
+    <equip:serialNumber>519</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0850</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>&lt;1</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber>NONE</equip:radomeSerialNumber>
+    <equip:antennaCableType>AWM RG214/U STYLE 1354 E96824-I</equip:antennaCableType>
+    <equip:antennaCableLength>60</equip:antennaCableLength>
+    <equip:dateInstalled>1995-12-05T04:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1996-03-28T23:59Z</equip:dateRemoved>
+    <equip:notes>from FGI Finnland</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>ASH700936D_M    NONE</equip:antennaType>
+    <equip:serialNumber>11471</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0850</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>&lt;1</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber>NONE</equip:radomeSerialNumber>
+    <equip:antennaCableType>AWM RG214/U STYLE 1354 E96824-I</equip:antennaCableType>
+    <equip:antennaCableLength>60</equip:antennaCableLength>
+    <equip:dateInstalled>1996-03-29T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2005-01-13T00:30Z</equip:dateRemoved>
+    <equip:notes>from OSO Sweden</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        NONE</equip:antennaType>
+    <equip:serialNumber>532</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0850</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>&lt;1</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber>NONE</equip:radomeSerialNumber>
+    <equip:antennaCableType>AWM RG214/U STYLE 1354 E96824-I</equip:antennaCableType>
+    <equip:antennaCableLength>60</equip:antennaCableLength>
+    <equip:dateInstalled>2005-01-13T10:08Z</equip:dateInstalled>
+    <equip:dateRemoved>2006-05-20T06:00Z</equip:dateRemoved>
+    <equip:notes>Internally Damaged</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>ASH700936D_M    NONE</equip:antennaType>
+    <equip:serialNumber>11471</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0850</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>&lt;1</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber>NONE</equip:radomeSerialNumber>
+    <equip:antennaCableType>AWM RG214/U STYLE 1354 E96824-I</equip:antennaCableType>
+    <equip:antennaCableLength>60</equip:antennaCableLength>
+    <equip:dateInstalled>2006-05-22T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2007-12-06T12:00Z</equip:dateRemoved>
+    <equip:notes>The same as in point 4.2</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>LEIAT504        LEIS</equip:antennaType>
+    <equip:serialNumber>102588</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0850</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>&lt;1</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>LEIS</equip:antennaRadomeType>
+    <equip:radomeSerialNumber>NONE</equip:radomeSerialNumber>
+    <equip:antennaCableType>AWM RG214/U STYLE 1354 E96824-I</equip:antennaCableType>
+    <equip:antennaCableLength>60</equip:antennaCableLength>
+    <equip:dateInstalled>2007-12-16T12:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>NONE</equip:notes>
+  </gnssAntenna>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>S1884  Laser telescope LS-105</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>SLR</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>1884</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>12302S002</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>-3.401</equip:dX>
+      <equip:dY>18.661</equip:dY>
+      <equip:dZ>-6.963</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>2</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>GPS CAMPAIGN</equip:surveyMethod>
+    <equip:dateMeasured>1995-06-10T12:00Z</equip:dateMeasured>
+    <equip:notes>from local GPS session.</equip:notes>
+  </surveyedLocalTies>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>M1884  Moblas platform</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>SLR</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>7560</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>12302M001</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>14.834</equip:dX>
+      <equip:dY>-4.832</equip:dY>
+      <equip:dZ>-13.919</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>2</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>GPS CAMPAIGN</equip:surveyMethod>
+    <equip:dateMeasured>1995-06-10T12:00Z</equip:dateMeasured>
+    <equip:notes>local GPS session</equip:notes>
+  </surveyedLocalTies>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>S1884 LASER TELESCOPE LS-105</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>SLR</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>1884</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>12302S002</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>-3.4051</equip:dX>
+      <equip:dY>18.6609</equip:dY>
+      <equip:dZ>-6.9630</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>2</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>WITH TACHEOMETRE SET-4220</equip:surveyMethod>
+    <equip:dateMeasured>2004-12-20T10:00Z</equip:dateMeasured>
+    <equip:notes>local survey</equip:notes>
+  </surveyedLocalTies>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>M1884 MOBLAS PLATFORM</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>SLR</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>7560</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>12302M001</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>14.8213</equip:dX>
+      <equip:dY>-4.8370</equip:dY>
+      <equip:dZ>-13.9076</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>2</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>WITH TACHEOMETRE SET-4220</equip:surveyMethod>
+    <equip:dateMeasured>2004-12-20T10:00Z</equip:dateMeasured>
+    <equip:notes>local survey</equip:notes>
+  </surveyedLocalTies>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL </equip:standardType>
+    <equip:inputFrequency>(if external)</equip:inputFrequency>
+    <equip:effectiveDates>1995-12-05/2005-01-13</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL </equip:standardType>
+    <equip:inputFrequency>(if external)</equip:inputFrequency>
+    <equip:effectiveDates>2005-01-13/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </frequencyStandard>
+  <collocationInformation>
+    <equip:instrumentType>SLR</equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates>1995-12-05/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>EUROLAS Consortium.</equip:notes>
+  </collocationInformation>
+  <collocationInformation>
+    <equip:instrumentType>ABSOLUTE GRAVIMETER JiLag-5</equip:instrumentType>
+    <equip:status>MOBILE</equip:status>
+    <equip:effectiveDates>1995-10-25/1995-10-29</equip:effectiveDates>
+    <equip:notes>Finnish Geodetic Institute.</equip:notes>
+  </collocationInformation>
+  <collocationInformation>
+    <equip:instrumentType>ABSOLUTE GRAVIMETER FG5/101</equip:instrumentType>
+    <equip:status>MOBILE</equip:status>
+    <equip:effectiveDates>1996-05-07/1996-05-11</equip:effectiveDates>
+    <equip:notes>IFAG Germany</equip:notes>
+  </collocationInformation>
+  <collocationInformation>
+    <equip:instrumentType>ABSOLUTE GRAVIMETER FG5/107</equip:instrumentType>
+    <equip:status>MOBILE</equip:status>
+    <equip:effectiveDates>1996-08-01/1996-08-12</equip:effectiveDates>
+    <equip:notes>DMA USA</equip:notes>
+  </collocationInformation>
+  <humiditySensor>
+    <equip:type>Hair Hygrometer,</equip:type>
+    <equip:manufacturer>USSR</equip:manufacturer>
+    <equip:serialNumber>M34-3359</equip:serialNumber>
+    <equip:heightDiffToAntenna>3.5</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>1995-12-05/2007-03-30</equip:effectiveDates>
+    <equip:dataSamplingInterval>86400 s</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>10</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>fan</equip:aspiration>
+    <equip:notes>No meteo files given. Not in use for GPS. Not calibrated.</equip:notes>
+  </humiditySensor>
+  <humiditySensor>
+    <equip:type>WXT510</equip:type>
+    <equip:manufacturer>VAISALA</equip:manufacturer>
+    <equip:serialNumber>C1150003</equip:serialNumber>
+    <equip:heightDiffToAntenna>-2.0</equip:heightDiffToAntenna>
+    <equip:calibrationDate>2007-03-16</equip:calibrationDate>
+    <equip:effectiveDates>2007-03-30/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>600 s</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>3</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>NATURAL</equip:aspiration>
+    <equip:notes>Calibrated at Factory. 3% accur. between 0 and 90% RH 5% accur. between 90 and 100% RH</equip:notes>
+  </humiditySensor>
+  <pressureSensor>
+    <equip:type>Precisions Barometer</equip:type>
+    <equip:manufacturer>Paulin Stockholm</equip:manufacturer>
+    <equip:serialNumber>VBM2-1443</equip:serialNumber>
+    <equip:heightDiffToAntenna>3.5</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>1995-12-05/2007-03-30</equip:effectiveDates>
+    <equip:dataSamplingInterval>86400 s</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>0.2 hPa</equip:accuracy-hPa>
+    <equip:notes>No meteo files given. Not in use for GPS. Not calibrated.</equip:notes>
+  </pressureSensor>
+  <pressureSensor>
+    <equip:type>WXT510</equip:type>
+    <equip:manufacturer>VAISALA</equip:manufacturer>
+    <equip:serialNumber>C1150003</equip:serialNumber>
+    <equip:heightDiffToAntenna>-2.0</equip:heightDiffToAntenna>
+    <equip:calibrationDate>2007-03-16</equip:calibrationDate>
+    <equip:effectiveDates>2007-03-30/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>600 s</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>0.5 hPa</equip:accuracy-hPa>
+    <equip:notes>Calibrated at Factory.</equip:notes>
+  </pressureSensor>
+  <temperatureSensor>
+    <equip:type>Mercury Thermometer</equip:type>
+    <equip:manufacturer>USSR</equip:manufacturer>
+    <equip:serialNumber>TMZ-4970</equip:serialNumber>
+    <equip:heightDiffToAntenna>3.5</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>1995-12-05/2007-03-30</equip:effectiveDates>
+    <equip:dataSamplingInterval>86400 s</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>0.1 deg C</equip:accuracy-degreesCelcius>
+    <equip:aspiration>UNASPIRATED</equip:aspiration>
+    <equip:notes>No meteo files given. Not in use for GPS. Not calibrated after factory, hence calibration date is unknown</equip:notes>
+  </temperatureSensor>
+  <temperatureSensor>
+    <equip:type>WXT510</equip:type>
+    <equip:manufacturer>VAISALA</equip:manufacturer>
+    <equip:serialNumber>C1150003</equip:serialNumber>
+    <equip:heightDiffToAntenna>-2.0</equip:heightDiffToAntenna>
+    <equip:calibrationDate>2007-03-16</equip:calibrationDate>
+    <equip:effectiveDates>2007-03-30/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>600 s</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>0.3 deg C</equip:accuracy-degreesCelcius>
+    <equip:aspiration>NATURAL</equip:aspiration>
+    <equip:notes>Calibrated at Factory</equip:notes>
+  </temperatureSensor>
+  <contactAgency>
+    <contact:agency>Institute of astronomy of the University of</contact:agency>
+    <contact:preferredAbbreviation>LUAI</contact:preferredAbbreviation>
+    <contact:mailingAddress>Blvd. Rainis 19,LV-1586,Riga,Latvia</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Kazimirs Lapushka</contact:name>
+      <contact:telephonePrimary>+371 7 611984</contact:telephonePrimary>
+      <contact:telephoneSecondary>+371 7 034580</contact:telephoneSecondary>
+      <contact:fax>+371 7 611984</contact:fax>
+      <contact:e-mail>riglas@lanet.lv</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Valdis Laposhka</contact:name>
+      <contact:telephonePrimary>+371 7 034580</contact:telephonePrimary>
+      <contact:telephoneSecondary>+371 7 611984</contact:telephoneSecondary>
+      <contact:fax>+371 7 611984</contact:fax>
+      <contact:e-mail>riglas@lanet.lv</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>Latvia. (multiple lines)</contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>Institute of astronomy of the University of</contact:agency>
+    <contact:preferredAbbreviation>LUAI</contact:preferredAbbreviation>
+    <contact:mailingAddress>(multiple lines)</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>(multiple lines)</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter></mi:primaryDataCenter>
+    <mi:secondaryDataCenter></mi:secondaryDataCenter>
+    <mi:urlForMoreInformation></mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>Y</mi:siteMap>
+    <mi:siteDiagram>Y</mi:siteDiagram>
+    <mi:horizonMask>Y</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>Y</mi:sitePictures>
+    <mi:notes>(multiple lines)</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

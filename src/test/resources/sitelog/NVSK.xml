@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Vladimir Timofeev, Dmitriy Ardyukov</mi:preparedBy>
+    <mi:datePrepared>2005-03-29</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>nvsk_20070912.log</mi:previousLog>
+    <mi:modifiedSections>8.1,8.2,8.3</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>Novosibirsk</mi:siteName>
+    <mi:fourCharacterID>NVSK</mi:fourCharacterID>
+    <mi:monumentInscription>Seismological and tidal gravity station</mi:monumentInscription>
+    <mi:iersDOMESNumber>12319M001</mi:iersDOMESNumber>
+    <mi:cdpNumber>none</mi:cdpNumber>
+    <mi:monumentDescription>STEEL TUBE(PILLAR/BRASS PLATE/STEEL MAST/etc)</mi:monumentDescription>
+    <mi:heightOfTheMonument>6.1</mi:heightOfTheMonument>
+    <mi:monumentFoundation>WALL (STEEL RODS, CONCRETE BLOCK, ROOF, etc)</mi:monumentFoundation>
+    <mi:foundationDepth></mi:foundationDepth>
+    <mi:markerDescription>BRASS NAIL(CHISELLED CROSS/DIVOT/BRASS NAIL/etc)</mi:markerDescription>
+    <mi:dateInstalled>2000-06-30</mi:dateInstalled>
+    <mi:geologicCharacteristic>SAND AND SANDSTONE</mi:geologicCharacteristic>
+    <mi:bedrockType>SEDIMENTARY</mi:bedrockType>
+    <mi:bedrockCondition>WEATHERED</mi:bedrockCondition>
+    <mi:fractureSpacing>(1-10 cm/10-50 cm/50-200 cm/over 200 cm)</mi:fractureSpacing>
+    <mi:faultZonesNearby>NO(YES/NO/Name of the zone)</mi:faultZonesNearby>
+    <mi:distance-Activity>(multiple lines)</mi:distance-Activity>
+    <mi:notes>Seismical and tidal gravity station established 1976 year. Special 3-inches metal tube (4.5 meters) was installed on the wall(width 0.8 meters), east wall of one floor seismology station building. Forced centered GPS antenna on the top of tube, height from the ground 6.1 m.</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Novosibirsk</mi:city>
+    <mi:state></mi:state>
+    <mi:country>Russia</mi:country>
+    <mi:tectonicPlate>Eurasian</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>433604.1534</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>3655557.7470</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>5191288.0377</mi:zCoordinateInMeters>
+      <mi:latitude-North>+545026.16</mi:latitude-North>
+      <mi:longitude-East>+0831407.80</mi:longitude-East>
+      <mi:elevation-m_ellips.>123.6429</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>(multiple lines)</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE 4700</equip:receiverType>
+    <equip:satelliteSystem>GPS(GPS+GLO+GAL+CMP+QZSS+SBAS)</equip:satelliteSystem>
+    <equip:serialNumber>SN 0220180873</equip:serialNumber>
+    <equip:firmwareVersion>1.20</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2000-06-30T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>Firmware version from 29-AUG-1999 field configuration</equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>TRM33429.00+GP  DOME</equip:antennaType>
+    <equip:serialNumber>0220179989</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>006.1546</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>DOME</equip:antennaRadomeType>
+    <equip:radomeSerialNumber>none</equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength>10</equip:antennaCableLength>
+    <equip:dateInstalled>2000-06-30T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>Forced centered antenna</equip:notes>
+  </gnssAntenna>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL</equip:standardType>
+    <equip:inputFrequency>(Hg)</equip:inputFrequency>
+    <equip:effectiveDates>(CCYY-MM-DD/CCYY-MM-DD)</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </frequencyStandard>
+  <humiditySensor>
+    <equip:type>Thermo-hygrometer</equip:type>
+    <equip:manufacturer>Oregon Scientific, Ltd</equip:manufacturer>
+    <equip:serialNumber>NONE</equip:serialNumber>
+    <equip:heightDiffToAntenna>2.25</equip:heightDiffToAntenna>
+    <equip:calibrationDate>2010-12-25</equip:calibrationDate>
+    <equip:effectiveDates>2010-12-25/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>600</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>1</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>UNASPIRATED</equip:aspiration>
+    <equip:notes>The sensor STR918 is incorporated in the WMR918</equip:notes>
+  </humiditySensor>
+  <pressureSensor>
+    <equip:type>capacity sensor developed in Belgium Royal</equip:type>
+    <equip:manufacturer>M.Van Ruymbeke</equip:manufacturer>
+    <equip:serialNumber>NONE</equip:serialNumber>
+    <equip:heightDiffToAntenna>5</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>(2000-03-06/2000-07-06)</equip:effectiveDates>
+    <equip:dataSamplingInterval>30 sec.</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>0.01 mbar</equip:accuracy-hPa>
+    <equip:notes>first channel</equip:notes>
+  </pressureSensor>
+  <pressureSensor>
+    <equip:type>Baro-thermo-hygrometer</equip:type>
+    <equip:manufacturer>Oregon Scientific, Ltd</equip:manufacturer>
+    <equip:serialNumber>NONE</equip:serialNumber>
+    <equip:heightDiffToAntenna>2.25</equip:heightDiffToAntenna>
+    <equip:calibrationDate>2010-12-25</equip:calibrationDate>
+    <equip:effectiveDates>2010-12-25/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>600</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>1 hPa</equip:accuracy-hPa>
+    <equip:notes>The sensor BTHR918N is incorporated in the</equip:notes>
+  </pressureSensor>
+  <temperatureSensor>
+    <equip:type>resistence bridge in digital MDAS system</equip:type>
+    <equip:manufacturer>NONE</equip:manufacturer>
+    <equip:serialNumber>NONE</equip:serialNumber>
+    <equip:heightDiffToAntenna>5</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>(2000-03-06/2000-07-06)</equip:effectiveDates>
+    <equip:dataSamplingInterval>30 sec.</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>0.01 deg C</equip:accuracy-degreesCelcius>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>second channel</equip:notes>
+  </temperatureSensor>
+  <temperatureSensor>
+    <equip:type>Thermo-hygrometer</equip:type>
+    <equip:manufacturer>Oregon Scientific, Ltd</equip:manufacturer>
+    <equip:serialNumber>NONE</equip:serialNumber>
+    <equip:heightDiffToAntenna>2.25</equip:heightDiffToAntenna>
+    <equip:calibrationDate>2010-12-25</equip:calibrationDate>
+    <equip:effectiveDates>2010-12-25/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>600</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>0.1 deg C</equip:accuracy-degreesCelcius>
+    <equip:aspiration>UNASPIRATED</equip:aspiration>
+    <equip:notes>The sensor STR918 is incorporated in the</equip:notes>
+  </temperatureSensor>
+  <waterVaporSensor>
+    <equip:type>NONE</equip:type>
+    <equip:manufacturer>NONE</equip:manufacturer>
+    <equip:serialNumber>NONE</equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>CCYY-MM-DD/CCYY-MM-DD</equip:effectiveDates>
+    <equip:distanceToAntenna></equip:distanceToAntenna>
+    <equip:notes>(multiple lines)</equip:notes>
+  </waterVaporSensor>
+  <contactAgency>
+    <contact:agency>Trofimuk Institute of Petroleum Geology and</contact:agency>
+    <contact:preferredAbbreviation>IPGG SB RAS</contact:preferredAbbreviation>
+    <contact:mailingAddress>Pr.Akad.Koptyuga, 3, Novosibirsk-90, 630090,</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Vladimir Timofeev</contact:name>
+      <contact:telephonePrimary>+7-383-2-35-64-42</contact:telephonePrimary>
+      <contact:telephoneSecondary>+7-383-2-30-25-91</contact:telephoneSecondary>
+      <contact:fax>+7-383-2-33-34-32</contact:fax>
+      <contact:e-mail>TimofeevVY@ipgg.nsc.ru</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Dmitriy Ardyukov</contact:name>
+      <contact:telephonePrimary>+7-383-2-35-64-42</contact:telephonePrimary>
+      <contact:telephoneSecondary>+7-383-2-30-25-91</contact:telephoneSecondary>
+      <contact:fax>+7-383-2-33-34-32</contact:fax>
+      <contact:e-mail>ArdyukovDG@ipgg.nsc.ru</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>Siberian Branch of Russian Academy of Sciences Russia All troubles please send to Dmitry Ardyukov</contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>Trofimuk Institute of Petroleum Geology and</contact:agency>
+    <contact:preferredAbbreviation>IPGG SB RAS</contact:preferredAbbreviation>
+    <contact:mailingAddress>(multiple lines)</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>(multiple lines)</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter></mi:primaryDataCenter>
+    <mi:secondaryDataCenter></mi:secondaryDataCenter>
+    <mi:urlForMoreInformation></mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>(Y or URL)</mi:siteMap>
+    <mi:siteDiagram>(Y)</mi:siteDiagram>
+    <mi:horizonMask>(Y)</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>(Y)</mi:sitePictures>
+    <mi:notes>(multiple lines)</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

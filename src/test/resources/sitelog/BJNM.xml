@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>LIANG Kun</mi:preparedBy>
+    <mi:datePrepared>2009-02-12</mi:datePrepared>
+    <mi:reportType>NEW</mi:reportType>
+    <mi:previousLog></mi:previousLog>
+    <mi:modifiedSections></mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>BJNM antenna at NIM</mi:siteName>
+    <mi:fourCharacterID>BJNM</mi:fourCharacterID>
+    <mi:monumentInscription>NONE</mi:monumentInscription>
+    <mi:iersDOMESNumber>21616M001</mi:iersDOMESNumber>
+    <mi:cdpNumber>NONE</mi:cdpNumber>
+    <mi:monumentDescription>A round hollow corner of the rack on the rooftop</mi:monumentDescription>
+    <mi:heightOfTheMonument></mi:heightOfTheMonument>
+    <mi:monumentFoundation>Metal rack on the rooftop</mi:monumentFoundation>
+    <mi:foundationDepth></mi:foundationDepth>
+    <mi:markerDescription>ARP only</mi:markerDescription>
+    <mi:dateInstalled>2008-10-22T02</mi:dateInstalled>
+    <mi:geologicCharacteristic>(BEDROCK/CLAY/CONGLOMERATE/GRAVEL/SAND/etc)</mi:geologicCharacteristic>
+    <mi:bedrockType>(IGNEOUS/METAMORPHIC/SEDIMENTARY)</mi:bedrockType>
+    <mi:bedrockCondition>(FRESH/JOINTED/WEATHERED)</mi:bedrockCondition>
+    <mi:fractureSpacing>(1-10 cm/11-50 cm/51-200 cm/over 200 cm)</mi:fractureSpacing>
+    <mi:faultZonesNearby>(YES/NO/Name of the zone)</mi:faultZonesNearby>
+    <mi:distance-Activity>(multiple lines)</mi:distance-Activity>
+    <mi:notes>Antenna is fixed in the round northeast corner of the metal rack layed in the fixed position on the top of Building 20# of the experimental base at NIM</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Beijing</mi:city>
+    <mi:state>Beijing</mi:state>
+    <mi:country>China</mi:country>
+    <mi:tectonicPlate>Eurasia</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>-2154287.413</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>4373440.047</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>4098885.628</mi:zCoordinateInMeters>
+      <mi:latitude-North>+401443.17</mi:latitude-North>
+      <mi:longitude-East>+1161326.86</mi:longitude-East>
+      <mi:elevation-m_ellips.>118.6</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>(multiple lines)</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>SEPT POLARX3ETR</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>2001087</equip:serialNumber>
+    <equip:firmwareVersion>2.0</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>15</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2010-05-04T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>NONE</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>NOV702GG        NONE</equip:antennaType>
+    <equip:serialNumber>01017577</equip:serialNumber>
+    <equip:antennaReferencePoint>BAM</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType></equip:antennaCableType>
+    <equip:antennaCableLength>30</equip:antennaCableLength>
+    <equip:dateInstalled>2010-08-21T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <frequencyStandard>
+    <equip:standardType>EXTERNAL HYDROGEN MASER</equip:standardType>
+    <equip:inputFrequency>10M Hz</equip:inputFrequency>
+    <equip:effectiveDates>2006-06-25/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>Input signal is UTC(NIM). It is generated</equip:notes>
+  </frequencyStandard>
+  <collocationInformation>
+    <equip:instrumentType>NATIONAL TIME &amp; FREQUENCY STANDARDS</equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates>(CCYY-MM-DD/CCYY-MM-DD)</equip:effectiveDates>
+    <equip:notes>Full name is National Time &amp; Frequency  Metrology Primary Standards</equip:notes>
+  </collocationInformation>
+  <humiditySensor>
+    <equip:type>HygroClip CP01</equip:type>
+    <equip:manufacturer>Rotronic</equip:manufacturer>
+    <equip:serialNumber>10070716101</equip:serialNumber>
+    <equip:heightDiffToAntenna>-0.12</equip:heightDiffToAntenna>
+    <equip:calibrationDate>2010-08-18</equip:calibrationDate>
+    <equip:effectiveDates>(CCYY-MM-DD/CCYY-MM-DD)</equip:effectiveDates>
+    <equip:dataSamplingInterval>600</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>1.5</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>FAN</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </humiditySensor>
+  <pressureSensor>
+    <equip:type>F02002-M004W-A</equip:type>
+    <equip:manufacturer>FRONTTECH</equip:manufacturer>
+    <equip:serialNumber>MSP100500450N</equip:serialNumber>
+    <equip:heightDiffToAntenna>-0.97</equip:heightDiffToAntenna>
+    <equip:calibrationDate>2010-08-18</equip:calibrationDate>
+    <equip:effectiveDates>(CCYY-MM-DD/CCYY-MM-DD)</equip:effectiveDates>
+    <equip:dataSamplingInterval>600</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>1.5</equip:accuracy-hPa>
+    <equip:notes>(multiple lines)</equip:notes>
+  </pressureSensor>
+  <temperatureSensor>
+    <equip:type>HygroClip CP01</equip:type>
+    <equip:manufacturer>Rotronic</equip:manufacturer>
+    <equip:serialNumber>10070716101</equip:serialNumber>
+    <equip:heightDiffToAntenna>-0.12</equip:heightDiffToAntenna>
+    <equip:calibrationDate>2010-08-18</equip:calibrationDate>
+    <equip:effectiveDates>(CCYY-MM-DD/CCYY-MM-DD)</equip:effectiveDates>
+    <equip:dataSamplingInterval>600</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>0.3</equip:accuracy-degreesCelcius>
+    <equip:aspiration>FAN</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </temperatureSensor>
+  <waterVaporSensor>
+    <equip:type></equip:type>
+    <equip:manufacturer></equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>(CCYY-MM-DD/CCYY-MM-DD)</equip:effectiveDates>
+    <equip:distanceToAntenna></equip:distanceToAntenna>
+    <equip:notes>(multiple lines)</equip:notes>
+  </waterVaporSensor>
+  <radioInterferences>
+    <li:possibleProblemSources>(TV/CELL PHONE ANTENNA/RADAR/etc)</li:possibleProblemSources>
+    <li:effectiveDates>(CCYY-MM-DD/CCYY-MM-DD)</li:effectiveDates>
+    <li:observedDegredation></li:observedDegredation>
+    <li:notes>(multiple lines)</li:notes>
+  </radioInterferences>
+  <localEpisodicEvents>
+    <li:date>(CCYY-MM-DD/CCYY-MM-DD)</li:date>
+    <li:event>(TREE CLEARING/CONSTRUCTION/etc)</li:event>
+  </localEpisodicEvents>
+  <contactAgency>
+    <contact:agency>National Institute of Metrology</contact:agency>
+    <contact:preferredAbbreviation>NIM</contact:preferredAbbreviation>
+    <contact:mailingAddress>No.18, Bei San Huan Dong Lu, Chaoyang Dist,</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>LIANG Kun</contact:name>
+      <contact:telephonePrimary>+86-10-64525207</contact:telephonePrimary>
+      <contact:telephoneSecondary>+86-10-64225327</contact:telephoneSecondary>
+      <contact:fax>+86-10-64214828</contact:fax>
+      <contact:e-mail>Liangk@nim.ac.cn</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>ZHANG Aimin</contact:name>
+      <contact:telephonePrimary>+86-10-64525206</contact:telephonePrimary>
+      <contact:telephoneSecondary>+86-10-64214828</contact:telephoneSecondary>
+      <contact:fax>+86-10-64214828</contact:fax>
+      <contact:e-mail>Zhangam@nim.ac.cn</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>Beijing, P.R.China,  100013 (multiple lines)</contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>National Institute of Metrology</contact:agency>
+    <contact:preferredAbbreviation>NIM</contact:preferredAbbreviation>
+    <contact:mailingAddress>No.18, Bei San Huan Dong Lu, Chaoyang Dist,</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>ZHANG Aimin</contact:name>
+      <contact:telephonePrimary>+86-10-64525206</contact:telephonePrimary>
+      <contact:telephoneSecondary>+86-10-64214828</contact:telephoneSecondary>
+      <contact:fax>+86-10-64214828</contact:fax>
+      <contact:e-mail>Zhangam@nim.ac.cn</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>Beijing, P.R.China,  100013 (multiple lines)</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter></mi:primaryDataCenter>
+    <mi:secondaryDataCenter></mi:secondaryDataCenter>
+    <mi:urlForMoreInformation></mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>(Y or URL)</mi:siteMap>
+    <mi:siteDiagram>(Y or URL)</mi:siteDiagram>
+    <mi:horizonMask>(Y or URL)</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>(Y or URL)</mi:sitePictures>
+    <mi:notes>(multiple lines)</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

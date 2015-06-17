@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Hannu Koivula</mi:preparedBy>
+    <mi:datePrepared>2008-09-30</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>metz_20020627.log</mi:previousLog>
+    <mi:modifiedSections>3.3,11</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>METSAHOVI</mi:siteName>
+    <mi:fourCharacterID>METZ</mi:fourCharacterID>
+    <mi:monumentInscription></mi:monumentInscription>
+    <mi:iersDOMESNumber>10503M005</mi:iersDOMESNumber>
+    <mi:cdpNumber></mi:cdpNumber>
+    <mi:monumentDescription>STEEL MAST</mi:monumentDescription>
+    <mi:heightOfTheMonument>20</mi:heightOfTheMonument>
+    <mi:monumentFoundation>BEDROCK</mi:monumentFoundation>
+    <mi:foundationDepth></mi:foundationDepth>
+    <mi:markerDescription></mi:markerDescription>
+    <mi:dateInstalled>1992-05-01T12</mi:dateInstalled>
+    <mi:geologicCharacteristic>BEDROCK</mi:geologicCharacteristic>
+    <mi:bedrockType>METAMORPHIC</mi:bedrockType>
+    <mi:bedrockCondition>WEATHERED</mi:bedrockCondition>
+    <mi:fractureSpacing>over 200 cm</mi:fractureSpacing>
+    <mi:faultZonesNearby>NO</mi:faultZonesNearby>
+    <mi:distance-Activity></mi:distance-Activity>
+    <mi:notes>20-m high steel mast, height change of w.r.t. given position is 0.23 x (T-5) mm, where T is the mast temperature in Deg C</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Kirkkonummi (40 km west from Helsinki)</mi:city>
+    <mi:state></mi:state>
+    <mi:country>Finland</mi:country>
+    <mi:tectonicPlate>Eurasian</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>2892570.935</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>1311843.339</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>5512634.049</mi:zCoordinateInMeters>
+      <mi:latitude-North>+601302.92</mi:latitude-North>
+      <mi:longitude-East>+0242343.18</mi:longitude-East>
+      <mi:elevation-m_ellips.>94.5</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>(multiple lines)</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z18</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>00117</equip:serialNumber>
+    <equip:firmwareVersion>0057ZT12</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1998-10-12T06:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2000-02-12T12:26Z</equip:dateRemoved>
+    <equip:temperatureStabilization>20 +/-2 deg C</equip:temperatureStabilization>
+    <equip:notes>Out of operation 1999-05-10... 1999-08-17, defective, broken again 2000-02-12</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>JPS EUROCARD</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>MT302125212</equip:serialNumber>
+    <equip:firmwareVersion>2.1,Jun16,2000</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>1</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2000-08-14T14:30Z</equip:dateInstalled>
+    <equip:dateRemoved>2008-09-29T08:39Z</equip:dateRemoved>
+    <equip:temperatureStabilization>21 +/-2 deg C</equip:temperatureStabilization>
+    <equip:notes>2002-01-07 Firmware 2.2 p1 Oct 15, 2001</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>JPS EUROCARD</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>MT302125212</equip:serialNumber>
+    <equip:firmwareVersion>2.6.1,Jan 10,2008</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>1</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2008-09-29T08:39Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>21 +/-2 deg C</equip:temperatureStabilization>
+    <equip:notes>Firmware upgrade</equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>ASH701073.1     NONE</equip:antennaType>
+    <equip:serialNumber>112</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>Suhner S-12272-4</equip:antennaCableType>
+    <equip:antennaCableLength>40</equip:antennaCableLength>
+    <equip:dateInstalled>1998-10-12T06:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>GPS ANTENNA MOUNTING POINT</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>IGS GPS</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber></equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>10503S011</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>0.951</equip:dX>
+      <equip:dY>-0.205</equip:dY>
+      <equip:dZ>-0.398</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>1</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>GPS, LEVELLING, DISTANCE</equip:surveyMethod>
+    <equip:dateMeasured>1998-10-12T12:00Z </equip:dateMeasured>
+    <equip:notes>measured at 5 deg C, see 1. The height of 10503S011 is stabilised</equip:notes>
+  </surveyedLocalTies>
+  <frequencyStandard>
+    <equip:standardType>EXTERNAL QUARTZ                            </equip:standardType>
+    <equip:inputFrequency>5 MHz        </equip:inputFrequency>
+    <equip:effectiveDates>1998-10-12/CCYY-MM-DD </equip:effectiveDates>
+    <equip:notes>Oscilloquartz 8601 BVA</equip:notes>
+  </frequencyStandard>
+  <collocationInformation>
+    <equip:instrumentType>GPS </equip:instrumentType>
+    <equip:status>PERMANENT            </equip:status>
+    <equip:effectiveDates>1992-05-01/CCYY-MM-DD                  </equip:effectiveDates>
+    <equip:notes>DOMES NR 10503S011</equip:notes>
+  </collocationInformation>
+  <collocationInformation>
+    <equip:instrumentType>SLR 7806            </equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates>1998-01-01/CCYY-MM-DD </equip:effectiveDates>
+    <equip:notes>DOMES NR 10503S014</equip:notes>
+  </collocationInformation>
+  <collocationInformation>
+    <equip:instrumentType>DORIS               </equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates>1988-06-21/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>DOMES NR 10503S013</equip:notes>
+  </collocationInformation>
+  <collocationInformation>
+    <equip:instrumentType>VLBI                </equip:instrumentType>
+    <equip:status>EPISODIC </equip:status>
+    <equip:effectiveDates>1989-07-01/1989-07-10 </equip:effectiveDates>
+    <equip:notes>DOMES NR 10503M002                        </equip:notes>
+  </collocationInformation>
+  <collocationInformation>
+    <equip:instrumentType>SUPERCONDUCTING GRAVIMETER</equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates>1994-08-10/CCYY-MM-DD </equip:effectiveDates>
+    <equip:notes></equip:notes>
+  </collocationInformation>
+  <humiditySensor>
+    <equip:type>HMP35D</equip:type>
+    <equip:manufacturer>Vaisala</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>-5.3</equip:heightDiffToAntenna>
+    <equip:calibrationDate></equip:calibrationDate>
+    <equip:effectiveDates>1997-05-21/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>600</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>3% rel h</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>NATURAL</equip:aspiration>
+    <equip:notes>sliding average  over 100 sec</equip:notes>
+  </humiditySensor>
+  <pressureSensor>
+    <equip:type>PTB200A</equip:type>
+    <equip:manufacturer>Vaisala</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>-5.3</equip:heightDiffToAntenna>
+    <equip:calibrationDate></equip:calibrationDate>
+    <equip:effectiveDates>1997-05-21/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>600</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>0.2 hPa</equip:accuracy-hPa>
+    <equip:notes>sliding average over 100 sec</equip:notes>
+  </pressureSensor>
+  <temperatureSensor>
+    <equip:type>HMP35D (Pt-100)</equip:type>
+    <equip:manufacturer>Vaisala</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>-5.3</equip:heightDiffToAntenna>
+    <equip:calibrationDate></equip:calibrationDate>
+    <equip:effectiveDates>1997-05-21/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>600</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>0.2 deg C</equip:accuracy-degreesCelcius>
+    <equip:aspiration>NATURAL</equip:aspiration>
+    <equip:notes>sliding average over 100 sec</equip:notes>
+  </temperatureSensor>
+  <waterVaporSensor>
+    <equip:type></equip:type>
+    <equip:manufacturer></equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate></equip:calibrationDate>
+    <equip:effectiveDates></equip:effectiveDates>
+    <equip:distanceToAntenna></equip:distanceToAntenna>
+    <equip:notes></equip:notes>
+  </waterVaporSensor>
+  <radioInterferences>
+    <li:possibleProblemSources>NO</li:possibleProblemSources>
+    <li:effectiveDates></li:effectiveDates>
+    <li:observedDegredation></li:observedDegredation>
+    <li:notes></li:notes>
+  </radioInterferences>
+  <multipathSources>
+    <li:possibleProblemSources>1990-01-01/CCYY-MM-DD</li:possibleProblemSources>
+    <li:effectiveDates>1990-01-01/CCYY-MM-DD</li:effectiveDates>
+    <li:notes>distance  40 m, rising 4 m over the antenna</li:notes>
+  </multipathSources>
+  <multipathSources>
+    <li:possibleProblemSources>1998-10-12/CCYY-MM-DD</li:possibleProblemSources>
+    <li:effectiveDates>1998-10-12/CCYY-MM-DD</li:effectiveDates>
+    <li:notes>distance 1 m, same height</li:notes>
+  </multipathSources>
+  <signalObstructions>
+    <li:possibleProblemSources></li:possibleProblemSources>
+    <li:effectiveDates></li:effectiveDates>
+    <li:notes>see 9.2.1</li:notes>
+  </signalObstructions>
+  <localEpisodicEvents>
+    <li:date></li:date>
+    <li:event></li:event>
+  </localEpisodicEvents>
+  <contactAgency>
+    <contact:agency>Finnish Geodetic Institute</contact:agency>
+    <contact:preferredAbbreviation>FGI</contact:preferredAbbreviation>
+    <contact:mailingAddress>Geodeetinrinne 2, FIN-02430 Masala, Finland</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>FinnRef GPS group</contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail>FinnRef@fgi.fi</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Hannu Koivula</contact:name>
+      <contact:telephonePrimary>+358-9-29555221</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>+358-9-29555200</contact:fax>
+      <contact:e-mail>Hannu.Koivula@fgi.fi</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes></contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>Finnish Geodetic Institute</contact:agency>
+    <contact:preferredAbbreviation>FGI</contact:preferredAbbreviation>
+    <contact:mailingAddress></contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes></contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter>www.fgi.fi</mi:primaryDataCenter>
+    <mi:secondaryDataCenter>www.fgi.fi</mi:secondaryDataCenter>
+    <mi:urlForMoreInformation>www.fgi.fi</mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>Y</mi:siteMap>
+    <mi:siteDiagram>Y</mi:siteDiagram>
+    <mi:horizonMask>Y</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>Y</mi:sitePictures>
+    <mi:notes></mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

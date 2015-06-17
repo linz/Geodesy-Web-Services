@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>cors-adm</mi:preparedBy>
+    <mi:datePrepared>2013-08-09</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>usno_20100325.log</mi:previousLog>
+    <mi:modifiedSections>2 4.1 4.2</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>U.S. Naval Observ</mi:siteName>
+    <mi:fourCharacterID>USNO</mi:fourCharacterID>
+    <mi:monumentInscription>no monument, ARP</mi:monumentInscription>
+    <mi:iersDOMESNumber>40451S003</mi:iersDOMESNumber>
+    <mi:cdpNumber>NONE</mi:cdpNumber>
+    <mi:monumentDescription>Rod in a mortar rooftop parapet</mi:monumentDescription>
+    <mi:heightOfTheMonument></mi:heightOfTheMonument>
+    <mi:monumentFoundation>(STEEL RODS, CONCRETE BLOCK, ROOF, etc)</mi:monumentFoundation>
+    <mi:foundationDepth></mi:foundationDepth>
+    <mi:markerDescription>(CHISELLED CROSS/DIVOT/BRASS NAIL/etc)</mi:markerDescription>
+    <mi:dateInstalled>1997-04-24</mi:dateInstalled>
+    <mi:geologicCharacteristic>on edge of roof of 3-story building</mi:geologicCharacteristic>
+    <mi:bedrockType>(IGNEOUS/METAMORPHIC/SEDIMENTARY)</mi:bedrockType>
+    <mi:bedrockCondition>(FRESH/JOINTED/WEATHERED)</mi:bedrockCondition>
+    <mi:fractureSpacing>(1-10 cm/11-50 cm/51-200 cm/over 200 cm)</mi:fractureSpacing>
+    <mi:faultZonesNearby>(YES/NO/Name of the zone)</mi:faultZonesNearby>
+    <mi:distance-Activity>(multiple lines)</mi:distance-Activity>
+    <mi:notes>(multiple lines) The antenna is mounted near the edge of the roof (flat) of Building 52 (3 stories) at the U.S. Naval Observatory inside Washington, DC.  There are no nearby geodetic markers or control points.</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Washington</mi:city>
+    <mi:state>District of Columbia</mi:state>
+    <mi:country>USA</mi:country>
+    <mi:tectonicPlate>North American</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>1112189.773</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>-4842955.026</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>3985352.266</mi:zCoordinateInMeters>
+      <mi:latitude-North>+385508.27</mi:latitude-North>
+      <mi:longitude-East>-0770358.41</mi:longitude-East>
+      <mi:elevation-m_ellips.>48.9</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>ARP IGS08 POSITION (EPOCH 2005.00) Published by the IGS in Nov 2010.</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-12 RM</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>T246</equip:serialNumber>
+    <equip:firmwareVersion>3.2.32.4</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>1997-04-24T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1999-08-13T14:46Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>24-APR-1997 to 12-AUG-1998 the clock vault of Bldg 52A.  The space is environmental controlled but not stringently. 12-AUG-1998 to present environmentally controlled chamber within the clock vault (Bldg 52A); specs are +/- 0.15 C for temp. and +/- 1% for rel. humidity.</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-12 RM</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>T246</equip:serialNumber>
+    <equip:firmwareVersion>3.2.32.9</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>1999-08-13T14:46Z</equip:dateInstalled>
+    <equip:dateRemoved>1999-10-26T19:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>firmware update only; no other change</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>AOA SNR-12 ACT</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>245-U</equip:serialNumber>
+    <equip:firmwareVersion>3.3.32.3</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>1999-10-26T20:15Z</equip:dateInstalled>
+    <equip:dateRemoved>1999-11-29T15:50Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>continues to be located in environmentally controlled chamber</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>AOA SNR-12 ACT</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>246-U</equip:serialNumber>
+    <equip:firmwareVersion>3.3.32.3</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>1999-11-29T16:10Z</equip:dateInstalled>
+    <equip:dateRemoved>2000-06-29T15:15Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>continues to be located in environmentally controlled chamber</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>AOA SNR-12 ACT</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>246-U</equip:serialNumber>
+    <equip:firmwareVersion>3.3.32.4</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>2000-06-29T15:15Z</equip:dateInstalled>
+    <equip:dateRemoved>2002-03-12T15:15Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>firmware update only; no other change</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3T</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>RT919994503</equip:serialNumber>
+    <equip:firmwareVersion>1L01-1D04</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>2002-03-12T15:35Z</equip:dateInstalled>
+    <equip:dateRemoved>2008-08-19T16:07Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>no other changes (environmentally controlled chamber still in use)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3T</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>RT920013104</equip:serialNumber>
+    <equip:firmwareVersion>1L01-1D04 Beta</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2008-08-19T16:07Z</equip:dateInstalled>
+    <equip:dateRemoved>2009-09-18T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>no other changes (environmentally controlled chamber still in use)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3T</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>RT919994503</equip:serialNumber>
+    <equip:firmwareVersion>1L01-1D04</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>10</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2009-09-19T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>(environmentally controlled chamber still</equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        NONE</equip:antennaType>
+    <equip:serialNumber>309</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>oriented North but not measured</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>1997-04-24T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1998-11-12</equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        NONE</equip:antennaType>
+    <equip:serialNumber>309</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>oriented North but not measured</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>1998-11-12T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>Antenna removed at ~13 parapet coping (painted metal) on the roof edge immediately below the antenna.  The same antenna was reinstalled in the same location about 30 minutes later. Antenna cable changed on 14-OCT-1999.  The cable type (Andrew FSJ1-50A) and specs remain unchanged.</equip:notes>
+  </gnssAntenna>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>none</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>(SLR/VLBI/LOCAL CONTROL/FOOTPRINT/etc)</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>none</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber></equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX></equip:dX>
+      <equip:dY></equip:dY>
+      <equip:dZ></equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>(mm)</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>(GPS CAMPAIGN/TRILATERATION/TRIANGULATION/etc)</equip:surveyMethod>
+    <equip:dateMeasured>(CCYY-MM-DDThh:mmZ)</equip:dateMeasured>
+    <equip:notes>(multiple lines)</equip:notes>
+  </surveyedLocalTies>
+  <frequencyStandard>
+    <equip:standardType>steered H-MASER</equip:standardType>
+    <equip:inputFrequency>5 MHz</equip:inputFrequency>
+    <equip:effectiveDates>1997-04-24/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>reference signal from an H-maser (MC3) located in Bldg 52 which is steered to the USNO Master Clock (MC2), the realization of UTC(USNO); calibration data for MC3-MC2 are available; calibration of clock offset between MC3 and GPS receiver being investigated. Cable for 5MHz signal is RG-223 with thermal coeff. of 3000 PPM over (+10 to 30 C range) or 150 PPM/C. The 1 PPS output signal is monitored and compared with reference to determine clock offsets when receiver resets. On 12-NOV-1988 the trigger level for the 1 PPS monitoring was changed from 1 V to 0.5 V.</equip:notes>
+  </frequencyStandard>
+  <collocationInformation>
+    <equip:instrumentType>none</equip:instrumentType>
+    <equip:status>       Status                 :</equip:status>
+    <equip:effectiveDates>(CCYY-MM-DD/CCYY-MM-DD)</equip:effectiveDates>
+    <equip:notes>       Notes                  :</equip:notes>
+  </collocationInformation>
+  <humiditySensor>
+    <equip:type>Lithium chloride dew point units</equip:type>
+    <equip:manufacturer>Honeywell probes/General Eastern units;</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>(1997-04-24/2001-06-13)</equip:effectiveDates>
+    <equip:dataSamplingInterval>10</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>dew point to 5 deg F</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>probes are treated with lithium chloride activated solution and dried</equip:notes>
+  </humiditySensor>
+  <humiditySensor>
+    <equip:type>Thin film capacitor</equip:type>
+    <equip:manufacturer>RainWise Remote Weather Data Logger</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>(2001-06-15/2001-07-25)</equip:effectiveDates>
+    <equip:dataSamplingInterval>5 min</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>2% at 25 C</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes></equip:notes>
+  </humiditySensor>
+  <humiditySensor>
+    <equip:type>Weather Report Logger (WRL-25)</equip:type>
+    <equip:manufacturer>Texas Weather Instruments</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>(2001-07-25/2001-08-21)</equip:effectiveDates>
+    <equip:dataSamplingInterval>5 min</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>2%</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes></equip:notes>
+  </humiditySensor>
+  <humiditySensor>
+    <equip:type>HUMICA H-sensor (pn 16663)</equip:type>
+    <equip:manufacturer>Vaisala</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2001-08-21/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>15 seconds</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>+/-1%(0...90%RH)</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>NOAA GSOS # 062</equip:notes>
+  </humiditySensor>
+  <pressureSensor>
+    <equip:type>Digital barometer (model 361)</equip:type>
+    <equip:manufacturer>Setra</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>unknown</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>(1997-04-24/2001-06-13)</equip:effectiveDates>
+    <equip:dataSamplingInterval>10</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>0.1 mm mercury</equip:accuracy-hPa>
+    <equip:notes>all met sensors are located at USNO in Building 7 (the Transit House for 6-inch transit circle); air temp, air pressure, and dew point read every 10 seconds; contact for met data is Theodore J. Rafferty, Astrometry Dept., USNO (TJR@sicon.usno.navy.mil)</equip:notes>
+  </pressureSensor>
+  <pressureSensor>
+    <equip:type>Digital barometer</equip:type>
+    <equip:manufacturer>RainWise Remote Weather Data Logger</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>unknown</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>(2001-06-15/2001-07-25)</equip:effectiveDates>
+    <equip:dataSamplingInterval>5 min</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>0.1 mbar</equip:accuracy-hPa>
+    <equip:notes>met sensors are located at USNO on rooftop of Building 78 (Time Service)</equip:notes>
+  </pressureSensor>
+  <pressureSensor>
+    <equip:type>Weather Report Logger (WRL-25)</equip:type>
+    <equip:manufacturer>Texas Weather Instruments</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>unknown</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>(2001-07-25/2001-08-21)</equip:effectiveDates>
+    <equip:dataSamplingInterval>5 min</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>10 mbar</equip:accuracy-hPa>
+    <equip:notes>met sensors are located at USNO on rooftop of Building 78 (Time Service)</equip:notes>
+  </pressureSensor>
+  <pressureSensor>
+    <equip:type>PTB220</equip:type>
+    <equip:manufacturer>Vaisala</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>-0.724</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2001-08-21/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>15 seconds</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>+/-0.1 mbar</equip:accuracy-hPa>
+    <equip:notes>met sensors are located at USNO on rooftop of Building 52A (opposite end from GPS ant) NOAA GSOS # 062</equip:notes>
+  </pressureSensor>
+  <temperatureSensor>
+    <equip:type>Platium Res Probes (model CT-807-A)</equip:type>
+    <equip:manufacturer>Hy-cal</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>(1997-04-24/2001-06-13)</equip:effectiveDates>
+    <equip:dataSamplingInterval>10</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>(deg C)</equip:accuracy-degreesCelcius>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </temperatureSensor>
+  <temperatureSensor>
+    <equip:type>temperature sensor</equip:type>
+    <equip:manufacturer>RainWise Remote Weather Data Logger</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>(2001-06-15/2001-07-25)</equip:effectiveDates>
+    <equip:dataSamplingInterval>5 min</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>0.3 C</equip:accuracy-degreesCelcius>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </temperatureSensor>
+  <temperatureSensor>
+    <equip:type>Weather Report Logger (WRL-25)</equip:type>
+    <equip:manufacturer>Texas Weather Instruments</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>(2001-07-25/2001-08-21)</equip:effectiveDates>
+    <equip:dataSamplingInterval>5 min</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>0.4 C</equip:accuracy-degreesCelcius>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </temperatureSensor>
+  <temperatureSensor>
+    <equip:type>PT100 RTD 1/s DIN 43760B</equip:type>
+    <equip:manufacturer>Vaisala</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2001-08-21/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>15 seconds</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>+/-0.1 @ 20.0C</equip:accuracy-degreesCelcius>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>NOAA GSOS # 062</equip:notes>
+  </temperatureSensor>
+  <waterVaporSensor>
+    <equip:type>none</equip:type>
+    <equip:manufacturer></equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>CCYY-MM-DD/CCYY-MM-DD</equip:effectiveDates>
+    <equip:distanceToAntenna></equip:distanceToAntenna>
+    <equip:notes>(multiple lines)</equip:notes>
+  </waterVaporSensor>
+  <contactAgency>
+    <contact:agency>U.S. Naval Observatory</contact:agency>
+    <contact:preferredAbbreviation>USNO</contact:preferredAbbreviation>
+    <contact:mailingAddress>TS Dept.</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Edward Powers (USNO)</contact:name>
+      <contact:telephonePrimary>202-762-1451</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>202-762-1511</contact:fax>
+      <contact:e-mail>edward.powers@usno.navy.mil</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Blair Fonville</contact:name>
+      <contact:telephonePrimary>202-762-1450</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail>blair.fonville@usno.navy.mil</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>3450 Massachusetts Ave., NW Washington, DC  20392-5420 (Additional Information)</contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>U.S. Naval Observatory</contact:agency>
+    <contact:preferredAbbreviation>USNO</contact:preferredAbbreviation>
+    <contact:mailingAddress>TS Dept.</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Edward Powers USNO</contact:name>
+      <contact:telephonePrimary>202-762-1451</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>202-762-1511</contact:fax>
+      <contact:e-mail>edward.powers@usno.navy.mil</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>3450 Massachusetts Ave., NW Washington, DC  20392-5420 NOAA-NGS only facilitates data flow</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter>http</mi:primaryDataCenter>
+    <mi:secondaryDataCenter>http</mi:secondaryDataCenter>
+    <mi:urlForMoreInformation>http</mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>(Y or URL)</mi:siteMap>
+    <mi:siteDiagram>N</mi:siteDiagram>
+    <mi:horizonMask>N</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>N</mi:sitePictures>
+    <mi:notes>(multiple lines)</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

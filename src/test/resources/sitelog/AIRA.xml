@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Tomoaki Furuya / Kazuki Sakai / Motomu Mandokoro</mi:preparedBy>
+    <mi:datePrepared>2012-08-21</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>aira_20120802.log</mi:previousLog>
+    <mi:modifiedSections>3.6, 3.7</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>AIRA</mi:siteName>
+    <mi:fourCharacterID>AIRA</mi:fourCharacterID>
+    <mi:monumentInscription></mi:monumentInscription>
+    <mi:iersDOMESNumber>21742S001</mi:iersDOMESNumber>
+    <mi:cdpNumber></mi:cdpNumber>
+    <mi:monumentDescription>PILLAR</mi:monumentDescription>
+    <mi:heightOfTheMonument>5.4</mi:heightOfTheMonument>
+    <mi:monumentFoundation>CONCRETE BLOCK</mi:monumentFoundation>
+    <mi:foundationDepth>1.5</mi:foundationDepth>
+    <mi:markerDescription>none</mi:markerDescription>
+    <mi:dateInstalled>1997-12-05</mi:dateInstalled>
+    <mi:geologicCharacteristic>QUATERNARY CLAY</mi:geologicCharacteristic>
+    <mi:bedrockType></mi:bedrockType>
+    <mi:bedrockCondition></mi:bedrockCondition>
+    <mi:fractureSpacing></mi:fractureSpacing>
+    <mi:faultZonesNearby></mi:faultZonesNearby>
+    <mi:distance-Activity></mi:distance-Activity>
+    <mi:notes></mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Aira</mi:city>
+    <mi:state>Kagoshima</mi:state>
+    <mi:country>Japan</mi:country>
+    <mi:tectonicPlate>Eurasian plate</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>-3530185.489</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>4118797.337</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>3344036.931</mi:zCoordinateInMeters>
+      <mi:latitude-North>+314926.62</mi:latitude-North>
+      <mi:longitude-East>+1303558.53</mi:longitude-East>
+      <mi:elevation-m_ellips.>314.64</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>ITRF2000</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE 4000SSI</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>20630</equip:serialNumber>
+    <equip:firmwareVersion>7.17</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>15</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1998-02-28T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2001-08-16T14:59Z</equip:dateRemoved>
+    <equip:temperatureStabilization></equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE 4000SSI</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>17424</equip:serialNumber>
+    <equip:firmwareVersion>7.19</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>15</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2001-09-18T02:22Z</equip:dateInstalled>
+    <equip:dateRemoved>2002-08-15T14:59Z</equip:dateRemoved>
+    <equip:temperatureStabilization></equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE 4000SSI</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>17282</equip:serialNumber>
+    <equip:firmwareVersion>7.19</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>15</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2002-08-23T02:29Z</equip:dateInstalled>
+    <equip:dateRemoved>2003-02-18T14:59Z</equip:dateRemoved>
+    <equip:temperatureStabilization></equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE 5700</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>05227</equip:serialNumber>
+    <equip:firmwareVersion>1.24</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2003-02-19T09:04Z</equip:dateInstalled>
+    <equip:dateRemoved>2004-11-16T03:26Z</equip:dateRemoved>
+    <equip:temperatureStabilization></equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE 5700</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>21290</equip:serialNumber>
+    <equip:firmwareVersion>1.24</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2004-11-16T03:29Z</equip:dateInstalled>
+    <equip:dateRemoved>2012-07-25T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization></equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETR9</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>5134K78052</equip:serialNumber>
+    <equip:firmwareVersion>4.61</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2012-07-25T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2012-08-02T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization></equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETR9</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>5134K78052</equip:serialNumber>
+    <equip:firmwareVersion>4.61</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2012-08-02T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization></equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>TRM23903.00     DOME</equip:antennaType>
+    <equip:serialNumber>unkwn</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>DOME</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>Trimble N-lemo</equip:antennaCableType>
+    <equip:antennaCableLength>5</equip:antennaCableLength>
+    <equip:dateInstalled>1998-02-28T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2003-02-18T14:59Z</equip:dateRemoved>
+    <equip:notes>Spherical radome</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>TRM29659.00     DOME</equip:antennaType>
+    <equip:serialNumber>00031</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>DOME</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>Trimble N-minilemo</equip:antennaCableType>
+    <equip:antennaCableLength>5</equip:antennaCableLength>
+    <equip:dateInstalled>2003-02-19T09:04Z</equip:dateInstalled>
+    <equip:dateRemoved>2012-08-01T01:00Z</equip:dateRemoved>
+    <equip:notes>Spherical radome</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>TRM59800.00     SCIS</equip:antennaType>
+    <equip:serialNumber>4938353451</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>SCIS</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>Trimble N-minilemo</equip:antennaCableType>
+    <equip:antennaCableLength>5</equip:antennaCableLength>
+    <equip:dateInstalled>2012-08-01T01:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes></equip:notes>
+  </gnssAntenna>
+  <frequencyStandard>
+    <equip:standardType>CESIUM</equip:standardType>
+    <equip:inputFrequency>10MHz</equip:inputFrequency>
+    <equip:effectiveDates>2004-11-19</equip:effectiveDates>
+    <equip:notes>HP 5071A SN 3608A00927</equip:notes>
+  </frequencyStandard>
+  <collocationInformation>
+    <equip:instrumentType>VLBI</equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates>1997-07-17</equip:effectiveDates>
+    <equip:notes>Geospatial Information Authority of Japan (GSI) Aira 10m Antenna</equip:notes>
+  </collocationInformation>
+  <contactAgency>
+    <contact:agency>Geospatial Information Authority of Japan</contact:agency>
+    <contact:preferredAbbreviation>GSI</contact:preferredAbbreviation>
+    <contact:mailingAddress>Kitasato-1, Tsukuba-City, Ibaraki-Pref.,</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>IGS_group</contact:name>
+      <contact:telephonePrimary>81-29-864-6266</contact:telephonePrimary>
+      <contact:telephoneSecondary>81-29-864-1111</contact:telephoneSecondary>
+      <contact:fax>81-29-864-6864</contact:fax>
+      <contact:e-mail>igs-grp@gsi.go.jp</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>305-0811, JAPAN </contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>Geospatial Information Authority of Japan</contact:agency>
+    <contact:preferredAbbreviation>GSI</contact:preferredAbbreviation>
+    <contact:mailingAddress></contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes></contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter></mi:primaryDataCenter>
+    <mi:secondaryDataCenter></mi:secondaryDataCenter>
+    <mi:urlForMoreInformation></mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap></mi:siteMap>
+    <mi:siteDiagram></mi:siteDiagram>
+    <mi:horizonMask></mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures></mi:sitePictures>
+    <mi:notes></mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

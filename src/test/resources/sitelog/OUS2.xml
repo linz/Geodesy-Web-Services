@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Markus Bradke</mi:preparedBy>
+    <mi:datePrepared>2013-09-05</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>ous2_20130108.log</mi:previousLog>
+    <mi:modifiedSections>3.8, 3.9</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>Dunedin</mi:siteName>
+    <mi:fourCharacterID>OUS2</mi:fourCharacterID>
+    <mi:monumentInscription></mi:monumentInscription>
+    <mi:iersDOMESNumber>50212M002</mi:iersDOMESNumber>
+    <mi:cdpNumber>(A4)</mi:cdpNumber>
+    <mi:monumentDescription>PILLAR</mi:monumentDescription>
+    <mi:heightOfTheMonument>1.50</mi:heightOfTheMonument>
+    <mi:monumentFoundation>ROOF</mi:monumentFoundation>
+    <mi:foundationDepth></mi:foundationDepth>
+    <mi:markerDescription>BRASS NAIL</mi:markerDescription>
+    <mi:dateInstalled>2000-03-13T07</mi:dateInstalled>
+    <mi:geologicCharacteristic>(BEDROCK/CLAY/CONGLOMERATE/GRAVEL/SAND/etc)</mi:geologicCharacteristic>
+    <mi:bedrockType>(IGNEOUS/METAMORPHIC/SEDIMENTARY)</mi:bedrockType>
+    <mi:bedrockCondition>(FRESH/JOINTED/WEATHERED)</mi:bedrockCondition>
+    <mi:fractureSpacing>(1-10 cm/11-50 cm/51-200 cm/over 200 cm)</mi:fractureSpacing>
+    <mi:faultZonesNearby>(YES/NO/Name of the zone)</mi:faultZonesNearby>
+    <mi:distance-Activity>(multiple lines)</mi:distance-Activity>
+    <mi:notes> The mark is a steel pillar bolted to the roof.</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Dunedin</mi:city>
+    <mi:state></mi:state>
+    <mi:country>New Zealand</mi:country>
+    <mi:tectonicPlate>PACIFIC</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>-4387890.8367</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>733420.3903</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>-4555176.3706</mi:zCoordinateInMeters>
+      <mi:latitude-North>-455210.11</mi:latitude-North>
+      <mi:longitude-East>+1703039.36</mi:longitude-East>
+      <mi:elevation-m_ellips.>26.1</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>(multiple lines)</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>AOA BENCHMARK ACT</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>1104</equip:serialNumber>
+    <equip:firmwareVersion>3.3.32.3</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>2000-03-13T07:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2002-05-01T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>AOA BENCHMARK ACT</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>1121</equip:serialNumber>
+    <equip:firmwareVersion>3.3.32.2N</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0.5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2002-05-01T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2006-03-22T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>AOA BENCHMARK ACT</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>1101</equip:serialNumber>
+    <equip:firmwareVersion>3.3.32.2N</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0.5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2006-03-22T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2006-06-18T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>SEPT POLARX2</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>1249</equip:serialNumber>
+    <equip:firmwareVersion>2.5.0</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2006-06-19T07:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2011-06-23T05:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>JAVAD TRE_G3TH DELTA</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO+GAL</equip:satelliteSystem>
+    <equip:serialNumber>217</equip:serialNumber>
+    <equip:firmwareVersion>3.2.6</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2011-06-23T05:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2011-12-23T13:10Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>JAVAD TRE_G3TH DELTA</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO+GAL</equip:satelliteSystem>
+    <equip:serialNumber>217</equip:serialNumber>
+    <equip:firmwareVersion>3.3.5</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2011-12-23T13:10Z</equip:dateInstalled>
+    <equip:dateRemoved>2012-10-09T12:18Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>JAVAD TRE_G3TH DELTA</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO+GAL</equip:satelliteSystem>
+    <equip:serialNumber>217</equip:serialNumber>
+    <equip:firmwareVersion>3.4.4b0</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2012-10-09T12:20Z</equip:dateInstalled>
+    <equip:dateRemoved>2013-01-08T08:59Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>JAVAD TRE_G3TH DELTA</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO+GAL</equip:satelliteSystem>
+    <equip:serialNumber>217</equip:serialNumber>
+    <equip:firmwareVersion>3.4.7</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2013-01-08T09:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2013-09-05T15:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>JAVAD TRE_G3TH DELTA</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO+GAL+QZSS</equip:satelliteSystem>
+    <equip:serialNumber>217</equip:serialNumber>
+    <equip:firmwareVersion>3.4.7</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2013-09-05T15:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        NONE</equip:antennaType>
+    <equip:serialNumber>432</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0711</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>2000-03-13T07:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2001-10-13T07:00Z</equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        NONE</equip:antennaType>
+    <equip:serialNumber>440</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0711</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>2001-10-13T07:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2006-06-18T23:59Z</equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>TPSCR3_GGD      CONE</equip:antennaType>
+    <equip:serialNumber>217-0611</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0711</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>CONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>2006-06-19T07:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2006-08-27T22:00Z</equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>TPSCR3_GGD      NONE</equip:antennaType>
+    <equip:serialNumber>217-0611</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0711</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>2006-08-27T22:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2011-06-23T05:00Z</equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>JAV_RINGANT_G3T NONE</equip:antennaType>
+    <equip:serialNumber>335</equip:serialNumber>
+    <equip:antennaReferencePoint>BAM</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0711</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>(deg; + is clockwise/east)</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength></equip:antennaCableLength>
+    <equip:dateInstalled>2011-06-23T05:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL</equip:standardType>
+    <equip:inputFrequency>(if external)</equip:inputFrequency>
+    <equip:effectiveDates>2001-10-13/2004-04-24</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>EXTERNAL RUBIDIUM</equip:standardType>
+    <equip:inputFrequency>5 MHz</equip:inputFrequency>
+    <equip:effectiveDates>2004-04-24/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>TEMEX Neuchatel PFRS-01</equip:notes>
+  </frequencyStandard>
+  <humiditySensor>
+    <equip:type>HMP 45</equip:type>
+    <equip:manufacturer>VAISALA</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2001-10-13/2006-06-18</equip:effectiveDates>
+    <equip:dataSamplingInterval>600</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>2</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>NATURAL</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </humiditySensor>
+  <humiditySensor>
+    <equip:type>HMP45A-P</equip:type>
+    <equip:manufacturer>Vaisala</equip:manufacturer>
+    <equip:serialNumber>Z2310001</equip:serialNumber>
+    <equip:heightDiffToAntenna>0.00</equip:heightDiffToAntenna>
+    <equip:calibrationDate>2004-06-01</equip:calibrationDate>
+    <equip:effectiveDates>2006-06-19/2010-05-13</equip:effectiveDates>
+    <equip:dataSamplingInterval>300</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>1.5</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>NATURAL</equip:aspiration>
+    <equip:notes>The humidity sensor is part of a Vaisala PTU200 meteo station</equip:notes>
+  </humiditySensor>
+  <humiditySensor>
+    <equip:type>HMP45A-P</equip:type>
+    <equip:manufacturer>Vaisala</equip:manufacturer>
+    <equip:serialNumber>Z2310001</equip:serialNumber>
+    <equip:heightDiffToAntenna>0.00</equip:heightDiffToAntenna>
+    <equip:calibrationDate>2010-07-22</equip:calibrationDate>
+    <equip:effectiveDates>2010-08-11/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>300</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>1.5</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>NATURAL</equip:aspiration>
+    <equip:notes>The humidity sensor is part of a Vaisala PTU200 meteo station</equip:notes>
+  </humiditySensor>
+  <pressureSensor>
+    <equip:type>PTB100-B</equip:type>
+    <equip:manufacturer>VAISALA</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2001-10-13/2006-06-18</equip:effectiveDates>
+    <equip:dataSamplingInterval>600</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>0.5</equip:accuracy-hPa>
+    <equip:notes>(multiple lines)</equip:notes>
+  </pressureSensor>
+  <pressureSensor>
+    <equip:type>PTU200</equip:type>
+    <equip:manufacturer>Vaisala</equip:manufacturer>
+    <equip:serialNumber>Z2310001</equip:serialNumber>
+    <equip:heightDiffToAntenna>-8.30</equip:heightDiffToAntenna>
+    <equip:calibrationDate>2004-06-01</equip:calibrationDate>
+    <equip:effectiveDates>2006-06-19/2010-05-13</equip:effectiveDates>
+    <equip:dataSamplingInterval>300</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>0.1</equip:accuracy-hPa>
+    <equip:notes>The pressure sensor is part of a Vaisala PTU200 meteo station</equip:notes>
+  </pressureSensor>
+  <pressureSensor>
+    <equip:type>PTU200</equip:type>
+    <equip:manufacturer>Vaisala</equip:manufacturer>
+    <equip:serialNumber>Z2310001</equip:serialNumber>
+    <equip:heightDiffToAntenna>-8.30</equip:heightDiffToAntenna>
+    <equip:calibrationDate>2010-07-22</equip:calibrationDate>
+    <equip:effectiveDates>2010-08-11/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>300</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>0.1</equip:accuracy-hPa>
+    <equip:notes>The pressure sensor is part of a Vaisala PTU200 meteo station</equip:notes>
+  </pressureSensor>
+  <temperatureSensor>
+    <equip:type>PT100</equip:type>
+    <equip:manufacturer>TimeTech GmbH</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2001-10-13/2006-06-18</equip:effectiveDates>
+    <equip:dataSamplingInterval>600</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>0.25</equip:accuracy-degreesCelcius>
+    <equip:aspiration>NATURAL</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </temperatureSensor>
+  <temperatureSensor>
+    <equip:type>HMP45A-P</equip:type>
+    <equip:manufacturer>Vaisala</equip:manufacturer>
+    <equip:serialNumber>Z2310001</equip:serialNumber>
+    <equip:heightDiffToAntenna>0.00</equip:heightDiffToAntenna>
+    <equip:calibrationDate>2004-06-01</equip:calibrationDate>
+    <equip:effectiveDates>2006-06-19/2010-05-13</equip:effectiveDates>
+    <equip:dataSamplingInterval>300</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>0.1</equip:accuracy-degreesCelcius>
+    <equip:aspiration>NATURAL</equip:aspiration>
+    <equip:notes>The temperatur sensor is part of a Vaisala PTU200 meteo station</equip:notes>
+  </temperatureSensor>
+  <temperatureSensor>
+    <equip:type>HMP45A-P</equip:type>
+    <equip:manufacturer>Vaisala</equip:manufacturer>
+    <equip:serialNumber>Z2310001</equip:serialNumber>
+    <equip:heightDiffToAntenna>0.00</equip:heightDiffToAntenna>
+    <equip:calibrationDate>2010-07-22</equip:calibrationDate>
+    <equip:effectiveDates>2010-08-11/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>300</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>0.1</equip:accuracy-degreesCelcius>
+    <equip:aspiration>NATURAL</equip:aspiration>
+    <equip:notes>The temperatur sensor is part of a Vaisala PTU200 meteo station</equip:notes>
+  </temperatureSensor>
+  <contactAgency>
+    <contact:agency>Department of Surveying</contact:agency>
+    <contact:preferredAbbreviation>OUSD</contact:preferredAbbreviation>
+    <contact:mailingAddress>P.O. Box 56</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Dr. Paul Denys</contact:name>
+      <contact:telephonePrimary>+64 (03) 4797596</contact:telephonePrimary>
+      <contact:telephoneSecondary>+64 (03) 4797585</contact:telephoneSecondary>
+      <contact:fax>+64 (03) 4797586</contact:fax>
+      <contact:e-mail>pdenys@stonebow.otago.ac.nz</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>University of Otago Dunedin, New Zeeland (multiple lines)</contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>Helmholtz-Zentrum Potsdam</contact:agency>
+    <contact:preferredAbbreviation>GFZ</contact:preferredAbbreviation>
+    <contact:mailingAddress>Telegrafenberg A17</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Markus Bradke</contact:name>
+      <contact:telephonePrimary>(+49)331-288-1182</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>(+49)331-288-1759</contact:fax>
+      <contact:e-mail>bradke@gfz-potsdam.de</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>Deutsches GeoForschungsZentrum GFZ 14473 Potsdam / Germany (multiple lines)</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter>www.gfz-potsdam.de/pb1/igs/igs-stat/ous2.htm</mi:primaryDataCenter>
+    <mi:secondaryDataCenter>www.gfz-potsdam.de/pb1/igs/igs-stat/ous2.htm</mi:secondaryDataCenter>
+    <mi:urlForMoreInformation>www.gfz-potsdam.de/pb1/igs/igs-stat/ous2.htm</mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>(Y or URL)</mi:siteMap>
+    <mi:siteDiagram>(Y or URL)</mi:siteDiagram>
+    <mi:horizonMask>(Y or URL)</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>(Y or URL)</mi:sitePictures>
+    <mi:notes>(multiple lines)</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

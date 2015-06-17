@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class
+    name="au.gov.ga.geodesy.igssitelog.domain.model.GnssAntenna"
+    table="SITELOG_ANTENNA">
+    <id
+      name="id"
+      type="java.lang.Integer">
+      <column
+        name="ANTENNANO"
+        precision="9"
+        scale="0" />
+	  
+	  <generator class="sequence">
+		  <param name="sequence">SEQ_GNSSANTENNA</param>
+	  </generator>
+    </id>
+
+    <property name="antennaType" column="ANTENNA_TYPE"/>
+    <property name="serialNumber" column="SERIAL_NUMBER"/>
+    <property name="antennaReferencePoint" column="ANTENNA_REFERENCE_POINT"/>
+    <property name="markerArpUpEcc" column="MARKER_ARP_UP_ECC"/>
+    <property name="markerArpNorthEcc" column="MARKER_ARP_NORTH_ECC"/>
+    <property name="markerArpEastEcc" column="MARKER_ARP_EAST_ECC"/>
+    <property name="alignmentFromTrueNorth" column="ALIGNMENT_FROM_TRUE_NORTH"/>
+    <property name="antennaRadomeType" column="ANTENNA_RADOME_TYPE"/>
+    <property name="radomeSerialNumber" column="RADOME_SERIAL_NUMBER"/>
+    <property name="antennaCableLength" column="ANTENNA_CABLE_LENGTH"/>
+    <property name="antennaCableType" column="ANTENNA_CABLE_TYPE"/>
+    <property name="dateInstalled" column="DATE_INSTALLED"/>
+    <property name="dateRemoved" column="DATE_REMOVED"/>
+    <property name="notes" column="NOTES" length="4096"/>
+
+  </class>
+</hibernate-mapping>

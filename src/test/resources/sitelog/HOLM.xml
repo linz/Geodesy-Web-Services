@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Mike Craymer</mi:preparedBy>
+    <mi:datePrepared>2010-12-07</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>holm_20101207.log</mi:previousLog>
+    <mi:modifiedSections>4.1, 4.2, 13</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>Holman</mi:siteName>
+    <mi:fourCharacterID>HOLM</mi:fourCharacterID>
+    <mi:monumentInscription>M019000</mi:monumentInscription>
+    <mi:iersDOMESNumber>40148M001</mi:iersDOMESNumber>
+    <mi:cdpNumber>N/A</mi:cdpNumber>
+    <mi:monumentDescription>Stainless steel pillar</mi:monumentDescription>
+    <mi:heightOfTheMonument>1.5</mi:heightOfTheMonument>
+    <mi:monumentFoundation>Bedrock</mi:monumentFoundation>
+    <mi:foundationDepth>0</mi:foundationDepth>
+    <mi:markerDescription>Steel bolt on steel plate</mi:markerDescription>
+    <mi:dateInstalled>2001-07-22</mi:dateInstalled>
+    <mi:geologicCharacteristic>Bedrock</mi:geologicCharacteristic>
+    <mi:bedrockType>Igneous</mi:bedrockType>
+    <mi:bedrockCondition>Weathered</mi:bedrockCondition>
+    <mi:fractureSpacing>10-50 cm</mi:fractureSpacing>
+    <mi:faultZonesNearby>No</mi:faultZonesNearby>
+    <mi:distance-Activity></mi:distance-Activity>
+    <mi:notes>The GPS reference mark consists of a stainless</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Ulukhaktok, formerly Holman (Victoria Island)</mi:city>
+    <mi:state>Northwest Territories</mi:state>
+    <mi:country>Canada</mi:country>
+    <mi:tectonicPlate>North American</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>-983063.87</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>-1867634.52</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>5998678.91</mi:zCoordinateInMeters>
+      <mi:latitude-North>+704411.04</mi:latitude-North>
+      <mi:longitude-East>-1174539.24</mi:longitude-East>
+      <mi:elevation-m_ellips.>39.50</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>Halmet Parking Garage</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>GP10191</equip:serialNumber>
+    <equip:firmwareVersion>CD00-1D02</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2001-08-28T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2002-10-24T14:04Z</equip:dateRemoved>
+    <equip:temperatureStabilization>None</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH UZ-12</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>ZR520021004</equip:serialNumber>
+    <equip:firmwareVersion>CJ00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2002-10-24T14:06Z</equip:dateInstalled>
+    <equip:dateRemoved>2002-11-21T05:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>None</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>LP019992707</equip:serialNumber>
+    <equip:firmwareVersion>CD00-1D02</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2002-11-21T08:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2002-11-26T23:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>None</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH UZ-12</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>ZR520020405</equip:serialNumber>
+    <equip:firmwareVersion>CJ00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2002-11-26T23:03Z</equip:dateInstalled>
+    <equip:dateRemoved>2003-04-03T17:40Z</equip:dateRemoved>
+    <equip:temperatureStabilization>None</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH UZ-12</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>ZR520021005</equip:serialNumber>
+    <equip:firmwareVersion>CJ50</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2003-04-03T17:45Z</equip:dateInstalled>
+    <equip:dateRemoved>2005-07-25T13:47Z</equip:dateRemoved>
+    <equip:temperatureStabilization>None</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH UZ-12</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>ZR520021005</equip:serialNumber>
+    <equip:firmwareVersion>CK00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2005-07-25T15:01Z</equip:dateInstalled>
+    <equip:dateRemoved>2006-07-05T15:55Z</equip:dateRemoved>
+    <equip:temperatureStabilization>None</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH UZ-12</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>ZR520021004</equip:serialNumber>
+    <equip:firmwareVersion>CK00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2006-07-05T15:58Z</equip:dateInstalled>
+    <equip:dateRemoved>2010-12-07T23:30Z</equip:dateRemoved>
+    <equip:temperatureStabilization>None</equip:temperatureStabilization>
+    <equip:notes>Tracking problems starting 2010-10-16.</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH UZ-12</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>ZR520020405</equip:serialNumber>
+    <equip:firmwareVersion>CK00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2010-12-07T23:40Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>None</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        NONE</equip:antennaType>
+    <equip:serialNumber>387</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.1000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>N/A</equip:antennaCableType>
+    <equip:antennaCableLength>50</equip:antennaCableLength>
+    <equip:dateInstalled>2001-08-28T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2002-08-09</equip:dateRemoved>
+    <equip:notes>2012-06-26</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>ASH701945D_M    NONE</equip:antennaType>
+    <equip:serialNumber>CR520020905</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.1000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>N/A</equip:antennaCableType>
+    <equip:antennaCableLength>50</equip:antennaCableLength>
+    <equip:dateInstalled>2002-08-09T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>2012-06-26 corrected antenna type from ASH701945C_M to ASH701945D_M. (multiple lines)</equip:notes>
+  </gnssAntenna>
+  <frequencyStandard>
+    <equip:standardType>Internal</equip:standardType>
+    <equip:inputFrequency></equip:inputFrequency>
+    <equip:effectiveDates>2001-08-28/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes></equip:notes>
+  </frequencyStandard>
+  <localEpisodicEvents>
+    <li:date>2010-11-29T16</li:date>
+    <li:event>Removed 3 cm hard packed snow within choke</li:event>
+  </localEpisodicEvents>
+  <contactAgency>
+    <contact:agency>Natural Resources Canada</contact:agency>
+    <contact:preferredAbbreviation>NRCan/GSD</contact:preferredAbbreviation>
+    <contact:mailingAddress>615 Booth Street</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Mike Craymer</contact:name>
+      <contact:telephonePrimary>613-947-1829</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>613-995-3215</contact:fax>
+      <contact:e-mail>craymer@nrcan.gc.ca</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Mike Piraszewski</contact:name>
+      <contact:telephonePrimary>613-947-0967</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>613-995-3215</contact:fax>
+      <contact:e-mail>mpirasze@nrcan.gc.ca</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>Ottawa, ON, K1A 0E9, Canada (multiple lines)</contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>Natural Resources Canada</contact:agency>
+    <contact:preferredAbbreviation>NRCan/GSD</contact:preferredAbbreviation>
+    <contact:mailingAddress>(multiple lines)</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>(multiple lines)</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter></mi:primaryDataCenter>
+    <mi:secondaryDataCenter></mi:secondaryDataCenter>
+    <mi:urlForMoreInformation></mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>Y</mi:siteMap>
+    <mi:siteDiagram>Y</mi:siteDiagram>
+    <mi:horizonMask>Y</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>Y</mi:sitePictures>
+    <mi:notes>(multiple lines)</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

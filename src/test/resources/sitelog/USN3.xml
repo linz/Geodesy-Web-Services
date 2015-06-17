@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Edward Powers</mi:preparedBy>
+    <mi:datePrepared>2009-04-15</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>usn3_20080521.log</mi:previousLog>
+    <mi:modifiedSections>0,4.3,11</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>U.S. Naval Observatory Time Service</mi:siteName>
+    <mi:fourCharacterID>USN3</mi:fourCharacterID>
+    <mi:monumentInscription>NONE</mi:monumentInscription>
+    <mi:iersDOMESNumber>40451S007</mi:iersDOMESNumber>
+    <mi:cdpNumber>NONE</mi:cdpNumber>
+    <mi:monumentDescription>TRIANGULATED AL STRUTS</mi:monumentDescription>
+    <mi:heightOfTheMonument>5</mi:heightOfTheMonument>
+    <mi:monumentFoundation>ROOF</mi:monumentFoundation>
+    <mi:foundationDepth></mi:foundationDepth>
+    <mi:markerDescription>MOUNTING BRACKET HOLE, ARP</mi:markerDescription>
+    <mi:dateInstalled>2004-06-28</mi:dateInstalled>
+    <mi:geologicCharacteristic>on aluminum structure on roof of of 2-story</mi:geologicCharacteristic>
+    <mi:bedrockType>(IGNEOUS/METAMORPHIC/SEDIMENTARY)</mi:bedrockType>
+    <mi:bedrockCondition>(FRESH/JOINTED/WEATHERED)</mi:bedrockCondition>
+    <mi:fractureSpacing>(1-10 cm/11-50 cm/51-200 cm/over 200 cm)</mi:fractureSpacing>
+    <mi:faultZonesNearby>(YES/NO/Name of the zone)</mi:faultZonesNearby>
+    <mi:distance-Activity>(multiple lines)</mi:distance-Activity>
+    <mi:notes>building (multiple lines) The antenna is mounted on a baseball diamond shaped aluminum structure mounted on the roof (2 stories) of the Time Service department building at the U.S. Naval Observatory, Washington. D.C..  There are nearby geodetic markers, but this antenna has not been surveyed to those markers. (see accompanying pictures). USN3 functionally replaces USN1.</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Washington</mi:city>
+    <mi:state>D.C.</mi:state>
+    <mi:country>U.S.A.</mi:country>
+    <mi:tectonicPlate>North American</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>1112162.140</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>-4842853.628</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>3985496.084</mi:zCoordinateInMeters>
+      <mi:latitude-North>+385514.033</mi:latitude-North>
+      <mi:longitude-East>-0770358.586</mi:longitude-East>
+      <mi:elevation-m_ellips.>57.519</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>(multiple lines)</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3T</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>RT920012203</equip:serialNumber>
+    <equip:firmwareVersion>IL01-1D04-MCF-12MX</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>4</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2004-06-28T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        NONE</equip:antennaType>
+    <equip:serialNumber>458</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>oriented North but not measured</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>Andrew FSJ1-50A (35422-33 phase stabilized)</equip:antennaCableType>
+    <equip:antennaCableLength>45 M</equip:antennaCableLength>
+    <equip:dateInstalled>2004-06-28T16:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>This antenna is a standard AOAD/M_T using a special LNA designed to have a flat group delay response at both L1 and L2.  Because of this flat group delay response the thermal sensitivity of this antenna should be much improved over what is typically found in this antenna type. Antenna Group Delay at L1 = 26.63 NS Antenna Group Delay at L2 = 27.93 NS  Antenna cable 28-JUNE-2004 to present - Andrew FSJ1-50A (35422-33 phase stabilized) 1/4 inch Superflexible Foam Dielectric Heliax -- physical length 150 feet (45 m), mostly run in ceiling and floor of USNO Bldg 78; specifications - Velocity factor 0.84 DC resistance 2 to 3 ohms per 1000 foot Capacitance, 24.2 pF/foot Inductance, .061 uH/foot Loss at 1250 MHz   6.77 dB/100 foot Loss at 1500 MHz   7.47 dB/100 foot Electrical Length Change versus Temperature - 400 PPM over (-40 to 30 C) or 5.7 PPM/C => 0.02 ps/m/C  Antenna splitter - USNO specially designed antenna splitter that has > 100 db port to port isolation and flat group delay response at L1 and L2. Antenna splitter cable - from splitter to receiver. The Antenna splitter cable is attached to a DC block and 20db PAD at the receiver input to improve impedance matching.  The measured delays through each component of the system are summarized in the table below - L1(ns)          L2(ns) ---------       --------- antenna total      26.63           27.93 antenna cable     182.4           182.4 antenna splitter    5.76            6.31 cable to receiver   8.57            8.57 DC block and 20db PAD                 0.50            0.50 receiver w/ a +5.0 ns delay between on-time signal and 20MHZ.            246.4           257.8 Total               470.26          483.51  Net Delay at P3 would be 449.86 ns  Note - These delay have already been added to RAW psudorange data and they should not be added to any solutions.</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        NONE</equip:antennaType>
+    <equip:serialNumber>KW5-0258</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>oriented North but not measured</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>Andrew FSJ1-50A (35422-33 phase stabilized)</equip:antennaCableType>
+    <equip:antennaCableLength>45 M</equip:antennaCableLength>
+    <equip:dateInstalled>2004-06-28T16:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>This antenna is a standard AOAD/M_T using a special LNA designed to have a flat group delay response at both L1 and L2.  Because of this flat group delay response the thermal sensitivity of this antenna should be much improved over what is typically found in this antenna type. Antenna Group Delay at L1 = 24.13 NS Antenna Group Delay at L2 = 25.93 NS  Antenna cable 28-JUNE-2004 to present - Andrew FSJ1-50A (35422-33 phase stabilized) 1/4 inch Superflexible Foam Dielectric Heliax -- physical length 150 feet (45 m), mostly run in ceiling and floor of USNO Bldg 78; specifications - Velocity factor 0.84 DC resistance 2 to 3 ohms per 1000 foot Capacitance, 24.2 pF/foot Inductance, .061 uH/foot Loss at 1250 MHz   6.77 dB/100 foot Loss at 1500 MHz   7.47 dB/100 foot Electrical Length Change versus Temperature - 400 PPM over (-40 to 30 C) or 5.7 PPM/C => 0.02 ps/m/C  Antenna splitter - USNO specially designed antenna splitter that has > 100 db port to port isolation and flat group delay response at L1 and L2. Antenna splitter cable - from splitter to receiver. The Antenna splitter cable is attached to a DC block and 20db PAD at the receiver input to improve impedance matching.  The measured delays through each component of the system are summarized in the table below - L1(ns)          L2(ns) ---------       --------- antenna total      24.13           25.93 antenna cable     182.40          182.40 antenna splitter    7.04            7.25 cable to receiver   8.57            8.57 DC block and 20db PAD                 0.50            0.50 receiver w/ a +5.0 ns delay between on-time signal and 20MHZ.          239.71          253.75 Total             462.35          478.40  Net Delay at P3 would be 437.54 ns  NOTE to RAW psudorange data and they should not be added to any solutions.</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        NONE</equip:antennaType>
+    <equip:serialNumber>KW5-0258</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>oriented North but not measured</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>Andrew FSJ1-50A (35422-33 phase stabilized)</equip:antennaCableType>
+    <equip:antennaCableLength>45 M</equip:antennaCableLength>
+    <equip:dateInstalled>2004-06-28T16:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>This antenna is a standard AOAD/M_T using a special LNA designed to have a flat group delay response at both L1 and L2.  Because of this flat group delay response the thermal sensitivity of this antenna should be much improved over what is typically found in this antenna type. Antenna Group Delay at L1 = 24.13 NS Antenna Group Delay at L2 = 25.93 NS  Antenna cable 28-JUNE-2004 to present - Andrew FSJ1-50A (35422-33 phase stabilized) 1/4 inch Superflexible Foam Dielectric Heliax -- physical length 150 feet (45 m), mostly run in ceiling and floor of USNO Bldg 78; specifications - Velocity factor 0.84 DC resistance 2 to 3 ohms per 1000 foot Capacitance, 24.2 pF/foot Inductance, .061 uH/foot Loss at 1250 MHz   6.77 dB/100 foot Loss at 1500 MHz   7.47 dB/100 foot Electrical Length Change versus Temperature - 400 PPM over (-40 to 30 C) or 5.7 PPM/C => 0.02 ps/m/C  Antenna splitter - USNO specially designed antenna splitter that has > 100 db port to port isolation and flat group delay response at L1 and L2. Antenna splitter cable - from splitter to receiver. The Antenna splitter cable is attached to a DC block and 20db PAD at the receiver input to improve impedance matching.  The measured delays through each component of the system are summarized in the table below - L1(ns)          L2(ns) ---------       --------- antenna total      24.13           25.93 antenna cable     182.40          182.40 antenna splitter    7.04            7.25 cable to receiver   8.57            8.57 DC block and 20db PAD                 0.50            0.50 receiver w/ a +5.0 ns delay between on-time signal and 20MHZ.          256.73          270.95 Total             479.37          495.60  Net Delay at P3 would be 454.28 ns  NOTE to RAW psudorange data and they should not be added to any solutions.</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        NONE</equip:antennaType>
+    <equip:serialNumber>KW5-0258</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>oriented North but not measured</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>Andrew FSJ1-50A (35422-33 phase stabilized)</equip:antennaCableType>
+    <equip:antennaCableLength>39 M</equip:antennaCableLength>
+    <equip:dateInstalled>2004-06-28T16:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>This antenna is a standard AOAD/M_T using a special LNA designed to have a flat group delay response at both L1 and L2.  Because of this flat group delay response the thermal sensitivity of this antenna should be much improved over what is typically found in this antenna type. Antenna Group Delay at L1 = 24.13 NS Antenna Group Delay at L2 = 25.93 NS  Antenna cable 14-April-2009 to present - Andrew FSJ1-50A (35422-33 phase stabilized) 1/4 inch Superflexible Foam Dielectric Heliax -- physical length 130 feet (39 m), mostly run in ceiling and floor of USNO Bldg 78; specifications - Velocity factor 0.84 DC resistance 2 to 3 ohms per 1000 foot Capacitance, 24.2 pF/foot Inductance, .061 uH/foot Loss at 1250 MHz   6.77 dB/100 foot Loss at 1500 MHz   7.47 dB/100 foot Electrical Length Change versus Temperature - 400 PPM over (-40 to 30 C) or 5.7 PPM/C => 0.02 ps/m/C  Antenna splitter - USNO specially designed antenna splitter that has > 100 db port to port isolation and flat group delay response at L1 and L2. Antenna splitter cable - from splitter to receiver. The Antenna splitter cable is attached to a DC block and 20db PAD at the receiver input to improve impedance matching.  The measured delays through each component of the system are summarized in the table below - L1(ns)          L2(ns) ---------       --------- antenna total      24.13           25.93 antenna cable     150.10          150.10 antenna splitter    7.70            7.90 cable to receiver   6.36            6.36 DC block and 20db PAD                 0.50            0.50 receiver w/ a +5.0 ns delay between on-time signal and 20MHZ.          278.98          293.20 Total             467.77          483.99  Net Delay at P3 would be 442.70 ns  NOTE to RAW psudorange data and they should not be added to any solutions.</equip:notes>
+  </gnssAntenna>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>none</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>(SLR/VLBI/LOCAL CONTROL/FOOTPRINT/etc)</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>none</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber></equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX></equip:dX>
+      <equip:dY></equip:dY>
+      <equip:dZ></equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>(mm)</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>(GPS CAMPAIGN/TRILATERATION/TRIANGULATION/etc)</equip:surveyMethod>
+    <equip:dateMeasured>(CCYY-MM-DDThh:mmZ)</equip:dateMeasured>
+    <equip:notes>(multiple lines)</equip:notes>
+  </surveyedLocalTies>
+  <frequencyStandard>
+    <equip:standardType>H-MASER</equip:standardType>
+    <equip:inputFrequency>5 MHz</equip:inputFrequency>
+    <equip:effectiveDates>1998-03-24/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>Reference signal from USNO Master clock (MC2), the primary realization of UTC(USNO), located in Bldg. 78 in a thermal chamber.  MC2 is steered to UTC using information obtained from the Bureau International des Poids et Mesures (BIPM) roughly each month.  See the BIPM Circular T for more detail, http://www.bipm.fr/enus/5_Scientific/c_time/ time_ftp.shtml All calibration delays have already been accounted for in the RAW pseudorange data produced by USN3.</equip:notes>
+  </frequencyStandard>
+  <collocationInformation>
+    <equip:instrumentType>none</equip:instrumentType>
+    <equip:status></equip:status>
+    <equip:effectiveDates>(CCYY-MM-DD/CCYY-MM-DD)</equip:effectiveDates>
+    <equip:notes></equip:notes>
+  </collocationInformation>
+  <humiditySensor>
+    <equip:type>HUMICA H-sensor (pn 16663)</equip:type>
+    <equip:manufacturer>Vaisala</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>-0.724</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2001-08-21/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>15 seconds</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>+/-1%(0...90%RH)</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>NATURAL</equip:aspiration>
+    <equip:notes>NOAA GSOS # 062</equip:notes>
+  </humiditySensor>
+  <pressureSensor>
+    <equip:type>PTB220</equip:type>
+    <equip:manufacturer>Vaisala</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>-0.724</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2001-08-21/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>15 seconds</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>+/-0.1 mbar</equip:accuracy-hPa>
+    <equip:notes>met sensors are located at USNO on rooftop of Building 52A (~ few hundred m from GPS ant.) NOAA GSOS # 062</equip:notes>
+  </pressureSensor>
+  <temperatureSensor>
+    <equip:type>PT100 RTD 1/s DIN 43760B</equip:type>
+    <equip:manufacturer>Vaisala</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>-0.724</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2001-08-21/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>15 seconds</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>+/-0.1 @ 20.0C</equip:accuracy-degreesCelcius>
+    <equip:aspiration>NATURAL</equip:aspiration>
+    <equip:notes>NOAA GSOS # 062</equip:notes>
+  </temperatureSensor>
+  <waterVaporSensor>
+    <equip:type>none</equip:type>
+    <equip:manufacturer></equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>CCYY-MM-DD/CCYY-MM-DD</equip:effectiveDates>
+    <equip:distanceToAntenna></equip:distanceToAntenna>
+    <equip:notes>(multiple lines)</equip:notes>
+  </waterVaporSensor>
+  <contactAgency>
+    <contact:agency>U.S. Naval Observatory</contact:agency>
+    <contact:preferredAbbreviation>USNO</contact:preferredAbbreviation>
+    <contact:mailingAddress>Time Service Department</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Ed Powers (USNO)</contact:name>
+      <contact:telephonePrimary>202-762-1451</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>202-762-1511</contact:fax>
+      <contact:e-mail>edward.powers@usno.navy.mil</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Wendy Kelley</contact:name>
+      <contact:telephonePrimary>202-762-1455</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>202-762-1511</contact:fax>
+      <contact:e-mail>wendy.kelley@usno.navy.mil</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>3450 Massachusetts Ave., NW Washington, D.C. 20392-5420 Regional Data Center is JPL  Dave Stowers (JPL) 818-354-7055  818-393-4965 dstowers@jpl.nasa.gov</contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>U.S. Naval Observatory</contact:agency>
+    <contact:preferredAbbreviation>USNO</contact:preferredAbbreviation>
+    <contact:mailingAddress>(multiple lines)</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>(multiple lines)</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter></mi:primaryDataCenter>
+    <mi:secondaryDataCenter></mi:secondaryDataCenter>
+    <mi:urlForMoreInformation></mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>N</mi:siteMap>
+    <mi:siteDiagram>N</mi:siteDiagram>
+    <mi:horizonMask>N</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>N</mi:sitePictures>
+    <mi:notes>(multiple lines)</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

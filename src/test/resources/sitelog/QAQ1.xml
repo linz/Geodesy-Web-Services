@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>FINN BO MADSEN</mi:preparedBy>
+    <mi:datePrepared>2006-02-28</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>qaq1_20050801.log</mi:previousLog>
+    <mi:modifiedSections>3.3 6.2 6.3</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>Qaqortoq</mi:siteName>
+    <mi:fourCharacterID>QAQ1</mi:fourCharacterID>
+    <mi:monumentInscription></mi:monumentInscription>
+    <mi:iersDOMESNumber>43007M001</mi:iersDOMESNumber>
+    <mi:cdpNumber>(A4)</mi:cdpNumber>
+    <mi:monumentDescription>2.5 meter concrete pillar with brass nail</mi:monumentDescription>
+    <mi:heightOfTheMonument></mi:heightOfTheMonument>
+    <mi:monumentFoundation>(STEEL RODS, CONCRETE BLOCK, ROOF, etc)</mi:monumentFoundation>
+    <mi:foundationDepth></mi:foundationDepth>
+    <mi:markerDescription>(CHISELLED CROSS/DIVOT/BRASS NAIL/etc)</mi:markerDescription>
+    <mi:dateInstalled>2001-10-15</mi:dateInstalled>
+    <mi:geologicCharacteristic>BEDROCK</mi:geologicCharacteristic>
+    <mi:bedrockType>METAMORPHIC</mi:bedrockType>
+    <mi:bedrockCondition>JOINTED</mi:bedrockCondition>
+    <mi:fractureSpacing>over 200</mi:fractureSpacing>
+    <mi:faultZonesNearby>(YES/NO/Name of the zone)</mi:faultZonesNearby>
+    <mi:distance-Activity>(multiple lines)</mi:distance-Activity>
+    <mi:notes>2002-08-20 Format issues, antenna eccentricity, elevation cutoff setting and datacenter information has been corrected/added.</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Qaqortoq / Julianehaab</mi:city>
+    <mi:state>Greenland</mi:state>
+    <mi:country>Greenland (Denmark)</mi:country>
+    <mi:tectonicPlate>North American</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>2170942.18</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>-2251829.95</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>5539988.29</mi:zCoordinateInMeters>
+      <mi:latitude-North>+604254.72</mi:latitude-North>
+      <mi:longitude-East>-0460252.08</mi:longitude-East>
+      <mi:elevation-m_ellips.>00110.4</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>Position origins from one week processing (GPS week 1136)</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH UZ-12</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>ZR20012301</equip:serialNumber>
+    <equip:firmwareVersion>CJ00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2001-10-15T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2005-08-01T19:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>NONE</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH Z-XII3</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>02259</equip:serialNumber>
+    <equip:firmwareVersion>1L00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2005-08-01T19:07Z</equip:dateInstalled>
+    <equip:dateRemoved>2006-02-23T13:59Z</equip:dateRemoved>
+    <equip:temperatureStabilization>NONE</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH UZ-12</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>ZR20012301</equip:serialNumber>
+    <equip:firmwareVersion>CJ00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2006-02-23T14:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>NONE</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>ASH701941.B     SCIS</equip:antennaType>
+    <equip:serialNumber>13301</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.1206</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>SCIS</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>Andrew LDF4-50A</equip:antennaCableType>
+    <equip:antennaCableLength>55</equip:antennaCableLength>
+    <equip:dateInstalled>2001-10-15T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2003-08-26T14:12Z</equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>ASH701941.B     NONE</equip:antennaType>
+    <equip:serialNumber>13301</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.1206</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>Andrew LDF4-50A</equip:antennaCableType>
+    <equip:antennaCableLength>55</equip:antennaCableLength>
+    <equip:dateInstalled>2003-09-05T12:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2003-09-29T11:20Z</equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>ASH701941.B     SCIS</equip:antennaType>
+    <equip:serialNumber>13301</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.1206</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>SCIS</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>Andrew LDF4-50A</equip:antennaCableType>
+    <equip:antennaCableLength>55</equip:antennaCableLength>
+    <equip:dateInstalled>2003-09-29T11:21Z</equip:dateInstalled>
+    <equip:dateRemoved>2003-12-30T17:08Z</equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>ASH701945E_M    SCIS</equip:antennaType>
+    <equip:serialNumber>24206</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.1206</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>SCIS</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>Andrew LDF4-50A</equip:antennaCableType>
+    <equip:antennaCableLength>55</equip:antennaCableLength>
+    <equip:dateInstalled>2003-12-30T17:09Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <frequencyStandard>
+    <equip:standardType>RUBIDIUM</equip:standardType>
+    <equip:inputFrequency>5 MHz</equip:inputFrequency>
+    <equip:effectiveDates>2001-11-11/2005-09-04</equip:effectiveDates>
+    <equip:notes>DATUM EFRATOM FRK-LLN S/N 18676</equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL</equip:standardType>
+    <equip:inputFrequency>(if external)</equip:inputFrequency>
+    <equip:effectiveDates>2005-09-05/2006-01-11</equip:effectiveDates>
+    <equip:notes>receiver not locked to external frequency</equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>RUBIDIUM</equip:standardType>
+    <equip:inputFrequency>5 MHz</equip:inputFrequency>
+    <equip:effectiveDates>2006-01-11/CCYY-MM-DD)</equip:effectiveDates>
+    <equip:notes>DATUM EFRATOM FRK-LLN S/N 18676</equip:notes>
+  </frequencyStandard>
+  <humiditySensor>
+    <equip:type>HMP45D</equip:type>
+    <equip:manufacturer>VAISALA</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2001-11-15/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>300 SEC</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>2 % rel h</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>Serial U5020002</equip:notes>
+  </humiditySensor>
+  <pressureSensor>
+    <equip:type>PTU200 Class A</equip:type>
+    <equip:manufacturer>VAISALA</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>5.578</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2001-11-15/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval></equip:dataSamplingInterval>
+    <equip:accuracy-hPa>0.15 mbar</equip:accuracy-hPa>
+    <equip:notes>Serial U5120002</equip:notes>
+  </pressureSensor>
+  <temperatureSensor>
+    <equip:type>PTU200</equip:type>
+    <equip:manufacturer>VAISALA</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2001-11-15/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>300 SEC</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>0.2 deg C</equip:accuracy-degreesCelcius>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>Serial U5120002</equip:notes>
+  </temperatureSensor>
+  <contactAgency>
+    <contact:agency>Danish National Space Center</contact:agency>
+    <contact:preferredAbbreviation>DNSC</contact:preferredAbbreviation>
+    <contact:mailingAddress>Juliane Maries Vej 30</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Finn Bo Madsen</contact:name>
+      <contact:telephonePrimary>+45 3532 5700(switch)</contact:telephonePrimary>
+      <contact:telephoneSecondary>+45 3532 5784(direct)</contact:telephoneSecondary>
+      <contact:fax>+45 3536 2475</contact:fax>
+      <contact:e-mail>bm@spacecenter.dk</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Ole Bjerregaard Hansen</contact:name>
+      <contact:telephonePrimary>+45 3532 5700 (switch)</contact:telephonePrimary>
+      <contact:telephoneSecondary>+45 3532 5738 (direct)</contact:telephoneSecondary>
+      <contact:fax>+45 3536 2475</contact:fax>
+      <contact:e-mail>obh@spacecenter.dk</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>DK-2100 Copenhagen East (multiple lines)</contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>Danish National Space Center</contact:agency>
+    <contact:preferredAbbreviation>DNSC</contact:preferredAbbreviation>
+    <contact:mailingAddress>(multiple lines)</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>(multiple lines)</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter>http</mi:primaryDataCenter>
+    <mi:secondaryDataCenter>http</mi:secondaryDataCenter>
+    <mi:urlForMoreInformation>http</mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>(Y or URL)</mi:siteMap>
+    <mi:siteDiagram>(Y)</mi:siteDiagram>
+    <mi:horizonMask>(Y)</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>(Y)</mi:sitePictures>
+    <mi:notes>(multiple lines)</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

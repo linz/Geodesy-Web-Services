@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class
+    name="au.gov.ga.geodesy.igssitelog.domain.model.GnssReceiver"
+    table="SITELOG_RECEIVER">
+    <id
+      name="id"
+      type="java.lang.Integer">
+      <column
+        name="RECEIVERNO"
+        precision="9"
+        scale="0" />
+	  
+	  <generator class="sequence">
+		  <param name="sequence">SEQ_GNSSRECEIVER</param>
+	  </generator>
+    </id>
+
+    <property name="serialNumber" column="SERIAL_NUMBER"/>
+    <property name="receiverType" column="RECEIVER_TYPE"/>
+    <property name="satelliteSystem" column="SATELLITE_SYSTEM"/>
+    <property name="firmwareVersion" column="FIRMWARE_VERSION"/>
+    <property name="elevationCutoffSetting" column="ELEVATION_CUTOFF"/>
+    <property name="dateInstalled" column="DATE_INSTALLED"/>
+    <property name="dateRemoved" column="DATE_REMOVED"/>
+    <property name="temperatureStabilization" column="TEMPERATURE_STABILIZATION"/>
+    <property name="notes" column="NOTES" length="1024"/>
+
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Iskander Gayazov</mi:preparedBy>
+    <mi:datePrepared>2011-11-11</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>badg_20100423.log</mi:previousLog>
+    <mi:modifiedSections>3.2, 3.3</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>Badary</mi:siteName>
+    <mi:fourCharacterID>BADG</mi:fourCharacterID>
+    <mi:monumentInscription>301</mi:monumentInscription>
+    <mi:iersDOMESNumber>12338M002</mi:iersDOMESNumber>
+    <mi:cdpNumber>(A4)</mi:cdpNumber>
+    <mi:monumentDescription>CONCRETE PILLAR ON THE ROOF</mi:monumentDescription>
+    <mi:heightOfTheMonument>1.2</mi:heightOfTheMonument>
+    <mi:monumentFoundation>ROOF</mi:monumentFoundation>
+    <mi:foundationDepth></mi:foundationDepth>
+    <mi:markerDescription>CENTERING BOLT ON STAINLESS PLATE</mi:markerDescription>
+    <mi:dateInstalled>2004-08-01</mi:dateInstalled>
+    <mi:geologicCharacteristic>SAND</mi:geologicCharacteristic>
+    <mi:bedrockType>(IGNEOUS/METAMORPHIC/SEDIMENTARY)</mi:bedrockType>
+    <mi:bedrockCondition>(FRESH/JOINTED/WEATHERED)</mi:bedrockCondition>
+    <mi:fractureSpacing>(1-10 cm/11-50 cm/51-200 cm/over 200 cm)</mi:fractureSpacing>
+    <mi:faultZonesNearby>(YES/NO/Name of the zone)</mi:faultZonesNearby>
+    <mi:distance-Activity>(multiple lines)</mi:distance-Activity>
+    <mi:notes>Concrete pillar on flat roof of 2-story laboratory building; mark 301; 16 m above the ground.</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Badary</mi:city>
+    <mi:state>Buryatiya Republic</mi:state>
+    <mi:country>Russian Federation</mi:country>
+    <mi:tectonicPlate>EURASIAN</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>-838281.513</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>3865777.334</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>4987624.632</mi:zCoordinateInMeters>
+      <mi:latitude-North>+514610.94</mi:latitude-North>
+      <mi:longitude-East>+1021405.93</mi:longitude-East>
+      <mi:elevation-m_ellips.>811.4</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes></mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>LEICA SR520</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>20527</equip:serialNumber>
+    <equip:firmwareVersion>4.20/1.44</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2005-04-01T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2010-03-09T23:59Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>JAVAD TRE_G3TH DELTA</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>00181</equip:serialNumber>
+    <equip:firmwareVersion>3.1.1 Oct,05,2009</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>3</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2010-03-15T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2011-09-12T06:22Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>JAVAD TRE_G3TH DELTA</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>00181</equip:serialNumber>
+    <equip:firmwareVersion>3.2.7 May,16,2011</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>3</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2011-09-12T07:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>LEIAT504        LEIS</equip:antennaType>
+    <equip:serialNumber>102158</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0280</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>+180</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>LEIS</equip:antennaRadomeType>
+    <equip:radomeSerialNumber>NONE</equip:radomeSerialNumber>
+    <equip:antennaCableType>Leica</equip:antennaCableType>
+    <equip:antennaCableLength>30</equip:antennaCableLength>
+    <equip:dateInstalled>2005-04-01T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2005-11-14T23:59Z</equip:dateRemoved>
+    <equip:notes></equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>LEIAT504        NONE</equip:antennaType>
+    <equip:serialNumber>102158</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0280</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>+180</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>Leica</equip:antennaCableType>
+    <equip:antennaCableLength>30</equip:antennaCableLength>
+    <equip:dateInstalled>2005-11-15T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2006-08-25T23:59Z</equip:dateRemoved>
+    <equip:notes></equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>LEIAT504        LEIS</equip:antennaType>
+    <equip:serialNumber>102158</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0280</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>+180</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>LEIS</equip:antennaRadomeType>
+    <equip:radomeSerialNumber>NONE</equip:radomeSerialNumber>
+    <equip:antennaCableType>Leica</equip:antennaCableType>
+    <equip:antennaCableLength>30</equip:antennaCableLength>
+    <equip:dateInstalled>2006-08-26T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2007-04-01T23:59Z</equip:dateRemoved>
+    <equip:notes></equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>LEIAT504        LEIS</equip:antennaType>
+    <equip:serialNumber>102158</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0280</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>LEIS</equip:antennaRadomeType>
+    <equip:radomeSerialNumber>NONE</equip:radomeSerialNumber>
+    <equip:antennaCableType>Leica</equip:antennaCableType>
+    <equip:antennaCableLength>30</equip:antennaCableLength>
+    <equip:dateInstalled>2007-04-02T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2010-03-09T23:59Z</equip:dateRemoved>
+    <equip:notes>Degree Offset from North</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>JAVRINGANT_DM   JVDM</equip:antennaType>
+    <equip:serialNumber>00328</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0280</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>JVDM</equip:antennaRadomeType>
+    <equip:radomeSerialNumber>NONE</equip:radomeSerialNumber>
+    <equip:antennaCableType>8D-FB PEEG MIL-C-17D</equip:antennaCableType>
+    <equip:antennaCableLength>30</equip:antennaCableLength>
+    <equip:dateInstalled>2010-03-15T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>Degree Offset from North</equip:notes>
+  </gnssAntenna>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>BADARY</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>VLBI</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>7382</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>12338S003</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>80.758</equip:dX>
+      <equip:dY>-25.612</equip:dY>
+      <equip:dZ>46.448</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>3</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>TRIANGULATION/LEVELING/DIRECT DIST. MEAS.</equip:surveyMethod>
+    <equip:dateMeasured>2006-09-27T00:00Z</equip:dateMeasured>
+    <equip:notes>measured with conventional techniques exact time unknown</equip:notes>
+  </surveyedLocalTies>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>BADB</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>DORIS</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber></equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>12338S002</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>3.694</equip:dX>
+      <equip:dY>-0.159</equip:dY>
+      <equip:dZ>2.165</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>3</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>TRIANGULATION/LEVELING/DIRECT DIST. MEAS.</equip:surveyMethod>
+    <equip:dateMeasured>2006-09-27T00:00Z</equip:dateMeasured>
+    <equip:notes>measured with conventional techniques exact time unknown</equip:notes>
+  </surveyedLocalTies>
+  <frequencyStandard>
+    <equip:standardType>EXTERNAL H-MASER CH1-80</equip:standardType>
+    <equip:inputFrequency>5 MHz</equip:inputFrequency>
+    <equip:effectiveDates>2010-03-15/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes></equip:notes>
+  </frequencyStandard>
+  <collocationInformation>
+    <equip:instrumentType>VLBI RADIO TELESCOPE RT-32</equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates>2006-07-01/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>regular participation in the IVS since Mar 2007</equip:notes>
+  </collocationInformation>
+  <collocationInformation>
+    <equip:instrumentType>DORIS</equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates>1993-01-03/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes></equip:notes>
+  </collocationInformation>
+  <humiditySensor>
+    <equip:type>HUMICAP</equip:type>
+    <equip:manufacturer>Vaisala Oyj, Finland</equip:manufacturer>
+    <equip:serialNumber>C4820022</equip:serialNumber>
+    <equip:heightDiffToAntenna>1</equip:heightDiffToAntenna>
+    <equip:calibrationDate>2007-11-28</equip:calibrationDate>
+    <equip:effectiveDates>2008-07-18/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>600</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>3</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>NATURAL</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </humiditySensor>
+  <pressureSensor>
+    <equip:type>BAROCAP</equip:type>
+    <equip:manufacturer>Vaisala Oyj, Finland</equip:manufacturer>
+    <equip:serialNumber>C4820022</equip:serialNumber>
+    <equip:heightDiffToAntenna>1</equip:heightDiffToAntenna>
+    <equip:calibrationDate>2007-11-28</equip:calibrationDate>
+    <equip:effectiveDates>2008-07-18/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>600</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>0.5</equip:accuracy-hPa>
+    <equip:notes>(multiple lines)</equip:notes>
+  </pressureSensor>
+  <temperatureSensor>
+    <equip:type>THERMOCAP</equip:type>
+    <equip:manufacturer>Vaisala Oyj, Finland</equip:manufacturer>
+    <equip:serialNumber>C4820022</equip:serialNumber>
+    <equip:heightDiffToAntenna>1</equip:heightDiffToAntenna>
+    <equip:calibrationDate>2007-11-28</equip:calibrationDate>
+    <equip:effectiveDates>2008-07-18/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>600</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>0.3</equip:accuracy-degreesCelcius>
+    <equip:aspiration>NATURAL</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </temperatureSensor>
+  <contactAgency>
+    <contact:agency>Institute of Applied Astronomy RAS</contact:agency>
+    <contact:preferredAbbreviation>IAA</contact:preferredAbbreviation>
+    <contact:mailingAddress>nab. Kutuzova 10, St.Petersburg 191187, Russia</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Iskander Gayazov (in St.Petersburg)</contact:name>
+      <contact:telephonePrimary>+7-(812)-275-11-18</contact:telephonePrimary>
+      <contact:telephoneSecondary>+7-(812)-275-10-24</contact:telephoneSecondary>
+      <contact:fax>+7-(812)-275-11-19</contact:fax>
+      <contact:e-mail>gayazov@ipa.nw.ru</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Vladimir Sharkov</contact:name>
+      <contact:telephonePrimary>+7-(812)-275-11-18</contact:telephonePrimary>
+      <contact:telephoneSecondary>+7-(812)-275-10-24</contact:telephoneSecondary>
+      <contact:fax>Fax   +7-(812)-275-11-19</contact:fax>
+      <contact:e-mail>E-mail sergeev@ipa.nw.ru</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>Roman Sergeev (at Badary) Phone +7-(30147)-418-91</contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>Institute of Applied Astronomy RAS</contact:agency>
+    <contact:preferredAbbreviation>IAA</contact:preferredAbbreviation>
+    <contact:mailingAddress>(multiple lines)</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>(multiple lines)</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter>www.ipa.nw.ru</mi:primaryDataCenter>
+    <mi:secondaryDataCenter>www.ipa.nw.ru</mi:secondaryDataCenter>
+    <mi:urlForMoreInformation>www.ipa.nw.ru</mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>(Y or URL)</mi:siteMap>
+    <mi:siteDiagram>(Y or URL)</mi:siteDiagram>
+    <mi:horizonMask>(Y or URL)</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>(Y or URL)</mi:sitePictures>
+    <mi:notes>(multiple lines)</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Hans van der Marel</mi:preparedBy>
+    <mi:datePrepared>2012-06-22</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>kosg_20110520.log</mi:previousLog>
+    <mi:modifiedSections>1, 2, 3.10, 3.11, 3.13, 3.14, 3.15, 3.16, 4.1,</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>Kootwijk Observatory for Satellite Geodesy</mi:siteName>
+    <mi:fourCharacterID>KOSG</mi:fourCharacterID>
+    <mi:monumentInscription>KOSG-25</mi:monumentInscription>
+    <mi:iersDOMESNumber>13504M003</mi:iersDOMESNumber>
+    <mi:cdpNumber>(A4)</mi:cdpNumber>
+    <mi:monumentDescription>STEEL MAST</mi:monumentDescription>
+    <mi:heightOfTheMonument>12</mi:heightOfTheMonument>
+    <mi:monumentFoundation>CONCRETE BLOCK</mi:monumentFoundation>
+    <mi:foundationDepth></mi:foundationDepth>
+    <mi:markerDescription>BRASS NAIL</mi:markerDescription>
+    <mi:dateInstalled>1991-01-01</mi:dateInstalled>
+    <mi:geologicCharacteristic>SAND, GLACIAL DEPOSIT</mi:geologicCharacteristic>
+    <mi:bedrockType>(IGNEOUS/METAMORPHIC/SEDIMENTARY)</mi:bedrockType>
+    <mi:bedrockCondition>(FRESH/JOINTED/WEATHERED)</mi:bedrockCondition>
+    <mi:fractureSpacing>(0 cm/1-10 cm/11-50 cm/51-200 cm/over 200 cm)</mi:fractureSpacing>
+    <mi:faultZonesNearby>NO</mi:faultZonesNearby>
+    <mi:distance-Activity>(multiple lines)</mi:distance-Activity>
+    <mi:notes>The GPS receiver is located at the site of the former Kootwijk Observatory for Satellite Geodesy (KOSG). The buildings at the site were vacated and pulled down in 2005, with the exception of the GPS mast. Since 28 August 2008 the receiver is running under solar power. The receiver is operating under responsibility of the Department of Earth Observation (DEOS) of the Delft University of Technology. The steel GPS mast has been in place since January 1991 (exact date unknown).</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Kootwijk</mi:city>
+    <mi:state>Gelderland</mi:state>
+    <mi:country>Netherlands</mi:country>
+    <mi:tectonicPlate>EURASIAN</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>3899225.2730</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>396731.8010</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>5015078.3320</mi:zCoordinateInMeters>
+      <mi:latitude-North>+521042.24</mi:latitude-North>
+      <mi:longitude-East>+0054834.56</mi:longitude-East>
+      <mi:elevation-m_ellips.>97.9</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>Near Apeldoorn</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-8</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>R117</equip:serialNumber>
+    <equip:firmwareVersion>Meenix 7.8</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1994-06-13T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1994-08-23</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- 2.0</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-8000</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>T175</equip:serialNumber>
+    <equip:firmwareVersion>2.8</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1994-08-24T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1994-11-22</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- 2.0</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-8</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>R117</equip:serialNumber>
+    <equip:firmwareVersion>Meenix 7.8</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1994-11-23T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1996-01-25</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- 2.0</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-12 RM</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>T209</equip:serialNumber>
+    <equip:firmwareVersion>3.2.32.1</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1996-01-26T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1996-04-23</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- 2.0</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-12 RM</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>T229</equip:serialNumber>
+    <equip:firmwareVersion>3.2.32.1</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1996-04-24T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1999-02-28</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- 2.0</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-12 RM</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>T222</equip:serialNumber>
+    <equip:firmwareVersion>3.2.32.1</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1999-03-01T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1999-07-14T07:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- 2.0</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-12 RM</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>T222</equip:serialNumber>
+    <equip:firmwareVersion>3.2.32.9</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1999-07-14T07:10Z</equip:dateInstalled>
+    <equip:dateRemoved>2000-11-23T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- 2.0</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>AOA SNR-12 ACT</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>224</equip:serialNumber>
+    <equip:firmwareVersion>3.3.32.4</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2000-11-24T17:34Z</equip:dateInstalled>
+    <equip:dateRemoved>2000-11-26T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- 2.0</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>AOA SNR-12 ACT</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>229</equip:serialNumber>
+    <equip:firmwareVersion>3.3.32.4</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2000-11-27T15:16Z</equip:dateInstalled>
+    <equip:dateRemoved>2008-08-28T08:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- 5.0</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200GGPRO</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>356091</equip:serialNumber>
+    <equip:firmwareVersion>6.00/3.14</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2008-08-28T13:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2009-04-17T14:45Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- 99.9</equip:temperatureStabilization>
+    <equip:notes>The receiver has actually been installed on 2008-07-31T08 in parallel to KOSG as KOS2 until 2008-08-28, at which time it became the official receiver for this site. Data for this parallel period is available from the LDC at http</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200GGPRO</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>356091</equip:serialNumber>
+    <equip:firmwareVersion>6.00/3.017</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2009-04-17T15:04Z</equip:dateInstalled>
+    <equip:dateRemoved>2009-05-19T09:15Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- 99.9</equip:temperatureStabilization>
+    <equip:notes>Firmware update</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200GGPRO</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>356091</equip:serialNumber>
+    <equip:firmwareVersion>7.50/3.017</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2009-05-19T09:15Z</equip:dateInstalled>
+    <equip:dateRemoved>2010-03-20T14:30Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- (deg C)</equip:temperatureStabilization>
+    <equip:notes>Firmware update</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200GGPRO</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>356091</equip:serialNumber>
+    <equip:firmwareVersion>7.80/3.018</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2010-03-20T14:30Z</equip:dateInstalled>
+    <equip:dateRemoved>2010-04-30T21:10Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- 99.9</equip:temperatureStabilization>
+    <equip:notes>Firmware update</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200GGPRO</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>356091</equip:serialNumber>
+    <equip:firmwareVersion>7.80/3.019</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2010-04-30T21:10Z</equip:dateInstalled>
+    <equip:dateRemoved>2011-05-20T16:15Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- 99.9</equip:temperatureStabilization>
+    <equip:notes>Firmware update</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200GGPRO</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>356091</equip:serialNumber>
+    <equip:firmwareVersion>8.20/3.019</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2011-05-20T16:15Z</equip:dateInstalled>
+    <equip:dateRemoved>2011-11-28T14:02Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- 99.9</equip:temperatureStabilization>
+    <equip:notes>Receiver removed for off-site testing</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200GGPRO</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>356091</equip:serialNumber>
+    <equip:firmwareVersion>8.20/3.019</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2012-04-23T14:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) +/- 99.9</equip:temperatureStabilization>
+    <equip:notes>Receiver reinstalled</equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_B        DUTD</equip:antennaType>
+    <equip:serialNumber>119</equip:serialNumber>
+    <equip:antennaReferencePoint>BCR</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.1050</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>DUTD</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength>30</equip:antennaCableLength>
+    <equip:dateInstalled>1991-01-01T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2011-07-20T00:00Z</equip:dateRemoved>
+    <equip:notes>Model C146-6-1 DUT design (polyester cone) Power and Signal cable separated, power submitted by original GPS-receiver ROGUE SNR-8, and later batteries</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_B        UNKN</equip:antennaType>
+    <equip:serialNumber>119</equip:serialNumber>
+    <equip:antennaReferencePoint>BCR</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.1050</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>UNKN</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength>30</equip:antennaCableLength>
+    <equip:dateInstalled>2011-07-20T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2011-09-13T00:00Z</equip:dateRemoved>
+    <equip:notes>On 18 Sep 2011 it was discovered that the radome has fallen off the station. The exact date and time that the Radome fell off is unknown, but from the inspection of the timeseries we believe it fell off on 12 Sep 2011. However, there may have been a prolonged period when the dome was only loosely connected resulting in rather unstable coordinate time series. We believe this started on June 20 2011, although there is also some increased scatter in the period leading up to this date (starting end of March).</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_B        NONE</equip:antennaType>
+    <equip:serialNumber>119</equip:serialNumber>
+    <equip:antennaReferencePoint>BCR</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.1050</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>(vendor &amp; type number)</equip:antennaCableType>
+    <equip:antennaCableLength>30</equip:antennaCableLength>
+    <equip:dateInstalled>2011-09-13T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>Model C146-6-1 Power and Signal cable separated, power submitted by batteries The antenna itself remains unaltered since 1991</equip:notes>
+  </gnssAntenna>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>KOSG-23(SLR)</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>SLR/LOCAL CONTROL/FOOTPRINT</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>8833</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>13504M002</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>12.458</equip:dX>
+      <equip:dY>37.501</equip:dY>
+      <equip:dZ>-23.025</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>3</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>GPS CAMPAIGN/TRILATERATION/TRIANGULATION</equip:surveyMethod>
+    <equip:dateMeasured>1993-04-14</equip:dateMeasured>
+    <equip:notes>KOSG-23  Mobile SLR Reference Point</equip:notes>
+  </surveyedLocalTies>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>KOSG-28</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>LOCAL CONTROL/FOOTPRINT/GPS</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>8833</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>13504M002</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>-17.115</equip:dX>
+      <equip:dY>32.379</equip:dY>
+      <equip:dZ>1.144</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>3</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>GPS CAMPAIGN/TRILATERATION/TRIANGULATION</equip:surveyMethod>
+    <equip:dateMeasured>1993-04-14</equip:dateMeasured>
+    <equip:notes>KOSG-28  Mobile GPS Reference Point, also EUREF reference marker</equip:notes>
+  </surveyedLocalTies>
+  <frequencyStandard>
+    <equip:standardType>EXTERNAL RUBIDIUM</equip:standardType>
+    <equip:inputFrequency>5 MHz</equip:inputFrequency>
+    <equip:effectiveDates>1991-01-01/1996-01-26</equip:effectiveDates>
+    <equip:notes>5065A Rubidium Vapor Frequency Standard</equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>EXTERNAL QUARTZ</equip:standardType>
+    <equip:inputFrequency>5 MHz</equip:inputFrequency>
+    <equip:effectiveDates>1996-01-27/1996-02-14</equip:effectiveDates>
+    <equip:notes>Frequency Crystal Oscillator</equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>EXTERNAL RUBIDIUM</equip:standardType>
+    <equip:inputFrequency>5 MHz</equip:inputFrequency>
+    <equip:effectiveDates>1996-02-14/2000-11-23</equip:effectiveDates>
+    <equip:notes>5065A Rubidium Vapor Frequency Standard</equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL </equip:standardType>
+    <equip:inputFrequency>(if external)</equip:inputFrequency>
+    <equip:effectiveDates>2000-11-24/2000-11-27</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>EXTERNAL QUARTZ</equip:standardType>
+    <equip:inputFrequency>5 MHZ</equip:inputFrequency>
+    <equip:effectiveDates>2000-11-27/2008-08-27</equip:effectiveDates>
+    <equip:notes>OSCILLOQUARTZ Oven Controlled Crystal Oscillator OCXO 8600</equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL </equip:standardType>
+    <equip:inputFrequency>(if external)</equip:inputFrequency>
+    <equip:effectiveDates>2008-08-28/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </frequencyStandard>
+  <collocationInformation>
+    <equip:instrumentType>SLR</equip:instrumentType>
+    <equip:status>MOBILE</equip:status>
+    <equip:effectiveDates>1984-01-01/1996-12-31</equip:effectiveDates>
+    <equip:notes>Regular occupations by MTLRS-2</equip:notes>
+  </collocationInformation>
+  <collocationInformation>
+    <equip:instrumentType>Absolute gravimeters</equip:instrumentType>
+    <equip:status>MOBILE</equip:status>
+    <equip:effectiveDates>1973-01-01/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </collocationInformation>
+  <collocationInformation>
+    <equip:instrumentType>Relative gravimeters</equip:instrumentType>
+    <equip:status>MOBILE</equip:status>
+    <equip:effectiveDates>1973-01-01/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </collocationInformation>
+  <collocationInformation>
+    <equip:instrumentType>Seismometer</equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates>1973-01-01/1995-12-31</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </collocationInformation>
+  <localEpisodicEvents>
+    <li:date>2003-03-17/2003-03-17</li:date>
+    <li:event>On March 17, 2003, about 8</li:event>
+  </localEpisodicEvents>
+  <localEpisodicEvents>
+    <li:date>2008-07-17/2008-07-17</li:date>
+    <li:event>MINOR CONSTRUCTION (FOUNDATION FOR SOLAR PANELS)</li:event>
+  </localEpisodicEvents>
+  <localEpisodicEvents>
+    <li:date>2010-04-01/2011-11-28</li:date>
+    <li:event>The receiver has been experiencing increasing</li:event>
+  </localEpisodicEvents>
+  <localEpisodicEvents>
+    <li:date>2011-07-20/2011-11-28</li:date>
+    <li:event>Data started to deteriorate, frequent</li:event>
+  </localEpisodicEvents>
+  <localEpisodicEvents>
+    <li:date>2011-11-28/2012-04-23</li:date>
+    <li:event>Observations were stopped because of power</li:event>
+  </localEpisodicEvents>
+  <contactAgency>
+    <contact:agency>Delft University of Technology</contact:agency>
+    <contact:preferredAbbreviation>DUT</contact:preferredAbbreviation>
+    <contact:mailingAddress>Faculty of Aerospace Engineering TU Delft</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Hans van der Marel</contact:name>
+      <contact:telephonePrimary>+31 15 2784907</contact:telephonePrimary>
+      <contact:telephoneSecondary>+31 15 2783546</contact:telephoneSecondary>
+      <contact:fax>+31 15 2783711</contact:fax>
+      <contact:e-mail>H.vanderMarel@tudelft.nl</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>Earth Observation and Space Systems (DEOS) Kluyverweg 1, NL-2629 HS Delft (multiple lines)</contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>Delft University of Technology</contact:agency>
+    <contact:preferredAbbreviation>DUT</contact:preferredAbbreviation>
+    <contact:mailingAddress>(multiple lines)</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>(multiple lines)</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter>http</mi:primaryDataCenter>
+    <mi:secondaryDataCenter>http</mi:secondaryDataCenter>
+    <mi:urlForMoreInformation>http</mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>./dpga/station/Kootwijk.html</mi:siteMap>
+    <mi:siteDiagram>X</mi:siteDiagram>
+    <mi:horizonMask>X</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>./dpga/station/Kootwijk.html</mi:sitePictures>
+    <mi:notes>(multiple lines)</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

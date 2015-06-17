@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Michael Schmidt</mi:preparedBy>
+    <mi:datePrepared>2012-01-16</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>nano_20100430.log</mi:previousLog>
+    <mi:modifiedSections>2003-02-20</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>Nanoose</mi:siteName>
+    <mi:fourCharacterID>NANO</mi:fourCharacterID>
+    <mi:monumentInscription>957000</mi:monumentInscription>
+    <mi:iersDOMESNumber>40138M001</mi:iersDOMESNumber>
+    <mi:cdpNumber></mi:cdpNumber>
+    <mi:monumentDescription>PILLAR/BRASS</mi:monumentDescription>
+    <mi:heightOfTheMonument>1.5</mi:heightOfTheMonument>
+    <mi:monumentFoundation>BEDROCK</mi:monumentFoundation>
+    <mi:foundationDepth></mi:foundationDepth>
+    <mi:markerDescription>BRASS PLATE</mi:markerDescription>
+    <mi:dateInstalled>1995-05-13</mi:dateInstalled>
+    <mi:geologicCharacteristic>BEDROCK</mi:geologicCharacteristic>
+    <mi:bedrockType>IGNEOUS/METAMORPHIC</mi:bedrockType>
+    <mi:bedrockCondition>WEATHERED</mi:bedrockCondition>
+    <mi:fractureSpacing>50 - 100cm</mi:fractureSpacing>
+    <mi:faultZonesNearby>BEAUFORT FAULT / CASCADIA SUBDUCTION ZONE</mi:faultZonesNearby>
+    <mi:distance-Activity></mi:distance-Activity>
+    <mi:notes>This station is part of the Western Canada Deformation Array (WCDA) as well as the Canadian Active Control System (CACS). ******************************************* The GPS reference mark consists of a brass plate with a forced centered stainless steel bolt. The brass plate is embedded on top of a 1.5 metre high concrete pier, 60 cm in diameter. The concrete pier is anchored to exposed bedrock using steel re-enforcement bars to a depth of 1.5 m. The antenna is attached to the brass forced centered plate via an anodized aluminum base. ** File Audited as of 2008-10-08</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Nanoose Bay</mi:city>
+    <mi:state>B.C.</mi:state>
+    <mi:country>Canada</mi:country>
+    <mi:tectonicPlate>North America</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>-2335726.7300</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>-3451608.3290</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>4812009.9710</mi:zCoordinateInMeters>
+      <mi:latitude-North>+491741.28</mi:latitude-North>
+      <mi:longitude-East>-1240511.40</mi:longitude-East>
+      <mi:elevation-m_ellips.>+6.0</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>located on Winchelsea Island</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-8000</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>162</equip:serialNumber>
+    <equip:firmwareVersion>3.0.32.3 lk 95/03/21</equip:firmwareVersion>
+    <equip:elevationCutoffSetting></equip:elevationCutoffSetting>
+    <equip:dateInstalled>1995-05-13T00:25Z</equip:dateInstalled>
+    <equip:dateRemoved>1996-02-14T18:20Z</equip:dateRemoved>
+    <equip:temperatureStabilization>± 5 DEG C</equip:temperatureStabilization>
+    <equip:notes>Installed</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-8000</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>162</equip:serialNumber>
+    <equip:firmwareVersion>3.2 lk  95/03/09</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>10</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1996-02-14T18:20Z</equip:dateInstalled>
+    <equip:dateRemoved>1999-05-13T16:52Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(none or tolerance in degrees C)</equip:temperatureStabilization>
+    <equip:notes>firmware upgrade</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-8000</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>162</equip:serialNumber>
+    <equip:firmwareVersion>3.2.32.8 lk 98/12/28</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>10</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1999-05-13T16:52Z</equip:dateInstalled>
+    <equip:dateRemoved>1999-08-06T00:24Z</equip:dateRemoved>
+    <equip:temperatureStabilization>± 5 DEG C</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-8000</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>165</equip:serialNumber>
+    <equip:firmwareVersion>3.2.32.8 lk 98/12/28</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>10</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1999-08-06T00:24Z</equip:dateInstalled>
+    <equip:dateRemoved>2001-11-08T17:15Z</equip:dateRemoved>
+    <equip:temperatureStabilization>± 5 DEG C</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>AOA BENCHMARK ACT</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>2042</equip:serialNumber>
+    <equip:firmwareVersion>3.3.32.4x lk 00/03/08</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2001-11-08T17:15Z</equip:dateInstalled>
+    <equip:dateRemoved>2002-10-18T17:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>± 5 DEG C</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ROGUE SNR-8000</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>158</equip:serialNumber>
+    <equip:firmwareVersion>3.2.32.11 lk 00/07/25</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2002-10-18T17:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2003-01-09T18:35Z</equip:dateRemoved>
+    <equip:temperatureStabilization>± 5 DEG C</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA CRS1000</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>30174</equip:serialNumber>
+    <equip:firmwareVersion>9.00 4.42 1.26 1.20</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2003-01-09T23:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2003-02-20T18:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>± 5 DEG C</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA CRS1000</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>23214</equip:serialNumber>
+    <equip:firmwareVersion>9.00 4.42 1.26 1.20</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2003-02-20T18:30Z</equip:dateInstalled>
+    <equip:dateRemoved>2008-12-09T21:30Z</equip:dateRemoved>
+    <equip:temperatureStabilization>± 5 DEG C</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200GGPRO</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>355846</equip:serialNumber>
+    <equip:firmwareVersion>6.00</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2008-12-09T21:50Z</equip:dateInstalled>
+    <equip:dateRemoved>2009-09-25T15:51Z</equip:dateRemoved>
+    <equip:temperatureStabilization>± 5 DEG C</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200GGPRO</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>355846</equip:serialNumber>
+    <equip:firmwareVersion>7.53</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2009-09-25T19:50Z</equip:dateInstalled>
+    <equip:dateRemoved>2010-04-28T23:50Z</equip:dateRemoved>
+    <equip:temperatureStabilization>? 5 DEG C</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>LEICA GRX1200GGPRO</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>355846</equip:serialNumber>
+    <equip:firmwareVersion>7.80/3.019</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2010-04-29T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>? 5 DEG C</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        EMRA</equip:antennaType>
+    <equip:serialNumber>92174</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.1000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>EMRA</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>Andrews FSJ4-50B</equip:antennaCableType>
+    <equip:antennaCableLength>100</equip:antennaCableLength>
+    <equip:dateInstalled>1995-05-13T00:25Z</equip:dateInstalled>
+    <equip:dateRemoved>1999-08-06T00:24Z</equip:dateRemoved>
+    <equip:notes>The dome was installed using an aluminum flange ring attached to the choke ring. The flange ring extends the radius of the ground plane by 2.5 cm. Antenna p/n 7490400-1 ref. Antenna Diagram 'A' below</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>AOAD/M_T        EMRA</equip:antennaType>
+    <equip:serialNumber>94383</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.1000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>EMRA</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>Andrews FSJ4-50B</equip:antennaCableType>
+    <equip:antennaCableLength>100</equip:antennaCableLength>
+    <equip:dateInstalled>1999-08-06T00:24Z</equip:dateInstalled>
+    <equip:dateRemoved>2003-01-09T18:35Z</equip:dateRemoved>
+    <equip:notes>The dome was installed using an aluminum flange ring attached to the choke ring. The flange ring extends the radius of the ground plane by 2.5 cm. Antenna p/n 7490582-2 ref. Antenna Diagram 'A' below</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>LEIAT504        NONE</equip:antennaType>
+    <equip:serialNumber>00411</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.2000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>Andrews FSJ4-50B</equip:antennaCableType>
+    <equip:antennaCableLength>100</equip:antennaCableLength>
+    <equip:dateInstalled>2003-01-09T23:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2009-09-25T15:51Z</equip:dateRemoved>
+    <equip:notes>SS RF skirt ref. Antenna Diagram 'B' below</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>LEIAT504GG      LEIS</equip:antennaType>
+    <equip:serialNumber>00724</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.1000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>LEIS</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>Andrews FSJ4-50B</equip:antennaCableType>
+    <equip:antennaCableLength>100</equip:antennaCableLength>
+    <equip:dateInstalled>2009-09-25T19:50Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>SS RF skirt ref. Antenna Diagram 'B' below</equip:notes>
+  </gnssAntenna>
+  <frequencyStandard>
+    <equip:standardType>RUBIDIUM</equip:standardType>
+    <equip:inputFrequency>5MHz</equip:inputFrequency>
+    <equip:effectiveDates>1995-05-13T00:25Z/1998-02-26T19:18Z</equip:effectiveDates>
+    <equip:notes>       Notes                  :</equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>RUBIDIUM</equip:standardType>
+    <equip:inputFrequency>5MHz</equip:inputFrequency>
+    <equip:effectiveDates>1998-02-26T19:27Z/1998-03-03T17:15Z</equip:effectiveDates>
+    <equip:notes>       Notes                  :</equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>internal clock steering</equip:standardType>
+    <equip:inputFrequency>5MHz</equip:inputFrequency>
+    <equip:effectiveDates>1998-03-03T17:15Z/1998-06-10T14:46Z</equip:effectiveDates>
+    <equip:notes>       Notes                  :</equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>RUBIDIUM</equip:standardType>
+    <equip:inputFrequency>5MHz</equip:inputFrequency>
+    <equip:effectiveDates>1998-06-10T14:54Z/2000-11-07T17:08Z</equip:effectiveDates>
+    <equip:notes>       Notes                  :</equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>CLOCK STEERING</equip:standardType>
+    <equip:inputFrequency>       Input Frequency        :</equip:inputFrequency>
+    <equip:effectiveDates>2000-11-07T17:08Z/2003-01-09T18:35Z</equip:effectiveDates>
+    <equip:notes>       Notes                  :</equip:notes>
+  </frequencyStandard>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL</equip:standardType>
+    <equip:inputFrequency>       Input Frequency        :</equip:inputFrequency>
+    <equip:effectiveDates>2003-01-09T23:00Z</equip:effectiveDates>
+    <equip:notes>       Notes                  :</equip:notes>
+  </frequencyStandard>
+  <collocationInformation>
+    <equip:instrumentType>Absolute Gravity</equip:instrumentType>
+    <equip:status>Mobile</equip:status>
+    <equip:effectiveDates>1995-07-26</equip:effectiveDates>
+    <equip:notes>Located approx. 7km from site; contact GSC for additional information</equip:notes>
+  </collocationInformation>
+  <contactAgency>
+    <contact:agency>Geological Survey of Canada</contact:agency>
+    <contact:preferredAbbreviation>GSC</contact:preferredAbbreviation>
+    <contact:mailingAddress>P.O. Box 6000</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Michael Schmidt</contact:name>
+      <contact:telephonePrimary>250-363-6760</contact:telephonePrimary>
+      <contact:telephoneSecondary>250-363-6500</contact:telephoneSecondary>
+      <contact:fax>250-363-6565</contact:fax>
+      <contact:e-mail>MSchmidt@nrcan.gc.ca</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Herb Dragert</contact:name>
+      <contact:telephonePrimary>250-363-6447</contact:telephonePrimary>
+      <contact:telephoneSecondary>250-363-6500</contact:telephoneSecondary>
+      <contact:fax>250-363-6565</contact:fax>
+      <contact:e-mail>HDragert@nrcan.gc.ca</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>9860 West Saanich Rd. Sidney, B.C. Canada V8L 4B2 (multiple lines)</contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>Geological Survey of Canada</contact:agency>
+    <contact:preferredAbbreviation>GSC</contact:preferredAbbreviation>
+    <contact:mailingAddress>(multiple lines)</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>(multiple lines)</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter>http</mi:primaryDataCenter>
+    <mi:secondaryDataCenter>http</mi:secondaryDataCenter>
+    <mi:urlForMoreInformation>http</mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>(Y or URL)</mi:siteMap>
+    <mi:siteDiagram>(Y)</mi:siteDiagram>
+    <mi:horizonMask>(Y)</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>(Y)</mi:sitePictures>
+    <mi:notes>Hardcopy Information available from www site or site contact</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

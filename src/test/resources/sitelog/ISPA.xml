@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Andrea Prantner</mi:preparedBy>
+    <mi:datePrepared>2012-10-05</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>ispa_20080702.log</mi:previousLog>
+    <mi:modifiedSections>0,4.1,4.2,8.1.1,</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>Easter Island (Isla de Pascua)</mi:siteName>
+    <mi:fourCharacterID>ISPA</mi:fourCharacterID>
+    <mi:monumentInscription>ISPA (North leg of monument)</mi:monumentInscription>
+    <mi:iersDOMESNumber>41703M007</mi:iersDOMESNumber>
+    <mi:cdpNumber>None</mi:cdpNumber>
+    <mi:monumentDescription>SCIGN SHORT DRILL-BRACED STAINLESS STEEL</mi:monumentDescription>
+    <mi:heightOfTheMonument>1.7</mi:heightOfTheMonument>
+    <mi:monumentFoundation>BASALT BEDROCK</mi:monumentFoundation>
+    <mi:foundationDepth>1.6</mi:foundationDepth>
+    <mi:markerDescription>SCIGN MOUNT</mi:markerDescription>
+    <mi:dateInstalled>2004-02-13</mi:dateInstalled>
+    <mi:geologicCharacteristic>BEDROCK</mi:geologicCharacteristic>
+    <mi:bedrockType>IGNEOUS</mi:bedrockType>
+    <mi:bedrockCondition>(FRESH/JOINTED/WEATHERED)</mi:bedrockCondition>
+    <mi:fractureSpacing>(1-10 cm/10-50 cm/50-200 cm/over 200 cm)</mi:fractureSpacing>
+    <mi:faultZonesNearby>(YES/NO/Name of the zone)</mi:faultZonesNearby>
+    <mi:distance-Activity>(multiple lines)</mi:distance-Activity>
+    <mi:notes>(multiple lines) East South Pacific Island, about 500 kilometers east of the crest of the East Pacific Rise. The island is the product of three principle volcanic structures. Some evidence suggests that the island is on a microplate at the edge of the Nazca Plate. Geological information from "NASA Space Geodesy Program Technical Memorandum 4482, March 1993, p99.</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Easter Island</mi:city>
+    <mi:state></mi:state>
+    <mi:country>Chile</mi:country>
+    <mi:tectonicPlate>Pacific/Nazca</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>-1881703.5070</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>-5359979.7720</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>-2890599.2590</mi:zCoordinateInMeters>
+      <mi:latitude-North>-270729.9386</mi:latitude-North>
+      <mi:longitude-East>-1092039.8759</mi:longitude-East>
+      <mi:elevation-m_ellips.>112.4948</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes> The site is located on the south part of the South Pacific Chilean island, Easter Island. The facility is located inland about 9 km east of Mataveri Airport. To reach the station from the main entrance of the Mataveri Airport, proceed southeast along the road that parallels the runway for 1.2 kilometers to a fork in the road. Bear left (northeast) onto the left fork and proceed past the NASA station (EISL) after about 4.1 kilometers, make a right turn onto a dirt road after about another 5 km. Follow dirt road south to site.</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH UZ-12</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>UC120031602</equip:serialNumber>
+    <equip:firmwareVersion></equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2004-02-13T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2007-03-30T02:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>ASHTECH UZ-12</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>UC2200524015</equip:serialNumber>
+    <equip:firmwareVersion></equip:firmwareVersion>
+    <equip:elevationCutoffSetting>0</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2007-06-03T06:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>ASH701945E_M    SCIT</equip:antennaType>
+    <equip:serialNumber>CR620024321</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0083</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>SCIT</equip:antennaRadomeType>
+    <equip:radomeSerialNumber>0117</equip:radomeSerialNumber>
+    <equip:antennaCableType>Times Microwave LMR 400</equip:antennaCableType>
+    <equip:antennaCableLength>36</equip:antennaCableLength>
+    <equip:dateInstalled>2004-02-13T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2012-10-05T00:00Z</equip:dateRemoved>
+    <equip:notes>SCIGN mount s/n 0669.</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>ASH701945E_M    SCIT</equip:antennaType>
+    <equip:serialNumber>CR620024321</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0083</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>SCIT</equip:antennaRadomeType>
+    <equip:radomeSerialNumber>0117</equip:radomeSerialNumber>
+    <equip:antennaCableType>Times Microwave LMR 400</equip:antennaCableType>
+    <equip:antennaCableLength>170</equip:antennaCableLength>
+    <equip:dateInstalled>2012-10-05T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>SCIGN mount s/n 0669. new antenna cable installed</equip:notes>
+  </gnssAntenna>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>JPL 4008-S</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>GPS (EISL mark)</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>none</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>41703M003</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX></equip:dX>
+      <equip:dY></equip:dY>
+      <equip:dZ></equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>(mm)</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>GPS CAMPAIGN</equip:surveyMethod>
+    <equip:dateMeasured>(CCYY-MM-DDThh:mmZ)</equip:dateMeasured>
+    <equip:notes>This tie marker is the old EISL mark. Site will run for about one year till sufficient data has been recorded. Differential components will be published at that time.</equip:notes>
+  </surveyedLocalTies>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL</equip:standardType>
+    <equip:inputFrequency>(if external)</equip:inputFrequency>
+    <equip:effectiveDates>(2004-02-13/CCYY-MM-DD)</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </frequencyStandard>
+  <collocationInformation>
+    <equip:instrumentType>SEISMOMETER</equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates>(CCYY-MM-DD/CCYY-MM-DD)</equip:effectiveDates>
+    <equip:notes>Operated by IRIS.</equip:notes>
+  </collocationInformation>
+  <humiditySensor>
+    <equip:type>Capacitance Probe</equip:type>
+    <equip:manufacturer>Paroscientific</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>0</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2004-02-13/2012-10-04</equip:effectiveDates>
+    <equip:dataSamplingInterval>5 minutes</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>+/- 2</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>NATURAL</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </humiditySensor>
+  <humiditySensor>
+    <equip:type>MET4</equip:type>
+    <equip:manufacturer>Paroscientific</equip:manufacturer>
+    <equip:serialNumber>115107</equip:serialNumber>
+    <equip:heightDiffToAntenna>3.1</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2012-10-05/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>1 minutes</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>+/- 2</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>UNASPIRATED</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </humiditySensor>
+  <pressureSensor>
+    <equip:type>Digiquartz Barometric Standard</equip:type>
+    <equip:manufacturer>Paroscientific</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>0</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2004-02-13/2012-10-04</equip:effectiveDates>
+    <equip:dataSamplingInterval>5 minutes</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>0.010%</equip:accuracy-hPa>
+    <equip:notes>(multiple lines)</equip:notes>
+  </pressureSensor>
+  <pressureSensor>
+    <equip:type>MET4</equip:type>
+    <equip:manufacturer>Paroscientific</equip:manufacturer>
+    <equip:serialNumber>115107</equip:serialNumber>
+    <equip:heightDiffToAntenna>3.1</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2012-10-05/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>1 minutes</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>.1</equip:accuracy-hPa>
+    <equip:notes>(multiple lines)</equip:notes>
+  </pressureSensor>
+  <temperatureSensor>
+    <equip:type>Platinum Resistance Temperature Probe</equip:type>
+    <equip:manufacturer>Paroscientific</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>3.1</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2004-02-13/2012-10-04</equip:effectiveDates>
+    <equip:dataSamplingInterval>5 minutes</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>0.5 deg C</equip:accuracy-degreesCelcius>
+    <equip:aspiration>NATURAL</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </temperatureSensor>
+  <temperatureSensor>
+    <equip:type>MET4</equip:type>
+    <equip:manufacturer>Paroscientific</equip:manufacturer>
+    <equip:serialNumber>115107</equip:serialNumber>
+    <equip:heightDiffToAntenna>3.1</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2012-10-05/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>1 minutes</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>0.5</equip:accuracy-degreesCelcius>
+    <equip:aspiration>UNASPIRATED</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </temperatureSensor>
+  <waterVaporSensor>
+    <equip:type></equip:type>
+    <equip:manufacturer></equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna></equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>CCYY-MM-DD/CCYY-MM-DD</equip:effectiveDates>
+    <equip:distanceToAntenna></equip:distanceToAntenna>
+    <equip:notes>(multiple lines)</equip:notes>
+  </waterVaporSensor>
+  <localEpisodicEvents>
+    <li:date>2011-09-09/2011-09-09</li:date>
+    <li:event>Transition from .soc to .ash data types.</li:event>
+  </localEpisodicEvents>
+  <contactAgency>
+    <contact:agency>Center for Space Studies</contact:agency>
+    <contact:preferredAbbreviation>CEC</contact:preferredAbbreviation>
+    <contact:mailingAddress>University of Chile</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Martin Arluciaga</contact:name>
+      <contact:telephonePrimary>56-2-6981702</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>56-2-8441003</contact:fax>
+      <contact:e-mail>marluciaga@ing.uchile.cl</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Miguel Tapia</contact:name>
+      <contact:telephonePrimary>56-2-6981702</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>56-2-8441003</contact:fax>
+      <contact:e-mail>mtapia@cec.uchile.cl</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>A. Prat 1171 Casilla 411-3 Santiago, Chile (multiple lines)</contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>Jet Propulsion Laboratory</contact:agency>
+    <contact:preferredAbbreviation>JPL</contact:preferredAbbreviation>
+    <contact:mailingAddress>4800 Oak Grove Drive</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>UNAVCO Engineer</contact:name>
+      <contact:telephonePrimary>303-381-7500</contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax>303-381-7451</contact:fax>
+      <contact:e-mail>ggn-ops@ls.unavco.org</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>Pasadena, CA 91109 USA </contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter></mi:primaryDataCenter>
+    <mi:secondaryDataCenter></mi:secondaryDataCenter>
+    <mi:urlForMoreInformation></mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>Y</mi:siteMap>
+    <mi:siteDiagram>Y</mi:siteDiagram>
+    <mi:horizonMask>Y</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>Y</mi:sitePictures>
+    <mi:notes>(multiple lines)</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

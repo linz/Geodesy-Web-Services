@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Sachiyo Kasho (JAXA)</mi:preparedBy>
+    <mi:datePrepared>2013-07-08</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>gmsd_20130510.log</mi:previousLog>
+    <mi:modifiedSections>3.11, 3.12</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>GUTS Masda</mi:siteName>
+    <mi:fourCharacterID>GMSD</mi:fourCharacterID>
+    <mi:monumentInscription>HAC monitoring station</mi:monumentInscription>
+    <mi:iersDOMESNumber>21749S002</mi:iersDOMESNumber>
+    <mi:cdpNumber>none</mi:cdpNumber>
+    <mi:monumentDescription>STEEL MAST</mi:monumentDescription>
+    <mi:heightOfTheMonument>2.0</mi:heightOfTheMonument>
+    <mi:monumentFoundation>Concrete base on roof</mi:monumentFoundation>
+    <mi:foundationDepth></mi:foundationDepth>
+    <mi:markerDescription></mi:markerDescription>
+    <mi:dateInstalled>2003-12-20T00</mi:dateInstalled>
+    <mi:geologicCharacteristic>(BEDROCK/CLAY/CONGLOMERATE/GRAVEL/SAND/etc)</mi:geologicCharacteristic>
+    <mi:bedrockType>(IGNEOUS/METAMORPHIC/SEDIMENTARY)</mi:bedrockType>
+    <mi:bedrockCondition>(FRESH/JOINTED/WEATHERED)</mi:bedrockCondition>
+    <mi:fractureSpacing>(0 cm/1-10 cm/11-50 cm/51-200 cm/over 200 cm)</mi:fractureSpacing>
+    <mi:faultZonesNearby>(YES/NO/Name of the zone)</mi:faultZonesNearby>
+    <mi:distance-Activity></mi:distance-Activity>
+    <mi:notes>STK400 structures,Concreate base on ROOF GPS Antenna mounted on the steel mast Steel mast is on the rooftop of SLR building. http</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Nakatane town</mi:city>
+    <mi:state>Kagoshima prefecture(Tanegashima Island)</mi:state>
+    <mi:country>Japan</mi:country>
+    <mi:tectonicPlate>EURASIAN</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>-3607665.4303</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>4147868.2248</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>3223717.2617</mi:zCoordinateInMeters>
+      <mi:latitude-North>+303323.204151</mi:latitude-North>
+      <mi:longitude-East>+1310056.029064</mi:longitude-East>
+      <mi:elevation-m_ellips.>142.6475</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>Date Measured 2012/02/25</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>NOV MILLEN-RT2</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>SGL01270141</equip:serialNumber>
+    <equip:firmwareVersion>HW3-2 SW4.503/2.03</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2003-11-13T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2008-10-14T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>This receiver is installed for the navigation experiment using ETS-VIII(Engineering Test Satellite-VIII), thus, transmission of GPS data will interrupt when the experiment carry out. The data which received in the experiment period will transmit after the end of experiment.</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>NOV OEMV3-RT2</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>NBV07510004</equip:serialNumber>
+    <equip:firmwareVersion>HW Rev. 5.01</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>10</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2008-10-14T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2010-12-06T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>Reference clock (10MHz) which made by cesium atomic clock is inputed.</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETR9</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>5049K72188</equip:serialNumber>
+    <equip:firmwareVersion>4.42  22 Oct 2007</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>10</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2011-07-27T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2011-10-25T00:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>none</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETR9</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>5049K72188</equip:serialNumber>
+    <equip:firmwareVersion>4.43</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>10</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2011-10-25T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>none</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETR9</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>5049K72188</equip:serialNumber>
+    <equip:firmwareVersion>4.43</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2012-01-10T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2012-03-15T03:20Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes>none</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETR9</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>5049K72188</equip:serialNumber>
+    <equip:firmwareVersion>4.46</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2012-03-15T03:20Z</equip:dateInstalled>
+    <equip:dateRemoved>2012-04-17T10:30Z</equip:dateRemoved>
+    <equip:temperatureStabilization>none</equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETR9</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>5049K72188</equip:serialNumber>
+    <equip:firmwareVersion>4.48</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2012-04-17T10:30Z</equip:dateInstalled>
+    <equip:dateRemoved>2012-06-07T03:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization></equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETR9</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>5049K72188</equip:serialNumber>
+    <equip:firmwareVersion>4.60</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2012-06-07T03:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2012-08-15T03:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization></equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETR9</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>5049K72188</equip:serialNumber>
+    <equip:firmwareVersion>4.61</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2012-08-15T03:20Z</equip:dateInstalled>
+    <equip:dateRemoved>2012-10-11T05:10Z</equip:dateRemoved>
+    <equip:temperatureStabilization></equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETR9</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO</equip:satelliteSystem>
+    <equip:serialNumber>5049K72188</equip:serialNumber>
+    <equip:firmwareVersion>4.62</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>3</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2012-10-11T05:10Z</equip:dateInstalled>
+    <equip:dateRemoved>2013-02-15T01:30Z</equip:dateRemoved>
+    <equip:temperatureStabilization></equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETR9</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO+GAL+BDS+QZSS</equip:satelliteSystem>
+    <equip:serialNumber>5049K72188</equip:serialNumber>
+    <equip:firmwareVersion>4.70</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>3</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2013-02-15T01:30Z</equip:dateInstalled>
+    <equip:dateRemoved>2013-05-10T01:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization></equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETR9</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO+GAL+BDS+QZSS</equip:satelliteSystem>
+    <equip:serialNumber>5049K72188</equip:serialNumber>
+    <equip:firmwareVersion>4.80</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>3</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2013-05-10T01:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2013-07-08T01:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization></equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETR9</equip:receiverType>
+    <equip:satelliteSystem>GPS+GLO+GAL+BDS+QZSS</equip:satelliteSystem>
+    <equip:serialNumber>5049K72188</equip:serialNumber>
+    <equip:firmwareVersion>4.81</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>3</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2013-07-08T01:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization></equip:temperatureStabilization>
+    <equip:notes></equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>NOV503+CR       SPKE</equip:antennaType>
+    <equip:serialNumber>7297.503</equip:serialNumber>
+    <equip:antennaReferencePoint>BCR</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>SPKE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>LHP X-10D (HITACHI CABLE LTD.)</equip:antennaCableType>
+    <equip:antennaCableLength>28</equip:antennaCableLength>
+    <equip:dateInstalled>2003-11-13T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2010-12-06T00:00Z</equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>TRM59800.00     SCIS</equip:antennaType>
+    <equip:serialNumber>4938353448</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>SCIS</equip:antennaRadomeType>
+    <equip:radomeSerialNumber>0968</equip:radomeSerialNumber>
+    <equip:antennaCableType>LHP X-10D (HITACHI CABLE LTD.)</equip:antennaCableType>
+    <equip:antennaCableLength>28</equip:antennaCableLength>
+    <equip:dateInstalled>2011-07-27T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>JAXA SLR GMSL station</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>SLR</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber></equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber></equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>13.4196</equip:dX>
+      <equip:dY>5.9487</equip:dY>
+      <equip:dZ>5.6317</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>5.0</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>TRILATERATION</equip:surveyMethod>
+    <equip:dateMeasured>2006-05-14T00:00Z</equip:dateMeasured>
+    <equip:notes>Infomation of JAXA SLR station is described at http x y z</equip:notes>
+  </surveyedLocalTies>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>JAXA SLR GMSL station</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>SLR</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber></equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber></equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX></equip:dX>
+      <equip:dY></equip:dY>
+      <equip:dZ></equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy></equip:localSiteTiesAccuracy>
+    <equip:surveyMethod></equip:surveyMethod>
+    <equip:dateMeasured>2010-02-12T00:00Z</equip:dateMeasured>
+    <equip:notes>Infomarion of JAXA SLR station is described at http x y z</equip:notes>
+  </surveyedLocalTies>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>JAXA SLR GMSL station</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>SLR</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>7358</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>21749S001</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>13.8533</equip:dX>
+      <equip:dY>5.4943</equip:dY>
+      <equip:dZ>5.327</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>5.0</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod></equip:surveyMethod>
+    <equip:dateMeasured>2012-02-25T00:00Z</equip:dateMeasured>
+    <equip:notes>Infomarion of JAXA SLR station is described at http x y z</equip:notes>
+  </surveyedLocalTies>
+  <frequencyStandard>
+    <equip:standardType>EXTERNAL CESIUM</equip:standardType>
+    <equip:inputFrequency>10</equip:inputFrequency>
+    <equip:effectiveDates>CCYY-MM-DD/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes></equip:notes>
+  </frequencyStandard>
+  <collocationInformation>
+    <equip:instrumentType>SLR</equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates>2004-04-28/(CCYY-MM-DD)</equip:effectiveDates>
+    <equip:notes>NONE</equip:notes>
+  </collocationInformation>
+  <humiditySensor>
+    <equip:type>HMP45D</equip:type>
+    <equip:manufacturer>NIPPON ELECTRIC INSTRUMENT</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>&lt;1</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2010-12-06/(CCYY-MM-DD)</equip:effectiveDates>
+    <equip:dataSamplingInterval>1 minute</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>2</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </humiditySensor>
+  <pressureSensor>
+    <equip:type>RPT-301</equip:type>
+    <equip:manufacturer>NIPPON ELECTRIC INSTRUMENT</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>5</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2010-12-06/(CCYY-MM-DD)</equip:effectiveDates>
+    <equip:dataSamplingInterval>1 minute</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>0.1</equip:accuracy-hPa>
+    <equip:notes></equip:notes>
+  </pressureSensor>
+  <temperatureSensor>
+    <equip:type>N-65B</equip:type>
+    <equip:manufacturer>NIPPON ELECTRIC INSTRUMENT</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>&lt;1</equip:heightDiffToAntenna>
+    <equip:calibrationDate></equip:calibrationDate>
+    <equip:effectiveDates>2010-12-06/(CCYY-MM-DD)</equip:effectiveDates>
+    <equip:dataSamplingInterval>1 minute</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>0.2</equip:accuracy-degreesCelcius>
+    <equip:aspiration></equip:aspiration>
+    <equip:notes></equip:notes>
+  </temperatureSensor>
+  <contactAgency>
+    <contact:agency>Japan Aerospace Exploration Agency</contact:agency>
+    <contact:preferredAbbreviation>JAXA</contact:preferredAbbreviation>
+    <contact:mailingAddress>2-1-1 sengen, Tsukuba-city, Ibaraki Japan</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Shinichi Nakamura</contact:name>
+      <contact:telephonePrimary>+81 50 3362 4798</contact:telephonePrimary>
+      <contact:telephoneSecondary>+81 50 3362 4574</contact:telephoneSecondary>
+      <contact:fax>+81 298 68 2990</contact:fax>
+      <contact:e-mail>nakamura.shinichi@jaxa.jp</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Ryo Nakamura</contact:name>
+      <contact:telephonePrimary>+81 50 3362 7031</contact:telephonePrimary>
+      <contact:telephoneSecondary>+81 50 3362 4574</contact:telephoneSecondary>
+      <contact:fax>+81 298 68 2990</contact:fax>
+      <contact:e-mail>nakamura.ryoh@jaxa.jp</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes></contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>Japan Aerospace Exploration Agency</contact:agency>
+    <contact:preferredAbbreviation>JAXA</contact:preferredAbbreviation>
+    <contact:mailingAddress>(multiple lines)</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>(multiple lines)</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter>http</mi:primaryDataCenter>
+    <mi:secondaryDataCenter>http</mi:secondaryDataCenter>
+    <mi:urlForMoreInformation>http</mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>URL</mi:siteMap>
+    <mi:siteDiagram>URL</mi:siteDiagram>
+    <mi:horizonMask>URL</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>URL</mi:sitePictures>
+    <mi:notes>(multiple lines) (multiple lines)</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

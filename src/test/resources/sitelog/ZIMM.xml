@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<igsSiteLog xmlns="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:contact="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/contact/2004" xmlns:equip="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004" xmlns:li="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004" xmlns:mi="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004  http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"><!--Alice Springs Station Log-->
+<!--Version 0.01-->
+<!--Geoscience Australia Geodesy-->
+<!--For More Information regarding XML based Site Logs go to-->
+<!--http://sopac.ucsd.edu/projects/xml-->
+
+  <formInformation>
+    <mi:preparedBy>Elmar Brockmann (Federal Office of Topography)</mi:preparedBy>
+    <mi:datePrepared>2012-04-17</mi:datePrepared>
+    <mi:reportType>UPDATE</mi:reportType>
+    <mi:previousLog>zimm_20110818.log</mi:previousLog>
+    <mi:modifiedSections>4.3</mi:modifiedSections>
+  </formInformation>
+  <siteIdentification>
+    <mi:siteName>Zimmerwald L+T 88</mi:siteName>
+    <mi:fourCharacterID>ZIMM</mi:fourCharacterID>
+    <mi:monumentInscription></mi:monumentInscription>
+    <mi:iersDOMESNumber>14001M004</mi:iersDOMESNumber>
+    <mi:cdpNumber>(A4)</mi:cdpNumber>
+    <mi:monumentDescription>STEEL MAST</mi:monumentDescription>
+    <mi:heightOfTheMonument>9.2</mi:heightOfTheMonument>
+    <mi:monumentFoundation>CONCRETE BLOCK</mi:monumentFoundation>
+    <mi:foundationDepth>1.5</mi:foundationDepth>
+    <mi:markerDescription>LV95 steeled marker</mi:markerDescription>
+    <mi:dateInstalled>1988-03-01</mi:dateInstalled>
+    <mi:geologicCharacteristic>CONGLOMERATE</mi:geologicCharacteristic>
+    <mi:bedrockType>SEDIMENTARY</mi:bedrockType>
+    <mi:bedrockCondition>JOINTED</mi:bedrockCondition>
+    <mi:fractureSpacing>(0 cm/1-10 cm/11-50 cm/51-200 cm/over 200 cm)</mi:fractureSpacing>
+    <mi:faultZonesNearby>NO</mi:faultZonesNearby>
+    <mi:distance-Activity>(multiple lines)</mi:distance-Activity>
+    <mi:notes>Morraine</mi:notes>
+  </siteIdentification>
+  <siteLocation>
+    <mi:city>Zimmerwald</mi:city>
+    <mi:state></mi:state>
+    <mi:country>Switzerland</mi:country>
+    <mi:tectonicPlate>EURASIAN</mi:tectonicPlate>
+    <approximatePositionITRF>
+      <mi:xCoordinateInMeters>4331297.3</mi:xCoordinateInMeters>
+      <mi:yCoordinateInMeters>567555.6</mi:yCoordinateInMeters>
+      <mi:zCoordinateInMeters>4633133.7</mi:zCoordinateInMeters>
+      <mi:latitude-North>+465237.56</mi:latitude-North>
+      <mi:longitude-East>+0072755.08</mi:longitude-East>
+      <mi:elevation-m_ellips.>956.7</mi:elevation-m_ellips.>
+    </approximatePositionITRF>
+    <mi:notes>(multiple lines)</mi:notes>
+  </siteLocation>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE 4000SSE</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>3310A02691</equip:serialNumber>
+    <equip:firmwareVersion>6.12</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1993-05-01T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1997-08-06</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) ± (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE 4000SSE</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>3310A02691</equip:serialNumber>
+    <equip:firmwareVersion>7.25</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1997-08-06T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1999-08-16</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) ± (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE 4000SSE</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>3310A02691</equip:serialNumber>
+    <equip:firmwareVersion>7.29</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>1999-08-16T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2003-08-12T14:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) ± (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE 4700</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>20224769</equip:serialNumber>
+    <equip:firmwareVersion>Nav  1.30 / Boot  1</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2003-08-12T14:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2006-02-22T08:00Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) ± (deg C)</equip:temperatureStabilization>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETRS</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>4526253099</equip:serialNumber>
+    <equip:firmwareVersion>Nav  1.15 / Boot  1</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2006-02-22T14:00Z</equip:dateInstalled>
+    <equip:dateRemoved>2008-04-01T14:10Z</equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) ± (deg C)</equip:temperatureStabilization>
+    <equip:notes>Antenna cable shortened to 40 m</equip:notes>
+  </gnssReceiver>
+  <gnssReceiver>
+    <equip:receiverType>TRIMBLE NETRS</equip:receiverType>
+    <equip:satelliteSystem>GPS</equip:satelliteSystem>
+    <equip:serialNumber>4526253099</equip:serialNumber>
+    <equip:firmwareVersion>Nav  1.20</equip:firmwareVersion>
+    <equip:elevationCutoffSetting>5</equip:elevationCutoffSetting>
+    <equip:dateInstalled>2008-04-01T14:10Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:temperatureStabilization>(deg C) ± (deg C)</equip:temperatureStabilization>
+    <equip:notes>Options L2C and L2-Y-code activated</equip:notes>
+  </gnssReceiver>
+  <gnssAntenna>
+    <equip:antennaType>TRM14532.00     NONE</equip:antennaType>
+    <equip:serialNumber>3311A67905</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>SUCOFEED</equip:antennaCableType>
+    <equip:antennaCableLength>50</equip:antennaCableLength>
+    <equip:dateInstalled>1993-05-01T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1998-11-06</equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>TRM29659.00     NONE</equip:antennaType>
+    <equip:serialNumber>99390</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>SUCOFEED</equip:antennaCableType>
+    <equip:antennaCableLength>50</equip:antennaCableLength>
+    <equip:dateInstalled>1998-11-06T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved>1999-07-02</equip:dateRemoved>
+    <equip:notes>(multiple lines)</equip:notes>
+  </gnssAntenna>
+  <gnssAntenna>
+    <equip:antennaType>TRM29659.00     NONE</equip:antennaType>
+    <equip:serialNumber>99390</equip:serialNumber>
+    <equip:antennaReferencePoint>BPA</equip:antennaReferencePoint>
+    <equip:marker-arpUpEcc.>000.0000</equip:marker-arpUpEcc.>
+    <equip:marker-arpNorthEcc.>000.0000</equip:marker-arpNorthEcc.>
+    <equip:marker-arpEastEcc.>000.0000</equip:marker-arpEastEcc.>
+    <equip:alignmentFromTrueNorth>0</equip:alignmentFromTrueNorth>
+    <equip:antennaRadomeType>NONE</equip:antennaRadomeType>
+    <equip:radomeSerialNumber></equip:radomeSerialNumber>
+    <equip:antennaCableType>SUCOFEED</equip:antennaCableType>
+    <equip:antennaCableLength>50</equip:antennaCableLength>
+    <equip:dateInstalled>1999-07-02T00:00Z</equip:dateInstalled>
+    <equip:dateRemoved></equip:dateRemoved>
+    <equip:notes>pre-amplifier changed on 2011-12-13</equip:notes>
+  </gnssAntenna>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>Laser (7810)</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>SLR</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>7810</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>14001S001</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>-13.680</equip:dX>
+      <equip:dY>-6.012</equip:dY>
+      <equip:dZ>6.242</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>1</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>TRIANGULATION</equip:surveyMethod>
+    <equip:dateMeasured>1990-01-25</equip:dateMeasured>
+    <equip:notes>The old laser system (14001S001) was removed end of April 1995. The new telescope is within a few millimeters in the same place, its horizontal axis is about 25 cm higher. Differential coordinates from the GPS monument to the reference and other monuments. The components are parallel to the XYZ-axes of the global geocentric reference system ITRF (WGS-84).</equip:notes>
+  </surveyedLocalTies>
+  <surveyedLocalTies>
+    <equip:tiedMarkerName>ZIMLAT</equip:tiedMarkerName>
+    <equip:tiedMarkerUsage>SLR</equip:tiedMarkerUsage>
+    <equip:tiedMarkerCDPNumber>7810</equip:tiedMarkerCDPNumber>
+    <equip:tiedMarkerDOMESNumber>14001S007</equip:tiedMarkerDOMESNumber>
+    <equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+      <equip:dX>-13.506</equip:dX>
+      <equip:dY>-5.986</equip:dY>
+      <equip:dZ>6.420</equip:dZ>
+    </equip:differentialComponentsGNSSMarkerToTiedMonumentsITRS>
+    <equip:localSiteTiesAccuracy>1</equip:localSiteTiesAccuracy>
+    <equip:surveyMethod>TRIANGULATION</equip:surveyMethod>
+    <equip:dateMeasured>1996-04-04</equip:dateMeasured>
+    <equip:notes>(multiple lines)</equip:notes>
+  </surveyedLocalTies>
+  <frequencyStandard>
+    <equip:standardType>INTERNAL</equip:standardType>
+    <equip:inputFrequency>(if external)</equip:inputFrequency>
+    <equip:effectiveDates>1993-05-01/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>(multiple lines)</equip:notes>
+  </frequencyStandard>
+  <collocationInformation>
+    <equip:instrumentType>SLR</equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates>1976-01-01/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>New telescope since 1996 (see 5.2) exact date in 1976 not known</equip:notes>
+  </collocationInformation>
+  <collocationInformation>
+    <equip:instrumentType>Earth tide gravimeter</equip:instrumentType>
+    <equip:status>PERMANENT</equip:status>
+    <equip:effectiveDates>1995-01-01/CCYY-MM-DD</equip:effectiveDates>
+    <equip:notes>Swiss Federal Institute of Technology Geodesy and Geodynamics Lab (GGL) ETH-H D3D94nggerberg CH-8093 Zurich exact date in 1995 not known</equip:notes>
+  </collocationInformation>
+  <humiditySensor>
+    <equip:type>Hygromer C94 MP409A</equip:type>
+    <equip:manufacturer>unknown</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>-0.3</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>1999-01-01/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>1800 s</equip:dataSamplingInterval>
+    <equip:accuracy-percentRelativeHumidity>2</equip:accuracy-percentRelativeHumidity>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </humiditySensor>
+  <pressureSensor>
+    <equip:type>PAROSCIENTIFIC 740-16B</equip:type>
+    <equip:manufacturer>unkwnon</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>7</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>1999-01-01/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>1800 s</equip:dataSamplingInterval>
+    <equip:accuracy-hPa>&lt; 0.3 hPa</equip:accuracy-hPa>
+    <equip:notes>(multiple lines)</equip:notes>
+  </pressureSensor>
+  <temperatureSensor>
+    <equip:type>Rotronic PT100  MP409A</equip:type>
+    <equip:manufacturer>unknown</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>-0.3</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>1999-01-01/CCYY-MM-DD</equip:effectiveDates>
+    <equip:dataSamplingInterval>1800 s</equip:dataSamplingInterval>
+    <equip:accuracy-degreesCelcius>0.2 deg C</equip:accuracy-degreesCelcius>
+    <equip:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</equip:aspiration>
+    <equip:notes>(multiple lines)</equip:notes>
+  </temperatureSensor>
+  <waterVaporSensor>
+    <equip:type>ASMUWARA</equip:type>
+    <equip:manufacturer>Univ. of Berne, Inst. of Applied Physics</equip:manufacturer>
+    <equip:serialNumber></equip:serialNumber>
+    <equip:heightDiffToAntenna>3</equip:heightDiffToAntenna>
+    <equip:calibrationDate>(CCYY-MM-DD)</equip:calibrationDate>
+    <equip:effectiveDates>2006-11-01/CCYY-MM-DD</equip:effectiveDates>
+    <equip:distanceToAntenna>18</equip:distanceToAntenna>
+    <equip:notes>(multiple lines)</equip:notes>
+  </waterVaporSensor>
+  <contactAgency>
+    <contact:agency>Swiss Federal Office of Topography</contact:agency>
+    <contact:preferredAbbreviation>swisstopo</contact:preferredAbbreviation>
+    <contact:mailingAddress>Seftigenstrasse 264, CH-3084 Wabern</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name>Elmar Brockmann</contact:name>
+      <contact:telephonePrimary>+41 31 963 22 56</contact:telephonePrimary>
+      <contact:telephoneSecondary>+41 31 963 21 11</contact:telephoneSecondary>
+      <contact:fax>+41 31 963 24 59</contact:fax>
+      <contact:e-mail>elmar.brockmann@swisstopo.ch</contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name>Daniel Ineichen</contact:name>
+      <contact:telephonePrimary>+41 31 963 21 51</contact:telephonePrimary>
+      <contact:telephoneSecondary>+41 31 963 22 11</contact:telephoneSecondary>
+      <contact:fax>+41 31 963 24 59</contact:fax>
+      <contact:e-mail>daniel.ineichen@swisstopo.ch</contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>(multiple lines)</contact:notes>
+  </contactAgency>
+  <responsibleAgency>
+    <contact:agency>Swiss Federal Office of Topography</contact:agency>
+    <contact:preferredAbbreviation>swisstopo</contact:preferredAbbreviation>
+    <contact:mailingAddress>(multiple lines)</contact:mailingAddress>
+    <contact:primaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:primaryContact>
+    <contact:secondaryContact>
+      <contact:name></contact:name>
+      <contact:telephonePrimary></contact:telephonePrimary>
+      <contact:telephoneSecondary></contact:telephoneSecondary>
+      <contact:fax></contact:fax>
+      <contact:e-mail></contact:e-mail>
+    </contact:secondaryContact>
+    <contact:notes>(multiple lines)</contact:notes>
+  </responsibleAgency>
+  <moreInformation>
+    <mi:primaryDataCenter>http</mi:primaryDataCenter>
+    <mi:secondaryDataCenter>http</mi:secondaryDataCenter>
+    <mi:urlForMoreInformation>http</mi:urlForMoreInformation>
+    <mi:hardCopyOnFile/>
+    <mi:siteMap>(Y or URL)</mi:siteMap>
+    <mi:siteDiagram>(Y or URL)</mi:siteDiagram>
+    <mi:horizonMask>No obstruction above 0 degrees</mi:horizonMask>
+    <mi:monumentDescription></mi:monumentDescription>
+    <mi:sitePictures>(Y or URL)</mi:sitePictures>
+    <mi:notes>(multiple lines)</mi:notes>
+    <mi:antennaGraphicsWithDimensions/>
+    <mi:insertTextGraphicFromAntenna/>
+  </moreInformation>
+</igsSiteLog>

@@ -48,7 +48,7 @@ public class GnssCorsSiteRepositoryTest implements TraceMethodExecution.Intercep
     /* @Test */
     public void test() {
         long n = sites.count();
-        sites.saveAndFlush(new GnssCorsSite(sites.nextId(), "ABCD"));
+        sites.saveAndFlush(new GnssCorsSite("ABCD"));
         assertEquals(sites.count(), n + 1);
     }
 
@@ -56,7 +56,7 @@ public class GnssCorsSiteRepositoryTest implements TraceMethodExecution.Intercep
     @Rollback(false)
     public void testMigrateFromNgcpDatabase() {
         for (Station station : stations.findAll()) {
-            sites.save(new GnssCorsSite(sites.nextId(), station.getGpsSiteId()));
+            sites.save(new GnssCorsSite(station.getGpsSiteId()));
         }
         sites.flush();
     }

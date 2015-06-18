@@ -12,9 +12,9 @@ import au.gov.ga.geodesy.support.spring.EntityId;
 @Table(name = "gnss_cors_site")
 public class GnssCorsSite extends Site {
 
-    @Column(name = "id", length = 36, nullable = false, unique = true)
-    @Type(type = "au.gov.ga.geodesy.support.hibernate.EntityIdUserType")
-    private EntityId<GnssCorsSite> gnssCorsSiteId;
+    /* @Column(name = "id", length = 36, nullable = false, unique = true) */
+    /* @Type(type = "au.gov.ga.geodesy.support.hibernate.EntityIdUserType") */
+    /* private EntityId<GnssCorsSite> gnssCorsSiteId; */
 
     /**
      * Business id
@@ -22,13 +22,14 @@ public class GnssCorsSite extends Site {
     @Column(name = "four_character_id", length = 4, nullable = false, unique = true)
     private String fourCharacterId;
 
-    public EntityId<GnssCorsSite> gnssCorsSiteId() {
-        return gnssCorsSiteId;
-    }
+    /* public EntityId<GnssCorsSite> gnssCorsSiteId() { */
+    /*     return gnssCorsSiteId; */
+    /* } */
 
-    public GnssCorsSite(EntityId<GnssCorsSite> id, String fourCharacterId) {
+    /* public GnssCorsSite(EntityId<GnssCorsSite> id, String fourCharacterId) { */
+    public GnssCorsSite(String fourCharacterId) {
         super();
-        gnssCorsSiteId = id;
+        /* gnssCorsSiteId = id; */
         setFourCharacterId(fourCharacterId);
     }
 

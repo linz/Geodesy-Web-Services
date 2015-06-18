@@ -40,7 +40,7 @@ public class IgsSiteLogEndpoint {
     @RequestMapping(value = "/upload", method = RequestMethod.POST)
     public void upload(HttpServletRequest req, HttpServletResponse rsp) throws Exception {
         IgsSiteLog siteLog = siteLogMarshaller.unmarshal(new InputStreamReader(req.getInputStream()));
-        List<? extends Event> events = service.upload(siteLog);
+        List<Event> events = service.upload(siteLog);
         eventPublisher.publish(events);
     }
 }

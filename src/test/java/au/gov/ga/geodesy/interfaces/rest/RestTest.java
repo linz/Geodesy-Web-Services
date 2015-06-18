@@ -10,11 +10,11 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 import org.testng.annotations.BeforeClass;
 
-import au.gov.ga.geodesy.support.spring.GeodesyConfig;
+import au.gov.ga.geodesy.support.spring.GeodesyTestConfig;
 import au.gov.ga.geodesy.support.spring.PersistenceJpaConfig;
 
 @ContextConfiguration(
-        classes = {GeodesyConfig.class, RestConfig.class, PersistenceJpaConfig.class},
+        classes = {GeodesyTestConfig.class, RestConfig.class, PersistenceJpaConfig.class},
         loader = AnnotationConfigWebContextLoader.class)
 
 @WebAppConfiguration

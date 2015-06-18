@@ -22,10 +22,10 @@ public class IgsSiteLogService {
     @Autowired
     private IgsSiteLogRepository siteLogs;
 
-    public List<? extends Event> upload(IgsSiteLog siteLog) throws Exception {
+    public List<Event> upload(IgsSiteLog siteLog) throws Exception {
         siteLogs.save(siteLog);
         String id = siteLog.getSiteIdentification().getFourCharacterId();
         log.info("Saving " + id);
-        return Lists.newArrayList(new SiteLogUploaded(id));
+        return Lists.newArrayList((Event) new SiteLogUploaded(id));
     }
 }

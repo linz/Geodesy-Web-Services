@@ -11,13 +11,13 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 import au.gov.ga.geodesy.domain.model.EventSynchronousPublisher;
-import au.gov.ga.geodesy.domain.service.SiteService;
+import au.gov.ga.geodesy.domain.service.GnssCorsSiteService;
 
 @Configuration
 public class GeodesyTestConfig extends GeodesyCommonConfig {
 
     @Autowired
-    private SiteService siteService;
+    private GnssCorsSiteService siteService;
 
     @Bean
     public EventSynchronousPublisher eventPublisher() {

@@ -1,9 +1,5 @@
 package au.gov.ga.geodesy.interfaces.rest;
 
-import static au.gov.ga.geodesy.interfaces.rest.ResultHandlers.print;
-
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-
 import java.io.File;
 import java.io.FileReader;
 
@@ -13,21 +9,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.annotation.Rollback;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.web.AnnotationConfigWebContextLoader;
-import org.springframework.test.context.web.WebAppConfiguration;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLog;
 import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLogRepository;
 import au.gov.ga.geodesy.igssitelog.interfaces.xml.IgsSiteLogXmlMarshaller;
-import au.gov.ga.geodesy.support.spring.GeodesyConfig;
-import au.gov.ga.geodesy.support.spring.PersistenceJpaConfig;
 
-/* @ContextConfiguration( */
-/*         classes = {GeodesyConfig.class, RestConfig.class, PersistenceJpaConfig.class}, */
-/*         loader = AnnotationConfigWebContextLoader.class) */
-/* @WebAppConfiguration */
 @Transactional
 public class IgsSiteLogRepositoryRestTest extends RestTest {
 
@@ -48,7 +36,7 @@ public class IgsSiteLogRepositoryRestTest extends RestTest {
 
     @Test(dependsOnMethods = {"testSaveAlic"})
     public void fetchAlic() throws Exception {
-        mvc.perform(get("/igsSiteLogs")).andDo(print);
+        Assert.assertNotNull(siteLogs.findByFourCharacterId("ALIC"));
     }
 
     private File getSiteLog(String fourCharacterId) {

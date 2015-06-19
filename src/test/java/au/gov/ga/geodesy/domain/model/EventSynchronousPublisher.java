@@ -20,7 +20,7 @@ public class EventSynchronousPublisher implements EventPublisher {
         subscribers.get().add(subscriber);
     }
 
-    public void clearSubscribers() {
+    public void unsubscribeAll() {
         subscribers.get().clear();
     }
 

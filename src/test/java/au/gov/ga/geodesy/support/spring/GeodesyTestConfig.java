@@ -10,7 +10,9 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
-import au.gov.ga.geodesy.domain.model.EventSynchronousPublisher;
+import au.gov.ga.geodesy.domain.model.AsynchronousEventPublisher;
+import au.gov.ga.geodesy.domain.model.EventPublisher;
+import au.gov.ga.geodesy.domain.model.SynchronousEventPublisher;
 import au.gov.ga.geodesy.domain.service.GnssCorsSiteService;
 
 @Configuration
@@ -20,9 +22,13 @@ public class GeodesyTestConfig extends GeodesyCommonConfig {
     private GnssCorsSiteService siteService;
 
     @Bean
-    public EventSynchronousPublisher eventPublisher() {
-        return new EventSynchronousPublisher();
+    public EventPublisher eventPublisher() {
+        return new AsynchronousEventPublisher();
     }
+    /* @Bean */
+    /* public EventSynchronousPublisher eventPublisher() { */
+    /*     return new EventSynchronousPublisher(); */
+    /* } */
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
@@ -43,7 +49,7 @@ public class GeodesyTestConfig extends GeodesyCommonConfig {
         public void postHandle(HttpServletRequest req, HttpServletResponse rsp,
                 Object handler, ModelAndView modelAndView) {
             
-            eventPublisher().clearSubscribers();
+            eventPublisher().unsubscribeAll();
         }
     }
 }

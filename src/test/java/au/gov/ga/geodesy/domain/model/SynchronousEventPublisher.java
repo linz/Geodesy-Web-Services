@@ -6,13 +6,13 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class EventSynchronousPublisher implements EventPublisher {
+public class SynchronousEventPublisher implements EventPublisher {
 
-    private static final Logger log = LoggerFactory.getLogger(EventSynchronousPublisher.class);
+    private static final Logger log = LoggerFactory.getLogger(SynchronousEventPublisher.class);
 
     private ThreadLocal<List<EventSubscriber<?>>> subscribers = new ThreadLocal<List<EventSubscriber<?>>>();
 
-    public EventSynchronousPublisher() {
+    public SynchronousEventPublisher() {
         subscribers.set(new ArrayList<EventSubscriber<?>>());
     }
 

@@ -11,9 +11,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import au.gov.ga.geodesy.igssitelog.domain.model.EventRepository;
 
-public class EventAsynchronousPublisher implements EventPublisher {
+public class AsynchronousEventPublisher implements EventPublisher {
 
-    private static final Logger log = LoggerFactory.getLogger(EventAsynchronousPublisher.class);
+    private static final Logger log = LoggerFactory.getLogger(AsynchronousEventPublisher.class);
 
     @Autowired
     private EventRepository events;

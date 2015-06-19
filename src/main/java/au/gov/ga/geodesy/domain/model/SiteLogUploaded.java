@@ -13,6 +13,10 @@ public class SiteLogUploaded extends Event {
     @Column(name = "FOUR_CHARACTER_ID", nullable = false)
     private String fourCharacterId;
 
+    @SuppressWarnings("unused") // used by hibernate
+    private SiteLogUploaded() {
+    }
+
     public SiteLogUploaded(String fourCharacterId) {
         this.fourCharacterId = fourCharacterId;
     }

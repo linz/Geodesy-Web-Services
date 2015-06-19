@@ -11,12 +11,23 @@ import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.persistence.Transient;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Configurable;
+
+import au.gov.ga.geodesy.igssitelog.domain.model.EventRepository;
 
 @Entity
 @Table(name = "DOMAIN_EVENT")
 @Inheritance(strategy = InheritanceType.JOINED)
 @DiscriminatorColumn(name = "EVENT_NAME")
+@Configurable
 public abstract class Event {
+
+    @Autowired(required = true)
+    @Transient
+    private EventRepository events;
 
     @Id
     @GeneratedValue(generator = "surrogateKeyGenerator")
@@ -52,6 +63,9 @@ public abstract class Event {
     public void handled() {
         if (timeHandled == null) {
             setTimeHandled(new Date());
+        }
+        if (id != null && events.exists(id)) {
+            events.save(this);
         }
     }
 }

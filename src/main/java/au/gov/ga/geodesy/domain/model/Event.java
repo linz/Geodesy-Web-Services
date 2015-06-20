@@ -23,7 +23,7 @@ import au.gov.ga.geodesy.igssitelog.domain.model.EventRepository;
 @Inheritance(strategy = InheritanceType.JOINED)
 @DiscriminatorColumn(name = "EVENT_NAME")
 @Configurable
-public abstract class Event {
+public abstract class Event implements Cloneable {
 
     @Autowired(required = true)
     @Transient
@@ -36,6 +36,9 @@ public abstract class Event {
 
     @Column(name = "TIME_RAISED", nullable = false)
     private Date timeRaised;
+
+    @Column(name = "SUBSCRIBER", nullable = false)
+    public String subscriber;
 
     @Column(name = "TIME_HANDLED")
     public Date timeHandled;
@@ -50,6 +53,14 @@ public abstract class Event {
 
     private void setTimeRaised(Date t) {
         timeRaised = t;
+    }
+
+    public String getSubscriber() {
+        return subscriber;
+    }
+
+    protected void setSubscriber(String s) {
+        subscriber = s;
     }
 
     public Date getTimeHandled() {
@@ -67,5 +78,9 @@ public abstract class Event {
         if (id != null && events.exists(id)) {
             events.save(this);
         }
+    }
+
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
     }
 }

@@ -35,8 +35,16 @@ public class AsynchronousEventPublisher implements EventPublisher {
 
     public void publish(Iterable<Event> es) {
         for (Event e : es) {
-            events.save(e);
-            log.info("Publishing event: " + e);
+            for (EventSubscriber<?> s : subscribers) {
+                try {
+                    Event published = (Event) e.clone();
+                    published.setSubscriber(s.getClass().toString());
+                    events.save(published);
+                } catch (CloneNotSupportedException ex) {
+                    throw new RuntimeException(ex);
+                }
+            }
+            log.info("Scheduling event " + e + " for asynchronous publishing");
         }
     }
 
@@ -53,11 +61,31 @@ public class AsynchronousEventPublisher implements EventPublisher {
             try {
                 while(true) {
                     Thread.sleep(3000);
-                    System.out.println(events);
+                    List<Event> es = events.getPendingEvents();
+                    log.info("Processing " + es.size() + " pending event(s)");
+                    System.out.println(subscribers.size());
+                    for (Event e : events.getPendingEvents()) {
+                        synchronized(subscribers) {
+                            for (EventSubscriber<?> s : subscribers) {
+                                if (s.canHandle(e) && s.getClass().toString().equals(e.getSubscriber())) {
+                                    handle(s, e);
+                                }
+                            }
+                        }
+                    }
                 }
-
             } catch (InterruptedException ok) {
             }
+        }
+
+        private void handle(final EventSubscriber<?> s, final Event e) {
+            new Thread() {
+                @SuppressWarnings("unchecked")
+                public void run() {
+                    ((EventSubscriber<Event>) s).handle(e);
+                    log.info("Publishing event " + e + " to " + s);
+                }
+            }.start();
         }
     }
 }

@@ -29,10 +29,6 @@ public class AsynchronousEventPublisher implements EventPublisher {
         subscribers.add(s);
     }
 
-    public void unsubscribeAll() {
-        subscribers.clear();
-    }
-
     public void publish(Iterable<Event> es) {
         for (Event e : es) {
             for (EventSubscriber<?> s : subscribers) {

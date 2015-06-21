@@ -9,7 +9,12 @@ import au.gov.ga.geodesy.domain.model.Event;
 import au.gov.ga.geodesy.domain.model.EventSubscriber;
 import au.gov.ga.geodesy.domain.model.GnssCorsSite;
 import au.gov.ga.geodesy.domain.model.GnssCorsSiteRepository;
+import au.gov.ga.geodesy.domain.model.GnssReceiver;
+import au.gov.ga.geodesy.domain.model.GnssReceiverConfiguration;
+import au.gov.ga.geodesy.domain.model.GnssReceiverRepository;
+import au.gov.ga.geodesy.domain.model.Setup;
 import au.gov.ga.geodesy.domain.model.SiteLogUploaded;
+import au.gov.ga.geodesy.igssitelog.domain.model.EffectiveDates;
 import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLog;
 import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLogRepository;
 
@@ -20,6 +25,9 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogUploaded> {
 
     @Autowired
     private IgsSiteLogRepository siteLogs;
+
+    @Autowired
+    private GnssReceiverRepository receivers;
 
     @Autowired
     private GnssCorsSiteRepository gnssSites;
@@ -41,9 +49,23 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogUploaded> {
         gnssSite.setName(siteLog.getSiteIdentification().getSiteName());
         gnssSite.setDescription(siteLog.getSiteIdentification().getMonumentDescription());
 
+        gnssSite.getSetups().clear();
+
+        for (au.gov.ga.geodesy.igssitelog.domain.model.GnssReceiver r : siteLog.getGnssReceivers()) {
+            EffectiveDates period = new EffectiveDates(r.getDateInstalled(), r.getDateRemoved());
+            Setup s = new Setup("GNSS CORS Setup", period);
+            gnssSite.getSetups().add(s);
+
+            GnssReceiver receiver = receivers.findOne(r.getReceiverType(), r.getSerialNumber());
+            if (receiver == null) {
+                receiver = new GnssReceiver(r.getSerialNumber(), r.getReceiverType());
+                receivers.saveAndFlush(receiver);
+            }
+            GnssReceiverConfiguration receiverConfig = new GnssReceiverConfiguration(receiver.getId(), r.getDateInstalled());
+            receiverConfig.setFirmwareVersion(r.getFirmwareVersion());
+            s.getEquipmentConfigurations().add(receiverConfig);
+        }
         gnssSites.save(gnssSite);
-
         siteLogUploaded.handled();
-
     }
 }

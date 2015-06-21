@@ -15,12 +15,12 @@ import org.slf4j.LoggerFactory;
 import org.springframework.http.MediaType;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.transaction.annotation.Transactional;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 
 @Transactional("geodesyTransactionManager")
 public class UploadIgsSiteLogRestTest extends RestTest {
 
-    @SuppressWarnings("unused")
     private static final Logger log = LoggerFactory.getLogger(UploadIgsSiteLogRestTest.class);
 
     @Test
@@ -33,10 +33,18 @@ public class UploadIgsSiteLogRestTest extends RestTest {
 
     @Test(dependsOnMethods = {"uploadAlic"})
     public void fetchAlic() throws Exception {
-        mvc.perform(get("/igsSiteLogs")).andDo(print);
+        mvc.perform(get("/gnssCorsSites")).andDo(print);
     }
 
     private File getSiteLog(String fourCharacterId) {
         return new File("src/test/resources/sitelog/" + fourCharacterId.toUpperCase() + ".xml");
+    }
+
+    @AfterClass
+    public static void sleepUntilInterrupted() {
+        log.info("Tests are done, going to sleep.");
+        try {
+            Thread.sleep(Long.MAX_VALUE);
+        } catch (InterruptedException ok) {}
     }
 }

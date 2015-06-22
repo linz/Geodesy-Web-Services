@@ -51,8 +51,12 @@ public class RestConfig extends RepositoryRestMvcConfiguration {
     public static class SerializerModifier extends BeanSerializerModifier {
         public JsonSerializer<?> modifySerializer(SerializationConfig config, BeanDescription beanDesc,
                 JsonSerializer<?> ser) {
+
+            Class<?> beanClass = beanDesc.getBeanClass();
  
-            if (EquipmentConfiguration.class.isAssignableFrom(beanDesc.getBeanClass())) {
+            if (EquipmentConfiguration.class.isAssignableFrom(beanClass)
+                || Equipment.class.isAssignableFrom(beanClass)) {
+
                 return new CustomSerializer((BeanSerializerBase) ser);
             } else {
                 return ser;
@@ -115,8 +119,10 @@ public class RestConfig extends RepositoryRestMvcConfiguration {
             if (bean instanceof EquipmentConfiguration) {
                 Integer equipmentId = ((EquipmentConfiguration) bean).getEquipmentId();
                 Equipment e = equipment.findOne(equipmentId);
-            jgen.writeObjectField("equipment", e);
-        }
+                jgen.writeObjectField("equipment", e);
+            } else if (bean instanceof Equipment) {
+                jgen.writeObjectField("equipmentType", bean.getClass().getSimpleName());
+            }
             serializeFields(bean, jgen, provider);
             jgen.writeEndObject();
         }

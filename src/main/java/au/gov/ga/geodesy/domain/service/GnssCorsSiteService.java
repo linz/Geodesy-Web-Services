@@ -62,7 +62,11 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogUploaded> {
                 receivers.saveAndFlush(receiver);
             }
             GnssReceiverConfiguration receiverConfig = new GnssReceiverConfiguration(receiver.getId(), r.getDateInstalled());
+            receiverConfig.setSatelliteSystem(r.getSatelliteSystem());
             receiverConfig.setFirmwareVersion(r.getFirmwareVersion());
+            receiverConfig.setElevetionCutoffSetting(r.getElevationCutoffSetting());
+            receiverConfig.setTemperatureStabilization(r.getTemperatureStabilization());
+            receiverConfig.setNotes(r.getNotes());
             s.getEquipmentConfigurations().add(receiverConfig);
         }
         gnssSites.save(gnssSite);

@@ -15,6 +15,18 @@ public class GnssReceiverConfiguration extends EquipmentConfiguration {
     @Column(name = "FIRMWARE_VERSION")
     private String firmwareVersion;
 
+    @Column(name = "SATELLITE_SYSTEM")
+    private String satelliteSystem;
+
+    @Column(name = "ELEVATION_CUTOFF_SETTING")
+    private String elevetionCutoffSetting;
+
+    @Column(name = "TEMPERATURE_STABILIZATION")
+    private String temperatureStabilization;
+
+    @Column(name = "NOTES")
+    private String notes;
+
     /* @SuppressWarnings("unused") // used by hibernate */
     private GnssReceiverConfiguration() {
         super(null, null);
@@ -30,6 +42,38 @@ public class GnssReceiverConfiguration extends EquipmentConfiguration {
 
     public void setFirmwareVersion(String firmwareVersion) {
         this.firmwareVersion = firmwareVersion;
+    }
+
+    public String getSatelliteSystem() {
+        return satelliteSystem;
+    }
+
+    public void setSatelliteSystem(String satelliteSystem) {
+        this.satelliteSystem = satelliteSystem;
+    }
+
+    public String getElevetionCutoffSetting() {
+        return elevetionCutoffSetting;
+    }
+
+    public void setElevetionCutoffSetting(String elevetionCutoffSetting) {
+        this.elevetionCutoffSetting = elevetionCutoffSetting;
+    }
+
+    public String getTemperatureStabilization() {
+        return temperatureStabilization;
+    }
+
+    public void setTemperatureStabilization(String temperatureStabilization) {
+        this.temperatureStabilization = temperatureStabilization;
+    }
+
+    public String getNotes() {
+        return notes;
+    }
+
+    public void setNotes(String notes) {
+        this.notes = notes;
     }
 
     @Projection(name = "test", types = {EquipmentConfiguration.class, GnssReceiver.class})

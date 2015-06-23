@@ -6,8 +6,6 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-import au.gov.ga.geodesy.support.spring.EntityId;
-
 @Entity
 @Table(name = "GNSS_ANTENNA_CONFIGURATION")
 public class GnssAntennaConfiguration extends EquipmentConfiguration {

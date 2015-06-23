@@ -10,7 +10,4 @@ public interface GnssAntennaRepository extends JpaRepository<GnssAntenna, Intege
 
     @Override
     List<GnssAntenna> findAll();
-
-    /* @Query("select r from geodesy.GnssAntenna r where r.antennaType = :type and r.serialNumber = :serialNumber") */
-    /* GnssAntenna findOne(@Param("type") String type, @Param("serialNumber") String serialNumber); */
 }

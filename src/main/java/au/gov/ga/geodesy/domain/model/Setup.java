@@ -15,8 +15,6 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
-import org.springframework.util.Assert;
-
 import au.gov.ga.geodesy.igssitelog.domain.model.EffectiveDates;
 
 @Entity
@@ -41,7 +39,7 @@ public class Setup {
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "SETUP_ID")
-    private List<EquipmentConfiguration> equipmentConfigurations = new ArrayList<EquipmentConfiguration>();
+    private List<EquipmentInUse> equipmentInUse = new ArrayList<EquipmentInUse>();
 
     @SuppressWarnings("unused") // used by hibernate
     private Setup() {
@@ -72,13 +70,12 @@ public class Setup {
         this.effectivePeriod = effectivePeriod;
     }
 
-    public List<EquipmentConfiguration> getEquipmentConfigurations() {
-        return equipmentConfigurations;
+    public List<EquipmentInUse> getEquipmentInUse() {
+        return equipmentInUse;
     }
 
-    public void setEquipmentConfigurations(List<EquipmentConfiguration> equipmentConfigurations) {
-        Assert.notNull(equipmentConfigurations);
-        this.equipmentConfigurations = equipmentConfigurations;
+    public void setEquipmentInUse(List<EquipmentInUse> equipment) {
+        this.equipmentInUse = equipment;
     }
 
     public boolean isCurrent() {

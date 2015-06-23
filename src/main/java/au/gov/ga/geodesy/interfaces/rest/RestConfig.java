@@ -10,7 +10,9 @@ import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
 import org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration;
 
 import au.gov.ga.geodesy.domain.model.Equipment;
+import au.gov.ga.geodesy.domain.model.EquipmentInUse;
 import au.gov.ga.geodesy.domain.model.EquipmentConfiguration;
+import au.gov.ga.geodesy.domain.model.EquipmentConfigurationRepository;
 import au.gov.ga.geodesy.domain.model.EquipmentRepository;
 import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLog;
 
@@ -38,7 +40,7 @@ public class RestConfig extends RepositoryRestMvcConfiguration {
     @SuppressWarnings("serial")
     @Override
     protected void configureJacksonObjectMapper(ObjectMapper mapper) {
-        mapper.setDateFormat(new SimpleDateFormat("yyyy-MM-dd")); // ISO 8601
+        mapper.setDateFormat(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss")); // ISO 8601
  
         mapper.registerModule(new SimpleModule() {
             public void setupModule(SetupContext context) {
@@ -54,7 +56,7 @@ public class RestConfig extends RepositoryRestMvcConfiguration {
 
             Class<?> beanClass = beanDesc.getBeanClass();
  
-            if (EquipmentConfiguration.class.isAssignableFrom(beanClass)
+            if (EquipmentInUse.class.isAssignableFrom(beanClass)
                 || Equipment.class.isAssignableFrom(beanClass)) {
 
                 return new CustomSerializer((BeanSerializerBase) ser);
@@ -70,6 +72,9 @@ public class RestConfig extends RepositoryRestMvcConfiguration {
 
         @Autowired
         private EquipmentRepository equipment;
+
+        @Autowired
+        private EquipmentConfigurationRepository configurations;
  
         public CustomSerializer(BeanSerializerBase source) {
             super(source);
@@ -116,12 +121,14 @@ public class RestConfig extends RepositoryRestMvcConfiguration {
                 JsonGenerationException {
             jgen.writeStartObject();
 
-            if (bean instanceof EquipmentConfiguration) {
-                Integer equipmentId = ((EquipmentConfiguration) bean).getEquipmentId();
+            if (bean instanceof EquipmentInUse) {
+                EquipmentInUse atSetup = (EquipmentInUse) bean;
+                Integer equipmentId = atSetup.getEquipmentId();
+                Integer configId = atSetup.getConfigurationId();
                 Equipment e = equipment.findOne(equipmentId);
-                jgen.writeObjectField("equipment", e);
-            } else if (bean instanceof Equipment) {
-                jgen.writeObjectField("equipmentType", bean.getClass().getSimpleName());
+                EquipmentConfiguration c = configurations.findOne(configId);
+                jgen.writeObjectField("id", e);
+                jgen.writeObjectField("configuration", c);
             }
             serializeFields(bean, jgen, provider);
             jgen.writeEndObject();

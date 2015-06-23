@@ -23,11 +23,12 @@ public class EquipmentConfiguration {
     @SequenceGenerator(name = "surrogateKeyGenerator", sequenceName = "seq_surrogate_keys")
     private Integer id;
 
-    @Column(name = "EQUIPMENT_ID")
+    @Column(name = "EQUIPMENT_ID", nullable = false)
     @JsonIgnore
     private Integer equipmentId;
 
-    @Column(name = "CONFIGURATION_TIME")
+    @Column(name = "CONFIGURATION_TIME", nullable = false)
+    @JsonIgnore
     private Date configurationTime;
 
     @SuppressWarnings("unused") // used by hibernate
@@ -37,6 +38,15 @@ public class EquipmentConfiguration {
     public EquipmentConfiguration(Integer equipmentId, Date configurationTime) {
         this.equipmentId = equipmentId;
         this.configurationTime = configurationTime;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    @SuppressWarnings("unused")
+    private void setId(Integer id) {
+        this.id = id;
     }
 
     public Integer getEquipmentId() {

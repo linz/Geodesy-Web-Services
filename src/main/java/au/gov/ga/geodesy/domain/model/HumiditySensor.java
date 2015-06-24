@@ -3,14 +3,14 @@ package au.gov.ga.geodesy.domain.model;
 import javax.persistence.Column;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.SecondaryTable;
 
 @Entity(name = "geodesy.HumiditySensor")
-@Table(name = "HUMIDITY_SENSOR")
+@SecondaryTable(name = "HUMIDITY_SENSOR")
 @DiscriminatorValue("humidity sensor")
 public class HumiditySensor extends Equipment {
 
-    @Column(name = "ASPIRATION")
+    @Column(table = "HUMIDITY_SENSOR", name = "ASPIRATION")
     private String aspiration;
 
     private HumiditySensor() {

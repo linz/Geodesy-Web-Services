@@ -14,7 +14,7 @@ import javax.persistence.Version;
 @Entity
 @Table(name = "EQUIPMENT")
 @DiscriminatorColumn(name = "EQUIPMENT_TYPE")
-@Inheritance(strategy = InheritanceType.JOINED)
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 /* @JsonTypeInfo(use = JsonTypeInfo.Id.MINIMAL_CLASS, include = JsonTypeInfo.As.PROPERTY, property = "equipmentType") */
 public class Equipment {
 

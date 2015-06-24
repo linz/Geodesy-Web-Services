@@ -23,6 +23,7 @@ public class IgsSiteLogService {
     private IgsSiteLogRepository siteLogs;
 
     public List<Event> upload(IgsSiteLog siteLog) throws Exception {
+        siteLogs.delete(siteLog.getSiteIdentification().getFourCharacterId());
         siteLogs.save(siteLog);
         String id = siteLog.getSiteIdentification().getFourCharacterId();
         log.info("Saving " + id);

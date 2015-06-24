@@ -9,6 +9,7 @@ import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.persistence.Version;
 
 @Entity
 @Table(name = "EQUIPMENT")
@@ -17,8 +18,8 @@ import javax.persistence.Table;
 /* @JsonTypeInfo(use = JsonTypeInfo.Id.MINIMAL_CLASS, include = JsonTypeInfo.As.PROPERTY, property = "equipmentType") */
 public class Equipment {
 
-    /* @Version */
-    /* private Integer version; */
+    @Version
+    private Integer version;
 
     /**
      * RDBMS surrogate key
@@ -49,6 +50,14 @@ public class Equipment {
     public Equipment(String type, String serialNumber) {
         setType(type);
         setSerialNumber(serialNumber);
+    }
+
+    public Integer getVersion() {
+        return version;
+    }
+
+    public void setVersion(Integer version) {
+        this.version = version;
     }
 
     public Integer getId() {

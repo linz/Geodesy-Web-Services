@@ -208,6 +208,7 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogUploaded> {
             HumiditySensor humiditySensor = equipmentRepository.findOne(HumiditySensor.class, h.getType(), h.getSerialNumber());
             if (humiditySensor == null) {
                 humiditySensor = new HumiditySensor(h.getType(), h.getSerialNumber());
+                humiditySensor.setAspiration(h.getAspiration());
                 equipmentRepository.saveAndFlush(humiditySensor);
             }
             HumiditySensorConfiguration config = (HumiditySensorConfiguration) configurations.findOne(humiditySensor.getId(), period.getFrom());

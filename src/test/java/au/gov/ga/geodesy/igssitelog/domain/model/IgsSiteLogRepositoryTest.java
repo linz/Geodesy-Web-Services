@@ -5,28 +5,24 @@ import java.io.FileFilter;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 
-import javax.transaction.Transactional;
-
-import org.junit.AfterClass;
-import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.support.AnnotationConfigContextLoader;
+import org.springframework.test.context.testng.AbstractTransactionalTestNGSpringContextTests;
+import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.Test;
 
 import au.gov.ga.geodesy.igssitelog.support.marshalling.moxy.IgsSiteLogMoxyMarshaller;
 import au.gov.ga.geodesy.support.spring.PersistenceJpaConfig;
 
-@RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(
         classes = {PersistenceJpaConfig.class},
         loader = AnnotationConfigContextLoader.class)
-@Transactional
-public class IgsSiteLogRepositoryTest {
+public class IgsSiteLogRepositoryTest extends AbstractTransactionalTestNGSpringContextTests {
 
     private static final Logger log = LoggerFactory.getLogger(IgsSiteLogRepositoryTest.class);
 
@@ -42,12 +38,24 @@ public class IgsSiteLogRepositoryTest {
 
     @Test
     @Rollback(false)
-    public void testSaveAllSiteLogs() throws Exception {
+    public void saveAllSiteLogs() throws Exception {
         for (File f : getSiteLogFiles()) {
             IgsSiteLog siteLog = marshaller.unmarshal(new InputStreamReader(new FileInputStream(f)));
+            log.info("Saving " + siteLog.getSiteIdentification().getFourCharacterId());
             igsSiteLogs.saveAndFlush(siteLog);
         }
     }
+
+    @Test(dependsOnMethods = {"saveAllSiteLogs"})
+    public void checkNumberOfSavedSiteLogs() throws Exception {
+        Assert.assertEquals(igsSiteLogs.count(), 683);
+    }
+
+    /* @Test(dependsOnMethods = {"checkNumberOfSavedSiteLogs"}) */
+    /* @Rollback(false) */
+    /* public void deleteSavedLogs() { */
+    /*     igsSiteLogs.deleteAll(); */
+    /* } */
 
     private File[] getSiteLogFiles() throws Exception {
         return new File(sampleSiteLogsDir).listFiles(new FileFilter() {
@@ -59,9 +67,9 @@ public class IgsSiteLogRepositoryTest {
 
     @AfterClass
     public static void sleepUntilInterrupted() {
-        log.info("Tests are done, going to sleep.");
-        try {
-            Thread.sleep(Long.MAX_VALUE);
-        } catch (InterruptedException ok) {}
+        /* log.info("Tests are done, going to sleep."); */
+        /* try { */
+        /*     Thread.sleep(Long.MAX_VALUE); */
+        /* } catch (InterruptedException ok) {} */
     }
 }

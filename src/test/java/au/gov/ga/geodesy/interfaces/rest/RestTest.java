@@ -7,17 +7,20 @@ import org.springframework.test.context.web.AnnotationConfigWebContextLoader;
 import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.context.WebApplicationContext;
 import org.testng.annotations.BeforeClass;
 
+import au.gov.ga.geodesy.support.spring.GeodesyRestConfig;
 import au.gov.ga.geodesy.support.spring.GeodesyTestConfig;
 import au.gov.ga.geodesy.support.spring.PersistenceJpaConfig;
 
 @ContextConfiguration(
-        classes = {GeodesyTestConfig.class, RestConfig.class, PersistenceJpaConfig.class},
+        classes = {GeodesyTestConfig.class, GeodesyRestConfig.class, PersistenceJpaConfig.class},
         loader = AnnotationConfigWebContextLoader.class)
 
 @WebAppConfiguration
+@Transactional("geodesyTransactionManager")
 public class RestTest extends AbstractTransactionalTestNGSpringContextTests {
 
     @Autowired

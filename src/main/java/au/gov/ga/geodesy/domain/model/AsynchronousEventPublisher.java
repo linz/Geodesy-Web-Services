@@ -29,7 +29,7 @@ public class AsynchronousEventPublisher implements EventPublisher {
         subscribers.add(s);
     }
 
-    public void publish(Iterable<Event> es) {
+    public void publish(Event... es) {
         for (Event e : es) {
             for (EventSubscriber<?> s : subscribers) {
                 try {

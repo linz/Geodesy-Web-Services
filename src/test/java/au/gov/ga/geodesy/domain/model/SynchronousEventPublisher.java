@@ -20,7 +20,7 @@ public class SynchronousEventPublisher implements EventPublisher {
         subscribers.get().add(subscriber);
     }
 
-    public void publish(Iterable<Event> es) {
+    public void publish(Event... es) {
         for (Event e : es) {
             publish(e);
             log.info("Publishing event: " + e);

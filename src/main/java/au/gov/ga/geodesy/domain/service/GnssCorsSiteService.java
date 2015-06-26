@@ -9,16 +9,20 @@ import java.util.Set;
 import java.util.SortedMap;
 import java.util.TreeMap;
 
+import javax.annotation.PostConstruct;
+
 import org.apache.commons.collections.ComparatorUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import au.gov.ga.geodesy.domain.model.EquipmentConfigurationRepository;
 import au.gov.ga.geodesy.domain.model.EquipmentInUse;
 import au.gov.ga.geodesy.domain.model.EquipmentRepository;
 import au.gov.ga.geodesy.domain.model.Event;
+import au.gov.ga.geodesy.domain.model.EventPublisher;
 import au.gov.ga.geodesy.domain.model.EventSubscriber;
 import au.gov.ga.geodesy.domain.model.GnssAntenna;
 import au.gov.ga.geodesy.domain.model.GnssAntennaConfiguration;
@@ -36,6 +40,7 @@ import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLog;
 import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLogRepository;
 
 @Component
+@Transactional("geodesyTransactionManager")
 public class GnssCorsSiteService implements EventSubscriber<SiteLogUploaded> {
 
     private static final Logger log = LoggerFactory.getLogger(GnssCorsSiteService.class);
@@ -55,6 +60,14 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogUploaded> {
     @Autowired
     private GnssCorsSiteRepository gnssSites;
 
+    @Autowired
+    private EventPublisher eventPublisher;
+
+    @PostConstruct
+    private void subcribe() {
+        eventPublisher.subscribe(this);
+    }
+
     public boolean canHandle(Event e) {
         return e != null && (e instanceof SiteLogUploaded);
     }
@@ -64,6 +77,7 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogUploaded> {
 
         String siteId = siteLogUploaded.getFourCharacterId();
         IgsSiteLog siteLog = siteLogs.findByFourCharacterId(siteId);
+
         GnssCorsSite gnssSite = gnssSites.findByFourCharacterId(siteId);
 
         if (gnssSite == null) {
@@ -71,12 +85,11 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogUploaded> {
         }
         gnssSite.setName(siteLog.getSiteIdentification().getSiteName());
         gnssSite.setDescription(siteLog.getSiteIdentification().getMonumentDescription());
-
         gnssSite.getSetups().clear();
-
         gnssSite.getSetups().addAll(getSetups(siteLog));
 
         gnssSites.save(gnssSite);
+
         siteLogUploaded.handled();
     }
 
@@ -85,8 +98,6 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogUploaded> {
             new TreeMap<Date, List<Equipment>>(dateComparator);
 
         for (Equipment e : siteLog.getEquipment()) {
-            
-
             EffectiveDates dates = e.getEffectiveDates();
 
             List<Equipment> es = equipment.get(dates.getFrom());
@@ -133,7 +144,6 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogUploaded> {
         }
         return new ArrayList<Setup>(setups.values());
     }
-
 
     private void addEquipment(Equipment e, SortedMap<Date, Setup> setups) {
         @SuppressWarnings("unchecked")

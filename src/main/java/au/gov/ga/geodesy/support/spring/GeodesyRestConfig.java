@@ -1,4 +1,4 @@
-package au.gov.ga.geodesy.interfaces.rest;
+package au.gov.ga.geodesy.support.spring;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -10,9 +10,9 @@ import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
 import org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration;
 
 import au.gov.ga.geodesy.domain.model.Equipment;
-import au.gov.ga.geodesy.domain.model.EquipmentInUse;
 import au.gov.ga.geodesy.domain.model.EquipmentConfiguration;
 import au.gov.ga.geodesy.domain.model.EquipmentConfigurationRepository;
+import au.gov.ga.geodesy.domain.model.EquipmentInUse;
 import au.gov.ga.geodesy.domain.model.EquipmentRepository;
 import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLog;
 
@@ -30,9 +30,9 @@ import com.fasterxml.jackson.databind.ser.impl.ObjectIdWriter;
 import com.fasterxml.jackson.databind.ser.std.BeanSerializerBase;
 
 @Configuration
-public class RestConfig extends RepositoryRestMvcConfiguration {
+public class GeodesyRestConfig extends RepositoryRestMvcConfiguration {
 
-   @Override
+    @Override
     protected void configureRepositoryRestConfiguration(RepositoryRestConfiguration config) {
         config.exposeIdsFor(IgsSiteLog.class);
     }

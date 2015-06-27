@@ -24,11 +24,32 @@
     </properties>
     <repositories>
         <repository>
+            <id>boundlessgeo</id>
+            <url>http://repo.boundlessgeo.com/main</url>
+        </repository>
+        <repository>
+            <id>Hibernate Spatial repo</id>
+            <url>http://www.hibernatespatial.org/repository</url>
+        </repository>
+       <repository>
+          <id>central</id>
+          <url>https://repo1.maven.org/maven2</url>
+        </repository>
+        <repository>
+            <id>jboss</id>
+            <name>JBoss</name>
+            <url>https://repository.jboss.org/nexus/content/groups/public-jboss/</url>
+        </repository>
+    </repositories>
+<!--
+    <repositories>
+        <repository>
             <id>ga-maven-int</id>
             <name>Geoscience Internal Maven Repo</name>
             <url>http://maven-int.ga.gov.au/nexus/content/groups/public/</url>
         </repository>
     </repositories>
+-->
     <dependencies>
         <dependency>
             <groupId>au.gov.ga.geodesy</groupId>

@@ -1,7 +1,6 @@
 package au.gov.ga.geodesy.interfaces.rest;
 
 import java.io.InputStreamReader;
-import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -10,19 +9,15 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import au.gov.ga.geodesy.domain.model.Event;
-import au.gov.ga.geodesy.domain.model.EventPublisher;
 import au.gov.ga.geodesy.domain.service.IgsSiteLogService;
 import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLog;
 import au.gov.ga.geodesy.igssitelog.interfaces.xml.IgsSiteLogXmlMarshaller;
 
 @Controller
 @RequestMapping("/siteLog")
-@Transactional("geodesyTransactionManager")
 public class IgsSiteLogEndpoint {
 
     @SuppressWarnings("unused")
@@ -32,15 +27,11 @@ public class IgsSiteLogEndpoint {
     private IgsSiteLogService service;
 
     @Autowired
-    private EventPublisher eventPublisher;
-
-    @Autowired
     private IgsSiteLogXmlMarshaller siteLogMarshaller;
 
     @RequestMapping(value = "/upload", method = RequestMethod.POST)
     public void upload(HttpServletRequest req, HttpServletResponse rsp) throws Exception {
         IgsSiteLog siteLog = siteLogMarshaller.unmarshal(new InputStreamReader(req.getInputStream()));
-        List<Event> events = service.upload(siteLog);
-        eventPublisher.publish(events);
+        service.upload(siteLog);
     }
 }

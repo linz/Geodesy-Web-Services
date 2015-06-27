@@ -12,31 +12,51 @@ import java.nio.charset.Charset;
 import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.test.annotation.Rollback;
-import org.springframework.transaction.annotation.Transactional;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 
-@Transactional("geodesyTransactionManager")
+import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLogRepository;
+
 public class UploadIgsSiteLogRestTest extends RestTest {
 
-    @SuppressWarnings("unused")
     private static final Logger log = LoggerFactory.getLogger(UploadIgsSiteLogRestTest.class);
+
+    @Autowired
+    private IgsSiteLogRepository siteLogs;
 
     @Test
     @Rollback(false)
-    public void uploadAlic() throws Exception {
-        String content = FileUtils.readFileToString(getSiteLog("ALIC"), Charset.defaultCharset());
+    public void uploadABRK_0() throws Exception {
+        String content = FileUtils.readFileToString(getSiteLog("ABRK_0"), Charset.defaultCharset());
         mvc.perform(post("/siteLog/upload").contentType(MediaType.APPLICATION_XML).content(content))
             .andExpect(status().isOk());
     }
 
-    @Test(dependsOnMethods = {"uploadAlic"})
-    public void fetchAlic() throws Exception {
-        mvc.perform(get("/igsSiteLogs")).andDo(print);
+    @Rollback(false)
+    @Test(dependsOnMethods = {"uploadABRK_0"})
+    public void uploadABRK_1() throws Exception {
+        String content = FileUtils.readFileToString(getSiteLog("ABRK_1"), Charset.defaultCharset());
+        mvc.perform(post("/siteLog/upload").contentType(MediaType.APPLICATION_XML).content(content))
+            .andExpect(status().isOk());
     }
 
-    private File getSiteLog(String fourCharacterId) {
-        return new File("src/test/resources/sitelog/" + fourCharacterId.toUpperCase() + ".xml");
+    @Test(dependsOnMethods = {"uploadABRK_1"})
+    public void fetchAll() throws Exception {
+        mvc.perform(get("/gnssCorsSites")).andDo(print);
+    }
+
+    private File getSiteLog(String file) {
+        return new File("src/test/resources/sitelog/" + file + ".xml");
+    }
+
+    @AfterClass
+    public static void sleepUntilInterrupted() {
+        log.info("Tests are done, going to sleep.");
+        try {
+            Thread.sleep(Long.MAX_VALUE);
+        } catch (InterruptedException ok) {}
     }
 }

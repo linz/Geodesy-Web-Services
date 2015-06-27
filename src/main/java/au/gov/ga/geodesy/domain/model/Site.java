@@ -1,24 +1,37 @@
 package au.gov.ga.geodesy.domain.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.OrderBy;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.persistence.Version;
+
+import org.springframework.util.Assert;
 
 @Entity
 @Table(name = "SITE")
 @Inheritance(strategy = InheritanceType.JOINED)
 abstract public class Site {
 
+    @Version
+    private Integer version;
+
     /**
      * RDBMS surrogate key
      */
     @Id
-    @Column(name = "gnss_cors_site_no")
+    @Column(name = "ID")
     @GeneratedValue(generator = "surrogateKeyGenerator")
     @SequenceGenerator(name = "surrogateKeyGenerator", sequenceName = "seq_surrogate_keys")
     protected Integer id;
@@ -28,6 +41,11 @@ abstract public class Site {
 
     @Column(name = "DESCRIPTION")
     private String description;
+
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @OrderBy("effectivePeriod.from ASC")
+    @JoinColumn(name = "SITE_ID")
+    private List<Setup> setups = new ArrayList<Setup>();
 
     public String getName() {
         return name;
@@ -44,4 +62,13 @@ abstract public class Site {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    public List<Setup> getSetups() {
+        return setups;
+    }
+
+    /* private void setSetups(List<Setup> setups) { */
+    /*     Assert.notNull(setups); */
+    /*     this.setups = setups; */
+    /* } */
 }

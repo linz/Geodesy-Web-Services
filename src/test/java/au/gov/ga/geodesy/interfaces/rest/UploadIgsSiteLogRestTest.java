@@ -54,9 +54,9 @@ public class UploadIgsSiteLogRestTest extends RestTest {
 
     @AfterClass
     public static void sleepUntilInterrupted() {
-        log.info("Tests are done, going to sleep.");
-        try {
-            Thread.sleep(Long.MAX_VALUE);
-        } catch (InterruptedException ok) {}
+        /* log.info("Tests are done, going to sleep."); */
+        /* try { */
+        /*     Thread.sleep(Long.MAX_VALUE); */
+        /* } catch (InterruptedException ok) {} */
     }
 }

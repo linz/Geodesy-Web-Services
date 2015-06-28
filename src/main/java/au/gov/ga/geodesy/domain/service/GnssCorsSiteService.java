@@ -35,7 +35,10 @@ import au.gov.ga.geodesy.domain.model.HumiditySensorConfiguration;
 import au.gov.ga.geodesy.domain.model.Setup;
 import au.gov.ga.geodesy.domain.model.SiteLogUploaded;
 import au.gov.ga.geodesy.igssitelog.domain.model.EffectiveDates;
-import au.gov.ga.geodesy.igssitelog.domain.model.Equipment;
+import au.gov.ga.geodesy.igssitelog.domain.model.EquipmentLogItem;
+import au.gov.ga.geodesy.igssitelog.domain.model.GnssAntennaLogItem;
+import au.gov.ga.geodesy.igssitelog.domain.model.GnssReceiverLogItem;
+import au.gov.ga.geodesy.igssitelog.domain.model.HumiditySensorLogItem;
 import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLog;
 import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLogRepository;
 
@@ -94,27 +97,27 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogUploaded> {
     }
 
     private List<Setup> getSetups(IgsSiteLog siteLog) {
-        SortedMap<Date, List<Equipment>> equipment =
-            new TreeMap<Date, List<Equipment>>(dateComparator);
+        SortedMap<Date, List<EquipmentLogItem>> logItemsByDate =
+            new TreeMap<Date, List<EquipmentLogItem>>(dateComparator);
 
-        for (Equipment e : siteLog.getEquipment()) {
-            EffectiveDates dates = e.getEffectiveDates();
+        for (EquipmentLogItem logItem : siteLog.getEquipmentLogItems()) {
+            EffectiveDates dates = logItem.getEffectiveDates();
 
-            List<Equipment> es = equipment.get(dates.getFrom());
-            if (es == null) {
-                es = new ArrayList<Equipment>();
-                equipment.put(dates.getFrom(), es);
+            List<EquipmentLogItem> logItems = logItemsByDate.get(dates.getFrom());
+            if (logItems == null) {
+                logItems = new ArrayList<EquipmentLogItem>();
+                logItemsByDate.put(dates.getFrom(), logItems);
             }
-            es.add(e);
-            es = equipment.get(dates.getTo());
-            if (es == null) {
-                equipment.put(dates.getTo(), new ArrayList<Equipment>());
+            logItems.add(logItem);
+            logItems = logItemsByDate.get(dates.getTo());
+            if (logItems == null) {
+                logItemsByDate.put(dates.getTo(), new ArrayList<EquipmentLogItem>());
             }
         }
 
         SortedMap<Date, Setup> setups = new TreeMap<Date, Setup>(dateComparator);
 
-        Set<Date> datesOfChange = equipment.keySet();
+        Set<Date> datesOfChange = logItemsByDate.keySet();
 
         if (datesOfChange.size() > 0) {
             if (datesOfChange.size() == 1) {
@@ -139,24 +142,24 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogUploaded> {
                 }
             }
         }
-        for (Equipment e : siteLog.getEquipment()) {
-            addEquipment(e, setups);
+        for (EquipmentLogItem logItem : siteLog.getEquipmentLogItems()) {
+            addEquipment(logItem, setups);
         }
         return new ArrayList<Setup>(setups.values());
     }
 
-    private void addEquipment(Equipment e, SortedMap<Date, Setup> setups) {
+    private void addEquipment(EquipmentLogItem logItem, SortedMap<Date, Setup> setups) {
         @SuppressWarnings("unchecked")
         Comparator<Date> comparator = ComparatorUtils.nullLowComparator(ComparatorUtils.NATURAL_COMPARATOR);
 
-        Date equipmentFrom = e.getEffectiveDates().getFrom();
-        Date equipmentTo = e.getEffectiveDates().getTo();
+        Date equipmentFrom = logItem.getEffectiveDates().getFrom();
+        Date equipmentTo = logItem.getEffectiveDates().getTo();
 
         Iterator<Date> setupFromIt = setups.keySet().iterator();
         while (setupFromIt.hasNext()) {
             Date setupFrom = setupFromIt.next();
             if (setupFrom.equals(equipmentFrom)) {
-                addEquipment(e, setups.get(setupFrom));
+                addEquipment(logItem, setups.get(setupFrom));
                 break;
             }
         }
@@ -165,24 +168,39 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogUploaded> {
             Setup setup = setups.get(setupFrom);
             Date setupTo = setup.getEffectivePeriod().getTo();
             if (comparator.compare(equipmentTo, setupTo) < 1) {
-                addEquipment(e, setup);
+                addEquipment(logItem, setup);
             } else {
                 break;
             }
         }
     }
 
-    private void addEquipment(Equipment e, Setup s) {
-        EffectiveDates period = e.getEffectiveDates();
+    private GnssReceiver getReceiver(GnssReceiverLogItem r) {
+        GnssReceiver receiver = equipmentRepository.findOne(GnssReceiver.class, r.getReceiverType(), r.getSerialNumber());
+        if (receiver == null) {
+            receiver = new GnssReceiver(r.getReceiverType(), r.getSerialNumber());
+            equipmentRepository.saveAndFlush(receiver);
+        }
+        return receiver;
+    }
 
-        if (e instanceof au.gov.ga.geodesy.igssitelog.domain.model.GnssReceiver) {
-            au.gov.ga.geodesy.igssitelog.domain.model.GnssReceiver r = (au.gov.ga.geodesy.igssitelog.domain.model.GnssReceiver) e;
+    private HumiditySensor getHumiditySensor(HumiditySensorLogItem e) {
+        HumiditySensor sensor = equipmentRepository.findOne(HumiditySensor.class, e.getType(), e.getSerialNumber());
+        if (sensor == null) {
+            sensor = new HumiditySensor(e.getType(), e.getSerialNumber());
+            equipmentRepository.saveAndFlush(sensor);
+        }
+        return sensor;
+    }
 
-            GnssReceiver receiver = equipmentRepository.findOne(GnssReceiver.class, r.getReceiverType(), r.getSerialNumber());
-            if (receiver == null) {
-                receiver = new GnssReceiver(r.getReceiverType(), r.getSerialNumber());
-                equipmentRepository.saveAndFlush(receiver);
-            }
+    private void addEquipment(EquipmentLogItem logItem, Setup s) {
+        EffectiveDates period = logItem.getEffectiveDates();
+
+        if (logItem instanceof GnssReceiverLogItem) {
+            GnssReceiverLogItem r = (GnssReceiverLogItem) logItem;
+
+            GnssReceiver receiver = getReceiver(r);
+
             GnssReceiverConfiguration config = (GnssReceiverConfiguration) configurations.findOne(receiver.getId(), period.getFrom());
             if (config == null) {
                  config = new GnssReceiverConfiguration(receiver.getId(), r.getDateInstalled());
@@ -196,8 +214,8 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogUploaded> {
 
             s.getEquipmentInUse().add(new EquipmentInUse(receiver.getId(), config.getId(), period));
 
-        } else if (e instanceof au.gov.ga.geodesy.igssitelog.domain.model.GnssAntenna) {
-            au.gov.ga.geodesy.igssitelog.domain.model.GnssAntenna a = (au.gov.ga.geodesy.igssitelog.domain.model.GnssAntenna) e;
+        } else if (logItem instanceof GnssAntennaLogItem) {
+            GnssAntennaLogItem a = (GnssAntennaLogItem) logItem;
 
             GnssAntenna antenna = equipmentRepository.findOne(GnssAntenna.class, a.getAntennaType(), a.getSerialNumber());
             if (antenna == null) {
@@ -212,15 +230,12 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogUploaded> {
             config.setAlignmentFromTrueNorth(a.getAlignmentFromTrueNorth());
 
             s.getEquipmentInUse().add(new EquipmentInUse(antenna.getId(), config.getId(), period));
-        } else if (e instanceof au.gov.ga.geodesy.igssitelog.domain.model.HumiditySensor) {
-            au.gov.ga.geodesy.igssitelog.domain.model.HumiditySensor h = (au.gov.ga.geodesy.igssitelog.domain.model.HumiditySensor) e;
+        } else if (logItem instanceof HumiditySensorLogItem) {
+            HumiditySensorLogItem h = (HumiditySensorLogItem) logItem;
 
-            HumiditySensor humiditySensor = equipmentRepository.findOne(HumiditySensor.class, h.getType(), h.getSerialNumber());
-            if (humiditySensor == null) {
-                humiditySensor = new HumiditySensor(h.getType(), h.getSerialNumber());
-                humiditySensor.setAspiration(h.getAspiration());
-                equipmentRepository.saveAndFlush(humiditySensor);
-            }
+            HumiditySensor humiditySensor = getHumiditySensor(h);
+            humiditySensor.setAspiration(h.getAspiration());
+            equipmentRepository.saveAndFlush(humiditySensor);
             HumiditySensorConfiguration config = (HumiditySensorConfiguration) configurations.findOne(humiditySensor.getId(), period.getFrom());
             if (config == null) {
                  config = new HumiditySensorConfiguration(humiditySensor.getId(), period.getFrom());

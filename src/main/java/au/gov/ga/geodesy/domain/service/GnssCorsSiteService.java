@@ -62,7 +62,7 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogUploaded> {
     private EquipmentRepository equipmentRepository;
 
     @Autowired
-    private EquipmentConfigurationRepository configurations;
+    private EquipmentConfigurationRepository configurationRepository;
 
     @Autowired
     private GnssCorsSiteRepository gnssSites;
@@ -86,7 +86,6 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogUploaded> {
         IgsSiteLog siteLog = siteLogs.findByFourCharacterId(siteId);
 
         GnssCorsSite gnssSite = gnssSites.findByFourCharacterId(siteId);
-
         if (gnssSite == null) {
             gnssSite = new GnssCorsSite(siteId);
         }
@@ -94,9 +93,7 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogUploaded> {
         gnssSite.setDescription(siteLog.getSiteIdentification().getMonumentDescription());
         gnssSite.getSetups().clear();
         gnssSite.getSetups().addAll(getSetups(siteLog));
-
         gnssSites.save(gnssSite);
-
         siteLogUploaded.handled();
     }
 
@@ -117,9 +114,7 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogUploaded> {
                 logItemsByDate.put(dates.getTo(), new ArrayList<EquipmentLogItem>());
             }
         }
-
         SortedMap<Date, Setup> setups = new TreeMap<>(dateComparator);
-
         Set<Date> datesOfChange = logItemsByDate.keySet();
 
         if (datesOfChange.size() > 0) {
@@ -186,33 +181,6 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogUploaded> {
         s.getEquipmentInUse().add(inUse);
     }
 
-    private <T extends Equipment> T getEquipment(Class<T> equipmentClass, EquipmentLogItem logItem) {
-        T e = equipmentRepository.findOne(equipmentClass, logItem.getType(), logItem.getSerialNumber());
-        if (e == null) {
-            try {
-                e = equipmentClass.getConstructor(String.class, String.class).newInstance(logItem.getType(), logItem.getSerialNumber());
-                equipmentRepository.saveAndFlush(e);
-            } catch (IllegalAccessException | InstantiationException | NoSuchMethodException | InvocationTargetException ex) {
-                throw new RuntimeException(ex);
-            }
-        }
-        return e;
-    }
-
-    private <T extends EquipmentConfiguration> T getConfiguration(Class<T> configClass, Integer equipId, EquipmentLogItem logItem) {
-        Date effectiveFrom = logItem.getEffectiveDates().getFrom();
-        T c = configurations.findOne(configClass, equipId, effectiveFrom);
-        if (c == null) {
-            try {
-                c = configClass.getConstructor(Integer.class, Date.class).newInstance(equipId, effectiveFrom);
-                configurations.saveAndFlush(c);
-            } catch (IllegalAccessException | InstantiationException | NoSuchMethodException | InvocationTargetException ex) {
-                throw new RuntimeException(ex);
-            }
-        }
-        return c;
-    }
-
     private Pair<Equipment, EquipmentConfiguration> getEquipmentAndConfiguration(EquipmentLogItem logItem) {
         Equipment equipment = null;
         EquipmentConfiguration configuration = null;
@@ -246,7 +214,36 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogUploaded> {
             equipment = equip;
             configuration = config;
         }
+        equipmentRepository.save(equipment);
+        configurationRepository.save(configuration);
         return Pair.of(equipment, configuration);
+    }
+
+    private <T extends Equipment> T getEquipment(Class<T> equipmentClass, EquipmentLogItem logItem) {
+        T e = equipmentRepository.findOne(equipmentClass, logItem.getType(), logItem.getSerialNumber());
+        if (e == null) {
+            try {
+                e = equipmentClass.getConstructor(String.class, String.class).newInstance(logItem.getType(), logItem.getSerialNumber());
+                equipmentRepository.saveAndFlush(e);
+            } catch (IllegalAccessException | InstantiationException | NoSuchMethodException | InvocationTargetException ex) {
+                throw new RuntimeException(ex);
+            }
+        }
+        return e;
+    }
+
+    private <T extends EquipmentConfiguration> T getConfiguration(Class<T> configClass, Integer equipId, EquipmentLogItem logItem) {
+        Date effectiveFrom = logItem.getEffectiveDates().getFrom();
+        T c = configurationRepository.findOne(configClass, equipId, effectiveFrom);
+        if (c == null) {
+            try {
+                c = configClass.getConstructor(Integer.class, Date.class).newInstance(equipId, effectiveFrom);
+                configurationRepository.saveAndFlush(c);
+            } catch (IllegalAccessException | InstantiationException | NoSuchMethodException | InvocationTargetException ex) {
+                throw new RuntimeException(ex);
+            }
+        }
+        return c;
     }
 }
 

@@ -97,15 +97,14 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogUploaded> {
     }
 
     private List<Setup> getSetups(IgsSiteLog siteLog) {
-        SortedMap<Date, List<EquipmentLogItem>> logItemsByDate =
-            new TreeMap<Date, List<EquipmentLogItem>>(dateComparator);
+        SortedMap<Date, List<EquipmentLogItem>> logItemsByDate = new TreeMap<>(dateComparator);
 
         for (EquipmentLogItem logItem : siteLog.getEquipmentLogItems()) {
             EffectiveDates dates = logItem.getEffectiveDates();
 
             List<EquipmentLogItem> logItems = logItemsByDate.get(dates.getFrom());
             if (logItems == null) {
-                logItems = new ArrayList<EquipmentLogItem>();
+                logItems = new ArrayList<>();
                 logItemsByDate.put(dates.getFrom(), logItems);
             }
             logItems.add(logItem);
@@ -115,7 +114,7 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogUploaded> {
             }
         }
 
-        SortedMap<Date, Setup> setups = new TreeMap<Date, Setup>(dateComparator);
+        SortedMap<Date, Setup> setups = new TreeMap<>(dateComparator);
 
         Set<Date> datesOfChange = logItemsByDate.keySet();
 

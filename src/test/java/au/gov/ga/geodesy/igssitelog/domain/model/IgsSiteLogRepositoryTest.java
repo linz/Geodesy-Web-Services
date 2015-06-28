@@ -12,6 +12,7 @@ import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.support.AnnotationConfigContextLoader;
 import org.springframework.test.context.testng.AbstractTransactionalTestNGSpringContextTests;
+import org.springframework.transaction.annotation.Transactional;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
@@ -22,6 +23,7 @@ import au.gov.ga.geodesy.support.spring.PersistenceJpaConfig;
 @ContextConfiguration(
         classes = {PersistenceJpaConfig.class},
         loader = AnnotationConfigContextLoader.class)
+@Transactional("geodesyTransactionManager")
 public class IgsSiteLogRepositoryTest extends AbstractTransactionalTestNGSpringContextTests {
 
     private static final Logger log = LoggerFactory.getLogger(IgsSiteLogRepositoryTest.class);

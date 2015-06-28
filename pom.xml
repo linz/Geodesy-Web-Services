@@ -16,7 +16,7 @@
         <liquibase.version>3.3.2</liquibase.version>
         <spring.version>4.1.6.RELEASE</spring.version>
         <!--<spring.version>3.2.8.RELEASE</spring.version>-->
-        <hibernate.version>4.3.1.FINAL</hibernate.version>
+        <hibernate.version>4.3.1.Final</hibernate.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <aspectj.version>1.8.6</aspectj.version>
@@ -24,11 +24,32 @@
     </properties>
     <repositories>
         <repository>
+            <id>boundlessgeo</id>
+            <url>http://repo.boundlessgeo.com/main</url>
+        </repository>
+        <repository>
+            <id>Hibernate Spatial repo</id>
+            <url>http://www.hibernatespatial.org/repository</url>
+        </repository>
+       <repository>
+          <id>central</id>
+          <url>https://repo1.maven.org/maven2</url>
+        </repository>
+        <repository>
+            <id>jboss</id>
+            <name>JBoss</name>
+            <url>https://repository.jboss.org/nexus/content/groups/public-jboss/</url>
+        </repository>
+    </repositories>
+<!--
+    <repositories>
+        <repository>
             <id>ga-maven-int</id>
             <name>Geoscience Internal Maven Repo</name>
             <url>http://maven-int.ga.gov.au/nexus/content/groups/public/</url>
         </repository>
     </repositories>
+-->
     <dependencies>
         <dependency>
             <groupId>au.gov.ga.geodesy</groupId>
@@ -58,7 +79,7 @@
         <dependency>
             <groupId>com.oracle</groupId>
             <artifactId>ojdbc6</artifactId>
-            <version>11.2.0.3</version>
+            <version>11.2.0.4.0</version>
             <scope>test</scope>
         </dependency>
         <dependency>

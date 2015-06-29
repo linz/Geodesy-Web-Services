@@ -26,7 +26,7 @@ public class GnssReceiverConfiguration extends EquipmentConfiguration {
     @Column(name = "TEMPERATURE_STABILIZATION")
     private String temperatureStabilization;
 
-    @Column(name = "NOTES")
+    @Column(name = "NOTES", length = 4000)
     private String notes;
 
     /* @SuppressWarnings("unused") // used by hibernate */

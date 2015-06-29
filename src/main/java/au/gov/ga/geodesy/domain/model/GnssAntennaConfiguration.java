@@ -37,7 +37,7 @@ public class GnssAntennaConfiguration extends EquipmentConfiguration {
     @Column(name = "ANTENNA_CABLE_LENGTH")
     private String antennaCableLength;
 
-    @Column(name = "NOTES")
+    @Column(name = "NOTES", length = 4000)
     private String notes;
 
     /* @SuppressWarnings("unused") // used by hibernate */

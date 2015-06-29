@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface EquipmentRepository extends JpaRepository<Equipment, Integer>, EquipmentRepositoryCustom {
+public interface EventRepository extends JpaRepository<Event, Integer>, EventRepositoryCustom {
     @Override
-    List<Equipment> findAll();
+    List<Event> findAll();
 }

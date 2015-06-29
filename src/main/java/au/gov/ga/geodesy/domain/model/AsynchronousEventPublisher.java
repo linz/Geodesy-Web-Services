@@ -9,8 +9,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import au.gov.ga.geodesy.igssitelog.domain.model.EventRepository;
-
 public class AsynchronousEventPublisher implements EventPublisher {
 
     private static final Logger log = LoggerFactory.getLogger(AsynchronousEventPublisher.class);
@@ -61,6 +59,8 @@ public class AsynchronousEventPublisher implements EventPublisher {
                     log.info("Processing " + es.size() + " pending event(s)");
                     System.out.println(subscribers.size());
                     for (Event e : events.getPendingEvents()) {
+                        e.published();
+                        events.saveAndFlush(e);
                         synchronized(subscribers) {
                             for (EventSubscriber<?> s : subscribers) {
                                 if (s.canHandle(e) && s.getClass().toString().equals(e.getSubscriber())) {
@@ -74,14 +74,21 @@ public class AsynchronousEventPublisher implements EventPublisher {
             }
         }
 
+        /* @Transactional */
         private void handle(final EventSubscriber<?> s, final Event e) {
             new Thread() {
                 @SuppressWarnings("unchecked")
                 public void run() {
-                    ((EventSubscriber<Event>) s).handle(e);
                     log.info("Publishing event " + e + " to " + s);
+                    ((EventSubscriber<Event>) s).handle(e);
+                    /* events.saveAndFlush(e); */
                 }
             }.start();
         }
+    }
+
+    public void handled(Event e) {
+        e.handled();
+        events.saveAndFlush(e);
     }
 }

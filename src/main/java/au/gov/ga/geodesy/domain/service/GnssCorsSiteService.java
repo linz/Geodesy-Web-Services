@@ -27,6 +27,7 @@ import au.gov.ga.geodesy.domain.model.EquipmentInUse;
 import au.gov.ga.geodesy.domain.model.EquipmentRepository;
 import au.gov.ga.geodesy.domain.model.Event;
 import au.gov.ga.geodesy.domain.model.EventPublisher;
+import au.gov.ga.geodesy.domain.model.EventRepository;
 import au.gov.ga.geodesy.domain.model.EventSubscriber;
 import au.gov.ga.geodesy.domain.model.GnssAntenna;
 import au.gov.ga.geodesy.domain.model.GnssAntennaConfiguration;
@@ -70,6 +71,9 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogUploaded> {
     @Autowired
     private EventPublisher eventPublisher;
 
+    @Autowired
+    private EventRepository events;
+
     @PostConstruct
     private void subcribe() {
         eventPublisher.subscribe(this);
@@ -94,7 +98,7 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogUploaded> {
         gnssSite.getSetups().clear();
         gnssSite.getSetups().addAll(getSetups(siteLog));
         gnssSites.save(gnssSite);
-        siteLogUploaded.handled();
+        eventPublisher.handled(siteLogUploaded);
     }
 
     private List<Setup> getSetups(IgsSiteLog siteLog) {

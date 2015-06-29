@@ -16,8 +16,6 @@ import javax.persistence.Transient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
 
-import au.gov.ga.geodesy.igssitelog.domain.model.EventRepository;
-
 @Entity
 @Table(name = "DOMAIN_EVENT")
 @Inheritance(strategy = InheritanceType.JOINED)
@@ -25,9 +23,9 @@ import au.gov.ga.geodesy.igssitelog.domain.model.EventRepository;
 @Configurable
 public abstract class Event implements Cloneable {
 
-    @Autowired(required = true)
-    @Transient
-    private EventRepository events;
+    /* @Autowired(required = true) */
+    /* @Transient */
+    /* private EventRepository events; */
 
     @Id
     @GeneratedValue(generator = "surrogateKeyGenerator")
@@ -42,6 +40,12 @@ public abstract class Event implements Cloneable {
 
     @Column(name = "TIME_HANDLED")
     public Date timeHandled;
+
+    @Column(name = "TIME_PUBLISHED")
+    public Date timePublished;
+
+    @Column(name = "RETRIES")
+    public Integer retries;
 
     public Event() {
         setTimeRaised(new Date());
@@ -71,13 +75,39 @@ public abstract class Event implements Cloneable {
         timeHandled = t;
     }
 
+    public Date getTimePublished() {
+        return timePublished;
+    }
+
+    public void setTimePublished(Date timePublished) {
+        this.timePublished = timePublished;
+    }
+
+    public Integer getRetries() {
+        return retries;
+    }
+
+    public void setRetries(Integer retries) {
+        this.retries = retries;
+    }
+
+    public void published() {
+        if (getTimePublished() != null) {
+            setRetries(getRetries() == null ? 1 : getRetries());
+        }
+        setTimePublished(new Date());
+        /* if (id != null && events.exists(id)) { */
+        /*     events.save(this); */
+        /* } */
+    }
+
     public void handled() {
         if (timeHandled == null) {
             setTimeHandled(new Date());
         }
-        if (id != null && events.exists(id)) {
-            events.save(this);
-        }
+        /* if (id != null && events.exists(id)) { */
+        /*     events.save(this); */
+        /* } */
     }
 
     public Object clone() throws CloneNotSupportedException {

@@ -1,6 +1,7 @@
 package au.gov.ga.geodesy.domain.model;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -32,7 +33,12 @@ public class SynchronousEventPublisher implements EventPublisher {
         for (EventSubscriber<?> s : subscribers.get()) {
             if (s.canHandle(e)) {
                 ((EventSubscriber<T>) s).handle(e);
+                e.handled();
             }
         }
+    }
+
+    public void handled(Event e) {
+        e.handled();
     }
 }

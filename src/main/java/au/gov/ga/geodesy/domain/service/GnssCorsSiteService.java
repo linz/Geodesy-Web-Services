@@ -106,7 +106,9 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogUploaded> {
 
         for (EquipmentLogItem logItem : siteLog.getEquipmentLogItems()) {
             EffectiveDates dates = logItem.getEffectiveDates();
-
+            if (dates == null) {
+                dates = new EffectiveDates(new Date(0L), null);
+            }
             List<EquipmentLogItem> logItems = logItemsByDate.get(dates.getFrom());
             if (logItems == null) {
                 logItems = new ArrayList<>();
@@ -154,8 +156,15 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogUploaded> {
         @SuppressWarnings("unchecked")
         Comparator<Date> comparator = ComparatorUtils.nullLowComparator(ComparatorUtils.NATURAL_COMPARATOR);
 
-        Date equipmentFrom = logItem.getEffectiveDates().getFrom();
-        Date equipmentTo = logItem.getEffectiveDates().getTo();
+        EffectiveDates period = logItem.getEffectiveDates();
+        Date equipmentFrom = null;
+        Date equipmentTo = null;
+        if (period != null) {
+            equipmentFrom = logItem.getEffectiveDates().getFrom();
+            equipmentTo = logItem.getEffectiveDates().getTo();
+        } else {
+            equipmentFrom = new Date(0L);
+        }
 
         Iterator<Date> setupFromIt = setups.keySet().iterator();
         while (setupFromIt.hasNext()) {
@@ -237,7 +246,13 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogUploaded> {
     }
 
     private <T extends EquipmentConfiguration> T getConfiguration(Class<T> configClass, Integer equipId, EquipmentLogItem logItem) {
-        Date effectiveFrom = logItem.getEffectiveDates().getFrom();
+        EffectiveDates period = logItem.getEffectiveDates();
+        Date effectiveFrom = null;
+        if (period != null) {
+            effectiveFrom = period.getFrom();
+        } else {
+            effectiveFrom = new Date(0L);
+        }
         T c = configurationRepository.findOne(configClass, equipId, effectiveFrom);
         if (c == null) {
             try {

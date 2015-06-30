@@ -31,9 +31,11 @@ public class AsynchronousEventPublisher implements EventPublisher {
         for (Event e : es) {
             for (EventSubscriber<?> s : subscribers) {
                 try {
-                    Event published = (Event) e.clone();
-                    published.setSubscriber(s.getClass().toString());
-                    events.save(published);
+                    if (s.canHandle(e)) {
+                        Event published = (Event) e.clone();
+                        published.setSubscriber(s.getClass().toString());
+                        events.save(published);
+                    }
                 } catch (CloneNotSupportedException ex) {
                     throw new RuntimeException(ex);
                 }
@@ -57,13 +59,12 @@ public class AsynchronousEventPublisher implements EventPublisher {
                     Thread.sleep(3000);
                     List<Event> es = events.getPendingEvents();
                     log.info("Processing " + es.size() + " pending event(s)");
-                    System.out.println(subscribers.size());
                     for (Event e : events.getPendingEvents()) {
                         e.published();
                         events.saveAndFlush(e);
                         synchronized(subscribers) {
                             for (EventSubscriber<?> s : subscribers) {
-                                if (s.canHandle(e) && s.getClass().toString().equals(e.getSubscriber())) {
+                                if (s.getClass().toString().equals(e.getSubscriber())) {
                                     handle(s, e);
                                 }
                             }
@@ -74,14 +75,12 @@ public class AsynchronousEventPublisher implements EventPublisher {
             }
         }
 
-        /* @Transactional */
         private void handle(final EventSubscriber<?> s, final Event e) {
             new Thread() {
                 @SuppressWarnings("unchecked")
                 public void run() {
                     log.info("Publishing event " + e + " to " + s);
                     ((EventSubscriber<Event>) s).handle(e);
-                    /* events.saveAndFlush(e); */
                 }
             }.start();
         }

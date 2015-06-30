@@ -11,9 +11,7 @@ import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
-import javax.persistence.Transient;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
 
 @Entity
@@ -22,10 +20,6 @@ import org.springframework.beans.factory.annotation.Configurable;
 @DiscriminatorColumn(name = "EVENT_NAME")
 @Configurable
 public abstract class Event implements Cloneable {
-
-    /* @Autowired(required = true) */
-    /* @Transient */
-    /* private EventRepository events; */
 
     @Id
     @GeneratedValue(generator = "surrogateKeyGenerator")
@@ -93,21 +87,15 @@ public abstract class Event implements Cloneable {
 
     public void published() {
         if (getTimePublished() != null) {
-            setRetries(getRetries() == null ? 1 : getRetries());
+            setRetries(getRetries() == null ? 1 : getRetries() + 1);
         }
         setTimePublished(new Date());
-        /* if (id != null && events.exists(id)) { */
-        /*     events.save(this); */
-        /* } */
     }
 
     public void handled() {
         if (timeHandled == null) {
             setTimeHandled(new Date());
         }
-        /* if (id != null && events.exists(id)) { */
-        /*     events.save(this); */
-        /* } */
     }
 
     public Object clone() throws CloneNotSupportedException {

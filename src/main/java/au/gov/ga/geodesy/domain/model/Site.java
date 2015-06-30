@@ -17,8 +17,6 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Version;
 
-import org.springframework.util.Assert;
-
 @Entity
 @Table(name = "SITE")
 @Inheritance(strategy = InheritanceType.JOINED)
@@ -46,6 +44,10 @@ abstract public class Site {
     @OrderBy("effectivePeriod.from ASC")
     @JoinColumn(name = "SITE_ID")
     private List<Setup> setups = new ArrayList<Setup>();
+
+    public Integer getId() {
+        return id;
+    }
 
     public String getName() {
         return name;

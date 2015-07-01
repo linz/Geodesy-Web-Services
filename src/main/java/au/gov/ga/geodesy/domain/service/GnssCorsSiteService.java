@@ -2,18 +2,14 @@ package au.gov.ga.geodesy.domain.service;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.Date;
-import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Set;
-import java.util.SortedMap;
-import java.util.TreeMap;
+import java.util.SortedSet;
+import java.util.TreeSet;
 
 import javax.annotation.PostConstruct;
 
-import org.apache.commons.collections.ComparatorUtils;
 import org.apache.commons.lang3.tuple.Pair;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -54,9 +50,7 @@ import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLogRepository;
 public class GnssCorsSiteService implements EventSubscriber<SiteLogUploaded> {
 
     private static final Logger log = LoggerFactory.getLogger(GnssCorsSiteService.class);
-
-    @SuppressWarnings("unchecked")
-    private static final Comparator<Date> dateComparator = ComparatorUtils.nullHighComparator(ComparatorUtils.NATURAL_COMPARATOR);
+    private static final String gnssCorsSetupName = "GNSS CORS Setup";
 
     @Autowired
     private IgsSiteLogRepository siteLogs;
@@ -105,7 +99,7 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogUploaded> {
     }
 
     private List<Setup> getSetups(IgsSiteLog siteLog) {
-        Set<Date> datesOfChange = new HashSet<>();
+        SortedSet<Date> datesOfChange = new TreeSet<>();
 
         for (EquipmentLogItem logItem : siteLog.getEquipmentLogItems()) {
 
@@ -118,12 +112,12 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogUploaded> {
                 datesOfChange.add(dates.getTo());
             }
         }
-        SortedMap<Date, Setup> setups = new TreeMap<>(dateComparator);
+        List<Setup> setups = new ArrayList<>();
 
         if (datesOfChange.size() > 0) {
             if (datesOfChange.size() == 1) {
                 Date d = datesOfChange.iterator().next();
-                setups.put(d, new Setup("GNSS Cors Setup", new EffectiveDates(d, null)));
+                setups.add(new Setup(gnssCorsSetupName, new EffectiveDates(d, null)));
             } else {
                 Iterator<Date> i = datesOfChange.iterator();
                 Iterator<Date> j = datesOfChange.iterator();
@@ -132,27 +126,24 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogUploaded> {
                 do {
                     Date from = i.next();
                     Date to = j.next();
-                    s = new Setup("Gnss Core Setup", new EffectiveDates(from, to));
-                    setups.put(from, s);
+                    s = new Setup(gnssCorsSetupName, new EffectiveDates(from, to));
+                    setups.add(s);
                 }
                 while (j.hasNext());
                 EffectiveDates lastPeriod = s.getEffectivePeriod();
                 if (lastPeriod.getTo() != null) {
-                    s = new Setup("Gnss Core Setup", new EffectiveDates(lastPeriod.getTo(), null));
-                    setups.put(s.getEffectivePeriod().getFrom(), s);
+                    s = new Setup(gnssCorsSetupName, new EffectiveDates(lastPeriod.getTo(), null));
+                    setups.add(s);
                 }
             }
         }
         for (EquipmentLogItem logItem : siteLog.getEquipmentLogItems()) {
             addEquipment(logItem, setups);
         }
-        return new ArrayList<Setup>(setups.values());
+        return setups;
     }
 
-    private void addEquipment(EquipmentLogItem logItem, SortedMap<Date, Setup> setups) {
-        @SuppressWarnings("unchecked")
-        Comparator<Date> comparator = ComparatorUtils.nullLowComparator(ComparatorUtils.NATURAL_COMPARATOR);
-
+    private void addEquipment(EquipmentLogItem logItem, List<Setup> setups) {
         EffectiveDates period = logItem.getEffectiveDates();
         Date equipmentFrom = null;
         Date equipmentTo = null;
@@ -166,23 +157,18 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogUploaded> {
             // equipment log entries with empty periods are corrections
             return;
         }
-        Iterator<Date> setupFromIt = setups.keySet().iterator();
-        while (setupFromIt.hasNext()) {
-            Date setupFrom = setupFromIt.next();
-            if (setupFrom.equals(equipmentFrom)) {
-                addEquipment(logItem, setups.get(setupFrom));
-                break;
-            }
+        int i = 0;
+        while (!setups.get(i).getEffectivePeriod().getFrom().equals(equipmentFrom)) {
+            i++;
         }
-        while (setupFromIt.hasNext()) {
-            Date setupFrom = setupFromIt.next();
-            Setup setup = setups.get(setupFrom);
-            Date setupTo = setup.getEffectivePeriod().getTo();
-            if (comparator.compare(equipmentFrom, setupFrom) == 1 && comparator.compare(equipmentTo, setupTo) < 1) {
-                addEquipment(logItem, setup);
-            } else {
-                break;
-            }
+        int j = i;
+        if (equipmentTo == null) {
+            j = setups.size();
+        } else {
+            while (!setups.get(j++).getEffectivePeriod().getTo().equals(equipmentTo));
+        }
+        for (int k = i; k < j; k++) {
+            addEquipment(logItem, setups.get(k));
         }
     }
 

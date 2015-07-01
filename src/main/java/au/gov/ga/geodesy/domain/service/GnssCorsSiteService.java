@@ -162,7 +162,10 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogUploaded> {
         } else {
             equipmentFrom = new Date(0L);
         }
-
+        if (equipmentFrom.equals(equipmentTo)) {
+            // equipment log entries with empty periods are corrections
+            return;
+        }
         Iterator<Date> setupFromIt = setups.keySet().iterator();
         while (setupFromIt.hasNext()) {
             Date setupFrom = setupFromIt.next();

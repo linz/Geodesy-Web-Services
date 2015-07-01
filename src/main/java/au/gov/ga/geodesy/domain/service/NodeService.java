@@ -64,13 +64,24 @@ public class NodeService implements EventSubscriber<SiteUpdated> {
 
     public void handle(SiteUpdated siteUpdated) {
         GnssCorsSite site = gnssCorsSites.findByFourCharacterId(siteUpdated.getFourCharacterId());
+        EffectiveDates nodePeriod = null;
+
         for (Setup setup : site.getSetups()) {
 
+            if (nodePeriod != null) {
+                Date nodeEffectiveTo = nodePeriod.getTo();
+                if (nodeEffectiveTo == null) {
+                    break;
+                }
+                if (nodeEffectiveTo.compareTo(setup.getEffectivePeriod().getFrom()) == 1) {
+                    continue;
+                }
+            }
             EquipmentInUse receiverInUse = getReceiverInUse(setup);
             EquipmentInUse antennaInUse = getAntennaInUse(setup);
 
             if (receiverInUse != null && antennaInUse != null) {
-                EffectiveDates nodePeriod = lcd(receiverInUse.getPeriod(), antennaInUse.getPeriod());
+                nodePeriod = lcd(receiverInUse.getPeriod(), antennaInUse.getPeriod());
                 nodes.save(new Node(site.getId(), nodePeriod, setup.getId()));
             }
         }
@@ -85,7 +96,7 @@ public class NodeService implements EventSubscriber<SiteUpdated> {
     }
 
     private <T> T min(T a, T b, Comparator<T> c) {
-         return c.compare(a, b) < 1 ? a : b;
+        return c.compare(a, b) < 1 ? a : b;
     }
 
     private <T> T max(T a, T b, Comparator<T> c) {

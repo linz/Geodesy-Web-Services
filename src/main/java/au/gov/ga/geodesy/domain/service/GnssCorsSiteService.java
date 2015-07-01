@@ -4,6 +4,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
@@ -104,26 +105,20 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogUploaded> {
     }
 
     private List<Setup> getSetups(IgsSiteLog siteLog) {
-        SortedMap<Date, List<EquipmentLogItem>> logItemsByDate = new TreeMap<>(dateComparator);
+        Set<Date> datesOfChange = new HashSet<>();
 
         for (EquipmentLogItem logItem : siteLog.getEquipmentLogItems()) {
+
             EffectiveDates dates = logItem.getEffectiveDates();
             if (dates == null) {
                 dates = new EffectiveDates(new Date(0L), null);
             }
-            List<EquipmentLogItem> logItems = logItemsByDate.get(dates.getFrom());
-            if (logItems == null) {
-                logItems = new ArrayList<>();
-                logItemsByDate.put(dates.getFrom(), logItems);
-            }
-            logItems.add(logItem);
-            logItems = logItemsByDate.get(dates.getTo());
-            if (logItems == null) {
-                logItemsByDate.put(dates.getTo(), new ArrayList<EquipmentLogItem>());
+            datesOfChange.add(dates.getFrom());
+            if (dates.getTo() != null) {
+                datesOfChange.add(dates.getTo());
             }
         }
         SortedMap<Date, Setup> setups = new TreeMap<>(dateComparator);
-        Set<Date> datesOfChange = logItemsByDate.keySet();
 
         if (datesOfChange.size() > 0) {
             if (datesOfChange.size() == 1) {

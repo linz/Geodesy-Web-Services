@@ -180,7 +180,7 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogUploaded> {
             Date setupFrom = setupFromIt.next();
             Setup setup = setups.get(setupFrom);
             Date setupTo = setup.getEffectivePeriod().getTo();
-            if (comparator.compare(equipmentTo, setupTo) < 1) {
+            if (comparator.compare(equipmentFrom, setupFrom) == 1 && comparator.compare(equipmentTo, setupTo) < 1) {
                 addEquipment(logItem, setup);
             } else {
                 break;

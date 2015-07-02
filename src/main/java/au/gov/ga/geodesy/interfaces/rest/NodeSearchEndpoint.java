@@ -34,7 +34,7 @@ public class NodeSearchEndpoint {
     @Autowired
     private PagedResourcesAssembler<Node> assembler;
 
-    @RequestMapping(value = "/findByFourCharacterId", method = RequestMethod.GET)
+    @RequestMapping(value = "/findByFourCharacterId", method = RequestMethod.GET, produces = "application/hal+json")
     public ResponseEntity<PagedResources<Resource<Node>>> findByFourCharacterId(
             String id, Pageable pageRequest) {
 

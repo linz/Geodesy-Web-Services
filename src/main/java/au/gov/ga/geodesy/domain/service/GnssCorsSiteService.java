@@ -102,12 +102,8 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogUploaded> {
         SortedSet<Date> datesOfChange = new TreeSet<>();
 
         for (EquipmentLogItem logItem : siteLog.getEquipmentLogItems()) {
-
             EffectiveDates dates = logItem.getEffectiveDates();
-            if (dates == null) {
-                dates = new EffectiveDates(new Date(0L), null);
-            }
-            datesOfChange.add(dates.getFrom());
+            datesOfChange.add(dates.getFrom() == null ? new Date(0L) : dates.getFrom());
             if (dates.getTo() != null) {
                 datesOfChange.add(dates.getTo());
             }
@@ -145,14 +141,9 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogUploaded> {
 
     private void addEquipment(EquipmentLogItem logItem, List<Setup> setups) {
         EffectiveDates period = logItem.getEffectiveDates();
-        Date equipmentFrom = null;
-        Date equipmentTo = null;
-        if (period != null) {
-            equipmentFrom = logItem.getEffectiveDates().getFrom();
-            equipmentTo = logItem.getEffectiveDates().getTo();
-        } else {
-            equipmentFrom = new Date(0L);
-        }
+        Date equipmentFrom = period.getFrom() == null ? new Date(0L) : period.getFrom();
+        Date equipmentTo = period.getTo();
+
         if (equipmentFrom.equals(equipmentTo)) {
             // equipment log entries with empty periods are corrections
             return;
@@ -233,12 +224,7 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogUploaded> {
 
     private <T extends EquipmentConfiguration> T getConfiguration(Class<T> configClass, Integer equipId, EquipmentLogItem logItem) {
         EffectiveDates period = logItem.getEffectiveDates();
-        Date effectiveFrom = null;
-        if (period != null) {
-            effectiveFrom = period.getFrom();
-        } else {
-            effectiveFrom = new Date(0L);
-        }
+        Date effectiveFrom = period.getFrom() == null ? new Date(0L) : period.getFrom();
         T c = configurationRepository.findOne(configClass, equipId, effectiveFrom);
         if (c == null) {
             try {

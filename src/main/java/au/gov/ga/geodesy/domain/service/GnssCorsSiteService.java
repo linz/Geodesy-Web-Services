@@ -156,7 +156,10 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogUploaded> {
         if (equipmentTo == null) {
             j = setups.size();
         } else {
-            while (!setups.get(j++).getEffectivePeriod().getTo().equals(equipmentTo));
+            Date setupTo = null;
+            do {
+                setupTo = setups.get(j++).getEffectivePeriod().getTo();
+            } while (setupTo != null && !setupTo.equals(equipmentTo));
         }
         for (int k = i; k < j; k++) {
             addEquipment(logItem, setups.get(k));

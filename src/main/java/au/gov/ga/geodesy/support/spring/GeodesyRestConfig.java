@@ -2,6 +2,7 @@ package au.gov.ga.geodesy.support.spring;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.TimeZone;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
@@ -41,7 +42,9 @@ public class GeodesyRestConfig extends RepositoryRestMvcConfiguration {
     @SuppressWarnings("serial")
     @Override
     protected void configureJacksonObjectMapper(ObjectMapper mapper) {
-        mapper.setDateFormat(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss")); // ISO 8601
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"); // ISO 8601
+        format.setTimeZone(TimeZone.getTimeZone("UTC"));
+        mapper.setDateFormat(format);
  
         mapper.registerModule(new SimpleModule() {
             public void setupModule(SetupContext context) {

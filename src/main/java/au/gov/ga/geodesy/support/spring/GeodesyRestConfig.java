@@ -6,6 +6,7 @@ import java.util.TimeZone;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
 import org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration;
@@ -24,6 +25,7 @@ import com.fasterxml.jackson.databind.BeanDescription;
 import com.fasterxml.jackson.databind.JsonSerializer;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationConfig;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.databind.SerializerProvider;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.fasterxml.jackson.databind.ser.BeanSerializerModifier;
@@ -37,6 +39,14 @@ public class GeodesyRestConfig extends RepositoryRestMvcConfiguration {
     @Override
     protected void configureRepositoryRestConfiguration(RepositoryRestConfiguration config) {
         config.exposeIdsFor(IgsSiteLog.class, Setup.class);
+    }
+
+    // See: https://github.com/spring-projects/spring-hateoas/issues/134
+    @Autowired
+    @Qualifier("_halObjectMapper")
+    private void configureHalObjectMapper(ObjectMapper mapper) {
+        mapper.enable(SerializationFeature.INDENT_OUTPUT);
+        configureJacksonObjectMapper(mapper);
     }
 
     @SuppressWarnings("serial")

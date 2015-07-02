@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 import au.gov.ga.geodesy.domain.model.EventPublisher;
-import au.gov.ga.geodesy.domain.model.SiteLogUploaded;
+import au.gov.ga.geodesy.domain.model.SiteLogReceived;
 import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLog;
 import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLogRepository;
 
@@ -28,6 +28,6 @@ public class IgsSiteLogService {
         siteLogs.save(siteLog);
         String id = siteLog.getSiteIdentification().getFourCharacterId();
         log.info("Saving " + id);
-        eventPublisher.publish(new SiteLogUploaded(id));
+        eventPublisher.publish(new SiteLogReceived(id));
     }
 }

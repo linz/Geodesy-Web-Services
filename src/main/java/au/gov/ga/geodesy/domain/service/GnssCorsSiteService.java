@@ -35,7 +35,7 @@ import au.gov.ga.geodesy.domain.model.GnssReceiverConfiguration;
 import au.gov.ga.geodesy.domain.model.HumiditySensor;
 import au.gov.ga.geodesy.domain.model.HumiditySensorConfiguration;
 import au.gov.ga.geodesy.domain.model.Setup;
-import au.gov.ga.geodesy.domain.model.SiteLogUploaded;
+import au.gov.ga.geodesy.domain.model.SiteLogReceived;
 import au.gov.ga.geodesy.domain.model.SiteUpdated;
 import au.gov.ga.geodesy.igssitelog.domain.model.EffectiveDates;
 import au.gov.ga.geodesy.igssitelog.domain.model.EquipmentLogItem;
@@ -47,7 +47,7 @@ import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLogRepository;
 
 @Component
 @Transactional("geodesyTransactionManager")
-public class GnssCorsSiteService implements EventSubscriber<SiteLogUploaded> {
+public class GnssCorsSiteService implements EventSubscriber<SiteLogReceived> {
 
     private static final Logger log = LoggerFactory.getLogger(GnssCorsSiteService.class);
     private static final String gnssCorsSetupName = "GNSS CORS Setup";
@@ -76,10 +76,10 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogUploaded> {
     }
 
     public boolean canHandle(Event e) {
-        return e != null && (e instanceof SiteLogUploaded);
+        return e != null && (e instanceof SiteLogReceived);
     }
 
-    public void handle(SiteLogUploaded siteLogUploaded) {
+    public void handle(SiteLogReceived siteLogUploaded) {
         log.info("Notified of " + siteLogUploaded);
 
         String fourCharacterId = siteLogUploaded.getFourCharacterId();

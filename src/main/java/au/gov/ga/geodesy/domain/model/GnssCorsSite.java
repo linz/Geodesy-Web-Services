@@ -5,13 +5,13 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "gnss_cors_site")
+@Table(name = "GNSS_CORS_SITE")
 public class GnssCorsSite extends Site {
 
     /**
      * Business id
      */
-    @Column(name = "four_character_id", length = 4, nullable = false, unique = true)
+    @Column(name = "FOUR_CHARACTER_ID", length = 4, nullable = false, unique = true)
     private String fourCharacterId;
 
     @Column(name = "DOMES_NUMBER", nullable = false, unique = true)
@@ -23,7 +23,6 @@ public class GnssCorsSite extends Site {
 
     public GnssCorsSite(String fourCharacterId) {
         super();
-        /* gnssCorsSiteId = id; */
         setFourCharacterId(fourCharacterId);
     }
 

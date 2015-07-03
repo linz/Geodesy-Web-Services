@@ -14,6 +14,9 @@ public class GnssCorsSite extends Site {
     @Column(name = "four_character_id", length = 4, nullable = false, unique = true)
     private String fourCharacterId;
 
+    @Column(name = "DOMES_NUMBER", nullable = false, unique = true)
+    private String domesNumber;
+
     @SuppressWarnings("unused") // hibernate needs the default constructor
     private GnssCorsSite() {
     }
@@ -30,5 +33,13 @@ public class GnssCorsSite extends Site {
 
     private void setFourCharacterId(String fourCharacterId) {
         this.fourCharacterId = fourCharacterId;
+    }
+
+    public String getDomesNumber() {
+        return domesNumber;
+    }
+
+    public void setDomesNumber(String domesNumber) {
+        this.domesNumber = domesNumber;
     }
 }

@@ -44,6 +44,7 @@ import au.gov.ga.geodesy.igssitelog.domain.model.GnssReceiverLogItem;
 import au.gov.ga.geodesy.igssitelog.domain.model.HumiditySensorLogItem;
 import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLog;
 import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLogRepository;
+import au.gov.ga.geodesy.igssitelog.domain.model.SiteIdentification;
 
 @Component
 @Transactional("geodesyTransactionManager")
@@ -90,7 +91,9 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogReceived> {
             gnssSite = new GnssCorsSite(fourCharacterId);
         }
         gnssSite.setName(siteLog.getSiteIdentification().getSiteName());
-        gnssSite.setDescription(siteLog.getSiteIdentification().getMonumentDescription());
+        SiteIdentification siteId = siteLog.getSiteIdentification();
+        gnssSite.setDescription(siteId.getMonumentDescription());
+        gnssSite.setDomesNumber(siteId.getIersDOMESNumber());
         gnssSite.getSetups().clear();
         gnssSite.getSetups().addAll(getSetups(siteLog));
         gnssSites.save(gnssSite);

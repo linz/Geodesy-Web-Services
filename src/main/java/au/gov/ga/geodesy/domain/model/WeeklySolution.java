@@ -37,6 +37,10 @@ public class WeeklySolution {
         setSinexFile(sinexFile);
     }
 
+    public Integer getId() {
+        return id;
+    }
+
     public Date getEpoch() {
         return epoch;
     }

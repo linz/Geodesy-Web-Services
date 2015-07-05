@@ -35,7 +35,6 @@ public class WeeklySolutionService {
         ) {
             String firstLine = scanner.nextLine();
             // firstLine might look like this: %=SNX 2.00 AUS 13:074:43829 IGS 01:014:00000 01:020:86370 P 00384 0 S
-            System.out.println(firstLine);
 
             StringTokenizer tokenizer = new StringTokenizer(firstLine);
             drop(tokenizer, 3);

@@ -25,10 +25,10 @@ public class WeeklySolution {
     @Column(name = "AS_AT")
     private Date asAt;
 
-    @Column(name = "epoch")
+    @Column(name = "EPOCH")
     private Date epoch;
 
-    @Column(name = "sinexFile")
+    @Column(name = "SINEX_FILE_NAME")
     private String sinexFile;
 
     @SuppressWarnings("unused") // used by hibernate

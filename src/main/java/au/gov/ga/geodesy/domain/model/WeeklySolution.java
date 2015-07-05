@@ -22,6 +22,9 @@ public class WeeklySolution {
     @SequenceGenerator(name = "surrogateKeyGenerator", sequenceName = "seq_surrogate_keys")
     private Integer id;
 
+    @Column(name = "AS_AT")
+    private Date asAt;
+
     @Column(name = "epoch")
     private Date epoch;
 
@@ -32,7 +35,8 @@ public class WeeklySolution {
     private WeeklySolution() {
     }
 
-    public WeeklySolution(Date epoch, String sinexFile) {
+    public WeeklySolution(Date asAt, Date epoch, String sinexFile) {
+        setAsAt(asAt);
         setEpoch(epoch);
         setSinexFile(sinexFile);
     }
@@ -41,11 +45,19 @@ public class WeeklySolution {
         return id;
     }
 
+    public Date getAsAt() {
+        return asAt;
+    }
+
+    private void setAsAt(Date asAt) {
+        this.asAt = asAt;
+    }
+
     public Date getEpoch() {
         return epoch;
     }
 
-    public void setEpoch(Date epoch) {
+    private void setEpoch(Date epoch) {
         this.epoch = epoch;
     }
 
@@ -53,7 +65,7 @@ public class WeeklySolution {
         return sinexFile;
     }
 
-    public void setSinexFile(String sinexFile) {
+    private void setSinexFile(String sinexFile) {
         this.sinexFile = sinexFile;
     }
 }

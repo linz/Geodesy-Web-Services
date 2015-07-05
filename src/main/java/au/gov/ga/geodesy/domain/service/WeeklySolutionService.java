@@ -42,13 +42,15 @@ public class WeeklySolutionService {
             Date asAt = parseGpsEpoch(tokenizer.nextToken());
             drop(tokenizer, 1);
             Date firstObservation = parseGpsEpoch(tokenizer.nextToken());
+
+            @SuppressWarnings("unused")
             Date lastObservation = parseGpsEpoch(tokenizer.nextToken());
 
             Calendar epoch = Calendar.getInstance(TimeZone.getTimeZone("UTC"));
             epoch.setTime(firstObservation);
             epoch.add(Calendar.DAY_OF_WEEK, 3);
 
-            WeeklySolution solution = new WeeklySolution(epoch.getTime(), sinexFileName);
+            WeeklySolution solution = new WeeklySolution(asAt, epoch.getTime(), sinexFileName);
             solutions.saveAndFlush(solution);
             eventPublisher.publish(new WeeklySolutionAvailable(solution.getId()));
         } catch (IOException | ParseException e) {

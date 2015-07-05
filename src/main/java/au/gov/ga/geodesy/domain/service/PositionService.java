@@ -3,7 +3,6 @@ package au.gov.ga.geodesy.domain.service;
 import java.io.File;
 import java.io.IOException;
 import java.math.BigDecimal;
-import java.util.Date;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
@@ -67,7 +66,7 @@ public class PositionService implements EventSubscriber<WeeklySolutionAvailable>
                 double x = xLine.getRight().doubleValue();
                 double y = yLine.getRight().doubleValue();
 
-                Position p = new Position(xLine.getLeft(), null, 5332, x, y, solution.getEpoch(), new Date(), solution.getId());
+                Position p = new Position(xLine.getLeft(), null, 5332, x, y, solution.getEpoch(), solution.getAsAt(), solution.getId());
                 positions.save(p);
             }
             System.out.println("last line read is: " + line);

@@ -49,7 +49,7 @@ public class PositionService implements EventSubscriber<WeeklySolutionAvailable>
 
         File sinex = new File(solution.getSinexFile());
         try (
-            Scanner scanner = new Scanner(sinex);
+            Scanner scanner = new Scanner(sinex, "iso-8859-1");
         ) {
             while (!scanner.nextLine().startsWith("+SOLUTION/ESTIMATE"));
             scanner.nextLine();

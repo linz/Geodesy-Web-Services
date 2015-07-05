@@ -3,6 +3,7 @@ package au.gov.ga.geodesy.domain.service;
 import java.io.File;
 import java.io.IOException;
 import java.math.BigDecimal;
+import java.util.Date;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
@@ -16,8 +17,8 @@ import org.springframework.transaction.annotation.Transactional;
 import au.gov.ga.geodesy.domain.model.Event;
 import au.gov.ga.geodesy.domain.model.EventPublisher;
 import au.gov.ga.geodesy.domain.model.EventSubscriber;
-import au.gov.ga.geodesy.domain.model.GnssCorsSite;
-import au.gov.ga.geodesy.domain.model.GnssCorsSiteRepository;
+import au.gov.ga.geodesy.domain.model.Position;
+import au.gov.ga.geodesy.domain.model.PositionRepository;
 import au.gov.ga.geodesy.domain.model.WeeklySolution;
 import au.gov.ga.geodesy.domain.model.WeeklySolutionAvailable;
 import au.gov.ga.geodesy.domain.model.WeeklySolutionRepository;
@@ -30,10 +31,10 @@ public class PositionService implements EventSubscriber<WeeklySolutionAvailable>
     private WeeklySolutionRepository solutions;
 
     @Autowired
-    private GnssCorsSiteRepository sites;
+    private EventPublisher eventPublisher;
 
     @Autowired
-    private EventPublisher eventPublisher;
+    private PositionRepository positions;
 
     @PostConstruct
     public void subscribe() {
@@ -59,18 +60,15 @@ public class PositionService implements EventSubscriber<WeeklySolutionAvailable>
 
                 Pair<String, BigDecimal> xLine = parseEstimatedValue(line);
                 Pair<String, BigDecimal> yLine = parseEstimatedValue(scanner.nextLine());
+
+                @SuppressWarnings("unused")
                 Pair<String, BigDecimal> zLine = parseEstimatedValue(scanner.nextLine());
 
                 double x = xLine.getRight().doubleValue();
                 double y = yLine.getRight().doubleValue();
-                double z = zLine.getRight().doubleValue();
 
-                GnssCorsSite site = sites.findByFourCharacterId(xLine.getLeft());
-
-                System.out.println(xLine.getLeft() + ": " + x + ", " + y + ", " + z);
-
-                /* Position p = new Position(site.getId(), null, 5332, x, y, z, solution.getEpoch(), new Date(), solution.getId()); */
-                /* positions.save(p); */
+                Position p = new Position(xLine.getLeft(), null, 5332, x, y, solution.getEpoch(), new Date(), solution.getId());
+                positions.save(p);
             }
             System.out.println("last line read is: " + line);
 

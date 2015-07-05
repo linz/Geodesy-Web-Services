@@ -8,6 +8,6 @@ import org.springframework.data.repository.query.Param;
 
 public interface PositionRepository extends JpaRepository<Position, Integer> {
 
-    @Query("select p from Position p where p.siteId = :siteId")
-    List<Position> findAll(@Param("siteId") Integer siteId);
+    @Query("select p from Position p where p.fourCharacterId = :id")
+    List<Position> findByFourCharacterId(@Param("id") String id);
 }

@@ -22,8 +22,8 @@ public class Position {
     @SequenceGenerator(name = "surrogateKeyGenerator", sequenceName = "seq_surrogate_keys")
     private Integer id;
 
-    @Column(name = "SITE_ID")
-    private Integer siteId;
+    @Column(name = "FOUR_CHARACTER_ID")
+    private String fourCharacterId;
 
     @Column(name = "NODE_ID")
     private Integer nodeId;
@@ -50,10 +50,10 @@ public class Position {
     private Position() {
     }
 
-    public Position(Integer siteId, Integer nodeId, Integer datumEpsgCode, Double x, Double y, Date epoch, Date asAt,
+    public Position(String fourCharacterId, Integer nodeId, Integer datumEpsgCode, Double x, Double y, Date epoch, Date asAt,
             Integer positionSourceId) {
 
-        setSiteId(siteId);
+        setFourCharacterId(fourCharacterId);
         setNodeId(nodeId);
         setDatumEpsgCode(datumEpsgCode);
         setX(x);
@@ -63,12 +63,12 @@ public class Position {
         setPositionSourceId(positionSourceId);
     }
 
-    public Integer getSiteId() {
-        return siteId;
+    public String getFourCharacterId() {
+        return fourCharacterId;
     }
 
-    public void setSiteId(Integer siteId) {
-        this.siteId = siteId;
+    public void setFourCharacterId(String id) {
+        this.fourCharacterId = id;
     }
 
     public Integer getNodeId() {

@@ -110,7 +110,8 @@ public class NodeService implements EventSubscriber<SiteUpdated> {
         } else if (inUse.size() == 1) {
             return inUse.iterator().next();
         } else {
-            throw new RuntimeException("Multiple " + equipmentClass.getSimpleName() + " in use!");
+            System.out.println("Multiple " + equipmentClass.getSimpleName() + " in use!");
+            return inUse.iterator().next();
         }
     }
 

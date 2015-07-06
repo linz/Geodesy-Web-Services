@@ -80,7 +80,12 @@ public class AsynchronousEventPublisher implements EventPublisher {
                 @SuppressWarnings("unchecked")
                 public void run() {
                     log.info("Publishing event " + e + " to " + s);
-                    ((EventSubscriber<Event>) s).handle(e);
+                    try {
+                        ((EventSubscriber<Event>) s).handle(e);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                        throw e;
+                    }
                 }
             }.start();
         }

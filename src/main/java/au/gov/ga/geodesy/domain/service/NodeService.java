@@ -25,6 +25,7 @@ import au.gov.ga.geodesy.domain.model.GnssReceiver;
 import au.gov.ga.geodesy.domain.model.Node;
 import au.gov.ga.geodesy.domain.model.NodeRepository;
 import au.gov.ga.geodesy.domain.model.Setup;
+import au.gov.ga.geodesy.domain.model.SetupRepository;
 import au.gov.ga.geodesy.domain.model.SiteUpdated;
 import au.gov.ga.geodesy.igssitelog.domain.model.EffectiveDates;
 
@@ -53,6 +54,9 @@ public class NodeService implements EventSubscriber<SiteUpdated> {
     @Autowired
     private EquipmentRepository equipment;
 
+    @Autowired
+    private SetupRepository setups;
+
     @PostConstruct
     private void subcribe() {
         eventPublisher.subscribe(this);
@@ -66,7 +70,7 @@ public class NodeService implements EventSubscriber<SiteUpdated> {
         GnssCorsSite site = gnssCorsSites.findByFourCharacterId(siteUpdated.getFourCharacterId());
         EffectiveDates nodePeriod = null;
 
-        for (Setup setup : site.getSetups()) {
+        for (Setup setup : setups.findBySiteId(site.getId())) {
 
             if (nodePeriod != null) {
                 Date nodeEffectiveTo = nodePeriod.getTo();

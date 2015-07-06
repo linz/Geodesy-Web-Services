@@ -35,6 +35,7 @@ import au.gov.ga.geodesy.domain.model.GnssReceiverConfiguration;
 import au.gov.ga.geodesy.domain.model.HumiditySensor;
 import au.gov.ga.geodesy.domain.model.HumiditySensorConfiguration;
 import au.gov.ga.geodesy.domain.model.Setup;
+import au.gov.ga.geodesy.domain.model.SetupRepository;
 import au.gov.ga.geodesy.domain.model.SiteLogReceived;
 import au.gov.ga.geodesy.domain.model.SiteUpdated;
 import au.gov.ga.geodesy.igssitelog.domain.model.EffectiveDates;
@@ -71,6 +72,9 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogReceived> {
     @Autowired
     private EventRepository events;
 
+    @Autowired
+    private SetupRepository setups;
+
     @PostConstruct
     private void subcribe() {
         eventPublisher.subscribe(this);
@@ -89,14 +93,21 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogReceived> {
         GnssCorsSite gnssSite = gnssSites.findByFourCharacterId(fourCharacterId);
         if (gnssSite == null) {
             gnssSite = new GnssCorsSite(fourCharacterId);
+        } else {
+            setups.delete(setups.findBySiteId(gnssSite.getId()));
         }
         gnssSite.setName(siteLog.getSiteIdentification().getSiteName());
         SiteIdentification siteId = siteLog.getSiteIdentification();
         gnssSite.setDescription(siteId.getMonumentDescription());
         gnssSite.setDomesNumber(siteId.getIersDOMESNumber());
-        gnssSite.getSetups().clear();
-        gnssSite.getSetups().addAll(getSetups(siteLog));
-        gnssSites.save(gnssSite);
+        gnssSites.saveAndFlush(gnssSite);
+
+        List<Setup> newSetups = getSetups(siteLog);
+        for (Setup s : newSetups) {
+            s.setSiteId(gnssSite.getId());
+        }
+        setups.save(newSetups);
+
         eventPublisher.handled(siteLogUploaded);
         eventPublisher.publish(new SiteUpdated(fourCharacterId));
     }

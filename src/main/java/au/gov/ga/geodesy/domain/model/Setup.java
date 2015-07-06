@@ -30,6 +30,9 @@ public class Setup {
     @SequenceGenerator(name = "surrogateKeyGenerator", sequenceName = "seq_surrogate_keys")
     protected Integer id;
 
+    @Column(name = "SITE_ID")
+    private Integer siteId; 
+
     @Column(name = "NAME", nullable = false)
     private String name;
 
@@ -52,6 +55,14 @@ public class Setup {
 
     public Integer getId() {
         return id;
+    }
+
+    public Integer getSiteId() {
+        return siteId;
+    }
+
+    public void setSiteId(Integer siteId) {
+        this.siteId = siteId;
     }
 
     public String getName() {

@@ -16,6 +16,7 @@ import au.gov.ga.geodesy.domain.model.EquipmentConfiguration;
 import au.gov.ga.geodesy.domain.model.EquipmentConfigurationRepository;
 import au.gov.ga.geodesy.domain.model.EquipmentInUse;
 import au.gov.ga.geodesy.domain.model.EquipmentRepository;
+import au.gov.ga.geodesy.domain.model.GnssCorsSite;
 import au.gov.ga.geodesy.domain.model.Setup;
 import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLog;
 
@@ -38,7 +39,7 @@ public class GeodesyRestConfig extends RepositoryRestMvcConfiguration {
 
     @Override
     protected void configureRepositoryRestConfiguration(RepositoryRestConfiguration config) {
-        config.exposeIdsFor(IgsSiteLog.class, Setup.class);
+        config.exposeIdsFor(IgsSiteLog.class, GnssCorsSite.class, Setup.class);
     }
 
     // See: https://github.com/spring-projects/spring-hateoas/issues/134

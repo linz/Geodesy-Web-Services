@@ -6,8 +6,6 @@ import javax.persistence.TypedQuery;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import au.gov.ga.support.Json;
-
 public class SetupRepositoryImpl implements SetupRepositoryCustom {
 
     @Autowired
@@ -21,20 +19,6 @@ public class SetupRepositoryImpl implements SetupRepositoryCustom {
             "select s from Setup s where s.siteId = :id and s.effectivePeriod.to is null";
 
         TypedQuery<Setup> query = entityManager.createQuery(queryString, Setup.class);
-
-
-        System.out.println(siteId);
-        System.out.println(siteId);
-        System.out.println(siteId);
-        System.out.println(siteId);
-        System.out.println(siteId);
-        System.out.println(siteId);
-        System.out.println(siteId);
-
-        for (Setup s : setups.findAll()) {
-            System.out.println(Json.toString(s));
-        }
-
         query.setParameter("id", siteId);
         return query.getSingleResult();
     }

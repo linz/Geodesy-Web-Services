@@ -69,9 +69,6 @@ public class PositionService implements EventSubscriber<WeeklySolutionAvailable>
                 Position p = new Position(xLine.getLeft(), null, 5332, x, y, solution.getEpoch(), solution.getAsAt(), solution.getId());
                 positions.save(p);
             }
-            System.out.println("last line read is: " + line);
-
-
         } catch (IOException e) {
             e.printStackTrace();
         }

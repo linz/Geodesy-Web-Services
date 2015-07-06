@@ -20,13 +20,6 @@ public class PositionRepositoryTest extends AbstractTransactionalTestNGSpringCon
 
     @Test
     public void test() {
-        System.out.println(positions.findAll(34));
-        System.out.println(positions.findAll(34));
-        System.out.println(positions.findAll(34));
-        System.out.println(positions.findAll(34));
-        System.out.println(positions.findAll(34));
-        System.out.println(positions.findAll(34));
-        System.out.println(positions.findAll(34));
     }
 }
 

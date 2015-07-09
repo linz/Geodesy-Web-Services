@@ -91,7 +91,7 @@ public class PersistenceJpaConfig {
 
     private DataSource inMemoryDataSource() {
         System.setProperty("h2.baseDir", "target/");
-        final String h2Url = "jdbc:h2:mem:test;INIT=CREATE SCHEMA IF NOT EXISTS U62208;DB_CLOSE_DELAY=-1";
+        final String h2Url = "jdbc:h2:./test;INIT=CREATE SCHEMA IF NOT EXISTS U62208;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE";
         DataSource dataSource = new SingleConnectionDataSource() {
             {
                 setDriverClassName("org.h2.Driver");

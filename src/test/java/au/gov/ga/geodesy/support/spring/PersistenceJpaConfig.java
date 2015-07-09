@@ -35,7 +35,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @EnableJpaRepositories(
     value = {"au.gov.ga.geodesy.domain.model", "au.gov.ga.geodesy.igssitelog.domain.model"},
-    repositoryFactoryBeanClass = EntityRepositoryFactoryBean.class,
     entityManagerFactoryRef = "geodesyEntityManagerFactory",
     transactionManagerRef = "geodesyTransactionManager"
 )

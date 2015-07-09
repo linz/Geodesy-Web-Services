@@ -2,15 +2,11 @@ package au.gov.ga.geodesy.domain.model;
 
 import java.util.List;
 
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
-import au.gov.ga.geodesy.support.spring.EntityId;
-import au.gov.ga.geodesy.support.spring.EntityRepository;
-
-public interface GnssCorsSiteRepository extends EntityRepository<GnssCorsSite, Integer> {
-
-    EntityId<GnssCorsSite> nextId();
+public interface GnssCorsSiteRepository extends JpaRepository<GnssCorsSite, Integer> {
 
     @Override
     List<GnssCorsSite> findAll();

@@ -24,7 +24,6 @@ import au.gov.ga.geodesy.domain.model.EquipmentInUse;
 import au.gov.ga.geodesy.domain.model.EquipmentRepository;
 import au.gov.ga.geodesy.domain.model.Event;
 import au.gov.ga.geodesy.domain.model.EventPublisher;
-import au.gov.ga.geodesy.domain.model.EventRepository;
 import au.gov.ga.geodesy.domain.model.EventSubscriber;
 import au.gov.ga.geodesy.domain.model.GnssAntenna;
 import au.gov.ga.geodesy.domain.model.GnssAntennaConfiguration;
@@ -68,9 +67,6 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogReceived> {
 
     @Autowired
     private EventPublisher eventPublisher;
-
-    @Autowired
-    private EventRepository events;
 
     @Autowired
     private SetupRepository setups;

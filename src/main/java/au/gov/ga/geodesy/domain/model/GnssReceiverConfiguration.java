@@ -8,8 +8,6 @@ import javax.persistence.Table;
 
 import org.springframework.data.rest.core.config.Projection;
 
-import au.gov.ga.geodesy.support.spring.EntityId;
-
 @Entity
 @Table(name = "GNSS_RECEIVER_CONFIGURATION")
 public class GnssReceiverConfiguration extends EquipmentConfiguration {

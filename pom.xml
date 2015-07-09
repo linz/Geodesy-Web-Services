@@ -283,6 +283,9 @@
                             <systemPropertyVariables>
                                 <unitTestDatabaseType>IN_MEMORY</unitTestDatabaseType>
                             </systemPropertyVariables>
+                            <excludes>
+                                <exclude>au/gov/ga/geodesy/ngcp/**/*</exclude>
+                            </excludes>
                         </configuration>
                     </plugin>
                 </plugins>

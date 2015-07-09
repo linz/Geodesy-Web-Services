@@ -14,7 +14,7 @@ public class GnssCorsSite extends Site {
     @Column(name = "FOUR_CHARACTER_ID", length = 4, nullable = false, unique = true)
     private String fourCharacterId;
 
-    @Column(name = "DOMES_NUMBER", nullable = false, unique = true)
+    @Column(name = "DOMES_NUMBER")
     private String domesNumber;
 
     @SuppressWarnings("unused") // hibernate needs the default constructor

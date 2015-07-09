@@ -11,12 +11,18 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.context.WebApplicationContext;
 import org.testng.annotations.BeforeClass;
 
-import au.gov.ga.geodesy.support.spring.GeodesyRestConfig;
-import au.gov.ga.geodesy.support.spring.GeodesyTestConfig;
+import au.gov.ga.geodesy.support.spring.GeodesyRepositoryRestMvcConfig;
+import au.gov.ga.geodesy.support.spring.GeodesyRestMvcConfig;
+import au.gov.ga.geodesy.support.spring.GeodesyServiceTestConfig;
 import au.gov.ga.geodesy.support.spring.PersistenceJpaConfig;
 
 @ContextConfiguration(
-        classes = {GeodesyTestConfig.class, GeodesyRestConfig.class, PersistenceJpaConfig.class},
+        classes = {
+            GeodesyServiceTestConfig.class,
+            GeodesyRepositoryRestMvcConfig.class,
+            GeodesyRestMvcConfig.class,
+            PersistenceJpaConfig.class
+        },
         loader = AnnotationConfigWebContextLoader.class)
 
 @WebAppConfiguration

@@ -1,4 +1,4 @@
-package au.gov.ga.geodesy.domain.model;
+package au.gov.ga.geodesy.domain.service;
 
 import java.io.File;
 import java.io.FileFilter;
@@ -15,18 +15,21 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import au.gov.ga.geodesy.domain.service.IgsSiteLogService;
+import au.gov.ga.geodesy.domain.model.Event;
+import au.gov.ga.geodesy.domain.model.MockEventPublisher;
+import au.gov.ga.geodesy.domain.model.SiteLogReceived;
 import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLog;
 import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLogRepository;
 import au.gov.ga.geodesy.igssitelog.interfaces.xml.IgsSiteLogXmlMarshaller;
-import au.gov.ga.geodesy.support.spring.GeodesyUnitTestConfig;
+import au.gov.ga.geodesy.support.spring.GeodesyServiceUnitTestConfig;
 import au.gov.ga.geodesy.support.spring.PersistenceJpaConfig;
 
 @ContextConfiguration(
-        classes = {GeodesyUnitTestConfig.class, PersistenceJpaConfig.class},
+        classes = {GeodesyServiceUnitTestConfig.class, PersistenceJpaConfig.class},
         loader = AnnotationConfigContextLoader.class)
+
 @Transactional("geodesyTransactionManager")
-public class UploadAllSiteLogs extends AbstractTransactionalTestNGSpringContextTests {
+public class UploadAllSiteLogsTest extends AbstractTransactionalTestNGSpringContextTests {
 
     private static final String siteLogsDir = "src/test/resources/sitelog/";
     private File[] siteLogFiles = null;
@@ -73,4 +76,3 @@ public class UploadAllSiteLogs extends AbstractTransactionalTestNGSpringContextT
         Assert.assertEquals(n, eventPublisher.getPublishedEvents().size());
     }
 }
-

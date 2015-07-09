@@ -35,7 +35,7 @@ import com.fasterxml.jackson.databind.ser.impl.ObjectIdWriter;
 import com.fasterxml.jackson.databind.ser.std.BeanSerializerBase;
 
 @Configuration
-public class GeodesyRestConfig extends RepositoryRestMvcConfiguration {
+public class GeodesyRepositoryRestMvcConfig extends RepositoryRestMvcConfiguration {
 
     @Override
     protected void configureRepositoryRestConfiguration(RepositoryRestConfiguration config) {

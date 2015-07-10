@@ -14,7 +14,6 @@ import org.springframework.test.context.support.AnnotationConfigContextLoader;
 import org.springframework.test.context.testng.AbstractTransactionalTestNGSpringContextTests;
 import org.springframework.transaction.annotation.Transactional;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 
 import au.gov.ga.geodesy.igssitelog.support.marshalling.moxy.IgsSiteLogMoxyMarshaller;
@@ -65,13 +64,5 @@ public class IgsSiteLogRepositoryTest extends AbstractTransactionalTestNGSpringC
                 return f.getName().endsWith(".xml");
             }
         });
-    }
-
-    @AfterClass
-    public static void sleepUntilInterrupted() {
-        /* log.info("Tests are done, going to sleep."); */
-        /* try { */
-        /*     Thread.sleep(Long.MAX_VALUE); */
-        /* } catch (InterruptedException ok) {} */
     }
 }

@@ -1,4 +1,6 @@
 package au.gov.ga.geodesy.domain.model; 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -32,6 +34,9 @@ abstract public class Site {
     @Column(name = "DESCRIPTION")
     private String description;
 
+    @Column(name = "DATE_INSTALLED")
+    private Date dateInstalled;
+
     public Integer getId() {
         return id;
     }
@@ -50,5 +55,13 @@ abstract public class Site {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public Date getDateInstalled() {
+        return dateInstalled;
+    }
+
+    public void setDateInstalled(Date dateInstalled) {
+        this.dateInstalled = dateInstalled;
     }
 }

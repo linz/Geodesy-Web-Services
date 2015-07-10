@@ -96,6 +96,7 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogReceived> {
         SiteIdentification siteId = siteLog.getSiteIdentification();
         gnssSite.setDescription(siteId.getMonumentDescription());
         gnssSite.setDomesNumber(siteId.getIersDOMESNumber());
+        gnssSite.setDateInstalled(siteId.getDateInstalled());
         gnssSites.saveAndFlush(gnssSite);
 
         List<Setup> newSetups = getSetups(siteLog);

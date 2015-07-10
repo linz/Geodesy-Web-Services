@@ -59,7 +59,7 @@ public class PersistenceJpaConfig {
 
     @Bean
     @Primary
-    @DependsOn("liquibase")
+    /* @DependsOn("liquibase") */
     public LocalContainerEntityManagerFactoryBean geodesyEntityManagerFactory() {
         LocalContainerEntityManagerFactoryBean springFactoryBean = new LocalContainerEntityManagerFactoryBean();
         springFactoryBean.setPackagesToScan(new String[]{"au.gov.ga.geodesy.domain.model", "au.gov.ga.geodesy.igssitelog.domain.model"});
@@ -114,7 +114,7 @@ public class PersistenceJpaConfig {
         return dataSource;
     }
 
-    @Bean
+    /* @Bean */
     public SpringLiquibase liquibase() {
         if (databaseType == DatabaseType.IN_MEMORY) {
             SpringLiquibase liquibase = new SpringLiquibase();

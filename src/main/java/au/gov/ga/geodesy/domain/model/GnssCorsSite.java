@@ -1,7 +1,10 @@
 package au.gov.ga.geodesy.domain.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -16,6 +19,10 @@ public class GnssCorsSite extends Site {
 
     @Column(name = "DOMES_NUMBER")
     private String domesNumber;
+
+    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "MONUMENT_ID")
+    private Monument monument;
 
     @SuppressWarnings("unused") // hibernate needs the default constructor
     private GnssCorsSite() {
@@ -40,5 +47,13 @@ public class GnssCorsSite extends Site {
 
     public void setDomesNumber(String domesNumber) {
         this.domesNumber = domesNumber;
+    }
+
+    public Monument getMonument() {
+        return monument;
+    }
+
+    public void setMonument(Monument monument) {
+        this.monument = monument;
     }
 }

@@ -33,6 +33,7 @@ import au.gov.ga.geodesy.domain.model.GnssReceiver;
 import au.gov.ga.geodesy.domain.model.GnssReceiverConfiguration;
 import au.gov.ga.geodesy.domain.model.HumiditySensor;
 import au.gov.ga.geodesy.domain.model.HumiditySensorConfiguration;
+import au.gov.ga.geodesy.domain.model.Monument;
 import au.gov.ga.geodesy.domain.model.Setup;
 import au.gov.ga.geodesy.domain.model.SetupRepository;
 import au.gov.ga.geodesy.domain.model.SiteLogReceived;
@@ -93,10 +94,18 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogReceived> {
             setups.delete(setups.findBySiteId(gnssSite.getId()));
         }
         gnssSite.setName(siteLog.getSiteIdentification().getSiteName());
+
         SiteIdentification siteId = siteLog.getSiteIdentification();
-        gnssSite.setDescription(siteId.getMonumentDescription());
         gnssSite.setDomesNumber(siteId.getIersDOMESNumber());
         gnssSite.setDateInstalled(siteId.getDateInstalled());
+
+        Monument monument = new Monument();
+        monument.setDescription(siteId.getMonumentDescription());
+        monument.setHeight(siteId.getHeightOfMonument());
+        monument.setFoundation(siteId.getMonumentFoundation());
+        monument.setMarkerDescription(siteId.getMarkerDescription());
+        gnssSite.setMonument(monument);
+
         gnssSites.saveAndFlush(gnssSite);
 
         List<Setup> newSetups = getSetups(siteLog);

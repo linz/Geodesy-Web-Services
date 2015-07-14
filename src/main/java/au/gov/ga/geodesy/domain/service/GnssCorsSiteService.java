@@ -1,6 +1,5 @@
 package au.gov.ga.geodesy.domain.service;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Iterator;
@@ -25,14 +24,8 @@ import au.gov.ga.geodesy.domain.model.EquipmentRepository;
 import au.gov.ga.geodesy.domain.model.Event;
 import au.gov.ga.geodesy.domain.model.EventPublisher;
 import au.gov.ga.geodesy.domain.model.EventSubscriber;
-import au.gov.ga.geodesy.domain.model.GnssAntenna;
-import au.gov.ga.geodesy.domain.model.GnssAntennaConfiguration;
 import au.gov.ga.geodesy.domain.model.GnssCorsSite;
 import au.gov.ga.geodesy.domain.model.GnssCorsSiteRepository;
-import au.gov.ga.geodesy.domain.model.GnssReceiver;
-import au.gov.ga.geodesy.domain.model.GnssReceiverConfiguration;
-import au.gov.ga.geodesy.domain.model.HumiditySensor;
-import au.gov.ga.geodesy.domain.model.HumiditySensorConfiguration;
 import au.gov.ga.geodesy.domain.model.Monument;
 import au.gov.ga.geodesy.domain.model.Setup;
 import au.gov.ga.geodesy.domain.model.SetupRepository;
@@ -40,9 +33,6 @@ import au.gov.ga.geodesy.domain.model.SiteLogReceived;
 import au.gov.ga.geodesy.domain.model.SiteUpdated;
 import au.gov.ga.geodesy.igssitelog.domain.model.EffectiveDates;
 import au.gov.ga.geodesy.igssitelog.domain.model.EquipmentLogItem;
-import au.gov.ga.geodesy.igssitelog.domain.model.GnssAntennaLogItem;
-import au.gov.ga.geodesy.igssitelog.domain.model.GnssReceiverLogItem;
-import au.gov.ga.geodesy.igssitelog.domain.model.HumiditySensorLogItem;
 import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLog;
 import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLogRepository;
 import au.gov.ga.geodesy.igssitelog.domain.model.SiteIdentification;
@@ -71,6 +61,9 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogReceived> {
 
     @Autowired
     private SetupRepository setups;
+
+    @Autowired
+    private EquipmentFactory equipmentFactory;
 
     @PostConstruct
     private void subcribe() {
@@ -116,6 +109,8 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogReceived> {
 
         eventPublisher.handled(siteLogUploaded);
         eventPublisher.publish(new SiteUpdated(fourCharacterId));
+
+        log.info("Saving site: " + fourCharacterId);
     }
 
     private List<Setup> getSetups(IgsSiteLog siteLog) {
@@ -187,77 +182,13 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogReceived> {
     }
 
     private void addEquipment(EquipmentLogItem logItem, Setup s) {
-        Pair<Equipment, EquipmentConfiguration> ec = getEquipmentAndConfiguration(logItem);
+        Pair<? extends Equipment, ? extends EquipmentConfiguration> ec = equipmentFactory.create(logItem);
         Equipment equipment = ec.getLeft();
         EquipmentConfiguration config = ec.getRight();
+        equipmentRepository.save(equipment);
+        configurationRepository.saveAndFlush(config); // TODO: must flush to get the id, is there another way?
         EquipmentInUse inUse = new EquipmentInUse(equipment.getId(), config.getId(), logItem.getEffectiveDates());
         s.getEquipmentInUse().add(inUse);
-    }
-
-    private Pair<Equipment, EquipmentConfiguration> getEquipmentAndConfiguration(EquipmentLogItem logItem) {
-        Equipment equipment = null;
-        EquipmentConfiguration configuration = null;
-
-        if (logItem instanceof GnssReceiverLogItem) {
-            GnssReceiverLogItem receiverLogItem = (GnssReceiverLogItem) logItem;
-            GnssReceiver equip = getEquipment(GnssReceiver.class, logItem);
-            GnssReceiverConfiguration config = getConfiguration(GnssReceiverConfiguration.class, equip.getId(), logItem);
-            config.setSatelliteSystem(receiverLogItem.getSatelliteSystem());
-            config.setFirmwareVersion(receiverLogItem.getFirmwareVersion());
-            config.setElevetionCutoffSetting(receiverLogItem.getElevationCutoffSetting());
-            config.setTemperatureStabilization(receiverLogItem.getTemperatureStabilization());
-            config.setNotes(receiverLogItem.getNotes());
-            equipment = equip;
-            configuration = config;
-
-        } else if (logItem instanceof GnssAntennaLogItem) {
-            GnssAntennaLogItem antennaLogItem = (GnssAntennaLogItem) logItem;
-            GnssAntenna equip = getEquipment(GnssAntenna.class, logItem);
-            GnssAntennaConfiguration config = getConfiguration(GnssAntennaConfiguration.class, equip.getId(), logItem);
-            config.setAlignmentFromTrueNorth(antennaLogItem.getAlignmentFromTrueNorth());
-            equipment = equip;
-            configuration = config;
-
-        } else if (logItem instanceof HumiditySensorLogItem) {
-            HumiditySensorLogItem humiditySensorLogItem = (HumiditySensorLogItem) logItem;
-            HumiditySensor equip = getEquipment(HumiditySensor.class, logItem);
-            HumiditySensorConfiguration config = getConfiguration(HumiditySensorConfiguration.class, equip.getId(), logItem);
-            equip.setAspiration(humiditySensorLogItem.getAspiration());
-            config.setHeightDiffToAntenna(humiditySensorLogItem.getHeightDiffToAntenna());
-            equipment = equip;
-            configuration = config;
-        }
-        equipmentRepository.save(equipment);
-        configurationRepository.save(configuration);
-        return Pair.of(equipment, configuration);
-    }
-
-    private <T extends Equipment> T getEquipment(Class<T> equipmentClass, EquipmentLogItem logItem) {
-        T e = equipmentRepository.findOne(equipmentClass, logItem.getType(), logItem.getSerialNumber());
-        if (e == null) {
-            try {
-                e = equipmentClass.getConstructor(String.class, String.class).newInstance(logItem.getType(), logItem.getSerialNumber());
-                equipmentRepository.saveAndFlush(e);
-            } catch (IllegalAccessException | InstantiationException | NoSuchMethodException | InvocationTargetException ex) {
-                throw new RuntimeException(ex);
-            }
-        }
-        return e;
-    }
-
-    private <T extends EquipmentConfiguration> T getConfiguration(Class<T> configClass, Integer equipId, EquipmentLogItem logItem) {
-        EffectiveDates period = logItem.getEffectiveDates();
-        Date effectiveFrom = period.getFrom() == null ? new Date(0L) : period.getFrom();
-        T c = configurationRepository.findOne(configClass, equipId, effectiveFrom);
-        if (c == null) {
-            try {
-                c = configClass.getConstructor(Integer.class, Date.class).newInstance(equipId, effectiveFrom);
-                configurationRepository.saveAndFlush(c);
-            } catch (IllegalAccessException | InstantiationException | NoSuchMethodException | InvocationTargetException ex) {
-                throw new RuntimeException(ex);
-            }
-        }
-        return c;
     }
 }
 

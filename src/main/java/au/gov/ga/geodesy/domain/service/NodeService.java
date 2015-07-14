@@ -7,6 +7,8 @@ import java.util.Date;
 import javax.annotation.PostConstruct;
 
 import org.apache.commons.collections.ComparatorUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
@@ -37,7 +39,7 @@ import com.google.common.collect.Collections2;
 @Transactional("geodesyTransactionManager")
 public class NodeService implements EventSubscriber<SiteUpdated> {
 
-    /* private static final Logger log = LoggerFactory.getLogger(NodeService.class); */
+    private static final Logger log = LoggerFactory.getLogger(NodeService.class);
 
     @Autowired
     private EventPublisher eventPublisher;
@@ -67,7 +69,10 @@ public class NodeService implements EventSubscriber<SiteUpdated> {
     }
 
     public void handle(SiteUpdated siteUpdated) {
-        GnssCorsSite site = gnssCorsSites.findByFourCharacterId(siteUpdated.getFourCharacterId());
+        log.info("Notified of " + siteUpdated);
+
+        String fourCharId = siteUpdated.getFourCharacterId();
+        GnssCorsSite site = gnssCorsSites.findByFourCharacterId(fourCharId);
         EffectiveDates nodePeriod = null;
 
         for (Setup setup : setups.findBySiteId(site.getId())) {
@@ -90,6 +95,8 @@ public class NodeService implements EventSubscriber<SiteUpdated> {
             }
         }
         eventPublisher.handled(siteUpdated);
+
+        log.info("Saving nodes: " + fourCharId);
     }
 
     @SuppressWarnings("unchecked")

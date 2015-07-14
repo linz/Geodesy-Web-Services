@@ -27,7 +27,7 @@ public class IgsSiteLogService {
         siteLogs.delete(siteLog.getSiteIdentification().getFourCharacterId());
         siteLogs.save(siteLog);
         String id = siteLog.getSiteIdentification().getFourCharacterId();
-        log.info("Saving " + id);
+        log.info("Saving site log: " + id);
         eventPublisher.publish(new SiteLogReceived(id));
     }
 }

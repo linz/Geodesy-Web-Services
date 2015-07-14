@@ -4,7 +4,7 @@ import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
 @Entity(name = "geodesy.GnssAntenna")
-@DiscriminatorValue("GNSS antenna")
+@DiscriminatorValue("gnss antenna")
 public class GnssAntenna extends Equipment {
 
     private GnssAntenna() {

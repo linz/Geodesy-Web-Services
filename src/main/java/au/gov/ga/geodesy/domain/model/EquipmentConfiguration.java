@@ -27,7 +27,7 @@ public class EquipmentConfiguration {
     @JsonIgnore
     private Integer equipmentId;
 
-    @Column(name = "CONFIGURATION_TIME", nullable = false)
+    @Column(name = "CONFIGURATION_TIME")
     @JsonIgnore
     private Date configurationTime;
 

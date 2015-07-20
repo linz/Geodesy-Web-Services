@@ -21,6 +21,7 @@ import au.gov.ga.geodesy.domain.model.HumiditySensor;
 import au.gov.ga.geodesy.domain.model.HumiditySensorConfiguration;
 import au.gov.ga.geodesy.igssitelog.domain.model.EffectiveDates;
 import au.gov.ga.geodesy.igssitelog.domain.model.EquipmentLogItem;
+import au.gov.ga.geodesy.igssitelog.domain.model.FrequencyStandardLogItem;
 import au.gov.ga.geodesy.igssitelog.domain.model.GnssAntennaLogItem;
 import au.gov.ga.geodesy.igssitelog.domain.model.GnssReceiverLogItem;
 import au.gov.ga.geodesy.igssitelog.domain.model.HumiditySensorLogItem;
@@ -46,7 +47,8 @@ public class EquipmentFactory {
         return logItem.accept(creator);
     }
 
-    private class EquipmentCreator implements LogItemVisitor<Pair<? extends Equipment, ? extends EquipmentConfiguration>> {
+    private class EquipmentCreator
+            implements LogItemVisitor<Pair<? extends Equipment, ? extends EquipmentConfiguration>> {
 
         public Pair<? extends Equipment, ? extends EquipmentConfiguration> visit(GnssReceiverLogItem logItem) {
             GnssReceiver receiver = getEquipment(GnssReceiver.class, logItem);
@@ -64,17 +66,27 @@ public class EquipmentFactory {
 
         public Pair<? extends Equipment, ? extends EquipmentConfiguration> visit(GnssAntennaLogItem logItem) {
             GnssAntenna antenna = getEquipment(GnssAntenna.class, logItem);
-            GnssAntennaConfiguration config = getConfiguration(GnssAntennaConfiguration.class, antenna.getId(), logItem);
+
+            GnssAntennaConfiguration config =
+                getConfiguration(GnssAntennaConfiguration.class, antenna.getId(), logItem);
+
             config.setAlignmentFromTrueNorth(logItem.getAlignmentFromTrueNorth());
             return Pair.of(antenna, config);
         }
 
         public Pair<? extends Equipment, ? extends EquipmentConfiguration> visit(HumiditySensorLogItem logItem) {
             HumiditySensor sensor = getEquipment(HumiditySensor.class, logItem);
-            HumiditySensorConfiguration config = getConfiguration(HumiditySensorConfiguration.class, sensor.getId(), logItem);
+
+            HumiditySensorConfiguration config =
+                getConfiguration(HumiditySensorConfiguration.class, sensor.getId(), logItem);
+
             sensor.setAspiration(logItem.getAspiration());
             config.setHeightDiffToAntenna(logItem.getHeightDiffToAntenna());
             return Pair.of(sensor, config);
+        }
+
+        public Pair<Equipment, EquipmentConfiguration> visit(FrequencyStandardLogItem logItem) {
+            throw new UnsupportedOperationException();
         }
 
         public Pair<Equipment, EquipmentConfiguration> visit(WaterVaporSensorLogItem logItem) {
@@ -93,9 +105,12 @@ public class EquipmentFactory {
             T e = equipment.findOne(equipmentClass, logItem.getType(), logItem.getSerialNumber());
             if (e == null) {
                 try {
-                    e = equipmentClass.getConstructor(String.class, String.class).newInstance(logItem.getType(), logItem.getSerialNumber());
-                    equipment.saveAndFlush(e); // TODO: We shouldn't save here, but we need the id. Is there another way?
-                } catch (IllegalAccessException | InstantiationException | NoSuchMethodException | InvocationTargetException ex) {
+                    e = equipmentClass.getConstructor(String.class, String.class)
+                            .newInstance(logItem.getType(), logItem.getSerialNumber());
+                    // TODO: We shouldn't save here, but we need the id. Is there another way?
+                    equipment.saveAndFlush(e);
+                } catch (IllegalAccessException | InstantiationException | NoSuchMethodException
+                        | InvocationTargetException ex) {
                     throw new RuntimeException(ex);
                 }
             }
@@ -108,8 +123,11 @@ public class EquipmentFactory {
                 EquipmentLogItem logItem) {
 
             EffectiveDates period = logItem.getEffectiveDates();
-            Date effectiveFrom = period.getFrom() == null ? new Date(0L) : period.getFrom();
-            T c = configurations.findOne(configClass, equipId, effectiveFrom);
+            Date effectiveFrom = period == null ? null : period.getFrom();
+            T c = null;
+            if (effectiveFrom != null) {
+                c = configurations.findOne(configClass, equipId, effectiveFrom);
+            }
             if (c == null) {
                 try {
                     return configClass.getConstructor(Integer.class, Date.class).newInstance(equipId, effectiveFrom);

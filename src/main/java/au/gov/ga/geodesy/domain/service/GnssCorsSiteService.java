@@ -1,6 +1,7 @@
 package au.gov.ga.geodesy.domain.service;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
@@ -9,6 +10,7 @@ import java.util.TreeSet;
 
 import javax.annotation.PostConstruct;
 
+import org.apache.commons.collections.ComparatorUtils;
 import org.apache.commons.lang3.tuple.Pair;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -114,13 +116,19 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogReceived> {
     }
 
     private List<Setup> getSetups(IgsSiteLog siteLog) {
-        SortedSet<Date> datesOfChange = new TreeSet<>();
+        @SuppressWarnings("unchecked")
+        Comparator<Date> fromC = ComparatorUtils.nullLowComparator(ComparatorUtils.NATURAL_COMPARATOR);
+        SortedSet<Date> datesOfChange = new TreeSet<>(fromC);
 
         for (EquipmentLogItem logItem : siteLog.getEquipmentLogItems()) {
             EffectiveDates dates = logItem.getEffectiveDates();
-            datesOfChange.add(dates.getFrom() == null ? new Date(0L) : dates.getFrom());
-            if (dates.getTo() != null) {
-                datesOfChange.add(dates.getTo());
+            if (dates == null) {
+                datesOfChange.add(null);
+            } else {
+                datesOfChange.add(dates.getFrom());
+                if (dates.getTo() != null) {
+                    datesOfChange.add(dates.getTo());
+                }
             }
         }
         List<Setup> setups = new ArrayList<>();
@@ -156,25 +164,39 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogReceived> {
 
     private void addEquipment(EquipmentLogItem logItem, List<Setup> setups) {
         EffectiveDates period = logItem.getEffectiveDates();
-        Date equipmentFrom = period.getFrom() == null ? new Date(0L) : period.getFrom();
-        Date equipmentTo = period.getTo();
+        Date equipmentFrom = null;
+        Date equipmentTo = null;
 
-        if (equipmentFrom.equals(equipmentTo)) {
-            // equipment log entries with empty periods are corrections
-            return;
-        }
         int i = 0;
-        while (!setups.get(i).getEffectivePeriod().getFrom().equals(equipmentFrom)) {
-            i++;
-        }
-        int j = i;
-        if (equipmentTo == null) {
-            j = setups.size();
-        } else {
-            Date setupTo = null;
-            do {
-                setupTo = setups.get(j++).getEffectivePeriod().getTo();
-            } while (setupTo != null && !setupTo.equals(equipmentTo));
+        int j = setups.size();
+
+        if (period != null) {
+            equipmentFrom = period.getFrom();
+            equipmentTo = period.getTo();
+            if (equipmentFrom != null && equipmentFrom.equals(equipmentTo)) {
+                // equipment log entries with empty periods are corrections
+                return;
+            }
+            /* while (!setups.get(i).getEffectivePeriod().getFrom().equals(equipmentFrom)) { */
+            /*     i++; */
+            /* } */
+            while (true) {
+                EffectiveDates setupPeriod = setups.get(i).getEffectivePeriod();
+                if (setupPeriod != null && setupPeriod.getFrom() != null
+                        && setupPeriod.getFrom().equals(equipmentFrom)) {
+                    break;
+                }
+                i++;
+            }
+            j = i;
+            if (equipmentTo == null) {
+                j = setups.size();
+            } else {
+                Date setupTo = null;
+                do {
+                    setupTo = setups.get(j++).getEffectivePeriod().getTo();
+                } while (setupTo != null && !setupTo.equals(equipmentTo));
+            }
         }
         for (int k = i; k < j; k++) {
             addEquipment(logItem, setups.get(k));

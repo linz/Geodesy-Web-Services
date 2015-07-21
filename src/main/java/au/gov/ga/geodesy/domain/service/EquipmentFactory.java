@@ -9,6 +9,8 @@ import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import au.gov.ga.geodesy.domain.model.Clock;
+import au.gov.ga.geodesy.domain.model.ClockConfiguration;
 import au.gov.ga.geodesy.domain.model.Equipment;
 import au.gov.ga.geodesy.domain.model.EquipmentConfiguration;
 import au.gov.ga.geodesy.domain.model.EquipmentConfigurationRepository;
@@ -85,8 +87,12 @@ public class EquipmentFactory {
             return Pair.of(sensor, config);
         }
 
-        public Pair<Equipment, EquipmentConfiguration> visit(FrequencyStandardLogItem logItem) {
-            throw new UnsupportedOperationException();
+        public Pair<? extends Equipment, ? extends EquipmentConfiguration> visit(FrequencyStandardLogItem logItem) {
+            Clock clock = new Clock(logItem.getType());
+            equipment.saveAndFlush(clock);
+            ClockConfiguration config = getConfiguration(ClockConfiguration.class, clock.getId(), logItem);
+            config.setInputFrequency(logItem.getInputFrequency());
+            return Pair.of(clock, config);
         }
 
         public Pair<Equipment, EquipmentConfiguration> visit(WaterVaporSensorLogItem logItem) {

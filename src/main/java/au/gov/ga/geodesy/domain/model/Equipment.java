@@ -15,7 +15,6 @@ import javax.persistence.Version;
 @Table(name = "EQUIPMENT")
 @DiscriminatorColumn(name = "EQUIPMENT_TYPE")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-/* @JsonTypeInfo(use = JsonTypeInfo.Id.MINIMAL_CLASS, include = JsonTypeInfo.As.PROPERTY, property = "equipmentType") */
 public class Equipment {
 
     @Version
@@ -28,7 +27,6 @@ public class Equipment {
     @Column(name = "ID")
     @GeneratedValue(generator = "surrogateKeyGenerator")
     @SequenceGenerator(name = "surrogateKeyGenerator", sequenceName = "seq_surrogate_keys")
-    /* @Type(type = "au.gov.ga.geodesy.support.hibernate.EntityIdUserType") */
     protected Integer id;
 
     @Column(name = "TYPE")
@@ -45,6 +43,10 @@ public class Equipment {
 
     @SuppressWarnings("unused") // used by hibernate
     private Equipment() {
+    }
+
+    public Equipment(String type) {
+        setType(type);
     }
 
     public Equipment(String type, String serialNumber) {

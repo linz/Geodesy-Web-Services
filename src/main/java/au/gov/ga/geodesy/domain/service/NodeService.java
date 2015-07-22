@@ -1,8 +1,11 @@
 package au.gov.ga.geodesy.domain.service;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
-import java.util.Comparator;
+import java.util.Collections;
 import java.util.Date;
+import java.util.List;
 
 import javax.annotation.PostConstruct;
 
@@ -13,6 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
+import au.gov.ga.geodesy.domain.model.Clock;
 import au.gov.ga.geodesy.domain.model.Equipment;
 import au.gov.ga.geodesy.domain.model.EquipmentInUse;
 import au.gov.ga.geodesy.domain.model.EquipmentRepository;
@@ -31,15 +35,22 @@ import au.gov.ga.geodesy.domain.model.SetupRepository;
 import au.gov.ga.geodesy.domain.model.SiteUpdated;
 import au.gov.ga.geodesy.igssitelog.domain.model.EffectiveDates;
 
+import com.google.common.base.Function;
 import com.google.common.base.Predicate;
 import com.google.common.collect.Collections2;
-
+import com.google.common.collect.Lists;
 
 @Component
 @Transactional("geodesyTransactionManager")
 public class NodeService implements EventSubscriber<SiteUpdated> {
 
     private static final Logger log = LoggerFactory.getLogger(NodeService.class);
+
+    private final List<Class<? extends Equipment>> significantEquipment =
+        new ArrayList<>(Arrays.asList(
+            GnssReceiver.class,
+            GnssAntenna.class,
+            Clock.class));
 
     @Autowired
     private EventPublisher eventPublisher;
@@ -75,8 +86,7 @@ public class NodeService implements EventSubscriber<SiteUpdated> {
         GnssCorsSite site = gnssCorsSites.findByFourCharacterId(fourCharId);
         EffectiveDates nodePeriod = null;
 
-        for (Setup setup : setups.findBySiteId(site.getId())) {
-
+        for (final Setup setup : setups.findBySiteId(site.getId())) {
             if (nodePeriod != null) {
                 Date nodeEffectiveTo = nodePeriod.getTo();
                 if (nodeEffectiveTo == null) {
@@ -86,32 +96,41 @@ public class NodeService implements EventSubscriber<SiteUpdated> {
                     continue;
                 }
             }
-            EquipmentInUse receiverInUse = getReceiverInUse(setup);
-            EquipmentInUse antennaInUse = getAntennaInUse(setup);
-
-            if (receiverInUse != null && antennaInUse != null) {
-                nodePeriod = lcd(receiverInUse.getPeriod(), antennaInUse.getPeriod());
+            if (isCompleteCorsSetup(setup)) {
+                List<EffectiveDates> dates = new ArrayList<>();
+                for (Class<? extends Equipment> equipmentType : significantEquipment) {
+                    EquipmentInUse inUse = getOneEquipmentInUse(setup, equipmentType);
+                    if (inUse != null) {
+                        dates.add(inUse.getPeriod());
+                    }
+                }
+                nodePeriod = lcd(dates);
                 nodes.save(new Node(site.getId(), nodePeriod, setup.getId()));
             }
         }
         eventPublisher.handled(siteUpdated);
-
         log.info("Saving nodes: " + fourCharId);
     }
 
+    private Boolean isCompleteCorsSetup(Setup setup) {
+        return getOneEquipmentInUse(setup, GnssReceiver.class) != null
+            && getOneEquipmentInUse(setup, GnssAntenna.class) != null;
+    }
+
     @SuppressWarnings("unchecked")
-    private EffectiveDates lcd(EffectiveDates e, EffectiveDates f) {
-        Comparator<Date> fromC = ComparatorUtils.nullLowComparator(ComparatorUtils.NATURAL_COMPARATOR);
-        Comparator<Date> toC   = ComparatorUtils.nullHighComparator(ComparatorUtils.NATURAL_COMPARATOR);
-        return new EffectiveDates(max(e.getFrom(), f.getFrom(), fromC), min(e.getTo(), f.getTo(), toC));
-    }
-
-    private <T> T min(T a, T b, Comparator<T> c) {
-        return c.compare(a, b) < 1 ? a : b;
-    }
-
-    private <T> T max(T a, T b, Comparator<T> c) {
-        return c.compare(a, b) > -1 ? a : b;
+    private EffectiveDates lcd(List<EffectiveDates> es) {
+        return new EffectiveDates(
+            Collections.max(Lists.transform(es, new Function<EffectiveDates, Date>() {
+                public Date apply(EffectiveDates dates) {
+                    return dates == null ? null : dates.getFrom();
+                }
+            }), ComparatorUtils.nullLowComparator(ComparatorUtils.NATURAL_COMPARATOR))
+            ,
+            Collections.min(Lists.transform(es, new Function<EffectiveDates, Date>() {
+                public Date apply(EffectiveDates dates) {
+                    return dates == null ? null : dates.getTo();
+                }
+            }), ComparatorUtils.nullHighComparator(ComparatorUtils.NATURAL_COMPARATOR)));
     }
 
     private <T extends Equipment> EquipmentInUse getOneEquipmentInUse(Setup setup, Class<T> equipmentClass) {
@@ -124,14 +143,6 @@ public class NodeService implements EventSubscriber<SiteUpdated> {
             System.out.println("Multiple " + equipmentClass.getSimpleName() + " in use!");
             return inUse.iterator().next();
         }
-    }
-
-    private EquipmentInUse getReceiverInUse(Setup setup) {
-        return getOneEquipmentInUse(setup, GnssReceiver.class);
-    }
-
-    private EquipmentInUse getAntennaInUse(Setup setup) {
-        return getOneEquipmentInUse(setup, GnssAntenna.class);
     }
 
     private <T extends Equipment> Collection<EquipmentInUse> getEquipmentInUse(Setup setup, final Class<T> equipmentClass) {

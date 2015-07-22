@@ -5,6 +5,7 @@ import static org.testng.Assert.assertNotNull;
 
 import java.io.File;
 import java.io.FileReader;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.annotation.Rollback;
@@ -16,22 +17,27 @@ import org.testng.annotations.Test;
 
 import au.gov.ga.geodesy.domain.model.GnssCorsSite;
 import au.gov.ga.geodesy.domain.model.GnssCorsSiteRepository;
-import au.gov.ga.geodesy.domain.model.MockEventPublisher;
-import au.gov.ga.geodesy.domain.model.SiteLogReceived;
+import au.gov.ga.geodesy.domain.model.Node;
+import au.gov.ga.geodesy.domain.model.NodeRepository;
+import au.gov.ga.geodesy.domain.model.Setup;
+import au.gov.ga.geodesy.domain.model.SetupRepository;
 import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLog;
 import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLogRepository;
+import au.gov.ga.geodesy.igssitelog.domain.model.SiteIdentification;
 import au.gov.ga.geodesy.igssitelog.interfaces.xml.IgsSiteLogXmlMarshaller;
-import au.gov.ga.geodesy.support.spring.GeodesyServiceUnitTestConfig;
+import au.gov.ga.geodesy.support.spring.GeodesyServiceTestConfig;
 import au.gov.ga.geodesy.support.spring.PersistenceJpaConfig;
 
 @ContextConfiguration(
-        classes = {GeodesyServiceUnitTestConfig.class, PersistenceJpaConfig.class},
+        classes = {GeodesyServiceTestConfig.class, PersistenceJpaConfig.class},
         loader = AnnotationConfigContextLoader.class)
 
 @Transactional("geodesyTransactionManager")
 public class UpdateABRKTest extends AbstractTransactionalTestNGSpringContextTests {
 
     private static final String siteLogsDir = "src/test/resources/sitelog/";
+
+    private static final String fourCharId = "ABRK";
 
     @Autowired
     private GnssCorsSiteService siteService;
@@ -40,33 +46,42 @@ public class UpdateABRKTest extends AbstractTransactionalTestNGSpringContextTest
     private GnssCorsSiteRepository sites;
 
     @Autowired
+    private IgsSiteLogService siteLogService;
+
+    @Autowired
+    private SetupRepository setupRepo;
+
+    @Autowired
+    private NodeRepository nodeRepo;
+
+    @Autowired
     private IgsSiteLogRepository siteLogs;
 
     @Autowired
     private IgsSiteLogXmlMarshaller marshaller;
 
-    @Autowired
-    public MockEventPublisher eventPublisher;
-
     @Test
     @Rollback(false)
     public void saveSiteLog() throws Exception {
-        File abrk = new File(siteLogsDir + "ABRK.xml");
-        siteLogs.save(marshaller.unmarshal(new FileReader(abrk)));
+        File sitelog = new File(siteLogsDir + fourCharId + ".xml");
+        siteLogService.upload(marshaller.unmarshal(new FileReader(sitelog)));
     }
 
-    @Test
-    @Rollback(false)
-    public void updateSite() throws Exception {
-        siteService.handle(new SiteLogReceived("ABRK"));
-    }
-
-    @Test(dependsOnMethods = {"saveSiteLog", "updateSite"})
+    @Test(dependsOnMethods = {"saveSiteLog"})
     @Rollback(false)
     public void checkSite() throws Exception {
-        IgsSiteLog siteLog = siteLogs.findByFourCharacterId("ABRK");
-        GnssCorsSite site = sites.findByFourCharacterId("ABRK");
+        IgsSiteLog siteLog = siteLogs.findByFourCharacterId(fourCharId);
+        GnssCorsSite site = sites.findByFourCharacterId(fourCharId);
         assertNotNull(site);
-        assertEquals(site.getName(), siteLog.getSiteIdentification().getSiteName());
+
+        SiteIdentification identification = siteLog.getSiteIdentification();
+        assertEquals(site.getName(), identification.getSiteName());
+        assertEquals(site.getDateInstalled(), identification.getDateInstalled());
+
+        List<Setup> setups = setupRepo.findBySiteId(site.getId());
+        assertEquals(setups.size(), 2);
+
+        List<Node> nodes = nodeRepo.findBySiteId(site.getId());
+        assertEquals(nodes.size(), 1);
     }
 }

@@ -1,25 +1,45 @@
 package au.gov.ga.geodesy;
 
-import org.testng.ISuite;
-import org.testng.ISuiteListener;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import java.security.Permission;
 
-public class TestSuiteListener implements ISuiteListener {
+import org.testng.IExecutionListener;
 
-    private static final Logger log = LoggerFactory.getLogger(TestSuiteListener.class);
+public class TestSuiteListener implements IExecutionListener {
 
-    public void onStart(ISuite suite) {
+    @SuppressWarnings("serial")
+    public class ExitInterceptedException extends SecurityException {
+        public ExitInterceptedException() {
+            super("Keeping the JVM alive, so you can inspect the in-memory database at http://localhost:8082/. Type ctrl-c to exit.");
+        }
     }
 
-    public void onFinish(ISuite suite) {
-        if (System.getProperty("keepAlive") != null) {
-            log.info("Keeping the JVM alive, so you can inspect the in-memory database at http://localhost:8082/.");
-            log.info("Type ctrl-c to exit.");
-            try {
-                Thread.sleep(Long.MAX_VALUE);
-            } catch (InterruptedException ok) {
+    public void onExecutionStart() {
+        Thread.currentThread().setUncaughtExceptionHandler(new Thread.UncaughtExceptionHandler() {
+            public void uncaughtException(Thread t, Throwable x) {
+                if (x.getClass() == ExitInterceptedException.class) {
+                    new Thread() {
+                        public void run() {
+                            try {
+                                Thread.sleep(Long.MAX_VALUE);
+                            } catch (InterruptedException ok) {
+                            }
+                        }
+                    }.start();
+                }
             }
+        });
+    }
+
+    public void onExecutionFinish() {
+        if (System.getProperty("keepAlive") != null) {
+            final SecurityManager securityManager = new SecurityManager() {
+                public void checkPermission(Permission permission) {
+                    if (permission.getName().startsWith("exitVM.")) {
+                        throw new ExitInterceptedException();
+                    }
+                }
+            };
+            System.setSecurityManager(securityManager);
         }
     }
 }

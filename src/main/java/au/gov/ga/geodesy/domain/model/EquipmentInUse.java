@@ -8,6 +8,8 @@ import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+
 import au.gov.ga.geodesy.igssitelog.domain.model.EffectiveDates;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -64,5 +66,23 @@ public class EquipmentInUse {
 
     public void setPeriod(EffectiveDates period) {
         this.period = period;
+    }
+
+    public boolean equals(Object x) {
+        if (x == null) {
+            return false;
+        }
+        if (x == this) {
+            return true;
+        }
+        if (x.getClass() != getClass()) {
+            return false;
+        }
+        EquipmentInUse other = (EquipmentInUse) x;
+        return new EqualsBuilder()
+            .append(equipmentId, other.getEquipmentId())
+            .append(configurationId, other.getConfigurationId())
+            .append(period, other.getPeriod())
+            .isEquals();
     }
 }

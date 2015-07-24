@@ -10,7 +10,9 @@ import java.util.TreeSet;
 
 import javax.annotation.PostConstruct;
 
+import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.collections.ComparatorUtils;
+import org.apache.commons.collections.ListUtils;
 import org.apache.commons.lang3.tuple.Pair;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -85,8 +87,6 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogReceived> {
         GnssCorsSite gnssSite = gnssSites.findByFourCharacterId(fourCharacterId);
         if (gnssSite == null) {
             gnssSite = new GnssCorsSite(fourCharacterId);
-        } else {
-            setups.delete(setups.findBySiteId(gnssSite.getId()));
         }
         gnssSite.setName(siteLog.getSiteIdentification().getSiteName());
 
@@ -107,6 +107,13 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogReceived> {
         for (Setup s : newSetups) {
             s.setSiteId(gnssSite.getId());
         }
+        List<Setup> oldSetups = setups.findBySiteId(gnssSite.getId());
+        @SuppressWarnings("unchecked")
+        List<Setup> commonSetups = ListUtils.intersection(oldSetups, newSetups);
+        newSetups.removeAll(commonSetups);
+        oldSetups.removeAll(commonSetups);
+
+        setups.delete(oldSetups);
         setups.save(newSetups);
 
         eventPublisher.handled(siteLogUploaded);

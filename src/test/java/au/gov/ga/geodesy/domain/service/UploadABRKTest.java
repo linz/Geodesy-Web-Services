@@ -1,39 +1,33 @@
 package au.gov.ga.geodesy.domain.service;
 
 import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertNotNull;
 
 import java.io.File;
 import java.io.FileReader;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.annotation.Rollback;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.support.AnnotationConfigContextLoader;
-import org.springframework.test.context.testng.AbstractTransactionalTestNGSpringContextTests;
-import org.springframework.transaction.annotation.Transactional;
+import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.TransactionStatus;
+import org.springframework.transaction.support.DefaultTransactionDefinition;
 import org.testng.annotations.Test;
 
 import au.gov.ga.geodesy.domain.model.GnssCorsSite;
 import au.gov.ga.geodesy.domain.model.GnssCorsSiteRepository;
-import au.gov.ga.geodesy.domain.model.Node;
 import au.gov.ga.geodesy.domain.model.NodeRepository;
 import au.gov.ga.geodesy.domain.model.Setup;
 import au.gov.ga.geodesy.domain.model.SetupRepository;
-import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLog;
 import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLogRepository;
-import au.gov.ga.geodesy.igssitelog.domain.model.SiteIdentification;
 import au.gov.ga.geodesy.igssitelog.interfaces.xml.IgsSiteLogXmlMarshaller;
-import au.gov.ga.geodesy.support.spring.GeodesyServiceTestConfig;
-import au.gov.ga.geodesy.support.spring.PersistenceJpaConfig;
+import au.gov.ga.geodesy.interfaces.rest.RestTest;
 
-@ContextConfiguration(
-        classes = {GeodesyServiceTestConfig.class, PersistenceJpaConfig.class},
-        loader = AnnotationConfigContextLoader.class)
+/* @ContextConfiguration( */
+/*         classes = {GeodesyServiceTestConfig.class, PersistenceJpaConfig.class}, */
+/*         loader = AnnotationConfigContextLoader.class) */
 
-@Transactional("geodesyTransactionManager")
-public class UpdateABRKTest extends AbstractTransactionalTestNGSpringContextTests {
+/* @Transactional("geodesyTransactionManager") */
+/* public class UploadABRKTest extends AbstractTransactionalTestNGSpringContextTests { */
+public class UploadABRKTest extends RestTest {
 
     private static final String siteLogsDir = "src/test/resources/sitelog/";
 
@@ -60,28 +54,70 @@ public class UpdateABRKTest extends AbstractTransactionalTestNGSpringContextTest
     @Autowired
     private IgsSiteLogXmlMarshaller marshaller;
 
-    @Test
-    @Rollback(false)
-    public void saveSiteLog() throws Exception {
-        File sitelog = new File(siteLogsDir + fourCharId + ".xml");
-        siteLogService.upload(marshaller.unmarshal(new FileReader(sitelog)));
+    @Autowired
+    private PlatformTransactionManager txnManager;
+
+    private abstract class InTransaction {
+        public void f() throws Exception {
+            DefaultTransactionDefinition txnDef = new DefaultTransactionDefinition();
+            TransactionStatus txn = txnManager.getTransaction(txnDef);
+            try {
+                f();
+            }
+            finally {
+                txnManager.commit(txn);
+            }
+        }
     }
 
-    @Test(dependsOnMethods = {"saveSiteLog"})
-    @Rollback(false)
-    public void checkSite() throws Exception {
-        IgsSiteLog siteLog = siteLogs.findByFourCharacterId(fourCharId);
-        GnssCorsSite site = sites.findByFourCharacterId(fourCharId);
-        assertNotNull(site);
+    private Integer setupId1;
+    private Integer setupId2;
 
-        SiteIdentification identification = siteLog.getSiteIdentification();
-        assertEquals(site.getName(), identification.getSiteName());
-        assertEquals(site.getDateInstalled(), identification.getDateInstalled());
+    private InTransaction uploadABRK = new InTransaction() {
+        public void f() throws Exception {
+            File sitelog = new File(siteLogsDir + fourCharId + ".xml");
+            siteLogService.upload(marshaller.unmarshal(new FileReader(sitelog)));
+        }
+    };
+    private InTransaction[] scenario = {
+        uploadABRK,
+        new InTransaction() {
+            /**
+             * Save setupId.
+             */
+            public void f() throws Exception {
+                GnssCorsSite site = sites.findByFourCharacterId(fourCharId);
+                List<Setup> setups = setupRepo.findBySiteId(site.getId());
+                assertEquals(setups.size(), 1);
+                setupId1 = setups.get(0).getId();
+            }
+        },
+        uploadABRK,
+        new InTransaction() {
+            /**
+             * Save setupId.
+             */
+            public void f() throws Exception {
+                GnssCorsSite site = sites.findByFourCharacterId(fourCharId);
+                List<Setup> setups = setupRepo.findBySiteId(site.getId());
+                assertEquals(setups.size(), 1);
+                setupId2 = setups.get(0).getId();
+            }
+        }
 
-        List<Setup> setups = setupRepo.findBySiteId(site.getId());
-        assertEquals(setups.size(), 2);
+    };
 
-        List<Node> nodes = nodeRepo.findBySiteId(site.getId());
-        assertEquals(nodes.size(), 1);
+    private void execute(InTransaction... scenario) throws Exception {
+        for (InTransaction s : scenario) {
+            s.f();
+        }
+    }
+
+    @Test
+    private void checkSetupId() throws Exception {
+        execute(scenario);
+        System.out.println(setupId1);
+        System.out.println(setupId2);
+        assertEquals(setupId1, setupId2);
     }
 }

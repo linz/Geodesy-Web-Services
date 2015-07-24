@@ -14,6 +14,7 @@ import org.testng.annotations.Test;
 
 import au.gov.ga.geodesy.domain.model.GnssCorsSite;
 import au.gov.ga.geodesy.domain.model.GnssCorsSiteRepository;
+import au.gov.ga.geodesy.domain.model.Node;
 import au.gov.ga.geodesy.domain.model.NodeRepository;
 import au.gov.ga.geodesy.domain.model.Setup;
 import au.gov.ga.geodesy.domain.model.SetupRepository;
@@ -21,13 +22,7 @@ import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLogRepository;
 import au.gov.ga.geodesy.igssitelog.interfaces.xml.IgsSiteLogXmlMarshaller;
 import au.gov.ga.geodesy.interfaces.rest.RestTest;
 
-/* @ContextConfiguration( */
-/*         classes = {GeodesyServiceTestConfig.class, PersistenceJpaConfig.class}, */
-/*         loader = AnnotationConfigContextLoader.class) */
-
-/* @Transactional("geodesyTransactionManager") */
-/* public class UploadABRKTest extends AbstractTransactionalTestNGSpringContextTests { */
-public class UploadABRKTest extends RestTest {
+public class KeepUnmodifiedNodesAndSetupsTest extends RestTest {
 
     private static final String siteLogsDir = "src/test/resources/sitelog/";
 
@@ -73,6 +68,9 @@ public class UploadABRKTest extends RestTest {
     private Integer setupId1;
     private Integer setupId2;
 
+    private Integer nodeId1;
+    private Integer nodeId2;
+
     private InTransaction uploadABRK = new InTransaction() {
         public void f() throws Exception {
             File sitelog = new File(siteLogsDir + fourCharId + ".xml");
@@ -88,8 +86,11 @@ public class UploadABRKTest extends RestTest {
             public void f() throws Exception {
                 GnssCorsSite site = sites.findByFourCharacterId(fourCharId);
                 List<Setup> setups = setupRepo.findBySiteId(site.getId());
+                List<Node> nodes = nodeRepo.findBySiteId(site.getId());
                 assertEquals(setups.size(), 1);
+                assertEquals(nodes.size(), 1);
                 setupId1 = setups.get(0).getId();
+                nodeId1 = nodes.get(0).getId();
             }
         },
         uploadABRK,
@@ -100,8 +101,11 @@ public class UploadABRKTest extends RestTest {
             public void f() throws Exception {
                 GnssCorsSite site = sites.findByFourCharacterId(fourCharId);
                 List<Setup> setups = setupRepo.findBySiteId(site.getId());
+                List<Node> nodes = nodeRepo.findBySiteId(site.getId());
                 assertEquals(setups.size(), 1);
+                assertEquals(nodes.size(), 1);
                 setupId2 = setups.get(0).getId();
+                nodeId2 = nodes.get(0).getId();
             }
         }
 
@@ -116,8 +120,7 @@ public class UploadABRKTest extends RestTest {
     @Test
     private void checkSetupId() throws Exception {
         execute(scenario);
-        System.out.println(setupId1);
-        System.out.println(setupId2);
         assertEquals(setupId1, setupId2);
+        assertEquals(nodeId1, nodeId2);
     }
 }

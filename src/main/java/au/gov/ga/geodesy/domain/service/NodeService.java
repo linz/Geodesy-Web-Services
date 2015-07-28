@@ -113,8 +113,15 @@ public class NodeService implements EventSubscriber<SiteUpdated> {
     }
 
     private Boolean isCompleteCorsSetup(Setup setup) {
-        return getOneEquipmentInUse(setup, GnssReceiver.class) != null
-            && getOneEquipmentInUse(setup, GnssAntenna.class) != null;
+        return hasReceiver(setup) && hasAntenna(setup);
+    }
+
+    private Boolean hasReceiver(Setup setup) {
+        return getOneEquipmentInUse(setup, GnssReceiver.class) != null;
+    }
+
+    private Boolean hasAntenna(Setup setup) {
+        return getOneEquipmentInUse(setup, GnssAntenna.class) != null;
     }
 
     @SuppressWarnings("unchecked")

@@ -24,6 +24,15 @@ public class GnssCorsSite extends Site {
     @JoinColumn(name = "MONUMENT_ID")
     private Monument monument;
 
+    @Column(name = "GEOLOGIC_CHARACTERISTIC")
+    private String geologicCharacteristic;
+
+    @Column(name = "BEDROCK_TYPE")
+    private String bedrockType;
+
+    @Column(name = "BEDROCK_CONDITION")
+    private String bedrockCondition;
+
     @SuppressWarnings("unused") // hibernate needs the default constructor
     private GnssCorsSite() {
     }
@@ -55,5 +64,21 @@ public class GnssCorsSite extends Site {
 
     public void setMonument(Monument monument) {
         this.monument = monument;
+    }
+
+    public String getGeologicCharacteristic() {
+        return geologicCharacteristic;
+    }
+
+    public void setGeologicCharacteristic(String geologicCharacteristic) {
+        this.geologicCharacteristic = geologicCharacteristic;
+    }
+
+    public String getBedrockType() {
+        return bedrockType;
+    }
+
+    public void setBedrockType(String bedrockType) {
+        this.bedrockType = bedrockType;
     }
 }

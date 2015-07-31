@@ -105,7 +105,9 @@ public class NodeService implements EventSubscriber<SiteUpdated> {
                     }
                 }
                 nodePeriod = lcd(dates);
-                nodes.save(new Node(site.getId(), nodePeriod, setup.getId()));
+                if (nodes.findBySetupId(setup.getId()) == null) {
+                    nodes.save(new Node(site.getId(), nodePeriod, setup.getId()));
+                }
             }
         }
         eventPublisher.handled(siteUpdated);

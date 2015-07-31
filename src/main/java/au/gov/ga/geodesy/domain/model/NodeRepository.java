@@ -17,4 +17,6 @@ public interface NodeRepository extends JpaRepository<Node, Integer> {
     @RestResource(exported = false)
     @Query("select n from Node n where n.siteId = :siteId")
     public List<Node> findBySiteId(@Param("siteId") Integer siteId);
+
+    public Node findBySetupId(@Param("setupId") Integer setupId);
 }

@@ -45,6 +45,9 @@ public class Setup {
     @Embedded
     public EffectiveDates effectivePeriod;
 
+    @Column(nullable = false)
+    private Boolean invalidated = false;
+
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "SETUP_ID")
     private List<EquipmentInUse> equipmentInUse = new ArrayList<EquipmentInUse>();
@@ -84,6 +87,18 @@ public class Setup {
 
     public void setEffectivePeriod(EffectiveDates effectivePeriod) {
         this.effectivePeriod = effectivePeriod;
+    }
+
+    public Boolean getInvalidated() {
+        return invalidated;
+    }
+
+    private void setInvalidated(Boolean invalidated) {
+        this.invalidated = invalidated;
+    }
+
+    public void invalidate() {
+        setInvalidated(true);
     }
 
     public List<EquipmentInUse> getEquipmentInUse() {

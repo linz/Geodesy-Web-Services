@@ -10,7 +10,6 @@ import java.util.TreeSet;
 
 import javax.annotation.PostConstruct;
 
-import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.collections.ComparatorUtils;
 import org.apache.commons.collections.ListUtils;
 import org.apache.commons.lang3.tuple.Pair;
@@ -113,7 +112,10 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogReceived> {
         newSetups.removeAll(commonSetups);
         oldSetups.removeAll(commonSetups);
 
-        setups.delete(oldSetups);
+        for (Setup s : oldSetups) {
+            s.invalidate();
+        }
+        setups.save(oldSetups);
         setups.save(newSetups);
 
         eventPublisher.handled(siteLogUploaded);

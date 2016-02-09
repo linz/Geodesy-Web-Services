@@ -6,6 +6,8 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.Date;
 import java.util.List;
+import java.util.Objects;
+import java.util.stream.Stream;
 
 import javax.annotation.PostConstruct;
 
@@ -85,6 +87,16 @@ public class NodeService implements EventSubscriber<SiteUpdated> {
         String fourCharId = siteUpdated.getFourCharacterId();
         GnssCorsSite site = gnssCorsSites.findByFourCharacterId(fourCharId);
         EffectiveDates nodePeriod = null;
+
+        setups.findInvalidatedBySiteId(site.getId())
+            .stream()
+            .map(s -> nodes.findBySetupId(s.getId()))
+            .filter(Objects::nonNull)
+            .forEach(n -> {
+                n.invalidate();
+                nodes.save(n);
+                log.info("Invalidated node " + n.getId());
+            });
 
         for (final Setup setup : setups.findBySiteId(site.getId())) {
             if (nodePeriod != null) {

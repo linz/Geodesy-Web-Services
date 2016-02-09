@@ -22,6 +22,7 @@ import au.gov.ga.geodesy.support.spring.PersistenceJpaConfig;
 @ContextConfiguration(
         classes = {PersistenceJpaConfig.class},
         loader = AnnotationConfigContextLoader.class)
+
 @Transactional("geodesyTransactionManager")
 public class IgsSiteLogRepositoryTest extends AbstractTransactionalTestNGSpringContextTests {
 
@@ -37,8 +38,8 @@ public class IgsSiteLogRepositoryTest extends AbstractTransactionalTestNGSpringC
         marshaller = new IgsSiteLogMoxyMarshaller();
     }
 
-    /* @Test */
-    /* @Rollback(false) */
+    @Test
+    @Rollback(false)
     public void saveAllSiteLogs() throws Exception {
         for (File f : getSiteLogFiles()) {
             IgsSiteLog siteLog = marshaller.unmarshal(new InputStreamReader(new FileInputStream(f)));
@@ -47,16 +48,21 @@ public class IgsSiteLogRepositoryTest extends AbstractTransactionalTestNGSpringC
         }
     }
 
-    /* @Test(dependsOnMethods = {"saveAllSiteLogs"}) */
+    @Test(dependsOnMethods = {"saveAllSiteLogs"})
     public void checkNumberOfSavedSiteLogs() throws Exception {
-        Assert.assertEquals(igsSiteLogs.count(), 683);
+        Assert.assertEquals(igsSiteLogs.count(), 681);
     }
 
-    /* @Test(dependsOnMethods = {"checkNumberOfSavedSiteLogs"}) */
-    /* @Rollback(false) */
-    /* public void deleteSavedLogs() { */
-    /*     igsSiteLogs.deleteAll(); */
-    /* } */
+    @Test(dependsOnMethods = {"checkNumberOfSavedSiteLogs"})
+    @Rollback(false)
+    public void deleteSavedLogs() {
+        igsSiteLogs.deleteAll();
+    }
+
+    @Test(dependsOnMethods = {"deleteSavedLogs"})
+    public void checkNumberOfDeleteSiteLogs() throws Exception {
+        Assert.assertEquals(igsSiteLogs.count(), 0);
+    }
 
     private File[] getSiteLogFiles() throws Exception {
         return new File(sampleSiteLogsDir).listFiles(new FileFilter() {

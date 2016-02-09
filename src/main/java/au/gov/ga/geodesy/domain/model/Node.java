@@ -36,6 +36,9 @@ public class Node {
     @Embedded
     private EffectiveDates effectivePeriod;
 
+    @Column(nullable = false)
+    private Boolean invalidated = false;
+
     @SuppressWarnings("unused") // used by hibernate
     private Node() {
     }
@@ -77,5 +80,17 @@ public class Node {
 
     private void setEffectivePeriod(EffectiveDates effectivePeriod) {
         this.effectivePeriod = effectivePeriod;
+    }
+
+    public Boolean getInvalidated() {
+        return invalidated;
+    }
+
+    private void setInvalidated(Boolean invalidated) {
+        this.invalidated = invalidated;
+    }
+
+    public void invalidate() {
+        setInvalidated(true);
     }
 }

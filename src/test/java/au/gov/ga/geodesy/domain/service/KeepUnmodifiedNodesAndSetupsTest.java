@@ -7,8 +7,13 @@ import java.io.FileReader;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.annotation.Rollback;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.support.AnnotationConfigContextLoader;
+import org.springframework.test.context.testng.AbstractTransactionalTestNGSpringContextTests;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.TransactionStatus;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.support.DefaultTransactionDefinition;
 import org.testng.annotations.Test;
 
@@ -20,9 +25,15 @@ import au.gov.ga.geodesy.domain.model.Setup;
 import au.gov.ga.geodesy.domain.model.SetupRepository;
 import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLogRepository;
 import au.gov.ga.geodesy.igssitelog.interfaces.xml.IgsSiteLogXmlMarshaller;
-import au.gov.ga.geodesy.interfaces.rest.RestTest;
+import au.gov.ga.geodesy.support.spring.GeodesyServiceTestConfig;
+import au.gov.ga.geodesy.support.spring.PersistenceJpaConfig;
 
-public class KeepUnmodifiedNodesAndSetupsTest extends RestTest {
+@ContextConfiguration(
+        classes = {GeodesyServiceTestConfig.class, PersistenceJpaConfig.class},
+        loader = AnnotationConfigContextLoader.class)
+
+@Transactional("geodesyTransactionManager")
+public class KeepUnmodifiedNodesAndSetupsTest extends AbstractTransactionalTestNGSpringContextTests {
 
     private static final String siteLogsDir = "src/test/resources/sitelog/";
 
@@ -118,7 +129,8 @@ public class KeepUnmodifiedNodesAndSetupsTest extends RestTest {
     }
 
     @Test
-    private void checkSetupId() throws Exception {
+    @Rollback(false)
+    public void checkSetupId() throws Exception {
         execute(scenario);
         assertEquals(setupId1, setupId2);
         assertEquals(nodeId1, nodeId2);

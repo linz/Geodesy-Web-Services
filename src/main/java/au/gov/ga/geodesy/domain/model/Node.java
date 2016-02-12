@@ -50,6 +50,11 @@ public class Node {
         setSetupId(setupId);
     }
 
+    // TODO: public id
+    public Integer getId() {
+        return id;
+    }
+
     public Integer getSiteId() {
         return siteId;
     }

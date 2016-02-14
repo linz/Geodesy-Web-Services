@@ -23,7 +23,7 @@ public class IgsSiteLogService {
     @Autowired
     private EventPublisher eventPublisher;
 
-    public void upload(IgsSiteLog siteLog) throws Exception {
+    public void upload(IgsSiteLog siteLog) {
         siteLogs.delete(siteLog.getSiteIdentification().getFourCharacterId());
         siteLogs.save(siteLog);
         String id = siteLog.getSiteIdentification().getFourCharacterId();

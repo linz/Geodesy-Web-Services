@@ -9,7 +9,8 @@ public class TestSuiteListener implements IExecutionListener {
     @SuppressWarnings("serial")
     public class ExitInterceptedException extends SecurityException {
         public ExitInterceptedException() {
-            super("Keeping the JVM alive, so you can inspect the in-memory database at http://localhost:8082/. Type ctrl-c to exit.");
+            super("Keeping the JVM alive, so you can inspect the in-memory database at http://localhost:8082/."
+                  + " Connection details: jdbc:h2:./h2-test-db, username: \"\", password: \"\". Type ctrl-c to exit.");
         }
     }
 

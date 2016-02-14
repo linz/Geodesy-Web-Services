@@ -112,9 +112,11 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogReceived> {
         newSetups.removeAll(commonSetups);
         oldSetups.removeAll(commonSetups);
 
-        for (Setup s : oldSetups) {
-            s.invalidate();
-        }
+        oldSetups.forEach(s -> {
+                s.invalidate();
+                log.info("Invalidated site : " + s.getId());
+            });
+
         setups.save(oldSetups);
         setups.save(newSetups);
 

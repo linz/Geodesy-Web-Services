@@ -18,4 +18,8 @@ public interface SetupRepository extends JpaRepository<Setup, Integer>, SetupRep
     @RestResource(exported = false)
     @Query("select s from Setup s where s.siteId = :siteId and s.invalidated = false")
     List<Setup> findBySiteId(@Param("siteId") Integer id);
+
+    @RestResource(exported = false)
+    @Query("select s from Setup s where s.siteId = :siteId and s.invalidated = true")
+    List<Setup> findInvalidatedBySiteId(@Param("siteId") Integer id);
 }

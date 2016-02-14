@@ -125,8 +125,6 @@ public class Setup {
             return false;
         }
         Setup other = (Setup) x;
-        System.out.println(equipmentInUse.getClass());
-        System.out.println(other.getEquipmentInUse().getClass());
         return new EqualsBuilder()
             .append(siteId, other.getSiteId())
             .append(name, other.getName())

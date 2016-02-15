@@ -11,13 +11,13 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
 import org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration;
 
-import au.gov.ga.geodesy.domain.model.Equipment;
-import au.gov.ga.geodesy.domain.model.EquipmentConfiguration;
-import au.gov.ga.geodesy.domain.model.EquipmentConfigurationRepository;
 import au.gov.ga.geodesy.domain.model.EquipmentInUse;
-import au.gov.ga.geodesy.domain.model.EquipmentRepository;
 import au.gov.ga.geodesy.domain.model.GnssCorsSite;
 import au.gov.ga.geodesy.domain.model.Setup;
+import au.gov.ga.geodesy.domain.model.equipment.Equipment;
+import au.gov.ga.geodesy.domain.model.equipment.EquipmentConfiguration;
+import au.gov.ga.geodesy.domain.model.equipment.EquipmentConfigurationRepository;
+import au.gov.ga.geodesy.domain.model.equipment.EquipmentRepository;
 import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLog;
 
 import com.fasterxml.jackson.core.JsonGenerationException;

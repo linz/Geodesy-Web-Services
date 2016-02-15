@@ -2,6 +2,8 @@ package au.gov.ga.geodesy.domain.service;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Date;
+import java.util.List;
+import java.util.Optional;
 
 import org.apache.commons.lang3.tuple.Pair;
 import org.apache.commons.logging.Log;
@@ -88,8 +90,16 @@ public class EquipmentFactory {
         }
 
         public Pair<? extends Equipment, ? extends EquipmentConfiguration> visit(FrequencyStandardLogItem logItem) {
-            Clock clock = new Clock(logItem.getType());
-            equipment.saveAndFlush(clock);
+            final Clock newClock = new Clock(logItem.getType());
+            Optional<Clock> existingClock = equipment.findByEquipmentType(Clock.class)
+                .stream().
+                filter(c -> c.equals(newClock))
+                .findFirst();
+
+            Clock clock = existingClock.orElseGet(() -> {
+                equipment.saveAndFlush(newClock);
+                return newClock;
+            });
             ClockConfiguration config = getConfiguration(ClockConfiguration.class, clock.getId(), logItem);
             config.setInputFrequency(logItem.getInputFrequency());
             return Pair.of(clock, config);

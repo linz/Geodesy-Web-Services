@@ -17,6 +17,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.support.DefaultTransactionDefinition;
 import org.testng.annotations.Test;
 
+import au.gov.ga.geodesy.domain.model.EquipmentRepository;
 import au.gov.ga.geodesy.domain.model.GnssCorsSite;
 import au.gov.ga.geodesy.domain.model.GnssCorsSiteRepository;
 import au.gov.ga.geodesy.domain.model.Node;
@@ -49,10 +50,13 @@ public class KeepUnmodifiedNodesAndSetupsTest extends AbstractTransactionalTestN
     private IgsSiteLogService siteLogService;
 
     @Autowired
-    private SetupRepository setupRepo;
+    private SetupRepository setups;
 
     @Autowired
-    private NodeRepository nodeRepo;
+    private NodeRepository nodes;
+
+    @Autowired
+    private EquipmentRepository equipment;
 
     @Autowired
     private IgsSiteLogRepository siteLogs;
@@ -76,12 +80,6 @@ public class KeepUnmodifiedNodesAndSetupsTest extends AbstractTransactionalTestN
         }
     }
 
-    private Integer setupId1;
-    private Integer setupId2;
-
-    private Integer nodeId1;
-    private Integer nodeId2;
-
     private InTransaction uploadABRK = new InTransaction() {
         public void f() throws Exception {
             File sitelog = new File(siteLogsDir + fourCharId + ".xml");
@@ -90,36 +88,7 @@ public class KeepUnmodifiedNodesAndSetupsTest extends AbstractTransactionalTestN
     };
     private InTransaction[] scenario = {
         uploadABRK,
-        new InTransaction() {
-            /**
-             * Save setupId.
-             */
-            public void f() throws Exception {
-                GnssCorsSite site = sites.findByFourCharacterId(fourCharId);
-                List<Setup> setups = setupRepo.findBySiteId(site.getId());
-                List<Node> nodes = nodeRepo.findBySiteId(site.getId());
-                assertEquals(setups.size(), 1);
-                assertEquals(nodes.size(), 1);
-                setupId1 = setups.get(0).getId();
-                nodeId1 = nodes.get(0).getId();
-            }
-        },
         uploadABRK,
-        new InTransaction() {
-            /**
-             * Save setupId.
-             */
-            public void f() throws Exception {
-                GnssCorsSite site = sites.findByFourCharacterId(fourCharId);
-                List<Setup> setups = setupRepo.findBySiteId(site.getId());
-                List<Node> nodes = nodeRepo.findBySiteId(site.getId());
-                assertEquals(setups.size(), 1);
-                assertEquals(nodes.size(), 1);
-                setupId2 = setups.get(0).getId();
-                nodeId2 = nodes.get(0).getId();
-            }
-        }
-
     };
 
     private void execute(InTransaction... scenario) throws Exception {
@@ -130,9 +99,16 @@ public class KeepUnmodifiedNodesAndSetupsTest extends AbstractTransactionalTestN
 
     @Test
     @Rollback(false)
-    public void checkSetupId() throws Exception {
+    public void execute() throws Exception {
         execute(scenario);
-        assertEquals(setupId1, setupId2);
-        assertEquals(nodeId1, nodeId2);
+    }
+
+    @Test(dependsOnMethods = "execute")
+    @Rollback(false)
+    public void checkSetupId() throws Exception {
+        assertEquals(sites.count(), 1);
+        assertEquals(setups.count(), 1);
+        assertEquals(nodes.count(), 1);
+        assertEquals(equipment.count(), 3);
     }
 }

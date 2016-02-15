@@ -28,6 +28,7 @@ import au.gov.ga.geodesy.domain.model.SetupRepository;
 import au.gov.ga.geodesy.domain.model.equipment.Equipment;
 import au.gov.ga.geodesy.domain.model.equipment.EquipmentConfiguration;
 import au.gov.ga.geodesy.domain.model.equipment.EquipmentConfigurationRepository;
+import au.gov.ga.geodesy.domain.model.equipment.EquipmentFactory;
 import au.gov.ga.geodesy.domain.model.equipment.EquipmentRepository;
 import au.gov.ga.geodesy.domain.model.event.Event;
 import au.gov.ga.geodesy.domain.model.event.EventPublisher;

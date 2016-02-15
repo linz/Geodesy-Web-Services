@@ -5,6 +5,10 @@ import java.util.List;
 
 import org.apache.commons.collections.CollectionUtils;
 
+import au.gov.ga.geodesy.domain.model.event.Event;
+import au.gov.ga.geodesy.domain.model.event.EventPublisher;
+import au.gov.ga.geodesy.domain.model.event.EventSubscriber;
+
 public class MockEventPublisher implements EventPublisher {
 
     private List<Event> publishedEvents = new ArrayList<>();

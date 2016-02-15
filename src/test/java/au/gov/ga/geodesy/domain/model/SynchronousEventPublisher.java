@@ -6,6 +6,10 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import au.gov.ga.geodesy.domain.model.event.Event;
+import au.gov.ga.geodesy.domain.model.event.EventPublisher;
+import au.gov.ga.geodesy.domain.model.event.EventSubscriber;
+
 public class SynchronousEventPublisher implements EventPublisher {
 
     private static final Logger log = LoggerFactory.getLogger(SynchronousEventPublisher.class);

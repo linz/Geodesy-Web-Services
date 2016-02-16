@@ -1,7 +1,5 @@
 package au.gov.ga.geodesy.support.spring;
 
-import geodb.GeoDB;
-
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.Properties;
@@ -9,8 +7,7 @@ import java.util.Properties;
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 
-import liquibase.integration.spring.SpringLiquibase;
-
+import org.apache.commons.lang3.StringUtils;
 import org.h2.tools.Server;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,7 +15,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.DependsOn;
 import org.springframework.context.annotation.Primary;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
@@ -29,6 +25,9 @@ import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+
+import geodb.GeoDB;
+import liquibase.integration.spring.SpringLiquibase;
 
 @Configuration
 @EnableTransactionManagement
@@ -53,7 +52,12 @@ public class PersistenceJpaConfig {
     private ApplicationContext context;
 
     public PersistenceJpaConfig() {
-        databaseType = DatabaseType.valueOf(System.getProperty(DATABASE_TYPE_PROPERTY_NAME));
+        String databaseTypeValue = System.getProperty(DATABASE_TYPE_PROPERTY_NAME);
+        if (StringUtils.isBlank(databaseTypeValue)) {
+            databaseType = DatabaseType.IN_MEMORY;
+        } else {
+            databaseType = DatabaseType.valueOf(databaseTypeValue);
+        }
         log.info("Database type: " + databaseType);
         /* Runtime.getRuntime().addShutdownHook(new Thread() { */
         /*     public void run() { */

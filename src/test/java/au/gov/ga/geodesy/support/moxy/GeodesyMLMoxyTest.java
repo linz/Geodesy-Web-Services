@@ -3,6 +3,7 @@ package au.gov.ga.geodesy.support.moxy;
 import java.io.InputStreamReader;
 import java.io.Reader;
 
+import org.junit.Assert;
 import org.testng.annotations.Test;
 
 import au.gov.xml.icsm.geodesyml.v_0_2_1.GeodesyMLType;
@@ -23,9 +24,9 @@ public class GeodesyMLMoxyTest {
 
         GeodesyMLType geodesyML = marshaller.unmarshal(input).getValue();
 
+        Assert.assertEquals(24, geodesyML.getNodeOrAbstractPositionOrPositionPairCovariance().size());
         geodesyML.getNodeOrAbstractPositionOrPositionPairCovariance().forEach(x -> {
             System.out.println(x.getName());
         });
-
     }
 }

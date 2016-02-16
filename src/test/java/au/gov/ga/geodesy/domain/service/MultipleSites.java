@@ -67,7 +67,6 @@ public class MultipleSites extends AbstractTransactionalTestNGSpringContextTests
 		List<IgsSiteLog> siteLogMembers = siteLogs.findAll();
 		Assert.assertEquals(0, siteLogMembers.size());
 		executeSiteLogScenario(scenarioDirName);
-		siteLogMembers = siteLogs.findAll();
-		Assert.assertEquals(numberOfSites, siteLogMembers.size());
+		Assert.assertEquals(numberOfSites, siteLogs.count());
 	}
 }

@@ -55,8 +55,6 @@ public class ChangeReceiverAtABRKTest extends AbstractTransactionalTestNGSpringC
         List<IgsSiteLog> siteLogMembers = siteLogs.findAll();
         Assert.assertEquals(0, siteLogMembers.size());
         executeSiteLogScenario(scenarioDirName);
-        // TODO: check
-        siteLogMembers = siteLogs.findAll();
-        Assert.assertEquals(1, siteLogMembers.size());
+        Assert.assertEquals(1, siteLogs.count());
     }
 }

@@ -59,19 +59,6 @@ public class PersistenceJpaConfig {
             databaseType = DatabaseType.valueOf(databaseTypeValue);
         }
         log.info("Database type: " + databaseType);
-        /* Runtime.getRuntime().addShutdownHook(new Thread() { */
-        /*     public void run() { */
-        /*         System.out.println(isDaemon()); */
-        /*         if (System.getProperty("keepAlive") != null) { */
-        /*             log.info("Keeping the JVM alive, so you can inspect the in-memory database at http://localhost:8082/."); */
-        /*             log.info("Type ctrl-c to exit."); */
-        /*             try { */
-        /*                 Thread.sleep(Long.MAX_VALUE); */
-        /*             } catch (InterruptedException ok) { */
-        /*             } */
-        /*         } */
-        /*     } */
-        /* }); */
     }
 
     @Bean

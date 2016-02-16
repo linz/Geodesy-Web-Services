@@ -1,4 +1,4 @@
-package au.gov.ga.geodesy.domain.service;
+package au.gov.ga.geodesy.domain.model.equipment;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Date;
@@ -11,18 +11,6 @@ import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import au.gov.ga.geodesy.domain.model.Clock;
-import au.gov.ga.geodesy.domain.model.ClockConfiguration;
-import au.gov.ga.geodesy.domain.model.Equipment;
-import au.gov.ga.geodesy.domain.model.EquipmentConfiguration;
-import au.gov.ga.geodesy.domain.model.EquipmentConfigurationRepository;
-import au.gov.ga.geodesy.domain.model.EquipmentRepository;
-import au.gov.ga.geodesy.domain.model.GnssAntenna;
-import au.gov.ga.geodesy.domain.model.GnssAntennaConfiguration;
-import au.gov.ga.geodesy.domain.model.GnssReceiver;
-import au.gov.ga.geodesy.domain.model.GnssReceiverConfiguration;
-import au.gov.ga.geodesy.domain.model.HumiditySensor;
-import au.gov.ga.geodesy.domain.model.HumiditySensorConfiguration;
 import au.gov.ga.geodesy.igssitelog.domain.model.EffectiveDates;
 import au.gov.ga.geodesy.igssitelog.domain.model.EquipmentLogItem;
 import au.gov.ga.geodesy.igssitelog.domain.model.FrequencyStandardLogItem;

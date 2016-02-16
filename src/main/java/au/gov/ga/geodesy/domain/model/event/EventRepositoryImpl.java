@@ -1,4 +1,4 @@
-package au.gov.ga.geodesy.domain.model;
+package au.gov.ga.geodesy.domain.model.event;
 
 import java.util.Calendar;
 import java.util.List;

@@ -1,4 +1,4 @@
-package au.gov.ga.geodesy.domain.model;
+package au.gov.ga.geodesy.domain.model.event;
 
 import javax.persistence.Column;
 import javax.persistence.DiscriminatorValue;

@@ -1,4 +1,4 @@
-package au.gov.ga.geodesy.domain.model;
+package au.gov.ga.geodesy.domain.model.equipment;
 
 import java.util.List;
 

@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
-import au.gov.ga.geodesy.domain.model.EventPublisher;
-import au.gov.ga.geodesy.domain.model.SiteLogReceived;
+import au.gov.ga.geodesy.domain.model.event.EventPublisher;
+import au.gov.ga.geodesy.domain.model.event.SiteLogReceived;
 import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLog;
 import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLogRepository;
 

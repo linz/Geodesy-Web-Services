@@ -15,9 +15,9 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import au.gov.ga.geodesy.domain.model.Event;
 import au.gov.ga.geodesy.domain.model.MockEventPublisher;
-import au.gov.ga.geodesy.domain.model.SiteLogReceived;
+import au.gov.ga.geodesy.domain.model.event.Event;
+import au.gov.ga.geodesy.domain.model.event.SiteLogReceived;
 import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLog;
 import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLogRepository;
 import au.gov.ga.geodesy.igssitelog.interfaces.xml.IgsSiteLogXmlMarshaller;

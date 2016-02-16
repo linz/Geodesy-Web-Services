@@ -8,8 +8,8 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.context.annotation.aspectj.EnableSpringConfigured;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-import au.gov.ga.geodesy.domain.model.AsynchronousEventPublisher;
-import au.gov.ga.geodesy.domain.model.EventPublisher;
+import au.gov.ga.geodesy.domain.model.event.AsynchronousEventPublisher;
+import au.gov.ga.geodesy.domain.model.event.EventPublisher;
 import au.gov.ga.geodesy.igssitelog.interfaces.xml.IgsSiteLogXmlMarshaller;
 import au.gov.ga.geodesy.igssitelog.support.marshalling.moxy.IgsSiteLogMoxyMarshaller;
 

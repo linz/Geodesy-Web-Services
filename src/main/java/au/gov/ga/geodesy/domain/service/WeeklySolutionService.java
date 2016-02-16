@@ -14,10 +14,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
-import au.gov.ga.geodesy.domain.model.EventPublisher;
 import au.gov.ga.geodesy.domain.model.WeeklySolution;
-import au.gov.ga.geodesy.domain.model.WeeklySolutionAvailable;
 import au.gov.ga.geodesy.domain.model.WeeklySolutionRepository;
+import au.gov.ga.geodesy.domain.model.event.EventPublisher;
+import au.gov.ga.geodesy.domain.model.event.WeeklySolutionAvailable;
 
 @Component
 @Transactional("geodesyTransactionManager")

@@ -12,8 +12,8 @@ import javax.xml.bind.Unmarshaller;
 
 import org.eclipse.persistence.jaxb.JAXBContextFactory;
 
-import au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException;
 import au.gov.ga.geodesy.interfaces.xml.GeodesyMLMarshaller;
+import au.gov.ga.geodesy.interfaces.xml.MarshallingException;
 import au.gov.xml.icsm.geodesyml.v_0_2_1.GeodesyMLType;
 
 public class GeodesyMLMoxy implements GeodesyMLMarshaller {

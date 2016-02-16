@@ -1,6 +1,5 @@
 package au.gov.ga.geodesy.interfaces.xml;
 
-import au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException;
 import au.gov.xml.icsm.geodesyml.v_0_2_1.GeodesyMLType;
 
 import java.io.Writer;

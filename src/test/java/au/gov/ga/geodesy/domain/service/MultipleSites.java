@@ -1,16 +1,11 @@
 package au.gov.ga.geodesy.domain.service;
 
 import java.io.File;
-import java.io.FileFilter;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.List;
 
 import org.junit.Assert;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.io.Resource;
-import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.support.AnnotationConfigContextLoader;
@@ -32,7 +27,7 @@ import au.gov.ga.geodesy.support.spring.PersistenceJpaConfig;
 public class MultipleSites extends AbstractTransactionalTestNGSpringContextTests {
 
 	private static final String scenarioDirName = "src/test/resources/multiple-sites/";
-																	  
+
 	@Autowired
 	private IgsSiteLogService siteLogService;
 
@@ -41,14 +36,14 @@ public class MultipleSites extends AbstractTransactionalTestNGSpringContextTests
 
 	@Autowired
 	private IgsSiteLogRepository siteLogs;
-	
+
 	private int numberOfSites;
 
 	/**
 	 * Each siteLog file must have a unique getSiteIdentification.
 	 * @param scenarioDirName
 	 * @throws MarshallingException
-	 * @throws IOException 
+	 * @throws IOException
 	 */
 	private void executeSiteLogScenario(String scenarioDirName) throws MarshallingException, IOException {
 		File[] siteLogFiles = new File(scenarioDirName).listFiles((File dir, String f) -> {
@@ -64,8 +59,7 @@ public class MultipleSites extends AbstractTransactionalTestNGSpringContextTests
 	@Test
 	@Rollback(false)
 	public void checkSetupId() throws Exception {
-		List<IgsSiteLog> siteLogMembers = siteLogs.findAll();
-		Assert.assertEquals(0, siteLogMembers.size());
+		Assert.assertEquals(0, siteLogs.count());
 		executeSiteLogScenario(scenarioDirName);
 		Assert.assertEquals(numberOfSites, siteLogs.count());
 	}

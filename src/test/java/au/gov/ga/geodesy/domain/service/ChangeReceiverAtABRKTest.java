@@ -3,7 +3,6 @@ package au.gov.ga.geodesy.domain.service;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.annotation.Rollback;
@@ -35,7 +34,7 @@ public class ChangeReceiverAtABRKTest extends AbstractTransactionalTestNGSpringC
 
     @Autowired
     private IgsSiteLogXmlMarshaller marshaller;
-    
+
     @Autowired
     private IgsSiteLogRepository siteLogs;
 
@@ -52,8 +51,7 @@ public class ChangeReceiverAtABRKTest extends AbstractTransactionalTestNGSpringC
     @Test
     @Rollback(false)
     public void checkSetupId() throws Exception {
-        List<IgsSiteLog> siteLogMembers = siteLogs.findAll();
-        Assert.assertEquals(0, siteLogMembers.size());
+        Assert.assertEquals(0, siteLogs.count());
         executeSiteLogScenario(scenarioDirName);
         Assert.assertEquals(1, siteLogs.count());
     }

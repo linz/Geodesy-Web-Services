@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 
 import au.gov.ga.geodesy.interfaces.xml.GeodesyMLMarshaller;
 import au.gov.ga.geodesy.interfaces.xml.MarshallingException;
-import au.gov.xml.icsm.geodesyml.v_0_2_1.GeodesyMLType;
+import au.gov.xml.icsm.geodesyml.v_0_2_2.GeodesyMLType;
 
 @Component
 public class GeodesyMLMoxy implements GeodesyMLMarshaller {

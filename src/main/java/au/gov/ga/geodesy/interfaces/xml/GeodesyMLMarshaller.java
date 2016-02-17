@@ -1,6 +1,6 @@
 package au.gov.ga.geodesy.interfaces.xml;
 
-import au.gov.xml.icsm.geodesyml.v_0_2_1.GeodesyMLType;
+import au.gov.xml.icsm.geodesyml.v_0_2_2.GeodesyMLType;
 
 import java.io.Writer;
 

@@ -38,9 +38,7 @@ public class IgsSiteLogRepositoryTest extends AbstractTransactionalTestNGSpringC
         marshaller = new IgsSiteLogMoxyMarshaller();
     }
 
-    @Test
-    @Rollback(false)
-    public void saveAllSiteLogs() throws Exception {
+    private void saveAllSiteLogs() throws Exception {
         for (File f : getSiteLogFiles()) {
             IgsSiteLog siteLog = marshaller.unmarshal(new InputStreamReader(new FileInputStream(f)));
             log.info("Saving " + siteLog.getSiteIdentification().getFourCharacterId());
@@ -48,19 +46,19 @@ public class IgsSiteLogRepositoryTest extends AbstractTransactionalTestNGSpringC
         }
     }
 
-    @Test(dependsOnMethods = {"saveAllSiteLogs"})
+    @Test 
     public void checkNumberOfSavedSiteLogs() throws Exception {
+        saveAllSiteLogs();
         Assert.assertEquals(igsSiteLogs.count(), 681);
     }
 
-    @Test(dependsOnMethods = {"checkNumberOfSavedSiteLogs"})
-    @Rollback(false)
-    public void deleteSavedLogs() {
+    private void deleteSavedLogs() {
         igsSiteLogs.deleteAll();
     }
 
-    @Test(dependsOnMethods = {"deleteSavedLogs"})
+    @Test 
     public void checkNumberOfDeleteSiteLogs() throws Exception {
+        deleteSavedLogs();
         Assert.assertEquals(igsSiteLogs.count(), 0);
     }
 

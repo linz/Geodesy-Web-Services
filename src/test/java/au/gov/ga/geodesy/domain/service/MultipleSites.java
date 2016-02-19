@@ -57,8 +57,8 @@ public class MultipleSites extends AbstractTransactionalTestNGSpringContextTests
 	}
 
 	@Test
-	@Rollback(false)
-	public void checkSetupId() throws Exception {
+	@Rollback(true)
+	public void checkSetupId3() throws Exception {
 		Assert.assertEquals(0, siteLogs.count());
 		executeSiteLogScenario(scenarioDirName);
 		Assert.assertEquals(numberOfSites, siteLogs.count());

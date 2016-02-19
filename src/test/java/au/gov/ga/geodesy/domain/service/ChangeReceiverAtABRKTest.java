@@ -49,8 +49,8 @@ public class ChangeReceiverAtABRKTest extends AbstractTransactionalTestNGSpringC
     }
 
     @Test
-    @Rollback(false)
-    public void checkSetupId() throws Exception {
+    @Rollback(true)
+    public void checkSetupId1() throws Exception {
         Assert.assertEquals(0, siteLogs.count());
         executeSiteLogScenario(scenarioDirName);
         Assert.assertEquals(1, siteLogs.count());

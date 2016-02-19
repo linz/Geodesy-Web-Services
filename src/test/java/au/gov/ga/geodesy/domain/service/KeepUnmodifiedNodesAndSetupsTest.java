@@ -4,7 +4,6 @@ import static org.testng.Assert.assertEquals;
 
 import java.io.File;
 import java.io.FileReader;
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.annotation.Rollback;
@@ -17,11 +16,8 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.support.DefaultTransactionDefinition;
 import org.testng.annotations.Test;
 
-import au.gov.ga.geodesy.domain.model.GnssCorsSite;
 import au.gov.ga.geodesy.domain.model.GnssCorsSiteRepository;
-import au.gov.ga.geodesy.domain.model.Node;
 import au.gov.ga.geodesy.domain.model.NodeRepository;
-import au.gov.ga.geodesy.domain.model.Setup;
 import au.gov.ga.geodesy.domain.model.SetupRepository;
 import au.gov.ga.geodesy.domain.model.equipment.EquipmentRepository;
 import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLogRepository;
@@ -97,15 +93,14 @@ public class KeepUnmodifiedNodesAndSetupsTest extends AbstractTransactionalTestN
         }
     }
 
-    @Test
-    @Rollback(false)
-    public void execute() throws Exception {
+    private void execute() throws Exception {
         execute(scenario);
     }
 
-    @Test(dependsOnMethods = "execute")
-    @Rollback(false)
-    public void checkSetupId() throws Exception {
+    @Test
+    @Rollback(true)
+    public void checkSetupId2() throws Exception {
+        execute();
         assertEquals(sites.count(), 1);
         assertEquals(setups.count(), 1);
         assertEquals(nodes.count(), 1);

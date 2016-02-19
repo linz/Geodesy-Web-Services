@@ -24,7 +24,7 @@ public class GeodesyMLMoxyTest {
 
         GeodesyMLType geodesyML = marshaller.unmarshal(input).getValue();
 
-        Assert.assertEquals(24, geodesyML.getNodeOrAbstractPositionOrPositionPairCovariance().size());
+        Assert.assertEquals(23, geodesyML.getNodeOrAbstractPositionOrPositionPairCovariance().size());
         geodesyML.getNodeOrAbstractPositionOrPositionPairCovariance().forEach(x -> {
             System.out.println(x.getName());
         });

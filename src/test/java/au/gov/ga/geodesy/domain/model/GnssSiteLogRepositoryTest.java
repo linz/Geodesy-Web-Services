@@ -2,7 +2,7 @@ package au.gov.ga.geodesy.domain.model;
 
 import java.io.File;
 import java.io.FileFilter;
-import java.nio.charset.Charset;
+import java.io.FileReader;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,10 +14,10 @@ import org.springframework.test.context.testng.AbstractTransactionalTestNGSpring
 import org.springframework.transaction.annotation.Transactional;
 import org.testng.annotations.Test;
 
-import com.google.common.io.Files;
-
+import au.gov.ga.geodesy.interfaces.xml.GeodesyMLMarshaller;
 import au.gov.ga.geodesy.support.spring.GeodesySupportConfig;
 import au.gov.ga.geodesy.support.spring.PersistenceJpaConfig;
+import au.gov.xml.icsm.geodesyml.v_0_2_2.GeodesyMLType;
 
 @ContextConfiguration(
         classes = {GeodesySupportConfig.class, PersistenceJpaConfig.class},
@@ -31,15 +31,21 @@ public class GnssSiteLogRepositoryTest extends AbstractTransactionalTestNGSpring
     @Autowired
     private GnssSiteLogRepository siteLogs;
 
+    @Autowired
+    private GeodesyMLMarshaller marshaller;
+
     private static final String sampleSiteLogsDir = "src/test/resources/sitelog/geodesyml";
 
     @Test
     @Rollback(false)
     public void saveAllSiteLogs() throws Exception {
         for (File f : getSiteLogFiles()) {
-            GnssSiteLog siteLog = new GnssSiteLog(Files.toString(f, Charset.defaultCharset()));
-            log.info("Saving " + siteLog.getFourCharacterId());
-            siteLogs.saveAndFlush(siteLog);
+            GeodesyMLType geodesyML = marshaller.unmarshal(new FileReader(f)).getValue();
+            new GnssSiteLogFactory(geodesyML).create()
+                .forEach(siteLog -> {
+                    log.info("Saving " + siteLog.getFourCharacterId());
+                    siteLogs.saveAndFlush(siteLog);
+                });
         }
     }
 

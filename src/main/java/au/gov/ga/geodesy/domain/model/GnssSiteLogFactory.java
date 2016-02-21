@@ -10,7 +10,6 @@ import javax.xml.bind.JAXBElement;
 
 import org.apache.commons.lang3.reflect.MethodUtils;
 import org.apache.commons.lang3.tuple.Pair;
-import org.springframework.stereotype.Component;
 
 import au.gov.xml.icsm.geodesyml.v_0_2_2.GeodesyMLType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.MonumentPropertyType;
@@ -21,7 +20,6 @@ import au.gov.xml.icsm.geodesyml.v_0_2_2.SiteType;
 
 import net.opengis.gml.v_3_2_1.CodeType;
 
-@Component
 public class GnssSiteLogFactory {
 
     private GeodesyMLType geodesyML;

@@ -16,15 +16,16 @@ import org.testng.annotations.Test;
 
 public class UploadIgsSiteLogRestTest extends RestTest {
 
-    private void uploadALIC() throws Exception {
+    @Test
+    @Rollback(false)
+    public void uploadALIC() throws Exception {
         String content = FileUtils.readFileToString(getSiteLog("ALIC"), Charset.defaultCharset());
         mvc.perform(post("/siteLog/upload").contentType(MediaType.APPLICATION_XML).content(content))
             .andExpect(status().isOk());
     }
 
-    @Test
+    @Test(dependsOnMethods = {"uploadALIC"})
     public void checkALIC() throws Exception {
-        uploadALIC();
         mvc.perform(get("/gnssCorsSites/search/findByFourCharacterId?id=ALIC"))
             .andExpect(status().isOk())
             .andDo(print);

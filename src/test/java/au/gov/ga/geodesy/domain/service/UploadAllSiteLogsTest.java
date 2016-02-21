@@ -24,8 +24,9 @@ import au.gov.ga.geodesy.igssitelog.interfaces.xml.IgsSiteLogXmlMarshaller;
 import au.gov.ga.geodesy.support.spring.GeodesyServiceUnitTestConfig;
 import au.gov.ga.geodesy.support.spring.PersistenceJpaConfig;
 
-@ContextConfiguration(classes = {GeodesyServiceUnitTestConfig.class,
-        PersistenceJpaConfig.class}, loader = AnnotationConfigContextLoader.class)
+@ContextConfiguration(
+        classes = {GeodesyServiceUnitTestConfig.class, PersistenceJpaConfig.class},
+        loader = AnnotationConfigContextLoader.class)
 
 @Transactional("geodesyTransactionManager")
 public class UploadAllSiteLogsTest extends AbstractTransactionalTestNGSpringContextTests {
@@ -55,17 +56,17 @@ public class UploadAllSiteLogsTest extends AbstractTransactionalTestNGSpringCont
         });
     }
 
-    private void upload() throws Exception {
+    @Test
+    @Rollback(false)
+    public void upload() throws Exception {
         for (File f : siteLogFiles) {
             IgsSiteLog siteLog = marshaller.unmarshal(new FileReader(f));
             service.upload(siteLog);
         }
     }
 
-    @Test
-    @Rollback(true)
+    @Test(dependsOnMethods = {"upload"})
     public void check() throws Exception {
-        upload();
         List<Event> events = eventPublisher.getPublishedEvents();
         for (Event e : events) {
             Assert.assertTrue(e instanceof SiteLogReceived);

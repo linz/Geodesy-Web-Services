@@ -63,16 +63,16 @@ public class UploadADE1Test extends AbstractTransactionalTestNGSpringContextTest
     @Autowired
     private IgsSiteLogXmlMarshaller marshaller;
 
-    private void saveSiteLog() throws Exception {
+    @Test
+    @Rollback(false)
+    public void saveSiteLog() throws Exception {
         File siteLog = new File(siteLogsDir + fourCharId + ".xml");
         siteLogService.upload(marshaller.unmarshal(new FileReader(siteLog)));
     }
 
-    @Test
-    @Rollback(true)
+    @Test(dependsOnMethods = {"saveSiteLog"})
+    @Rollback(false)
     public void checkSite() throws Exception {
-        saveSiteLog();
-
         IgsSiteLog siteLog = siteLogs.findByFourCharacterId(fourCharId);
         GnssCorsSite site = sites.findByFourCharacterId(fourCharId);
         assertNotNull(site);

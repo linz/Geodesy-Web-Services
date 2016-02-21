@@ -12,6 +12,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.support.AnnotationConfigContextLoader;
 import org.springframework.test.context.testng.AbstractTransactionalTestNGSpringContextTests;
 import org.springframework.transaction.annotation.Transactional;
+import static org.testng.Assert.*;
 import org.testng.annotations.Test;
 
 import au.gov.ga.geodesy.interfaces.xml.GeodesyMLMarshaller;
@@ -47,6 +48,11 @@ public class GnssSiteLogRepositoryTest extends AbstractTransactionalTestNGSpring
                     siteLogs.saveAndFlush(siteLog);
                 });
         }
+    }
+
+    @Test(dependsOnMethods = "saveAllSiteLogs")
+    public void checkNumberOfSavedLogs() throws Exception {
+        assertEquals(siteLogs.count(), 1);
     }
 
     private File[] getSiteLogFiles() throws Exception {

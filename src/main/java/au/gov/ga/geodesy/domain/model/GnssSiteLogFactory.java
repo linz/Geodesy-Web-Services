@@ -39,7 +39,7 @@ public class GnssSiteLogFactory {
 
     /**
      * Given a geodesyML document, attempt to look up an element by its gml:id.
-     * TODO: Move out of GnssSiteLogFactory or replace to private methods.
+     * TODO: Move out of GnssSiteLogFactory or replace with private methods.
      */
     public class XLinkResolver {
 

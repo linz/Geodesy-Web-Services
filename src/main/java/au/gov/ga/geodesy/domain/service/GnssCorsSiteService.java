@@ -70,7 +70,7 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogReceived> {
     private EquipmentFactory equipmentFactory;
 
     @PostConstruct
-    private void subcribe() {
+    private void subscribe() {
         eventPublisher.subscribe(this);
     }
 

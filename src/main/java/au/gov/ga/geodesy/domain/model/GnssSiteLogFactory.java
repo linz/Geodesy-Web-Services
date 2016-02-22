@@ -20,15 +20,27 @@ import au.gov.xml.icsm.geodesyml.v_0_2_2.SiteType;
 
 import net.opengis.gml.v_3_2_1.CodeType;
 
+/**
+ * Create {@code GnssSiteLog} instances from GeodesyML documents. One geodesyML document can contain
+ * multiple site logs.
+ */
 public class GnssSiteLogFactory {
 
     private GeodesyMLType geodesyML;
     private XLinkResolver xlinkResolver = new XLinkResolver();
 
+    /**
+     * The factory needs a reference to an entire geodesyML document, because not all site
+     * log data can be reached without following xlink references.
+     */
     public GnssSiteLogFactory(GeodesyMLType ml) {
         geodesyML = ml;
     }
 
+    /**
+     * Given a geodesyML document, attempt to look up an element by its gml:id.
+     * TODO: Move out of GnssSiteLogFactory or replace to private methods.
+     */
     public class XLinkResolver {
 
         private List<JAXBElement<?>> topLevelElements() {

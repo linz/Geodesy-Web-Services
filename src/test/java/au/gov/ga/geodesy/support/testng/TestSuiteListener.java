@@ -1,4 +1,4 @@
-package au.gov.ga.geodesy;
+package au.gov.ga.geodesy.support.testng;
 
 import java.security.Permission;
 

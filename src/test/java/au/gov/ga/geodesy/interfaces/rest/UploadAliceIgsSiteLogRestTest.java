@@ -14,7 +14,7 @@ import org.springframework.http.MediaType;
 import org.springframework.test.annotation.Rollback;
 import org.testng.annotations.Test;
 
-public class UploadIgsSiteLogRestTest extends RestTest {
+public class UploadAliceIgsSiteLogRestTest extends RestTest {
 
     @Test
     @Rollback(false)

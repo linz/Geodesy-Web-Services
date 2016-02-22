@@ -1,5 +1,14 @@
 package au.gov.ga.geodesy.interfaces.rest;
 
+import java.io.File;
+import java.nio.file.DirectoryIteratorException;
+import java.nio.file.DirectoryStream;
+import java.nio.file.FileSystems;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.testng.AbstractTransactionalTestNGSpringContextTests;
@@ -37,5 +46,22 @@ public class RestTest extends AbstractTransactionalTestNGSpringContextTests {
     @BeforeClass
     public void setUp() throws Exception {
         mvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
+    }
+
+    protected String siteLogsDir() {
+        return "src/test/resources/sitelog/";
+    }
+
+    protected List<File> siteLogs() throws Exception {
+        List<File> files = new ArrayList<>();
+        Path siteLogsDirPath = FileSystems.getDefault().getPath(siteLogsDir());
+        try (DirectoryStream<Path> paths = Files.newDirectoryStream(siteLogsDirPath, "*.xml")) {
+            for (Path p : paths) {
+                files.add(p.toFile());
+            }
+        } catch (DirectoryIteratorException e) {
+            throw e.getCause();
+        }
+        return files;
     }
 }

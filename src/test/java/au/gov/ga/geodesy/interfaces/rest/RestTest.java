@@ -52,10 +52,26 @@ public class RestTest extends AbstractTransactionalTestNGSpringContextTests {
         return "src/test/resources/sitelog/";
     }
 
+    protected String weeklyFinalSolutionsDir() {
+        return "target/test-classes/solutions/final/weekly/15647-16157";
+    }
+
     protected List<File> siteLogs() throws Exception {
+        return files(siteLogsDir(), "*.XML");
+    }
+
+    protected File siteLog(String fourCharacterId) throws Exception {
+        return new File(siteLogsDir() + fourCharacterId + ".xml");
+    }
+
+    protected List<File> weeklyFinalSolutions() throws Exception {
+        return files(weeklyFinalSolutionsDir(), "*.SNX");
+    }
+
+    private List<File> files(String directory, String pattern) throws Exception {
         List<File> files = new ArrayList<>();
-        Path siteLogsDirPath = FileSystems.getDefault().getPath(siteLogsDir());
-        try (DirectoryStream<Path> paths = Files.newDirectoryStream(siteLogsDirPath, "*.xml")) {
+        Path directoryPath = FileSystems.getDefault().getPath(directory);
+        try (DirectoryStream<Path> paths = Files.newDirectoryStream(directoryPath, pattern)) {
             for (Path p : paths) {
                 files.add(p.toFile());
             }

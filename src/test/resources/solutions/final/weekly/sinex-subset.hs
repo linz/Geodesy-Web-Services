@@ -1,6 +1,9 @@
 #!/usr/bin/env stack
 -- stack --install-ghc runghc --package turtle
 
+-- Generate a subset of sinex files to commit into the source tree as test
+-- data
+
 {-# LANGUAGE LambdaCase        #-}
 {-# LANGUAGE OverloadedStrings #-}
 

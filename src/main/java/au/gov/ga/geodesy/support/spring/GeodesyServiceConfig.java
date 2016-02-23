@@ -17,7 +17,7 @@ import au.gov.ga.geodesy.igssitelog.support.marshalling.moxy.IgsSiteLogMoxyMarsh
 @EnableSpringConfigured
 @EnableTransactionManagement(mode = AdviceMode.ASPECTJ)
 @EnableAspectJAutoProxy(proxyTargetClass = true)
-@ComponentScan(basePackages = {"au.gov.ga.geodesy.domain"})
+@ComponentScan(basePackages = {"au.gov.ga.geodesy.support.moxy","au.gov.ga.geodesy.domain.service"})
 public class GeodesyServiceConfig {
 
     @Bean

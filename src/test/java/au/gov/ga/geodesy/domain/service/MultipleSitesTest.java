@@ -24,7 +24,7 @@ import au.gov.ga.geodesy.support.spring.PersistenceJpaConfig;
 		PersistenceJpaConfig.class }, loader = AnnotationConfigContextLoader.class)
 
 @Transactional("geodesyTransactionManager")
-public class MultipleSites extends AbstractTransactionalTestNGSpringContextTests {
+public class MultipleSitesTest extends AbstractTransactionalTestNGSpringContextTests {
 
 	private static final String scenarioDirName = "src/test/resources/multiple-sites/";
 

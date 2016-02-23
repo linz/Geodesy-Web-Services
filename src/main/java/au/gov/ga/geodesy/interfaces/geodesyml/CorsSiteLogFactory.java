@@ -11,14 +11,17 @@ import javax.xml.bind.JAXBElement;
 import org.apache.commons.lang3.reflect.MethodUtils;
 import org.apache.commons.lang3.tuple.Pair;
 
+<<<<<<< a6ef53e61254efe0ed811449924e951a9419da1b:src/main/java/au/gov/ga/geodesy/interfaces/geodesyml/CorsSiteLogFactory.java
 import au.gov.ga.geodesy.domain.model.CorsSiteLog;
+=======
+import au.gov.ga.geodesy.domain.model.utils.GeodesyMLModelUtils;
+>>>>>>>  #11 Develop SopacXML to GeodesyML Converter:src/main/java/au/gov/ga/geodesy/domain/model/GnssSiteLogFactory.java
 import au.gov.xml.icsm.geodesyml.v_0_2_2.GeodesyMLType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.MonumentPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.MonumentType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.SiteLogType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.SitePropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.SiteType;
-
 import net.opengis.gml.v_3_2_1.CodeType;
 
 /**
@@ -50,26 +53,26 @@ public class CorsSiteLogFactory {
 
         private Pair<?, Method> getIdMethod(JAXBElement<?> element) {
             Object x = element.getValue();
-            return Pair.of(x, MethodUtils.getAccessibleMethod(x.getClass(), "getId", new Class[]{}));
+            return Pair.of(x, MethodUtils.getAccessibleMethod(x.getClass(), "getId", new Class[] {}));
         }
 
         @SuppressWarnings("unchecked")
         public <T> Optional<T> resolve(String targetHref, Class<T> type) {
             return topLevelElements()
-                .stream()
-                .map(element -> getIdMethod(element))
-                .filter(pair -> pair.getRight() != null)
-                .filter(pair -> {
-                    try {
-                        String candidateId = (String) pair.getRight().invoke(pair.getLeft(), new Object[]{});
-                        return targetHref.substring(1).equals(candidateId); // strip # from href
-                    } catch (IllegalAccessException | InvocationTargetException e) {
-                        e.printStackTrace();
-                        return false;
-                    }
-                 })
-                .map(pair -> (T) pair.getLeft())
-                .findFirst(); // TODO: assume uniques
+                    .stream()
+                    .map(element -> getIdMethod(element))
+                    .filter(pair -> pair.getRight() != null)
+                    .filter(pair -> {
+                        try {
+                            String candidateId = (String) pair.getRight().invoke(pair.getLeft(), new Object[] {});
+                            return targetHref.substring(1).equals(candidateId); // strip # from href
+                        } catch (IllegalAccessException | InvocationTargetException e) {
+                            e.printStackTrace();
+                            return false;
+                        }
+                    })
+                    .map(pair -> (T) pair.getLeft())
+                    .findFirst(); // TODO: assume uniques
         }
     }
 
@@ -78,10 +81,12 @@ public class CorsSiteLogFactory {
     }
 
     public Stream<CorsSiteLog> create() {
-        return getElements(SiteLogType.class)
-            .map(this::create)
-            .filter(Optional::isPresent)
-            .map(Optional::get);
+        return GeodesyMLModelUtils
+                .getElementFromJAXBElements(geodesyML.getNodeOrAbstractPositionOrPositionPairCovariance(),
+                        SiteLogType.class)
+                .map(this::create)
+                .filter(Optional::isPresent)
+                .map(Optional::get);
     }
 
     private Optional<SiteType> getSiteML(SitePropertyType sitePropertyML) {
@@ -101,18 +106,9 @@ public class CorsSiteLogFactory {
 
     private Optional<String> getFourCharacterId(MonumentType monument) {
         return monument.getName()
-            .stream()
-            .filter(code -> code.getCodeSpace().equals("urn:ga-gov-au:monument-fourCharacterID"))
-            .findFirst()
-            .map(CodeType::getValue);
-    }
-
-    @SuppressWarnings("unchecked")
-    private <T> Stream<T> getElements(Class<T> type) {
-        List<JAXBElement<?>> elements = geodesyML.getNodeOrAbstractPositionOrPositionPairCovariance();
-        return elements.stream()
-            .map(JAXBElement::getValue)
-            .filter(x -> type.isAssignableFrom(x.getClass()))
-            .map(x -> (T) x);
+                .stream()
+                .filter(code -> code.getCodeSpace().equals("urn:ga-gov-au:monument-fourCharacterID"))
+                .findFirst()
+                .map(CodeType::getValue);
     }
 }

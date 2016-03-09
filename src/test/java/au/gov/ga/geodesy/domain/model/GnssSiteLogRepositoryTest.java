@@ -16,6 +16,7 @@ import static org.testng.Assert.*;
 import org.testng.annotations.Test;
 
 import au.gov.ga.geodesy.interfaces.xml.GeodesyMLMarshaller;
+import au.gov.ga.geodesy.interfaces.xml.GnssSiteLogFactory;
 import au.gov.ga.geodesy.support.spring.GeodesySupportConfig;
 import au.gov.ga.geodesy.support.spring.PersistenceJpaConfig;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.GeodesyMLType;

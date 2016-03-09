@@ -57,7 +57,7 @@ public class RestTest extends AbstractTransactionalTestNGSpringContextTests {
     }
 
     protected List<File> siteLogs() throws Exception {
-        return files(siteLogsDir(), "*.XML");
+        return files(siteLogsDir(), "*.xml");
     }
 
     protected File siteLog(String fourCharacterId) throws Exception {

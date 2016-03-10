@@ -19,8 +19,8 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 import au.gov.ga.geodesy.domain.model.EquipmentInUse;
-import au.gov.ga.geodesy.domain.model.GnssCorsSite;
-import au.gov.ga.geodesy.domain.model.GnssCorsSiteRepository;
+import au.gov.ga.geodesy.domain.model.CorsSite;
+import au.gov.ga.geodesy.domain.model.CorsSiteRepository;
 import au.gov.ga.geodesy.domain.model.Node;
 import au.gov.ga.geodesy.domain.model.NodeRepository;
 import au.gov.ga.geodesy.domain.model.Setup;
@@ -61,7 +61,7 @@ public class NodeService implements EventSubscriber<SiteUpdated> {
     private EventRepository events;
 
     @Autowired
-    private GnssCorsSiteRepository gnssCorsSites;
+    private CorsSiteRepository gnssCorsSites;
 
     @Autowired
     private NodeRepository nodes;
@@ -85,7 +85,7 @@ public class NodeService implements EventSubscriber<SiteUpdated> {
         log.info("Notified of " + siteUpdated);
 
         String fourCharId = siteUpdated.getFourCharacterId();
-        GnssCorsSite site = gnssCorsSites.findByFourCharacterId(fourCharId);
+        CorsSite site = gnssCorsSites.findByFourCharacterId(fourCharId);
         EffectiveDates nodePeriod = null;
 
         setups.findInvalidatedBySiteId(site.getId())

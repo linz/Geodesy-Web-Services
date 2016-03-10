@@ -16,7 +16,7 @@ import static org.testng.Assert.*;
 import org.testng.annotations.Test;
 
 import au.gov.ga.geodesy.interfaces.xml.GeodesyMLMarshaller;
-import au.gov.ga.geodesy.interfaces.xml.GnssSiteLogFactory;
+import au.gov.ga.geodesy.interfaces.xml.CorsSiteLogFactory;
 import au.gov.ga.geodesy.support.spring.GeodesySupportConfig;
 import au.gov.ga.geodesy.support.spring.PersistenceJpaConfig;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.GeodesyMLType;
@@ -26,12 +26,12 @@ import au.gov.xml.icsm.geodesyml.v_0_2_2.GeodesyMLType;
         loader = AnnotationConfigContextLoader.class)
 
 @Transactional("geodesyTransactionManager")
-public class GnssSiteLogRepositoryTest extends AbstractTransactionalTestNGSpringContextTests {
+public class CorsSiteLogRepositoryTest extends AbstractTransactionalTestNGSpringContextTests {
 
-    private static final Logger log = LoggerFactory.getLogger(GnssSiteLogRepositoryTest.class);
+    private static final Logger log = LoggerFactory.getLogger(CorsSiteLogRepositoryTest.class);
 
     @Autowired
-    private GnssSiteLogRepository siteLogs;
+    private CorsSiteLogRepository siteLogs;
 
     @Autowired
     private GeodesyMLMarshaller marshaller;
@@ -43,7 +43,7 @@ public class GnssSiteLogRepositoryTest extends AbstractTransactionalTestNGSpring
     public void saveAllSiteLogs() throws Exception {
         for (File f : getSiteLogFiles()) {
             GeodesyMLType geodesyML = marshaller.unmarshal(new FileReader(f)).getValue();
-            new GnssSiteLogFactory(geodesyML).create()
+            new CorsSiteLogFactory(geodesyML).create()
                 .forEach(siteLog -> {
                     log.info("Saving " + siteLog.getFourCharacterId());
                     siteLogs.saveAndFlush(siteLog);

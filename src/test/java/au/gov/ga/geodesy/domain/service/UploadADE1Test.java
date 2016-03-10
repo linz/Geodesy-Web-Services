@@ -15,8 +15,8 @@ import org.springframework.test.context.testng.AbstractTransactionalTestNGSpring
 import org.springframework.transaction.annotation.Transactional;
 import org.testng.annotations.Test;
 
-import au.gov.ga.geodesy.domain.model.GnssCorsSite;
-import au.gov.ga.geodesy.domain.model.GnssCorsSiteRepository;
+import au.gov.ga.geodesy.domain.model.CorsSite;
+import au.gov.ga.geodesy.domain.model.CorsSiteRepository;
 import au.gov.ga.geodesy.domain.model.Node;
 import au.gov.ga.geodesy.domain.model.NodeRepository;
 import au.gov.ga.geodesy.domain.model.Setup;
@@ -43,10 +43,10 @@ public class UploadADE1Test extends AbstractTransactionalTestNGSpringContextTest
     private IgsSiteLogService siteLogService;
 
     @Autowired
-    private GnssCorsSiteService siteService;
+    private CorsSiteService siteService;
 
     @Autowired
-    private GnssCorsSiteRepository sites;
+    private CorsSiteRepository sites;
 
     @Autowired
     private SetupRepository setupRepo;
@@ -74,7 +74,7 @@ public class UploadADE1Test extends AbstractTransactionalTestNGSpringContextTest
     @Rollback(false)
     public void checkSite() throws Exception {
         IgsSiteLog siteLog = siteLogs.findByFourCharacterId(fourCharId);
-        GnssCorsSite site = sites.findByFourCharacterId(fourCharId);
+        CorsSite site = sites.findByFourCharacterId(fourCharId);
         assertNotNull(site);
 
         SiteIdentification identification = siteLog.getSiteIdentification();

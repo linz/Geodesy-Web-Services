@@ -21,10 +21,10 @@ import au.gov.ga.geodesy.interfaces.xml.MarshallingException;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.GeodesyMLType;
 
 @Entity
-@Table(name = "GNSS_SITE_LOG")
+@Table(name = "CORS_SITE_LOG")
 @Configurable(preConstruction = true)
-public class GnssSiteLog {
-    private static final Log log = LogFactory.getLog(GnssSiteLog.class);
+public class CorsSiteLog {
+    private static final Log log = LogFactory.getLog(CorsSiteLog.class);
 
 
     @Autowired
@@ -50,9 +50,9 @@ public class GnssSiteLog {
     private String geodesyML;
 
     @SuppressWarnings("unused") // used by hibernate
-    private GnssSiteLog() {}
+    private CorsSiteLog() {}
 
-    public GnssSiteLog(String id, GeodesyMLType geodesyML) {
+    public CorsSiteLog(String id, GeodesyMLType geodesyML) {
         setFourCharacterId(id);
         StringWriter writer = new StringWriter();
         try {

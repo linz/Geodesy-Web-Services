@@ -20,8 +20,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import au.gov.ga.geodesy.domain.model.GnssCorsSite;
-import au.gov.ga.geodesy.domain.model.GnssCorsSiteRepository;
+import au.gov.ga.geodesy.domain.model.CorsSite;
+import au.gov.ga.geodesy.domain.model.CorsSiteRepository;
 import au.gov.ga.geodesy.domain.model.Setup;
 import au.gov.ga.geodesy.domain.model.SetupRepository;
 
@@ -33,7 +33,7 @@ public class SetupEndpoint {
     private SetupRepository setups;
     
     @Autowired
-    private GnssCorsSiteRepository sites;
+    private CorsSiteRepository sites;
 
     @Autowired
     private PagedResourcesAssembler<Setup> assembler;
@@ -52,7 +52,7 @@ public class SetupEndpoint {
             String id, Pageable pageRequest) {
 
         Page<Setup> page = null;
-        GnssCorsSite site = sites.findByFourCharacterId(id);
+        CorsSite site = sites.findByFourCharacterId(id);
 
         if (site != null) {
             page = setups.findBySiteId(site.getId(), pageRequest);

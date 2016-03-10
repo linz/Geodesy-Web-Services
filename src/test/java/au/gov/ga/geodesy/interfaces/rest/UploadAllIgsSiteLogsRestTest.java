@@ -14,14 +14,14 @@ import org.springframework.http.MediaType;
 import org.springframework.test.annotation.Rollback;
 import org.testng.annotations.Test;
 
-import au.gov.ga.geodesy.domain.model.GnssCorsSiteRepository;
+import au.gov.ga.geodesy.domain.model.CorsSiteRepository;
 
 public class UploadAllIgsSiteLogsRestTest extends RestTest {
 
     private static final Logger log = LoggerFactory.getLogger(UploadAllIgsSiteLogsRestTest.class);
 
     @Autowired
-    private GnssCorsSiteRepository sites;
+    private CorsSiteRepository sites;
 
     @Test
     @Rollback(false)

@@ -1,4 +1,4 @@
-package au.gov.ga.geodesy.interfaces.xml;
+package au.gov.ga.geodesy.interfaces.geodesyml;
 
 @SuppressWarnings("serial")
 public class MarshallingException extends Exception {

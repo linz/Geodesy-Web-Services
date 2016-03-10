@@ -16,8 +16,8 @@ import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
 
-import au.gov.ga.geodesy.interfaces.xml.GeodesyMLMarshaller;
-import au.gov.ga.geodesy.interfaces.xml.MarshallingException;
+import au.gov.ga.geodesy.interfaces.geodesyml.GeodesyMLMarshaller;
+import au.gov.ga.geodesy.interfaces.geodesyml.MarshallingException;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.GeodesyMLType;
 
 @Entity

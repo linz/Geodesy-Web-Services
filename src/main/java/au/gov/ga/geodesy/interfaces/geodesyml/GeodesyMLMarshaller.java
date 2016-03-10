@@ -1,4 +1,4 @@
-package au.gov.ga.geodesy.interfaces.xml;
+package au.gov.ga.geodesy.interfaces.geodesyml;
 
 import au.gov.xml.icsm.geodesyml.v_0_2_2.GeodesyMLType;
 

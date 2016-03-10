@@ -18,10 +18,10 @@ import au.gov.ga.geodesy.igssitelog.interfaces.xml.IgsSiteLogXmlMarshaller;
 
 @Controller
 @RequestMapping("/siteLog")
-public class IgsSiteLogEndpoint {
+public class SiteLogEndpoint {
 
     @SuppressWarnings("unused")
-    private static final Logger log = LoggerFactory.getLogger(IgsSiteLogEndpoint.class);
+    private static final Logger log = LoggerFactory.getLogger(SiteLogEndpoint.class);
 
     @Autowired
     private IgsSiteLogService service;

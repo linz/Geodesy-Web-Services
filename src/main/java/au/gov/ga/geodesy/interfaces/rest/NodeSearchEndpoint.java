@@ -16,8 +16,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import au.gov.ga.geodesy.domain.model.GnssCorsSite;
-import au.gov.ga.geodesy.domain.model.GnssCorsSiteRepository;
+import au.gov.ga.geodesy.domain.model.CorsSite;
+import au.gov.ga.geodesy.domain.model.CorsSiteRepository;
 import au.gov.ga.geodesy.domain.model.Node;
 import au.gov.ga.geodesy.domain.model.NodeRepository;
 
@@ -29,7 +29,7 @@ public class NodeSearchEndpoint {
     private NodeRepository nodes;
 
     @Autowired
-    private GnssCorsSiteRepository sites;
+    private CorsSiteRepository sites;
 
     @Autowired
     private PagedResourcesAssembler<Node> assembler;
@@ -39,7 +39,7 @@ public class NodeSearchEndpoint {
             String id, Pageable pageRequest) {
 
         Page<Node> page = null;
-        GnssCorsSite site = sites.findByFourCharacterId(id);
+        CorsSite site = sites.findByFourCharacterId(id);
         if (site != null) {
             page = nodes.findBySiteId(site.getId(), pageRequest);
         } else {

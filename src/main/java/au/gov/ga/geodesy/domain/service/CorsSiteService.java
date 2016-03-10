@@ -20,8 +20,8 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 import au.gov.ga.geodesy.domain.model.EquipmentInUse;
-import au.gov.ga.geodesy.domain.model.GnssCorsSite;
-import au.gov.ga.geodesy.domain.model.GnssCorsSiteRepository;
+import au.gov.ga.geodesy.domain.model.CorsSite;
+import au.gov.ga.geodesy.domain.model.CorsSiteRepository;
 import au.gov.ga.geodesy.domain.model.Monument;
 import au.gov.ga.geodesy.domain.model.Setup;
 import au.gov.ga.geodesy.domain.model.SetupRepository;
@@ -43,9 +43,9 @@ import au.gov.ga.geodesy.igssitelog.domain.model.SiteIdentification;
 
 @Component
 @Transactional("geodesyTransactionManager")
-public class GnssCorsSiteService implements EventSubscriber<SiteLogReceived> {
+public class CorsSiteService implements EventSubscriber<SiteLogReceived> {
 
-    private static final Logger log = LoggerFactory.getLogger(GnssCorsSiteService.class);
+    private static final Logger log = LoggerFactory.getLogger(CorsSiteService.class);
     private static final String gnssCorsSetupName = "GNSS CORS Setup";
 
     @Autowired
@@ -58,7 +58,7 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogReceived> {
     private EquipmentConfigurationRepository configurationRepository;
 
     @Autowired
-    private GnssCorsSiteRepository gnssSites;
+    private CorsSiteRepository gnssSites;
 
     @Autowired
     private EventPublisher eventPublisher;
@@ -84,9 +84,9 @@ public class GnssCorsSiteService implements EventSubscriber<SiteLogReceived> {
         String fourCharacterId = siteLogUploaded.getFourCharacterId();
         IgsSiteLog siteLog = siteLogs.findByFourCharacterId(fourCharacterId);
 
-        GnssCorsSite gnssSite = gnssSites.findByFourCharacterId(fourCharacterId);
+        CorsSite gnssSite = gnssSites.findByFourCharacterId(fourCharacterId);
         if (gnssSite == null) {
-            gnssSite = new GnssCorsSite(fourCharacterId);
+            gnssSite = new CorsSite(fourCharacterId);
         }
         gnssSite.setName(siteLog.getSiteIdentification().getSiteName());
 

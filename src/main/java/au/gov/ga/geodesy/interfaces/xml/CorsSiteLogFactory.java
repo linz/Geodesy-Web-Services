@@ -11,7 +11,7 @@ import javax.xml.bind.JAXBElement;
 import org.apache.commons.lang3.reflect.MethodUtils;
 import org.apache.commons.lang3.tuple.Pair;
 
-import au.gov.ga.geodesy.domain.model.GnssSiteLog;
+import au.gov.ga.geodesy.domain.model.CorsSiteLog;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.GeodesyMLType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.MonumentPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.MonumentType;
@@ -25,7 +25,7 @@ import net.opengis.gml.v_3_2_1.CodeType;
  * Create {@code GnssSiteLog} instances from GeodesyML documents. One geodesyML document can contain
  * multiple site logs.
  */
-public class GnssSiteLogFactory {
+public class CorsSiteLogFactory {
 
     private GeodesyMLType geodesyML;
     private XLinkResolver xlinkResolver = new XLinkResolver();
@@ -34,7 +34,7 @@ public class GnssSiteLogFactory {
      * The factory needs a reference to an entire geodesyML document, because not all site
      * log data can be reached without following xlink references.
      */
-    public GnssSiteLogFactory(GeodesyMLType ml) {
+    public CorsSiteLogFactory(GeodesyMLType ml) {
         geodesyML = ml;
     }
 
@@ -77,7 +77,7 @@ public class GnssSiteLogFactory {
         return xlinkResolver.resolve(href, type);
     }
 
-    public Stream<GnssSiteLog> create() {
+    public Stream<CorsSiteLog> create() {
         return getElements(SiteLogType.class)
             .map(this::create)
             .filter(Optional::isPresent)
@@ -92,11 +92,11 @@ public class GnssSiteLogFactory {
         return resolve(monumentPropertyML.getHref(), MonumentType.class);
     }
 
-    private Optional<GnssSiteLog> create(SiteLogType siteLogML) {
+    private Optional<CorsSiteLog> create(SiteLogType siteLogML) {
         return getSiteML(siteLogML.getAtSite())
             .flatMap(siteML -> getMonumentML(siteML.getMonument()))
             .flatMap(this::getFourCharacterId)
-            .flatMap(id -> Optional.of(new GnssSiteLog(id, geodesyML)));
+            .flatMap(id -> Optional.of(new CorsSiteLog(id, geodesyML)));
     }
 
     private Optional<String> getFourCharacterId(MonumentType monument) {

@@ -8,8 +8,8 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "GNSS_CORS_SITE")
-public class GnssCorsSite extends Site {
+@Table(name = "CORS_SITE")
+public class CorsSite extends Site {
 
     /**
      * Business id
@@ -34,10 +34,10 @@ public class GnssCorsSite extends Site {
     private String bedrockCondition;
 
     @SuppressWarnings("unused") // hibernate needs the default constructor
-    private GnssCorsSite() {
+    private CorsSite() {
     }
 
-    public GnssCorsSite(String fourCharacterId) {
+    public CorsSite(String fourCharacterId) {
         super();
         setFourCharacterId(fourCharacterId);
     }

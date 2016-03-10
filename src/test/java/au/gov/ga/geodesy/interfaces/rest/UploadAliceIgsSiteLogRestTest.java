@@ -26,7 +26,7 @@ public class UploadAliceIgsSiteLogRestTest extends RestTest {
 
     @Test(dependsOnMethods = {"uploadALIC"})
     public void checkALIC() throws Exception {
-        mvc.perform(get("/gnssCorsSites/search/findByFourCharacterId?id=ALIC"))
+        mvc.perform(get("/corsSites/search/findByFourCharacterId?id=ALIC"))
             .andExpect(status().isOk())
             .andDo(print);
     }

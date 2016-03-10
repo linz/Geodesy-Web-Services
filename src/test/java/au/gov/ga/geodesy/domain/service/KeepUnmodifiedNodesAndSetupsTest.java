@@ -17,8 +17,8 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.support.DefaultTransactionDefinition;
 import org.testng.annotations.Test;
 
-import au.gov.ga.geodesy.domain.model.GnssCorsSite;
-import au.gov.ga.geodesy.domain.model.GnssCorsSiteRepository;
+import au.gov.ga.geodesy.domain.model.CorsSite;
+import au.gov.ga.geodesy.domain.model.CorsSiteRepository;
 import au.gov.ga.geodesy.domain.model.Node;
 import au.gov.ga.geodesy.domain.model.NodeRepository;
 import au.gov.ga.geodesy.domain.model.Setup;
@@ -41,10 +41,10 @@ public class KeepUnmodifiedNodesAndSetupsTest extends AbstractTransactionalTestN
     private static final String fourCharId = "ABRK";
 
     @Autowired
-    private GnssCorsSiteService siteService;
+    private CorsSiteService siteService;
 
     @Autowired
-    private GnssCorsSiteRepository sites;
+    private CorsSiteRepository sites;
 
     @Autowired
     private IgsSiteLogService siteLogService;

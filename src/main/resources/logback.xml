@@ -7,6 +7,9 @@
     </encoder>
   </appender>
 
+  <logger name="au.gov.ga.geodesy" level="DEBUG"/>
+  <logger name="org.dozer.MappingProcessor" level="DEBUG"/>  <!--.MappingProcessor -->
+
   <root level="info">
     <appender-ref ref="STDOUT" />
   </root>

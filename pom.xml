@@ -1,21 +1,22 @@
 <?xml version="1.0"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>au.gov.ga.geodesy</groupId>
     <artifactId>geodesy-domain-model</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <!--<scm>-->
-    <!--    <connection>scm:git:http://rhe-neo-dev-repo.dev.lan/git/r/ngrs/geodesy-domain-model.git</connection>-->
-    <!--    <developerConnection>scm:git:http://rhe-neo-dev-repo.dev.lan/git/r/ngrs/geodesyml-java-bindings.git</developerConnection>-->
-    <!--    <url>http://rhe-neo-dev-repo.dev.lan/git/summary/geodesyml-java-bindings.git</url>-->
-    <!--    <tag>0.0.1-SNAPSHOT</tag>-->
-    <!--</scm>-->
+    <!--<scm> -->
+    <!-- <connection>scm:git:http://rhe-neo-dev-repo.dev.lan/git/r/ngrs/geodesy-domain-model.git</connection> -->
+    <!-- <developerConnection>scm:git:http://rhe-neo-dev-repo.dev.lan/git/r/ngrs/geodesyml-java-bindings.git</developerConnection> -->
+    <!-- <url>http://rhe-neo-dev-repo.dev.lan/git/summary/geodesyml-java-bindings.git</url> -->
+    <!-- <tag>0.0.1-SNAPSHOT</tag> -->
+    <!--</scm> -->
     <properties>
         <java.version>1.8</java.version>
         <liquibase.version>3.3.2</liquibase.version>
         <spring.version>4.1.6.RELEASE</spring.version>
-        <!--<spring.version>3.2.8.RELEASE</spring.version>-->
+        <!--<spring.version>3.2.8.RELEASE</spring.version> -->
         <hibernate.version>4.3.1.Final</hibernate.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
@@ -31,9 +32,9 @@
             <id>Hibernate Spatial repo</id>
             <url>http://www.hibernatespatial.org/repository</url>
         </repository>
-       <repository>
-          <id>central</id>
-          <url>https://repo1.maven.org/maven2</url>
+        <repository>
+            <id>central</id>
+            <url>https://repo1.maven.org/maven2</url>
         </repository>
         <repository>
             <id>jboss</id>
@@ -41,15 +42,8 @@
             <url>https://repository.jboss.org/nexus/content/groups/public-jboss/</url>
         </repository>
     </repositories>
-<!--
-    <repositories>
-        <repository>
-            <id>ga-maven-int</id>
-            <name>Geoscience Internal Maven Repo</name>
-            <url>http://maven-int.ga.gov.au/nexus/content/groups/public/</url>
-        </repository>
-    </repositories>
--->
+    <!-- <repositories> <repository> <id>ga-maven-int</id> <name>Geoscience Internal Maven Repo</name> <url>http://maven-int.ga.gov.au/nexus/content/groups/public/</url> 
+        </repository> </repositories> -->
     <dependencies>
         <dependency>
             <groupId>au.gov.ga.geodesy</groupId>
@@ -187,6 +181,16 @@
             <groupId>au.gov.ga.geodesy</groupId>
             <artifactId>geodesyml-bindings</artifactId>
             <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>net.sf.dozer</groupId>
+            <artifactId>dozer</artifactId>
+            <version>5.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-all</artifactId>
+            <version>1.3</version>
         </dependency>
     </dependencies>
     <build>
@@ -354,27 +358,27 @@
                             </systemPropertyVariables>
                         </configuration>
                     </plugin>
-                    <!--<plugin>-->
-                    <!--    <groupId>org.liquibase</groupId>-->
-                    <!--    <artifactId>liquibase-maven-plugin</artifactId>-->
-                    <!--    <version>${liquibase.version}</version>-->
-                    <!--    <executions>-->
-                    <!--        <execution>-->
-                    <!--            <id>update-db</id>-->
-                    <!--            <phase>process-test-resources</phase>-->
-                    <!--            <goals>-->
-                    <!--                <goal>update</goal>-->
-                    <!--            </goals>-->
-                    <!--        </execution>-->
-                    <!--        <execution>-->
-                    <!--            <id>diff-db</id>-->
-                    <!--            <phase>process-test-resources</phase>-->
-                    <!--            <goals>-->
-                    <!--                <goal>diff</goal>-->
-                    <!--            </goals>-->
-                    <!--        </execution>-->
-                    <!--    </executions>-->
-                    <!--</plugin>-->
+                    <!--<plugin> -->
+                    <!-- <groupId>org.liquibase</groupId> -->
+                    <!-- <artifactId>liquibase-maven-plugin</artifactId> -->
+                    <!-- <version>${liquibase.version}</version> -->
+                    <!-- <executions> -->
+                    <!-- <execution> -->
+                    <!-- <id>update-db</id> -->
+                    <!-- <phase>process-test-resources</phase> -->
+                    <!-- <goals> -->
+                    <!-- <goal>update</goal> -->
+                    <!-- </goals> -->
+                    <!-- </execution> -->
+                    <!-- <execution> -->
+                    <!-- <id>diff-db</id> -->
+                    <!-- <phase>process-test-resources</phase> -->
+                    <!-- <goals> -->
+                    <!-- <goal>diff</goal> -->
+                    <!-- </goals> -->
+                    <!-- </execution> -->
+                    <!-- </executions> -->
+                    <!--</plugin> -->
                 </plugins>
             </build>
         </profile>

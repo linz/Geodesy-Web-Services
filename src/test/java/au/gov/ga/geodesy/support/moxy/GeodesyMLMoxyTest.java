@@ -19,13 +19,15 @@ public class GeodesyMLMoxyTest {
 
     @Test
     public void unmarshal() throws Exception {
+        String inputDoc = "sitelog/geodesyml/MOBS.xml";
+
         Reader input = new InputStreamReader(Thread.currentThread()
-            .getContextClassLoader()
-            .getResourceAsStream("sitelog/geodesyml/MOBS.xml"));
+                .getContextClassLoader()
+                .getResourceAsStream(inputDoc));
 
         GeodesyMLType geodesyML = marshaller.unmarshal(input).getValue();
-
-        Assert.assertEquals(24, geodesyML.getNodeOrAbstractPositionOrPositionPairCovariance().size());
+        
+        Assert.assertEquals(23, geodesyML.getNodeOrAbstractPositionOrPositionPairCovariance().size());
         geodesyML.getNodeOrAbstractPositionOrPositionPairCovariance().forEach(x -> {
             System.out.println(x.getName());
         });

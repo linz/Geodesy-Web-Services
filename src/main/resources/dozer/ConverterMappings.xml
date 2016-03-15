@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings xmlns="http://dozer.sourceforge.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://dozer.sourceforge.net
+          http://dozer.sourceforge.net/schema/beanmapping.xsd">
+    <configuration>
+        <custom-converters> <!-- these are always bi-directional -->
+            <converter type="au.gov.ga.geodesy.domain.converter.StringListConverter">
+                <class-a>java.util.List</class-a>
+                <class-b>java.lang.String</class-b>
+            </converter>
+            <converter type="au.gov.ga.geodesy.domain.converter.TimePostitionTypeDateConverter">
+                <class-a>java.util.Date</class-a>
+                <class-b>net.opengis.gml.v_3_2_1.TimePositionType</class-b>
+            </converter>
+            <converter type="au.gov.ga.geodesy.domain.converter.TimePostitionTypeStringConverter">
+                <class-a>java.lang.String</class-a>
+                <class-b>net.opengis.gml.v_3_2_1.TimePositionType</class-b>
+            </converter>
+            <converter type="au.gov.ga.geodesy.domain.converter.CodeListValueTypeConverter">
+                <!-- This needs to also handle these extenders of CodeListValueType (either directly or indirectly via further 
+                    inheritance) -->
+                <!-- and I do this inside the Converter -->
+                <!-- au.gov.xml.icsm.geodesyml.v_0_2_2.IgsReceiverModelCodeType -->
+                <!-- au.gov.xml.icsm.geodesyml.v_0_2_2.IgsAntennaModelCodeType -->
+                <class-a>net.opengis.iso19139.gco.v_20070417.CodeListValueType</class-a>
+                <class-b>java.lang.String</class-b>
+            </converter>
+            <converter type="au.gov.ga.geodesy.domain.converter.CodeTypeConverter">
+                <!-- This needs to also handle these extenders of CodeType (either directly or indirectly via further inheritance) -->
+                <!-- and I do this inside the Converter -->
+                <!-- net.opengis.gml.v_3_2_1.CodeWithAuthorityType -->
+                <!-- au.gov.xml.icsm.geodesyml.v_0_2_2.IgsRadomeModelCodeType -->
+                <class-a>net.opengis.gml.v_3_2_1.CodeType</class-a>
+                <class-b>java.lang.String</class-b>
+            </converter>
+            <converter type="au.gov.ga.geodesy.domain.converter.TimePrimitivePropertyTypeEffectiveDatesConverter">
+                <class-a>au.gov.ga.geodesy.igssitelog.domain.model.EffectiveDates</class-a>
+                <class-b>net.opengis.gml.v_3_2_1.TimePrimitivePropertyType</class-b>
+            </converter>
+            <converter type="au.gov.ga.geodesy.domain.converter.TimePrimitivePropertyTypeStringConverter">
+                <class-a>java.lang.String</class-a>
+                <class-b>net.opengis.gml.v_3_2_1.TimePrimitivePropertyType</class-b>
+            </converter>
+        </custom-converters>
+    </configuration>
+</mappings>

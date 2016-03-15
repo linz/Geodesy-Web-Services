@@ -11,11 +11,8 @@ import javax.xml.bind.JAXBElement;
 import org.apache.commons.lang3.reflect.MethodUtils;
 import org.apache.commons.lang3.tuple.Pair;
 
-<<<<<<< a6ef53e61254efe0ed811449924e951a9419da1b:src/main/java/au/gov/ga/geodesy/interfaces/geodesyml/CorsSiteLogFactory.java
 import au.gov.ga.geodesy.domain.model.CorsSiteLog;
-=======
 import au.gov.ga.geodesy.domain.model.utils.GeodesyMLModelUtils;
->>>>>>>  #11 Develop SopacXML to GeodesyML Converter:src/main/java/au/gov/ga/geodesy/domain/model/GnssSiteLogFactory.java
 import au.gov.xml.icsm.geodesyml.v_0_2_2.GeodesyMLType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.MonumentPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.MonumentType;

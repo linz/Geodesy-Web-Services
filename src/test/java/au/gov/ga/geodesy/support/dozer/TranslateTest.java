@@ -19,11 +19,11 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import au.gov.ga.geodesy.domain.model.utils.GeodesyMLModelUtils;
 import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLog;
 import au.gov.ga.geodesy.igssitelog.interfaces.xml.IgsSiteLogXmlMarshaller;
 import au.gov.ga.geodesy.igssitelog.support.marshalling.moxy.IgsSiteLogMoxyMarshaller;
 import au.gov.ga.geodesy.interfaces.geodesyml.GeodesyMLMarshaller;
+import au.gov.ga.geodesy.interfaces.geodesyml.GeodesyMLModelUtils;
 import au.gov.ga.geodesy.interfaces.geodesyml.MarshallingException;
 import au.gov.ga.geodesy.support.dozer.GeodesyMLSiteLogDozerTranslator;
 import au.gov.ga.geodesy.support.dozer.TimePrimitivePropertyTypeUtils;

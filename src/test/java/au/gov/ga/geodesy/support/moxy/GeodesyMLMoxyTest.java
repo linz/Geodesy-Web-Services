@@ -6,6 +6,7 @@ import java.io.Reader;
 import org.junit.Assert;
 import org.testng.annotations.Test;
 
+import au.gov.ga.geodesy.support.marshalling.moxy.GeodesyMLMoxy;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.GeodesyMLType;
 
 public class GeodesyMLMoxyTest {

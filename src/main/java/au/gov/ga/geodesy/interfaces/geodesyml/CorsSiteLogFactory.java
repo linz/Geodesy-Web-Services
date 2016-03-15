@@ -12,7 +12,6 @@ import org.apache.commons.lang3.reflect.MethodUtils;
 import org.apache.commons.lang3.tuple.Pair;
 
 import au.gov.ga.geodesy.domain.model.CorsSiteLog;
-import au.gov.ga.geodesy.domain.model.utils.GeodesyMLModelUtils;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.GeodesyMLType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.MonumentPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.MonumentType;
@@ -78,7 +77,7 @@ public class CorsSiteLogFactory {
     }
 
     public Stream<CorsSiteLog> create() {
-        return GeodesyMLModelUtils
+        return GeodesyMLUtils
                 .getElementFromJAXBElements(geodesyML.getNodeOrAbstractPositionOrPositionPairCovariance(),
                         SiteLogType.class)
                 .map(this::create)

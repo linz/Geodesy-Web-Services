@@ -7,6 +7,7 @@ import javax.xml.bind.JAXBElement;
 import org.junit.Assert;
 import org.junit.Test;
 
+import au.gov.ga.geodesy.interfaces.geodesyml.GeodesyMLUtils;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.SiteLogType;
 
 public class GeodesyMLModelUtilsTest {
@@ -15,7 +16,7 @@ public class GeodesyMLModelUtilsTest {
     public void testBuildJAXBElementEquivalent() throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
         SiteLogType siteLogType = new SiteLogType();
         siteLogType.setId("999");
-        JAXBElement<SiteLogType> jaxBEquiv = GeodesyMLModelUtils.buildJAXBElementEquivalent(siteLogType);
+        JAXBElement<SiteLogType> jaxBEquiv = GeodesyMLUtils.buildJAXBElementEquivalent(siteLogType);
         
         Assert.assertNotNull(jaxBEquiv);
         Assert.assertEquals("999", jaxBEquiv.getValue().getId());

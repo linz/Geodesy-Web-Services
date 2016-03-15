@@ -19,11 +19,11 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import au.gov.ga.geodesy.domain.model.utils.GeodesyMLModelUtils;
 import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLog;
 import au.gov.ga.geodesy.igssitelog.interfaces.xml.IgsSiteLogXmlMarshaller;
 import au.gov.ga.geodesy.igssitelog.support.marshalling.moxy.IgsSiteLogMoxyMarshaller;
 import au.gov.ga.geodesy.interfaces.geodesyml.GeodesyMLMarshaller;
+import au.gov.ga.geodesy.interfaces.geodesyml.GeodesyMLUtils;
 import au.gov.ga.geodesy.interfaces.geodesyml.MarshallingException;
 import au.gov.ga.geodesy.support.dozer.GeodesyMLSiteLogDozerTranslator;
 import au.gov.ga.geodesy.support.dozer.TimePrimitivePropertyTypeUtils;
@@ -120,7 +120,7 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
         Assert.assertEquals(geodesyML.getName().get(0).getValue(), "GeodesyML Rocks Like Axel Foley!");
         Assert.assertTrue(geodesyML.getNodeOrAbstractPositionOrPositionPairCovariance().get(0) instanceof JAXBElement);
 
-        Stream<SiteLogType> siteLogTypeStream = GeodesyMLModelUtils.getElementFromJAXBElements(
+        Stream<SiteLogType> siteLogTypeStream = GeodesyMLUtils.getElementFromJAXBElements(
                 geodesyML.getNodeOrAbstractPositionOrPositionPairCovariance(), SiteLogType.class);
 
         SiteLogType siteLogType = siteLogTypeStream.collect(Collectors.toList()).get(0);

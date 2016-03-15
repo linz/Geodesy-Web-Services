@@ -1,4 +1,4 @@
-package au.gov.ga.geodesy.domain.model.utils;
+package au.gov.ga.geodesy.interfaces.geodesyml;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -17,8 +17,8 @@ import org.slf4j.LoggerFactory;
 import au.gov.ga.geodesy.exception.GeodesyRuntimeException;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.ObjectFactory;
 
-public class GeodesyMLModelUtils {
-    private static Logger logger = LoggerFactory.getLogger(GeodesyMLModelUtils.class);
+public class GeodesyMLUtils {
+    private static Logger logger = LoggerFactory.getLogger(GeodesyMLUtils.class);
 
     @SuppressWarnings("unchecked")
     /**

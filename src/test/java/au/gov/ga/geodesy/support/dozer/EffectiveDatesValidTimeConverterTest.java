@@ -1,4 +1,4 @@
-package au.gov.ga.geodesy.domain.converter;
+package au.gov.ga.geodesy.support.dozer;
 
 import java.text.ParseException;
 import java.util.ArrayList;
@@ -14,6 +14,8 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import au.gov.ga.geodesy.igssitelog.domain.model.EffectiveDates;
+import au.gov.ga.geodesy.support.dozer.TimePrimitivePropertyTypeEffectiveDatesConverter;
+import au.gov.ga.geodesy.support.dozer.TimePrimitivePropertyTypeUtils;
 import au.gov.ga.geodesy.support.utils.GMLDateUtils;
 import net.opengis.gml.v_3_2_1.TimePeriodType;
 import net.opengis.gml.v_3_2_1.TimePositionType;

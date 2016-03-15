@@ -1,19 +1,20 @@
-package au.gov.ga.geodesy.domain.service;
+package au.gov.ga.geodesy.support.dozer;
 
 import java.lang.reflect.InvocationTargetException;
 
 import org.junit.Assert;
 import org.junit.Test;
 
+import au.gov.ga.geodesy.support.dozer.GeodesyMLSiteLogDozerTranslator;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.FrequencyStandardPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.FrequencyStandardType;
 
 public class GeodesyMLSiteLogTranslatorTest {
 
-    GeodesyMLSiteLogTranslator geodesyMLSiteLogTranslator = new GeodesyMLSiteLogTranslator();
+    GeodesyMLSiteLogDozerTranslator geodesyMLSiteLogTranslator = new GeodesyMLSiteLogDozerTranslator();
     
     @Test
-    public void testReflectionThing() throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public void testTranslateBasedOnChildType() throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
         FrequencyStandardPropertyType frequencyStandardPropertyType = new FrequencyStandardPropertyType();
         FrequencyStandardType frequencyStandardType = new FrequencyStandardType();
         frequencyStandardType.setId("99");

@@ -1,4 +1,4 @@
-package au.gov.ga.geodesy.domain.service;
+package au.gov.ga.geodesy.support.dozer;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -24,6 +24,7 @@ import au.gov.ga.geodesy.igssitelog.domain.model.SiteLocation;
 import au.gov.ga.geodesy.igssitelog.domain.model.SurveyedLocalTie;
 import au.gov.ga.geodesy.igssitelog.domain.model.TemperatureSensorLogItem;
 import au.gov.ga.geodesy.igssitelog.domain.model.WaterVaporSensorLogItem;
+import au.gov.ga.geodesy.interfaces.geodesyml.GeodesyMLSiteLogTranslator;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.FrequencyStandardPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.FrequencyStandardType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.GeodesyMLType;
@@ -50,7 +51,7 @@ import au.gov.xml.icsm.geodesyml.v_0_2_2.WaterVaporSensorType;
 import net.opengis.gml.v_3_2_1.CodeType;
 
 @Service
-public class GeodesyMLSiteLogTranslator {
+public class GeodesyMLSiteLogDozerTranslator implements GeodesyMLSiteLogTranslator{
 
     public GeodesyMLType dozerTranslate(IgsSiteLog sopacSiteLog) {
         try {

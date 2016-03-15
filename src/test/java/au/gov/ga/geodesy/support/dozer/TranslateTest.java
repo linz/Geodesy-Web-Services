@@ -1,4 +1,4 @@
-package au.gov.ga.geodesy.domain.translate;
+package au.gov.ga.geodesy.support.dozer;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -19,14 +19,14 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import au.gov.ga.geodesy.domain.converter.TimePrimitivePropertyTypeUtils;
 import au.gov.ga.geodesy.domain.model.utils.GeodesyMLModelUtils;
-import au.gov.ga.geodesy.domain.service.GeodesyMLSiteLogTranslator;
 import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLog;
 import au.gov.ga.geodesy.igssitelog.interfaces.xml.IgsSiteLogXmlMarshaller;
 import au.gov.ga.geodesy.igssitelog.support.marshalling.moxy.IgsSiteLogMoxyMarshaller;
 import au.gov.ga.geodesy.interfaces.geodesyml.GeodesyMLMarshaller;
 import au.gov.ga.geodesy.interfaces.geodesyml.MarshallingException;
+import au.gov.ga.geodesy.support.dozer.GeodesyMLSiteLogDozerTranslator;
+import au.gov.ga.geodesy.support.dozer.TimePrimitivePropertyTypeUtils;
 import au.gov.ga.geodesy.support.marshalling.moxy.GeodesyMLMoxy;
 import au.gov.ga.geodesy.support.utils.GMLDateUtils;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.FrequencyStandardPropertyType;
@@ -59,7 +59,7 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
     private IgsSiteLogXmlMarshaller marshaller;
 
     // @Autowired
-    private GeodesyMLSiteLogTranslator geodesyMLSiteLogTranslator;
+    private GeodesyMLSiteLogDozerTranslator geodesyMLSiteLogTranslator;
 
     // @Autowired
     private GeodesyMLMarshaller geodesyMLMarshaller;
@@ -68,7 +68,7 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
     public void startup()
             throws au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, MarshallingException {
         marshaller = new IgsSiteLogMoxyMarshaller();
-        geodesyMLSiteLogTranslator = new GeodesyMLSiteLogTranslator();
+        geodesyMLSiteLogTranslator = new GeodesyMLSiteLogDozerTranslator();
         geodesyMLMarshaller = new GeodesyMLMoxy();
     }
 

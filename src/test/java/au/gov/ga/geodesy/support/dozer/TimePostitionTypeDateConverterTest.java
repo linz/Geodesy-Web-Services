@@ -1,4 +1,4 @@
-package au.gov.ga.geodesy.domain.converter;
+package au.gov.ga.geodesy.support.dozer;
 
 import java.text.ParseException;
 import java.util.Date;
@@ -6,6 +6,7 @@ import java.util.Date;
 import org.junit.Assert;
 import org.junit.Test;
 
+import au.gov.ga.geodesy.support.dozer.TimePostitionTypeDateConverter;
 import au.gov.ga.geodesy.support.utils.GMLDateUtils;
 import net.opengis.gml.v_3_2_1.TimePositionType;
 

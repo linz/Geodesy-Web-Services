@@ -77,7 +77,7 @@ public class CorsSiteLogFactory {
     }
 
     public Stream<CorsSiteLog> create() {
-        return GeodesyMLModelUtils
+        return GeodesyMLUtils
                 .getElementFromJAXBElements(geodesyML.getNodeOrAbstractPositionOrPositionPairCovariance(),
                         SiteLogType.class)
                 .map(this::create)

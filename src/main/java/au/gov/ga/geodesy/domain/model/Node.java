@@ -9,7 +9,7 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Version;
 
-import au.gov.ga.geodesy.igssitelog.domain.model.EffectiveDates;
+import au.gov.ga.geodesy.domain.model.sitelog.EffectiveDates;
 
 @Entity
 @Table(name = "NODE")

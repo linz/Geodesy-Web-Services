@@ -23,10 +23,12 @@ import org.testng.annotations.BeforeClass;
 import au.gov.ga.geodesy.support.spring.GeodesyRepositoryRestMvcConfig;
 import au.gov.ga.geodesy.support.spring.GeodesyRestMvcConfig;
 import au.gov.ga.geodesy.support.spring.GeodesyServiceTestConfig;
+import au.gov.ga.geodesy.support.spring.GeodesySupportConfig;
 import au.gov.ga.geodesy.support.spring.PersistenceJpaConfig;
 
 @ContextConfiguration(
         classes = {
+            GeodesySupportConfig.class,
             GeodesyServiceTestConfig.class,
             GeodesyRepositoryRestMvcConfig.class,
             GeodesyRestMvcConfig.class,

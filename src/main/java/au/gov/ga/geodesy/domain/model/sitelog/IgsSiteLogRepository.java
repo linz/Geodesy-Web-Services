@@ -1,4 +1,4 @@
-package au.gov.ga.geodesy.igssitelog.domain.model;
+package au.gov.ga.geodesy.domain.model.sitelog;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package au.gov.ga.geodesy.igssitelog.domain.model;
+package au.gov.ga.geodesy.domain.model.sitelog;
 
 import org.springframework.beans.factory.annotation.Autowired;
 

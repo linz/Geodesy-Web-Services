@@ -18,14 +18,15 @@ import org.testng.annotations.Test;
 import au.gov.ga.geodesy.domain.model.MockEventPublisher;
 import au.gov.ga.geodesy.domain.model.event.Event;
 import au.gov.ga.geodesy.domain.model.event.SiteLogReceived;
-import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLog;
-import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLogRepository;
-import au.gov.ga.geodesy.igssitelog.interfaces.xml.IgsSiteLogXmlMarshaller;
+import au.gov.ga.geodesy.domain.model.sitelog.IgsSiteLogRepository;
+import au.gov.ga.geodesy.interfaces.SiteLogSource;
+import au.gov.ga.geodesy.interfaces.sopac.SiteLogSopacSource;
 import au.gov.ga.geodesy.support.spring.GeodesyServiceUnitTestConfig;
+import au.gov.ga.geodesy.support.spring.GeodesySupportConfig;
 import au.gov.ga.geodesy.support.spring.PersistenceJpaConfig;
 
 @ContextConfiguration(
-        classes = {GeodesyServiceUnitTestConfig.class, PersistenceJpaConfig.class},
+        classes = {GeodesySupportConfig.class, GeodesyServiceUnitTestConfig.class, PersistenceJpaConfig.class},
         loader = AnnotationConfigContextLoader.class)
 
 @Transactional("geodesyTransactionManager")
@@ -39,9 +40,6 @@ public class UploadAllSiteLogsTest extends AbstractTransactionalTestNGSpringCont
 
     @Autowired
     private IgsSiteLogRepository siteLogs;
-
-    @Autowired
-    private IgsSiteLogXmlMarshaller marshaller;
 
     @Autowired
     public MockEventPublisher eventPublisher;
@@ -60,8 +58,8 @@ public class UploadAllSiteLogsTest extends AbstractTransactionalTestNGSpringCont
     @Rollback(false)
     public void upload() throws Exception {
         for (File f : siteLogFiles) {
-            IgsSiteLog siteLog = marshaller.unmarshal(new FileReader(f));
-            service.upload(siteLog);
+            SiteLogSource input = new SiteLogSopacSource(new FileReader(f));
+            service.upload(input.getSiteLog());
         }
     }
 

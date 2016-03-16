@@ -4,7 +4,6 @@ import static org.testng.Assert.assertEquals;
 
 import java.io.File;
 import java.io.FileReader;
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.annotation.Rollback;
@@ -17,20 +16,19 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.support.DefaultTransactionDefinition;
 import org.testng.annotations.Test;
 
-import au.gov.ga.geodesy.domain.model.CorsSite;
 import au.gov.ga.geodesy.domain.model.CorsSiteRepository;
-import au.gov.ga.geodesy.domain.model.Node;
 import au.gov.ga.geodesy.domain.model.NodeRepository;
-import au.gov.ga.geodesy.domain.model.Setup;
 import au.gov.ga.geodesy.domain.model.SetupRepository;
 import au.gov.ga.geodesy.domain.model.equipment.EquipmentRepository;
-import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLogRepository;
-import au.gov.ga.geodesy.igssitelog.interfaces.xml.IgsSiteLogXmlMarshaller;
+import au.gov.ga.geodesy.domain.model.sitelog.IgsSiteLogRepository;
+import au.gov.ga.geodesy.interfaces.SiteLogSource;
+import au.gov.ga.geodesy.interfaces.sopac.SiteLogSopacSource;
 import au.gov.ga.geodesy.support.spring.GeodesyServiceTestConfig;
+import au.gov.ga.geodesy.support.spring.GeodesySupportConfig;
 import au.gov.ga.geodesy.support.spring.PersistenceJpaConfig;
 
 @ContextConfiguration(
-        classes = {GeodesyServiceTestConfig.class, PersistenceJpaConfig.class},
+        classes = {GeodesySupportConfig.class, GeodesyServiceTestConfig.class, PersistenceJpaConfig.class},
         loader = AnnotationConfigContextLoader.class)
 
 @Transactional("geodesyTransactionManager")
@@ -62,9 +60,6 @@ public class KeepUnmodifiedNodesAndSetupsTest extends AbstractTransactionalTestN
     private IgsSiteLogRepository siteLogs;
 
     @Autowired
-    private IgsSiteLogXmlMarshaller marshaller;
-
-    @Autowired
     private PlatformTransactionManager txnManager;
 
     private abstract class InTransaction {
@@ -82,8 +77,8 @@ public class KeepUnmodifiedNodesAndSetupsTest extends AbstractTransactionalTestN
 
     private InTransaction uploadABRK = new InTransaction() {
         public void f() throws Exception {
-            File sitelog = new File(siteLogsDir + fourCharId + ".xml");
-            siteLogService.upload(marshaller.unmarshal(new FileReader(sitelog)));
+            SiteLogSource input = new SiteLogSopacSource(new FileReader(new File(siteLogsDir + fourCharId + ".xml")));
+            siteLogService.upload(input.getSiteLog());
         }
     };
     private InTransaction[] scenario = {

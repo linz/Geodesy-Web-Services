@@ -13,25 +13,22 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import au.gov.ga.geodesy.domain.service.IgsSiteLogService;
-import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLog;
-import au.gov.ga.geodesy.igssitelog.interfaces.xml.IgsSiteLogXmlMarshaller;
+import au.gov.ga.geodesy.interfaces.SiteLogSource;
+import au.gov.ga.geodesy.interfaces.sopac.SiteLogSopacSource;
 
 @Controller
 @RequestMapping("/siteLog")
-public class IgsSiteLogEndpoint {
+public class SiteLogEndpoint {
 
     @SuppressWarnings("unused")
-    private static final Logger log = LoggerFactory.getLogger(IgsSiteLogEndpoint.class);
+    private static final Logger log = LoggerFactory.getLogger(SiteLogEndpoint.class);
 
     @Autowired
     private IgsSiteLogService service;
 
-    @Autowired
-    private IgsSiteLogXmlMarshaller siteLogMarshaller;
-
     @RequestMapping(value = "/upload", method = RequestMethod.POST)
     public void upload(HttpServletRequest req, HttpServletResponse rsp) throws Exception {
-        IgsSiteLog siteLog = siteLogMarshaller.unmarshal(new InputStreamReader(req.getInputStream()));
-        service.upload(siteLog);
+        SiteLogSource input = new SiteLogSopacSource(new InputStreamReader(req.getInputStream()));
+        service.upload(input.getSiteLog());
     }
 }

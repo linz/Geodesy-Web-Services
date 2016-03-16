@@ -8,8 +8,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import au.gov.ga.geodesy.domain.model.event.EventPublisher;
 import au.gov.ga.geodesy.domain.model.event.SiteLogReceived;
-import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLog;
-import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLogRepository;
+import au.gov.ga.geodesy.domain.model.sitelog.IgsSiteLogRepository;
+import au.gov.ga.geodesy.domain.model.sitelog.IgsSiteLog;
 
 @Component
 @Transactional("geodesyTransactionManager")

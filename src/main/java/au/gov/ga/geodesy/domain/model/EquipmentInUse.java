@@ -10,7 +10,7 @@ import javax.persistence.Table;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 
-import au.gov.ga.geodesy.igssitelog.domain.model.EffectiveDates;
+import au.gov.ga.geodesy.domain.model.sitelog.EffectiveDates;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 

@@ -33,7 +33,7 @@ import liquibase.integration.spring.SpringLiquibase;
 @EnableTransactionManagement
 
 @EnableJpaRepositories(
-    value = {"au.gov.ga.geodesy.domain.model", "au.gov.ga.geodesy.igssitelog.domain.model"},
+    value = {"au.gov.ga.geodesy.domain.model"},
     entityManagerFactoryRef = "geodesyEntityManagerFactory",
     transactionManagerRef = "geodesyTransactionManager"
 )
@@ -66,7 +66,7 @@ public class PersistenceJpaConfig {
     /* @DependsOn("liquibase") */
     public LocalContainerEntityManagerFactoryBean geodesyEntityManagerFactory() {
         LocalContainerEntityManagerFactoryBean springFactoryBean = new LocalContainerEntityManagerFactoryBean();
-        springFactoryBean.setPackagesToScan(new String[]{"au.gov.ga.geodesy.domain.model", "au.gov.ga.geodesy.igssitelog.domain.model"});
+        springFactoryBean.setPackagesToScan(new String[]{"au.gov.ga.geodesy.domain.model"});
         springFactoryBean.setDataSource(dataSource());
         springFactoryBean.setPersistenceUnitName("geodesy");
         JpaVendorAdapter vendor = new HibernateJpaVendorAdapter();

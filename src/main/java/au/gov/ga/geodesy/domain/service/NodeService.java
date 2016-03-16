@@ -35,7 +35,7 @@ import au.gov.ga.geodesy.domain.model.event.EventPublisher;
 import au.gov.ga.geodesy.domain.model.event.EventRepository;
 import au.gov.ga.geodesy.domain.model.event.EventSubscriber;
 import au.gov.ga.geodesy.domain.model.event.SiteUpdated;
-import au.gov.ga.geodesy.igssitelog.domain.model.EffectiveDates;
+import au.gov.ga.geodesy.domain.model.sitelog.EffectiveDates;
 
 import com.google.common.base.Function;
 import com.google.common.base.Predicate;

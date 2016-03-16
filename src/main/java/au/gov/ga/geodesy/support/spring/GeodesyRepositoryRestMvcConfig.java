@@ -18,7 +18,7 @@ import au.gov.ga.geodesy.domain.model.equipment.Equipment;
 import au.gov.ga.geodesy.domain.model.equipment.EquipmentConfiguration;
 import au.gov.ga.geodesy.domain.model.equipment.EquipmentConfigurationRepository;
 import au.gov.ga.geodesy.domain.model.equipment.EquipmentRepository;
-import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLog;
+import au.gov.ga.geodesy.domain.model.sitelog.IgsSiteLog;
 
 import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.core.JsonGenerator;

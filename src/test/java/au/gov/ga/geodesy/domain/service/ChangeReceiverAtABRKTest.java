@@ -13,15 +13,16 @@ import org.springframework.transaction.annotation.Transactional;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLog;
-import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLogRepository;
-import au.gov.ga.geodesy.igssitelog.interfaces.xml.IgsSiteLogXmlMarshaller;
+import au.gov.ga.geodesy.domain.model.sitelog.IgsSiteLogRepository;
 import au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException;
+import au.gov.ga.geodesy.interfaces.SiteLogSource;
+import au.gov.ga.geodesy.interfaces.sopac.SiteLogSopacSource;
 import au.gov.ga.geodesy.support.spring.GeodesyServiceTestConfig;
+import au.gov.ga.geodesy.support.spring.GeodesySupportConfig;
 import au.gov.ga.geodesy.support.spring.PersistenceJpaConfig;
 
 @ContextConfiguration(
-        classes = {GeodesyServiceTestConfig.class, PersistenceJpaConfig.class},
+        classes = {GeodesySupportConfig.class, GeodesyServiceTestConfig.class, PersistenceJpaConfig.class},
         loader = AnnotationConfigContextLoader.class)
 
 @Transactional("geodesyTransactionManager")
@@ -33,9 +34,6 @@ public class ChangeReceiverAtABRKTest extends AbstractTransactionalTestNGSpringC
     private IgsSiteLogService siteLogService;
 
     @Autowired
-    private IgsSiteLogXmlMarshaller marshaller;
-
-    @Autowired
     private IgsSiteLogRepository siteLogs;
 
     private void executeSiteLogScenario(String scenarioDirName) throws FileNotFoundException, MarshallingException {
@@ -43,8 +41,8 @@ public class ChangeReceiverAtABRKTest extends AbstractTransactionalTestNGSpringC
             return f.endsWith(".xml");
         });
         for (File siteLogFile : siteLogFiles) {
-            IgsSiteLog siteLog = marshaller.unmarshal(new FileReader(siteLogFile));
-            siteLogService.upload(siteLog);
+            SiteLogSource input = new SiteLogSopacSource(new FileReader(siteLogFile));
+            siteLogService.upload(input.getSiteLog());
         }
     }
 

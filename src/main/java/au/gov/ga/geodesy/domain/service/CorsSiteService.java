@@ -35,11 +35,11 @@ import au.gov.ga.geodesy.domain.model.event.EventPublisher;
 import au.gov.ga.geodesy.domain.model.event.EventSubscriber;
 import au.gov.ga.geodesy.domain.model.event.SiteLogReceived;
 import au.gov.ga.geodesy.domain.model.event.SiteUpdated;
-import au.gov.ga.geodesy.igssitelog.domain.model.EffectiveDates;
-import au.gov.ga.geodesy.igssitelog.domain.model.EquipmentLogItem;
-import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLog;
-import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLogRepository;
-import au.gov.ga.geodesy.igssitelog.domain.model.SiteIdentification;
+import au.gov.ga.geodesy.domain.model.sitelog.IgsSiteLogRepository;
+import au.gov.ga.geodesy.domain.model.sitelog.EffectiveDates;
+import au.gov.ga.geodesy.domain.model.sitelog.EquipmentLogItem;
+import au.gov.ga.geodesy.domain.model.sitelog.IgsSiteLog;
+import au.gov.ga.geodesy.domain.model.sitelog.SiteIdentification;
 
 @Component
 @Transactional("geodesyTransactionManager")

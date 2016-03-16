@@ -20,7 +20,7 @@ import javax.validation.constraints.NotNull;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 
-import au.gov.ga.geodesy.igssitelog.domain.model.EffectiveDates;
+import au.gov.ga.geodesy.domain.model.sitelog.EffectiveDates;
 
 @Entity
 @Table(name = "SETUP")

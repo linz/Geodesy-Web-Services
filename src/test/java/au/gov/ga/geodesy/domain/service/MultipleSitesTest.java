@@ -13,14 +13,15 @@ import org.springframework.test.context.testng.AbstractTransactionalTestNGSpring
 import org.springframework.transaction.annotation.Transactional;
 import org.testng.annotations.Test;
 
-import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLog;
-import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLogRepository;
-import au.gov.ga.geodesy.igssitelog.interfaces.xml.IgsSiteLogXmlMarshaller;
+import au.gov.ga.geodesy.domain.model.sitelog.IgsSiteLogRepository;
 import au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException;
+import au.gov.ga.geodesy.interfaces.SiteLogSource;
+import au.gov.ga.geodesy.interfaces.sopac.SiteLogSopacSource;
 import au.gov.ga.geodesy.support.spring.GeodesyServiceTestConfig;
+import au.gov.ga.geodesy.support.spring.GeodesySupportConfig;
 import au.gov.ga.geodesy.support.spring.PersistenceJpaConfig;
 
-@ContextConfiguration(classes = { GeodesyServiceTestConfig.class,
+@ContextConfiguration(classes = { GeodesySupportConfig.class, GeodesyServiceTestConfig.class,
 		PersistenceJpaConfig.class }, loader = AnnotationConfigContextLoader.class)
 
 @Transactional("geodesyTransactionManager")
@@ -30,9 +31,6 @@ public class MultipleSitesTest extends AbstractTransactionalTestNGSpringContextT
 
 	@Autowired
 	private IgsSiteLogService siteLogService;
-
-	@Autowired
-	private IgsSiteLogXmlMarshaller marshaller;
 
 	@Autowired
 	private IgsSiteLogRepository siteLogs;
@@ -50,9 +48,9 @@ public class MultipleSitesTest extends AbstractTransactionalTestNGSpringContextT
 			return f.endsWith(".xml");
 		});
 		numberOfSites = siteLogFiles.length;
-		for (File siteLogFile : siteLogFiles) {
-			IgsSiteLog siteLog = marshaller.unmarshal(new FileReader(siteLogFile));
-			siteLogService.upload(siteLog);
+		for (File f : siteLogFiles) {
+            SiteLogSource input = new SiteLogSopacSource(new FileReader(f));
+			siteLogService.upload(input.getSiteLog());
 		}
 	}
 

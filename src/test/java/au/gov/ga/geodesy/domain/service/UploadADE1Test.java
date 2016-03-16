@@ -21,15 +21,17 @@ import au.gov.ga.geodesy.domain.model.Node;
 import au.gov.ga.geodesy.domain.model.NodeRepository;
 import au.gov.ga.geodesy.domain.model.Setup;
 import au.gov.ga.geodesy.domain.model.SetupRepository;
-import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLog;
-import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLogRepository;
-import au.gov.ga.geodesy.igssitelog.domain.model.SiteIdentification;
-import au.gov.ga.geodesy.igssitelog.interfaces.xml.IgsSiteLogXmlMarshaller;
+import au.gov.ga.geodesy.domain.model.sitelog.IgsSiteLog;
+import au.gov.ga.geodesy.domain.model.sitelog.IgsSiteLogRepository;
+import au.gov.ga.geodesy.domain.model.sitelog.SiteIdentification;
+import au.gov.ga.geodesy.interfaces.SiteLogSource;
+import au.gov.ga.geodesy.interfaces.sopac.SiteLogSopacSource;
 import au.gov.ga.geodesy.support.spring.GeodesyServiceTestConfig;
+import au.gov.ga.geodesy.support.spring.GeodesySupportConfig;
 import au.gov.ga.geodesy.support.spring.PersistenceJpaConfig;
 
 @ContextConfiguration(
-        classes = {GeodesyServiceTestConfig.class, PersistenceJpaConfig.class},
+        classes = {GeodesySupportConfig.class, GeodesyServiceTestConfig.class, PersistenceJpaConfig.class},
         loader = AnnotationConfigContextLoader.class)
 
 @Transactional("geodesyTransactionManager")
@@ -60,14 +62,12 @@ public class UploadADE1Test extends AbstractTransactionalTestNGSpringContextTest
     @Autowired
     private IgsSiteLogRepository siteLogs;
 
-    @Autowired
-    private IgsSiteLogXmlMarshaller marshaller;
-
     @Test
     @Rollback(false)
     public void saveSiteLog() throws Exception {
-        File siteLog = new File(siteLogsDir + fourCharId + ".xml");
-        siteLogService.upload(marshaller.unmarshal(new FileReader(siteLog)));
+        File f = new File(siteLogsDir + fourCharId + ".xml");
+        SiteLogSource input = new SiteLogSopacSource(new FileReader(f));
+        siteLogService.upload(input.getSiteLog());
     }
 
     @Test(dependsOnMethods = {"saveSiteLog"})

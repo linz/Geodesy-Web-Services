@@ -13,7 +13,11 @@ import au.gov.ga.geodesy.support.marshalling.moxy.GeodesyMLMoxy;
 @Configuration
 @EnableSpringConfigured
 @EnableAspectJAutoProxy(proxyTargetClass = true)
-@ComponentScan(basePackages = {"au.gov.ga.geodesy.support.moxy"})
+@ComponentScan(basePackages = {
+    "au.gov.ga.geodesy.support.dozer",
+    "au.gov.ga.geodesy.support.jpa",
+    "au.gov.ga.geodesy.support.moxy",
+})
 public class GeodesySupportConfig {
     
     @Bean

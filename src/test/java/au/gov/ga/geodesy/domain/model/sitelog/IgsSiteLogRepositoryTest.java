@@ -1,4 +1,4 @@
-package au.gov.ga.geodesy.igssitelog.domain.model;
+package au.gov.ga.geodesy.domain.model.sitelog;
 
 import java.io.File;
 import java.io.FileFilter;
@@ -16,11 +16,14 @@ import org.springframework.transaction.annotation.Transactional;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import au.gov.ga.geodesy.igssitelog.support.marshalling.moxy.IgsSiteLogMoxyMarshaller;
+import au.gov.ga.geodesy.interfaces.SiteLogSource;
+import au.gov.ga.geodesy.interfaces.sopac.SiteLogSopacSource;
+import au.gov.ga.geodesy.support.spring.GeodesyServiceConfig;
+import au.gov.ga.geodesy.support.spring.GeodesySupportConfig;
 import au.gov.ga.geodesy.support.spring.PersistenceJpaConfig;
 
 @ContextConfiguration(
-        classes = {PersistenceJpaConfig.class},
+        classes = {GeodesySupportConfig.class, PersistenceJpaConfig.class},
         loader = AnnotationConfigContextLoader.class)
 
 @Transactional("geodesyTransactionManager")
@@ -32,23 +35,20 @@ public class IgsSiteLogRepositoryTest extends AbstractTransactionalTestNGSpringC
     private IgsSiteLogRepository igsSiteLogs;
 
     private static final String sampleSiteLogsDir = "src/test/resources/sitelog";
-    private IgsSiteLogMoxyMarshaller marshaller;
-
-    public IgsSiteLogRepositoryTest() throws Exception {
-        marshaller = new IgsSiteLogMoxyMarshaller();
-    }
 
     @Test
     @Rollback(false)
     public void saveAllSiteLogs() throws Exception {
         for (File f : getSiteLogFiles()) {
-            IgsSiteLog siteLog = marshaller.unmarshal(new InputStreamReader(new FileInputStream(f)));
+            SiteLogSource input = new SiteLogSopacSource(new InputStreamReader(new FileInputStream(f)));
+            IgsSiteLog siteLog = input.getSiteLog();
             log.info("Saving " + siteLog.getSiteIdentification().getFourCharacterId());
             igsSiteLogs.saveAndFlush(siteLog);
         }
     }
 
     @Test(dependsOnMethods = {"saveAllSiteLogs"})
+    @Rollback(false)
     public void checkNumberOfSavedSiteLogs() throws Exception {
         Assert.assertEquals(igsSiteLogs.count(), 681);
     }
@@ -60,6 +60,7 @@ public class IgsSiteLogRepositoryTest extends AbstractTransactionalTestNGSpringC
     }
 
     @Test(dependsOnMethods = {"deleteSavedLogs"})
+    @Rollback(false)
     public void checkNumberOfDeleteSiteLogs() throws Exception {
         Assert.assertEquals(igsSiteLogs.count(), 0);
     }

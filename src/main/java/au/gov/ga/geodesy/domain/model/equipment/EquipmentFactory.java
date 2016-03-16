@@ -11,16 +11,16 @@ import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import au.gov.ga.geodesy.igssitelog.domain.model.EffectiveDates;
-import au.gov.ga.geodesy.igssitelog.domain.model.EquipmentLogItem;
-import au.gov.ga.geodesy.igssitelog.domain.model.FrequencyStandardLogItem;
-import au.gov.ga.geodesy.igssitelog.domain.model.GnssAntennaLogItem;
-import au.gov.ga.geodesy.igssitelog.domain.model.GnssReceiverLogItem;
-import au.gov.ga.geodesy.igssitelog.domain.model.HumiditySensorLogItem;
-import au.gov.ga.geodesy.igssitelog.domain.model.LogItemVisitor;
-import au.gov.ga.geodesy.igssitelog.domain.model.PressureSensorLogItem;
-import au.gov.ga.geodesy.igssitelog.domain.model.TemperatureSensorLogItem;
-import au.gov.ga.geodesy.igssitelog.domain.model.WaterVaporSensorLogItem;
+import au.gov.ga.geodesy.domain.model.sitelog.EffectiveDates;
+import au.gov.ga.geodesy.domain.model.sitelog.EquipmentLogItem;
+import au.gov.ga.geodesy.domain.model.sitelog.FrequencyStandardLogItem;
+import au.gov.ga.geodesy.domain.model.sitelog.GnssAntennaLogItem;
+import au.gov.ga.geodesy.domain.model.sitelog.GnssReceiverLogItem;
+import au.gov.ga.geodesy.domain.model.sitelog.HumiditySensorLogItem;
+import au.gov.ga.geodesy.domain.model.sitelog.LogItemVisitor;
+import au.gov.ga.geodesy.domain.model.sitelog.PressureSensorLogItem;
+import au.gov.ga.geodesy.domain.model.sitelog.TemperatureSensorLogItem;
+import au.gov.ga.geodesy.domain.model.sitelog.WaterVaporSensorLogItem;
 
 @Component
 public class EquipmentFactory {

@@ -29,7 +29,7 @@ public class UploadAllIgsSiteLogsRestTest extends RestTest {
         siteLogs().forEach(file -> {
             try {
                 // TODO: this test takes too long, so for now we just upload some site logs
-                if (file.getName().startsWith("A") || file.getName().startsWith("B") || file.getName().startsWith("C")) {
+                if (file.getName().startsWith("A")) {
                     log.info("Uploading " + file.getPath());
                     String content = FileUtils.readFileToString(file, Charset.defaultCharset());
                     mvc.perform(post("/siteLog/upload").contentType(MediaType.APPLICATION_XML).content(content))
@@ -43,6 +43,6 @@ public class UploadAllIgsSiteLogsRestTest extends RestTest {
 
     @Test(dependsOnMethods = {"upload"})
     public void checkCount() throws Exception {
-        assertEquals(sites.count(), 145);
+        assertEquals(sites.count(), 34);
     }
 }

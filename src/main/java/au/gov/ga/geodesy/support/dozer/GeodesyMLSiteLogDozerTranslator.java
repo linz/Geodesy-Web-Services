@@ -8,6 +8,8 @@ import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import javax.xml.bind.JAXBElement;
+
 import org.dozer.DozerBeanMapper;
 import org.springframework.stereotype.Service;
 
@@ -53,7 +55,7 @@ import net.opengis.gml.v_3_2_1.CodeType;
 @Service
 public class GeodesyMLSiteLogDozerTranslator implements GeodesyMLSiteLogTranslator{
 
-    public GeodesyMLType dozerTranslate(IgsSiteLog sopacSiteLog) {
+    public JAXBElement<GeodesyMLType> dozerTranslate(IgsSiteLog sopacSiteLog) {
         try {
             return run(sopacSiteLog);
         } catch (InstantiationException | IllegalAccessException | IllegalArgumentException
@@ -62,7 +64,7 @@ public class GeodesyMLSiteLogDozerTranslator implements GeodesyMLSiteLogTranslat
         }
     }
 
-    private GeodesyMLType run(IgsSiteLog sopacSiteLog)
+    private JAXBElement<GeodesyMLType> run(IgsSiteLog sopacSiteLog)
             throws InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
 
         DozerBeanMapper mapper = new DozerBeanMapper();
@@ -74,6 +76,9 @@ public class GeodesyMLSiteLogDozerTranslator implements GeodesyMLSiteLogTranslat
         ObjectFactory geodesyObjectFactory = new ObjectFactory();
         net.opengis.gml.v_3_2_1.ObjectFactory gmlObjectFactory = new net.opengis.gml.v_3_2_1.ObjectFactory();
         GeodesyMLType geodesyMl = new GeodesyMLType();
+        
+        JAXBElement<GeodesyMLType> geodesyMLTypeJaxB = geodesyObjectFactory.createGeodesyML(geodesyMl);
+        
         SiteLogType siteLogType = new SiteLogType();
 
         geodesyMl.getNodeOrAbstractPositionOrPositionPairCovariance()
@@ -127,13 +132,13 @@ public class GeodesyMLSiteLogDozerTranslator implements GeodesyMLSiteLogTranslat
         siteLogType.setLocalEpisodicEventsSet(localEpisodicEvents);
 
         // +++++
-        List<CodeType> names = new ArrayList<>();
-        CodeType nameCT = gmlObjectFactory.createCodeType();
-        nameCT.setValue("GeodesyML Rocks Like Axel Foley!");
-        names.add(nameCT);
-        geodesyMl.setName(names);
+//        List<CodeType> names = new ArrayList<>();
+//        CodeType nameCT = gmlObjectFactory.createCodeType();
+//        nameCT.setValue("GeodesyML Rocks Like Axel Foley!");
+//        names.add(nameCT);
+//        geodesyMl.setName(names);
 
-        return geodesyMl;
+        return geodesyMLTypeJaxB;
     }
 
     /**

@@ -10,6 +10,7 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 import javax.persistence.Version;
+import javax.xml.bind.JAXBElement;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -19,13 +20,13 @@ import org.springframework.beans.factory.annotation.Configurable;
 import au.gov.ga.geodesy.interfaces.geodesyml.GeodesyMLMarshaller;
 import au.gov.ga.geodesy.interfaces.geodesyml.MarshallingException;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.GeodesyMLType;
+import au.gov.xml.icsm.geodesyml.v_0_2_2.ObjectFactory;
 
 @Entity
 @Table(name = "CORS_SITE_LOG")
 @Configurable(preConstruction = true)
 public class CorsSiteLog {
     private static final Log log = LogFactory.getLog(CorsSiteLog.class);
-
 
     @Autowired
     @Transient
@@ -49,18 +50,25 @@ public class CorsSiteLog {
     @Column(name = "GEODESY_ML", nullable = false, length = 30000)
     private String geodesyML;
 
+    private static final ObjectFactory GEODESY_OBJECT_FACTORY = new ObjectFactory();
+    
     @SuppressWarnings("unused") // used by hibernate
-    private CorsSiteLog() {}
+    private CorsSiteLog() {
+    }
 
     public CorsSiteLog(String id, GeodesyMLType geodesyML) {
+        this(id, GEODESY_OBJECT_FACTORY.createGeodesyML(geodesyML));
+    }
+
+    public CorsSiteLog(String id, JAXBElement<GeodesyMLType> geodesyML) {
         setFourCharacterId(id);
         StringWriter writer = new StringWriter();
         try {
             geodesyMLMarshaller.marshal(geodesyML, writer);
             setGeodesyML(writer.toString());
-        }
-        catch (MarshallingException e) {
-            log.warn(e);
+        } catch (MarshallingException e) {
+            log.error(e);
+            throw new RuntimeException("Error marshalling GeodesyMLType",e);
         }
     }
 

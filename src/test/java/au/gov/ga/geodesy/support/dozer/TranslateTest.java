@@ -108,16 +108,17 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
 
         IgsSiteLog siteLog = marshaller.unmarshal(input);
 
-        GeodesyMLType geodesyML = geodesyMLSiteLogTranslator.dozerTranslate(siteLog);
+        JAXBElement<GeodesyMLType> geodesyMLJAXB = geodesyMLSiteLogTranslator.dozerTranslate(siteLog);
+
+        GeodesyMLType geodesyML = geodesyMLJAXB.getValue();
 
         Assert.assertNotNull(geodesyML);
 
         System.out.println("Write xml file to: " + returnTestFile(destTmpName).toString());
         FileWriter writer = new FileWriter(returnTestFile(destTmpName).toFile());
-        geodesyMLMarshaller.marshal(geodesyML, writer);
+        geodesyMLMarshaller.marshal(geodesyMLJAXB, writer);
 
         Assert.assertEquals(geodesyML.getNodeOrAbstractPositionOrPositionPairCovariance().size(), 1);
-        Assert.assertEquals(geodesyML.getName().get(0).getValue(), "GeodesyML Rocks Like Axel Foley!");
         Assert.assertTrue(geodesyML.getNodeOrAbstractPositionOrPositionPairCovariance().get(0) instanceof JAXBElement);
 
         Stream<SiteLogType> siteLogTypeStream = GeodesyMLUtils.getElementFromJAXBElements(

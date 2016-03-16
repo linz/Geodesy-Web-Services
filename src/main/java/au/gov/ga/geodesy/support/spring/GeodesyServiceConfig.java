@@ -10,8 +10,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import au.gov.ga.geodesy.domain.model.event.AsynchronousEventPublisher;
 import au.gov.ga.geodesy.domain.model.event.EventPublisher;
-import au.gov.ga.geodesy.igssitelog.interfaces.xml.IgsSiteLogXmlMarshaller;
-import au.gov.ga.geodesy.igssitelog.support.marshalling.moxy.IgsSiteLogMoxyMarshaller;
 
 @Configuration
 @EnableSpringConfigured
@@ -19,11 +17,6 @@ import au.gov.ga.geodesy.igssitelog.support.marshalling.moxy.IgsSiteLogMoxyMarsh
 @EnableAspectJAutoProxy(proxyTargetClass = true)
 @ComponentScan(basePackages = {"au.gov.ga.geodesy.support.moxy","au.gov.ga.geodesy.domain.service","au.gov.ga.geodesy.domain.model.equipment"})
 public class GeodesyServiceConfig {
-
-    @Bean
-    public IgsSiteLogXmlMarshaller siteLogMarshaller() throws Exception {
-        return new IgsSiteLogMoxyMarshaller();
-    }
 
     @Bean
     public EventPublisher eventPublisher() {

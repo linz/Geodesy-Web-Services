@@ -1,4 +1,4 @@
-package au.gov.ga.geodesy.interfaces.geodesyml;
+package au.gov.ga.geodesy.port.adapter.geodesyml;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;

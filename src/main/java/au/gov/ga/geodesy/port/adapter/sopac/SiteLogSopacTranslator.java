@@ -1,4 +1,4 @@
-package au.gov.ga.geodesy.interfaces.sopac;
+package au.gov.ga.geodesy.port.adapter.sopac;
 
 import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLog;
 

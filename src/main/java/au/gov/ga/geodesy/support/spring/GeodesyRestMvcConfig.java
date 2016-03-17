@@ -7,6 +7,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = {"au.gov.ga.geodesy.interfaces.rest"})
+@ComponentScan(basePackages = {"au.gov.ga.geodesy.port.adapter.rest"})
 public class GeodesyRestMvcConfig extends WebMvcConfigurerAdapter {
 }

@@ -15,8 +15,8 @@ import org.testng.annotations.Test;
 
 import au.gov.ga.geodesy.domain.model.sitelog.IgsSiteLogRepository;
 import au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException;
-import au.gov.ga.geodesy.interfaces.SiteLogSource;
-import au.gov.ga.geodesy.interfaces.sopac.SiteLogSopacSource;
+import au.gov.ga.geodesy.port.SiteLogSource;
+import au.gov.ga.geodesy.port.adapter.sopac.SiteLogSopacSource;
 import au.gov.ga.geodesy.support.spring.GeodesyServiceTestConfig;
 import au.gov.ga.geodesy.support.spring.GeodesySupportConfig;
 import au.gov.ga.geodesy.support.spring.PersistenceJpaConfig;

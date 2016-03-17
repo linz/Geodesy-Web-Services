@@ -16,8 +16,8 @@ import org.springframework.transaction.annotation.Transactional;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import au.gov.ga.geodesy.interfaces.SiteLogSource;
-import au.gov.ga.geodesy.interfaces.sopac.SiteLogSopacSource;
+import au.gov.ga.geodesy.port.SiteLogSource;
+import au.gov.ga.geodesy.port.adapter.sopac.SiteLogSopacSource;
 import au.gov.ga.geodesy.support.spring.GeodesyServiceConfig;
 import au.gov.ga.geodesy.support.spring.GeodesySupportConfig;
 import au.gov.ga.geodesy.support.spring.PersistenceJpaConfig;

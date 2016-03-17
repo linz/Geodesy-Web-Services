@@ -24,7 +24,7 @@ import au.gov.ga.geodesy.igssitelog.domain.model.SiteLocation;
 import au.gov.ga.geodesy.igssitelog.domain.model.SurveyedLocalTie;
 import au.gov.ga.geodesy.igssitelog.domain.model.TemperatureSensorLogItem;
 import au.gov.ga.geodesy.igssitelog.domain.model.WaterVaporSensorLogItem;
-import au.gov.ga.geodesy.interfaces.geodesyml.GeodesyMLSiteLogTranslator;
+import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLSiteLogTranslator;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.FrequencyStandardPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.FrequencyStandardType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.GeodesyMLType;

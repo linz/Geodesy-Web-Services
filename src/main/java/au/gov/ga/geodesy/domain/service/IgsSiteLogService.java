@@ -8,8 +8,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import au.gov.ga.geodesy.domain.model.event.EventPublisher;
 import au.gov.ga.geodesy.domain.model.event.SiteLogReceived;
-import au.gov.ga.geodesy.domain.model.sitelog.IgsSiteLogRepository;
-import au.gov.ga.geodesy.domain.model.sitelog.IgsSiteLog;
+import au.gov.ga.geodesy.domain.model.sitelog.SiteLogRepository;
+import au.gov.ga.geodesy.domain.model.sitelog.SiteLog;
 
 @Component
 @Transactional("geodesyTransactionManager")
@@ -18,12 +18,12 @@ public class IgsSiteLogService {
     private static final Logger log = LoggerFactory.getLogger(IgsSiteLogService.class);
 
     @Autowired
-    private IgsSiteLogRepository siteLogs;
+    private SiteLogRepository siteLogs;
 
     @Autowired
     private EventPublisher eventPublisher;
 
-    public void upload(IgsSiteLog siteLog) {
+    public void upload(SiteLog siteLog) {
         siteLogs.delete(siteLog.getSiteIdentification().getFourCharacterId());
         siteLogs.save(siteLog);
         String id = siteLog.getSiteIdentification().getFourCharacterId();

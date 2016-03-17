@@ -13,7 +13,7 @@ import org.springframework.test.context.testng.AbstractTransactionalTestNGSpring
 import org.springframework.transaction.annotation.Transactional;
 import org.testng.annotations.Test;
 
-import au.gov.ga.geodesy.domain.model.sitelog.IgsSiteLogRepository;
+import au.gov.ga.geodesy.domain.model.sitelog.SiteLogRepository;
 import au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException;
 import au.gov.ga.geodesy.port.SiteLogSource;
 import au.gov.ga.geodesy.port.adapter.sopac.SiteLogSopacSource;
@@ -33,7 +33,7 @@ public class MultipleSitesTest extends AbstractTransactionalTestNGSpringContextT
 	private IgsSiteLogService siteLogService;
 
 	@Autowired
-	private IgsSiteLogRepository siteLogs;
+	private SiteLogRepository siteLogs;
 
 	private int numberOfSites;
 

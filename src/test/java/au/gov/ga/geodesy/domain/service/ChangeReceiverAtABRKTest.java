@@ -13,7 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import au.gov.ga.geodesy.domain.model.sitelog.IgsSiteLogRepository;
+import au.gov.ga.geodesy.domain.model.sitelog.SiteLogRepository;
 import au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException;
 import au.gov.ga.geodesy.port.SiteLogSource;
 import au.gov.ga.geodesy.port.adapter.sopac.SiteLogSopacSource;
@@ -34,7 +34,7 @@ public class ChangeReceiverAtABRKTest extends AbstractTransactionalTestNGSpringC
     private IgsSiteLogService siteLogService;
 
     @Autowired
-    private IgsSiteLogRepository siteLogs;
+    private SiteLogRepository siteLogs;
 
     private void executeSiteLogScenario(String scenarioDirName) throws FileNotFoundException, MarshallingException {
         File[] siteLogFiles = new File(scenarioDirName).listFiles((File dir, String f) -> {

@@ -33,8 +33,8 @@ import org.springframework.beans.factory.annotation.Configurable;
 @Configurable
 @Entity
 @Table(name = "SITELOG_SITE")
-public class IgsSiteLog {
-    private static final Log log = LogFactory.getLog(IgsSiteLog.class);
+public class SiteLog {
+    private static final Log log = LogFactory.getLog(SiteLog.class);
 
     @Id
     @GeneratedValue(generator = "surrogateKeyGenerator")

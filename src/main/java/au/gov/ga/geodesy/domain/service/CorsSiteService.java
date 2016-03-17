@@ -35,10 +35,10 @@ import au.gov.ga.geodesy.domain.model.event.EventPublisher;
 import au.gov.ga.geodesy.domain.model.event.EventSubscriber;
 import au.gov.ga.geodesy.domain.model.event.SiteLogReceived;
 import au.gov.ga.geodesy.domain.model.event.SiteUpdated;
-import au.gov.ga.geodesy.domain.model.sitelog.IgsSiteLogRepository;
+import au.gov.ga.geodesy.domain.model.sitelog.SiteLogRepository;
 import au.gov.ga.geodesy.domain.model.sitelog.EffectiveDates;
 import au.gov.ga.geodesy.domain.model.sitelog.EquipmentLogItem;
-import au.gov.ga.geodesy.domain.model.sitelog.IgsSiteLog;
+import au.gov.ga.geodesy.domain.model.sitelog.SiteLog;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteIdentification;
 
 @Component
@@ -49,7 +49,7 @@ public class CorsSiteService implements EventSubscriber<SiteLogReceived> {
     private static final String gnssCorsSetupName = "GNSS CORS Setup";
 
     @Autowired
-    private IgsSiteLogRepository siteLogs;
+    private SiteLogRepository siteLogs;
 
     @Autowired
     private EquipmentRepository equipmentRepository;
@@ -82,7 +82,7 @@ public class CorsSiteService implements EventSubscriber<SiteLogReceived> {
         log.info("Notified of " + siteLogUploaded);
 
         String fourCharacterId = siteLogUploaded.getFourCharacterId();
-        IgsSiteLog siteLog = siteLogs.findByFourCharacterId(fourCharacterId);
+        SiteLog siteLog = siteLogs.findByFourCharacterId(fourCharacterId);
 
         CorsSite gnssSite = gnssSites.findByFourCharacterId(fourCharacterId);
         if (gnssSite == null) {
@@ -127,7 +127,7 @@ public class CorsSiteService implements EventSubscriber<SiteLogReceived> {
         log.info("Saving site: " + fourCharacterId);
     }
 
-    private List<Setup> getSetups(IgsSiteLog siteLog) {
+    private List<Setup> getSetups(SiteLog siteLog) {
         @SuppressWarnings("unchecked")
         Comparator<Date> fromC = ComparatorUtils.nullLowComparator(ComparatorUtils.NATURAL_COMPARATOR);
         SortedSet<Date> datesOfChange = new TreeSet<>(fromC);

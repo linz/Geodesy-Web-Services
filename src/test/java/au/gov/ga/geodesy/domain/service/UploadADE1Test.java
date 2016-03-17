@@ -21,8 +21,8 @@ import au.gov.ga.geodesy.domain.model.Node;
 import au.gov.ga.geodesy.domain.model.NodeRepository;
 import au.gov.ga.geodesy.domain.model.Setup;
 import au.gov.ga.geodesy.domain.model.SetupRepository;
-import au.gov.ga.geodesy.domain.model.sitelog.IgsSiteLog;
-import au.gov.ga.geodesy.domain.model.sitelog.IgsSiteLogRepository;
+import au.gov.ga.geodesy.domain.model.sitelog.SiteLog;
+import au.gov.ga.geodesy.domain.model.sitelog.SiteLogRepository;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteIdentification;
 import au.gov.ga.geodesy.port.SiteLogSource;
 import au.gov.ga.geodesy.port.adapter.sopac.SiteLogSopacSource;
@@ -60,7 +60,7 @@ public class UploadADE1Test extends AbstractTransactionalTestNGSpringContextTest
     private NodeService nodeService;
 
     @Autowired
-    private IgsSiteLogRepository siteLogs;
+    private SiteLogRepository siteLogs;
 
     @Test
     @Rollback(false)
@@ -73,7 +73,7 @@ public class UploadADE1Test extends AbstractTransactionalTestNGSpringContextTest
     @Test(dependsOnMethods = {"saveSiteLog"})
     @Rollback(false)
     public void checkSite() throws Exception {
-        IgsSiteLog siteLog = siteLogs.findByFourCharacterId(fourCharId);
+        SiteLog siteLog = siteLogs.findByFourCharacterId(fourCharId);
         CorsSite site = sites.findByFourCharacterId(fourCharId);
         assertNotNull(site);
 

@@ -20,7 +20,7 @@ import au.gov.ga.geodesy.domain.model.CorsSiteRepository;
 import au.gov.ga.geodesy.domain.model.NodeRepository;
 import au.gov.ga.geodesy.domain.model.SetupRepository;
 import au.gov.ga.geodesy.domain.model.equipment.EquipmentRepository;
-import au.gov.ga.geodesy.domain.model.sitelog.IgsSiteLogRepository;
+import au.gov.ga.geodesy.domain.model.sitelog.SiteLogRepository;
 import au.gov.ga.geodesy.port.SiteLogSource;
 import au.gov.ga.geodesy.port.adapter.sopac.SiteLogSopacSource;
 import au.gov.ga.geodesy.support.spring.GeodesyServiceTestConfig;
@@ -57,7 +57,7 @@ public class KeepUnmodifiedNodesAndSetupsTest extends AbstractTransactionalTestN
     private EquipmentRepository equipment;
 
     @Autowired
-    private IgsSiteLogRepository siteLogs;
+    private SiteLogRepository siteLogs;
 
     @Autowired
     private PlatformTransactionManager txnManager;

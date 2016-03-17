@@ -27,12 +27,12 @@ import au.gov.ga.geodesy.support.spring.PersistenceJpaConfig;
         loader = AnnotationConfigContextLoader.class)
 
 @Transactional("geodesyTransactionManager")
-public class IgsSiteLogRepositoryTest extends AbstractTransactionalTestNGSpringContextTests {
+public class SiteLogRepositoryTest extends AbstractTransactionalTestNGSpringContextTests {
 
-    private static final Logger log = LoggerFactory.getLogger(IgsSiteLogRepositoryTest.class);
+    private static final Logger log = LoggerFactory.getLogger(SiteLogRepositoryTest.class);
 
     @Autowired
-    private IgsSiteLogRepository igsSiteLogs;
+    private SiteLogRepository igsSiteLogs;
 
     private static final String sampleSiteLogsDir = "src/test/resources/sitelog";
 
@@ -41,7 +41,7 @@ public class IgsSiteLogRepositoryTest extends AbstractTransactionalTestNGSpringC
     public void saveAllSiteLogs() throws Exception {
         for (File f : getSiteLogFiles()) {
             SiteLogSource input = new SiteLogSopacSource(new InputStreamReader(new FileInputStream(f)));
-            IgsSiteLog siteLog = input.getSiteLog();
+            SiteLog siteLog = input.getSiteLog();
             log.info("Saving " + siteLog.getSiteIdentification().getFourCharacterId());
             igsSiteLogs.saveAndFlush(siteLog);
         }

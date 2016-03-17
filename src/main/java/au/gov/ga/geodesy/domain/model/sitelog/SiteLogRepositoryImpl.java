@@ -2,13 +2,13 @@ package au.gov.ga.geodesy.domain.model.sitelog;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-public class IgsSiteLogRepositoryImpl implements IgsSiteLogRepositoryCustom {
+public class SiteLogRepositoryImpl implements SiteLogRepositoryCustom {
 
     @Autowired
-    private IgsSiteLogRepository siteLogs;
+    private SiteLogRepository siteLogs;
 
     public void delete(String fourCharacterId) {
-        IgsSiteLog toDelete = siteLogs.findByFourCharacterId(fourCharacterId);
+        SiteLog toDelete = siteLogs.findByFourCharacterId(fourCharacterId);
         if (toDelete != null) {
             siteLogs.delete(toDelete);
         }

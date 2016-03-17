@@ -18,7 +18,7 @@ import org.testng.annotations.Test;
 import au.gov.ga.geodesy.domain.model.MockEventPublisher;
 import au.gov.ga.geodesy.domain.model.event.Event;
 import au.gov.ga.geodesy.domain.model.event.SiteLogReceived;
-import au.gov.ga.geodesy.domain.model.sitelog.IgsSiteLogRepository;
+import au.gov.ga.geodesy.domain.model.sitelog.SiteLogRepository;
 import au.gov.ga.geodesy.port.SiteLogSource;
 import au.gov.ga.geodesy.port.adapter.sopac.SiteLogSopacSource;
 import au.gov.ga.geodesy.support.spring.GeodesyServiceUnitTestConfig;
@@ -39,7 +39,7 @@ public class UploadAllSiteLogsTest extends AbstractTransactionalTestNGSpringCont
     private IgsSiteLogService service;
 
     @Autowired
-    private IgsSiteLogRepository siteLogs;
+    private SiteLogRepository siteLogs;
 
     @Autowired
     public MockEventPublisher eventPublisher;

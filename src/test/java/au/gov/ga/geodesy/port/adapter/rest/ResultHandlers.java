@@ -1,4 +1,4 @@
-package au.gov.ga.geodesy.interfaces.rest;
+package au.gov.ga.geodesy.port.adapter.rest;
 
 import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.ResultHandler;

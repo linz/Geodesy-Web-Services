@@ -1,4 +1,4 @@
-package au.gov.ga.geodesy.interfaces.rest;
+package au.gov.ga.geodesy.port.adapter.rest;
 
 import java.io.File;
 import java.nio.file.DirectoryIteratorException;

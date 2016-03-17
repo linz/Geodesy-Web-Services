@@ -1,7 +1,6 @@
-package au.gov.ga.geodesy.interfaces.rest;
+package au.gov.ga.geodesy.port.adapter.rest;
 
-import static au.gov.ga.geodesy.interfaces.rest.ResultHandlers.print;
-
+import static au.gov.ga.geodesy.port.adapter.rest.ResultHandlers.print;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.testng.Assert.assertEquals;

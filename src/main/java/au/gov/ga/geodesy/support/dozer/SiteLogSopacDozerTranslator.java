@@ -5,7 +5,7 @@ import org.dozer.loader.api.BeanMappingBuilder;
 import org.springframework.stereotype.Component;
 
 import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLog;
-import au.gov.ga.geodesy.interfaces.sopac.SiteLogSopacTranslator;
+import au.gov.ga.geodesy.port.adapter.sopac.SiteLogSopacTranslator;
 
 @Component
 public class SiteLogSopacDozerTranslator implements SiteLogSopacTranslator {

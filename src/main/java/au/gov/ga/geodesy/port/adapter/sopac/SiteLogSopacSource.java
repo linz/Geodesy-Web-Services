@@ -1,4 +1,4 @@
-package au.gov.ga.geodesy.interfaces.sopac;
+package au.gov.ga.geodesy.port.adapter.sopac;
 
 import java.io.Reader;
 
@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Configurable;
 import au.gov.ga.geodesy.domain.model.sitelog.IgsSiteLog;
 import au.gov.ga.geodesy.igssitelog.interfaces.xml.IgsSiteLogXmlMarshaller;
 import au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException;
-import au.gov.ga.geodesy.interfaces.SiteLogSource;
+import au.gov.ga.geodesy.port.SiteLogSource;
 
 @Configurable(preConstruction = true)
 public class SiteLogSopacSource implements SiteLogSource {

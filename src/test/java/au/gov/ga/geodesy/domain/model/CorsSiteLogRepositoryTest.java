@@ -16,8 +16,8 @@ import org.springframework.test.context.testng.AbstractTransactionalTestNGSpring
 import org.springframework.transaction.annotation.Transactional;
 import org.testng.annotations.Test;
 
-import au.gov.ga.geodesy.interfaces.geodesyml.CorsSiteLogFactory;
 import au.gov.ga.geodesy.interfaces.geodesyml.GeodesyMLMarshaller;
+import au.gov.ga.geodesy.port.adapter.geodesyml.CorsSiteLogFactory;
 import au.gov.ga.geodesy.support.spring.GeodesySupportConfig;
 import au.gov.ga.geodesy.support.spring.PersistenceJpaConfig;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.GeodesyMLType;

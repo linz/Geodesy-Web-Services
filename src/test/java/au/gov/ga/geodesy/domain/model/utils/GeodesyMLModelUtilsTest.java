@@ -7,7 +7,7 @@ import javax.xml.bind.JAXBElement;
 import org.junit.Assert;
 import org.junit.Test;
 
-import au.gov.ga.geodesy.interfaces.geodesyml.GeodesyMLUtils;
+import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLUtils;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.SiteLogType;
 
 public class GeodesyMLModelUtilsTest {

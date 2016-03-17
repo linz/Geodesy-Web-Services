@@ -1,4 +1,4 @@
-package au.gov.ga.geodesy.interfaces.rest;
+package au.gov.ga.geodesy.port.adapter.rest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

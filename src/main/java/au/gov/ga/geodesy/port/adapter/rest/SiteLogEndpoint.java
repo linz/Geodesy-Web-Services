@@ -1,4 +1,4 @@
-package au.gov.ga.geodesy.interfaces.rest;
+package au.gov.ga.geodesy.port.adapter.rest;
 
 import java.io.InputStreamReader;
 
@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import au.gov.ga.geodesy.domain.service.IgsSiteLogService;
-import au.gov.ga.geodesy.interfaces.SiteLogSource;
-import au.gov.ga.geodesy.interfaces.sopac.SiteLogSopacSource;
+import au.gov.ga.geodesy.port.SiteLogSource;
+import au.gov.ga.geodesy.port.adapter.sopac.SiteLogSopacSource;
 
 @Controller
 @RequestMapping("/siteLog")

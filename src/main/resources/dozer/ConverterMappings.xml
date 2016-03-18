@@ -33,6 +33,10 @@
                 <class-a>net.opengis.gml.v_3_2_1.CodeType</class-a>
                 <class-b>java.lang.String</class-b>
             </converter>
+            <converter type="au.gov.ga.geodesy.support.dozer.CharacterStringPropertyTypeConverter">
+                <class-a>net.opengis.iso19139.gco.v_20070417.CharacterStringPropertyType</class-a>
+                <class-b>java.lang.String</class-b>
+            </converter>
             <converter type="au.gov.ga.geodesy.support.dozer.TimePrimitivePropertyTypeEffectiveDatesConverter">
                 <class-a>au.gov.ga.geodesy.igssitelog.domain.model.EffectiveDates</class-a>
                 <class-b>net.opengis.gml.v_3_2_1.TimePrimitivePropertyType</class-b>
@@ -40,6 +44,10 @@
             <converter type="au.gov.ga.geodesy.support.dozer.TimePrimitivePropertyTypeStringConverter">
                 <class-a>java.lang.String</class-a>
                 <class-b>net.opengis.gml.v_3_2_1.TimePrimitivePropertyType</class-b>
+            </converter>
+            <converter type="au.gov.ga.geodesy.support.dozer.AgencyAgencyPropertyTypeConverter">
+                <class-a>au.gov.ga.geodesy.igssitelog.domain.model.Agency</class-a>
+                <class-b>au.gov.xml.icsm.geodesyml.v_0_2_2.AgencyPropertyType</class-b>
             </converter>
         </custom-converters>
     </configuration>

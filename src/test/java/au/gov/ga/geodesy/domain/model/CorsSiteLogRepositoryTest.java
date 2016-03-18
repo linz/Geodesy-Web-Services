@@ -43,7 +43,7 @@ public class CorsSiteLogRepositoryTest extends AbstractTransactionalTestNGSpring
     @Rollback(false)
     public void saveAllSiteLogs() throws Exception {
         for (File f : getSiteLogFiles()) {
-            GeodesyMLType geodesyML = marshaller.unmarshal(new FileReader(f)).getValue();
+            GeodesyMLType geodesyML = marshaller.unmarshal(new FileReader(f), GeodesyMLType.class).getValue();
             new CorsSiteLogFactory(geodesyML).create()
                 .forEach(siteLog -> {
                     log.info("Saving " + siteLog.getFourCharacterId());

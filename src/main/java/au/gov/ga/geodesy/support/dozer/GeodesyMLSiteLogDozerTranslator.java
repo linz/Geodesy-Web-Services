@@ -7,6 +7,9 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+import javax.xml.bind.JAXBElement;
 
 import org.dozer.DozerBeanMapper;
 import org.springframework.stereotype.Service;
@@ -18,6 +21,7 @@ import au.gov.ga.geodesy.igssitelog.domain.model.GnssReceiverLogItem;
 import au.gov.ga.geodesy.igssitelog.domain.model.HumiditySensorLogItem;
 import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLog;
 import au.gov.ga.geodesy.igssitelog.domain.model.LocalEpisodicEvent;
+import au.gov.ga.geodesy.igssitelog.domain.model.MoreInformation;
 import au.gov.ga.geodesy.igssitelog.domain.model.PressureSensorLogItem;
 import au.gov.ga.geodesy.igssitelog.domain.model.SiteIdentification;
 import au.gov.ga.geodesy.igssitelog.domain.model.SiteLocation;
@@ -25,6 +29,7 @@ import au.gov.ga.geodesy.igssitelog.domain.model.SurveyedLocalTie;
 import au.gov.ga.geodesy.igssitelog.domain.model.TemperatureSensorLogItem;
 import au.gov.ga.geodesy.igssitelog.domain.model.WaterVaporSensorLogItem;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLSiteLogTranslator;
+import au.gov.xml.icsm.geodesyml.v_0_2_2.AgencyPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.FrequencyStandardPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.FrequencyStandardType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.GeodesyMLType;
@@ -36,6 +41,7 @@ import au.gov.xml.icsm.geodesyml.v_0_2_2.HumiditySensorPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.HumiditySensorType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.LocalEpisodicEventsPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.LocalEpisodicEventsType;
+import au.gov.xml.icsm.geodesyml.v_0_2_2.MoreInformationType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.ObjectFactory;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.PressureSensorPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.PressureSensorType;
@@ -48,12 +54,11 @@ import au.gov.xml.icsm.geodesyml.v_0_2_2.TemperatureSensorPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.TemperatureSensorType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.WaterVaporSensorPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.WaterVaporSensorType;
-import net.opengis.gml.v_3_2_1.CodeType;
 
 @Service
 public class GeodesyMLSiteLogDozerTranslator implements GeodesyMLSiteLogTranslator{
 
-    public GeodesyMLType dozerTranslate(IgsSiteLog sopacSiteLog) {
+    public JAXBElement<GeodesyMLType> dozerTranslate(IgsSiteLog sopacSiteLog) {
         try {
             return run(sopacSiteLog);
         } catch (InstantiationException | IllegalAccessException | IllegalArgumentException
@@ -62,18 +67,16 @@ public class GeodesyMLSiteLogDozerTranslator implements GeodesyMLSiteLogTranslat
         }
     }
 
-    private GeodesyMLType run(IgsSiteLog sopacSiteLog)
+    private JAXBElement<GeodesyMLType> run(IgsSiteLog sopacSiteLog)
             throws InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
 
-        DozerBeanMapper mapper = new DozerBeanMapper();
-        List<String> dozerMappings = new ArrayList<>();
-        dozerMappings.add("dozer/ConverterMappings.xml");
-        dozerMappings.add("dozer/FieldMappings.xml");
-        mapper.setMappingFiles(dozerMappings);
+        DozerBeanMapper mapper = DozerUtils.getDozerBeanMapper(); 
 
         ObjectFactory geodesyObjectFactory = new ObjectFactory();
-        net.opengis.gml.v_3_2_1.ObjectFactory gmlObjectFactory = new net.opengis.gml.v_3_2_1.ObjectFactory();
         GeodesyMLType geodesyMl = new GeodesyMLType();
+        
+        JAXBElement<GeodesyMLType> geodesyMLTypeJaxB = geodesyObjectFactory.createGeodesyML(geodesyMl);
+        
         SiteLogType siteLogType = new SiteLogType();
 
         geodesyMl.getNodeOrAbstractPositionOrPositionPairCovariance()
@@ -125,15 +128,21 @@ public class GeodesyMLSiteLogDozerTranslator implements GeodesyMLSiteLogTranslat
                 LocalEpisodicEventsPropertyType.class, LocalEpisodicEventsType.class, LocalEpisodicEvent.class,
                 sopacSiteLog.getLocalEpisodicEvents(), mapper);
         siteLogType.setLocalEpisodicEventsSet(localEpisodicEvents);
+        
+        AgencyPropertyType siteContact = mapper.map(sopacSiteLog.getContactAgency(), AgencyPropertyType.class); 
+        siteLogType.setSiteContact(Stream.of(siteContact).collect(Collectors.toList()));
 
-        // +++++
-        List<CodeType> names = new ArrayList<>();
-        CodeType nameCT = gmlObjectFactory.createCodeType();
-        nameCT.setValue("GeodesyML Rocks Like Axel Foley!");
-        names.add(nameCT);
-        geodesyMl.setName(names);
+        AgencyPropertyType siteMetadataCustodian = mapper.map(sopacSiteLog.getResponsibleAgency(), AgencyPropertyType.class); 
+        siteLogType.setSiteMetadataCustodian(siteMetadataCustodian);
 
-        return geodesyMl;
+        MoreInformation moreInformation = sopacSiteLog.getMoreInformation();
+        MoreInformationType moreInformationType = mapper.map(moreInformation, MoreInformationType.class);
+        siteLogType.setMoreInformation(moreInformationType);
+
+        // DataStreams
+        // TBD - There is no instance of this across the 682 test files we have
+        
+        return geodesyMLTypeJaxB;
     }
 
     /**

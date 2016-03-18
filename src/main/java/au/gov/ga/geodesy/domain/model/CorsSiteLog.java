@@ -1,7 +1,5 @@
 package au.gov.ga.geodesy.domain.model;
 
-import java.io.StringWriter;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -17,15 +15,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
 
 import au.gov.ga.geodesy.interfaces.geodesyml.GeodesyMLMarshaller;
-import au.gov.ga.geodesy.interfaces.geodesyml.MarshallingException;
-import au.gov.xml.icsm.geodesyml.v_0_2_2.GeodesyMLType;
 
 @Entity
 @Table(name = "CORS_SITE_LOG")
 @Configurable(preConstruction = true)
 public class CorsSiteLog {
     private static final Log log = LogFactory.getLog(CorsSiteLog.class);
-
 
     @Autowired
     @Transient
@@ -46,22 +41,12 @@ public class CorsSiteLog {
     @Column(name = "FOUR_CHAR_ID", unique = true, nullable = false)
     private String fourCharacterId;
 
-    @Column(name = "GEODESY_ML", nullable = false, length = 30000)
-    private String geodesyML;
-
     @SuppressWarnings("unused") // used by hibernate
-    private CorsSiteLog() {}
+    private CorsSiteLog() {
+    }
 
-    public CorsSiteLog(String id, GeodesyMLType geodesyML) {
+    public CorsSiteLog(String id) {
         setFourCharacterId(id);
-        StringWriter writer = new StringWriter();
-        try {
-            geodesyMLMarshaller.marshal(geodesyML, writer);
-            setGeodesyML(writer.toString());
-        }
-        catch (MarshallingException e) {
-            log.warn(e);
-        }
     }
 
     public String getFourCharacterId() {
@@ -70,13 +55,5 @@ public class CorsSiteLog {
 
     private void setFourCharacterId(String fourCharacterId) {
         this.fourCharacterId = fourCharacterId;
-    }
-
-    public String getGeodesyML() {
-        return geodesyML;
-    }
-
-    private void setGeodesyML(String ml) {
-        geodesyML = ml;
     }
 }

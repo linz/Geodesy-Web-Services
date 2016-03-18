@@ -25,8 +25,6 @@ import au.gov.ga.geodesy.igssitelog.support.marshalling.moxy.IgsSiteLogMoxyMarsh
 import au.gov.ga.geodesy.interfaces.geodesyml.GeodesyMLMarshaller;
 import au.gov.ga.geodesy.interfaces.geodesyml.MarshallingException;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLUtils;
-import au.gov.ga.geodesy.support.dozer.GeodesyMLSiteLogDozerTranslator;
-import au.gov.ga.geodesy.support.dozer.TimePrimitivePropertyTypeUtils;
 import au.gov.ga.geodesy.support.marshalling.moxy.GeodesyMLMoxy;
 import au.gov.ga.geodesy.support.utils.GMLDateUtils;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.FrequencyStandardPropertyType;
@@ -40,6 +38,7 @@ import au.gov.xml.icsm.geodesyml.v_0_2_2.HumiditySensorPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.HumiditySensorType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.LocalEpisodicEventsPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.LocalEpisodicEventsType;
+import au.gov.xml.icsm.geodesyml.v_0_2_2.MoreInformationType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.PressureSensorPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.PressureSensorType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.SiteIdentificationType;
@@ -51,6 +50,7 @@ import au.gov.xml.icsm.geodesyml.v_0_2_2.TemperatureSensorPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.TemperatureSensorType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.WaterVaporSensorPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.WaterVaporSensorType;
+import net.opengis.iso19139.gmd.v_20070417.CIResponsiblePartyType;
 
 // @ContextConfiguration(classes = {GeodesyServiceTestConfig.class}, loader = AnnotationConfigContextLoader.class)
 // @Transactional("geodesyTransactionManager")
@@ -87,7 +87,7 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
         } else {
             tempDir = Files.createDirectory(tempDirName);
         }
-        Path tempFileName = tempDir.resolve("marshalled.xml");
+        Path tempFileName = tempDir.resolve(fileName);
         Path tempFile = null;
         if (Files.exists(tempFileName)) {
             tempFile = tempFileName;
@@ -100,7 +100,7 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
     @Test
     public void testTranslate() throws MarshallingException, IOException,
             au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
-        String source = "sitelog/ALIC.xml";
+        String source = "sitelog/testData/ALIC.xml";
         String destTmpName = "ALICGML.xml";
 
         Reader input = new InputStreamReader(
@@ -108,16 +108,17 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
 
         IgsSiteLog siteLog = marshaller.unmarshal(input);
 
-        GeodesyMLType geodesyML = geodesyMLSiteLogTranslator.dozerTranslate(siteLog);
+        JAXBElement<GeodesyMLType> geodesyMLJAXB = geodesyMLSiteLogTranslator.dozerTranslate(siteLog);
+
+        GeodesyMLType geodesyML = geodesyMLJAXB.getValue();
 
         Assert.assertNotNull(geodesyML);
 
         System.out.println("Write xml file to: " + returnTestFile(destTmpName).toString());
         FileWriter writer = new FileWriter(returnTestFile(destTmpName).toFile());
-        geodesyMLMarshaller.marshal(geodesyML, writer);
+        geodesyMLMarshaller.marshal(geodesyMLJAXB, writer);
 
         Assert.assertEquals(geodesyML.getNodeOrAbstractPositionOrPositionPairCovariance().size(), 1);
-        Assert.assertEquals(geodesyML.getName().get(0).getValue(), "GeodesyML Rocks Like Axel Foley!");
         Assert.assertTrue(geodesyML.getNodeOrAbstractPositionOrPositionPairCovariance().get(0) instanceof JAXBElement);
 
         Stream<SiteLogType> siteLogTypeStream = GeodesyMLUtils.getElementFromJAXBElements(
@@ -270,7 +271,27 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
                 GMLDateUtils.stringToDateToStringMultiParsers(TimePrimitivePropertyTypeUtils
                         .getTheTimeInstantType(localEpisodicEvent.getValidTime()).getTimePosition().getValue().get(0)),
                 "20 Jul 2011");
+        
+        // Contacts
+        CIResponsiblePartyType siteContact = siteLogType.getSiteContact().get(0).getCIResponsibleParty();
+        Assert.assertEquals(siteContact.getOrganisationName().getCharacterString().getValue(), "Geoscience Australia");
+        Assert.assertEquals(siteContact.getIndividualName().getCharacterString().getValue(), "Ryan Ruddick");
+        Assert.assertEquals(siteContact.getContactInfo().getCIContact().getAddress().getCIAddress().getElectronicMailAddress().get(0).getCharacterString().getValue(), "ryan.ruddick@ga.gov.au");
+        Assert.assertEquals(siteContact.getContactInfo().getCIContact().getPhone().getCITelephone().getVoice().get(0).getCharacterString().getValue(), "+61 2 6249 9426");
+        Assert.assertEquals(siteContact.getContactInfo().getCIContact().getPhone().getCITelephone().getFacsimile().get(0).getCharacterString().getValue(), "+61 2 6249 9929");
 
+        CIResponsiblePartyType siteMetadataCustodian = siteLogType.getSiteMetadataCustodian().getCIResponsibleParty();
+        Assert.assertEquals(siteMetadataCustodian.getOrganisationName().getCharacterString().getValue(), "Geoscience Australia 2");
+        Assert.assertEquals(siteMetadataCustodian.getIndividualName().getCharacterString().getValue(), "Bob Twilley");
+        Assert.assertEquals(siteMetadataCustodian.getContactInfo().getCIContact().getAddress().getCIAddress().getElectronicMailAddress().get(0).getCharacterString().getValue(), "bob.twilley@ga.gov.au");
+        Assert.assertEquals(siteMetadataCustodian.getContactInfo().getCIContact().getPhone().getCITelephone().getVoice().get(0).getCharacterString().getValue(), "+61 2 6249 9066");
+        Assert.assertEquals(siteMetadataCustodian.getContactInfo().getCIContact().getPhone().getCITelephone().getFacsimile().get(0).getCharacterString().getValue(), "+61 2 6249 9929");
+        
+        // More Information
+        MoreInformationType moreInformationType = siteLogType.getMoreInformation();
+        Assert.assertEquals(moreInformationType.getSiteDiagram(), "Y");
+        Assert.assertEquals(moreInformationType.getHorizonMask(), "Y");
+        Assert.assertEquals(moreInformationType.getSitePictures(), "Y");
     }
 
 }

@@ -97,7 +97,7 @@ public class CorsSiteLogFactory {
         return getSiteML(siteLogML.getAtSite())
             .flatMap(siteML -> getMonumentML(siteML.getMonument()))
             .flatMap(this::getFourCharacterId)
-            .flatMap(id -> Optional.of(new CorsSiteLog(id, geodesyML)));
+            .flatMap(id -> Optional.of(new CorsSiteLog(id)));
     }
 
     private Optional<String> getFourCharacterId(MonumentType monument) {

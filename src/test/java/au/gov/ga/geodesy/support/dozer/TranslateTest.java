@@ -87,7 +87,7 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
         } else {
             tempDir = Files.createDirectory(tempDirName);
         }
-        Path tempFileName = tempDir.resolve("marshalled.xml");
+        Path tempFileName = tempDir.resolve(fileName);
         Path tempFile = null;
         if (Files.exists(tempFileName)) {
             tempFile = tempFileName;
@@ -100,7 +100,7 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
     @Test
     public void testTranslate() throws MarshallingException, IOException,
             au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
-        String source = "sitelog/ALIC.xml";
+        String source = "sitelog/testData/ALIC.xml";
         String destTmpName = "ALICGML.xml";
 
         Reader input = new InputStreamReader(

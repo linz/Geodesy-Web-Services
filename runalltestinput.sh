@@ -8,10 +8,10 @@ if [ ! -d $OUTPUTDIR ]; then
     mkdir -p $OUTPUTDIR
 fi
 
-for i in $INPUTDIR/*
-do
-    echo $i
+#for i in $INPUTDIR/*
+#do
+#    echo $i
     
-    mvn exec:java -Dexec.mainClass="au.gov.ga.geodesy.support.commandline.GeodesyMLCommandLine" -Dexec.args="-in $i -outdir $OUTPUTDIR"
-    exit 1
-done
+mvn exec:java -Dexec.mainClass="au.gov.ga.geodesy.support.commandline.GeodesyMLCommandLine" -Dexec.args="-indir $INPUTDIR -outdir $OUTPUTDIR"
+#    exit 1
+#done

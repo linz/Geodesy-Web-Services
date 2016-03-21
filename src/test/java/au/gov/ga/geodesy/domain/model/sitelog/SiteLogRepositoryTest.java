@@ -40,9 +40,9 @@ public class SiteLogRepositoryTest extends AbstractTransactionalTestNGSpringCont
     @Rollback(false)
     public void saveAllSiteLogs() throws Exception {
         for (File f : getSiteLogFiles()) {
+            log.info("Saving " + f.getName());
             SiteLogSource input = new SiteLogSopacSource(new InputStreamReader(new FileInputStream(f)));
             SiteLog siteLog = input.getSiteLog();
-            log.info("Saving " + siteLog.getSiteIdentification().getFourCharacterId());
             igsSiteLogs.saveAndFlush(siteLog);
         }
     }

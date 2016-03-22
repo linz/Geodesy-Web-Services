@@ -17,8 +17,9 @@ import au.gov.ga.geodesy.support.marshalling.moxy.GeodesyMLMoxy;
 @EnableAspectJAutoProxy(proxyTargetClass = true)
 @ComponentScan(basePackages = {
     "au.gov.ga.geodesy.support.dozer",
-    "au.gov.ga.geodesy.support.jpa",
+    "au.gov.ga.geodesy.support.persistence.jpa",
     "au.gov.ga.geodesy.support.moxy",
+    "au.gov.ga.geodesy.support.mapper.orika",
 })
 public class GeodesySupportConfig {
     @Bean

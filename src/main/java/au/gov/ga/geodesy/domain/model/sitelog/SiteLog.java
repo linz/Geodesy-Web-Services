@@ -15,6 +15,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.validation.Valid;
@@ -26,6 +27,8 @@ import org.apache.commons.collections.functors.NotNullPredicate;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Configurable;
+
+import au.gov.ga.geodesy.domain.model.SiteResponsibleParty;
 
 /**
  * http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd:igsSiteLogType
@@ -129,6 +132,14 @@ public class SiteLog {
     @Valid
     @Embedded
     protected MoreInformation moreInformation;
+
+    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "SITE_CONTACT_ID")
+    protected SiteResponsibleParty siteContact;
+
+    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "SITE_METADATA_CUSTODIAN_ID")
+    protected SiteResponsibleParty siteMetadataCustodian;
 
     @SuppressWarnings("unused") // used by hibernate
     private Integer getId() {
@@ -403,6 +414,34 @@ public class SiteLog {
      */
     public void setMoreInformation(MoreInformation value) {
         this.moreInformation = value;
+    }
+
+    /**
+     * @return the siteContact
+     */
+    public SiteResponsibleParty getSiteContact() {
+        return siteContact;
+    }
+
+    /**
+     * @param siteContact the siteContact to set
+     */
+    public void setSiteContact(SiteResponsibleParty siteContact) {
+        this.siteContact = siteContact;
+    }
+
+    /**
+     * @return the siteMetadataCustodian
+     */
+    public SiteResponsibleParty getSiteMetadataCustodian() {
+        return siteMetadataCustodian;
+    }
+
+    /**
+     * @param siteMetadataCustodian the siteMetadataCustodian to set
+     */
+    public void setSiteMetadataCustodian(SiteResponsibleParty siteMetadataCustodian) {
+        this.siteMetadataCustodian = siteMetadataCustodian;
     }
 
     void afterUnmarshal(Unmarshaller unmarshaller, Object parent) {

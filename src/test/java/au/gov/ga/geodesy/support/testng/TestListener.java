@@ -1,6 +1,7 @@
 package au.gov.ga.geodesy.support.testng;
 
 import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.orm.jpa.JpaSystemException;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 import org.testng.TestListenerAdapter;
@@ -8,8 +9,11 @@ import org.testng.TestListenerAdapter;
 public class TestListener extends TestListenerAdapter implements ITestListener {
     public void onTestFailure(ITestResult failure) {
         Throwable x = failure.getThrowable();
+        // TODO: can we get the root cause polymorphicaly?
         if (x instanceof DataIntegrityViolationException) {
             ((DataIntegrityViolationException) x).getRootCause().printStackTrace();
+        } else if (x instanceof JpaSystemException) {
+            ((JpaSystemException) x).getRootCause().printStackTrace();
         }
         super.onTestFailure(failure);
     }

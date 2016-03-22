@@ -25,6 +25,14 @@
     </properties>
     <repositories>
         <repository>
+            <id>geotoolkit</id>
+            <url>http://maven.geotoolkit.org/</url>
+        </repository>
+        <repository>
+            <id>osgeo</id>
+            <url>http://download.osgeo.org/webdav/geotools/</url>
+        </repository>
+        <repository>
             <id>boundlessgeo</id>
             <url>http://repo.boundlessgeo.com/main</url>
         </repository>
@@ -46,9 +54,31 @@
         </repository> </repositories> -->
     <dependencies>
         <dependency>
+            <groupId>ma.glasnost.orika</groupId>
+            <artifactId>orika-core</artifactId>
+            <!-- TODO: choose version -->
+            <!-- <version>1.4.6</version> -->
+            <version>1.5.0-beta0</version>
+        </dependency>
+        <dependency>
+           <groupId>ma.glasnost.orika</groupId>
+           <artifactId>orika-eclipse-tools</artifactId>
+           <version>1.5.0-beta0</version>
+        </dependency>
+        <dependency>
             <groupId>au.gov.ga.geodesy</groupId>
             <artifactId>igssitelog-bindings</artifactId>
             <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>1.0.0.GA</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-collections</groupId>
+            <artifactId>commons-collections</artifactId>
+            <version>3.2.2</version>
         </dependency>
         <dependency>
             <groupId>commons-io</groupId>
@@ -85,6 +115,27 @@
             <groupId>org.jvnet.ogc</groupId>
             <artifactId>geodesyml-v_0_2_2</artifactId>
             <version>2.6.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.geotoolkit</groupId>
+            <artifactId>geotk-xml-gml</artifactId>
+            <version>4.0-M2</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.opengis</groupId>
+                    <artifactId>geoapi-pending</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.geotools</groupId>
+            <artifactId>gt-api</artifactId>
+            <version>14.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.geotools</groupId>
+            <artifactId>gt-metadata</artifactId>
+            <version>14.0</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.data</groupId>

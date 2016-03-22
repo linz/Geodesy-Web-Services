@@ -4,6 +4,7 @@ import org.geotools.metadata.iso.citation.ResponsiblePartyImpl;
 import org.geotools.util.SimpleInternationalString;
 import org.opengis.metadata.citation.Address;
 import org.opengis.metadata.citation.ResponsibleParty;
+import org.opengis.metadata.citation.Role;
 import org.opengis.metadata.citation.Telephone;
 import org.opengis.util.InternationalString;
 
@@ -11,6 +12,8 @@ import ma.glasnost.orika.MapperFacade;
 import ma.glasnost.orika.MapperFactory;
 import ma.glasnost.orika.impl.DefaultMapperFactory;
 
+import net.opengis.gml.v_3_2_1.CodeListType;
+import net.opengis.iso19139.gco.v_20070417.CodeListValueType;
 import net.opengis.iso19139.gmd.v_20070417.CIAddressType;
 import net.opengis.iso19139.gmd.v_20070417.CIResponsiblePartyType;
 import net.opengis.iso19139.gmd.v_20070417.CITelephoneType;
@@ -35,8 +38,8 @@ public class ResponsiblePartyOrikaMapper {
             .byDefault()
             .register();
 
-
         mapperFactory.classMap(ResponsiblePartyImpl.class, CIResponsiblePartyType.class)
+            .field("role", "role.CIRoleCode")
             .field("contactInfo", "contactInfo.CIContact")
             .field("contactInfo.address", "contactInfo.CIContact.address.CIAddress")
             .field("contactInfo.phone", "contactInfo.CIContact.phone.CITelephone")
@@ -44,6 +47,7 @@ public class ResponsiblePartyOrikaMapper {
             .register();
 
         mapperFactory.getConverterFactory().registerConverter(new InternationalStringToStringPropertyConverter());
+        mapperFactory.getConverterFactory().registerConverter(new RoleToCodeListValueConverter());
         mapperFactory.getConverterFactory().registerConverter(new StringToStringPropertyConverter());
         mapperFactory.registerConcreteType(InternationalString.class, SimpleInternationalString.class);
         mapper = mapperFactory.getMapperFacade();

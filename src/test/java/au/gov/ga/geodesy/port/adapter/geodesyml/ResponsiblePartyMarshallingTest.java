@@ -9,6 +9,7 @@ import org.geotools.metadata.iso.citation.ContactImpl;
 import org.geotools.metadata.iso.citation.ResponsiblePartyImpl;
 import org.geotools.metadata.iso.citation.TelephoneImpl;
 import org.geotools.util.SimpleInternationalString;
+import org.opengis.metadata.citation.Role;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.support.AnnotationConfigContextLoader;
@@ -33,6 +34,7 @@ public class ResponsiblePartyMarshallingTest extends AbstractTestNGSpringContext
     public void testMarshalling() throws Exception {
         ResponsiblePartyImpl party = new ResponsiblePartyImpl();
 
+        party.setRole(Role.POINT_OF_CONTACT);
         party.setIndividualName("Lazar Bodor");
         party.setOrganisationName(new SimpleInternationalString("Geoscience Australia"));
         party.setPositionName(new SimpleInternationalString("software developer"));

@@ -19,10 +19,10 @@ public class SiteLogSopacSource implements SiteLogSource {
     private IgsSiteLogXmlMarshaller marshaller;
 
     @Autowired
-    private SiteLogSopacTranslator dtoTranslator;
+    private SiteLogSopacMapper mapper;
 
     public SiteLogSopacSource(Reader sopacXML) throws MarshallingException {
-        siteLog = dtoTranslator.fromDTO(marshaller.unmarshal(sopacXML));
+        siteLog = mapper.fromDTO(marshaller.unmarshal(sopacXML));
     }
 
     public SiteLog getSiteLog() {

@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLog;
 import au.gov.ga.geodesy.igssitelog.domain.model.Agency;
 import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLog;
-import au.gov.ga.geodesy.port.adapter.sopac.SiteLogMapper;
+import au.gov.ga.geodesy.port.adapter.sopac.SiteLogSopacMapper;
 
 import ma.glasnost.orika.MapperFacade;
 import ma.glasnost.orika.MapperFactory;
@@ -18,7 +18,7 @@ import ma.glasnost.orika.impl.DefaultMapperFactory;
 import ma.glasnost.orika.impl.generator.EclipseJdtCompilerStrategy;
 
 @Component
-public class SiteLogOrikaMapper implements SiteLogMapper {
+public class SiteLogOrikaMapper implements SiteLogSopacMapper {
 
     static {
         System.setProperty(OrikaSystemProperties.WRITE_SOURCE_FILES, "true");

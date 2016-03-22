@@ -18,7 +18,6 @@ import org.testng.annotations.Test;
 
 import au.gov.ga.geodesy.port.SiteLogSource;
 import au.gov.ga.geodesy.port.adapter.sopac.SiteLogSopacSource;
-import au.gov.ga.geodesy.support.spring.GeodesyServiceConfig;
 import au.gov.ga.geodesy.support.spring.GeodesySupportConfig;
 import au.gov.ga.geodesy.support.spring.PersistenceJpaConfig;
 
@@ -36,9 +35,29 @@ public class SiteLogRepositoryTest extends AbstractTransactionalTestNGSpringCont
 
     private static final String sampleSiteLogsDir = "src/test/resources/sitelog";
 
-    @Test
+    @Test(groups = "first")
+    @Rollback(false)
+    public void saveALIC() throws Exception {
+        File alic = new File(sampleSiteLogsDir + "/ALIC.xml");
+        SiteLogSource input = new SiteLogSopacSource(new InputStreamReader(new FileInputStream(alic)));
+        igsSiteLogs.saveAndFlush(input.getSiteLog());
+    }
+
+    /**
+     * BZGN is a special case, because it does not have contact telephone numbers.
+     */
+    @Test(groups = "first")
+    @Rollback(false)
+    public void saveBZGN() throws Exception {
+        File alic = new File(sampleSiteLogsDir + "/BZGN.xml");
+        SiteLogSource input = new SiteLogSopacSource(new InputStreamReader(new FileInputStream(alic)));
+        igsSiteLogs.saveAndFlush(input.getSiteLog());
+    }
+
+    @Test(dependsOnGroups = "first")
     @Rollback(false)
     public void saveAllSiteLogs() throws Exception {
+        igsSiteLogs.deleteAll();
         for (File f : getSiteLogFiles()) {
             log.info("Saving " + f.getName());
             SiteLogSource input = new SiteLogSopacSource(new InputStreamReader(new FileInputStream(f)));
@@ -53,7 +72,7 @@ public class SiteLogRepositoryTest extends AbstractTransactionalTestNGSpringCont
         Assert.assertEquals(igsSiteLogs.count(), 681);
     }
 
-    @Test(dependsOnMethods = {"checkNumberOfSavedSiteLogs"})
+    @Test(dependsOnMethods = {"saveAllSiteLogs"})
     @Rollback(false)
     public void deleteSavedLogs() {
         igsSiteLogs.deleteAll();

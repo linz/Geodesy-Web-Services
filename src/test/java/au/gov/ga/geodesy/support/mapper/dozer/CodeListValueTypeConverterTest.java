@@ -1,9 +1,9 @@
-package au.gov.ga.geodesy.support.dozer;
+package au.gov.ga.geodesy.support.mapper.dozer;
 
 import org.junit.Assert;
 import org.junit.Test;
 
-import au.gov.ga.geodesy.support.dozer.CodeListValueTypeConverter;
+import au.gov.ga.geodesy.support.mapper.dozer.CodeListValueTypeConverter;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.IgsReceiverModelCodeType;
 import net.opengis.iso19139.gco.v_20070417.CodeListValueType;
 

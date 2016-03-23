@@ -1,11 +1,11 @@
-package au.gov.ga.geodesy.support.dozer;
+package au.gov.ga.geodesy.support.mapper.dozer;
 
 import java.lang.reflect.InvocationTargetException;
 
 import org.junit.Assert;
 import org.junit.Test;
 
-import au.gov.ga.geodesy.support.dozer.GeodesyMLSiteLogDozerTranslator;
+import au.gov.ga.geodesy.support.mapper.dozer.GeodesyMLSiteLogDozerTranslator;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.FrequencyStandardPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.FrequencyStandardType;
 

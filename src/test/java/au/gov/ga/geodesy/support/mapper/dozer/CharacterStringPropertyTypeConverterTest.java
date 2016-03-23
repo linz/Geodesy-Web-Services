@@ -1,8 +1,9 @@
-package au.gov.ga.geodesy.support.dozer;
+package au.gov.ga.geodesy.support.mapper.dozer;
 
 import org.junit.Test;
 import org.testng.Assert;
 
+import au.gov.ga.geodesy.support.mapper.dozer.CharacterStringPropertyTypeConverter;
 import net.opengis.iso19139.gco.v_20070417.CharacterStringPropertyType;
 import net.opengis.iso19139.gco.v_20070417.ObjectFactory;
 

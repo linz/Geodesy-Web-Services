@@ -4,19 +4,19 @@
           http://dozer.sourceforge.net/schema/beanmapping.xsd">
     <configuration>
         <custom-converters> <!-- these are always bi-directional -->
-            <converter type="au.gov.ga.geodesy.support.dozer.StringListConverter">
+            <converter type="au.gov.ga.geodesy.support.mapper.dozer.StringListConverter">
                 <class-a>java.util.List</class-a>
                 <class-b>java.lang.String</class-b>
             </converter>
-            <converter type="au.gov.ga.geodesy.support.dozer.TimePostitionTypeDateConverter">
+            <converter type="au.gov.ga.geodesy.support.mapper.dozer.TimePostitionTypeDateConverter">
                 <class-a>java.util.Date</class-a>
                 <class-b>net.opengis.gml.v_3_2_1.TimePositionType</class-b>
             </converter>
-            <converter type="au.gov.ga.geodesy.support.dozer.TimePostitionTypeStringConverter">
+            <converter type="au.gov.ga.geodesy.support.mapper.dozer.TimePostitionTypeStringConverter">
                 <class-a>java.lang.String</class-a>
                 <class-b>net.opengis.gml.v_3_2_1.TimePositionType</class-b>
             </converter>
-            <converter type="au.gov.ga.geodesy.support.dozer.CodeListValueTypeConverter">
+            <converter type="au.gov.ga.geodesy.support.mapper.dozer.CodeListValueTypeConverter">
                 <!-- This needs to also handle these extenders of CodeListValueType (either directly or indirectly via further 
                     inheritance) -->
                 <!-- and I do this inside the Converter -->
@@ -25,7 +25,7 @@
                 <class-a>net.opengis.iso19139.gco.v_20070417.CodeListValueType</class-a>
                 <class-b>java.lang.String</class-b>
             </converter>
-            <converter type="au.gov.ga.geodesy.support.dozer.CodeTypeConverter">
+            <converter type="au.gov.ga.geodesy.support.mapper.dozer.CodeTypeConverter">
                 <!-- This needs to also handle these extenders of CodeType (either directly or indirectly via further inheritance) -->
                 <!-- and I do this inside the Converter -->
                 <!-- net.opengis.gml.v_3_2_1.CodeWithAuthorityType -->
@@ -33,19 +33,19 @@
                 <class-a>net.opengis.gml.v_3_2_1.CodeType</class-a>
                 <class-b>java.lang.String</class-b>
             </converter>
-            <converter type="au.gov.ga.geodesy.support.dozer.CharacterStringPropertyTypeConverter">
+            <converter type="au.gov.ga.geodesy.support.mapper.dozer.CharacterStringPropertyTypeConverter">
                 <class-a>net.opengis.iso19139.gco.v_20070417.CharacterStringPropertyType</class-a>
                 <class-b>java.lang.String</class-b>
             </converter>
-            <converter type="au.gov.ga.geodesy.support.dozer.TimePrimitivePropertyTypeEffectiveDatesConverter">
+            <converter type="au.gov.ga.geodesy.support.mapper.dozer.TimePrimitivePropertyTypeEffectiveDatesConverter">
                 <class-a>au.gov.ga.geodesy.igssitelog.domain.model.EffectiveDates</class-a>
                 <class-b>net.opengis.gml.v_3_2_1.TimePrimitivePropertyType</class-b>
             </converter>
-            <converter type="au.gov.ga.geodesy.support.dozer.TimePrimitivePropertyTypeStringConverter">
+            <converter type="au.gov.ga.geodesy.support.mapper.dozer.TimePrimitivePropertyTypeStringConverter">
                 <class-a>java.lang.String</class-a>
                 <class-b>net.opengis.gml.v_3_2_1.TimePrimitivePropertyType</class-b>
             </converter>
-            <converter type="au.gov.ga.geodesy.support.dozer.AgencyAgencyPropertyTypeConverter">
+            <converter type="au.gov.ga.geodesy.support.mapper.dozer.AgencyAgencyPropertyTypeConverter">
                 <class-a>au.gov.ga.geodesy.igssitelog.domain.model.Agency</class-a>
                 <class-b>au.gov.xml.icsm.geodesyml.v_0_2_2.AgencyPropertyType</class-b>
             </converter>

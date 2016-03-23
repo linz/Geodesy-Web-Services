@@ -1,20 +1,21 @@
-package au.gov.ga.geodesy.support.dozer;
+package au.gov.ga.geodesy.support.mapper.dozer;
 
 import org.dozer.CustomConverter;
 import org.dozer.MappingException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import net.opengis.gml.v_3_2_1.CodeType;
+import net.opengis.iso19139.gco.v_20070417.CodeListValueType;
 
 /**
- * Convert: java.lang.String <--> net.opengis.gml.v_3_2_1.CodeType
+ * Convert: java.lang.String <--> net.opengis.gml.v_3_2_1.CodeListValueType
  * 
- * Also for these extending classes:
- * net.opengis.gml.v_3_2_1.CodeWithAuthorityType
- * au.gov.xml.icsm.geodesyml.v_0_2_2.IgsRadomeModelCodeType
+ * Also handles these extending classes:
+ * au.gov.xml.icsm.geodesyml.v_0_2_2.IgsReceiverModelCodeType
+ * au.gov.xml.icsm.geodesyml.v_0_2_2.IgsAntennaModelCodeType
+ * 
  */
-public class CodeTypeConverter implements CustomConverter {
+public class CodeListValueTypeConverter implements CustomConverter {
     Logger logger = LoggerFactory.getLogger(getClass());
 
     @SuppressWarnings("rawtypes")
@@ -34,10 +35,10 @@ public class CodeTypeConverter implements CustomConverter {
             } else {
                 destClassInstance = destination;
             }
-            ((CodeType) destClassInstance).setValue((String) source);
+            ((CodeListValueType) destClassInstance).setValue((String) source);
             return destClassInstance;
-        } else if (source instanceof CodeType) {
-            return ((CodeType) source).getValue();
+        } else if (source instanceof CodeListValueType) {
+            return ((CodeListValueType) source).getValue();
         } else {
             throw new MappingException("Converter " + getClass().getName()
                     + "used incorrectly. Arguments passed in were:" + destination + " and " + source);

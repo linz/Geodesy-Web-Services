@@ -1,4 +1,4 @@
-package au.gov.ga.geodesy.support.dozer;
+package au.gov.ga.geodesy.support.mapper.dozer;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -25,6 +25,8 @@ import au.gov.ga.geodesy.igssitelog.support.marshalling.moxy.IgsSiteLogMoxyMarsh
 import au.gov.ga.geodesy.interfaces.geodesyml.GeodesyMLMarshaller;
 import au.gov.ga.geodesy.interfaces.geodesyml.MarshallingException;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLUtils;
+import au.gov.ga.geodesy.support.mapper.dozer.GeodesyMLSiteLogDozerTranslator;
+import au.gov.ga.geodesy.support.mapper.dozer.TimePrimitivePropertyTypeUtils;
 import au.gov.ga.geodesy.support.marshalling.moxy.GeodesyMLMoxy;
 import au.gov.ga.geodesy.support.utils.GMLDateUtils;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.CollocationInformationPropertyType;

@@ -1,12 +1,12 @@
-package au.gov.ga.geodesy.support.dozer;
+package au.gov.ga.geodesy.support.mapper.dozer;
 
 import java.util.Date;
 
 import org.junit.Assert;
 import org.junit.Test;
 
-import au.gov.ga.geodesy.support.dozer.TimePrimitivePropertyTypeStringConverter;
-import au.gov.ga.geodesy.support.dozer.TimePrimitivePropertyTypeUtils;
+import au.gov.ga.geodesy.support.mapper.dozer.TimePrimitivePropertyTypeStringConverter;
+import au.gov.ga.geodesy.support.mapper.dozer.TimePrimitivePropertyTypeUtils;
 import au.gov.ga.geodesy.support.utils.GMLDateUtils;
 import net.opengis.gml.v_3_2_1.TimePrimitivePropertyType;
 

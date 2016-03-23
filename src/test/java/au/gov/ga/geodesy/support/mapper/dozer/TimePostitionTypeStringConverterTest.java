@@ -1,11 +1,11 @@
-package au.gov.ga.geodesy.support.dozer;
+package au.gov.ga.geodesy.support.mapper.dozer;
 
 import java.util.Date;
 
 import org.junit.Assert;
 import org.junit.Test;
 
-import au.gov.ga.geodesy.support.dozer.TimePostitionTypeStringConverter;
+import au.gov.ga.geodesy.support.mapper.dozer.TimePostitionTypeStringConverter;
 import au.gov.ga.geodesy.support.utils.GMLDateUtils;
 import net.opengis.gml.v_3_2_1.TimePositionType;
 

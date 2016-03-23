@@ -1,4 +1,4 @@
-package au.gov.ga.geodesy.support.dozer;
+package au.gov.ga.geodesy.support.mapper.dozer;
 
 import org.dozer.CustomConverter;
 import org.dozer.MappingException;

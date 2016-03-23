@@ -1,10 +1,11 @@
-package au.gov.ga.geodesy.support.dozer;
+package au.gov.ga.geodesy.support.mapper.dozer;
 
 import org.junit.Assert;
 import org.junit.Test;
 
 import au.gov.ga.geodesy.igssitelog.domain.model.Agency;
 import au.gov.ga.geodesy.igssitelog.domain.model.Contact;
+import au.gov.ga.geodesy.support.mapper.dozer.AgencyAgencyPropertyTypeConverter;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.AgencyPropertyType;
 
 /**

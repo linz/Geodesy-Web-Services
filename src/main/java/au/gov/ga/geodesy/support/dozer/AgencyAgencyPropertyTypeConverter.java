@@ -1,9 +1,12 @@
 package au.gov.ga.geodesy.support.dozer;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import org.dozer.CustomConverter;
+import org.dozer.DozerBeanMapper;
 import org.dozer.MappingException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,7 +25,8 @@ import net.opengis.iso19139.gmd.v_20070417.CITelephoneType;
 import net.opengis.iso19139.gmd.v_20070417.MDSecurityConstraintsType;
 
 /**
- * Convert: au.gov.ga.geodesy.igssitelog.domain.model.Agency <--> au.gov.xml.icsm.geodesyml.v_0_2_2.AgencyPropertyType
+ * Convert: au.gov.ga.geodesy.igssitelog.domain.model.Agency <-->
+ * au.gov.xml.icsm.geodesyml.v_0_2_2.AgencyPropertyType
  * 
  * ie. contacts
  */
@@ -30,6 +34,7 @@ public class AgencyAgencyPropertyTypeConverter implements CustomConverter {
     Logger logger = LoggerFactory.getLogger(getClass());
     ObjectFactory geoObjectFactory = new ObjectFactory();
     net.opengis.iso19139.gmd.v_20070417.ObjectFactory gmdObjectFactory = new net.opengis.iso19139.gmd.v_20070417.ObjectFactory();
+    DozerBeanMapper mapper = DozerUtils.getDozerBeanMapper();
 
     @SuppressWarnings("rawtypes")
     public Object convert(Object destination, Object source, Class destClass, Class sourceClass) {
@@ -51,14 +56,13 @@ public class AgencyAgencyPropertyTypeConverter implements CustomConverter {
             CIResponsiblePartyType ciResponsibleParty = gmdObjectFactory.createCIResponsiblePartyType();
             dest.setCIResponsibleParty(ciResponsibleParty);
 
-            CharacterStringPropertyType characterStringPropertyTypeName = DozerDelegate.mapWithGuard(
-                    sourceType.getName(),
+            CharacterStringPropertyType characterStringPropertyTypeName = mapper.map(sourceType.getName(),
                     CharacterStringPropertyType.class);
             ciResponsibleParty.setOrganisationName(characterStringPropertyTypeName);
 
             if (sourceType.getPrimaryContact() != null) {
-                CharacterStringPropertyType characterStringPropertyTypeIndividualName = DozerDelegate
-                        .mapWithGuard(sourceType.getPrimaryContact().getName(), CharacterStringPropertyType.class);
+                CharacterStringPropertyType characterStringPropertyTypeIndividualName = mapper
+                        .map(sourceType.getPrimaryContact().getName(), CharacterStringPropertyType.class);
                 ciResponsibleParty.setIndividualName(characterStringPropertyTypeIndividualName);
 
                 // c.getCIResponsibleParty().getContactInfo()
@@ -68,30 +72,27 @@ public class AgencyAgencyPropertyTypeConverter implements CustomConverter {
                 CIContactType ciContactType = gmdObjectFactory.createCIContactType();
                 CIAddressPropertyType ciAddressPropertyType = gmdObjectFactory.createCIAddressPropertyType();
                 CIAddressType ciAddressType = gmdObjectFactory.createCIAddressType();
-
+                
                 // Email
-                CharacterStringPropertyType emailCSPT = DozerDelegate.mapWithGuard(
-                        sourceType.getPrimaryContact().getEmail(),
+                CharacterStringPropertyType emailCSPT = mapper.map(sourceType.getPrimaryContact().getEmail(),
                         CharacterStringPropertyType.class);
                 ciAddressType.setElectronicMailAddress(Stream.of(emailCSPT).collect(Collectors.toList()));
                 ciAddressPropertyType.setCIAddress(ciAddressType);
                 ciContactType.setAddress(ciAddressPropertyType);
                 ciContactPropertyType.setCIContact(ciContactType);
                 ciResponsibleParty.setContactInfo(ciContactPropertyType);
-
+                
                 // Phone
                 CITelephonePropertyType ciTelephonePropertyType = gmdObjectFactory.createCITelephonePropertyType();
-                ciContactType.setPhone(ciTelephonePropertyType);
+                ciContactType.setPhone(ciTelephonePropertyType );
                 CITelephoneType ciTelephoneType = gmdObjectFactory.createCITelephoneType();
-                ciTelephonePropertyType.setCITelephone(ciTelephoneType);
-                CharacterStringPropertyType phoneCSPT = DozerDelegate.mapWithGuard(
-                        sourceType.getPrimaryContact().getTelephonePrimary(),
+                ciTelephonePropertyType.setCITelephone(ciTelephoneType );
+                CharacterStringPropertyType phoneCSPT = mapper.map(sourceType.getPrimaryContact().getTelephonePrimary(),
                         CharacterStringPropertyType.class);
                 ciTelephoneType.setVoice(Stream.of(phoneCSPT).collect(Collectors.toList()));
 
                 // Fax
-                CharacterStringPropertyType faxCSPT = DozerDelegate.mapWithGuard(
-                        sourceType.getPrimaryContact().getFax(),
+                CharacterStringPropertyType faxCSPT = mapper.map(sourceType.getPrimaryContact().getFax(),
                         CharacterStringPropertyType.class);
                 ciTelephoneType.setFacsimile(Stream.of(faxCSPT).collect(Collectors.toList()));
             }

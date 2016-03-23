@@ -403,7 +403,11 @@
                             <properties>
                                 <property>
                                     <name>listener</name>
-                                    <value>au.gov.ga.geodesy.support.testng.TestSuiteListener,au.gov.ga.geodesy.support.testng.TestListener</value>
+                                    <value>
+                                        au.gov.ga.geodesy.support.testng.TestSuiteListener,
+                                        au.gov.ga.geodesy.support.testng.TestListener,
+                                        au.gov.ga.geodesy.support.testng.TestDependencyController
+                                    </value>
                                 </property>
                             </properties>
                         </configuration>

@@ -12,8 +12,9 @@ import org.slf4j.LoggerFactory;
 import au.gov.ga.geodesy.exception.GeodesyRuntimeException;
 
 /**
- * Define Date Formats and various methods to use them. Including stringToDateToStringMultiParsers(String dateString) that will try every Date Format to parse
- * the given String and fail after all tried. The stringToDateToString dance is done here to validate the String is a date and also to lose ms precision.
+ * Define Date Formats and various methods to use them. Including stringToDateToStringMultiParsers(String dateString) that will try every
+ * Date Format to parse the given String and fail after all tried. The stringToDateToString dance is done here to validate the String is a
+ * date and also to lose ms precision.
  * 
  */
 public class GMLDateUtils {
@@ -132,7 +133,7 @@ public class GMLDateUtils {
             try {
                 date = dateFormat.parse(dateString);
             } catch (ParseException e) {
-                logger.info(String.format("Unable to parse date string: %s, with dateFormat: %s", dateString,
+                logger.warn(String.format("Unable to parse date string: %s, with dateFormat: %s", dateString,
                         ((SimpleDateFormat) dateFormat).toLocalizedPattern()));
                 throw e;
             }
@@ -140,8 +141,8 @@ public class GMLDateUtils {
     }
 
     /**
-     * Perform this dateToString and stringToDate dance so can lose the ms precision that renders dates different. Uses default dateFormat of
-     * GEODESYML_DATE_FORMAT_FULL
+     * Perform this dateToString and stringToDate dance so can lose the ms precision that renders dates different.
+     * Uses default dateFormat of GEODESYML_DATE_FORMAT_FULL
      * 
      * @param date
      */
@@ -176,9 +177,9 @@ public class GMLDateUtils {
     }
 
     /**
-     * Attempt to parse using all DateFormats, only throwing an exception to the client if all DateFormats are all exhausted. Do so by returning a string from
-     * an input string going via an intermediate Date object. This technique good to validate input is a valid date. It also drops millisecond precision and
-     * through the dateFormats[] array, allows a specific output format to be used.
+     * Attempt to parse using all DateFormats, only throwing an exception to the client if all DateFormats are all exhausted.
+     * Do so by returning a string from an input string going via an intermediate Date object. This technique good to validate input is a
+     * valid date. It also drops millisecond precision and through the dateFormats[] array, allows a specific output format to be used.
      * 
      * @param dateString
      * @return string version of date after verify it a date
@@ -197,19 +198,10 @@ public class GMLDateUtils {
             }
         }
         if (result == null) {
-            // If the dateString is "(CCYY-MM-DDThh" or "CCYY-MM-DDThh)" or "CCYY-MM-DDThh" it is most likely the template string that was somehow munged.  
-            // And it was always meant to remain as a template and hence this can be ignored.
-            // Note that "(CCYY-MM-DDThh)" is never passed in for translation
-            if (dateString.equals("(CCYY-MM-DDThh") || dateString.equals("CCYY-MM-DDThh")
-                    || dateString.equals("CCYY-MM-DDThh)")) {
-                String msg = "Cannot parse dateString: '" + dateString + "' and it is likely a badly formed template. Ignoring.";
-                logger.debug(msg);
-            } else {
-                String msg = "Cannot parse dateString: '" + dateString + "' with any of the formats: "
-                        + formatsFailed.toString();
-                logger.debug(msg);
-                throw new GeodesyRuntimeException(msg);
-            }
+            String msg = "Cannot parse dateString: " + dateString + " with any of the formats: "
+                    + formatsFailed.toString();
+            logger.debug(msg);
+            throw new GeodesyRuntimeException(msg);
         }
         return result;
     }

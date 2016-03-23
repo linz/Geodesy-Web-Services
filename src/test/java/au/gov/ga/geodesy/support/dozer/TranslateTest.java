@@ -27,7 +27,6 @@ import au.gov.ga.geodesy.interfaces.geodesyml.MarshallingException;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLUtils;
 import au.gov.ga.geodesy.support.marshalling.moxy.GeodesyMLMoxy;
 import au.gov.ga.geodesy.support.utils.GMLDateUtils;
-import au.gov.xml.icsm.geodesyml.v_0_2_2.CollocationInformationPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.FrequencyStandardPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.FrequencyStandardType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.GeodesyMLType;
@@ -42,8 +41,6 @@ import au.gov.xml.icsm.geodesyml.v_0_2_2.LocalEpisodicEventsType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.MoreInformationType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.PressureSensorPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.PressureSensorType;
-import au.gov.xml.icsm.geodesyml.v_0_2_2.RadioInterferencesPropertyType;
-import au.gov.xml.icsm.geodesyml.v_0_2_2.RadioInterferencesType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.SiteIdentificationType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.SiteLocationType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.SiteLogType;
@@ -58,15 +55,6 @@ import net.opengis.iso19139.gmd.v_20070417.CIResponsiblePartyType;
 // @ContextConfiguration(classes = {GeodesyServiceTestConfig.class}, loader = AnnotationConfigContextLoader.class)
 // @Transactional("geodesyTransactionManager")
 public class TranslateTest { // extends AbstractTestNGSpringContextTests {
-    /**
-     * Location of input test data - original location of files that haven't been modified
-     */
-    private final static String SITEDATADIR = "sitelog";
-    /**
-     * Location of input test data - same as that in SITEDATADIR though modified in some way to improve or fix test
-     */
-    private final static String TESTDATADIR = "sitelog/testData";
-
     // @Autowired
     private IgsSiteLogXmlMarshaller marshaller;
 
@@ -109,22 +97,11 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
         return tempFile;
     }
 
-    /**
-     * @param inputResourceDir
-     *            - directory in the resources in which the input file exists
-     * @param inputFile
-     *            - file to test
-     * @return
-     * @throws MarshallingException
-     * @throws IOException
-     * @throws au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException
-     * @throws ParseException
-     */
-    public GeodesyMLType testTranslate(String inputResourceDir, String inputFile)
-            throws MarshallingException, IOException,
+    @Test
+    public void testTranslate() throws MarshallingException, IOException,
             au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
-        String source = inputResourceDir + "/" + inputFile + ".xml";
-        String destTmpName = inputFile + ".out.xml";
+        String source = "sitelog/testData/ALIC.xml";
+        String destTmpName = "ALICGML.xml";
 
         Reader input = new InputStreamReader(
                 Thread.currentThread().getContextClassLoader().getResourceAsStream(source));
@@ -141,10 +118,6 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
         FileWriter writer = new FileWriter(returnTestFile(destTmpName).toFile());
         geodesyMLMarshaller.marshal(geodesyMLJAXB, writer);
 
-        return geodesyML;
-    }
-
-    private SiteLogType getSiteLog(GeodesyMLType geodesyML) {
         Assert.assertEquals(geodesyML.getNodeOrAbstractPositionOrPositionPairCovariance().size(), 1);
         Assert.assertTrue(geodesyML.getNodeOrAbstractPositionOrPositionPairCovariance().get(0) instanceof JAXBElement);
 
@@ -152,22 +125,6 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
                 geodesyML.getNodeOrAbstractPositionOrPositionPairCovariance(), SiteLogType.class);
 
         SiteLogType siteLogType = siteLogTypeStream.collect(Collectors.toList()).get(0);
-        return siteLogType;
-    }
-
-    @Test
-    public void testALIC() throws MarshallingException, IOException,
-            au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
-        GeodesyMLType geodesyML = testTranslate(TESTDATADIR, "ALIC");
-
-//        Assert.assertEquals(geodesyML.getNodeOrAbstractPositionOrPositionPairCovariance().size(), 1);
-//        Assert.assertTrue(geodesyML.getNodeOrAbstractPositionOrPositionPairCovariance().get(0) instanceof JAXBElement);
-//
-//        Stream<SiteLogType> siteLogTypeStream = GeodesyMLUtils.getElementFromJAXBElements(
-//                geodesyML.getNodeOrAbstractPositionOrPositionPairCovariance(), SiteLogType.class);
-//
-//        SiteLogType siteLogType = siteLogTypeStream.collect(Collectors.toList()).get(0);
-        SiteLogType siteLogType = getSiteLog(geodesyML);
 
         SiteIdentificationType siteIdentificationType = siteLogType.getSiteIdentification();
         SiteLocationType siteLocationType = siteLogType.getSiteLocation();
@@ -215,8 +172,7 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
         Assert.assertEquals(antenna1.getNotes(), "Radome was damaged at an unknown time during this period.");
 
         // SurveyedLocalTiesPropertyType
-        List<SurveyedLocalTiesPropertyType> surveyedLocalTies = siteLogType
-                .getSurveyedLocalTies();
+        List<SurveyedLocalTiesPropertyType> surveyedLocalTies = siteLogType.getSurveyedLocalTies();
         Assert.assertEquals(surveyedLocalTies.size(), 3);
 
         Collections.sort(surveyedLocalTies, (s1, s2) -> s1.getSurveyedLocalTies().getTiedMarkerName()
@@ -231,8 +187,7 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
         Assert.assertEquals(surveyedTies1.getDateMeasured().getValue().get(0), "11 Aug 1992 14:00 GMT");
 
         // FrequencyStandardPropertyType
-        List<FrequencyStandardPropertyType> frequencyStandards = siteLogType
-                .getFrequencyStandards();
+        List<FrequencyStandardPropertyType> frequencyStandards = siteLogType.getFrequencyStandards();
         Assert.assertEquals(frequencyStandards.size(), 1);
 
         FrequencyStandardType frequencyStandardType = frequencyStandards.get(0).getFrequencyStandard();
@@ -243,8 +198,7 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
                 "15 May 1994 00:00 GMT");
 
         // Humidity Sensors
-        List<HumiditySensorPropertyType> humiditySensors = siteLogType
-                .getHumiditySensors();
+        List<HumiditySensorPropertyType> humiditySensors = siteLogType.getHumiditySensors();
         Assert.assertEquals(humiditySensors.size(), 1);
 
         HumiditySensorType humiditySensor = humiditySensors.get(0).getHumiditySensor();
@@ -261,8 +215,7 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
         Assert.assertEquals(humiditySensor.getAspiration(), "FAN");
 
         // Pressuer Sensors
-        List<PressureSensorPropertyType> pressureSensors = siteLogType
-                .getPressureSensors();
+        List<PressureSensorPropertyType> pressureSensors = siteLogType.getPressureSensors();
         Assert.assertEquals(pressureSensors.size(), 1);
 
         PressureSensorType pressureSensor = pressureSensors.get(0).getPressureSensor();
@@ -279,8 +232,7 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
         Assert.assertEquals(pressureSensor.getAccuracyHPa(), "0.1 mbar");
 
         // Water Vapour Sensors
-        List<WaterVaporSensorPropertyType> waterVapourSensors = siteLogType
-                .getWaterVaporSensors();
+        List<WaterVaporSensorPropertyType> waterVapourSensors = siteLogType.getWaterVaporSensors();
         Assert.assertEquals(waterVapourSensors.size(), 1);
 
         WaterVaporSensorType waterVapourSensor = waterVapourSensors.get(0).getWaterVaporSensor();
@@ -291,8 +243,7 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
                 "29 Mar 2006 00:00 GMT");
 
         // Temperature Sensors
-        List<TemperatureSensorPropertyType> temperatureSensors = siteLogType
-                .getTemperatureSensors();
+        List<TemperatureSensorPropertyType> temperatureSensors = siteLogType.getTemperatureSensors();
         Assert.assertEquals(temperatureSensors.size(), 1);
 
         TemperatureSensorType temperatureSensor = temperatureSensors.get(0).getTemperatureSensor();
@@ -310,8 +261,7 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
         Assert.assertEquals(temperatureSensor.getAspiration(), "FAN");
 
         // Local Episodic Events
-        List<LocalEpisodicEventsPropertyType> localEpisodicEvents = siteLogType
-                .getLocalEpisodicEventsSet();
+        List<LocalEpisodicEventsPropertyType> localEpisodicEvents = siteLogType.getLocalEpisodicEventsSet();
         Assert.assertEquals(localEpisodicEvents.size(), 1);
 
         LocalEpisodicEventsType localEpisodicEvent = localEpisodicEvents.get(0).getLocalEpisodicEvents();
@@ -321,92 +271,27 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
                 GMLDateUtils.stringToDateToStringMultiParsers(TimePrimitivePropertyTypeUtils
                         .getTheTimeInstantType(localEpisodicEvent.getValidTime()).getTimePosition().getValue().get(0)),
                 "20 Jul 2011");
-
+        
         // Contacts
-        CIResponsiblePartyType siteContact = siteLogType.getSiteContact().get(0)
-                .getCIResponsibleParty();
+        CIResponsiblePartyType siteContact = siteLogType.getSiteContact().get(0).getCIResponsibleParty();
         Assert.assertEquals(siteContact.getOrganisationName().getCharacterString().getValue(), "Geoscience Australia");
         Assert.assertEquals(siteContact.getIndividualName().getCharacterString().getValue(), "Ryan Ruddick");
-        Assert.assertEquals(siteContact.getContactInfo().getCIContact().getAddress().getCIAddress()
-                .getElectronicMailAddress().get(0).getCharacterString().getValue(), "ryan.ruddick@ga.gov.au");
-        Assert.assertEquals(siteContact.getContactInfo().getCIContact().getPhone().getCITelephone().getVoice().get(0)
-                .getCharacterString().getValue(), "+61 2 6249 9426");
-        Assert.assertEquals(siteContact.getContactInfo().getCIContact().getPhone().getCITelephone().getFacsimile()
-                .get(0).getCharacterString().getValue(), "+61 2 6249 9929");
+        Assert.assertEquals(siteContact.getContactInfo().getCIContact().getAddress().getCIAddress().getElectronicMailAddress().get(0).getCharacterString().getValue(), "ryan.ruddick@ga.gov.au");
+        Assert.assertEquals(siteContact.getContactInfo().getCIContact().getPhone().getCITelephone().getVoice().get(0).getCharacterString().getValue(), "+61 2 6249 9426");
+        Assert.assertEquals(siteContact.getContactInfo().getCIContact().getPhone().getCITelephone().getFacsimile().get(0).getCharacterString().getValue(), "+61 2 6249 9929");
 
-        CIResponsiblePartyType siteMetadataCustodian = siteLogType.getSiteMetadataCustodian()
-                .getCIResponsibleParty();
-        Assert.assertEquals(siteMetadataCustodian.getOrganisationName().getCharacterString().getValue(),
-                "Geoscience Australia 2");
+        CIResponsiblePartyType siteMetadataCustodian = siteLogType.getSiteMetadataCustodian().getCIResponsibleParty();
+        Assert.assertEquals(siteMetadataCustodian.getOrganisationName().getCharacterString().getValue(), "Geoscience Australia 2");
         Assert.assertEquals(siteMetadataCustodian.getIndividualName().getCharacterString().getValue(), "Bob Twilley");
-        Assert.assertEquals(siteMetadataCustodian.getContactInfo().getCIContact().getAddress().getCIAddress()
-                .getElectronicMailAddress().get(0).getCharacterString().getValue(), "bob.twilley@ga.gov.au");
-        Assert.assertEquals(siteMetadataCustodian.getContactInfo().getCIContact().getPhone().getCITelephone().getVoice()
-                .get(0).getCharacterString().getValue(), "+61 2 6249 9066");
-        Assert.assertEquals(siteMetadataCustodian.getContactInfo().getCIContact().getPhone().getCITelephone()
-                .getFacsimile().get(0).getCharacterString().getValue(), "+61 2 6249 9929");
-
+        Assert.assertEquals(siteMetadataCustodian.getContactInfo().getCIContact().getAddress().getCIAddress().getElectronicMailAddress().get(0).getCharacterString().getValue(), "bob.twilley@ga.gov.au");
+        Assert.assertEquals(siteMetadataCustodian.getContactInfo().getCIContact().getPhone().getCITelephone().getVoice().get(0).getCharacterString().getValue(), "+61 2 6249 9066");
+        Assert.assertEquals(siteMetadataCustodian.getContactInfo().getCIContact().getPhone().getCITelephone().getFacsimile().get(0).getCharacterString().getValue(), "+61 2 6249 9929");
+        
         // More Information
-        MoreInformationType moreInformationType = siteLogType
-                .getMoreInformation();
+        MoreInformationType moreInformationType = siteLogType.getMoreInformation();
         Assert.assertEquals(moreInformationType.getSiteDiagram(), "Y");
         Assert.assertEquals(moreInformationType.getHorizonMask(), "Y");
         Assert.assertEquals(moreInformationType.getSitePictures(), "Y");
-    }
-
-    @Test
-    public void testARTU() throws MarshallingException, IOException,
-            au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
-        GeodesyMLType geodesyML = testTranslate(SITEDATADIR, "ARTU");
-
-        Assert.assertNotNull(geodesyML);
-    }
-
-    @Test
-    public void test00NA() throws MarshallingException, IOException,
-            au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
-        GeodesyMLType geodesyML = testTranslate(SITEDATADIR, "00NA");
-
-        Assert.assertNotNull(geodesyML);
-    }
-
-    @Test
-    public void testMAT1() throws MarshallingException, IOException,
-            au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
-        GeodesyMLType geodesyML = testTranslate(TESTDATADIR, "MAT1");
-
-        Assert.assertNotNull(geodesyML);
-        
-        SiteLogType siteLogType = getSiteLog(geodesyML);
-
-        // test the new elements (compared to ALIC)
-        
-        List<CollocationInformationPropertyType> collocations = siteLogType.getCollocationInformations();
-        Assert.assertNotNull(collocations);
-        Assert.assertEquals(collocations.size(), 3);
-        
-//        <li:possibleProblemSources>TV</li:possibleProblemSources>
-//        <li:effectiveDates>2015-03-31/CCYY-MM-DD)</li:effectiveDates>
-//        <li:observedDegredation>Huge</li:observedDegredation>
-
-        List<RadioInterferencesPropertyType> radioInterferences = siteLogType.getRadioInterferencesSet();
-        Assert.assertNotNull(radioInterferences);
-        Assert.assertEquals(radioInterferences.size(), 1);
-        
-        RadioInterferencesType radioInterference = radioInterferences.get(0).getRadioInterferences();
-        Assert.assertEquals(radioInterference.getPossibleProblemSources(), "TV");
-        Assert.assertEquals(GMLDateUtils.stringToDateToStringMultiParsers(TimePrimitivePropertyTypeUtils
-                .getTheTimePeriodType(radioInterference.getValidTime()).getBeginPosition().getValue().get(0)),
-                "31 Mar 2015 00:00 GMT");
-
-    }
-
-    @Test
-    public void testZIMJ() throws MarshallingException, IOException,
-            au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
-        GeodesyMLType geodesyML = testTranslate(SITEDATADIR, "ZIMJ");
-
-        Assert.assertNotNull(geodesyML);
     }
 
 }

@@ -16,7 +16,7 @@ import org.testng.annotations.Test;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLogRepository;
 import au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException;
 import au.gov.ga.geodesy.port.SiteLogSource;
-import au.gov.ga.geodesy.port.adapter.sopac.SiteLogSopacSource;
+import au.gov.ga.geodesy.port.adapter.sopac.SiteLogSopacReader;
 import au.gov.ga.geodesy.support.spring.GeodesyServiceTestConfig;
 import au.gov.ga.geodesy.support.spring.GeodesySupportConfig;
 import au.gov.ga.geodesy.support.spring.PersistenceJpaConfig;
@@ -41,7 +41,7 @@ public class ChangeReceiverAtABRKTest extends AbstractTransactionalTestNGSpringC
             return f.endsWith(".xml");
         });
         for (File siteLogFile : siteLogFiles) {
-            SiteLogSource input = new SiteLogSopacSource(new FileReader(siteLogFile));
+            SiteLogSource input = new SiteLogSopacReader(new FileReader(siteLogFile));
             siteLogService.upload(input.getSiteLog());
         }
     }

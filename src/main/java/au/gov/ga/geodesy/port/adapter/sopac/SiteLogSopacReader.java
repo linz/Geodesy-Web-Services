@@ -8,10 +8,10 @@ import org.springframework.beans.factory.annotation.Configurable;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLog;
 import au.gov.ga.geodesy.igssitelog.interfaces.xml.IgsSiteLogXmlMarshaller;
 import au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException;
-import au.gov.ga.geodesy.port.SiteLogSource;
+import au.gov.ga.geodesy.port.SiteLogReader;
 
 @Configurable(preConstruction = true)
-public class SiteLogSopacSource implements SiteLogSource {
+public class SiteLogSopacReader extends SiteLogReader {
 
     private SiteLog siteLog;
 
@@ -21,7 +21,8 @@ public class SiteLogSopacSource implements SiteLogSource {
     @Autowired
     private SiteLogSopacMapper mapper;
 
-    public SiteLogSopacSource(Reader sopacXML) throws MarshallingException {
+    public SiteLogSopacReader(Reader sopacXML) throws MarshallingException {
+        super(sopacXML);
         siteLog = mapper.fromDTO(marshaller.unmarshal(sopacXML));
     }
 

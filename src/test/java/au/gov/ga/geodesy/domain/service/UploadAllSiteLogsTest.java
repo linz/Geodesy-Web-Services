@@ -20,7 +20,7 @@ import au.gov.ga.geodesy.domain.model.event.Event;
 import au.gov.ga.geodesy.domain.model.event.SiteLogReceived;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLogRepository;
 import au.gov.ga.geodesy.port.SiteLogSource;
-import au.gov.ga.geodesy.port.adapter.sopac.SiteLogSopacSource;
+import au.gov.ga.geodesy.port.adapter.sopac.SiteLogSopacReader;
 import au.gov.ga.geodesy.support.spring.GeodesyServiceUnitTestConfig;
 import au.gov.ga.geodesy.support.spring.GeodesySupportConfig;
 import au.gov.ga.geodesy.support.spring.PersistenceJpaConfig;
@@ -58,7 +58,7 @@ public class UploadAllSiteLogsTest extends AbstractTransactionalTestNGSpringCont
     @Rollback(false)
     public void upload() throws Exception {
         for (File f : siteLogFiles) {
-            SiteLogSource input = new SiteLogSopacSource(new FileReader(f));
+            SiteLogSource input = new SiteLogSopacReader(new FileReader(f));
             service.upload(input.getSiteLog());
         }
     }

@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import au.gov.ga.geodesy.domain.service.IgsSiteLogService;
 import au.gov.ga.geodesy.port.SiteLogSource;
-import au.gov.ga.geodesy.port.adapter.sopac.SiteLogSopacSource;
+import au.gov.ga.geodesy.port.adapter.sopac.SiteLogSopacReader;
 
 @Controller
 @RequestMapping("/siteLog")
@@ -28,7 +28,7 @@ public class SiteLogEndpoint {
 
     @RequestMapping(value = "/upload", method = RequestMethod.POST)
     public void upload(HttpServletRequest req, HttpServletResponse rsp) throws Exception {
-        SiteLogSource input = new SiteLogSopacSource(new InputStreamReader(req.getInputStream()));
+        SiteLogSource input = new SiteLogSopacReader(new InputStreamReader(req.getInputStream()));
         service.upload(input.getSiteLog());
     }
 }

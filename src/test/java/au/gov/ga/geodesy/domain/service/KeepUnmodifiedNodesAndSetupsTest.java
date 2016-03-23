@@ -22,7 +22,7 @@ import au.gov.ga.geodesy.domain.model.SetupRepository;
 import au.gov.ga.geodesy.domain.model.equipment.EquipmentRepository;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLogRepository;
 import au.gov.ga.geodesy.port.SiteLogSource;
-import au.gov.ga.geodesy.port.adapter.sopac.SiteLogSopacSource;
+import au.gov.ga.geodesy.port.adapter.sopac.SiteLogSopacReader;
 import au.gov.ga.geodesy.support.spring.GeodesyServiceTestConfig;
 import au.gov.ga.geodesy.support.spring.GeodesySupportConfig;
 import au.gov.ga.geodesy.support.spring.PersistenceJpaConfig;
@@ -77,7 +77,7 @@ public class KeepUnmodifiedNodesAndSetupsTest extends AbstractTransactionalTestN
 
     private InTransaction uploadABRK = new InTransaction() {
         public void f() throws Exception {
-            SiteLogSource input = new SiteLogSopacSource(new FileReader(new File(siteLogsDir + fourCharId + ".xml")));
+            SiteLogSource input = new SiteLogSopacReader(new FileReader(new File(siteLogsDir + fourCharId + ".xml")));
             siteLogService.upload(input.getSiteLog());
         }
     };

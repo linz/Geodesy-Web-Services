@@ -5,6 +5,7 @@ import static org.testng.Assert.assertEquals;
 import java.io.File;
 import java.io.FileFilter;
 import java.io.FileReader;
+import java.io.Reader;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

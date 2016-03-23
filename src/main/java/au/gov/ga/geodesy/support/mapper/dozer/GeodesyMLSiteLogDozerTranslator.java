@@ -120,8 +120,10 @@ public class GeodesyMLSiteLogDozerTranslator implements GeodesyMLSiteLogTranslat
                 FrequencyStandardType.class, FrequencyStandardLogItem.class, sopacSiteLog.getFrequencyStandards());
         siteLogType.setFrequencyStandards(frequencyStandards);
 
-        List<CollocationInformationPropertyType> collocationInformation = buildSiteLogItem(CollocationInformationPropertyType.class,
-                CollocationInformationType.class, CollocationInformation.class, sopacSiteLog.getCollocationInformation());
+        List<CollocationInformationPropertyType> collocationInformation = buildSiteLogItem(
+                CollocationInformationPropertyType.class,
+                CollocationInformationType.class, CollocationInformation.class,
+                sopacSiteLog.getCollocationInformation());
         siteLogType.setCollocationInformations(collocationInformation);
 
         List<HumiditySensorPropertyType> humiditySensors = buildSiteLogItem(HumiditySensorPropertyType.class,
@@ -140,8 +142,9 @@ public class GeodesyMLSiteLogDozerTranslator implements GeodesyMLSiteLogTranslat
                 TemperatureSensorType.class, TemperatureSensorLogItem.class, sopacSiteLog.getTemperatureSensors());
         siteLogType.setTemperatureSensors(temperatureSensors);
 
-        //  TODO TEST
-        List<OtherInstrumentationPropertyType> otherInstrumentation = buildSiteLogItem(OtherInstrumentationPropertyType.class,
+        // TODO TEST - No usage in the 684 Sopac SiteLog samples we have
+        List<OtherInstrumentationPropertyType> otherInstrumentation = buildSiteLogItem(
+                OtherInstrumentationPropertyType.class,
                 OtherInstrumentationType.class, CollocationInformation.class, sopacSiteLog.getCollocationInformation());
         siteLogType.setOtherInstrumentations(otherInstrumentation);
 
@@ -162,16 +165,19 @@ public class GeodesyMLSiteLogDozerTranslator implements GeodesyMLSiteLogTranslat
                 sopacSiteLog.getLocalEpisodicEvents());
         siteLogType.setLocalEpisodicEventsSet(localEpisodicEvents);
 
+        // IgsSiteLog Contact Agency becomes GeodesyML SiteContact
         AgencyPropertyType siteContact = DozerDelegate.mapWithGuard(sopacSiteLog.getContactAgency(),
                 AgencyPropertyType.class);
         siteLogType.setSiteContact(Stream.of(siteContact).collect(Collectors.toList()));
 
+        // IgsSiteLog Responsible Agency becomes GeodesyML Site Metadata Custodian
         AgencyPropertyType siteMetadataCustodian = DozerDelegate.mapWithGuard(sopacSiteLog.getResponsibleAgency(),
                 AgencyPropertyType.class);
         siteLogType.setSiteMetadataCustodian(siteMetadataCustodian);
 
         MoreInformation moreInformation = sopacSiteLog.getMoreInformation();
-        MoreInformationType moreInformationType = DozerDelegate.mapWithGuard(moreInformation, MoreInformationType.class);
+        MoreInformationType moreInformationType = DozerDelegate.mapWithGuard(moreInformation,
+                MoreInformationType.class);
         siteLogType.setMoreInformation(moreInformationType);
 
         // DataStreams
@@ -181,7 +187,8 @@ public class GeodesyMLSiteLogDozerTranslator implements GeodesyMLSiteLogTranslat
     }
 
     /**
-     * Generic method to build List of parentPropertyType that contain the item of interest in a childType. For SiteLogItem (the list becomes a member of that).
+     * Generic method to build List of parentPropertyType that contain the item of interest in a childType. For SiteLogItem (the list
+     * becomes a member of that).
      * 
      * @param parentPropertyType
      * @param childType
@@ -219,7 +226,8 @@ public class GeodesyMLSiteLogDozerTranslator implements GeodesyMLSiteLogTranslat
     }
 
     /**
-     * Use reflection to find the setter in newParentPropertyType.getClass() class that takes the type newChildType.getClass() and run the setter.
+     * Use reflection to find the setter in newParentPropertyType.getClass() class that takes the type newChildType.getClass() and run the
+     * setter.
      * 
      * @param newParentPropertyType
      * @param newChildType

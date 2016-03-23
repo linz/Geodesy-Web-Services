@@ -107,7 +107,7 @@
         <class-a>au.gov.ga.geodesy.igssitelog.domain.model.RadioInterference</class-a>
         <class-b>au.gov.xml.icsm.geodesyml.v_0_2_2.RadioInterferencesType</class-b>
         <field>
-            <a>date</a>
+            <a>effectiveDates</a>
             <b>validTime</b>
         </field>
         <field>
@@ -119,7 +119,31 @@
             <b>observedDegradations</b>
         </field>
     </mapping>
-        <mapping>
+    <mapping>
+        <class-a>au.gov.ga.geodesy.igssitelog.domain.model.MultipathSource</class-a>
+        <class-b>au.gov.xml.icsm.geodesyml.v_0_2_2.BasePossibleProblemSourcesType</class-b>
+        <field>
+            <a>effectiveDates</a>
+            <b>validTime</b>
+        </field>
+        <field>
+            <a>possibleProblemSource</a>
+            <b>possibleProblemSources</b>
+        </field>
+    </mapping>
+    <mapping>
+        <class-a>au.gov.ga.geodesy.igssitelog.domain.model.SignalObstruction</class-a>
+        <class-b>au.gov.xml.icsm.geodesyml.v_0_2_2.BasePossibleProblemSourcesType</class-b>
+        <field>
+            <a>effectiveDates</a>
+            <b>validTime</b>
+        </field>
+        <field>
+            <a>possibleProblemSource</a>
+            <b>possibleProblemSources</b>
+        </field>
+    </mapping>
+    <mapping>
         <class-a>au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLog</class-a>
         <class-b>au.gov.xml.icsm.geodesyml.v_0_2_2.SiteLogType</class-b>
         <field>

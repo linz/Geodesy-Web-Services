@@ -9,6 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import au.gov.ga.geodesy.igssitelog.domain.model.Agency;
+import au.gov.ga.geodesy.igssitelog.domain.model.Contact;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.AgencyPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.ObjectFactory;
 import net.opengis.iso19139.gco.v_20070417.CharacterStringPropertyType;
@@ -56,6 +57,14 @@ public class AgencyAgencyPropertyTypeConverter implements CustomConverter {
                     CharacterStringPropertyType.class);
             ciResponsibleParty.setOrganisationName(characterStringPropertyTypeName);
 
+            CIAddressType ciAddressType = gmdObjectFactory.createCIAddressType();
+            CIAddressPropertyType ciAddressPropertyType = gmdObjectFactory.createCIAddressPropertyType();
+            CIContactType ciContactType = gmdObjectFactory.createCIContactType();
+            ciAddressPropertyType.setCIAddress(ciAddressType);
+            ciContactType.setAddress(ciAddressPropertyType);
+            CIContactPropertyType ciContactPropertyType = gmdObjectFactory.createCIContactPropertyType();
+            ciContactPropertyType.setCIContact(ciContactType);
+            ciResponsibleParty.setContactInfo(ciContactPropertyType);
             if (sourceType.getPrimaryContact() != null) {
                 CharacterStringPropertyType characterStringPropertyTypeIndividualName = DozerDelegate
                         .mapWithGuard(sourceType.getPrimaryContact().getName(), CharacterStringPropertyType.class);
@@ -64,20 +73,12 @@ public class AgencyAgencyPropertyTypeConverter implements CustomConverter {
                 // c.getCIResponsibleParty().getContactInfo()
                 // .getCIContact().getAddress().getCIAddress().getElectronicMailAddress().get(0)
 
-                CIContactPropertyType ciContactPropertyType = gmdObjectFactory.createCIContactPropertyType();
-                CIContactType ciContactType = gmdObjectFactory.createCIContactType();
-                CIAddressPropertyType ciAddressPropertyType = gmdObjectFactory.createCIAddressPropertyType();
-                CIAddressType ciAddressType = gmdObjectFactory.createCIAddressType();
 
                 // Email
                 CharacterStringPropertyType emailCSPT = DozerDelegate.mapWithGuard(
                         sourceType.getPrimaryContact().getEmail(),
                         CharacterStringPropertyType.class);
                 ciAddressType.setElectronicMailAddress(Stream.of(emailCSPT).collect(Collectors.toList()));
-                ciAddressPropertyType.setCIAddress(ciAddressType);
-                ciContactType.setAddress(ciAddressPropertyType);
-                ciContactPropertyType.setCIContact(ciContactType);
-                ciResponsibleParty.setContactInfo(ciContactPropertyType);
 
                 // Phone
                 CITelephonePropertyType ciTelephonePropertyType = gmdObjectFactory.createCITelephonePropertyType();
@@ -94,7 +95,13 @@ public class AgencyAgencyPropertyTypeConverter implements CustomConverter {
                         sourceType.getPrimaryContact().getFax(),
                         CharacterStringPropertyType.class);
                 ciTelephoneType.setFacsimile(Stream.of(faxCSPT).collect(Collectors.toList()));
+                
             }
+            // Address
+            CharacterStringPropertyType mailingAddressCSPT = DozerDelegate.mapWithGuard(
+                    sourceType.getMailingAddress(),
+                    CharacterStringPropertyType.class);
+            ciAddressType.setDeliveryPoint(Stream.of(mailingAddressCSPT).collect(Collectors.toList()));
             return dest;
         } else if (source instanceof AgencyPropertyType) {
             AgencyPropertyType sourceType = (AgencyPropertyType) source;
@@ -104,6 +111,9 @@ public class AgencyAgencyPropertyTypeConverter implements CustomConverter {
             } else {
                 dest = (Agency) destination;
             }
+            
+            // A lot of effort to create Agency from AgencyPropertyType and not necessarily (in the current scope)
+            
             return dest;
         } else {
             throw new MappingException("Converter TestCustomConverter " + "used incorrectly. Arguments passed in were:"

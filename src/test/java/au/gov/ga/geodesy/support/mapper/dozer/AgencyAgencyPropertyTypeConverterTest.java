@@ -32,12 +32,13 @@ public class AgencyAgencyPropertyTypeConverterTest {
         Assert.assertEquals(source.getPrimaryContact().getEmail(),
                 c.getCIResponsibleParty().getContactInfo().getCIContact().getAddress().getCIAddress()
                         .getElectronicMailAddress().get(0).getCharacterString().getValue());
-        Assert.assertEquals(source.getPrimaryContact().getTelephonePrimary(),
-                c.getCIResponsibleParty().getContactInfo().getCIContact().getPhone().getCITelephone().getVoice().get(0).getCharacterString().getValue());
-        Assert.assertEquals(source.getPrimaryContact().getFax(),
-                c.getCIResponsibleParty().getContactInfo().getCIContact().getPhone().getCITelephone().getFacsimile().get(0).getCharacterString().getValue());
-        
-        
+        Assert.assertEquals(source.getPrimaryContact().getTelephonePrimary(), c.getCIResponsibleParty().getContactInfo()
+                .getCIContact().getPhone().getCITelephone().getVoice().get(0).getCharacterString().getValue());
+        Assert.assertEquals(source.getPrimaryContact().getFax(), c.getCIResponsibleParty().getContactInfo()
+                .getCIContact().getPhone().getCITelephone().getFacsimile().get(0).getCharacterString().getValue());
+
+        Assert.assertEquals(source.getMailingAddress(), c.getCIResponsibleParty().getContactInfo().getCIContact()
+                .getAddress().getCIAddress().getDeliveryPoint().get(0).getCharacterString().getValue());
     }
 
     @Test
@@ -49,10 +50,8 @@ public class AgencyAgencyPropertyTypeConverterTest {
 
         Assert.assertEquals(source.getName(),
                 c.getCIResponsibleParty().getOrganisationName().getCharacterString().getValue());
-        Assert.assertEquals(null,
-                c.getCIResponsibleParty().getIndividualName());
-        Assert.assertEquals(null,
-                c.getCIResponsibleParty().getContactInfo());
+        Assert.assertEquals(null, c.getCIResponsibleParty().getIndividualName());
+        Assert.assertEquals(null, c.getCIResponsibleParty().getContactInfo().getCIContact().getPhone());
     }
 
     private Agency buildAgency() {

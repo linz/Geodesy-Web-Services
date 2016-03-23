@@ -11,7 +11,7 @@ import javax.xml.bind.JAXBElement;
 import org.apache.commons.lang3.reflect.MethodUtils;
 import org.apache.commons.lang3.tuple.Pair;
 
-import au.gov.ga.geodesy.domain.model.CorsSiteLog;
+import au.gov.ga.geodesy.domain.model.sitelog.SiteLog;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.GeodesyMLType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.MonumentPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.MonumentType;
@@ -76,7 +76,7 @@ public class CorsSiteLogFactory {
         return xlinkResolver.resolve(href, type);
     }
 
-    public Stream<CorsSiteLog> create() {
+    public Stream<SiteLog> create() {
         return GeodesyMLUtils
                 .getElementFromJAXBElements(geodesyML.getNodeOrAbstractPositionOrPositionPairCovariance(),
                         SiteLogType.class)
@@ -93,11 +93,11 @@ public class CorsSiteLogFactory {
         return resolve(monumentPropertyML.getHref(), MonumentType.class);
     }
 
-    private Optional<CorsSiteLog> create(SiteLogType siteLogML) {
+    private Optional<SiteLog> create(SiteLogType siteLogML) {
         return getSiteML(siteLogML.getAtSite())
             .flatMap(siteML -> getMonumentML(siteML.getMonument()))
             .flatMap(this::getFourCharacterId)
-            .flatMap(id -> Optional.of(new CorsSiteLog(id)));
+            .flatMap(id -> Optional.of(new SiteLog()));
     }
 
     private Optional<String> getFourCharacterId(MonumentType monument) {

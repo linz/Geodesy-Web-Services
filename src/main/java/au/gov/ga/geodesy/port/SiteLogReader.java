@@ -4,9 +4,9 @@ import java.io.Reader;
 
 public abstract class SiteLogReader implements SiteLogSource {
 
-    protected Reader reader;
+    protected Reader input;
 
-    public SiteLogReader(Reader r) {
-        reader = r;
+    public SiteLogReader(Reader input) {
+        this.input = input;
     }
 }

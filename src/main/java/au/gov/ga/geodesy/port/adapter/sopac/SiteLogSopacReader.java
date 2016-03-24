@@ -21,9 +21,9 @@ public class SiteLogSopacReader extends SiteLogReader {
     @Autowired
     private SiteLogSopacMapper mapper;
 
-    public SiteLogSopacReader(Reader sopacXML) throws MarshallingException {
-        super(sopacXML);
-        siteLog = mapper.fromDTO(marshaller.unmarshal(sopacXML));
+    public SiteLogSopacReader(Reader input) throws MarshallingException {
+        super(input);
+        siteLog = mapper.fromDTO(marshaller.unmarshal(input));
     }
 
     public SiteLog getSiteLog() {

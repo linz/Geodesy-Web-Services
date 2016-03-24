@@ -14,7 +14,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.testng.annotations.Test;
 
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLogRepository;
-import au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException;
+import au.gov.ga.geodesy.port.InvalidSiteLogException;
 import au.gov.ga.geodesy.port.SiteLogSource;
 import au.gov.ga.geodesy.port.adapter.sopac.SiteLogSopacReader;
 import au.gov.ga.geodesy.support.spring.GeodesyServiceTestConfig;
@@ -40,10 +40,10 @@ public class MultipleSitesTest extends AbstractTransactionalTestNGSpringContextT
 	/**
 	 * Each siteLog file must have a unique getSiteIdentification.
 	 * @param scenarioDirName
-	 * @throws MarshallingException
+	 * @throws InvalidSiteLogException
 	 * @throws IOException
 	 */
-	private void executeSiteLogScenario(String scenarioDirName) throws MarshallingException, IOException {
+	private void executeSiteLogScenario(String scenarioDirName) throws IOException, InvalidSiteLogException {
 		File[] siteLogFiles = new File(scenarioDirName).listFiles((File dir, String f) -> {
 			return f.endsWith(".xml");
 		});

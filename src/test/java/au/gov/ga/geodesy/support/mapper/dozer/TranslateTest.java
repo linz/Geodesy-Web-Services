@@ -25,10 +25,9 @@ import au.gov.ga.geodesy.igssitelog.support.marshalling.moxy.IgsSiteLogMoxyMarsh
 import au.gov.ga.geodesy.interfaces.geodesyml.GeodesyMLMarshaller;
 import au.gov.ga.geodesy.interfaces.geodesyml.MarshallingException;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLUtils;
-import au.gov.ga.geodesy.support.mapper.dozer.GeodesyMLSiteLogDozerTranslator;
-import au.gov.ga.geodesy.support.mapper.dozer.TimePrimitivePropertyTypeUtils;
 import au.gov.ga.geodesy.support.marshalling.moxy.GeodesyMLMoxy;
 import au.gov.ga.geodesy.support.utils.GMLDateUtils;
+import au.gov.xml.icsm.geodesyml.v_0_2_2.BasePossibleProblemSourcesType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.CollocationInformationPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.FrequencyStandardPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.FrequencyStandardType;
@@ -42,10 +41,12 @@ import au.gov.xml.icsm.geodesyml.v_0_2_2.HumiditySensorType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.LocalEpisodicEventsPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.LocalEpisodicEventsType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.MoreInformationType;
+import au.gov.xml.icsm.geodesyml.v_0_2_2.MultipathSourcesPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.PressureSensorPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.PressureSensorType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.RadioInterferencesPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.RadioInterferencesType;
+import au.gov.xml.icsm.geodesyml.v_0_2_2.SignalObstructionsPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.SiteIdentificationType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.SiteLocationType;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.SiteLogType;
@@ -162,13 +163,6 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
             au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
         GeodesyMLType geodesyML = testTranslate(TESTDATADIR, "ALIC");
 
-//        Assert.assertEquals(geodesyML.getNodeOrAbstractPositionOrPositionPairCovariance().size(), 1);
-//        Assert.assertTrue(geodesyML.getNodeOrAbstractPositionOrPositionPairCovariance().get(0) instanceof JAXBElement);
-//
-//        Stream<SiteLogType> siteLogTypeStream = GeodesyMLUtils.getElementFromJAXBElements(
-//                geodesyML.getNodeOrAbstractPositionOrPositionPairCovariance(), SiteLogType.class);
-//
-//        SiteLogType siteLogType = siteLogTypeStream.collect(Collectors.toList()).get(0);
         SiteLogType siteLogType = getSiteLog(geodesyML);
 
         SiteIdentificationType siteIdentificationType = siteLogType.getSiteIdentification();
@@ -378,29 +372,61 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
         GeodesyMLType geodesyML = testTranslate(TESTDATADIR, "MAT1");
 
         Assert.assertNotNull(geodesyML);
-        
+
         SiteLogType siteLogType = getSiteLog(geodesyML);
 
         // test the new elements (compared to ALIC)
-        
+
         List<CollocationInformationPropertyType> collocations = siteLogType.getCollocationInformations();
         Assert.assertNotNull(collocations);
         Assert.assertEquals(collocations.size(), 3);
-        
-//        <li:possibleProblemSources>TV</li:possibleProblemSources>
-//        <li:effectiveDates>2015-03-31/CCYY-MM-DD)</li:effectiveDates>
-//        <li:observedDegredation>Huge</li:observedDegredation>
 
+        // RadioInterferencesPropertyType
         List<RadioInterferencesPropertyType> radioInterferences = siteLogType.getRadioInterferencesSet();
         Assert.assertNotNull(radioInterferences);
         Assert.assertEquals(radioInterferences.size(), 1);
-        
+
         RadioInterferencesType radioInterference = radioInterferences.get(0).getRadioInterferences();
         Assert.assertEquals(radioInterference.getPossibleProblemSources(), "TV");
+        Assert.assertEquals(radioInterference.getNotes(), "multiple lines 1");
         Assert.assertEquals(GMLDateUtils.stringToDateToStringMultiParsers(TimePrimitivePropertyTypeUtils
                 .getTheTimePeriodType(radioInterference.getValidTime()).getBeginPosition().getValue().get(0)),
                 "31 Mar 2015 00:00 GMT");
 
+        // MultipathSourcesPropertyType
+        List<MultipathSourcesPropertyType> multipathSources = siteLogType.getMultipathSourcesSet();
+        Assert.assertNotNull(multipathSources);
+        Assert.assertEquals(multipathSources.size(), 1);
+
+        BasePossibleProblemSourcesType multipathSource = multipathSources.get(0).getMultipathSources();
+        Assert.assertEquals(multipathSource.getPossibleProblemSources(), "VIDEO");
+        Assert.assertEquals(multipathSource.getNotes(), "multiple lines 2");
+        Assert.assertEquals(GMLDateUtils.stringToDateToStringMultiParsers(TimePrimitivePropertyTypeUtils
+                .getTheTimePeriodType(multipathSource.getValidTime()).getBeginPosition().getValue().get(0)),
+                "30 Mar 2015 00:00 GMT");
+
+        // SignalObstructionsPropertyType
+        List<SignalObstructionsPropertyType> signalObstructions = siteLogType.getSignalObstructionsSet();
+        Assert.assertNotNull(signalObstructions);
+        Assert.assertEquals(signalObstructions.size(), 1);
+        
+        BasePossibleProblemSourcesType signalObstruction = signalObstructions.get(0).getSignalObstructions();
+        Assert.assertEquals(signalObstruction.getPossibleProblemSources(), "TRACTOR");
+        Assert.assertEquals(signalObstruction.getNotes(), "multiple lines 3");
+        Assert.assertEquals(GMLDateUtils.stringToDateToStringMultiParsers(TimePrimitivePropertyTypeUtils
+                .getTheTimePeriodType(signalObstruction.getValidTime()).getBeginPosition().getValue().get(0)),
+                "29 Mar 2015 00:00 GMT");
+
+        // Contacts - just different and new parts (compared to ALIC)
+        CIResponsiblePartyType siteContact = siteLogType.getSiteContact().get(0)
+                .getCIResponsibleParty();
+        Assert.assertEquals(
+                siteContact.getContactInfo().getCIContact().getAddress().getCIAddress().getDeliveryPoint().get(0).getCharacterString().getValue(),
+                "P.O.BOX OPEN - 75100 Matera, ITALY");
+
+        CIResponsiblePartyType siteMetaDataCustodian = siteLogType.getSiteMetadataCustodian().getCIResponsibleParty();
+        Assert.assertEquals(siteMetaDataCustodian.getContactInfo().getCIContact().getAddress().getCIAddress()
+                .getDeliveryPoint().get(0).getCharacterString().getValue(), "P.O.BOX OPEN - 75100 Matera, ITALY");
     }
 
     @Test

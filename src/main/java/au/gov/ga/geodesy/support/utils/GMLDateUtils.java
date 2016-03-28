@@ -132,7 +132,7 @@ public class GMLDateUtils {
             try {
                 date = dateFormat.parse(dateString);
             } catch (ParseException e) {
-                logger.info(String.format("Unable to parse date string: %s, with dateFormat: %s", dateString,
+                logger.debug(String.format("Unable to parse date string: %s, with dateFormat: %s", dateString,
                         ((SimpleDateFormat) dateFormat).toLocalizedPattern()));
                 throw e;
             }

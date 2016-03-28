@@ -17,7 +17,7 @@ public class SiteLogReaderAbstractFactory {
     public Optional<SiteLogReader> create(Reader input) {
         BufferedReader bufferedInput = new BufferedReader(input);
         return concreteFactories.stream()
-            .filter(factory -> factory.canCreate(bufferedInput))
+            .filter(factory -> factory.canRecogniseInput(bufferedInput))
             .findFirst()
             .map(factory -> factory.create(bufferedInput));
     }

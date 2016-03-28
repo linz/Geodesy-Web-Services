@@ -8,7 +8,7 @@ import au.gov.ga.geodesy.port.SiteLogReaderFactory;
 public class SiteLogSopacReaderFactory implements SiteLogReaderFactory {
 
 	@Override
-	public boolean canCreate(Reader input) {
+	public boolean canRecogniseInput(Reader input) {
 		// TODO: implement decision
 		return true;
 	}

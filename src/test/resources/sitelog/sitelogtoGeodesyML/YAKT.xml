@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <geo:siteLog>
+      <geo:siteIdentification>
+         <geo:siteName>Seismic Station Yakutsk</geo:siteName>
+         <geo:fourCharacterID>YAKT</geo:fourCharacterID>
+         <geo:iersDOMESNumber>12353M002</geo:iersDOMESNumber>
+         <geo:dateInstalled>23 Apr 2000 14:00 GMT</geo:dateInstalled>
+         <geo:geologicCharacteristic>Eastern margin of Siberian platform.</geo:geologicCharacteristic>
+         <geo:bedrockType>Sedimentary</geo:bedrockType>
+         <geo:bedrockCondition>NA</geo:bedrockCondition>
+         <geo:fractureSpacing>NA</geo:fractureSpacing>
+         <geo:notes>Permafrost  This station is part of NEDA Deformation Array. NEDA operational control is provided by RDAAC Acquisition/Analysis Center (Moscow, Russia). RDAAC is also IGS Operational Center for NEDA. ******************************************* The GPS reference mark consists of 5/8-11&quot; diameter, vertical stainless steel rod. It is glued into the concrete parapet at the southwestern corner of the roof of Seismic Station Yakutsk. This is 2-story building made from prefabricated concrete. The rod is driven into the parapet to a depth of 100 mm; its top end is 100 mm above the surface of the parapet. Vertical datum of the rod. Antenna is attached to the rod with the UNAVCO compact leveling mount. The antenna and choke ring assembly are protected with the SCIGN hemispherical dome. Mark YAKT is located 37 m to the west of IGS mark YAKZ (IERS DOMES No. 12353M001). YAKT was reoccupied several times since 1996 and showed much smaller seasonal horizontal fluctuations compared with YAKZ.</geo:notes>
+      </geo:siteIdentification>
+      <geo:siteLocation>
+         <geo:city>Yakutsk</geo:city>
+         <geo:state>Yakutia Sakha Republic</geo:state>
+         <geo:tectonicPlate>Eurasian</geo:tectonicPlate>
+         <geo:approximatePositionITRF>
+            <geo:xCoordinateInMeters>-1914998.836</geo:xCoordinateInMeters>
+            <geo:yCoordinateInMeters>2308241.52</geo:yCoordinateInMeters>
+            <geo:zCoordinateInMeters>5610225.578</geo:zCoordinateInMeters>
+            <geo:elevation-m_ellips.>103.370</geo:elevation-m_ellips.>
+         </geo:approximatePositionITRF>
+         <geo:notes>Cartesian and geodetic coordinates (ITRF96) from GAMIT/GLOBK solution in ITRF96 based on 10 days 2000/4/25 to 2000/5/4. Epoch 2000.33060</geo:notes>
+      </geo:siteLocation>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>ASHTECH Z-XII3</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>LP01567</geo:serialNumber>
+            <geo:firmwareVersion>NAV CC00  CH 1D02</geo:firmwareVersion>
+            <geo:dateInstalled>24 Apr 2000 00:00 GMT</geo:dateInstalled>
+            <geo:notes>Model 700845-10D (Z-12 CGRS).</geo:notes>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna>
+            <geo:antennaType>ASH701933B_M    SCIS</geo:antennaType>
+            <geo:serialNumber>CRN1999100160</geo:serialNumber>
+            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>0.081</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
+            <geo:antennaRadomeType>SCIS</geo:antennaRadomeType>
+            <geo:dateInstalled>24 Apr 2000 00:00 GMT</geo:dateInstalled>
+         </geo:gnssAntenna>
+      </geo:gnssAntennas>
+      <geo:surveyedLocalTies>
+         <geo:surveyedLocalTies>
+            <geo:tiedMarkerName>YAKZ</geo:tiedMarkerName>
+            <geo:tiedMarkerDOMESNumber>12353M001</geo:tiedMarkerDOMESNumber>
+            <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+               <geo:dx>-24.464</geo:dx>
+               <geo:dy>-28.318</geo:dy>
+               <geo:dz>-0.611</geo:dz>
+            </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+            <geo:localSiteTiesAccuracy>+-0.3 mm per component</geo:localSiteTiesAccuracy>
+            <geo:dateMeasured>27 Jun 2000 14:00 GMT</geo:dateMeasured>
+            <geo:notes>YAKT is the GPS Mark YAK of RUSEG 1996 campaign. YAKT was reoccupied in 1997 and in 1999.</geo:notes>
+         </geo:surveyedLocalTies>
+      </geo:surveyedLocalTies>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard>
+            <geo:standardType>CESIUM</geo:standardType>
+            <geo:inputFrequency>5 Mhz</geo:inputFrequency>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2001-01-23T00:00Z</gml:beginPosition>
+                  <gml:endPosition></gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+            <geo:notes>Clock Steering OFF (See IGSMAIL-30710)</geo:notes>
+         </geo:frequencyStandard>
+      </geo:frequencyStandards>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard>
+            <geo:standardType>INTERNAL</geo:standardType>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2000-04-24T00:00Z</gml:beginPosition>
+                  <gml:endPosition>2001-01-23T00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+            <geo:notes>Clock Steering ON</geo:notes>
+         </geo:frequencyStandard>
+      </geo:frequencyStandards>
+      <geo:localEpisodicEventsSet>
+         <geo:localEpisodicEvents>
+            <gml:validTime>
+               <gml:TimeInstant>
+                  <gml:timePosition>10 Feb 2012</gml:timePosition>
+               </gml:TimeInstant>
+            </gml:validTime>
+            <geo:event>Transitioned from .soc to .ash data types.  For</geo:event>
+         </geo:localEpisodicEvents>
+      </geo:localEpisodicEventsSet>
+      <geo:siteContact>
+         <gmd:MD_SecurityConstraints/>
+         <gmd:CI_ResponsibleParty>
+            <gmd:individualName>
+               <gco:CharacterString>Sergei Shibaev</gco:CharacterString>
+            </gmd:individualName>
+            <gmd:organisationName>
+               <gco:CharacterString>Seismic Station Yakutsk</gco:CharacterString>
+            </gmd:organisationName>
+            <gmd:contactInfo>
+               <gmd:CI_Contact>
+                  <gmd:phone>
+                     <gmd:CI_Telephone>
+                        <gmd:voice>
+                           <gco:CharacterString>+7 411 225-4646</gco:CharacterString>
+                        </gmd:voice>
+                        <gmd:facsimile>
+                           <gco:CharacterString>+7 411 225-4646</gco:CharacterString>
+                        </gmd:facsimile>
+                     </gmd:CI_Telephone>
+                  </gmd:phone>
+                  <gmd:address>
+                     <gmd:CI_Address>
+                        <gmd:deliveryPoint>
+                           <gco:CharacterString>21 Beketova Street</gco:CharacterString>
+                        </gmd:deliveryPoint>
+                        <gmd:electronicMailAddress>
+                           <gco:CharacterString>shibaev@omsd.sakha.ru</gco:CharacterString>
+                        </gmd:electronicMailAddress>
+                     </gmd:CI_Address>
+                  </gmd:address>
+               </gmd:CI_Contact>
+            </gmd:contactInfo>
+         </gmd:CI_ResponsibleParty>
+      </geo:siteContact>
+      <geo:siteMetadataCustodian>
+         <gmd:MD_SecurityConstraints/>
+         <gmd:CI_ResponsibleParty>
+            <gmd:organisationName>
+               <gco:CharacterString>RDAAC-JPL-IRIS</gco:CharacterString>
+            </gmd:organisationName>
+            <gmd:contactInfo>
+               <gmd:CI_Contact>
+                  <gmd:address>
+                     <gmd:CI_Address>
+                        <gmd:deliveryPoint>
+                           <gco:CharacterString>6-3 Universitetskiy Prospect</gco:CharacterString>
+                        </gmd:deliveryPoint>
+                     </gmd:CI_Address>
+                  </gmd:address>
+               </gmd:CI_Contact>
+            </gmd:contactInfo>
+         </gmd:CI_ResponsibleParty>
+      </geo:siteMetadataCustodian>
+      <geo:moreInformation>
+         <geo:urlForMoreInformation>http</geo:urlForMoreInformation>
+         <geo:notes>Hardcopy Information available from www.site or from Responsible Agency</geo:notes>
+      </geo:moreInformation>
+   </geo:siteLog>
+</geo:GeodesyML>

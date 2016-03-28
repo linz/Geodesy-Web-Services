@@ -10,6 +10,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import javax.xml.bind.JAXBElement;
@@ -35,7 +36,7 @@ import au.gov.ga.geodesy.support.marshalling.moxy.GeodesyMLMoxy;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.GeodesyMLType;
 
 public class GeodesyMLCommandLine {
-    Logger logger = LoggerFactory.getLogger(getClass());
+    private final Logger logger = LoggerFactory.getLogger(GeodesyMLCommandLine.class);
 
     private final static Option INPUT_FILE_OPT = Option.builder("in").type(String.class).longOpt("input")
             .argName("file").hasArg().desc("use given buildfile").build();
@@ -107,7 +108,7 @@ public class GeodesyMLCommandLine {
                 try {
                     currentPath = testFile;
                     Path testOutFile = returnTestFile(outputDir, testFile);
-                    logger.debug("processFile - Write xml file to: " + testOutFile.toString());
+                    logger.info("process file: " + testFile.toString());
                     processFile(testFile, testOutFile);
                     successfulFiles.add(currentPath);
                 } catch (au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException e) {
@@ -127,8 +128,8 @@ public class GeodesyMLCommandLine {
             failedFiles.add(currentPath);
             e.printStackTrace();
         }
-        logger.info("Successfully processed these files:" + successfulFiles);
-        logger.error("Failed to process these files:" + failedFiles);
+        logger.info("Successfully processed this # files: " + successfulFiles.size());
+        logger.error("Failed to process these files: " + failedFiles);
     }
 
     /**
@@ -218,7 +219,7 @@ public class GeodesyMLCommandLine {
 
     public static void main(String[] args) {
         try {
-            System.out.println("STARTED");
+            System.out.println("GeodesyMLCommandLine - args: "+Arrays.asList(args));
             new GeodesyMLCommandLine(args);
         } catch (au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException | MarshallingException
                 | IOException e) {

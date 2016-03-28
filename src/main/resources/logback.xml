@@ -3,12 +3,12 @@
     <!-- encoders are assigned the type
          ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
     <encoder>
-      <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+      <pattern>%d{HH:mm:ss.SSS} [..%.18thread] %-5level %logger{36} - %msg%n</pattern>
     </encoder>
   </appender>
 
-  <!-- TODO -->
   <logger name="au.gov.ga.geodesy" level="WARN"/>
+  <logger name="au.gov.ga.geodesy.support.commandline.GeodesyMLCommandLine" level="INFO"/>
   <logger name="org.dozer.MappingProcessor" level="WARN"/>
 
   <root level="info">

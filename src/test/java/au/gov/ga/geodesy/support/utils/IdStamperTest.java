@@ -5,7 +5,7 @@ import java.lang.reflect.Method;
 import org.junit.Assert;
 import org.junit.Test;
 
-import au.gov.xml.icsm.geodesyml.v_0_2_2.GeodesyMLType;
+import au.gov.xml.icsm.geodesyml.v_0_3.GeodesyMLType;
 
 public class IdStamperTest {
 

@@ -15,6 +15,8 @@ import java.util.stream.Stream;
 
 import javax.xml.bind.JAXBElement;
 
+import org.hamcrest.MatcherAssert;
+import org.hamcrest.Matchers;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -29,6 +31,7 @@ import au.gov.ga.geodesy.support.marshalling.moxy.GeodesyMLMoxy;
 import au.gov.ga.geodesy.support.utils.GMLDateUtils;
 import au.gov.xml.icsm.geodesyml.v_0_3.BasePossibleProblemSourcesType;
 import au.gov.xml.icsm.geodesyml.v_0_3.CollocationInformationPropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_3.FormInformationType;
 import au.gov.xml.icsm.geodesyml.v_0_3.FrequencyStandardPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_3.FrequencyStandardType;
 import au.gov.xml.icsm.geodesyml.v_0_3.GeodesyMLType;
@@ -165,6 +168,26 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
 
         SiteLogType siteLogType = getSiteLog(geodesyML);
 
+        FormInformationType formIdentificationType = siteLogType.getFormInformation();
+        Assert.assertEquals(formIdentificationType.getPreparedBy(), "Nick Dando");
+        
+        // Input is 2013-07-08 and because there is no time-zone, it gets the local one (8 July 2013 +10 or +11)
+        // GMT (the dateFormat uses forces GMT) will be the day before and due to daylight savings ambiguity I won't
+        // check the time
+        MatcherAssert.assertThat("formIdentificationType.getDatePrepared()", formIdentificationType.getDatePrepared().getValue().get(0), Matchers.startsWith("2013-07-07"));
+        
+        Assert.assertEquals(formIdentificationType.getReportType(), "UPDATE");
+        // These don't exist (should they - Mmm, not in Sopac SiteLog either so no)?
+        // Assert.assertEquals(formIdentificationType.getPreviousLog(), "alic_20130308.log");
+        // Assert.assertEquals(formIdentificationType.getModifiedSections(), "3.11, 3.12");
+        
+//        <mi:preparedBy></mi:preparedBy>
+//        <mi:datePrepared>2013-07-08</mi:datePrepared>
+//        <mi:reportType>UPDATE</mi:reportType>
+//        <mi:previousLog>alic_20130308.log</mi:previousLog>
+//        <mi:modifiedSections>3.11, 3.12</mi:modifiedSections>
+
+        
         SiteIdentificationType siteIdentificationType = siteLogType.getSiteIdentification();
         SiteLocationType siteLocationType = siteLogType.getSiteLocation();
 
@@ -185,9 +208,9 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
         Assert.assertEquals(receiver1.getSerialNumber(), "C128");
         Assert.assertEquals(receiver1.getFirmwareVersion(), "3.2.32.9");
         Assert.assertEquals(receiver1.getElevationCutoffSetting(), 0, 0.01);
-        Assert.assertEquals(receiver1.getDateInstalled().getValue().get(0), "31 Jul 1999 01:00 GMT");
-        Assert.assertEquals(receiver1.getDateRemoved().getValue().get(0), "14 Jan 2000 01:50 GMT");
         Assert.assertEquals(receiver1.getTemperatureStabilization(), 0, 0.01);
+        MatcherAssert.assertThat("receiver1.getDateInstalled()", receiver1.getDateInstalled().getValue().get(0), Matchers.startsWith("1999-07-31"));
+        MatcherAssert.assertThat("receiver1.getDateRemoved()", receiver1.getDateRemoved().getValue().get(0), Matchers.startsWith("2000-01-14"));
         Assert.assertEquals(receiver1.getNotes(), "Upgrade of firmware to avoid GPS week");
 
         // Antennas
@@ -206,8 +229,8 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
         Assert.assertEquals(antenna1.getMarkerArpEastEcc(), 0.0, 0.01);
         Assert.assertEquals(antenna1.getAlignmentFromTrueNorth(), 0.0, 0.01);
         Assert.assertEquals(antenna1.getAntennaRadomeType().getValue(), "AUST");
-        Assert.assertEquals(antenna1.getDateInstalled().getValue().get(0), "15 May 1994 00:00 GMT");
-        Assert.assertEquals(antenna1.getDateRemoved().getValue().get(0), "15 Jun 2003 03:30 GMT");
+        MatcherAssert.assertThat("antenna1.getDateInstalled()", antenna1.getDateInstalled().getValue().get(0), Matchers.startsWith("1994-05-15"));
+        MatcherAssert.assertThat("antenna1.getDateRemoved()", antenna1.getDateRemoved().getValue().get(0), Matchers.startsWith("2003-06-15"));
         Assert.assertEquals(antenna1.getNotes(), "Radome was damaged at an unknown time during this period.");
 
         // SurveyedLocalTiesPropertyType
@@ -224,7 +247,7 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
         Assert.assertEquals(surveyedTies1.getDifferentialComponentsGNSSMarkerToTiedMonumentITRS().getDy(), -9.632, 0.0001);
         Assert.assertEquals(surveyedTies1.getDifferentialComponentsGNSSMarkerToTiedMonumentITRS().getDz(), 9.09, 0.01);
         Assert.assertEquals(surveyedTies1.getLocalSiteTiesAccuracy(), 1.0, 0.01);
-        Assert.assertEquals(surveyedTies1.getDateMeasured().getValue().get(0), "11 Aug 1992 14:00 GMT");
+        MatcherAssert.assertThat("surveyedTies1.getDateMeasured()", surveyedTies1.getDateMeasured().getValue().get(0), Matchers.startsWith("1992-08-11"));
 
         // FrequencyStandardPropertyType
         List<FrequencyStandardPropertyType> frequencyStandards = siteLogType

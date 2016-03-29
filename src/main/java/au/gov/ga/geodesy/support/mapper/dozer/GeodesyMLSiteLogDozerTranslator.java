@@ -17,6 +17,7 @@ import org.springframework.stereotype.Service;
 
 import au.gov.ga.geodesy.exception.GeodesyRuntimeException;
 import au.gov.ga.geodesy.igssitelog.domain.model.CollocationInformation;
+import au.gov.ga.geodesy.igssitelog.domain.model.FormInformation;
 import au.gov.ga.geodesy.igssitelog.domain.model.FrequencyStandardLogItem;
 import au.gov.ga.geodesy.igssitelog.domain.model.GnssAntennaLogItem;
 import au.gov.ga.geodesy.igssitelog.domain.model.GnssReceiverLogItem;
@@ -39,6 +40,7 @@ import au.gov.xml.icsm.geodesyml.v_0_3.AgencyPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_3.BasePossibleProblemSourcesType;
 import au.gov.xml.icsm.geodesyml.v_0_3.CollocationInformationPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_3.CollocationInformationType;
+import au.gov.xml.icsm.geodesyml.v_0_3.FormInformationType;
 import au.gov.xml.icsm.geodesyml.v_0_3.FrequencyStandardPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_3.FrequencyStandardType;
 import au.gov.xml.icsm.geodesyml.v_0_3.GeodesyMLType;

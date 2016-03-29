@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-   <geo:siteLog>
+<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_462">
+   <geo:siteLog gml:id="SiteLogType_462">
+      <geo:formInformation>
+         <geo:preparedBy>David Maggert</geo:preparedBy>
+         <geo:datePrepared>2013-01-30T13:00:00Z</geo:datePrepared>
+         <geo:reportType>UPDATE</geo:reportType>
+      </geo:formInformation>
       <geo:siteIdentification>
          <geo:siteName>Petropavlovsk GSN Seismic Station</geo:siteName>
          <geo:fourCharacterID>PETS</geo:fourCharacterID>
@@ -10,7 +15,7 @@
          <geo:monumentFoundation>Concrete block</geo:monumentFoundation>
          <geo:foundationDepth>2.00</geo:foundationDepth>
          <geo:markerDescription>Threaded stainless steel rod 5/8-11 in diameter</geo:markerDescription>
-         <geo:dateInstalled>06 Oct 1998 14:00 GMT</geo:dateInstalled>
+         <geo:dateInstalled>1998-10-06T14:00:00Z</geo:dateInstalled>
          <geo:geologicCharacteristic>Bedrock</geo:geologicCharacteristic>
          <geo:bedrockType>Igneous</geo:bedrockType>
          <geo:bedrockCondition>Jointed</geo:bedrockCondition>
@@ -31,11 +36,10 @@
          <geo:gnssReceiver>
             <geo:receiverType>ASHTECH Z-XII3</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>LP01431</geo:serialNumber>
+            <geo:serialNumber>LP03240</geo:serialNumber>
             <geo:firmwareVersion>CD00</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>27 Aug 2002 04:14 GMT</geo:dateInstalled>
-            <geo:dateRemoved>20 Oct 2011 00:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2011-10-21T00:00:00Z</geo:dateInstalled>
             <geo:temperatureStabilization>None</geo:temperatureStabilization>
             <geo:notes>Model 700845-10D (Z-12 CGRS)</geo:notes>
          </geo:gnssReceiver>
@@ -44,10 +48,11 @@
          <geo:gnssReceiver>
             <geo:receiverType>ASHTECH Z-XII3</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>LP03240</geo:serialNumber>
+            <geo:serialNumber>LP01431</geo:serialNumber>
             <geo:firmwareVersion>CD00</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>21 Oct 2011 00:00 GMT</geo:dateInstalled>
+            <geo:dateInstalled>2002-08-27T04:14:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2011-10-20T00:00:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>None</geo:temperatureStabilization>
             <geo:notes>Model 700845-10D (Z-12 CGRS)</geo:notes>
          </geo:gnssReceiver>
@@ -63,7 +68,7 @@
             <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
             <geo:antennaRadomeType>SCIS</geo:antennaRadomeType>
             <geo:radomeSerialNumber>00399</geo:radomeSerialNumber>
-            <geo:dateInstalled>06 Oct 2005 00:00 GMT</geo:dateInstalled>
+            <geo:dateInstalled>2005-10-06T00:00:00Z</geo:dateInstalled>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
       <geo:gnssAntennas>
@@ -77,8 +82,8 @@
             <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
             <geo:antennaRadomeType>SCIS</geo:antennaRadomeType>
             <geo:radomeSerialNumber>00399</geo:radomeSerialNumber>
-            <geo:dateInstalled>02 Sep 2002 02:25 GMT</geo:dateInstalled>
-            <geo:dateRemoved>05 Oct 2005 23:59 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2002-09-02T02:25:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2005-10-05T23:59:00Z</geo:dateRemoved>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
       <geo:surveyedLocalTies>
@@ -93,7 +98,7 @@
             </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
             <geo:localSiteTiesAccuracy>3 mm</geo:localSiteTiesAccuracy>
             <geo:surveyMethod>GPS</geo:surveyMethod>
-            <geo:dateMeasured>22 Aug 2003 14:00 GMT</geo:dateMeasured>
+            <geo:dateMeasured>2003-08-22T14:00:00Z</geo:dateMeasured>
          </geo:surveyedLocalTies>
       </geo:surveyedLocalTies>
       <geo:frequencyStandards>
@@ -102,7 +107,7 @@
             <geo:inputFrequency>Input Frequency        :</geo:inputFrequency>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2002-08-27T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2002-08-27T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>

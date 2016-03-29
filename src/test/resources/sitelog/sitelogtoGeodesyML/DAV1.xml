@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-   <geo:siteLog>
+<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_155">
+   <geo:siteLog gml:id="SiteLogType_155">
+      <geo:formInformation>
+         <geo:preparedBy>Ryan Ruddick</geo:preparedBy>
+         <geo:datePrepared>2011-02-20T13:00:00Z</geo:datePrepared>
+         <geo:reportType>UPDATE</geo:reportType>
+      </geo:formInformation>
       <geo:siteIdentification>
          <geo:siteName>Davis</geo:siteName>
          <geo:fourCharacterID>DAV1</geo:fourCharacterID>
@@ -11,7 +16,7 @@
          <geo:heightOfTheMonument>0.3</geo:heightOfTheMonument>
          <geo:monumentFoundation>ROCK</geo:monumentFoundation>
          <geo:markerDescription>Steel Pin</geo:markerDescription>
-         <geo:dateInstalled>17 Nov 1993 13:00 GMT</geo:dateInstalled>
+         <geo:dateInstalled>1993-11-17T13:00:00Z</geo:dateInstalled>
          <geo:geologicCharacteristic>BEDROCK</geo:geologicCharacteristic>
          <geo:bedrockType>METAMORPHIC</geo:bedrockType>
          <geo:bedrockCondition>WEATHERED</geo:bedrockCondition>
@@ -34,11 +39,12 @@
             <geo:receiverType>LEICA GRX1200GGPRO</geo:receiverType>
             <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
             <geo:serialNumber>356502</geo:serialNumber>
-            <geo:firmwareVersion>6.02</geo:firmwareVersion>
+            <geo:firmwareVersion>7.50</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>07 Jan 2009 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>29 Jul 2009 00:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2009-07-29T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2010-05-04T00:00:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>none</geo:temperatureStabilization>
+            <geo:notes>Tracking Changed to all in view at</geo:notes>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
@@ -46,9 +52,23 @@
             <geo:receiverType>LEICA GRX1200GGPRO</geo:receiverType>
             <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
             <geo:serialNumber>356502</geo:serialNumber>
-            <geo:firmwareVersion>8.01 / 3.019</geo:firmwareVersion>
+            <geo:firmwareVersion>7.50 / 3.019</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>22 Feb 2011 00:00 GMT</geo:dateInstalled>
+            <geo:dateInstalled>2010-05-04T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2011-02-22T00:00:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>none</geo:temperatureStabilization>
+            <geo:notes>ME upgrade due to GLONASS tracking problems.</geo:notes>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>ASHTECH Z-XII3</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>4338</geo:serialNumber>
+            <geo:firmwareVersion>CD00</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2000-02-08T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2000-03-17T06:30:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>none</geo:temperatureStabilization>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
@@ -59,8 +79,56 @@
             <geo:serialNumber>C 124</geo:serialNumber>
             <geo:firmwareVersion>3.2.32.9</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>02 Nov 1999 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>08 Feb 2000 00:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>1999-11-02T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2000-02-08T00:00:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>none</geo:temperatureStabilization>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>LEICA GRX1200GGPRO</geo:receiverType>
+            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
+            <geo:serialNumber>356502</geo:serialNumber>
+            <geo:firmwareVersion>6.02</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2009-01-07T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2009-07-29T00:00:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>none</geo:temperatureStabilization>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>ASHTECH UZ-12</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>2006</geo:serialNumber>
+            <geo:firmwareVersion>CN00</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2005-01-04T14:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2009-01-06T23:59:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>none</geo:temperatureStabilization>
+            <geo:notes>Firmware erroneously reported as CZ00.</geo:notes>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>AOA ICS-4000Z</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>C 124</geo:serialNumber>
+            <geo:firmwareVersion>3.2.33.1</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>1996-02-05T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1999-08-22T00:00:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>none</geo:temperatureStabilization>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>LEICA GRX1200GGPRO</geo:receiverType>
+            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
+            <geo:serialNumber>356502</geo:serialNumber>
+            <geo:firmwareVersion>8.01 / 3.019</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2011-02-22T00:00:00Z</geo:dateInstalled>
             <geo:temperatureStabilization>none</geo:temperatureStabilization>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
@@ -71,22 +139,9 @@
             <geo:serialNumber>C102U</geo:serialNumber>
             <geo:firmwareVersion>3.3.32.3</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>18 Mar 2000 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>29 Nov 2000 04:15 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2000-03-18T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2000-11-29T04:15:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>none</geo:temperatureStabilization>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>LEICA GRX1200GGPRO</geo:receiverType>
-            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
-            <geo:serialNumber>356502</geo:serialNumber>
-            <geo:firmwareVersion>7.50</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>29 Jul 2009 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>04 May 2010 00:00 GMT</geo:dateRemoved>
-            <geo:temperatureStabilization>none</geo:temperatureStabilization>
-            <geo:notes>Tracking Changed to all in view at</geo:notes>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
@@ -96,45 +151,8 @@
             <geo:serialNumber>C206U</geo:serialNumber>
             <geo:firmwareVersion>3.3.32.4</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>16 Dec 2000 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>04 Jan 2005 14:00 GMT</geo:dateRemoved>
-            <geo:temperatureStabilization>none</geo:temperatureStabilization>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>AOA ICS-4000Z</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>C 124</geo:serialNumber>
-            <geo:firmwareVersion>3.2.33.1</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>05 Feb 1996 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>22 Aug 1999 00:00 GMT</geo:dateRemoved>
-            <geo:temperatureStabilization>none</geo:temperatureStabilization>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>LEICA GRX1200GGPRO</geo:receiverType>
-            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
-            <geo:serialNumber>356502</geo:serialNumber>
-            <geo:firmwareVersion>7.50 / 3.019</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>04 May 2010 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>22 Feb 2011 00:00 GMT</geo:dateRemoved>
-            <geo:temperatureStabilization>none</geo:temperatureStabilization>
-            <geo:notes>ME upgrade due to GLONASS tracking problems.</geo:notes>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>AOA ICS-4000Z</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>C 119</geo:serialNumber>
-            <geo:firmwareVersion>1.28.1</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>11 Jan 1994 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>04 Feb 1996 23:59 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2000-12-16T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2005-01-04T14:00:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>none</geo:temperatureStabilization>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
@@ -145,20 +163,8 @@
             <geo:serialNumber>4338</geo:serialNumber>
             <geo:firmwareVersion>CD00</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>08 Feb 2000 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>17 Mar 2000 06:30 GMT</geo:dateRemoved>
-            <geo:temperatureStabilization>none</geo:temperatureStabilization>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>ASHTECH Z-XII3</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>4338</geo:serialNumber>
-            <geo:firmwareVersion>CD00</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>29 Nov 2000 04:15 GMT</geo:dateInstalled>
-            <geo:dateRemoved>16 Dec 2000 00:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2000-11-29T04:15:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2000-12-16T00:00:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>none</geo:temperatureStabilization>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
@@ -169,38 +175,37 @@
             <geo:serialNumber>212</geo:serialNumber>
             <geo:firmwareVersion>1F60</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>26 Aug 1999 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>30 Oct 1999 23:59 GMT</geo:dateRemoved>
+            <geo:dateInstalled>1999-08-26T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1999-10-30T23:59:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>none</geo:temperatureStabilization>
             <geo:notes>Clock steering set to &quot;ON&quot;</geo:notes>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
          <geo:gnssReceiver>
-            <geo:receiverType>ASHTECH UZ-12</geo:receiverType>
+            <geo:receiverType>AOA ICS-4000Z</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>2006</geo:serialNumber>
-            <geo:firmwareVersion>CN00</geo:firmwareVersion>
+            <geo:serialNumber>C 119</geo:serialNumber>
+            <geo:firmwareVersion>1.28.1</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>04 Jan 2005 14:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>06 Jan 2009 23:59 GMT</geo:dateRemoved>
+            <geo:dateInstalled>1994-01-11T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1996-02-04T23:59:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>none</geo:temperatureStabilization>
-            <geo:notes>Firmware erroneously reported as CZ00.</geo:notes>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssAntennas>
          <geo:gnssAntenna>
-            <geo:antennaType>AOAD/M_T        AUST</geo:antennaType>
-            <geo:serialNumber>193</geo:serialNumber>
+            <geo:antennaType>ASH701945G_M    AUST</geo:antennaType>
+            <geo:serialNumber>CR5200428009</geo:serialNumber>
             <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
-            <geo:marker-arpUpEcc.>0.0035</geo:marker-arpUpEcc.>
+            <geo:marker-arpUpEcc.>5.0E-4</geo:marker-arpUpEcc.>
             <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
-            <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
+            <geo:alignmentFromTrueNorth>20</geo:alignmentFromTrueNorth>
             <geo:antennaRadomeType>AUST</geo:antennaRadomeType>
             <geo:antennaCableLength>40</geo:antennaCableLength>
-            <geo:dateInstalled>02 Nov 1999 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>01 Aug 2007 06:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2007-08-01T07:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2011-02-21T00:00:00Z</geo:dateRemoved>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
       <geo:gnssAntennas>
@@ -215,23 +220,8 @@
             <geo:antennaRadomeType>LEIT</geo:antennaRadomeType>
             <geo:antennaCableType>LMR400</geo:antennaCableType>
             <geo:antennaCableLength>85</geo:antennaCableLength>
-            <geo:dateInstalled>21 Feb 2011 00:00 GMT</geo:dateInstalled>
+            <geo:dateInstalled>2011-02-21T00:00:00Z</geo:dateInstalled>
             <geo:notes>Plastic collar attached to radome</geo:notes>
-         </geo:gnssAntenna>
-      </geo:gnssAntennas>
-      <geo:gnssAntennas>
-         <geo:gnssAntenna>
-            <geo:antennaType>ASH701945G_M    AUST</geo:antennaType>
-            <geo:serialNumber>CR5200428009</geo:serialNumber>
-            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
-            <geo:marker-arpUpEcc.>5.0E-4</geo:marker-arpUpEcc.>
-            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
-            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
-            <geo:alignmentFromTrueNorth>20</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>AUST</geo:antennaRadomeType>
-            <geo:antennaCableLength>40</geo:antennaCableLength>
-            <geo:dateInstalled>01 Aug 2007 07:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>21 Feb 2011 00:00 GMT</geo:dateRemoved>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
       <geo:gnssAntennas>
@@ -245,10 +235,39 @@
             <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
             <geo:antennaRadomeType>AUST</geo:antennaRadomeType>
             <geo:antennaCableLength>40</geo:antennaCableLength>
-            <geo:dateInstalled>11 Jan 1994 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>30 Oct 1999 23:59 GMT</geo:dateRemoved>
+            <geo:dateInstalled>1994-01-11T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1999-10-30T23:59:00Z</geo:dateRemoved>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna>
+            <geo:antennaType>AOAD/M_T        AUST</geo:antennaType>
+            <geo:serialNumber>193</geo:serialNumber>
+            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>0.0035</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
+            <geo:antennaRadomeType>AUST</geo:antennaRadomeType>
+            <geo:antennaCableLength>40</geo:antennaCableLength>
+            <geo:dateInstalled>1999-11-02T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2007-08-01T06:00:00Z</geo:dateRemoved>
+         </geo:gnssAntenna>
+      </geo:gnssAntennas>
+      <geo:surveyedLocalTies>
+         <geo:surveyedLocalTies>
+            <geo:tiedMarkerName>RM2</geo:tiedMarkerName>
+            <geo:tiedMarkerUsage>LOCAL CONTROL</geo:tiedMarkerUsage>
+            <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+               <geo:dx>-11.6364</geo:dx>
+               <geo:dy>-7.5773</geo:dy>
+               <geo:dz>-3.3824</geo:dz>
+            </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+            <geo:localSiteTiesAccuracy>+-1mm</geo:localSiteTiesAccuracy>
+            <geo:surveyMethod>TRIANGULATION</geo:surveyMethod>
+            <geo:dateMeasured>2007-02-05T13:00:00Z</geo:dateMeasured>
+         </geo:surveyedLocalTies>
+      </geo:surveyedLocalTies>
       <geo:surveyedLocalTies>
          <geo:surveyedLocalTies>
             <geo:tiedMarkerName>RM3</geo:tiedMarkerName>
@@ -260,7 +279,7 @@
             </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
             <geo:localSiteTiesAccuracy>+-1mm</geo:localSiteTiesAccuracy>
             <geo:surveyMethod>TRIANGULATION</geo:surveyMethod>
-            <geo:dateMeasured>05 Feb 2007 13:00 GMT</geo:dateMeasured>
+            <geo:dateMeasured>2007-02-05T13:00:00Z</geo:dateMeasured>
          </geo:surveyedLocalTies>
       </geo:surveyedLocalTies>
       <geo:surveyedLocalTies>
@@ -274,21 +293,7 @@
             </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
             <geo:localSiteTiesAccuracy>+-1mm</geo:localSiteTiesAccuracy>
             <geo:surveyMethod>TRIANGULATION</geo:surveyMethod>
-            <geo:dateMeasured>05 Feb 2007 13:00 GMT</geo:dateMeasured>
-         </geo:surveyedLocalTies>
-      </geo:surveyedLocalTies>
-      <geo:surveyedLocalTies>
-         <geo:surveyedLocalTies>
-            <geo:tiedMarkerName>RM2</geo:tiedMarkerName>
-            <geo:tiedMarkerUsage>LOCAL CONTROL</geo:tiedMarkerUsage>
-            <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
-               <geo:dx>-11.6364</geo:dx>
-               <geo:dy>-7.5773</geo:dy>
-               <geo:dz>-3.3824</geo:dz>
-            </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
-            <geo:localSiteTiesAccuracy>+-1mm</geo:localSiteTiesAccuracy>
-            <geo:surveyMethod>TRIANGULATION</geo:surveyMethod>
-            <geo:dateMeasured>05 Feb 2007 13:00 GMT</geo:dateMeasured>
+            <geo:dateMeasured>2007-02-05T13:00:00Z</geo:dateMeasured>
          </geo:surveyedLocalTies>
       </geo:surveyedLocalTies>
       <geo:frequencyStandards>
@@ -297,8 +302,8 @@
             <geo:inputFrequency>5Mhz</geo:inputFrequency>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>1994-01-11T00:00Z</gml:beginPosition>
-                  <gml:endPosition>1997-12-19T00:00Z</gml:endPosition>
+                  <gml:beginPosition>1994-01-11T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>1997-12-19T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
          </geo:frequencyStandard>
@@ -309,8 +314,8 @@
             <geo:inputFrequency>5Mhz</geo:inputFrequency>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2005-01-04T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2009-01-06T00:00Z</gml:endPosition>
+                  <gml:beginPosition>2005-01-04T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2009-01-06T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
             <geo:notes>S/N 013018836</geo:notes>
@@ -322,7 +327,7 @@
             <geo:inputFrequency>5Mhz</geo:inputFrequency>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2009-01-07T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2009-01-07T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
@@ -334,45 +339,45 @@
             <geo:inputFrequency>5Mhz</geo:inputFrequency>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>1997-12-19T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2005-01-04T00:00Z</gml:endPosition>
+                  <gml:beginPosition>1997-12-19T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2005-01-04T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
          </geo:frequencyStandard>
       </geo:frequencyStandards>
       <geo:humiditySensors>
          <geo:humiditySensor>
-            <geo:type>PAROSCIENTIFIC MET3</geo:type>
-            <geo:manufacturer>PAROSCIENTIFIC</geo:manufacturer>
-            <geo:serialNumber>81488</geo:serialNumber>
-            <geo:heightDiffToAntenna>0.110</geo:heightDiffToAntenna>
-            <geo:calibrationDate>17 Sep 2002 14:00 GMT</geo:calibrationDate>
-            <gml:validTime>
-               <gml:TimePeriod>
-                  <gml:beginPosition>2005-01-04T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2011-02-01T00:00Z</gml:endPosition>
-               </gml:TimePeriod>
-            </gml:validTime>
-            <geo:dataSamplingInterval>30</geo:dataSamplingInterval>
-            <geo:accuracy-percentRelativeHumidity>2% rel h)</geo:accuracy-percentRelativeHumidity>
-            <geo:aspiration>NATURAL</geo:aspiration>
-         </geo:humiditySensor>
-      </geo:humiditySensors>
-      <geo:humiditySensors>
-         <geo:humiditySensor>
             <geo:type>PAROSCIENTIFIC MET4</geo:type>
             <geo:manufacturer>PAROSCIENTIFIC</geo:manufacturer>
             <geo:serialNumber>DQ107352</geo:serialNumber>
             <geo:heightDiffToAntenna>0.3251</geo:heightDiffToAntenna>
-            <geo:calibrationDate>31 Jan 2011 13:00 GMT</geo:calibrationDate>
+            <geo:calibrationDate>2011-01-31T13:00:00Z</geo:calibrationDate>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2011-02-01T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2011-02-01T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
             <geo:dataSamplingInterval>30</geo:dataSamplingInterval>
             <geo:accuracy-percentRelativeHumidity>2% rel h</geo:accuracy-percentRelativeHumidity>
+            <geo:aspiration>NATURAL</geo:aspiration>
+         </geo:humiditySensor>
+      </geo:humiditySensors>
+      <geo:humiditySensors>
+         <geo:humiditySensor>
+            <geo:type>PAROSCIENTIFIC MET3</geo:type>
+            <geo:manufacturer>PAROSCIENTIFIC</geo:manufacturer>
+            <geo:serialNumber>81488</geo:serialNumber>
+            <geo:heightDiffToAntenna>0.110</geo:heightDiffToAntenna>
+            <geo:calibrationDate>2002-09-17T14:00:00Z</geo:calibrationDate>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2005-01-04T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2011-02-01T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+            <geo:dataSamplingInterval>30</geo:dataSamplingInterval>
+            <geo:accuracy-percentRelativeHumidity>2% rel h)</geo:accuracy-percentRelativeHumidity>
             <geo:aspiration>NATURAL</geo:aspiration>
          </geo:humiditySensor>
       </geo:humiditySensors>
@@ -382,10 +387,10 @@
             <geo:manufacturer>PAROSCIENTIFIC</geo:manufacturer>
             <geo:serialNumber>DQ107352</geo:serialNumber>
             <geo:heightDiffToAntenna>0.3251</geo:heightDiffToAntenna>
-            <geo:calibrationDate>31 Jan 2011 13:00 GMT</geo:calibrationDate>
+            <geo:calibrationDate>2011-01-31T13:00:00Z</geo:calibrationDate>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2011-02-01T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2011-02-01T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
@@ -399,11 +404,11 @@
             <geo:manufacturer>PAROSCIENTIFIC</geo:manufacturer>
             <geo:serialNumber>81488</geo:serialNumber>
             <geo:heightDiffToAntenna>0.110</geo:heightDiffToAntenna>
-            <geo:calibrationDate>17 Sep 2002 14:00 GMT</geo:calibrationDate>
+            <geo:calibrationDate>2002-09-17T14:00:00Z</geo:calibrationDate>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2005-01-04T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2011-02-01T00:00Z</gml:endPosition>
+                  <gml:beginPosition>2005-01-04T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2011-02-01T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
             <geo:dataSamplingInterval>30</geo:dataSamplingInterval>
@@ -412,37 +417,37 @@
       </geo:pressureSensors>
       <geo:temperatureSensors>
          <geo:temperatureSensor>
-            <geo:type>PAROSCIENTIFIC MET4</geo:type>
+            <geo:type>PAROSCIENTIFIC MET3</geo:type>
             <geo:manufacturer>PAROSCIENTIFIC</geo:manufacturer>
-            <geo:serialNumber>DQ107352</geo:serialNumber>
-            <geo:heightDiffToAntenna>0.3251</geo:heightDiffToAntenna>
-            <geo:calibrationDate>31 Jan 2011 13:00 GMT</geo:calibrationDate>
+            <geo:serialNumber>81488</geo:serialNumber>
+            <geo:heightDiffToAntenna>0.110</geo:heightDiffToAntenna>
+            <geo:calibrationDate>2002-09-17T14:00:00Z</geo:calibrationDate>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2011-02-01T00:00Z</gml:beginPosition>
-                  <gml:endPosition></gml:endPosition>
+                  <gml:beginPosition>2005-01-04T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2011-02-01T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
             <geo:dataSamplingInterval>30</geo:dataSamplingInterval>
-            <geo:accuracy-degreesCelcius>0.5 deg C</geo:accuracy-degreesCelcius>
+            <geo:accuracy-degreesCelcius>0.5deg C</geo:accuracy-degreesCelcius>
             <geo:aspiration>NATURAL</geo:aspiration>
          </geo:temperatureSensor>
       </geo:temperatureSensors>
       <geo:temperatureSensors>
          <geo:temperatureSensor>
-            <geo:type>PAROSCIENTIFIC MET3</geo:type>
+            <geo:type>PAROSCIENTIFIC MET4</geo:type>
             <geo:manufacturer>PAROSCIENTIFIC</geo:manufacturer>
-            <geo:serialNumber>81488</geo:serialNumber>
-            <geo:heightDiffToAntenna>0.110</geo:heightDiffToAntenna>
-            <geo:calibrationDate>17 Sep 2002 14:00 GMT</geo:calibrationDate>
+            <geo:serialNumber>DQ107352</geo:serialNumber>
+            <geo:heightDiffToAntenna>0.3251</geo:heightDiffToAntenna>
+            <geo:calibrationDate>2011-01-31T13:00:00Z</geo:calibrationDate>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2005-01-04T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2011-02-01T00:00Z</gml:endPosition>
+                  <gml:beginPosition>2011-02-01T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
             <geo:dataSamplingInterval>30</geo:dataSamplingInterval>
-            <geo:accuracy-degreesCelcius>0.5deg C</geo:accuracy-degreesCelcius>
+            <geo:accuracy-degreesCelcius>0.5 deg C</geo:accuracy-degreesCelcius>
             <geo:aspiration>NATURAL</geo:aspiration>
          </geo:temperatureSensor>
       </geo:temperatureSensors>

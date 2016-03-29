@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-   <geo:siteLog>
+<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_301">
+   <geo:siteLog gml:id="SiteLogType_301">
+      <geo:formInformation>
+         <geo:preparedBy>Markus Bradke</geo:preparedBy>
+         <geo:datePrepared>2013-01-08T13:00:00Z</geo:datePrepared>
+         <geo:reportType>UPDATE</geo:reportType>
+      </geo:formInformation>
       <geo:siteIdentification>
          <geo:siteName>Kitab, Uzbekistan</geo:siteName>
          <geo:fourCharacterID>KIT3</geo:fourCharacterID>
@@ -10,7 +15,7 @@
          <geo:monumentDescription>PLATE</geo:monumentDescription>
          <geo:heightOfTheMonument>0.2</geo:heightOfTheMonument>
          <geo:monumentFoundation>ROOF</geo:monumentFoundation>
-         <geo:dateInstalled>13 Oct 1994 14:00 GMT</geo:dateInstalled>
+         <geo:dateInstalled>1994-10-13T14:00:00Z</geo:dateInstalled>
       </geo:siteIdentification>
       <geo:siteLocation>
          <geo:city>Kitab</geo:city>
@@ -25,24 +30,22 @@
       </geo:siteLocation>
       <geo:gnssReceivers>
          <geo:gnssReceiver>
-            <geo:receiverType>JAVAD TRE_G3TH DELTA</geo:receiverType>
-            <geo:satelliteSystem>GPS+GLO+GAL</geo:satelliteSystem>
-            <geo:serialNumber>206</geo:serialNumber>
-            <geo:firmwareVersion>3.4.4b0</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>17 Oct 2012 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>09 Jan 2013 09:51 GMT</geo:dateRemoved>
+            <geo:receiverType>ROGUE SNR-8000</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>191</geo:serialNumber>
+            <geo:firmwareVersion>3.3.32.9</geo:firmwareVersion>
+            <geo:dateInstalled>1999-09-07T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1999-11-24T00:00:00Z</geo:dateRemoved>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
          <geo:gnssReceiver>
-            <geo:receiverType>AOA SNR-8000 ACT</geo:receiverType>
+            <geo:receiverType>ROGUE SNR-8000</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>284</geo:serialNumber>
-            <geo:firmwareVersion>3.3.32.3</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>5.0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>11 Dec 1999 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>16 Oct 2012 23:59 GMT</geo:dateRemoved>
+            <geo:serialNumber>191</geo:serialNumber>
+            <geo:firmwareVersion>2.8.32.1X, 06/08/93</geo:firmwareVersion>
+            <geo:dateInstalled>1994-10-01T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1999-09-06T00:00:00Z</geo:dateRemoved>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
@@ -52,27 +55,29 @@
             <geo:serialNumber>206</geo:serialNumber>
             <geo:firmwareVersion>3.4.7</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>09 Jan 2013 09:52 GMT</geo:dateInstalled>
+            <geo:dateInstalled>2013-01-09T09:52:00Z</geo:dateInstalled>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
          <geo:gnssReceiver>
-            <geo:receiverType>ROGUE SNR-8000</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>191</geo:serialNumber>
-            <geo:firmwareVersion>2.8.32.1X, 06/08/93</geo:firmwareVersion>
-            <geo:dateInstalled>01 Oct 1994 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>06 Sep 1999 00:00 GMT</geo:dateRemoved>
+            <geo:receiverType>JAVAD TRE_G3TH DELTA</geo:receiverType>
+            <geo:satelliteSystem>GPS+GLO+GAL</geo:satelliteSystem>
+            <geo:serialNumber>206</geo:serialNumber>
+            <geo:firmwareVersion>3.4.4b0</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2012-10-17T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2013-01-09T09:51:00Z</geo:dateRemoved>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
          <geo:gnssReceiver>
-            <geo:receiverType>ROGUE SNR-8000</geo:receiverType>
+            <geo:receiverType>AOA SNR-8000 ACT</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>191</geo:serialNumber>
-            <geo:firmwareVersion>3.3.32.9</geo:firmwareVersion>
-            <geo:dateInstalled>07 Sep 1999 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>24 Nov 1999 00:00 GMT</geo:dateRemoved>
+            <geo:serialNumber>284</geo:serialNumber>
+            <geo:firmwareVersion>3.3.32.3</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>5.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>1999-12-11T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2012-10-16T23:59:00Z</geo:dateRemoved>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssAntennas>
@@ -85,8 +90,8 @@
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
             <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
-            <geo:dateInstalled>01 Oct 1994 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>24 Nov 1999 00:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>1994-10-01T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1999-11-24T00:00:00Z</geo:dateRemoved>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
       <geo:gnssAntennas>
@@ -99,8 +104,8 @@
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
             <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
-            <geo:dateInstalled>11 Dec 1999 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>16 Oct 2012 23:59 GMT</geo:dateRemoved>
+            <geo:dateInstalled>1999-12-11T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2012-10-16T23:59:00Z</geo:dateRemoved>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
       <geo:gnssAntennas>
@@ -113,7 +118,7 @@
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
             <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
-            <geo:dateInstalled>17 Oct 2012 00:00 GMT</geo:dateInstalled>
+            <geo:dateInstalled>2012-10-17T00:00:00Z</geo:dateInstalled>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
       <geo:surveyedLocalTies>
@@ -127,7 +132,7 @@
             <geo:standardType>INTERNAL</geo:standardType>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>1994-10-14T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>1994-10-14T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
@@ -149,10 +154,10 @@
             <geo:manufacturer>Vaisala</geo:manufacturer>
             <geo:serialNumber>B3110014</geo:serialNumber>
             <geo:heightDiffToAntenna>1.7</geo:heightDiffToAntenna>
-            <geo:calibrationDate>01 Aug 2006 14:00 GMT</geo:calibrationDate>
+            <geo:calibrationDate>2006-08-01T14:00:00Z</geo:calibrationDate>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2008-04-17T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2008-04-17T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
@@ -164,14 +169,28 @@
       </geo:humiditySensors>
       <geo:humiditySensors>
          <geo:humiditySensor>
+            <geo:type>HC 500</geo:type>
+            <geo:manufacturer>TimeTech/Gresinger</geo:manufacturer>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>1996-08-25T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2008-04-17T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+            <geo:dataSamplingInterval>600</geo:dataSamplingInterval>
+            <geo:accuracy-percentRelativeHumidity>1</geo:accuracy-percentRelativeHumidity>
+         </geo:humiditySensor>
+      </geo:humiditySensors>
+      <geo:humiditySensors>
+         <geo:humiditySensor>
             <geo:type>PTU303</geo:type>
             <geo:manufacturer>Vaisala</geo:manufacturer>
             <geo:serialNumber>E5140007</geo:serialNumber>
             <geo:heightDiffToAntenna>0.5</geo:heightDiffToAntenna>
-            <geo:calibrationDate>30 Nov 2009 13:00 GMT</geo:calibrationDate>
+            <geo:calibrationDate>2009-11-30T13:00:00Z</geo:calibrationDate>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2012-10-17T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2012-10-17T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
@@ -181,20 +200,6 @@
             <geo:notes>The sensor is part of a Vaisala PTU300 meteo station</geo:notes>
          </geo:humiditySensor>
       </geo:humiditySensors>
-      <geo:humiditySensors>
-         <geo:humiditySensor>
-            <geo:type>HC 500</geo:type>
-            <geo:manufacturer>TimeTech/Gresinger</geo:manufacturer>
-            <gml:validTime>
-               <gml:TimePeriod>
-                  <gml:beginPosition>1996-08-25T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2008-04-17T00:00Z</gml:endPosition>
-               </gml:TimePeriod>
-            </gml:validTime>
-            <geo:dataSamplingInterval>600</geo:dataSamplingInterval>
-            <geo:accuracy-percentRelativeHumidity>1</geo:accuracy-percentRelativeHumidity>
-         </geo:humiditySensor>
-      </geo:humiditySensors>
       <geo:pressureSensors>
          <geo:pressureSensor>
             <geo:type>PTB100B</geo:type>
@@ -202,8 +207,8 @@
             <geo:heightDiffToAntenna>0</geo:heightDiffToAntenna>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>1996-08-25T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2008-04-17T00:00Z</gml:endPosition>
+                  <gml:beginPosition>1996-08-25T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2008-04-17T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
             <geo:dataSamplingInterval>600</geo:dataSamplingInterval>
@@ -216,10 +221,10 @@
             <geo:manufacturer>Vaisala</geo:manufacturer>
             <geo:serialNumber>E5140007</geo:serialNumber>
             <geo:heightDiffToAntenna>-1.5</geo:heightDiffToAntenna>
-            <geo:calibrationDate>30 Nov 2009 13:00 GMT</geo:calibrationDate>
+            <geo:calibrationDate>2009-11-30T13:00:00Z</geo:calibrationDate>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2012-10-17T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2012-10-17T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
@@ -234,10 +239,10 @@
             <geo:manufacturer>Vaisala</geo:manufacturer>
             <geo:serialNumber>B3110014</geo:serialNumber>
             <geo:heightDiffToAntenna>-0.9</geo:heightDiffToAntenna>
-            <geo:calibrationDate>01 Aug 2006 14:00 GMT</geo:calibrationDate>
+            <geo:calibrationDate>2006-08-01T14:00:00Z</geo:calibrationDate>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2008-04-17T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2008-04-17T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
@@ -247,14 +252,28 @@
       </geo:pressureSensors>
       <geo:temperatureSensors>
          <geo:temperatureSensor>
+            <geo:type>TM 200</geo:type>
+            <geo:manufacturer>TimeTech</geo:manufacturer>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>1996-08-25T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2008-04-17T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+            <geo:dataSamplingInterval>600</geo:dataSamplingInterval>
+            <geo:accuracy-degreesCelcius>0.25</geo:accuracy-degreesCelcius>
+         </geo:temperatureSensor>
+      </geo:temperatureSensors>
+      <geo:temperatureSensors>
+         <geo:temperatureSensor>
             <geo:type>PTU303</geo:type>
             <geo:manufacturer>Vaisala</geo:manufacturer>
             <geo:serialNumber>E5140007</geo:serialNumber>
             <geo:heightDiffToAntenna>0.5</geo:heightDiffToAntenna>
-            <geo:calibrationDate>30 Nov 2009 13:00 GMT</geo:calibrationDate>
+            <geo:calibrationDate>2009-11-30T13:00:00Z</geo:calibrationDate>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2012-10-17T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2012-10-17T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
@@ -270,10 +289,10 @@
             <geo:manufacturer>Vaisala</geo:manufacturer>
             <geo:serialNumber>B3110014</geo:serialNumber>
             <geo:heightDiffToAntenna>1.7</geo:heightDiffToAntenna>
-            <geo:calibrationDate>01 Aug 2006 14:00 GMT</geo:calibrationDate>
+            <geo:calibrationDate>2006-08-01T14:00:00Z</geo:calibrationDate>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2008-04-17T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2008-04-17T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
@@ -281,20 +300,6 @@
             <geo:accuracy-degreesCelcius>0.1</geo:accuracy-degreesCelcius>
             <geo:aspiration>NATURAL</geo:aspiration>
             <geo:notes>The temperature sensor is part of a Vaisala PTU200 meteo station</geo:notes>
-         </geo:temperatureSensor>
-      </geo:temperatureSensors>
-      <geo:temperatureSensors>
-         <geo:temperatureSensor>
-            <geo:type>TM 200</geo:type>
-            <geo:manufacturer>TimeTech</geo:manufacturer>
-            <gml:validTime>
-               <gml:TimePeriod>
-                  <gml:beginPosition>1996-08-25T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2008-04-17T00:00Z</gml:endPosition>
-               </gml:TimePeriod>
-            </gml:validTime>
-            <geo:dataSamplingInterval>600</geo:dataSamplingInterval>
-            <geo:accuracy-degreesCelcius>0.25</geo:accuracy-degreesCelcius>
          </geo:temperatureSensor>
       </geo:temperatureSensors>
       <geo:otherInstrumentations>

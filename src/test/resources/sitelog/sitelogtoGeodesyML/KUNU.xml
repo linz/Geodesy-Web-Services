@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-   <geo:siteLog>
+<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_311">
+   <geo:siteLog gml:id="SiteLogType_311">
+      <geo:formInformation>
+         <geo:preparedBy>Ryan Ruddick</geo:preparedBy>
+         <geo:datePrepared>2011-08-24T14:00:00Z</geo:datePrepared>
+         <geo:reportType>Update</geo:reportType>
+      </geo:formInformation>
       <geo:siteIdentification>
          <geo:siteName>Kununurra</geo:siteName>
          <geo:fourCharacterID>KUNU</geo:fourCharacterID>
@@ -11,7 +16,7 @@
          <geo:monumentFoundation>STEEL RODS / CONCRETE BLOCK</geo:monumentFoundation>
          <geo:foundationDepth>4.0</geo:foundationDepth>
          <geo:markerDescription>STAINLESS STEEL PLATE, THREADED SPIGOT</geo:markerDescription>
-         <geo:dateInstalled>21 May 2009 14:00 GMT</geo:dateInstalled>
+         <geo:dateInstalled>2009-05-21T14:00:00Z</geo:dateInstalled>
          <geo:geologicCharacteristic>BEDROCK</geo:geologicCharacteristic>
          <geo:bedrockType>Rock</geo:bedrockType>
          <geo:faultZonesNearby>NO</geo:faultZonesNearby>
@@ -34,23 +39,10 @@
             <geo:serialNumber>355566</geo:serialNumber>
             <geo:firmwareVersion>7.50</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>22 Jul 2009 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>07 May 2010 00:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2009-07-22T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2010-05-07T00:00:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>none</geo:temperatureStabilization>
             <geo:notes>The tracking was changed from C2 or P2, to P2 only at 2009-08-06T00 The tracking was changed to all SVs regardless of health status at 2009-09-24T04</geo:notes>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>LEICA GRX1200+GNSS</geo:receiverType>
-            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
-            <geo:serialNumber>495608</geo:serialNumber>
-            <geo:firmwareVersion>8.10/4.007</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>07 Apr 2011 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>24 Aug 2011 23:59 GMT</geo:dateRemoved>
-            <geo:temperatureStabilization>none</geo:temperatureStabilization>
-            <geo:notes>Previous receiver failed.</geo:notes>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
@@ -60,8 +52,8 @@
             <geo:serialNumber>355566</geo:serialNumber>
             <geo:firmwareVersion>7.50 / 3.019</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>07 May 2010 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>07 Apr 2011 00:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2010-05-07T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2011-04-07T00:00:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>none</geo:temperatureStabilization>
             <geo:notes>ME upgrade due to GLONASS tracking problem.</geo:notes>
          </geo:gnssReceiver>
@@ -73,8 +65,21 @@
             <geo:serialNumber>495608</geo:serialNumber>
             <geo:firmwareVersion>8.10/4.007</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>25 Aug 2011 00:00 GMT</geo:dateInstalled>
+            <geo:dateInstalled>2011-08-25T00:00:00Z</geo:dateInstalled>
             <geo:temperatureStabilization>none</geo:temperatureStabilization>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>LEICA GRX1200+GNSS</geo:receiverType>
+            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
+            <geo:serialNumber>495608</geo:serialNumber>
+            <geo:firmwareVersion>8.10/4.007</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2011-04-07T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2011-08-24T23:59:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>none</geo:temperatureStabilization>
+            <geo:notes>Previous receiver failed.</geo:notes>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssAntennas>
@@ -89,7 +94,7 @@
             <geo:antennaRadomeType>SCIS</geo:antennaRadomeType>
             <geo:antennaCableType>CNT400</geo:antennaCableType>
             <geo:antennaCableLength>28</geo:antennaCableLength>
-            <geo:dateInstalled>22 Jul 2009 00:00 GMT</geo:dateInstalled>
+            <geo:dateInstalled>2009-07-22T00:00:00Z</geo:dateInstalled>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
       <geo:frequencyStandards>
@@ -98,7 +103,7 @@
             <geo:inputFrequency>5Mhz</geo:inputFrequency>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2009-07-22T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2009-07-22T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
@@ -110,10 +115,10 @@
             <geo:manufacturer>PAROSCIENTIFIC</geo:manufacturer>
             <geo:serialNumber>DQ107262</geo:serialNumber>
             <geo:heightDiffToAntenna>000.000</geo:heightDiffToAntenna>
-            <geo:calibrationDate>21 Jul 2009 14:00 GMT</geo:calibrationDate>
+            <geo:calibrationDate>2009-07-21T14:00:00Z</geo:calibrationDate>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2009-07-22T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2009-07-22T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
@@ -128,10 +133,10 @@
             <geo:manufacturer>PAROSCIENTIFIC</geo:manufacturer>
             <geo:serialNumber>DQ107262</geo:serialNumber>
             <geo:heightDiffToAntenna>000.000</geo:heightDiffToAntenna>
-            <geo:calibrationDate>21 Jul 2009 14:00 GMT</geo:calibrationDate>
+            <geo:calibrationDate>2009-07-21T14:00:00Z</geo:calibrationDate>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2009-07-22T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2009-07-22T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
@@ -145,10 +150,10 @@
             <geo:manufacturer>PAROSCIENTIFIC</geo:manufacturer>
             <geo:serialNumber>DQ107262</geo:serialNumber>
             <geo:heightDiffToAntenna>000.0000</geo:heightDiffToAntenna>
-            <geo:calibrationDate>21 Jul 2009 14:00 GMT</geo:calibrationDate>
+            <geo:calibrationDate>2009-07-21T14:00:00Z</geo:calibrationDate>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2009-07-22T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2009-07-22T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>

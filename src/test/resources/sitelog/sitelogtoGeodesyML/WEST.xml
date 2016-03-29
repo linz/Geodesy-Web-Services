@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-   <geo:siteLog>
+<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_628">
+   <geo:siteLog gml:id="SiteLogType_628">
+      <geo:formInformation>
+         <geo:preparedBy>Manoj Deo</geo:preparedBy>
+         <geo:datePrepared>2011-05-17T14:00:00Z</geo:datePrepared>
+         <geo:reportType>UPDATE</geo:reportType>
+      </geo:formInformation>
       <geo:siteIdentification>
          <geo:siteName>Westport</geo:siteName>
          <geo:fourCharacterID>WEST</geo:fourCharacterID>
          <geo:iersDOMESNumber>50238M001</geo:iersDOMESNumber>
-         <geo:dateInstalled>21 Sep 2004 14:00 GMT</geo:dateInstalled>
+         <geo:dateInstalled>2004-09-21T14:00:00Z</geo:dateInstalled>
       </geo:siteIdentification>
       <geo:siteLocation>
          <geo:approximatePositionITRF>
@@ -17,12 +22,13 @@
       </geo:siteLocation>
       <geo:gnssReceivers>
          <geo:gnssReceiver>
-            <geo:receiverType>TRIMBLE NETR9</geo:receiverType>
-            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
-            <geo:serialNumber>5034K69697</geo:serialNumber>
-            <geo:firmwareVersion>4.17A</geo:firmwareVersion>
+            <geo:receiverType>TRIMBLE NETRS</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>4429236327</geo:serialNumber>
+            <geo:firmwareVersion>1.1-3</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>25 Jan 2011 14:03 GMT</geo:dateInstalled>
+            <geo:dateInstalled>2006-05-16T22:07:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2006-05-16T23:04:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>none</geo:temperatureStabilization>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
@@ -33,20 +39,8 @@
             <geo:serialNumber>4429236327</geo:serialNumber>
             <geo:firmwareVersion>1.0-3</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>22 Sep 2004 17:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>16 May 2006 22:07 GMT</geo:dateRemoved>
-            <geo:temperatureStabilization>none</geo:temperatureStabilization>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>TRIMBLE NETRS</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>4429236327</geo:serialNumber>
-            <geo:firmwareVersion>1.1-3</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>16 May 2006 22:07 GMT</geo:dateInstalled>
-            <geo:dateRemoved>16 May 2006 23:04 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2004-09-22T17:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2006-05-16T22:07:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>none</geo:temperatureStabilization>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
@@ -57,25 +51,22 @@
             <geo:serialNumber>4429236327</geo:serialNumber>
             <geo:firmwareVersion>1.1-5</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>16 May 2006 23:04 GMT</geo:dateInstalled>
-            <geo:dateRemoved>25 Jan 2011 11:55 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2006-05-16T23:04:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2011-01-25T11:55:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>none</geo:temperatureStabilization>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
-      <geo:gnssAntennas>
-         <geo:gnssAntenna>
-            <geo:antennaType>TRM55971.00     NONE</geo:antennaType>
-            <geo:serialNumber>1441031206</geo:serialNumber>
-            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
-            <geo:marker-arpUpEcc.>0.055</geo:marker-arpUpEcc.>
-            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
-            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
-            <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
-            <geo:antennaCableLength>0</geo:antennaCableLength>
-            <geo:dateInstalled>25 Jan 2011 14:03 GMT</geo:dateInstalled>
-         </geo:gnssAntenna>
-      </geo:gnssAntennas>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>TRIMBLE NETR9</geo:receiverType>
+            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
+            <geo:serialNumber>5034K69697</geo:serialNumber>
+            <geo:firmwareVersion>4.17A</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2011-01-25T14:03:00Z</geo:dateInstalled>
+            <geo:temperatureStabilization>none</geo:temperatureStabilization>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
       <geo:gnssAntennas>
          <geo:gnssAntenna>
             <geo:antennaType>TRM41249.00     NONE</geo:antennaType>
@@ -87,8 +78,22 @@
             <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
             <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
             <geo:antennaCableLength>0</geo:antennaCableLength>
-            <geo:dateInstalled>22 Sep 2004 17:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>25 Jan 2011 14:03 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2004-09-22T17:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2011-01-25T14:03:00Z</geo:dateRemoved>
+         </geo:gnssAntenna>
+      </geo:gnssAntennas>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna>
+            <geo:antennaType>TRM55971.00     NONE</geo:antennaType>
+            <geo:serialNumber>1441031206</geo:serialNumber>
+            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>0.055</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
+            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
+            <geo:antennaCableLength>0</geo:antennaCableLength>
+            <geo:dateInstalled>2011-01-25T14:03:00Z</geo:dateInstalled>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
       <geo:frequencyStandards>
@@ -96,22 +101,12 @@
             <geo:standardType>QUARTZ/INTERNAL</geo:standardType>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2004-09-22T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2004-09-22T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
          </geo:frequencyStandard>
       </geo:frequencyStandards>
-      <geo:localEpisodicEventsSet>
-         <geo:localEpisodicEvents>
-            <gml:validTime>
-               <gml:TimeInstant>
-                  <gml:timePosition>23 Dec 2004</gml:timePosition>
-               </gml:TimeInstant>
-            </gml:validTime>
-            <geo:event>EARTHQUAKE</geo:event>
-         </geo:localEpisodicEvents>
-      </geo:localEpisodicEventsSet>
       <geo:localEpisodicEventsSet>
          <geo:localEpisodicEvents>
             <gml:validTime>
@@ -127,6 +122,16 @@
             <gml:validTime>
                <gml:TimeInstant>
                   <gml:timePosition>15 Jul 2009</gml:timePosition>
+               </gml:TimeInstant>
+            </gml:validTime>
+            <geo:event>EARTHQUAKE</geo:event>
+         </geo:localEpisodicEvents>
+      </geo:localEpisodicEventsSet>
+      <geo:localEpisodicEventsSet>
+         <geo:localEpisodicEvents>
+            <gml:validTime>
+               <gml:TimeInstant>
+                  <gml:timePosition>23 Dec 2004</gml:timePosition>
                </gml:TimeInstant>
             </gml:validTime>
             <geo:event>EARTHQUAKE</geo:event>

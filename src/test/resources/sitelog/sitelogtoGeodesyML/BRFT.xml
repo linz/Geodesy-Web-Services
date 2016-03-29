@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-   <geo:siteLog>
+<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_82">
+   <geo:siteLog gml:id="SiteLogType_82">
+      <geo:formInformation>
+         <geo:preparedBy>cors-adm</geo:preparedBy>
+         <geo:datePrepared>2013-08-04T14:00:00Z</geo:datePrepared>
+         <geo:reportType>UPDATE</geo:reportType>
+      </geo:formInformation>
       <geo:siteIdentification>
          <geo:siteName>Fortaleza 2005</geo:siteName>
          <geo:fourCharacterID>BRFT</geo:fourCharacterID>
@@ -10,7 +15,7 @@
          <geo:monumentFoundation>CONCRETE ROOF</geo:monumentFoundation>
          <geo:foundationDepth>10</geo:foundationDepth>
          <geo:markerDescription>DIMPLED POINT</geo:markerDescription>
-         <geo:dateInstalled>05 Sep 2005 14:00 GMT</geo:dateInstalled>
+         <geo:dateInstalled>2005-09-05T14:00:00Z</geo:dateInstalled>
          <geo:notes>mount, which is welded atop a 2-m tall steel tripod on the roof of a 1-storey concrete building (multiple lines)</geo:notes>
       </geo:siteIdentification>
       <geo:siteLocation>
@@ -30,10 +35,10 @@
             <geo:receiverType>LEICA GRX1200PRO</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
             <geo:serialNumber>452719</geo:serialNumber>
-            <geo:firmwareVersion>8.20/IME2.125</geo:firmwareVersion>
+            <geo:firmwareVersion>8.10/IME2.121</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>31 Oct 2011 13:20 GMT</geo:dateInstalled>
-            <geo:dateRemoved>14 Dec 2012 13:11 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2011-02-03T14:33:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2011-10-31T13:20:00Z</geo:dateRemoved>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
@@ -41,10 +46,33 @@
             <geo:receiverType>LEICA GRX1200PRO</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
             <geo:serialNumber>452719</geo:serialNumber>
-            <geo:firmwareVersion>8.10/IME2.121</geo:firmwareVersion>
+            <geo:firmwareVersion>8.20/IME2.125</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>03 Feb 2011 14:33 GMT</geo:dateInstalled>
-            <geo:dateRemoved>31 Oct 2011 13:20 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2011-10-31T13:20:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2012-12-14T13:11:00Z</geo:dateRemoved>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>LEICA GRX1200PRO</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>452719</geo:serialNumber>
+            <geo:firmwareVersion>7.80/IME 2.125</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2010-04-27T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2011-01-18T17:51:00Z</geo:dateRemoved>
+            <geo:notes>2011-01-03T14 to OCXO 2011-01-10T12 to Ces.</geo:notes>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>LEICA GRX1200PRO</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>452719</geo:serialNumber>
+            <geo:firmwareVersion>2.12</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2005-09-06T18:40:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2010-04-27T00:00:00Z</geo:dateRemoved>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
@@ -54,8 +82,8 @@
             <geo:serialNumber>452719</geo:serialNumber>
             <geo:firmwareVersion>8.10/IME 2.125</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>18 Jan 2011 17:51 GMT</geo:dateInstalled>
-            <geo:dateRemoved>03 Feb 2011 14:33 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2011-01-18T17:51:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2011-02-03T14:33:00Z</geo:dateRemoved>
             <geo:notes>2011-01-19T19 from maser 2011-01-24T15</geo:notes>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
@@ -66,30 +94,7 @@
             <geo:serialNumber>452719</geo:serialNumber>
             <geo:firmwareVersion>8.20/IME2.127</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>14 Dec 2012 13:11 GMT</geo:dateInstalled>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>LEICA GRX1200PRO</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>452719</geo:serialNumber>
-            <geo:firmwareVersion>2.12</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
-            <geo:dateInstalled>06 Sep 2005 18:40 GMT</geo:dateInstalled>
-            <geo:dateRemoved>27 Apr 2010 00:00 GMT</geo:dateRemoved>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>LEICA GRX1200PRO</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>452719</geo:serialNumber>
-            <geo:firmwareVersion>7.80/IME 2.125</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>27 Apr 2010 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>18 Jan 2011 17:51 GMT</geo:dateRemoved>
-            <geo:notes>2011-01-03T14 to OCXO 2011-01-10T12 to Ces.</geo:notes>
+            <geo:dateInstalled>2012-12-14T13:11:00Z</geo:dateInstalled>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssAntennas>
@@ -104,18 +109,10 @@
             <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
             <geo:antennaCableType>Andrew LDF4-50 Heliax</geo:antennaCableType>
             <geo:antennaCableLength>36</geo:antennaCableLength>
-            <geo:dateInstalled>06 Sep 2005 00:00 GMT</geo:dateInstalled>
+            <geo:dateInstalled>2005-09-06T00:00:00Z</geo:dateInstalled>
             <geo:notes>antenna mounted on SCIGN leveling mount</geo:notes>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
-      <geo:surveyedLocalTies>
-         <geo:surveyedLocalTies>
-            <geo:tiedMarkerName>FORT GPS    41602M001</geo:tiedMarkerName>
-            <geo:tiedMarkerUsage>GPS</geo:tiedMarkerUsage>
-            <geo:tiedMarkerDOMESNumber>41602M001</geo:tiedMarkerDOMESNumber>
-            <geo:notes>local tie not yet measured but survey planned</geo:notes>
-         </geo:surveyedLocalTies>
-      </geo:surveyedLocalTies>
       <geo:surveyedLocalTies>
          <geo:surveyedLocalTies>
             <geo:tiedMarkerName>Fortaleza VLBI  41602S001</geo:tiedMarkerName>
@@ -125,39 +122,22 @@
             <geo:notes>local tie not yet measured but survey planned</geo:notes>
          </geo:surveyedLocalTies>
       </geo:surveyedLocalTies>
-      <geo:frequencyStandards>
-         <geo:frequencyStandard>
-            <geo:standardType>INTERNAL</geo:standardType>
-            <gml:validTime>
-               <gml:TimePeriod>
-                  <gml:beginPosition>2011-01-19T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2011-01-24T00:00Z</gml:endPosition>
-               </gml:TimePeriod>
-            </gml:validTime>
-            <geo:notes>Switch on T19:36Z, off T15:11Z</geo:notes>
-         </geo:frequencyStandard>
-      </geo:frequencyStandards>
-      <geo:frequencyStandards>
-         <geo:frequencyStandard>
-            <geo:standardType>INTERNAL</geo:standardType>
-            <geo:inputFrequency>5 MHz</geo:inputFrequency>
-            <gml:validTime>
-               <gml:TimePeriod>
-                  <gml:beginPosition>2011-02-07T00:00Z</gml:beginPosition>
-                  <gml:endPosition></gml:endPosition>
-               </gml:TimePeriod>
-            </gml:validTime>
-            <geo:notes>Switch on T22:48Z</geo:notes>
-         </geo:frequencyStandard>
-      </geo:frequencyStandards>
+      <geo:surveyedLocalTies>
+         <geo:surveyedLocalTies>
+            <geo:tiedMarkerName>FORT GPS    41602M001</geo:tiedMarkerName>
+            <geo:tiedMarkerUsage>GPS</geo:tiedMarkerUsage>
+            <geo:tiedMarkerDOMESNumber>41602M001</geo:tiedMarkerDOMESNumber>
+            <geo:notes>local tie not yet measured but survey planned</geo:notes>
+         </geo:surveyedLocalTies>
+      </geo:surveyedLocalTies>
       <geo:frequencyStandards>
          <geo:frequencyStandard>
             <geo:standardType>EXTERNAL H-MASER</geo:standardType>
             <geo:inputFrequency>5 MHz</geo:inputFrequency>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2005-09-06T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2011-01-19T00:00Z</gml:endPosition>
+                  <gml:beginPosition>2005-09-06T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2011-01-19T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
             <geo:notes>Sigma Tau maser</geo:notes>
@@ -165,12 +145,24 @@
       </geo:frequencyStandards>
       <geo:frequencyStandards>
          <geo:frequencyStandard>
+            <geo:standardType>INTERNAL</geo:standardType>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2011-01-19T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2011-01-24T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+            <geo:notes>Switch on T19:36Z, off T15:11Z</geo:notes>
+         </geo:frequencyStandard>
+      </geo:frequencyStandards>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard>
             <geo:standardType>EXTERNAL H-MASER</geo:standardType>
             <geo:inputFrequency>5 MHz</geo:inputFrequency>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2011-01-24T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2011-01-25T00:00Z</gml:endPosition>
+                  <gml:beginPosition>2011-01-24T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2011-01-25T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
             <geo:notes>Sigma Tau Maser on T15:11Z</geo:notes>
@@ -182,8 +174,8 @@
             <geo:inputFrequency>5 MHz</geo:inputFrequency>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2011-01-31T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2011-02-07T00:00Z</gml:endPosition>
+                  <gml:beginPosition>2011-01-31T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2011-02-07T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
             <geo:notes>Sigma Tau Maser on T16:18Z,off T22:48Z</geo:notes>
@@ -195,22 +187,35 @@
             <geo:inputFrequency>5 MHz</geo:inputFrequency>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2011-01-25T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2011-01-31T00:00Z</gml:endPosition>
+                  <gml:beginPosition>2011-01-25T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2011-01-31T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
             <geo:notes>Switch on T13:45Z, offT16:18Z</geo:notes>
          </geo:frequencyStandard>
       </geo:frequencyStandards>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard>
+            <geo:standardType>INTERNAL</geo:standardType>
+            <geo:inputFrequency>5 MHz</geo:inputFrequency>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2011-02-07T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition></gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+            <geo:notes>Switch on T22:48Z</geo:notes>
+         </geo:frequencyStandard>
+      </geo:frequencyStandards>
       <geo:collocationInformations>
          <geo:collocationInformation>
             <geo:status>PERMANENT</geo:status>
-            <geo:notes>will be discontinued and replaced by BRFT</geo:notes>
          </geo:collocationInformation>
       </geo:collocationInformations>
       <geo:collocationInformations>
          <geo:collocationInformation>
             <geo:status>PERMANENT</geo:status>
+            <geo:notes>will be discontinued and replaced by BRFT</geo:notes>
          </geo:collocationInformation>
       </geo:collocationInformations>
       <geo:otherInstrumentations>

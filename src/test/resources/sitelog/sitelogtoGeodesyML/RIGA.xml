@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-   <geo:siteLog>
+<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_501">
+   <geo:siteLog gml:id="SiteLogType_501">
+      <geo:formInformation>
+         <geo:preparedBy>Kazimirs Lapushka</geo:preparedBy>
+         <geo:datePrepared>2013-01-10T13:00:00Z</geo:datePrepared>
+         <geo:reportType>UPDATE</geo:reportType>
+      </geo:formInformation>
       <geo:siteIdentification>
          <geo:siteName>RIGA permanent GPS</geo:siteName>
          <geo:fourCharacterID>RIGA</geo:fourCharacterID>
@@ -11,7 +16,7 @@
          <geo:monumentFoundation>5 m diameter concrete cylinder.</geo:monumentFoundation>
          <geo:foundationDepth>12</geo:foundationDepth>
          <geo:markerDescription>standard geodetic mark</geo:markerDescription>
-         <geo:dateInstalled>04 Dec 1995 13:00 GMT</geo:dateInstalled>
+         <geo:dateInstalled>1995-12-04T13:00:00Z</geo:dateInstalled>
          <geo:bedrockType>METAMORPHIC</geo:bedrockType>
          <geo:bedrockCondition>JOINTED</geo:bedrockCondition>
          <geo:fractureSpacing>1-10 cm</geo:fractureSpacing>
@@ -33,91 +38,13 @@
       </geo:siteLocation>
       <geo:gnssReceivers>
          <geo:gnssReceiver>
-            <geo:receiverType>ASHTECH Z-XII3</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>UNKNOWN</geo:serialNumber>
-            <geo:firmwareVersion>UNKNOWN</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
-            <geo:dateInstalled>05 Dec 1995 04:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>28 Mar 1996 23:59 GMT</geo:dateRemoved>
-            <geo:temperatureStabilization>18 +/- 4</geo:temperatureStabilization>
-            <geo:notes>from FGI Finnland</geo:notes>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
             <geo:receiverType>ROGUE SNR-8000</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
             <geo:serialNumber>223</geo:serialNumber>
             <geo:firmwareVersion>2.8.0.7</geo:firmwareVersion>
             <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
-            <geo:dateInstalled>02 Sep 1999 13:45 GMT</geo:dateInstalled>
-            <geo:dateRemoved>13 Jan 2005 00:30 GMT</geo:dateRemoved>
-            <geo:temperatureStabilization>18 +/- 4</geo:temperatureStabilization>
-            <geo:notes>from OSO Sweden.</geo:notes>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>LEICA GRX1200PRO</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>453321</geo:serialNumber>
-            <geo:firmwareVersion>5.60/2.125</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>4</geo:elevationCutoffSetting>
-            <geo:dateInstalled>16 Dec 2007 12:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>12 Dec 2012 15:20 GMT</geo:dateRemoved>
-            <geo:temperatureStabilization>18 +/- 4</geo:temperatureStabilization>
-            <geo:notes>none</geo:notes>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>ROGUE SNR-8000</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>223</geo:serialNumber>
-            <geo:firmwareVersion>2.8.0.7</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
-            <geo:dateInstalled>18 Jun 2006 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>08 Jan 2007 13:00 GMT</geo:dateRemoved>
-            <geo:temperatureStabilization>18 +/- 4</geo:temperatureStabilization>
-            <geo:notes>from OSO Sweden.</geo:notes>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>AOA BENCHMARK ACT</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>2050</geo:serialNumber>
-            <geo:firmwareVersion>3.3.32.5</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>4</geo:elevationCutoffSetting>
-            <geo:dateInstalled>10 Sep 2007 09:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>06 Dec 2007 12:00 GMT</geo:dateRemoved>
-            <geo:temperatureStabilization>18 +/- 4</geo:temperatureStabilization>
-            <geo:notes>LUAI property</geo:notes>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>AOA BENCHMARK ACT</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>2050</geo:serialNumber>
-            <geo:firmwareVersion>3.3.32.5</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>4</geo:elevationCutoffSetting>
-            <geo:dateInstalled>13 Jan 2005 10:08 GMT</geo:dateInstalled>
-            <geo:dateRemoved>17 Jun 2006 00:00 GMT</geo:dateRemoved>
-            <geo:temperatureStabilization>18 +/- 4</geo:temperatureStabilization>
-            <geo:notes>LUAI property.</geo:notes>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>ROGUE SNR-8000</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>223</geo:serialNumber>
-            <geo:firmwareVersion>2.8</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
-            <geo:dateInstalled>29 Mar 1996 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>02 Sep 1999 13:10 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2007-05-29T11:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2007-09-10T08:30:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>18 +/- 4</geo:temperatureStabilization>
             <geo:notes>from OSO Sweden.</geo:notes>
          </geo:gnssReceiver>
@@ -129,8 +56,21 @@
             <geo:serialNumber>453321</geo:serialNumber>
             <geo:firmwareVersion>5.60/2.127</geo:firmwareVersion>
             <geo:elevationCutoffSetting>4</geo:elevationCutoffSetting>
-            <geo:dateInstalled>12 Dec 2012 15:20 GMT</geo:dateInstalled>
+            <geo:dateInstalled>2012-12-12T15:20:00Z</geo:dateInstalled>
             <geo:temperatureStabilization>18 +/- 4</geo:temperatureStabilization>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>AOA BENCHMARK ACT</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>2050</geo:serialNumber>
+            <geo:firmwareVersion>3.3.32.5</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>4</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2005-01-13T10:08:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2006-06-17T00:00:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>18 +/- 4</geo:temperatureStabilization>
+            <geo:notes>LUAI property.</geo:notes>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
@@ -140,8 +80,8 @@
             <geo:serialNumber>223</geo:serialNumber>
             <geo:firmwareVersion>2.8.0.7</geo:firmwareVersion>
             <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
-            <geo:dateInstalled>29 May 2007 11:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>10 Sep 2007 08:30 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2006-06-18T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2007-01-08T13:00:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>18 +/- 4</geo:temperatureStabilization>
             <geo:notes>from OSO Sweden.</geo:notes>
          </geo:gnssReceiver>
@@ -153,34 +93,81 @@
             <geo:serialNumber>2050</geo:serialNumber>
             <geo:firmwareVersion>3.3.32.5</geo:firmwareVersion>
             <geo:elevationCutoffSetting>4</geo:elevationCutoffSetting>
-            <geo:dateInstalled>08 Jan 2007 13:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>24 May 2007 10:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2007-01-08T13:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2007-05-24T10:00:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>18 +/- 4</geo:temperatureStabilization>
             <geo:notes>LUAI property</geo:notes>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
-      <geo:gnssAntennas>
-         <geo:gnssAntenna>
-            <geo:antennaType>AOAD/M_T        NONE</geo:antennaType>
-            <geo:serialNumber>519</geo:serialNumber>
-            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
-            <geo:marker-arpUpEcc.>0.085</geo:marker-arpUpEcc.>
-            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
-            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
-            <geo:alignmentFromTrueNorth>&lt;1</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
-            <geo:radomeSerialNumber>NONE</geo:radomeSerialNumber>
-            <geo:antennaCableType>AWM RG214/U STYLE 1354 E96824-I</geo:antennaCableType>
-            <geo:antennaCableLength>60</geo:antennaCableLength>
-            <geo:dateInstalled>05 Dec 1995 04:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>28 Mar 1996 23:59 GMT</geo:dateRemoved>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>ASHTECH Z-XII3</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>UNKNOWN</geo:serialNumber>
+            <geo:firmwareVersion>UNKNOWN</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
+            <geo:dateInstalled>1995-12-05T04:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1996-03-28T23:59:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>18 +/- 4</geo:temperatureStabilization>
             <geo:notes>from FGI Finnland</geo:notes>
-         </geo:gnssAntenna>
-      </geo:gnssAntennas>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>AOA BENCHMARK ACT</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>2050</geo:serialNumber>
+            <geo:firmwareVersion>3.3.32.5</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>4</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2007-09-10T09:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2007-12-06T12:00:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>18 +/- 4</geo:temperatureStabilization>
+            <geo:notes>LUAI property</geo:notes>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>ROGUE SNR-8000</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>223</geo:serialNumber>
+            <geo:firmwareVersion>2.8.0.7</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
+            <geo:dateInstalled>1999-09-02T13:45:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2005-01-13T00:30:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>18 +/- 4</geo:temperatureStabilization>
+            <geo:notes>from OSO Sweden.</geo:notes>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>LEICA GRX1200PRO</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>453321</geo:serialNumber>
+            <geo:firmwareVersion>5.60/2.125</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>4</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2007-12-16T12:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2012-12-12T15:20:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>18 +/- 4</geo:temperatureStabilization>
+            <geo:notes>none</geo:notes>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>ROGUE SNR-8000</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>223</geo:serialNumber>
+            <geo:firmwareVersion>2.8</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
+            <geo:dateInstalled>1996-03-29T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1999-09-02T13:10:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>18 +/- 4</geo:temperatureStabilization>
+            <geo:notes>from OSO Sweden.</geo:notes>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
       <geo:gnssAntennas>
          <geo:gnssAntenna>
-            <geo:antennaType>AOAD/M_T        NONE</geo:antennaType>
-            <geo:serialNumber>532</geo:serialNumber>
+            <geo:antennaType>ASH700936D_M    NONE</geo:antennaType>
+            <geo:serialNumber>11471</geo:serialNumber>
             <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
             <geo:marker-arpUpEcc.>0.085</geo:marker-arpUpEcc.>
             <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
@@ -190,9 +177,9 @@
             <geo:radomeSerialNumber>NONE</geo:radomeSerialNumber>
             <geo:antennaCableType>AWM RG214/U STYLE 1354 E96824-I</geo:antennaCableType>
             <geo:antennaCableLength>60</geo:antennaCableLength>
-            <geo:dateInstalled>13 Jan 2005 10:08 GMT</geo:dateInstalled>
-            <geo:dateRemoved>20 May 2006 06:00 GMT</geo:dateRemoved>
-            <geo:notes>Internally Damaged</geo:notes>
+            <geo:dateInstalled>2006-05-22T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2007-12-06T12:00:00Z</geo:dateRemoved>
+            <geo:notes>The same as in point 4.2</geo:notes>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
       <geo:gnssAntennas>
@@ -208,9 +195,27 @@
             <geo:radomeSerialNumber>NONE</geo:radomeSerialNumber>
             <geo:antennaCableType>AWM RG214/U STYLE 1354 E96824-I</geo:antennaCableType>
             <geo:antennaCableLength>60</geo:antennaCableLength>
-            <geo:dateInstalled>29 Mar 1996 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>13 Jan 2005 00:30 GMT</geo:dateRemoved>
+            <geo:dateInstalled>1996-03-29T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2005-01-13T00:30:00Z</geo:dateRemoved>
             <geo:notes>from OSO Sweden</geo:notes>
+         </geo:gnssAntenna>
+      </geo:gnssAntennas>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna>
+            <geo:antennaType>AOAD/M_T        NONE</geo:antennaType>
+            <geo:serialNumber>519</geo:serialNumber>
+            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>0.085</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:alignmentFromTrueNorth>&lt;1</geo:alignmentFromTrueNorth>
+            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
+            <geo:radomeSerialNumber>NONE</geo:radomeSerialNumber>
+            <geo:antennaCableType>AWM RG214/U STYLE 1354 E96824-I</geo:antennaCableType>
+            <geo:antennaCableLength>60</geo:antennaCableLength>
+            <geo:dateInstalled>1995-12-05T04:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1996-03-28T23:59:00Z</geo:dateRemoved>
+            <geo:notes>from FGI Finnland</geo:notes>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
       <geo:gnssAntennas>
@@ -226,14 +231,14 @@
             <geo:radomeSerialNumber>NONE</geo:radomeSerialNumber>
             <geo:antennaCableType>AWM RG214/U STYLE 1354 E96824-I</geo:antennaCableType>
             <geo:antennaCableLength>60</geo:antennaCableLength>
-            <geo:dateInstalled>16 Dec 2007 12:00 GMT</geo:dateInstalled>
+            <geo:dateInstalled>2007-12-16T12:00:00Z</geo:dateInstalled>
             <geo:notes>NONE</geo:notes>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
       <geo:gnssAntennas>
          <geo:gnssAntenna>
-            <geo:antennaType>ASH700936D_M    NONE</geo:antennaType>
-            <geo:serialNumber>11471</geo:serialNumber>
+            <geo:antennaType>AOAD/M_T        NONE</geo:antennaType>
+            <geo:serialNumber>532</geo:serialNumber>
             <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
             <geo:marker-arpUpEcc.>0.085</geo:marker-arpUpEcc.>
             <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
@@ -243,9 +248,9 @@
             <geo:radomeSerialNumber>NONE</geo:radomeSerialNumber>
             <geo:antennaCableType>AWM RG214/U STYLE 1354 E96824-I</geo:antennaCableType>
             <geo:antennaCableLength>60</geo:antennaCableLength>
-            <geo:dateInstalled>22 May 2006 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>06 Dec 2007 12:00 GMT</geo:dateRemoved>
-            <geo:notes>The same as in point 4.2</geo:notes>
+            <geo:dateInstalled>2005-01-13T10:08:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2006-05-20T06:00:00Z</geo:dateRemoved>
+            <geo:notes>Internally Damaged</geo:notes>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
       <geo:surveyedLocalTies>
@@ -261,8 +266,25 @@
             </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
             <geo:localSiteTiesAccuracy>2</geo:localSiteTiesAccuracy>
             <geo:surveyMethod>GPS CAMPAIGN</geo:surveyMethod>
-            <geo:dateMeasured>09 Jun 1995 14:00 GMT</geo:dateMeasured>
+            <geo:dateMeasured>1995-06-09T14:00:00Z</geo:dateMeasured>
             <geo:notes>from local GPS session.</geo:notes>
+         </geo:surveyedLocalTies>
+      </geo:surveyedLocalTies>
+      <geo:surveyedLocalTies>
+         <geo:surveyedLocalTies>
+            <geo:tiedMarkerName>M1884  Moblas platform</geo:tiedMarkerName>
+            <geo:tiedMarkerUsage>SLR</geo:tiedMarkerUsage>
+            <geo:tiedMarkerCDPNumber>7560</geo:tiedMarkerCDPNumber>
+            <geo:tiedMarkerDOMESNumber>12302M001</geo:tiedMarkerDOMESNumber>
+            <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+               <geo:dx>14.834</geo:dx>
+               <geo:dy>-4.832</geo:dy>
+               <geo:dz>-13.919</geo:dz>
+            </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+            <geo:localSiteTiesAccuracy>2</geo:localSiteTiesAccuracy>
+            <geo:surveyMethod>GPS CAMPAIGN</geo:surveyMethod>
+            <geo:dateMeasured>1995-06-09T14:00:00Z</geo:dateMeasured>
+            <geo:notes>local GPS session</geo:notes>
          </geo:surveyedLocalTies>
       </geo:surveyedLocalTies>
       <geo:surveyedLocalTies>
@@ -278,7 +300,7 @@
             </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
             <geo:localSiteTiesAccuracy>2</geo:localSiteTiesAccuracy>
             <geo:surveyMethod>WITH TACHEOMETRE SET-4220</geo:surveyMethod>
-            <geo:dateMeasured>19 Dec 2004 13:00 GMT</geo:dateMeasured>
+            <geo:dateMeasured>2004-12-19T13:00:00Z</geo:dateMeasured>
             <geo:notes>local survey</geo:notes>
          </geo:surveyedLocalTies>
       </geo:surveyedLocalTies>
@@ -295,25 +317,8 @@
             </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
             <geo:localSiteTiesAccuracy>2</geo:localSiteTiesAccuracy>
             <geo:surveyMethod>WITH TACHEOMETRE SET-4220</geo:surveyMethod>
-            <geo:dateMeasured>19 Dec 2004 13:00 GMT</geo:dateMeasured>
+            <geo:dateMeasured>2004-12-19T13:00:00Z</geo:dateMeasured>
             <geo:notes>local survey</geo:notes>
-         </geo:surveyedLocalTies>
-      </geo:surveyedLocalTies>
-      <geo:surveyedLocalTies>
-         <geo:surveyedLocalTies>
-            <geo:tiedMarkerName>M1884  Moblas platform</geo:tiedMarkerName>
-            <geo:tiedMarkerUsage>SLR</geo:tiedMarkerUsage>
-            <geo:tiedMarkerCDPNumber>7560</geo:tiedMarkerCDPNumber>
-            <geo:tiedMarkerDOMESNumber>12302M001</geo:tiedMarkerDOMESNumber>
-            <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
-               <geo:dx>14.834</geo:dx>
-               <geo:dy>-4.832</geo:dy>
-               <geo:dz>-13.919</geo:dz>
-            </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
-            <geo:localSiteTiesAccuracy>2</geo:localSiteTiesAccuracy>
-            <geo:surveyMethod>GPS CAMPAIGN</geo:surveyMethod>
-            <geo:dateMeasured>09 Jun 1995 14:00 GMT</geo:dateMeasured>
-            <geo:notes>local GPS session</geo:notes>
          </geo:surveyedLocalTies>
       </geo:surveyedLocalTies>
       <geo:frequencyStandards>
@@ -321,7 +326,7 @@
             <geo:standardType>INTERNAL</geo:standardType>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2005-01-13T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2005-01-13T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
@@ -332,18 +337,12 @@
             <geo:standardType>INTERNAL</geo:standardType>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>1995-12-05T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2005-01-13T00:00Z</gml:endPosition>
+                  <gml:beginPosition>1995-12-05T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2005-01-13T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
          </geo:frequencyStandard>
       </geo:frequencyStandards>
-      <geo:collocationInformations>
-         <geo:collocationInformation>
-            <geo:status>PERMANENT</geo:status>
-            <geo:notes>EUROLAS Consortium.</geo:notes>
-         </geo:collocationInformation>
-      </geo:collocationInformations>
       <geo:collocationInformations>
          <geo:collocationInformation>
             <geo:status>MOBILE</geo:status>
@@ -353,43 +352,31 @@
       <geo:collocationInformations>
          <geo:collocationInformation>
             <geo:status>MOBILE</geo:status>
-            <geo:notes>Finnish Geodetic Institute.</geo:notes>
+            <geo:notes>IFAG Germany</geo:notes>
+         </geo:collocationInformation>
+      </geo:collocationInformations>
+      <geo:collocationInformations>
+         <geo:collocationInformation>
+            <geo:status>PERMANENT</geo:status>
+            <geo:notes>EUROLAS Consortium.</geo:notes>
          </geo:collocationInformation>
       </geo:collocationInformations>
       <geo:collocationInformations>
          <geo:collocationInformation>
             <geo:status>MOBILE</geo:status>
-            <geo:notes>IFAG Germany</geo:notes>
+            <geo:notes>Finnish Geodetic Institute.</geo:notes>
          </geo:collocationInformation>
       </geo:collocationInformations>
-      <geo:humiditySensors>
-         <geo:humiditySensor>
-            <geo:type>Hair Hygrometer,</geo:type>
-            <geo:manufacturer>USSR</geo:manufacturer>
-            <geo:serialNumber>M34-3359</geo:serialNumber>
-            <geo:heightDiffToAntenna>3.5</geo:heightDiffToAntenna>
-            <gml:validTime>
-               <gml:TimePeriod>
-                  <gml:beginPosition>1995-12-05T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2007-03-30T00:00Z</gml:endPosition>
-               </gml:TimePeriod>
-            </gml:validTime>
-            <geo:dataSamplingInterval>86400 s</geo:dataSamplingInterval>
-            <geo:accuracy-percentRelativeHumidity>10</geo:accuracy-percentRelativeHumidity>
-            <geo:aspiration>fan</geo:aspiration>
-            <geo:notes>No meteo files given. Not in use for GPS. Not calibrated.</geo:notes>
-         </geo:humiditySensor>
-      </geo:humiditySensors>
       <geo:humiditySensors>
          <geo:humiditySensor>
             <geo:type>WXT510</geo:type>
             <geo:manufacturer>VAISALA</geo:manufacturer>
             <geo:serialNumber>C1150003</geo:serialNumber>
             <geo:heightDiffToAntenna>-2.0</geo:heightDiffToAntenna>
-            <geo:calibrationDate>15 Mar 2007 13:00 GMT</geo:calibrationDate>
+            <geo:calibrationDate>2007-03-15T13:00:00Z</geo:calibrationDate>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2007-03-30T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2007-03-30T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
@@ -399,33 +386,34 @@
             <geo:notes>Calibrated at Factory. 3% accur. between 0 and 90% RH 5% accur. between 90 and 100% RH</geo:notes>
          </geo:humiditySensor>
       </geo:humiditySensors>
-      <geo:pressureSensors>
-         <geo:pressureSensor>
-            <geo:type>Precisions Barometer</geo:type>
-            <geo:manufacturer>Paulin Stockholm</geo:manufacturer>
-            <geo:serialNumber>VBM2-1443</geo:serialNumber>
+      <geo:humiditySensors>
+         <geo:humiditySensor>
+            <geo:type>Hair Hygrometer,</geo:type>
+            <geo:manufacturer>USSR</geo:manufacturer>
+            <geo:serialNumber>M34-3359</geo:serialNumber>
             <geo:heightDiffToAntenna>3.5</geo:heightDiffToAntenna>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>1995-12-05T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2007-03-30T00:00Z</gml:endPosition>
+                  <gml:beginPosition>1995-12-05T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2007-03-30T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
             <geo:dataSamplingInterval>86400 s</geo:dataSamplingInterval>
-            <geo:accuracy-hPa>0.2 hPa</geo:accuracy-hPa>
+            <geo:accuracy-percentRelativeHumidity>10</geo:accuracy-percentRelativeHumidity>
+            <geo:aspiration>fan</geo:aspiration>
             <geo:notes>No meteo files given. Not in use for GPS. Not calibrated.</geo:notes>
-         </geo:pressureSensor>
-      </geo:pressureSensors>
+         </geo:humiditySensor>
+      </geo:humiditySensors>
       <geo:pressureSensors>
          <geo:pressureSensor>
             <geo:type>WXT510</geo:type>
             <geo:manufacturer>VAISALA</geo:manufacturer>
             <geo:serialNumber>C1150003</geo:serialNumber>
             <geo:heightDiffToAntenna>-2.0</geo:heightDiffToAntenna>
-            <geo:calibrationDate>15 Mar 2007 13:00 GMT</geo:calibrationDate>
+            <geo:calibrationDate>2007-03-15T13:00:00Z</geo:calibrationDate>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2007-03-30T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2007-03-30T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
@@ -434,25 +422,23 @@
             <geo:notes>Calibrated at Factory.</geo:notes>
          </geo:pressureSensor>
       </geo:pressureSensors>
-      <geo:temperatureSensors>
-         <geo:temperatureSensor>
-            <geo:type>WXT510</geo:type>
-            <geo:manufacturer>VAISALA</geo:manufacturer>
-            <geo:serialNumber>C1150003</geo:serialNumber>
-            <geo:heightDiffToAntenna>-2.0</geo:heightDiffToAntenna>
-            <geo:calibrationDate>15 Mar 2007 13:00 GMT</geo:calibrationDate>
+      <geo:pressureSensors>
+         <geo:pressureSensor>
+            <geo:type>Precisions Barometer</geo:type>
+            <geo:manufacturer>Paulin Stockholm</geo:manufacturer>
+            <geo:serialNumber>VBM2-1443</geo:serialNumber>
+            <geo:heightDiffToAntenna>3.5</geo:heightDiffToAntenna>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2007-03-30T00:00Z</gml:beginPosition>
-                  <gml:endPosition></gml:endPosition>
+                  <gml:beginPosition>1995-12-05T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2007-03-30T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
-            <geo:dataSamplingInterval>600 s</geo:dataSamplingInterval>
-            <geo:accuracy-degreesCelcius>0.3 deg C</geo:accuracy-degreesCelcius>
-            <geo:aspiration>NATURAL</geo:aspiration>
-            <geo:notes>Calibrated at Factory</geo:notes>
-         </geo:temperatureSensor>
-      </geo:temperatureSensors>
+            <geo:dataSamplingInterval>86400 s</geo:dataSamplingInterval>
+            <geo:accuracy-hPa>0.2 hPa</geo:accuracy-hPa>
+            <geo:notes>No meteo files given. Not in use for GPS. Not calibrated.</geo:notes>
+         </geo:pressureSensor>
+      </geo:pressureSensors>
       <geo:temperatureSensors>
          <geo:temperatureSensor>
             <geo:type>Mercury Thermometer</geo:type>
@@ -461,14 +447,33 @@
             <geo:heightDiffToAntenna>3.5</geo:heightDiffToAntenna>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>1995-12-05T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2007-03-30T00:00Z</gml:endPosition>
+                  <gml:beginPosition>1995-12-05T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2007-03-30T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
             <geo:dataSamplingInterval>86400 s</geo:dataSamplingInterval>
             <geo:accuracy-degreesCelcius>0.1 deg C</geo:accuracy-degreesCelcius>
             <geo:aspiration>UNASPIRATED</geo:aspiration>
             <geo:notes>No meteo files given. Not in use for GPS. Not calibrated after factory, hence calibration date is unknown</geo:notes>
+         </geo:temperatureSensor>
+      </geo:temperatureSensors>
+      <geo:temperatureSensors>
+         <geo:temperatureSensor>
+            <geo:type>WXT510</geo:type>
+            <geo:manufacturer>VAISALA</geo:manufacturer>
+            <geo:serialNumber>C1150003</geo:serialNumber>
+            <geo:heightDiffToAntenna>-2.0</geo:heightDiffToAntenna>
+            <geo:calibrationDate>2007-03-15T13:00:00Z</geo:calibrationDate>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2007-03-30T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition></gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+            <geo:dataSamplingInterval>600 s</geo:dataSamplingInterval>
+            <geo:accuracy-degreesCelcius>0.3 deg C</geo:accuracy-degreesCelcius>
+            <geo:aspiration>NATURAL</geo:aspiration>
+            <geo:notes>Calibrated at Factory</geo:notes>
          </geo:temperatureSensor>
       </geo:temperatureSensors>
       <geo:otherInstrumentations>

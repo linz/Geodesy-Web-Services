@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-   <geo:siteLog>
+<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_414">
+   <geo:siteLog gml:id="SiteLogType_414">
+      <geo:formInformation>
+         <geo:preparedBy>David Maggert</geo:preparedBy>
+         <geo:datePrepared>2008-07-02T14:00:00Z</geo:datePrepared>
+         <geo:reportType>UPDATE</geo:reportType>
+      </geo:formInformation>
       <geo:siteIdentification>
          <geo:siteName>North Liberty VLBA site</geo:siteName>
          <geo:fourCharacterID>NLIB</geo:fourCharacterID>
@@ -10,7 +15,7 @@
          <geo:heightOfTheMonument>0.465</geo:heightOfTheMonument>
          <geo:monumentFoundation>CONCRETE BLOCK</geo:monumentFoundation>
          <geo:markerDescription>Stainless steel plate</geo:markerDescription>
-         <geo:dateInstalled>04 Mar 1993 13:00 GMT</geo:dateInstalled>
+         <geo:dateInstalled>1993-03-04T13:00:00Z</geo:dateInstalled>
          <geo:notes>(multiple lines) Type of Monument steel plate set flush in the center of a 0.610 meter diameter concrete monolith that projects 0.465 meters above the ground. Monument information from &quot;NASA Space Geodesy Program Technical Memorandum 4482, March 1993, p385.</geo:notes>
       </geo:siteIdentification>
       <geo:siteLocation>
@@ -32,8 +37,8 @@
             <geo:serialNumber>T102</geo:serialNumber>
             <geo:firmwareVersion>0.5</geo:firmwareVersion>
             <geo:elevationCutoffSetting>4</geo:elevationCutoffSetting>
-            <geo:dateInstalled>31 Aug 1999 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>27 Mar 2005 23:59 GMT</geo:dateRemoved>
+            <geo:dateInstalled>1999-08-31T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2005-03-27T23:59:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>none</geo:temperatureStabilization>
             <geo:notes>Firmware update</geo:notes>
          </geo:gnssReceiver>
@@ -43,12 +48,11 @@
             <geo:receiverType>ROGUE SNR-8000</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
             <geo:serialNumber>T102</geo:serialNumber>
-            <geo:firmwareVersion>3.2.32.8</geo:firmwareVersion>
+            <geo:firmwareVersion>2.6-93/01/08</geo:firmwareVersion>
             <geo:elevationCutoffSetting>4</geo:elevationCutoffSetting>
-            <geo:dateInstalled>09 Jul 1999 15:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>31 Aug 1999 00:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>1993-03-05T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1993-06-15T00:00:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>none</geo:temperatureStabilization>
-            <geo:notes>Firmware upgrade</geo:notes>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
@@ -58,19 +62,8 @@
             <geo:serialNumber>T102</geo:serialNumber>
             <geo:firmwareVersion>94/10/10-17</geo:firmwareVersion>
             <geo:elevationCutoffSetting>4</geo:elevationCutoffSetting>
-            <geo:dateInstalled>24 Oct 1994 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>09 Jul 1999 15:00 GMT</geo:dateRemoved>
-            <geo:temperatureStabilization>none</geo:temperatureStabilization>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>AOA SNR-12 ACT</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>R253-U</geo:serialNumber>
-            <geo:firmwareVersion>3.3.32.5</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>4</geo:elevationCutoffSetting>
-            <geo:dateInstalled>15 Apr 2005 00:00 GMT</geo:dateInstalled>
+            <geo:dateInstalled>1994-10-24T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1999-07-09T15:00:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>none</geo:temperatureStabilization>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
@@ -81,8 +74,8 @@
             <geo:serialNumber>T102</geo:serialNumber>
             <geo:firmwareVersion>2.8-93/06/08</geo:firmwareVersion>
             <geo:elevationCutoffSetting>4</geo:elevationCutoffSetting>
-            <geo:dateInstalled>15 Jun 1993 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>24 Oct 1994 00:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>1993-06-15T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1994-10-24T00:00:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>none</geo:temperatureStabilization>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
@@ -91,10 +84,22 @@
             <geo:receiverType>ROGUE SNR-8000</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
             <geo:serialNumber>T102</geo:serialNumber>
-            <geo:firmwareVersion>2.6-93/01/08</geo:firmwareVersion>
+            <geo:firmwareVersion>3.2.32.8</geo:firmwareVersion>
             <geo:elevationCutoffSetting>4</geo:elevationCutoffSetting>
-            <geo:dateInstalled>05 Mar 1993 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>15 Jun 1993 00:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>1999-07-09T15:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1999-08-31T00:00:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>none</geo:temperatureStabilization>
+            <geo:notes>Firmware upgrade</geo:notes>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>AOA SNR-12 ACT</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>R253-U</geo:serialNumber>
+            <geo:firmwareVersion>3.3.32.5</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>4</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2005-04-15T00:00:00Z</geo:dateInstalled>
             <geo:temperatureStabilization>none</geo:temperatureStabilization>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
@@ -108,7 +113,7 @@
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
             <geo:antennaRadomeType>JPLA</geo:antennaRadomeType>
-            <geo:dateInstalled>05 Mar 1993 00:00 GMT</geo:dateInstalled>
+            <geo:dateInstalled>1993-03-05T00:00:00Z</geo:dateInstalled>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
       <geo:surveyedLocalTies>
@@ -130,7 +135,7 @@
             <geo:inputFrequency>5 MHz</geo:inputFrequency>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>1993-03-05T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>1993-03-05T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>

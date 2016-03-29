@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-   <geo:siteLog>
+<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_633">
+   <geo:siteLog gml:id="SiteLogType_633">
+      <geo:formInformation>
+         <geo:preparedBy>Brian Donahue</geo:preparedBy>
+         <geo:datePrepared>2011-08-23T14:00:00Z</geo:datePrepared>
+         <geo:reportType>UPDATE</geo:reportType>
+      </geo:formInformation>
       <geo:siteIdentification>
          <geo:siteName>WHIT CACS-GSD</geo:siteName>
          <geo:fourCharacterID>WHIT</geo:fourCharacterID>
@@ -11,7 +16,7 @@
          <geo:monumentFoundation>Exposed bedrock</geo:monumentFoundation>
          <geo:foundationDepth>0.00</geo:foundationDepth>
          <geo:markerDescription>Brass Plate</geo:markerDescription>
-         <geo:dateInstalled>06 Jun 1996 14:00 GMT</geo:dateInstalled>
+         <geo:dateInstalled>1996-06-06T14:00:00Z</geo:dateInstalled>
          <geo:geologicCharacteristic>BEDROCK</geo:geologicCharacteristic>
          <geo:bedrockType>METAMORPHIC</geo:bedrockType>
          <geo:bedrockCondition>FRESH</geo:bedrockCondition>
@@ -33,22 +38,22 @@
          <geo:gnssReceiver>
             <geo:receiverType>TPS NETG3</geo:receiverType>
             <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
-            <geo:serialNumber>01545</geo:serialNumber>
-            <geo:firmwareVersion>3.4B4</geo:firmwareVersion>
+            <geo:serialNumber>401-01545</geo:serialNumber>
+            <geo:firmwareVersion>3.4</geo:firmwareVersion>
             <geo:elevationCutoffSetting>10</geo:elevationCutoffSetting>
-            <geo:dateInstalled>20 May 2009 20:20 GMT</geo:dateInstalled>
-            <geo:dateRemoved>30 Jun 2009 13:59 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2009-06-30T14:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2011-08-24T17:20:00Z</geo:dateRemoved>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
          <geo:gnssReceiver>
-            <geo:receiverType>TPS NETG3</geo:receiverType>
-            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
-            <geo:serialNumber>401-01545</geo:serialNumber>
-            <geo:firmwareVersion>3.4</geo:firmwareVersion>
+            <geo:receiverType>ROGUE SNR-8000</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>309</geo:serialNumber>
+            <geo:firmwareVersion>3.2 LINK 95/03/09</geo:firmwareVersion>
             <geo:elevationCutoffSetting>10</geo:elevationCutoffSetting>
-            <geo:dateInstalled>30 Jun 2009 14:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>24 Aug 2011 17:20 GMT</geo:dateRemoved>
+            <geo:dateInstalled>1996-06-07T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1999-07-30T17:33:00Z</geo:dateRemoved>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
@@ -58,8 +63,52 @@
             <geo:serialNumber>2026</geo:serialNumber>
             <geo:firmwareVersion>3.3.32.4 LK 00/06/02</geo:firmwareVersion>
             <geo:elevationCutoffSetting>10</geo:elevationCutoffSetting>
-            <geo:dateInstalled>11 Jul 2000 23:30 GMT</geo:dateInstalled>
-            <geo:dateRemoved>03 Oct 2000 16:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2000-07-11T23:30:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2000-10-03T16:00:00Z</geo:dateRemoved>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>TPS NET-G3A</geo:receiverType>
+            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
+            <geo:serialNumber>618-00846</geo:serialNumber>
+            <geo:firmwareVersion>3.5 Mar,16,2011 p1</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2011-08-24T17:30:00Z</geo:dateInstalled>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>ROGUE SNR-8000</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>165</geo:serialNumber>
+            <geo:firmwareVersion>3.2 LINK 95/03/09</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>10</geo:elevationCutoffSetting>
+            <geo:dateInstalled>1995-07-13T19:30:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1995-09-19T23:59:00Z</geo:dateRemoved>
+            <geo:notes>New Receiver / Firmware Instrumentation removed 19-SEP-1995 23 00</geo:notes>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>TPS NETG3</geo:receiverType>
+            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
+            <geo:serialNumber>01545</geo:serialNumber>
+            <geo:firmwareVersion>3.4B4</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>10</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2009-05-20T20:20:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2009-06-30T13:59:00Z</geo:dateRemoved>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>AOA SNR-8000 ACT</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>302U</geo:serialNumber>
+            <geo:firmwareVersion>3.3.32.2N</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>10</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2000-10-04T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2009-01-13T23:59:00Z</geo:dateRemoved>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
@@ -69,8 +118,8 @@
             <geo:serialNumber>166</geo:serialNumber>
             <geo:firmwareVersion>3.0.32.3 L 95/03/21</geo:firmwareVersion>
             <geo:elevationCutoffSetting>10</geo:elevationCutoffSetting>
-            <geo:dateInstalled>09 Jun 1995 22:18 GMT</geo:dateInstalled>
-            <geo:dateRemoved>05 Jul 1995 06:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>1995-06-09T22:18:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1995-07-05T06:00:00Z</geo:dateRemoved>
             <geo:notes>equipment failure - no data until 13-JUL-1995 19</geo:notes>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
@@ -81,53 +130,9 @@
             <geo:serialNumber>309</geo:serialNumber>
             <geo:firmwareVersion>3.2.32.8 LINK 1998/12/20</geo:firmwareVersion>
             <geo:elevationCutoffSetting>10</geo:elevationCutoffSetting>
-            <geo:dateInstalled>30 Jul 1999 17:44 GMT</geo:dateInstalled>
-            <geo:dateRemoved>11 Jul 2000 23:30 GMT</geo:dateRemoved>
+            <geo:dateInstalled>1999-07-30T17:44:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2000-07-11T23:30:00Z</geo:dateRemoved>
             <geo:notes>equipment failure, no data from Jul 7 to Jul 12</geo:notes>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>TPS NET-G3A</geo:receiverType>
-            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
-            <geo:serialNumber>618-00846</geo:serialNumber>
-            <geo:firmwareVersion>3.5 Mar,16,2011 p1</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
-            <geo:dateInstalled>24 Aug 2011 17:30 GMT</geo:dateInstalled>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>ROGUE SNR-8000</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>165</geo:serialNumber>
-            <geo:firmwareVersion>3.2 LINK 95/03/09</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>10</geo:elevationCutoffSetting>
-            <geo:dateInstalled>13 Jul 1995 19:30 GMT</geo:dateInstalled>
-            <geo:dateRemoved>19 Sep 1995 23:59 GMT</geo:dateRemoved>
-            <geo:notes>New Receiver / Firmware Instrumentation removed 19-SEP-1995 23 00</geo:notes>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>AOA SNR-8000 ACT</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>302U</geo:serialNumber>
-            <geo:firmwareVersion>3.3.32.2N</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>10</geo:elevationCutoffSetting>
-            <geo:dateInstalled>04 Oct 2000 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>13 Jan 2009 23:59 GMT</geo:dateRemoved>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>ROGUE SNR-8000</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>309</geo:serialNumber>
-            <geo:firmwareVersion>3.2 LINK 95/03/09</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>10</geo:elevationCutoffSetting>
-            <geo:dateInstalled>07 Jun 1996 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>30 Jul 1999 17:33 GMT</geo:dateRemoved>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssAntennas>
@@ -141,9 +146,25 @@
             <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
             <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
             <geo:antennaCableLength>0.00</geo:antennaCableLength>
-            <geo:dateInstalled>07 Jun 1996 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>24 Jun 1997 16:55 GMT</geo:dateRemoved>
+            <geo:dateInstalled>1996-06-07T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1997-06-24T16:55:00Z</geo:dateRemoved>
             <geo:notes>Reference Antenna Diagram 'B' below no data 23-JUN-1997 04 degrees offset from North refers to 'True North Antenna p/n 7490400-1 RF skirt installed 1996-06-07T00</geo:notes>
+         </geo:gnssAntenna>
+      </geo:gnssAntennas>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna>
+            <geo:antennaType>AOAD/M_T        NONE</geo:antennaType>
+            <geo:serialNumber>289</geo:serialNumber>
+            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>0.1</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
+            <geo:antennaCableType>VXL5-50 / HELIAX</geo:antennaCableType>
+            <geo:antennaCableLength>140.00</geo:antennaCableLength>
+            <geo:dateInstalled>2011-06-28T18:03:00Z</geo:dateInstalled>
+            <geo:notes>Variable Gain In-line Amplifier installed set at 5dB.</geo:notes>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
       <geo:gnssAntennas>
@@ -157,8 +178,8 @@
             <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
             <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
             <geo:antennaCableLength>0.00</geo:antennaCableLength>
-            <geo:dateInstalled>09 Jun 1995 22:18 GMT</geo:dateInstalled>
-            <geo:dateRemoved>05 Jul 1995 06:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>1995-06-09T22:18:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1995-07-05T06:00:00Z</geo:dateRemoved>
             <geo:notes>equipment failure - no data until Jul 13 Reference Antenna Diagram 'A' below degrees offset from North refers to 'True North' Antenna p/n 7490400-1</geo:notes>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
@@ -174,25 +195,25 @@
             <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
             <geo:antennaCableType>VXL5-50 / HELIAX</geo:antennaCableType>
             <geo:antennaCableLength>140.00</geo:antennaCableLength>
-            <geo:dateInstalled>28 Jun 2011 18:03 GMT</geo:dateInstalled>
-            <geo:notes>Variable Gain In-line Amplifier installed set at 5dB.</geo:notes>
+            <geo:dateInstalled>2009-02-06T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2011-06-28T18:02:00Z</geo:dateRemoved>
+            <geo:notes>RF skirt removed on 2009-07-22T17</geo:notes>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
       <geo:gnssAntennas>
          <geo:gnssAntenna>
             <geo:antennaType>AOAD/M_T        NONE</geo:antennaType>
-            <geo:serialNumber>289</geo:serialNumber>
+            <geo:serialNumber>92168</geo:serialNumber>
             <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
             <geo:marker-arpUpEcc.>0.1</geo:marker-arpUpEcc.>
             <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
             <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
-            <geo:antennaCableType>VXL5-50 / HELIAX</geo:antennaCableType>
-            <geo:antennaCableLength>140.00</geo:antennaCableLength>
-            <geo:dateInstalled>06 Feb 2009 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>28 Jun 2011 18:02 GMT</geo:dateRemoved>
-            <geo:notes>RF skirt removed on 2009-07-22T17</geo:notes>
+            <geo:antennaCableLength>0.00</geo:antennaCableLength>
+            <geo:dateInstalled>1995-07-13T19:30:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1995-09-19T23:59:00Z</geo:dateRemoved>
+            <geo:notes>Reference Antenna Diagram 'A' below Instrumentation removed 19-SEP-1995 23 data until 07-JUN-1996 00 from North refers to 'True North' Antenna p/n 7490400-1</geo:notes>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
       <geo:gnssAntennas>
@@ -207,35 +228,19 @@
             <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
             <geo:antennaCableType>LDF4-50A / HELIAX</geo:antennaCableType>
             <geo:antennaCableLength>140.00</geo:antennaCableLength>
-            <geo:dateInstalled>24 Jun 1997 16:55 GMT</geo:dateInstalled>
-            <geo:dateRemoved>06 Feb 2009 00:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>1997-06-24T16:55:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2009-02-06T00:00:00Z</geo:dateRemoved>
             <geo:notes>Reference Antenna Diagram 'B' below degrees offset from North refers to 'True North' currently installed Antenna p/n 7490582-B</geo:notes>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
-      <geo:gnssAntennas>
-         <geo:gnssAntenna>
-            <geo:antennaType>AOAD/M_T        NONE</geo:antennaType>
-            <geo:serialNumber>92168</geo:serialNumber>
-            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
-            <geo:marker-arpUpEcc.>0.1</geo:marker-arpUpEcc.>
-            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
-            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
-            <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
-            <geo:antennaCableLength>0.00</geo:antennaCableLength>
-            <geo:dateInstalled>13 Jul 1995 19:30 GMT</geo:dateInstalled>
-            <geo:dateRemoved>19 Sep 1995 23:59 GMT</geo:dateRemoved>
-            <geo:notes>Reference Antenna Diagram 'A' below Instrumentation removed 19-SEP-1995 23 data until 07-JUN-1996 00 from North refers to 'True North' Antenna p/n 7490400-1</geo:notes>
-         </geo:gnssAntenna>
-      </geo:gnssAntennas>
       <geo:frequencyStandards>
          <geo:frequencyStandard>
-            <geo:standardType>INTERNAL</geo:standardType>
+            <geo:standardType>RUBIDIUM</geo:standardType>
             <geo:inputFrequency>5 MHZ</geo:inputFrequency>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>1996-06-07T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2000-10-04T00:00Z</gml:endPosition>
+                  <gml:beginPosition>2002-03-12T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2002-09-24T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
          </geo:frequencyStandard>
@@ -246,8 +251,8 @@
             <geo:inputFrequency>5 MHZ</geo:inputFrequency>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2002-03-12T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2002-09-24T00:00Z</gml:endPosition>
+                  <gml:beginPosition>2002-09-24T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2009-05-20T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
          </geo:frequencyStandard>
@@ -255,23 +260,10 @@
       <geo:frequencyStandards>
          <geo:frequencyStandard>
             <geo:standardType>INTERNAL</geo:standardType>
-            <geo:inputFrequency>5 MHZ</geo:inputFrequency>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>1995-06-09T00:00Z</gml:beginPosition>
-                  <gml:endPosition>1996-06-07T00:00Z</gml:endPosition>
-               </gml:TimePeriod>
-            </gml:validTime>
-         </geo:frequencyStandard>
-      </geo:frequencyStandards>
-      <geo:frequencyStandards>
-         <geo:frequencyStandard>
-            <geo:standardType>RUBIDIUM</geo:standardType>
-            <geo:inputFrequency>5 MHZ</geo:inputFrequency>
-            <gml:validTime>
-               <gml:TimePeriod>
-                  <gml:beginPosition>2009-05-20T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2009-07-31T00:00Z</gml:endPosition>
+                  <gml:beginPosition>2009-07-31T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2010-09-09T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
          </geo:frequencyStandard>
@@ -282,7 +274,7 @@
             <geo:inputFrequency>5 MHZ</geo:inputFrequency>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2010-09-09T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2010-09-09T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
@@ -295,8 +287,32 @@
             <geo:inputFrequency>5 MHZ</geo:inputFrequency>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2000-10-04T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2002-03-12T00:00Z</gml:endPosition>
+                  <gml:beginPosition>2000-10-04T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2002-03-12T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+         </geo:frequencyStandard>
+      </geo:frequencyStandards>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard>
+            <geo:standardType>INTERNAL</geo:standardType>
+            <geo:inputFrequency>5 MHZ</geo:inputFrequency>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>1995-06-09T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>1996-06-07T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+         </geo:frequencyStandard>
+      </geo:frequencyStandards>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard>
+            <geo:standardType>INTERNAL</geo:standardType>
+            <geo:inputFrequency>5 MHZ</geo:inputFrequency>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>1996-06-07T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2000-10-04T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
          </geo:frequencyStandard>
@@ -307,19 +323,8 @@
             <geo:inputFrequency>5 MHZ</geo:inputFrequency>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2002-09-24T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2009-05-20T00:00Z</gml:endPosition>
-               </gml:TimePeriod>
-            </gml:validTime>
-         </geo:frequencyStandard>
-      </geo:frequencyStandards>
-      <geo:frequencyStandards>
-         <geo:frequencyStandard>
-            <geo:standardType>INTERNAL</geo:standardType>
-            <gml:validTime>
-               <gml:TimePeriod>
-                  <gml:beginPosition>2009-07-31T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2010-09-09T00:00Z</gml:endPosition>
+                  <gml:beginPosition>2009-05-20T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2009-07-31T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
          </geo:frequencyStandard>
@@ -336,11 +341,11 @@
             <geo:manufacturer>VAISALA</geo:manufacturer>
             <geo:serialNumber>XXX</geo:serialNumber>
             <geo:heightDiffToAntenna>-20.95</geo:heightDiffToAntenna>
-            <geo:calibrationDate>23 Jul 2002 14:00 GMT</geo:calibrationDate>
+            <geo:calibrationDate>2002-07-23T14:00:00Z</geo:calibrationDate>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2002-08-15T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2008-10-10T00:00Z</gml:endPosition>
+                  <gml:beginPosition>2002-08-15T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2008-10-10T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
             <geo:dataSamplingInterval>300</geo:dataSamplingInterval>
@@ -356,8 +361,8 @@
             <geo:heightDiffToAntenna>-20.95</geo:heightDiffToAntenna>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2000-09-06T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2002-08-15T00:00Z</gml:endPosition>
+                  <gml:beginPosition>2000-09-06T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2002-08-15T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
             <geo:dataSamplingInterval>900</geo:dataSamplingInterval>
@@ -373,8 +378,8 @@
             <geo:heightDiffToAntenna>-15.89</geo:heightDiffToAntenna>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2002-02-09T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2002-08-15T00:00Z</gml:endPosition>
+                  <gml:beginPosition>2000-09-06T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2000-10-13T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
             <geo:dataSamplingInterval>900</geo:dataSamplingInterval>
@@ -387,28 +392,10 @@
             <geo:manufacturer>VAISALA</geo:manufacturer>
             <geo:serialNumber>XXX</geo:serialNumber>
             <geo:heightDiffToAntenna>-15.89</geo:heightDiffToAntenna>
-            <geo:calibrationDate>23 Jul 2002 14:00 GMT</geo:calibrationDate>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2002-08-15T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2007-06-14T00:00Z</gml:endPosition>
-               </gml:TimePeriod>
-            </gml:validTime>
-            <geo:dataSamplingInterval>900</geo:dataSamplingInterval>
-            <geo:accuracy-hPa>0.1 (hPa)</geo:accuracy-hPa>
-            <geo:notes>The readings are modeled as a function of the pressure transducer output and the temperature.</geo:notes>
-         </geo:pressureSensor>
-      </geo:pressureSensors>
-      <geo:pressureSensors>
-         <geo:pressureSensor>
-            <geo:type>PTB-100A</geo:type>
-            <geo:manufacturer>VAISALA</geo:manufacturer>
-            <geo:serialNumber>XXX</geo:serialNumber>
-            <geo:heightDiffToAntenna>-15.89</geo:heightDiffToAntenna>
-            <gml:validTime>
-               <gml:TimePeriod>
-                  <gml:beginPosition>2000-10-13T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2002-02-09T00:00Z</gml:endPosition>
+                  <gml:beginPosition>2000-10-13T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2002-02-09T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
             <geo:dataSamplingInterval>900</geo:dataSamplingInterval>
@@ -421,11 +408,11 @@
             <geo:manufacturer>VAISALA</geo:manufacturer>
             <geo:serialNumber>XXX</geo:serialNumber>
             <geo:heightDiffToAntenna>-15.89</geo:heightDiffToAntenna>
-            <geo:calibrationDate>29 May 2007 14:00 GMT</geo:calibrationDate>
+            <geo:calibrationDate>2007-05-29T14:00:00Z</geo:calibrationDate>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2007-06-14T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2008-10-10T00:00Z</gml:endPosition>
+                  <gml:beginPosition>2007-06-14T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2008-10-10T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
             <geo:dataSamplingInterval>300</geo:dataSamplingInterval>
@@ -441,12 +428,30 @@
             <geo:heightDiffToAntenna>-15.89</geo:heightDiffToAntenna>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2000-09-06T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2000-10-13T00:00Z</gml:endPosition>
+                  <gml:beginPosition>2002-02-09T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2002-08-15T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
             <geo:dataSamplingInterval>900</geo:dataSamplingInterval>
             <geo:accuracy-hPa>0.3 (hPa)</geo:accuracy-hPa>
+         </geo:pressureSensor>
+      </geo:pressureSensors>
+      <geo:pressureSensors>
+         <geo:pressureSensor>
+            <geo:type>PTB-100A</geo:type>
+            <geo:manufacturer>VAISALA</geo:manufacturer>
+            <geo:serialNumber>XXX</geo:serialNumber>
+            <geo:heightDiffToAntenna>-15.89</geo:heightDiffToAntenna>
+            <geo:calibrationDate>2002-07-23T14:00:00Z</geo:calibrationDate>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2002-08-15T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2007-06-14T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+            <geo:dataSamplingInterval>900</geo:dataSamplingInterval>
+            <geo:accuracy-hPa>0.1 (hPa)</geo:accuracy-hPa>
+            <geo:notes>The readings are modeled as a function of the pressure transducer output and the temperature.</geo:notes>
          </geo:pressureSensor>
       </geo:pressureSensors>
       <geo:temperatureSensors>
@@ -455,13 +460,14 @@
             <geo:manufacturer>VSI</geo:manufacturer>
             <geo:serialNumber>XXX</geo:serialNumber>
             <geo:heightDiffToAntenna>-20.95</geo:heightDiffToAntenna>
+            <geo:calibrationDate>2002-07-23T14:00:00Z</geo:calibrationDate>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2000-09-06T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2002-08-15T00:00Z</gml:endPosition>
+                  <gml:beginPosition>2002-08-15T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2008-10-10T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
-            <geo:dataSamplingInterval>900</geo:dataSamplingInterval>
+            <geo:dataSamplingInterval>300</geo:dataSamplingInterval>
             <geo:accuracy-degreesCelcius>0.2 (deg C)</geo:accuracy-degreesCelcius>
             <geo:aspiration>NONE</geo:aspiration>
          </geo:temperatureSensor>
@@ -472,14 +478,13 @@
             <geo:manufacturer>VSI</geo:manufacturer>
             <geo:serialNumber>XXX</geo:serialNumber>
             <geo:heightDiffToAntenna>-20.95</geo:heightDiffToAntenna>
-            <geo:calibrationDate>23 Jul 2002 14:00 GMT</geo:calibrationDate>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2002-08-15T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2008-10-10T00:00Z</gml:endPosition>
+                  <gml:beginPosition>2000-09-06T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2002-08-15T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
-            <geo:dataSamplingInterval>300</geo:dataSamplingInterval>
+            <geo:dataSamplingInterval>900</geo:dataSamplingInterval>
             <geo:accuracy-degreesCelcius>0.2 (deg C)</geo:accuracy-degreesCelcius>
             <geo:aspiration>NONE</geo:aspiration>
          </geo:temperatureSensor>

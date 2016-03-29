@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-   <geo:siteLog>
+<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_503">
+   <geo:siteLog gml:id="SiteLogType_503">
+      <geo:formInformation>
+         <geo:preparedBy>Rachel Reeves</geo:preparedBy>
+         <geo:datePrepared>2012-07-25T14:00:00Z</geo:datePrepared>
+         <geo:reportType>NEW</geo:reportType>
+      </geo:formInformation>
       <geo:siteIdentification>
          <geo:siteName>Rocklands</geo:siteName>
          <geo:fourCharacterID>RKLD</geo:fourCharacterID>
@@ -10,7 +15,7 @@
          <geo:monumentFoundation>STEEL RODS</geo:monumentFoundation>
          <geo:foundationDepth>2.0</geo:foundationDepth>
          <geo:markerDescription>STEEL PLATE</geo:markerDescription>
-         <geo:dateInstalled>20 Jul 2012 14:00 GMT</geo:dateInstalled>
+         <geo:dateInstalled>2012-07-20T14:00:00Z</geo:dateInstalled>
          <geo:geologicCharacteristic>BEDROCK</geo:geologicCharacteristic>
          <geo:bedrockType>METAMORPHIC</geo:bedrockType>
          <geo:bedrockCondition>WEATHERED</geo:bedrockCondition>
@@ -34,7 +39,7 @@
             <geo:serialNumber>495596</geo:serialNumber>
             <geo:firmwareVersion>8.51</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>21 Jul 2012 00:00 GMT</geo:dateInstalled>
+            <geo:dateInstalled>2012-07-21T00:00:00Z</geo:dateInstalled>
             <geo:temperatureStabilization>NONE</geo:temperatureStabilization>
             <geo:notes>Measurement Engine Version 6.11</geo:notes>
          </geo:gnssReceiver>
@@ -51,16 +56,26 @@
             <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
             <geo:antennaCableType>LMR400</geo:antennaCableType>
             <geo:antennaCableLength>22.5</geo:antennaCableLength>
-            <geo:dateInstalled>21 Jul 2012 00:00 GMT</geo:dateInstalled>
+            <geo:dateInstalled>2012-07-21T00:00:00Z</geo:dateInstalled>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
+      <geo:surveyedLocalTies>
+         <geo:surveyedLocalTies>
+            <geo:tiedMarkerName>RM3</geo:tiedMarkerName>
+            <geo:tiedMarkerUsage>CONTROL</geo:tiedMarkerUsage>
+            <geo:localSiteTiesAccuracy>0.1mm</geo:localSiteTiesAccuracy>
+            <geo:surveyMethod>Terrestrial</geo:surveyMethod>
+            <geo:dateMeasured>2012-07-20T14:00:00Z</geo:dateMeasured>
+            <geo:notes>Stainless steel rod driven to almost refusal. 4 x 0.5m lengths</geo:notes>
+         </geo:surveyedLocalTies>
+      </geo:surveyedLocalTies>
       <geo:surveyedLocalTies>
          <geo:surveyedLocalTies>
             <geo:tiedMarkerName>RM1</geo:tiedMarkerName>
             <geo:tiedMarkerUsage>CONTROL</geo:tiedMarkerUsage>
             <geo:localSiteTiesAccuracy>0.1mm</geo:localSiteTiesAccuracy>
             <geo:surveyMethod>Terrestrial</geo:surveyMethod>
-            <geo:dateMeasured>20 Jul 2012 14:00 GMT</geo:dateMeasured>
+            <geo:dateMeasured>2012-07-20T14:00:00Z</geo:dateMeasured>
             <geo:notes>Stainless steel rod driven to almost refusal. 4 x 0.5m lengths</geo:notes>
          </geo:surveyedLocalTies>
       </geo:surveyedLocalTies>
@@ -70,18 +85,8 @@
             <geo:tiedMarkerUsage>CONTROL</geo:tiedMarkerUsage>
             <geo:localSiteTiesAccuracy>0.1mm</geo:localSiteTiesAccuracy>
             <geo:surveyMethod>Terrestrial</geo:surveyMethod>
-            <geo:dateMeasured>20 Jul 2012 14:00 GMT</geo:dateMeasured>
+            <geo:dateMeasured>2012-07-20T14:00:00Z</geo:dateMeasured>
             <geo:notes>Stainless steel rod driven to almost refusal. 1 x 1.0m and 1 x 0.5m lengths</geo:notes>
-         </geo:surveyedLocalTies>
-      </geo:surveyedLocalTies>
-      <geo:surveyedLocalTies>
-         <geo:surveyedLocalTies>
-            <geo:tiedMarkerName>RM3</geo:tiedMarkerName>
-            <geo:tiedMarkerUsage>CONTROL</geo:tiedMarkerUsage>
-            <geo:localSiteTiesAccuracy>0.1mm</geo:localSiteTiesAccuracy>
-            <geo:surveyMethod>Terrestrial</geo:surveyMethod>
-            <geo:dateMeasured>20 Jul 2012 14:00 GMT</geo:dateMeasured>
-            <geo:notes>Stainless steel rod driven to almost refusal. 4 x 0.5m lengths</geo:notes>
          </geo:surveyedLocalTies>
       </geo:surveyedLocalTies>
       <geo:frequencyStandards>
@@ -97,7 +102,7 @@
             <geo:heightDiffToAntenna>+0.035</geo:heightDiffToAntenna>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2012-07-21T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2012-07-21T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
@@ -114,7 +119,7 @@
             <geo:heightDiffToAntenna>0.035</geo:heightDiffToAntenna>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2012-07-21T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2012-07-21T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
@@ -130,7 +135,7 @@
             <geo:heightDiffToAntenna>0.035</geo:heightDiffToAntenna>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2012-07-21T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2012-07-21T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>

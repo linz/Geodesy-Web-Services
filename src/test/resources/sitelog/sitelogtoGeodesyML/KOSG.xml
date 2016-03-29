@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-   <geo:siteLog>
+<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_304">
+   <geo:siteLog gml:id="SiteLogType_304">
+      <geo:formInformation>
+         <geo:preparedBy>Hans van der Marel</geo:preparedBy>
+         <geo:datePrepared>2012-06-21T14:00:00Z</geo:datePrepared>
+         <geo:reportType>UPDATE</geo:reportType>
+      </geo:formInformation>
       <geo:siteIdentification>
          <geo:siteName>Kootwijk Observatory for Satellite Geodesy</geo:siteName>
          <geo:fourCharacterID>KOSG</geo:fourCharacterID>
@@ -10,7 +15,7 @@
          <geo:heightOfTheMonument>12</geo:heightOfTheMonument>
          <geo:monumentFoundation>CONCRETE BLOCK</geo:monumentFoundation>
          <geo:markerDescription>BRASS NAIL</geo:markerDescription>
-         <geo:dateInstalled>31 Dec 1990 13:00 GMT</geo:dateInstalled>
+         <geo:dateInstalled>1990-12-31T13:00:00Z</geo:dateInstalled>
          <geo:geologicCharacteristic>SAND, GLACIAL DEPOSIT</geo:geologicCharacteristic>
          <geo:faultZonesNearby>NO</geo:faultZonesNearby>
          <geo:notes>The GPS receiver is located at the site of the former Kootwijk Observatory for Satellite Geodesy (KOSG). The buildings at the site were vacated and pulled down in 2005, with the exception of the GPS mast. Since 28 August 2008 the receiver is running under solar power. The receiver is operating under responsibility of the Department of Earth Observation (DEOS) of the Delft University of Technology. The steel GPS mast has been in place since January 1991 (exact date unknown).</geo:notes>
@@ -34,85 +39,21 @@
             <geo:serialNumber>R117</geo:serialNumber>
             <geo:firmwareVersion>Meenix 7.8</geo:firmwareVersion>
             <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
-            <geo:dateInstalled>13 Jun 1994 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>23 Aug 1994 00:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>1994-06-13T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1994-08-23T00:00:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>(deg C) +/- 2.0</geo:temperatureStabilization>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
          <geo:gnssReceiver>
-            <geo:receiverType>ROGUE SNR-12 RM</geo:receiverType>
+            <geo:receiverType>AOA SNR-12 ACT</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>T229</geo:serialNumber>
-            <geo:firmwareVersion>3.2.32.1</geo:firmwareVersion>
+            <geo:serialNumber>229</geo:serialNumber>
+            <geo:firmwareVersion>3.3.32.4</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>24 Apr 1996 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>28 Feb 1999 00:00 GMT</geo:dateRemoved>
-            <geo:temperatureStabilization>(deg C) +/- 2.0</geo:temperatureStabilization>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>LEICA GRX1200GGPRO</geo:receiverType>
-            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
-            <geo:serialNumber>356091</geo:serialNumber>
-            <geo:firmwareVersion>6.00/3.14</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>28 Aug 2008 13:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>17 Apr 2009 14:45 GMT</geo:dateRemoved>
-            <geo:temperatureStabilization>(deg C) +/- 99.9</geo:temperatureStabilization>
-            <geo:notes>The receiver has actually been installed on 2008-07-31T08 in parallel to KOSG as KOS2 until 2008-08-28, at which time it became the official receiver for this site. Data for this parallel period is available from the LDC at http</geo:notes>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>LEICA GRX1200GGPRO</geo:receiverType>
-            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
-            <geo:serialNumber>356091</geo:serialNumber>
-            <geo:firmwareVersion>8.20/3.019</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>23 Apr 2012 14:00 GMT</geo:dateInstalled>
-            <geo:temperatureStabilization>(deg C) +/- 99.9</geo:temperatureStabilization>
-            <geo:notes>Receiver reinstalled</geo:notes>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>LEICA GRX1200GGPRO</geo:receiverType>
-            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
-            <geo:serialNumber>356091</geo:serialNumber>
-            <geo:firmwareVersion>7.80/3.019</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>30 Apr 2010 21:10 GMT</geo:dateInstalled>
-            <geo:dateRemoved>20 May 2011 16:15 GMT</geo:dateRemoved>
-            <geo:temperatureStabilization>(deg C) +/- 99.9</geo:temperatureStabilization>
-            <geo:notes>Firmware update</geo:notes>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>LEICA GRX1200GGPRO</geo:receiverType>
-            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
-            <geo:serialNumber>356091</geo:serialNumber>
-            <geo:firmwareVersion>6.00/3.017</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>17 Apr 2009 15:04 GMT</geo:dateInstalled>
-            <geo:dateRemoved>19 May 2009 09:15 GMT</geo:dateRemoved>
-            <geo:temperatureStabilization>(deg C) +/- 99.9</geo:temperatureStabilization>
-            <geo:notes>Firmware update</geo:notes>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>LEICA GRX1200GGPRO</geo:receiverType>
-            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
-            <geo:serialNumber>356091</geo:serialNumber>
-            <geo:firmwareVersion>7.80/3.018</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>20 Mar 2010 14:30 GMT</geo:dateInstalled>
-            <geo:dateRemoved>30 Apr 2010 21:10 GMT</geo:dateRemoved>
-            <geo:temperatureStabilization>(deg C) +/- 99.9</geo:temperatureStabilization>
-            <geo:notes>Firmware update</geo:notes>
+            <geo:dateInstalled>2000-11-27T15:16:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2008-08-28T08:00:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>(deg C) +/- 5.0</geo:temperatureStabilization>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
@@ -122,45 +63,21 @@
             <geo:serialNumber>T175</geo:serialNumber>
             <geo:firmwareVersion>2.8</geo:firmwareVersion>
             <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
-            <geo:dateInstalled>24 Aug 1994 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>22 Nov 1994 00:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>1994-08-24T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1994-11-22T00:00:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>(deg C) +/- 2.0</geo:temperatureStabilization>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
          <geo:gnssReceiver>
-            <geo:receiverType>ROGUE SNR-12 RM</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>T222</geo:serialNumber>
-            <geo:firmwareVersion>3.2.32.9</geo:firmwareVersion>
+            <geo:receiverType>LEICA GRX1200GGPRO</geo:receiverType>
+            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
+            <geo:serialNumber>356091</geo:serialNumber>
+            <geo:firmwareVersion>7.50/3.017</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>14 Jul 1999 07:10 GMT</geo:dateInstalled>
-            <geo:dateRemoved>23 Nov 2000 00:00 GMT</geo:dateRemoved>
-            <geo:temperatureStabilization>(deg C) +/- 2.0</geo:temperatureStabilization>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>ROGUE SNR-12 RM</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>T222</geo:serialNumber>
-            <geo:firmwareVersion>3.2.32.1</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>01 Mar 1999 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>14 Jul 1999 07:00 GMT</geo:dateRemoved>
-            <geo:temperatureStabilization>(deg C) +/- 2.0</geo:temperatureStabilization>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>ROGUE SNR-8</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>R117</geo:serialNumber>
-            <geo:firmwareVersion>Meenix 7.8</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>23 Nov 1994 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>25 Jan 1996 00:00 GMT</geo:dateRemoved>
-            <geo:temperatureStabilization>(deg C) +/- 2.0</geo:temperatureStabilization>
+            <geo:dateInstalled>2009-05-19T09:15:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2010-03-20T14:30:00Z</geo:dateRemoved>
+            <geo:notes>Firmware update</geo:notes>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
@@ -170,8 +87,8 @@
             <geo:serialNumber>356091</geo:serialNumber>
             <geo:firmwareVersion>8.20/3.019</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>20 May 2011 16:15 GMT</geo:dateInstalled>
-            <geo:dateRemoved>28 Nov 2011 14:02 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2011-05-20T16:15:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2011-11-28T14:02:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>(deg C) +/- 99.9</geo:temperatureStabilization>
             <geo:notes>Receiver removed for off-site testing</geo:notes>
          </geo:gnssReceiver>
@@ -183,21 +100,109 @@
             <geo:serialNumber>224</geo:serialNumber>
             <geo:firmwareVersion>3.3.32.4</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>24 Nov 2000 17:34 GMT</geo:dateInstalled>
-            <geo:dateRemoved>26 Nov 2000 00:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2000-11-24T17:34:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2000-11-26T00:00:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>(deg C) +/- 2.0</geo:temperatureStabilization>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
          <geo:gnssReceiver>
-            <geo:receiverType>AOA SNR-12 ACT</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>229</geo:serialNumber>
-            <geo:firmwareVersion>3.3.32.4</geo:firmwareVersion>
+            <geo:receiverType>LEICA GRX1200GGPRO</geo:receiverType>
+            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
+            <geo:serialNumber>356091</geo:serialNumber>
+            <geo:firmwareVersion>7.80/3.018</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>27 Nov 2000 15:16 GMT</geo:dateInstalled>
-            <geo:dateRemoved>28 Aug 2008 08:00 GMT</geo:dateRemoved>
-            <geo:temperatureStabilization>(deg C) +/- 5.0</geo:temperatureStabilization>
+            <geo:dateInstalled>2010-03-20T14:30:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2010-04-30T21:10:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>(deg C) +/- 99.9</geo:temperatureStabilization>
+            <geo:notes>Firmware update</geo:notes>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>LEICA GRX1200GGPRO</geo:receiverType>
+            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
+            <geo:serialNumber>356091</geo:serialNumber>
+            <geo:firmwareVersion>7.80/3.019</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2010-04-30T21:10:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2011-05-20T16:15:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>(deg C) +/- 99.9</geo:temperatureStabilization>
+            <geo:notes>Firmware update</geo:notes>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>ROGUE SNR-12 RM</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>T222</geo:serialNumber>
+            <geo:firmwareVersion>3.2.32.9</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>1999-07-14T07:10:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2000-11-23T00:00:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>(deg C) +/- 2.0</geo:temperatureStabilization>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>LEICA GRX1200GGPRO</geo:receiverType>
+            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
+            <geo:serialNumber>356091</geo:serialNumber>
+            <geo:firmwareVersion>8.20/3.019</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2012-04-23T14:00:00Z</geo:dateInstalled>
+            <geo:temperatureStabilization>(deg C) +/- 99.9</geo:temperatureStabilization>
+            <geo:notes>Receiver reinstalled</geo:notes>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>ROGUE SNR-8</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>R117</geo:serialNumber>
+            <geo:firmwareVersion>Meenix 7.8</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>1994-11-23T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1996-01-25T00:00:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>(deg C) +/- 2.0</geo:temperatureStabilization>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>ROGUE SNR-12 RM</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>T229</geo:serialNumber>
+            <geo:firmwareVersion>3.2.32.1</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>1996-04-24T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1999-02-28T00:00:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>(deg C) +/- 2.0</geo:temperatureStabilization>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>LEICA GRX1200GGPRO</geo:receiverType>
+            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
+            <geo:serialNumber>356091</geo:serialNumber>
+            <geo:firmwareVersion>6.00/3.14</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2008-08-28T13:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2009-04-17T14:45:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>(deg C) +/- 99.9</geo:temperatureStabilization>
+            <geo:notes>The receiver has actually been installed on 2008-07-31T08 in parallel to KOSG as KOS2 until 2008-08-28, at which time it became the official receiver for this site. Data for this parallel period is available from the LDC at http</geo:notes>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>LEICA GRX1200GGPRO</geo:receiverType>
+            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
+            <geo:serialNumber>356091</geo:serialNumber>
+            <geo:firmwareVersion>6.00/3.017</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2009-04-17T15:04:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2009-05-19T09:15:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>(deg C) +/- 99.9</geo:temperatureStabilization>
+            <geo:notes>Firmware update</geo:notes>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
@@ -207,39 +212,23 @@
             <geo:serialNumber>T209</geo:serialNumber>
             <geo:firmwareVersion>3.2.32.1</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>26 Jan 1996 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>23 Apr 1996 00:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>1996-01-26T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1996-04-23T00:00:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>(deg C) +/- 2.0</geo:temperatureStabilization>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
          <geo:gnssReceiver>
-            <geo:receiverType>LEICA GRX1200GGPRO</geo:receiverType>
-            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
-            <geo:serialNumber>356091</geo:serialNumber>
-            <geo:firmwareVersion>7.50/3.017</geo:firmwareVersion>
+            <geo:receiverType>ROGUE SNR-12 RM</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>T222</geo:serialNumber>
+            <geo:firmwareVersion>3.2.32.1</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>19 May 2009 09:15 GMT</geo:dateInstalled>
-            <geo:dateRemoved>20 Mar 2010 14:30 GMT</geo:dateRemoved>
-            <geo:notes>Firmware update</geo:notes>
+            <geo:dateInstalled>1999-03-01T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1999-07-14T07:00:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>(deg C) +/- 2.0</geo:temperatureStabilization>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
-      <geo:gnssAntennas>
-         <geo:gnssAntenna>
-            <geo:antennaType>AOAD/M_B        UNKN</geo:antennaType>
-            <geo:serialNumber>119</geo:serialNumber>
-            <geo:antennaReferencePoint>BCR</geo:antennaReferencePoint>
-            <geo:marker-arpUpEcc.>0.105</geo:marker-arpUpEcc.>
-            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
-            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
-            <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>UNKN</geo:antennaRadomeType>
-            <geo:antennaCableLength>30</geo:antennaCableLength>
-            <geo:dateInstalled>20 Jul 2011 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>13 Sep 2011 00:00 GMT</geo:dateRemoved>
-            <geo:notes>On 18 Sep 2011 it was discovered that the radome has fallen off the station. The exact date and time that the Radome fell off is unknown, but from the inspection of the timeseries we believe it fell off on 12 Sep 2011. However, there may have been a prolonged period when the dome was only loosely connected resulting in rather unstable coordinate time series. We believe this started on June 20 2011, although there is also some increased scatter in the period leading up to this date (starting end of March).</geo:notes>
-         </geo:gnssAntenna>
-      </geo:gnssAntennas>
       <geo:gnssAntennas>
          <geo:gnssAntenna>
             <geo:antennaType>AOAD/M_B        DUTD</geo:antennaType>
@@ -251,8 +240,8 @@
             <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
             <geo:antennaRadomeType>DUTD</geo:antennaRadomeType>
             <geo:antennaCableLength>30</geo:antennaCableLength>
-            <geo:dateInstalled>01 Jan 1991 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>20 Jul 2011 00:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>1991-01-01T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2011-07-20T00:00:00Z</geo:dateRemoved>
             <geo:notes>Model C146-6-1 DUT design (polyester cone) Power and Signal cable separated, power submitted by original GPS-receiver ROGUE SNR-8, and later batteries</geo:notes>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
@@ -267,27 +256,26 @@
             <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
             <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
             <geo:antennaCableLength>30</geo:antennaCableLength>
-            <geo:dateInstalled>13 Sep 2011 00:00 GMT</geo:dateInstalled>
+            <geo:dateInstalled>2011-09-13T00:00:00Z</geo:dateInstalled>
             <geo:notes>Model C146-6-1 Power and Signal cable separated, power submitted by batteries The antenna itself remains unaltered since 1991</geo:notes>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
-      <geo:surveyedLocalTies>
-         <geo:surveyedLocalTies>
-            <geo:tiedMarkerName>KOSG-28</geo:tiedMarkerName>
-            <geo:tiedMarkerUsage>LOCAL CONTROL/FOOTPRINT/GPS</geo:tiedMarkerUsage>
-            <geo:tiedMarkerCDPNumber>8833</geo:tiedMarkerCDPNumber>
-            <geo:tiedMarkerDOMESNumber>13504M002</geo:tiedMarkerDOMESNumber>
-            <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
-               <geo:dx>-17.115</geo:dx>
-               <geo:dy>32.379</geo:dy>
-               <geo:dz>1.144</geo:dz>
-            </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
-            <geo:localSiteTiesAccuracy>3</geo:localSiteTiesAccuracy>
-            <geo:surveyMethod>GPS CAMPAIGN/TRILATERATION/TRIANGULATION</geo:surveyMethod>
-            <geo:dateMeasured>13 Apr 1993 14:00 GMT</geo:dateMeasured>
-            <geo:notes>KOSG-28  Mobile GPS Reference Point, also EUREF reference marker</geo:notes>
-         </geo:surveyedLocalTies>
-      </geo:surveyedLocalTies>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna>
+            <geo:antennaType>AOAD/M_B        UNKN</geo:antennaType>
+            <geo:serialNumber>119</geo:serialNumber>
+            <geo:antennaReferencePoint>BCR</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>0.105</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
+            <geo:antennaRadomeType>UNKN</geo:antennaRadomeType>
+            <geo:antennaCableLength>30</geo:antennaCableLength>
+            <geo:dateInstalled>2011-07-20T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2011-09-13T00:00:00Z</geo:dateRemoved>
+            <geo:notes>On 18 Sep 2011 it was discovered that the radome has fallen off the station. The exact date and time that the Radome fell off is unknown, but from the inspection of the timeseries we believe it fell off on 12 Sep 2011. However, there may have been a prolonged period when the dome was only loosely connected resulting in rather unstable coordinate time series. We believe this started on June 20 2011, although there is also some increased scatter in the period leading up to this date (starting end of March).</geo:notes>
+         </geo:gnssAntenna>
+      </geo:gnssAntennas>
       <geo:surveyedLocalTies>
          <geo:surveyedLocalTies>
             <geo:tiedMarkerName>KOSG-23(SLR)</geo:tiedMarkerName>
@@ -301,16 +289,46 @@
             </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
             <geo:localSiteTiesAccuracy>3</geo:localSiteTiesAccuracy>
             <geo:surveyMethod>GPS CAMPAIGN/TRILATERATION/TRIANGULATION</geo:surveyMethod>
-            <geo:dateMeasured>13 Apr 1993 14:00 GMT</geo:dateMeasured>
+            <geo:dateMeasured>1993-04-13T14:00:00Z</geo:dateMeasured>
             <geo:notes>KOSG-23  Mobile SLR Reference Point</geo:notes>
          </geo:surveyedLocalTies>
       </geo:surveyedLocalTies>
+      <geo:surveyedLocalTies>
+         <geo:surveyedLocalTies>
+            <geo:tiedMarkerName>KOSG-28</geo:tiedMarkerName>
+            <geo:tiedMarkerUsage>LOCAL CONTROL/FOOTPRINT/GPS</geo:tiedMarkerUsage>
+            <geo:tiedMarkerCDPNumber>8833</geo:tiedMarkerCDPNumber>
+            <geo:tiedMarkerDOMESNumber>13504M002</geo:tiedMarkerDOMESNumber>
+            <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+               <geo:dx>-17.115</geo:dx>
+               <geo:dy>32.379</geo:dy>
+               <geo:dz>1.144</geo:dz>
+            </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+            <geo:localSiteTiesAccuracy>3</geo:localSiteTiesAccuracy>
+            <geo:surveyMethod>GPS CAMPAIGN/TRILATERATION/TRIANGULATION</geo:surveyMethod>
+            <geo:dateMeasured>1993-04-13T14:00:00Z</geo:dateMeasured>
+            <geo:notes>KOSG-28  Mobile GPS Reference Point, also EUREF reference marker</geo:notes>
+         </geo:surveyedLocalTies>
+      </geo:surveyedLocalTies>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard>
+            <geo:standardType>EXTERNAL QUARTZ</geo:standardType>
+            <geo:inputFrequency>5 MHz</geo:inputFrequency>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>1996-01-27T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>1996-02-14T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+            <geo:notes>Frequency Crystal Oscillator</geo:notes>
+         </geo:frequencyStandard>
+      </geo:frequencyStandards>
       <geo:frequencyStandards>
          <geo:frequencyStandard>
             <geo:standardType>INTERNAL</geo:standardType>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2008-08-28T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2008-08-28T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
@@ -322,35 +340,11 @@
             <geo:inputFrequency>5 MHz</geo:inputFrequency>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>1991-01-01T00:00Z</gml:beginPosition>
-                  <gml:endPosition>1996-01-26T00:00Z</gml:endPosition>
+                  <gml:beginPosition>1996-02-14T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2000-11-23T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
             <geo:notes>5065A Rubidium Vapor Frequency Standard</geo:notes>
-         </geo:frequencyStandard>
-      </geo:frequencyStandards>
-      <geo:frequencyStandards>
-         <geo:frequencyStandard>
-            <geo:standardType>EXTERNAL QUARTZ</geo:standardType>
-            <geo:inputFrequency>5 MHz</geo:inputFrequency>
-            <gml:validTime>
-               <gml:TimePeriod>
-                  <gml:beginPosition>1996-01-27T00:00Z</gml:beginPosition>
-                  <gml:endPosition>1996-02-14T00:00Z</gml:endPosition>
-               </gml:TimePeriod>
-            </gml:validTime>
-            <geo:notes>Frequency Crystal Oscillator</geo:notes>
-         </geo:frequencyStandard>
-      </geo:frequencyStandards>
-      <geo:frequencyStandards>
-         <geo:frequencyStandard>
-            <geo:standardType>INTERNAL</geo:standardType>
-            <gml:validTime>
-               <gml:TimePeriod>
-                  <gml:beginPosition>2000-11-24T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2000-11-27T00:00Z</gml:endPosition>
-               </gml:TimePeriod>
-            </gml:validTime>
          </geo:frequencyStandard>
       </geo:frequencyStandards>
       <geo:frequencyStandards>
@@ -359,8 +353,8 @@
             <geo:inputFrequency>5 MHz</geo:inputFrequency>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>1996-02-14T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2000-11-23T00:00Z</gml:endPosition>
+                  <gml:beginPosition>1991-01-01T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>1996-01-26T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
             <geo:notes>5065A Rubidium Vapor Frequency Standard</geo:notes>
@@ -372,11 +366,22 @@
             <geo:inputFrequency>5 MHZ</geo:inputFrequency>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2000-11-27T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2008-08-27T00:00Z</gml:endPosition>
+                  <gml:beginPosition>2000-11-27T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2008-08-27T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
             <geo:notes>OSCILLOQUARTZ Oven Controlled Crystal Oscillator OCXO 8600</geo:notes>
+         </geo:frequencyStandard>
+      </geo:frequencyStandards>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard>
+            <geo:standardType>INTERNAL</geo:standardType>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2000-11-24T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2000-11-27T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
          </geo:frequencyStandard>
       </geo:frequencyStandards>
       <geo:collocationInformations>
@@ -386,18 +391,18 @@
       </geo:collocationInformations>
       <geo:collocationInformations>
          <geo:collocationInformation>
-            <geo:status>PERMANENT</geo:status>
-         </geo:collocationInformation>
-      </geo:collocationInformations>
-      <geo:collocationInformations>
-         <geo:collocationInformation>
-            <geo:status>MOBILE</geo:status>
-         </geo:collocationInformation>
-      </geo:collocationInformations>
-      <geo:collocationInformations>
-         <geo:collocationInformation>
             <geo:status>MOBILE</geo:status>
             <geo:notes>Regular occupations by MTLRS-2</geo:notes>
+         </geo:collocationInformation>
+      </geo:collocationInformations>
+      <geo:collocationInformations>
+         <geo:collocationInformation>
+            <geo:status>MOBILE</geo:status>
+         </geo:collocationInformation>
+      </geo:collocationInformations>
+      <geo:collocationInformations>
+         <geo:collocationInformation>
+            <geo:status>PERMANENT</geo:status>
          </geo:collocationInformation>
       </geo:collocationInformations>
       <geo:otherInstrumentations>
@@ -426,20 +431,20 @@
          <geo:localEpisodicEvents>
             <gml:validTime>
                <gml:TimeInstant>
-                  <gml:timePosition>17 Mar 2003</gml:timePosition>
+                  <gml:timePosition>17 Jul 2008</gml:timePosition>
                </gml:TimeInstant>
             </gml:validTime>
-            <geo:event>On March 17, 2003, about 8</geo:event>
+            <geo:event>MINOR CONSTRUCTION (FOUNDATION FOR SOLAR PANELS)</geo:event>
          </geo:localEpisodicEvents>
       </geo:localEpisodicEventsSet>
       <geo:localEpisodicEventsSet>
          <geo:localEpisodicEvents>
             <gml:validTime>
                <gml:TimeInstant>
-                  <gml:timePosition>28 Nov 2011</gml:timePosition>
+                  <gml:timePosition>17 Mar 2003</gml:timePosition>
                </gml:TimeInstant>
             </gml:validTime>
-            <geo:event>Observations were stopped because of power</geo:event>
+            <geo:event>On March 17, 2003, about 8</geo:event>
          </geo:localEpisodicEvents>
       </geo:localEpisodicEventsSet>
       <geo:localEpisodicEventsSet>
@@ -456,10 +461,10 @@
          <geo:localEpisodicEvents>
             <gml:validTime>
                <gml:TimeInstant>
-                  <gml:timePosition>17 Jul 2008</gml:timePosition>
+                  <gml:timePosition>28 Nov 2011</gml:timePosition>
                </gml:TimeInstant>
             </gml:validTime>
-            <geo:event>MINOR CONSTRUCTION (FOUNDATION FOR SOLAR PANELS)</geo:event>
+            <geo:event>Observations were stopped because of power</geo:event>
          </geo:localEpisodicEvents>
       </geo:localEpisodicEventsSet>
       <geo:siteContact>

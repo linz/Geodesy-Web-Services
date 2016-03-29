@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-   <geo:siteLog>
+<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_550">
+   <geo:siteLog gml:id="SiteLogType_550">
+      <geo:formInformation>
+         <geo:preparedBy>Ryan Ruddick</geo:preparedBy>
+         <geo:datePrepared>2008-01-04T13:00:00Z</geo:datePrepared>
+         <geo:reportType>UPDATE</geo:reportType>
+      </geo:formInformation>
       <geo:siteIdentification>
          <geo:siteName>National Measurement Institute</geo:siteName>
          <geo:fourCharacterID>SYDN</geo:fourCharacterID>
@@ -11,7 +16,7 @@
          <geo:monumentFoundation>CONCRETE BLOCK</geo:monumentFoundation>
          <geo:foundationDepth>10</geo:foundationDepth>
          <geo:markerDescription>Stainless Steel Plate</geo:markerDescription>
-         <geo:dateInstalled>04 May 2004 14:00 GMT</geo:dateInstalled>
+         <geo:dateInstalled>2004-05-04T14:00:00Z</geo:dateInstalled>
          <geo:geologicCharacteristic>BEDROCK</geo:geologicCharacteristic>
          <geo:bedrockType>SEDIMENTARY</geo:bedrockType>
          <geo:bedrockCondition>WEATHERED</geo:bedrockCondition>
@@ -35,7 +40,7 @@
             <geo:serialNumber>AGE3MU07TA8</geo:serialNumber>
             <geo:firmwareVersion>2.3p3</geo:firmwareVersion>
             <geo:elevationCutoffSetting>1</geo:elevationCutoffSetting>
-            <geo:dateInstalled>05 May 2004 00:00 GMT</geo:dateInstalled>
+            <geo:dateInstalled>2004-05-05T00:00:00Z</geo:dateInstalled>
             <geo:temperatureStabilization>0.5deg</geo:temperatureStabilization>
             <geo:notes>Receiver in laboratory</geo:notes>
          </geo:gnssReceiver>
@@ -52,7 +57,7 @@
             <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
             <geo:antennaCableType>Mixed</geo:antennaCableType>
             <geo:antennaCableLength>23m LMR400 / 520m fibre / 2m SF-142B</geo:antennaCableLength>
-            <geo:dateInstalled>05 May 2004 00:00 GMT</geo:dateInstalled>
+            <geo:dateInstalled>2004-05-05T00:00:00Z</geo:dateInstalled>
             <geo:notes>PPM Vialite transmitter/receiver pair used to</geo:notes>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
@@ -67,7 +72,7 @@
             </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
             <geo:localSiteTiesAccuracy>+-1mm</geo:localSiteTiesAccuracy>
             <geo:surveyMethod>TOTAL STATION</geo:surveyMethod>
-            <geo:dateMeasured>07 Jul 2004 14:00 GMT</geo:dateMeasured>
+            <geo:dateMeasured>2004-07-07T14:00:00Z</geo:dateMeasured>
          </geo:surveyedLocalTies>
       </geo:surveyedLocalTies>
       <geo:surveyedLocalTies>
@@ -81,7 +86,7 @@
             </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
             <geo:localSiteTiesAccuracy>+-1mm</geo:localSiteTiesAccuracy>
             <geo:surveyMethod>TOTAL STATION</geo:surveyMethod>
-            <geo:dateMeasured>07 Jul 2004 14:00 GMT</geo:dateMeasured>
+            <geo:dateMeasured>2004-07-07T14:00:00Z</geo:dateMeasured>
          </geo:surveyedLocalTies>
       </geo:surveyedLocalTies>
       <geo:surveyedLocalTies>
@@ -95,7 +100,7 @@
             </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
             <geo:localSiteTiesAccuracy>+-1mm</geo:localSiteTiesAccuracy>
             <geo:surveyMethod>TOTAL STATION</geo:surveyMethod>
-            <geo:dateMeasured>07 Jul 2004 14:00 GMT</geo:dateMeasured>
+            <geo:dateMeasured>2004-07-07T14:00:00Z</geo:dateMeasured>
          </geo:surveyedLocalTies>
       </geo:surveyedLocalTies>
       <geo:frequencyStandards>
@@ -104,20 +109,7 @@
             <geo:inputFrequency>10 MHz</geo:inputFrequency>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2005-01-28T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2008-04-30T00:00Z</gml:endPosition>
-               </gml:TimePeriod>
-            </gml:validTime>
-            <geo:notes>Agilent 5071A cesium beam frequency standard /</geo:notes>
-         </geo:frequencyStandard>
-      </geo:frequencyStandards>
-      <geo:frequencyStandards>
-         <geo:frequencyStandard>
-            <geo:standardType>EXTERNAL CESIUM</geo:standardType>
-            <geo:inputFrequency>10 MHz</geo:inputFrequency>
-            <gml:validTime>
-               <gml:TimePeriod>
-                  <gml:beginPosition>2008-05-01T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2008-05-01T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
@@ -126,11 +118,24 @@
       </geo:frequencyStandards>
       <geo:frequencyStandards>
          <geo:frequencyStandard>
+            <geo:standardType>EXTERNAL CESIUM</geo:standardType>
+            <geo:inputFrequency>10 MHz</geo:inputFrequency>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2005-01-28T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2008-04-30T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+            <geo:notes>Agilent 5071A cesium beam frequency standard /</geo:notes>
+         </geo:frequencyStandard>
+      </geo:frequencyStandards>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard>
             <geo:standardType>INTERNAL</geo:standardType>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2004-05-05T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2005-01-27T00:00Z</gml:endPosition>
+                  <gml:beginPosition>2004-05-05T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2005-01-27T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
             <geo:notes>Removed 2005-01-27T23:59:30</geo:notes>

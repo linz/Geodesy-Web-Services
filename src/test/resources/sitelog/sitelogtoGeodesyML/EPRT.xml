@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-   <geo:siteLog>
+<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_180">
+   <geo:siteLog gml:id="SiteLogType_180">
+      <geo:formInformation>
+         <geo:preparedBy>cors-adm</geo:preparedBy>
+         <geo:datePrepared>2013-08-04T14:00:00Z</geo:datePrepared>
+         <geo:reportType>UPDATE</geo:reportType>
+      </geo:formInformation>
       <geo:siteIdentification>
          <geo:siteName>East Port Elementary School</geo:siteName>
          <geo:fourCharacterID>EPRT</geo:fourCharacterID>
@@ -8,7 +13,7 @@
          <geo:monumentDescription>PILLAR</geo:monumentDescription>
          <geo:heightOfTheMonument>1.5</geo:heightOfTheMonument>
          <geo:monumentFoundation>Bedrock</geo:monumentFoundation>
-         <geo:dateInstalled>01 Oct 1998 14:00 GMT</geo:dateInstalled>
+         <geo:dateInstalled>1998-10-01T14:00:00Z</geo:dateInstalled>
          <geo:geologicCharacteristic>BEDROCK</geo:geologicCharacteristic>
          <geo:bedrockType>IGNEOUS-GRANITE</geo:bedrockType>
          <geo:bedrockCondition>FRESH</geo:bedrockCondition>
@@ -32,10 +37,11 @@
             <geo:receiverType>LEICA GRX1200GGPRO</geo:receiverType>
             <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
             <geo:serialNumber>351254</geo:serialNumber>
-            <geo:firmwareVersion>7.80 / IME 3.019</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>03 May 2010 20:10 GMT</geo:dateInstalled>
-            <geo:dateRemoved>24 Jan 2011 15:42 GMT</geo:dateRemoved>
+            <geo:firmwareVersion>5.62</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2008-09-02T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2009-07-30T00:00:00Z</geo:dateRemoved>
+            <geo:notes>Firmware upgrade.</geo:notes>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
@@ -44,20 +50,9 @@
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
             <geo:serialNumber>3611A14979</geo:serialNumber>
             <geo:firmwareVersion>7.29</geo:firmwareVersion>
-            <geo:dateInstalled>20 May 2004 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>10 May 2008 00:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2004-05-20T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2008-05-10T00:00:00Z</geo:dateRemoved>
             <geo:notes>Receiver upgrade.</geo:notes>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>LEICA GRX1200GGPRO</geo:receiverType>
-            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
-            <geo:serialNumber>351254</geo:serialNumber>
-            <geo:firmwareVersion>7.53</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
-            <geo:dateInstalled>30 Jul 2009 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>22 Mar 2010 16:50 GMT</geo:dateRemoved>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
@@ -67,18 +62,40 @@
             <geo:serialNumber>351254</geo:serialNumber>
             <geo:firmwareVersion>8.10/IME3.019</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>24 Jan 2011 15:42 GMT</geo:dateInstalled>
+            <geo:dateInstalled>2011-01-24T15:42:00Z</geo:dateInstalled>
             <geo:notes>2011feb09 rem. space bet. IME 3.019 FW</geo:notes>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
          <geo:gnssReceiver>
-            <geo:receiverType>TRIMBLE 4000SSE</geo:receiverType>
+            <geo:receiverType>TRIMBLE 4000SSI</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>3316A02993</geo:serialNumber>
-            <geo:firmwareVersion>7.29</geo:firmwareVersion>
-            <geo:dateInstalled>03 May 2004 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>20 May 2004 00:00 GMT</geo:dateRemoved>
+            <geo:serialNumber>3748A20591</geo:serialNumber>
+            <geo:firmwareVersion>7.27</geo:firmwareVersion>
+            <geo:dateInstalled>1998-10-02T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2004-05-03T00:00:00Z</geo:dateRemoved>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>LEICA GRX1200GGPRO</geo:receiverType>
+            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
+            <geo:serialNumber>351254</geo:serialNumber>
+            <geo:firmwareVersion>7.53</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2009-07-30T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2010-03-22T16:50:00Z</geo:dateRemoved>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>LEICA GRX1200GGPRO</geo:receiverType>
+            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
+            <geo:serialNumber>351254</geo:serialNumber>
+            <geo:firmwareVersion>7.80 / IME 3.019</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2010-05-03T20:10:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2011-01-24T15:42:00Z</geo:dateRemoved>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
@@ -88,47 +105,20 @@
             <geo:serialNumber>351254</geo:serialNumber>
             <geo:firmwareVersion>7.80</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>22 Mar 2010 16:50 GMT</geo:dateInstalled>
-            <geo:dateRemoved>03 May 2010 20:10 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2010-03-22T16:50:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2010-05-03T20:10:00Z</geo:dateRemoved>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
          <geo:gnssReceiver>
-            <geo:receiverType>LEICA GRX1200GGPRO</geo:receiverType>
-            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
-            <geo:serialNumber>351254</geo:serialNumber>
-            <geo:firmwareVersion>5.62</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
-            <geo:dateInstalled>02 Sep 2008 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>30 Jul 2009 00:00 GMT</geo:dateRemoved>
-            <geo:notes>Firmware upgrade.</geo:notes>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>TRIMBLE 4000SSI</geo:receiverType>
+            <geo:receiverType>TRIMBLE 4000SSE</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>3748A20591</geo:serialNumber>
-            <geo:firmwareVersion>7.27</geo:firmwareVersion>
-            <geo:dateInstalled>02 Oct 1998 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>03 May 2004 00:00 GMT</geo:dateRemoved>
+            <geo:serialNumber>3316A02993</geo:serialNumber>
+            <geo:firmwareVersion>7.29</geo:firmwareVersion>
+            <geo:dateInstalled>2004-05-03T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2004-05-20T00:00:00Z</geo:dateRemoved>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
-      <geo:gnssAntennas>
-         <geo:gnssAntenna>
-            <geo:antennaType>TRM29659.00     UNAV</geo:antennaType>
-            <geo:serialNumber>0220157640</geo:serialNumber>
-            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
-            <geo:marker-arpUpEcc.>0.0</geo:marker-arpUpEcc.>
-            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
-            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
-            <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>UNAV</geo:antennaRadomeType>
-            <geo:dateInstalled>23 Sep 1999 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>10 Jul 2004 00:00 GMT</geo:dateRemoved>
-            <geo:notes>New antenna installed. Mounted on UNAV Leveling Mount. UNAV radome replaced with LEIS radome. Added 2009-03-18 ARP Ecc North and East</geo:notes>
-         </geo:gnssAntenna>
-      </geo:gnssAntennas>
       <geo:gnssAntennas>
          <geo:gnssAntenna>
             <geo:antennaType>TRM29659.00     UNAV</geo:antennaType>
@@ -139,9 +129,24 @@
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
             <geo:antennaRadomeType>UNAV</geo:antennaRadomeType>
-            <geo:dateInstalled>02 Oct 1998 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>23 Sep 1999 00:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>1998-10-02T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1999-09-23T00:00:00Z</geo:dateRemoved>
             <geo:notes>Antenna replaced. Added 2009-03-18 ARP Ecc North and East</geo:notes>
+         </geo:gnssAntenna>
+      </geo:gnssAntennas>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna>
+            <geo:antennaType>TRM29659.00     UNAV</geo:antennaType>
+            <geo:serialNumber>0220157640</geo:serialNumber>
+            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>0.0</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
+            <geo:antennaRadomeType>UNAV</geo:antennaRadomeType>
+            <geo:dateInstalled>1999-09-23T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2004-07-10T00:00:00Z</geo:dateRemoved>
+            <geo:notes>New antenna installed. Mounted on UNAV Leveling Mount. UNAV radome replaced with LEIS radome. Added 2009-03-18 ARP Ecc North and East</geo:notes>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
       <geo:gnssAntennas>
@@ -156,7 +161,7 @@
             <geo:antennaRadomeType>LEIS</geo:antennaRadomeType>
             <geo:antennaCableType>Andrews Co. Heliax</geo:antennaCableType>
             <geo:antennaCableLength>75</geo:antennaCableLength>
-            <geo:dateInstalled>10 Jul 2004 00:00 GMT</geo:dateInstalled>
+            <geo:dateInstalled>2004-07-10T00:00:00Z</geo:dateInstalled>
             <geo:notes>Added cable info on 2008-09-02 Cable has pigtail btwn light. arrestor</geo:notes>
          </geo:gnssAntenna>
       </geo:gnssAntennas>

@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-   <geo:siteLog>
+<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_120">
+   <geo:siteLog gml:id="SiteLogType_120">
+      <geo:formInformation>
+         <geo:preparedBy>Darren Burns</geo:preparedBy>
+         <geo:datePrepared>2013-08-19T14:00:00Z</geo:datePrepared>
+         <geo:reportType>UPDATE</geo:reportType>
+      </geo:formInformation>
       <geo:siteIdentification>
          <geo:siteName>Cleveland SunPOZ</geo:siteName>
          <geo:fourCharacterID>CLEV</geo:fourCharacterID>
@@ -8,7 +13,7 @@
          <geo:monumentDescription>STEEL TRIPOD</geo:monumentDescription>
          <geo:monumentFoundation>BRICK AND CONCRETE PARAPET WALL ON BLDING ROOF</geo:monumentFoundation>
          <geo:markerDescription>THREADED BOLT ON STEEL TRIPOD</geo:markerDescription>
-         <geo:dateInstalled>19 Feb 2009 13:00 GMT</geo:dateInstalled>
+         <geo:dateInstalled>2009-02-19T13:00:00Z</geo:dateInstalled>
          <geo:notes>Monument is a tribrach adapter on tribrach on fixed steel tripod on brick parapet wall on building roof.  State Permanent Survey Mark No. 753293 in Survey Control Database.</geo:notes>
       </geo:siteIdentification>
       <geo:siteLocation>
@@ -25,39 +30,14 @@
       </geo:siteLocation>
       <geo:gnssReceivers>
          <geo:gnssReceiver>
-            <geo:receiverType>TRIMBLE NETR5</geo:receiverType>
-            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
-            <geo:serialNumber>4939K63965</geo:serialNumber>
-            <geo:firmwareVersion>4.22</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
-            <geo:dateInstalled>08 Mar 2011 12:10 GMT</geo:dateInstalled>
-            <geo:dateRemoved>17 Aug 2013 13:00 GMT</geo:dateRemoved>
-            <geo:temperatureStabilization>none</geo:temperatureStabilization>
-            <geo:notes>Firmware Update</geo:notes>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
             <geo:receiverType>TRIMBLE NETRS</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
             <geo:serialNumber>4351230308</geo:serialNumber>
             <geo:firmwareVersion>1.20</geo:firmwareVersion>
             <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
-            <geo:dateInstalled>04 Sep 2009 02:49 GMT</geo:dateInstalled>
-            <geo:dateRemoved>22 Jun 2010 00:22 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2009-09-04T02:49:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2010-06-22T00:22:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>none</geo:temperatureStabilization>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>TRIMBLE NETR5</geo:receiverType>
-            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
-            <geo:serialNumber>4939K63965</geo:serialNumber>
-            <geo:firmwareVersion>4.48</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
-            <geo:dateInstalled>17 Aug 2013 13:35 GMT</geo:dateInstalled>
-            <geo:temperatureStabilization>none</geo:temperatureStabilization>
-            <geo:notes>Firmware Update</geo:notes>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
@@ -67,9 +47,34 @@
             <geo:serialNumber>4939K63965</geo:serialNumber>
             <geo:firmwareVersion>4.03</geo:firmwareVersion>
             <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
-            <geo:dateInstalled>22 Jun 2010 00:47 GMT</geo:dateInstalled>
-            <geo:dateRemoved>08 Mar 2011 11:21 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2010-06-22T00:47:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2011-03-08T11:21:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>none</geo:temperatureStabilization>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>TRIMBLE NETR5</geo:receiverType>
+            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
+            <geo:serialNumber>4939K63965</geo:serialNumber>
+            <geo:firmwareVersion>4.22</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2011-03-08T12:10:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2013-08-17T13:00:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>none</geo:temperatureStabilization>
+            <geo:notes>Firmware Update</geo:notes>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>TRIMBLE NETR5</geo:receiverType>
+            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
+            <geo:serialNumber>4939K63965</geo:serialNumber>
+            <geo:firmwareVersion>4.48</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2013-08-17T13:35:00Z</geo:dateInstalled>
+            <geo:temperatureStabilization>none</geo:temperatureStabilization>
+            <geo:notes>Firmware Update</geo:notes>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
@@ -79,8 +84,8 @@
             <geo:serialNumber>4351230308</geo:serialNumber>
             <geo:firmwareVersion>1.02</geo:firmwareVersion>
             <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
-            <geo:dateInstalled>20 Feb 2009 05:27 GMT</geo:dateInstalled>
-            <geo:dateRemoved>04 Sep 2009 02:43 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2009-02-20T05:27:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2009-09-04T02:43:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>none</geo:temperatureStabilization>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
@@ -94,8 +99,8 @@
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
             <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
-            <geo:dateInstalled>22 Jun 2010 00:46 GMT</geo:dateInstalled>
-            <geo:dateRemoved>22 Jun 2010 00:46 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2010-06-22T00:46:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2010-06-22T00:46:00Z</geo:dateRemoved>
             <geo:notes>Incorrect Antenna Model entered as TRM55971.00</geo:notes>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
@@ -109,8 +114,8 @@
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
             <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
-            <geo:dateInstalled>20 Feb 2009 05:27 GMT</geo:dateInstalled>
-            <geo:dateRemoved>22 Jun 2010 00:46 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2009-02-20T05:27:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2010-06-22T00:46:00Z</geo:dateRemoved>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
       <geo:gnssAntennas>
@@ -123,7 +128,7 @@
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
             <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
-            <geo:dateInstalled>22 Jun 2010 00:46 GMT</geo:dateInstalled>
+            <geo:dateInstalled>2010-06-22T00:46:00Z</geo:dateInstalled>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
       <geo:frequencyStandards>
@@ -131,7 +136,7 @@
             <geo:standardType>INTERNAL</geo:standardType>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2009-02-20T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2009-02-20T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>

@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-   <geo:siteLog>
+<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_194">
+   <geo:siteLog gml:id="SiteLogType_194">
+      <geo:formInformation>
+         <geo:preparedBy>Stuart Elson</geo:preparedBy>
+         <geo:datePrepared>2012-03-07T13:00:00Z</geo:datePrepared>
+         <geo:reportType>UPDATE</geo:reportType>
+      </geo:formInformation>
       <geo:siteIdentification>
          <geo:siteName>FRDN CACS-GSD</geo:siteName>
          <geo:fourCharacterID>FRDN</geo:fourCharacterID>
@@ -11,7 +16,7 @@
          <geo:monumentFoundation>Bedrock</geo:monumentFoundation>
          <geo:foundationDepth>10.50</geo:foundationDepth>
          <geo:markerDescription>Brass plate with forced centering stainless bolt</geo:markerDescription>
-         <geo:dateInstalled>30 Jun 2003 14:00 GMT</geo:dateInstalled>
+         <geo:dateInstalled>2003-06-30T14:00:00Z</geo:dateInstalled>
          <geo:notes>GNSS rerefence mark consists in a brass plate with a forced centered stainless steel bolt. Brass plate cemented to top of 0.1525 m diameter, 12.0 m long steel casing. The 12.0 m steel casing is drilled 7.2 m into ground and 3.0 m into bedrock and filled with concrete. Steel casing is 1.5 m above grade. Casing is inside a 0.900 m plastic culvert extending from 5.8 m below grade to ground level and filled with gravel to a depth 1 meter below grade. The 0.600 m concrete culvert then inserted into plastic culvert and extends 1.5 m above grade.</geo:notes>
       </geo:siteIdentification>
       <geo:siteLocation>
@@ -28,34 +33,35 @@
       </geo:siteLocation>
       <geo:gnssReceivers>
          <geo:gnssReceiver>
+            <geo:receiverType>AOA SNR-12 ACT</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>T305U</geo:serialNumber>
+            <geo:firmwareVersion>3.2.32.2N</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>10</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2005-11-04T15:10:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2006-08-09T13:30:00Z</geo:dateRemoved>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
             <geo:receiverType>AOA BENCHMARK ACT</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
             <geo:serialNumber>1128</geo:serialNumber>
             <geo:firmwareVersion>3.2.32.2N</geo:firmwareVersion>
             <geo:elevationCutoffSetting>10</geo:elevationCutoffSetting>
-            <geo:dateInstalled>01 Jul 2003 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>23 Oct 2005 09:15 GMT</geo:dateRemoved>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>TPS NETG3</geo:receiverType>
-            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
-            <geo:serialNumber>401-01949</geo:serialNumber>
-            <geo:firmwareVersion>3.5p1</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
-            <geo:dateInstalled>08 Mar 2012 18:18 GMT</geo:dateInstalled>
+            <geo:dateInstalled>2003-07-01T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2005-10-23T09:15:00Z</geo:dateRemoved>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
          <geo:gnssReceiver>
             <geo:receiverType>AOA SNR-12 ACT</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>T305U</geo:serialNumber>
+            <geo:serialNumber>2044</geo:serialNumber>
             <geo:firmwareVersion>3.2.32.2N</geo:firmwareVersion>
             <geo:elevationCutoffSetting>10</geo:elevationCutoffSetting>
-            <geo:dateInstalled>04 Nov 2005 15:10 GMT</geo:dateInstalled>
-            <geo:dateRemoved>09 Aug 2006 13:30 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2006-08-09T13:30:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2009-12-20T23:59:00Z</geo:dateRemoved>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
@@ -65,8 +71,8 @@
             <geo:serialNumber>401-01537</geo:serialNumber>
             <geo:firmwareVersion>3.4 Dec12, 2009 p2</geo:firmwareVersion>
             <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
-            <geo:dateInstalled>08 Jun 2011 15:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>15 Sep 2011 14:44 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2011-06-08T15:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2011-09-15T14:44:00Z</geo:dateRemoved>
             <geo:notes>Serial number corrected</geo:notes>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
@@ -77,20 +83,9 @@
             <geo:serialNumber>401-01537</geo:serialNumber>
             <geo:firmwareVersion>3.4</geo:firmwareVersion>
             <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
-            <geo:dateInstalled>21 Dec 2009 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>08 Jun 2011 14:59 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2009-12-21T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2011-06-08T14:59:00Z</geo:dateRemoved>
             <geo:notes>Serial number corrected</geo:notes>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>AOA SNR-12 ACT</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>2044</geo:serialNumber>
-            <geo:firmwareVersion>3.2.32.2N</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>10</geo:elevationCutoffSetting>
-            <geo:dateInstalled>09 Aug 2006 13:30 GMT</geo:dateInstalled>
-            <geo:dateRemoved>20 Dec 2009 23:59 GMT</geo:dateRemoved>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
@@ -100,8 +95,18 @@
             <geo:serialNumber>401-01537</geo:serialNumber>
             <geo:firmwareVersion>3.5p1</geo:firmwareVersion>
             <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
-            <geo:dateInstalled>15 Sep 2011 14:45 GMT</geo:dateInstalled>
-            <geo:dateRemoved>08 Mar 2012 18:18 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2011-09-15T14:45:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2012-03-08T18:18:00Z</geo:dateRemoved>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>TPS NETG3</geo:receiverType>
+            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
+            <geo:serialNumber>401-01949</geo:serialNumber>
+            <geo:firmwareVersion>3.5p1</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2012-03-08T18:18:00Z</geo:dateInstalled>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssAntennas>
@@ -116,41 +121,8 @@
             <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
             <geo:antennaCableType>ANDREW-HELIAX LDF4-50A</geo:antennaCableType>
             <geo:antennaCableLength>160.00</geo:antennaCableLength>
-            <geo:dateInstalled>31 Jul 2006 14:40 GMT</geo:dateInstalled>
-            <geo:dateRemoved>20 Dec 2009 23:59 GMT</geo:dateRemoved>
-         </geo:gnssAntenna>
-      </geo:gnssAntennas>
-      <geo:gnssAntennas>
-         <geo:gnssAntenna>
-            <geo:antennaType>AOAD/M_T        NONE</geo:antennaType>
-            <geo:serialNumber>469</geo:serialNumber>
-            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
-            <geo:marker-arpUpEcc.>0.1</geo:marker-arpUpEcc.>
-            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
-            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
-            <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
-            <geo:antennaCableType>ANDREW-HELIAX LDF4-50A</geo:antennaCableType>
-            <geo:antennaCableLength>160.00</geo:antennaCableLength>
-            <geo:dateInstalled>09 Jul 2004 16:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>31 Jul 2006 14:40 GMT</geo:dateRemoved>
-            <geo:notes>Site had been down for about a week prior to this antenna swap. Suspect a lightning strike on the old antenna.</geo:notes>
-         </geo:gnssAntenna>
-      </geo:gnssAntennas>
-      <geo:gnssAntennas>
-         <geo:gnssAntenna>
-            <geo:antennaType>AOAD/M_T        NONE</geo:antennaType>
-            <geo:serialNumber>387U</geo:serialNumber>
-            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
-            <geo:marker-arpUpEcc.>0.1</geo:marker-arpUpEcc.>
-            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
-            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
-            <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
-            <geo:antennaCableType>ANDREW-HELIAX LDF4-50A</geo:antennaCableType>
-            <geo:antennaCableLength>160.00</geo:antennaCableLength>
-            <geo:dateInstalled>01 Jul 2003 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>09 Jul 2004 16:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2006-07-31T14:40:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2009-12-20T23:59:00Z</geo:dateRemoved>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
       <geo:gnssAntennas>
@@ -165,27 +137,48 @@
             <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
             <geo:antennaCableType>ANDREW-HELIAX LDF4-50A</geo:antennaCableType>
             <geo:antennaCableLength>160.00</geo:antennaCableLength>
-            <geo:dateInstalled>21 Dec 2009 00:00 GMT</geo:dateInstalled>
+            <geo:dateInstalled>2009-12-21T00:00:00Z</geo:dateInstalled>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
-      <geo:frequencyStandards>
-         <geo:frequencyStandard>
-            <geo:standardType>RUBIDIUM</geo:standardType>
-            <geo:inputFrequency>5 MHZ</geo:inputFrequency>
-            <gml:validTime>
-               <gml:TimePeriod>
-                  <gml:beginPosition>2003-07-01T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2005-12-06T00:00Z</gml:endPosition>
-               </gml:TimePeriod>
-            </gml:validTime>
-         </geo:frequencyStandard>
-      </geo:frequencyStandards>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna>
+            <geo:antennaType>AOAD/M_T        NONE</geo:antennaType>
+            <geo:serialNumber>387U</geo:serialNumber>
+            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>0.1</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
+            <geo:antennaCableType>ANDREW-HELIAX LDF4-50A</geo:antennaCableType>
+            <geo:antennaCableLength>160.00</geo:antennaCableLength>
+            <geo:dateInstalled>2003-07-01T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2004-07-09T16:00:00Z</geo:dateRemoved>
+         </geo:gnssAntenna>
+      </geo:gnssAntennas>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna>
+            <geo:antennaType>AOAD/M_T        NONE</geo:antennaType>
+            <geo:serialNumber>469</geo:serialNumber>
+            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>0.1</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
+            <geo:antennaCableType>ANDREW-HELIAX LDF4-50A</geo:antennaCableType>
+            <geo:antennaCableLength>160.00</geo:antennaCableLength>
+            <geo:dateInstalled>2004-07-09T16:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2006-07-31T14:40:00Z</geo:dateRemoved>
+            <geo:notes>Site had been down for about a week prior to this antenna swap. Suspect a lightning strike on the old antenna.</geo:notes>
+         </geo:gnssAntenna>
+      </geo:gnssAntennas>
       <geo:frequencyStandards>
          <geo:frequencyStandard>
             <geo:standardType>INTERNAL</geo:standardType>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2009-11-29T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2009-11-29T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
@@ -197,8 +190,20 @@
             <geo:inputFrequency>5 MHZ</geo:inputFrequency>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2005-12-06T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2009-11-29T00:00Z</gml:endPosition>
+                  <gml:beginPosition>2003-07-01T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2005-12-06T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+         </geo:frequencyStandard>
+      </geo:frequencyStandards>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard>
+            <geo:standardType>RUBIDIUM</geo:standardType>
+            <geo:inputFrequency>5 MHZ</geo:inputFrequency>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2005-12-06T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2009-11-29T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
          </geo:frequencyStandard>
@@ -209,11 +214,11 @@
             <geo:manufacturer>VAISALA</geo:manufacturer>
             <geo:serialNumber>XXX</geo:serialNumber>
             <geo:heightDiffToAntenna>-19.43</geo:heightDiffToAntenna>
-            <geo:calibrationDate>15 Jun 2003 14:00 GMT</geo:calibrationDate>
+            <geo:calibrationDate>2003-06-15T14:00:00Z</geo:calibrationDate>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2003-07-01T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2009-12-21T00:00Z</gml:endPosition>
+                  <gml:beginPosition>2003-07-01T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2009-12-21T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
             <geo:dataSamplingInterval>900</geo:dataSamplingInterval>
@@ -228,11 +233,11 @@
             <geo:manufacturer>VAISALA</geo:manufacturer>
             <geo:serialNumber>XXX</geo:serialNumber>
             <geo:heightDiffToAntenna>2.13</geo:heightDiffToAntenna>
-            <geo:calibrationDate>27 Jan 2003 13:00 GMT</geo:calibrationDate>
+            <geo:calibrationDate>2003-01-27T13:00:00Z</geo:calibrationDate>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2003-07-01T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2009-12-21T00:00Z</gml:endPosition>
+                  <gml:beginPosition>2003-07-01T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2009-12-21T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
             <geo:dataSamplingInterval>900</geo:dataSamplingInterval>
@@ -246,11 +251,11 @@
             <geo:manufacturer>VSI</geo:manufacturer>
             <geo:serialNumber>XXX</geo:serialNumber>
             <geo:heightDiffToAntenna>-19.43</geo:heightDiffToAntenna>
-            <geo:calibrationDate>15 Jun 2003 14:00 GMT</geo:calibrationDate>
+            <geo:calibrationDate>2003-06-15T14:00:00Z</geo:calibrationDate>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2003-07-01T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2009-12-21T00:00Z</gml:endPosition>
+                  <gml:beginPosition>2003-07-01T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2009-12-21T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
             <geo:dataSamplingInterval>900</geo:dataSamplingInterval>

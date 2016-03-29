@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-   <geo:siteLog>
+<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_360">
+   <geo:siteLog gml:id="SiteLogType_360">
+      <geo:formInformation>
+         <geo:preparedBy>Robert Khachikyan</geo:preparedBy>
+         <geo:datePrepared>2013-08-08T14:00:00Z</geo:datePrepared>
+         <geo:reportType>UPDATE</geo:reportType>
+      </geo:formInformation>
       <geo:siteIdentification>
          <geo:siteName>McDonald Observatory Site</geo:siteName>
          <geo:fourCharacterID>MDO1</geo:fourCharacterID>
@@ -10,7 +15,7 @@
          <geo:monumentDescription>CONCRETE PILLAR</geo:monumentDescription>
          <geo:heightOfTheMonument>0.5</geo:heightOfTheMonument>
          <geo:markerDescription>STAINLESS STEEL PLATE</geo:markerDescription>
-         <geo:dateInstalled>02 Jun 1993 14:00 GMT</geo:dateInstalled>
+         <geo:dateInstalled>1993-06-02T14:00:00Z</geo:dateInstalled>
          <geo:notes>(multiple lines) 0.457m diameter stainless steel plate set flush in center of a 0.762m diameter concrete monolith that projects 0.5m above ground.</geo:notes>
       </geo:siteIdentification>
       <geo:siteLocation>
@@ -30,49 +35,11 @@
             <geo:receiverType>ROGUE SNR-8000</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
             <geo:serialNumber>T338</geo:serialNumber>
-            <geo:firmwareVersion>3.2.32.8</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>4</geo:elevationCutoffSetting>
-            <geo:dateInstalled>17 May 1999 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>21 Aug 2002 23:30 GMT</geo:dateRemoved>
-            <geo:temperatureStabilization>none</geo:temperatureStabilization>
-            <geo:notes>firmware update</geo:notes>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>ROGUE SNR-8000</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>T338</geo:serialNumber>
             <geo:firmwareVersion>3.0 10/10/1994 17</geo:firmwareVersion>
             <geo:elevationCutoffSetting>4</geo:elevationCutoffSetting>
-            <geo:dateInstalled>23 Nov 1994 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>17 May 1999 00:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>1994-11-23T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1999-05-17T00:00:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>none</geo:temperatureStabilization>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>ROGUE SNR-8000</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>T338</geo:serialNumber>
-            <geo:firmwareVersion>3.2.32.11</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>4</geo:elevationCutoffSetting>
-            <geo:dateInstalled>21 Aug 2002 23:30 GMT</geo:dateInstalled>
-            <geo:dateRemoved>28 Aug 2002 00:00 GMT</geo:dateRemoved>
-            <geo:temperatureStabilization>none</geo:temperatureStabilization>
-            <geo:notes>firmware update</geo:notes>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>ASHTECH UZ-12</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>UC1200340013</geo:serialNumber>
-            <geo:firmwareVersion>CQ00</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>4</geo:elevationCutoffSetting>
-            <geo:dateInstalled>09 Feb 2007 00:00 GMT</geo:dateInstalled>
-            <geo:temperatureStabilization>none</geo:temperatureStabilization>
-            <geo:notes>AOAD/M_T antenna powered through GPS signal splitter.</geo:notes>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
@@ -82,10 +49,23 @@
             <geo:serialNumber>T331</geo:serialNumber>
             <geo:firmwareVersion>3.2.32.11</geo:firmwareVersion>
             <geo:elevationCutoffSetting>4</geo:elevationCutoffSetting>
-            <geo:dateInstalled>07 Dec 2004 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>07 Feb 2007 21:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2004-12-07T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2007-02-07T21:00:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>none</geo:temperatureStabilization>
             <geo:notes>replace faulty receiver</geo:notes>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>ROGUE SNR-8000</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>T338</geo:serialNumber>
+            <geo:firmwareVersion>3.2.32.8</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>4</geo:elevationCutoffSetting>
+            <geo:dateInstalled>1999-05-17T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2002-08-21T23:30:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>none</geo:temperatureStabilization>
+            <geo:notes>firmware update</geo:notes>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
@@ -95,10 +75,23 @@
             <geo:serialNumber>T390</geo:serialNumber>
             <geo:firmwareVersion>3.2.32.11</geo:firmwareVersion>
             <geo:elevationCutoffSetting>4</geo:elevationCutoffSetting>
-            <geo:dateInstalled>28 Aug 2002 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>06 Dec 2004 21:40 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2002-08-28T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2004-12-06T21:40:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>none</geo:temperatureStabilization>
             <geo:notes>replace faulty receiver</geo:notes>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>ROGUE SNR-8000</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>T338</geo:serialNumber>
+            <geo:firmwareVersion>3.2.32.11</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>4</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2002-08-21T23:30:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2002-08-28T00:00:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>none</geo:temperatureStabilization>
+            <geo:notes>firmware update</geo:notes>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
@@ -108,9 +101,21 @@
             <geo:serialNumber>unknown</geo:serialNumber>
             <geo:firmwareVersion>2.6 1/8/1993</geo:firmwareVersion>
             <geo:elevationCutoffSetting>4</geo:elevationCutoffSetting>
-            <geo:dateInstalled>03 Jun 1993 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>30 Jun 1993 00:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>1993-06-03T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1993-06-30T00:00:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>none</geo:temperatureStabilization>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>ASHTECH UZ-12</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>UC1200340013</geo:serialNumber>
+            <geo:firmwareVersion>CQ00</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>4</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2007-02-09T00:00:00Z</geo:dateInstalled>
+            <geo:temperatureStabilization>none</geo:temperatureStabilization>
+            <geo:notes>AOAD/M_T antenna powered through GPS signal splitter.</geo:notes>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
@@ -120,8 +125,8 @@
             <geo:serialNumber>unknown</geo:serialNumber>
             <geo:firmwareVersion>2.8 6/8/1993</geo:firmwareVersion>
             <geo:elevationCutoffSetting>4</geo:elevationCutoffSetting>
-            <geo:dateInstalled>30 Jun 1993 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>23 Nov 1994 00:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>1993-06-30T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1994-11-23T00:00:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>none</geo:temperatureStabilization>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
@@ -135,21 +140,8 @@
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
             <geo:antennaRadomeType>JPLA</geo:antennaRadomeType>
-            <geo:dateInstalled>09 Aug 2013 00:41 GMT</geo:dateInstalled>
-         </geo:gnssAntenna>
-      </geo:gnssAntennas>
-      <geo:gnssAntennas>
-         <geo:gnssAntenna>
-            <geo:antennaType>AOAD/M_T        JPLA</geo:antennaType>
-            <geo:serialNumber>130</geo:serialNumber>
-            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
-            <geo:marker-arpUpEcc.>0.061</geo:marker-arpUpEcc.>
-            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
-            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
-            <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>JPLA</geo:antennaRadomeType>
-            <geo:dateInstalled>05 Mar 1993 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>22 Feb 2013 22:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>1993-03-05T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2013-02-22T22:00:00Z</geo:dateRemoved>
             <geo:notes>clear acrylic &quot;JPLA&quot; dome info added 2002-08-22 note that this is a correction, not a new radome installation</geo:notes>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
@@ -163,10 +155,37 @@
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
             <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
-            <geo:dateInstalled>22 Feb 2013 22:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>09 Aug 2013 00:41 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2013-02-22T22:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2013-08-09T00:41:00Z</geo:dateRemoved>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna>
+            <geo:antennaType>AOAD/M_T        JPLA</geo:antennaType>
+            <geo:serialNumber>130</geo:serialNumber>
+            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>0.061</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
+            <geo:antennaRadomeType>JPLA</geo:antennaRadomeType>
+            <geo:dateInstalled>2013-08-09T00:41:00Z</geo:dateInstalled>
+         </geo:gnssAntenna>
+      </geo:gnssAntennas>
+      <geo:surveyedLocalTies>
+         <geo:surveyedLocalTies>
+            <geo:tiedMarkerName>7850-1988</geo:tiedMarkerName>
+            <geo:tiedMarkerUsage>SLR and Mobile VLBI</geo:tiedMarkerUsage>
+            <geo:tiedMarkerCDPNumber>7850</geo:tiedMarkerCDPNumber>
+            <geo:tiedMarkerDOMESNumber>40442M008</geo:tiedMarkerDOMESNumber>
+            <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+               <geo:dx>-9.5212</geo:dx>
+               <geo:dy>1.7953</geo:dy>
+               <geo:dz>-1.4841</geo:dz>
+            </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+            <geo:dateMeasured>1993-03-16T14:00:00Z</geo:dateMeasured>
+         </geo:surveyedLocalTies>
+      </geo:surveyedLocalTies>
       <geo:surveyedLocalTies>
          <geo:surveyedLocalTies>
             <geo:tiedMarkerName>7851-1988</geo:tiedMarkerName>
@@ -178,7 +197,7 @@
                <geo:dy>2.4155</geo:dy>
                <geo:dz>-0.973</geo:dz>
             </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
-            <geo:dateMeasured>16 Mar 1993 14:00 GMT</geo:dateMeasured>
+            <geo:dateMeasured>1993-03-16T14:00:00Z</geo:dateMeasured>
          </geo:surveyedLocalTies>
       </geo:surveyedLocalTies>
       <geo:surveyedLocalTies>
@@ -192,43 +211,17 @@
                <geo:dy>-8.4807</geo:dy>
                <geo:dz>-23.4064</geo:dz>
             </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
-            <geo:dateMeasured>16 Mar 1993 14:00 GMT</geo:dateMeasured>
+            <geo:dateMeasured>1993-03-16T14:00:00Z</geo:dateMeasured>
          </geo:surveyedLocalTies>
       </geo:surveyedLocalTies>
-      <geo:surveyedLocalTies>
-         <geo:surveyedLocalTies>
-            <geo:tiedMarkerName>7850-1988</geo:tiedMarkerName>
-            <geo:tiedMarkerUsage>SLR and Mobile VLBI</geo:tiedMarkerUsage>
-            <geo:tiedMarkerCDPNumber>7850</geo:tiedMarkerCDPNumber>
-            <geo:tiedMarkerDOMESNumber>40442M008</geo:tiedMarkerDOMESNumber>
-            <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
-               <geo:dx>-9.5212</geo:dx>
-               <geo:dy>1.7953</geo:dy>
-               <geo:dz>-1.4841</geo:dz>
-            </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
-            <geo:dateMeasured>16 Mar 1993 14:00 GMT</geo:dateMeasured>
-         </geo:surveyedLocalTies>
-      </geo:surveyedLocalTies>
-      <geo:frequencyStandards>
-         <geo:frequencyStandard>
-            <geo:standardType>EXTERNAL CESIUM</geo:standardType>
-            <geo:inputFrequency>5 MHz</geo:inputFrequency>
-            <gml:validTime>
-               <gml:TimePeriod>
-                  <gml:beginPosition>1993-06-03T00:00Z</gml:beginPosition>
-                  <gml:endPosition>1997-08-26T00:00Z</gml:endPosition>
-               </gml:TimePeriod>
-            </gml:validTime>
-         </geo:frequencyStandard>
-      </geo:frequencyStandards>
       <geo:frequencyStandards>
          <geo:frequencyStandard>
             <geo:standardType>EXTERNAL XTAL VCO</geo:standardType>
             <geo:inputFrequency>5 MHz</geo:inputFrequency>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2002-08-28T00:00Z</gml:beginPosition>
-                  <gml:endPosition></gml:endPosition>
+                  <gml:beginPosition>1997-08-26T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2002-08-21T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
             <geo:notes>Austron, &lt;1us/day typ.</geo:notes>
@@ -236,12 +229,24 @@
       </geo:frequencyStandards>
       <geo:frequencyStandards>
          <geo:frequencyStandard>
+            <geo:standardType>EXTERNAL CESIUM</geo:standardType>
+            <geo:inputFrequency>5 MHz</geo:inputFrequency>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>1993-06-03T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>1997-08-26T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+         </geo:frequencyStandard>
+      </geo:frequencyStandards>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard>
             <geo:standardType>EXTERNAL XTAL VCO</geo:standardType>
             <geo:inputFrequency>5 MHz</geo:inputFrequency>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>1997-08-26T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2002-08-21T00:00Z</gml:endPosition>
+                  <gml:beginPosition>2002-08-28T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
             <geo:notes>Austron, &lt;1us/day typ.</geo:notes>
@@ -253,8 +258,8 @@
             <geo:inputFrequency>5 MHz</geo:inputFrequency>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2002-08-21T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2002-08-28T00:00Z</gml:endPosition>
+                  <gml:beginPosition>2002-08-21T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2002-08-28T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
             <geo:notes>steering off, exceeded VCO pulling range, receiver needs repair/replacement</geo:notes>

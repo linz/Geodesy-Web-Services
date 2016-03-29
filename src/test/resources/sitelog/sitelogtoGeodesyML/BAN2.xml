@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-   <geo:siteLog>
+<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_47">
+   <geo:siteLog gml:id="SiteLogType_47">
+      <geo:formInformation>
+         <geo:preparedBy>Renate Romstedt</geo:preparedBy>
+         <geo:datePrepared>2008-03-03T13:00:00Z</geo:datePrepared>
+         <geo:reportType>UPDATE</geo:reportType>
+      </geo:formInformation>
       <geo:siteIdentification>
          <geo:siteName>Bangalore</geo:siteName>
          <geo:fourCharacterID>BAN2</geo:fourCharacterID>
@@ -9,7 +14,7 @@
          <geo:cdpNumber>NONE</geo:cdpNumber>
          <geo:monumentDescription>Pillar</geo:monumentDescription>
          <geo:monumentFoundation>ROOF</geo:monumentFoundation>
-         <geo:dateInstalled>12 Mar 2000 13:00 GMT</geo:dateInstalled>
+         <geo:dateInstalled>2000-03-12T13:00:00Z</geo:dateInstalled>
       </geo:siteIdentification>
       <geo:siteLocation>
          <geo:city>Bangalore</geo:city>
@@ -28,7 +33,7 @@
             <geo:serialNumber>1131</geo:serialNumber>
             <geo:firmwareVersion>3.3.32.2N</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0.5</geo:elevationCutoffSetting>
-            <geo:dateInstalled>13 Mar 2000 07:00 GMT</geo:dateInstalled>
+            <geo:dateInstalled>2000-03-13T07:00:00Z</geo:dateInstalled>
             <geo:temperatureStabilization>NONE</geo:temperatureStabilization>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
@@ -42,8 +47,8 @@
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
             <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
-            <geo:dateInstalled>13 Mar 2000 07:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>04 Mar 2008 09:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2000-03-13T07:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2008-03-04T09:00:00Z</geo:dateRemoved>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
       <geo:gnssAntennas>
@@ -56,7 +61,7 @@
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
             <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
-            <geo:dateInstalled>04 Mar 2008 09:00 GMT</geo:dateInstalled>
+            <geo:dateInstalled>2008-03-04T09:00:00Z</geo:dateInstalled>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
       <geo:frequencyStandards>
@@ -77,8 +82,8 @@
             <geo:manufacturer>VAISALA</geo:manufacturer>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2000-03-13T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2004-10-29T00:00Z</gml:endPosition>
+                  <gml:beginPosition>2000-03-13T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2004-10-29T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
             <geo:dataSamplingInterval>600</geo:dataSamplingInterval>
@@ -92,10 +97,10 @@
             <geo:manufacturer>VAISALA</geo:manufacturer>
             <geo:serialNumber>X3710007</geo:serialNumber>
             <geo:heightDiffToAntenna>0</geo:heightDiffToAntenna>
-            <geo:calibrationDate>10 Sep 2002 14:00 GMT</geo:calibrationDate>
+            <geo:calibrationDate>2002-09-10T14:00:00Z</geo:calibrationDate>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2004-10-29T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2004-10-29T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
@@ -107,28 +112,14 @@
       </geo:humiditySensors>
       <geo:pressureSensors>
          <geo:pressureSensor>
-            <geo:type>PTB100-B</geo:type>
-            <geo:manufacturer>VAISALA</geo:manufacturer>
-            <gml:validTime>
-               <gml:TimePeriod>
-                  <gml:beginPosition>2000-03-13T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2004-10-29T00:00Z</gml:endPosition>
-               </gml:TimePeriod>
-            </gml:validTime>
-            <geo:dataSamplingInterval>600</geo:dataSamplingInterval>
-            <geo:accuracy-hPa>0.5</geo:accuracy-hPa>
-         </geo:pressureSensor>
-      </geo:pressureSensors>
-      <geo:pressureSensors>
-         <geo:pressureSensor>
             <geo:type>PTU200</geo:type>
             <geo:manufacturer>VAISALA</geo:manufacturer>
             <geo:serialNumber>X3710007</geo:serialNumber>
             <geo:heightDiffToAntenna>-2.5</geo:heightDiffToAntenna>
-            <geo:calibrationDate>10 Sep 2002 14:00 GMT</geo:calibrationDate>
+            <geo:calibrationDate>2002-09-10T14:00:00Z</geo:calibrationDate>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2004-10-29T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2004-10-29T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
@@ -137,16 +128,45 @@
             <geo:notes>The pressure sensor is part of a Vaisala</geo:notes>
          </geo:pressureSensor>
       </geo:pressureSensors>
+      <geo:pressureSensors>
+         <geo:pressureSensor>
+            <geo:type>PTB100-B</geo:type>
+            <geo:manufacturer>VAISALA</geo:manufacturer>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2000-03-13T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2004-10-29T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+            <geo:dataSamplingInterval>600</geo:dataSamplingInterval>
+            <geo:accuracy-hPa>0.5</geo:accuracy-hPa>
+         </geo:pressureSensor>
+      </geo:pressureSensors>
+      <geo:temperatureSensors>
+         <geo:temperatureSensor>
+            <geo:type>PT100</geo:type>
+            <geo:manufacturer>TimeTech GmbH</geo:manufacturer>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2000-03-13T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2004-10-29T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+            <geo:dataSamplingInterval>600</geo:dataSamplingInterval>
+            <geo:accuracy-degreesCelcius>0.25</geo:accuracy-degreesCelcius>
+            <geo:aspiration>NATURAL</geo:aspiration>
+         </geo:temperatureSensor>
+      </geo:temperatureSensors>
       <geo:temperatureSensors>
          <geo:temperatureSensor>
             <geo:type>HMP45A-P</geo:type>
             <geo:manufacturer>VAISALA</geo:manufacturer>
             <geo:serialNumber>X3710007</geo:serialNumber>
             <geo:heightDiffToAntenna>0</geo:heightDiffToAntenna>
-            <geo:calibrationDate>10 Sep 2002 14:00 GMT</geo:calibrationDate>
+            <geo:calibrationDate>2002-09-10T14:00:00Z</geo:calibrationDate>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2004-10-29T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2004-10-29T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
@@ -154,21 +174,6 @@
             <geo:accuracy-degreesCelcius>0.1</geo:accuracy-degreesCelcius>
             <geo:aspiration>NATURAL</geo:aspiration>
             <geo:notes>The temperatur sensor is part of a Vaisala</geo:notes>
-         </geo:temperatureSensor>
-      </geo:temperatureSensors>
-      <geo:temperatureSensors>
-         <geo:temperatureSensor>
-            <geo:type>PT100</geo:type>
-            <geo:manufacturer>TimeTech GmbH</geo:manufacturer>
-            <gml:validTime>
-               <gml:TimePeriod>
-                  <gml:beginPosition>2000-03-13T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2004-10-29T00:00Z</gml:endPosition>
-               </gml:TimePeriod>
-            </gml:validTime>
-            <geo:dataSamplingInterval>600</geo:dataSamplingInterval>
-            <geo:accuracy-degreesCelcius>0.25</geo:accuracy-degreesCelcius>
-            <geo:aspiration>NATURAL</geo:aspiration>
          </geo:temperatureSensor>
       </geo:temperatureSensors>
       <geo:waterVaporSensors>

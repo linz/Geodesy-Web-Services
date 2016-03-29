@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-   <geo:siteLog>
+<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_351">
+   <geo:siteLog gml:id="SiteLogType_351">
+      <geo:formInformation>
+         <geo:preparedBy>Giuseppe Colucci</geo:preparedBy>
+         <geo:datePrepared>2009-06-02T14:00:00Z</geo:datePrepared>
+         <geo:reportType>UPDATE</geo:reportType>
+      </geo:formInformation>
       <geo:siteIdentification>
          <geo:siteName>Matera</geo:siteName>
          <geo:fourCharacterID>MAT1</geo:fourCharacterID>
@@ -9,7 +14,7 @@
          <geo:heightOfTheMonument>0.30</geo:heightOfTheMonument>
          <geo:monumentFoundation>CONCRETE BLOCK</geo:monumentFoundation>
          <geo:markerDescription>STAINLESS STEEL ROOL</geo:markerDescription>
-         <geo:dateInstalled>07 May 2001 14:00 GMT</geo:dateInstalled>
+         <geo:dateInstalled>2001-05-07T14:00:00Z</geo:dateInstalled>
          <geo:geologicCharacteristic>BEDROCK</geo:geologicCharacteristic>
          <geo:bedrockType>SEDIMENTARY</geo:bedrockType>
          <geo:bedrockCondition>JOINTED</geo:bedrockCondition>
@@ -32,8 +37,8 @@
             <geo:serialNumber>10403</geo:serialNumber>
             <geo:firmwareVersion>0065</geo:firmwareVersion>
             <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
-            <geo:dateInstalled>08 May 2001 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>12 Sep 2005 00:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2001-05-08T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2005-09-12T00:00:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>none</geo:temperatureStabilization>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
@@ -44,8 +49,8 @@
             <geo:serialNumber>12129</geo:serialNumber>
             <geo:firmwareVersion>0065</geo:firmwareVersion>
             <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
-            <geo:dateInstalled>12 Sep 2005 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>03 Jun 2009 00:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2005-09-12T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2009-06-03T00:00:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>none</geo:temperatureStabilization>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
@@ -56,26 +61,10 @@
             <geo:serialNumber>21438</geo:serialNumber>
             <geo:firmwareVersion>Nav 7.29 Sig 3.07</geo:firmwareVersion>
             <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
-            <geo:dateInstalled>03 Jun 2009 00:00 GMT</geo:dateInstalled>
+            <geo:dateInstalled>2009-06-03T00:00:00Z</geo:dateInstalled>
             <geo:temperatureStabilization>20B0C +-5B0C</geo:temperatureStabilization>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
-      <geo:gnssAntennas>
-         <geo:gnssAntenna>
-            <geo:antennaType>ASH701941.B     NONE</geo:antennaType>
-            <geo:serialNumber>10403</geo:serialNumber>
-            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
-            <geo:marker-arpUpEcc.>0.0</geo:marker-arpUpEcc.>
-            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
-            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
-            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
-            <geo:radomeSerialNumber>none</geo:radomeSerialNumber>
-            <geo:antennaCableType>Belden 8214Braid RG8 Type</geo:antennaCableType>
-            <geo:antennaCableLength>30</geo:antennaCableLength>
-            <geo:dateInstalled>08 May 2001 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>03 Jun 2009 00:00 GMT</geo:dateRemoved>
-         </geo:gnssAntenna>
-      </geo:gnssAntennas>
       <geo:gnssAntennas>
          <geo:gnssAntenna>
             <geo:antennaType>TRM29659.00     NONE</geo:antennaType>
@@ -88,8 +77,24 @@
             <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
             <geo:antennaCableType>Belden 8214Braid RG8 Type</geo:antennaCableType>
             <geo:antennaCableLength>30</geo:antennaCableLength>
-            <geo:dateInstalled>03 Jun 2009 00:00 GMT</geo:dateInstalled>
+            <geo:dateInstalled>2009-06-03T00:00:00Z</geo:dateInstalled>
             <geo:notes>TRIMBLE L1/L2 DORNE MARGOLIN ELEMENT</geo:notes>
+         </geo:gnssAntenna>
+      </geo:gnssAntennas>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna>
+            <geo:antennaType>ASH701941.B     NONE</geo:antennaType>
+            <geo:serialNumber>10403</geo:serialNumber>
+            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>0.0</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
+            <geo:radomeSerialNumber>none</geo:radomeSerialNumber>
+            <geo:antennaCableType>Belden 8214Braid RG8 Type</geo:antennaCableType>
+            <geo:antennaCableLength>30</geo:antennaCableLength>
+            <geo:dateInstalled>2001-05-08T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2009-06-03T00:00:00Z</geo:dateRemoved>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
       <geo:surveyedLocalTies>
@@ -104,19 +109,20 @@
             </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
             <geo:localSiteTiesAccuracy>2 mm</geo:localSiteTiesAccuracy>
             <geo:surveyMethod>GPS CAMPAIGN</geo:surveyMethod>
-            <geo:dateMeasured>07 May 2001 14:00 GMT</geo:dateMeasured>
+            <geo:dateMeasured>2001-05-07T14:00:00Z</geo:dateMeasured>
          </geo:surveyedLocalTies>
       </geo:surveyedLocalTies>
       <geo:frequencyStandards>
          <geo:frequencyStandard>
-            <geo:standardType>H-MASER</geo:standardType>
-            <geo:inputFrequency>5 MHz</geo:inputFrequency>
+            <geo:standardType>INTERNAL</geo:standardType>
+            <geo:inputFrequency>Input Frequency        :</geo:inputFrequency>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2001-05-08T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2006-04-10T00:00Z</gml:endPosition>
+                  <gml:beginPosition>2010-09-16T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2010-09-24T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
+            <geo:notes>Notes                  :</geo:notes>
          </geo:frequencyStandard>
       </geo:frequencyStandards>
       <geo:frequencyStandards>
@@ -125,7 +131,7 @@
             <geo:inputFrequency>5 MHz</geo:inputFrequency>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2010-09-24T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2010-09-24T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
@@ -138,8 +144,8 @@
             <geo:inputFrequency>5 MHz</geo:inputFrequency>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2006-05-02T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2010-09-16T00:00Z</gml:endPosition>
+                  <gml:beginPosition>2006-05-02T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2010-09-16T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
             <geo:notes>Notes                  :</geo:notes>
@@ -147,15 +153,14 @@
       </geo:frequencyStandards>
       <geo:frequencyStandards>
          <geo:frequencyStandard>
-            <geo:standardType>INTERNAL</geo:standardType>
-            <geo:inputFrequency>Input Frequency        :</geo:inputFrequency>
+            <geo:standardType>H-MASER</geo:standardType>
+            <geo:inputFrequency>5 MHz</geo:inputFrequency>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2010-09-16T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2010-09-24T00:00Z</gml:endPosition>
+                  <gml:beginPosition>2001-05-08T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2006-04-10T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
-            <geo:notes>Notes                  :</geo:notes>
          </geo:frequencyStandard>
       </geo:frequencyStandards>
       <geo:frequencyStandards>
@@ -164,8 +169,8 @@
             <geo:inputFrequency>5 MHz</geo:inputFrequency>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2006-04-10T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2006-05-02T00:00Z</gml:endPosition>
+                  <gml:beginPosition>2006-04-10T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2006-05-02T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
             <geo:notes>Notes                  :</geo:notes>
@@ -188,12 +193,27 @@
       </geo:collocationInformations>
       <geo:humiditySensors>
          <geo:humiditySensor>
+            <geo:type>UM 5516</geo:type>
+            <geo:manufacturer>SIAP</geo:manufacturer>
+            <geo:heightDiffToAntenna>-1.0 M</geo:heightDiffToAntenna>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2002-01-14T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2002-07-17T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+            <geo:dataSamplingInterval>60</geo:dataSamplingInterval>
+            <geo:notes>Uncalibrated sensor, please see note on</geo:notes>
+         </geo:humiditySensor>
+      </geo:humiditySensors>
+      <geo:humiditySensors>
+         <geo:humiditySensor>
             <geo:type>HMD70Y</geo:type>
             <geo:manufacturer>VAISALA</geo:manufacturer>
             <geo:heightDiffToAntenna>-1.0</geo:heightDiffToAntenna>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2002-07-18T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2002-07-18T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
@@ -203,28 +223,13 @@
       </geo:humiditySensors>
       <geo:humiditySensors>
          <geo:humiditySensor>
-            <geo:type>UM 5516</geo:type>
-            <geo:manufacturer>SIAP</geo:manufacturer>
-            <geo:heightDiffToAntenna>-1.0 M</geo:heightDiffToAntenna>
-            <gml:validTime>
-               <gml:TimePeriod>
-                  <gml:beginPosition>2002-01-14T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2002-07-17T00:00Z</gml:endPosition>
-               </gml:TimePeriod>
-            </gml:validTime>
-            <geo:dataSamplingInterval>60</geo:dataSamplingInterval>
-            <geo:notes>Uncalibrated sensor, please see note on</geo:notes>
-         </geo:humiditySensor>
-      </geo:humiditySensors>
-      <geo:humiditySensors>
-         <geo:humiditySensor>
             <geo:type>HMP132Y</geo:type>
             <geo:manufacturer>VAISALA</geo:manufacturer>
             <geo:heightDiffToAntenna>-1.0</geo:heightDiffToAntenna>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>1993-06-01T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2002-01-13T00:00Z</gml:endPosition>
+                  <gml:beginPosition>1993-06-01T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2002-01-13T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
             <geo:dataSamplingInterval>60</geo:dataSamplingInterval>
@@ -238,8 +243,24 @@
             <geo:heightDiffToAntenna>-1.0</geo:heightDiffToAntenna>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>1993-06-01T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2002-01-13T00:00Z</gml:endPosition>
+                  <gml:beginPosition>1993-06-01T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2002-01-13T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+            <geo:dataSamplingInterval>60</geo:dataSamplingInterval>
+            <geo:accuracy-hPa>=B1 0.25 mbar</geo:accuracy-hPa>
+         </geo:pressureSensor>
+      </geo:pressureSensors>
+      <geo:pressureSensors>
+         <geo:pressureSensor>
+            <geo:type>DPI 141</geo:type>
+            <geo:manufacturer>DRUCK</geo:manufacturer>
+            <geo:heightDiffToAntenna>0.5</geo:heightDiffToAntenna>
+            <geo:calibrationDate>2002-07-17T14:00:00Z</geo:calibrationDate>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2002-07-18T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
             <geo:dataSamplingInterval>60</geo:dataSamplingInterval>
@@ -253,8 +274,8 @@
             <geo:heightDiffToAntenna>-1.0</geo:heightDiffToAntenna>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2002-01-14T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2002-07-17T00:00Z</gml:endPosition>
+                  <gml:beginPosition>2002-01-14T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2002-07-17T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
             <geo:dataSamplingInterval>60</geo:dataSamplingInterval>
@@ -262,22 +283,21 @@
             <geo:notes>Uncalibrated sensor, please see note on</geo:notes>
          </geo:pressureSensor>
       </geo:pressureSensors>
-      <geo:pressureSensors>
-         <geo:pressureSensor>
-            <geo:type>DPI 141</geo:type>
-            <geo:manufacturer>DRUCK</geo:manufacturer>
-            <geo:heightDiffToAntenna>0.5</geo:heightDiffToAntenna>
-            <geo:calibrationDate>17 Jul 2002 14:00 GMT</geo:calibrationDate>
+      <geo:temperatureSensors>
+         <geo:temperatureSensor>
+            <geo:type>UNKNOWN</geo:type>
+            <geo:manufacturer>SIAP</geo:manufacturer>
+            <geo:heightDiffToAntenna>-1.0</geo:heightDiffToAntenna>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2002-07-18T00:00Z</gml:beginPosition>
-                  <gml:endPosition></gml:endPosition>
+                  <gml:beginPosition>2002-01-14T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2002-07-17T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
             <geo:dataSamplingInterval>60</geo:dataSamplingInterval>
-            <geo:accuracy-hPa>=B1 0.25 mbar</geo:accuracy-hPa>
-         </geo:pressureSensor>
-      </geo:pressureSensors>
+            <geo:notes>Uncalibrated sensor, please see note on</geo:notes>
+         </geo:temperatureSensor>
+      </geo:temperatureSensors>
       <geo:temperatureSensors>
          <geo:temperatureSensor>
             <geo:type>HMD70Y - PT 1000 IEC 751 class B</geo:type>
@@ -285,7 +305,7 @@
             <geo:heightDiffToAntenna>-1.0</geo:heightDiffToAntenna>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2002-07-18T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2002-07-18T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
@@ -300,27 +320,12 @@
             <geo:heightDiffToAntenna>-1.0</geo:heightDiffToAntenna>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>1993-06-01T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2002-01-13T00:00Z</gml:endPosition>
+                  <gml:beginPosition>1993-06-01T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2002-01-13T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
             <geo:dataSamplingInterval>60</geo:dataSamplingInterval>
             <geo:accuracy-degreesCelcius>=B1 0.2 =B0C</geo:accuracy-degreesCelcius>
-         </geo:temperatureSensor>
-      </geo:temperatureSensors>
-      <geo:temperatureSensors>
-         <geo:temperatureSensor>
-            <geo:type>UNKNOWN</geo:type>
-            <geo:manufacturer>SIAP</geo:manufacturer>
-            <geo:heightDiffToAntenna>-1.0</geo:heightDiffToAntenna>
-            <gml:validTime>
-               <gml:TimePeriod>
-                  <gml:beginPosition>2002-01-14T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2002-07-17T00:00Z</gml:endPosition>
-               </gml:TimePeriod>
-            </gml:validTime>
-            <geo:dataSamplingInterval>60</geo:dataSamplingInterval>
-            <geo:notes>Uncalibrated sensor, please see note on</geo:notes>
          </geo:temperatureSensor>
       </geo:temperatureSensors>
       <geo:otherInstrumentations>

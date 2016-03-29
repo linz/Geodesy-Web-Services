@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-   <geo:siteLog>
+<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_253">
+   <geo:siteLog gml:id="SiteLogType_253">
+      <geo:formInformation>
+         <geo:preparedBy>Rudi Stoeger</geo:preparedBy>
+         <geo:datePrepared>2013-10-10T13:00:00Z</geo:datePrepared>
+         <geo:reportType>UPDATE</geo:reportType>
+      </geo:formInformation>
       <geo:siteIdentification>
          <geo:siteName>Hoefn / Iceland</geo:siteName>
          <geo:fourCharacterID>HOFN</geo:fourCharacterID>
@@ -10,7 +15,7 @@
          <geo:heightOfTheMonument>4.36</geo:heightOfTheMonument>
          <geo:monumentFoundation>CONCRETE BOLTED TO BEDROCK</geo:monumentFoundation>
          <geo:markerDescription>SURVEY MARKER BOLT</geo:markerDescription>
-         <geo:dateInstalled>26 May 1997 14:00 GMT</geo:dateInstalled>
+         <geo:dateInstalled>1997-05-26T14:00:00Z</geo:dateInstalled>
          <geo:geologicCharacteristic>BEDROCK</geo:geologicCharacteristic>
          <geo:notes>The survey marker bolt is anchored on the top of the concrete chimney pillar No.1 in the Maelingarhus in Hofn. The height of the chimey pillar No.1 is 4.36 m. It is bolted to the bedrock. The antenna on the chimney pillar is 4.47 m above the ground and 1.4 m above the roof.</geo:notes>
       </geo:siteIdentification>
@@ -31,9 +36,20 @@
             <geo:serialNumber>00009374</geo:serialNumber>
             <geo:firmwareVersion>00719|00304|00333</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>11 Oct 2004 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>13 Feb 2007 08:20 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2004-10-11T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2007-02-13T08:20:00Z</geo:dateRemoved>
             <geo:notes>the serial number format has been modified on 2006-08-04T08 (the old format was 3503A09374)</geo:notes>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>TPS E_GGD</geo:receiverType>
+            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
+            <geo:serialNumber>AGL2LHV3XMO</geo:serialNumber>
+            <geo:firmwareVersion>2.6.1 JAN,10,2008</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2010-03-30T13:15:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2013-05-05T11:00:00Z</geo:dateRemoved>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
@@ -43,19 +59,8 @@
             <geo:serialNumber>1830199</geo:serialNumber>
             <geo:firmwareVersion>3.00/6.113</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>05 May 2013 12:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>09 Oct 2013 14:29 GMT</geo:dateRemoved>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>TRIMBLE 4000SSI</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>3503A09374</geo:serialNumber>
-            <geo:firmwareVersion>00729|00304|00333</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>31 Jul 1999 14:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>11 Oct 2004 00:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2013-05-05T12:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2013-10-09T14:29:00Z</geo:dateRemoved>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
@@ -65,8 +70,8 @@
             <geo:serialNumber>00024908</geo:serialNumber>
             <geo:firmwareVersion>00729|00307|00334</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>13 Feb 2007 08:20 GMT</geo:dateInstalled>
-            <geo:dateRemoved>22 Sep 2007 10:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2007-02-13T08:20:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2007-09-22T10:00:00Z</geo:dateRemoved>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
@@ -76,18 +81,8 @@
             <geo:serialNumber>AGL2LHV3XMO</geo:serialNumber>
             <geo:firmwareVersion>2.6.1 JAN,10,2008</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>30 Mar 2010 13:15 GMT</geo:dateInstalled>
-            <geo:dateRemoved>05 May 2013 11:00 GMT</geo:dateRemoved>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>LEICA GR25</geo:receiverType>
-            <geo:satelliteSystem>GPS+GLO+GAL+SBAS</geo:satelliteSystem>
-            <geo:serialNumber>1830199</geo:serialNumber>
-            <geo:firmwareVersion>3.01/6.212</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>09 Oct 2013 14:30 GMT</geo:dateInstalled>
+            <geo:dateInstalled>2008-01-17T16:15:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2010-03-26T09:54:00Z</geo:dateRemoved>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
@@ -97,19 +92,29 @@
             <geo:serialNumber>AGL2LHV3XMO</geo:serialNumber>
             <geo:firmwareVersion>2.6.0 APR,18,2007</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>23 Sep 2007 17:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>17 Jan 2008 16:14 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2007-09-23T17:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2008-01-17T16:14:00Z</geo:dateRemoved>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
          <geo:gnssReceiver>
-            <geo:receiverType>TPS E_GGD</geo:receiverType>
-            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
-            <geo:serialNumber>AGL2LHV3XMO</geo:serialNumber>
-            <geo:firmwareVersion>3.4 DEC,12,2009 P2</geo:firmwareVersion>
+            <geo:receiverType>LEICA GR25</geo:receiverType>
+            <geo:satelliteSystem>GPS+GLO+GAL+SBAS</geo:satelliteSystem>
+            <geo:serialNumber>1830199</geo:serialNumber>
+            <geo:firmwareVersion>3.01/6.212</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>26 Mar 2010 09:55 GMT</geo:dateInstalled>
-            <geo:dateRemoved>30 Mar 2010 13:14 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2013-10-09T14:30:00Z</geo:dateInstalled>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>TRIMBLE 4000SSI</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>3503A09374</geo:serialNumber>
+            <geo:firmwareVersion>00729|00304|00333</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>1999-07-31T14:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2004-10-11T00:00:00Z</geo:dateRemoved>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
@@ -119,8 +124,8 @@
             <geo:serialNumber>3503A09374</geo:serialNumber>
             <geo:firmwareVersion>7.12</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>27 May 1997 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>31 Jul 1999 14:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>1997-05-27T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1999-07-31T14:00:00Z</geo:dateRemoved>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
@@ -128,30 +133,14 @@
             <geo:receiverType>TPS E_GGD</geo:receiverType>
             <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
             <geo:serialNumber>AGL2LHV3XMO</geo:serialNumber>
-            <geo:firmwareVersion>2.6.1 JAN,10,2008</geo:firmwareVersion>
+            <geo:firmwareVersion>3.4 DEC,12,2009 P2</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>17 Jan 2008 16:15 GMT</geo:dateInstalled>
-            <geo:dateRemoved>26 Mar 2010 09:54 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2010-03-26T09:55:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2010-03-30T13:14:00Z</geo:dateRemoved>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssAntennas>
          <geo:gnssAntenna>
-            <geo:antennaType>TRM29659.00     NONE</geo:antennaType>
-            <geo:serialNumber>0220181800</geo:serialNumber>
-            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
-            <geo:marker-arpUpEcc.>0.051</geo:marker-arpUpEcc.>
-            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
-            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
-            <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
-            <geo:antennaCableType>RG214</geo:antennaCableType>
-            <geo:antennaCableLength>30</geo:antennaCableLength>
-            <geo:dateInstalled>21 Sep 2001 18:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>22 Sep 2007 10:00 GMT</geo:dateRemoved>
-         </geo:gnssAntenna>
-      </geo:gnssAntennas>
-      <geo:gnssAntennas>
-         <geo:gnssAntenna>
             <geo:antennaType>TRM22020.00+GP  DOME</geo:antennaType>
             <geo:serialNumber>0220008914</geo:serialNumber>
             <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
@@ -162,57 +151,8 @@
             <geo:antennaRadomeType>DOME</geo:antennaRadomeType>
             <geo:antennaCableType>RG214</geo:antennaCableType>
             <geo:antennaCableLength>30</geo:antennaCableLength>
-            <geo:dateInstalled>27 May 1997 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>13 Mar 2000 00:00 GMT</geo:dateRemoved>
-            <geo:notes>TRIMBLE 24490-00 Prod Ass Ext Dome</geo:notes>
-         </geo:gnssAntenna>
-      </geo:gnssAntennas>
-      <geo:gnssAntennas>
-         <geo:gnssAntenna>
-            <geo:antennaType>LEIAR25.R4      LEIT</geo:antennaType>
-            <geo:serialNumber>725283</geo:serialNumber>
-            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
-            <geo:marker-arpUpEcc.>0.0319</geo:marker-arpUpEcc.>
-            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
-            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
-            <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>LEIT</geo:antennaRadomeType>
-            <geo:antennaCableType>Ecoflex 10</geo:antennaCableType>
-            <geo:antennaCableLength>30</geo:antennaCableLength>
-            <geo:dateInstalled>05 May 2013 12:00 GMT</geo:dateInstalled>
-         </geo:gnssAntenna>
-      </geo:gnssAntennas>
-      <geo:gnssAntennas>
-         <geo:gnssAntenna>
-            <geo:antennaType>TPSCR3_GGD      CONE</geo:antennaType>
-            <geo:serialNumber>217-0218</geo:serialNumber>
-            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
-            <geo:marker-arpUpEcc.>0.0675</geo:marker-arpUpEcc.>
-            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
-            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
-            <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>CONE</geo:antennaRadomeType>
-            <geo:antennaCableType>Ecoflex 10</geo:antennaCableType>
-            <geo:antennaCableLength>30</geo:antennaCableLength>
-            <geo:dateInstalled>23 Sep 2007 17:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>05 May 2013 11:00 GMT</geo:dateRemoved>
-            <geo:notes>The serial number format has been modified on 2007-10-01T 09 The old format was 217 0218.</geo:notes>
-         </geo:gnssAntenna>
-      </geo:gnssAntennas>
-      <geo:gnssAntennas>
-         <geo:gnssAntenna>
-            <geo:antennaType>TRM22020.00+GP  DOME</geo:antennaType>
-            <geo:serialNumber>0220008914</geo:serialNumber>
-            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
-            <geo:marker-arpUpEcc.>0.055</geo:marker-arpUpEcc.>
-            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
-            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
-            <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>DOME</geo:antennaRadomeType>
-            <geo:antennaCableType>RG214</geo:antennaCableType>
-            <geo:antennaCableLength>30</geo:antennaCableLength>
-            <geo:dateInstalled>25 May 2000 13:45 GMT</geo:dateInstalled>
-            <geo:dateRemoved>21 Sep 2001 18:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>1997-05-27T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2000-03-13T00:00:00Z</geo:dateRemoved>
             <geo:notes>TRIMBLE 24490-00 Prod Ass Ext Dome</geo:notes>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
@@ -228,24 +168,90 @@
             <geo:antennaRadomeType>DOME</geo:antennaRadomeType>
             <geo:antennaCableType>RG214</geo:antennaCableType>
             <geo:antennaCableLength>30</geo:antennaCableLength>
-            <geo:dateInstalled>13 Mar 2000 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>25 May 2000 13:45 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2000-03-13T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2000-05-25T13:45:00Z</geo:dateRemoved>
             <geo:notes>TRIMBLE 24490-00 Prod Ass Ext Dome</geo:notes>
+         </geo:gnssAntenna>
+      </geo:gnssAntennas>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna>
+            <geo:antennaType>LEIAR25.R4      LEIT</geo:antennaType>
+            <geo:serialNumber>725283</geo:serialNumber>
+            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>0.0319</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
+            <geo:antennaRadomeType>LEIT</geo:antennaRadomeType>
+            <geo:antennaCableType>Ecoflex 10</geo:antennaCableType>
+            <geo:antennaCableLength>30</geo:antennaCableLength>
+            <geo:dateInstalled>2013-05-05T12:00:00Z</geo:dateInstalled>
+         </geo:gnssAntenna>
+      </geo:gnssAntennas>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna>
+            <geo:antennaType>TPSCR3_GGD      CONE</geo:antennaType>
+            <geo:serialNumber>217-0218</geo:serialNumber>
+            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>0.0675</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
+            <geo:antennaRadomeType>CONE</geo:antennaRadomeType>
+            <geo:antennaCableType>Ecoflex 10</geo:antennaCableType>
+            <geo:antennaCableLength>30</geo:antennaCableLength>
+            <geo:dateInstalled>2007-09-23T17:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2013-05-05T11:00:00Z</geo:dateRemoved>
+            <geo:notes>The serial number format has been modified on 2007-10-01T 09 The old format was 217 0218.</geo:notes>
+         </geo:gnssAntenna>
+      </geo:gnssAntennas>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna>
+            <geo:antennaType>TRM22020.00+GP  DOME</geo:antennaType>
+            <geo:serialNumber>0220008914</geo:serialNumber>
+            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>0.055</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
+            <geo:antennaRadomeType>DOME</geo:antennaRadomeType>
+            <geo:antennaCableType>RG214</geo:antennaCableType>
+            <geo:antennaCableLength>30</geo:antennaCableLength>
+            <geo:dateInstalled>2000-05-25T13:45:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2001-09-21T18:00:00Z</geo:dateRemoved>
+            <geo:notes>TRIMBLE 24490-00 Prod Ass Ext Dome</geo:notes>
+         </geo:gnssAntenna>
+      </geo:gnssAntennas>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna>
+            <geo:antennaType>TRM29659.00     NONE</geo:antennaType>
+            <geo:serialNumber>0220181800</geo:serialNumber>
+            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>0.051</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
+            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
+            <geo:antennaCableType>RG214</geo:antennaCableType>
+            <geo:antennaCableLength>30</geo:antennaCableLength>
+            <geo:dateInstalled>2001-09-21T18:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2007-09-22T10:00:00Z</geo:dateRemoved>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
       <geo:surveyedLocalTies>
          <geo:surveyedLocalTies>
-            <geo:tiedMarkerName>EUREF PILLAR</geo:tiedMarkerName>
-            <geo:tiedMarkerUsage>GPS</geo:tiedMarkerUsage>
-            <geo:tiedMarkerDOMESNumber>10204M005</geo:tiedMarkerDOMESNumber>
+            <geo:tiedMarkerName>VLBI PLATFORM</geo:tiedMarkerName>
+            <geo:tiedMarkerUsage>VLBI</geo:tiedMarkerUsage>
+            <geo:tiedMarkerCDPNumber>7635</geo:tiedMarkerCDPNumber>
+            <geo:tiedMarkerDOMESNumber>10204M001</geo:tiedMarkerDOMESNumber>
             <geo:surveyMethod>TRIANGULATION</geo:surveyMethod>
          </geo:surveyedLocalTies>
       </geo:surveyedLocalTies>
       <geo:surveyedLocalTies>
          <geo:surveyedLocalTies>
-            <geo:tiedMarkerName>CHIMNEY PILLAR NO. 2</geo:tiedMarkerName>
+            <geo:tiedMarkerName>EUREF PILLAR</geo:tiedMarkerName>
             <geo:tiedMarkerUsage>GPS</geo:tiedMarkerUsage>
-            <geo:tiedMarkerDOMESNumber>10204M003</geo:tiedMarkerDOMESNumber>
+            <geo:tiedMarkerDOMESNumber>10204M005</geo:tiedMarkerDOMESNumber>
             <geo:surveyMethod>TRIANGULATION</geo:surveyMethod>
          </geo:surveyedLocalTies>
       </geo:surveyedLocalTies>
@@ -259,10 +265,9 @@
       </geo:surveyedLocalTies>
       <geo:surveyedLocalTies>
          <geo:surveyedLocalTies>
-            <geo:tiedMarkerName>VLBI PLATFORM</geo:tiedMarkerName>
-            <geo:tiedMarkerUsage>VLBI</geo:tiedMarkerUsage>
-            <geo:tiedMarkerCDPNumber>7635</geo:tiedMarkerCDPNumber>
-            <geo:tiedMarkerDOMESNumber>10204M001</geo:tiedMarkerDOMESNumber>
+            <geo:tiedMarkerName>CHIMNEY PILLAR NO. 2</geo:tiedMarkerName>
+            <geo:tiedMarkerUsage>GPS</geo:tiedMarkerUsage>
+            <geo:tiedMarkerDOMESNumber>10204M003</geo:tiedMarkerDOMESNumber>
             <geo:surveyMethod>TRIANGULATION</geo:surveyMethod>
          </geo:surveyedLocalTies>
       </geo:surveyedLocalTies>
@@ -271,7 +276,7 @@
             <geo:standardType>INTERNAL</geo:standardType>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>1997-05-27T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>1997-05-27T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
@@ -280,7 +285,19 @@
       <geo:collocationInformations>
          <geo:collocationInformation>
             <geo:status>MOBILE</geo:status>
-            <geo:notes>EUREF PILLAR. ISLAND95 GPS Campaign</geo:notes>
+            <geo:notes>EUREF PILLAR. EUVN GPS Campaign Also a GPS Campaign 1985, dates not known yet</geo:notes>
+         </geo:collocationInformation>
+      </geo:collocationInformations>
+      <geo:collocationInformations>
+         <geo:collocationInformation>
+            <geo:status>MOBILE</geo:status>
+            <geo:notes>EUREF PILLAR. EUREFNW GPS camapign</geo:notes>
+         </geo:collocationInformation>
+      </geo:collocationInformations>
+      <geo:collocationInformations>
+         <geo:collocationInformation>
+            <geo:status>MOBILE</geo:status>
+            <geo:notes>EUREF PILLAR. ISNET93 GPS camapaign</geo:notes>
          </geo:collocationInformation>
       </geo:collocationInformations>
       <geo:collocationInformations>
@@ -292,25 +309,13 @@
       <geo:collocationInformations>
          <geo:collocationInformation>
             <geo:status>MOBILE</geo:status>
-            <geo:notes>EUREF PILLAR. EUREFNW GPS camapign</geo:notes>
+            <geo:notes>EUREF PILLAR. ISLAND95 GPS Campaign</geo:notes>
          </geo:collocationInformation>
       </geo:collocationInformations>
       <geo:collocationInformations>
          <geo:collocationInformation>
             <geo:status>PERMANENT</geo:status>
             <geo:notes>Statens Kartverk Norway</geo:notes>
-         </geo:collocationInformation>
-      </geo:collocationInformations>
-      <geo:collocationInformations>
-         <geo:collocationInformation>
-            <geo:status>MOBILE</geo:status>
-            <geo:notes>EUREF PILLAR. EUVN GPS Campaign Also a GPS Campaign 1985, dates not known yet</geo:notes>
-         </geo:collocationInformation>
-      </geo:collocationInformations>
-      <geo:collocationInformations>
-         <geo:collocationInformation>
-            <geo:status>MOBILE</geo:status>
-            <geo:notes>EUREF PILLAR. ISNET93 GPS camapaign</geo:notes>
          </geo:collocationInformation>
       </geo:collocationInformations>
       <geo:humiditySensors>
@@ -321,7 +326,7 @@
             <geo:heightDiffToAntenna>0.4</geo:heightDiffToAntenna>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2001-09-22T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2001-09-22T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
@@ -339,7 +344,7 @@
             <geo:heightDiffToAntenna>3.26</geo:heightDiffToAntenna>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2001-09-22T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2001-09-22T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
@@ -356,7 +361,7 @@
             <geo:heightDiffToAntenna>0.4</geo:heightDiffToAntenna>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2001-09-22T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2001-09-22T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>

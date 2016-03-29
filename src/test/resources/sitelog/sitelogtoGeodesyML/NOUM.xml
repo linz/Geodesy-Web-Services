@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-   <geo:siteLog>
+<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_423">
+   <geo:siteLog gml:id="SiteLogType_423">
+      <geo:formInformation>
+         <geo:preparedBy>Cyrille DUMAS-PILHOU</geo:preparedBy>
+         <geo:datePrepared>2004-03-21T13:00:00Z</geo:datePrepared>
+         <geo:reportType>UPDATED</geo:reportType>
+      </geo:formInformation>
       <geo:siteIdentification>
          <geo:siteName>NOUMEA</geo:siteName>
          <geo:fourCharacterID>NOUM</geo:fourCharacterID>
@@ -10,7 +15,7 @@
          <geo:heightOfTheMonument>2.50</geo:heightOfTheMonument>
          <geo:monumentFoundation>CONCRETE BLOCK</geo:monumentFoundation>
          <geo:foundationDepth>3.50</geo:foundationDepth>
-         <geo:dateInstalled>07 Dec 1997 13:00 GMT</geo:dateInstalled>
+         <geo:dateInstalled>1997-12-07T13:00:00Z</geo:dateInstalled>
          <geo:geologicCharacteristic>BEDROCK</geo:geologicCharacteristic>
          <geo:bedrockType>SEDIMENTARY</geo:bedrockType>
          <geo:bedrockCondition>WEATHERED on the surface, UNALTERED below</geo:bedrockCondition>
@@ -31,12 +36,22 @@
       </geo:siteLocation>
       <geo:gnssReceivers>
          <geo:gnssReceiver>
+            <geo:receiverType>TRIMBLE 4700</geo:receiverType>
+            <geo:serialNumber>0220134837</geo:serialNumber>
+            <geo:firmwareVersion>Nav 1.20   Sig 1.42</geo:firmwareVersion>
+            <geo:dateInstalled>2000-05-23T09:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2000-07-12T06:05:00Z</geo:dateRemoved>
+            <geo:notes>Temporary change beetween 4000ssi and</geo:notes>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
             <geo:receiverType>TRIMBLE 4000SSI</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
             <geo:serialNumber>3618A15567</geo:serialNumber>
-            <geo:firmwareVersion>7.19</geo:firmwareVersion>
-            <geo:dateInstalled>12 Jul 2000 06:25 GMT</geo:dateInstalled>
-            <geo:dateRemoved>23 Nov 2001 03:00 GMT</geo:dateRemoved>
-            <geo:notes>TRIMBLE support put firmware 7.19  new problem</geo:notes>
+            <geo:firmwareVersion>7.29</geo:firmwareVersion>
+            <geo:dateInstalled>1997-12-08T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2000-05-22T23:59:00Z</geo:dateRemoved>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
@@ -46,28 +61,8 @@
             <geo:serialNumber>0220264714</geo:serialNumber>
             <geo:firmwareVersion>2.01</geo:firmwareVersion>
             <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
-            <geo:dateInstalled>16 Mar 2004 00:00 GMT</geo:dateInstalled>
+            <geo:dateInstalled>2004-03-16T00:00:00Z</geo:dateInstalled>
             <geo:notes>L1/L2 receiver with Maxwell-4 ASIC</geo:notes>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>TRIMBLE 4000SSI</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>3618A15567</geo:serialNumber>
-            <geo:firmwareVersion>7.29</geo:firmwareVersion>
-            <geo:dateInstalled>08 Dec 1997 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>22 May 2000 23:59 GMT</geo:dateRemoved>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>TRIMBLE 4700</geo:receiverType>
-            <geo:serialNumber>0220134837</geo:serialNumber>
-            <geo:firmwareVersion>Nav 1.20   Sig 1.42</geo:firmwareVersion>
-            <geo:dateInstalled>23 May 2000 09:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>12 Jul 2000 06:05 GMT</geo:dateRemoved>
-            <geo:notes>Temporary change beetween 4000ssi and</geo:notes>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
@@ -77,7 +72,7 @@
             <geo:serialNumber>0220264714</geo:serialNumber>
             <geo:firmwareVersion>1.20</geo:firmwareVersion>
             <geo:elevationCutoffSetting>10</geo:elevationCutoffSetting>
-            <geo:dateInstalled>06 Aug 2002 00:00 GMT</geo:dateInstalled>
+            <geo:dateInstalled>2002-08-06T00:00:00Z</geo:dateInstalled>
             <geo:notes>L1/L2 receiver with Maxwell-4 ASIC</geo:notes>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
@@ -88,10 +83,35 @@
             <geo:serialNumber>0220264714</geo:serialNumber>
             <geo:firmwareVersion>1.04</geo:firmwareVersion>
             <geo:elevationCutoffSetting>10</geo:elevationCutoffSetting>
-            <geo:dateInstalled>23 Nov 2001 03:00 GMT</geo:dateInstalled>
+            <geo:dateInstalled>2001-11-23T03:00:00Z</geo:dateInstalled>
             <geo:notes>L1/L2 receiver with Maxwell-4 ASIC</geo:notes>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>TRIMBLE 4000SSI</geo:receiverType>
+            <geo:serialNumber>3618A15567</geo:serialNumber>
+            <geo:firmwareVersion>7.19</geo:firmwareVersion>
+            <geo:dateInstalled>2000-07-12T06:25:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2001-11-23T03:00:00Z</geo:dateRemoved>
+            <geo:notes>TRIMBLE support put firmware 7.19  new problem</geo:notes>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna>
+            <geo:antennaType>TRM29659.00     NONE</geo:antennaType>
+            <geo:serialNumber>0220094218</geo:serialNumber>
+            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>0.0</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
+            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
+            <geo:dateInstalled>1997-12-08T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2001-11-23T03:00:00Z</geo:dateRemoved>
+            <geo:notes>The antenna is fixed at the centre of stainless steel plate at the top of 4&quot; steel pillar</geo:notes>
+         </geo:gnssAntenna>
+      </geo:gnssAntennas>
       <geo:gnssAntennas>
          <geo:gnssAntenna>
             <geo:antennaType>TRM41249.00     NONE</geo:antennaType>
@@ -103,23 +123,8 @@
             <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
             <geo:antennaCableType>Trimble</geo:antennaCableType>
             <geo:antennaCableLength>60</geo:antennaCableLength>
-            <geo:dateInstalled>23 Nov 2001 03:00 GMT</geo:dateInstalled>
+            <geo:dateInstalled>2001-11-23T03:00:00Z</geo:dateInstalled>
             <geo:notes>Zephyr 4 -point feed antenna - Stealth Ground Plane Exactly the same position (axe and height) that the precedent antenna (TRM29659.00)</geo:notes>
-         </geo:gnssAntenna>
-      </geo:gnssAntennas>
-      <geo:gnssAntennas>
-         <geo:gnssAntenna>
-            <geo:antennaType>TRM29659.00     NONE</geo:antennaType>
-            <geo:serialNumber>0220094218</geo:serialNumber>
-            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
-            <geo:marker-arpUpEcc.>0.0</geo:marker-arpUpEcc.>
-            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
-            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
-            <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
-            <geo:dateInstalled>08 Dec 1997 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>23 Nov 2001 03:00 GMT</geo:dateRemoved>
-            <geo:notes>The antenna is fixed at the centre of stainless steel plate at the top of 4&quot; steel pillar</geo:notes>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
       <geo:surveyedLocalTies>
@@ -133,7 +138,20 @@
             </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
             <geo:localSiteTiesAccuracy>3</geo:localSiteTiesAccuracy>
             <geo:surveyMethod>(GPS</geo:surveyMethod>
-            <geo:dateMeasured>27 Jul 1997 14:00 GMT</geo:dateMeasured>
+            <geo:dateMeasured>1997-07-27T14:00:00Z</geo:dateMeasured>
+         </geo:surveyedLocalTies>
+      </geo:surveyedLocalTies>
+      <geo:surveyedLocalTies>
+         <geo:surveyedLocalTies>
+            <geo:tiedMarkerName>PRARE ARP  (Ant. Reference point)</geo:tiedMarkerName>
+            <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+               <geo:dx>7.823</geo:dx>
+               <geo:dy>7.551</geo:dy>
+               <geo:dz>-9.455</geo:dz>
+            </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+            <geo:localSiteTiesAccuracy>3</geo:localSiteTiesAccuracy>
+            <geo:surveyMethod>(GPS</geo:surveyMethod>
+            <geo:dateMeasured>1997-07-27T14:00:00Z</geo:dateMeasured>
          </geo:surveyedLocalTies>
       </geo:surveyedLocalTies>
       <geo:surveyedLocalTies>
@@ -147,21 +165,8 @@
             </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
             <geo:localSiteTiesAccuracy>2</geo:localSiteTiesAccuracy>
             <geo:surveyMethod>GPS CAMPAIGN + LEVELLING + TRILATERATION</geo:surveyMethod>
-            <geo:dateMeasured>29 Oct 2001 13:00 GMT</geo:dateMeasured>
+            <geo:dateMeasured>2001-10-29T13:00:00Z</geo:dateMeasured>
             <geo:notes>New DORIS station (december 2001) DITTT file Old one (&#65533; 5.2) is decontaminated</geo:notes>
-         </geo:surveyedLocalTies>
-      </geo:surveyedLocalTies>
-      <geo:surveyedLocalTies>
-         <geo:surveyedLocalTies>
-            <geo:tiedMarkerName>PRARE ARP  (Ant. Reference point)</geo:tiedMarkerName>
-            <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
-               <geo:dx>7.823</geo:dx>
-               <geo:dy>7.551</geo:dy>
-               <geo:dz>-9.455</geo:dz>
-            </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
-            <geo:localSiteTiesAccuracy>3</geo:localSiteTiesAccuracy>
-            <geo:surveyMethod>(GPS</geo:surveyMethod>
-            <geo:dateMeasured>27 Jul 1997 14:00 GMT</geo:dateMeasured>
          </geo:surveyedLocalTies>
       </geo:surveyedLocalTies>
       <geo:surveyedLocalTies>
@@ -174,7 +179,7 @@
             </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
             <geo:localSiteTiesAccuracy>3</geo:localSiteTiesAccuracy>
             <geo:surveyMethod>(GPS</geo:surveyMethod>
-            <geo:dateMeasured>27 Jul 1997 14:00 GMT</geo:dateMeasured>
+            <geo:dateMeasured>1997-07-27T14:00:00Z</geo:dateMeasured>
          </geo:surveyedLocalTies>
       </geo:surveyedLocalTies>
       <geo:collocationInformations>

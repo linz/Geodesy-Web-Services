@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-   <geo:siteLog>
+<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_481">
+   <geo:siteLog gml:id="SiteLogType_481">
+      <geo:formInformation>
+         <geo:preparedBy>Alex Woods</geo:preparedBy>
+         <geo:datePrepared>2013-06-10T14:00:00Z</geo:datePrepared>
+         <geo:reportType>UPDATE</geo:reportType>
+      </geo:formInformation>
       <geo:siteIdentification>
          <geo:siteName>Portland</geo:siteName>
          <geo:fourCharacterID>PTLD</geo:fourCharacterID>
@@ -10,7 +15,7 @@
          <geo:monumentFoundation>STEEL RODS / CONCRETE BLOCK</geo:monumentFoundation>
          <geo:foundationDepth>5</geo:foundationDepth>
          <geo:markerDescription>STAINLESS STEEL PLATE, THREADED SPIGOT</geo:markerDescription>
-         <geo:dateInstalled>25 Aug 2009 14:00 GMT</geo:dateInstalled>
+         <geo:dateInstalled>2009-08-25T14:00:00Z</geo:dateInstalled>
          <geo:geologicCharacteristic>BEDROCK</geo:geologicCharacteristic>
          <geo:bedrockType>SEDIMENTARY</geo:bedrockType>
          <geo:bedrockCondition>WEATHERED</geo:bedrockCondition>
@@ -30,36 +35,13 @@
       </geo:siteLocation>
       <geo:gnssReceivers>
          <geo:gnssReceiver>
-            <geo:receiverType>LEICA GR25</geo:receiverType>
-            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
-            <geo:serialNumber>1830272</geo:serialNumber>
-            <geo:firmwareVersion>2.61/6.111</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>06 Dec 2012 00:00 GMT</geo:dateInstalled>
-            <geo:temperatureStabilization>none</geo:temperatureStabilization>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>LEICA GRX1200GGPRO</geo:receiverType>
-            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
-            <geo:serialNumber>353310</geo:serialNumber>
-            <geo:firmwareVersion>7.53</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>26 Aug 2009 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>10 May 2010 04:00 GMT</geo:dateRemoved>
-            <geo:temperatureStabilization>none</geo:temperatureStabilization>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
             <geo:receiverType>LEICA GRX1200GGPRO</geo:receiverType>
             <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
             <geo:serialNumber>353310</geo:serialNumber>
             <geo:firmwareVersion>8.00/3.019</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>04 Jun 2010 07:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>06 Dec 2012 00:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2010-06-04T07:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2012-12-06T00:00:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>none</geo:temperatureStabilization>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
@@ -70,8 +52,31 @@
             <geo:serialNumber>353310</geo:serialNumber>
             <geo:firmwareVersion>7.80/3.019</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>10 May 2010 04:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>04 Jun 2010 07:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2010-05-10T04:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2010-06-04T07:00:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>none</geo:temperatureStabilization>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>LEICA GR25</geo:receiverType>
+            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
+            <geo:serialNumber>1830272</geo:serialNumber>
+            <geo:firmwareVersion>2.61/6.111</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2012-12-06T00:00:00Z</geo:dateInstalled>
+            <geo:temperatureStabilization>none</geo:temperatureStabilization>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>LEICA GRX1200GGPRO</geo:receiverType>
+            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
+            <geo:serialNumber>353310</geo:serialNumber>
+            <geo:firmwareVersion>7.53</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2009-08-26T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2010-05-10T04:00:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>none</geo:temperatureStabilization>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
@@ -87,7 +92,7 @@
             <geo:antennaRadomeType>SCIS</geo:antennaRadomeType>
             <geo:antennaCableType>LMR</geo:antennaCableType>
             <geo:antennaCableLength>65</geo:antennaCableLength>
-            <geo:dateInstalled>26 Aug 2009 00:00 GMT</geo:dateInstalled>
+            <geo:dateInstalled>2009-08-26T00:00:00Z</geo:dateInstalled>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
       <geo:frequencyStandards>
@@ -96,7 +101,7 @@
             <geo:inputFrequency>5Mhz</geo:inputFrequency>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2009-08-26T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2009-08-26T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
@@ -117,7 +122,7 @@
             <geo:heightDiffToAntenna>+0.670</geo:heightDiffToAntenna>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2009-08-29T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2009-08-29T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
@@ -134,7 +139,7 @@
             <geo:heightDiffToAntenna>+0.670</geo:heightDiffToAntenna>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2009-08-29T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2009-08-29T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
@@ -151,7 +156,7 @@
             <geo:heightDiffToAntenna>+0.670</geo:heightDiffToAntenna>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2009-08-29T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2009-08-29T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>

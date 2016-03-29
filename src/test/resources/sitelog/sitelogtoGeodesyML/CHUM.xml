@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-   <geo:siteLog>
+<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_114">
+   <geo:siteLog gml:id="SiteLogType_114">
+      <geo:formInformation>
+         <geo:preparedBy>Oivind Ruud</geo:preparedBy>
+         <geo:datePrepared>2009-08-03T14:00:00Z</geo:datePrepared>
+         <geo:reportType>UPDATE</geo:reportType>
+      </geo:formInformation>
       <geo:siteIdentification>
          <geo:siteName>Chumysh</geo:siteName>
          <geo:fourCharacterID>CHUM</geo:fourCharacterID>
@@ -8,7 +13,7 @@
          <geo:iersDOMESNumber>25601M001</geo:iersDOMESNumber>
          <geo:monumentDescription>MAST</geo:monumentDescription>
          <geo:heightOfTheMonument>18</geo:heightOfTheMonument>
-         <geo:dateInstalled>06 Oct 1997 14:00 GMT</geo:dateInstalled>
+         <geo:dateInstalled>1997-10-06T14:00:00Z</geo:dateInstalled>
          <geo:geologicCharacteristic>BEDROCK</geo:geologicCharacteristic>
          <geo:bedrockType>IGNEOUS</geo:bedrockType>
          <geo:bedrockCondition>JOINTED</geo:bedrockCondition>
@@ -26,13 +31,26 @@
       </geo:siteLocation>
       <geo:gnssReceivers>
          <geo:gnssReceiver>
+            <geo:receiverType>TRIMBLE NETRS</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>4549261322</geo:serialNumber>
+            <geo:firmwareVersion>1.1-5</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2007-05-29T04:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2009-08-03T07:00:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>none</geo:temperatureStabilization>
+            <geo:notes>new receiver AOAD/M_T antenna powered through GPS signal splitter.</geo:notes>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
             <geo:receiverType>ROGUE SNR-8000</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
             <geo:serialNumber>T136</geo:serialNumber>
             <geo:firmwareVersion>3.2.32.8</geo:firmwareVersion>
             <geo:elevationCutoffSetting>4</geo:elevationCutoffSetting>
-            <geo:dateInstalled>13 Aug 1999 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>06 Jun 2001 00:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>1999-08-13T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2001-06-06T00:00:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>none</geo:temperatureStabilization>
             <geo:notes>Firmware upgrade</geo:notes>
          </geo:gnssReceiver>
@@ -42,12 +60,38 @@
             <geo:receiverType>ROGUE SNR-8000</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
             <geo:serialNumber>T136</geo:serialNumber>
+            <geo:firmwareVersion>3.2</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>4</geo:elevationCutoffSetting>
+            <geo:dateInstalled>1997-10-07T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1999-08-13T00:00:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>none</geo:temperatureStabilization>
+            <geo:notes>UNAVCO ID 8696</geo:notes>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>ROGUE SNR-8000</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>T136</geo:serialNumber>
             <geo:firmwareVersion>3.2.32.8</geo:firmwareVersion>
             <geo:elevationCutoffSetting>4</geo:elevationCutoffSetting>
-            <geo:dateInstalled>11 Jun 2001 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>25 Oct 2002 00:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2001-06-11T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2002-10-25T00:00:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>none</geo:temperatureStabilization>
             <geo:notes>Receiver re-installed</geo:notes>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>ROGUE SNR-8000</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>T136</geo:serialNumber>
+            <geo:firmwareVersion>3.2.32.11</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>4</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2002-10-25T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2003-09-17T00:00:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>none</geo:temperatureStabilization>
+            <geo:notes>New receiver firmware</geo:notes>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
@@ -57,36 +101,10 @@
             <geo:serialNumber>T102</geo:serialNumber>
             <geo:firmwareVersion>3.2.32.11</geo:firmwareVersion>
             <geo:elevationCutoffSetting>4</geo:elevationCutoffSetting>
-            <geo:dateInstalled>17 Sep 2003 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>29 May 2007 04:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2003-09-17T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2007-05-29T04:00:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>none</geo:temperatureStabilization>
             <geo:notes>new receiver installed</geo:notes>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>TRIMBLE NETRS</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>4549261322</geo:serialNumber>
-            <geo:firmwareVersion>1.1-5</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
-            <geo:dateInstalled>29 May 2007 04:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>03 Aug 2009 07:00 GMT</geo:dateRemoved>
-            <geo:temperatureStabilization>none</geo:temperatureStabilization>
-            <geo:notes>new receiver AOAD/M_T antenna powered through GPS signal splitter.</geo:notes>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>ROGUE SNR-8000</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>T136</geo:serialNumber>
-            <geo:firmwareVersion>3.2</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>4</geo:elevationCutoffSetting>
-            <geo:dateInstalled>07 Oct 1997 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>13 Aug 1999 00:00 GMT</geo:dateRemoved>
-            <geo:temperatureStabilization>none</geo:temperatureStabilization>
-            <geo:notes>UNAVCO ID 8696</geo:notes>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
@@ -96,38 +114,11 @@
             <geo:serialNumber>4549261325</geo:serialNumber>
             <geo:firmwareVersion>1.1-5</geo:firmwareVersion>
             <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
-            <geo:dateInstalled>03 Aug 2009 08:00 GMT</geo:dateInstalled>
+            <geo:dateInstalled>2009-08-03T08:00:00Z</geo:dateInstalled>
             <geo:temperatureStabilization>none</geo:temperatureStabilization>
             <geo:notes>new receiver AOAD/M_T antenna powered through GPS signal splitter.</geo:notes>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>ROGUE SNR-8000</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>T136</geo:serialNumber>
-            <geo:firmwareVersion>3.2.32.11</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>4</geo:elevationCutoffSetting>
-            <geo:dateInstalled>25 Oct 2002 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>17 Sep 2003 00:00 GMT</geo:dateRemoved>
-            <geo:temperatureStabilization>none</geo:temperatureStabilization>
-            <geo:notes>New receiver firmware</geo:notes>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssAntennas>
-         <geo:gnssAntenna>
-            <geo:antennaType>AOAD/M_T        NONE</geo:antennaType>
-            <geo:serialNumber>136</geo:serialNumber>
-            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
-            <geo:marker-arpUpEcc.>0.09</geo:marker-arpUpEcc.>
-            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
-            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
-            <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
-            <geo:dateInstalled>10 Jul 1997 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>12 Aug 1998 00:00 GMT</geo:dateRemoved>
-         </geo:gnssAntenna>
-      </geo:gnssAntennas>
       <geo:gnssAntennas>
          <geo:gnssAntenna>
             <geo:antennaType>AOAD/M_T        NONE</geo:antennaType>
@@ -138,7 +129,7 @@
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
             <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
-            <geo:dateInstalled>17 Sep 2003 00:00 GMT</geo:dateInstalled>
+            <geo:dateInstalled>2003-09-17T00:00:00Z</geo:dateInstalled>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
       <geo:gnssAntennas>
@@ -151,8 +142,22 @@
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
             <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
-            <geo:dateInstalled>12 Aug 1998 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>17 Sep 2003 00:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>1998-08-12T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2003-09-17T00:00:00Z</geo:dateRemoved>
+         </geo:gnssAntenna>
+      </geo:gnssAntennas>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna>
+            <geo:antennaType>AOAD/M_T        NONE</geo:antennaType>
+            <geo:serialNumber>136</geo:serialNumber>
+            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>0.09</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
+            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
+            <geo:dateInstalled>1997-07-10T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1998-08-12T00:00:00Z</geo:dateRemoved>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
       <geo:surveyedLocalTies>
@@ -165,7 +170,7 @@
             <geo:standardType>INTERNAL</geo:standardType>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>1997-10-07T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>1997-10-07T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>

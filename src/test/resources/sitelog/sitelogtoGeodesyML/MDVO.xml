@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-   <geo:siteLog>
+<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_362">
+   <geo:siteLog gml:id="SiteLogType_362">
+      <geo:formInformation>
+         <geo:preparedBy>Boudewijn Ambrosius</geo:preparedBy>
+         <geo:datePrepared>2002-09-16T14:00:00Z</geo:datePrepared>
+         <geo:reportType>UPDATE</geo:reportType>
+      </geo:formInformation>
       <geo:siteIdentification>
          <geo:siteName>MENDELEEVO</geo:siteName>
          <geo:fourCharacterID>MDVO</geo:fourCharacterID>
          <geo:monumentInscription>???????????</geo:monumentInscription>
          <geo:iersDOMESNumber>12309M002</geo:iersDOMESNumber>
          <geo:cdpNumber>1870</geo:cdpNumber>
-         <geo:dateInstalled>14 Jul 1995 14:00 GMT</geo:dateInstalled>
+         <geo:dateInstalled>1995-07-14T14:00:00Z</geo:dateInstalled>
       </geo:siteIdentification>
       <geo:siteLocation>
          <geo:city>Mendeleevo, Moscow Region</geo:city>
@@ -24,10 +29,9 @@
             <geo:receiverType>TRIMBLE 4000SSE</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
             <geo:serialNumber>03752 (3333A03752)</geo:serialNumber>
-            <geo:firmwareVersion>5.66 / 1.25</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>15</geo:elevationCutoffSetting>
-            <geo:dateInstalled>18 Feb 1995 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>18 Aug 1999 00:00 GMT</geo:dateRemoved>
+            <geo:firmwareVersion>7.29 / 3.07</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
+            <geo:dateInstalled>1999-08-18T00:00:00Z</geo:dateInstalled>
             <geo:temperatureStabilization>none</geo:temperatureStabilization>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
@@ -36,9 +40,10 @@
             <geo:receiverType>TRIMBLE 4000SSE</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
             <geo:serialNumber>03752 (3333A03752)</geo:serialNumber>
-            <geo:firmwareVersion>7.29 / 3.07</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
-            <geo:dateInstalled>18 Aug 1999 00:00 GMT</geo:dateInstalled>
+            <geo:firmwareVersion>5.66 / 1.25</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>15</geo:elevationCutoffSetting>
+            <geo:dateInstalled>1995-02-18T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1999-08-18T00:00:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>none</geo:temperatureStabilization>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
@@ -52,24 +57,9 @@
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
             <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
-            <geo:dateInstalled>05 Jul 1995 00:00 GMT</geo:dateInstalled>
+            <geo:dateInstalled>1995-07-05T00:00:00Z</geo:dateInstalled>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
-      <geo:surveyedLocalTies>
-         <geo:surveyedLocalTies>
-            <geo:tiedMarkerName>MENDELEEVO</geo:tiedMarkerName>
-            <geo:tiedMarkerUsage>SLR</geo:tiedMarkerUsage>
-            <geo:tiedMarkerCDPNumber>1870</geo:tiedMarkerCDPNumber>
-            <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
-               <geo:dx>2.1</geo:dx>
-               <geo:dy>11.93</geo:dy>
-               <geo:dz>-7.69</geo:dz>
-            </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
-            <geo:localSiteTiesAccuracy>15</geo:localSiteTiesAccuracy>
-            <geo:dateMeasured>20 Jul 1995 14:00 GMT</geo:dateMeasured>
-            <geo:notes>SLR point</geo:notes>
-         </geo:surveyedLocalTies>
-      </geo:surveyedLocalTies>
       <geo:surveyedLocalTies>
          <geo:surveyedLocalTies>
             <geo:tiedMarkerName>MENDELEEVO</geo:tiedMarkerName>
@@ -81,8 +71,23 @@
                <geo:dz>-1.75</geo:dz>
             </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
             <geo:localSiteTiesAccuracy>15</geo:localSiteTiesAccuracy>
-            <geo:dateMeasured>20 Jul 1995 14:00 GMT</geo:dateMeasured>
+            <geo:dateMeasured>1995-07-20T14:00:00Z</geo:dateMeasured>
             <geo:notes>The previous MDVO IGS point</geo:notes>
+         </geo:surveyedLocalTies>
+      </geo:surveyedLocalTies>
+      <geo:surveyedLocalTies>
+         <geo:surveyedLocalTies>
+            <geo:tiedMarkerName>MENDELEEVO</geo:tiedMarkerName>
+            <geo:tiedMarkerUsage>SLR</geo:tiedMarkerUsage>
+            <geo:tiedMarkerCDPNumber>1870</geo:tiedMarkerCDPNumber>
+            <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+               <geo:dx>2.1</geo:dx>
+               <geo:dy>11.93</geo:dy>
+               <geo:dz>-7.69</geo:dz>
+            </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+            <geo:localSiteTiesAccuracy>15</geo:localSiteTiesAccuracy>
+            <geo:dateMeasured>1995-07-20T14:00:00Z</geo:dateMeasured>
+            <geo:notes>SLR point</geo:notes>
          </geo:surveyedLocalTies>
       </geo:surveyedLocalTies>
       <geo:frequencyStandards>
@@ -90,7 +95,7 @@
             <geo:standardType>H-MASER</geo:standardType>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>1995-11-13T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>1995-11-13T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>

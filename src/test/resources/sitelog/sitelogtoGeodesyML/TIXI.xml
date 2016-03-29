@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-   <geo:siteLog>
+<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_569">
+   <geo:siteLog gml:id="SiteLogType_569">
+      <geo:formInformation>
+         <geo:preparedBy>Grigory Steblov</geo:preparedBy>
+         <geo:datePrepared>2010-11-06T13:00:00Z</geo:datePrepared>
+         <geo:reportType>UPDATE</geo:reportType>
+      </geo:formInformation>
       <geo:siteIdentification>
          <geo:siteName>Seismic Station Tixi</geo:siteName>
          <geo:fourCharacterID>TIXI</geo:fourCharacterID>
          <geo:iersDOMESNumber>12360M001</geo:iersDOMESNumber>
          <geo:monumentDescription>STAINLESS STEEL ROD</geo:monumentDescription>
-         <geo:dateInstalled>07 Oct 1998 14:00 GMT</geo:dateInstalled>
+         <geo:dateInstalled>1998-10-07T14:00:00Z</geo:dateInstalled>
          <geo:geologicCharacteristic>Verkhoyansk fold-and-thrust belt</geo:geologicCharacteristic>
          <geo:bedrockType>Thick siltstone series</geo:bedrockType>
          <geo:bedrockCondition>Jointed</geo:bedrockCondition>
@@ -30,8 +35,8 @@
             <geo:receiverType>ROGUE SNR-8000</geo:receiverType>
             <geo:serialNumber>T123</geo:serialNumber>
             <geo:firmwareVersion>3.2 95/03/08</geo:firmwareVersion>
-            <geo:dateInstalled>08 Oct 1998 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>30 Mar 1999 00:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>1998-10-08T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1999-03-30T00:00:00Z</geo:dateRemoved>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
@@ -39,9 +44,19 @@
             <geo:receiverType>ASHTECH Z-XII3</geo:receiverType>
             <geo:serialNumber>LP020003240</geo:serialNumber>
             <geo:firmwareVersion>NAV CD00 CH 1D02</geo:firmwareVersion>
-            <geo:dateInstalled>23 Dec 2005 09:25 GMT</geo:dateInstalled>
-            <geo:dateRemoved>20 Oct 2010 00:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2005-12-23T09:25:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2010-10-20T00:00:00Z</geo:dateRemoved>
             <geo:notes>Model 700845-10F (Z-12 CGRS).</geo:notes>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>ASHTECH Z-XII3</geo:receiverType>
+            <geo:serialNumber>LP01745</geo:serialNumber>
+            <geo:firmwareVersion>NAV CC00 CH 1D02</geo:firmwareVersion>
+            <geo:dateInstalled>1999-03-30T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2005-12-22T23:59:00Z</geo:dateRemoved>
+            <geo:notes>Model 700845-10D (Z-12 CGRS).</geo:notes>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
@@ -50,32 +65,21 @@
             <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
             <geo:serialNumber>8RLTBTENFGG</geo:serialNumber>
             <geo:firmwareVersion>2.7.0 Mar,31,2008</geo:firmwareVersion>
-            <geo:dateInstalled>20 Oct 2010 17:00 GMT</geo:dateInstalled>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>ASHTECH Z-XII3</geo:receiverType>
-            <geo:serialNumber>LP01745</geo:serialNumber>
-            <geo:firmwareVersion>NAV CC00 CH 1D02</geo:firmwareVersion>
-            <geo:dateInstalled>30 Mar 1999 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>22 Dec 2005 23:59 GMT</geo:dateRemoved>
-            <geo:notes>Model 700845-10D (Z-12 CGRS).</geo:notes>
+            <geo:dateInstalled>2010-10-20T17:00:00Z</geo:dateInstalled>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssAntennas>
          <geo:gnssAntenna>
-            <geo:antennaType>ASH700936D_M    UNAV</geo:antennaType>
+            <geo:antennaType>ASH700936D_M    SCIS</geo:antennaType>
             <geo:serialNumber>13083</geo:serialNumber>
             <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
             <geo:marker-arpUpEcc.>0.0792</geo:marker-arpUpEcc.>
             <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>UNAV</geo:antennaRadomeType>
-            <geo:dateInstalled>08 Oct 1998 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>14 Mar 2002 00:00 GMT</geo:dateRemoved>
-            <geo:notes>Antenna Diagram below clear spherical radome</geo:notes>
+            <geo:antennaRadomeType>SCIS</geo:antennaRadomeType>
+            <geo:dateInstalled>2002-10-14T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2010-10-20T00:00:00Z</geo:dateRemoved>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
       <geo:gnssAntennas>
@@ -88,22 +92,23 @@
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
             <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
-            <geo:dateInstalled>20 Oct 2010 17:00 GMT</geo:dateInstalled>
+            <geo:dateInstalled>2010-10-20T17:00:00Z</geo:dateInstalled>
             <geo:notes>The receiver is connected to the antenna via the splitter. The 2nd input of the splitter is connected with the receiver of station TIXG. The splitter provides power to the antenna independently of either TIXI or TIXG receivers.</geo:notes>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
       <geo:gnssAntennas>
          <geo:gnssAntenna>
-            <geo:antennaType>ASH700936D_M    SCIS</geo:antennaType>
+            <geo:antennaType>ASH700936D_M    UNAV</geo:antennaType>
             <geo:serialNumber>13083</geo:serialNumber>
             <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
             <geo:marker-arpUpEcc.>0.0792</geo:marker-arpUpEcc.>
             <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>SCIS</geo:antennaRadomeType>
-            <geo:dateInstalled>14 Oct 2002 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>20 Oct 2010 00:00 GMT</geo:dateRemoved>
+            <geo:antennaRadomeType>UNAV</geo:antennaRadomeType>
+            <geo:dateInstalled>1998-10-08T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2002-03-14T00:00:00Z</geo:dateRemoved>
+            <geo:notes>Antenna Diagram below clear spherical radome</geo:notes>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
       <geo:gnssAntennas>
@@ -116,8 +121,8 @@
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
             <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
-            <geo:dateInstalled>14 Mar 2002 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>14 Oct 2002 00:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2002-03-14T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2002-10-14T00:00:00Z</geo:dateRemoved>
             <geo:notes>Unauthorized radome removal was discovered about 14-MAR-2002. Precise date is unknown.</geo:notes>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
@@ -130,7 +135,7 @@
                <geo:dz>-1685.43</geo:dz>
             </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
             <geo:localSiteTiesAccuracy>1 mm</geo:localSiteTiesAccuracy>
-            <geo:dateMeasured>13 Oct 1998 14:00 GMT</geo:dateMeasured>
+            <geo:dateMeasured>1998-10-13T14:00:00Z</geo:dateMeasured>
             <geo:notes>GAMIT solution of simultaneous GPS observations (baseline mode in sestbl.).</geo:notes>
          </geo:surveyedLocalTies>
       </geo:surveyedLocalTies>
@@ -150,7 +155,7 @@
             <geo:manufacturer>Paroscientific, Inc.</geo:manufacturer>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2004-08-18T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2004-08-18T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
@@ -166,7 +171,7 @@
             <geo:manufacturer>Paroscientific, Inc.Paroscientific, Inc.</geo:manufacturer>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2004-08-18T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2004-08-18T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
@@ -181,7 +186,7 @@
             <geo:manufacturer>Paroscientific, Inc.</geo:manufacturer>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2004-08-18T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2004-08-18T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>

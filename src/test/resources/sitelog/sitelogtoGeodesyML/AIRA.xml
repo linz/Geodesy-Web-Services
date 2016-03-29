@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-   <geo:siteLog>
+<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_15">
+   <geo:siteLog gml:id="SiteLogType_15">
+      <geo:formInformation>
+         <geo:preparedBy>Tomoaki Furuya / Kazuki Sakai / Motomu Mandokoro</geo:preparedBy>
+         <geo:datePrepared>2012-08-20T14:00:00Z</geo:datePrepared>
+         <geo:reportType>UPDATE</geo:reportType>
+      </geo:formInformation>
       <geo:siteIdentification>
          <geo:siteName>AIRA</geo:siteName>
          <geo:fourCharacterID>AIRA</geo:fourCharacterID>
@@ -10,7 +15,7 @@
          <geo:monumentFoundation>CONCRETE BLOCK</geo:monumentFoundation>
          <geo:foundationDepth>1.5</geo:foundationDepth>
          <geo:markerDescription>none</geo:markerDescription>
-         <geo:dateInstalled>04 Dec 1997 13:00 GMT</geo:dateInstalled>
+         <geo:dateInstalled>1997-12-04T13:00:00Z</geo:dateInstalled>
          <geo:geologicCharacteristic>QUATERNARY CLAY</geo:geologicCharacteristic>
       </geo:siteIdentification>
       <geo:siteLocation>
@@ -27,24 +32,13 @@
       </geo:siteLocation>
       <geo:gnssReceivers>
          <geo:gnssReceiver>
-            <geo:receiverType>TRIMBLE 5700</geo:receiverType>
+            <geo:receiverType>TRIMBLE 4000SSI</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>05227</geo:serialNumber>
-            <geo:firmwareVersion>1.24</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
-            <geo:dateInstalled>19 Feb 2003 09:04 GMT</geo:dateInstalled>
-            <geo:dateRemoved>16 Nov 2004 03:26 GMT</geo:dateRemoved>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>TRIMBLE NETR9</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>5134K78052</geo:serialNumber>
-            <geo:firmwareVersion>4.61</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
-            <geo:dateInstalled>25 Jul 2012 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>02 Aug 2012 00:00 GMT</geo:dateRemoved>
+            <geo:serialNumber>20630</geo:serialNumber>
+            <geo:firmwareVersion>7.17</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>15</geo:elevationCutoffSetting>
+            <geo:dateInstalled>1998-02-28T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2001-08-16T14:59:00Z</geo:dateRemoved>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
@@ -54,40 +48,19 @@
             <geo:serialNumber>17424</geo:serialNumber>
             <geo:firmwareVersion>7.19</geo:firmwareVersion>
             <geo:elevationCutoffSetting>15</geo:elevationCutoffSetting>
-            <geo:dateInstalled>18 Sep 2001 02:22 GMT</geo:dateInstalled>
-            <geo:dateRemoved>15 Aug 2002 14:59 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2001-09-18T02:22:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2002-08-15T14:59:00Z</geo:dateRemoved>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
          <geo:gnssReceiver>
             <geo:receiverType>TRIMBLE 5700</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>21290</geo:serialNumber>
+            <geo:serialNumber>05227</geo:serialNumber>
             <geo:firmwareVersion>1.24</geo:firmwareVersion>
             <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
-            <geo:dateInstalled>16 Nov 2004 03:29 GMT</geo:dateInstalled>
-            <geo:dateRemoved>25 Jul 2012 00:00 GMT</geo:dateRemoved>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>TRIMBLE NETR9</geo:receiverType>
-            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
-            <geo:serialNumber>5134K78052</geo:serialNumber>
-            <geo:firmwareVersion>4.61</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
-            <geo:dateInstalled>02 Aug 2012 00:00 GMT</geo:dateInstalled>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>TRIMBLE 4000SSI</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>20630</geo:serialNumber>
-            <geo:firmwareVersion>7.17</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>15</geo:elevationCutoffSetting>
-            <geo:dateInstalled>28 Feb 1998 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>16 Aug 2001 14:59 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2003-02-19T09:04:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2004-11-16T03:26:00Z</geo:dateRemoved>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
@@ -97,25 +70,55 @@
             <geo:serialNumber>17282</geo:serialNumber>
             <geo:firmwareVersion>7.19</geo:firmwareVersion>
             <geo:elevationCutoffSetting>15</geo:elevationCutoffSetting>
-            <geo:dateInstalled>23 Aug 2002 02:29 GMT</geo:dateInstalled>
-            <geo:dateRemoved>18 Feb 2003 14:59 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2002-08-23T02:29:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2003-02-18T14:59:00Z</geo:dateRemoved>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>TRIMBLE NETR9</geo:receiverType>
+            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
+            <geo:serialNumber>5134K78052</geo:serialNumber>
+            <geo:firmwareVersion>4.61</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2012-08-02T00:00:00Z</geo:dateInstalled>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>TRIMBLE NETR9</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>5134K78052</geo:serialNumber>
+            <geo:firmwareVersion>4.61</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2012-07-25T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2012-08-02T00:00:00Z</geo:dateRemoved>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>TRIMBLE 5700</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>21290</geo:serialNumber>
+            <geo:firmwareVersion>1.24</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2004-11-16T03:29:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2012-07-25T00:00:00Z</geo:dateRemoved>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssAntennas>
          <geo:gnssAntenna>
-            <geo:antennaType>TRM29659.00     DOME</geo:antennaType>
-            <geo:serialNumber>00031</geo:serialNumber>
+            <geo:antennaType>TRM59800.00     SCIS</geo:antennaType>
+            <geo:serialNumber>4938353451</geo:serialNumber>
             <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
             <geo:marker-arpUpEcc.>0.0</geo:marker-arpUpEcc.>
             <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>DOME</geo:antennaRadomeType>
+            <geo:antennaRadomeType>SCIS</geo:antennaRadomeType>
             <geo:antennaCableType>Trimble N-minilemo</geo:antennaCableType>
             <geo:antennaCableLength>5</geo:antennaCableLength>
-            <geo:dateInstalled>19 Feb 2003 09:04 GMT</geo:dateInstalled>
-            <geo:dateRemoved>01 Aug 2012 01:00 GMT</geo:dateRemoved>
-            <geo:notes>Spherical radome</geo:notes>
+            <geo:dateInstalled>2012-08-01T01:00:00Z</geo:dateInstalled>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
       <geo:gnssAntennas>
@@ -130,24 +133,26 @@
             <geo:antennaRadomeType>DOME</geo:antennaRadomeType>
             <geo:antennaCableType>Trimble N-lemo</geo:antennaCableType>
             <geo:antennaCableLength>5</geo:antennaCableLength>
-            <geo:dateInstalled>28 Feb 1998 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>18 Feb 2003 14:59 GMT</geo:dateRemoved>
+            <geo:dateInstalled>1998-02-28T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2003-02-18T14:59:00Z</geo:dateRemoved>
             <geo:notes>Spherical radome</geo:notes>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
       <geo:gnssAntennas>
          <geo:gnssAntenna>
-            <geo:antennaType>TRM59800.00     SCIS</geo:antennaType>
-            <geo:serialNumber>4938353451</geo:serialNumber>
+            <geo:antennaType>TRM29659.00     DOME</geo:antennaType>
+            <geo:serialNumber>00031</geo:serialNumber>
             <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
             <geo:marker-arpUpEcc.>0.0</geo:marker-arpUpEcc.>
             <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>SCIS</geo:antennaRadomeType>
+            <geo:antennaRadomeType>DOME</geo:antennaRadomeType>
             <geo:antennaCableType>Trimble N-minilemo</geo:antennaCableType>
             <geo:antennaCableLength>5</geo:antennaCableLength>
-            <geo:dateInstalled>01 Aug 2012 01:00 GMT</geo:dateInstalled>
+            <geo:dateInstalled>2003-02-19T09:04:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2012-08-01T01:00:00Z</geo:dateRemoved>
+            <geo:notes>Spherical radome</geo:notes>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
       <geo:frequencyStandards>
@@ -156,7 +161,7 @@
             <geo:inputFrequency>10MHz</geo:inputFrequency>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2004-11-19T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2004-11-19T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>

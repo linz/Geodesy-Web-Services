@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-   <geo:siteLog>
+<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_565">
+   <geo:siteLog gml:id="SiteLogType_565">
+      <geo:formInformation>
+         <geo:preparedBy>Jean-Paul CARDALIAGUET</geo:preparedBy>
+         <geo:datePrepared>2011-06-29T14:00:00Z</geo:datePrepared>
+         <geo:reportType>UPDATE</geo:reportType>
+      </geo:formInformation>
       <geo:siteIdentification>
          <geo:siteName>Tahiti</geo:siteName>
          <geo:fourCharacterID>THTI</geo:fourCharacterID>
@@ -10,7 +15,7 @@
          <geo:monumentDescription>STEEL MAST</geo:monumentDescription>
          <geo:monumentFoundation>ROOF</geo:monumentFoundation>
          <geo:markerDescription>BRASS NAIL</geo:markerDescription>
-         <geo:dateInstalled>19 Apr 1998 14:00 GMT</geo:dateInstalled>
+         <geo:dateInstalled>1998-04-19T14:00:00Z</geo:dateInstalled>
       </geo:siteIdentification>
       <geo:siteLocation>
          <geo:city>Papeete</geo:city>
@@ -28,9 +33,41 @@
             <geo:receiverType>TRIMBLE NETR8</geo:receiverType>
             <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
             <geo:serialNumber>4906k34352</geo:serialNumber>
+            <geo:firmwareVersion>4.17</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>3</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2010-11-24T09:03:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2011-06-30T14:00:00Z</geo:dateRemoved>
+            <geo:notes>GNSS ACQUISITION (GPS+GLO)</geo:notes>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>TRIMBLE 4000SSI</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>380A21919</geo:serialNumber>
+            <geo:firmwareVersion>7.29</geo:firmwareVersion>
+            <geo:dateInstalled>1998-11-22T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2004-01-12T00:00:00Z</geo:dateRemoved>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>ASHTECH UZ-12</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>04006</geo:serialNumber>
+            <geo:firmwareVersion>CN00-1A01</geo:firmwareVersion>
+            <geo:dateInstalled>2004-01-13T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2007-09-17T00:00:00Z</geo:dateRemoved>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>TRIMBLE NETR8</geo:receiverType>
+            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
+            <geo:serialNumber>4906k34352</geo:serialNumber>
             <geo:firmwareVersion>4.22</geo:firmwareVersion>
             <geo:elevationCutoffSetting>3</geo:elevationCutoffSetting>
-            <geo:dateInstalled>30 Jun 2011 14:15 GMT</geo:dateInstalled>
+            <geo:dateInstalled>2011-06-30T14:15:00Z</geo:dateInstalled>
             <geo:temperatureStabilization>18-24</geo:temperatureStabilization>
             <geo:notes>GNSS ACQUISITION (GPS+GLO+SBAS)</geo:notes>
          </geo:gnssReceiver>
@@ -42,8 +79,8 @@
             <geo:serialNumber>04006</geo:serialNumber>
             <geo:firmwareVersion>CN00-1A01</geo:firmwareVersion>
             <geo:elevationCutoffSetting>3</geo:elevationCutoffSetting>
-            <geo:dateInstalled>17 Sep 2007 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>16 Apr 2008 07:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2007-09-17T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2008-04-16T07:00:00Z</geo:dateRemoved>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
@@ -53,40 +90,8 @@
             <geo:serialNumber>48001</geo:serialNumber>
             <geo:firmwareVersion>CN00-1A01</geo:firmwareVersion>
             <geo:elevationCutoffSetting>3</geo:elevationCutoffSetting>
-            <geo:dateInstalled>16 Apr 2008 07:24 GMT</geo:dateInstalled>
-            <geo:dateRemoved>24 Nov 2010 09:00 GMT</geo:dateRemoved>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>TRIMBLE NETR8</geo:receiverType>
-            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
-            <geo:serialNumber>4906k34352</geo:serialNumber>
-            <geo:firmwareVersion>4.17</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>3</geo:elevationCutoffSetting>
-            <geo:dateInstalled>24 Nov 2010 09:03 GMT</geo:dateInstalled>
-            <geo:dateRemoved>30 Jun 2011 14:00 GMT</geo:dateRemoved>
-            <geo:notes>GNSS ACQUISITION (GPS+GLO)</geo:notes>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>TRIMBLE 4000SSI</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>380A21919</geo:serialNumber>
-            <geo:firmwareVersion>7.29</geo:firmwareVersion>
-            <geo:dateInstalled>22 Nov 1998 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>12 Jan 2004 00:00 GMT</geo:dateRemoved>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>ASHTECH UZ-12</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>04006</geo:serialNumber>
-            <geo:firmwareVersion>CN00-1A01</geo:firmwareVersion>
-            <geo:dateInstalled>13 Jan 2004 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>17 Sep 2007 00:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2008-04-16T07:24:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2010-11-24T09:00:00Z</geo:dateRemoved>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssAntennas>
@@ -99,7 +104,7 @@
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
             <geo:antennaCableLength>30</geo:antennaCableLength>
-            <geo:dateInstalled>13 Jan 2004 00:00 GMT</geo:dateInstalled>
+            <geo:dateInstalled>2004-01-13T00:00:00Z</geo:dateInstalled>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
       <geo:gnssAntennas>
@@ -112,32 +117,31 @@
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
             <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
-            <geo:dateInstalled>22 Nov 1998 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>12 Jan 2004 00:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>1998-11-22T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2004-01-12T00:00:00Z</geo:dateRemoved>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
-      <geo:surveyedLocalTies>
-         <geo:surveyedLocalTies>
-            <geo:tiedMarkerName>PRARE antenna ref. pt.</geo:tiedMarkerName>
-         </geo:surveyedLocalTies>
-      </geo:surveyedLocalTies>
       <geo:surveyedLocalTies>
          <geo:surveyedLocalTies>
             <geo:tiedMarkerName>DORIS antenna ref. pt. (PAQB)</geo:tiedMarkerName>
             <geo:tiedMarkerDOMESNumber>92201S008</geo:tiedMarkerDOMESNumber>
          </geo:surveyedLocalTies>
       </geo:surveyedLocalTies>
+      <geo:surveyedLocalTies>
+         <geo:surveyedLocalTies>
+            <geo:tiedMarkerName>PRARE antenna ref. pt.</geo:tiedMarkerName>
+         </geo:surveyedLocalTies>
+      </geo:surveyedLocalTies>
       <geo:frequencyStandards>
          <geo:frequencyStandard>
             <geo:standardType>INTERNAL</geo:standardType>
-            <geo:inputFrequency>Input Frequency        :</geo:inputFrequency>
+            <geo:inputFrequency>5 MHz</geo:inputFrequency>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2010-11-24T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>1998-11-22T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
-            <geo:notes>Clock steering enable</geo:notes>
          </geo:frequencyStandard>
       </geo:frequencyStandards>
       <geo:frequencyStandards>
@@ -146,8 +150,8 @@
             <geo:inputFrequency>10 MHz</geo:inputFrequency>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2001-12-05T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2010-11-24T00:00Z</gml:endPosition>
+                  <gml:beginPosition>2001-12-05T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2010-11-24T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
          </geo:frequencyStandard>
@@ -155,13 +159,14 @@
       <geo:frequencyStandards>
          <geo:frequencyStandard>
             <geo:standardType>INTERNAL</geo:standardType>
-            <geo:inputFrequency>5 MHz</geo:inputFrequency>
+            <geo:inputFrequency>Input Frequency        :</geo:inputFrequency>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>1998-11-22T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2010-11-24T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
+            <geo:notes>Clock steering enable</geo:notes>
          </geo:frequencyStandard>
       </geo:frequencyStandards>
       <geo:collocationInformations>

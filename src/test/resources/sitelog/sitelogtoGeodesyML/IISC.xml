@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-   <geo:siteLog>
+<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_264">
+   <geo:siteLog gml:id="SiteLogType_264">
+      <geo:formInformation>
+         <geo:preparedBy>David Maggert</geo:preparedBy>
+         <geo:datePrepared>2013-01-30T13:00:00Z</geo:datePrepared>
+         <geo:reportType>UPDATE</geo:reportType>
+      </geo:formInformation>
       <geo:siteIdentification>
          <geo:siteName>Indian Institute of Science</geo:siteName>
          <geo:fourCharacterID>IISC</geo:fourCharacterID>
@@ -10,7 +15,7 @@
          <geo:heightOfTheMonument>~1.6</geo:heightOfTheMonument>
          <geo:monumentFoundation>Exposed bedrock</geo:monumentFoundation>
          <geo:markerDescription>Divot in bottom plate of antenna mount.</geo:markerDescription>
-         <geo:dateInstalled>19 Jan 1995 13:00 GMT</geo:dateInstalled>
+         <geo:dateInstalled>1995-01-19T13:00:00Z</geo:dateInstalled>
          <geo:geologicCharacteristic>BEDROCK</geo:geologicCharacteristic>
          <geo:bedrockType>IGNEOUS</geo:bedrockType>
          <geo:notes>Site is over a *different* monument than previous TRIMBLE receiver occupations (also named &quot;IISC&quot; !) Tie information to the previously (pre- 18-SEP-1995) occupied site follows (DOMES# 22306M001), see Section 5.1. Equipment used for this occupation includes TRIMBLE 4000SSE receiver (s/n 3337A03971, firmware NAV 5.71) and TRM14532.00 antenna (s/n 08053861, no radome) Slant antenna height (1.323 m) measured to BGP. This data set is available.</geo:notes>
@@ -32,8 +37,8 @@
             <geo:serialNumber>T365</geo:serialNumber>
             <geo:firmwareVersion>3.2 link 3/09/95</geo:firmwareVersion>
             <geo:elevationCutoffSetting>4</geo:elevationCutoffSetting>
-            <geo:dateInstalled>01 Apr 1998 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>20 May 1999 00:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>1998-04-01T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1999-05-20T00:00:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>none</geo:temperatureStabilization>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
@@ -44,33 +49,10 @@
             <geo:serialNumber>LP020005105</geo:serialNumber>
             <geo:firmwareVersion>CD00-1D02 1s soc2rnx</geo:firmwareVersion>
             <geo:elevationCutoffSetting>4</geo:elevationCutoffSetting>
-            <geo:dateInstalled>17 Jul 2001 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>07 Jan 2009 10:44 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2001-07-17T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2009-01-07T10:44:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>none</geo:temperatureStabilization>
             <geo:notes>samplerate - 1s offload format - soc conversion to 30s - soc2rnx</geo:notes>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>ASHTECH UZ-12</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>ZR520013802</geo:serialNumber>
-            <geo:firmwareVersion>CQ00</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>4</geo:elevationCutoffSetting>
-            <geo:dateInstalled>08 Jan 2009 00:00 GMT</geo:dateInstalled>
-            <geo:temperatureStabilization>none</geo:temperatureStabilization>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>ROGUE SNR-8000</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>T352</geo:serialNumber>
-            <geo:firmwareVersion>3.2</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>4</geo:elevationCutoffSetting>
-            <geo:dateInstalled>24 Jun 1996 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>04 Aug 1996 00:00 GMT</geo:dateRemoved>
-            <geo:temperatureStabilization>none</geo:temperatureStabilization>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
@@ -80,20 +62,19 @@
             <geo:serialNumber>T202</geo:serialNumber>
             <geo:firmwareVersion>3.2 link 3/09/95</geo:firmwareVersion>
             <geo:elevationCutoffSetting>4</geo:elevationCutoffSetting>
-            <geo:dateInstalled>04 Aug 1996 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>01 Apr 1998 00:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>1996-08-04T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1998-04-01T00:00:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>none</geo:temperatureStabilization>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
          <geo:gnssReceiver>
-            <geo:receiverType>ROGUE SNR-8000</geo:receiverType>
+            <geo:receiverType>ASHTECH UZ-12</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>T365</geo:serialNumber>
-            <geo:firmwareVersion>3.2.32.8</geo:firmwareVersion>
+            <geo:serialNumber>ZR520013802</geo:serialNumber>
+            <geo:firmwareVersion>CQ00</geo:firmwareVersion>
             <geo:elevationCutoffSetting>4</geo:elevationCutoffSetting>
-            <geo:dateInstalled>20 May 1999 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>17 Jul 2001 00:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2009-01-08T00:00:00Z</geo:dateInstalled>
             <geo:temperatureStabilization>none</geo:temperatureStabilization>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
@@ -104,26 +85,35 @@
             <geo:serialNumber>T213</geo:serialNumber>
             <geo:firmwareVersion>3.2 link 3/09/95</geo:firmwareVersion>
             <geo:elevationCutoffSetting>4</geo:elevationCutoffSetting>
-            <geo:dateInstalled>01 Oct 1995 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>24 Jun 1996 00:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>1995-10-01T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1996-06-24T00:00:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>none</geo:temperatureStabilization>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
-      <geo:gnssAntennas>
-         <geo:gnssAntenna>
-            <geo:antennaType>AOAD/M_T        NONE</geo:antennaType>
-            <geo:serialNumber>483</geo:serialNumber>
-            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
-            <geo:marker-arpUpEcc.>0.078</geo:marker-arpUpEcc.>
-            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
-            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
-            <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
-            <geo:dateInstalled>01 Oct 1995 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>08 Jan 2008 00:00 GMT</geo:dateRemoved>
-            <geo:notes>Direct vertical antenna height.</geo:notes>
-         </geo:gnssAntenna>
-      </geo:gnssAntennas>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>ROGUE SNR-8000</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>T365</geo:serialNumber>
+            <geo:firmwareVersion>3.2.32.8</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>4</geo:elevationCutoffSetting>
+            <geo:dateInstalled>1999-05-20T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2001-07-17T00:00:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>none</geo:temperatureStabilization>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>ROGUE SNR-8000</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>T352</geo:serialNumber>
+            <geo:firmwareVersion>3.2</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>4</geo:elevationCutoffSetting>
+            <geo:dateInstalled>1996-06-24T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1996-08-04T00:00:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>none</geo:temperatureStabilization>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
       <geo:gnssAntennas>
          <geo:gnssAntenna>
             <geo:antennaType>ASH701945E_M    NONE</geo:antennaType>
@@ -134,8 +124,23 @@
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
             <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
-            <geo:dateInstalled>10 Jul 2008 00:00 GMT</geo:dateInstalled>
+            <geo:dateInstalled>2008-07-10T00:00:00Z</geo:dateInstalled>
             <geo:notes>Direct vertical antenna height. The 5/8&quot; brass adapter on the antenna leveling mount was replaced.</geo:notes>
+         </geo:gnssAntenna>
+      </geo:gnssAntennas>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna>
+            <geo:antennaType>AOAD/M_T        NONE</geo:antennaType>
+            <geo:serialNumber>483</geo:serialNumber>
+            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>0.078</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
+            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
+            <geo:dateInstalled>1995-10-01T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2008-01-08T00:00:00Z</geo:dateRemoved>
+            <geo:notes>Direct vertical antenna height.</geo:notes>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
       <geo:surveyedLocalTies>
@@ -154,7 +159,7 @@
             <geo:standardType>INTERNAL</geo:standardType>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>1995-10-01T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>1995-10-01T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
@@ -168,7 +173,7 @@
             <geo:heightDiffToAntenna>0</geo:heightDiffToAntenna>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2005-12-20T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2005-12-20T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
@@ -184,7 +189,7 @@
             <geo:heightDiffToAntenna>0</geo:heightDiffToAntenna>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2005-12-20T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2005-12-20T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
@@ -200,7 +205,7 @@
             <geo:heightDiffToAntenna>0</geo:heightDiffToAntenna>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2005-12-20T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2005-12-20T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>

@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-   <geo:siteLog>
+<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_442">
+   <geo:siteLog gml:id="SiteLogType_442">
+      <geo:formInformation>
+         <geo:preparedBy>Rudi Stoeger</geo:preparedBy>
+         <geo:datePrepared>2013-02-12T13:00:00Z</geo:datePrepared>
+         <geo:reportType>UPDATE</geo:reportType>
+      </geo:formInformation>
       <geo:siteIdentification>
          <geo:siteName>O'Higgins / Antarctica</geo:siteName>
          <geo:fourCharacterID>OHI2</geo:fourCharacterID>
@@ -11,7 +16,7 @@
          <geo:monumentFoundation>CONCRETE PILLAR BOLTED ON BEDROCK</geo:monumentFoundation>
          <geo:foundationDepth>0.5</geo:foundationDepth>
          <geo:markerDescription>SURVEY MARKER WITH THREAD</geo:markerDescription>
-         <geo:dateInstalled>13 Feb 2002 13:00 GMT</geo:dateInstalled>
+         <geo:dateInstalled>2002-02-13T13:00:00Z</geo:dateInstalled>
          <geo:geologicCharacteristic>Bedrock</geo:geologicCharacteristic>
          <geo:bedrockType>Metamorphic</geo:bedrockType>
          <geo:bedrockCondition>Weathered</geo:bedrockCondition>
@@ -30,15 +35,14 @@
       </geo:siteLocation>
       <geo:gnssReceivers>
          <geo:gnssReceiver>
-            <geo:receiverType>AOA SNR-8000 ACT</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>T-394U</geo:serialNumber>
-            <geo:firmwareVersion>3.3.32.4</geo:firmwareVersion>
+            <geo:receiverType>JPS E_GGD</geo:receiverType>
+            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
+            <geo:serialNumber>AECFDJ1KK5C</geo:serialNumber>
+            <geo:firmwareVersion>3.4 DEC,12,2009 P2</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>14 Feb 2002 18:30 GMT</geo:dateInstalled>
-            <geo:dateRemoved>12 Nov 2007 08:29 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2010-03-26T13:35:00Z</geo:dateInstalled>
             <geo:temperatureStabilization>none</geo:temperatureStabilization>
-            <geo:notes>New OHI2 at pillar K6 replaced OHIG at pillar K5, which operated since 1995-02-14T00</geo:notes>
+            <geo:notes>Additional number LGGD SN 0243 on the type level. /par/lock/notvis switched to &quot;on&quot;.</geo:notes>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
@@ -48,8 +52,8 @@
             <geo:serialNumber>AECFDJ1KK5C</geo:serialNumber>
             <geo:firmwareVersion>2.6.0 Apr,18,2007</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>12 Nov 2007 08:30 GMT</geo:dateInstalled>
-            <geo:dateRemoved>17 Jan 2008 16:14 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2007-11-12T08:30:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2008-01-17T16:14:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>none</geo:temperatureStabilization>
             <geo:notes>Additional number LGGD SN 0243 on the type level. /par/lock/notvis switched to &quot;on&quot;.</geo:notes>
          </geo:gnssReceiver>
@@ -61,54 +65,40 @@
             <geo:serialNumber>AECFDJ1KK5C</geo:serialNumber>
             <geo:firmwareVersion>2.6.1 JAN,10,2008</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>17 Jan 2008 16:15 GMT</geo:dateInstalled>
-            <geo:dateRemoved>26 Mar 2010 13:34 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2008-01-17T16:15:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2010-03-26T13:34:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>none</geo:temperatureStabilization>
             <geo:notes>Additional number LGGD SN 0243 on the type level. /par/lock/notvis switched to &quot;on&quot;.</geo:notes>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
          <geo:gnssReceiver>
-            <geo:receiverType>JPS E_GGD</geo:receiverType>
-            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
-            <geo:serialNumber>AECFDJ1KK5C</geo:serialNumber>
-            <geo:firmwareVersion>3.4 DEC,12,2009 P2</geo:firmwareVersion>
+            <geo:receiverType>AOA SNR-8000 ACT</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>T-394U</geo:serialNumber>
+            <geo:firmwareVersion>3.3.32.4</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>26 Mar 2010 13:35 GMT</geo:dateInstalled>
+            <geo:dateInstalled>2002-02-14T18:30:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2007-11-12T08:29:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>none</geo:temperatureStabilization>
-            <geo:notes>Additional number LGGD SN 0243 on the type level. /par/lock/notvis switched to &quot;on&quot;.</geo:notes>
+            <geo:notes>New OHI2 at pillar K6 replaced OHIG at pillar K5, which operated since 1995-02-14T00</geo:notes>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssAntennas>
          <geo:gnssAntenna>
-            <geo:antennaType>AOAD/M_T        NONE</geo:antennaType>
+            <geo:antennaType>AOAD/M_T        DOME</geo:antennaType>
             <geo:serialNumber>414U</geo:serialNumber>
             <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
             <geo:marker-arpUpEcc.>8.0E-4</geo:marker-arpUpEcc.>
             <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
+            <geo:antennaRadomeType>DOME</geo:antennaRadomeType>
             <geo:antennaCableType>RG214</geo:antennaCableType>
             <geo:antennaCableLength>30</geo:antennaCableLength>
-            <geo:dateInstalled>14 Feb 2002 18:30 GMT</geo:dateInstalled>
-            <geo:dateRemoved>19 Feb 2002 20:00 GMT</geo:dateRemoved>
-            <geo:notes>Antenna height was incorrectly reported as 0.0008 m, instead of correct -0.0080 m.</geo:notes>
-         </geo:gnssAntenna>
-      </geo:gnssAntennas>
-      <geo:gnssAntennas>
-         <geo:gnssAntenna>
-            <geo:antennaType>TPSCR.G3        TPSH</geo:antennaType>
-            <geo:serialNumber>383-0203</geo:serialNumber>
-            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
-            <geo:marker-arpUpEcc.>0.0244</geo:marker-arpUpEcc.>
-            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
-            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
-            <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>TPSH</geo:antennaRadomeType>
-            <geo:antennaCableType>RG214</geo:antennaCableType>
-            <geo:dateInstalled>07 Feb 2013 21:00 GMT</geo:dateInstalled>
-            <geo:notes>P/N 01-044301-01 Antenna calibrated absolute by GEO++ GmbH Garbsen, 11-November-2007.</geo:notes>
+            <geo:dateInstalled>2002-02-19T20:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2003-02-23T00:00:00Z</geo:dateRemoved>
+            <geo:notes>Modfied Radome as used for Inmarsat A equipments. Used also for former OHIG. Antenna height was incorrectly reported as 0.0008 m, instead of correct -0.0080 m until 2003-02-23.</geo:notes>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
       <geo:gnssAntennas>
@@ -123,26 +113,26 @@
             <geo:antennaRadomeType>DOME</geo:antennaRadomeType>
             <geo:antennaCableType>RG214</geo:antennaCableType>
             <geo:antennaCableLength>30</geo:antennaCableLength>
-            <geo:dateInstalled>23 Feb 2003 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>30 Jan 2009 17:30 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2003-02-23T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2009-01-30T17:30:00Z</geo:dateRemoved>
             <geo:notes>Modfied Radome as used for Inmarsat A equipments. Used also for former OHIG. Correctly antenna-height -0.0080 m in the RINEX-Headers since 2003-02-23.</geo:notes>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
       <geo:gnssAntennas>
          <geo:gnssAntenna>
-            <geo:antennaType>AOAD/M_T        DOME</geo:antennaType>
+            <geo:antennaType>AOAD/M_T        NONE</geo:antennaType>
             <geo:serialNumber>414U</geo:serialNumber>
             <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
             <geo:marker-arpUpEcc.>8.0E-4</geo:marker-arpUpEcc.>
             <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>DOME</geo:antennaRadomeType>
+            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
             <geo:antennaCableType>RG214</geo:antennaCableType>
             <geo:antennaCableLength>30</geo:antennaCableLength>
-            <geo:dateInstalled>19 Feb 2002 20:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>23 Feb 2003 00:00 GMT</geo:dateRemoved>
-            <geo:notes>Modfied Radome as used for Inmarsat A equipments. Used also for former OHIG. Antenna height was incorrectly reported as 0.0008 m, instead of correct -0.0080 m until 2003-02-23.</geo:notes>
+            <geo:dateInstalled>2002-02-14T18:30:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2002-02-19T20:00:00Z</geo:dateRemoved>
+            <geo:notes>Antenna height was incorrectly reported as 0.0008 m, instead of correct -0.0080 m.</geo:notes>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
       <geo:gnssAntennas>
@@ -156,8 +146,23 @@
             <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
             <geo:antennaRadomeType>TPSH</geo:antennaRadomeType>
             <geo:antennaCableType>RG214</geo:antennaCableType>
-            <geo:dateInstalled>30 Jan 2009 17:45 GMT</geo:dateInstalled>
-            <geo:dateRemoved>07 Feb 2013 20:59 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2009-01-30T17:45:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2013-02-07T20:59:00Z</geo:dateRemoved>
+            <geo:notes>P/N 01-044301-01 Antenna calibrated absolute by GEO++ GmbH Garbsen, 11-November-2007.</geo:notes>
+         </geo:gnssAntenna>
+      </geo:gnssAntennas>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna>
+            <geo:antennaType>TPSCR.G3        TPSH</geo:antennaType>
+            <geo:serialNumber>383-0203</geo:serialNumber>
+            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>0.0244</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
+            <geo:antennaRadomeType>TPSH</geo:antennaRadomeType>
+            <geo:antennaCableType>RG214</geo:antennaCableType>
+            <geo:dateInstalled>2013-02-07T21:00:00Z</geo:dateInstalled>
             <geo:notes>P/N 01-044301-01 Antenna calibrated absolute by GEO++ GmbH Garbsen, 11-November-2007.</geo:notes>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
@@ -172,40 +177,8 @@
             </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
             <geo:localSiteTiesAccuracy>1.0</geo:localSiteTiesAccuracy>
             <geo:surveyMethod>TRIANGULATION</geo:surveyMethod>
-            <geo:dateMeasured>11 Feb 2002 13:00 GMT</geo:dateMeasured>
+            <geo:dateMeasured>2002-02-11T13:00:00Z</geo:dateMeasured>
             <geo:notes>Differential Components from the Marker Pillar K6 OHI2 to the Point of Axis-Intersection in the VLBI Radiotelescope. dx, dy, dz = Marker Pillar K6 OHI2 minus Axis-Intersection VLBI.</geo:notes>
-         </geo:surveyedLocalTies>
-      </geo:surveyedLocalTies>
-      <geo:surveyedLocalTies>
-         <geo:surveyedLocalTies>
-            <geo:tiedMarkerName>Pillar K3 = OHI3</geo:tiedMarkerName>
-            <geo:tiedMarkerUsage>GPS+GLONASS</geo:tiedMarkerUsage>
-            <geo:tiedMarkerDOMESNumber>66008M006</geo:tiedMarkerDOMESNumber>
-            <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
-               <geo:dx>2.8291</geo:dx>
-               <geo:dy>0.515</geo:dy>
-               <geo:dz>0.6918</geo:dz>
-            </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
-            <geo:localSiteTiesAccuracy>1.0</geo:localSiteTiesAccuracy>
-            <geo:surveyMethod>TRIANGULATION</geo:surveyMethod>
-            <geo:dateMeasured>11 Feb 2002 13:00 GMT</geo:dateMeasured>
-            <geo:notes>GPS+GLONASS Permanent Tracking Station OHI3 at pillar K3 since 2003-02-06. Differentiel Components from the Marker Pillar K6 OHI2 to the Marker Pillar K3 OHI3. dx, dy, dz = Marker Pillar K6 OHI2 minus Marker Pillar K3 OHI3.</geo:notes>
-         </geo:surveyedLocalTies>
-      </geo:surveyedLocalTies>
-      <geo:surveyedLocalTies>
-         <geo:surveyedLocalTies>
-            <geo:tiedMarkerName>Pillar K5 = OHIG</geo:tiedMarkerName>
-            <geo:tiedMarkerUsage>GPS</geo:tiedMarkerUsage>
-            <geo:tiedMarkerDOMESNumber>66008M001</geo:tiedMarkerDOMESNumber>
-            <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
-               <geo:dx>-60.744</geo:dx>
-               <geo:dy>3.0891</geo:dy>
-               <geo:dz>-19.5299</geo:dz>
-            </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
-            <geo:localSiteTiesAccuracy>1.0</geo:localSiteTiesAccuracy>
-            <geo:surveyMethod>TRIANGULATION</geo:surveyMethod>
-            <geo:dateMeasured>11 Feb 2002 13:00 GMT</geo:dateMeasured>
-            <geo:notes>GPS Permanent Tracking Station OHIG at Pillar K5 from 1995-02-14 until 2002-02-20. Differential Components from the Marker Pillar K6 OHI2 to the Marker Pillar K5 OHIG. dx, dy, dz = Marker Pillar K6 OHI2 minus Marker Pillar K5 OHIG.</geo:notes>
          </geo:surveyedLocalTies>
       </geo:surveyedLocalTies>
       <geo:surveyedLocalTies>
@@ -220,8 +193,40 @@
             </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
             <geo:localSiteTiesAccuracy>1.5</geo:localSiteTiesAccuracy>
             <geo:surveyMethod>TRIANGULATION</geo:surveyMethod>
-            <geo:dateMeasured>11 Feb 2002 13:00 GMT</geo:dateMeasured>
+            <geo:dateMeasured>2002-02-11T13:00:00Z</geo:dateMeasured>
             <geo:notes>GPS+GLONASS Permanent Tracking Station OHIZ from 2001-02-09 until 2003-01-27. Differential Components from the Marker Pillar K6 OHI2 to the ARP of the OHIZ antenna, not to the OHIZ Marker. The ARP of the OHIZ antenna was 0.1215 m above the OHIZ Marker. dx, dy, dz = Marker Pillar K6 OHI2 minus ARP OHIZ antenna.</geo:notes>
+         </geo:surveyedLocalTies>
+      </geo:surveyedLocalTies>
+      <geo:surveyedLocalTies>
+         <geo:surveyedLocalTies>
+            <geo:tiedMarkerName>Pillar K5 = OHIG</geo:tiedMarkerName>
+            <geo:tiedMarkerUsage>GPS</geo:tiedMarkerUsage>
+            <geo:tiedMarkerDOMESNumber>66008M001</geo:tiedMarkerDOMESNumber>
+            <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+               <geo:dx>-60.744</geo:dx>
+               <geo:dy>3.0891</geo:dy>
+               <geo:dz>-19.5299</geo:dz>
+            </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+            <geo:localSiteTiesAccuracy>1.0</geo:localSiteTiesAccuracy>
+            <geo:surveyMethod>TRIANGULATION</geo:surveyMethod>
+            <geo:dateMeasured>2002-02-11T13:00:00Z</geo:dateMeasured>
+            <geo:notes>GPS Permanent Tracking Station OHIG at Pillar K5 from 1995-02-14 until 2002-02-20. Differential Components from the Marker Pillar K6 OHI2 to the Marker Pillar K5 OHIG. dx, dy, dz = Marker Pillar K6 OHI2 minus Marker Pillar K5 OHIG.</geo:notes>
+         </geo:surveyedLocalTies>
+      </geo:surveyedLocalTies>
+      <geo:surveyedLocalTies>
+         <geo:surveyedLocalTies>
+            <geo:tiedMarkerName>Pillar K3 = OHI3</geo:tiedMarkerName>
+            <geo:tiedMarkerUsage>GPS+GLONASS</geo:tiedMarkerUsage>
+            <geo:tiedMarkerDOMESNumber>66008M006</geo:tiedMarkerDOMESNumber>
+            <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+               <geo:dx>2.8291</geo:dx>
+               <geo:dy>0.515</geo:dy>
+               <geo:dz>0.6918</geo:dz>
+            </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+            <geo:localSiteTiesAccuracy>1.0</geo:localSiteTiesAccuracy>
+            <geo:surveyMethod>TRIANGULATION</geo:surveyMethod>
+            <geo:dateMeasured>2002-02-11T13:00:00Z</geo:dateMeasured>
+            <geo:notes>GPS+GLONASS Permanent Tracking Station OHI3 at pillar K3 since 2003-02-06. Differentiel Components from the Marker Pillar K6 OHI2 to the Marker Pillar K3 OHI3. dx, dy, dz = Marker Pillar K6 OHI2 minus Marker Pillar K3 OHI3.</geo:notes>
          </geo:surveyedLocalTies>
       </geo:surveyedLocalTies>
       <geo:frequencyStandards>
@@ -230,7 +235,7 @@
             <geo:inputFrequency>Input Frequency        :</geo:inputFrequency>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2002-02-14T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2002-02-14T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
@@ -240,13 +245,13 @@
       <geo:collocationInformations>
          <geo:collocationInformation>
             <geo:status>PERMANENT</geo:status>
-            <geo:notes>Four Character ID OHIX</geo:notes>
+            <geo:notes>Four Character ID OHIZ</geo:notes>
          </geo:collocationInformation>
       </geo:collocationInformations>
       <geo:collocationInformations>
          <geo:collocationInformation>
             <geo:status>PERMANENT</geo:status>
-            <geo:notes>2 VLBI-measurements in campaigns each year</geo:notes>
+            <geo:notes>Four Character ID OHI3</geo:notes>
          </geo:collocationInformation>
       </geo:collocationInformations>
       <geo:collocationInformations>
@@ -264,7 +269,13 @@
       <geo:collocationInformations>
          <geo:collocationInformation>
             <geo:status>PERMANENT</geo:status>
-            <geo:notes>Four Character ID OHI3</geo:notes>
+            <geo:notes>2 VLBI-measurements in campaigns each year</geo:notes>
+         </geo:collocationInformation>
+      </geo:collocationInformations>
+      <geo:collocationInformations>
+         <geo:collocationInformation>
+            <geo:status>PERMANENT</geo:status>
+            <geo:notes>Four Character ID OHIX</geo:notes>
          </geo:collocationInformation>
       </geo:collocationInformations>
       <geo:collocationInformations>
@@ -282,32 +293,9 @@
       <geo:collocationInformations>
          <geo:collocationInformation>
             <geo:status>PERMANENT</geo:status>
-            <geo:notes>Four Character ID OHIZ</geo:notes>
-         </geo:collocationInformation>
-      </geo:collocationInformations>
-      <geo:collocationInformations>
-         <geo:collocationInformation>
-            <geo:status>PERMANENT</geo:status>
             <geo:notes>Four Character ID OHI3</geo:notes>
          </geo:collocationInformation>
       </geo:collocationInformations>
-      <geo:humiditySensors>
-         <geo:humiditySensor>
-            <geo:type>MP408A</geo:type>
-            <geo:manufacturer>ROTRONIC</geo:manufacturer>
-            <geo:heightDiffToAntenna>-1.1</geo:heightDiffToAntenna>
-            <gml:validTime>
-               <gml:TimePeriod>
-                  <gml:beginPosition>2003-11-03T00:00Z</gml:beginPosition>
-                  <gml:endPosition></gml:endPosition>
-               </gml:TimePeriod>
-            </gml:validTime>
-            <geo:dataSamplingInterval>900</geo:dataSamplingInterval>
-            <geo:accuracy-percentRelativeHumidity>1.5</geo:accuracy-percentRelativeHumidity>
-            <geo:aspiration>CAPACITANCE PROBE</geo:aspiration>
-            <geo:notes>The Humidity Sensor is 1.1 m above the antenna.</geo:notes>
-         </geo:humiditySensor>
-      </geo:humiditySensors>
       <geo:humiditySensors>
          <geo:humiditySensor>
             <geo:type>HUGER-WS</geo:type>
@@ -315,8 +303,8 @@
             <geo:heightDiffToAntenna>-1.1</geo:heightDiffToAntenna>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2003-02-25T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2003-11-03T00:00Z</gml:endPosition>
+                  <gml:beginPosition>2003-02-25T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2003-11-03T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
             <geo:dataSamplingInterval>900</geo:dataSamplingInterval>
@@ -332,8 +320,25 @@
             <geo:heightDiffToAntenna>-1.1</geo:heightDiffToAntenna>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>1995-02-14T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2003-02-25T00:00Z</gml:endPosition>
+                  <gml:beginPosition>2003-11-03T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition></gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+            <geo:dataSamplingInterval>900</geo:dataSamplingInterval>
+            <geo:accuracy-percentRelativeHumidity>1.5</geo:accuracy-percentRelativeHumidity>
+            <geo:aspiration>CAPACITANCE PROBE</geo:aspiration>
+            <geo:notes>The Humidity Sensor is 1.1 m above the antenna.</geo:notes>
+         </geo:humiditySensor>
+      </geo:humiditySensors>
+      <geo:humiditySensors>
+         <geo:humiditySensor>
+            <geo:type>MP408A</geo:type>
+            <geo:manufacturer>ROTRONIC</geo:manufacturer>
+            <geo:heightDiffToAntenna>-1.1</geo:heightDiffToAntenna>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>1995-02-14T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2003-02-25T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
             <geo:dataSamplingInterval>900</geo:dataSamplingInterval>
@@ -349,8 +354,8 @@
             <geo:heightDiffToAntenna>0.5</geo:heightDiffToAntenna>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2003-02-25T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2003-11-03T00:00Z</gml:endPosition>
+                  <gml:beginPosition>2003-02-25T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2003-11-03T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
             <geo:dataSamplingInterval>900</geo:dataSamplingInterval>
@@ -365,8 +370,8 @@
             <geo:heightDiffToAntenna>1.0</geo:heightDiffToAntenna>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>1995-02-14T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2003-02-25T00:00Z</gml:endPosition>
+                  <gml:beginPosition>1995-02-14T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2003-02-25T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
             <geo:dataSamplingInterval>900</geo:dataSamplingInterval>
@@ -382,7 +387,7 @@
             <geo:heightDiffToAntenna>1.0</geo:heightDiffToAntenna>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2003-11-03T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2003-11-03T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
@@ -398,8 +403,8 @@
             <geo:heightDiffToAntenna>-1.1</geo:heightDiffToAntenna>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>1995-02-14T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2003-02-25T00:00Z</gml:endPosition>
+                  <gml:beginPosition>1995-02-14T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2003-02-25T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
             <geo:dataSamplingInterval>900</geo:dataSamplingInterval>
@@ -415,8 +420,8 @@
             <geo:heightDiffToAntenna>-1.1</geo:heightDiffToAntenna>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2003-02-25T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2003-11-03T00:00Z</gml:endPosition>
+                  <gml:beginPosition>2003-02-25T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2003-11-03T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
             <geo:dataSamplingInterval>900</geo:dataSamplingInterval>
@@ -432,7 +437,7 @@
             <geo:heightDiffToAntenna>-1.1</geo:heightDiffToAntenna>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2003-11-03T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2003-11-03T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>

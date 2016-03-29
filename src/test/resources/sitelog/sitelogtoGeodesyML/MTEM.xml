@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-   <geo:siteLog>
+<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_392">
+   <geo:siteLog gml:id="SiteLogType_392">
+      <geo:formInformation>
+         <geo:preparedBy>Alex Woods</geo:preparedBy>
+         <geo:datePrepared>2013-06-23T14:00:00Z</geo:datePrepared>
+         <geo:reportType>UPDATE</geo:reportType>
+      </geo:formInformation>
       <geo:siteIdentification>
          <geo:siteName>Mount Emu</geo:siteName>
          <geo:fourCharacterID>MTEM</geo:fourCharacterID>
@@ -11,7 +16,7 @@
          <geo:monumentFoundation>STEEL RODS / CONCRETE BLOCK</geo:monumentFoundation>
          <geo:foundationDepth>0.6</geo:foundationDepth>
          <geo:markerDescription>STAINLESS STEEL PLATE, THREADED SPIGOT</geo:markerDescription>
-         <geo:dateInstalled>11 May 2011 14:00 GMT</geo:dateInstalled>
+         <geo:dateInstalled>2011-05-11T14:00:00Z</geo:dateInstalled>
          <geo:geologicCharacteristic>GRANITE ROCK</geo:geologicCharacteristic>
          <geo:bedrockType>DEVONIAN</geo:bedrockType>
          <geo:bedrockCondition>GOOD</geo:bedrockCondition>
@@ -33,21 +38,9 @@
             <geo:receiverType>LEICA GRX1200+GNSS</geo:receiverType>
             <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
             <geo:serialNumber>495571</geo:serialNumber>
-            <geo:firmwareVersion>8.10/4.004</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>12 May 2011 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>09 Feb 2012 23:40 GMT</geo:dateRemoved>
-            <geo:temperatureStabilization>none</geo:temperatureStabilization>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>LEICA GRX1200+GNSS</geo:receiverType>
-            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
-            <geo:serialNumber>495571</geo:serialNumber>
             <geo:firmwareVersion>8.50/6.112</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>15 May 2013 00:00 GMT</geo:dateInstalled>
+            <geo:dateInstalled>2013-05-15T00:00:00Z</geo:dateInstalled>
             <geo:temperatureStabilization>none</geo:temperatureStabilization>
             <geo:notes>Repaired after lightning strike</geo:notes>
          </geo:gnssReceiver>
@@ -57,31 +50,26 @@
             <geo:receiverType>LEICA GRX1200+GNSS</geo:receiverType>
             <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
             <geo:serialNumber>495571</geo:serialNumber>
+            <geo:firmwareVersion>8.10/4.004</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2011-05-12T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2012-02-09T23:40:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>none</geo:temperatureStabilization>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>LEICA GRX1200+GNSS</geo:receiverType>
+            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
+            <geo:serialNumber>495571</geo:serialNumber>
             <geo:firmwareVersion>8.50/6.110</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>09 Feb 2012 23:40 GMT</geo:dateInstalled>
-            <geo:dateRemoved>15 Feb 2013 00:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2012-02-09T23:40:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2013-02-15T00:00:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>none</geo:temperatureStabilization>
             <geo:notes>FW update</geo:notes>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
-      <geo:gnssAntennas>
-         <geo:gnssAntenna>
-            <geo:antennaType>LEIAR25.R3      NONE</geo:antennaType>
-            <geo:serialNumber>09370005</geo:serialNumber>
-            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
-            <geo:marker-arpUpEcc.>0.0</geo:marker-arpUpEcc.>
-            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
-            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
-            <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
-            <geo:antennaCableType>CNT-400</geo:antennaCableType>
-            <geo:antennaCableLength>40</geo:antennaCableLength>
-            <geo:dateInstalled>12 May 2011 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>15 Feb 2013 00:00 GMT</geo:dateRemoved>
-            <geo:notes>Lightning strike damage</geo:notes>
-         </geo:gnssAntenna>
-      </geo:gnssAntennas>
       <geo:gnssAntennas>
          <geo:gnssAntenna>
             <geo:antennaType>TRM59800.00     NONE</geo:antennaType>
@@ -94,21 +82,38 @@
             <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
             <geo:antennaCableType>CNT-400</geo:antennaCableType>
             <geo:antennaCableLength>40</geo:antennaCableLength>
-            <geo:dateInstalled>15 May 2013 00:00 GMT</geo:dateInstalled>
+            <geo:dateInstalled>2013-05-15T00:00:00Z</geo:dateInstalled>
+         </geo:gnssAntenna>
+      </geo:gnssAntennas>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna>
+            <geo:antennaType>LEIAR25.R3      NONE</geo:antennaType>
+            <geo:serialNumber>09370005</geo:serialNumber>
+            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>0.0</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
+            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
+            <geo:antennaCableType>CNT-400</geo:antennaCableType>
+            <geo:antennaCableLength>40</geo:antennaCableLength>
+            <geo:dateInstalled>2011-05-12T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2013-02-15T00:00:00Z</geo:dateRemoved>
+            <geo:notes>Lightning strike damage</geo:notes>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
       <geo:surveyedLocalTies>
          <geo:surveyedLocalTies>
-            <geo:tiedMarkerName>RM2</geo:tiedMarkerName>
+            <geo:tiedMarkerName>RM3</geo:tiedMarkerName>
             <geo:tiedMarkerUsage>LOCAL CONTROL</geo:tiedMarkerUsage>
             <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
-               <geo:dx>4.1311</geo:dx>
-               <geo:dy>-3.5119</geo:dy>
-               <geo:dz>-2.8976</geo:dz>
+               <geo:dx>5.7022</geo:dx>
+               <geo:dy>10.1758</geo:dy>
+               <geo:dz>5.4381</geo:dz>
             </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
             <geo:localSiteTiesAccuracy>1 (mm)</geo:localSiteTiesAccuracy>
             <geo:surveyMethod>TRILATERATION/TRIANGULATION</geo:surveyMethod>
-            <geo:dateMeasured>20 Feb 2012 13:00 GMT</geo:dateMeasured>
+            <geo:dateMeasured>2012-02-20T13:00:00Z</geo:dateMeasured>
          </geo:surveyedLocalTies>
       </geo:surveyedLocalTies>
       <geo:surveyedLocalTies>
@@ -122,7 +127,7 @@
             </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
             <geo:localSiteTiesAccuracy>1 (mm)</geo:localSiteTiesAccuracy>
             <geo:surveyMethod>TRILATERATION/TRIANGULATION</geo:surveyMethod>
-            <geo:dateMeasured>20 Feb 2012 13:00 GMT</geo:dateMeasured>
+            <geo:dateMeasured>2012-02-20T13:00:00Z</geo:dateMeasured>
          </geo:surveyedLocalTies>
       </geo:surveyedLocalTies>
       <geo:surveyedLocalTies>
@@ -136,21 +141,21 @@
             </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
             <geo:localSiteTiesAccuracy>1 (mm)</geo:localSiteTiesAccuracy>
             <geo:surveyMethod>TRILATERATION/TRIANGULATION</geo:surveyMethod>
-            <geo:dateMeasured>20 Feb 2012 13:00 GMT</geo:dateMeasured>
+            <geo:dateMeasured>2012-02-20T13:00:00Z</geo:dateMeasured>
          </geo:surveyedLocalTies>
       </geo:surveyedLocalTies>
       <geo:surveyedLocalTies>
          <geo:surveyedLocalTies>
-            <geo:tiedMarkerName>RM3</geo:tiedMarkerName>
+            <geo:tiedMarkerName>RM2</geo:tiedMarkerName>
             <geo:tiedMarkerUsage>LOCAL CONTROL</geo:tiedMarkerUsage>
             <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
-               <geo:dx>5.7022</geo:dx>
-               <geo:dy>10.1758</geo:dy>
-               <geo:dz>5.4381</geo:dz>
+               <geo:dx>4.1311</geo:dx>
+               <geo:dy>-3.5119</geo:dy>
+               <geo:dz>-2.8976</geo:dz>
             </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
             <geo:localSiteTiesAccuracy>1 (mm)</geo:localSiteTiesAccuracy>
             <geo:surveyMethod>TRILATERATION/TRIANGULATION</geo:surveyMethod>
-            <geo:dateMeasured>20 Feb 2012 13:00 GMT</geo:dateMeasured>
+            <geo:dateMeasured>2012-02-20T13:00:00Z</geo:dateMeasured>
          </geo:surveyedLocalTies>
       </geo:surveyedLocalTies>
       <geo:frequencyStandards>
@@ -159,7 +164,7 @@
             <geo:inputFrequency>5Mhz</geo:inputFrequency>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2011-05-12T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2011-05-12T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
@@ -173,8 +178,8 @@
             <geo:heightDiffToAntenna>-0.514</geo:heightDiffToAntenna>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2012-02-22T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2013-02-15T00:00Z</gml:endPosition>
+                  <gml:beginPosition>2012-02-22T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2013-02-15T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
             <geo:dataSamplingInterval>30</geo:dataSamplingInterval>
@@ -191,7 +196,7 @@
             <geo:heightDiffToAntenna>-0.500</geo:heightDiffToAntenna>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2013-06-13T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2013-06-13T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
@@ -208,8 +213,8 @@
             <geo:heightDiffToAntenna>-0.514</geo:heightDiffToAntenna>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2012-02-22T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2013-02-15T00:00Z</gml:endPosition>
+                  <gml:beginPosition>2012-02-22T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2013-02-15T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
             <geo:dataSamplingInterval>30</geo:dataSamplingInterval>
@@ -225,7 +230,7 @@
             <geo:heightDiffToAntenna>-0.500</geo:heightDiffToAntenna>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2013-06-13T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2013-06-13T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
@@ -237,35 +242,35 @@
          <geo:temperatureSensor>
             <geo:type>PAROSCIENTIFIC MET4</geo:type>
             <geo:manufacturer>Paroscientific</geo:manufacturer>
-            <geo:serialNumber>127302</geo:serialNumber>
-            <geo:heightDiffToAntenna>-0.500</geo:heightDiffToAntenna>
-            <gml:validTime>
-               <gml:TimePeriod>
-                  <gml:beginPosition>2013-06-13T00:00Z</gml:beginPosition>
-                  <gml:endPosition></gml:endPosition>
-               </gml:TimePeriod>
-            </gml:validTime>
-            <geo:dataSamplingInterval>30</geo:dataSamplingInterval>
-            <geo:accuracy-degreesCelcius>0.50 (deg C)</geo:accuracy-degreesCelcius>
-            <geo:aspiration>UNASPIRATED</geo:aspiration>
-         </geo:temperatureSensor>
-      </geo:temperatureSensors>
-      <geo:temperatureSensors>
-         <geo:temperatureSensor>
-            <geo:type>PAROSCIENTIFIC MET4</geo:type>
-            <geo:manufacturer>Paroscientific</geo:manufacturer>
             <geo:serialNumber>114958</geo:serialNumber>
             <geo:heightDiffToAntenna>-0.514</geo:heightDiffToAntenna>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2012-02-22T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2013-02-15T00:00Z</gml:endPosition>
+                  <gml:beginPosition>2012-02-22T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2013-02-15T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
             <geo:dataSamplingInterval>30</geo:dataSamplingInterval>
             <geo:accuracy-degreesCelcius>0.50 (deg C)</geo:accuracy-degreesCelcius>
             <geo:aspiration>UNASPIRATED</geo:aspiration>
             <geo:notes>Lightning strike damage</geo:notes>
+         </geo:temperatureSensor>
+      </geo:temperatureSensors>
+      <geo:temperatureSensors>
+         <geo:temperatureSensor>
+            <geo:type>PAROSCIENTIFIC MET4</geo:type>
+            <geo:manufacturer>Paroscientific</geo:manufacturer>
+            <geo:serialNumber>127302</geo:serialNumber>
+            <geo:heightDiffToAntenna>-0.500</geo:heightDiffToAntenna>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2013-06-13T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition></gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+            <geo:dataSamplingInterval>30</geo:dataSamplingInterval>
+            <geo:accuracy-degreesCelcius>0.50 (deg C)</geo:accuracy-degreesCelcius>
+            <geo:aspiration>UNASPIRATED</geo:aspiration>
          </geo:temperatureSensor>
       </geo:temperatureSensors>
       <geo:siteContact>

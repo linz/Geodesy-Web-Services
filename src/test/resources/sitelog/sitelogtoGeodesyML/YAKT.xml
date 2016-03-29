@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-   <geo:siteLog>
+<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_655">
+   <geo:siteLog gml:id="SiteLogType_655">
+      <geo:formInformation>
+         <geo:preparedBy>David Maggert</geo:preparedBy>
+         <geo:datePrepared>2013-01-30T13:00:00Z</geo:datePrepared>
+         <geo:reportType>UPDATE</geo:reportType>
+      </geo:formInformation>
       <geo:siteIdentification>
          <geo:siteName>Seismic Station Yakutsk</geo:siteName>
          <geo:fourCharacterID>YAKT</geo:fourCharacterID>
          <geo:iersDOMESNumber>12353M002</geo:iersDOMESNumber>
-         <geo:dateInstalled>23 Apr 2000 14:00 GMT</geo:dateInstalled>
+         <geo:dateInstalled>2000-04-23T14:00:00Z</geo:dateInstalled>
          <geo:geologicCharacteristic>Eastern margin of Siberian platform.</geo:geologicCharacteristic>
          <geo:bedrockType>Sedimentary</geo:bedrockType>
          <geo:bedrockCondition>NA</geo:bedrockCondition>
@@ -30,7 +35,7 @@
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
             <geo:serialNumber>LP01567</geo:serialNumber>
             <geo:firmwareVersion>NAV CC00  CH 1D02</geo:firmwareVersion>
-            <geo:dateInstalled>24 Apr 2000 00:00 GMT</geo:dateInstalled>
+            <geo:dateInstalled>2000-04-24T00:00:00Z</geo:dateInstalled>
             <geo:notes>Model 700845-10D (Z-12 CGRS).</geo:notes>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
@@ -44,7 +49,7 @@
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
             <geo:antennaRadomeType>SCIS</geo:antennaRadomeType>
-            <geo:dateInstalled>24 Apr 2000 00:00 GMT</geo:dateInstalled>
+            <geo:dateInstalled>2000-04-24T00:00:00Z</geo:dateInstalled>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
       <geo:surveyedLocalTies>
@@ -57,33 +62,33 @@
                <geo:dz>-0.611</geo:dz>
             </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
             <geo:localSiteTiesAccuracy>+-0.3 mm per component</geo:localSiteTiesAccuracy>
-            <geo:dateMeasured>27 Jun 2000 14:00 GMT</geo:dateMeasured>
+            <geo:dateMeasured>2000-06-27T14:00:00Z</geo:dateMeasured>
             <geo:notes>YAKT is the GPS Mark YAK of RUSEG 1996 campaign. YAKT was reoccupied in 1997 and in 1999.</geo:notes>
          </geo:surveyedLocalTies>
       </geo:surveyedLocalTies>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard>
+            <geo:standardType>INTERNAL</geo:standardType>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2000-04-24T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2001-01-23T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+            <geo:notes>Clock Steering ON</geo:notes>
+         </geo:frequencyStandard>
+      </geo:frequencyStandards>
       <geo:frequencyStandards>
          <geo:frequencyStandard>
             <geo:standardType>CESIUM</geo:standardType>
             <geo:inputFrequency>5 Mhz</geo:inputFrequency>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2001-01-23T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2001-01-23T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
             <geo:notes>Clock Steering OFF (See IGSMAIL-30710)</geo:notes>
-         </geo:frequencyStandard>
-      </geo:frequencyStandards>
-      <geo:frequencyStandards>
-         <geo:frequencyStandard>
-            <geo:standardType>INTERNAL</geo:standardType>
-            <gml:validTime>
-               <gml:TimePeriod>
-                  <gml:beginPosition>2000-04-24T00:00Z</gml:beginPosition>
-                  <gml:endPosition>2001-01-23T00:00Z</gml:endPosition>
-               </gml:TimePeriod>
-            </gml:validTime>
-            <geo:notes>Clock Steering ON</geo:notes>
          </geo:frequencyStandard>
       </geo:frequencyStandards>
       <geo:localEpisodicEventsSet>

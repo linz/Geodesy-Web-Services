@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-   <geo:siteLog>
+<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_220">
+   <geo:siteLog gml:id="SiteLogType_220">
+      <geo:formInformation>
+         <geo:preparedBy>Helmut Titz, BEV, Vienna, Austria</geo:preparedBy>
+         <geo:datePrepared>2013-08-11T14:00:00Z</geo:datePrepared>
+         <geo:reportType>UPDATE</geo:reportType>
+      </geo:formInformation>
       <geo:siteIdentification>
          <geo:siteName>Graz-Lustbuehel</geo:siteName>
          <geo:fourCharacterID>GRAZ</geo:fourCharacterID>
@@ -12,7 +17,7 @@
          <geo:monumentFoundation>ROOF</geo:monumentFoundation>
          <geo:foundationDepth>18.0</geo:foundationDepth>
          <geo:markerDescription>BRASS MARKER</geo:markerDescription>
-         <geo:dateInstalled>11 Jun 1993 14:00 GMT</geo:dateInstalled>
+         <geo:dateInstalled>1993-06-11T14:00:00Z</geo:dateInstalled>
          <geo:geologicCharacteristic>Marker in roof of the observatory</geo:geologicCharacteristic>
          <geo:bedrockType>SEDIMENTARY</geo:bedrockType>
          <geo:bedrockCondition>JOINTED</geo:bedrockCondition>
@@ -32,48 +37,14 @@
       </geo:siteLocation>
       <geo:gnssReceivers>
          <geo:gnssReceiver>
-            <geo:receiverType>TRIMBLE NETRS</geo:receiverType>
+            <geo:receiverType>ROGUE SNR-8000</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>28748</geo:serialNumber>
-            <geo:firmwareVersion>NETRS 1.1-1</geo:firmwareVersion>
+            <geo:serialNumber>T 351</geo:serialNumber>
+            <geo:firmwareVersion>3.2.32.9</geo:firmwareVersion>
             <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
-            <geo:dateInstalled>17 Mar 2005 10:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>15 Dec 2005 10:45 GMT</geo:dateRemoved>
-            <geo:notes>Firmware change</geo:notes>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>LEICA GRX1200+GNSS</geo:receiverType>
-            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
-            <geo:serialNumber>495524</geo:serialNumber>
-            <geo:firmwareVersion>8.00 / 4.007</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>29 Oct 2010 06:45 GMT</geo:dateInstalled>
-            <geo:dateRemoved>18 Nov 2010 09:20 GMT</geo:dateRemoved>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>AOA SNR-8000 ACT</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>T 408U</geo:serialNumber>
-            <geo:firmwareVersion>3.3.32.3</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
-            <geo:dateInstalled>10 May 2000 13:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>01 Jul 2000 08:00 GMT</geo:dateRemoved>
-            <geo:notes>malfunctions, receiver under test</geo:notes>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>ASHTECH UZ-12</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>11108</geo:serialNumber>
-            <geo:firmwareVersion>UNKNOWN</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
-            <geo:dateInstalled>07 May 2001 17:58 GMT</geo:dateInstalled>
-            <geo:dateRemoved>31 May 2001 23:59 GMT</geo:dateRemoved>
+            <geo:dateInstalled>1999-06-16T13:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2000-05-10T12:00:00Z</geo:dateRemoved>
+            <geo:notes>Y2K firmware upgrade</geo:notes>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
@@ -83,8 +54,30 @@
             <geo:serialNumber>495524</geo:serialNumber>
             <geo:firmwareVersion>8.10 / 4.007</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>28 Mar 2011 13:20 GMT</geo:dateInstalled>
-            <geo:dateRemoved>08 Aug 2013 00:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2011-03-28T13:20:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2013-08-08T00:00:00Z</geo:dateRemoved>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>ASHTECH UZ-12</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>11108</geo:serialNumber>
+            <geo:firmwareVersion>UNKNOWN</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2001-05-07T17:58:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2001-05-31T23:59:00Z</geo:dateRemoved>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>TRIMBLE NETRS</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>28748</geo:serialNumber>
+            <geo:firmwareVersion>NETRS 1.1-3</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2005-12-15T10:45:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2008-04-28T12:00:00Z</geo:dateRemoved>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
@@ -94,86 +87,8 @@
             <geo:serialNumber>495524</geo:serialNumber>
             <geo:firmwareVersion>7.80 / 4.004</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>18 May 2010 09:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>07 Sep 2010 06:00 GMT</geo:dateRemoved>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>ROGUE SNR-8000</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>T 351</geo:serialNumber>
-            <geo:firmwareVersion>Meenix 7.8</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>10</geo:elevationCutoffSetting>
-            <geo:dateInstalled>25 Jun 1996 14:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>06 Sep 1997 00:00 GMT</geo:dateRemoved>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>ROGUE SNR-8000</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>T 351</geo:serialNumber>
-            <geo:firmwareVersion>Meenix 7.8</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
-            <geo:dateInstalled>08 Jun 1998 18:29 GMT</geo:dateInstalled>
-            <geo:dateRemoved>16 Jun 1999 12:00 GMT</geo:dateRemoved>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>LEICA GRX1200+GNSS</geo:receiverType>
-            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
-            <geo:serialNumber>495524</geo:serialNumber>
-            <geo:firmwareVersion>8.00 / 4.005</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>07 Sep 2010 06:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>29 Oct 2010 06:45 GMT</geo:dateRemoved>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>LEICA GRX1200+GNSS</geo:receiverType>
-            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
-            <geo:serialNumber>495524</geo:serialNumber>
-            <geo:firmwareVersion>8.01 / 4.007</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>18 Nov 2010 09:20 GMT</geo:dateInstalled>
-            <geo:dateRemoved>28 Mar 2011 13:20 GMT</geo:dateRemoved>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>TRIMBLE NETRS</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>28748</geo:serialNumber>
-            <geo:firmwareVersion>NETRS 1.1-3</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>28 Apr 2008 12:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>18 May 2010 09:00 GMT</geo:dateRemoved>
-            <geo:notes>elevation cutoff changed</geo:notes>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>ASHTECH UZ-12</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>11108</geo:serialNumber>
-            <geo:firmwareVersion>CJ00</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
-            <geo:dateInstalled>01 Jun 2001 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>17 Mar 2005 09:00 GMT</geo:dateRemoved>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>TRIMBLE NETRS</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>28748</geo:serialNumber>
-            <geo:firmwareVersion>NETRS 1.1-3</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
-            <geo:dateInstalled>15 Dec 2005 10:45 GMT</geo:dateInstalled>
-            <geo:dateRemoved>28 Apr 2008 12:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2010-05-18T09:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2010-09-07T06:00:00Z</geo:dateRemoved>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
@@ -183,8 +98,19 @@
             <geo:serialNumber>T 393</geo:serialNumber>
             <geo:firmwareVersion>Meenix 7.8</geo:firmwareVersion>
             <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
-            <geo:dateInstalled>09 Sep 1997 12:51 GMT</geo:dateInstalled>
-            <geo:dateRemoved>08 Jun 1998 18:23 GMT</geo:dateRemoved>
+            <geo:dateInstalled>1997-09-09T12:51:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1998-06-08T18:23:00Z</geo:dateRemoved>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>LEICA GRX1200+GNSS</geo:receiverType>
+            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
+            <geo:serialNumber>495524</geo:serialNumber>
+            <geo:firmwareVersion>8.00 / 4.007</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2010-10-29T06:45:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2010-11-18T09:20:00Z</geo:dateRemoved>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
@@ -194,9 +120,67 @@
             <geo:serialNumber>T 351</geo:serialNumber>
             <geo:firmwareVersion>3.2.32.9</geo:firmwareVersion>
             <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
-            <geo:dateInstalled>01 Jul 2000 08:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>29 Apr 2001 12:10 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2000-07-01T08:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2001-04-29T12:10:00Z</geo:dateRemoved>
             <geo:notes>malfunctions, receiver under test</geo:notes>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>TRIMBLE NETRS</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>28748</geo:serialNumber>
+            <geo:firmwareVersion>NETRS 1.1-1</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2005-03-17T10:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2005-12-15T10:45:00Z</geo:dateRemoved>
+            <geo:notes>Firmware change</geo:notes>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>ROGUE SNR-8000</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>T 351</geo:serialNumber>
+            <geo:firmwareVersion>Meenix 7.8</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>10</geo:elevationCutoffSetting>
+            <geo:dateInstalled>1996-06-25T14:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1997-09-06T00:00:00Z</geo:dateRemoved>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>ROGUE SNR-8000</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>T 351</geo:serialNumber>
+            <geo:firmwareVersion>Meenix 7.8</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
+            <geo:dateInstalled>1998-06-08T18:29:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1999-06-16T12:00:00Z</geo:dateRemoved>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>AOA SNR-8000 ACT</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>T 408U</geo:serialNumber>
+            <geo:firmwareVersion>3.3.32.3</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2000-05-10T13:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2000-07-01T08:00:00Z</geo:dateRemoved>
+            <geo:notes>malfunctions, receiver under test</geo:notes>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>TRIMBLE NETRS</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>28748</geo:serialNumber>
+            <geo:firmwareVersion>NETRS 1.1-3</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2008-04-28T12:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2010-05-18T09:00:00Z</geo:dateRemoved>
+            <geo:notes>elevation cutoff changed</geo:notes>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
@@ -206,20 +190,19 @@
             <geo:serialNumber>CR 320</geo:serialNumber>
             <geo:firmwareVersion>7.00.1/4.2</geo:firmwareVersion>
             <geo:elevationCutoffSetting>10</geo:elevationCutoffSetting>
-            <geo:dateInstalled>12 Jun 1992 12:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>25 Jun 1996 12:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>1992-06-12T12:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1996-06-25T12:00:00Z</geo:dateRemoved>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
          <geo:gnssReceiver>
-            <geo:receiverType>ROGUE SNR-8000</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>T 351</geo:serialNumber>
-            <geo:firmwareVersion>3.2.32.9</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
-            <geo:dateInstalled>16 Jun 1999 13:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>10 May 2000 12:00 GMT</geo:dateRemoved>
-            <geo:notes>Y2K firmware upgrade</geo:notes>
+            <geo:receiverType>LEICA GRX1200+GNSS</geo:receiverType>
+            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
+            <geo:serialNumber>495524</geo:serialNumber>
+            <geo:firmwareVersion>8.00 / 4.005</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2010-09-07T06:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2010-10-29T06:45:00Z</geo:dateRemoved>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
@@ -229,42 +212,31 @@
             <geo:serialNumber>495524</geo:serialNumber>
             <geo:firmwareVersion>8.51 / 6.111</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>08 Aug 2013 00:00 GMT</geo:dateInstalled>
+            <geo:dateInstalled>2013-08-08T00:00:00Z</geo:dateInstalled>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
-      <geo:gnssAntennas>
-         <geo:gnssAntenna>
-            <geo:antennaType>TRM29659.00     NONE</geo:antennaType>
-            <geo:serialNumber>091637</geo:serialNumber>
-            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
-            <geo:marker-arpUpEcc.>1.964</geo:marker-arpUpEcc.>
-            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
-            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
-            <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
-            <geo:antennaCableType>RG213</geo:antennaCableType>
-            <geo:antennaCableLength>20</geo:antennaCableLength>
-            <geo:dateInstalled>02 Nov 2005 12:09 GMT</geo:dateInstalled>
-            <geo:dateRemoved>18 May 2010 09:00 GMT</geo:dateRemoved>
-         </geo:gnssAntenna>
-      </geo:gnssAntennas>
-      <geo:gnssAntennas>
-         <geo:gnssAntenna>
-            <geo:antennaType>AOAD/M_T        NONE</geo:antennaType>
-            <geo:serialNumber>457</geo:serialNumber>
-            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
-            <geo:marker-arpUpEcc.>1.964</geo:marker-arpUpEcc.>
-            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
-            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
-            <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
-            <geo:antennaCableType>RG213</geo:antennaCableType>
-            <geo:antennaCableLength>20</geo:antennaCableLength>
-            <geo:dateInstalled>25 Jun 1996 14:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>07 May 2001 08:00 GMT</geo:dateRemoved>
-            <geo:notes>Antenna renamed acc. to new convention</geo:notes>
-         </geo:gnssAntenna>
-      </geo:gnssAntennas>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>ASHTECH UZ-12</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>11108</geo:serialNumber>
+            <geo:firmwareVersion>CJ00</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2001-06-01T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2005-03-17T09:00:00Z</geo:dateRemoved>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>LEICA GRX1200+GNSS</geo:receiverType>
+            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
+            <geo:serialNumber>495524</geo:serialNumber>
+            <geo:firmwareVersion>8.01 / 4.007</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2010-11-18T09:20:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2011-03-28T13:20:00Z</geo:dateRemoved>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
       <geo:gnssAntennas>
          <geo:gnssAntenna>
             <geo:antennaType>TRM29659.00     NONE</geo:antennaType>
@@ -277,41 +249,8 @@
             <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
             <geo:antennaCableType>RG213</geo:antennaCableType>
             <geo:antennaCableLength>20</geo:antennaCableLength>
-            <geo:dateInstalled>22 Mar 2005 10:50 GMT</geo:dateInstalled>
-            <geo:dateRemoved>02 Nov 2005 12:03 GMT</geo:dateRemoved>
-         </geo:gnssAntenna>
-      </geo:gnssAntennas>
-      <geo:gnssAntennas>
-         <geo:gnssAntenna>
-            <geo:antennaType>AOAD/M_B        NONE</geo:antennaType>
-            <geo:serialNumber>128</geo:serialNumber>
-            <geo:antennaReferencePoint>BCR</geo:antennaReferencePoint>
-            <geo:marker-arpUpEcc.>2.068</geo:marker-arpUpEcc.>
-            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
-            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
-            <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
-            <geo:antennaCableType>RG213</geo:antennaCableType>
-            <geo:antennaCableLength>20</geo:antennaCableLength>
-            <geo:dateInstalled>12 Jun 1992 12:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>25 Jun 1996 12:00 GMT</geo:dateRemoved>
-         </geo:gnssAntenna>
-      </geo:gnssAntennas>
-      <geo:gnssAntennas>
-         <geo:gnssAntenna>
-            <geo:antennaType>ASH701945C_M    NONE</geo:antennaType>
-            <geo:serialNumber>11701</geo:serialNumber>
-            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
-            <geo:marker-arpUpEcc.>1.964</geo:marker-arpUpEcc.>
-            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
-            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
-            <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
-            <geo:antennaCableType>RG213</geo:antennaCableType>
-            <geo:antennaCableLength>20</geo:antennaCableLength>
-            <geo:dateInstalled>07 May 2001 08:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>22 Mar 2005 10:50 GMT</geo:dateRemoved>
-            <geo:notes>Antenna removed</geo:notes>
+            <geo:dateInstalled>2005-03-22T10:50:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2005-11-02T12:03:00Z</geo:dateRemoved>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
       <geo:gnssAntennas>
@@ -327,7 +266,73 @@
             <geo:radomeSerialNumber>2009/27</geo:radomeSerialNumber>
             <geo:antennaCableType>RG213</geo:antennaCableType>
             <geo:antennaCableLength>20</geo:antennaCableLength>
-            <geo:dateInstalled>18 May 2010 09:00 GMT</geo:dateInstalled>
+            <geo:dateInstalled>2010-05-18T09:00:00Z</geo:dateInstalled>
+         </geo:gnssAntenna>
+      </geo:gnssAntennas>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna>
+            <geo:antennaType>ASH701945C_M    NONE</geo:antennaType>
+            <geo:serialNumber>11701</geo:serialNumber>
+            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>1.964</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
+            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
+            <geo:antennaCableType>RG213</geo:antennaCableType>
+            <geo:antennaCableLength>20</geo:antennaCableLength>
+            <geo:dateInstalled>2001-05-07T08:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2005-03-22T10:50:00Z</geo:dateRemoved>
+            <geo:notes>Antenna removed</geo:notes>
+         </geo:gnssAntenna>
+      </geo:gnssAntennas>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna>
+            <geo:antennaType>TRM29659.00     NONE</geo:antennaType>
+            <geo:serialNumber>091637</geo:serialNumber>
+            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>1.964</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
+            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
+            <geo:antennaCableType>RG213</geo:antennaCableType>
+            <geo:antennaCableLength>20</geo:antennaCableLength>
+            <geo:dateInstalled>2005-11-02T12:09:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2010-05-18T09:00:00Z</geo:dateRemoved>
+         </geo:gnssAntenna>
+      </geo:gnssAntennas>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna>
+            <geo:antennaType>AOAD/M_T        NONE</geo:antennaType>
+            <geo:serialNumber>457</geo:serialNumber>
+            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>1.964</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
+            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
+            <geo:antennaCableType>RG213</geo:antennaCableType>
+            <geo:antennaCableLength>20</geo:antennaCableLength>
+            <geo:dateInstalled>1996-06-25T14:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2001-05-07T08:00:00Z</geo:dateRemoved>
+            <geo:notes>Antenna renamed acc. to new convention</geo:notes>
+         </geo:gnssAntenna>
+      </geo:gnssAntennas>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna>
+            <geo:antennaType>AOAD/M_B        NONE</geo:antennaType>
+            <geo:serialNumber>128</geo:serialNumber>
+            <geo:antennaReferencePoint>BCR</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>2.068</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:alignmentFromTrueNorth>0</geo:alignmentFromTrueNorth>
+            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
+            <geo:antennaCableType>RG213</geo:antennaCableType>
+            <geo:antennaCableLength>20</geo:antennaCableLength>
+            <geo:dateInstalled>1992-06-12T12:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1996-06-25T12:00:00Z</geo:dateRemoved>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
       <geo:surveyedLocalTies>
@@ -343,23 +348,7 @@
             </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
             <geo:localSiteTiesAccuracy>0</geo:localSiteTiesAccuracy>
             <geo:surveyMethod>TRIANGULATION</geo:surveyMethod>
-            <geo:dateMeasured>14 Nov 1992 13:00 GMT</geo:dateMeasured>
-         </geo:surveyedLocalTies>
-      </geo:surveyedLocalTies>
-      <geo:surveyedLocalTies>
-         <geo:surveyedLocalTies>
-            <geo:tiedMarkerName>Laser (az/el axis)</geo:tiedMarkerName>
-            <geo:tiedMarkerUsage>LOCAL CONTROL</geo:tiedMarkerUsage>
-            <geo:tiedMarkerCDPNumber>7839</geo:tiedMarkerCDPNumber>
-            <geo:tiedMarkerDOMESNumber>11001S002</geo:tiedMarkerDOMESNumber>
-            <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
-               <geo:dx>-2.558</geo:dx>
-               <geo:dy>8.516</geo:dy>
-               <geo:dz>-1.321</geo:dz>
-            </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
-            <geo:localSiteTiesAccuracy>1</geo:localSiteTiesAccuracy>
-            <geo:surveyMethod>TRIANGULATION</geo:surveyMethod>
-            <geo:dateMeasured>14 Nov 1992 13:00 GMT</geo:dateMeasured>
+            <geo:dateMeasured>1992-11-14T13:00:00Z</geo:dateMeasured>
          </geo:surveyedLocalTies>
       </geo:surveyedLocalTies>
       <geo:surveyedLocalTies>
@@ -375,7 +364,23 @@
             </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
             <geo:localSiteTiesAccuracy>1</geo:localSiteTiesAccuracy>
             <geo:surveyMethod>TRIANGULATION</geo:surveyMethod>
-            <geo:dateMeasured>14 Nov 1992 13:00 GMT</geo:dateMeasured>
+            <geo:dateMeasured>1992-11-14T13:00:00Z</geo:dateMeasured>
+         </geo:surveyedLocalTies>
+      </geo:surveyedLocalTies>
+      <geo:surveyedLocalTies>
+         <geo:surveyedLocalTies>
+            <geo:tiedMarkerName>Laser (az/el axis)</geo:tiedMarkerName>
+            <geo:tiedMarkerUsage>LOCAL CONTROL</geo:tiedMarkerUsage>
+            <geo:tiedMarkerCDPNumber>7839</geo:tiedMarkerCDPNumber>
+            <geo:tiedMarkerDOMESNumber>11001S002</geo:tiedMarkerDOMESNumber>
+            <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+               <geo:dx>-2.558</geo:dx>
+               <geo:dy>8.516</geo:dy>
+               <geo:dz>-1.321</geo:dz>
+            </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+            <geo:localSiteTiesAccuracy>1</geo:localSiteTiesAccuracy>
+            <geo:surveyMethod>TRIANGULATION</geo:surveyMethod>
+            <geo:dateMeasured>1992-11-14T13:00:00Z</geo:dateMeasured>
          </geo:surveyedLocalTies>
       </geo:surveyedLocalTies>
       <geo:surveyedLocalTies>
@@ -391,7 +396,7 @@
             </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
             <geo:localSiteTiesAccuracy>2</geo:localSiteTiesAccuracy>
             <geo:surveyMethod>TRIANGULATION</geo:surveyMethod>
-            <geo:dateMeasured>14 Nov 1992 13:00 GMT</geo:dateMeasured>
+            <geo:dateMeasured>1992-11-14T13:00:00Z</geo:dateMeasured>
          </geo:surveyedLocalTies>
       </geo:surveyedLocalTies>
       <geo:frequencyStandards>
@@ -399,7 +404,7 @@
             <geo:standardType>INTERNAL</geo:standardType>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2005-03-17T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2005-03-17T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
@@ -423,7 +428,7 @@
             <geo:heightDiffToAntenna>3</geo:heightDiffToAntenna>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2003-07-01T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2003-07-01T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
@@ -439,7 +444,7 @@
             <geo:heightDiffToAntenna>3</geo:heightDiffToAntenna>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2003-07-01T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2003-07-01T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
@@ -454,7 +459,7 @@
             <geo:heightDiffToAntenna>3</geo:heightDiffToAntenna>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2003-07-01T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2003-07-01T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>

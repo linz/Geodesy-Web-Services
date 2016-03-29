@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-   <geo:siteLog>
+<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_100">
+   <geo:siteLog gml:id="SiteLogType_100">
+      <geo:formInformation>
+         <geo:preparedBy>Aldo Banni</geo:preparedBy>
+         <geo:datePrepared>2012-10-07T13:00:00Z</geo:datePrepared>
+         <geo:reportType>UPDATE</geo:reportType>
+      </geo:formInformation>
       <geo:siteIdentification>
          <geo:siteName>CAGLIARI</geo:siteName>
          <geo:fourCharacterID>CAGZ</geo:fourCharacterID>
@@ -10,7 +15,7 @@
          <geo:monumentFoundation>CONCRETE BLOCK WITH STEEL RODS</geo:monumentFoundation>
          <geo:foundationDepth>0.5</geo:foundationDepth>
          <geo:markerDescription>BRASS FORCE FIT</geo:markerDescription>
-         <geo:dateInstalled>31 Jan 1995 13:00 GMT</geo:dateInstalled>
+         <geo:dateInstalled>1995-01-31T13:00:00Z</geo:dateInstalled>
          <geo:geologicCharacteristic>BEDROCK</geo:geologicCharacteristic>
          <geo:bedrockType>IGNEOUS</geo:bedrockType>
          <geo:bedrockCondition>JOINTED</geo:bedrockCondition>
@@ -31,15 +36,15 @@
       </geo:siteLocation>
       <geo:gnssReceivers>
          <geo:gnssReceiver>
-            <geo:receiverType>TPS E_GGD</geo:receiverType>
+            <geo:receiverType>JPS E_GGD</geo:receiverType>
             <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
-            <geo:serialNumber>AGNV7TGA2O0</geo:serialNumber>
-            <geo:firmwareVersion>2.4 Sep,02,2004</geo:firmwareVersion>
+            <geo:serialNumber>LE4687</geo:serialNumber>
+            <geo:firmwareVersion>AGNV7TGA2O0</geo:firmwareVersion>
             <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
-            <geo:dateInstalled>07 Nov 2007 15:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>15 Nov 2007 12:36 GMT</geo:dateRemoved>
-            <geo:temperatureStabilization>20 +/- 3</geo:temperatureStabilization>
-            <geo:notes>receiver 3.2 Case label</geo:notes>
+            <geo:dateInstalled>2003-08-11T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2004-04-08T00:00:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>20 +/- 2</geo:temperatureStabilization>
+            <geo:notes>Spare receiver until repair of 3.1</geo:notes>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
@@ -49,62 +54,10 @@
             <geo:serialNumber>LE2998</geo:serialNumber>
             <geo:firmwareVersion>MT310305520</geo:firmwareVersion>
             <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
-            <geo:dateInstalled>01 Oct 2001 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>11 Aug 2003 00:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2001-10-01T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2003-08-11T00:00:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>20 +/- 2</geo:temperatureStabilization>
             <geo:notes>Exact date in October not known</geo:notes>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>JPS E_GGD</geo:receiverType>
-            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
-            <geo:serialNumber>LE4687</geo:serialNumber>
-            <geo:firmwareVersion>AGNV7TGA2O0</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
-            <geo:dateInstalled>01 Dec 2004 14:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>07 Nov 2007 15:00 GMT</geo:dateRemoved>
-            <geo:temperatureStabilization>20 +/- 3</geo:temperatureStabilization>
-            <geo:notes>receiver 3.2 Case label</geo:notes>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>JPS E_GGD</geo:receiverType>
-            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
-            <geo:serialNumber>LE4687</geo:serialNumber>
-            <geo:firmwareVersion>AGNV7TGA2O0</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
-            <geo:dateInstalled>11 Aug 2003 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>08 Apr 2004 00:00 GMT</geo:dateRemoved>
-            <geo:temperatureStabilization>20 +/- 2</geo:temperatureStabilization>
-            <geo:notes>Spare receiver until repair of 3.1</geo:notes>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>JPS E_GGD</geo:receiverType>
-            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
-            <geo:serialNumber>235-1757</geo:serialNumber>
-            <geo:firmwareVersion>AE82EUA01KW</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
-            <geo:dateInstalled>08 Apr 2004 00:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>08 May 2004 10:30 GMT</geo:dateRemoved>
-            <geo:temperatureStabilization>20 +/- 2</geo:temperatureStabilization>
-            <geo:notes>Spare receiver until repair of 3.1</geo:notes>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver>
-            <geo:receiverType>JPS EUROCARD</geo:receiverType>
-            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
-            <geo:serialNumber>LE2998</geo:serialNumber>
-            <geo:firmwareVersion>MT310305520</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
-            <geo:dateInstalled>17 May 2004 11:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>26 Jul 2004 13:30 GMT</geo:dateRemoved>
-            <geo:temperatureStabilization>20 +/- 2</geo:temperatureStabilization>
-            <geo:notes>re-installing of the receiver 3.1</geo:notes>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
@@ -114,9 +67,22 @@
             <geo:serialNumber>AGNV7TGA2O0</geo:serialNumber>
             <geo:firmwareVersion>3.3 Jul,10,2008 p4</geo:firmwareVersion>
             <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
-            <geo:dateInstalled>20 Nov 2008 21:37 GMT</geo:dateInstalled>
+            <geo:dateInstalled>2008-11-20T21:37:00Z</geo:dateInstalled>
             <geo:temperatureStabilization>20 +/- 3</geo:temperatureStabilization>
             <geo:notes>receiver 3.2 Case label</geo:notes>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>JPS EUROCARD</geo:receiverType>
+            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
+            <geo:serialNumber>LE2998</geo:serialNumber>
+            <geo:firmwareVersion>MT310305520</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2004-05-17T11:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2004-07-26T13:30:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>20 +/- 2</geo:temperatureStabilization>
+            <geo:notes>re-installing of the receiver 3.1</geo:notes>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
@@ -126,20 +92,20 @@
             <geo:serialNumber>235-2098</geo:serialNumber>
             <geo:firmwareVersion>AE6A2FQG160</geo:firmwareVersion>
             <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
-            <geo:dateInstalled>26 Jul 2004 14:30 GMT</geo:dateInstalled>
-            <geo:dateRemoved>01 Dec 2004 12:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2004-07-26T14:30:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2004-12-01T12:00:00Z</geo:dateRemoved>
             <geo:notes>Spare receiver until repair of 3.4</geo:notes>
          </geo:gnssReceiver>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
          <geo:gnssReceiver>
-            <geo:receiverType>TPS E_GGD</geo:receiverType>
+            <geo:receiverType>JPS E_GGD</geo:receiverType>
             <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
-            <geo:serialNumber>AGNV7TGA2O0</geo:serialNumber>
-            <geo:firmwareVersion>2.6 Mar,16,2006</geo:firmwareVersion>
+            <geo:serialNumber>LE4687</geo:serialNumber>
+            <geo:firmwareVersion>AGNV7TGA2O0</geo:firmwareVersion>
             <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
-            <geo:dateInstalled>15 Nov 2007 12:36 GMT</geo:dateInstalled>
-            <geo:dateRemoved>30 Nov 2007 12:00 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2004-12-01T14:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2007-11-07T15:00:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>20 +/- 3</geo:temperatureStabilization>
             <geo:notes>receiver 3.2 Case label</geo:notes>
          </geo:gnssReceiver>
@@ -151,8 +117,47 @@
             <geo:serialNumber>AGNV7TGA2O0</geo:serialNumber>
             <geo:firmwareVersion>3.1 Mar,13,2007 p2</geo:firmwareVersion>
             <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
-            <geo:dateInstalled>30 Nov 2007 12:00 GMT</geo:dateInstalled>
-            <geo:dateRemoved>20 Nov 2008 15:20 GMT</geo:dateRemoved>
+            <geo:dateInstalled>2007-11-30T12:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2008-11-20T15:20:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>20 +/- 3</geo:temperatureStabilization>
+            <geo:notes>receiver 3.2 Case label</geo:notes>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>JPS E_GGD</geo:receiverType>
+            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
+            <geo:serialNumber>235-1757</geo:serialNumber>
+            <geo:firmwareVersion>AE82EUA01KW</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2004-04-08T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2004-05-08T10:30:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>20 +/- 2</geo:temperatureStabilization>
+            <geo:notes>Spare receiver until repair of 3.1</geo:notes>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>TPS E_GGD</geo:receiverType>
+            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
+            <geo:serialNumber>AGNV7TGA2O0</geo:serialNumber>
+            <geo:firmwareVersion>2.4 Sep,02,2004</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2007-11-07T15:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2007-11-15T12:36:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>20 +/- 3</geo:temperatureStabilization>
+            <geo:notes>receiver 3.2 Case label</geo:notes>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver>
+            <geo:receiverType>TPS E_GGD</geo:receiverType>
+            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
+            <geo:serialNumber>AGNV7TGA2O0</geo:serialNumber>
+            <geo:firmwareVersion>2.6 Mar,16,2006</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>5</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2007-11-15T12:36:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2007-11-30T12:00:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>20 +/- 3</geo:temperatureStabilization>
             <geo:notes>receiver 3.2 Case label</geo:notes>
          </geo:gnssReceiver>
@@ -169,7 +174,7 @@
             <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
             <geo:antennaCableType>RG214</geo:antennaCableType>
             <geo:antennaCableLength>30</geo:antennaCableLength>
-            <geo:dateInstalled>01 Oct 2001 00:00 GMT</geo:dateInstalled>
+            <geo:dateInstalled>2001-10-01T00:00:00Z</geo:dateInstalled>
             <geo:notes>Exact date in October not known. The former valuation Marker->ARP Up Ecc. = 0.1095 was wrong (ARP misundertood).  Antenna type listed in this section retro- actively changed from JPSREGANT_DD_E to JPSREGANT_DD_E2 starting with log file cagz_20121007.log. See IGSMAIL-6662 and IGSMAIL-6663 for details.</geo:notes>
          </geo:gnssAntenna>
       </geo:gnssAntennas>
@@ -186,7 +191,7 @@
             </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
             <geo:localSiteTiesAccuracy>10</geo:localSiteTiesAccuracy>
             <geo:surveyMethod>GPS CAMPAIGN</geo:surveyMethod>
-            <geo:dateMeasured>11 May 2003 14:00 GMT</geo:dateMeasured>
+            <geo:dateMeasured>2003-05-11T14:00:00Z</geo:dateMeasured>
          </geo:surveyedLocalTies>
       </geo:surveyedLocalTies>
       <geo:surveyedLocalTies>
@@ -201,7 +206,7 @@
             </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
             <geo:localSiteTiesAccuracy>5</geo:localSiteTiesAccuracy>
             <geo:surveyMethod>GPS CAMPAIGN</geo:surveyMethod>
-            <geo:dateMeasured>11 May 2003 14:00 GMT</geo:dateMeasured>
+            <geo:dateMeasured>2003-05-11T14:00:00Z</geo:dateMeasured>
             <geo:notes>Responsible agency ASI</geo:notes>
          </geo:surveyedLocalTies>
       </geo:surveyedLocalTies>
@@ -211,7 +216,7 @@
             <geo:inputFrequency>10 Hz</geo:inputFrequency>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2004-12-01T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2004-12-01T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
@@ -235,7 +240,7 @@
             <geo:heightDiffToAntenna>0.416</geo:heightDiffToAntenna>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2005-02-15T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2005-02-15T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
@@ -251,7 +256,7 @@
             <geo:heightDiffToAntenna>0.0</geo:heightDiffToAntenna>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2005-02-15T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2005-02-15T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
@@ -266,7 +271,7 @@
             <geo:heightDiffToAntenna>0.416</geo:heightDiffToAntenna>
             <gml:validTime>
                <gml:TimePeriod>
-                  <gml:beginPosition>2005-02-15T00:00Z</gml:beginPosition>
+                  <gml:beginPosition>2005-02-15T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>

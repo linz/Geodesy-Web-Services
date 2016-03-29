@@ -96,6 +96,9 @@ public class GeodesyMLSiteLogDozerTranslator implements GeodesyMLSiteLogTranslat
         geodesyMl.getNodeOrAbstractPositionOrPositionPairCovariance()
                 .add(geodesyObjectFactory.createSiteLog(siteLogType));
 
+        FormInformation formInformation = sopacSiteLog.getFormInformation();
+        FormInformationType formInformationType = DozerDelegate.mapWithGuard(formInformation, FormInformationType.class);
+        siteLogType.setFormInformation(formInformationType);
         
         SiteIdentification siteIdentification = sopacSiteLog.getSiteIdentification();
         SiteIdentificationType siteIdentificationType = DozerDelegate.mapWithGuard(siteIdentification,

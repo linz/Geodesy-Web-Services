@@ -34,6 +34,7 @@ import au.gov.ga.geodesy.igssitelog.domain.model.SurveyedLocalTie;
 import au.gov.ga.geodesy.igssitelog.domain.model.TemperatureSensorLogItem;
 import au.gov.ga.geodesy.igssitelog.domain.model.WaterVaporSensorLogItem;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLSiteLogTranslator;
+import au.gov.ga.geodesy.support.utils.IdStamper;
 import au.gov.xml.icsm.geodesyml.v_0_3.AgencyPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_3.BasePossibleProblemSourcesType;
 import au.gov.xml.icsm.geodesyml.v_0_3.CollocationInformationPropertyType;
@@ -86,15 +87,16 @@ public class GeodesyMLSiteLogDozerTranslator implements GeodesyMLSiteLogTranslat
             throws InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
 
         ObjectFactory geodesyObjectFactory = new ObjectFactory();
-        GeodesyMLType geodesyMl = new GeodesyMLType();
+        GeodesyMLType geodesyMl = IdStamper.addId(new GeodesyMLType());
 
         JAXBElement<GeodesyMLType> geodesyMLTypeJaxB = geodesyObjectFactory.createGeodesyML(geodesyMl);
 
-        SiteLogType siteLogType = new SiteLogType();
+        SiteLogType siteLogType = IdStamper.addId(new SiteLogType());
 
         geodesyMl.getNodeOrAbstractPositionOrPositionPairCovariance()
                 .add(geodesyObjectFactory.createSiteLog(siteLogType));
 
+        
         SiteIdentification siteIdentification = sopacSiteLog.getSiteIdentification();
         SiteIdentificationType siteIdentificationType = DozerDelegate.mapWithGuard(siteIdentification,
                 SiteIdentificationType.class);

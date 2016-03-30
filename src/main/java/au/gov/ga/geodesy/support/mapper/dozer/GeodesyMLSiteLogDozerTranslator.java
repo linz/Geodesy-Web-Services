@@ -222,7 +222,7 @@ public class GeodesyMLSiteLogDozerTranslator implements GeodesyMLSiteLogTranslat
         }
         for (Object sopacSiteLogItem : sopacSiteLogItems) {
             C newChildType = childType.newInstance();
-            newChildType = DozerDelegate.mapWithGuard(sopacSiteLogItem, childType);
+            newChildType = IdStamper.addId(DozerDelegate.mapWithGuard(sopacSiteLogItem, childType));
             logger.trace("  " + newChildType);
             Object newParentPropertyType = parentPropertyType.newInstance();
             setBasedOnChildType(newParentPropertyType, newChildType);

@@ -2,6 +2,8 @@ package au.gov.ga.geodesy.support.mapper.dozer;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import org.dozer.DozerBeanMapper;
 
@@ -21,6 +23,7 @@ public class DozerDelegate {
             dozerMappings.add("dozer/ConverterMappings.xml");
             dozerMappings.add("dozer/FieldMappings.xml");
             mapper.setMappingFiles(dozerMappings);
+            mapper.setEventListeners(Stream.of(new GeodesyMLDozerEventListener()).collect(Collectors.toList()));
         }
         return mapper;
     }

@@ -27,9 +27,9 @@ public class GeodesyMLDozerEventListener_SiteLocationType implements DozerEventL
         // Change CountryCode from a Country to a country code - the Sopac Sitelog XML has Countries and the translate just copied them
         // across
         SiteLocationType siteLocationType = (SiteLocationType) event.getDestinationObject();
-        String country = siteLocationType.getCountryCode();
+        String country = siteLocationType.getCountryCodeISO();
         String code = COUNTRY_CODES_ALPHA_3.lookupCode(country);
-        siteLocationType.setCountryCode(code);
+        siteLocationType.setCountryCodeISO(code);
         logger.info(String.format("Change country: '%s' to code '%s'", country, code));
     }
 

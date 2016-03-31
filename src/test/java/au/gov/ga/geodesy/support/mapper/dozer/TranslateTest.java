@@ -204,7 +204,7 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
         // In SOPAC XML (input) ALIC.xml, the foundationDepth is empty but required
         // (<siteIdentification>..<foundationDepth></foundationDepth>..)
         // Because it is required I want the empty value to come out
-        Assert.assertNotNull(siteIdentificationType.getFoundationDepth());
+        Assert.assertNull(siteIdentificationType.getFoundationDepth());
 
         // Receivers
         List<GnssReceiverPropertyType> receivers = siteLogType.getGnssReceivers();
@@ -464,5 +464,14 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
 
         Assert.assertNotNull(geodesyML);
     }
+    
+    @Test
+    public void testBHIL() throws MarshallingException, IOException,
+            au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
+        GeodesyMLType geodesyML = testTranslate(SITEDATADIR, "BHIL");
+
+        Assert.assertNotNull(geodesyML);
+    }
+
 
 }

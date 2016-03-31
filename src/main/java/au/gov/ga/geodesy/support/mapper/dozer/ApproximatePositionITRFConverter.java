@@ -54,11 +54,18 @@ public class ApproximatePositionITRFConverter implements CustomConverter {
             }
 
             // these 4 are easily mappable with a Field Mapping
-            dest.setXCoordinateInMeters(sourceType.getItrfX().toString());
-            dest.setYCoordinateInMeters(sourceType.getItrfY().toString());
-            dest.setZCoordinateInMeters(sourceType.getItrfZ().toString());
-            dest.setElevationMEllips(sourceType.getElevationGrs80());
-
+            if (sourceType.getItrfX() != null) {
+                dest.setXCoordinateInMeters(sourceType.getItrfX().toString());
+            }
+            if (sourceType.getItrfX() != null) {
+                dest.setYCoordinateInMeters(sourceType.getItrfY().toString());
+            }
+            if (sourceType.getItrfX() != null) {
+                dest.setZCoordinateInMeters(sourceType.getItrfZ().toString());
+            }
+            if (sourceType.getItrfX() != null) {
+                dest.setElevationMEllips(sourceType.getElevationGrs80());
+            }
             // these 2 are the reason for the Converter
             if (sourceType.getGrs80() != null) {
                 dest.setLatitudeNorth(new BigDecimal(sourceType.getGrs80().getCoordinate().x));

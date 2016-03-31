@@ -6,8 +6,8 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import au.gov.ga.geodesy.support.mapper.dozer.GeodesyMLSiteLogDozerTranslator;
-import au.gov.xml.icsm.geodesyml.v_0_2_2.FrequencyStandardPropertyType;
-import au.gov.xml.icsm.geodesyml.v_0_2_2.FrequencyStandardType;
+import au.gov.xml.icsm.geodesyml.v_0_3.FrequencyStandardPropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_3.FrequencyStandardType;
 
 public class GeodesyMLSiteLogTranslatorTest {
 

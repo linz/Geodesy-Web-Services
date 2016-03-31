@@ -20,8 +20,8 @@
                 <!-- This needs to also handle these extenders of CodeListValueType (either directly or indirectly via further 
                     inheritance) -->
                 <!-- and I do this inside the Converter -->
-                <!-- au.gov.xml.icsm.geodesyml.v_0_2_2.IgsReceiverModelCodeType -->
-                <!-- au.gov.xml.icsm.geodesyml.v_0_2_2.IgsAntennaModelCodeType -->
+                <!-- au.gov.xml.icsm.geodesyml.v_0_3.IgsReceiverModelCodeType -->
+                <!-- au.gov.xml.icsm.geodesyml.v_0_3.IgsAntennaModelCodeType -->
                 <class-a>net.opengis.iso19139.gco.v_20070417.CodeListValueType</class-a>
                 <class-b>java.lang.String</class-b>
             </converter>
@@ -29,7 +29,7 @@
                 <!-- This needs to also handle these extenders of CodeType (either directly or indirectly via further inheritance) -->
                 <!-- and I do this inside the Converter -->
                 <!-- net.opengis.gml.v_3_2_1.CodeWithAuthorityType -->
-                <!-- au.gov.xml.icsm.geodesyml.v_0_2_2.IgsRadomeModelCodeType -->
+                <!-- au.gov.xml.icsm.geodesyml.v_0_3.IgsRadomeModelCodeType -->
                 <class-a>net.opengis.gml.v_3_2_1.CodeType</class-a>
                 <class-b>java.lang.String</class-b>
             </converter>
@@ -47,7 +47,7 @@
             </converter>
             <converter type="au.gov.ga.geodesy.support.mapper.dozer.AgencyAgencyPropertyTypeConverter">
                 <class-a>au.gov.ga.geodesy.igssitelog.domain.model.Agency</class-a>
-                <class-b>au.gov.xml.icsm.geodesyml.v_0_2_2.AgencyPropertyType</class-b>
+                <class-b>au.gov.xml.icsm.geodesyml.v_0_3.AgencyPropertyType</class-b>
             </converter>
         </custom-converters>
     </configuration>

@@ -10,8 +10,8 @@ import org.slf4j.LoggerFactory;
 
 import au.gov.ga.geodesy.igssitelog.domain.model.Agency;
 import au.gov.ga.geodesy.igssitelog.domain.model.Contact;
-import au.gov.xml.icsm.geodesyml.v_0_2_2.AgencyPropertyType;
-import au.gov.xml.icsm.geodesyml.v_0_2_2.ObjectFactory;
+import au.gov.xml.icsm.geodesyml.v_0_3.AgencyPropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_3.ObjectFactory;
 import net.opengis.iso19139.gco.v_20070417.CharacterStringPropertyType;
 import net.opengis.iso19139.gmd.v_20070417.CIAddressPropertyType;
 import net.opengis.iso19139.gmd.v_20070417.CIAddressType;
@@ -23,7 +23,7 @@ import net.opengis.iso19139.gmd.v_20070417.CITelephoneType;
 import net.opengis.iso19139.gmd.v_20070417.MDSecurityConstraintsType;
 
 /**
- * Convert: au.gov.ga.geodesy.igssitelog.domain.model.Agency <--> au.gov.xml.icsm.geodesyml.v_0_2_2.AgencyPropertyType
+ * Convert: au.gov.ga.geodesy.igssitelog.domain.model.Agency <--> au.gov.xml.icsm.geodesyml.v_0_3.AgencyPropertyType
  * 
  * ie. contacts
  */

@@ -11,8 +11,8 @@ import net.opengis.iso19139.gco.v_20070417.CodeListValueType;
  * Convert: java.lang.String <--> net.opengis.gml.v_3_2_1.CodeListValueType
  * 
  * Also handles these extending classes:
- * au.gov.xml.icsm.geodesyml.v_0_2_2.IgsReceiverModelCodeType
- * au.gov.xml.icsm.geodesyml.v_0_2_2.IgsAntennaModelCodeType
+ * au.gov.xml.icsm.geodesyml.v_0_3.IgsReceiverModelCodeType
+ * au.gov.xml.icsm.geodesyml.v_0_3.IgsAntennaModelCodeType
  * 
  */
 public class CodeListValueTypeConverter implements CustomConverter {

@@ -12,12 +12,12 @@ import org.apache.commons.lang3.reflect.MethodUtils;
 import org.apache.commons.lang3.tuple.Pair;
 
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLog;
-import au.gov.xml.icsm.geodesyml.v_0_2_2.GeodesyMLType;
-import au.gov.xml.icsm.geodesyml.v_0_2_2.MonumentPropertyType;
-import au.gov.xml.icsm.geodesyml.v_0_2_2.MonumentType;
-import au.gov.xml.icsm.geodesyml.v_0_2_2.SiteLogType;
-import au.gov.xml.icsm.geodesyml.v_0_2_2.SitePropertyType;
-import au.gov.xml.icsm.geodesyml.v_0_2_2.SiteType;
+import au.gov.xml.icsm.geodesyml.v_0_3.GeodesyMLType;
+import au.gov.xml.icsm.geodesyml.v_0_3.MonumentPropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_3.MonumentType;
+import au.gov.xml.icsm.geodesyml.v_0_3.SiteLogType;
+import au.gov.xml.icsm.geodesyml.v_0_3.SitePropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_3.SiteType;
 import net.opengis.gml.v_3_2_1.CodeType;
 
 /**

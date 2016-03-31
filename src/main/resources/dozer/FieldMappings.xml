@@ -5,7 +5,7 @@
 
     <mapping>
         <class-a>au.gov.ga.geodesy.igssitelog.domain.model.SiteIdentification</class-a>
-        <class-b>au.gov.xml.icsm.geodesyml.v_0_2_2.SiteIdentificationType</class-b>
+        <class-b>au.gov.xml.icsm.geodesyml.v_0_3.SiteIdentificationType</class-b>
         <field>
             <a>heightOfMonument</a>
             <b>heightOfTheMonument</b>
@@ -13,7 +13,7 @@
     </mapping>
     <mapping>
         <class-a>au.gov.ga.geodesy.igssitelog.domain.model.SiteLocation</class-a>
-        <class-b>au.gov.xml.icsm.geodesyml.v_0_2_2.SiteLocationType</class-b>
+        <class-b>au.gov.xml.icsm.geodesyml.v_0_3.SiteLocationType</class-b>
         <field>
             <a>approximatePosition</a>
             <b>approximatePositionITRF</b>
@@ -21,7 +21,7 @@
     </mapping>
     <mapping>
         <class-a>au.gov.ga.geodesy.igssitelog.domain.model.ApproximatePosition</class-a>
-        <class-b>au.gov.xml.icsm.geodesyml.v_0_2_2.SiteLocationType.ApproximatePositionITRF</class-b>
+        <class-b>au.gov.xml.icsm.geodesyml.v_0_3.SiteLocationType.ApproximatePositionITRF</class-b>
         <field>
             <a>itrfX</a>
             <b>xCoordinateInMeters</b>
@@ -41,7 +41,7 @@
     </mapping>
     <mapping>
         <class-a>au.gov.ga.geodesy.igssitelog.domain.model.GnssReceiverLogItem</class-a>
-        <class-b>au.gov.xml.icsm.geodesyml.v_0_2_2.GnssReceiverType</class-b>
+        <class-b>au.gov.xml.icsm.geodesyml.v_0_3.GnssReceiverType</class-b>
         <field>
             <a>type</a>
             <b>receiverType</b>
@@ -49,7 +49,7 @@
     </mapping>
     <mapping>
         <class-a>au.gov.ga.geodesy.igssitelog.domain.model.GnssAntennaLogItem</class-a>
-        <class-b>au.gov.xml.icsm.geodesyml.v_0_2_2.GnssAntennaType</class-b>
+        <class-b>au.gov.xml.icsm.geodesyml.v_0_3.GnssAntennaType</class-b>
         <field>
             <a>type</a>
             <b>antennaType</b>
@@ -57,7 +57,7 @@
     </mapping>
     <mapping>
         <class-a>au.gov.ga.geodesy.igssitelog.domain.model.SurveyedLocalTie</class-a>
-        <class-b>au.gov.xml.icsm.geodesyml.v_0_2_2.SurveyedLocalTiesType</class-b>
+        <class-b>au.gov.xml.icsm.geodesyml.v_0_3.SurveyedLocalTiesType</class-b>
         <field>
             <a>tiedMarkerCdpNumber</a>
             <b>tiedMarkerCDPNumber</b>
@@ -77,7 +77,7 @@
     </mapping>
     <mapping>
         <class-a>au.gov.ga.geodesy.igssitelog.domain.model.FrequencyStandardLogItem</class-a>
-        <class-b>au.gov.xml.icsm.geodesyml.v_0_2_2.FrequencyStandardType</class-b>
+        <class-b>au.gov.xml.icsm.geodesyml.v_0_3.FrequencyStandardType</class-b>
         <field>
             <a>type</a>
             <b>standardType</b>
@@ -89,7 +89,7 @@
     </mapping>
     <mapping>
         <class-a>au.gov.ga.geodesy.igssitelog.domain.model.SensorEquipmentLogItem</class-a>
-        <class-b>au.gov.xml.icsm.geodesyml.v_0_2_2.BaseSensorEquipmentType</class-b>
+        <class-b>au.gov.xml.icsm.geodesyml.v_0_3.BaseSensorEquipmentType</class-b>
         <field>
             <a>effectiveDates</a>
             <b>validTime</b>
@@ -97,7 +97,7 @@
     </mapping>
     <mapping>
         <class-a>au.gov.ga.geodesy.igssitelog.domain.model.LocalEpisodicEvent</class-a>
-        <class-b>au.gov.xml.icsm.geodesyml.v_0_2_2.LocalEpisodicEventsType</class-b>
+        <class-b>au.gov.xml.icsm.geodesyml.v_0_3.LocalEpisodicEventsType</class-b>
         <field>
             <a>date</a>
             <b>validTime</b>
@@ -105,7 +105,7 @@
     </mapping>
     <mapping>
         <class-a>au.gov.ga.geodesy.igssitelog.domain.model.RadioInterference</class-a>
-        <class-b>au.gov.xml.icsm.geodesyml.v_0_2_2.RadioInterferencesType</class-b>
+        <class-b>au.gov.xml.icsm.geodesyml.v_0_3.RadioInterferencesType</class-b>
         <field>
             <a>effectiveDates</a>
             <b>validTime</b>
@@ -121,7 +121,7 @@
     </mapping>
     <mapping>
         <class-a>au.gov.ga.geodesy.igssitelog.domain.model.MultipathSource</class-a>
-        <class-b>au.gov.xml.icsm.geodesyml.v_0_2_2.BasePossibleProblemSourcesType</class-b>
+        <class-b>au.gov.xml.icsm.geodesyml.v_0_3.BasePossibleProblemSourcesType</class-b>
         <field>
             <a>effectiveDates</a>
             <b>validTime</b>
@@ -133,7 +133,7 @@
     </mapping>
     <mapping>
         <class-a>au.gov.ga.geodesy.igssitelog.domain.model.SignalObstruction</class-a>
-        <class-b>au.gov.xml.icsm.geodesyml.v_0_2_2.BasePossibleProblemSourcesType</class-b>
+        <class-b>au.gov.xml.icsm.geodesyml.v_0_3.BasePossibleProblemSourcesType</class-b>
         <field>
             <a>effectiveDates</a>
             <b>validTime</b>
@@ -145,7 +145,7 @@
     </mapping>
     <mapping>
         <class-a>au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLog</class-a>
-        <class-b>au.gov.xml.icsm.geodesyml.v_0_2_2.SiteLogType</class-b>
+        <class-b>au.gov.xml.icsm.geodesyml.v_0_3.SiteLogType</class-b>
         <field>
             <a>contactAgency</a>
             <b>siteContact</b>

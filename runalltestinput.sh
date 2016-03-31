@@ -15,12 +15,12 @@ if [ ! -d $OUTPUTDIRTMP ]; then
 fi
 
 if [ ! "x$1x"=="xx" ]; then
-	if [ -e $1 ]; then
-		 mvn exec:java -Dexec.mainClass="au.gov.ga.geodesy.support.commandline.GeodesyMLCommandLine" -Dexec.args="-infile $1 -outdir $OUTPUTDIRTMP"
-	else
-		echo ERROR: File to process specified on command-line but it doesnt exist: $1
-		exit 1
-	fi
+    if [ -e $1 ]; then
+         mvn exec:java -Dexec.mainClass="au.gov.ga.geodesy.support.commandline.GeodesyMLCommandLine" -Dexec.args="-infile $1 -outdir $OUTPUTDIRTMP"
+    else
+        echo ERROR: File to process specified on command-line but it doesnt exist: $1
+        exit 1
+    fi
 else
-	mvn exec:java -Dexec.mainClass="au.gov.ga.geodesy.support.commandline.GeodesyMLCommandLine" -Dexec.args="-indir $INPUTDIR -outdir $OUTPUTDIR"
+    mvn exec:java -Dexec.mainClass="au.gov.ga.geodesy.support.commandline.GeodesyMLCommandLine" -Dexec.args="-indir $INPUTDIR -outdir $OUTPUTDIR"
 fi

@@ -38,12 +38,12 @@ import au.gov.xml.icsm.geodesyml.v_0_3.GeodesyMLType;
 public class GeodesyMLCommandLine {
     private final Logger logger = LoggerFactory.getLogger(GeodesyMLCommandLine.class);
 
-    private final static Option INPUT_FILE_OPT = Option.builder("in").type(String.class).longOpt("infile")
-            .optionalArg(true).argName("file").hasArg().desc("use given buildfile").build();
+    private final static Option INPUT_FILE_OPT = Option.builder("in").type(String.class).longOpt("input")
+            .argName("file").hasArg().desc("use given buildfile").build();
     private final static Option OUTPUT_DIR_OPT = Option.builder("outdir").type(String.class).longOpt("outdir")
-            .optionalArg(true).argName("dir").hasArg().desc("output directory").build();
+            .argName("dir").hasArg().desc("output directory").build();
     private final static Option INPUT_DIR_OPT = Option.builder("indir").type(String.class).longOpt("indir")
-            .optionalArg(true).argName("dir").hasArg().desc("input directory").build();
+            .argName("dir").hasArg().desc("input directory").build();
 
     // @Autowired
     private IgsSiteLogXmlMarshaller marshaller;
@@ -74,7 +74,7 @@ public class GeodesyMLCommandLine {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-        String inputFile = line.getOptionValue("infile");
+        String inputFile = line.getOptionValue("input");
         String outputDir = line.getOptionValue("outdir");
         String inputDir = line.getOptionValue("indir");
         logger.debug("  inputFile: " + inputFile);
@@ -85,8 +85,6 @@ public class GeodesyMLCommandLine {
             processFileToDir(inputFile, outputDir);
         } else if (!StringUtils.isBlank(inputDir)) {
             processDir(inputDir, outputDir);
-        } else {
-            throw new RuntimeException("USAGE: Expect one of -infile or -indir.");
         }
     }
 
@@ -221,7 +219,7 @@ public class GeodesyMLCommandLine {
 
     public static void main(String[] args) {
         try {
-            System.out.println("GeodesyMLCommandLine - args: " + Arrays.asList(args));
+            System.out.println("GeodesyMLCommandLine - args: "+Arrays.asList(args));
             new GeodesyMLCommandLine(args);
         } catch (au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException | MarshallingException
                 | IOException e) {

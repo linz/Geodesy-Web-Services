@@ -12,7 +12,7 @@ import net.opengis.gml.v_3_2_1.CodeType;
  * 
  * Also for these extending classes:
  * net.opengis.gml.v_3_2_1.CodeWithAuthorityType
- * au.gov.xml.icsm.geodesyml.v_0_2_2.IgsRadomeModelCodeType
+ * au.gov.xml.icsm.geodesyml.v_0_3.IgsRadomeModelCodeType
  */
 public class CodeTypeConverter implements CustomConverter {
     Logger logger = LoggerFactory.getLogger(getClass());

@@ -4,13 +4,13 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import au.gov.ga.geodesy.support.mapper.dozer.CodeTypeConverter;
-import au.gov.xml.icsm.geodesyml.v_0_2_2.IgsRadomeModelCodeType;
+import au.gov.xml.icsm.geodesyml.v_0_3.IgsRadomeModelCodeType;
 import net.opengis.gml.v_3_2_1.CodeType;
 
 /**
  * CodeTypeConverter is handling the CodeType super-type and these extensions (directly or indirectly via inheritance).
  * net.opengis.gml.v_3_2_1.CodeWithAuthorityType
- * au.gov.xml.icsm.geodesyml.v_0_2_2.IgsRadomeModelCodeType
+ * au.gov.xml.icsm.geodesyml.v_0_3.IgsRadomeModelCodeType
  */
 public class CodeTypeConverterTest {
     CodeTypeConverter ctv = new CodeTypeConverter();

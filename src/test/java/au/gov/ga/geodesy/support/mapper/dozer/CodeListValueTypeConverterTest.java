@@ -4,13 +4,13 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import au.gov.ga.geodesy.support.mapper.dozer.CodeListValueTypeConverter;
-import au.gov.xml.icsm.geodesyml.v_0_2_2.IgsReceiverModelCodeType;
+import au.gov.xml.icsm.geodesyml.v_0_3.IgsReceiverModelCodeType;
 import net.opengis.iso19139.gco.v_20070417.CodeListValueType;
 
 /**
  * CodeListValueTypeConverter is handling the CodeListValueType super-type and these extensions (directly or indirectly via inheritance).
- * au.gov.xml.icsm.geodesyml.v_0_2_2.IgsReceiverModelCodeType
- * au.gov.xml.icsm.geodesyml.v_0_2_2.IgsAntennaModelCodeType
+ * au.gov.xml.icsm.geodesyml.v_0_3.IgsReceiverModelCodeType
+ * au.gov.xml.icsm.geodesyml.v_0_3.IgsAntennaModelCodeType
  *
  */
 public class CodeListValueTypeConverterTest {

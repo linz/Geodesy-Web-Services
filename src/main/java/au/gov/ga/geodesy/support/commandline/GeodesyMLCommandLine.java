@@ -33,7 +33,7 @@ import au.gov.ga.geodesy.interfaces.geodesyml.GeodesyMLMarshaller;
 import au.gov.ga.geodesy.interfaces.geodesyml.MarshallingException;
 import au.gov.ga.geodesy.support.mapper.dozer.GeodesyMLSiteLogDozerTranslator;
 import au.gov.ga.geodesy.support.marshalling.moxy.GeodesyMLMoxy;
-import au.gov.xml.icsm.geodesyml.v_0_2_2.GeodesyMLType;
+import au.gov.xml.icsm.geodesyml.v_0_3.GeodesyMLType;
 
 public class GeodesyMLCommandLine {
     private final Logger logger = LoggerFactory.getLogger(GeodesyMLCommandLine.class);

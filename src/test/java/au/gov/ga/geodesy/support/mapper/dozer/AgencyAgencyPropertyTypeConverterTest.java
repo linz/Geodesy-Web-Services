@@ -6,11 +6,11 @@ import org.junit.Test;
 import au.gov.ga.geodesy.igssitelog.domain.model.Agency;
 import au.gov.ga.geodesy.igssitelog.domain.model.Contact;
 import au.gov.ga.geodesy.support.mapper.dozer.AgencyAgencyPropertyTypeConverter;
-import au.gov.xml.icsm.geodesyml.v_0_2_2.AgencyPropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_3.AgencyPropertyType;
 
 /**
  * Test Convert: au.gov.ga.geodesy.igssitelog.domain.model.Agency <-->
- * au.gov.xml.icsm.geodesyml.v_0_2_2.AgencyPropertyType
+ * au.gov.xml.icsm.geodesyml.v_0_3.AgencyPropertyType
  *
  */
 public class AgencyAgencyPropertyTypeConverterTest {

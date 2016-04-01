@@ -474,4 +474,11 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
     }
 
 
+    @Test
+    public void testALBH() throws MarshallingException, IOException,
+            au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
+        GeodesyMLType geodesyML = testTranslate(SITEDATADIR, "ALBH");
+
+        Assert.assertNotNull(geodesyML);
+    }
 }

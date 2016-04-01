@@ -55,16 +55,17 @@ public class StringDoubleConverter implements CustomConverter {
         // drop any units suffix
         String dropUnits = dropRelH.toUpperCase().replaceAll("[A-Z]+\\W*[A-Z]*$", "");
         String finaldropUnits = dropUnits.length() > 0 ? dropUnits : "0.0";
+        String dropPercent = finaldropUnits.toUpperCase().replaceAll("\\%", "");
 
         // If there are any non-digit chars left then the input was BAD. To allow translate to go through drop everything else and log an
         // ERRORÏ
         String finalResult = null;
 
-        if (finaldropUnits.toUpperCase().matches("[\\W\\d]*[A-Z]+.*")) {
+        if (dropPercent.toUpperCase().matches("[\\W\\d]*[A-Z]+.*")) {
             logger.error("source cannot be made purely numeric - fix source data: " + source);
-            finalResult = finaldropUnits.toUpperCase().replaceAll("[A-Z\\W]", "");
+            finalResult = dropPercent.toUpperCase().replaceAll("[A-Z\\W]", "");
         } else {
-            finalResult = finaldropUnits;
+            finalResult = dropPercent;
         }
         String superFinalResult = finalResult.length() > 0 ? finalResult : "0.0";
 

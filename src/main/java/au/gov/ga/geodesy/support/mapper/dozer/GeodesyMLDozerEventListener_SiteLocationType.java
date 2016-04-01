@@ -9,7 +9,7 @@ import org.dozer.event.DozerEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import au.gov.xml.icsm.geodesyml.v_0_2_2.SiteLocationType;
+import au.gov.xml.icsm.geodesyml.v_0_3.SiteLocationType;
 
 public class GeodesyMLDozerEventListener_SiteLocationType implements DozerEventListener {
     Logger logger = LoggerFactory.getLogger(getClass());

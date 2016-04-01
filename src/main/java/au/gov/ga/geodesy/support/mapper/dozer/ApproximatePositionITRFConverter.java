@@ -1,8 +1,6 @@
 package au.gov.ga.geodesy.support.mapper.dozer;
 
 import java.math.BigDecimal;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 import org.dozer.CustomConverter;
 import org.dozer.MappingException;
@@ -13,21 +11,9 @@ import com.vividsolutions.jts.geom.Coordinate;
 import com.vividsolutions.jts.geom.Point;
 import com.vividsolutions.jts.geom.PrecisionModel;
 
-import au.gov.ga.geodesy.igssitelog.domain.model.Agency;
 import au.gov.ga.geodesy.igssitelog.domain.model.ApproximatePosition;
-import au.gov.ga.geodesy.igssitelog.domain.model.Contact;
-import au.gov.xml.icsm.geodesyml.v_0_2_2.AgencyPropertyType;
-import au.gov.xml.icsm.geodesyml.v_0_2_2.ObjectFactory;
-import au.gov.xml.icsm.geodesyml.v_0_2_2.SiteLocationType.ApproximatePositionITRF;
-import net.opengis.iso19139.gco.v_20070417.CharacterStringPropertyType;
-import net.opengis.iso19139.gmd.v_20070417.CIAddressPropertyType;
-import net.opengis.iso19139.gmd.v_20070417.CIAddressType;
-import net.opengis.iso19139.gmd.v_20070417.CIContactPropertyType;
-import net.opengis.iso19139.gmd.v_20070417.CIContactType;
-import net.opengis.iso19139.gmd.v_20070417.CIResponsiblePartyType;
-import net.opengis.iso19139.gmd.v_20070417.CITelephonePropertyType;
-import net.opengis.iso19139.gmd.v_20070417.CITelephoneType;
-import net.opengis.iso19139.gmd.v_20070417.MDSecurityConstraintsType;
+import au.gov.xml.icsm.geodesyml.v_0_3.ObjectFactory;
+import au.gov.xml.icsm.geodesyml.v_0_3.SiteLocationType.ApproximatePositionITRF;
 
 /**
  * Convert: au.gov.ga.geodesy.igssitelog.domain.model.ApproximatePosition <-->

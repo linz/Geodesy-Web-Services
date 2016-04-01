@@ -49,6 +49,14 @@
                 <class-a>au.gov.ga.geodesy.igssitelog.domain.model.Agency</class-a>
                 <class-b>au.gov.xml.icsm.geodesyml.v_0_3.AgencyPropertyType</class-b>
             </converter>
+            <converter type="au.gov.ga.geodesy.support.mapper.dozer.StringDoubleConverter">
+                <class-a>java.lang.String</class-a>
+                <class-b>java.lang.Double</class-b>
+            </converter>
+            <converter type="au.gov.ga.geodesy.support.mapper.dozer.StringBigDecimalConverter">
+                <class-a>java.lang.String</class-a>
+                <class-b>java.math.BigDecimal</class-b>
+            </converter>
         </custom-converters>
     </configuration>
 </mappings>

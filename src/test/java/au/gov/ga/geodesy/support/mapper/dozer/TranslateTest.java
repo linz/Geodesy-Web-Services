@@ -184,10 +184,10 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
         Assert.assertEquals(receiver1.getSatelliteSystem().get(0).getValue(), "GPS");
         Assert.assertEquals(receiver1.getSerialNumber(), "C128");
         Assert.assertEquals(receiver1.getFirmwareVersion(), "3.2.32.9");
-        Assert.assertEquals(receiver1.getElevationCutoffSetting(), "0");
+        Assert.assertEquals(receiver1.getElevationCutoffSetting(), 0, 0.01);
         Assert.assertEquals(receiver1.getDateInstalled().getValue().get(0), "31 Jul 1999 01:00 GMT");
         Assert.assertEquals(receiver1.getDateRemoved().getValue().get(0), "14 Jan 2000 01:50 GMT");
-        Assert.assertEquals(receiver1.getTemperatureStabilization(), "none");
+        Assert.assertEquals(receiver1.getTemperatureStabilization(), 0, 0.01);
         Assert.assertEquals(receiver1.getNotes(), "Upgrade of firmware to avoid GPS week");
 
         // Antennas
@@ -201,10 +201,10 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
         Assert.assertEquals(antenna1.getAntennaType().getValue(), "AOAD/M_T AUST");
         Assert.assertEquals(antenna1.getSerialNumber(), "318");
         Assert.assertEquals(antenna1.getAntennaReferencePoint().getValue(), "BPA");
-        Assert.assertEquals(antenna1.getMarkerArpUpEcc(), "0.007");
-        Assert.assertEquals(antenna1.getMarkerArpNorthEcc(), "0.0");
-        Assert.assertEquals(antenna1.getMarkerArpEastEcc(), "0.0");
-        Assert.assertEquals(antenna1.getAlignmentFromTrueNorth(), "0");
+        Assert.assertEquals(antenna1.getMarkerArpUpEcc(), 0.007, 0.00001);
+        Assert.assertEquals(antenna1.getMarkerArpNorthEcc(), 0.0, 0.01);
+        Assert.assertEquals(antenna1.getMarkerArpEastEcc(), 0.0, 0.01);
+        Assert.assertEquals(antenna1.getAlignmentFromTrueNorth(), 0.0, 0.01);
         Assert.assertEquals(antenna1.getAntennaRadomeType().getValue(), "AUST");
         Assert.assertEquals(antenna1.getDateInstalled().getValue().get(0), "15 May 1994 00:00 GMT");
         Assert.assertEquals(antenna1.getDateRemoved().getValue().get(0), "15 Jun 2003 03:30 GMT");
@@ -220,10 +220,10 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
         SurveyedLocalTiesType surveyedTies1 = surveyedLocalTies.get(0).getSurveyedLocalTies();
         // Test some required fields
         Assert.assertEquals(surveyedTies1.getTiedMarkerName(), "RM1");
-        Assert.assertEquals(surveyedTies1.getDifferentialComponentsGNSSMarkerToTiedMonumentITRS().getDx(), "-15.366");
-        Assert.assertEquals(surveyedTies1.getDifferentialComponentsGNSSMarkerToTiedMonumentITRS().getDy(), "-9.632");
-        Assert.assertEquals(surveyedTies1.getDifferentialComponentsGNSSMarkerToTiedMonumentITRS().getDz(), "9.099");
-        Assert.assertEquals(surveyedTies1.getLocalSiteTiesAccuracy(), "+-1mm");
+        Assert.assertEquals(surveyedTies1.getDifferentialComponentsGNSSMarkerToTiedMonumentITRS().getDx(), -15.366, 0.0001);
+        Assert.assertEquals(surveyedTies1.getDifferentialComponentsGNSSMarkerToTiedMonumentITRS().getDy(), -9.632, 0.0001);
+        Assert.assertEquals(surveyedTies1.getDifferentialComponentsGNSSMarkerToTiedMonumentITRS().getDz(), 9.09, 0.01);
+        Assert.assertEquals(surveyedTies1.getLocalSiteTiesAccuracy(), 1.0, 0.01);
         Assert.assertEquals(surveyedTies1.getDateMeasured().getValue().get(0), "11 Aug 1992 14:00 GMT");
 
         // FrequencyStandardPropertyType
@@ -251,9 +251,9 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
                         .getTheTimePeriodType(humiditySensor.getValidTime()).getBeginPosition().getValue().get(0)),
                 "29 Mar 2006 00:00 GMT");
         Assert.assertEquals(humiditySensor.getSerialNumber(), "98850");
-        Assert.assertEquals(humiditySensor.getHeightDiffToAntenna(), "2.4");
-        Assert.assertEquals(humiditySensor.getDataSamplingInterval(), "30");
-        Assert.assertEquals(humiditySensor.getAccuracyPercentRelativeHumidity(), "2% rel h");
+        Assert.assertEquals(humiditySensor.getHeightDiffToAntenna(), 2.4, 0.001);
+        Assert.assertEquals(humiditySensor.getDataSamplingInterval(), 30, 0.01);
+        Assert.assertEquals(humiditySensor.getAccuracyPercentRelativeHumidity(), 2.0, 0.001);
         Assert.assertEquals(humiditySensor.getAspiration(), "FAN");
 
         // Pressuer Sensors
@@ -270,9 +270,9 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
                 "29 Mar 2006 00:00 GMT");
         Assert.assertEquals(pressureSensor.getManufacturer(), "Paroscientific, Inc.");
         Assert.assertEquals(pressureSensor.getSerialNumber(), "98850");
-        Assert.assertEquals(pressureSensor.getHeightDiffToAntenna(), "2.4");
-        Assert.assertEquals(pressureSensor.getDataSamplingInterval(), "30");
-        Assert.assertEquals(pressureSensor.getAccuracyHPa(), "0.1 mbar");
+        Assert.assertEquals(pressureSensor.getHeightDiffToAntenna(), 2.4, 0.01);
+        Assert.assertEquals(pressureSensor.getDataSamplingInterval(), 30, 0.01);
+        Assert.assertEquals(pressureSensor.getAccuracyHPa(), 0.1, 0.001);
 
         // Water Vapour Sensors
         List<WaterVaporSensorPropertyType> waterVapourSensors = siteLogType
@@ -300,9 +300,9 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
                         .getTheTimePeriodType(temperatureSensor.getValidTime()).getBeginPosition().getValue().get(0)),
                 "29 Mar 2006 00:00 GMT");
         Assert.assertEquals(temperatureSensor.getSerialNumber(), "98850");
-        Assert.assertEquals(temperatureSensor.getHeightDiffToAntenna(), "2.4");
-        Assert.assertEquals(temperatureSensor.getDataSamplingInterval(), "30");
-        Assert.assertEquals(temperatureSensor.getAccuracyDegreesCelcius(), "0.5 deg C");
+        Assert.assertEquals(temperatureSensor.getHeightDiffToAntenna(), 2.4, 0.001);
+        Assert.assertEquals(temperatureSensor.getDataSamplingInterval().doubleValue(), 30, 0.001);
+        Assert.assertEquals(temperatureSensor.getAccuracyDegreesCelcius().doubleValue(), 0.5, 0.001);
         Assert.assertEquals(temperatureSensor.getAspiration(), "FAN");
 
         // Local Episodic Events

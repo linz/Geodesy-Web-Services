@@ -18,7 +18,7 @@ import au.gov.ga.geodesy.domain.model.event.EventPublisher;
 import au.gov.ga.geodesy.domain.model.event.EventSubscriber;
 import au.gov.ga.geodesy.domain.model.event.InvalidSiteLogReceived;
 import au.gov.ga.geodesy.domain.model.event.RawSiteLogReceived;
-import au.gov.ga.geodesy.domain.model.event.SiteLogReceived;
+import au.gov.ga.geodesy.domain.model.event.SiteLogAccepted;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLog;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLogRepository;
 import au.gov.ga.geodesy.port.InvalidSiteLogException;
@@ -45,7 +45,7 @@ public class IgsSiteLogService implements EventSubscriber<RawSiteLogReceived> {
         siteLogs.save(siteLog);
         String id = siteLog.getSiteIdentification().getFourCharacterId();
         log.info("Saving site log: " + id);
-        eventPublisher.publish(new SiteLogReceived(id));
+        eventPublisher.publish(new SiteLogAccepted(id));
     }
 
     public void upload(Reader reader) {

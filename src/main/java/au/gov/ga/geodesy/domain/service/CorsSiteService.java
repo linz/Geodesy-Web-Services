@@ -33,7 +33,7 @@ import au.gov.ga.geodesy.domain.model.equipment.EquipmentRepository;
 import au.gov.ga.geodesy.domain.model.event.Event;
 import au.gov.ga.geodesy.domain.model.event.EventPublisher;
 import au.gov.ga.geodesy.domain.model.event.EventSubscriber;
-import au.gov.ga.geodesy.domain.model.event.SiteLogReceived;
+import au.gov.ga.geodesy.domain.model.event.SiteLogAccepted;
 import au.gov.ga.geodesy.domain.model.event.SiteUpdated;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLogRepository;
 import au.gov.ga.geodesy.domain.model.sitelog.EffectiveDates;
@@ -43,7 +43,7 @@ import au.gov.ga.geodesy.domain.model.sitelog.SiteIdentification;
 
 @Component
 @Transactional("geodesyTransactionManager")
-public class CorsSiteService implements EventSubscriber<SiteLogReceived> {
+public class CorsSiteService implements EventSubscriber<SiteLogAccepted> {
 
     private static final Logger log = LoggerFactory.getLogger(CorsSiteService.class);
     private static final String gnssCorsSetupName = "GNSS CORS Setup";
@@ -75,13 +75,13 @@ public class CorsSiteService implements EventSubscriber<SiteLogReceived> {
     }
 
     public boolean canHandle(Event e) {
-        return e != null && (e instanceof SiteLogReceived);
+        return e != null && (e instanceof SiteLogAccepted);
     }
 
-    public void handle(SiteLogReceived siteLogUploaded) {
-        log.info("Notified of " + siteLogUploaded);
+    public void handle(SiteLogAccepted siteLogAccepted) {
+        log.info("Notified of " + siteLogAccepted);
 
-        String fourCharacterId = siteLogUploaded.getFourCharacterId();
+        String fourCharacterId = siteLogAccepted.getFourCharacterId();
         SiteLog siteLog = siteLogs.findByFourCharacterId(fourCharacterId);
 
         CorsSite gnssSite = gnssSites.findByFourCharacterId(fourCharacterId);
@@ -121,7 +121,7 @@ public class CorsSiteService implements EventSubscriber<SiteLogReceived> {
         setups.save(oldSetups);
         setups.save(newSetups);
 
-        eventPublisher.handled(siteLogUploaded);
+        eventPublisher.handled(siteLogAccepted);
         eventPublisher.publish(new SiteUpdated(fourCharacterId));
 
         log.info("Saving site: " + fourCharacterId);

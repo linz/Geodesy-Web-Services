@@ -17,7 +17,7 @@ import org.testng.annotations.Test;
 
 import au.gov.ga.geodesy.domain.model.MockEventPublisher;
 import au.gov.ga.geodesy.domain.model.event.Event;
-import au.gov.ga.geodesy.domain.model.event.SiteLogAccepted;
+import au.gov.ga.geodesy.domain.model.event.SiteLogReceived;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLogRepository;
 import au.gov.ga.geodesy.support.spring.GeodesyServiceUnitTestConfig;
 import au.gov.ga.geodesy.support.spring.GeodesySupportConfig;
@@ -46,8 +46,8 @@ public class UploadAllSiteLogsTest extends AbstractTransactionalTestNGSpringCont
     private void setup() throws Exception {
         siteLogFiles = new File(siteLogsDir).listFiles(new FileFilter() {
             public boolean accept(File f) {
-                /* return f.getName().startsWith("A") && f.getName().endsWith(".xml"); */
-                return f.getName().endsWith(".xml");
+                return f.getName().startsWith("A") && f.getName().endsWith(".xml");
+                /* return f.getName().endsWith(".xml"); */
             }
         });
     }
@@ -65,7 +65,7 @@ public class UploadAllSiteLogsTest extends AbstractTransactionalTestNGSpringCont
         List<Event> events = eventPublisher.getPublishedEvents();
         Assert.assertEquals(events.size(), 34);
         for (Event e : events) {
-            Assert.assertTrue(e instanceof SiteLogAccepted);
+            Assert.assertTrue(e instanceof SiteLogReceived);
         }
         Assert.assertEquals(0, siteLogs.count());
     }

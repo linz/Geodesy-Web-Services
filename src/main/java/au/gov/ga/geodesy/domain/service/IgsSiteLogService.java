@@ -17,7 +17,7 @@ import au.gov.ga.geodesy.domain.model.event.Event;
 import au.gov.ga.geodesy.domain.model.event.EventPublisher;
 import au.gov.ga.geodesy.domain.model.event.EventSubscriber;
 import au.gov.ga.geodesy.domain.model.event.InvalidSiteLogReceived;
-import au.gov.ga.geodesy.domain.model.event.RawSiteLogReceived;
+import au.gov.ga.geodesy.domain.model.event.SiteLogReceived;
 import au.gov.ga.geodesy.domain.model.event.SiteLogAccepted;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLog;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLogRepository;
@@ -27,7 +27,7 @@ import au.gov.ga.geodesy.port.SiteLogReaderAbstractFactory;
 
 @Component
 @Transactional("geodesyTransactionManager")
-public class IgsSiteLogService implements EventSubscriber<RawSiteLogReceived> {
+public class IgsSiteLogService implements EventSubscriber<SiteLogReceived> {
 
     private static final Logger log = LoggerFactory.getLogger(IgsSiteLogService.class);
 
@@ -52,7 +52,7 @@ public class IgsSiteLogService implements EventSubscriber<RawSiteLogReceived> {
         try (Scanner scanner = new Scanner(reader)) {
             scanner.useDelimiter("\\Z");
             String siteLogText = scanner.next();
-            eventPublisher.publish(new RawSiteLogReceived(siteLogText));
+            eventPublisher.publish(new SiteLogReceived(siteLogText));
         }
     }
 
@@ -62,12 +62,12 @@ public class IgsSiteLogService implements EventSubscriber<RawSiteLogReceived> {
     }
 
     public boolean canHandle(Event e) {
-        return e instanceof RawSiteLogReceived;
+        return e instanceof SiteLogReceived;
     }
 
-    public void handle(RawSiteLogReceived rawSiteLogReceived) {
-        log.info("Received rawSiteLogReceived event");
-        String siteLogText = rawSiteLogReceived.getSiteLogText();
+    public void handle(SiteLogReceived siteLogReceived) {
+        log.info("Received SiteLogReceived event");
+        String siteLogText = siteLogReceived.getSiteLogText();
         try {
             Optional<SiteLogReader> siteLogReader = siteLogReaderFactory.create(new StringReader(siteLogText));
             if (siteLogReader.isPresent()) {
@@ -81,6 +81,6 @@ public class IgsSiteLogService implements EventSubscriber<RawSiteLogReceived> {
             // TODO: Include a message saying shy the site log is invalid
             eventPublisher.publish(new InvalidSiteLogReceived(siteLogText));
         }
-        eventPublisher.handled(rawSiteLogReceived);
+        eventPublisher.handled(siteLogReceived);
     }
 }

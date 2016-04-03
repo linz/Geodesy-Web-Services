@@ -30,7 +30,7 @@ public class GeodesyMLDozerEventListener_SiteLocationType implements DozerEventL
         String country = siteLocationType.getCountryCodeISO();
         String code = COUNTRY_CODES_ALPHA_3.lookupCode(country);
         siteLocationType.setCountryCodeISO(code);
-        logger.info(String.format("Change country: '%s' to code '%s'", country, code));
+        logger.debug(String.format("Change country: '%s' to code '%s'", country, code));
     }
 
     @Override

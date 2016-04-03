@@ -197,9 +197,11 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
         Assert.assertEquals(siteLocationType.getApproximatePositionITRF().getXCoordinateInMeters(), "-4052051.767");
         Assert.assertEquals(siteLocationType.getApproximatePositionITRF().getYCoordinateInMeters(), "4212836.215");
         Assert.assertEquals(siteLocationType.getApproximatePositionITRF().getZCoordinateInMeters(), "-2545106.027");
-        Assert.assertEquals(siteLocationType.getApproximatePositionITRF().getLatitudeNorth().doubleValue(), -234012.44594, 0.00001);
-        Assert.assertEquals(siteLocationType.getApproximatePositionITRF().getLongitudeEast().doubleValue(), 1335307.84759, 0.00001);
-        Assert.assertEquals(siteLocationType.getNotes(),"ARGN (Australian Regional GPS Network)");
+        Assert.assertEquals(siteLocationType.getApproximatePositionITRF().getLatitudeNorth().doubleValue(),
+                -234012.44594, 0.00001);
+        Assert.assertEquals(siteLocationType.getApproximatePositionITRF().getLongitudeEast().doubleValue(),
+                1335307.84759, 0.00001);
+        Assert.assertEquals(siteLocationType.getNotes(), "ARGN (Australian Regional GPS Network)");
 
         // In SOPAC XML (input) ALIC.xml, the foundationDepth is empty but required
         // (<siteIdentification>..<foundationDepth></foundationDepth>..)
@@ -220,8 +222,10 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
         Assert.assertEquals(receiver1.getFirmwareVersion(), "3.2.32.9");
         Assert.assertEquals(receiver1.getElevationCutoffSetting(), 0, 0.01);
         Assert.assertEquals(receiver1.getTemperatureStabilization(), 0, 0.01);
-        MatcherAssert.assertThat("receiver1.getDateInstalled()", receiver1.getDateInstalled().getValue().get(0), Matchers.startsWith("1999-07-31"));
-        MatcherAssert.assertThat("receiver1.getDateRemoved()", receiver1.getDateRemoved().getValue().get(0), Matchers.startsWith("2000-01-14"));
+        MatcherAssert.assertThat("receiver1.getDateInstalled()", receiver1.getDateInstalled().getValue().get(0),
+                Matchers.startsWith("1999-07-31"));
+        MatcherAssert.assertThat("receiver1.getDateRemoved()", receiver1.getDateRemoved().getValue().get(0),
+                Matchers.startsWith("2000-01-14"));
         Assert.assertEquals(receiver1.getNotes(), "Upgrade of firmware to avoid GPS week");
 
         // Antennas
@@ -255,8 +259,10 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
         SurveyedLocalTiesType surveyedTies1 = surveyedLocalTies.get(0).getSurveyedLocalTies();
         // Test some required fields
         Assert.assertEquals(surveyedTies1.getTiedMarkerName(), "RM1");
-        Assert.assertEquals(surveyedTies1.getDifferentialComponentsGNSSMarkerToTiedMonumentITRS().getDx(), -15.366, 0.0001);
-        Assert.assertEquals(surveyedTies1.getDifferentialComponentsGNSSMarkerToTiedMonumentITRS().getDy(), -9.632, 0.0001);
+        Assert.assertEquals(surveyedTies1.getDifferentialComponentsGNSSMarkerToTiedMonumentITRS().getDx(), -15.366,
+                0.0001);
+        Assert.assertEquals(surveyedTies1.getDifferentialComponentsGNSSMarkerToTiedMonumentITRS().getDy(), -9.632,
+                0.0001);
         Assert.assertEquals(surveyedTies1.getDifferentialComponentsGNSSMarkerToTiedMonumentITRS().getDz(), 9.09, 0.01);
         Assert.assertEquals(surveyedTies1.getLocalSiteTiesAccuracy(), 1.0, 0.01);
         MatcherAssert.assertThat("surveyedTies1.getDateMeasured()", surveyedTies1.getDateMeasured().getValue().get(0),
@@ -464,7 +470,7 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
 
         Assert.assertNotNull(geodesyML);
     }
-    
+
     @Test
     public void testBHIL() throws MarshallingException, IOException,
             au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
@@ -473,11 +479,42 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
         Assert.assertNotNull(geodesyML);
     }
 
-
     @Test
     public void testALBH() throws MarshallingException, IOException,
             au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
         GeodesyMLType geodesyML = testTranslate(SITEDATADIR, "ALBH");
+
+        Assert.assertNotNull(geodesyML);
+    }
+
+    @Test
+    public void testALGO() throws MarshallingException, IOException,
+            au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
+        GeodesyMLType geodesyML = testTranslate(SITEDATADIR, "ALGO");
+
+        Assert.assertNotNull(geodesyML);
+    }
+
+    @Test
+    public void testAMC2() throws MarshallingException, IOException,
+            au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
+        GeodesyMLType geodesyML = testTranslate(SITEDATADIR, "AMC2");
+
+        Assert.assertNotNull(geodesyML);
+    }
+
+    @Test
+    public void testCOOB() throws MarshallingException, IOException,
+            au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
+        GeodesyMLType geodesyML = testTranslate(SITEDATADIR, "COOB");
+
+        Assert.assertNotNull(geodesyML);
+    }
+
+    @Test
+    public void testDEAR() throws MarshallingException, IOException,
+            au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
+        GeodesyMLType geodesyML = testTranslate(SITEDATADIR, "DEAR");
 
         Assert.assertNotNull(geodesyML);
     }

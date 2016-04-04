@@ -6,18 +6,18 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "SITE_LOG_RECEIVED")
-@DiscriminatorValue("site log received")
-public class SiteLogReceived extends Event {
+@Table(name = "INVALID_SITE_LOG_RECEIVED")
+@DiscriminatorValue("invalid site log received")
+public class InvalidSiteLogReceived extends Event {
 
     @Column(name = "SITE_LOG_TEXT", length=1048576, nullable = false)
     private String siteLogText;
 
     @SuppressWarnings("unused") // used by hibernate
-    private SiteLogReceived() {
+    private InvalidSiteLogReceived() {
     }
 
-    public SiteLogReceived(String siteLogText) {
+    public InvalidSiteLogReceived(String siteLogText) {
         this.siteLogText = siteLogText;
     }
 

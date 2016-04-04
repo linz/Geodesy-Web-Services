@@ -29,7 +29,7 @@ public class GMLDateUtils {
     /**
      * "yyyy-MM-dd'T'HH:mmX"
      */
-    public static final DateFormat GEODESYML_DATE_FORMAT_TIME = new SimpleDateFormat("yyyy-MM-dd'T'HH:mmX");
+    public static final DateFormat GEODESYML_DATE_FORMAT_TIME = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssX");
     /**
      * "dd MMM yyyy HH:mm z"
      */

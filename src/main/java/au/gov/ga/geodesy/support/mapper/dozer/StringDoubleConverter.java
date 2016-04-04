@@ -48,28 +48,41 @@ public class StringDoubleConverter implements CustomConverter {
         case "NONE":
             return "0.0";
         }
-        // drop "+-" or "-+"
-        String dropPlusMinux = source.replaceAll("\\+-|-\\+", "");
-        // drop % relative humidity
-        String dropRelH = dropPlusMinux.toUpperCase().replaceAll("\\% REL H", "");
-        // drop any units suffix
-        String dropUnits = dropRelH.toUpperCase().replaceAll("[A-Z]+\\W*[A-Z]*$", "");
-        String finaldropUnits = dropUnits.length() > 0 ? dropUnits : "0.0";
+        // drop "+-" or "-+" with optional '/' between them
+        String dropPlusMinux = source.replaceAll("\\+\\/?-|-\\/?\\+", "");
+        
+        // drop "APPROX." (optional .)
+        String dropApprox = dropPlusMinux.replaceAll("APPROX.?", "");
 
-        // If there are any non-digit chars left then the input was BAD. To allow translate to go through drop everything else and log an
-        // ERRORÏ
-        String finalResult = null;
+        // Now just drop anything but numbers, + -, .
+        String dropRest = dropApprox.replaceAll("[^\\d\\.\\+-]+", "");// .replaceAll("[^\\.]+", "");//\\.+-]+", "");
 
-        if (finaldropUnits.toUpperCase().matches("[\\W\\d]*[A-Z]+.*")) {
-            logger.error("source cannot be made purely numeric - fix source data: " + source);
-            finalResult = finaldropUnits.toUpperCase().replaceAll("[A-Z\\W]", "");
-        } else {
-            finalResult = finaldropUnits;
+        // Special cases
+        // "a...b" -> "a"
+        String sc1 = dropRest.replaceAll("\\.\\.+.*", "");
+
+        // Special cases
+        // "a.b.c" -> "a.b"
+        String sc2 = sc1.replaceAll("(\\d+\\.\\d+)\\.\\d+.*", "$1");
+
+        // Special cases
+        // "a+b" -> "a" (or "a-b" -> "a")
+        String sc3 = sc2.replaceAll("(\\d+)[\\+\\-]\\d+.*", "$1");
+
+        // But in some instances there are no numbers at all so just make the result 0.0 and log the ERROR
+        String removeDigits = sc3.replaceAll("[\\d]", "");
+        if (sc3.length() == removeDigits.length()) {
+            logger.error("Source doesn't contain any numbers - fix data: \"" + source + "\"");
+            return "0.0";
         }
-        String superFinalResult = finalResult.length() > 0 ? finalResult : "0.0";
 
-        logger.debug("handleProblemValues - input: " + source + ", output: " + superFinalResult);
-        return superFinalResult;
+        if (sc3.length() < dropRest.length()) {
+            logger.error(String.format(
+                    "Source data that represents a double is likely in bad format - source: %s, returning: %s ", source,
+                    sc2));
+        }
+
+        return sc3;
     }
 
 }

@@ -35,7 +35,10 @@ public class CodeListValueTypeConverter implements CustomConverter {
             } else {
                 destClassInstance = destination;
             }
-            ((CodeListValueType) destClassInstance).setValue((String) source);
+            CodeListValueType destClassInstanceType =  (CodeListValueType) destClassInstance;
+            destClassInstanceType.setValue((String) source);
+            destClassInstanceType.setCodeList("codelist");
+            destClassInstanceType.setCodeListValue("codeListValue");
             return destClassInstance;
         } else if (source instanceof CodeListValueType) {
             return ((CodeListValueType) source).getValue();

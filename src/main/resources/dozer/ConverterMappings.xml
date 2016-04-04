@@ -57,6 +57,10 @@
                 <class-a>java.lang.String</class-a>
                 <class-b>java.math.BigDecimal</class-b>
             </converter>
+            <converter type="au.gov.ga.geodesy.support.mapper.dozer.ApproximatePositionITRFConverter">
+                <class-a>au.gov.ga.geodesy.igssitelog.domain.model.ApproximatePosition</class-a>
+                <class-b>au.gov.xml.icsm.geodesyml.v_0_3.SiteLocationType.ApproximatePositionITRF</class-b>
+            </converter>
         </custom-converters>
     </configuration>
 </mappings>

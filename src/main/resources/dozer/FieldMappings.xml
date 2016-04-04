@@ -18,27 +18,16 @@
             <a>approximatePosition</a>
             <b>approximatePositionITRF</b>
         </field>
-    </mapping>
-    <mapping>
-        <class-a>au.gov.ga.geodesy.igssitelog.domain.model.ApproximatePosition</class-a>
-        <class-b>au.gov.xml.icsm.geodesyml.v_0_3.SiteLocationType.ApproximatePositionITRF</class-b>
         <field>
-            <a>itrfX</a>
-            <b>xCoordinateInMeters</b>
-        </field>
-        <field>
-            <a>itrfY</a>
-            <b>yCoordinateInMeters</b>
-        </field>
-        <field>
-            <a>itrfZ</a>
-            <b>zCoordinateInMeters</b>
-        </field>
-        <field>
-            <a>elevationGrs80</a>
-            <b>elevationMEllips</b>
+            <a>country</a>
+            <b>countryCodeISO</b>
         </field>
     </mapping>
+    <!-- Have made this a converter -->
+    <!-- <mapping> -->
+    <!-- <class-a>au.gov.ga.geodesy.igssitelog.domain.model.ApproximatePosition</class-a> -->
+    <!-- <class-b>au.gov.xml.icsm.geodesyml.v_0_2_2.SiteLocationType.ApproximatePositionITRF</class-b> -->
+    <!-- </mapping> -->
     <mapping>
         <class-a>au.gov.ga.geodesy.igssitelog.domain.model.GnssReceiverLogItem</class-a>
         <class-b>au.gov.xml.icsm.geodesyml.v_0_3.GnssReceiverType</class-b>

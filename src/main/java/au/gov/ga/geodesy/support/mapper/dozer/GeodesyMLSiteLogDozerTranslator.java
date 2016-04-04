@@ -17,6 +17,7 @@ import org.springframework.stereotype.Service;
 
 import au.gov.ga.geodesy.exception.GeodesyRuntimeException;
 import au.gov.ga.geodesy.igssitelog.domain.model.CollocationInformation;
+import au.gov.ga.geodesy.igssitelog.domain.model.FormInformation;
 import au.gov.ga.geodesy.igssitelog.domain.model.FrequencyStandardLogItem;
 import au.gov.ga.geodesy.igssitelog.domain.model.GnssAntennaLogItem;
 import au.gov.ga.geodesy.igssitelog.domain.model.GnssReceiverLogItem;
@@ -34,10 +35,12 @@ import au.gov.ga.geodesy.igssitelog.domain.model.SurveyedLocalTie;
 import au.gov.ga.geodesy.igssitelog.domain.model.TemperatureSensorLogItem;
 import au.gov.ga.geodesy.igssitelog.domain.model.WaterVaporSensorLogItem;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLSiteLogTranslator;
+import au.gov.ga.geodesy.support.utils.IdStamper;
 import au.gov.xml.icsm.geodesyml.v_0_3.AgencyPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_3.BasePossibleProblemSourcesType;
 import au.gov.xml.icsm.geodesyml.v_0_3.CollocationInformationPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_3.CollocationInformationType;
+import au.gov.xml.icsm.geodesyml.v_0_3.FormInformationType;
 import au.gov.xml.icsm.geodesyml.v_0_3.FrequencyStandardPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_3.FrequencyStandardType;
 import au.gov.xml.icsm.geodesyml.v_0_3.GeodesyMLType;
@@ -86,15 +89,19 @@ public class GeodesyMLSiteLogDozerTranslator implements GeodesyMLSiteLogTranslat
             throws InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
 
         ObjectFactory geodesyObjectFactory = new ObjectFactory();
-        GeodesyMLType geodesyMl = new GeodesyMLType();
+        GeodesyMLType geodesyMl = IdStamper.addId(new GeodesyMLType());
 
         JAXBElement<GeodesyMLType> geodesyMLTypeJaxB = geodesyObjectFactory.createGeodesyML(geodesyMl);
 
-        SiteLogType siteLogType = new SiteLogType();
+        SiteLogType siteLogType = IdStamper.addId(new SiteLogType());
 
         geodesyMl.getNodeOrAbstractPositionOrPositionPairCovariance()
                 .add(geodesyObjectFactory.createSiteLog(siteLogType));
 
+        FormInformation formInformation = sopacSiteLog.getFormInformation();
+        FormInformationType formInformationType = DozerDelegate.mapWithGuard(formInformation, FormInformationType.class);
+        siteLogType.setFormInformation(formInformationType);
+        
         SiteIdentification siteIdentification = sopacSiteLog.getSiteIdentification();
         SiteIdentificationType siteIdentificationType = DozerDelegate.mapWithGuard(siteIdentification,
                 SiteIdentificationType.class);
@@ -215,7 +222,7 @@ public class GeodesyMLSiteLogDozerTranslator implements GeodesyMLSiteLogTranslat
         }
         for (Object sopacSiteLogItem : sopacSiteLogItems) {
             C newChildType = childType.newInstance();
-            newChildType = DozerDelegate.mapWithGuard(sopacSiteLogItem, childType);
+            newChildType = IdStamper.addId(DozerDelegate.mapWithGuard(sopacSiteLogItem, childType));
             logger.trace("  " + newChildType);
             Object newParentPropertyType = parentPropertyType.newInstance();
             setBasedOnChildType(newParentPropertyType, newChildType);

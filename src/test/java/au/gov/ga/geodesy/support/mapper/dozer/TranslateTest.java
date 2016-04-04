@@ -15,6 +15,8 @@ import java.util.stream.Stream;
 
 import javax.xml.bind.JAXBElement;
 
+import org.hamcrest.MatcherAssert;
+import org.hamcrest.Matchers;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -29,6 +31,7 @@ import au.gov.ga.geodesy.support.marshalling.moxy.GeodesyMLMoxy;
 import au.gov.ga.geodesy.support.utils.GMLDateUtils;
 import au.gov.xml.icsm.geodesyml.v_0_3.BasePossibleProblemSourcesType;
 import au.gov.xml.icsm.geodesyml.v_0_3.CollocationInformationPropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_3.FormInformationType;
 import au.gov.xml.icsm.geodesyml.v_0_3.FrequencyStandardPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_3.FrequencyStandardType;
 import au.gov.xml.icsm.geodesyml.v_0_3.GeodesyMLType;
@@ -123,9 +126,8 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
      * @throws au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException
      * @throws ParseException
      */
-    public GeodesyMLType testTranslate(String inputResourceDir, String inputFile)
-            throws MarshallingException, IOException,
-            au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
+    public GeodesyMLType testTranslate(String inputResourceDir, String inputFile) throws MarshallingException,
+            IOException, au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
         String source = inputResourceDir + "/" + inputFile + ".xml";
         String destTmpName = inputFile + ".out.xml";
 
@@ -165,12 +167,46 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
 
         SiteLogType siteLogType = getSiteLog(geodesyML);
 
-        SiteIdentificationType siteIdentificationType = siteLogType.getSiteIdentification();
-        SiteLocationType siteLocationType = siteLogType.getSiteLocation();
+        FormInformationType formIdentificationType = siteLogType.getFormInformation();
+        Assert.assertEquals(formIdentificationType.getPreparedBy(), "Nick Dando");
 
+        // Input is 2013-07-08 and because there is no time-zone, it gets the local one (8 July 2013 +10 or +11)
+        // GMT (the dateFormat uses forces GMT) will be the day before and due to daylight savings ambiguity I won't
+        // check the time
+        MatcherAssert.assertThat("formIdentificationType.getDatePrepared()",
+                formIdentificationType.getDatePrepared().getValue().get(0), Matchers.startsWith("2013-07-07"));
+
+        Assert.assertEquals(formIdentificationType.getReportType(), "UPDATE");
+        // These don't exist (should they - Mmm, not in Sopac SiteLog either so no)?
+        // Assert.assertEquals(formIdentificationType.getPreviousLog(), "alic_20130308.log");
+        // Assert.assertEquals(formIdentificationType.getModifiedSections(), "3.11, 3.12");
+
+        // <mi:previousLog>alic_20130308.log</mi:previousLog>
+        // <mi:modifiedSections>3.11, 3.12</mi:modifiedSections>
+
+        SiteIdentificationType siteIdentificationType = siteLogType.getSiteIdentification();
         Assert.assertEquals(siteIdentificationType.getMonumentDescription().getValue(), "PILLAR");
+
+        SiteLocationType siteLocationType = siteLogType.getSiteLocation();
         Assert.assertEquals(Double.parseDouble(siteLocationType.getApproximatePositionITRF().getXCoordinateInMeters()),
                 Double.parseDouble("-4052051.7670"));
+        Assert.assertEquals("AUS", siteLocationType.getCountryCodeISO());
+        Assert.assertEquals(siteLocationType.getCity(), "Alice Springs");
+        Assert.assertEquals(siteLocationType.getState(), "Northern Territory");
+        Assert.assertEquals(siteLocationType.getTectonicPlate().getValue(), "Australian");
+        Assert.assertEquals(siteLocationType.getApproximatePositionITRF().getXCoordinateInMeters(), "-4052051.767");
+        Assert.assertEquals(siteLocationType.getApproximatePositionITRF().getYCoordinateInMeters(), "4212836.215");
+        Assert.assertEquals(siteLocationType.getApproximatePositionITRF().getZCoordinateInMeters(), "-2545106.027");
+        Assert.assertEquals(siteLocationType.getApproximatePositionITRF().getLatitudeNorth().doubleValue(),
+                -234012.44594, 0.00001);
+        Assert.assertEquals(siteLocationType.getApproximatePositionITRF().getLongitudeEast().doubleValue(),
+                1335307.84759, 0.00001);
+        Assert.assertEquals(siteLocationType.getNotes(), "ARGN (Australian Regional GPS Network)");
+
+        // In SOPAC XML (input) ALIC.xml, the foundationDepth is empty but required
+        // (<siteIdentification>..<foundationDepth></foundationDepth>..)
+        // Because it is required I want the empty value to come out
+        Assert.assertNull(siteIdentificationType.getFoundationDepth());
 
         // Receivers
         List<GnssReceiverPropertyType> receivers = siteLogType.getGnssReceivers();
@@ -185,9 +221,11 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
         Assert.assertEquals(receiver1.getSerialNumber(), "C128");
         Assert.assertEquals(receiver1.getFirmwareVersion(), "3.2.32.9");
         Assert.assertEquals(receiver1.getElevationCutoffSetting(), 0, 0.01);
-        Assert.assertEquals(receiver1.getDateInstalled().getValue().get(0), "31 Jul 1999 01:00 GMT");
-        Assert.assertEquals(receiver1.getDateRemoved().getValue().get(0), "14 Jan 2000 01:50 GMT");
         Assert.assertEquals(receiver1.getTemperatureStabilization(), 0, 0.01);
+        MatcherAssert.assertThat("receiver1.getDateInstalled()", receiver1.getDateInstalled().getValue().get(0),
+                Matchers.startsWith("1999-07-31"));
+        MatcherAssert.assertThat("receiver1.getDateRemoved()", receiver1.getDateRemoved().getValue().get(0),
+                Matchers.startsWith("2000-01-14"));
         Assert.assertEquals(receiver1.getNotes(), "Upgrade of firmware to avoid GPS week");
 
         // Antennas
@@ -206,13 +244,14 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
         Assert.assertEquals(antenna1.getMarkerArpEastEcc(), 0.0, 0.01);
         Assert.assertEquals(antenna1.getAlignmentFromTrueNorth(), 0.0, 0.01);
         Assert.assertEquals(antenna1.getAntennaRadomeType().getValue(), "AUST");
-        Assert.assertEquals(antenna1.getDateInstalled().getValue().get(0), "15 May 1994 00:00 GMT");
-        Assert.assertEquals(antenna1.getDateRemoved().getValue().get(0), "15 Jun 2003 03:30 GMT");
+        MatcherAssert.assertThat("antenna1.getDateInstalled()", antenna1.getDateInstalled().getValue().get(0),
+                Matchers.startsWith("1994-05-15"));
+        MatcherAssert.assertThat("antenna1.getDateRemoved()", antenna1.getDateRemoved().getValue().get(0),
+                Matchers.startsWith("2003-06-15"));
         Assert.assertEquals(antenna1.getNotes(), "Radome was damaged at an unknown time during this period.");
 
         // SurveyedLocalTiesPropertyType
-        List<SurveyedLocalTiesPropertyType> surveyedLocalTies = siteLogType
-                .getSurveyedLocalTies();
+        List<SurveyedLocalTiesPropertyType> surveyedLocalTies = siteLogType.getSurveyedLocalTies();
         Assert.assertEquals(surveyedLocalTies.size(), 3);
 
         Collections.sort(surveyedLocalTies, (s1, s2) -> s1.getSurveyedLocalTies().getTiedMarkerName()
@@ -220,15 +259,17 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
         SurveyedLocalTiesType surveyedTies1 = surveyedLocalTies.get(0).getSurveyedLocalTies();
         // Test some required fields
         Assert.assertEquals(surveyedTies1.getTiedMarkerName(), "RM1");
-        Assert.assertEquals(surveyedTies1.getDifferentialComponentsGNSSMarkerToTiedMonumentITRS().getDx(), -15.366, 0.0001);
-        Assert.assertEquals(surveyedTies1.getDifferentialComponentsGNSSMarkerToTiedMonumentITRS().getDy(), -9.632, 0.0001);
+        Assert.assertEquals(surveyedTies1.getDifferentialComponentsGNSSMarkerToTiedMonumentITRS().getDx(), -15.366,
+                0.0001);
+        Assert.assertEquals(surveyedTies1.getDifferentialComponentsGNSSMarkerToTiedMonumentITRS().getDy(), -9.632,
+                0.0001);
         Assert.assertEquals(surveyedTies1.getDifferentialComponentsGNSSMarkerToTiedMonumentITRS().getDz(), 9.09, 0.01);
         Assert.assertEquals(surveyedTies1.getLocalSiteTiesAccuracy(), 1.0, 0.01);
-        Assert.assertEquals(surveyedTies1.getDateMeasured().getValue().get(0), "11 Aug 1992 14:00 GMT");
+        MatcherAssert.assertThat("surveyedTies1.getDateMeasured()", surveyedTies1.getDateMeasured().getValue().get(0),
+                Matchers.startsWith("1992-08-11"));
 
         // FrequencyStandardPropertyType
-        List<FrequencyStandardPropertyType> frequencyStandards = siteLogType
-                .getFrequencyStandards();
+        List<FrequencyStandardPropertyType> frequencyStandards = siteLogType.getFrequencyStandards();
         Assert.assertEquals(frequencyStandards.size(), 1);
 
         FrequencyStandardType frequencyStandardType = frequencyStandards.get(0).getFrequencyStandard();
@@ -239,8 +280,7 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
                 "15 May 1994 00:00 GMT");
 
         // Humidity Sensors
-        List<HumiditySensorPropertyType> humiditySensors = siteLogType
-                .getHumiditySensors();
+        List<HumiditySensorPropertyType> humiditySensors = siteLogType.getHumiditySensors();
         Assert.assertEquals(humiditySensors.size(), 1);
 
         HumiditySensorType humiditySensor = humiditySensors.get(0).getHumiditySensor();
@@ -257,8 +297,7 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
         Assert.assertEquals(humiditySensor.getAspiration(), "FAN");
 
         // Pressuer Sensors
-        List<PressureSensorPropertyType> pressureSensors = siteLogType
-                .getPressureSensors();
+        List<PressureSensorPropertyType> pressureSensors = siteLogType.getPressureSensors();
         Assert.assertEquals(pressureSensors.size(), 1);
 
         PressureSensorType pressureSensor = pressureSensors.get(0).getPressureSensor();
@@ -275,8 +314,7 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
         Assert.assertEquals(pressureSensor.getAccuracyHPa(), 0.1, 0.001);
 
         // Water Vapour Sensors
-        List<WaterVaporSensorPropertyType> waterVapourSensors = siteLogType
-                .getWaterVaporSensors();
+        List<WaterVaporSensorPropertyType> waterVapourSensors = siteLogType.getWaterVaporSensors();
         Assert.assertEquals(waterVapourSensors.size(), 1);
 
         WaterVaporSensorType waterVapourSensor = waterVapourSensors.get(0).getWaterVaporSensor();
@@ -287,8 +325,7 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
                 "29 Mar 2006 00:00 GMT");
 
         // Temperature Sensors
-        List<TemperatureSensorPropertyType> temperatureSensors = siteLogType
-                .getTemperatureSensors();
+        List<TemperatureSensorPropertyType> temperatureSensors = siteLogType.getTemperatureSensors();
         Assert.assertEquals(temperatureSensors.size(), 1);
 
         TemperatureSensorType temperatureSensor = temperatureSensors.get(0).getTemperatureSensor();
@@ -306,8 +343,7 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
         Assert.assertEquals(temperatureSensor.getAspiration(), "FAN");
 
         // Local Episodic Events
-        List<LocalEpisodicEventsPropertyType> localEpisodicEvents = siteLogType
-                .getLocalEpisodicEventsSet();
+        List<LocalEpisodicEventsPropertyType> localEpisodicEvents = siteLogType.getLocalEpisodicEventsSet();
         Assert.assertEquals(localEpisodicEvents.size(), 1);
 
         LocalEpisodicEventsType localEpisodicEvent = localEpisodicEvents.get(0).getLocalEpisodicEvents();
@@ -319,8 +355,7 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
                 "20 Jul 2011");
 
         // Contacts
-        CIResponsiblePartyType siteContact = siteLogType.getSiteContact().get(0)
-                .getCIResponsibleParty();
+        CIResponsiblePartyType siteContact = siteLogType.getSiteContact().get(0).getCIResponsibleParty();
         Assert.assertEquals(siteContact.getOrganisationName().getCharacterString().getValue(), "Geoscience Australia");
         Assert.assertEquals(siteContact.getIndividualName().getCharacterString().getValue(), "Ryan Ruddick");
         Assert.assertEquals(siteContact.getContactInfo().getCIContact().getAddress().getCIAddress()
@@ -330,8 +365,7 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
         Assert.assertEquals(siteContact.getContactInfo().getCIContact().getPhone().getCITelephone().getFacsimile()
                 .get(0).getCharacterString().getValue(), "+61 2 6249 9929");
 
-        CIResponsiblePartyType siteMetadataCustodian = siteLogType.getSiteMetadataCustodian()
-                .getCIResponsibleParty();
+        CIResponsiblePartyType siteMetadataCustodian = siteLogType.getSiteMetadataCustodian().getCIResponsibleParty();
         Assert.assertEquals(siteMetadataCustodian.getOrganisationName().getCharacterString().getValue(),
                 "Geoscience Australia 2");
         Assert.assertEquals(siteMetadataCustodian.getIndividualName().getCharacterString().getValue(), "Bob Twilley");
@@ -343,8 +377,7 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
                 .getFacsimile().get(0).getCharacterString().getValue(), "+61 2 6249 9929");
 
         // More Information
-        MoreInformationType moreInformationType = siteLogType
-                .getMoreInformation();
+        MoreInformationType moreInformationType = siteLogType.getMoreInformation();
         Assert.assertEquals(moreInformationType.getSiteDiagram(), "Y");
         Assert.assertEquals(moreInformationType.getHorizonMask(), "Y");
         Assert.assertEquals(moreInformationType.getSitePictures(), "Y");
@@ -389,8 +422,9 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
         RadioInterferencesType radioInterference = radioInterferences.get(0).getRadioInterferences();
         Assert.assertEquals(radioInterference.getPossibleProblemSources(), "TV");
         Assert.assertEquals(radioInterference.getNotes(), "multiple lines 1");
-        Assert.assertEquals(GMLDateUtils.stringToDateToStringMultiParsers(TimePrimitivePropertyTypeUtils
-                .getTheTimePeriodType(radioInterference.getValidTime()).getBeginPosition().getValue().get(0)),
+        Assert.assertEquals(
+                GMLDateUtils.stringToDateToStringMultiParsers(TimePrimitivePropertyTypeUtils
+                        .getTheTimePeriodType(radioInterference.getValidTime()).getBeginPosition().getValue().get(0)),
                 "31 Mar 2015 00:00 GMT");
 
         // MultipathSourcesPropertyType
@@ -401,28 +435,28 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
         BasePossibleProblemSourcesType multipathSource = multipathSources.get(0).getMultipathSources();
         Assert.assertEquals(multipathSource.getPossibleProblemSources(), "VIDEO");
         Assert.assertEquals(multipathSource.getNotes(), "multiple lines 2");
-        Assert.assertEquals(GMLDateUtils.stringToDateToStringMultiParsers(TimePrimitivePropertyTypeUtils
-                .getTheTimePeriodType(multipathSource.getValidTime()).getBeginPosition().getValue().get(0)),
+        Assert.assertEquals(
+                GMLDateUtils.stringToDateToStringMultiParsers(TimePrimitivePropertyTypeUtils
+                        .getTheTimePeriodType(multipathSource.getValidTime()).getBeginPosition().getValue().get(0)),
                 "30 Mar 2015 00:00 GMT");
 
         // SignalObstructionsPropertyType
         List<SignalObstructionsPropertyType> signalObstructions = siteLogType.getSignalObstructionsSet();
         Assert.assertNotNull(signalObstructions);
         Assert.assertEquals(signalObstructions.size(), 1);
-        
+
         BasePossibleProblemSourcesType signalObstruction = signalObstructions.get(0).getSignalObstructions();
         Assert.assertEquals(signalObstruction.getPossibleProblemSources(), "TRACTOR");
         Assert.assertEquals(signalObstruction.getNotes(), "multiple lines 3");
-        Assert.assertEquals(GMLDateUtils.stringToDateToStringMultiParsers(TimePrimitivePropertyTypeUtils
-                .getTheTimePeriodType(signalObstruction.getValidTime()).getBeginPosition().getValue().get(0)),
+        Assert.assertEquals(
+                GMLDateUtils.stringToDateToStringMultiParsers(TimePrimitivePropertyTypeUtils
+                        .getTheTimePeriodType(signalObstruction.getValidTime()).getBeginPosition().getValue().get(0)),
                 "29 Mar 2015 00:00 GMT");
 
         // Contacts - just different and new parts (compared to ALIC)
-        CIResponsiblePartyType siteContact = siteLogType.getSiteContact().get(0)
-                .getCIResponsibleParty();
-        Assert.assertEquals(
-                siteContact.getContactInfo().getCIContact().getAddress().getCIAddress().getDeliveryPoint().get(0).getCharacterString().getValue(),
-                "P.O.BOX OPEN - 75100 Matera, ITALY");
+        CIResponsiblePartyType siteContact = siteLogType.getSiteContact().get(0).getCIResponsibleParty();
+        Assert.assertEquals(siteContact.getContactInfo().getCIContact().getAddress().getCIAddress().getDeliveryPoint()
+                .get(0).getCharacterString().getValue(), "P.O.BOX OPEN - 75100 Matera, ITALY");
 
         CIResponsiblePartyType siteMetaDataCustodian = siteLogType.getSiteMetadataCustodian().getCIResponsibleParty();
         Assert.assertEquals(siteMetaDataCustodian.getContactInfo().getCIContact().getAddress().getCIAddress()
@@ -437,4 +471,51 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
         Assert.assertNotNull(geodesyML);
     }
 
+    @Test
+    public void testBHIL() throws MarshallingException, IOException,
+            au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
+        GeodesyMLType geodesyML = testTranslate(SITEDATADIR, "BHIL");
+
+        Assert.assertNotNull(geodesyML);
+    }
+
+    @Test
+    public void testALBH() throws MarshallingException, IOException,
+            au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
+        GeodesyMLType geodesyML = testTranslate(SITEDATADIR, "ALBH");
+
+        Assert.assertNotNull(geodesyML);
+    }
+
+    @Test
+    public void testALGO() throws MarshallingException, IOException,
+            au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
+        GeodesyMLType geodesyML = testTranslate(SITEDATADIR, "ALGO");
+
+        Assert.assertNotNull(geodesyML);
+    }
+
+    @Test
+    public void testAMC2() throws MarshallingException, IOException,
+            au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
+        GeodesyMLType geodesyML = testTranslate(SITEDATADIR, "AMC2");
+
+        Assert.assertNotNull(geodesyML);
+    }
+
+    @Test
+    public void testCOOB() throws MarshallingException, IOException,
+            au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
+        GeodesyMLType geodesyML = testTranslate(SITEDATADIR, "COOB");
+
+        Assert.assertNotNull(geodesyML);
+    }
+
+    @Test
+    public void testDEAR() throws MarshallingException, IOException,
+            au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
+        GeodesyMLType geodesyML = testTranslate(SITEDATADIR, "DEAR");
+
+        Assert.assertNotNull(geodesyML);
+    }
 }

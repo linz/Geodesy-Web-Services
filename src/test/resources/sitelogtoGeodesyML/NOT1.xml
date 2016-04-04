@@ -1,2 +1,314 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<ns0:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:ns0="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:ns6="http://www.isotc211.org/2005/gts" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_422"/>
+<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_422">
+   <geo:siteLog gml:id="SiteLogType_422">
+      <geo:formInformation>
+         <geo:preparedBy>Giuseppe Colucci</geo:preparedBy>
+         <geo:datePrepared>2013-10-13T13:00:00Z</geo:datePrepared>
+         <geo:reportType>UPDATE</geo:reportType>
+      </geo:formInformation>
+      <geo:siteIdentification>
+         <geo:siteName>Noto-Radioastronomy Station of C.N.R.</geo:siteName>
+         <geo:fourCharacterID>NOT1</geo:fourCharacterID>
+         <geo:monumentInscription>Marker N</geo:monumentInscription>
+         <geo:iersDOMESNumber>12717M004</geo:iersDOMESNumber>
+         <geo:monumentDescription>PILLAR</geo:monumentDescription>
+         <geo:heightOfTheMonument>1.2</geo:heightOfTheMonument>
+         <geo:monumentFoundation>CONCRETE BLOCK</geo:monumentFoundation>
+         <geo:foundationDepth>3.0</geo:foundationDepth>
+         <geo:markerDescription>CHISELLED CROSS</geo:markerDescription>
+         <geo:dateInstalled>2000-09-14T13:00:00Z</geo:dateInstalled>
+         <geo:geologicCharacteristic>BEDROCK</geo:geologicCharacteristic>
+         <geo:bedrockType>SEDIMENTARY</geo:bedrockType>
+         <geo:notes>NOT1 site replaces NOTO site.</geo:notes>
+      </geo:siteIdentification>
+      <geo:siteLocation>
+         <geo:city>Noto</geo:city>
+         <geo:state>SICILY</geo:state>
+         <geo:countryCodeISO>ITA</geo:countryCodeISO>
+         <geo:tectonicPlate>EURASIAN</geo:tectonicPlate>
+         <geo:approximatePositionITRF>
+            <geo:xCoordinateInMeters>4934528.669</geo:xCoordinateInMeters>
+            <geo:yCoordinateInMeters>1321262.251</geo:yCoordinateInMeters>
+            <geo:zCoordinateInMeters>3806479.508</geo:zCoordinateInMeters>
+            <geo:latitude-North>365233.9600000000209547579288482666015625</geo:latitude-North>
+            <geo:longitude-East>145923.27999999999883584678173065185546875</geo:longitude-East>
+            <geo:elevation-m_ellips.>126.2</geo:elevation-m_ellips.>
+         </geo:approximatePositionITRF>
+      </geo:siteLocation>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_1911">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">TRIMBLE 4000SSI</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>21577</geo:serialNumber>
+            <geo:firmwareVersion>Nav 7.29 Sig 3.07</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>5.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2000-09-15T00:00:00Z</geo:dateInstalled>
+            <geo:temperatureStabilization>205.0</geo:temperatureStabilization>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna gml:id="GnssAntennaType_833">
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue">TRM29659.00     NONE</geo:antennaType>
+            <geo:serialNumber>11724</geo:serialNumber>
+            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>0.0</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
+            <geo:antennaCableType>Belden H1000</geo:antennaCableType>
+            <geo:antennaCableLength>60.0</geo:antennaCableLength>
+            <geo:dateInstalled>2000-09-15T00:00:00Z</geo:dateInstalled>
+         </geo:gnssAntenna>
+      </geo:gnssAntennas>
+      <geo:surveyedLocalTies>
+         <geo:surveyedLocalTies gml:id="SurveyedLocalTiesType_228">
+            <geo:tiedMarkerName>SLR (MARKER O)</geo:tiedMarkerName>
+            <geo:tiedMarkerUsage>Mobile SLR</geo:tiedMarkerUsage>
+            <geo:tiedMarkerCDPNumber>7543</geo:tiedMarkerCDPNumber>
+            <geo:tiedMarkerDOMESNumber>12717M001</geo:tiedMarkerDOMESNumber>
+            <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+               <geo:dx>-17.491</geo:dx>
+               <geo:dy>-131.506</geo:dy>
+               <geo:dz>66.735</geo:dz>
+            </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+            <geo:localSiteTiesAccuracy>1.5</geo:localSiteTiesAccuracy>
+            <geo:surveyMethod>TRIANGULATION</geo:surveyMethod>
+            <geo:dateMeasured>2000-09-14T13:00:00Z</geo:dateMeasured>
+         </geo:surveyedLocalTies>
+      </geo:surveyedLocalTies>
+      <geo:surveyedLocalTies>
+         <geo:surveyedLocalTies gml:id="SurveyedLocalTiesType_229">
+            <geo:tiedMarkerName>Pillar Marker R</geo:tiedMarkerName>
+            <geo:tiedMarkerUsage>GPS</geo:tiedMarkerUsage>
+            <geo:tiedMarkerDOMESNumber>12717M003</geo:tiedMarkerDOMESNumber>
+            <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+               <geo:dx>-17.72</geo:dx>
+               <geo:dy>-2.645</geo:dy>
+               <geo:dz>23.52</geo:dz>
+            </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+            <geo:localSiteTiesAccuracy>1.5</geo:localSiteTiesAccuracy>
+            <geo:surveyMethod>TRIANGULATION</geo:surveyMethod>
+            <geo:dateMeasured>2000-09-14T13:00:00Z</geo:dateMeasured>
+         </geo:surveyedLocalTies>
+      </geo:surveyedLocalTies>
+      <geo:surveyedLocalTies>
+         <geo:surveyedLocalTies gml:id="SurveyedLocalTiesType_230">
+            <geo:tiedMarkerName>MARKER G Bolt GPS Euref 89 (G)</geo:tiedMarkerName>
+            <geo:tiedMarkerUsage>GPS</geo:tiedMarkerUsage>
+            <geo:tiedMarkerDOMESNumber>12717M002</geo:tiedMarkerDOMESNumber>
+            <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+               <geo:dx>-31.952</geo:dx>
+               <geo:dy>-122.122</geo:dy>
+               <geo:dz>83.752</geo:dz>
+            </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+            <geo:localSiteTiesAccuracy>1.5</geo:localSiteTiesAccuracy>
+            <geo:surveyMethod>TRIANGULATION</geo:surveyMethod>
+            <geo:dateMeasured>2000-09-14T13:00:00Z</geo:dateMeasured>
+         </geo:surveyedLocalTies>
+      </geo:surveyedLocalTies>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_659">
+            <geo:standardType>INTERNAL</geo:standardType>
+            <geo:inputFrequency>0.0</geo:inputFrequency>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2011-04-19T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2011-07-20T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+         </geo:frequencyStandard>
+      </geo:frequencyStandards>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_660">
+            <geo:standardType>EXTERNAL H_MASER</geo:standardType>
+            <geo:inputFrequency>5.0</geo:inputFrequency>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2011-07-20T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2013-10-11T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+         </geo:frequencyStandard>
+      </geo:frequencyStandards>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_661">
+            <geo:standardType>INTERNAL</geo:standardType>
+            <geo:inputFrequency>0.0</geo:inputFrequency>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2010-03-05T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2010-03-15T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+         </geo:frequencyStandard>
+      </geo:frequencyStandards>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_662">
+            <geo:standardType>EXTERNAL H-MASER</geo:standardType>
+            <geo:inputFrequency>5.0</geo:inputFrequency>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2000-09-15T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2002-02-18T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+         </geo:frequencyStandard>
+      </geo:frequencyStandards>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_663">
+            <geo:standardType>INTERNAL</geo:standardType>
+            <geo:inputFrequency>0.0</geo:inputFrequency>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2009-10-08T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2009-10-16T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+         </geo:frequencyStandard>
+      </geo:frequencyStandards>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_664">
+            <geo:standardType>EXTERNAL H-MASER</geo:standardType>
+            <geo:inputFrequency>5.0</geo:inputFrequency>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2009-10-16T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2010-03-05T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+         </geo:frequencyStandard>
+      </geo:frequencyStandards>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_665">
+            <geo:standardType>EXTERNAL H-MASER</geo:standardType>
+            <geo:inputFrequency>5.0</geo:inputFrequency>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2008-11-17T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2009-10-08T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+         </geo:frequencyStandard>
+      </geo:frequencyStandards>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_666">
+            <geo:standardType>EXTERNAL H_MASER</geo:standardType>
+            <geo:inputFrequency>5.0</geo:inputFrequency>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2010-03-15T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2011-04-19T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+         </geo:frequencyStandard>
+      </geo:frequencyStandards>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_667">
+            <geo:standardType>INTERNAL</geo:standardType>
+            <geo:inputFrequency>0.0</geo:inputFrequency>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2008-11-12T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2008-11-17T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+         </geo:frequencyStandard>
+      </geo:frequencyStandards>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_668">
+            <geo:standardType>EXTERNAL H-MASER</geo:standardType>
+            <geo:inputFrequency>5.0</geo:inputFrequency>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2008-11-12T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2008-11-12T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+            <geo:notes>Start date unknown, date inserted only to validate site log.</geo:notes>
+         </geo:frequencyStandard>
+      </geo:frequencyStandards>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_669">
+            <geo:standardType>INTERNAL</geo:standardType>
+            <geo:inputFrequency>0.0</geo:inputFrequency>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2002-02-19T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2002-02-19T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+            <geo:notes>End date unknown, date inserted only to validate site log.</geo:notes>
+         </geo:frequencyStandard>
+      </geo:frequencyStandards>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_670">
+            <geo:standardType>INTERNAL</geo:standardType>
+            <geo:inputFrequency>0.0</geo:inputFrequency>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2013-10-11T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition></gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+         </geo:frequencyStandard>
+      </geo:frequencyStandards>
+      <geo:siteContact>
+         <gmd:MD_SecurityConstraints/>
+         <gmd:CI_ResponsibleParty>
+            <gmd:individualName>
+               <gco:CharacterString>G. Colucci</gco:CharacterString>
+            </gmd:individualName>
+            <gmd:organisationName>
+               <gco:CharacterString>e-geos S.p.A. - una Società ASI/Telespazio</gco:CharacterString>
+            </gmd:organisationName>
+            <gmd:contactInfo>
+               <gmd:CI_Contact>
+                  <gmd:phone>
+                     <gmd:CI_Telephone>
+                        <gmd:voice>
+                           <gco:CharacterString>++39.0835.377291</gco:CharacterString>
+                        </gmd:voice>
+                        <gmd:facsimile>
+                           <gco:CharacterString>++39.0835.334951</gco:CharacterString>
+                        </gmd:facsimile>
+                     </gmd:CI_Telephone>
+                  </gmd:phone>
+                  <gmd:address>
+                     <gmd:CI_Address>
+                        <gmd:deliveryPoint>
+                           <gco:CharacterString>P.O.BOX OPEN - 75100 Matera, ITALY</gco:CharacterString>
+                        </gmd:deliveryPoint>
+                        <gmd:electronicMailAddress>
+                           <gco:CharacterString>giuseppe.colucci@e-geos.it</gco:CharacterString>
+                        </gmd:electronicMailAddress>
+                     </gmd:CI_Address>
+                  </gmd:address>
+               </gmd:CI_Contact>
+            </gmd:contactInfo>
+         </gmd:CI_ResponsibleParty>
+      </geo:siteContact>
+      <geo:siteMetadataCustodian>
+         <gmd:MD_SecurityConstraints/>
+         <gmd:CI_ResponsibleParty>
+            <gmd:organisationName>
+               <gco:CharacterString>Agenzia Spaziale Italiana</gco:CharacterString>
+            </gmd:organisationName>
+            <gmd:contactInfo>
+               <gmd:CI_Contact>
+                  <gmd:address>
+                     <gmd:CI_Address>
+                        <gmd:deliveryPoint>
+                           <gco:CharacterString>P.O.BOX OPEN - 75100 Matera, ITALY</gco:CharacterString>
+                        </gmd:deliveryPoint>
+                     </gmd:CI_Address>
+                  </gmd:address>
+               </gmd:CI_Contact>
+            </gmd:contactInfo>
+         </gmd:CI_ResponsibleParty>
+      </geo:siteMetadataCustodian>
+      <geo:moreInformation>
+         <geo:notes>Survey of site</geo:notes>
+      </geo:moreInformation>
+   </geo:siteLog>
+</geo:GeodesyML>

@@ -1,2 +1,154 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<ns0:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:ns0="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:ns6="http://www.isotc211.org/2005/gts" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_353"/>
+<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_353">
+   <geo:siteLog gml:id="SiteLogType_353">
+      <geo:formInformation>
+         <geo:preparedBy>James Foster</geo:preparedBy>
+         <geo:datePrepared>2012-05-02T14:00:00Z</geo:datePrepared>
+         <geo:reportType>UPDATE</geo:reportType>
+      </geo:formInformation>
+      <geo:siteIdentification>
+         <geo:siteName>Haleakala, Maui</geo:siteName>
+         <geo:fourCharacterID>MAUI</geo:fourCharacterID>
+         <geo:iersDOMESNumber>40445S008</geo:iersDOMESNumber>
+         <geo:monumentDescription>STEEL MAST</geo:monumentDescription>
+         <geo:dateInstalled>1998-12-31T13:00:00Z</geo:dateInstalled>
+         <geo:geologicCharacteristic>BEDROCK</geo:geologicCharacteristic>
+         <geo:bedrockType>IGNEOUS</geo:bedrockType>
+         <geo:bedrockCondition>FRESH</geo:bedrockCondition>
+         <geo:fractureSpacing>over 200 cm</geo:fractureSpacing>
+         <geo:notes>Geodetic reference point is top-center of steel coupler atop steel mast anchored in bedrock.</geo:notes>
+      </geo:siteIdentification>
+      <geo:siteLocation>
+         <geo:city>Haleakala, Maui</geo:city>
+         <geo:state>Hawaii</geo:state>
+         <geo:countryCodeISO>United States</geo:countryCodeISO>
+         <geo:tectonicPlate>PACIFIC</geo:tectonicPlate>
+         <geo:approximatePositionITRF>
+            <geo:xCoordinateInMeters>-5466069.0</geo:xCoordinateInMeters>
+            <geo:yCoordinateInMeters>-2404328.0</geo:yCoordinateInMeters>
+            <geo:zCoordinateInMeters>2242127.0</geo:zCoordinateInMeters>
+            <geo:latitude-North>204224.119999999995343387126922607421875</geo:latitude-North>
+            <geo:longitude-East>-1561525.19999999995343387126922607421875</geo:longitude-East>
+            <geo:elevation-m_ellips.>3062.0</geo:elevation-m_ellips.>
+         </geo:approximatePositionITRF>
+         <geo:notes>Reference frame used is ITRF97. Coordinate system used is WGS84.</geo:notes>
+      </geo:siteLocation>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_1640">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ASHTECH Z-XII3</geo:receiverType>
+            <geo:serialNumber>LP00656</geo:serialNumber>
+            <geo:firmwareVersion>1F50</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>1999-01-01T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1999-08-16T23:59:00Z</geo:dateRemoved>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_1641">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ASHTECH Z-XII3</geo:receiverType>
+            <geo:serialNumber>LP00656</geo:serialNumber>
+            <geo:firmwareVersion>CC00</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>1999-08-18T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2000-02-25T05:33:00Z</geo:dateRemoved>
+            <geo:notes>LP00656 removed because of bad data port</geo:notes>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_1642">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ASHTECH Z-XII3</geo:receiverType>
+            <geo:serialNumber>LP03343</geo:serialNumber>
+            <geo:firmwareVersion>CC00</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2000-03-30T22:28:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2012-05-01T20:00:00Z</geo:dateRemoved>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_1643">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">TRIMBLE NETRS</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>4724134702</geo:serialNumber>
+            <geo:firmwareVersion>1.3-0</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2012-05-01T20:43:00Z</geo:dateInstalled>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna gml:id="GnssAntennaType_721">
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue">ASH700936D_M    SNOW</geo:antennaType>
+            <geo:serialNumber>12610</geo:serialNumber>
+            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>0.0</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+            <geo:antennaRadomeType>SNOW</geo:antennaRadomeType>
+            <geo:antennaCableLength>0.0</geo:antennaCableLength>
+            <geo:dateInstalled>1999-01-01T00:00:00Z</geo:dateInstalled>
+         </geo:gnssAntenna>
+      </geo:gnssAntennas>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_557">
+            <geo:standardType>INTERNAL</geo:standardType>
+            <geo:inputFrequency>0.0</geo:inputFrequency>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>1999-01-01T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition></gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+         </geo:frequencyStandard>
+      </geo:frequencyStandards>
+      <geo:siteContact>
+         <gmd:MD_SecurityConstraints/>
+         <gmd:CI_ResponsibleParty>
+            <gmd:individualName>
+               <gco:CharacterString>James Foster</gco:CharacterString>
+            </gmd:individualName>
+            <gmd:organisationName>
+               <gco:CharacterString>Pacific GPS Facility</gco:CharacterString>
+            </gmd:organisationName>
+            <gmd:contactInfo>
+               <gmd:CI_Contact>
+                  <gmd:phone>
+                     <gmd:CI_Telephone>
+                        <gmd:voice>
+                           <gco:CharacterString>(808) 956 2360</gco:CharacterString>
+                        </gmd:voice>
+                        <gmd:facsimile>
+                           <gco:CharacterString>(808) 956 3188</gco:CharacterString>
+                        </gmd:facsimile>
+                     </gmd:CI_Telephone>
+                  </gmd:phone>
+                  <gmd:address>
+                     <gmd:CI_Address>
+                        <gmd:deliveryPoint>
+                           <gco:CharacterString>POST Room 602</gco:CharacterString>
+                        </gmd:deliveryPoint>
+                        <gmd:electronicMailAddress>
+                           <gco:CharacterString>gps@soest.hawaii.edu</gco:CharacterString>
+                        </gmd:electronicMailAddress>
+                     </gmd:CI_Address>
+                  </gmd:address>
+               </gmd:CI_Contact>
+            </gmd:contactInfo>
+         </gmd:CI_ResponsibleParty>
+      </geo:siteContact>
+      <geo:siteMetadataCustodian>
+         <gmd:MD_SecurityConstraints/>
+         <gmd:CI_ResponsibleParty>
+            <gmd:organisationName>
+               <gco:CharacterString>Pacific GPS Facility</gco:CharacterString>
+            </gmd:organisationName>
+            <gmd:contactInfo>
+               <gmd:CI_Contact>
+                  <gmd:address>
+                     <gmd:CI_Address/>
+                  </gmd:address>
+               </gmd:CI_Contact>
+            </gmd:contactInfo>
+         </gmd:CI_ResponsibleParty>
+      </geo:siteMetadataCustodian>
+   </geo:siteLog>
+</geo:GeodesyML>

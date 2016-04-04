@@ -1,2 +1,199 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<ns0:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:ns0="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:ns6="http://www.isotc211.org/2005/gts" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_545"/>
+<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_545">
+   <geo:siteLog gml:id="SiteLogType_545">
+      <geo:formInformation>
+         <geo:preparedBy>Heungmuk Cho</geo:preparedBy>
+         <geo:datePrepared>2005-01-26T13:00:00Z</geo:datePrepared>
+         <geo:reportType>Update</geo:reportType>
+      </geo:formInformation>
+      <geo:siteIdentification>
+         <geo:siteName>GPS-station NGI/Suwon, Korea</geo:siteName>
+         <geo:fourCharacterID>SUWN</geo:fourCharacterID>
+         <geo:monumentInscription>Pillar</geo:monumentInscription>
+         <geo:iersDOMESNumber>23903M001</geo:iersDOMESNumber>
+         <geo:dateInstalled>1995-03-14T14:00:00Z</geo:dateInstalled>
+         <geo:geologicCharacteristic>BEDROCK</geo:geologicCharacteristic>
+         <geo:bedrockType>GRANITE</geo:bedrockType>
+         <geo:bedrockCondition>FRESH</geo:bedrockCondition>
+         <geo:notes>N/A N/A</geo:notes>
+      </geo:siteIdentification>
+      <geo:siteLocation>
+         <geo:city>Suwon-shi</geo:city>
+         <geo:state>Kyonggi-do</geo:state>
+         <geo:countryCodeISO>Korea</geo:countryCodeISO>
+         <geo:tectonicPlate>Euroasia</geo:tectonicPlate>
+         <geo:approximatePositionITRF>
+            <geo:xCoordinateInMeters>-3062023.4156</geo:xCoordinateInMeters>
+            <geo:yCoordinateInMeters>4055449.1662</geo:yCoordinateInMeters>
+            <geo:zCoordinateInMeters>3841819.3768</geo:zCoordinateInMeters>
+            <geo:latitude-North>371631.7999999999883584678173065185546875</geo:latitude-North>
+            <geo:longitude-East>1270315.120000000111758708953857421875</geo:longitude-East>
+            <geo:elevation-m_ellips.>83.9322</geo:elevation-m_ellips.>
+         </geo:approximatePositionITRF>
+      </geo:siteLocation>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_2498">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ROGUE SNR-8000</geo:receiverType>
+            <geo:serialNumber>T-306</geo:serialNumber>
+            <geo:firmwareVersion>Ver. 3.2</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>1995-03-15T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2000-02-14T00:00:00Z</geo:dateRemoved>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_2499">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">TRIMBLE 4000SSI</geo:receiverType>
+            <geo:serialNumber>3950A27345</geo:serialNumber>
+            <geo:firmwareVersion>Ver. 7.29</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2000-02-14T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2005-01-26T00:00:00Z</geo:dateRemoved>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_2500">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">TRIMBLE NETRS</geo:receiverType>
+            <geo:serialNumber>4450241593</geo:serialNumber>
+            <geo:firmwareVersion>1.0-3 09 Mar2004</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2005-01-28T00:00:00Z</geo:dateInstalled>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna gml:id="GnssAntennaType_1102">
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue">TRM29659.00     DOME</geo:antennaType>
+            <geo:serialNumber>0220170420</geo:serialNumber>
+            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>1.57</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+            <geo:antennaRadomeType>DOME</geo:antennaRadomeType>
+            <geo:antennaCableLength>0.0</geo:antennaCableLength>
+            <geo:dateInstalled>2000-02-14T00:00:00Z</geo:dateInstalled>
+            <geo:notes>The Antenna height is the vertical from the marker to the ARP of antenna. The Pillar height is 1.50cm. The othometric height of the concrete base is 58.634m(MSL). It is connected the first order Bench Mark. Half Sphere radome</geo:notes>
+         </geo:gnssAntenna>
+      </geo:gnssAntennas>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna gml:id="GnssAntennaType_1103">
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue">AOAD/M_T        DOME</geo:antennaType>
+            <geo:serialNumber>153</geo:serialNumber>
+            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>1.57</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+            <geo:antennaRadomeType>DOME</geo:antennaRadomeType>
+            <geo:antennaCableLength>0.0</geo:antennaCableLength>
+            <geo:dateInstalled>1995-03-15T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2000-02-14T00:00:00Z</geo:dateRemoved>
+            <geo:notes>The Antenna height is the vertical  from the Geodetic Marker to the ARP.  height of the Geodetic Marker on the  base is 58.634m(MSL). It is tied the  order Bench Mark. Half Sphere radome</geo:notes>
+         </geo:gnssAntenna>
+      </geo:gnssAntennas>
+      <geo:surveyedLocalTies>
+         <geo:surveyedLocalTies gml:id="SurveyedLocalTiesType_332">
+            <geo:tiedMarkerName>VLBI Observation Point</geo:tiedMarkerName>
+            <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+               <geo:dx>0.535</geo:dx>
+               <geo:dy>-4.63</geo:dy>
+               <geo:dz>9.394</geo:dz>
+            </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+            <geo:localSiteTiesAccuracy>0.0</geo:localSiteTiesAccuracy>
+            <geo:dateMeasured>1997-03-13T13:00:00Z</geo:dateMeasured>
+            <geo:notes>VLBI Observation was carried out with Mobil VLBI Observation System with 3.8m Antenna in from Sep. 1995 to Nov. 1997 and Geogrpahical Survey Institute(GSI) Japan.</geo:notes>
+         </geo:surveyedLocalTies>
+      </geo:surveyedLocalTies>
+      <geo:surveyedLocalTies>
+         <geo:surveyedLocalTies gml:id="SurveyedLocalTiesType_333">
+            <geo:tiedMarkerName>Korean Datum</geo:tiedMarkerName>
+            <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+               <geo:dx>-20.863</geo:dx>
+               <geo:dy>12.416</geo:dy>
+               <geo:dz>-41.492</geo:dz>
+            </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+            <geo:localSiteTiesAccuracy>0.0</geo:localSiteTiesAccuracy>
+            <geo:dateMeasured>1997-03-13T13:00:00Z</geo:dateMeasured>
+         </geo:surveyedLocalTies>
+      </geo:surveyedLocalTies>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_895">
+            <geo:standardType>RUBIDIUM</geo:standardType>
+            <geo:inputFrequency>5.0</geo:inputFrequency>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>1998-02-03T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition></gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+            <geo:notes>Allen Osborne Associate, Inc. S/N 132</geo:notes>
+         </geo:frequencyStandard>
+      </geo:frequencyStandards>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_896">
+            <geo:standardType>CESIUM=20</geo:standardType>
+            <geo:inputFrequency>5.0</geo:inputFrequency>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2002-01-23T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition></gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+            <geo:notes>Model 4065C, DATUM, Inc. S/N 0124006529</geo:notes>
+         </geo:frequencyStandard>
+      </geo:frequencyStandards>
+      <geo:siteContact>
+         <gmd:MD_SecurityConstraints/>
+         <gmd:CI_ResponsibleParty>
+            <gmd:individualName>
+               <gco:CharacterString>Cho, Heungmuk</gco:CharacterString>
+            </gmd:individualName>
+            <gmd:organisationName>
+               <gco:CharacterString>National Geographic Information Institute</gco:CharacterString>
+            </gmd:organisationName>
+            <gmd:contactInfo>
+               <gmd:CI_Contact>
+                  <gmd:phone>
+                     <gmd:CI_Telephone>
+                        <gmd:voice>
+                           <gco:CharacterString>+82-31-210-2650</gco:CharacterString>
+                        </gmd:voice>
+                        <gmd:facsimile>
+                           <gco:CharacterString>+82-31-210-2756</gco:CharacterString>
+                        </gmd:facsimile>
+                     </gmd:CI_Telephone>
+                  </gmd:phone>
+                  <gmd:address>
+                     <gmd:CI_Address>
+                        <gmd:deliveryPoint>
+                           <gco:CharacterString>111, Wonchon-dong, Youngtong-gu,</gco:CharacterString>
+                        </gmd:deliveryPoint>
+                        <gmd:electronicMailAddress>
+                           <gco:CharacterString>hmcho@moct.go.kr</gco:CharacterString>
+                        </gmd:electronicMailAddress>
+                     </gmd:CI_Address>
+                  </gmd:address>
+               </gmd:CI_Contact>
+            </gmd:contactInfo>
+         </gmd:CI_ResponsibleParty>
+      </geo:siteContact>
+      <geo:siteMetadataCustodian>
+         <gmd:MD_SecurityConstraints/>
+         <gmd:CI_ResponsibleParty>
+            <gmd:organisationName>
+               <gco:CharacterString>National Geographic Information Institute</gco:CharacterString>
+            </gmd:organisationName>
+            <gmd:contactInfo>
+               <gmd:CI_Contact>
+                  <gmd:address>
+                     <gmd:CI_Address/>
+                  </gmd:address>
+               </gmd:CI_Contact>
+            </gmd:contactInfo>
+         </gmd:CI_ResponsibleParty>
+      </geo:siteMetadataCustodian>
+      <geo:moreInformation>
+         <geo:urlForMoreInformation>http</geo:urlForMoreInformation>
+      </geo:moreInformation>
+   </geo:siteLog>
+</geo:GeodesyML>

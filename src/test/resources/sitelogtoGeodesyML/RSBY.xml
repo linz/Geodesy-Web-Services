@@ -1,2 +1,195 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<ns0:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:ns0="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:ns6="http://www.isotc211.org/2005/gts" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_508"/>
+<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_508">
+   <geo:siteLog gml:id="SiteLogType_508">
+      <geo:formInformation>
+         <geo:preparedBy>Ted Zhou</geo:preparedBy>
+         <geo:datePrepared>2013-08-06T14:00:00Z</geo:datePrepared>
+         <geo:reportType>UPDATE</geo:reportType>
+      </geo:formInformation>
+      <geo:siteIdentification>
+         <geo:siteName>Rosslyn Bay</geo:siteName>
+         <geo:fourCharacterID>RSBY</geo:fourCharacterID>
+         <geo:iersDOMESNumber>59953M001</geo:iersDOMESNumber>
+         <geo:monumentDescription>PILLAR</geo:monumentDescription>
+         <geo:heightOfTheMonument>6.0</geo:heightOfTheMonument>
+         <geo:monumentFoundation>CONCRETE PILE</geo:monumentFoundation>
+         <geo:markerDescription>THREADED BOLT ON STAINLESS STEEL PILLAR PLATE</geo:markerDescription>
+         <geo:dateInstalled>2011-07-19T14:00:00Z</geo:dateInstalled>
+         <geo:geologicCharacteristic>BEDROCK</geo:geologicCharacteristic>
+         <geo:bedrockType>SEDIMENTARY</geo:bedrockType>
+         <geo:faultZonesNearby>NO</geo:faultZonesNearby>
+      </geo:siteIdentification>
+      <geo:siteLocation>
+         <geo:city>Rosslyn Bay</geo:city>
+         <geo:state>Queensland</geo:state>
+         <geo:countryCodeISO>AUS</geo:countryCodeISO>
+         <geo:tectonicPlate>Australian</geo:tectonicPlate>
+         <geo:approximatePositionITRF>
+            <geo:xCoordinateInMeters>-5121089.184</geo:xCoordinateInMeters>
+            <geo:yCoordinateInMeters>2863243.338</geo:yCoordinateInMeters>
+            <geo:zCoordinateInMeters>-2493143.779</geo:zCoordinateInMeters>
+            <geo:latitude-North>-230939.55879999999888241291046142578125</geo:latitude-North>
+            <geo:longitude-East>1504724.29784999997355043888092041015625</geo:longitude-East>
+            <geo:elevation-m_ellips.>0058.1820</geo:elevation-m_ellips.>
+         </geo:approximatePositionITRF>
+      </geo:siteLocation>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_2304">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">LEICA GRX1200+GNSS</geo:receiverType>
+            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
+            <geo:serialNumber>495636</geo:serialNumber>
+            <geo:firmwareVersion>8.20/4.007</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2011-07-25T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2013-08-01T00:00:00Z</geo:dateRemoved>
+            <geo:notes>should be &quot;+GNSS&quot;</geo:notes>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_2305">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">LEICA GRX1200+GNSS</geo:receiverType>
+            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
+            <geo:serialNumber>495636</geo:serialNumber>
+            <geo:firmwareVersion>8.71/6.112</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2013-08-01T00:00:00Z</geo:dateInstalled>
+            <geo:notes>should be +&quot;GNSS&quot;</geo:notes>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna gml:id="GnssAntennaType_1020">
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue">LEIAR25.R3      LEIT</geo:antennaType>
+            <geo:serialNumber>09310026</geo:serialNumber>
+            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>0.0</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+            <geo:antennaRadomeType>LEIT</geo:antennaRadomeType>
+            <geo:antennaCableType>LMR400</geo:antennaCableType>
+            <geo:antennaCableLength>44.0</geo:antennaCableLength>
+            <geo:dateInstalled>2011-07-25T04:30:00Z</geo:dateInstalled>
+            <geo:notes>Cable also has 0.5 metre LMR200 pigtails at</geo:notes>
+         </geo:gnssAntenna>
+      </geo:gnssAntennas>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_794">
+            <geo:standardType>QUARTZ/INTERNAL</geo:standardType>
+            <geo:inputFrequency>0.0</geo:inputFrequency>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2011-07-25T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition></gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+         </geo:frequencyStandard>
+      </geo:frequencyStandards>
+      <geo:humiditySensors>
+         <geo:humiditySensor gml:id="HumiditySensorType_225">
+            <geo:type>PAROSCIENTIFIC MET4</geo:type>
+            <geo:manufacturer>Paroscientific</geo:manufacturer>
+            <geo:serialNumber>106744</geo:serialNumber>
+            <geo:heightDiffToAntenna>-1.94</geo:heightDiffToAntenna>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2011-08-23T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition></gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+            <geo:dataSamplingInterval>30.0</geo:dataSamplingInterval>
+            <geo:accuracy-percentRelativeHumidity>2.0</geo:accuracy-percentRelativeHumidity>
+            <geo:aspiration>UNASPIRATED(UNASPIRATED/NATURAL/FAN/etc)</geo:aspiration>
+         </geo:humiditySensor>
+      </geo:humiditySensors>
+      <geo:pressureSensors>
+         <geo:pressureSensor gml:id="PressureSensorType_229">
+            <geo:type>PAROSCIENTIFIC MET4</geo:type>
+            <geo:manufacturer>Paroscientific</geo:manufacturer>
+            <geo:serialNumber>106744</geo:serialNumber>
+            <geo:heightDiffToAntenna>-1.94</geo:heightDiffToAntenna>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2011-08-23T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition></gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+            <geo:dataSamplingInterval>30.0</geo:dataSamplingInterval>
+            <geo:accuracy-hPa>0.08</geo:accuracy-hPa>
+         </geo:pressureSensor>
+      </geo:pressureSensors>
+      <geo:temperatureSensors>
+         <geo:temperatureSensor gml:id="TemperatureSensorType_223">
+            <geo:type>PAROSCIENTIFIC MET4</geo:type>
+            <geo:manufacturer>Paroscientific</geo:manufacturer>
+            <geo:serialNumber>106744</geo:serialNumber>
+            <geo:heightDiffToAntenna>-1.94</geo:heightDiffToAntenna>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2011-08-23T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition></gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+            <geo:dataSamplingInterval>30.0</geo:dataSamplingInterval>
+            <geo:accuracy-degreesCelcius>0.5</geo:accuracy-degreesCelcius>
+            <geo:aspiration>UNASPIRATED</geo:aspiration>
+         </geo:temperatureSensor>
+      </geo:temperatureSensors>
+      <geo:siteContact>
+         <gmd:MD_SecurityConstraints/>
+         <gmd:CI_ResponsibleParty>
+            <gmd:individualName>
+               <gco:CharacterString>Garry Cislowski</gco:CharacterString>
+            </gmd:individualName>
+            <gmd:organisationName>
+               <gco:CharacterString>Department of Environment and Resource</gco:CharacterString>
+            </gmd:organisationName>
+            <gmd:contactInfo>
+               <gmd:CI_Contact>
+                  <gmd:phone>
+                     <gmd:CI_Telephone>
+                        <gmd:voice>
+                           <gco:CharacterString>+61 7 3896 3030</gco:CharacterString>
+                        </gmd:voice>
+                        <gmd:facsimile>
+                           <gco:CharacterString>+61 7 3896 3697</gco:CharacterString>
+                        </gmd:facsimile>
+                     </gmd:CI_Telephone>
+                  </gmd:phone>
+                  <gmd:address>
+                     <gmd:CI_Address>
+                        <gmd:electronicMailAddress>
+                           <gco:CharacterString>Garry.Cislowski@derm.qld.gov.au</gco:CharacterString>
+                        </gmd:electronicMailAddress>
+                     </gmd:CI_Address>
+                  </gmd:address>
+               </gmd:CI_Contact>
+            </gmd:contactInfo>
+         </gmd:CI_ResponsibleParty>
+      </geo:siteContact>
+      <geo:siteMetadataCustodian>
+         <gmd:MD_SecurityConstraints/>
+         <gmd:CI_ResponsibleParty>
+            <gmd:organisationName>
+               <gco:CharacterString>Geoscience Australia</gco:CharacterString>
+            </gmd:organisationName>
+            <gmd:contactInfo>
+               <gmd:CI_Contact>
+                  <gmd:address>
+                     <gmd:CI_Address>
+                        <gmd:deliveryPoint>
+                           <gco:CharacterString>GPO Box 378</gco:CharacterString>
+                        </gmd:deliveryPoint>
+                     </gmd:CI_Address>
+                  </gmd:address>
+               </gmd:CI_Contact>
+            </gmd:contactInfo>
+         </gmd:CI_ResponsibleParty>
+      </geo:siteMetadataCustodian>
+      <geo:moreInformation>
+         <geo:siteMap>Y</geo:siteMap>
+         <geo:siteDiagram>Y</geo:siteDiagram>
+         <geo:horizonMask>Y</geo:horizonMask>
+         <geo:sitePictures>Y</geo:sitePictures>
+      </geo:moreInformation>
+   </geo:siteLog>
+</geo:GeodesyML>

@@ -1,2 +1,290 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<ns0:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:ns0="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:ns6="http://www.isotc211.org/2005/gts" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_567"/>
+<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_567">
+   <geo:siteLog gml:id="SiteLogType_567">
+      <geo:formInformation>
+         <geo:preparedBy>Ryan Ruddick</geo:preparedBy>
+         <geo:datePrepared>2012-01-17T13:00:00Z</geo:datePrepared>
+         <geo:reportType>UPDATE</geo:reportType>
+      </geo:formInformation>
+      <geo:siteIdentification>
+         <geo:siteName>Tidbinbilla (Canberra)</geo:siteName>
+         <geo:fourCharacterID>TID1</geo:fourCharacterID>
+         <geo:monumentInscription>TIDBINBILLA SPC40</geo:monumentInscription>
+         <geo:iersDOMESNumber>50103M108</geo:iersDOMESNumber>
+         <geo:monumentDescription>PILLAR</geo:monumentDescription>
+         <geo:heightOfTheMonument>5.0</geo:heightOfTheMonument>
+         <geo:monumentFoundation>CONCRETE pillar</geo:monumentFoundation>
+         <geo:markerDescription>Stainless Steel Plate</geo:markerDescription>
+         <geo:dateInstalled>1992-04-30T14:00:00Z</geo:dateInstalled>
+         <geo:notes>(multiple lines) AU017 is the unique national identifier for the drill hole in the centre of a small triangle in the top centre of the pillar plate.  The GPS antenna is set over this mark  The ROGUE Antenna was first mounted on a 25-meter, un-guided, microwave tower. On 92/02/02 the GPS antenna was moved from the tower to the current location monument #4002-S. Antenna is shared by site TIDB and TID2</geo:notes>
+      </geo:siteIdentification>
+      <geo:siteLocation>
+         <geo:city>Canberra</geo:city>
+         <geo:state>Australian Capital Territory (ACT)</geo:state>
+         <geo:countryCodeISO>AUS</geo:countryCodeISO>
+         <geo:tectonicPlate>Indo-Australian</geo:tectonicPlate>
+         <geo:approximatePositionITRF>
+            <geo:xCoordinateInMeters>-4460996.069</geo:xCoordinateInMeters>
+            <geo:yCoordinateInMeters>2682557.144</geo:yCoordinateInMeters>
+            <geo:zCoordinateInMeters>-3674443.875</geo:zCoordinateInMeters>
+            <geo:latitude-North>-352357.1562999999732710421085357666015625</geo:latitude-North>
+            <geo:longitude-East>1485847.98424999997951090335845947265625</geo:longitude-East>
+            <geo:elevation-m_ellips.>665.4400</geo:elevation-m_ellips.>
+         </geo:approximatePositionITRF>
+         <geo:notes>Located at the Canberra Deep Space Communications Complex (CDSCC), Tidbinbilla Latitude and Longitude derived from Table 6 &quot;ITRF94 Class B Station Coordinates at Epoch 1993.0&quot;</geo:notes>
+      </geo:siteLocation>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_2568">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">AOA ICS-4000Z ACT</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>C116U</geo:serialNumber>
+            <geo:firmwareVersion>3.3.32.3</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2000-03-29T02:15:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2005-01-24T00:00:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_2569">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ASHTECH UZ-12</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>50014</geo:serialNumber>
+            <geo:firmwareVersion>CN00</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2005-06-20T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2009-04-28T23:59:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_2570">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">TRIMBLE NETR8</geo:receiverType>
+            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
+            <geo:serialNumber>4843K33421</geo:serialNumber>
+            <geo:firmwareVersion>3.80</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2009-04-29T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2012-01-18T00:00:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_2571">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ROGUE SNR-12 RM</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>206</geo:serialNumber>
+            <geo:firmwareVersion>3.2</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>1996-07-01T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1999-08-20T01:00:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_2572">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ROGUE SNR-12 RM</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>206</geo:serialNumber>
+            <geo:firmwareVersion>3.2.32.9</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>1999-08-20T01:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1999-09-29T23:00:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_2573">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">AOA ICS-4000Z ACT</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>C117U</geo:serialNumber>
+            <geo:firmwareVersion>3.3.32.4</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2005-01-24T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2005-06-19T23:59:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_2574">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">TRIMBLE NETR8</geo:receiverType>
+            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
+            <geo:serialNumber>4843K33421</geo:serialNumber>
+            <geo:firmwareVersion>4.43</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2012-01-18T00:00:00Z</geo:dateInstalled>
+            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna gml:id="GnssAntennaType_1144">
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue">AOAD/M_T        JPLA</geo:antennaType>
+            <geo:serialNumber>402</geo:serialNumber>
+            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>0.0614</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+            <geo:antennaRadomeType>JPLA</geo:antennaRadomeType>
+            <geo:antennaCableLength>0.0</geo:antennaCableLength>
+            <geo:dateInstalled>1996-06-26T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2004-12-08T00:00:00Z</geo:dateRemoved>
+         </geo:gnssAntenna>
+      </geo:gnssAntennas>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna gml:id="GnssAntennaType_1145">
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue">AOAD/M_T        JPLA</geo:antennaType>
+            <geo:serialNumber>205</geo:serialNumber>
+            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>0.0614</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+            <geo:antennaRadomeType>JPLA</geo:antennaRadomeType>
+            <geo:antennaCableLength>0.0</geo:antennaCableLength>
+            <geo:dateInstalled>2004-12-13T00:00:00Z</geo:dateInstalled>
+            <geo:notes>The antenna splitter was changed to a 12V DC LCDBS1X4 at 2009-09-21T22</geo:notes>
+         </geo:gnssAntenna>
+      </geo:gnssAntennas>
+      <geo:surveyedLocalTies>
+         <geo:surveyedLocalTies gml:id="SurveyedLocalTiesType_344">
+            <geo:tiedMarkerName>Ant Ref Pt</geo:tiedMarkerName>
+            <geo:tiedMarkerDOMESNumber>50103S017</geo:tiedMarkerDOMESNumber>
+            <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+               <geo:dx>-0.064</geo:dx>
+               <geo:dy>0.038</geo:dy>
+               <geo:dz>-0.054</geo:dz>
+            </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+            <geo:localSiteTiesAccuracy>1.0</geo:localSiteTiesAccuracy>
+            <geo:dateMeasured>1992-05-11T14:00:00Z</geo:dateMeasured>
+            <geo:notes>GPS antenna no longer exists</geo:notes>
+         </geo:surveyedLocalTies>
+      </geo:surveyedLocalTies>
+      <geo:surveyedLocalTies>
+         <geo:surveyedLocalTies gml:id="SurveyedLocalTiesType_345">
+            <geo:tiedMarkerName>TIDB (AU017)</geo:tiedMarkerName>
+            <geo:tiedMarkerDOMESNumber>50103M108</geo:tiedMarkerDOMESNumber>
+            <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+               <geo:dx>0.0</geo:dx>
+               <geo:dy>0.0</geo:dy>
+               <geo:dz>0.0</geo:dz>
+            </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+            <geo:localSiteTiesAccuracy>0.0</geo:localSiteTiesAccuracy>
+            <geo:dateMeasured>1992-05-11T14:00:00Z</geo:dateMeasured>
+            <geo:notes>Main GPS mark</geo:notes>
+         </geo:surveyedLocalTies>
+      </geo:surveyedLocalTies>
+      <geo:surveyedLocalTies>
+         <geo:surveyedLocalTies gml:id="SurveyedLocalTiesType_346">
+            <geo:tiedMarkerName>DSS45</geo:tiedMarkerName>
+            <geo:tiedMarkerCDPNumber>1642</geo:tiedMarkerCDPNumber>
+            <geo:tiedMarkerDOMESNumber>50103S010</geo:tiedMarkerDOMESNumber>
+            <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+               <geo:dx>60.781</geo:dx>
+               <geo:dy>208.581</geo:dy>
+               <geo:dz>62.538</geo:dz>
+            </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+            <geo:localSiteTiesAccuracy>5.0</geo:localSiteTiesAccuracy>
+            <geo:dateMeasured>1992-05-11T14:00:00Z</geo:dateMeasured>
+            <geo:notes>CDP number changed from 1545 to 1642 in this document following recommendation in mail from Carey Noll (05-NOV-93, WG)</geo:notes>
+         </geo:surveyedLocalTies>
+      </geo:surveyedLocalTies>
+      <geo:surveyedLocalTies>
+         <geo:surveyedLocalTies gml:id="SurveyedLocalTiesType_347">
+            <geo:tiedMarkerName>NM/C/194</geo:tiedMarkerName>
+            <geo:tiedMarkerDOMESNumber>50103M109</geo:tiedMarkerDOMESNumber>
+            <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+               <geo:dx>-19.324</geo:dx>
+               <geo:dy>162.65</geo:dy>
+               <geo:dz>145.19</geo:dz>
+            </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+            <geo:localSiteTiesAccuracy>5.0</geo:localSiteTiesAccuracy>
+            <geo:dateMeasured>1992-05-11T14:00:00Z</geo:dateMeasured>
+            <geo:notes>Domes number according to (Altamimi,</geo:notes>
+         </geo:surveyedLocalTies>
+      </geo:surveyedLocalTies>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_929">
+            <geo:standardType>H-MASER</geo:standardType>
+            <geo:inputFrequency>5.0</geo:inputFrequency>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>1996-07-01T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2009-03-28T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+         </geo:frequencyStandard>
+      </geo:frequencyStandards>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_930">
+            <geo:standardType>H-MASER</geo:standardType>
+            <geo:inputFrequency>10.0</geo:inputFrequency>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2009-09-22T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition></gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+         </geo:frequencyStandard>
+      </geo:frequencyStandards>
+      <geo:collocationInformations>
+         <geo:collocationInformation gml:id="CollocationInformationType_206">
+            <geo:status>PERMANENT</geo:status>
+            <geo:notes>DSN (P) NBS/GPS Time Transfer Receiver (P)</geo:notes>
+         </geo:collocationInformation>
+      </geo:collocationInformations>
+      <geo:otherInstrumentations>
+         <geo:otherInstrumentation gml:id="OtherInstrumentationType_206"/>
+      </geo:otherInstrumentations>
+      <geo:siteContact>
+         <gmd:MD_SecurityConstraints/>
+         <gmd:CI_ResponsibleParty>
+            <gmd:individualName>
+               <gco:CharacterString>Michael Moore</gco:CharacterString>
+            </gmd:individualName>
+            <gmd:organisationName>
+               <gco:CharacterString>Geoscience Australia</gco:CharacterString>
+            </gmd:organisationName>
+            <gmd:contactInfo>
+               <gmd:CI_Contact>
+                  <gmd:phone>
+                     <gmd:CI_Telephone>
+                        <gmd:voice>
+                           <gco:CharacterString>+61 2 62499052</gco:CharacterString>
+                        </gmd:voice>
+                        <gmd:facsimile>
+                           <gco:CharacterString>+61 2 62499929</gco:CharacterString>
+                        </gmd:facsimile>
+                     </gmd:CI_Telephone>
+                  </gmd:phone>
+                  <gmd:address>
+                     <gmd:CI_Address>
+                        <gmd:deliveryPoint>
+                           <gco:CharacterString>Geoscience Australia</gco:CharacterString>
+                        </gmd:deliveryPoint>
+                        <gmd:electronicMailAddress>
+                           <gco:CharacterString>Michael.Moore@ga.gov.au</gco:CharacterString>
+                        </gmd:electronicMailAddress>
+                     </gmd:CI_Address>
+                  </gmd:address>
+               </gmd:CI_Contact>
+            </gmd:contactInfo>
+         </gmd:CI_ResponsibleParty>
+      </geo:siteContact>
+      <geo:siteMetadataCustodian>
+         <gmd:MD_SecurityConstraints/>
+         <gmd:CI_ResponsibleParty>
+            <gmd:organisationName>
+               <gco:CharacterString>Geoscience Australia</gco:CharacterString>
+            </gmd:organisationName>
+            <gmd:contactInfo>
+               <gmd:CI_Contact>
+                  <gmd:address>
+                     <gmd:CI_Address/>
+                  </gmd:address>
+               </gmd:CI_Contact>
+            </gmd:contactInfo>
+         </gmd:CI_ResponsibleParty>
+      </geo:siteMetadataCustodian>
+   </geo:siteLog>
+</geo:GeodesyML>

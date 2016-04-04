@@ -1,2 +1,222 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<ns0:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:ns0="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:ns6="http://www.isotc211.org/2005/gts" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_435"/>
+<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_435">
+   <geo:siteLog gml:id="SiteLogType_435">
+      <geo:formInformation>
+         <geo:preparedBy>Vladimir Timofeev, Dmitriy Ardyukov</geo:preparedBy>
+         <geo:datePrepared>2005-03-28T14:00:00Z</geo:datePrepared>
+         <geo:reportType>UPDATE</geo:reportType>
+      </geo:formInformation>
+      <geo:siteIdentification>
+         <geo:siteName>Novosibirsk</geo:siteName>
+         <geo:fourCharacterID>NVSK</geo:fourCharacterID>
+         <geo:monumentInscription>Seismological and tidal gravity station</geo:monumentInscription>
+         <geo:iersDOMESNumber>12319M001</geo:iersDOMESNumber>
+         <geo:cdpNumber>none</geo:cdpNumber>
+         <geo:monumentDescription>STEEL TUBE(PILLAR/BRASS PLATE/STEEL MAST/etc)</geo:monumentDescription>
+         <geo:heightOfTheMonument>6.1</geo:heightOfTheMonument>
+         <geo:monumentFoundation>WALL (STEEL RODS, CONCRETE BLOCK, ROOF, etc)</geo:monumentFoundation>
+         <geo:markerDescription>BRASS NAIL(CHISELLED CROSS/DIVOT/BRASS NAIL/etc)</geo:markerDescription>
+         <geo:dateInstalled>2000-06-29T14:00:00Z</geo:dateInstalled>
+         <geo:geologicCharacteristic>SAND AND SANDSTONE</geo:geologicCharacteristic>
+         <geo:bedrockType>SEDIMENTARY</geo:bedrockType>
+         <geo:bedrockCondition>WEATHERED</geo:bedrockCondition>
+         <geo:faultZonesNearby>NO(YES/NO/Name of the zone)</geo:faultZonesNearby>
+         <geo:notes>Seismical and tidal gravity station established 1976 year. Special 3-inches metal tube (4.5 meters) was installed on the wall(width 0.8 meters), east wall of one floor seismology station building. Forced centered GPS antenna on the top of tube, height from the ground 6.1 m.</geo:notes>
+      </geo:siteIdentification>
+      <geo:siteLocation>
+         <geo:city>Novosibirsk</geo:city>
+         <geo:countryCodeISO>Russia</geo:countryCodeISO>
+         <geo:tectonicPlate>Eurasian</geo:tectonicPlate>
+         <geo:approximatePositionITRF>
+            <geo:xCoordinateInMeters>433604.1534</geo:xCoordinateInMeters>
+            <geo:yCoordinateInMeters>3655557.747</geo:yCoordinateInMeters>
+            <geo:zCoordinateInMeters>5191288.0377</geo:zCoordinateInMeters>
+            <geo:latitude-North>545026.160000000032596290111541748046875</geo:latitude-North>
+            <geo:longitude-East>831407.80000000004656612873077392578125</geo:longitude-East>
+            <geo:elevation-m_ellips.>123.6429</geo:elevation-m_ellips.>
+         </geo:approximatePositionITRF>
+      </geo:siteLocation>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_1977">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">TRIMBLE 4700</geo:receiverType>
+            <geo:satelliteSystem>GPS(GPS+GLO+GAL+CMP+QZSS+SBAS)</geo:satelliteSystem>
+            <geo:serialNumber>SN 0220180873</geo:serialNumber>
+            <geo:firmwareVersion>1.20</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2000-06-30T00:00:00Z</geo:dateInstalled>
+            <geo:notes>Firmware version from 29-AUG-1999 field configuration</geo:notes>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna gml:id="GnssAntennaType_858">
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue">TRM33429.00+GP  DOME</geo:antennaType>
+            <geo:serialNumber>0220179989</geo:serialNumber>
+            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>6.1546</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+            <geo:antennaRadomeType>DOME</geo:antennaRadomeType>
+            <geo:radomeSerialNumber>none</geo:radomeSerialNumber>
+            <geo:antennaCableLength>10.0</geo:antennaCableLength>
+            <geo:dateInstalled>2000-06-30T00:00:00Z</geo:dateInstalled>
+            <geo:notes>Forced centered antenna</geo:notes>
+         </geo:gnssAntenna>
+      </geo:gnssAntennas>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_684">
+            <geo:standardType>INTERNAL</geo:standardType>
+            <geo:inputFrequency>0.0</geo:inputFrequency>
+         </geo:frequencyStandard>
+      </geo:frequencyStandards>
+      <geo:humiditySensors>
+         <geo:humiditySensor gml:id="HumiditySensorType_183">
+            <geo:type>Thermo-hygrometer</geo:type>
+            <geo:manufacturer>Oregon Scientific, Ltd</geo:manufacturer>
+            <geo:serialNumber>NONE</geo:serialNumber>
+            <geo:heightDiffToAntenna>2.25</geo:heightDiffToAntenna>
+            <geo:calibrationDate>2010-12-24T13:00:00Z</geo:calibrationDate>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2010-12-25T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition></gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+            <geo:dataSamplingInterval>600.0</geo:dataSamplingInterval>
+            <geo:accuracy-percentRelativeHumidity>1.0</geo:accuracy-percentRelativeHumidity>
+            <geo:aspiration>UNASPIRATED</geo:aspiration>
+            <geo:notes>The sensor STR918 is incorporated in the WMR918</geo:notes>
+         </geo:humiditySensor>
+      </geo:humiditySensors>
+      <geo:pressureSensors>
+         <geo:pressureSensor gml:id="PressureSensorType_184">
+            <geo:type>Baro-thermo-hygrometer</geo:type>
+            <geo:manufacturer>Oregon Scientific, Ltd</geo:manufacturer>
+            <geo:serialNumber>NONE</geo:serialNumber>
+            <geo:heightDiffToAntenna>2.25</geo:heightDiffToAntenna>
+            <geo:calibrationDate>2010-12-24T13:00:00Z</geo:calibrationDate>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2010-12-25T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition></gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+            <geo:dataSamplingInterval>600.0</geo:dataSamplingInterval>
+            <geo:accuracy-hPa>1.0</geo:accuracy-hPa>
+            <geo:notes>The sensor BTHR918N is incorporated in the</geo:notes>
+         </geo:pressureSensor>
+      </geo:pressureSensors>
+      <geo:pressureSensors>
+         <geo:pressureSensor gml:id="PressureSensorType_185">
+            <geo:type>capacity sensor developed in Belgium Royal</geo:type>
+            <geo:manufacturer>M.Van Ruymbeke</geo:manufacturer>
+            <geo:serialNumber>NONE</geo:serialNumber>
+            <geo:heightDiffToAntenna>5.0</geo:heightDiffToAntenna>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2000-03-06T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2000-07-06T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+            <geo:dataSamplingInterval>30.0</geo:dataSamplingInterval>
+            <geo:accuracy-hPa>0.01</geo:accuracy-hPa>
+            <geo:notes>first channel</geo:notes>
+         </geo:pressureSensor>
+      </geo:pressureSensors>
+      <geo:temperatureSensors>
+         <geo:temperatureSensor gml:id="TemperatureSensorType_181">
+            <geo:type>Thermo-hygrometer</geo:type>
+            <geo:manufacturer>Oregon Scientific, Ltd</geo:manufacturer>
+            <geo:serialNumber>NONE</geo:serialNumber>
+            <geo:heightDiffToAntenna>2.25</geo:heightDiffToAntenna>
+            <geo:calibrationDate>2010-12-24T13:00:00Z</geo:calibrationDate>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2010-12-25T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition></gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+            <geo:dataSamplingInterval>600.0</geo:dataSamplingInterval>
+            <geo:accuracy-degreesCelcius>0.1</geo:accuracy-degreesCelcius>
+            <geo:aspiration>UNASPIRATED</geo:aspiration>
+            <geo:notes>The sensor STR918 is incorporated in the</geo:notes>
+         </geo:temperatureSensor>
+      </geo:temperatureSensors>
+      <geo:temperatureSensors>
+         <geo:temperatureSensor gml:id="TemperatureSensorType_182">
+            <geo:type>resistence bridge in digital MDAS system</geo:type>
+            <geo:manufacturer>NONE</geo:manufacturer>
+            <geo:serialNumber>NONE</geo:serialNumber>
+            <geo:heightDiffToAntenna>5.0</geo:heightDiffToAntenna>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2000-03-06T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2000-07-06T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+            <geo:dataSamplingInterval>30.0</geo:dataSamplingInterval>
+            <geo:accuracy-degreesCelcius>0.01</geo:accuracy-degreesCelcius>
+            <geo:notes>second channel</geo:notes>
+         </geo:temperatureSensor>
+      </geo:temperatureSensors>
+      <geo:waterVaporSensors>
+         <geo:waterVaporSensor gml:id="WaterVaporSensorType_18">
+            <geo:type>NONE</geo:type>
+            <geo:manufacturer>NONE</geo:manufacturer>
+            <geo:serialNumber>NONE</geo:serialNumber>
+            <geo:heightDiffToAntenna>0.0</geo:heightDiffToAntenna>
+            <geo:distanceToAntenna>0.0</geo:distanceToAntenna>
+         </geo:waterVaporSensor>
+      </geo:waterVaporSensors>
+      <geo:siteContact>
+         <gmd:MD_SecurityConstraints/>
+         <gmd:CI_ResponsibleParty>
+            <gmd:individualName>
+               <gco:CharacterString>Vladimir Timofeev</gco:CharacterString>
+            </gmd:individualName>
+            <gmd:organisationName>
+               <gco:CharacterString>Trofimuk Institute of Petroleum Geology and</gco:CharacterString>
+            </gmd:organisationName>
+            <gmd:contactInfo>
+               <gmd:CI_Contact>
+                  <gmd:phone>
+                     <gmd:CI_Telephone>
+                        <gmd:voice>
+                           <gco:CharacterString>+7-383-2-35-64-42</gco:CharacterString>
+                        </gmd:voice>
+                        <gmd:facsimile>
+                           <gco:CharacterString>+7-383-2-33-34-32</gco:CharacterString>
+                        </gmd:facsimile>
+                     </gmd:CI_Telephone>
+                  </gmd:phone>
+                  <gmd:address>
+                     <gmd:CI_Address>
+                        <gmd:deliveryPoint>
+                           <gco:CharacterString>Pr.Akad.Koptyuga, 3, Novosibirsk-90, 630090,</gco:CharacterString>
+                        </gmd:deliveryPoint>
+                        <gmd:electronicMailAddress>
+                           <gco:CharacterString>TimofeevVY@ipgg.nsc.ru</gco:CharacterString>
+                        </gmd:electronicMailAddress>
+                     </gmd:CI_Address>
+                  </gmd:address>
+               </gmd:CI_Contact>
+            </gmd:contactInfo>
+         </gmd:CI_ResponsibleParty>
+      </geo:siteContact>
+      <geo:siteMetadataCustodian>
+         <gmd:MD_SecurityConstraints/>
+         <gmd:CI_ResponsibleParty>
+            <gmd:organisationName>
+               <gco:CharacterString>Trofimuk Institute of Petroleum Geology and</gco:CharacterString>
+            </gmd:organisationName>
+            <gmd:contactInfo>
+               <gmd:CI_Contact>
+                  <gmd:address>
+                     <gmd:CI_Address/>
+                  </gmd:address>
+               </gmd:CI_Contact>
+            </gmd:contactInfo>
+         </gmd:CI_ResponsibleParty>
+      </geo:siteMetadataCustodian>
+   </geo:siteLog>
+</geo:GeodesyML>

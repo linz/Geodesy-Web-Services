@@ -1,2 +1,172 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<ns0:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:ns0="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:ns6="http://www.isotc211.org/2005/gts" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_362"/>
+<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_362">
+   <geo:siteLog gml:id="SiteLogType_362">
+      <geo:formInformation>
+         <geo:preparedBy>Boudewijn Ambrosius</geo:preparedBy>
+         <geo:datePrepared>2002-09-16T14:00:00Z</geo:datePrepared>
+         <geo:reportType>UPDATE</geo:reportType>
+      </geo:formInformation>
+      <geo:siteIdentification>
+         <geo:siteName>MENDELEEVO</geo:siteName>
+         <geo:fourCharacterID>MDVO</geo:fourCharacterID>
+         <geo:monumentInscription>???????????</geo:monumentInscription>
+         <geo:iersDOMESNumber>12309M002</geo:iersDOMESNumber>
+         <geo:cdpNumber>1870</geo:cdpNumber>
+         <geo:dateInstalled>1995-07-14T14:00:00Z</geo:dateInstalled>
+      </geo:siteIdentification>
+      <geo:siteLocation>
+         <geo:city>Mendeleevo, Moscow Region</geo:city>
+         <geo:countryCodeISO>Russia</geo:countryCodeISO>
+         <geo:tectonicPlate>EURA</geo:tectonicPlate>
+         <geo:approximatePositionITRF>
+            <geo:xCoordinateInMeters>2844672.27</geo:xCoordinateInMeters>
+            <geo:yCoordinateInMeters>2161070.08</geo:yCoordinateInMeters>
+            <geo:zCoordinateInMeters>5266363.81</geo:zCoordinateInMeters>
+            <geo:latitude-North>560138.920000000041909515857696533203125</geo:latitude-North>
+            <geo:longitude-East>371324.9099999999743886291980743408203125</geo:longitude-East>
+            <geo:elevation-m_ellips.>254.8</geo:elevation-m_ellips.>
+         </geo:approximatePositionITRF>
+      </geo:siteLocation>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_1697">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">TRIMBLE 4000SSE</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>03752 (3333A03752)</geo:serialNumber>
+            <geo:firmwareVersion>5.66 / 1.25</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>15.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>1995-02-18T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1999-08-18T00:00:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_1698">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">TRIMBLE 4000SSE</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>03752 (3333A03752)</geo:serialNumber>
+            <geo:firmwareVersion>7.29 / 3.07</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>5.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>1999-08-18T00:00:00Z</geo:dateInstalled>
+            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna gml:id="GnssAntennaType_736">
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue">TRM14532.10     NONE</geo:antennaType>
+            <geo:serialNumber>68709 (3330A68709)</geo:serialNumber>
+            <geo:antennaReferencePoint>TOP</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>0.1456</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
+            <geo:antennaCableLength>0.0</geo:antennaCableLength>
+            <geo:dateInstalled>1995-07-05T00:00:00Z</geo:dateInstalled>
+         </geo:gnssAntenna>
+      </geo:gnssAntennas>
+      <geo:surveyedLocalTies>
+         <geo:surveyedLocalTies gml:id="SurveyedLocalTiesType_190">
+            <geo:tiedMarkerName>MENDELEEVO</geo:tiedMarkerName>
+            <geo:tiedMarkerUsage>SLR</geo:tiedMarkerUsage>
+            <geo:tiedMarkerCDPNumber>1870</geo:tiedMarkerCDPNumber>
+            <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+               <geo:dx>2.1</geo:dx>
+               <geo:dy>11.93</geo:dy>
+               <geo:dz>-7.69</geo:dz>
+            </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+            <geo:localSiteTiesAccuracy>15.0</geo:localSiteTiesAccuracy>
+            <geo:dateMeasured>1995-07-20T14:00:00Z</geo:dateMeasured>
+            <geo:notes>SLR point</geo:notes>
+         </geo:surveyedLocalTies>
+      </geo:surveyedLocalTies>
+      <geo:surveyedLocalTies>
+         <geo:surveyedLocalTies gml:id="SurveyedLocalTiesType_191">
+            <geo:tiedMarkerName>MENDELEEVO</geo:tiedMarkerName>
+            <geo:tiedMarkerUsage>GPS</geo:tiedMarkerUsage>
+            <geo:tiedMarkerDOMESNumber>12309M001</geo:tiedMarkerDOMESNumber>
+            <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+               <geo:dx>0.15</geo:dx>
+               <geo:dy>3.67</geo:dy>
+               <geo:dz>-1.75</geo:dz>
+            </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+            <geo:localSiteTiesAccuracy>15.0</geo:localSiteTiesAccuracy>
+            <geo:dateMeasured>1995-07-20T14:00:00Z</geo:dateMeasured>
+            <geo:notes>The previous MDVO IGS point</geo:notes>
+         </geo:surveyedLocalTies>
+      </geo:surveyedLocalTies>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_572">
+            <geo:standardType>H-MASER</geo:standardType>
+            <geo:inputFrequency>0.0</geo:inputFrequency>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>1995-11-13T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition></gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+         </geo:frequencyStandard>
+      </geo:frequencyStandards>
+      <geo:collocationInformations>
+         <geo:collocationInformation gml:id="CollocationInformationType_107">
+            <geo:status>PERMANENT</geo:status>
+         </geo:collocationInformation>
+      </geo:collocationInformations>
+      <geo:otherInstrumentations>
+         <geo:otherInstrumentation gml:id="OtherInstrumentationType_107"/>
+      </geo:otherInstrumentations>
+      <geo:siteContact>
+         <gmd:MD_SecurityConstraints/>
+         <gmd:CI_ResponsibleParty>
+            <gmd:individualName>
+               <gco:CharacterString>Dr. Vladimir Rousakov,</gco:CharacterString>
+            </gmd:individualName>
+            <gmd:organisationName>
+               <gco:CharacterString>The Institute of Metrology</gco:CharacterString>
+            </gmd:organisationName>
+            <gmd:contactInfo>
+               <gmd:CI_Contact>
+                  <gmd:phone>
+                     <gmd:CI_Telephone>
+                        <gmd:voice>
+                           <gco:CharacterString>7-095-535-0891</gco:CharacterString>
+                        </gmd:voice>
+                        <gmd:facsimile>
+                           <gco:CharacterString>7-095-534-0609</gco:CharacterString>
+                        </gmd:facsimile>
+                     </gmd:CI_Telephone>
+                  </gmd:phone>
+                  <gmd:address>
+                     <gmd:CI_Address>
+                        <gmd:deliveryPoint>
+                           <gco:CharacterString>IMVP GP VNIIFTRI, Mendeleevo,</gco:CharacterString>
+                        </gmd:deliveryPoint>
+                        <gmd:electronicMailAddress>
+                           <gco:CharacterString>mark@imvp.ru</gco:CharacterString>
+                        </gmd:electronicMailAddress>
+                     </gmd:CI_Address>
+                  </gmd:address>
+               </gmd:CI_Contact>
+            </gmd:contactInfo>
+         </gmd:CI_ResponsibleParty>
+      </geo:siteContact>
+      <geo:siteMetadataCustodian>
+         <gmd:MD_SecurityConstraints/>
+         <gmd:CI_ResponsibleParty>
+            <gmd:organisationName>
+               <gco:CharacterString>Delft University of Technology</gco:CharacterString>
+            </gmd:organisationName>
+            <gmd:contactInfo>
+               <gmd:CI_Contact>
+                  <gmd:address>
+                     <gmd:CI_Address>
+                        <gmd:deliveryPoint>
+                           <gco:CharacterString>Faculty of Aerospace Engineering</gco:CharacterString>
+                        </gmd:deliveryPoint>
+                     </gmd:CI_Address>
+                  </gmd:address>
+               </gmd:CI_Contact>
+            </gmd:contactInfo>
+         </gmd:CI_ResponsibleParty>
+      </geo:siteMetadataCustodian>
+   </geo:siteLog>
+</geo:GeodesyML>

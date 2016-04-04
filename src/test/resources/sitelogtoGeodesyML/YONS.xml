@@ -1,2 +1,171 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<ns0:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:ns0="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:ns6="http://www.isotc211.org/2005/gts" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_671"/>
+<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_671">
+   <geo:siteLog gml:id="SiteLogType_671">
+      <geo:formInformation>
+         <geo:preparedBy>Heui Young Park</geo:preparedBy>
+         <geo:datePrepared>2012-03-06T13:00:00Z</geo:datePrepared>
+         <geo:reportType>NEW</geo:reportType>
+      </geo:formInformation>
+      <geo:siteIdentification>
+         <geo:siteName>YONGSAN</geo:siteName>
+         <geo:fourCharacterID>YONS</geo:fourCharacterID>
+         <geo:monumentInscription>SEOUL GNSS STATION</geo:monumentInscription>
+         <geo:iersDOMESNumber>23906M001</geo:iersDOMESNumber>
+         <geo:cdpNumber>NONE</geo:cdpNumber>
+         <geo:monumentDescription>PILLAR</geo:monumentDescription>
+         <geo:heightOfTheMonument>2.0</geo:heightOfTheMonument>
+         <geo:monumentFoundation>CONCRETE BLOCK</geo:monumentFoundation>
+         <geo:foundationDepth>1.0</geo:foundationDepth>
+         <geo:dateInstalled>2010-10-31T13:00:00Z</geo:dateInstalled>
+         <geo:geologicCharacteristic>BEDROCK</geo:geologicCharacteristic>
+         <geo:bedrockType>IGNEOUS</geo:bedrockType>
+         <geo:bedrockCondition>JOINTED</geo:bedrockCondition>
+         <geo:fractureSpacing>1-10 cm</geo:fractureSpacing>
+      </geo:siteIdentification>
+      <geo:siteLocation>
+         <geo:city>SEOUL</geo:city>
+         <geo:countryCodeISO>Korea</geo:countryCodeISO>
+         <geo:tectonicPlate>Eurasian</geo:tectonicPlate>
+         <geo:approximatePositionITRF>
+            <geo:xCoordinateInMeters>-3047506.741</geo:xCoordinateInMeters>
+            <geo:yCoordinateInMeters>4043980.58</geo:yCoordinateInMeters>
+            <geo:zCoordinateInMeters>3865243.01</geo:zCoordinateInMeters>
+            <geo:latitude-North>373228.0399999999790452420711517333984375</geo:latitude-North>
+            <geo:longitude-East>1270004.84000000008381903171539306640625</geo:longitude-East>
+            <geo:elevation-m_ellips.>96.849</geo:elevation-m_ellips.>
+         </geo:approximatePositionITRF>
+      </geo:siteLocation>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_3045">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">TRIMBLE NETR9</geo:receiverType>
+            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
+            <geo:serialNumber>5016K66897</geo:serialNumber>
+            <geo:firmwareVersion>4.42</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2010-11-01T00:00:00Z</geo:dateInstalled>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna gml:id="GnssAntennaType_1361">
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue">TRM59800.00     SCIS</geo:antennaType>
+            <geo:serialNumber>5007353</geo:serialNumber>
+            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>0.0</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+            <geo:antennaRadomeType>SCIS</geo:antennaRadomeType>
+            <geo:antennaCableLength>0.0</geo:antennaCableLength>
+            <geo:dateInstalled>2010-11-01T00:00:00Z</geo:dateInstalled>
+            <geo:notes>Radome is Half Sphere</geo:notes>
+         </geo:gnssAntenna>
+      </geo:gnssAntennas>
+      <geo:humiditySensors>
+         <geo:humiditySensor gml:id="HumiditySensorType_306">
+            <geo:type>WXT 520</geo:type>
+            <geo:manufacturer>VAISALA</geo:manufacturer>
+            <geo:heightDiffToAntenna>2.0</geo:heightDiffToAntenna>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2010-11-01T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition></gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+            <geo:dataSamplingInterval>15.0</geo:dataSamplingInterval>
+            <geo:accuracy-percentRelativeHumidity>0.0</geo:accuracy-percentRelativeHumidity>
+         </geo:humiditySensor>
+      </geo:humiditySensors>
+      <geo:pressureSensors>
+         <geo:pressureSensor gml:id="PressureSensorType_315">
+            <geo:type>WXT 520</geo:type>
+            <geo:manufacturer>VAISALA</geo:manufacturer>
+            <geo:heightDiffToAntenna>2.0</geo:heightDiffToAntenna>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2010-11-01T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition></gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+            <geo:dataSamplingInterval>60.0</geo:dataSamplingInterval>
+            <geo:accuracy-hPa>0.1</geo:accuracy-hPa>
+         </geo:pressureSensor>
+      </geo:pressureSensors>
+      <geo:temperatureSensors>
+         <geo:temperatureSensor gml:id="TemperatureSensorType_302">
+            <geo:type>WXT 520</geo:type>
+            <geo:manufacturer>VAISALA</geo:manufacturer>
+            <geo:heightDiffToAntenna>2.0</geo:heightDiffToAntenna>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2010-11-01T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition></gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+            <geo:dataSamplingInterval>15.0</geo:dataSamplingInterval>
+            <geo:accuracy-degreesCelcius>0.5</geo:accuracy-degreesCelcius>
+         </geo:temperatureSensor>
+      </geo:temperatureSensors>
+      <geo:waterVaporSensors>
+         <geo:waterVaporSensor gml:id="WaterVaporSensorType_36">
+            <geo:type>NONE</geo:type>
+            <geo:heightDiffToAntenna>0.0</geo:heightDiffToAntenna>
+            <geo:distanceToAntenna>0.0</geo:distanceToAntenna>
+         </geo:waterVaporSensor>
+      </geo:waterVaporSensors>
+      <geo:siteContact>
+         <gmd:MD_SecurityConstraints/>
+         <gmd:CI_ResponsibleParty>
+            <gmd:individualName>
+               <gco:CharacterString>Heui-Young Park</gco:CharacterString>
+            </gmd:individualName>
+            <gmd:organisationName>
+               <gco:CharacterString>Seoul Metropolitan Government</gco:CharacterString>
+            </gmd:organisationName>
+            <gmd:contactInfo>
+               <gmd:CI_Contact>
+                  <gmd:phone>
+                     <gmd:CI_Telephone>
+                        <gmd:voice>
+                           <gco:CharacterString>+82-2-3707-8058</gco:CharacterString>
+                        </gmd:voice>
+                        <gmd:facsimile>
+                           <gco:CharacterString>+82-42-861-5610</gco:CharacterString>
+                        </gmd:facsimile>
+                     </gmd:CI_Telephone>
+                  </gmd:phone>
+                  <gmd:address>
+                     <gmd:CI_Address>
+                        <gmd:deliveryPoint>
+                           <gco:CharacterString>15, Ducksugung-Kil, Jung-gu, Seoul 100-739,</gco:CharacterString>
+                        </gmd:deliveryPoint>
+                        <gmd:electronicMailAddress>
+                           <gco:CharacterString>park2002@seoul.go.kr</gco:CharacterString>
+                        </gmd:electronicMailAddress>
+                     </gmd:CI_Address>
+                  </gmd:address>
+               </gmd:CI_Contact>
+            </gmd:contactInfo>
+         </gmd:CI_ResponsibleParty>
+      </geo:siteContact>
+      <geo:siteMetadataCustodian>
+         <gmd:MD_SecurityConstraints/>
+         <gmd:CI_ResponsibleParty>
+            <gmd:organisationName>
+               <gco:CharacterString>Seoul Metropolitan Government</gco:CharacterString>
+            </gmd:organisationName>
+            <gmd:contactInfo>
+               <gmd:CI_Contact>
+                  <gmd:address>
+                     <gmd:CI_Address/>
+                  </gmd:address>
+               </gmd:CI_Contact>
+            </gmd:contactInfo>
+         </gmd:CI_ResponsibleParty>
+      </geo:siteMetadataCustodian>
+      <geo:moreInformation>
+         <geo:siteDiagram>NONE</geo:siteDiagram>
+         <geo:horizonMask>NONE</geo:horizonMask>
+         <geo:sitePictures>Y</geo:sitePictures>
+      </geo:moreInformation>
+   </geo:siteLog>
+</geo:GeodesyML>

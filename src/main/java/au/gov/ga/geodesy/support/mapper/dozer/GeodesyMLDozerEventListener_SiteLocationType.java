@@ -11,6 +11,12 @@ import org.slf4j.LoggerFactory;
 
 import au.gov.xml.icsm.geodesyml.v_0_3.SiteLocationType;
 
+/**
+ * The translate simply copied the Countries (in Sopac Sitelog XML) across to the GeoesyML CountryCode elements.
+ * This cleans those up by converting to the actual CountryCodes.
+ * @author brookes
+ *
+ */
 public class GeodesyMLDozerEventListener_SiteLocationType implements DozerEventListener {
     Logger logger = LoggerFactory.getLogger(getClass());
 
@@ -24,8 +30,6 @@ public class GeodesyMLDozerEventListener_SiteLocationType implements DozerEventL
 
     @Override
     public void postWritingDestinationValue(DozerEvent event) {
-        // Change CountryCode from a Country to a country code - the Sopac Sitelog XML has Countries and the translate just copied them
-        // across
         SiteLocationType siteLocationType = (SiteLocationType) event.getDestinationObject();
         String country = siteLocationType.getCountryCodeISO();
         String code = COUNTRY_CODES_ALPHA_3.lookupCode(country);

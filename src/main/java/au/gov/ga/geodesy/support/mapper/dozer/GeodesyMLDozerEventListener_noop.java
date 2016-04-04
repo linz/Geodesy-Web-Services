@@ -4,7 +4,7 @@ import org.dozer.DozerEventListener;
 import org.dozer.event.DozerEvent;
 
 /**
- * This is a dummy that should do nothing.
+ * This is a dummy that does nothing.
  * 
  * @author brookes
  *

@@ -1,2 +1,286 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<ns0:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:ns0="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:ns6="http://www.isotc211.org/2005/gts" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_502"/>
+<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_502">
+   <geo:siteLog gml:id="SiteLogType_502">
+      <geo:formInformation>
+         <geo:preparedBy>Markus Ramatschi</geo:preparedBy>
+         <geo:datePrepared>2006-07-30T14:00:00Z</geo:datePrepared>
+         <geo:reportType>UPDATE</geo:reportType>
+      </geo:formInformation>
+      <geo:siteIdentification>
+         <geo:siteName>Rio Grande</geo:siteName>
+         <geo:fourCharacterID>RIOG</geo:fourCharacterID>
+         <geo:monumentInscription>none</geo:monumentInscription>
+         <geo:iersDOMESNumber>41507M004</geo:iersDOMESNumber>
+         <geo:cdpNumber>none</geo:cdpNumber>
+         <geo:monumentDescription>PILLAR</geo:monumentDescription>
+         <geo:heightOfTheMonument>1.3</geo:heightOfTheMonument>
+         <geo:monumentFoundation>CONCRETE BLOCK plus STEEL ROD</geo:monumentFoundation>
+         <geo:markerDescription>BRASS NAIL on a triangular plate</geo:markerDescription>
+         <geo:dateInstalled>1995-02-28T13:00:00Z</geo:dateInstalled>
+         <geo:geologicCharacteristic>GRAVEL</geo:geologicCharacteristic>
+         <geo:bedrockType>SEDIMENTARY</geo:bedrockType>
+      </geo:siteIdentification>
+      <geo:siteLocation>
+         <geo:city>Rio Grande</geo:city>
+         <geo:state>Tierra del Fuego</geo:state>
+         <geo:countryCodeISO>ARG</geo:countryCodeISO>
+         <geo:tectonicPlate>South American</geo:tectonicPlate>
+         <geo:approximatePositionITRF>
+            <geo:xCoordinateInMeters>1429907.7834</geo:xCoordinateInMeters>
+            <geo:yCoordinateInMeters>-3495354.8119</geo:yCoordinateInMeters>
+            <geo:zCoordinateInMeters>-5122698.6553</geo:zCoordinateInMeters>
+            <geo:latitude-North>-534707.69999999995343387126922607421875</geo:latitude-North>
+            <geo:longitude-East>-674504.03000000002793967723846435546875</geo:longitude-East>
+            <geo:elevation-m_ellips.>32.0</geo:elevation-m_ellips.>
+         </geo:approximatePositionITRF>
+      </geo:siteLocation>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_2291">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ASHTECH Z-XII3</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>LP00796</geo:serialNumber>
+            <geo:firmwareVersion>1E76-ID01</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>1996-11-12T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1999-09-01T16:42:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
+            <geo:notes>The receiver is located inside the observatory</geo:notes>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_2292">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ASHTECH Z-XII3</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>LP00796</geo:serialNumber>
+            <geo:firmwareVersion>1D02-CD00</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>1999-09-01T17:19:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1999-12-03T11:45:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
+            <geo:notes>The receiver is located inside the observatory</geo:notes>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_2293">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ASHTECH Z-XII3</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>LP00785</geo:serialNumber>
+            <geo:firmwareVersion>1D02-CC00</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0.5</geo:elevationCutoffSetting>
+            <geo:dateInstalled>1999-12-03T13:15:00Z</geo:dateInstalled>
+            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
+            <geo:notes>The receiver is located inside the observatory</geo:notes>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna gml:id="GnssAntennaType_1012">
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue">ASH700936C_M    SNOW</geo:antennaType>
+            <geo:serialNumber>12126</geo:serialNumber>
+            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>0.035</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+            <geo:antennaRadomeType>SNOW</geo:antennaRadomeType>
+            <geo:antennaCableLength>0.0</geo:antennaCableLength>
+            <geo:dateInstalled>1996-11-12T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1999-12-03T11:45:00Z</geo:dateRemoved>
+         </geo:gnssAntenna>
+      </geo:gnssAntennas>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna gml:id="GnssAntennaType_1013">
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue">ASH700936C_M    SNOW</geo:antennaType>
+            <geo:serialNumber>12129</geo:serialNumber>
+            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>0.035</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+            <geo:antennaRadomeType>SNOW</geo:antennaRadomeType>
+            <geo:antennaCableLength>0.0</geo:antennaCableLength>
+            <geo:dateInstalled>1999-12-03T13:15:00Z</geo:dateInstalled>
+         </geo:gnssAntenna>
+      </geo:gnssAntennas>
+      <geo:surveyedLocalTies>
+         <geo:surveyedLocalTies gml:id="SurveyedLocalTiesType_291">
+            <geo:tiedMarkerName>Doris2 Ant. (RIOB)</geo:tiedMarkerName>
+            <geo:tiedMarkerCDPNumber>none</geo:tiedMarkerCDPNumber>
+            <geo:tiedMarkerDOMESNumber>41507S004</geo:tiedMarkerDOMESNumber>
+            <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+               <geo:dx>-53.582</geo:dx>
+               <geo:dy>12.466</geo:dy>
+               <geo:dz>-26.414</geo:dz>
+            </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+            <geo:localSiteTiesAccuracy>0.002</geo:localSiteTiesAccuracy>
+            <geo:dateMeasured>1998-12-31T13:00:00Z</geo:dateMeasured>
+            <geo:notes>exact dates in Jan 1995 and Jan 1999 not known</geo:notes>
+         </geo:surveyedLocalTies>
+      </geo:surveyedLocalTies>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_786">
+            <geo:standardType>EXTERNAL RUBIDIUM</geo:standardType>
+            <geo:inputFrequency>5.0</geo:inputFrequency>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2003-05-12T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2006-03-03T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+         </geo:frequencyStandard>
+      </geo:frequencyStandards>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_787">
+            <geo:standardType>INTERNAL</geo:standardType>
+            <geo:inputFrequency>0.0</geo:inputFrequency>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2006-03-04T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition></gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+         </geo:frequencyStandard>
+      </geo:frequencyStandards>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_788">
+            <geo:standardType>INTERNAL</geo:standardType>
+            <geo:inputFrequency>0.0</geo:inputFrequency>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>1996-11-12T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2003-05-12T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+         </geo:frequencyStandard>
+      </geo:frequencyStandards>
+      <geo:collocationInformations>
+         <geo:collocationInformation gml:id="CollocationInformationType_183">
+            <geo:status>PERMANENT</geo:status>
+            <geo:notes>exact date in Jan 1990 not known</geo:notes>
+         </geo:collocationInformation>
+      </geo:collocationInformations>
+      <geo:humiditySensors>
+         <geo:humiditySensor gml:id="HumiditySensorType_222">
+            <geo:type>HMP45A-P</geo:type>
+            <geo:manufacturer>Vaisala</geo:manufacturer>
+            <geo:serialNumber>x3710006</geo:serialNumber>
+            <geo:heightDiffToAntenna>3.2</geo:heightDiffToAntenna>
+            <geo:calibrationDate>2002-09-10T14:00:00Z</geo:calibrationDate>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2003-05-12T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition></gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+            <geo:dataSamplingInterval>600.0</geo:dataSamplingInterval>
+            <geo:accuracy-percentRelativeHumidity>1.5</geo:accuracy-percentRelativeHumidity>
+            <geo:aspiration>NATURAL</geo:aspiration>
+            <geo:notes>The humidity sensor is part of a Vaisala PTU200 meteo station</geo:notes>
+         </geo:humiditySensor>
+      </geo:humiditySensors>
+      <geo:pressureSensors>
+         <geo:pressureSensor gml:id="PressureSensorType_226">
+            <geo:type>PTU200</geo:type>
+            <geo:manufacturer>Vaisala</geo:manufacturer>
+            <geo:serialNumber>x3710006</geo:serialNumber>
+            <geo:heightDiffToAntenna>1.1</geo:heightDiffToAntenna>
+            <geo:calibrationDate>2002-09-10T14:00:00Z</geo:calibrationDate>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2003-05-12T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition></gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+            <geo:dataSamplingInterval>600.0</geo:dataSamplingInterval>
+            <geo:accuracy-hPa>0.1</geo:accuracy-hPa>
+            <geo:notes>The pressure sensor is part of a Vaisala PTU200 meteo station</geo:notes>
+         </geo:pressureSensor>
+      </geo:pressureSensors>
+      <geo:temperatureSensors>
+         <geo:temperatureSensor gml:id="TemperatureSensorType_220">
+            <geo:type>HMP45A-P</geo:type>
+            <geo:manufacturer>Vaisala</geo:manufacturer>
+            <geo:serialNumber>x3710006</geo:serialNumber>
+            <geo:heightDiffToAntenna>3.2</geo:heightDiffToAntenna>
+            <geo:calibrationDate>2002-09-11T14:00:00Z</geo:calibrationDate>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2003-05-12T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition></gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+            <geo:dataSamplingInterval>600.0</geo:dataSamplingInterval>
+            <geo:accuracy-degreesCelcius>0.1</geo:accuracy-degreesCelcius>
+            <geo:aspiration>NATURAL</geo:aspiration>
+            <geo:notes>The temperatur sensor is part of a Vaisala PTU200 meteo station</geo:notes>
+         </geo:temperatureSensor>
+      </geo:temperatureSensors>
+      <geo:waterVaporSensors>
+         <geo:waterVaporSensor gml:id="WaterVaporSensorType_25">
+            <geo:type>not available</geo:type>
+            <geo:heightDiffToAntenna>0.0</geo:heightDiffToAntenna>
+            <geo:distanceToAntenna>0.0</geo:distanceToAntenna>
+         </geo:waterVaporSensor>
+      </geo:waterVaporSensors>
+      <geo:otherInstrumentations>
+         <geo:otherInstrumentation gml:id="OtherInstrumentationType_183"/>
+      </geo:otherInstrumentations>
+      <geo:siteContact>
+         <gmd:MD_SecurityConstraints/>
+         <gmd:CI_ResponsibleParty>
+            <gmd:individualName>
+               <gco:CharacterString>Prof. Dr. Raul Perdomo</gco:CharacterString>
+            </gmd:individualName>
+            <gmd:organisationName>
+               <gco:CharacterString>Estacion Astronomica Rio Grande</gco:CharacterString>
+            </gmd:organisationName>
+            <gmd:contactInfo>
+               <gmd:CI_Contact>
+                  <gmd:phone>
+                     <gmd:CI_Telephone>
+                        <gmd:voice>
+                           <gco:CharacterString>54 221 421 7308</gco:CharacterString>
+                        </gmd:voice>
+                        <gmd:facsimile>
+                           <gco:CharacterString>54 221 421 1761</gco:CharacterString>
+                        </gmd:facsimile>
+                     </gmd:CI_Telephone>
+                  </gmd:phone>
+                  <gmd:address>
+                     <gmd:CI_Address>
+                        <gmd:deliveryPoint>
+                           <gco:CharacterString>CC160</gco:CharacterString>
+                        </gmd:deliveryPoint>
+                        <gmd:electronicMailAddress>
+                           <gco:CharacterString>perdomo@fcaglp.fcaglp.unlp.edu.ar</gco:CharacterString>
+                        </gmd:electronicMailAddress>
+                     </gmd:CI_Address>
+                  </gmd:address>
+               </gmd:CI_Contact>
+            </gmd:contactInfo>
+         </gmd:CI_ResponsibleParty>
+      </geo:siteContact>
+      <geo:siteMetadataCustodian>
+         <gmd:MD_SecurityConstraints/>
+         <gmd:CI_ResponsibleParty>
+            <gmd:organisationName>
+               <gco:CharacterString>GFZ Potsdam</gco:CharacterString>
+            </gmd:organisationName>
+            <gmd:contactInfo>
+               <gmd:CI_Contact>
+                  <gmd:address>
+                     <gmd:CI_Address>
+                        <gmd:deliveryPoint>
+                           <gco:CharacterString>Telegrafenberg, D-14473 Potsdam - Germany</gco:CharacterString>
+                        </gmd:deliveryPoint>
+                     </gmd:CI_Address>
+                  </gmd:address>
+               </gmd:CI_Contact>
+            </gmd:contactInfo>
+         </gmd:CI_ResponsibleParty>
+      </geo:siteMetadataCustodian>
+      <geo:moreInformation>
+         <geo:urlForMoreInformation>www.gfz-potsdam.de/pb1/igs/igs_stat/riog.htm</geo:urlForMoreInformation>
+         <geo:sitePictures>riogphoto.htm</geo:sitePictures>
+      </geo:moreInformation>
+   </geo:siteLog>
+</geo:GeodesyML>

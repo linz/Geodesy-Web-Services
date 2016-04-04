@@ -1,2 +1,220 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<ns0:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:ns0="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:ns6="http://www.isotc211.org/2005/gts" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_574"/>
+<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_574">
+   <geo:siteLog gml:id="SiteLogType_574">
+      <geo:formInformation>
+         <geo:preparedBy>Miao-Hsiang Peng</geo:preparedBy>
+         <geo:datePrepared>2012-01-30T13:00:00Z</geo:datePrepared>
+         <geo:reportType>UPDATE</geo:reportType>
+      </geo:formInformation>
+      <geo:siteIdentification>
+         <geo:siteName>Hsinchu</geo:siteName>
+         <geo:fourCharacterID>TNML</geo:fourCharacterID>
+         <geo:monumentInscription>NML1</geo:monumentInscription>
+         <geo:iersDOMESNumber>23604S001</geo:iersDOMESNumber>
+         <geo:monumentDescription>STEEL</geo:monumentDescription>
+         <geo:heightOfTheMonument>2.09</geo:heightOfTheMonument>
+         <geo:monumentFoundation>ROOF</geo:monumentFoundation>
+         <geo:foundationDepth>8.0</geo:foundationDepth>
+         <geo:markerDescription>CHISELLED BRASS</geo:markerDescription>
+         <geo:dateInstalled>2001-06-06T14:00:00Z</geo:dateInstalled>
+         <geo:geologicCharacteristic>CLAY</geo:geologicCharacteristic>
+         <geo:bedrockType>SEDIMENTARY</geo:bedrockType>
+         <geo:bedrockCondition>FRESH</geo:bedrockCondition>
+      </geo:siteIdentification>
+      <geo:siteLocation>
+         <geo:city>Hsinchu</geo:city>
+         <geo:state>Taiwan</geo:state>
+         <geo:countryCodeISO>Republic of China</geo:countryCodeISO>
+         <geo:tectonicPlate>Eurasia plate</geo:tectonicPlate>
+         <geo:approximatePositionITRF>
+            <geo:xCoordinateInMeters>-2982779.0389</geo:xCoordinateInMeters>
+            <geo:yCoordinateInMeters>4966662.6552</geo:yCoordinateInMeters>
+            <geo:zCoordinateInMeters>2658805.7381</geo:zCoordinateInMeters>
+            <geo:latitude-North>244752.63769999999203719198703765869140625</geo:latitude-North>
+            <geo:longitude-East>1205914.4385999999940395355224609375</geo:longitude-East>
+            <geo:elevation-m_ellips.>75.8599</geo:elevation-m_ellips.>
+         </geo:approximatePositionITRF>
+      </geo:siteLocation>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_2603">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">AOA BENCHMARK ACT</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>1132</geo:serialNumber>
+            <geo:firmwareVersion>3.3.32.5</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>4.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2001-06-07T00:00:00Z</geo:dateInstalled>
+            <geo:temperatureStabilization>1921.0</geo:temperatureStabilization>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna gml:id="GnssAntennaType_1164">
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue">AOAD/M_T        DOME</geo:antennaType>
+            <geo:serialNumber>455</geo:serialNumber>
+            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>1.577</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+            <geo:antennaRadomeType>DOME</geo:antennaRadomeType>
+            <geo:antennaCableType>RG214</geo:antennaCableType>
+            <geo:antennaCableLength>60.0</geo:antennaCableLength>
+            <geo:dateInstalled>2001-06-07T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2002-07-25T01:00:00Z</geo:dateRemoved>
+         </geo:gnssAntenna>
+      </geo:gnssAntennas>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna gml:id="GnssAntennaType_1165">
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue">AOAD/M_T        NONE</geo:antennaType>
+            <geo:serialNumber>455</geo:serialNumber>
+            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>1.577</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
+            <geo:antennaCableType>RG214</geo:antennaCableType>
+            <geo:antennaCableLength>60.0</geo:antennaCableLength>
+            <geo:dateInstalled>2002-07-25T01:00:00Z</geo:dateInstalled>
+         </geo:gnssAntenna>
+      </geo:gnssAntennas>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_938">
+            <geo:standardType>EXTERNAL RUBIDIUM</geo:standardType>
+            <geo:inputFrequency>5.0</geo:inputFrequency>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2005-05-13T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition></gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+         </geo:frequencyStandard>
+      </geo:frequencyStandards>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_939">
+            <geo:standardType>INTERNAL</geo:standardType>
+            <geo:inputFrequency>0.0</geo:inputFrequency>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2005-05-05T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2005-05-13T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+         </geo:frequencyStandard>
+      </geo:frequencyStandards>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_940">
+            <geo:standardType>EXTERNAL RUBIDIUM</geo:standardType>
+            <geo:inputFrequency>5.0</geo:inputFrequency>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2002-06-20T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2005-05-05T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+         </geo:frequencyStandard>
+      </geo:frequencyStandards>
+      <geo:humiditySensors>
+         <geo:humiditySensor gml:id="HumiditySensorType_257">
+            <geo:type>MET3A</geo:type>
+            <geo:manufacturer>Paroscientific, Inc.</geo:manufacturer>
+            <geo:serialNumber>81394</geo:serialNumber>
+            <geo:heightDiffToAntenna>0.65</geo:heightDiffToAntenna>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2001-11-28T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition></gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+            <geo:dataSamplingInterval>15.0</geo:dataSamplingInterval>
+            <geo:accuracy-percentRelativeHumidity>2.0</geo:accuracy-percentRelativeHumidity>
+            <geo:aspiration>FAN</geo:aspiration>
+         </geo:humiditySensor>
+      </geo:humiditySensors>
+      <geo:pressureSensors>
+         <geo:pressureSensor gml:id="PressureSensorType_263">
+            <geo:type>MET3A</geo:type>
+            <geo:manufacturer>Paroscientific, Inc.</geo:manufacturer>
+            <geo:serialNumber>81394</geo:serialNumber>
+            <geo:heightDiffToAntenna>0.11</geo:heightDiffToAntenna>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2001-11-28T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition></gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+            <geo:dataSamplingInterval>15.0</geo:dataSamplingInterval>
+            <geo:accuracy-hPa>0.08</geo:accuracy-hPa>
+         </geo:pressureSensor>
+      </geo:pressureSensors>
+      <geo:temperatureSensors>
+         <geo:temperatureSensor gml:id="TemperatureSensorType_254">
+            <geo:type>MET3A</geo:type>
+            <geo:manufacturer>Paroscientific, Inc.</geo:manufacturer>
+            <geo:serialNumber>81394</geo:serialNumber>
+            <geo:heightDiffToAntenna>0.65</geo:heightDiffToAntenna>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2001-11-28T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition></gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+            <geo:dataSamplingInterval>15.0</geo:dataSamplingInterval>
+            <geo:accuracy-degreesCelcius>0.1</geo:accuracy-degreesCelcius>
+            <geo:aspiration>FAN</geo:aspiration>
+         </geo:temperatureSensor>
+      </geo:temperatureSensors>
+      <geo:siteContact>
+         <gmd:MD_SecurityConstraints/>
+         <gmd:CI_ResponsibleParty>
+            <gmd:individualName>
+               <gco:CharacterString>Miao-Hsiang Peng</gco:CharacterString>
+            </gmd:individualName>
+            <gmd:organisationName>
+               <gco:CharacterString>National Measurement Laboratory</gco:CharacterString>
+            </gmd:organisationName>
+            <gmd:contactInfo>
+               <gmd:CI_Contact>
+                  <gmd:phone>
+                     <gmd:CI_Telephone>
+                        <gmd:voice>
+                           <gco:CharacterString>886 3 574-3891</gco:CharacterString>
+                        </gmd:voice>
+                        <gmd:facsimile>
+                           <gco:CharacterString>886 3 572-6445</gco:CharacterString>
+                        </gmd:facsimile>
+                     </gmd:CI_Telephone>
+                  </gmd:phone>
+                  <gmd:address>
+                     <gmd:CI_Address>
+                        <gmd:deliveryPoint>
+                           <gco:CharacterString>ITRI</gco:CharacterString>
+                        </gmd:deliveryPoint>
+                        <gmd:electronicMailAddress>
+                           <gco:CharacterString>MHPeng@itri.org.tw</gco:CharacterString>
+                        </gmd:electronicMailAddress>
+                     </gmd:CI_Address>
+                  </gmd:address>
+               </gmd:CI_Contact>
+            </gmd:contactInfo>
+         </gmd:CI_ResponsibleParty>
+      </geo:siteContact>
+      <geo:siteMetadataCustodian>
+         <gmd:MD_SecurityConstraints/>
+         <gmd:CI_ResponsibleParty>
+            <gmd:organisationName>
+               <gco:CharacterString>National Measurement Laboratory</gco:CharacterString>
+            </gmd:organisationName>
+            <gmd:contactInfo>
+               <gmd:CI_Contact>
+                  <gmd:address>
+                     <gmd:CI_Address/>
+                  </gmd:address>
+               </gmd:CI_Contact>
+            </gmd:contactInfo>
+         </gmd:CI_ResponsibleParty>
+      </geo:siteMetadataCustodian>
+      <geo:moreInformation>
+         <geo:urlForMoreInformation>http</geo:urlForMoreInformation>
+      </geo:moreInformation>
+   </geo:siteLog>
+</geo:GeodesyML>

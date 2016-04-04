@@ -1,2 +1,252 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<ns0:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:ns0="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:ns6="http://www.isotc211.org/2005/gts" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_294"/>
+<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_294">
+   <geo:siteLog gml:id="SiteLogType_294">
+      <geo:formInformation>
+         <geo:preparedBy>David Maggert</geo:preparedBy>
+         <geo:datePrepared>2013-01-30T13:00:00Z</geo:datePrepared>
+         <geo:reportType>UPDATE</geo:reportType>
+      </geo:formInformation>
+      <geo:siteIdentification>
+         <geo:siteName>Kellyville (Kangerlussuaq)</geo:siteName>
+         <geo:fourCharacterID>KELY</geo:fourCharacterID>
+         <geo:monumentInscription>KELLYVILLE 1995</geo:monumentInscription>
+         <geo:iersDOMESNumber>43005M002</geo:iersDOMESNumber>
+         <geo:monumentDescription>CONCRETE PILLAR</geo:monumentDescription>
+         <geo:heightOfTheMonument>1.5</geo:heightOfTheMonument>
+         <geo:monumentFoundation>EXPOSED BEDROCK</geo:monumentFoundation>
+         <geo:markerDescription>Dimple in 5/8' bolt set in pillar</geo:markerDescription>
+         <geo:dateInstalled>1995-07-22T14:00:00Z</geo:dateInstalled>
+         <geo:notes>UNAVCO antenna leveling mount used on (mark) bolt.</geo:notes>
+      </geo:siteIdentification>
+      <geo:siteLocation>
+         <geo:city>Kangerlussuaq</geo:city>
+         <geo:countryCodeISO>GRL</geo:countryCodeISO>
+         <geo:tectonicPlate>NORTH AMERICAN</geo:tectonicPlate>
+         <geo:approximatePositionITRF>
+            <geo:xCoordinateInMeters>1575559.29</geo:xCoordinateInMeters>
+            <geo:yCoordinateInMeters>-1941828.01</geo:yCoordinateInMeters>
+            <geo:zCoordinateInMeters>5848076.39</geo:zCoordinateInMeters>
+            <geo:latitude-North>665914.69999999995343387126922607421875</geo:latitude-North>
+            <geo:longitude-East>-505641.4099999999743886291980743408203125</geo:longitude-East>
+            <geo:elevation-m_ellips.>229.8</geo:elevation-m_ellips.>
+         </geo:approximatePositionITRF>
+         <geo:notes>The GPS site is located on the Sondrestrom fjord, at the Sondrestrom Incoherent Scatter Radar facility.  This facility is known as as Kellyville.  A 3 megawatt radar operates approximately 10% of the month. This radar operates at 1290 MHz.  Because of safety concerns, we are not currently collecting data through the radar runs.  The The nearest town is Kangerlussuaq.  We have named this site KELY so as to not confuse this site with a temporary GPS marker named KANG.</geo:notes>
+      </geo:siteLocation>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_1316">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ROGUE SNR-8000</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>T295</geo:serialNumber>
+            <geo:firmwareVersion>3.2.32.8</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>4.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>1999-05-27T11:03:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1999-08-27T11:40:00Z</geo:dateRemoved>
+            <geo:notes>Firmware Upgrade</geo:notes>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_1317">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ASHTECH UZ-12</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>ZR520021809</geo:serialNumber>
+            <geo:firmwareVersion>CQ00</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>4.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2010-06-08T13:30:00Z</geo:dateInstalled>
+            <geo:notes>UNAVCO # 16196 DOWNLOAD COMPUTER REPLACED</geo:notes>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_1318">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ROGUE SNR-8000</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>T295</geo:serialNumber>
+            <geo:firmwareVersion>3.2</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>4.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>1995-07-23T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1995-07-27T23:59:00Z</geo:dateRemoved>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_1319">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ROGUE SNR-8000</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>T295</geo:serialNumber>
+            <geo:firmwareVersion>3.2.32.11</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>4.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2000-10-16T11:16:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2001-09-14T17:18:00Z</geo:dateRemoved>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_1320">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ROGUE SNR-8000</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>T295</geo:serialNumber>
+            <geo:firmwareVersion>3.2.32.9</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>4.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>1999-08-27T11:52:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2000-10-16T11:16:00Z</geo:dateRemoved>
+            <geo:notes>Firmware Upgrade</geo:notes>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_1321">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ROGUE SNR-8000</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>T314</geo:serialNumber>
+            <geo:firmwareVersion>3.2</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>4.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>1995-07-28T01:41:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1996-02-03T07:34:00Z</geo:dateRemoved>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_1322">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ASHTECH Z-XII3</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>LP020003804</geo:serialNumber>
+            <geo:firmwareVersion>CD00-1D02 1s soc2rnx</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>4.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2001-09-14T17:18:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2010-06-08T13:20:00Z</geo:dateRemoved>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_1323">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ROGUE SNR-8000</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>T295</geo:serialNumber>
+            <geo:firmwareVersion>3.2.32.1</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>4.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>1996-02-09T11:09:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1999-05-26T23:59:00Z</geo:dateRemoved>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna gml:id="GnssAntennaType_593">
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue">AOAD/M_T        DOME</geo:antennaType>
+            <geo:serialNumber>394</geo:serialNumber>
+            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>0.0</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+            <geo:antennaRadomeType>DOME</geo:antennaRadomeType>
+            <geo:antennaCableLength>0.0</geo:antennaCableLength>
+            <geo:dateInstalled>1995-07-23T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1996-04-04T18:22:00Z</geo:dateRemoved>
+            <geo:notes>radome was conical fiberglass unit of indeterminate origin.</geo:notes>
+         </geo:gnssAntenna>
+      </geo:gnssAntennas>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna gml:id="GnssAntennaType_594">
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue">ASH701945C_M    NONE</geo:antennaType>
+            <geo:serialNumber>CR620010504</geo:serialNumber>
+            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>0.0762</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
+            <geo:antennaCableLength>0.0</geo:antennaCableLength>
+            <geo:dateInstalled>2001-09-14T17:18:00Z</geo:dateInstalled>
+            <geo:notes>antenna height of 7.62cm measured at site (previously reported as 0.00). UNAVCO levelling mount used over monument. Cone fiberglass dome removed along with old antenna. SCIGN-type dome to be added at a later date.</geo:notes>
+         </geo:gnssAntenna>
+      </geo:gnssAntennas>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna gml:id="GnssAntennaType_595">
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue">AOAD/M_T        DOME</geo:antennaType>
+            <geo:serialNumber>230</geo:serialNumber>
+            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>0.0</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+            <geo:antennaRadomeType>DOME</geo:antennaRadomeType>
+            <geo:antennaCableLength>0.0</geo:antennaCableLength>
+            <geo:dateInstalled>1996-04-05T05:58:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2001-09-14T17:18:00Z</geo:dateRemoved>
+            <geo:notes>radome was conical fiberglass unit of indeterminate origin. As requested by EUREF, the antenna reference point was changed to BPA on 2001-04-12.</geo:notes>
+         </geo:gnssAntenna>
+      </geo:gnssAntennas>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_451">
+            <geo:standardType>INTERNAL</geo:standardType>
+            <geo:inputFrequency>0.0</geo:inputFrequency>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>1995-07-23T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition></gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+         </geo:frequencyStandard>
+      </geo:frequencyStandards>
+      <geo:localEpisodicEventsSet>
+         <geo:localEpisodicEvents gml:id="LocalEpisodicEventsType_102">
+            <gml:validTime>
+               <gml:TimeInstant>
+                  <gml:timePosition>07 Feb 2012</gml:timePosition>
+               </gml:TimeInstant>
+            </gml:validTime>
+            <geo:event>Transitioned from .soc to .ash data types.  For</geo:event>
+         </geo:localEpisodicEvents>
+      </geo:localEpisodicEventsSet>
+      <geo:siteContact>
+         <gmd:MD_SecurityConstraints/>
+         <gmd:CI_ResponsibleParty>
+            <gmd:individualName>
+               <gco:CharacterString>John Jorgensen</gco:CharacterString>
+            </gmd:individualName>
+            <gmd:organisationName>
+               <gco:CharacterString>SRI International</gco:CharacterString>
+            </gmd:organisationName>
+            <gmd:contactInfo>
+               <gmd:CI_Contact>
+                  <gmd:phone>
+                     <gmd:CI_Telephone>
+                        <gmd:voice>
+                           <gco:CharacterString>+299 841260</gco:CharacterString>
+                        </gmd:voice>
+                        <gmd:facsimile>
+                           <gco:CharacterString>+299 841120</gco:CharacterString>
+                        </gmd:facsimile>
+                     </gmd:CI_Telephone>
+                  </gmd:phone>
+                  <gmd:address>
+                     <gmd:CI_Address>
+                        <gmd:deliveryPoint>
+                           <gco:CharacterString>Box 108</gco:CharacterString>
+                        </gmd:deliveryPoint>
+                        <gmd:electronicMailAddress>
+                           <gco:CharacterString>john.joergensen@pc.dk</gco:CharacterString>
+                        </gmd:electronicMailAddress>
+                     </gmd:CI_Address>
+                  </gmd:address>
+               </gmd:CI_Contact>
+            </gmd:contactInfo>
+         </gmd:CI_ResponsibleParty>
+      </geo:siteContact>
+      <geo:siteMetadataCustodian>
+         <gmd:MD_SecurityConstraints/>
+         <gmd:CI_ResponsibleParty>
+            <gmd:organisationName>
+               <gco:CharacterString>Jet Propulsion Laboratory</gco:CharacterString>
+            </gmd:organisationName>
+            <gmd:contactInfo>
+               <gmd:CI_Contact>
+                  <gmd:address>
+                     <gmd:CI_Address>
+                        <gmd:deliveryPoint>
+                           <gco:CharacterString>4800 Oak Grove Drive</gco:CharacterString>
+                        </gmd:deliveryPoint>
+                     </gmd:CI_Address>
+                  </gmd:address>
+               </gmd:CI_Contact>
+            </gmd:contactInfo>
+         </gmd:CI_ResponsibleParty>
+      </geo:siteMetadataCustodian>
+      <geo:moreInformation>
+         <geo:urlForMoreInformation>http</geo:urlForMoreInformation>
+      </geo:moreInformation>
+   </geo:siteLog>
+</geo:GeodesyML>

@@ -1,2 +1,140 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<ns0:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:ns0="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:ns6="http://www.isotc211.org/2005/gts" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_668"/>
+<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_668">
+   <geo:siteLog gml:id="SiteLogType_668">
+      <geo:formInformation>
+         <geo:preparedBy>Thomas A Herring</geo:preparedBy>
+         <geo:datePrepared>2006-11-12T13:00:00Z</geo:datePrepared>
+         <geo:reportType>UPDATE</geo:reportType>
+      </geo:formInformation>
+      <geo:siteIdentification>
+         <geo:siteName>Yibal Oman</geo:siteName>
+         <geo:fourCharacterID>YIBL</geo:fourCharacterID>
+         <geo:monumentInscription>Yibal Permanent Network No. 1</geo:monumentInscription>
+         <geo:iersDOMESNumber>25001M001</geo:iersDOMESNumber>
+         <geo:monumentDescription>Short drilled braced monument</geo:monumentDescription>
+         <geo:heightOfTheMonument>1.0</geo:heightOfTheMonument>
+         <geo:monumentFoundation>5 drilled stainless steel rods</geo:monumentFoundation>
+         <geo:foundationDepth>3.0</geo:foundationDepth>
+         <geo:markerDescription>Top of SCIGN mount attached to drilled rods</geo:markerDescription>
+         <geo:dateInstalled>2003-07-10T14:00:00Z</geo:dateInstalled>
+         <geo:geologicCharacteristic>Quaternary sediments</geo:geologicCharacteristic>
+         <geo:notes>Site lies over lower cretacous Shu'auba and</geo:notes>
+      </geo:siteIdentification>
+      <geo:siteLocation>
+         <geo:city>Yibal</geo:city>
+         <geo:state>Fahud</geo:state>
+         <geo:countryCodeISO>OMN</geo:countryCodeISO>
+         <geo:tectonicPlate>Arabian</geo:tectonicPlate>
+         <geo:approximatePositionITRF>
+            <geo:xCoordinateInMeters>3294552.811</geo:xCoordinateInMeters>
+            <geo:yCoordinateInMeters>4905092.434</geo:yCoordinateInMeters>
+            <geo:zCoordinateInMeters>2393579.637</geo:zCoordinateInMeters>
+            <geo:latitude-North>221111.25</geo:latitude-North>
+            <geo:longitude-East>560644.400000000023283064365386962890625</geo:longitude-East>
+            <geo:elevation-m_ellips.>95.1</geo:elevation-m_ellips.>
+         </geo:approximatePositionITRF>
+         <geo:notes>ITRF2000</geo:notes>
+      </geo:siteLocation>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_3041">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ASHTECH UZ-12</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>4507ZR52001</geo:serialNumber>
+            <geo:firmwareVersion>CJ12</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>5.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2003-07-11T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2006-11-12T00:11:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_3042">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">TRIMBLE NETRS</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>4623116485</geo:serialNumber>
+            <geo:firmwareVersion>1.1-5</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>5.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2006-11-12T22:40:00Z</geo:dateInstalled>
+            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna gml:id="GnssAntennaType_1358">
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue">ASH701945C_M    NONE</geo:antennaType>
+            <geo:serialNumber>4812CR62001</geo:serialNumber>
+            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>0.0</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
+            <geo:antennaCableType>Ashtech 10 m antenna cable (N to N) (700265)</geo:antennaCableType>
+            <geo:antennaCableLength>10.0</geo:antennaCableLength>
+            <geo:dateInstalled>2003-07-11T00:00:00Z</geo:dateInstalled>
+         </geo:gnssAntenna>
+      </geo:gnssAntennas>
+      <geo:surveyedLocalTies>
+         <geo:surveyedLocalTies gml:id="SurveyedLocalTiesType_420">
+            <geo:localSiteTiesAccuracy>0.0</geo:localSiteTiesAccuracy>
+            <geo:notes>Site is tied to local control sites 5km NW and 10 km SSW on a monthly basis.</geo:notes>
+         </geo:surveyedLocalTies>
+      </geo:surveyedLocalTies>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_1103">
+            <geo:standardType>INTERNAL</geo:standardType>
+            <geo:inputFrequency>0.0</geo:inputFrequency>
+         </geo:frequencyStandard>
+      </geo:frequencyStandards>
+      <geo:siteContact>
+         <gmd:MD_SecurityConstraints/>
+         <gmd:CI_ResponsibleParty>
+            <gmd:individualName>
+               <gco:CharacterString>Salim AH Harthy, XGG/1</gco:CharacterString>
+            </gmd:individualName>
+            <gmd:organisationName>
+               <gco:CharacterString>Petrolium Development Oman</gco:CharacterString>
+            </gmd:organisationName>
+            <gmd:contactInfo>
+               <gmd:CI_Contact>
+                  <gmd:phone>
+                     <gmd:CI_Telephone>
+                        <gmd:voice>
+                           <gco:CharacterString>+968 67 5034</gco:CharacterString>
+                        </gmd:voice>
+                        <gmd:facsimile>
+                           <gco:CharacterString>+968 67 5465</gco:CharacterString>
+                        </gmd:facsimile>
+                     </gmd:CI_Telephone>
+                  </gmd:phone>
+                  <gmd:address>
+                     <gmd:CI_Address>
+                        <gmd:electronicMailAddress>
+                           <gco:CharacterString>Salim.AH.Harthy@pdo.co.om</gco:CharacterString>
+                        </gmd:electronicMailAddress>
+                     </gmd:CI_Address>
+                  </gmd:address>
+               </gmd:CI_Contact>
+            </gmd:contactInfo>
+         </gmd:CI_ResponsibleParty>
+      </geo:siteContact>
+      <geo:siteMetadataCustodian>
+         <gmd:MD_SecurityConstraints/>
+         <gmd:CI_ResponsibleParty>
+            <gmd:organisationName>
+               <gco:CharacterString>Petrolium Development Oman</gco:CharacterString>
+            </gmd:organisationName>
+            <gmd:contactInfo>
+               <gmd:CI_Contact>
+                  <gmd:address>
+                     <gmd:CI_Address/>
+                  </gmd:address>
+               </gmd:CI_Contact>
+            </gmd:contactInfo>
+         </gmd:CI_ResponsibleParty>
+      </geo:siteMetadataCustodian>
+      <geo:moreInformation>
+         <geo:urlForMoreInformation>http</geo:urlForMoreInformation>
+         <geo:sitePictures>http</geo:sitePictures>
+      </geo:moreInformation>
+   </geo:siteLog>
+</geo:GeodesyML>

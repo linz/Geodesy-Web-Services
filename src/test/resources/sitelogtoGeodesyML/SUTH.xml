@@ -1,2 +1,354 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<ns0:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:ns0="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:ns6="http://www.isotc211.org/2005/gts" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_542"/>
+<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_542">
+   <geo:siteLog gml:id="SiteLogType_542">
+      <geo:formInformation>
+         <geo:preparedBy>David Maggert</geo:preparedBy>
+         <geo:datePrepared>2013-01-02T13:00:00Z</geo:datePrepared>
+         <geo:reportType>UPDATE</geo:reportType>
+      </geo:formInformation>
+      <geo:siteIdentification>
+         <geo:siteName>Sutherland</geo:siteName>
+         <geo:fourCharacterID>SUTH</geo:fourCharacterID>
+         <geo:monumentInscription>NONE</geo:monumentInscription>
+         <geo:iersDOMESNumber>30314M002</geo:iersDOMESNumber>
+         <geo:monumentDescription>CONCRETE PILLAR</geo:monumentDescription>
+         <geo:heightOfTheMonument>2.0</geo:heightOfTheMonument>
+         <geo:monumentFoundation>CONCRETE BLOCK ON BEDROCK</geo:monumentFoundation>
+         <geo:markerDescription>SELF-CENTRING PLATE</geo:markerDescription>
+         <geo:dateInstalled>1997-12-04T13:00:00Z</geo:dateInstalled>
+         <geo:geologicCharacteristic>BEDROCK</geo:geologicCharacteristic>
+         <geo:bedrockType>SEDIMENTARY</geo:bedrockType>
+         <geo:bedrockCondition>JOINTED</geo:bedrockCondition>
+         <geo:fractureSpacing>1-10 cm</geo:fractureSpacing>
+         <geo:notes>(multiple lines) Steel reinforced 2.0 meter high vertical concrete pier grouted into bedrock</geo:notes>
+      </geo:siteIdentification>
+      <geo:siteLocation>
+         <geo:city>Sutherland</geo:city>
+         <geo:state>Northern Cape</geo:state>
+         <geo:countryCodeISO>ZAF</geo:countryCodeISO>
+         <geo:tectonicPlate>African</geo:tectonicPlate>
+         <geo:approximatePositionITRF>
+            <geo:xCoordinateInMeters>5041274.8417</geo:xCoordinateInMeters>
+            <geo:yCoordinateInMeters>1916054.1204</geo:yCoordinateInMeters>
+            <geo:zCoordinateInMeters>-3397075.9716</geo:zCoordinateInMeters>
+            <geo:latitude-North>-322248.7590000000200234353542327880859375</geo:latitude-North>
+            <geo:longitude-East>204837.6643000000040046870708465576171875</geo:longitude-East>
+            <geo:elevation-m_ellips.>1799.7659, ITRF2000, Jan. 01, 2004</geo:elevation-m_ellips.>
+         </geo:approximatePositionITRF>
+      </geo:siteLocation>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_2483">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ASHTECH UZ-12</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>UC1200345010</geo:serialNumber>
+            <geo:firmwareVersion>CN00</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>4.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2004-06-01T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2006-10-29T23:59:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_2484">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ROGUE SNR-8000</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>JPL 352 UNAVCO 9512</geo:serialNumber>
+            <geo:firmwareVersion>3.2</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>4.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>1997-12-05T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1998-08-31T00:00:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_2485">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ROGUE SNR-8000</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>T326</geo:serialNumber>
+            <geo:firmwareVersion>3.2</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>4.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>1998-08-31T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1999-06-19T00:00:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_2486">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ROGUE SNR-8000</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>T145</geo:serialNumber>
+            <geo:firmwareVersion>3.2.32.9</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>4.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2001-01-12T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2002-02-27T00:00:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
+            <geo:notes>Firmware upgrade.</geo:notes>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_2487">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ASHTECH UZ-12</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>ZR520013801</geo:serialNumber>
+            <geo:firmwareVersion>CJ10</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>4.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2002-02-27T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2004-06-01T00:00:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_2488">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ROGUE SNR-8000</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>T326</geo:serialNumber>
+            <geo:firmwareVersion>3.2.32.8</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>4.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>1999-06-19T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2001-01-12T00:00:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
+            <geo:notes>Firmware upgrade.</geo:notes>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_2489">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ASHTECH UZ-12</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>UC120031617</geo:serialNumber>
+            <geo:firmwareVersion>CQ00</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>4.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2008-06-20T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2009-07-17T23:00:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
+            <geo:notes>UZ-12 receiver now connected to GPS signal splitter. No antenna change. Also see Section 10.1.</geo:notes>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_2490">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ASHTECH UZ-12</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>ZR220001909</geo:serialNumber>
+            <geo:firmwareVersion>CQ00</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>4.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2009-07-18T00:00:00Z</geo:dateInstalled>
+            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
+            <geo:notes>UZ-12 receiver connected to new powered 4x1 GPS signal splitter. New LMR400 antenna cable installed. New lightning protector installed.</geo:notes>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_2491">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ASHTECH UZ-12</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>UC1200345010</geo:serialNumber>
+            <geo:firmwareVersion>CN00</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>4.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2006-10-30T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2008-06-11T07:44:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
+            <geo:notes>UZ-12 receiver now connected to GPS signal splitter. No antenna change. Also see Section 10.1.</geo:notes>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna gml:id="GnssAntennaType_1096">
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue">AOAD/M_T        NONE</geo:antennaType>
+            <geo:serialNumber>JPL 372</geo:serialNumber>
+            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>0.084</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
+            <geo:antennaCableLength>0.0</geo:antennaCableLength>
+            <geo:dateInstalled>1997-12-05T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2002-02-27T00:00:00Z</geo:dateRemoved>
+         </geo:gnssAntenna>
+      </geo:gnssAntennas>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna gml:id="GnssAntennaType_1097">
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue">ASH701945G_M    NONE</geo:antennaType>
+            <geo:serialNumber>CR6200342011</geo:serialNumber>
+            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>0.084</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
+            <geo:antennaCableLength>0.0</geo:antennaCableLength>
+            <geo:dateInstalled>2004-06-01T00:00:00Z</geo:dateInstalled>
+         </geo:gnssAntenna>
+      </geo:gnssAntennas>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna gml:id="GnssAntennaType_1098">
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue">ASH701945C_M    NONE</geo:antennaType>
+            <geo:serialNumber>CR620010508</geo:serialNumber>
+            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>0.084</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
+            <geo:antennaCableLength>0.0</geo:antennaCableLength>
+            <geo:dateInstalled>2002-02-27T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2004-06-01T00:00:00Z</geo:dateRemoved>
+         </geo:gnssAntenna>
+      </geo:gnssAntennas>
+      <geo:surveyedLocalTies>
+         <geo:surveyedLocalTies gml:id="SurveyedLocalTiesType_331">
+            <geo:tiedMarkerName>Sutherland SLR</geo:tiedMarkerName>
+            <geo:tiedMarkerCDPNumber>ID 7502</geo:tiedMarkerCDPNumber>
+            <geo:tiedMarkerDOMESNumber>30314M001</geo:tiedMarkerDOMESNumber>
+            <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+               <geo:dx>268.583</geo:dx>
+               <geo:dy>-700.891</geo:dy>
+               <geo:dz>133.755</geo:dz>
+            </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+            <geo:localSiteTiesAccuracy>10.0</geo:localSiteTiesAccuracy>
+            <geo:dateMeasured>1997-12-05T13:00:00Z</geo:dateMeasured>
+         </geo:surveyedLocalTies>
+      </geo:surveyedLocalTies>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_891">
+            <geo:standardType>INTERNAL</geo:standardType>
+            <geo:inputFrequency>0.0</geo:inputFrequency>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>1997-12-05T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition></gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+         </geo:frequencyStandard>
+      </geo:frequencyStandards>
+      <geo:collocationInformations>
+         <geo:collocationInformation gml:id="CollocationInformationType_201">
+            <geo:status>MOBILE</geo:status>
+            <geo:notes>IfAG MTLRS1 occupied the SLR pad for a month.</geo:notes>
+         </geo:collocationInformation>
+      </geo:collocationInformations>
+      <geo:humiditySensors>
+         <geo:humiditySensor gml:id="HumiditySensorType_247">
+            <geo:type>none</geo:type>
+            <geo:heightDiffToAntenna>0.0</geo:heightDiffToAntenna>
+            <geo:dataSamplingInterval>0.0</geo:dataSamplingInterval>
+            <geo:accuracy-percentRelativeHumidity>0.0</geo:accuracy-percentRelativeHumidity>
+         </geo:humiditySensor>
+      </geo:humiditySensors>
+      <geo:pressureSensors>
+         <geo:pressureSensor gml:id="PressureSensorType_254">
+            <geo:type>none</geo:type>
+            <geo:heightDiffToAntenna>0.0</geo:heightDiffToAntenna>
+            <geo:dataSamplingInterval>0.0</geo:dataSamplingInterval>
+            <geo:accuracy-hPa>0.0</geo:accuracy-hPa>
+         </geo:pressureSensor>
+      </geo:pressureSensors>
+      <geo:temperatureSensors>
+         <geo:temperatureSensor gml:id="TemperatureSensorType_244">
+            <geo:type>none</geo:type>
+            <geo:heightDiffToAntenna>0.0</geo:heightDiffToAntenna>
+         </geo:temperatureSensor>
+      </geo:temperatureSensors>
+      <geo:waterVaporSensors>
+         <geo:waterVaporSensor gml:id="WaterVaporSensorType_28">
+            <geo:type>none</geo:type>
+            <geo:heightDiffToAntenna>0.0</geo:heightDiffToAntenna>
+            <geo:distanceToAntenna>0.0</geo:distanceToAntenna>
+         </geo:waterVaporSensor>
+      </geo:waterVaporSensors>
+      <geo:otherInstrumentations>
+         <geo:otherInstrumentation gml:id="OtherInstrumentationType_201"/>
+      </geo:otherInstrumentations>
+      <geo:localEpisodicEventsSet>
+         <geo:localEpisodicEvents gml:id="LocalEpisodicEventsType_208">
+            <gml:validTime>
+               <gml:TimeInstant>
+                  <gml:timePosition>17 Jul 2009</gml:timePosition>
+               </gml:TimeInstant>
+            </gml:validTime>
+            <geo:event>Installed new powered 4x1 splitter</geo:event>
+         </geo:localEpisodicEvents>
+      </geo:localEpisodicEventsSet>
+      <geo:localEpisodicEventsSet>
+         <geo:localEpisodicEvents gml:id="LocalEpisodicEventsType_209">
+            <gml:validTime>
+               <gml:TimeInstant>
+                  <gml:timePosition>30 Oct 2006</gml:timePosition>
+               </gml:TimeInstant>
+            </gml:validTime>
+            <geo:event>Added Trimble NetRs receiver, GPS</geo:event>
+         </geo:localEpisodicEvents>
+      </geo:localEpisodicEventsSet>
+      <geo:localEpisodicEventsSet>
+         <geo:localEpisodicEvents gml:id="LocalEpisodicEventsType_210">
+            <gml:validTime>
+               <gml:TimeInstant>
+                  <gml:timePosition>03 Feb 2012</gml:timePosition>
+               </gml:TimeInstant>
+            </gml:validTime>
+            <geo:event>Transitioned from .soc to .ash data types.  For</geo:event>
+         </geo:localEpisodicEvents>
+      </geo:localEpisodicEventsSet>
+      <geo:localEpisodicEventsSet>
+         <geo:localEpisodicEvents gml:id="LocalEpisodicEventsType_211">
+            <gml:validTime>
+               <gml:TimeInstant>
+                  <gml:timePosition>11 Apr 2011</gml:timePosition>
+               </gml:TimeInstant>
+            </gml:validTime>
+            <geo:event>Powered 4x1 splitter failed</geo:event>
+         </geo:localEpisodicEvents>
+      </geo:localEpisodicEventsSet>
+      <geo:siteContact>
+         <gmd:MD_SecurityConstraints/>
+         <gmd:CI_ResponsibleParty>
+            <gmd:individualName>
+               <gco:CharacterString>David A. Stowers</gco:CharacterString>
+            </gmd:individualName>
+            <gmd:organisationName>
+               <gco:CharacterString>Jet Propulsion Laboratory</gco:CharacterString>
+            </gmd:organisationName>
+            <gmd:contactInfo>
+               <gmd:CI_Contact>
+                  <gmd:phone>
+                     <gmd:CI_Telephone>
+                        <gmd:voice>
+                           <gco:CharacterString>818-354-7055</gco:CharacterString>
+                        </gmd:voice>
+                        <gmd:facsimile>
+                           <gco:CharacterString>818-393-4965</gco:CharacterString>
+                        </gmd:facsimile>
+                     </gmd:CI_Telephone>
+                  </gmd:phone>
+                  <gmd:address>
+                     <gmd:CI_Address>
+                        <gmd:deliveryPoint>
+                           <gco:CharacterString>4800 Oak Grove Drive</gco:CharacterString>
+                        </gmd:deliveryPoint>
+                        <gmd:electronicMailAddress>
+                           <gco:CharacterString>dstowers@jpl.nasa.gov</gco:CharacterString>
+                        </gmd:electronicMailAddress>
+                     </gmd:CI_Address>
+                  </gmd:address>
+               </gmd:CI_Contact>
+            </gmd:contactInfo>
+         </gmd:CI_ResponsibleParty>
+      </geo:siteContact>
+      <geo:siteMetadataCustodian>
+         <gmd:MD_SecurityConstraints/>
+         <gmd:CI_ResponsibleParty>
+            <gmd:organisationName>
+               <gco:CharacterString>HartRAO</gco:CharacterString>
+            </gmd:organisationName>
+            <gmd:contactInfo>
+               <gmd:CI_Contact>
+                  <gmd:address>
+                     <gmd:CI_Address>
+                        <gmd:deliveryPoint>
+                           <gco:CharacterString>PO BOX 443</gco:CharacterString>
+                        </gmd:deliveryPoint>
+                     </gmd:CI_Address>
+                  </gmd:address>
+               </gmd:CI_Contact>
+            </gmd:contactInfo>
+         </gmd:CI_ResponsibleParty>
+      </geo:siteMetadataCustodian>
+   </geo:siteLog>
+</geo:GeodesyML>

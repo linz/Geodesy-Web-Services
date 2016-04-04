@@ -1,2 +1,131 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<ns0:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:ns0="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:ns6="http://www.isotc211.org/2005/gts" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_441"/>
+<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_441">
+   <geo:siteLog gml:id="SiteLogType_441">
+      <geo:formInformation>
+         <geo:preparedBy>Volker Janssen</geo:preparedBy>
+         <geo:datePrepared>2012-06-03T14:00:00Z</geo:datePrepared>
+         <geo:reportType>UPDATE</geo:reportType>
+      </geo:formInformation>
+      <geo:siteIdentification>
+         <geo:siteName>Oberon</geo:siteName>
+         <geo:fourCharacterID>OBRN</geo:fourCharacterID>
+         <geo:monumentInscription>Oberon CORS</geo:monumentInscription>
+         <geo:iersDOMESNumber>AUM000211</geo:iersDOMESNumber>
+         <geo:monumentDescription>STAINLESS STEEL MAST</geo:monumentDescription>
+         <geo:monumentFoundation>BUILDING</geo:monumentFoundation>
+         <geo:markerDescription>CORSNET-NSW ANTENNA MOUNT (SS), THREADED SPIGOT</geo:markerDescription>
+         <geo:dateInstalled>2011-10-09T13:00:00Z</geo:dateInstalled>
+         <geo:notes>TS 12148 (SCIMS Number)</geo:notes>
+      </geo:siteIdentification>
+      <geo:siteLocation>
+         <geo:city>Oberon</geo:city>
+         <geo:state>New South Wales</geo:state>
+         <geo:countryCodeISO>AUS</geo:countryCodeISO>
+         <geo:tectonicPlate>Australian</geo:tectonicPlate>
+         <geo:approximatePositionITRF>
+            <geo:xCoordinateInMeters>-4594141.269</geo:xCoordinateInMeters>
+            <geo:yCoordinateInMeters>2667674.193</geo:yCoordinateInMeters>
+            <geo:zCoordinateInMeters>-3519807.008</geo:zCoordinateInMeters>
+            <geo:latitude-North>-334214.23450000002048909664154052734375</geo:latitude-North>
+            <geo:longitude-East>1495127.37583000003360211849212646484375</geo:longitude-East>
+            <geo:elevation-m_ellips.>1137.403</geo:elevation-m_ellips.>
+         </geo:approximatePositionITRF>
+         <geo:notes>GDA94 coordinates (Reg 13)</geo:notes>
+      </geo:siteLocation>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_1994">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">TRIMBLE NETR9</geo:receiverType>
+            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
+            <geo:serialNumber>5049K72198</geo:serialNumber>
+            <geo:firmwareVersion>4.48</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2012-05-25T03:04:00Z</geo:dateInstalled>
+            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
+            <geo:notes>Ti-2</geo:notes>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_1995">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">TRIMBLE NETR9</geo:receiverType>
+            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
+            <geo:serialNumber>5049K72198</geo:serialNumber>
+            <geo:firmwareVersion>4.42</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2011-10-10T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2012-05-25T03:04:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
+            <geo:notes>Ti-2</geo:notes>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna gml:id="GnssAntennaType_868">
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue">TRM57971.00     NONE</geo:antennaType>
+            <geo:serialNumber>1441107021</geo:serialNumber>
+            <geo:antennaReferencePoint>BAM</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>0.0</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
+            <geo:antennaCableLength>0.0</geo:antennaCableLength>
+            <geo:dateInstalled>2011-10-10T00:00:00Z</geo:dateInstalled>
+         </geo:gnssAntenna>
+      </geo:gnssAntennas>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_695">
+            <geo:standardType>INTERNAL</geo:standardType>
+            <geo:inputFrequency>0.0</geo:inputFrequency>
+         </geo:frequencyStandard>
+      </geo:frequencyStandards>
+      <geo:siteContact>
+         <gmd:MD_SecurityConstraints/>
+         <gmd:CI_ResponsibleParty>
+            <gmd:individualName>
+               <gco:CharacterString>Simon McElroy</gco:CharacterString>
+            </gmd:individualName>
+            <gmd:organisationName>
+               <gco:CharacterString>NSW Land and Property Information</gco:CharacterString>
+            </gmd:organisationName>
+            <gmd:contactInfo>
+               <gmd:CI_Contact>
+                  <gmd:phone>
+                     <gmd:CI_Telephone>
+                        <gmd:voice>
+                           <gco:CharacterString>+61 2 6332 8300</gco:CharacterString>
+                        </gmd:voice>
+                     </gmd:CI_Telephone>
+                  </gmd:phone>
+                  <gmd:address>
+                     <gmd:CI_Address>
+                        <gmd:deliveryPoint>
+                           <gco:CharacterString>346 Panorama Avenue</gco:CharacterString>
+                        </gmd:deliveryPoint>
+                        <gmd:electronicMailAddress>
+                           <gco:CharacterString>Simon.McElroy@lpi.nsw.gov.au</gco:CharacterString>
+                        </gmd:electronicMailAddress>
+                     </gmd:CI_Address>
+                  </gmd:address>
+               </gmd:CI_Contact>
+            </gmd:contactInfo>
+         </gmd:CI_ResponsibleParty>
+      </geo:siteContact>
+      <geo:siteMetadataCustodian>
+         <gmd:MD_SecurityConstraints/>
+         <gmd:CI_ResponsibleParty>
+            <gmd:organisationName>
+               <gco:CharacterString>NSW Land and Property Information</gco:CharacterString>
+            </gmd:organisationName>
+            <gmd:contactInfo>
+               <gmd:CI_Contact>
+                  <gmd:address>
+                     <gmd:CI_Address/>
+                  </gmd:address>
+               </gmd:CI_Contact>
+            </gmd:contactInfo>
+         </gmd:CI_ResponsibleParty>
+      </geo:siteMetadataCustodian>
+      <geo:moreInformation>
+         <geo:urlForMoreInformation>http</geo:urlForMoreInformation>
+      </geo:moreInformation>
+   </geo:siteLog>
+</geo:GeodesyML>

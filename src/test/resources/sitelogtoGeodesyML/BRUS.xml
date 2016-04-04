@@ -1,2 +1,524 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<ns0:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:ns0="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:ns6="http://www.isotc211.org/2005/gts" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_88"/>
+<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_88">
+   <geo:siteLog gml:id="SiteLogType_88">
+      <geo:formInformation>
+         <geo:preparedBy>Bruyninx Carine</geo:preparedBy>
+         <geo:datePrepared>2010-11-06T13:00:00Z</geo:datePrepared>
+         <geo:reportType>UPDATE</geo:reportType>
+      </geo:formInformation>
+      <geo:siteIdentification>
+         <geo:siteName>Brussels</geo:siteName>
+         <geo:fourCharacterID>BRUS</geo:fourCharacterID>
+         <geo:iersDOMESNumber>13101M004</geo:iersDOMESNumber>
+         <geo:monumentDescription>STEEL MAST</geo:monumentDescription>
+         <geo:heightOfTheMonument>5.0</geo:heightOfTheMonument>
+         <geo:monumentFoundation>CONCRETE BLOCK</geo:monumentFoundation>
+         <geo:foundationDepth>3.0</geo:foundationDepth>
+         <geo:markerDescription>BRASS NAIL</geo:markerDescription>
+         <geo:dateInstalled>1993-10-19T14:00:00Z</geo:dateInstalled>
+         <geo:geologicCharacteristic>SAND</geo:geologicCharacteristic>
+         <geo:bedrockType>SEDIMENTARY</geo:bedrockType>
+         <geo:bedrockCondition>FRESH</geo:bedrockCondition>
+         <geo:fractureSpacing>0 cm</geo:fractureSpacing>
+         <geo:faultZonesNearby>NO</geo:faultZonesNearby>
+         <geo:notes>Station located at old astrolab observ. dome.</geo:notes>
+      </geo:siteIdentification>
+      <geo:siteLocation>
+         <geo:city>Brussels</geo:city>
+         <geo:state>Brabant</geo:state>
+         <geo:countryCodeISO>BEL</geo:countryCodeISO>
+         <geo:tectonicPlate>EURASIAN</geo:tectonicPlate>
+         <geo:approximatePositionITRF>
+            <geo:xCoordinateInMeters>4027893.86</geo:xCoordinateInMeters>
+            <geo:yCoordinateInMeters>307045.71</geo:yCoordinateInMeters>
+            <geo:zCoordinateInMeters>4919475.03</geo:zCoordinateInMeters>
+            <geo:latitude-North>504752.0800000000162981450557708740234375</geo:latitude-North>
+            <geo:longitude-East>42133.1200000000026193447411060333251953125</geo:longitude-East>
+            <geo:elevation-m_ellips.>149.7</geo:elevation-m_ellips.>
+         </geo:approximatePositionITRF>
+      </geo:siteLocation>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_346">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ASHTECH UZ-12</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>UX219994206</geo:serialNumber>
+            <geo:firmwareVersion>UF00</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2000-03-27T12:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2001-03-20T12:30:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>180.5</geo:temperatureStabilization>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_347">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ROGUE SNR-8000</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>T-321</geo:serialNumber>
+            <geo:firmwareVersion>3.2.32.9</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>1999-05-25T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1999-09-20T06:30:00Z</geo:dateRemoved>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_348">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ROGUE SNR-8000</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>T-171</geo:serialNumber>
+            <geo:firmwareVersion>2.8</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>1994-04-24T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1995-09-30T00:00:00Z</geo:dateRemoved>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_349">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ROGUE SNR-8000</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>T-321</geo:serialNumber>
+            <geo:firmwareVersion>2.8</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>1995-09-30T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1997-01-14T00:00:00Z</geo:dateRemoved>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_350">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ROGUE SNR-8000</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>T-413</geo:serialNumber>
+            <geo:firmwareVersion>3.2.32.9</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2000-01-27T06:01:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2000-03-27T11:15:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>180.5</geo:temperatureStabilization>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_351">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ROGUE SNR-8000</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>T-174</geo:serialNumber>
+            <geo:firmwareVersion>2.8</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>1993-10-20T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1994-04-24T00:00:00Z</geo:dateRemoved>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_352">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ROGUE SNR-12 RM</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>251</geo:serialNumber>
+            <geo:firmwareVersion>3.2.32.4</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>1997-01-14T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1999-03-29T06:30:00Z</geo:dateRemoved>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_353">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ASHTECH Z-XII3T</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>RT919994505</geo:serialNumber>
+            <geo:firmwareVersion>1L01-1D04</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2001-03-20T13:00:00Z</geo:dateInstalled>
+            <geo:temperatureStabilization>180.5</geo:temperatureStabilization>
+            <geo:notes>- Up to 27/01/2003 the filled in Firmware Version was not correct (UF00) - 2003-03-18T08 in conversion from raw data to RINEX (XYZAshRx program) on request of IGS CB</geo:notes>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_354">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ROGUE SNR-8000</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>T-321</geo:serialNumber>
+            <geo:firmwareVersion>3.2.32.1</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>1999-03-29T06:30:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1999-05-25T00:00:00Z</geo:dateRemoved>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_355">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">AOA SNR-12 ACT</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>251-U</geo:serialNumber>
+            <geo:firmwareVersion>3.3.32.2</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>1999-09-20T06:30:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2000-01-27T06:00:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>180.5</geo:temperatureStabilization>
+            <geo:notes>Simultaneously with the receiver change the RG-223 antenna cable was replaced by a 85 m heliax LDF2-50A cable from Andrew Cooperation. This new cable has a loss of 1.05DB per 30 m.</geo:notes>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna gml:id="GnssAntennaType_176">
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue">ASH701945B_M    NONE</geo:antennaType>
+            <geo:serialNumber>CR519994604</geo:serialNumber>
+            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>3.9702</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
+            <geo:antennaCableType>ANDREW heliax LDF2-50A</geo:antennaCableType>
+            <geo:antennaCableLength>85.0</geo:antennaCableLength>
+            <geo:dateInstalled>2000-04-27T12:15:00Z</geo:dateInstalled>
+         </geo:gnssAntenna>
+      </geo:gnssAntennas>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna gml:id="GnssAntennaType_177">
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue">AOAD/M_T        NONE</geo:antennaType>
+            <geo:serialNumber>182</geo:serialNumber>
+            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>3.9702</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
+            <geo:antennaCableType>RG-223</geo:antennaCableType>
+            <geo:antennaCableLength>30.0</geo:antennaCableLength>
+            <geo:dateInstalled>1993-10-20T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2000-04-27T12:10:00Z</geo:dateRemoved>
+         </geo:gnssAntenna>
+      </geo:gnssAntennas>
+      <geo:surveyedLocalTies>
+         <geo:surveyedLocalTies gml:id="SurveyedLocalTiesType_36">
+            <geo:tiedMarkerName>GPS Chimney</geo:tiedMarkerName>
+            <geo:tiedMarkerUsage>EUREF89</geo:tiedMarkerUsage>
+            <geo:tiedMarkerDOMESNumber>13101M003</geo:tiedMarkerDOMESNumber>
+            <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+               <geo:dx>65.256</geo:dx>
+               <geo:dy>31.52</geo:dy>
+               <geo:dz>-65.11</geo:dz>
+            </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+            <geo:localSiteTiesAccuracy>1.0</geo:localSiteTiesAccuracy>
+            <geo:surveyMethod>GPS CAMPAIGN</geo:surveyMethod>
+            <geo:dateMeasured>1995-03-14T14:00:00Z</geo:dateMeasured>
+            <geo:notes>this point is the EUREF 0045 marker</geo:notes>
+         </geo:surveyedLocalTies>
+      </geo:surveyedLocalTies>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_137">
+            <geo:standardType>EXTERNAL H-MASER</geo:standardType>
+            <geo:inputFrequency>5.0</geo:inputFrequency>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>1994-08-23T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2001-03-19T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+         </geo:frequencyStandard>
+      </geo:frequencyStandards>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_138">
+            <geo:standardType>EXTERNAL CESIUM</geo:standardType>
+            <geo:inputFrequency>5.0</geo:inputFrequency>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>1994-04-27T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>1994-08-23T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+         </geo:frequencyStandard>
+      </geo:frequencyStandards>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_139">
+            <geo:standardType>EXTERNAL H-MASER CH1-75</geo:standardType>
+            <geo:inputFrequency>20.0</geo:inputFrequency>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2003-08-01T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2010-03-31T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+            <geo:notes>CH1-75 active H-maser. It is the source of UTC(ORB). UTC(ORB)-BRUS_1PPS (cable delay + delay from 1PPS_in to internal reference) = 48.6 ns 10MHz from  distr. amp. HP5087A, then frequency doubler up to 20MHz.</geo:notes>
+         </geo:frequencyStandard>
+      </geo:frequencyStandards>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_140">
+            <geo:standardType>EXTERNAL H-MASER</geo:standardType>
+            <geo:inputFrequency>20.0</geo:inputFrequency>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2001-03-20T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2003-07-03T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+         </geo:frequencyStandard>
+      </geo:frequencyStandards>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_141">
+            <geo:standardType>EXTERNAL CESIUM</geo:standardType>
+            <geo:inputFrequency>20.0</geo:inputFrequency>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2003-07-03T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2003-08-01T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+            <geo:notes>step of 6.15 ns in the antenna cable between 2003-07-03 and 2003-07-10</geo:notes>
+         </geo:frequencyStandard>
+      </geo:frequencyStandards>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_142">
+            <geo:standardType>EXTERNAL H-MASER CH1-75A</geo:standardType>
+            <geo:inputFrequency>20.0</geo:inputFrequency>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2010-03-31T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2010-11-05T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+            <geo:notes>CH1-75A active H-maser. It is the source of UTC(ORB). UTC(ORB)-BRUS_1PPS (cable delay + delay from 1PPS_in to internal reference) = 47.6 ns 10MHz from  distr. amp. HP5087A, then frequency doubler up to 20MHz.</geo:notes>
+         </geo:frequencyStandard>
+      </geo:frequencyStandards>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_143">
+            <geo:standardType>EXTERNAL CESIUM</geo:standardType>
+            <geo:inputFrequency>20.0</geo:inputFrequency>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2010-11-05T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition></gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+         </geo:frequencyStandard>
+      </geo:frequencyStandards>
+      <geo:collocationInformations>
+         <geo:collocationInformation gml:id="CollocationInformationType_19">
+            <geo:status>PERMANENT</geo:status>
+         </geo:collocationInformation>
+      </geo:collocationInformations>
+      <geo:collocationInformations>
+         <geo:collocationInformation gml:id="CollocationInformationType_20">
+            <geo:status>PERMANENT</geo:status>
+         </geo:collocationInformation>
+      </geo:collocationInformations>
+      <geo:humiditySensors>
+         <geo:humiditySensor gml:id="HumiditySensorType_36">
+            <geo:type>PAROSCIENTIFIC MET3</geo:type>
+            <geo:manufacturer>PAROSCIENTIFIC</geo:manufacturer>
+            <geo:serialNumber>69855</geo:serialNumber>
+            <geo:heightDiffToAntenna>-4.0</geo:heightDiffToAntenna>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>1998-11-15T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2000-07-19T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+            <geo:dataSamplingInterval>60.0</geo:dataSamplingInterval>
+            <geo:accuracy-percentRelativeHumidity>2.0</geo:accuracy-percentRelativeHumidity>
+            <geo:notes>Meteo sonde delivered unreliable data at the end. Height diff 2 ant with respect to marker</geo:notes>
+         </geo:humiditySensor>
+      </geo:humiditySensors>
+      <geo:humiditySensors>
+         <geo:humiditySensor gml:id="HumiditySensorType_37">
+            <geo:type>PAROSCIENTIFIC MET3</geo:type>
+            <geo:manufacturer>PAROSCIENTIFIC</geo:manufacturer>
+            <geo:serialNumber>70804</geo:serialNumber>
+            <geo:heightDiffToAntenna>-3.84</geo:heightDiffToAntenna>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2001-02-19T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2003-09-08T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+            <geo:dataSamplingInterval>60.0</geo:dataSamplingInterval>
+            <geo:accuracy-percentRelativeHumidity>2.0</geo:accuracy-percentRelativeHumidity>
+            <geo:notes>Height diff 2 ant with respect to marker</geo:notes>
+         </geo:humiditySensor>
+      </geo:humiditySensors>
+      <geo:humiditySensors>
+         <geo:humiditySensor gml:id="HumiditySensorType_38">
+            <geo:type>PAROSCIENTIFIC MET3</geo:type>
+            <geo:manufacturer>PAROSCIENTIFIC</geo:manufacturer>
+            <geo:serialNumber>70804</geo:serialNumber>
+            <geo:heightDiffToAntenna>-4.0</geo:heightDiffToAntenna>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2000-07-20T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2001-02-19T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+            <geo:dataSamplingInterval>60.0</geo:dataSamplingInterval>
+            <geo:accuracy-percentRelativeHumidity>2.0</geo:accuracy-percentRelativeHumidity>
+            <geo:notes>Height diff 2 ant with respect to marker</geo:notes>
+         </geo:humiditySensor>
+      </geo:humiditySensors>
+      <geo:pressureSensors>
+         <geo:pressureSensor gml:id="PressureSensorType_36">
+            <geo:type>PAROSCIENTIFIC MET3</geo:type>
+            <geo:manufacturer>PAROSCIENTIFIC</geo:manufacturer>
+            <geo:serialNumber>69855</geo:serialNumber>
+            <geo:heightDiffToAntenna>-4.0</geo:heightDiffToAntenna>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>1998-11-15T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2000-07-19T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+            <geo:dataSamplingInterval>60.0</geo:dataSamplingInterval>
+            <geo:accuracy-hPa>0.5</geo:accuracy-hPa>
+            <geo:notes>Meteo sonde delivered unreliable data at the end. Height diff 2 ant with respect to marker</geo:notes>
+         </geo:pressureSensor>
+      </geo:pressureSensors>
+      <geo:pressureSensors>
+         <geo:pressureSensor gml:id="PressureSensorType_37">
+            <geo:type>PAROSCIENTIFIC MET3</geo:type>
+            <geo:manufacturer>PAROSCIENTIFIC</geo:manufacturer>
+            <geo:serialNumber>70804</geo:serialNumber>
+            <geo:heightDiffToAntenna>-3.83</geo:heightDiffToAntenna>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2001-02-19T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2003-09-08T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+            <geo:dataSamplingInterval>60.0</geo:dataSamplingInterval>
+            <geo:accuracy-hPa>0.5</geo:accuracy-hPa>
+            <geo:notes>Height diff 2 ant with respect to marker</geo:notes>
+         </geo:pressureSensor>
+      </geo:pressureSensors>
+      <geo:pressureSensors>
+         <geo:pressureSensor gml:id="PressureSensorType_38">
+            <geo:type>PAROSCIENTIFIC MET3</geo:type>
+            <geo:manufacturer>PAROSCIENTIFIC</geo:manufacturer>
+            <geo:serialNumber>70804</geo:serialNumber>
+            <geo:heightDiffToAntenna>-4.0</geo:heightDiffToAntenna>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2000-07-20T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2001-02-19T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+            <geo:dataSamplingInterval>60.0</geo:dataSamplingInterval>
+            <geo:accuracy-hPa>0.5</geo:accuracy-hPa>
+            <geo:notes>Height diff 2 ant with respect to marker</geo:notes>
+         </geo:pressureSensor>
+      </geo:pressureSensors>
+      <geo:temperatureSensors>
+         <geo:temperatureSensor gml:id="TemperatureSensorType_36">
+            <geo:type>PAROSCIENTIFIC MET3</geo:type>
+            <geo:manufacturer>PAROSCIENTIFIC</geo:manufacturer>
+            <geo:serialNumber>70804</geo:serialNumber>
+            <geo:heightDiffToAntenna>-4.0</geo:heightDiffToAntenna>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2000-07-20T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2001-02-19T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+            <geo:dataSamplingInterval>60.0</geo:dataSamplingInterval>
+            <geo:accuracy-degreesCelcius>0.5</geo:accuracy-degreesCelcius>
+            <geo:notes>Meteo sonde delivered unreliable data at the end. Height diff 2 ant with respect to marker</geo:notes>
+         </geo:temperatureSensor>
+      </geo:temperatureSensors>
+      <geo:temperatureSensors>
+         <geo:temperatureSensor gml:id="TemperatureSensorType_37">
+            <geo:type>PAROSCIENTIFIC MET3</geo:type>
+            <geo:manufacturer>PAROSCIENTIFIC</geo:manufacturer>
+            <geo:serialNumber>69855</geo:serialNumber>
+            <geo:heightDiffToAntenna>-4.0</geo:heightDiffToAntenna>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>1998-11-15T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2000-07-19T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+            <geo:dataSamplingInterval>60.0</geo:dataSamplingInterval>
+            <geo:accuracy-degreesCelcius>0.5</geo:accuracy-degreesCelcius>
+            <geo:notes>Meteo sonde delivered unreliable data at the end. Height diff 2 ant with respect to marker</geo:notes>
+         </geo:temperatureSensor>
+      </geo:temperatureSensors>
+      <geo:temperatureSensors>
+         <geo:temperatureSensor gml:id="TemperatureSensorType_38">
+            <geo:type>PAROSCIENTIFIC MET3</geo:type>
+            <geo:manufacturer>PAROSCIENTIFIC</geo:manufacturer>
+            <geo:serialNumber>70804</geo:serialNumber>
+            <geo:heightDiffToAntenna>-3.83</geo:heightDiffToAntenna>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2001-02-19T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2003-09-08T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+            <geo:dataSamplingInterval>60.0</geo:dataSamplingInterval>
+            <geo:accuracy-degreesCelcius>0.5</geo:accuracy-degreesCelcius>
+            <geo:notes>Height diff 2 ant with respect to marker</geo:notes>
+         </geo:temperatureSensor>
+      </geo:temperatureSensors>
+      <geo:waterVaporSensors>
+         <geo:waterVaporSensor gml:id="WaterVaporSensorType_6">
+            <geo:type>Generation 3 ETH ZURICH and CAPTEC</geo:type>
+            <geo:manufacturer>ETH ZURICH and CAPTEC</geo:manufacturer>
+            <geo:serialNumber>WVR-III-BR-A-112000-FE</geo:serialNumber>
+            <geo:heightDiffToAntenna>7.0</geo:heightDiffToAntenna>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2001-01-24T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition></gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+            <geo:distanceToAntenna>97.0</geo:distanceToAntenna>
+         </geo:waterVaporSensor>
+      </geo:waterVaporSensors>
+      <geo:otherInstrumentations>
+         <geo:otherInstrumentation gml:id="OtherInstrumentationType_19"/>
+      </geo:otherInstrumentations>
+      <geo:otherInstrumentations>
+         <geo:otherInstrumentation gml:id="OtherInstrumentationType_20"/>
+      </geo:otherInstrumentations>
+      <geo:siteContact>
+         <gmd:MD_SecurityConstraints/>
+         <gmd:CI_ResponsibleParty>
+            <gmd:individualName>
+               <gco:CharacterString>Carine Bruyninx</gco:CharacterString>
+            </gmd:individualName>
+            <gmd:organisationName>
+               <gco:CharacterString>Royal Observatory of Belgium</gco:CharacterString>
+            </gmd:organisationName>
+            <gmd:contactInfo>
+               <gmd:CI_Contact>
+                  <gmd:phone>
+                     <gmd:CI_Telephone>
+                        <gmd:voice>
+                           <gco:CharacterString>32-2-373-02-92</gco:CharacterString>
+                        </gmd:voice>
+                        <gmd:facsimile>
+                           <gco:CharacterString>32-2-374-98-22</gco:CharacterString>
+                        </gmd:facsimile>
+                     </gmd:CI_Telephone>
+                  </gmd:phone>
+                  <gmd:address>
+                     <gmd:CI_Address>
+                        <gmd:deliveryPoint>
+                           <gco:CharacterString>Av. Circulaire No 3</gco:CharacterString>
+                        </gmd:deliveryPoint>
+                        <gmd:electronicMailAddress>
+                           <gco:CharacterString>c.bruyninx@oma.be</gco:CharacterString>
+                        </gmd:electronicMailAddress>
+                     </gmd:CI_Address>
+                  </gmd:address>
+               </gmd:CI_Contact>
+            </gmd:contactInfo>
+         </gmd:CI_ResponsibleParty>
+      </geo:siteContact>
+      <geo:siteMetadataCustodian>
+         <gmd:MD_SecurityConstraints/>
+         <gmd:CI_ResponsibleParty>
+            <gmd:organisationName>
+               <gco:CharacterString>Royal Observatory of Belgium</gco:CharacterString>
+            </gmd:organisationName>
+            <gmd:contactInfo>
+               <gmd:CI_Contact>
+                  <gmd:address>
+                     <gmd:CI_Address/>
+                  </gmd:address>
+               </gmd:CI_Contact>
+            </gmd:contactInfo>
+         </gmd:CI_ResponsibleParty>
+      </geo:siteMetadataCustodian>
+   </geo:siteLog>
+</geo:GeodesyML>

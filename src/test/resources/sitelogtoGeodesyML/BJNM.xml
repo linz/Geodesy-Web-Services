@@ -1,2 +1,172 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<ns0:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:ns0="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:ns6="http://www.isotc211.org/2005/gts" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_68"/>
+<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_68">
+   <geo:siteLog gml:id="SiteLogType_68">
+      <geo:formInformation>
+         <geo:preparedBy>LIANG Kun</geo:preparedBy>
+         <geo:datePrepared>2009-02-11T13:00:00Z</geo:datePrepared>
+         <geo:reportType>NEW</geo:reportType>
+      </geo:formInformation>
+      <geo:siteIdentification>
+         <geo:siteName>BJNM antenna at NIM</geo:siteName>
+         <geo:fourCharacterID>BJNM</geo:fourCharacterID>
+         <geo:monumentInscription>NONE</geo:monumentInscription>
+         <geo:iersDOMESNumber>21616M001</geo:iersDOMESNumber>
+         <geo:cdpNumber>NONE</geo:cdpNumber>
+         <geo:monumentDescription>A round hollow corner of the rack on the rooftop</geo:monumentDescription>
+         <geo:monumentFoundation>Metal rack on the rooftop</geo:monumentFoundation>
+         <geo:markerDescription>ARP only</geo:markerDescription>
+         <geo:dateInstalled>2008-10-21T13:00:00Z</geo:dateInstalled>
+         <geo:notes>Antenna is fixed in the round northeast corner of the metal rack layed in the fixed position on the top of Building 20# of the experimental base at NIM</geo:notes>
+      </geo:siteIdentification>
+      <geo:siteLocation>
+         <geo:city>Beijing</geo:city>
+         <geo:state>Beijing</geo:state>
+         <geo:countryCodeISO>CHN</geo:countryCodeISO>
+         <geo:tectonicPlate>Eurasia</geo:tectonicPlate>
+         <geo:approximatePositionITRF>
+            <geo:xCoordinateInMeters>-2154287.413</geo:xCoordinateInMeters>
+            <geo:yCoordinateInMeters>4373440.047</geo:yCoordinateInMeters>
+            <geo:zCoordinateInMeters>4098885.628</geo:zCoordinateInMeters>
+            <geo:latitude-North>401443.1699999999837018549442291259765625</geo:latitude-North>
+            <geo:longitude-East>1161326.86000000010244548320770263671875</geo:longitude-East>
+            <geo:elevation-m_ellips.>118.6</geo:elevation-m_ellips.>
+         </geo:approximatePositionITRF>
+      </geo:siteLocation>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_249">
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue">SEPT POLARX3ETR</geo:receiverType>
+            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
+            <geo:serialNumber>2001087</geo:serialNumber>
+            <geo:firmwareVersion>2.0</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>15.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2010-05-04T00:00:00Z</geo:dateInstalled>
+            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
+         </geo:gnssReceiver>
+      </geo:gnssReceivers>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna gml:id="GnssAntennaType_134">
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue">NOV702GG        NONE</geo:antennaType>
+            <geo:serialNumber>01017577</geo:serialNumber>
+            <geo:antennaReferencePoint>BAM</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>0.0</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
+            <geo:antennaCableLength>30.0</geo:antennaCableLength>
+            <geo:dateInstalled>2010-08-21T00:00:00Z</geo:dateInstalled>
+         </geo:gnssAntenna>
+      </geo:gnssAntennas>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_103">
+            <geo:standardType>EXTERNAL HYDROGEN MASER</geo:standardType>
+            <geo:inputFrequency>10.0</geo:inputFrequency>
+            <gml:validTime>
+               <gml:TimePeriod>
+                  <gml:beginPosition>2006-06-25T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition></gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+            <geo:notes>Input signal is UTC(NIM). It is generated</geo:notes>
+         </geo:frequencyStandard>
+      </geo:frequencyStandards>
+      <geo:collocationInformations>
+         <geo:collocationInformation gml:id="CollocationInformationType_13">
+            <geo:status>PERMANENT</geo:status>
+            <geo:notes>Full name is National Time &amp; Frequency  Metrology Primary Standards</geo:notes>
+         </geo:collocationInformation>
+      </geo:collocationInformations>
+      <geo:humiditySensors>
+         <geo:humiditySensor gml:id="HumiditySensorType_28">
+            <geo:type>HygroClip CP01</geo:type>
+            <geo:manufacturer>Rotronic</geo:manufacturer>
+            <geo:serialNumber>10070716101</geo:serialNumber>
+            <geo:heightDiffToAntenna>-0.12</geo:heightDiffToAntenna>
+            <geo:calibrationDate>2010-08-17T14:00:00Z</geo:calibrationDate>
+            <geo:dataSamplingInterval>600.0</geo:dataSamplingInterval>
+            <geo:accuracy-percentRelativeHumidity>1.5</geo:accuracy-percentRelativeHumidity>
+            <geo:aspiration>FAN</geo:aspiration>
+         </geo:humiditySensor>
+      </geo:humiditySensors>
+      <geo:pressureSensors>
+         <geo:pressureSensor gml:id="PressureSensorType_28">
+            <geo:type>F02002-M004W-A</geo:type>
+            <geo:manufacturer>FRONTTECH</geo:manufacturer>
+            <geo:serialNumber>MSP100500450N</geo:serialNumber>
+            <geo:heightDiffToAntenna>-0.97</geo:heightDiffToAntenna>
+            <geo:calibrationDate>2010-08-17T14:00:00Z</geo:calibrationDate>
+            <geo:dataSamplingInterval>600.0</geo:dataSamplingInterval>
+            <geo:accuracy-hPa>1.5</geo:accuracy-hPa>
+         </geo:pressureSensor>
+      </geo:pressureSensors>
+      <geo:temperatureSensors>
+         <geo:temperatureSensor gml:id="TemperatureSensorType_28">
+            <geo:type>HygroClip CP01</geo:type>
+            <geo:manufacturer>Rotronic</geo:manufacturer>
+            <geo:serialNumber>10070716101</geo:serialNumber>
+            <geo:heightDiffToAntenna>-0.12</geo:heightDiffToAntenna>
+            <geo:calibrationDate>2010-08-17T14:00:00Z</geo:calibrationDate>
+            <geo:dataSamplingInterval>600.0</geo:dataSamplingInterval>
+            <geo:accuracy-degreesCelcius>0.3</geo:accuracy-degreesCelcius>
+            <geo:aspiration>FAN</geo:aspiration>
+         </geo:temperatureSensor>
+      </geo:temperatureSensors>
+      <geo:otherInstrumentations>
+         <geo:otherInstrumentation gml:id="OtherInstrumentationType_13"/>
+      </geo:otherInstrumentations>
+      <geo:siteContact>
+         <gmd:MD_SecurityConstraints/>
+         <gmd:CI_ResponsibleParty>
+            <gmd:individualName>
+               <gco:CharacterString>LIANG Kun</gco:CharacterString>
+            </gmd:individualName>
+            <gmd:organisationName>
+               <gco:CharacterString>National Institute of Metrology</gco:CharacterString>
+            </gmd:organisationName>
+            <gmd:contactInfo>
+               <gmd:CI_Contact>
+                  <gmd:phone>
+                     <gmd:CI_Telephone>
+                        <gmd:voice>
+                           <gco:CharacterString>+86-10-64525207</gco:CharacterString>
+                        </gmd:voice>
+                        <gmd:facsimile>
+                           <gco:CharacterString>+86-10-64214828</gco:CharacterString>
+                        </gmd:facsimile>
+                     </gmd:CI_Telephone>
+                  </gmd:phone>
+                  <gmd:address>
+                     <gmd:CI_Address>
+                        <gmd:deliveryPoint>
+                           <gco:CharacterString>No.18, Bei San Huan Dong Lu, Chaoyang Dist,</gco:CharacterString>
+                        </gmd:deliveryPoint>
+                        <gmd:electronicMailAddress>
+                           <gco:CharacterString>Liangk@nim.ac.cn</gco:CharacterString>
+                        </gmd:electronicMailAddress>
+                     </gmd:CI_Address>
+                  </gmd:address>
+               </gmd:CI_Contact>
+            </gmd:contactInfo>
+         </gmd:CI_ResponsibleParty>
+      </geo:siteContact>
+      <geo:siteMetadataCustodian>
+         <gmd:MD_SecurityConstraints/>
+         <gmd:CI_ResponsibleParty>
+            <gmd:organisationName>
+               <gco:CharacterString>National Institute of Metrology</gco:CharacterString>
+            </gmd:organisationName>
+            <gmd:contactInfo>
+               <gmd:CI_Contact>
+                  <gmd:address>
+                     <gmd:CI_Address>
+                        <gmd:deliveryPoint>
+                           <gco:CharacterString>No.18, Bei San Huan Dong Lu, Chaoyang Dist,</gco:CharacterString>
+                        </gmd:deliveryPoint>
+                     </gmd:CI_Address>
+                  </gmd:address>
+               </gmd:CI_Contact>
+            </gmd:contactInfo>
+         </gmd:CI_ResponsibleParty>
+      </geo:siteMetadataCustodian>
+   </geo:siteLog>
+</geo:GeodesyML>

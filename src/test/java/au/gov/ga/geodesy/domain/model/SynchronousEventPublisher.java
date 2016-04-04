@@ -26,8 +26,8 @@ public class SynchronousEventPublisher implements EventPublisher {
 
     public void publish(Event... es) {
         for (Event e : es) {
-            publish(e);
             log.info("Publishing event: " + e);
+            publish(e);
         }
     }
 

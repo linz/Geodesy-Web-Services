@@ -10,7 +10,7 @@ public class GMLGeoTools {
      *            - true then 7 digit dms (padding may be added in here to make so)
      * @return decimal degrees - -180 <= Longitude <= 180 / -90 <= Latitude <= 90
      */
-    public static Double dmsToDecmial(double dms) {
+    public static double dmsToDecmial(double dms) {
         boolean positiveSign = dms >= 0;
         long significantPart = (long) Math.abs(dms);
         double fractionPart = Math.abs(dms) - significantPart;

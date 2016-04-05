@@ -198,9 +198,9 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
         Assert.assertEquals(siteLocationType.getApproximatePositionITRF().getYCoordinateInMeters(), "4212836.215");
         Assert.assertEquals(siteLocationType.getApproximatePositionITRF().getZCoordinateInMeters(), "-2545106.027");
         Assert.assertEquals(siteLocationType.getApproximatePositionITRF().getLatitudeNorth().doubleValue(),
-                -234012.44594, 0.00001);
+                -23.670124, 0.00001);
         Assert.assertEquals(siteLocationType.getApproximatePositionITRF().getLongitudeEast().doubleValue(),
-                1335307.84759, 0.00001);
+                133.885513, 0.00001);
         Assert.assertEquals(siteLocationType.getNotes(), "ARGN (Australian Regional GPS Network)");
 
         // In SOPAC XML (input) ALIC.xml, the foundationDepth is empty but required

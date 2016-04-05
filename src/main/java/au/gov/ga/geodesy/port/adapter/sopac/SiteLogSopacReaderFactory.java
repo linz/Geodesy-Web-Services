@@ -1,5 +1,6 @@
 package au.gov.ga.geodesy.port.adapter.sopac;
 
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.Reader;
 
@@ -22,11 +23,24 @@ public class SiteLogSopacReaderFactory implements SiteLogReaderFactory {
 
     private static final Logger log = LoggerFactory.getLogger(SiteLogSopacReaderFactory.class);
 
+    private static class OpenReader extends BufferedReader {
+
+        public OpenReader(Reader reader) {
+            super(reader);
+        }
+
+        @Override
+        public void close() throws IOException {
+            // leave this reader open
+        }
+    }
+
     @Override
     public boolean canRecogniseInput(Reader input) {
         try {
             DocumentBuilder docBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-            Document doc = docBuilder.parse(new InputSource(input));
+            // parse from our reader, but don't close it
+            Document doc = docBuilder.parse(new InputSource(new OpenReader(input)));
             String rootElementName = doc.getDocumentElement().getNodeName();
             return "igsSiteLog".equals(rootElementName);
         } catch (ParserConfigurationException | SAXException | IOException e) {

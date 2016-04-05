@@ -36,6 +36,8 @@ public class GeodesyMLDozerEventListener implements DozerEventListener {
             switch (event.getDestinationObject().getClass().getSimpleName()) {
             case "SiteLocationType":
                 return new GeodesyMLDozerEventListener_SiteLocationType();
+            case "GnssReceiverType":
+                return new GeodesyMLDozerEventListener_GnssReceiverType();
             }
             return new GeodesyMLDozerEventListener_noop();
         }

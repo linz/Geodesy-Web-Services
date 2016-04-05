@@ -197,10 +197,10 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
         Assert.assertEquals(siteLocationType.getApproximatePositionITRF().getXCoordinateInMeters(), "-4052051.767");
         Assert.assertEquals(siteLocationType.getApproximatePositionITRF().getYCoordinateInMeters(), "4212836.215");
         Assert.assertEquals(siteLocationType.getApproximatePositionITRF().getZCoordinateInMeters(), "-2545106.027");
-        Assert.assertEquals(siteLocationType.getApproximatePositionITRF().getLatitudeNorth().doubleValue(),
-                -23.670124, 0.00001);
-        Assert.assertEquals(siteLocationType.getApproximatePositionITRF().getLongitudeEast().doubleValue(),
-                133.885513, 0.00001);
+        Assert.assertEquals(siteLocationType.getApproximatePositionITRF().getLatitudeNorth().doubleValue(), -23.670124,
+                0.00001);
+        Assert.assertEquals(siteLocationType.getApproximatePositionITRF().getLongitudeEast().doubleValue(), 133.885513,
+                0.00001);
         Assert.assertEquals(siteLocationType.getNotes(), "ARGN (Australian Regional GPS Network)");
 
         // In SOPAC XML (input) ALIC.xml, the foundationDepth is empty but required
@@ -211,6 +211,11 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
         // Receivers
         List<GnssReceiverPropertyType> receivers = siteLogType.getGnssReceivers();
         Assert.assertEquals(12, receivers.size());
+        // Make sure they all have a dateInstalled and dateRemoved after adding GeodesyMLDozerEventListener_GnssReceiverType
+        for (GnssReceiverPropertyType receiver : receivers) {
+            Assert.assertNotNull(receiver.getGnssReceiver().getDateInstalled());
+            Assert.assertNotNull(receiver.getGnssReceiver().getDateRemoved());
+        }
 
         Collections.sort(receivers, (r1, r2) -> r1.getGnssReceiver().getFirmwareVersion()
                 .compareTo(r2.getGnssReceiver().getFirmwareVersion()));

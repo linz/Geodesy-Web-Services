@@ -54,7 +54,7 @@ if [ ! -d $OUTPUTDIR ]; then
     mkdir -p $OUTPUTDIR
 fi
 
-if [[ -z $INFILE ]];
+if [[ -z $INFILE ]]; then
     mvn exec:java -Dexec.mainClass="au.gov.ga.geodesy.support.commandline.GeodesyMLCommandLine" -Dexec.args="-indir $INPUTDIR -outdir $OUTDIR"
 else
     if [ -e $INFILE ]; then

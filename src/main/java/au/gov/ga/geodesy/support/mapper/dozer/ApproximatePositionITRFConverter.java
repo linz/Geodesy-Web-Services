@@ -12,6 +12,7 @@ import com.vividsolutions.jts.geom.Point;
 import com.vividsolutions.jts.geom.PrecisionModel;
 
 import au.gov.ga.geodesy.igssitelog.domain.model.ApproximatePosition;
+import au.gov.ga.geodesy.support.utils.GMLGeoTools;
 import au.gov.xml.icsm.geodesyml.v_0_3.ObjectFactory;
 import au.gov.xml.icsm.geodesyml.v_0_3.SiteLocationType.ApproximatePositionITRF;
 
@@ -54,8 +55,8 @@ public class ApproximatePositionITRFConverter implements CustomConverter {
             }
             // these 2 are the reason for the Converter
             if (sourceType.getGrs80() != null) {
-                dest.setLatitudeNorth(new BigDecimal(sourceType.getGrs80().getCoordinate().x));
-                dest.setLongitudeEast(new BigDecimal(sourceType.getGrs80().getCoordinate().y));
+                dest.setLatitudeNorth(new BigDecimal(GMLGeoTools.dmsToDecmial(sourceType.getGrs80().getCoordinate().x)));
+                dest.setLongitudeEast(new BigDecimal(GMLGeoTools.dmsToDecmial(sourceType.getGrs80().getCoordinate().y)));
             }
 
             return dest;

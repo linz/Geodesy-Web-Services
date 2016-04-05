@@ -31,84 +31,84 @@ public class GMLGeoToolsTest {
     public void testDMSConvert01() {
         Double in = new Double(-234012);
         double expected = -23.67;
-        Assert.assertEquals(expected, GMLGeoTools.dmsToDecmial(in, GMLGeoTools.northing), 0.001);
+        Assert.assertEquals(expected, GMLGeoTools.dmsToDecmial(in), 0.001);
     }
 
     @Test
     public void testDMSConvert012() {
         Double in = new Double(234012);
         double expected = 23.67;
-        Assert.assertEquals(expected, GMLGeoTools.dmsToDecmial(in, GMLGeoTools.northing), 0.001);
+        Assert.assertEquals(expected, GMLGeoTools.dmsToDecmial(in), 0.001);
     }
 
     @Test
     public void testDMSConvert02() {
         Double in = new Double(-234012.5);
         double expected = -23.670139;
-        Assert.assertEquals(expected, GMLGeoTools.dmsToDecmial(in, GMLGeoTools.northing), 0.001);
+        Assert.assertEquals(expected, GMLGeoTools.dmsToDecmial(in), 0.001);
     }
 
     @Test
     public void testDMSConvert022() {
         Double in = new Double(234012.5);
         double expected = 23.670139;
-        Assert.assertEquals(expected, GMLGeoTools.dmsToDecmial(in, GMLGeoTools.northing), 0.001);
+        Assert.assertEquals(expected, GMLGeoTools.dmsToDecmial(in), 0.001);
     }
 
     @Test
     public void testDMSConvert03() {
         Double in = new Double(-1465455.99);
         double expected = -146.915553;
-        Assert.assertEquals(expected, GMLGeoTools.dmsToDecmial(in, GMLGeoTools.easting), 0.001);
+        Assert.assertEquals(expected, GMLGeoTools.dmsToDecmial(in), 0.001);
     }
 
     @Test
     public void testDMSConvert032() {
         Double in = new Double(+1465455.99);
         double expected = 146.915553;
-        Assert.assertEquals(expected, GMLGeoTools.dmsToDecmial(in, GMLGeoTools.easting), 0.001);
+        Assert.assertEquals(expected, GMLGeoTools.dmsToDecmial(in), 0.001);
     }
 
     @Test
     public void testDMSConvert04() {
         Double in = new Double(-1335307.84759);
         double expected = -133.885513;
-        Assert.assertEquals(expected, GMLGeoTools.dmsToDecmial(in, GMLGeoTools.easting), 0.001);
+        Assert.assertEquals(expected, GMLGeoTools.dmsToDecmial(in), 0.001);
     }
 
     @Test
     public void testDMSConvert042() {
         Double in = new Double(+1335307.84759);
         double expected = 133.885513;
-        Assert.assertEquals(expected, GMLGeoTools.dmsToDecmial(in, GMLGeoTools.easting), 0.001);
+        Assert.assertEquals(expected, GMLGeoTools.dmsToDecmial(in), 0.001);
     }
 
     @Test
     public void testDMSConvert05() {
         Double in = new Double(-234012.44594);
         double expected = -23.670124;
-        Assert.assertEquals(expected, GMLGeoTools.dmsToDecmial(in, GMLGeoTools.northing), 0.001);
+        Assert.assertEquals(expected, GMLGeoTools.dmsToDecmial(in), 0.001);
     }
 
     @Test
     public void testDMSConvert052() {
         Double in = new Double(+234012.44594);
         double expected = 23.670124;
-        Assert.assertEquals(expected, GMLGeoTools.dmsToDecmial(in, GMLGeoTools.northing), 0.001);
+        Assert.assertEquals(expected, GMLGeoTools.dmsToDecmial(in), 0.001);
     }
 
     @Test
     public void testDMSConvert06() {
         Double in = new Double(-0072754.36);
         double expected = -7.465100;
-        Assert.assertEquals(expected, GMLGeoTools.dmsToDecmial(in, GMLGeoTools.easting), 0.001);
+        Assert.assertEquals(expected, GMLGeoTools.dmsToDecmial(in), 0.001);
     }
 
     @Test
     public void testDMSConvert062() {
         Double in = new Double(+0072754.36);
         double expected = 7.465100;
-        Assert.assertEquals(expected, GMLGeoTools.dmsToDecmial(in, GMLGeoTools.easting), 0.001);
+        Assert.assertEquals(expected, GMLGeoTools.dmsToDecmial(in), 0.001);
     }
 
 }

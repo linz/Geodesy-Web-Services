@@ -55,8 +55,8 @@ public class ApproximatePositionITRFConverter implements CustomConverter {
             }
             // these 2 are the reason for the Converter
             if (sourceType.getGrs80() != null) {
-                dest.setLatitudeNorth(new BigDecimal(GMLGeoTools.dmsToDecmial(sourceType.getGrs80().getCoordinate().x, GMLGeoTools.northing)));
-                dest.setLongitudeEast(new BigDecimal(GMLGeoTools.dmsToDecmial(sourceType.getGrs80().getCoordinate().y, GMLGeoTools.easting)));
+                dest.setLatitudeNorth(new BigDecimal(GMLGeoTools.dmsToDecmial(sourceType.getGrs80().getCoordinate().x)));
+                dest.setLongitudeEast(new BigDecimal(GMLGeoTools.dmsToDecmial(sourceType.getGrs80().getCoordinate().y)));
             }
 
             return dest;

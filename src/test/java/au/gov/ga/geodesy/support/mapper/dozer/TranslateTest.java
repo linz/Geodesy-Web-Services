@@ -236,6 +236,8 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
         // Antennas
         List<GnssAntennaPropertyType> antennas = siteLogType.getGnssAntennas();
         Assert.assertEquals(antennas.size(), 3);
+        Assert.assertNotNull(antennas.get(0).getGnssAntenna().getAntennaRadomeType().getValue());
+        Assert.assertNotNull(antennas.get(0).getGnssAntenna().getAntennaRadomeType().getCodeSpace());
 
         Collections.sort(antennas, (a1, a2) -> a1.getGnssAntenna().getAntennaType().getValue()
                 .compareTo(a2.getGnssAntenna().getAntennaType().getValue()));

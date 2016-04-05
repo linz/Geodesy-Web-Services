@@ -15,14 +15,14 @@ public class GeodesyMLDozerEventListener_GnssReceiverTypeTest {
     @Test
     public void testNoDateRemoved() {
         GnssReceiverType gnssReceiverType = new GnssReceiverType();
-        listener.checkPopulateElement(gnssReceiverType, "dateRemoved", getTimePositionType(null));
+        listener.checkElementPopulated(gnssReceiverType, "dateRemoved", getTimePositionType(null));
         Assert.assertNotNull(gnssReceiverType.getDateRemoved());
     }
     @Test
     public void testNoDateRemoved2() {
         GnssReceiverType gnssReceiverType = new GnssReceiverType();
         String value = "a value";
-        listener.checkPopulateElement(gnssReceiverType, "dateRemoved", getTimePositionType(value));
+        listener.checkElementPopulated(gnssReceiverType, "dateRemoved", getTimePositionType(value));
         Assert.assertNotNull(gnssReceiverType.getDateRemoved());
         Assert.assertEquals(value,  gnssReceiverType.getDateRemoved().getValue().get(0));
     }
@@ -31,7 +31,7 @@ public class GeodesyMLDozerEventListener_GnssReceiverTypeTest {
         GnssReceiverType gnssReceiverType = new GnssReceiverType();
         String value = "another value";
         gnssReceiverType.setDateRemoved(getTimePositionType(value));
-        listener.checkPopulateElement(gnssReceiverType, "dateRemoved", getTimePositionType(null));
+        listener.checkElementPopulated(gnssReceiverType, "dateRemoved", getTimePositionType(null));
         Assert.assertNotNull(gnssReceiverType.getDateRemoved());
         Assert.assertEquals(value,  gnssReceiverType.getDateRemoved().getValue().get(0));
     }

@@ -3,7 +3,7 @@ package au.gov.ga.geodesy.support.mapper.dozer;
 import org.dozer.DozerEventListener;
 import org.dozer.event.DozerEvent;
 
-public class GeodesyMLDozerEventListener implements DozerEventListener {
+public class GeodesyMLDozerEventListenerFactory implements DozerEventListener {
 
     @Override
     public void mappingStarted(DozerEvent event) {

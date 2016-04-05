@@ -23,7 +23,7 @@ public class DozerDelegate {
             dozerMappings.add("dozer/ConverterMappings.xml");
             dozerMappings.add("dozer/FieldMappings.xml");
             mapper.setMappingFiles(dozerMappings);
-            mapper.setEventListeners(Stream.of(new GeodesyMLDozerEventListener()).collect(Collectors.toList()));
+            mapper.setEventListeners(Stream.of(new GeodesyMLDozerEventListenerFactory()).collect(Collectors.toList()));
         }
         return mapper;
     }

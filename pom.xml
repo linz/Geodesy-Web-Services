@@ -105,6 +105,8 @@
             <version>${hibernate.version}</version>
         </dependency>
         <dependency>
+            <!-- TODO: pull in recent version of postgres JDBC drivers -->
+            <!-- hibernate-spatial is pulling in version 8.4-701 -->
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-spatial</artifactId>
             <version>4.3</version>

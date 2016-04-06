@@ -80,22 +80,30 @@ public class PersistenceJpaConfig {
     public DataSource dataSource() {
         switch (databaseType) {
             case IN_MEMORY: return inMemoryDataSource();
-            case EXTERNAL:  return externalDataSource();
+            case EXTERNAL:  return externalPostgresDataSource();
             default: return null;
         }
     }
 
-    private DataSource externalDataSource() {
+    private DataSource externalOracleDataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setUrl("jdbc:oracle:thin:@dm02-scan.prod.lan:7381/ORADEV");
-        dataSource.setUsername("u62208");
-        dataSource.setPassword("");
+        dataSource.setUsername("username");
+        dataSource.setPassword("password");
+        return dataSource;
+    }
+
+    private DataSource externalPostgresDataSource() {
+        DriverManagerDataSource dataSource = new DriverManagerDataSource();
+        dataSource.setUrl("jdbc:postgresql://localhost/geodesydb");
+        dataSource.setUsername("geodesy");
+        dataSource.setPassword("geodesypw");
         return dataSource;
     }
 
     private DataSource inMemoryDataSource() {
         System.setProperty("h2.baseDir", "target/");
-        final String h2Url = "jdbc:h2:./h2-test-db;INIT=CREATE SCHEMA IF NOT EXISTS U62208;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE";
+        final String h2Url = "jdbc:h2:./h2-test-db;INIT=CREATE SCHEMA IF NOT EXISTS geodesy;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE";
         DataSource dataSource = new SingleConnectionDataSource() {
             {
                 setDriverClassName("org.h2.Driver");
@@ -124,7 +132,7 @@ public class PersistenceJpaConfig {
             SpringLiquibase liquibase = new SpringLiquibase();
             liquibase.setDataSource(dataSource());
             liquibase.setChangeLog("classpath:db/geodesy-database-changelog.xml");
-            liquibase.setDefaultSchema("u62208");
+            liquibase.setDefaultSchema("geodesy");
             return liquibase;
         } else {
             return null;
@@ -140,7 +148,7 @@ public class PersistenceJpaConfig {
 
     private Properties jpaProperties() {
         Properties properties = new Properties();
-        properties.setProperty("hibernate.default_schema", "u62208");
+        properties.setProperty("hibernate.default_schema", "geodesy");
 
         switch (databaseType) {
             case IN_MEMORY:
@@ -151,8 +159,12 @@ public class PersistenceJpaConfig {
                 /* properties.setProperty("hibernate.use_sql_comments", "true"); */
                 break;
             case EXTERNAL:
-                properties.setProperty("hibernate.dialect", "org.hibernate.spatial.dialect.oracle.OracleSpatial10gDialect");
+                properties.setProperty("hibernate.dialect", "org.hibernate.spatial.dialect.postgis.PostgisDialect");
                 properties.setProperty("hibernate.hbm2ddl.auto", "create");
+//                properties.setProperty("hibernate.show_sql", "true");
+//                properties.setProperty("hibernate.format_sql", "true");
+                /* properties.setProperty("hibernate.use_sql_comments", "true"); */
+
                 break;
             default:
         }

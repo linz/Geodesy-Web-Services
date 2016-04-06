@@ -39,6 +39,9 @@ public abstract class GeodesyMLElementPopulator<T> implements DozerEventListener
      */
     @Override
     public void mappingFinished(DozerEvent event) {
+        @SuppressWarnings("unchecked")
+        T parentObject = (T) event.getDestinationObject();
+        checkAllRequiredElementsPopulated(parentObject);
     }
 
     /**
@@ -46,9 +49,6 @@ public abstract class GeodesyMLElementPopulator<T> implements DozerEventListener
      */
     @Override
     public void postWritingDestinationValue(DozerEvent event) {
-        @SuppressWarnings("unchecked")
-        T parentObject = (T) event.getDestinationObject();
-        checkAllRequiredElementsPopulated(parentObject);
     }
 
     /**
@@ -81,6 +81,9 @@ public abstract class GeodesyMLElementPopulator<T> implements DozerEventListener
             if (x == null) {
                 Method methodSet = parentObject.getClass().getMethod("set" + capitalise(elementName),
                         defaultObj.getClass());
+                logger.warn(
+                        String.format("Possible data error - needed to add required element \"%s\" in this parent: %s",
+                                elementName, parentObject));
                 methodSet.invoke(parentObject, defaultObj);
             }
         } catch (NoSuchMethodException | SecurityException | IllegalAccessException | IllegalArgumentException

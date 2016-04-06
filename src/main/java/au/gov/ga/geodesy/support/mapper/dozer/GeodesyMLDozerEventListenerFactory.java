@@ -3,27 +3,43 @@ package au.gov.ga.geodesy.support.mapper.dozer;
 import org.dozer.DozerEventListener;
 import org.dozer.event.DozerEvent;
 
+/**
+ * Factory to create DozerEventListener for specific elements. Only one instance of this class will be created.
+ * 
+ * @author brookes
+ *
+ */
 public class GeodesyMLDozerEventListenerFactory implements DozerEventListener {
+    private GeodesyMLDozerEventListener_SiteLocationType siteLocationTypeEventListener = null;
+    private GeodesyMLDozerEventListener_GnssReceiverType gnssReceiverTypeEventListener = null;
+    private GeodesyMLDozerEventListener_GnssAntennaType gnssAntennaTypeEventListener = null;
+    private EventListenerFactory eventListenerFactory = new EventListenerFactory();
 
     @Override
     public void mappingStarted(DozerEvent event) {
+        DozerEventListener handler = eventListenerFactory.getHandlerIfOfInterest(event);
+        handler.postWritingDestinationValue(event);
     }
 
     @Override
     public void preWritingDestinationValue(DozerEvent event) {
+        DozerEventListener handler = eventListenerFactory.getHandlerIfOfInterest(event);
+        handler.postWritingDestinationValue(event);
     }
 
     @Override
     public void postWritingDestinationValue(DozerEvent event) {
-        DozerEventListener handler = EventListenerFactory.getHandlerIfInteresting(event);
+        DozerEventListener handler = eventListenerFactory.getHandlerIfOfInterest(event);
         handler.postWritingDestinationValue(event);
     }
 
     @Override
     public void mappingFinished(DozerEvent event) {
+        DozerEventListener handler = eventListenerFactory.getHandlerIfOfInterest(event);
+        handler.mappingFinished(event);
     }
 
-    static class EventListenerFactory {
+    class EventListenerFactory {
 
         /**
          * We may want to return a DozerEventListener to handle a specific element, such as for SiteLocationType to turn the countryCode
@@ -32,15 +48,26 @@ public class GeodesyMLDozerEventListenerFactory implements DozerEventListener {
          * @param event
          * @return DozerEventListener that can handle if interesting or null if not.
          */
-        public static DozerEventListener getHandlerIfInteresting(DozerEvent event) {
+        public DozerEventListener getHandlerIfOfInterest(DozerEvent event) {
             switch (event.getDestinationObject().getClass().getSimpleName()) {
             case "SiteLocationType":
-                return new GeodesyMLDozerEventListener_SiteLocationType();
+                if (siteLocationTypeEventListener == null) {
+                    siteLocationTypeEventListener = new GeodesyMLDozerEventListener_SiteLocationType();
+                }
+                return siteLocationTypeEventListener;
             case "GnssReceiverType":
-                return new GeodesyMLDozerEventListener_GnssReceiverType();
+                if (gnssReceiverTypeEventListener == null) {
+                    gnssReceiverTypeEventListener = new GeodesyMLDozerEventListener_GnssReceiverType();
+                }
+                return gnssReceiverTypeEventListener;
+            case "GnssAntennaType":
+                if (gnssAntennaTypeEventListener == null) {
+                    gnssAntennaTypeEventListener = new GeodesyMLDozerEventListener_GnssAntennaType();
+                }
+                return gnssAntennaTypeEventListener;
+
             }
             return new GeodesyMLDozerEventListener_noop();
         }
-
     }
 }

@@ -470,6 +470,18 @@
                             <systemPropertyVariables>
                                 <unitTestDatabaseType>EXTERNAL</unitTestDatabaseType>
                             </systemPropertyVariables>
+                            <forkCount>1</forkCount>
+                            <reuseForks>false</reuseForks>
+                            <properties>
+                                <property>
+                                    <name>listener</name>
+                                    <value>
+                                        au.gov.ga.geodesy.support.testng.TestSuiteListener,
+                                        au.gov.ga.geodesy.support.testng.TestListener,
+                                        au.gov.ga.geodesy.support.testng.TestDependencyController
+                                    </value>
+                                </property>
+                            </properties>
                         </configuration>
                     </plugin>
                     <!--<plugin> -->

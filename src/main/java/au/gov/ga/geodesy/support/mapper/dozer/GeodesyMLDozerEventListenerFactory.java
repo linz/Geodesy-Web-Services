@@ -17,8 +17,7 @@ public class GeodesyMLDozerEventListenerFactory implements DozerEventListener {
 
     @Override
     public void mappingStarted(DozerEvent event) {
-        DozerEventListener handler = eventListenerFactory.getHandlerIfOfInterest(event);
-        handler.postWritingDestinationValue(event);
+        // I don't call getHandlerIfOfInterest() here as sometimes nulls are sent and I'm not using this ATM.
     }
 
     @Override

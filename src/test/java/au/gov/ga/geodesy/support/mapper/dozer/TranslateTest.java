@@ -214,6 +214,9 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
         // Make sure they all have a dateInstalled and dateRemoved after adding GeodesyMLDozerEventListener_GnssReceiverType
         for (GnssReceiverPropertyType receiver : receivers) {
             Assert.assertNotNull(receiver.getGnssReceiver().getDateInstalled());
+            Assert.assertNotNull(receiver.getDateInserted());
+            // The translate inserts a DateInstalled and sets same as DateInserted
+            Assert.assertEquals(receiver.getDateInserted().getValue().get(0),receiver.getGnssReceiver().getDateInstalled().getValue().get(0));
             Assert.assertNotNull(receiver.getGnssReceiver().getDateRemoved());
         }
 

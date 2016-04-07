@@ -35,7 +35,7 @@ import au.gov.ga.geodesy.igssitelog.domain.model.SurveyedLocalTie;
 import au.gov.ga.geodesy.igssitelog.domain.model.TemperatureSensorLogItem;
 import au.gov.ga.geodesy.igssitelog.domain.model.WaterVaporSensorLogItem;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLSiteLogTranslator;
-import au.gov.ga.geodesy.support.utils.IdStamper;
+import au.gov.ga.geodesy.support.utils.GeodesyMLDecorators;
 import au.gov.xml.icsm.geodesyml.v_0_3.AgencyPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_3.BasePossibleProblemSourcesType;
 import au.gov.xml.icsm.geodesyml.v_0_3.CollocationInformationPropertyType;
@@ -89,26 +89,28 @@ public class GeodesyMLSiteLogDozerTranslator implements GeodesyMLSiteLogTranslat
             throws InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
 
         ObjectFactory geodesyObjectFactory = new ObjectFactory();
-        GeodesyMLType geodesyMl = IdStamper.addId(new GeodesyMLType());
+        GeodesyMLType geodesyMl = GeodesyMLDecorators.IdDecorator.addId(new GeodesyMLType());
 
         JAXBElement<GeodesyMLType> geodesyMLTypeJaxB = geodesyObjectFactory.createGeodesyML(geodesyMl);
 
-        SiteLogType siteLogType = IdStamper.addId(new SiteLogType());
+        SiteLogType siteLogType = GeodesyMLDecorators.IdDecorator.addId(new SiteLogType());
 
         geodesyMl.getNodeOrAbstractPositionOrPositionPairCovariance()
                 .add(geodesyObjectFactory.createSiteLog(siteLogType));
 
         FormInformation formInformation = sopacSiteLog.getFormInformation();
-        FormInformationType formInformationType = DozerDelegate.mapWithGuard(formInformation, FormInformationType.class);
+        FormInformationType formInformationType = DozerDelegate.mapWithGuardWithDecorators(formInformation,
+                FormInformationType.class);
         siteLogType.setFormInformation(formInformationType);
-        
+
         SiteIdentification siteIdentification = sopacSiteLog.getSiteIdentification();
-        SiteIdentificationType siteIdentificationType = DozerDelegate.mapWithGuard(siteIdentification,
+        SiteIdentificationType siteIdentificationType = DozerDelegate.mapWithGuardWithDecorators(siteIdentification,
                 SiteIdentificationType.class);
         siteLogType.setSiteIdentification(siteIdentificationType);
 
         SiteLocation siteLocation = sopacSiteLog.getSiteLocation();
-        SiteLocationType siteLocationType = DozerDelegate.mapWithGuard(siteLocation, SiteLocationType.class);
+        SiteLocationType siteLocationType = DozerDelegate.mapWithGuardWithDecorators(siteLocation,
+                SiteLocationType.class);
         siteLogType.setSiteLocation(siteLocationType);
 
         List<GnssReceiverPropertyType> gnssReceivers = buildSiteLogItem(GnssReceiverPropertyType.class,
@@ -128,9 +130,8 @@ public class GeodesyMLSiteLogDozerTranslator implements GeodesyMLSiteLogTranslat
         siteLogType.setFrequencyStandards(frequencyStandards);
 
         List<CollocationInformationPropertyType> collocationInformation = buildSiteLogItem(
-                CollocationInformationPropertyType.class,
-                CollocationInformationType.class, CollocationInformation.class,
-                sopacSiteLog.getCollocationInformation());
+                CollocationInformationPropertyType.class, CollocationInformationType.class,
+                CollocationInformation.class, sopacSiteLog.getCollocationInformation());
         siteLogType.setCollocationInformations(collocationInformation);
 
         List<HumiditySensorPropertyType> humiditySensors = buildSiteLogItem(HumiditySensorPropertyType.class,
@@ -151,8 +152,8 @@ public class GeodesyMLSiteLogDozerTranslator implements GeodesyMLSiteLogTranslat
 
         // TODO TEST - No usage in the 684 Sopac SiteLog samples we have
         List<OtherInstrumentationPropertyType> otherInstrumentation = buildSiteLogItem(
-                OtherInstrumentationPropertyType.class,
-                OtherInstrumentationType.class, CollocationInformation.class, sopacSiteLog.getCollocationInformation());
+                OtherInstrumentationPropertyType.class, OtherInstrumentationType.class, CollocationInformation.class,
+                sopacSiteLog.getCollocationInformation());
         siteLogType.setOtherInstrumentations(otherInstrumentation);
 
         List<RadioInterferencesPropertyType> radioInterference = buildSiteLogItem(RadioInterferencesPropertyType.class,
@@ -173,17 +174,17 @@ public class GeodesyMLSiteLogDozerTranslator implements GeodesyMLSiteLogTranslat
         siteLogType.setLocalEpisodicEventsSet(localEpisodicEvents);
 
         // IgsSiteLog Contact Agency becomes GeodesyML SiteContact
-        AgencyPropertyType siteContact = DozerDelegate.mapWithGuard(sopacSiteLog.getContactAgency(),
+        AgencyPropertyType siteContact = DozerDelegate.mapWithGuardWithDecorators(sopacSiteLog.getContactAgency(),
                 AgencyPropertyType.class);
         siteLogType.setSiteContact(Stream.of(siteContact).collect(Collectors.toList()));
 
         // IgsSiteLog Responsible Agency becomes GeodesyML Site Metadata Custodian
-        AgencyPropertyType siteMetadataCustodian = DozerDelegate.mapWithGuard(sopacSiteLog.getResponsibleAgency(),
-                AgencyPropertyType.class);
+        AgencyPropertyType siteMetadataCustodian = DozerDelegate
+                .mapWithGuardWithDecorators(sopacSiteLog.getResponsibleAgency(), AgencyPropertyType.class);
         siteLogType.setSiteMetadataCustodian(siteMetadataCustodian);
 
         MoreInformation moreInformation = sopacSiteLog.getMoreInformation();
-        MoreInformationType moreInformationType = DozerDelegate.mapWithGuard(moreInformation,
+        MoreInformationType moreInformationType = DozerDelegate.mapWithGuardWithDecorators(moreInformation,
                 MoreInformationType.class);
         siteLogType.setMoreInformation(moreInformationType);
 
@@ -201,7 +202,7 @@ public class GeodesyMLSiteLogDozerTranslator implements GeodesyMLSiteLogTranslat
      * @param childType
      * @param sopacSiteLogItems
      *            - list of input data from SopacXML
-     * @param mapper
+     * @param mapper    
      *            - to map from SopacXML to GeodesyMl
      * @return List of parentPropertyType's or null if the input source data is null or empty
      * @throws IllegalAccessException
@@ -209,7 +210,6 @@ public class GeodesyMLSiteLogDozerTranslator implements GeodesyMLSiteLogTranslat
      * @throws InvocationTargetException
      * @throws IllegalArgumentException
      */
-    @SuppressWarnings("unchecked")
     private <P, C, S> List<P> buildSiteLogItem(Class<P> parentPropertyType, Class<C> childType, Class<S> sopacItemsType,
             Collection<?> sopacSiteLogItems)
             throws InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
@@ -221,10 +221,12 @@ public class GeodesyMLSiteLogDozerTranslator implements GeodesyMLSiteLogTranslat
             return null;
         }
         for (Object sopacSiteLogItem : sopacSiteLogItems) {
+            // Must create the child object as expected to exist and the dozer mapping may not do it for us
             C newChildType = childType.newInstance();
-            newChildType = IdStamper.addId(DozerDelegate.mapWithGuard(sopacSiteLogItem, childType));
+            newChildType = DozerDelegate.mapWithGuardWithDecorators(sopacSiteLogItem, childType);
             logger.trace("  " + newChildType);
-            Object newParentPropertyType = parentPropertyType.newInstance();
+            P newParentPropertyType = parentPropertyType.newInstance();
+            newParentPropertyType = (P) GeodesyMLDecorators.addDecorators(newParentPropertyType, newChildType);
             setBasedOnChildType(newParentPropertyType, newChildType);
             parentPropertyTypesList.add((P) newParentPropertyType);
         }

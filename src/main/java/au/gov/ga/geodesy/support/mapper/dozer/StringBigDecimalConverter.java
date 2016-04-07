@@ -26,7 +26,7 @@ public class StringBigDecimalConverter implements CustomConverter {
         }
         if (source instanceof String) {
             // use the String <--> Double converter
-            Double doubleVal = DozerDelegate.mapWithGuard((String) source, Double.class);
+            Double doubleVal = DozerDelegate.mapWithGuardWithDecorators((String) source, Double.class);
 
             BigDecimal dest = BigDecimal.valueOf(doubleVal);
             return dest;

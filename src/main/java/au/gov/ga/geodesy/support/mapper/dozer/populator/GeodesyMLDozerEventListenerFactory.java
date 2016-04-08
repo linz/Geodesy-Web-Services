@@ -14,6 +14,7 @@ public class GeodesyMLDozerEventListenerFactory implements DozerEventListener {
     private GeodesyMLDozerEventListener_GnssReceiverType gnssReceiverTypeEventListener = null;
     private GeodesyMLDozerEventListener_GnssAntennaType gnssAntennaTypeEventListener = null;
     private GeodesyMLDozerEventListener_SurveyedLocalTiesType surveyedLocalTiesTypeEventListener = null;
+    private HumiditySensorTypePopulator humiditySensorTypeEventListener = null;
     private EventListenerFactory eventListenerFactory = new EventListenerFactory();
 
     @Override
@@ -70,6 +71,11 @@ public class GeodesyMLDozerEventListenerFactory implements DozerEventListener {
                     surveyedLocalTiesTypeEventListener = new GeodesyMLDozerEventListener_SurveyedLocalTiesType();
                 }
                 return surveyedLocalTiesTypeEventListener;
+            case "HumiditySensorType":
+                if (humiditySensorTypeEventListener == null) {
+                    humiditySensorTypeEventListener = new HumiditySensorTypePopulator();
+                }
+                return humiditySensorTypeEventListener;
             }
             return new GeodesyMLDozerEventListener_noop();
         }

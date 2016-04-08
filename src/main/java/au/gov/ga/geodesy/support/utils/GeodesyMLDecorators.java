@@ -264,7 +264,7 @@ public class GeodesyMLDecorators {
          *         element object
          */
         static List<Method> getNonPrimitiveGetters(Object element) {
-            Method[] methods = element.getClass().getDeclaredMethods();
+            Method[] methods = element.getClass().getMethods();
             List<Method> getters = Arrays.stream(methods)
                     .filter(m -> m.getName().startsWith("get") && m.getParameterCount() == 0
                             && !unwantedTypes.containsKey(m.getReturnType().getSimpleName().toUpperCase()))

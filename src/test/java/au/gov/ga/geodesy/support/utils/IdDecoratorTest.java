@@ -11,9 +11,13 @@ import org.junit.Test;
 
 import au.gov.ga.geodesy.support.mapper.dozer.converter.TimePrimitivePropertyTypeUtils;
 import au.gov.xml.icsm.geodesyml.v_0_3.GeodesyMLType;
+import au.gov.xml.icsm.geodesyml.v_0_3.HumiditySensorPropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_3.HumiditySensorType;
+import au.gov.xml.icsm.geodesyml.v_0_3.ObjectFactory;
 import net.opengis.gml.v_3_2_1.TimePrimitivePropertyType;
 
 public class IdDecoratorTest {
+    private ObjectFactory geoFactory = new ObjectFactory();
     private Date instantDate;
 
     public IdDecoratorTest() {
@@ -25,7 +29,7 @@ public class IdDecoratorTest {
     }
 
     @Test
-    public void test01() {
+    public void test01_WithRecursiveIDApplication() {
         GeodesyMLType element = new GeodesyMLType();
         // Test recursively applying Ids with this child field element
         element.setValidTime(createTimePrimitivePropertyType());
@@ -44,6 +48,33 @@ public class IdDecoratorTest {
         MatcherAssert.assertThat("the id", out.getId(), Matchers.startsWith("GeodesyMLType_"));
 
         Assert.assertEquals(out.getId(), out2.getId());
+    }
+
+    @Test
+    public void test01_WithRecursiveIDApplication_NoIdOnParent() throws SecurityException {
+        // I wrote the code and test01_WithRecursiveIDApplication and worked - but not in all cases and investigating.
+        // This test is when run that code on parent that DOESN'T have id attribute but its child and descendents under that do.
+
+        HumiditySensorPropertyType humidityParent = geoFactory.createHumiditySensorPropertyType();
+        HumiditySensorType humidityChild = geoFactory.createHumiditySensorType();
+        humidityParent.setHumiditySensor(humidityChild);
+        humidityChild.setValidTime(createTimePrimitivePropertyType());
+        Assert.assertNotNull(humidityChild.getValidTime().getAbstractTimePrimitive().getValue());
+        // Confirm the parent hasn't an id attribute
+        boolean foundExpectedException = false;
+        try {
+            humidityParent.getClass().getMethod("getId");
+        } catch (NoSuchMethodException e) {
+            foundExpectedException = true;
+        }
+        Assert.assertTrue("Expect there NOT to be an IdGetter method", foundExpectedException);
+        Assert.assertNull(humidityChild.getId());
+        Assert.assertNull(humidityChild.getValidTime().getAbstractTimePrimitive().getValue().getId());
+
+        humidityParent = GeodesyMLDecorators.IdDecorator.addId(humidityParent);
+        
+        Assert.assertNotNull(humidityChild.getId());
+        Assert.assertNotNull(humidityChild.getValidTime().getAbstractTimePrimitive().getValue().getId());
     }
 
     @Test

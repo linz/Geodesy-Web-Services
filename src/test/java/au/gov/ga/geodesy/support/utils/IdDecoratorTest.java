@@ -1,23 +1,41 @@
 package au.gov.ga.geodesy.support.utils;
 
 import java.lang.reflect.Method;
+import java.util.Date;
+import java.util.List;
 
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Assert;
 import org.junit.Test;
 
+import au.gov.ga.geodesy.support.mapper.dozer.converter.TimePrimitivePropertyTypeUtils;
 import au.gov.xml.icsm.geodesyml.v_0_3.GeodesyMLType;
+import net.opengis.gml.v_3_2_1.TimePrimitivePropertyType;
 
 public class IdDecoratorTest {
+    private Date instantDate;
+
+    public IdDecoratorTest() {
+        instantDate = new Date();
+    }
+
+    public Date getInstantDate() {
+        return instantDate;
+    }
 
     @Test
     public void test01() {
         GeodesyMLType element = new GeodesyMLType();
+        // Test recursively applying Ids with this child field element
+        element.setValidTime(createTimePrimitivePropertyType());
+        Assert.assertNotNull(element.getValidTime().getAbstractTimePrimitive().getValue());
         Assert.assertNull(element.getId());
+        Assert.assertNull(element.getValidTime().getAbstractTimePrimitive().getValue().getId());
 
         GeodesyMLType out = GeodesyMLDecorators.IdDecorator.addId(element);
         Assert.assertNotNull(out.getId());
+        Assert.assertNotNull(element.getValidTime().getAbstractTimePrimitive().getValue().getId());
 
         MatcherAssert.assertThat("the id", out.getId(), Matchers.startsWith("GeodesyMLType_"));
 
@@ -75,5 +93,31 @@ public class IdDecoratorTest {
 
         GMLDateUtils out = GeodesyMLDecorators.addDecorators(gmlDateUtils, gmlDateUtils);
         Assert.assertEquals(gmlDateUtils, out);
+    }
+
+    @Test
+    public void testRecursiveFunction01() {
+        GMLDateUtils element = new GMLDateUtils();
+
+        List<Method> getterMethods = GeodesyMLDecorators.IdDecorator.getNonPrimitiveGetters(element);
+        Assert.assertEquals(0, getterMethods.size());
+    }
+
+    @Test
+    public void testRecursiveFunction02() {
+        GeodesyMLType element = new GeodesyMLType();
+
+        List<Method> getterMethods = GeodesyMLDecorators.IdDecorator.getNonPrimitiveGetters(element);
+        MatcherAssert.assertThat("getters #", getterMethods.size(), Matchers.greaterThan(4));
+        System.out.println("Getters (#:" + getterMethods.size() + ") - " + getterMethods);
+    }
+
+    private TimePrimitivePropertyType createTimePrimitivePropertyType() {
+        TimePrimitivePropertyType timePrimitivePropertyType = TimePrimitivePropertyTypeUtils
+                .addTimeInstantType(TimePrimitivePropertyTypeUtils.newOrUsingExistingTimePrimitivePropertyType(null));
+        TimePrimitivePropertyTypeUtils.getTheTimeInstantType(timePrimitivePropertyType)
+                .setTimePosition(TimePrimitivePropertyTypeUtils.buildTimePositionType(getInstantDate()));
+
+        return timePrimitivePropertyType;
     }
 }

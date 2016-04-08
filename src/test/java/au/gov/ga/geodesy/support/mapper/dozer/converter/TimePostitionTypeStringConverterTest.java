@@ -77,7 +77,7 @@ public class TimePostitionTypeStringConverterTest {
     /* ****************************************** */
     private TimePositionType getGoedMLTimePrimitive() {
         TimePositionType tpt = new TimePositionType();
-        tpt.getValue().add(GMLDateUtils.dateToString(getInstantDate(), GMLDateUtils.GEODESYML_DATE_FORMAT_TIME));
+        tpt.getValue().add(GMLDateUtils.dateToString(getInstantDate(), GMLDateUtils.GEODESYML_DATE_FORMAT_TIME_SEC));
 
         return tpt;
     }

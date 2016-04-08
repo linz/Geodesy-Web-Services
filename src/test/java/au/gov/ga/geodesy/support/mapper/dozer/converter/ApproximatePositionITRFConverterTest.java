@@ -15,6 +15,8 @@ import au.gov.xml.icsm.geodesyml.v_0_3.SiteLocationType.ApproximatePositionITRF;
 
 public class ApproximatePositionITRFConverterTest {
     ApproximatePositionITRFConverter conv = new ApproximatePositionITRFConverter();
+    private double decimalLat;
+    private double decimalLong;
 
     @Test
     public void test01() {
@@ -29,8 +31,8 @@ public class ApproximatePositionITRFConverterTest {
 
         Assert.assertEquals(source.getElevationGrs80(), dest.getElevationMEllips());
 
-        Assert.assertEquals(source.getGrs80().getCoordinate().y, dest.getLongitudeEast().doubleValue(), 0.0000001);
-        Assert.assertEquals(source.getGrs80().getCoordinate().x, dest.getLatitudeNorth().doubleValue(), 0.0000001);
+        Assert.assertEquals(this.decimalLong, dest.getLongitudeEast().doubleValue(), 0.000001);
+        Assert.assertEquals(this.decimalLat, dest.getLatitudeNorth().doubleValue(), 0.000001);
     }
 
     @Test
@@ -60,8 +62,10 @@ public class ApproximatePositionITRFConverterTest {
         source.setElevationGrs80("20");
 
         Coordinate c = new Coordinate();
-        c.setOrdinate(0, 10.0);
-        c.setOrdinate(1, 12.0);
+        c.setOrdinate(0, -234012.44594);
+        this.decimalLat = -23.670124; // Expected decimalTodms mapping from this
+        c.setOrdinate(1, +1335307.84759);
+        this.decimalLong = 133.885513; // Expected decimalTodms mapping from this
         PrecisionModel pm = new PrecisionModel();
         Point p = new Point(c, pm, 0);
 

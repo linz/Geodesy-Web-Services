@@ -26,7 +26,7 @@ public class TimePostitionTypeDateConverter implements CustomConverter {
                 dest = (TimePositionType) destination;
             }
             Date sourceType = (Date) source;
-            String destDate = GMLDateUtils.dateToString(sourceType, GMLDateUtils.GEODESYML_DATE_FORMAT_TIME);
+            String destDate = GMLDateUtils.dateToString(sourceType, GMLDateUtils.GEODESYML_DATE_FORMAT_TIME_SEC);
             dest.getValue().add(destDate);
             return dest;
         } else if (source instanceof TimePositionType) {

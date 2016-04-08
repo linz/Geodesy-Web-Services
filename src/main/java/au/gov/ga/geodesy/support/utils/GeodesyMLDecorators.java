@@ -141,7 +141,7 @@ public class GeodesyMLDecorators {
                     TimePositionType childTpt = (TimePositionType) getter.invoke(childElement);
                     if (childTpt != null) {
                         String stringDate = childTpt.getValue().get(0);
-                        useThisDate = GMLDateUtils.GEODESYML_DATE_FORMAT_TIME.parse(stringDate);
+                        useThisDate = GMLDateUtils.GEODESYML_DATE_FORMAT_TIME_SEC.parse(stringDate);
                     } else {
                         useThisDate = new Date();
                     }
@@ -159,7 +159,7 @@ public class GeodesyMLDecorators {
                 useThisDate = new Date();
             }
 
-            tpt.setValue(Stream.of(GMLDateUtils.GEODESYML_DATE_FORMAT_TIME.format(useThisDate))
+            tpt.setValue(Stream.of(GMLDateUtils.GEODESYML_DATE_FORMAT_TIME_SEC.format(useThisDate))
                     .collect(Collectors.toList()));
             return tpt;
         }

@@ -3,8 +3,10 @@ package au.gov.ga.geodesy.support.utils;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.text.ParseException;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -171,6 +173,7 @@ public class GeodesyMLDecorators {
 
         /**
          * Add unique id per element class type to the element and return.
+         * Also apply recursively to all child fields that have a non-primitive type.
          * 
          * @param element
          *            - that should have an Id attribute (but will check if so)
@@ -185,17 +188,29 @@ public class GeodesyMLDecorators {
          */
         public static <P> P addId(P element) {
             try {
-                return addIdRunner(element);
+                return addIdRunnerOuter(element);
             } catch (SecurityException | IllegalAccessException | IllegalArgumentException
                     | InvocationTargetException e) {
                 throw new GeodesyRuntimeException("Error generating id for element: " + element.getClass(), e);
             }
         }
 
+        // Implement depth-first recursion
+        static <P> P addIdRunnerOuter(P element)
+                throws SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+            logger.debug("addIdRunnerOuter - starting el:" + element.getClass().getSimpleName());
+            for (Method m : getNonPrimitiveGetters(element)) {
+                Object o = m.invoke(element);
+                if (o != null) {
+                    addIdRunnerOuter(o);
+                }
+            }
+            return addIdRunner(element);
+        }
+
         static <P> P addIdRunner(P element)
                 throws SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
             Method setString = null, setInteger = null;
-
             try {
                 setString = element.getClass().getMethod("setId", String.class);
             } catch (NoSuchMethodException e) {
@@ -232,5 +247,31 @@ public class GeodesyMLDecorators {
             return getIntegerId(elementClass).toString();
         }
 
+        private static Map<String, Void> unwantedTypes = new HashMap<>();
+        static {
+            unwantedTypes.put("DOUBLE", null);
+            unwantedTypes.put("BOOLEAN", null);
+            unwantedTypes.put("STRING", null);
+            unwantedTypes.put("INTEGER", null);
+            unwantedTypes.put("CLASS", null);
+            unwantedTypes.put("LIST", null);
+        }
+
+        /**
+         * @param element
+         * @return a List of getter method for the given element object that returns any getters that return non-primitive types. That is,
+         *         not ones that return String, Double, double, boolean, Boolean, .... Used to recursively descend into the children of an
+         *         element object
+         */
+        static List<Method> getNonPrimitiveGetters(Object element) {
+            Method[] methods = element.getClass().getDeclaredMethods();
+            List<Method> getters = Arrays.stream(methods)
+                    .filter(m -> m.getName().startsWith("get") && m.getParameterCount() == 0
+                            && !unwantedTypes.containsKey(m.getReturnType().getSimpleName().toUpperCase()))
+                    .collect(Collectors.toList());
+            logger.debug(
+                    "  getNonPrimitiveGetters for: " + element.getClass().getSimpleName() + ": " + getters);
+            return getters;
+        }
     }
 }

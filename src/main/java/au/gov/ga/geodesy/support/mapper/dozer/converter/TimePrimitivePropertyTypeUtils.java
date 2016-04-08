@@ -29,7 +29,7 @@ public class TimePrimitivePropertyTypeUtils {
      * @param optionalExistingObject
      * @return new TimePrimitivePropertyType or resurrect the optionalExistingObject TimePrimitivePropertyType.
      */
-    static TimePrimitivePropertyType newOrUsingExistingTimePrimitivePropertyType(Object optionalExistingObject) {
+    public static TimePrimitivePropertyType newOrUsingExistingTimePrimitivePropertyType(Object optionalExistingObject) {
         TimePrimitivePropertyType timePrimitivePropertyType = null;
 
         if (optionalExistingObject != null) {
@@ -68,7 +68,7 @@ public class TimePrimitivePropertyTypeUtils {
      * @param timePrimitivePropertyType
      * @return given timePrimitivePropertyType with a TimePeriodType payload
      */
-    static TimePrimitivePropertyType addTimeInstantType(TimePrimitivePropertyType timePrimitivePropertyType) {
+    public static TimePrimitivePropertyType addTimeInstantType(TimePrimitivePropertyType timePrimitivePropertyType) {
         TimeInstantType timePeriodType = getGmlObjectFactory().createTimeInstantType();
         JAXBElement<TimeInstantType> jaxbTimeInstantType = buildJaxBElementTimePropertyType(timePeriodType);
 
@@ -91,7 +91,7 @@ public class TimePrimitivePropertyTypeUtils {
      * @param date
      * @return TimePositionType with the given date in text with GMLDateUtils.GEODESYML_DATE_FORMAT_TIME format.
      */
-    static TimePositionType buildTimePositionType(Date date) {
+    public static TimePositionType buildTimePositionType(Date date) {
         List<String> dateStrings = new ArrayList<>();
         if (date == null) {
             // Date wasn't included in data - leave List empty

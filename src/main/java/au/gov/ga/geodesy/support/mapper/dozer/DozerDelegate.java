@@ -7,6 +7,7 @@ import java.util.stream.Stream;
 
 import org.dozer.DozerBeanMapper;
 
+import au.gov.ga.geodesy.support.mapper.dozer.populator.GeodesyMLDozerEventListenerFactory;
 import au.gov.ga.geodesy.support.utils.GeodesyMLDecorators;
 
 /**

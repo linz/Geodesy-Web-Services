@@ -3,6 +3,8 @@ package au.gov.ga.geodesy.support.mapper.dozer;
 import org.junit.Assert;
 import org.junit.Test;
 
+import au.gov.ga.geodesy.support.mapper.dozer.populator.GeodesyMLDozerEventListener_SiteLocationType;
+
 public class GeodesyMLDozerEventListener_SiteLocationTypeTest {
 
     @Test

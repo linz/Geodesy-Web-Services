@@ -4,19 +4,19 @@
           http://dozer.sourceforge.net/schema/beanmapping.xsd">
     <configuration>
         <custom-converters> <!-- these are always bi-directional -->
-            <converter type="au.gov.ga.geodesy.support.mapper.dozer.StringListConverter">
+            <converter type="au.gov.ga.geodesy.support.mapper.dozer.converter.StringListConverter">
                 <class-a>java.util.List</class-a>
                 <class-b>java.lang.String</class-b>
             </converter>
-            <converter type="au.gov.ga.geodesy.support.mapper.dozer.TimePostitionTypeDateConverter">
+            <converter type="au.gov.ga.geodesy.support.mapper.dozer.converter.TimePostitionTypeDateConverter">
                 <class-a>java.util.Date</class-a>
                 <class-b>net.opengis.gml.v_3_2_1.TimePositionType</class-b>
             </converter>
-            <converter type="au.gov.ga.geodesy.support.mapper.dozer.TimePostitionTypeStringConverter">
+            <converter type="au.gov.ga.geodesy.support.mapper.dozer.converter.TimePostitionTypeStringConverter">
                 <class-a>java.lang.String</class-a>
                 <class-b>net.opengis.gml.v_3_2_1.TimePositionType</class-b>
             </converter>
-            <converter type="au.gov.ga.geodesy.support.mapper.dozer.CodeListValueTypeConverter">
+            <converter type="au.gov.ga.geodesy.support.mapper.dozer.converter.CodeListValueTypeConverter">
                 <!-- This needs to also handle these extenders of CodeListValueType (either directly or indirectly via further 
                     inheritance) -->
                 <!-- and I do this inside the Converter -->
@@ -25,7 +25,7 @@
                 <class-a>net.opengis.iso19139.gco.v_20070417.CodeListValueType</class-a>
                 <class-b>java.lang.String</class-b>
             </converter>
-            <converter type="au.gov.ga.geodesy.support.mapper.dozer.CodeTypeConverter">
+            <converter type="au.gov.ga.geodesy.support.mapper.dozer.converter.CodeTypeConverter">
                 <!-- This needs to also handle these extenders of CodeType (either directly or indirectly via further inheritance) -->
                 <!-- and I do this inside the Converter -->
                 <!-- net.opengis.gml.v_3_2_1.CodeWithAuthorityType -->
@@ -33,31 +33,31 @@
                 <class-a>net.opengis.gml.v_3_2_1.CodeType</class-a>
                 <class-b>java.lang.String</class-b>
             </converter>
-            <converter type="au.gov.ga.geodesy.support.mapper.dozer.CharacterStringPropertyTypeConverter">
+            <converter type="au.gov.ga.geodesy.support.mapper.dozer.converter.CharacterStringPropertyTypeConverter">
                 <class-a>net.opengis.iso19139.gco.v_20070417.CharacterStringPropertyType</class-a>
                 <class-b>java.lang.String</class-b>
             </converter>
-            <converter type="au.gov.ga.geodesy.support.mapper.dozer.TimePrimitivePropertyTypeEffectiveDatesConverter">
+            <converter type="au.gov.ga.geodesy.support.mapper.dozer.converter.TimePrimitivePropertyTypeEffectiveDatesConverter">
                 <class-a>au.gov.ga.geodesy.igssitelog.domain.model.EffectiveDates</class-a>
                 <class-b>net.opengis.gml.v_3_2_1.TimePrimitivePropertyType</class-b>
             </converter>
-            <converter type="au.gov.ga.geodesy.support.mapper.dozer.TimePrimitivePropertyTypeStringConverter">
+            <converter type="au.gov.ga.geodesy.support.mapper.dozer.converter.TimePrimitivePropertyTypeStringConverter">
                 <class-a>java.lang.String</class-a>
                 <class-b>net.opengis.gml.v_3_2_1.TimePrimitivePropertyType</class-b>
             </converter>
-            <converter type="au.gov.ga.geodesy.support.mapper.dozer.AgencyAgencyPropertyTypeConverter">
+            <converter type="au.gov.ga.geodesy.support.mapper.dozer.converter.AgencyAgencyPropertyTypeConverter">
                 <class-a>au.gov.ga.geodesy.igssitelog.domain.model.Agency</class-a>
                 <class-b>au.gov.xml.icsm.geodesyml.v_0_3.AgencyPropertyType</class-b>
             </converter>
-            <converter type="au.gov.ga.geodesy.support.mapper.dozer.StringDoubleConverter">
+            <converter type="au.gov.ga.geodesy.support.mapper.dozer.converter.StringDoubleConverter">
                 <class-a>java.lang.String</class-a>
                 <class-b>java.lang.Double</class-b>
             </converter>
-            <converter type="au.gov.ga.geodesy.support.mapper.dozer.StringBigDecimalConverter">
+            <converter type="au.gov.ga.geodesy.support.mapper.dozer.converter.StringBigDecimalConverter">
                 <class-a>java.lang.String</class-a>
                 <class-b>java.math.BigDecimal</class-b>
             </converter>
-            <converter type="au.gov.ga.geodesy.support.mapper.dozer.ApproximatePositionITRFConverter">
+            <converter type="au.gov.ga.geodesy.support.mapper.dozer.converter.ApproximatePositionITRFConverter">
                 <class-a>au.gov.ga.geodesy.igssitelog.domain.model.ApproximatePosition</class-a>
                 <class-b>au.gov.xml.icsm.geodesyml.v_0_3.SiteLocationType.ApproximatePositionITRF</class-b>
             </converter>

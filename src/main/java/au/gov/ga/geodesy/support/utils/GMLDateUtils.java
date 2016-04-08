@@ -27,9 +27,13 @@ public class GMLDateUtils {
      * 
      */
     /**
+     * "yyyy-MM-dd'T'HH:mm:ssX"
+     */
+    public static final DateFormat GEODESYML_DATE_FORMAT_TIME_SEC = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssX");
+    /**
      * "yyyy-MM-dd'T'HH:mmX"
      */
-    public static final DateFormat GEODESYML_DATE_FORMAT_TIME = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssX");
+    public static final DateFormat GEODESYML_DATE_FORMAT_TIME = new SimpleDateFormat("yyyy-MM-dd'T'HH:mmX");
     /**
      * "dd MMM yyyy HH:mm z"
      */
@@ -61,6 +65,7 @@ public class GMLDateUtils {
      * - first=parse, second=output or correction
      */
     private static final DateFormat[][] dateFormats = new DateFormat[][] {
+            new DateFormat[] {GEODESYML_DATE_FORMAT_TIME_SEC, GEODESYML_DATE_FORMAT_TIME_OUTPUT},
             new DateFormat[] {GEODESYML_DATE_FORMAT_TIME, GEODESYML_DATE_FORMAT_TIME_OUTPUT},
             new DateFormat[] {GEODESYML_DATE_FORMAT, GEODESYML_DATE_FORMAT_OUTPUT},
             new DateFormat[] {GEODESYML_DATE_FORMAT_BAD, GEODESYML_DATE_FORMAT_OUTPUT},
@@ -68,6 +73,8 @@ public class GMLDateUtils {
             new DateFormat[] {GEODESYML_DATE_FORMAT_MONTH_BWARDS, GEODESYML_DATE_FORMAT_MONTH_BWARDS}};
 
     static {
+        GEODESYML_DATE_FORMAT_TIME_SEC.setTimeZone(TimeZone.getTimeZone("GMT"));
+        GEODESYML_DATE_FORMAT_TIME_SEC.setLenient(false);
         GEODESYML_DATE_FORMAT_TIME.setTimeZone(TimeZone.getTimeZone("GMT"));
         GEODESYML_DATE_FORMAT_TIME.setLenient(false);
         GEODESYML_DATE_FORMAT.setTimeZone(TimeZone.getTimeZone("GMT"));
@@ -90,7 +97,7 @@ public class GMLDateUtils {
      * @param date
      */
     public static String dateToString(Date date) {
-        return dateToString(date, GEODESYML_DATE_FORMAT_TIME);
+        return dateToString(date, GEODESYML_DATE_FORMAT_TIME_SEC);
     }
 
     /**
@@ -114,7 +121,7 @@ public class GMLDateUtils {
      * @throws ParseException
      */
     public static Date stringToDate(String dateString) throws ParseException {
-        return stringToDate(dateString, GEODESYML_DATE_FORMAT_TIME);
+        return stringToDate(dateString, GEODESYML_DATE_FORMAT_TIME_SEC);
     }
 
     /**

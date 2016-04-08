@@ -53,7 +53,7 @@ public class ChangeTrackingDecoratorTest {
         Assert.assertNotNull(out2.getDateInserted());
         Assert.assertEquals(out.getDateInserted().getValue().get(0), out2.getDateInserted().getValue().get(0));
 
-        Date theDate = GMLDateUtils.GEODESYML_DATE_FORMAT_TIME.parse(out2.getDateInserted().getValue().get(0));
+        Date theDate = GMLDateUtils.GEODESYML_DATE_FORMAT_TIME_SEC.parse(out2.getDateInserted().getValue().get(0));
         Calendar theCal = GregorianCalendar.getInstance();
         theCal.setTime(theDate);
         Assert.assertEquals(USE_THIS_HOUR, theCal.get(Calendar.HOUR_OF_DAY));
@@ -133,7 +133,7 @@ public class ChangeTrackingDecoratorTest {
         cal.set(Calendar.HOUR_OF_DAY, USE_THIS_HOUR);
         cal.set(Calendar.MINUTE, USE_THIS_MINUTE);
         tpt.setValue(
-                Stream.of(GMLDateUtils.GEODESYML_DATE_FORMAT_TIME.format(cal.getTime())).collect(Collectors.toList()));
+                Stream.of(GMLDateUtils.GEODESYML_DATE_FORMAT_TIME_SEC.format(cal.getTime())).collect(Collectors.toList()));
         return tpt;
     }
 }

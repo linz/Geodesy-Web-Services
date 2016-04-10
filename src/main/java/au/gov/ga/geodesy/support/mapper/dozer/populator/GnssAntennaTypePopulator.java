@@ -11,7 +11,7 @@ import au.gov.xml.icsm.geodesyml.v_0_3.GnssAntennaType;
  * @author brookes
  *
  */
-public class GeodesyMLDozerEventListener_GnssAntennaType extends GeodesyMLElementPopulator<GnssAntennaType> {
+public class GnssAntennaTypePopulator extends GeodesyMLElementPopulator<GnssAntennaType> {
     /**
      * Consider all required elements for this type and add any missing ones with default values.
      * 

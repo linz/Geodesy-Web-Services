@@ -6,12 +6,12 @@ import java.util.List;
 import org.junit.Test;
 import org.testng.Assert;
 
-import au.gov.ga.geodesy.support.mapper.dozer.populator.GeodesyMLDozerEventListener_GnssReceiverType;
+import au.gov.ga.geodesy.support.mapper.dozer.populator.GnssReceiverTypePopulator;
 import au.gov.xml.icsm.geodesyml.v_0_3.GnssReceiverType;
 import net.opengis.gml.v_3_2_1.TimePositionType;
 
 public class GeodesyMLDozerEventListener_GnssReceiverTypeTest {
-    GeodesyMLDozerEventListener_GnssReceiverType listener = new GeodesyMLDozerEventListener_GnssReceiverType();
+    GnssReceiverTypePopulator listener = new GnssReceiverTypePopulator();
     
     @Test
     public void testNoDateRemoved() {

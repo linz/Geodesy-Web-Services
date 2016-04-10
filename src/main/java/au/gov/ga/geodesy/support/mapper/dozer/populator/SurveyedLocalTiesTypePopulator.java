@@ -9,7 +9,7 @@ import au.gov.xml.icsm.geodesyml.v_0_3.SurveyedLocalTiesType;
  * @author brookes
  *
  */
-public class GeodesyMLDozerEventListener_SurveyedLocalTiesType
+public class SurveyedLocalTiesTypePopulator
         extends GeodesyMLElementPopulator<SurveyedLocalTiesType> {
     /**
      * Consider all required elements for this type and add any missing ones with default values.

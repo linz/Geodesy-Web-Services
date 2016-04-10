@@ -17,7 +17,7 @@ import au.gov.xml.icsm.geodesyml.v_0_3.SiteLocationType;
  * @author brookes
  *
  */
-public class GeodesyMLDozerEventListener_SiteLocationType implements DozerEventListener {
+public class SiteLocationTypePopulator implements DozerEventListener {
     Logger logger = LoggerFactory.getLogger(getClass());
 
     @Override

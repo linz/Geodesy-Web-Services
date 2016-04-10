@@ -9,7 +9,7 @@ import org.dozer.event.DozerEvent;
  * @author brookes
  *
  */
-public class GeodesyMLDozerEventListener_noop implements DozerEventListener {
+public class NoopPopulator implements DozerEventListener {
 
     @Override
     public void mappingStarted(DozerEvent event) {

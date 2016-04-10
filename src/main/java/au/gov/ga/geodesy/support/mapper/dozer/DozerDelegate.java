@@ -7,8 +7,8 @@ import java.util.stream.Stream;
 
 import org.dozer.DozerBeanMapper;
 
+import au.gov.ga.geodesy.support.mapper.decorator.GeodesyMLDecorators;
 import au.gov.ga.geodesy.support.mapper.dozer.populator.GeodesyMLDozerEventListenerFactory;
-import au.gov.ga.geodesy.support.utils.GeodesyMLDecorators;
 
 /**
  * The main purpose of this is to delegate calls to the Dozer mapper to catch and manage nulls.

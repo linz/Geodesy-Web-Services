@@ -13,7 +13,7 @@ import net.opengis.gml.v_3_2_1.TimePositionType;
  * @author brookes
  *
  */
-public class GeodesyMLDozerEventListener_GnssReceiverType extends GeodesyMLElementPopulator<GnssReceiverType> {
+public class GnssReceiverTypePopulator extends GeodesyMLElementPopulator<GnssReceiverType> {
 
     /**
      * Consider all required elements for this type and add any missing ones with default values.

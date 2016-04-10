@@ -10,10 +10,10 @@ import org.dozer.event.DozerEvent;
  *
  */
 public class GeodesyMLDozerEventListenerFactory implements DozerEventListener {
-    private GeodesyMLDozerEventListener_SiteLocationType siteLocationTypeEventListener = null;
-    private GeodesyMLDozerEventListener_GnssReceiverType gnssReceiverTypeEventListener = null;
-    private GeodesyMLDozerEventListener_GnssAntennaType gnssAntennaTypeEventListener = null;
-    private GeodesyMLDozerEventListener_SurveyedLocalTiesType surveyedLocalTiesTypeEventListener = null;
+    private SiteLocationTypePopulator siteLocationTypeEventListener = null;
+    private GnssReceiverTypePopulator gnssReceiverTypeEventListener = null;
+    private GnssAntennaTypePopulator gnssAntennaTypeEventListener = null;
+    private SurveyedLocalTiesTypePopulator surveyedLocalTiesTypeEventListener = null;
     private SensorTypesPopulator sensorTypesEventListener = null;
     private EventListenerFactory eventListenerFactory = new EventListenerFactory();
 
@@ -53,22 +53,22 @@ public class GeodesyMLDozerEventListenerFactory implements DozerEventListener {
             switch (event.getDestinationObject().getClass().getSimpleName()) {
             case "SiteLocationType":
                 if (siteLocationTypeEventListener == null) {
-                    siteLocationTypeEventListener = new GeodesyMLDozerEventListener_SiteLocationType();
+                    siteLocationTypeEventListener = new SiteLocationTypePopulator();
                 }
                 return siteLocationTypeEventListener;
             case "GnssReceiverType":
                 if (gnssReceiverTypeEventListener == null) {
-                    gnssReceiverTypeEventListener = new GeodesyMLDozerEventListener_GnssReceiverType();
+                    gnssReceiverTypeEventListener = new GnssReceiverTypePopulator();
                 }
                 return gnssReceiverTypeEventListener;
             case "GnssAntennaType":
                 if (gnssAntennaTypeEventListener == null) {
-                    gnssAntennaTypeEventListener = new GeodesyMLDozerEventListener_GnssAntennaType();
+                    gnssAntennaTypeEventListener = new GnssAntennaTypePopulator();
                 }
                 return gnssAntennaTypeEventListener;
             case "SurveyedLocalTiesType":
                 if (surveyedLocalTiesTypeEventListener == null) {
-                    surveyedLocalTiesTypeEventListener = new GeodesyMLDozerEventListener_SurveyedLocalTiesType();
+                    surveyedLocalTiesTypeEventListener = new SurveyedLocalTiesTypePopulator();
                 }
                 return surveyedLocalTiesTypeEventListener;
             case "HumiditySensorType":
@@ -80,7 +80,7 @@ public class GeodesyMLDozerEventListenerFactory implements DozerEventListener {
                 }
                 return sensorTypesEventListener;
             }
-            return new GeodesyMLDozerEventListener_noop();
+            return new NoopPopulator();
         }
     }
 }

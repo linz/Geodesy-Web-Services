@@ -269,7 +269,7 @@ public class GeodesyMLDecorators {
                     .filter(m -> m.getName().startsWith("get") && m.getParameterCount() == 0
                             && !unwantedTypes.containsKey(m.getReturnType().getSimpleName().toUpperCase()))
                     .collect(Collectors.toList());
-            logger.debug(
+            logger.trace(
                     "  getNonPrimitiveGetters for: " + element.getClass().getSimpleName() + ": " + getters);
             return getters;
         }

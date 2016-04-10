@@ -1,5 +1,6 @@
 package au.gov.ga.geodesy.port.adapter.rest;
 
+import java.io.IOException;
 import java.io.InputStreamReader;
 
 import javax.servlet.http.HttpServletRequest;
@@ -25,7 +26,7 @@ public class SiteLogEndpoint {
     private IgsSiteLogService service;
 
     @RequestMapping(value = "/upload", method = RequestMethod.POST)
-    public void upload(HttpServletRequest req, HttpServletResponse rsp) throws Exception {
+    public void upload(HttpServletRequest req, HttpServletResponse rsp) throws IOException {
         service.upload(new InputStreamReader(req.getInputStream()));
     }
 }

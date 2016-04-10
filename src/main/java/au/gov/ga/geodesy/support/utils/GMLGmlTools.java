@@ -3,6 +3,7 @@ package au.gov.ga.geodesy.support.utils;
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
+import net.opengis.gml.v_3_2_1.CodeType;
 import net.opengis.gml.v_3_2_1.TimePositionType;
 
 /**
@@ -18,4 +19,10 @@ public class GMLGmlTools {
         return tpt;
     }
 
+    public static CodeType getEmptyCodeType() {
+        CodeType codeType = new CodeType();
+        codeType.setValue("");
+        codeType.setCodeSpace("");
+        return codeType;
+    }
 }

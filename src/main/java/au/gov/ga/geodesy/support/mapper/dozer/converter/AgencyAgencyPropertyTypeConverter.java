@@ -13,13 +13,16 @@ import au.gov.ga.geodesy.support.mapper.dozer.DozerDelegate;
 import au.gov.xml.icsm.geodesyml.v_0_3.AgencyPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_3.ObjectFactory;
 import net.opengis.iso19139.gco.v_20070417.CharacterStringPropertyType;
+import net.opengis.iso19139.gco.v_20070417.CodeListValueType;
 import net.opengis.iso19139.gmd.v_20070417.CIAddressPropertyType;
 import net.opengis.iso19139.gmd.v_20070417.CIAddressType;
 import net.opengis.iso19139.gmd.v_20070417.CIContactPropertyType;
 import net.opengis.iso19139.gmd.v_20070417.CIContactType;
 import net.opengis.iso19139.gmd.v_20070417.CIResponsiblePartyType;
+import net.opengis.iso19139.gmd.v_20070417.CIRoleCodePropertyType;
 import net.opengis.iso19139.gmd.v_20070417.CITelephonePropertyType;
 import net.opengis.iso19139.gmd.v_20070417.CITelephoneType;
+import net.opengis.iso19139.gmd.v_20070417.MDClassificationCodePropertyType;
 import net.opengis.iso19139.gmd.v_20070417.MDSecurityConstraintsType;
 
 /**
@@ -47,9 +50,24 @@ public class AgencyAgencyPropertyTypeConverter implements CustomConverter {
             }
 
             MDSecurityConstraintsType mdSecurityConstraints = gmdObjectFactory.createMDSecurityConstraintsType();
+            MDClassificationCodePropertyType mdClassificationCode = gmdObjectFactory
+                    .createMDClassificationCodePropertyType();
+            // TODO set proper codeLists
+            CodeListValueType classificationCodeListValueType = new CodeListValueType();
+            classificationCodeListValueType.setCodeList("codelist");
+            classificationCodeListValueType.setCodeListValue("codeListValue");
+            mdClassificationCode.setMDClassificationCode(classificationCodeListValueType);
+            mdSecurityConstraints.setClassification(mdClassificationCode);
             dest.setMDSecurityConstraints(mdSecurityConstraints);
 
             CIResponsiblePartyType ciResponsibleParty = gmdObjectFactory.createCIResponsiblePartyType();
+            CIRoleCodePropertyType ciRoleCodePropertyType = gmdObjectFactory.createCIRoleCodePropertyType();
+            // TODO set proper codeLists
+            CodeListValueType roleCodeListValueType = new CodeListValueType();
+            roleCodeListValueType.setCodeList("codelist");
+            roleCodeListValueType.setCodeListValue("codeListValue");
+            ciRoleCodePropertyType.setCIRoleCode(roleCodeListValueType);
+            ciResponsibleParty.setRole(ciRoleCodePropertyType);
             dest.setCIResponsibleParty(ciResponsibleParty);
 
             CharacterStringPropertyType characterStringPropertyTypeName = DozerDelegate

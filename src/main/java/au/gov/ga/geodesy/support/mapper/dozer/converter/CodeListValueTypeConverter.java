@@ -37,6 +37,7 @@ public class CodeListValueTypeConverter implements CustomConverter {
             }
             CodeListValueType destClassInstanceType =  (CodeListValueType) destClassInstance;
             destClassInstanceType.setValue((String) source);
+            // TODO set proper codeLists
             destClassInstanceType.setCodeList("codelist");
             destClassInstanceType.setCodeListValue("codeListValue");
             return destClassInstance;

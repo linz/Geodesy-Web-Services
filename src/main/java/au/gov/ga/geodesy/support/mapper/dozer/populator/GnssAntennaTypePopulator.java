@@ -15,7 +15,7 @@ public class GnssAntennaTypePopulator extends GeodesyMLElementPopulator<GnssAnte
     /**
      * Consider all required elements for this type and add any missing ones with default values.
      * 
-     * @param gnssReceiverType
+     * @param gnssAntennaType
      */
     void checkAllRequiredElementsPopulated(GnssAntennaType gnssAntennaType) {
         // This can be blank when receiver hasn't been removed. Some other logic in the project
@@ -23,5 +23,16 @@ public class GnssAntennaTypePopulator extends GeodesyMLElementPopulator<GnssAnte
         checkElementPopulated(gnssAntennaType, "antennaCableType", GMLMiscTools.getEmptyString());
         checkElementPopulated(gnssAntennaType, "radomeSerialNumber", GMLMiscTools.getEmptyString());
         checkElementPopulated(gnssAntennaType, "dateRemoved", GMLGmlTools.getEmptyTimePositionType());
+        
+        // gnssAntennaType has a SerialNumber (defined on it) and a manufacturerModel (defined on BaseGeodeticEquipmentType, which is the
+        // Grandparent of) and we are uncertain exactly how to handle this multiplicity of what seems to be an element with the same
+        // purpose. For the mean time we will have both elements. This code will make sure of this requirement.
+        if (gnssAntennaType.getManufacturerSerialNumber() == null) {
+            if (gnssAntennaType.getSerialNumber() == null) {
+                checkElementPopulated(gnssAntennaType, "serialNumber", GMLMiscTools.getEmptyString());
+            }
+            checkElementPopulated(gnssAntennaType, "manufacturerSerialNumber", gnssAntennaType.getSerialNumber());
+        }
+        checkElementPopulated(gnssAntennaType, "serialNumber", gnssAntennaType.getManufacturerSerialNumber());
     }
 }

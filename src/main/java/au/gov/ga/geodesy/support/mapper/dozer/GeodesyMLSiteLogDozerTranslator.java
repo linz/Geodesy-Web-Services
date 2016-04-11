@@ -187,6 +187,10 @@ public class GeodesyMLSiteLogDozerTranslator implements GeodesyMLSiteLogTranslat
         MoreInformation moreInformation = sopacSiteLog.getMoreInformation();
         MoreInformationType moreInformationType = DozerDelegate.mapWithGuardWithDecorators(moreInformation,
                 MoreInformationType.class);
+        // Construct an empty instance if Sopac's moreInformation is empty (null) and thus moreInformationType is also from translate
+        if (moreInformationType == null) {
+            moreInformationType = new MoreInformationType();
+        }
         MoreInformationAfterMapping.fixMoreInformation(moreInformation, moreInformationType);
         siteLogType.setMoreInformation(moreInformationType);
 

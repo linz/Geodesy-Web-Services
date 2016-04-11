@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.commons.lang.StringUtils;
 
 import au.gov.ga.geodesy.igssitelog.domain.model.MoreInformation;
+import au.gov.ga.geodesy.support.mapper.dozer.populator.MoreInformationTypePopulator;
 import au.gov.ga.geodesy.support.utils.GMLMiscTools;
 import au.gov.xml.icsm.geodesyml.v_0_3.MoreInformationType;
 
@@ -21,11 +22,20 @@ import au.gov.xml.icsm.geodesyml.v_0_3.MoreInformationType;
  *
  */
 public class MoreInformationAfterMapping {
-
     public static void fixMoreInformation(MoreInformation moreInformation, MoreInformationType moreInformationType) {
         List<String> dataCenters = GMLMiscTools.getEmptyList(String.class);
-        String primary = moreInformation.getPrimaryDataCenter();
-        String secondary = moreInformation.getSecondaryDataCenter();
+        String primary = null;
+        String secondary = null;
+        // Sopac's moreInformation can be empty (null).  However it is expected that the  MoreInformationType has been created
+        if (moreInformation == null) {
+            MoreInformationTypePopulator moreInformationTypePopulator = new MoreInformationTypePopulator();
+            moreInformationTypePopulator.checkAllRequiredElementsPopulated(moreInformationType);
+            primary = "";
+            secondary = "";
+        } else {
+            primary = moreInformation.getPrimaryDataCenter();
+            secondary = moreInformation.getSecondaryDataCenter();
+        }
         dataCenters.add(StringUtils.isBlank(primary) ? "" : primary);
         if (StringUtils.isBlank(secondary)) {
             // nothing
@@ -34,5 +44,4 @@ public class MoreInformationAfterMapping {
         }
         moreInformationType.setDataCenter(dataCenters);
     }
-
 }

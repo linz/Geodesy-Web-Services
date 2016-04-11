@@ -33,7 +33,7 @@ public class IdDecoratorTest {
     public void test01_WithRecursiveIDApplication() {
         GeodesyMLType element = new GeodesyMLType();
         // Test recursively applying Ids with this child field element
-        element.setValidTime(createTimePrimitivePropertyType());
+        element.setValidTime(TimePrimitivePropertyTypeUtils.buildTimePrimitivePropertyType(getInstantDate()));
         Assert.assertNotNull(element.getValidTime().getAbstractTimePrimitive().getValue());
         Assert.assertNull(element.getId());
         Assert.assertNull(element.getValidTime().getAbstractTimePrimitive().getValue().getId());
@@ -59,7 +59,7 @@ public class IdDecoratorTest {
         HumiditySensorPropertyType humidityParent = geoFactory.createHumiditySensorPropertyType();
         HumiditySensorType humidityChild = geoFactory.createHumiditySensorType();
         humidityParent.setHumiditySensor(humidityChild);
-        humidityChild.setValidTime(createTimePrimitivePropertyType());
+        humidityChild.setValidTime(TimePrimitivePropertyTypeUtils.buildTimePrimitivePropertyType(getInstantDate()));
         Assert.assertNotNull(humidityChild.getValidTime().getAbstractTimePrimitive().getValue());
         // Confirm the parent hasn't an id attribute
         boolean foundExpectedException = false;
@@ -142,14 +142,5 @@ public class IdDecoratorTest {
         List<Method> getterMethods = GeodesyMLDecorators.IdDecorator.getNonPrimitiveGetters(element);
         MatcherAssert.assertThat("getters #", getterMethods.size(), Matchers.greaterThan(4));
         System.out.println("Getters (#:" + getterMethods.size() + ") - " + getterMethods);
-    }
-
-    private TimePrimitivePropertyType createTimePrimitivePropertyType() {
-        TimePrimitivePropertyType timePrimitivePropertyType = TimePrimitivePropertyTypeUtils
-                .addTimeInstantType(TimePrimitivePropertyTypeUtils.newOrUsingExistingTimePrimitivePropertyType(null));
-        TimePrimitivePropertyTypeUtils.getTheTimeInstantType(timePrimitivePropertyType)
-                .setTimePosition(TimePrimitivePropertyTypeUtils.buildTimePositionType(getInstantDate()));
-
-        return timePrimitivePropertyType;
     }
 }

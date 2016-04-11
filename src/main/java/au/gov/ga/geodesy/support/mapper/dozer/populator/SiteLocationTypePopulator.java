@@ -4,41 +4,42 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.apache.commons.lang3.StringUtils;
-import org.dozer.DozerEventListener;
 import org.dozer.event.DozerEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import au.gov.ga.geodesy.support.utils.GMLGeoTools;
+import au.gov.ga.geodesy.support.utils.GMLMiscTools;
 import au.gov.xml.icsm.geodesyml.v_0_3.SiteLocationType;
 
 /**
  * The translate simply copied the Countries (in Sopac Sitelog XML) across to the GeoesyML CountryCode elements.
  * This cleans those up by converting to the actual CountryCodes.
+ * 
  * @author brookes
  *
  */
-public class SiteLocationTypePopulator implements DozerEventListener {
+public class SiteLocationTypePopulator extends GeodesyMLElementPopulator<SiteLocationType> {
     Logger logger = LoggerFactory.getLogger(getClass());
 
     @Override
-    public void mappingStarted(DozerEvent event) {
-    }
-
-    @Override
-    public void preWritingDestinationValue(DozerEvent event) {
+    void checkAllRequiredElementsPopulated(SiteLocationType siteLocationType) {
+        checkElementPopulated(siteLocationType, "city", GMLMiscTools.getEmptyString());
+        checkElementPopulated(siteLocationType, "state", GMLMiscTools.getEmptyString());
+        checkElementPopulated(siteLocationType, "countryCodeISO", GMLMiscTools.getEmptyString());
+        checkElementPopulated(siteLocationType, "tectonicPlate", GMLMiscTools.getEmptyString());
+        checkElementPopulated(siteLocationType, "approximatePositionITRF", GMLGeoTools.buildZeroApproximatePositionITRF());
     }
 
     @Override
     public void postWritingDestinationValue(DozerEvent event) {
+        super.postWritingDestinationValue(event);
+
         SiteLocationType siteLocationType = (SiteLocationType) event.getDestinationObject();
         String country = siteLocationType.getCountryCodeISO();
         String code = COUNTRY_CODES_ALPHA_3.lookupCode(country);
         siteLocationType.setCountryCodeISO(code);
         logger.debug(String.format("Change country: '%s' to code '%s'", country, code));
-    }
-
-    @Override
-    public void mappingFinished(DozerEvent event) {
     }
 
     /**
@@ -143,5 +144,4 @@ public class SiteLocationTypePopulator implements DozerEventListener {
             }
         }
     }
-
 }

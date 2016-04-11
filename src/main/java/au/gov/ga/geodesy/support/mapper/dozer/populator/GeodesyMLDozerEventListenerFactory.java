@@ -18,6 +18,7 @@ public class GeodesyMLDozerEventListenerFactory implements DozerEventListener {
     private SurveyedLocalTiesTypePopulator surveyedLocalTiesTypeEventListener = null;
     private SensorTypesPopulator sensorTypesEventListener = null;
     private MoreInformationTypePopulator moreInformationTypeEventListener = null;
+    private SiteIdentificationTypePopulator siteIdentificationTypeEventListener = null;
     private EventListenerFactory eventListenerFactory = new EventListenerFactory();
 
     @Override
@@ -87,6 +88,11 @@ public class GeodesyMLDozerEventListenerFactory implements DozerEventListener {
                     moreInformationTypeEventListener = new MoreInformationTypePopulator();
                 }
                 return moreInformationTypeEventListener;
+            case "SiteIdentificationType":
+                if (siteIdentificationTypeEventListener == null) {
+                    siteIdentificationTypeEventListener = new SiteIdentificationTypePopulator();
+                }
+                return siteIdentificationTypeEventListener;
             }
             return new NoopPopulator();
         }

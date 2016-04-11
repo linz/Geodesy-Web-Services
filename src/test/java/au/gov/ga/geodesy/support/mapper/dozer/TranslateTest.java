@@ -217,7 +217,8 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
             Assert.assertNotNull(receiver.getGnssReceiver().getDateInstalled());
             Assert.assertNotNull(receiver.getDateInserted());
             // The translate inserts a DateInstalled and sets same as DateInserted
-            Assert.assertEquals(receiver.getDateInserted().getValue().get(0),receiver.getGnssReceiver().getDateInstalled().getValue().get(0));
+            Assert.assertEquals(receiver.getDateInserted().getValue().get(0),
+                    receiver.getGnssReceiver().getDateInstalled().getValue().get(0));
             Assert.assertNotNull(receiver.getGnssReceiver().getDateRemoved());
         }
 
@@ -526,6 +527,14 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
     public void testDEAR() throws MarshallingException, IOException,
             au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
         GeodesyMLType geodesyML = testTranslate(SITEDATADIR, "DEAR");
+
+        Assert.assertNotNull(geodesyML);
+    }
+
+    @Test
+    public void testZIMM() throws MarshallingException, IOException,
+            au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
+        GeodesyMLType geodesyML = testTranslate(SITEDATADIR, "ZIMM");
 
         Assert.assertNotNull(geodesyML);
     }

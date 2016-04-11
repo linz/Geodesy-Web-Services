@@ -28,7 +28,7 @@ public class SiteLogEndpoint {
     @Autowired
     private IgsSiteLogService service;
 
-    @RequestMapping(value = "/upload", method = RequestMethod.POST)
+    @RequestMapping(value = "/sopac/upload", method = RequestMethod.POST)
     public void upload(HttpServletRequest req, HttpServletResponse rsp) throws IOException {
         SiteLogReader reader = new SiteLogSopacReader(new InputStreamReader(req.getInputStream()));
         try {

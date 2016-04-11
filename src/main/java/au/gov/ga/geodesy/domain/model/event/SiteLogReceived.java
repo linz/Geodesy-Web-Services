@@ -10,18 +10,19 @@ import javax.persistence.Table;
 @DiscriminatorValue("site log received")
 public class SiteLogReceived extends Event {
 
-    @Column(name = "SITE_LOG_TEXT", length=1048576, nullable = false)
-    private String siteLogText;
+    @Column(name = "FOUR_CHAR_ID", nullable = false)
+    private String fourCharacterId;
 
     @SuppressWarnings("unused") // used by hibernate
     private SiteLogReceived() {
     }
 
-    public SiteLogReceived(String siteLogText) {
-        this.siteLogText = siteLogText;
+    public SiteLogReceived(String fourCharacterId) {
+        this.fourCharacterId = fourCharacterId;
     }
 
-    public String getSiteLogText() {
-        return siteLogText;
+    public String getFourCharacterId() {
+        return fourCharacterId;
     }
 }
+

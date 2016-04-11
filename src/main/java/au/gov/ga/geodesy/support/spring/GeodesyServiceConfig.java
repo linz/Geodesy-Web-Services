@@ -10,7 +10,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import au.gov.ga.geodesy.domain.model.event.AsynchronousEventPublisher;
 import au.gov.ga.geodesy.domain.model.event.EventPublisher;
-import au.gov.ga.geodesy.port.SiteLogReaderAbstractFactory;
 
 @Configuration
 @EnableSpringConfigured
@@ -28,10 +27,5 @@ public class GeodesyServiceConfig {
     @Bean
     public EventPublisher eventPublisher() {
         return new AsynchronousEventPublisher();
-    }
-
-    @Bean
-    public SiteLogReaderAbstractFactory siteLogReaderAbstractFactory() {
-        return new SiteLogReaderAbstractFactory();
     }
 }

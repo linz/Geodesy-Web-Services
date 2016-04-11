@@ -29,5 +29,6 @@ public class SensorTypesPopulator extends GeodesyMLElementPopulator<BaseSensorEq
         checkElementPopulated(sensorType, "serialNumber", GMLMiscTools.getEmptyString());
         checkElementPopulated(sensorType, "type", GMLGmlTools.getEmptyCodeType());
         checkElementPopulated(sensorType, "heightDiffToAntenna", GMLMiscTools.getEmptyDouble());
+        checkElementPopulated(sensorType, "aspiration", GMLMiscTools.getEmptyString());
     }
 }

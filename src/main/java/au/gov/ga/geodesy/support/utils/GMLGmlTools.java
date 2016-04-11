@@ -19,6 +19,7 @@ public class GMLGmlTools {
         return tpt;
     }
 
+    // TODO fix up CodeValue - where this is used
     public static CodeType getEmptyCodeType() {
         CodeType codeType = new CodeType();
         codeType.setValue("");

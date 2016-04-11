@@ -1,5 +1,6 @@
 package au.gov.ga.geodesy.support.mapper.dozer.populator;
 
+import au.gov.ga.geodesy.support.utils.GMLMiscTools;
 import au.gov.xml.icsm.geodesyml.v_0_3.SurveyedLocalTiesType;
 
 /**
@@ -17,13 +18,9 @@ public class SurveyedLocalTiesTypePopulator
      * @param gnssReceiverType
      */
     void checkAllRequiredElementsPopulated(SurveyedLocalTiesType surveyedLocalTiesType) {
-        checkElementPopulated(surveyedLocalTiesType, "tiedMarkerUsage", getEmptyString());
-        checkElementPopulated(surveyedLocalTiesType, "tiedMarkerCDPNumber", getEmptyString());
-        checkElementPopulated(surveyedLocalTiesType, "tiedMarkerDOMESNumber", getEmptyString());
-        checkElementPopulated(surveyedLocalTiesType, "surveyMethod", getEmptyString());
-    }
-
-    private String getEmptyString() {
-        return "";
+        checkElementPopulated(surveyedLocalTiesType, "tiedMarkerUsage", GMLMiscTools.getEmptyString());
+        checkElementPopulated(surveyedLocalTiesType, "tiedMarkerCDPNumber", GMLMiscTools.getEmptyString());
+        checkElementPopulated(surveyedLocalTiesType, "tiedMarkerDOMESNumber", GMLMiscTools.getEmptyString());
+        checkElementPopulated(surveyedLocalTiesType, "surveyMethod", GMLMiscTools.getEmptyString());
     }
 }

@@ -3,6 +3,8 @@ package au.gov.ga.geodesy.support.mapper.dozer.populator;
 import org.dozer.DozerEventListener;
 import org.dozer.event.DozerEvent;
 
+import au.gov.xml.icsm.geodesyml.v_0_3.MoreInformationType;
+
 /**
  * Factory to create DozerEventListener for specific elements. Only one instance of this class will be created.
  * 
@@ -15,6 +17,7 @@ public class GeodesyMLDozerEventListenerFactory implements DozerEventListener {
     private GnssAntennaTypePopulator gnssAntennaTypeEventListener = null;
     private SurveyedLocalTiesTypePopulator surveyedLocalTiesTypeEventListener = null;
     private SensorTypesPopulator sensorTypesEventListener = null;
+    private MoreInformationTypePopulator moreInformationTypeEventListener = null;
     private EventListenerFactory eventListenerFactory = new EventListenerFactory();
 
     @Override
@@ -79,6 +82,11 @@ public class GeodesyMLDozerEventListenerFactory implements DozerEventListener {
                     sensorTypesEventListener = new SensorTypesPopulator();
                 }
                 return sensorTypesEventListener;
+            case "MoreInformationType":
+                if (moreInformationTypeEventListener == null) {
+                    moreInformationTypeEventListener = new MoreInformationTypePopulator();
+                }
+                return moreInformationTypeEventListener;
             }
             return new NoopPopulator();
         }

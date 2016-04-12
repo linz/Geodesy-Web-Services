@@ -12,6 +12,7 @@ import au.gov.xml.icsm.geodesyml.v_0_3.MoreInformationType;
  *
  */
 public class GeodesyMLDozerEventListenerFactory implements DozerEventListener {
+    private EventListenerFactory eventListenerFactory = new EventListenerFactory();
     private SiteLocationTypePopulator siteLocationTypeEventListener = null;
     private GnssReceiverTypePopulator gnssReceiverTypeEventListener = null;
     private GnssAntennaTypePopulator gnssAntennaTypeEventListener = null;
@@ -21,7 +22,7 @@ public class GeodesyMLDozerEventListenerFactory implements DozerEventListener {
     private SiteIdentificationTypePopulator siteIdentificationTypeEventListener = null;
     private CollocationInformationTypePopulator collocationInformationTypePopulator = null;
     private OtherInstrumentationTypePopulator otherInstrumentationTypePopulator = null;
-    private EventListenerFactory eventListenerFactory = new EventListenerFactory();
+    private FrequencyStandardTypePopulator frequencyStandardTypePopulator = null;
 
     @Override
     public void mappingStarted(DozerEvent event) {
@@ -105,6 +106,11 @@ public class GeodesyMLDozerEventListenerFactory implements DozerEventListener {
                     otherInstrumentationTypePopulator = new OtherInstrumentationTypePopulator();
                 }
                 return otherInstrumentationTypePopulator;
+            case "FrequencyStandardType":
+                if (frequencyStandardTypePopulator == null) {
+                    frequencyStandardTypePopulator = new FrequencyStandardTypePopulator();
+                }
+                return frequencyStandardTypePopulator;
             }
             return new NoopPopulator();
         }

@@ -7,11 +7,13 @@ import java.util.List;
 import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamSource;
 
+import org.springframework.stereotype.Component;
 import org.springframework.util.ResourceUtils;
 import org.xml.sax.SAXException;
 
 import au.gov.ga.xmlschemer.SchemaValidator;
 
+@Component
 public class GeodesyMLValidator {
 
     private SchemaValidator schemaValidator;

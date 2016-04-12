@@ -38,10 +38,10 @@ public class GMLGeoTools {
         decimal = positiveSign ? decimal : -(decimal);
         return decimal;
     }
-    
+
     public static SiteLocationType.ApproximatePositionITRF buildZeroApproximatePositionITRF() {
         SiteLocationType.ApproximatePositionITRF approximatePositionITRF = new SiteLocationType.ApproximatePositionITRF();
-        
+
         approximatePositionITRF.setElevationMEllips("0");
 
         approximatePositionITRF.setXCoordinateInMeters("0");
@@ -50,7 +50,7 @@ public class GMLGeoTools {
 
         approximatePositionITRF.setLatitudeNorth(new BigDecimal(0));
         approximatePositionITRF.setLongitudeEast(new BigDecimal(0));
-        
+
         return approximatePositionITRF;
     }
 

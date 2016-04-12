@@ -16,6 +16,7 @@ import org.slf4j.LoggerFactory;
 
 import au.gov.ga.geodesy.exception.GeodesyRuntimeException;
 import au.gov.ga.geodesy.support.utils.GMLDateUtils;
+import au.gov.ga.geodesy.support.utils.GMLReflectionUtils;
 import net.opengis.gml.v_3_2_1.TimePositionType;
 
 /**
@@ -200,7 +201,7 @@ public class GeodesyMLDecorators {
         static <P> P addIdRunnerOuter(P element)
                 throws SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
             logger.debug("addIdRunnerOuter - starting el:" + element.getClass().getSimpleName());
-            for (Method m : getNonPrimitiveGetters(element)) {
+            for (Method m : GMLReflectionUtils.getNonPrimitiveGetters(element)) { 
                 Object o = m.invoke(element);
                 if (o != null) {
                     addIdRunnerOuter(o);
@@ -246,33 +247,6 @@ public class GeodesyMLDecorators {
 
         private static String getStringId(Class<? extends Object> elementClass) {
             return getIntegerId(elementClass).toString();
-        }
-
-        private static Map<String, Void> unwantedTypes = new HashMap<>();
-        static {
-            unwantedTypes.put("DOUBLE", null);
-            unwantedTypes.put("BOOLEAN", null);
-            unwantedTypes.put("STRING", null);
-            unwantedTypes.put("INTEGER", null);
-            unwantedTypes.put("CLASS", null);
-            unwantedTypes.put("LIST", null);
-        }
-
-        /**
-         * @param element
-         * @return a List of getter method for the given element object that returns any getters that return non-primitive types. That is,
-         *         not ones that return String, Double, double, boolean, Boolean, .... Used to recursively descend into the children of an
-         *         element object
-         */
-        static List<Method> getNonPrimitiveGetters(Object element) {
-            Method[] methods = element.getClass().getMethods();
-            List<Method> getters = Arrays.stream(methods)
-                    .filter(m -> m.getName().startsWith("get") && m.getParameterCount() == 0
-                            && !unwantedTypes.containsKey(m.getReturnType().getSimpleName().toUpperCase()))
-                    .collect(Collectors.toList());
-            logger.trace(
-                    "  getNonPrimitiveGetters for: " + element.getClass().getSimpleName() + ": " + getters);
-            return getters;
         }
     }
 }

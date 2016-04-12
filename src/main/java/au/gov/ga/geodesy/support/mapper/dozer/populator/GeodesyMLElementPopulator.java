@@ -9,6 +9,8 @@ import org.dozer.event.DozerEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import au.gov.ga.geodesy.exception.GeodesyRuntimeException;
+
 /**
  * Abstract class for populating some element (the parent element) with child elements by Setting them if they currently have no value.
  * 
@@ -88,7 +90,7 @@ public abstract class GeodesyMLElementPopulator<T> implements DozerEventListener
             }
         } catch (NoSuchMethodException | SecurityException | IllegalAccessException | IllegalArgumentException
                 | InvocationTargetException e) {
-            logger.error(String.format("Expecting method to exist for type: %s (or perhaps other reflection error)",
+            throw new GeodesyRuntimeException(String.format("Expecting method to exist for type: %s (or perhaps other reflection error)",
                     parentObject.getClass()), e);
         }
     }

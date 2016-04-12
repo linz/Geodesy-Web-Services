@@ -1,6 +1,5 @@
 package au.gov.ga.geodesy.support.mapper.dozer.populator;
 
-import au.gov.ga.geodesy.support.utils.GMLGmlTools;
 import au.gov.ga.geodesy.support.utils.GMLMiscTools;
 import au.gov.xml.icsm.geodesyml.v_0_3.SiteIdentificationType;
 
@@ -18,6 +17,7 @@ public class SiteIdentificationTypePopulator extends GeodesyMLElementPopulator<S
      * @param gnssReceiverType
      */
     void checkAllRequiredElementsPopulated(SiteIdentificationType sensorType) {
+        checkElementPopulated(sensorType, "siteName", GMLMiscTools.getEmptyString());
         checkElementPopulated(sensorType, "cdpNumber", GMLMiscTools.getEmptyString());
         checkElementPopulated(sensorType, "iersDOMESNumber", GMLMiscTools.getEmptyString());
     }

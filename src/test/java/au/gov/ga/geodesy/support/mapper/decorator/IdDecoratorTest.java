@@ -11,6 +11,7 @@ import org.junit.Test;
 
 import au.gov.ga.geodesy.support.mapper.dozer.converter.TimePrimitivePropertyTypeUtils;
 import au.gov.ga.geodesy.support.utils.GMLDateUtils;
+import au.gov.ga.geodesy.support.utils.GMLReflectionUtils;
 import au.gov.xml.icsm.geodesyml.v_0_3.GeodesyMLType;
 import au.gov.xml.icsm.geodesyml.v_0_3.HumiditySensorPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_3.HumiditySensorType;
@@ -131,7 +132,7 @@ public class IdDecoratorTest {
     public void testRecursiveFunction01() {
         GMLDateUtils element = new GMLDateUtils();
 
-        List<Method> getterMethods = GeodesyMLDecorators.IdDecorator.getNonPrimitiveGetters(element);
+        List<Method> getterMethods = GMLReflectionUtils.getNonPrimitiveGetters(element);
         Assert.assertEquals(0, getterMethods.size());
     }
 
@@ -139,7 +140,7 @@ public class IdDecoratorTest {
     public void testRecursiveFunction02() {
         GeodesyMLType element = new GeodesyMLType();
 
-        List<Method> getterMethods = GeodesyMLDecorators.IdDecorator.getNonPrimitiveGetters(element);
+        List<Method> getterMethods = GMLReflectionUtils.getNonPrimitiveGetters(element);
         MatcherAssert.assertThat("getters #", getterMethods.size(), Matchers.greaterThan(4));
         System.out.println("Getters (#:" + getterMethods.size() + ") - " + getterMethods);
     }

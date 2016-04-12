@@ -19,6 +19,7 @@ import au.gov.ga.geodesy.domain.model.MockEventPublisher;
 import au.gov.ga.geodesy.domain.model.event.Event;
 import au.gov.ga.geodesy.domain.model.event.SiteLogReceived;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLogRepository;
+import au.gov.ga.geodesy.port.adapter.sopac.SiteLogSopacReader;
 import au.gov.ga.geodesy.support.spring.GeodesyServiceUnitTestConfig;
 import au.gov.ga.geodesy.support.spring.GeodesySupportConfig;
 import au.gov.ga.geodesy.support.spring.PersistenceJpaConfig;
@@ -56,17 +57,17 @@ public class UploadAllSiteLogsTest extends AbstractTransactionalTestNGSpringCont
     @Rollback(false)
     public void upload() throws Exception {
         for (File f : siteLogFiles) {
-            service.upload(new FileReader(f));
+            service.upload(new SiteLogSopacReader(new FileReader(f)).getSiteLog());
         }
     }
 
     @Test(dependsOnMethods = {"upload"})
     public void check() throws Exception {
         List<Event> events = eventPublisher.getPublishedEvents();
-        Assert.assertEquals(events.size(), 34);
+        Assert.assertEquals(34, events.size());
         for (Event e : events) {
             Assert.assertTrue(e instanceof SiteLogReceived);
         }
-        Assert.assertEquals(0, siteLogs.count());
+        Assert.assertEquals(34, siteLogs.count());
     }
 }

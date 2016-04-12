@@ -29,7 +29,8 @@ public class SiteLocationTypePopulator extends GeodesyMLElementPopulator<SiteLoc
         checkElementPopulated(siteLocationType, "state", GMLMiscTools.getEmptyString());
         checkElementPopulated(siteLocationType, "countryCodeISO", GMLMiscTools.getEmptyString());
         checkElementPopulated(siteLocationType, "tectonicPlate", GMLGmlTools.getEmptyCodeType());
-        checkElementPopulated(siteLocationType, "approximatePositionITRF", GMLGeoTools.buildZeroApproximatePositionITRF());
+        checkElementPopulated(siteLocationType, "approximatePositionITRF",
+                GMLGeoTools.buildZeroApproximatePositionITRF());
     }
 
     @Override
@@ -111,7 +112,9 @@ public class SiteLocationTypePopulator extends GeodesyMLElementPopulator<SiteLoc
                 "UZB", "Uzbekistan", "VAT", "Holy See (Vatican City State)", "VCT", "Saint Vincent and the Grenadines",
                 "VEN", "Venezuela, Bolivarian Republic of", "VGB", "Virgin Islands, British", "VIR",
                 "Virgin Islands, U.S.", "VNM", "Viet Nam", "VUT", "Vanuatu", "WLF", "Wallis and Futuna", "WSM", "Samoa",
-                "YEM", "Yemen", "ZAF", "South Africa", "ZMB", "Zambia", "ZWE", "Zimbabwe"};
+                "YEM", "Yemen", "ZAF", "South Africa", "ZMB", "Zambia", "ZWE", "Zimbabwe", "???", "???",
+                // Added from some other source
+                "PYF", "Tahiti", "KGZ", "Kyrghyzstan", "TF", "Kerguelen Islands", "KZ", "Kazakstan"};
 
         static {
             if (codesArrayList.length % 2 != 0) {
@@ -125,12 +128,74 @@ public class SiteLocationTypePopulator extends GeodesyMLElementPopulator<SiteLoc
 
         public static String lookupCode(String country) {
             if (StringUtils.isBlank(country)) {
-                return "";
+                return "???";
             }
-            if (countryToCode.containsKey(country.toUpperCase())) {
+            String modCountry = fixUpProblemCountry(country).toUpperCase();
+            if (countryToCode.containsKey(modCountry)) {
                 return countryToCode.get(country.toUpperCase());
             } else {
                 return country;
+            }
+        }
+
+        /**
+         * Some country strings are incorrect - fix to something that is.
+         * 
+         * @param upperCase
+         * @return
+         */
+        private static String fixUpProblemCountry(String inputCountry) {
+            if (StringUtils.isBlank(inputCountry)) {
+                return "???";
+            }
+            switch (inputCountry.toUpperCase()) {
+            case "ANTARCTIC PENINSULA":
+                return "Antarctic";
+            case "ASCENSION ISLAND":
+                return "Saint Helena, Ascension and Tristan da Cunha";
+            case "FRENCH GUYANA":
+                return "Guyana";
+            case "GREENLAND (DENMARK)":
+            case "GREENLAND(DENMARK)":
+                return "Greenland";
+            case "IRAN":
+                return "Iran, Islamic Republic of";
+            case "KOREA":
+                return "Korea, Republic of";
+            case "MICRONESIA (FEDERATED STATES OF)":
+                return "Micronesia, Federated States of";
+            case "NEGARA BRUNEI DARUSSALAM":
+                return "Brunei Darussalam";
+            case "P.R. CHINA":
+            case "REPUBLIC OF CHINA":
+            case "P.R.C.":
+                return "China";
+            case "RUSSIA":
+                return "Russian Federation";
+            case "REPUBLIC OF ARMENIA":
+                return "Armenia";
+            case "REPUBLIC OF MALDIVES":
+            case "REPUBLIC OF SINGAPORE":
+            case "REPUBLIC OF SOUTH AFRICA":
+                return "Russian Federation";
+            case "SOUTH KOREA":
+                return "Korea, Democratic People's Republic of";
+            case "SOUTHERN OCEAN":
+                return "French Southern Territories";
+            case "TAHITI":
+            case "TAHITI, FRENCH POLYNESIA":
+                return "Tahiti";
+            case "U.K. TERRITORY":
+            case "UK":
+            case "DEPENDENT TERRITORY OF THE U.K.":
+                return "United Kingdom";
+            case "U.S. VIRGIN ISLANDS (USA)":
+                return "Virgin Islands, U.S";
+            case "U.S.A.":
+            case "UNITED STATES":
+                return "United States of America";
+            default:
+                return inputCountry;
             }
         }
 

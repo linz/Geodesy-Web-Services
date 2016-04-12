@@ -3,8 +3,6 @@ package au.gov.ga.geodesy.support.mapper.dozer.populator;
 import org.dozer.DozerEventListener;
 import org.dozer.event.DozerEvent;
 
-import au.gov.xml.icsm.geodesyml.v_0_3.MoreInformationType;
-
 /**
  * Factory to create DozerEventListener for specific elements. Only one instance of this class will be created.
  * 
@@ -23,6 +21,7 @@ public class GeodesyMLDozerEventListenerFactory implements DozerEventListener {
     private CollocationInformationTypePopulator collocationInformationTypePopulator = null;
     private OtherInstrumentationTypePopulator otherInstrumentationTypePopulator = null;
     private FrequencyStandardTypePopulator frequencyStandardTypePopulator = null;
+    private LocalEpisodicEventsTypePopulator localEpisodicEventsTypePopulator = null;
 
     @Override
     public void mappingStarted(DozerEvent event) {
@@ -111,6 +110,11 @@ public class GeodesyMLDozerEventListenerFactory implements DozerEventListener {
                     frequencyStandardTypePopulator = new FrequencyStandardTypePopulator();
                 }
                 return frequencyStandardTypePopulator;
+            case "LocalEpisodicEventsType":
+                if (localEpisodicEventsTypePopulator == null) {
+                    localEpisodicEventsTypePopulator = new LocalEpisodicEventsTypePopulator();
+                }
+                return localEpisodicEventsTypePopulator;
             }
             return new NoopPopulator();
         }

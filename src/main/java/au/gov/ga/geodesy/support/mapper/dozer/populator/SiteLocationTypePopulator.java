@@ -9,6 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import au.gov.ga.geodesy.support.utils.GMLGeoTools;
+import au.gov.ga.geodesy.support.utils.GMLGmlTools;
 import au.gov.ga.geodesy.support.utils.GMLMiscTools;
 import au.gov.xml.icsm.geodesyml.v_0_3.SiteLocationType;
 
@@ -27,7 +28,7 @@ public class SiteLocationTypePopulator extends GeodesyMLElementPopulator<SiteLoc
         checkElementPopulated(siteLocationType, "city", GMLMiscTools.getEmptyString());
         checkElementPopulated(siteLocationType, "state", GMLMiscTools.getEmptyString());
         checkElementPopulated(siteLocationType, "countryCodeISO", GMLMiscTools.getEmptyString());
-        checkElementPopulated(siteLocationType, "tectonicPlate", GMLMiscTools.getEmptyString());
+        checkElementPopulated(siteLocationType, "tectonicPlate", GMLGmlTools.getEmptyCodeType());
         checkElementPopulated(siteLocationType, "approximatePositionITRF", GMLGeoTools.buildZeroApproximatePositionITRF());
     }
 

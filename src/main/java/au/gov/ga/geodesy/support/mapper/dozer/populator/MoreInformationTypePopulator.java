@@ -21,6 +21,7 @@ public class MoreInformationTypePopulator extends GeodesyMLElementPopulator<More
         checkElementPopulated(moreInformationType, "siteMap", GMLMiscTools.getEmptyString());
         checkElementPopulated(moreInformationType, "siteDiagram", GMLMiscTools.getEmptyString());
         checkElementPopulated(moreInformationType, "sitePictures", GMLMiscTools.getEmptyString());
+        checkElementPopulated(moreInformationType, "horizonMask", GMLMiscTools.getEmptyString());
         checkElementPopulated(moreInformationType, "monumentDescription", GMLMiscTools.getEmptyString());
         checkElementPopulated(moreInformationType, "antennaGraphicsWithDimensions", GMLMiscTools.getEmptyString());
         checkElementPopulated(moreInformationType, "insertTextGraphicFromAntenna", GMLMiscTools.getEmptyString());

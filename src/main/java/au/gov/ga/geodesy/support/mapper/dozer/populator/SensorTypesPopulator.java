@@ -3,6 +3,8 @@ package au.gov.ga.geodesy.support.mapper.dozer.populator;
 import au.gov.ga.geodesy.support.utils.GMLGmlTools;
 import au.gov.ga.geodesy.support.utils.GMLMiscTools;
 import au.gov.xml.icsm.geodesyml.v_0_3.BaseSensorEquipmentType;
+import au.gov.xml.icsm.geodesyml.v_0_3.HumiditySensorType;
+import au.gov.xml.icsm.geodesyml.v_0_3.TemperatureSensorType;
 
 /**
  * The receivers have required elements that don't all exist in the SOPAC Sitelog xml. This fills them in.
@@ -29,6 +31,8 @@ public class SensorTypesPopulator extends GeodesyMLElementPopulator<BaseSensorEq
         checkElementPopulated(sensorType, "serialNumber", GMLMiscTools.getEmptyString());
         checkElementPopulated(sensorType, "type", GMLGmlTools.getEmptyCodeType());
         checkElementPopulated(sensorType, "heightDiffToAntenna", GMLMiscTools.getEmptyDouble());
-        checkElementPopulated(sensorType, "aspiration", GMLMiscTools.getEmptyString());
+        if (sensorType instanceof TemperatureSensorType || sensorType instanceof HumiditySensorType) {
+            checkElementPopulated(sensorType, "aspiration", GMLMiscTools.getEmptyString());
+        }
     }
 }

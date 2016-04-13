@@ -2,7 +2,7 @@ package au.gov.ga.geodesy.support.mapper.dozer.populator;
 
 import au.gov.ga.geodesy.support.mapper.dozer.converter.TimePrimitivePropertyTypeUtils;
 import au.gov.ga.geodesy.support.utils.GMLDateUtils;
-import au.gov.ga.geodesy.support.utils.GMLMiscTools;
+import au.gov.ga.geodesy.support.utils.GMLGmlTools;
 import au.gov.xml.icsm.geodesyml.v_0_3.FrequencyStandardType;
 
 public class FrequencyStandardTypePopulator extends GeodesyMLElementPopulator<FrequencyStandardType> {
@@ -14,7 +14,7 @@ public class FrequencyStandardTypePopulator extends GeodesyMLElementPopulator<Fr
      */
     @Override
     public void checkAllRequiredElementsPopulated(FrequencyStandardType frequencyStandardType) {
-        checkElementPopulated(frequencyStandardType, "standardType", GMLMiscTools.getEmptyList(String.class));
+        checkElementPopulated(frequencyStandardType, "standardType", GMLGmlTools.getEmptyCodeType());
         checkElementPopulated(frequencyStandardType, "validTime",
                 TimePrimitivePropertyTypeUtils.buildTimePrimitivePropertyType(GMLDateUtils.buildStartOfTime()));
     }

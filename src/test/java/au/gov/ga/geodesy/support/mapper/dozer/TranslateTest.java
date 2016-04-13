@@ -586,12 +586,36 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
 
         Assert.assertNotNull(geodesyML);
     }
-    
+
     @Test
     public void testADE1() throws MarshallingException, IOException,
-    au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
+            au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
         GeodesyMLType geodesyML = testTranslate(SITEDATADIR, "ADE1");
-        
+
+        Assert.assertNotNull(geodesyML);
+    }
+
+    @Test
+    public void testADE2() throws MarshallingException, IOException,
+            au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
+        GeodesyMLType geodesyML = testTranslate(SITEDATADIR, "ADE2");
+
+        Assert.assertNotNull(geodesyML);
+    }
+
+    @Test
+    public void testAUCK() throws MarshallingException, IOException,
+            au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
+        GeodesyMLType geodesyML = testTranslate(SITEDATADIR, "AUCK");
+
+        Assert.assertNotNull(geodesyML);
+    }
+
+    @Test
+    public void testBAKO() throws MarshallingException, IOException,
+            au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
+        GeodesyMLType geodesyML = testTranslate(SITEDATADIR, "BAKO");
+
         Assert.assertNotNull(geodesyML);
     }
 }

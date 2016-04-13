@@ -1,12 +1,8 @@
 package au.gov.ga.geodesy.support.mapper.dozer.converter;
 
-import java.time.ZoneId;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Date;
-import java.util.GregorianCalendar;
 import java.util.List;
-import java.util.TimeZone;
 
 import javax.xml.bind.JAXBElement;
 
@@ -167,16 +163,4 @@ public class TimePrimitivePropertyTypeUtils {
 
         return timePrimitivePropertyType;
     }
-
-    public static Date buildStartOfTime() {
-        Calendar cal = new GregorianCalendar(TimeZone.getTimeZone(ZoneId.of("+11")));
-        cal.set(Calendar.YEAR,1970);
-        cal.set(Calendar.MONTH,Calendar.JANUARY);
-        cal.set(Calendar.DAY_OF_MONTH,23);
-        cal.set(Calendar.HOUR_OF_DAY,0);
-        cal.set(Calendar.MINUTE,0);
-        cal.set(Calendar.SECOND,0);
-        return cal.getTime();
-    }
-
 }

@@ -201,7 +201,7 @@ public class SiteLocationTypePopulator extends GeodesyMLElementPopulator<SiteLoc
 
         public static String lookupCountry(String code) {
             if (StringUtils.isBlank(code)) {
-                return "";
+                return "???";
             }
             if (codeToCountry.containsKey(code.toUpperCase())) {
                 return codeToCountry.get(code.toUpperCase());

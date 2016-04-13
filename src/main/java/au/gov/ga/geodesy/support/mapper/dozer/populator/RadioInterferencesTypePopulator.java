@@ -1,5 +1,7 @@
 package au.gov.ga.geodesy.support.mapper.dozer.populator;
 
+import au.gov.ga.geodesy.support.mapper.dozer.converter.TimePrimitivePropertyTypeUtils;
+import au.gov.ga.geodesy.support.utils.GMLDateUtils;
 import au.gov.ga.geodesy.support.utils.GMLMiscTools;
 import au.gov.xml.icsm.geodesyml.v_0_3.RadioInterferencesType;
 
@@ -13,5 +15,8 @@ public class RadioInterferencesTypePopulator extends GeodesyMLElementPopulator<R
     @Override
     public void checkAllRequiredElementsPopulated(RadioInterferencesType radioInterferencesType) {
         checkElementPopulated(radioInterferencesType, "observedDegradations", GMLMiscTools.getEmptyString());
+        checkElementPopulated(radioInterferencesType, "possibleProblemSources", GMLMiscTools.getEmptyString());
+        checkElementPopulated(radioInterferencesType, "validTime",
+                TimePrimitivePropertyTypeUtils.buildTimePrimitivePropertyType(GMLDateUtils.buildStartOfTime()));
     }
 }

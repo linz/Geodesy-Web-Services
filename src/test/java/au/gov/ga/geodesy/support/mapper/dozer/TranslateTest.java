@@ -650,4 +650,12 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
 
         Assert.assertNotNull(geodesyML);
     }
+
+    @Test
+    public void testCRAO() throws MarshallingException, IOException,
+            au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
+        GeodesyMLType geodesyML = testTranslate(SITEDATADIR, "CRAO");
+
+        Assert.assertNotNull(geodesyML);
+    }
 }

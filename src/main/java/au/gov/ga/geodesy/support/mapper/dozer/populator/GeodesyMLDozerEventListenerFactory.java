@@ -22,6 +22,7 @@ public class GeodesyMLDozerEventListenerFactory implements DozerEventListener {
     private OtherInstrumentationTypePopulator otherInstrumentationTypePopulator = null;
     private FrequencyStandardTypePopulator frequencyStandardTypePopulator = null;
     private LocalEpisodicEventsTypePopulator localEpisodicEventsTypePopulator = null;
+    private RadioInterferencesTypePopulator radioInterferencesTypePopulator = null;
 
     @Override
     public void mappingStarted(DozerEvent event) {
@@ -115,6 +116,11 @@ public class GeodesyMLDozerEventListenerFactory implements DozerEventListener {
                     localEpisodicEventsTypePopulator = new LocalEpisodicEventsTypePopulator();
                 }
                 return localEpisodicEventsTypePopulator;
+            case "RadioInterferencesType":
+                if (radioInterferencesTypePopulator == null) {
+                    radioInterferencesTypePopulator = new RadioInterferencesTypePopulator();
+                }
+                return radioInterferencesTypePopulator;
             }
             return new NoopPopulator();
         }

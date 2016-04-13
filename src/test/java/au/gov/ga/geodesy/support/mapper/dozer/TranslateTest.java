@@ -634,4 +634,20 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
 
         Assert.assertNotNull(geodesyML);
     }
+
+    @Test
+    public void testSELE() throws MarshallingException, IOException,
+            au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
+        GeodesyMLType geodesyML = testTranslate(SITEDATADIR, "SELE");
+
+        Assert.assertNotNull(geodesyML);
+    }
+
+    @Test
+    public void testWOOL() throws MarshallingException, IOException,
+            au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
+        GeodesyMLType geodesyML = testTranslate(SITEDATADIR, "WOOL");
+
+        Assert.assertNotNull(geodesyML);
+    }
 }

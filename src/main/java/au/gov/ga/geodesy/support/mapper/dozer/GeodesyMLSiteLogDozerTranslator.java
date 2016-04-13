@@ -100,6 +100,10 @@ public class GeodesyMLSiteLogDozerTranslator implements GeodesyMLSiteLogTranslat
                 .add(geodesyObjectFactory.createSiteLog(siteLogType));
 
         FormInformation formInformation = sopacSiteLog.getFormInformation();
+        // Force version to be created
+        if (formInformation == null) {
+            formInformation = new FormInformation();
+        }
         FormInformationType formInformationType = DozerDelegate.mapWithGuardWithDecorators(formInformation,
                 FormInformationType.class);
         siteLogType.setFormInformation(formInformationType);
@@ -208,7 +212,7 @@ public class GeodesyMLSiteLogDozerTranslator implements GeodesyMLSiteLogTranslat
      * @param childType
      * @param sopacSiteLogItems
      *            - list of input data from SopacXML
-     * @param mapper    
+     * @param mapper
      *            - to map from SopacXML to GeodesyMl
      * @return List of parentPropertyType's or null if the input source data is null or empty
      * @throws IllegalAccessException

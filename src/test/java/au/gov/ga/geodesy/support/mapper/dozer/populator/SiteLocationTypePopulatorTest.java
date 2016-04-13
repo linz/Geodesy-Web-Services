@@ -42,4 +42,23 @@ public class SiteLocationTypePopulatorTest {
         Assert.assertEquals(defaultUsed.getZCoordinateInMeters(), approximatePositionITRF.getZCoordinateInMeters());
     }
 
+    // these not working
+    // @Test
+    public void testVIR01() {
+        String country = "U.S. Virgin Islands (USA)";
+        String code = SiteLocationTypePopulator.COUNTRY_CODES_ALPHA_3.lookupCode(country);
+
+        Assert.assertEquals("VIR", code);
+
+    }
+
+    // @Test
+    public void testVIR02() {
+        String country = "Virgin Islands";
+        String code = SiteLocationTypePopulator.COUNTRY_CODES_ALPHA_3.lookupCode(country);
+
+        Assert.assertEquals("VIR", code);
+
+    }
+
 }

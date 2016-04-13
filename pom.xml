@@ -75,6 +75,18 @@
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
+            <groupId>au.gov.ga</groupId>
+            <artifactId>xml-schemer</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>au.gov.ga.geodesy</groupId>
+            <artifactId>geodesyml</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <classifier>xsd</classifier>
+            <type>zip</type>
+        </dependency>
+        <dependency>
             <groupId>javax.validation</groupId>
             <artifactId>validation-api</artifactId>
             <version>1.0.0.GA</version>
@@ -287,7 +299,58 @@
         </dependency>
     </dependencies>
     <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+            <resource>
+                <directory>target/generated-resources</directory>
+            </resource>
+        </resources>
         <plugins>
+            <plugin>
+                <!-- Unzip GeodesyML and dependent schemas -->
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>unpack-geodesyml</id>
+                        <goals>
+                            <goal>unpack</goal>
+                        </goals>
+                        <phase>generate-resources</phase>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/generated-resources/xsd</outputDirectory>
+                            <artifactItems>
+                                <artifactItem>
+                                    <groupId>${project.groupId}</groupId>
+                                    <artifactId>geodesyml</artifactId>
+                                    <version>1.0.0-SNAPSHOT</version>
+                                    <classifier>xsd</classifier>
+                                    <type>zip</type>
+                                </artifactItem>
+                            </artifactItems>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>add-source</goal>
+                        </goals>
+                        <configuration>
+                            <sources>
+                                <source>${project.build.directory}/generated-resources</source>
+                            </sources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin>
                 <!-- Build an executable JAR -->
                 <groupId>org.apache.maven.plugins</groupId>

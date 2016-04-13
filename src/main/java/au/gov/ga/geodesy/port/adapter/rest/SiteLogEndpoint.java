@@ -2,13 +2,17 @@ package au.gov.ga.geodesy.port.adapter.rest;
 
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.xml.transform.stream.StreamSource;
 
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -16,6 +20,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import au.gov.ga.geodesy.domain.service.IgsSiteLogService;
 import au.gov.ga.geodesy.port.InvalidSiteLogException;
 import au.gov.ga.geodesy.port.SiteLogReader;
+import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLValidator;
 import au.gov.ga.geodesy.port.adapter.sopac.SiteLogSopacReader;
 
 @Controller
@@ -28,7 +33,21 @@ public class SiteLogEndpoint {
     @Autowired
     private IgsSiteLogService service;
 
-    @RequestMapping(value = "/upload", method = RequestMethod.POST)
+    @Autowired
+    private GeodesyMLValidator geodesyMLValidator;
+
+    @RequestMapping(value = "/validate", method = RequestMethod.POST)
+    public ResponseEntity<String> validate(HttpServletRequest req, HttpServletResponse rsp) throws IOException {
+        StreamSource source = new StreamSource(req.getInputStream(), "data:");
+        List<String> violations = geodesyMLValidator.validate(source);
+        if (violations.isEmpty()) {
+            return ResponseEntity.ok().body(null);
+        } else {
+            return ResponseEntity.badRequest().body(StringUtils.join(violations, "\n"));
+        }
+    }
+
+    @RequestMapping(value = "/sopac/upload", method = RequestMethod.POST)
     public void upload(HttpServletRequest req, HttpServletResponse rsp) throws IOException {
         SiteLogReader reader = new SiteLogSopacReader(new InputStreamReader(req.getInputStream()));
         try {

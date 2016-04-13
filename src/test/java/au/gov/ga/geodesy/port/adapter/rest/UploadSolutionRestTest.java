@@ -29,7 +29,7 @@ public class UploadSolutionRestTest extends RestTest {
     @Rollback(false)
     public void uploadALIC() throws Exception {
         String content = FileUtils.readFileToString(siteLog("ALIC"), Charset.defaultCharset());
-        mvc.perform(post("/siteLog/upload").contentType(MediaType.APPLICATION_XML).content(content))
+        mvc.perform(post("/siteLog/sopac/upload").contentType(MediaType.APPLICATION_XML).content(content))
             .andExpect(status().isOk());
     }
 

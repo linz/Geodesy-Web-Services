@@ -32,7 +32,7 @@ public class UploadAllIgsSiteLogsRestTest extends RestTest {
                 if (file.getName().startsWith("A")) {
                     log.info("Uploading " + file.getPath());
                     String content = FileUtils.readFileToString(file, Charset.defaultCharset());
-                    mvc.perform(post("/siteLog/upload").contentType(MediaType.APPLICATION_XML).content(content))
+                    mvc.perform(post("/siteLog/sopac/upload").contentType(MediaType.APPLICATION_XML).content(content))
                         .andExpect(status().isOk());
                 }
             } catch (Exception e) {

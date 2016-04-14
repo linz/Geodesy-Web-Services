@@ -10,6 +10,7 @@
          <geo:siteName>Wallal</geo:siteName>
          <geo:fourCharacterID>WLAL</geo:fourCharacterID>
          <geo:iersDOMESNumber>59950M001</geo:iersDOMESNumber>
+         <geo:cdpNumber></geo:cdpNumber>
          <geo:monumentDescription>PILLAR</geo:monumentDescription>
          <geo:heightOfTheMonument>1.9</geo:heightOfTheMonument>
          <geo:monumentFoundation>STEEL RODS / CONCRETE BLOCK</geo:monumentFoundation>
@@ -26,19 +27,20 @@
          <geo:city>Wallal</geo:city>
          <geo:state>Western Australia</geo:state>
          <geo:countryCodeISO>AUS</geo:countryCodeISO>
-         <geo:tectonicPlate>Australian</geo:tectonicPlate>
+         <geo:tectonicPlate codeSpace="">Australian</geo:tectonicPlate>
          <geo:approximatePositionITRF>
             <geo:xCoordinateInMeters>-3060306.112</geo:xCoordinateInMeters>
             <geo:yCoordinateInMeters>5165740.531</geo:yCoordinateInMeters>
             <geo:zCoordinateInMeters>-2144657.086</geo:zCoordinateInMeters>
-            <geo:latitude-North>-194642.98746000000392086803913116455078125</geo:latitude-North>
-            <geo:longitude-East>1203836.59037999995052814483642578125</geo:longitude-East>
+            <geo:latitude-North>-19.778607627777777366873124265111982822418212890625</geo:latitude-North>
+            <geo:longitude-East>120.64349732777776580405770801007747650146484375</geo:longitude-East>
             <geo:elevation-m_ellips.>0021.145 (m)</geo:elevation-m_ellips.>
          </geo:approximatePositionITRF>
       </geo:siteLocation>
       <geo:gnssReceivers>
          <geo:gnssReceiver gml:id="GnssReceiverType_2902">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">LEICA GRX1200+GNSS</geo:receiverType>
+            <geo:manufacturerSerialNumber>495607</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">LEICA GRX1200+GNSS</geo:receiverType>
             <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
             <geo:serialNumber>495607</geo:serialNumber>
             <geo:firmwareVersion>4.20/4.004</geo:firmwareVersion>
@@ -47,10 +49,12 @@
             <geo:dateRemoved>2011-12-01T00:00:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
          </geo:gnssReceiver>
+         <geo:dateInserted>2011-11-23T00:00:00Z</geo:dateInserted>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
          <geo:gnssReceiver gml:id="GnssReceiverType_2903">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">LEICA GRX1200+GNSS</geo:receiverType>
+            <geo:manufacturerSerialNumber>495607</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">LEICA GRX1200+GNSS</geo:receiverType>
             <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
             <geo:serialNumber>495607</geo:serialNumber>
             <geo:firmwareVersion>4.20/4.007</geo:firmwareVersion>
@@ -60,55 +64,64 @@
             <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
             <geo:notes>Bug Fixes, updated serial number because the old one was wrong</geo:notes>
          </geo:gnssReceiver>
+         <geo:dateInserted>2011-12-01T00:00:00Z</geo:dateInserted>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
          <geo:gnssReceiver gml:id="GnssReceiverType_2904">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">LEICA GRX1200+GNSS</geo:receiverType>
+            <geo:manufacturerSerialNumber>495607</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">LEICA GRX1200+GNSS</geo:receiverType>
             <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
             <geo:serialNumber>495607</geo:serialNumber>
             <geo:firmwareVersion>8.20</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
             <geo:dateInstalled>2012-09-21T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved></geo:dateRemoved>
             <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
             <geo:notes>Bug Fixes, updated serial number because the old one was wrong</geo:notes>
          </geo:gnssReceiver>
+         <geo:dateInserted>2012-09-21T00:00:00Z</geo:dateInserted>
       </geo:gnssReceivers>
       <geo:gnssAntennas>
          <geo:gnssAntenna gml:id="GnssAntennaType_1305">
-            <geo:antennaType codeList="codelist" codeListValue="codeListValue">LEIAR25.R3      LEIT</geo:antennaType>
+            <geo:manufacturerSerialNumber>09310008</geo:manufacturerSerialNumber>
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue" codeSpace="codespace">LEIAR25.R3      LEIT</geo:antennaType>
             <geo:serialNumber>09310008</geo:serialNumber>
-            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:antennaReferencePoint codeSpace="">BPA</geo:antennaReferencePoint>
             <geo:marker-arpUpEcc.>0.0</geo:marker-arpUpEcc.>
             <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>LEIT</geo:antennaRadomeType>
+            <geo:antennaRadomeType codeSpace="CodeSpaceAttr">LEIT</geo:antennaRadomeType>
+            <geo:radomeSerialNumber></geo:radomeSerialNumber>
             <geo:antennaCableType>RG214</geo:antennaCableType>
             <geo:antennaCableLength>25.0</geo:antennaCableLength>
             <geo:dateInstalled>2011-11-23T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved></geo:dateRemoved>
          </geo:gnssAntenna>
+         <geo:dateInserted>2011-11-23T00:00:00Z</geo:dateInserted>
       </geo:gnssAntennas>
       <geo:frequencyStandards>
          <geo:frequencyStandard gml:id="FrequencyStandardType_1038">
-            <geo:standardType>QUARTZ/INTERNAL</geo:standardType>
+            <geo:standardType codeSpace="">QUARTZ/INTERNAL</geo:standardType>
             <geo:inputFrequency>0.0</geo:inputFrequency>
-            <gml:validTime>
-               <gml:TimePeriod>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_1700">
                   <gml:beginPosition>2011-11-23T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
          </geo:frequencyStandard>
+         <geo:dateInserted>2016-04-14T00:03:13Z</geo:dateInserted>
       </geo:frequencyStandards>
       <geo:humiditySensors>
          <geo:humiditySensor gml:id="HumiditySensorType_291">
-            <geo:type>PAROSCIENTIFIC MET4</geo:type>
+            <geo:type codeSpace="">PAROSCIENTIFIC MET4</geo:type>
             <geo:manufacturer>Paroscientific</geo:manufacturer>
             <geo:serialNumber>120493</geo:serialNumber>
             <geo:heightDiffToAntenna>0.0</geo:heightDiffToAntenna>
             <geo:calibrationDate>2011-11-22T13:00:00Z</geo:calibrationDate>
-            <gml:validTime>
-               <gml:TimePeriod>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_1701">
                   <gml:beginPosition>2011-11-23T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
@@ -117,16 +130,17 @@
             <geo:accuracy-percentRelativeHumidity>2.0</geo:accuracy-percentRelativeHumidity>
             <geo:aspiration>UNASPIRATED</geo:aspiration>
          </geo:humiditySensor>
+         <geo:dateInserted>2016-04-14T00:03:13Z</geo:dateInserted>
       </geo:humiditySensors>
       <geo:pressureSensors>
          <geo:pressureSensor gml:id="PressureSensorType_300">
-            <geo:type>PAROSCIENTIFIC MET4</geo:type>
+            <geo:type codeSpace="">PAROSCIENTIFIC MET4</geo:type>
             <geo:manufacturer>Paroscientific</geo:manufacturer>
             <geo:serialNumber>120493</geo:serialNumber>
             <geo:heightDiffToAntenna>0.0</geo:heightDiffToAntenna>
             <geo:calibrationDate>2011-11-22T13:00:00Z</geo:calibrationDate>
-            <gml:validTime>
-               <gml:TimePeriod>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_1702">
                   <gml:beginPosition>2011-11-23T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
@@ -134,15 +148,17 @@
             <geo:dataSamplingInterval>30.0</geo:dataSamplingInterval>
             <geo:accuracy-hPa>0.08</geo:accuracy-hPa>
          </geo:pressureSensor>
+         <geo:dateInserted>2016-04-14T00:03:13Z</geo:dateInserted>
       </geo:pressureSensors>
       <geo:temperatureSensors>
          <geo:temperatureSensor gml:id="TemperatureSensorType_288">
-            <geo:type>PAROSCIENTIFIC MET4</geo:type>
+            <geo:type codeSpace="">PAROSCIENTIFIC MET4</geo:type>
             <geo:manufacturer>Paroscientific</geo:manufacturer>
             <geo:serialNumber>120493</geo:serialNumber>
             <geo:heightDiffToAntenna>0.0</geo:heightDiffToAntenna>
-            <gml:validTime>
-               <gml:TimePeriod>
+            <geo:calibrationDate></geo:calibrationDate>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_1703">
                   <gml:beginPosition>2011-11-23T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
@@ -151,10 +167,15 @@
             <geo:accuracy-degreesCelcius>0.5</geo:accuracy-degreesCelcius>
             <geo:aspiration>UNASPIRATED</geo:aspiration>
          </geo:temperatureSensor>
+         <geo:dateInserted>2016-04-14T00:03:13Z</geo:dateInserted>
       </geo:temperatureSensors>
-      <geo:siteContact>
-         <gmd:MD_SecurityConstraints/>
-         <gmd:CI_ResponsibleParty>
+      <geo:siteContact gml:id="AgencyPropertyType_1280">
+         <gmd:MD_SecurityConstraints id="MDSecurityConstraintsType_1280">
+            <gmd:classification>
+               <gmd:MD_ClassificationCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:classification>
+         </gmd:MD_SecurityConstraints>
+         <gmd:CI_ResponsibleParty id="CIResponsiblePartyType_1280">
             <gmd:individualName>
                <gco:CharacterString>Doug Hardman</gco:CharacterString>
             </gmd:individualName>
@@ -162,16 +183,16 @@
                <gco:CharacterString>Landgate (WA)</gco:CharacterString>
             </gmd:organisationName>
             <gmd:contactInfo>
-               <gmd:CI_Contact>
+               <gmd:CI_Contact id="CIContactType_1280">
                   <gmd:phone>
-                     <gmd:CI_Telephone>
+                     <gmd:CI_Telephone id="CITelephoneType_507">
                         <gmd:voice>
                            <gco:CharacterString>+61 8 9273 7117</gco:CharacterString>
                         </gmd:voice>
                      </gmd:CI_Telephone>
                   </gmd:phone>
                   <gmd:address>
-                     <gmd:CI_Address>
+                     <gmd:CI_Address id="CIAddressType_1280">
                         <gmd:deliveryPoint>
                            <gco:CharacterString>1 Midland Square, Midland, Western Australia 6056</gco:CharacterString>
                         </gmd:deliveryPoint>
@@ -182,28 +203,44 @@
                   </gmd:address>
                </gmd:CI_Contact>
             </gmd:contactInfo>
+            <gmd:role>
+               <gmd:CI_RoleCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:role>
          </gmd:CI_ResponsibleParty>
       </geo:siteContact>
-      <geo:siteMetadataCustodian>
-         <gmd:MD_SecurityConstraints/>
-         <gmd:CI_ResponsibleParty>
+      <geo:siteMetadataCustodian gml:id="AgencyPropertyType_1281">
+         <gmd:MD_SecurityConstraints id="MDSecurityConstraintsType_1281">
+            <gmd:classification>
+               <gmd:MD_ClassificationCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:classification>
+         </gmd:MD_SecurityConstraints>
+         <gmd:CI_ResponsibleParty id="CIResponsiblePartyType_1281">
             <gmd:organisationName>
                <gco:CharacterString>Landgate (WA)</gco:CharacterString>
             </gmd:organisationName>
             <gmd:contactInfo>
-               <gmd:CI_Contact>
+               <gmd:CI_Contact id="CIContactType_1281">
                   <gmd:address>
-                     <gmd:CI_Address/>
+                     <gmd:CI_Address id="CIAddressType_1281"/>
                   </gmd:address>
                </gmd:CI_Contact>
             </gmd:contactInfo>
+            <gmd:role>
+               <gmd:CI_RoleCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:role>
          </gmd:CI_ResponsibleParty>
       </geo:siteMetadataCustodian>
       <geo:moreInformation>
+         <geo:dataCenter></geo:dataCenter>
+         <geo:urlForMoreInformation></geo:urlForMoreInformation>
          <geo:siteMap>Y</geo:siteMap>
          <geo:siteDiagram>Y</geo:siteDiagram>
          <geo:horizonMask>Y</geo:horizonMask>
+         <geo:monumentDescription></geo:monumentDescription>
          <geo:sitePictures>Y</geo:sitePictures>
+         <geo:antennaGraphicsWithDimensions></geo:antennaGraphicsWithDimensions>
+         <geo:insertTextGraphicFromAntenna></geo:insertTextGraphicFromAntenna>
+         <geo:DOI codeSpace="CodeSpaceTODO">CodeTypeTODO</geo:DOI>
       </geo:moreInformation>
    </geo:siteLog>
 </geo:GeodesyML>

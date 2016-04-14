@@ -11,6 +11,7 @@
          <geo:fourCharacterID>IRKT</geo:fourCharacterID>
          <geo:monumentInscription>East GPS/GLONASS Geodynamical Mark</geo:monumentInscription>
          <geo:iersDOMESNumber>12313M001</geo:iersDOMESNumber>
+         <geo:cdpNumber></geo:cdpNumber>
          <geo:monumentDescription>Concrete pillar encl. in isolated steel casing</geo:monumentDescription>
          <geo:dateInstalled>1995-09-28T14:00:00Z</geo:dateInstalled>
          <geo:notes>Fundamental pillar with passive termostabilization, installed on rock, special mark on the top, forced centering of the GPS antenna</geo:notes>
@@ -18,20 +19,35 @@
       <geo:siteLocation>
          <geo:city>Irkutsk</geo:city>
          <geo:state>Siberia</geo:state>
-         <geo:countryCodeISO>Russia</geo:countryCodeISO>
-         <geo:tectonicPlate>EURA</geo:tectonicPlate>
+         <geo:countryCodeISO>???</geo:countryCodeISO>
+         <geo:tectonicPlate codeSpace="">EURA</geo:tectonicPlate>
          <geo:approximatePositionITRF>
             <geo:xCoordinateInMeters>-968332.1608</geo:xCoordinateInMeters>
             <geo:yCoordinateInMeters>3794425.4408</geo:yCoordinateInMeters>
             <geo:zCoordinateInMeters>5018167.7973</geo:zCoordinateInMeters>
-            <geo:latitude-North>521308.400000000023283064365386962890625</geo:latitude-North>
-            <geo:longitude-East>1041858.319999999948777258396148681640625</geo:longitude-East>
+            <geo:latitude-North>52.2190000000000082991391536779701709747314453125</geo:latitude-North>
+            <geo:longitude-East>104.316199999999980718712322413921356201171875</geo:longitude-East>
             <geo:elevation-m_ellips.>503.3816</geo:elevation-m_ellips.>
          </geo:approximatePositionITRF>
       </geo:siteLocation>
       <geo:gnssReceivers>
          <geo:gnssReceiver gml:id="GnssReceiverType_1200">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ROGUE SNR-8000</geo:receiverType>
+            <geo:manufacturerSerialNumber>T173</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">ROGUE SNR-8000</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>T173</geo:serialNumber>
+            <geo:firmwareVersion>3.2.32.8</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>15.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>1999-06-29T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved></geo:dateRemoved>
+            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
+         </geo:gnssReceiver>
+         <geo:dateInserted>1999-06-29T00:00:00Z</geo:dateInserted>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_1201">
+            <geo:manufacturerSerialNumber>T173</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">ROGUE SNR-8000</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
             <geo:serialNumber>T173</geo:serialNumber>
             <geo:firmwareVersion>3.0.32.3</geo:firmwareVersion>
@@ -40,55 +56,70 @@
             <geo:dateRemoved>1999-06-29T00:00:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
          </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver gml:id="GnssReceiverType_1201">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ROGUE SNR-8000</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>T173</geo:serialNumber>
-            <geo:firmwareVersion>3.2.32.8</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>15.0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>1999-06-29T00:00:00Z</geo:dateInstalled>
-            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
-         </geo:gnssReceiver>
+         <geo:dateInserted>1995-09-16T00:00:00Z</geo:dateInserted>
       </geo:gnssReceivers>
       <geo:gnssAntennas>
          <geo:gnssAntenna gml:id="GnssAntennaType_550">
-            <geo:antennaType codeList="codelist" codeListValue="codeListValue">AOAD/M_T        NONE</geo:antennaType>
+            <geo:manufacturerSerialNumber>178</geo:manufacturerSerialNumber>
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue" codeSpace="codespace">AOAD/M_T        NONE</geo:antennaType>
             <geo:serialNumber>178</geo:serialNumber>
-            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:antennaReferencePoint codeSpace="">BPA</geo:antennaReferencePoint>
             <geo:marker-arpUpEcc.>0.128</geo:marker-arpUpEcc.>
             <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
+            <geo:antennaRadomeType codeSpace="CodeSpaceAttr">NONE</geo:antennaRadomeType>
+            <geo:radomeSerialNumber></geo:radomeSerialNumber>
+            <geo:antennaCableType></geo:antennaCableType>
             <geo:antennaCableLength>0.0</geo:antennaCableLength>
             <geo:dateInstalled>1995-09-16T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved></geo:dateRemoved>
          </geo:gnssAntenna>
+         <geo:dateInserted>1995-09-16T00:00:00Z</geo:dateInserted>
       </geo:gnssAntennas>
       <geo:frequencyStandards>
          <geo:frequencyStandard gml:id="FrequencyStandardType_431">
-            <geo:standardType>H-MASER</geo:standardType>
+            <geo:standardType codeSpace="">H-MASER</geo:standardType>
             <geo:inputFrequency>0.0</geo:inputFrequency>
-            <gml:validTime>
-               <gml:TimePeriod>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_633">
                   <gml:beginPosition>1995-09-16T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
          </geo:frequencyStandard>
+         <geo:dateInserted>2016-04-14T00:03:09Z</geo:dateInserted>
       </geo:frequencyStandards>
       <geo:collocationInformations>
          <geo:collocationInformation gml:id="CollocationInformationType_68">
-            <geo:status>PERMANENT</geo:status>
+            <geo:instrumentationType codeSpace=""></geo:instrumentationType>
+            <geo:status codeSpace="">PERMANENT</geo:status>
+            <gml:validTime>
+               <gml:TimeInstant gml:id="TimeInstantType_338">
+                  <gml:timePosition>1970-01-22T13:00:00Z</gml:timePosition>
+               </gml:TimeInstant>
+            </gml:validTime>
          </geo:collocationInformation>
+         <geo:dateInserted>2016-04-14T00:03:09Z</geo:dateInserted>
       </geo:collocationInformations>
       <geo:otherInstrumentations>
-         <geo:otherInstrumentation gml:id="OtherInstrumentationType_68"/>
+         <geo:otherInstrumentation gml:id="OtherInstrumentationType_68">
+            <geo:instrumentation></geo:instrumentation>
+            <gml:validTime>
+               <gml:TimeInstant gml:id="TimeInstantType_339">
+                  <gml:timePosition>1970-01-22T13:00:00Z</gml:timePosition>
+               </gml:TimeInstant>
+            </gml:validTime>
+         </geo:otherInstrumentation>
+         <geo:dateInserted>2016-04-14T00:03:09Z</geo:dateInserted>
       </geo:otherInstrumentations>
-      <geo:siteContact>
-         <gmd:MD_SecurityConstraints/>
-         <gmd:CI_ResponsibleParty>
+      <geo:siteContact gml:id="AgencyPropertyType_538">
+         <gmd:MD_SecurityConstraints id="MDSecurityConstraintsType_538">
+            <gmd:classification>
+               <gmd:MD_ClassificationCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:classification>
+         </gmd:MD_SecurityConstraints>
+         <gmd:CI_ResponsibleParty id="CIResponsiblePartyType_538">
             <gmd:individualName>
                <gco:CharacterString>Valery Emelyanov</gco:CharacterString>
             </gmd:individualName>
@@ -96,9 +127,9 @@
                <gco:CharacterString>East-Siberian Research Institute for</gco:CharacterString>
             </gmd:organisationName>
             <gmd:contactInfo>
-               <gmd:CI_Contact>
+               <gmd:CI_Contact id="CIContactType_538">
                   <gmd:phone>
-                     <gmd:CI_Telephone>
+                     <gmd:CI_Telephone id="CITelephoneType_206">
                         <gmd:voice>
                            <gco:CharacterString>(3952)393853</gco:CharacterString>
                         </gmd:voice>
@@ -108,7 +139,7 @@
                      </gmd:CI_Telephone>
                   </gmd:phone>
                   <gmd:address>
-                     <gmd:CI_Address>
+                     <gmd:CI_Address id="CIAddressType_538">
                         <gmd:deliveryPoint>
                            <gco:CharacterString>57, Borodina Str., Irkutsk,</gco:CharacterString>
                         </gmd:deliveryPoint>
@@ -119,18 +150,25 @@
                   </gmd:address>
                </gmd:CI_Contact>
             </gmd:contactInfo>
+            <gmd:role>
+               <gmd:CI_RoleCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:role>
          </gmd:CI_ResponsibleParty>
       </geo:siteContact>
-      <geo:siteMetadataCustodian>
-         <gmd:MD_SecurityConstraints/>
-         <gmd:CI_ResponsibleParty>
+      <geo:siteMetadataCustodian gml:id="AgencyPropertyType_539">
+         <gmd:MD_SecurityConstraints id="MDSecurityConstraintsType_539">
+            <gmd:classification>
+               <gmd:MD_ClassificationCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:classification>
+         </gmd:MD_SecurityConstraints>
+         <gmd:CI_ResponsibleParty id="CIResponsiblePartyType_539">
             <gmd:organisationName>
                <gco:CharacterString>Delft University of Technology</gco:CharacterString>
             </gmd:organisationName>
             <gmd:contactInfo>
-               <gmd:CI_Contact>
+               <gmd:CI_Contact id="CIContactType_539">
                   <gmd:address>
-                     <gmd:CI_Address>
+                     <gmd:CI_Address id="CIAddressType_539">
                         <gmd:deliveryPoint>
                            <gco:CharacterString>Faculty of Aerospace Engineering</gco:CharacterString>
                         </gmd:deliveryPoint>
@@ -138,7 +176,22 @@
                   </gmd:address>
                </gmd:CI_Contact>
             </gmd:contactInfo>
+            <gmd:role>
+               <gmd:CI_RoleCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:role>
          </gmd:CI_ResponsibleParty>
       </geo:siteMetadataCustodian>
+      <geo:moreInformation>
+         <geo:dataCenter></geo:dataCenter>
+         <geo:urlForMoreInformation></geo:urlForMoreInformation>
+         <geo:siteMap></geo:siteMap>
+         <geo:siteDiagram></geo:siteDiagram>
+         <geo:horizonMask></geo:horizonMask>
+         <geo:monumentDescription></geo:monumentDescription>
+         <geo:sitePictures></geo:sitePictures>
+         <geo:antennaGraphicsWithDimensions></geo:antennaGraphicsWithDimensions>
+         <geo:insertTextGraphicFromAntenna></geo:insertTextGraphicFromAntenna>
+         <geo:DOI codeSpace="CodeSpaceTODO">CodeTypeTODO</geo:DOI>
+      </geo:moreInformation>
    </geo:siteLog>
 </geo:GeodesyML>

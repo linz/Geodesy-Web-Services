@@ -10,6 +10,7 @@
          <geo:siteName>Cooladdi</geo:siteName>
          <geo:fourCharacterID>COOL</geo:fourCharacterID>
          <geo:iersDOMESNumber>59933M001</geo:iersDOMESNumber>
+         <geo:cdpNumber></geo:cdpNumber>
          <geo:monumentDescription>PILLAR</geo:monumentDescription>
          <geo:monumentFoundation>CONCRETE BLOCK</geo:monumentFoundation>
          <geo:dateInstalled>2013-02-04T13:00:00Z</geo:dateInstalled>
@@ -23,49 +24,57 @@
          <geo:city>Cooladdi</geo:city>
          <geo:state>Queensland</geo:state>
          <geo:countryCodeISO>AUS</geo:countryCodeISO>
-         <geo:tectonicPlate>Australian</geo:tectonicPlate>
+         <geo:tectonicPlate codeSpace="">Australian</geo:tectonicPlate>
          <geo:approximatePositionITRF>
             <geo:xCoordinateInMeters>-4707740.31</geo:xCoordinateInMeters>
             <geo:yCoordinateInMeters>3213770.423</geo:yCoordinateInMeters>
             <geo:zCoordinateInMeters>-2852875.759</geo:zCoordinateInMeters>
-            <geo:latitude-North>-264431.5700899999937973916530609130859375</geo:latitude-North>
-            <geo:longitude-East>1454049.2209600000642240047454833984375</geo:longitude-East>
+            <geo:latitude-North>-26.742102802777775849563113297335803508758544921875</geo:latitude-North>
+            <geo:longitude-East>145.680339155555572006051079370081424713134765625</geo:longitude-East>
             <geo:elevation-m_ellips.>333.699</geo:elevation-m_ellips.>
          </geo:approximatePositionITRF>
       </geo:siteLocation>
       <geo:gnssReceivers>
          <geo:gnssReceiver gml:id="GnssReceiverType_576">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">TRIMBLE NETR9</geo:receiverType>
+            <geo:manufacturerSerialNumber>5207K82336</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">TRIMBLE NETR9</geo:receiverType>
             <geo:satelliteSystem>GPS+GLO+GAL+QZSS+SBAS</geo:satelliteSystem>
             <geo:serialNumber>5207K82336</geo:serialNumber>
             <geo:firmwareVersion>4.70</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
             <geo:dateInstalled>2013-02-05T10:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved></geo:dateRemoved>
          </geo:gnssReceiver>
+         <geo:dateInserted>2013-02-05T10:00:00Z</geo:dateInserted>
       </geo:gnssReceivers>
       <geo:gnssAntennas>
          <geo:gnssAntenna gml:id="GnssAntennaType_261">
-            <geo:antennaType codeList="codelist" codeListValue="codeListValue">TRM59800.00     NONE</geo:antennaType>
+            <geo:manufacturerSerialNumber>5209354439</geo:manufacturerSerialNumber>
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue" codeSpace="codespace">TRM59800.00     NONE</geo:antennaType>
             <geo:serialNumber>5209354439</geo:serialNumber>
-            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:antennaReferencePoint codeSpace="">BPA</geo:antennaReferencePoint>
             <geo:marker-arpUpEcc.>0.001</geo:marker-arpUpEcc.>
             <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
+            <geo:antennaRadomeType codeSpace="CodeSpaceAttr">NONE</geo:antennaRadomeType>
+            <geo:radomeSerialNumber></geo:radomeSerialNumber>
             <geo:antennaCableType>SML400</geo:antennaCableType>
             <geo:antennaCableLength>18.0</geo:antennaCableLength>
             <geo:dateInstalled>2013-02-05T10:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved></geo:dateRemoved>
          </geo:gnssAntenna>
+         <geo:dateInserted>2013-02-05T10:00:00Z</geo:dateInserted>
       </geo:gnssAntennas>
       <geo:humiditySensors>
          <geo:humiditySensor gml:id="HumiditySensorType_55">
-            <geo:type>PAROSCIENTIFIC MET4</geo:type>
+            <geo:type codeSpace="">PAROSCIENTIFIC MET4</geo:type>
             <geo:manufacturer>Paroscientific</geo:manufacturer>
             <geo:serialNumber>DQ125385</geo:serialNumber>
             <geo:heightDiffToAntenna>0.29</geo:heightDiffToAntenna>
-            <gml:validTime>
-               <gml:TimePeriod>
+            <geo:calibrationDate></geo:calibrationDate>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_339">
                   <gml:beginPosition>2013-02-05T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
@@ -74,15 +83,17 @@
             <geo:accuracy-percentRelativeHumidity>2.0</geo:accuracy-percentRelativeHumidity>
             <geo:aspiration>UNASPIRATED</geo:aspiration>
          </geo:humiditySensor>
+         <geo:dateInserted>2016-04-14T00:03:08Z</geo:dateInserted>
       </geo:humiditySensors>
       <geo:pressureSensors>
          <geo:pressureSensor gml:id="PressureSensorType_58">
-            <geo:type>PAROSCIENTIFIC MET4</geo:type>
+            <geo:type codeSpace="">PAROSCIENTIFIC MET4</geo:type>
             <geo:manufacturer>Paroscientific</geo:manufacturer>
             <geo:serialNumber>DQ125385</geo:serialNumber>
             <geo:heightDiffToAntenna>0.29</geo:heightDiffToAntenna>
-            <gml:validTime>
-               <gml:TimePeriod>
+            <geo:calibrationDate></geo:calibrationDate>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_340">
                   <gml:beginPosition>2013-02-05T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
@@ -90,15 +101,17 @@
             <geo:dataSamplingInterval>30.0</geo:dataSamplingInterval>
             <geo:accuracy-hPa>0.08</geo:accuracy-hPa>
          </geo:pressureSensor>
+         <geo:dateInserted>2016-04-14T00:03:08Z</geo:dateInserted>
       </geo:pressureSensors>
       <geo:temperatureSensors>
          <geo:temperatureSensor gml:id="TemperatureSensorType_55">
-            <geo:type>PAROSCIENTIFIC MET4</geo:type>
+            <geo:type codeSpace="">PAROSCIENTIFIC MET4</geo:type>
             <geo:manufacturer>Paroscientific</geo:manufacturer>
             <geo:serialNumber>DQ125385</geo:serialNumber>
             <geo:heightDiffToAntenna>0.29</geo:heightDiffToAntenna>
-            <gml:validTime>
-               <gml:TimePeriod>
+            <geo:calibrationDate></geo:calibrationDate>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_341">
                   <gml:beginPosition>2013-02-05T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
@@ -107,10 +120,15 @@
             <geo:accuracy-degreesCelcius>0.5</geo:accuracy-degreesCelcius>
             <geo:aspiration>UNASPIRATED</geo:aspiration>
          </geo:temperatureSensor>
+         <geo:dateInserted>2016-04-14T00:03:08Z</geo:dateInserted>
       </geo:temperatureSensors>
-      <geo:siteContact>
-         <gmd:MD_SecurityConstraints/>
-         <gmd:CI_ResponsibleParty>
+      <geo:siteContact gml:id="AgencyPropertyType_268">
+         <gmd:MD_SecurityConstraints id="MDSecurityConstraintsType_268">
+            <gmd:classification>
+               <gmd:MD_ClassificationCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:classification>
+         </gmd:MD_SecurityConstraints>
+         <gmd:CI_ResponsibleParty id="CIResponsiblePartyType_268">
             <gmd:individualName>
                <gco:CharacterString>Ryan Ruddick</gco:CharacterString>
             </gmd:individualName>
@@ -118,9 +136,9 @@
                <gco:CharacterString>Geoscience Australia</gco:CharacterString>
             </gmd:organisationName>
             <gmd:contactInfo>
-               <gmd:CI_Contact>
+               <gmd:CI_Contact id="CIContactType_268">
                   <gmd:phone>
-                     <gmd:CI_Telephone>
+                     <gmd:CI_Telephone id="CITelephoneType_102">
                         <gmd:voice>
                            <gco:CharacterString>+61 2 6249 9426</gco:CharacterString>
                         </gmd:voice>
@@ -130,7 +148,7 @@
                      </gmd:CI_Telephone>
                   </gmd:phone>
                   <gmd:address>
-                     <gmd:CI_Address>
+                     <gmd:CI_Address id="CIAddressType_268">
                         <gmd:deliveryPoint>
                            <gco:CharacterString>National Geospatial Reference Frames Project</gco:CharacterString>
                         </gmd:deliveryPoint>
@@ -141,27 +159,44 @@
                   </gmd:address>
                </gmd:CI_Contact>
             </gmd:contactInfo>
+            <gmd:role>
+               <gmd:CI_RoleCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:role>
          </gmd:CI_ResponsibleParty>
       </geo:siteContact>
-      <geo:siteMetadataCustodian>
-         <gmd:MD_SecurityConstraints/>
-         <gmd:CI_ResponsibleParty>
+      <geo:siteMetadataCustodian gml:id="AgencyPropertyType_269">
+         <gmd:MD_SecurityConstraints id="MDSecurityConstraintsType_269">
+            <gmd:classification>
+               <gmd:MD_ClassificationCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:classification>
+         </gmd:MD_SecurityConstraints>
+         <gmd:CI_ResponsibleParty id="CIResponsiblePartyType_269">
             <gmd:organisationName>
                <gco:CharacterString>Geoscience Australia</gco:CharacterString>
             </gmd:organisationName>
             <gmd:contactInfo>
-               <gmd:CI_Contact>
+               <gmd:CI_Contact id="CIContactType_269">
                   <gmd:address>
-                     <gmd:CI_Address/>
+                     <gmd:CI_Address id="CIAddressType_269"/>
                   </gmd:address>
                </gmd:CI_Contact>
             </gmd:contactInfo>
+            <gmd:role>
+               <gmd:CI_RoleCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:role>
          </gmd:CI_ResponsibleParty>
       </geo:siteMetadataCustodian>
       <geo:moreInformation>
+         <geo:dataCenter></geo:dataCenter>
+         <geo:urlForMoreInformation></geo:urlForMoreInformation>
+         <geo:siteMap></geo:siteMap>
          <geo:siteDiagram>Y</geo:siteDiagram>
          <geo:horizonMask>Y</geo:horizonMask>
+         <geo:monumentDescription></geo:monumentDescription>
          <geo:sitePictures>Y</geo:sitePictures>
+         <geo:antennaGraphicsWithDimensions></geo:antennaGraphicsWithDimensions>
+         <geo:insertTextGraphicFromAntenna></geo:insertTextGraphicFromAntenna>
+         <geo:DOI codeSpace="CodeSpaceTODO">CodeTypeTODO</geo:DOI>
       </geo:moreInformation>
    </geo:siteLog>
 </geo:GeodesyML>

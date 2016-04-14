@@ -10,6 +10,7 @@
          <geo:siteName>Warwick SunPOZ</geo:siteName>
          <geo:fourCharacterID>WARW</geo:fourCharacterID>
          <geo:iersDOMESNumber>AUM000094</geo:iersDOMESNumber>
+         <geo:cdpNumber></geo:cdpNumber>
          <geo:monumentDescription>STEEL MAST</geo:monumentDescription>
          <geo:heightOfTheMonument>1.8</geo:heightOfTheMonument>
          <geo:monumentFoundation>ROOF</geo:monumentFoundation>
@@ -21,31 +22,21 @@
          <geo:city>Warwick</geo:city>
          <geo:state>Queensland</geo:state>
          <geo:countryCodeISO>AUS</geo:countryCodeISO>
-         <geo:tectonicPlate>Australian</geo:tectonicPlate>
+         <geo:tectonicPlate codeSpace="">Australian</geo:tectonicPlate>
          <geo:approximatePositionITRF>
             <geo:xCoordinateInMeters>-4967998.8465</geo:xCoordinateInMeters>
             <geo:yCoordinateInMeters>2638152.8379</geo:yCoordinateInMeters>
             <geo:zCoordinateInMeters>-2997613.6723</geo:zCoordinateInMeters>
-            <geo:latitude-North>-281248.5418100000242702662944793701171875</geo:latitude-North>
-            <geo:longitude-East>1520149.40188000001944601535797119140625</geo:longitude-East>
+            <geo:latitude-North>-28.21348383611111643176627694629132747650146484375</geo:latitude-North>
+            <geo:longitude-East>152.03038941111111626014462672173976898193359375</geo:longitude-East>
             <geo:elevation-m_ellips.>507.4349</geo:elevation-m_ellips.>
          </geo:approximatePositionITRF>
          <geo:notes>SunPOZ Network</geo:notes>
       </geo:siteLocation>
       <geo:gnssReceivers>
          <geo:gnssReceiver gml:id="GnssReceiverType_2805">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">LEICA GRX1200GGPRO</geo:receiverType>
-            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
-            <geo:serialNumber>355804</geo:serialNumber>
-            <geo:firmwareVersion>8.20/3.019</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>5.0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>2011-09-15T09:10:00Z</geo:dateInstalled>
-            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver gml:id="GnssReceiverType_2806">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">LEICA GRX1200GGPRO</geo:receiverType>
+            <geo:manufacturerSerialNumber>355804</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">LEICA GRX1200GGPRO</geo:receiverType>
             <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
             <geo:serialNumber>355804</geo:serialNumber>
             <geo:firmwareVersion>7.53</geo:firmwareVersion>
@@ -54,10 +45,26 @@
             <geo:dateRemoved>2010-08-13T02:00:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
          </geo:gnssReceiver>
+         <geo:dateInserted>2009-08-27T00:00:00Z</geo:dateInserted>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_2806">
+            <geo:manufacturerSerialNumber>355804</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">LEICA GRX1200GGPRO</geo:receiverType>
+            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
+            <geo:serialNumber>355804</geo:serialNumber>
+            <geo:firmwareVersion>8.20/3.019</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>5.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2011-09-15T09:10:00Z</geo:dateInstalled>
+            <geo:dateRemoved></geo:dateRemoved>
+            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
+         </geo:gnssReceiver>
+         <geo:dateInserted>2011-09-15T09:10:00Z</geo:dateInserted>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
          <geo:gnssReceiver gml:id="GnssReceiverType_2807">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">LEICA GRX1200GGPRO</geo:receiverType>
+            <geo:manufacturerSerialNumber>355804</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">LEICA GRX1200GGPRO</geo:receiverType>
             <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
             <geo:serialNumber>355804</geo:serialNumber>
             <geo:firmwareVersion>8.00</geo:firmwareVersion>
@@ -66,31 +73,46 @@
             <geo:dateRemoved>2011-09-15T09:07:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
          </geo:gnssReceiver>
+         <geo:dateInserted>2010-08-13T02:30:00Z</geo:dateInserted>
       </geo:gnssReceivers>
       <geo:gnssAntennas>
          <geo:gnssAntenna gml:id="GnssAntennaType_1257">
-            <geo:antennaType codeList="codelist" codeListValue="codeListValue">LEIAT504GG      NONE</geo:antennaType>
+            <geo:manufacturerSerialNumber>200725</geo:manufacturerSerialNumber>
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue" codeSpace="codespace">LEIAT504GG      NONE</geo:antennaType>
             <geo:serialNumber>200725</geo:serialNumber>
-            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:antennaReferencePoint codeSpace="">BPA</geo:antennaReferencePoint>
             <geo:marker-arpUpEcc.>0.003</geo:marker-arpUpEcc.>
             <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
+            <geo:antennaRadomeType codeSpace="CodeSpaceAttr">NONE</geo:antennaRadomeType>
+            <geo:radomeSerialNumber></geo:radomeSerialNumber>
             <geo:antennaCableType>LMR400</geo:antennaCableType>
             <geo:antennaCableLength>30.0</geo:antennaCableLength>
             <geo:dateInstalled>2009-08-27T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved></geo:dateRemoved>
          </geo:gnssAntenna>
+         <geo:dateInserted>2009-08-27T00:00:00Z</geo:dateInserted>
       </geo:gnssAntennas>
       <geo:frequencyStandards>
          <geo:frequencyStandard gml:id="FrequencyStandardType_1005">
-            <geo:standardType>INTERNAL</geo:standardType>
+            <geo:standardType codeSpace="">INTERNAL</geo:standardType>
             <geo:inputFrequency>0.0</geo:inputFrequency>
+            <gml:validTime>
+               <gml:TimeInstant gml:id="TimeInstantType_920">
+                  <gml:timePosition>1970-01-22T13:00:00Z</gml:timePosition>
+               </gml:TimeInstant>
+            </gml:validTime>
          </geo:frequencyStandard>
+         <geo:dateInserted>2016-04-14T00:03:13Z</geo:dateInserted>
       </geo:frequencyStandards>
-      <geo:siteContact>
-         <gmd:MD_SecurityConstraints/>
-         <gmd:CI_ResponsibleParty>
+      <geo:siteContact gml:id="AgencyPropertyType_1246">
+         <gmd:MD_SecurityConstraints id="MDSecurityConstraintsType_1246">
+            <gmd:classification>
+               <gmd:MD_ClassificationCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:classification>
+         </gmd:MD_SecurityConstraints>
+         <gmd:CI_ResponsibleParty id="CIResponsiblePartyType_1246">
             <gmd:individualName>
                <gco:CharacterString>Jason Ogden</gco:CharacterString>
             </gmd:individualName>
@@ -98,16 +120,16 @@
                <gco:CharacterString>Queensland Department of Environment and</gco:CharacterString>
             </gmd:organisationName>
             <gmd:contactInfo>
-               <gmd:CI_Contact>
+               <gmd:CI_Contact id="CIContactType_1246">
                   <gmd:phone>
-                     <gmd:CI_Telephone>
+                     <gmd:CI_Telephone id="CITelephoneType_497">
                         <gmd:voice>
                            <gco:CharacterString>(07) 4661 0217</gco:CharacterString>
                         </gmd:voice>
                      </gmd:CI_Telephone>
                   </gmd:phone>
                   <gmd:address>
-                     <gmd:CI_Address>
+                     <gmd:CI_Address id="CIAddressType_1246">
                         <gmd:deliveryPoint>
                            <gco:CharacterString>PO Box 2</gco:CharacterString>
                         </gmd:deliveryPoint>
@@ -118,18 +140,25 @@
                   </gmd:address>
                </gmd:CI_Contact>
             </gmd:contactInfo>
+            <gmd:role>
+               <gmd:CI_RoleCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:role>
          </gmd:CI_ResponsibleParty>
       </geo:siteContact>
-      <geo:siteMetadataCustodian>
-         <gmd:MD_SecurityConstraints/>
-         <gmd:CI_ResponsibleParty>
+      <geo:siteMetadataCustodian gml:id="AgencyPropertyType_1247">
+         <gmd:MD_SecurityConstraints id="MDSecurityConstraintsType_1247">
+            <gmd:classification>
+               <gmd:MD_ClassificationCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:classification>
+         </gmd:MD_SecurityConstraints>
+         <gmd:CI_ResponsibleParty id="CIResponsiblePartyType_1247">
             <gmd:organisationName>
                <gco:CharacterString>Queensland Department of Environment and</gco:CharacterString>
             </gmd:organisationName>
             <gmd:contactInfo>
-               <gmd:CI_Contact>
+               <gmd:CI_Contact id="CIContactType_1247">
                   <gmd:address>
-                     <gmd:CI_Address>
+                     <gmd:CI_Address id="CIAddressType_1247">
                         <gmd:deliveryPoint>
                            <gco:CharacterString>GPO Box 2454</gco:CharacterString>
                         </gmd:deliveryPoint>
@@ -137,7 +166,22 @@
                   </gmd:address>
                </gmd:CI_Contact>
             </gmd:contactInfo>
+            <gmd:role>
+               <gmd:CI_RoleCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:role>
          </gmd:CI_ResponsibleParty>
       </geo:siteMetadataCustodian>
+      <geo:moreInformation>
+         <geo:dataCenter></geo:dataCenter>
+         <geo:urlForMoreInformation></geo:urlForMoreInformation>
+         <geo:siteMap></geo:siteMap>
+         <geo:siteDiagram></geo:siteDiagram>
+         <geo:horizonMask></geo:horizonMask>
+         <geo:monumentDescription></geo:monumentDescription>
+         <geo:sitePictures></geo:sitePictures>
+         <geo:antennaGraphicsWithDimensions></geo:antennaGraphicsWithDimensions>
+         <geo:insertTextGraphicFromAntenna></geo:insertTextGraphicFromAntenna>
+         <geo:DOI codeSpace="CodeSpaceTODO">CodeTypeTODO</geo:DOI>
+      </geo:moreInformation>
    </geo:siteLog>
 </geo:GeodesyML>

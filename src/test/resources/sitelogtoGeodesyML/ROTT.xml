@@ -18,91 +18,119 @@
          <geo:city>Perth</geo:city>
          <geo:state>Western Australia</geo:state>
          <geo:countryCodeISO>AUS</geo:countryCodeISO>
-         <geo:tectonicPlate>Australian</geo:tectonicPlate>
+         <geo:tectonicPlate codeSpace="">Australian</geo:tectonicPlate>
          <geo:approximatePositionITRF>
             <geo:xCoordinateInMeters>-2333420.3318</geo:xCoordinateInMeters>
             <geo:yCoordinateInMeters>4885751.5394</geo:yCoordinateInMeters>
             <geo:zCoordinateInMeters>-3359903.7689</geo:zCoordinateInMeters>
-            <geo:latitude-North>-315940.08267999999225139617919921875</geo:latitude-North>
-            <geo:longitude-East>1153144.405340000055730342864990234375</geo:longitude-East>
+            <geo:latitude-North>-31.99446741111110981137244380079209804534912109375</geo:latitude-North>
+            <geo:longitude-East>115.5290014833333458454944775439798831939697265625</geo:longitude-East>
             <geo:elevation-m_ellips.>-13.928</geo:elevation-m_ellips.>
          </geo:approximatePositionITRF>
          <geo:notes>Perth Net</geo:notes>
       </geo:siteLocation>
       <geo:gnssReceivers>
          <geo:gnssReceiver gml:id="GnssReceiverType_2303">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">TRIMBLE NETR5</geo:receiverType>
+            <geo:manufacturerSerialNumber>4613K00971</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">TRIMBLE NETR5</geo:receiverType>
             <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
             <geo:serialNumber>4613K00971</geo:serialNumber>
             <geo:firmwareVersion>4.00</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
             <geo:dateInstalled>2008-09-16T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved></geo:dateRemoved>
             <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
          </geo:gnssReceiver>
+         <geo:dateInserted>2008-09-16T00:00:00Z</geo:dateInserted>
       </geo:gnssReceivers>
       <geo:gnssAntennas>
          <geo:gnssAntenna gml:id="GnssAntennaType_1019">
-            <geo:antennaType codeList="codelist" codeListValue="codeListValue">TRM55971.00     NONE</geo:antennaType>
+            <geo:manufacturerSerialNumber>23534347</geo:manufacturerSerialNumber>
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue" codeSpace="codespace">TRM55971.00     NONE</geo:antennaType>
             <geo:serialNumber>23534347</geo:serialNumber>
-            <geo:antennaReferencePoint>BAM</geo:antennaReferencePoint>
+            <geo:antennaReferencePoint codeSpace="">BAM</geo:antennaReferencePoint>
             <geo:marker-arpUpEcc.>0.0</geo:marker-arpUpEcc.>
             <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
+            <geo:antennaRadomeType codeSpace="CodeSpaceAttr">NONE</geo:antennaRadomeType>
+            <geo:radomeSerialNumber></geo:radomeSerialNumber>
             <geo:antennaCableType>CNT-400 50 Ohm</geo:antennaCableType>
             <geo:antennaCableLength>80.0</geo:antennaCableLength>
             <geo:dateInstalled>2008-09-16T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved></geo:dateRemoved>
          </geo:gnssAntenna>
+         <geo:dateInserted>2008-09-16T00:00:00Z</geo:dateInserted>
       </geo:gnssAntennas>
       <geo:frequencyStandards>
          <geo:frequencyStandard gml:id="FrequencyStandardType_793">
-            <geo:standardType>QUARTZ/INTERNAL</geo:standardType>
+            <geo:standardType codeSpace="">QUARTZ/INTERNAL</geo:standardType>
             <geo:inputFrequency>0.0</geo:inputFrequency>
-            <gml:validTime>
-               <gml:TimePeriod>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_1308">
                   <gml:beginPosition>2007-03-22T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
          </geo:frequencyStandard>
+         <geo:dateInserted>2016-04-14T00:03:12Z</geo:dateInserted>
       </geo:frequencyStandards>
-      <geo:siteContact>
-         <gmd:MD_SecurityConstraints/>
-         <gmd:CI_ResponsibleParty>
+      <geo:siteContact gml:id="AgencyPropertyType_1014">
+         <gmd:MD_SecurityConstraints id="MDSecurityConstraintsType_1014">
+            <gmd:classification>
+               <gmd:MD_ClassificationCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:classification>
+         </gmd:MD_SecurityConstraints>
+         <gmd:CI_ResponsibleParty id="CIResponsiblePartyType_1014">
             <gmd:organisationName>
                <gco:CharacterString>Perth Net</gco:CharacterString>
             </gmd:organisationName>
             <gmd:contactInfo>
-               <gmd:CI_Contact>
+               <gmd:CI_Contact id="CIContactType_1014">
                   <gmd:address>
-                     <gmd:CI_Address/>
+                     <gmd:CI_Address id="CIAddressType_1014"/>
                   </gmd:address>
                </gmd:CI_Contact>
             </gmd:contactInfo>
+            <gmd:role>
+               <gmd:CI_RoleCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:role>
          </gmd:CI_ResponsibleParty>
       </geo:siteContact>
-      <geo:siteMetadataCustodian>
-         <gmd:MD_SecurityConstraints/>
-         <gmd:CI_ResponsibleParty>
+      <geo:siteMetadataCustodian gml:id="AgencyPropertyType_1015">
+         <gmd:MD_SecurityConstraints id="MDSecurityConstraintsType_1015">
+            <gmd:classification>
+               <gmd:MD_ClassificationCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:classification>
+         </gmd:MD_SecurityConstraints>
+         <gmd:CI_ResponsibleParty id="CIResponsiblePartyType_1015">
             <gmd:organisationName>
                <gco:CharacterString>Geoscience Australia</gco:CharacterString>
             </gmd:organisationName>
             <gmd:contactInfo>
-               <gmd:CI_Contact>
+               <gmd:CI_Contact id="CIContactType_1015">
                   <gmd:address>
-                     <gmd:CI_Address/>
+                     <gmd:CI_Address id="CIAddressType_1015"/>
                   </gmd:address>
                </gmd:CI_Contact>
             </gmd:contactInfo>
+            <gmd:role>
+               <gmd:CI_RoleCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:role>
          </gmd:CI_ResponsibleParty>
       </geo:siteMetadataCustodian>
       <geo:moreInformation>
+         <geo:dataCenter>http</geo:dataCenter>
+         <geo:dataCenter>http</geo:dataCenter>
          <geo:urlForMoreInformation>http</geo:urlForMoreInformation>
          <geo:siteMap>http</geo:siteMap>
          <geo:siteDiagram>N</geo:siteDiagram>
          <geo:horizonMask>N</geo:horizonMask>
+         <geo:monumentDescription></geo:monumentDescription>
          <geo:sitePictures>N</geo:sitePictures>
+         <geo:antennaGraphicsWithDimensions></geo:antennaGraphicsWithDimensions>
+         <geo:insertTextGraphicFromAntenna></geo:insertTextGraphicFromAntenna>
+         <geo:DOI codeSpace="CodeSpaceTODO">CodeTypeTODO</geo:DOI>
       </geo:moreInformation>
    </geo:siteLog>
 </geo:GeodesyML>

@@ -16,20 +16,36 @@
       </geo:siteIdentification>
       <geo:siteLocation>
          <geo:city>Mendeleevo, Moscow Region</geo:city>
-         <geo:countryCodeISO>Russia</geo:countryCodeISO>
-         <geo:tectonicPlate>EURA</geo:tectonicPlate>
+         <geo:state></geo:state>
+         <geo:countryCodeISO>???</geo:countryCodeISO>
+         <geo:tectonicPlate codeSpace="">EURA</geo:tectonicPlate>
          <geo:approximatePositionITRF>
             <geo:xCoordinateInMeters>2844672.27</geo:xCoordinateInMeters>
             <geo:yCoordinateInMeters>2161070.08</geo:yCoordinateInMeters>
             <geo:zCoordinateInMeters>5266363.81</geo:zCoordinateInMeters>
-            <geo:latitude-North>560138.920000000041909515857696533203125</geo:latitude-North>
-            <geo:longitude-East>371324.9099999999743886291980743408203125</geo:longitude-East>
+            <geo:latitude-North>56.0274777777777899245847947895526885986328125</geo:latitude-North>
+            <geo:longitude-East>37.2235861111111034915666095912456512451171875</geo:longitude-East>
             <geo:elevation-m_ellips.>254.8</geo:elevation-m_ellips.>
          </geo:approximatePositionITRF>
       </geo:siteLocation>
       <geo:gnssReceivers>
          <geo:gnssReceiver gml:id="GnssReceiverType_1697">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">TRIMBLE 4000SSE</geo:receiverType>
+            <geo:manufacturerSerialNumber>03752 (3333A03752)</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">TRIMBLE 4000SSE</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>03752 (3333A03752)</geo:serialNumber>
+            <geo:firmwareVersion>7.29 / 3.07</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>5.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>1999-08-18T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved></geo:dateRemoved>
+            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
+         </geo:gnssReceiver>
+         <geo:dateInserted>1999-08-18T00:00:00Z</geo:dateInserted>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_1698">
+            <geo:manufacturerSerialNumber>03752 (3333A03752)</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">TRIMBLE 4000SSE</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
             <geo:serialNumber>03752 (3333A03752)</geo:serialNumber>
             <geo:firmwareVersion>5.66 / 1.25</geo:firmwareVersion>
@@ -38,51 +54,50 @@
             <geo:dateRemoved>1999-08-18T00:00:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
          </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver gml:id="GnssReceiverType_1698">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">TRIMBLE 4000SSE</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>03752 (3333A03752)</geo:serialNumber>
-            <geo:firmwareVersion>7.29 / 3.07</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>5.0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>1999-08-18T00:00:00Z</geo:dateInstalled>
-            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
-         </geo:gnssReceiver>
+         <geo:dateInserted>1995-02-18T00:00:00Z</geo:dateInserted>
       </geo:gnssReceivers>
       <geo:gnssAntennas>
          <geo:gnssAntenna gml:id="GnssAntennaType_736">
-            <geo:antennaType codeList="codelist" codeListValue="codeListValue">TRM14532.10     NONE</geo:antennaType>
+            <geo:manufacturerSerialNumber>68709 (3330A68709)</geo:manufacturerSerialNumber>
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue" codeSpace="codespace">TRM14532.10     NONE</geo:antennaType>
             <geo:serialNumber>68709 (3330A68709)</geo:serialNumber>
-            <geo:antennaReferencePoint>TOP</geo:antennaReferencePoint>
+            <geo:antennaReferencePoint codeSpace="">TOP</geo:antennaReferencePoint>
             <geo:marker-arpUpEcc.>0.1456</geo:marker-arpUpEcc.>
             <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
+            <geo:antennaRadomeType codeSpace="CodeSpaceAttr">NONE</geo:antennaRadomeType>
+            <geo:radomeSerialNumber></geo:radomeSerialNumber>
+            <geo:antennaCableType></geo:antennaCableType>
             <geo:antennaCableLength>0.0</geo:antennaCableLength>
             <geo:dateInstalled>1995-07-05T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved></geo:dateRemoved>
          </geo:gnssAntenna>
+         <geo:dateInserted>1995-07-05T00:00:00Z</geo:dateInserted>
       </geo:gnssAntennas>
       <geo:surveyedLocalTies>
          <geo:surveyedLocalTies gml:id="SurveyedLocalTiesType_190">
             <geo:tiedMarkerName>MENDELEEVO</geo:tiedMarkerName>
             <geo:tiedMarkerUsage>SLR</geo:tiedMarkerUsage>
             <geo:tiedMarkerCDPNumber>1870</geo:tiedMarkerCDPNumber>
+            <geo:tiedMarkerDOMESNumber></geo:tiedMarkerDOMESNumber>
             <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
                <geo:dx>2.1</geo:dx>
                <geo:dy>11.93</geo:dy>
                <geo:dz>-7.69</geo:dz>
             </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
             <geo:localSiteTiesAccuracy>15.0</geo:localSiteTiesAccuracy>
+            <geo:surveyMethod></geo:surveyMethod>
             <geo:dateMeasured>1995-07-20T14:00:00Z</geo:dateMeasured>
             <geo:notes>SLR point</geo:notes>
          </geo:surveyedLocalTies>
+         <geo:dateInserted>2016-04-14T00:03:10Z</geo:dateInserted>
       </geo:surveyedLocalTies>
       <geo:surveyedLocalTies>
          <geo:surveyedLocalTies gml:id="SurveyedLocalTiesType_191">
             <geo:tiedMarkerName>MENDELEEVO</geo:tiedMarkerName>
             <geo:tiedMarkerUsage>GPS</geo:tiedMarkerUsage>
+            <geo:tiedMarkerCDPNumber></geo:tiedMarkerCDPNumber>
             <geo:tiedMarkerDOMESNumber>12309M001</geo:tiedMarkerDOMESNumber>
             <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
                <geo:dx>0.15</geo:dx>
@@ -90,33 +105,55 @@
                <geo:dz>-1.75</geo:dz>
             </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
             <geo:localSiteTiesAccuracy>15.0</geo:localSiteTiesAccuracy>
+            <geo:surveyMethod></geo:surveyMethod>
             <geo:dateMeasured>1995-07-20T14:00:00Z</geo:dateMeasured>
             <geo:notes>The previous MDVO IGS point</geo:notes>
          </geo:surveyedLocalTies>
+         <geo:dateInserted>2016-04-14T00:03:10Z</geo:dateInserted>
       </geo:surveyedLocalTies>
       <geo:frequencyStandards>
          <geo:frequencyStandard gml:id="FrequencyStandardType_572">
-            <geo:standardType>H-MASER</geo:standardType>
+            <geo:standardType codeSpace="">H-MASER</geo:standardType>
             <geo:inputFrequency>0.0</geo:inputFrequency>
-            <gml:validTime>
-               <gml:TimePeriod>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_911">
                   <gml:beginPosition>1995-11-13T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
          </geo:frequencyStandard>
+         <geo:dateInserted>2016-04-14T00:03:10Z</geo:dateInserted>
       </geo:frequencyStandards>
       <geo:collocationInformations>
          <geo:collocationInformation gml:id="CollocationInformationType_107">
-            <geo:status>PERMANENT</geo:status>
+            <geo:instrumentationType codeSpace=""></geo:instrumentationType>
+            <geo:status codeSpace="">PERMANENT</geo:status>
+            <gml:validTime>
+               <gml:TimeInstant gml:id="TimeInstantType_488">
+                  <gml:timePosition>1970-01-22T13:00:00Z</gml:timePosition>
+               </gml:TimeInstant>
+            </gml:validTime>
          </geo:collocationInformation>
+         <geo:dateInserted>2016-04-14T00:03:10Z</geo:dateInserted>
       </geo:collocationInformations>
       <geo:otherInstrumentations>
-         <geo:otherInstrumentation gml:id="OtherInstrumentationType_107"/>
+         <geo:otherInstrumentation gml:id="OtherInstrumentationType_107">
+            <geo:instrumentation></geo:instrumentation>
+            <gml:validTime>
+               <gml:TimeInstant gml:id="TimeInstantType_489">
+                  <gml:timePosition>1970-01-22T13:00:00Z</gml:timePosition>
+               </gml:TimeInstant>
+            </gml:validTime>
+         </geo:otherInstrumentation>
+         <geo:dateInserted>2016-04-14T00:03:10Z</geo:dateInserted>
       </geo:otherInstrumentations>
-      <geo:siteContact>
-         <gmd:MD_SecurityConstraints/>
-         <gmd:CI_ResponsibleParty>
+      <geo:siteContact gml:id="AgencyPropertyType_724">
+         <gmd:MD_SecurityConstraints id="MDSecurityConstraintsType_724">
+            <gmd:classification>
+               <gmd:MD_ClassificationCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:classification>
+         </gmd:MD_SecurityConstraints>
+         <gmd:CI_ResponsibleParty id="CIResponsiblePartyType_724">
             <gmd:individualName>
                <gco:CharacterString>Dr. Vladimir Rousakov,</gco:CharacterString>
             </gmd:individualName>
@@ -124,9 +161,9 @@
                <gco:CharacterString>The Institute of Metrology</gco:CharacterString>
             </gmd:organisationName>
             <gmd:contactInfo>
-               <gmd:CI_Contact>
+               <gmd:CI_Contact id="CIContactType_724">
                   <gmd:phone>
-                     <gmd:CI_Telephone>
+                     <gmd:CI_Telephone id="CITelephoneType_280">
                         <gmd:voice>
                            <gco:CharacterString>7-095-535-0891</gco:CharacterString>
                         </gmd:voice>
@@ -136,7 +173,7 @@
                      </gmd:CI_Telephone>
                   </gmd:phone>
                   <gmd:address>
-                     <gmd:CI_Address>
+                     <gmd:CI_Address id="CIAddressType_724">
                         <gmd:deliveryPoint>
                            <gco:CharacterString>IMVP GP VNIIFTRI, Mendeleevo,</gco:CharacterString>
                         </gmd:deliveryPoint>
@@ -147,18 +184,25 @@
                   </gmd:address>
                </gmd:CI_Contact>
             </gmd:contactInfo>
+            <gmd:role>
+               <gmd:CI_RoleCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:role>
          </gmd:CI_ResponsibleParty>
       </geo:siteContact>
-      <geo:siteMetadataCustodian>
-         <gmd:MD_SecurityConstraints/>
-         <gmd:CI_ResponsibleParty>
+      <geo:siteMetadataCustodian gml:id="AgencyPropertyType_725">
+         <gmd:MD_SecurityConstraints id="MDSecurityConstraintsType_725">
+            <gmd:classification>
+               <gmd:MD_ClassificationCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:classification>
+         </gmd:MD_SecurityConstraints>
+         <gmd:CI_ResponsibleParty id="CIResponsiblePartyType_725">
             <gmd:organisationName>
                <gco:CharacterString>Delft University of Technology</gco:CharacterString>
             </gmd:organisationName>
             <gmd:contactInfo>
-               <gmd:CI_Contact>
+               <gmd:CI_Contact id="CIContactType_725">
                   <gmd:address>
-                     <gmd:CI_Address>
+                     <gmd:CI_Address id="CIAddressType_725">
                         <gmd:deliveryPoint>
                            <gco:CharacterString>Faculty of Aerospace Engineering</gco:CharacterString>
                         </gmd:deliveryPoint>
@@ -166,7 +210,22 @@
                   </gmd:address>
                </gmd:CI_Contact>
             </gmd:contactInfo>
+            <gmd:role>
+               <gmd:CI_RoleCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:role>
          </gmd:CI_ResponsibleParty>
       </geo:siteMetadataCustodian>
+      <geo:moreInformation>
+         <geo:dataCenter></geo:dataCenter>
+         <geo:urlForMoreInformation></geo:urlForMoreInformation>
+         <geo:siteMap></geo:siteMap>
+         <geo:siteDiagram></geo:siteDiagram>
+         <geo:horizonMask></geo:horizonMask>
+         <geo:monumentDescription></geo:monumentDescription>
+         <geo:sitePictures></geo:sitePictures>
+         <geo:antennaGraphicsWithDimensions></geo:antennaGraphicsWithDimensions>
+         <geo:insertTextGraphicFromAntenna></geo:insertTextGraphicFromAntenna>
+         <geo:DOI codeSpace="CodeSpaceTODO">CodeTypeTODO</geo:DOI>
+      </geo:moreInformation>
    </geo:siteLog>
 </geo:GeodesyML>

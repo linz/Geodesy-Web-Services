@@ -10,6 +10,7 @@
          <geo:siteName>Complex Magnetic-Ionospheric Station (CMIS)</geo:siteName>
          <geo:fourCharacterID>NRIL</geo:fourCharacterID>
          <geo:iersDOMESNumber>12364M001</geo:iersDOMESNumber>
+         <geo:cdpNumber></geo:cdpNumber>
          <geo:monumentDescription>Roof of Seismology Building</geo:monumentDescription>
          <geo:heightOfTheMonument>2.6</geo:heightOfTheMonument>
          <geo:monumentFoundation>STAINLESS STEEL ROD</geo:monumentFoundation>
@@ -24,30 +25,35 @@
          <geo:city>Norilsk</geo:city>
          <geo:state>Krasnoyarsk Region</geo:state>
          <geo:countryCodeISO>RUS</geo:countryCodeISO>
-         <geo:tectonicPlate>Eurasian</geo:tectonicPlate>
+         <geo:tectonicPlate codeSpace="">Eurasian</geo:tectonicPlate>
          <geo:approximatePositionITRF>
             <geo:xCoordinateInMeters>64537.2912</geo:xCoordinateInMeters>
             <geo:yCoordinateInMeters>2253782.8543</geo:yCoordinateInMeters>
             <geo:zCoordinateInMeters>5946363.4808</geo:zCoordinateInMeters>
-            <geo:latitude-North>692142.599999999976716935634613037109375</geo:latitude-North>
-            <geo:longitude-East>882135.19999999995343387126922607421875</geo:longitude-East>
+            <geo:latitude-North>69.36183333333332257097936235368251800537109375</geo:latitude-North>
+            <geo:longitude-East>88.35977777777776509537943638861179351806640625</geo:longitude-East>
             <geo:elevation-m_ellips.>47.8937</geo:elevation-m_ellips.>
          </geo:approximatePositionITRF>
          <geo:notes>Cartesian and geodetic coordinates (ITRF96) from GAMIT/GLOBK solution in ITRF96 based on 6 days</geo:notes>
       </geo:siteLocation>
       <geo:gnssReceivers>
          <geo:gnssReceiver gml:id="GnssReceiverType_1941">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ASHTECH UZ-12</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>UC120031611</geo:serialNumber>
-            <geo:firmwareVersion>CQ00</geo:firmwareVersion>
+            <geo:manufacturerSerialNumber>LP020002502</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">ASHTECH Z-XII3</geo:receiverType>
+            <geo:satelliteSystem codeSpace="DummyCodeSpace">DummyCodeList</geo:satelliteSystem>
+            <geo:serialNumber>LP020002502</geo:serialNumber>
+            <geo:firmwareVersion>NAV CD00  CH 1D02</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>2009-10-29T12:20:00Z</geo:dateInstalled>
+            <geo:dateInstalled>2000-09-17T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2005-11-10T07:20:00Z</geo:dateRemoved>
+            <geo:notes>Model 700845-10G (Z-12 CGRS).</geo:notes>
          </geo:gnssReceiver>
+         <geo:dateInserted>2000-09-17T00:00:00Z</geo:dateInserted>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
          <geo:gnssReceiver gml:id="GnssReceiverType_1942">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ASHTECH UZ-12</geo:receiverType>
+            <geo:manufacturerSerialNumber>UC120031614</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">ASHTECH UZ-12</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
             <geo:serialNumber>UC120031614</geo:serialNumber>
             <geo:firmwareVersion>CN00</geo:firmwareVersion>
@@ -56,103 +62,159 @@
             <geo:dateRemoved>2009-10-29T12:20:00Z</geo:dateRemoved>
             <geo:notes>P/N 800960-32A (MicroZ)</geo:notes>
          </geo:gnssReceiver>
+         <geo:dateInserted>2005-11-10T07:21:00Z</geo:dateInserted>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
          <geo:gnssReceiver gml:id="GnssReceiverType_1943">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ASHTECH Z-XII3</geo:receiverType>
-            <geo:serialNumber>LP020002502</geo:serialNumber>
-            <geo:firmwareVersion>NAV CD00  CH 1D02</geo:firmwareVersion>
+            <geo:manufacturerSerialNumber>UC120031611</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">ASHTECH UZ-12</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>UC120031611</geo:serialNumber>
+            <geo:firmwareVersion>CQ00</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>2000-09-17T00:00:00Z</geo:dateInstalled>
-            <geo:dateRemoved>2005-11-10T07:20:00Z</geo:dateRemoved>
-            <geo:notes>Model 700845-10G (Z-12 CGRS).</geo:notes>
+            <geo:dateInstalled>2009-10-29T12:20:00Z</geo:dateInstalled>
+            <geo:dateRemoved></geo:dateRemoved>
          </geo:gnssReceiver>
+         <geo:dateInserted>2009-10-29T12:20:00Z</geo:dateInserted>
       </geo:gnssReceivers>
       <geo:gnssAntennas>
          <geo:gnssAntenna gml:id="GnssAntennaType_846">
-            <geo:antennaType codeList="codelist" codeListValue="codeListValue">ASH701945B_M    SCIT</geo:antennaType>
+            <geo:manufacturerSerialNumber>CR620002607</geo:manufacturerSerialNumber>
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue" codeSpace="codespace">ASH701945B_M    SCIT</geo:antennaType>
             <geo:serialNumber>CR620002607</geo:serialNumber>
-            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:antennaReferencePoint codeSpace="">BPA</geo:antennaReferencePoint>
             <geo:marker-arpUpEcc.>0.0795</geo:marker-arpUpEcc.>
             <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>SCIT</geo:antennaRadomeType>
+            <geo:antennaRadomeType codeSpace="CodeSpaceAttr">SCIT</geo:antennaRadomeType>
+            <geo:radomeSerialNumber></geo:radomeSerialNumber>
+            <geo:antennaCableType></geo:antennaCableType>
             <geo:antennaCableLength>0.0</geo:antennaCableLength>
             <geo:dateInstalled>2000-09-17T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved></geo:dateRemoved>
             <geo:notes>Hemispherical dome Type DSP-001</geo:notes>
          </geo:gnssAntenna>
+         <geo:dateInserted>2000-09-17T00:00:00Z</geo:dateInserted>
       </geo:gnssAntennas>
       <geo:surveyedLocalTies>
          <geo:surveyedLocalTies gml:id="SurveyedLocalTiesType_235">
             <geo:tiedMarkerName>AGP0</geo:tiedMarkerName>
+            <geo:tiedMarkerUsage></geo:tiedMarkerUsage>
+            <geo:tiedMarkerCDPNumber></geo:tiedMarkerCDPNumber>
+            <geo:tiedMarkerDOMESNumber></geo:tiedMarkerDOMESNumber>
             <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
                <geo:dx>10342.9142</geo:dx>
                <geo:dy>-628.3138</geo:dy>
                <geo:dz>121.8358</geo:dz>
             </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
             <geo:localSiteTiesAccuracy>0.0</geo:localSiteTiesAccuracy>
+            <geo:surveyMethod></geo:surveyMethod>
             <geo:dateMeasured>2000-06-16T14:00:00Z</geo:dateMeasured>
          </geo:surveyedLocalTies>
+         <geo:dateInserted>2016-04-14T00:03:11Z</geo:dateInserted>
       </geo:surveyedLocalTies>
       <geo:frequencyStandards>
          <geo:frequencyStandard gml:id="FrequencyStandardType_678">
-            <geo:standardType>INTERNAL</geo:standardType>
+            <geo:standardType codeSpace="">INTERNAL</geo:standardType>
             <geo:inputFrequency>0.0</geo:inputFrequency>
+            <gml:validTime>
+               <gml:TimeInstant gml:id="TimeInstantType_586">
+                  <gml:timePosition>1970-01-22T13:00:00Z</gml:timePosition>
+               </gml:TimeInstant>
+            </gml:validTime>
          </geo:frequencyStandard>
+         <geo:dateInserted>2016-04-14T00:03:11Z</geo:dateInserted>
       </geo:frequencyStandards>
       <geo:humiditySensors>
          <geo:humiditySensor gml:id="HumiditySensorType_179">
-            <geo:type>MET3</geo:type>
+            <geo:type codeSpace="">MET3</geo:type>
             <geo:manufacturer>Paroscientific</geo:manufacturer>
+            <geo:serialNumber></geo:serialNumber>
             <geo:heightDiffToAntenna>0.0</geo:heightDiffToAntenna>
+            <geo:calibrationDate></geo:calibrationDate>
+            <gml:validTime>
+               <gml:TimeInstant gml:id="TimeInstantType_587">
+                  <gml:timePosition>1970-01-22T13:00:00Z</gml:timePosition>
+               </gml:TimeInstant>
+            </gml:validTime>
             <geo:dataSamplingInterval>5.0</geo:dataSamplingInterval>
             <geo:accuracy-percentRelativeHumidity>2.0</geo:accuracy-percentRelativeHumidity>
+            <geo:aspiration></geo:aspiration>
          </geo:humiditySensor>
+         <geo:dateInserted>2016-04-14T00:03:11Z</geo:dateInserted>
       </geo:humiditySensors>
       <geo:pressureSensors>
          <geo:pressureSensor gml:id="PressureSensorType_180">
-            <geo:type>MET3</geo:type>
+            <geo:type codeSpace="">MET3</geo:type>
             <geo:manufacturer>Paroscientific</geo:manufacturer>
+            <geo:serialNumber></geo:serialNumber>
             <geo:heightDiffToAntenna>0.0</geo:heightDiffToAntenna>
+            <geo:calibrationDate></geo:calibrationDate>
+            <gml:validTime>
+               <gml:TimeInstant gml:id="TimeInstantType_588">
+                  <gml:timePosition>1970-01-22T13:00:00Z</gml:timePosition>
+               </gml:TimeInstant>
+            </gml:validTime>
             <geo:dataSamplingInterval>5.0</geo:dataSamplingInterval>
             <geo:accuracy-hPa>0.1</geo:accuracy-hPa>
          </geo:pressureSensor>
+         <geo:dateInserted>2016-04-14T00:03:11Z</geo:dateInserted>
       </geo:pressureSensors>
       <geo:temperatureSensors>
          <geo:temperatureSensor gml:id="TemperatureSensorType_177">
-            <geo:type>MET3</geo:type>
+            <geo:type codeSpace="">MET3</geo:type>
             <geo:manufacturer>Paroscientific</geo:manufacturer>
+            <geo:serialNumber></geo:serialNumber>
             <geo:heightDiffToAntenna>0.0</geo:heightDiffToAntenna>
+            <geo:calibrationDate></geo:calibrationDate>
+            <gml:validTime>
+               <gml:TimeInstant gml:id="TimeInstantType_589">
+                  <gml:timePosition>1970-01-22T13:00:00Z</gml:timePosition>
+               </gml:TimeInstant>
+            </gml:validTime>
             <geo:dataSamplingInterval>5.0</geo:dataSamplingInterval>
             <geo:accuracy-degreesCelcius>0.5</geo:accuracy-degreesCelcius>
+            <geo:aspiration></geo:aspiration>
          </geo:temperatureSensor>
+         <geo:dateInserted>2016-04-14T00:03:11Z</geo:dateInserted>
       </geo:temperatureSensors>
-      <geo:siteContact>
-         <gmd:MD_SecurityConstraints/>
-         <gmd:CI_ResponsibleParty>
+      <geo:siteContact gml:id="AgencyPropertyType_856">
+         <gmd:MD_SecurityConstraints id="MDSecurityConstraintsType_856">
+            <gmd:classification>
+               <gmd:MD_ClassificationCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:classification>
+         </gmd:MD_SecurityConstraints>
+         <gmd:CI_ResponsibleParty id="CIResponsiblePartyType_856">
             <gmd:organisationName>
                <gco:CharacterString>Complex Magnetic-Ionospheric Station</gco:CharacterString>
             </gmd:organisationName>
             <gmd:contactInfo>
-               <gmd:CI_Contact>
+               <gmd:CI_Contact id="CIContactType_856">
                   <gmd:address>
-                     <gmd:CI_Address/>
+                     <gmd:CI_Address id="CIAddressType_856"/>
                   </gmd:address>
                </gmd:CI_Contact>
             </gmd:contactInfo>
+            <gmd:role>
+               <gmd:CI_RoleCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:role>
          </gmd:CI_ResponsibleParty>
       </geo:siteContact>
-      <geo:siteMetadataCustodian>
-         <gmd:MD_SecurityConstraints/>
-         <gmd:CI_ResponsibleParty>
+      <geo:siteMetadataCustodian gml:id="AgencyPropertyType_857">
+         <gmd:MD_SecurityConstraints id="MDSecurityConstraintsType_857">
+            <gmd:classification>
+               <gmd:MD_ClassificationCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:classification>
+         </gmd:MD_SecurityConstraints>
+         <gmd:CI_ResponsibleParty id="CIResponsiblePartyType_857">
             <gmd:organisationName>
                <gco:CharacterString>RDAAC,GS RAS,JPL,IRIS</gco:CharacterString>
             </gmd:organisationName>
             <gmd:contactInfo>
-               <gmd:CI_Contact>
+               <gmd:CI_Contact id="CIContactType_857">
                   <gmd:address>
-                     <gmd:CI_Address>
+                     <gmd:CI_Address id="CIAddressType_857">
                         <gmd:deliveryPoint>
                            <gco:CharacterString>189 Lenina Street</gco:CharacterString>
                         </gmd:deliveryPoint>
@@ -160,11 +222,24 @@
                   </gmd:address>
                </gmd:CI_Contact>
             </gmd:contactInfo>
+            <gmd:role>
+               <gmd:CI_RoleCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:role>
          </gmd:CI_ResponsibleParty>
       </geo:siteMetadataCustodian>
       <geo:moreInformation>
+         <geo:dataCenter>http</geo:dataCenter>
+         <geo:dataCenter>http</geo:dataCenter>
          <geo:urlForMoreInformation>http</geo:urlForMoreInformation>
+         <geo:siteMap></geo:siteMap>
+         <geo:siteDiagram></geo:siteDiagram>
+         <geo:horizonMask></geo:horizonMask>
+         <geo:monumentDescription></geo:monumentDescription>
+         <geo:sitePictures></geo:sitePictures>
          <geo:notes>Hardcopy Information available from www.site or from Responsible Agency</geo:notes>
+         <geo:antennaGraphicsWithDimensions></geo:antennaGraphicsWithDimensions>
+         <geo:insertTextGraphicFromAntenna></geo:insertTextGraphicFromAntenna>
+         <geo:DOI codeSpace="CodeSpaceTODO">CodeTypeTODO</geo:DOI>
       </geo:moreInformation>
    </geo:siteLog>
 </geo:GeodesyML>

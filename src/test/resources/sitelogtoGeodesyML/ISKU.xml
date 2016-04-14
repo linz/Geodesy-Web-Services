@@ -10,6 +10,7 @@
          <geo:siteName>Iraq Survey Kut</geo:siteName>
          <geo:fourCharacterID>ISKU</geo:fourCharacterID>
          <geo:iersDOMESNumber>IQM000074</geo:iersDOMESNumber>
+         <geo:cdpNumber></geo:cdpNumber>
          <geo:monumentDescription>Tribrach adapter</geo:monumentDescription>
          <geo:heightOfTheMonument>11.0</geo:heightOfTheMonument>
          <geo:monumentFoundation>ROOF</geo:monumentFoundation>
@@ -20,46 +21,58 @@
       </geo:siteIdentification>
       <geo:siteLocation>
          <geo:city>Kut</geo:city>
+         <geo:state></geo:state>
          <geo:countryCodeISO>IRQ</geo:countryCodeISO>
-         <geo:tectonicPlate>Arabian</geo:tectonicPlate>
+         <geo:tectonicPlate codeSpace="">Arabian</geo:tectonicPlate>
          <geo:approximatePositionITRF>
             <geo:xCoordinateInMeters>3753238.489</geo:xCoordinateInMeters>
             <geo:yCoordinateInMeters>3860668.582</geo:yCoordinateInMeters>
             <geo:zCoordinateInMeters>3407513.987</geo:zCoordinateInMeters>
-            <geo:latitude-North>323006.8032600000151433050632476806640625</geo:latitude-North>
-            <geo:longitude-East>454830.1454299999750219285488128662109375</geo:longitude-East>
+            <geo:latitude-North>32.501889794444451808885787613689899444580078125</geo:latitude-North>
+            <geo:longitude-East>45.80837373055555161727170343510806560516357421875</geo:longitude-East>
             <geo:elevation-m_ellips.>26.185</geo:elevation-m_ellips.>
          </geo:approximatePositionITRF>
          <geo:notes>ARP  ITRF00 POSITION (EPOCH 1997.0) Computed in Nov. 2009 using 29 days of data.</geo:notes>
       </geo:siteLocation>
       <geo:gnssReceivers>
          <geo:gnssReceiver gml:id="GnssReceiverType_1209">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">TRIMBLE NETR5</geo:receiverType>
+            <geo:manufacturerSerialNumber>4808K53532</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">TRIMBLE NETR5</geo:receiverType>
             <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
             <geo:serialNumber>4808K53532</geo:serialNumber>
             <geo:firmwareVersion>3.6</geo:firmwareVersion>
             <geo:elevationCutoffSetting>5.0</geo:elevationCutoffSetting>
             <geo:dateInstalled>2009-06-14T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved></geo:dateRemoved>
          </geo:gnssReceiver>
+         <geo:dateInserted>2009-06-14T00:00:00Z</geo:dateInserted>
       </geo:gnssReceivers>
       <geo:gnssAntennas>
          <geo:gnssAntenna gml:id="GnssAntennaType_556">
-            <geo:antennaType codeList="codelist" codeListValue="codeListValue">TRM57971.00     NONE</geo:antennaType>
+            <geo:manufacturerSerialNumber>30767519</geo:manufacturerSerialNumber>
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue" codeSpace="codespace">TRM57971.00     NONE</geo:antennaType>
             <geo:serialNumber>30767519</geo:serialNumber>
-            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:antennaReferencePoint codeSpace="">BPA</geo:antennaReferencePoint>
             <geo:marker-arpUpEcc.>0.0</geo:marker-arpUpEcc.>
             <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
+            <geo:antennaRadomeType codeSpace="CodeSpaceAttr">NONE</geo:antennaRadomeType>
+            <geo:radomeSerialNumber></geo:radomeSerialNumber>
             <geo:antennaCableType>Trimble LMR400 coax cable</geo:antennaCableType>
             <geo:antennaCableLength>30.0</geo:antennaCableLength>
             <geo:dateInstalled>2009-06-14T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved></geo:dateRemoved>
          </geo:gnssAntenna>
+         <geo:dateInserted>2009-06-14T00:00:00Z</geo:dateInserted>
       </geo:gnssAntennas>
-      <geo:siteContact>
-         <gmd:MD_SecurityConstraints/>
-         <gmd:CI_ResponsibleParty>
+      <geo:siteContact gml:id="AgencyPropertyType_548">
+         <gmd:MD_SecurityConstraints id="MDSecurityConstraintsType_548">
+            <gmd:classification>
+               <gmd:MD_ClassificationCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:classification>
+         </gmd:MD_SecurityConstraints>
+         <gmd:CI_ResponsibleParty id="CIResponsiblePartyType_548">
             <gmd:individualName>
                <gco:CharacterString>ENG.Wisam Abdulkadhum Hussein</gco:CharacterString>
             </gmd:individualName>
@@ -67,16 +80,16 @@
                <gco:CharacterString>Iraqi Ministry of Water Resource</gco:CharacterString>
             </gmd:organisationName>
             <gmd:contactInfo>
-               <gmd:CI_Contact>
+               <gmd:CI_Contact id="CIContactType_548">
                   <gmd:phone>
-                     <gmd:CI_Telephone>
+                     <gmd:CI_Telephone id="CITelephoneType_210">
                         <gmd:voice>
                            <gco:CharacterString>(00964) 7702561724</gco:CharacterString>
                         </gmd:voice>
                      </gmd:CI_Telephone>
                   </gmd:phone>
                   <gmd:address>
-                     <gmd:CI_Address>
+                     <gmd:CI_Address id="CIAddressType_548">
                         <gmd:deliveryPoint>
                            <gco:CharacterString>Palestine Street,Baghdad,Iraq</gco:CharacterString>
                         </gmd:deliveryPoint>
@@ -87,22 +100,44 @@
                   </gmd:address>
                </gmd:CI_Contact>
             </gmd:contactInfo>
+            <gmd:role>
+               <gmd:CI_RoleCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:role>
          </gmd:CI_ResponsibleParty>
       </geo:siteContact>
-      <geo:siteMetadataCustodian>
-         <gmd:MD_SecurityConstraints/>
-         <gmd:CI_ResponsibleParty>
+      <geo:siteMetadataCustodian gml:id="AgencyPropertyType_549">
+         <gmd:MD_SecurityConstraints id="MDSecurityConstraintsType_549">
+            <gmd:classification>
+               <gmd:MD_ClassificationCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:classification>
+         </gmd:MD_SecurityConstraints>
+         <gmd:CI_ResponsibleParty id="CIResponsiblePartyType_549">
             <gmd:organisationName>
                <gco:CharacterString>Iraqi Ministry of Water Resource</gco:CharacterString>
             </gmd:organisationName>
             <gmd:contactInfo>
-               <gmd:CI_Contact>
+               <gmd:CI_Contact id="CIContactType_549">
                   <gmd:address>
-                     <gmd:CI_Address/>
+                     <gmd:CI_Address id="CIAddressType_549"/>
                   </gmd:address>
                </gmd:CI_Contact>
             </gmd:contactInfo>
+            <gmd:role>
+               <gmd:CI_RoleCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:role>
          </gmd:CI_ResponsibleParty>
       </geo:siteMetadataCustodian>
+      <geo:moreInformation>
+         <geo:dataCenter></geo:dataCenter>
+         <geo:urlForMoreInformation></geo:urlForMoreInformation>
+         <geo:siteMap></geo:siteMap>
+         <geo:siteDiagram></geo:siteDiagram>
+         <geo:horizonMask></geo:horizonMask>
+         <geo:monumentDescription></geo:monumentDescription>
+         <geo:sitePictures></geo:sitePictures>
+         <geo:antennaGraphicsWithDimensions></geo:antennaGraphicsWithDimensions>
+         <geo:insertTextGraphicFromAntenna></geo:insertTextGraphicFromAntenna>
+         <geo:DOI codeSpace="CodeSpaceTODO">CodeTypeTODO</geo:DOI>
+      </geo:moreInformation>
    </geo:siteLog>
 </geo:GeodesyML>

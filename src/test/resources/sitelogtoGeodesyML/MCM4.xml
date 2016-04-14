@@ -20,20 +20,22 @@
       </geo:siteIdentification>
       <geo:siteLocation>
          <geo:city>Ross Island</geo:city>
+         <geo:state></geo:state>
          <geo:countryCodeISO>ATA</geo:countryCodeISO>
-         <geo:tectonicPlate>Antarctic</geo:tectonicPlate>
+         <geo:tectonicPlate codeSpace="">Antarctic</geo:tectonicPlate>
          <geo:approximatePositionITRF>
             <geo:xCoordinateInMeters>-1311703.172</geo:xCoordinateInMeters>
             <geo:yCoordinateInMeters>310814.982</geo:yCoordinateInMeters>
             <geo:zCoordinateInMeters>-6213255.16</geo:zCoordinateInMeters>
-            <geo:latitude-North>-775018.05810000002384185791015625</geo:latitude-North>
-            <geo:longitude-East>1664009.58550000004470348358154296875</geo:longitude-East>
+            <geo:latitude-North>-77.838349472222233771390165202319622039794921875</geo:latitude-North>
+            <geo:longitude-East>166.669329305555578457642695866525173187255859375</geo:longitude-East>
             <geo:elevation-m_ellips.>98.0222</geo:elevation-m_ellips.>
          </geo:approximatePositionITRF>
       </geo:siteLocation>
       <geo:gnssReceivers>
          <geo:gnssReceiver gml:id="GnssReceiverType_1674">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ROGUE SNR-8000</geo:receiverType>
+            <geo:manufacturerSerialNumber>275</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">ROGUE SNR-8000</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
             <geo:serialNumber>275</geo:serialNumber>
             <geo:firmwareVersion>0.9 link 01/03/96</geo:firmwareVersion>
@@ -42,22 +44,26 @@
             <geo:dateRemoved>1999-09-07T19:47:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
          </geo:gnssReceiver>
+         <geo:dateInserted>1996-01-13T00:00:00Z</geo:dateInserted>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
          <geo:gnssReceiver gml:id="GnssReceiverType_1675">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ROGUE SNR-8000</geo:receiverType>
+            <geo:manufacturerSerialNumber>275</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">ROGUE SNR-8000</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
             <geo:serialNumber>275</geo:serialNumber>
-            <geo:firmwareVersion>3.0 10/10/94 17</geo:firmwareVersion>
+            <geo:firmwareVersion>0.5</geo:firmwareVersion>
             <geo:elevationCutoffSetting>4.0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>1995-01-25T00:00:00Z</geo:dateInstalled>
-            <geo:dateRemoved>1995-10-01T00:00:00Z</geo:dateRemoved>
+            <geo:dateInstalled>1999-09-07T19:47:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2002-01-03T00:00:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
          </geo:gnssReceiver>
+         <geo:dateInserted>1999-09-07T19:47:00Z</geo:dateInserted>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
          <geo:gnssReceiver gml:id="GnssReceiverType_1676">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ROGUE SNR-8000</geo:receiverType>
+            <geo:manufacturerSerialNumber>275</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">ROGUE SNR-8000</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
             <geo:serialNumber>275</geo:serialNumber>
             <geo:firmwareVersion>3.2</geo:firmwareVersion>
@@ -66,22 +72,12 @@
             <geo:dateRemoved>1996-01-13T00:00:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
          </geo:gnssReceiver>
+         <geo:dateInserted>1995-10-01T00:00:00Z</geo:dateInserted>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
          <geo:gnssReceiver gml:id="GnssReceiverType_1677">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">AOA SNR-12 ACT</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>R1111</geo:serialNumber>
-            <geo:firmwareVersion>3.3.32.2</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>4.0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>2002-01-03T00:00:00Z</geo:dateInstalled>
-            <geo:dateRemoved>2005-01-26T23:59:00Z</geo:dateRemoved>
-            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver gml:id="GnssReceiverType_1678">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">AOA SNR-12 ACT</geo:receiverType>
+            <geo:manufacturerSerialNumber>R1111</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">AOA SNR-12 ACT</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
             <geo:serialNumber>R1111</geo:serialNumber>
             <geo:firmwareVersion>3.3.32.5</geo:firmwareVersion>
@@ -91,33 +87,12 @@
             <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
             <geo:notes>Firmware upgrade.</geo:notes>
          </geo:gnssReceiver>
+         <geo:dateInserted>2005-01-27T00:00:00Z</geo:dateInserted>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
-         <geo:gnssReceiver gml:id="GnssReceiverType_1679">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ASHTECH UZ-12</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>ZR520021808</geo:serialNumber>
-            <geo:firmwareVersion>CQ00</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>4.0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>2007-11-06T00:00:00Z</geo:dateInstalled>
-            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver gml:id="GnssReceiverType_1680">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ROGUE SNR-8000</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>275</geo:serialNumber>
-            <geo:firmwareVersion>0.5</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>4.0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>1999-09-07T19:47:00Z</geo:dateInstalled>
-            <geo:dateRemoved>2002-01-03T00:00:00Z</geo:dateRemoved>
-            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver gml:id="GnssReceiverType_1681">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ASHTECH Z-XII3</geo:receiverType>
+         <geo:gnssReceiver gml:id="GnssReceiverType_1678">
+            <geo:manufacturerSerialNumber>LP020003303</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">ASHTECH Z-XII3</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
             <geo:serialNumber>LP020003303</geo:serialNumber>
             <geo:firmwareVersion>CD00-1D02</geo:firmwareVersion>
@@ -126,89 +101,147 @@
             <geo:dateRemoved>2007-11-05T23:59:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
          </geo:gnssReceiver>
+         <geo:dateInserted>2006-05-19T00:00:00Z</geo:dateInserted>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_1679">
+            <geo:manufacturerSerialNumber>R1111</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">AOA SNR-12 ACT</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>R1111</geo:serialNumber>
+            <geo:firmwareVersion>3.3.32.2</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>4.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2002-01-03T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2005-01-26T23:59:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
+         </geo:gnssReceiver>
+         <geo:dateInserted>2002-01-03T00:00:00Z</geo:dateInserted>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_1680">
+            <geo:manufacturerSerialNumber>275</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">ROGUE SNR-8000</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>275</geo:serialNumber>
+            <geo:firmwareVersion>3.0 10/10/94 17</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>4.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>1995-01-25T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1995-10-01T00:00:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
+         </geo:gnssReceiver>
+         <geo:dateInserted>1995-01-25T00:00:00Z</geo:dateInserted>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_1681">
+            <geo:manufacturerSerialNumber>ZR520021808</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">ASHTECH UZ-12</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>ZR520021808</geo:serialNumber>
+            <geo:firmwareVersion>CQ00</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>4.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2007-11-06T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved></geo:dateRemoved>
+            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
+         </geo:gnssReceiver>
+         <geo:dateInserted>2007-11-06T00:00:00Z</geo:dateInserted>
       </geo:gnssReceivers>
       <geo:gnssAntennas>
          <geo:gnssAntenna gml:id="GnssAntennaType_729">
-            <geo:antennaType codeList="codelist" codeListValue="codeListValue">AOAD/M_T        JPLA</geo:antennaType>
+            <geo:manufacturerSerialNumber>363</geo:manufacturerSerialNumber>
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue" codeSpace="codespace">AOAD/M_T        JPLA</geo:antennaType>
             <geo:serialNumber>363</geo:serialNumber>
-            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:antennaReferencePoint codeSpace="">BPA</geo:antennaReferencePoint>
             <geo:marker-arpUpEcc.>0.0814</geo:marker-arpUpEcc.>
             <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>JPLA</geo:antennaRadomeType>
+            <geo:antennaRadomeType codeSpace="CodeSpaceAttr">JPLA</geo:antennaRadomeType>
+            <geo:radomeSerialNumber></geo:radomeSerialNumber>
             <geo:antennaCableType>Heliax and LMR400 sections</geo:antennaCableType>
             <geo:antennaCableLength>97.5</geo:antennaCableLength>
             <geo:dateInstalled>1995-01-25T00:00:00Z</geo:dateInstalled>
             <geo:dateRemoved>2011-11-25T19:44:00Z</geo:dateRemoved>
             <geo:notes>added info re pre-existing radome 2002-08-08 2008-02-07T00 routed through new bulkhead in bldg.</geo:notes>
          </geo:gnssAntenna>
+         <geo:dateInserted>1995-01-25T00:00:00Z</geo:dateInserted>
       </geo:gnssAntennas>
       <geo:gnssAntennas>
          <geo:gnssAntenna gml:id="GnssAntennaType_730">
-            <geo:antennaType codeList="codelist" codeListValue="codeListValue">AOAD/M_T        JPLA</geo:antennaType>
+            <geo:manufacturerSerialNumber>363</geo:manufacturerSerialNumber>
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue" codeSpace="codespace">AOAD/M_T        JPLA</geo:antennaType>
             <geo:serialNumber>363</geo:serialNumber>
-            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:antennaReferencePoint codeSpace="">BPA</geo:antennaReferencePoint>
             <geo:marker-arpUpEcc.>0.0814</geo:marker-arpUpEcc.>
             <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>JPLA</geo:antennaRadomeType>
+            <geo:antennaRadomeType codeSpace="CodeSpaceAttr">JPLA</geo:antennaRadomeType>
+            <geo:radomeSerialNumber></geo:radomeSerialNumber>
             <geo:antennaCableType>Heliax and LMR400 sections</geo:antennaCableType>
             <geo:antennaCableLength>97.5</geo:antennaCableLength>
             <geo:dateInstalled>2012-01-24T22:45:00Z</geo:dateInstalled>
+            <geo:dateRemoved></geo:dateRemoved>
             <geo:notes>New 4x1 powered antenna splitter installed and replaces old 4x1 un-powered splitter.  New antenna splitter is manufactured by GPS Source and the part is S14-PDC/V.</geo:notes>
          </geo:gnssAntenna>
+         <geo:dateInserted>2012-01-24T22:45:00Z</geo:dateInserted>
       </geo:gnssAntennas>
       <geo:frequencyStandards>
          <geo:frequencyStandard gml:id="FrequencyStandardType_563">
-            <geo:standardType>INTERNAL</geo:standardType>
+            <geo:standardType codeSpace="">INTERNAL</geo:standardType>
             <geo:inputFrequency>0.0</geo:inputFrequency>
-            <gml:validTime>
-               <gml:TimePeriod>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_902">
                   <gml:beginPosition>2009-07-30T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
          </geo:frequencyStandard>
+         <geo:dateInserted>2016-04-14T00:03:10Z</geo:dateInserted>
       </geo:frequencyStandards>
       <geo:frequencyStandards>
          <geo:frequencyStandard gml:id="FrequencyStandardType_564">
-            <geo:standardType>EXTERNAL RUBIDIUM</geo:standardType>
-            <geo:inputFrequency>5.0</geo:inputFrequency>
-            <gml:validTime>
-               <gml:TimePeriod>
-                  <gml:beginPosition>2000-01-30T00:00:00Z</gml:beginPosition>
-                  <gml:endPosition>2009-07-30T00:00:00Z</gml:endPosition>
-               </gml:TimePeriod>
-            </gml:validTime>
-         </geo:frequencyStandard>
-      </geo:frequencyStandards>
-      <geo:frequencyStandards>
-         <geo:frequencyStandard gml:id="FrequencyStandardType_565">
-            <geo:standardType>INTERNAL</geo:standardType>
+            <geo:standardType codeSpace="">INTERNAL</geo:standardType>
             <geo:inputFrequency>0.0</geo:inputFrequency>
-            <gml:validTime>
-               <gml:TimePeriod>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_903">
                   <gml:beginPosition>1995-01-31T00:00:00Z</gml:beginPosition>
                   <gml:endPosition>2000-01-30T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
          </geo:frequencyStandard>
+         <geo:dateInserted>2016-04-14T00:03:10Z</geo:dateInserted>
+      </geo:frequencyStandards>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_565">
+            <geo:standardType codeSpace="">EXTERNAL RUBIDIUM</geo:standardType>
+            <geo:inputFrequency>5.0</geo:inputFrequency>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_904">
+                  <gml:beginPosition>2000-01-30T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2009-07-30T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+         </geo:frequencyStandard>
+         <geo:dateInserted>2016-04-14T00:03:10Z</geo:dateInserted>
       </geo:frequencyStandards>
       <geo:localEpisodicEventsSet>
          <geo:localEpisodicEvents gml:id="LocalEpisodicEventsType_144">
-            <gml:validTime>
-               <gml:TimeInstant>
+            <gml:validTime nilReason="">
+               <gml:TimeInstant gml:id="TimeInstantType_482">
                   <gml:timePosition>24 Jan 2012</gml:timePosition>
                </gml:TimeInstant>
             </gml:validTime>
             <geo:event>Transitioned from .soc to .ash data types.  For</geo:event>
          </geo:localEpisodicEvents>
+         <geo:dateInserted>2016-04-14T00:03:10Z</geo:dateInserted>
       </geo:localEpisodicEventsSet>
-      <geo:siteContact>
-         <gmd:MD_SecurityConstraints/>
-         <gmd:CI_ResponsibleParty>
+      <geo:siteContact gml:id="AgencyPropertyType_716">
+         <gmd:MD_SecurityConstraints id="MDSecurityConstraintsType_716">
+            <gmd:classification>
+               <gmd:MD_ClassificationCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:classification>
+         </gmd:MD_SecurityConstraints>
+         <gmd:CI_ResponsibleParty id="CIResponsiblePartyType_716">
             <gmd:individualName>
                <gco:CharacterString>David A. Stowers</gco:CharacterString>
             </gmd:individualName>
@@ -216,9 +249,9 @@
                <gco:CharacterString>Jet Propulsion Laboratory</gco:CharacterString>
             </gmd:organisationName>
             <gmd:contactInfo>
-               <gmd:CI_Contact>
+               <gmd:CI_Contact id="CIContactType_716">
                   <gmd:phone>
-                     <gmd:CI_Telephone>
+                     <gmd:CI_Telephone id="CITelephoneType_277">
                         <gmd:voice>
                            <gco:CharacterString>818-354-7055</gco:CharacterString>
                         </gmd:voice>
@@ -228,7 +261,7 @@
                      </gmd:CI_Telephone>
                   </gmd:phone>
                   <gmd:address>
-                     <gmd:CI_Address>
+                     <gmd:CI_Address id="CIAddressType_716">
                         <gmd:deliveryPoint>
                            <gco:CharacterString>4800 Oak Grove Drive</gco:CharacterString>
                         </gmd:deliveryPoint>
@@ -239,27 +272,44 @@
                   </gmd:address>
                </gmd:CI_Contact>
             </gmd:contactInfo>
+            <gmd:role>
+               <gmd:CI_RoleCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:role>
          </gmd:CI_ResponsibleParty>
       </geo:siteContact>
-      <geo:siteMetadataCustodian>
-         <gmd:MD_SecurityConstraints/>
-         <gmd:CI_ResponsibleParty>
+      <geo:siteMetadataCustodian gml:id="AgencyPropertyType_717">
+         <gmd:MD_SecurityConstraints id="MDSecurityConstraintsType_717">
+            <gmd:classification>
+               <gmd:MD_ClassificationCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:classification>
+         </gmd:MD_SecurityConstraints>
+         <gmd:CI_ResponsibleParty id="CIResponsiblePartyType_717">
             <gmd:organisationName>
                <gco:CharacterString>Jet Propulsion Laboratory</gco:CharacterString>
             </gmd:organisationName>
             <gmd:contactInfo>
-               <gmd:CI_Contact>
+               <gmd:CI_Contact id="CIContactType_717">
                   <gmd:address>
-                     <gmd:CI_Address/>
+                     <gmd:CI_Address id="CIAddressType_717"/>
                   </gmd:address>
                </gmd:CI_Contact>
             </gmd:contactInfo>
+            <gmd:role>
+               <gmd:CI_RoleCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:role>
          </gmd:CI_ResponsibleParty>
       </geo:siteMetadataCustodian>
       <geo:moreInformation>
+         <geo:dataCenter></geo:dataCenter>
+         <geo:urlForMoreInformation></geo:urlForMoreInformation>
+         <geo:siteMap></geo:siteMap>
          <geo:siteDiagram>11/95</geo:siteDiagram>
          <geo:horizonMask>11/95</geo:horizonMask>
+         <geo:monumentDescription></geo:monumentDescription>
          <geo:sitePictures>11/95</geo:sitePictures>
+         <geo:antennaGraphicsWithDimensions></geo:antennaGraphicsWithDimensions>
+         <geo:insertTextGraphicFromAntenna></geo:insertTextGraphicFromAntenna>
+         <geo:DOI codeSpace="CodeSpaceTODO">CodeTypeTODO</geo:DOI>
       </geo:moreInformation>
    </geo:siteLog>
 </geo:GeodesyML>

@@ -11,6 +11,7 @@
          <geo:fourCharacterID>CORD</geo:fourCharacterID>
          <geo:monumentInscription>NONE</geo:monumentInscription>
          <geo:iersDOMESNumber>41511M001</geo:iersDOMESNumber>
+         <geo:cdpNumber></geo:cdpNumber>
          <geo:monumentDescription>Stainless steel pin w/ tread and dimple as mark</geo:monumentDescription>
          <geo:heightOfTheMonument>0.05</geo:heightOfTheMonument>
          <geo:monumentFoundation>cemented in concrete roof structure</geo:monumentFoundation>
@@ -21,33 +22,37 @@
       </geo:siteIdentification>
       <geo:siteLocation>
          <geo:city>Cordoba</geo:city>
+         <geo:state></geo:state>
          <geo:countryCodeISO>ARG</geo:countryCodeISO>
-         <geo:tectonicPlate>South American</geo:tectonicPlate>
+         <geo:tectonicPlate codeSpace="">South American</geo:tectonicPlate>
          <geo:approximatePositionITRF>
             <geo:xCoordinateInMeters>2345503.9452</geo:xCoordinateInMeters>
             <geo:yCoordinateInMeters>-4910842.9601</geo:yCoordinateInMeters>
             <geo:zCoordinateInMeters>-3316365.5474</geo:zCoordinateInMeters>
-            <geo:latitude-North>-313142.3681000000215135514736175537109375</geo:latitude-North>
-            <geo:longitude-East>-642812.173700000043027102947235107421875</geo:longitude-East>
+            <geo:latitude-North>-31.52843558333334073040532530285418033599853515625</geo:latitude-North>
+            <geo:longitude-East>-64.4700482500000049412847147323191165924072265625</geo:longitude-East>
             <geo:elevation-m_ellips.>747.0654, WGS84</geo:elevation-m_ellips.>
          </geo:approximatePositionITRF>
       </geo:siteLocation>
       <geo:gnssReceivers>
          <geo:gnssReceiver gml:id="GnssReceiverType_577">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ROGUE SNR-8000</geo:receiverType>
+            <geo:manufacturerSerialNumber>UC1200325010</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">ASHTECH UZ-12</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>375</geo:serialNumber>
-            <geo:firmwareVersion>3.2.32.11</geo:firmwareVersion>
+            <geo:serialNumber>UC1200325010</geo:serialNumber>
+            <geo:firmwareVersion>CN00</geo:firmwareVersion>
             <geo:elevationCutoffSetting>4.0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>2003-04-21T20:00:00Z</geo:dateInstalled>
-            <geo:dateRemoved>2005-03-03T00:00:00Z</geo:dateRemoved>
+            <geo:dateInstalled>2005-03-03T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved></geo:dateRemoved>
             <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
-            <geo:notes>Firmware version update offload format - trb</geo:notes>
+            <geo:notes>UNAVCO# 71033</geo:notes>
          </geo:gnssReceiver>
+         <geo:dateInserted>2005-03-03T00:00:00Z</geo:dateInserted>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
          <geo:gnssReceiver gml:id="GnssReceiverType_578">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ROGUE SNR-8000</geo:receiverType>
+            <geo:manufacturerSerialNumber>375</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">ROGUE SNR-8000</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
             <geo:serialNumber>375</geo:serialNumber>
             <geo:firmwareVersion>3.2.32.8 1s soc2rnx</geo:firmwareVersion>
@@ -57,22 +62,12 @@
             <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
             <geo:notes>UNAVCO #70014 samplerate - 1s offload format - soc conversion to 30s - soc2rnx</geo:notes>
          </geo:gnssReceiver>
+         <geo:dateInserted>2000-08-16T00:00:00Z</geo:dateInserted>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
          <geo:gnssReceiver gml:id="GnssReceiverType_579">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ASHTECH UZ-12</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>UC1200325010</geo:serialNumber>
-            <geo:firmwareVersion>CN00</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>4.0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>2005-03-03T00:00:00Z</geo:dateInstalled>
-            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
-            <geo:notes>UNAVCO# 71033</geo:notes>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver gml:id="GnssReceiverType_580">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ROGUE SNR-8000</geo:receiverType>
+            <geo:manufacturerSerialNumber>375</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">ROGUE SNR-8000</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
             <geo:serialNumber>375</geo:serialNumber>
             <geo:firmwareVersion>3.2.32.8</geo:firmwareVersion>
@@ -82,53 +77,83 @@
             <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
             <geo:notes>UNAVCO #70014</geo:notes>
          </geo:gnssReceiver>
+         <geo:dateInserted>1999-07-27T00:00:00Z</geo:dateInserted>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_580">
+            <geo:manufacturerSerialNumber>375</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">ROGUE SNR-8000</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>375</geo:serialNumber>
+            <geo:firmwareVersion>3.2.32.11</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>4.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2003-04-21T20:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2005-03-03T00:00:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
+            <geo:notes>Firmware version update offload format - trb</geo:notes>
+         </geo:gnssReceiver>
+         <geo:dateInserted>2003-04-21T20:00:00Z</geo:dateInserted>
       </geo:gnssReceivers>
       <geo:gnssAntennas>
          <geo:gnssAntenna gml:id="GnssAntennaType_262">
-            <geo:antennaType codeList="codelist" codeListValue="codeListValue">ASH701945G_M    NONE</geo:antennaType>
+            <geo:manufacturerSerialNumber>CR6200342009</geo:manufacturerSerialNumber>
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue" codeSpace="codespace">ASH701945G_M    NONE</geo:antennaType>
             <geo:serialNumber>CR6200342009</geo:serialNumber>
-            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:antennaReferencePoint codeSpace="">BPA</geo:antennaReferencePoint>
             <geo:marker-arpUpEcc.>0.0792</geo:marker-arpUpEcc.>
             <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
+            <geo:antennaRadomeType codeSpace="CodeSpaceAttr">NONE</geo:antennaRadomeType>
+            <geo:radomeSerialNumber></geo:radomeSerialNumber>
+            <geo:antennaCableType></geo:antennaCableType>
             <geo:antennaCableLength>0.0</geo:antennaCableLength>
             <geo:dateInstalled>2005-03-03T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved></geo:dateRemoved>
             <geo:notes>Height measured true vertical to antenna reference pooint (ARP=BPA). UNAVCO # 71030</geo:notes>
          </geo:gnssAntenna>
+         <geo:dateInserted>2005-03-03T00:00:00Z</geo:dateInserted>
       </geo:gnssAntennas>
       <geo:gnssAntennas>
          <geo:gnssAntenna gml:id="GnssAntennaType_263">
-            <geo:antennaType codeList="codelist" codeListValue="codeListValue">AOAD/M_T        NONE</geo:antennaType>
+            <geo:manufacturerSerialNumber>118</geo:manufacturerSerialNumber>
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue" codeSpace="codespace">AOAD/M_T        NONE</geo:antennaType>
             <geo:serialNumber>118</geo:serialNumber>
-            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:antennaReferencePoint codeSpace="">BPA</geo:antennaReferencePoint>
             <geo:marker-arpUpEcc.>0.0792</geo:marker-arpUpEcc.>
             <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
+            <geo:antennaRadomeType codeSpace="CodeSpaceAttr">NONE</geo:antennaRadomeType>
+            <geo:radomeSerialNumber></geo:radomeSerialNumber>
+            <geo:antennaCableType></geo:antennaCableType>
             <geo:antennaCableLength>0.0</geo:antennaCableLength>
             <geo:dateInstalled>1999-07-27T00:00:00Z</geo:dateInstalled>
             <geo:dateRemoved>2005-03-03T00:00:00Z</geo:dateRemoved>
             <geo:notes>Height measured true vertical to antenna reference plane for an AOAD/M_T chokering antenna (7.92 cm) UNAVCO #8038.</geo:notes>
          </geo:gnssAntenna>
+         <geo:dateInserted>1999-07-27T00:00:00Z</geo:dateInserted>
       </geo:gnssAntennas>
       <geo:frequencyStandards>
          <geo:frequencyStandard gml:id="FrequencyStandardType_227">
-            <geo:standardType>INTERNAL</geo:standardType>
+            <geo:standardType codeSpace="">INTERNAL</geo:standardType>
             <geo:inputFrequency>0.0</geo:inputFrequency>
-            <gml:validTime>
-               <gml:TimePeriod>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_342">
                   <gml:beginPosition>1999-07-27T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
          </geo:frequencyStandard>
+         <geo:dateInserted>2016-04-14T00:03:08Z</geo:dateInserted>
       </geo:frequencyStandards>
-      <geo:siteContact>
-         <gmd:MD_SecurityConstraints/>
-         <gmd:CI_ResponsibleParty>
+      <geo:siteContact gml:id="AgencyPropertyType_270">
+         <gmd:MD_SecurityConstraints id="MDSecurityConstraintsType_270">
+            <gmd:classification>
+               <gmd:MD_ClassificationCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:classification>
+         </gmd:MD_SecurityConstraints>
+         <gmd:CI_ResponsibleParty id="CIResponsiblePartyType_270">
             <gmd:individualName>
                <gco:CharacterString>Dr. Carlos Scavuzzo</gco:CharacterString>
             </gmd:individualName>
@@ -136,9 +161,9 @@
                <gco:CharacterString>Comision Nacional de Actividades</gco:CharacterString>
             </gmd:organisationName>
             <gmd:contactInfo>
-               <gmd:CI_Contact>
+               <gmd:CI_Contact id="CIContactType_270">
                   <gmd:phone>
-                     <gmd:CI_Telephone>
+                     <gmd:CI_Telephone id="CITelephoneType_103">
                         <gmd:voice>
                            <gco:CharacterString>(54)-3547-42-4566</gco:CharacterString>
                         </gmd:voice>
@@ -148,7 +173,7 @@
                      </gmd:CI_Telephone>
                   </gmd:phone>
                   <gmd:address>
-                     <gmd:CI_Address>
+                     <gmd:CI_Address id="CIAddressType_270">
                         <gmd:deliveryPoint>
                            <gco:CharacterString>Ruta Prov. C45 KM 8</gco:CharacterString>
                         </gmd:deliveryPoint>
@@ -159,18 +184,25 @@
                   </gmd:address>
                </gmd:CI_Contact>
             </gmd:contactInfo>
+            <gmd:role>
+               <gmd:CI_RoleCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:role>
          </gmd:CI_ResponsibleParty>
       </geo:siteContact>
-      <geo:siteMetadataCustodian>
-         <gmd:MD_SecurityConstraints/>
-         <gmd:CI_ResponsibleParty>
+      <geo:siteMetadataCustodian gml:id="AgencyPropertyType_271">
+         <gmd:MD_SecurityConstraints id="MDSecurityConstraintsType_271">
+            <gmd:classification>
+               <gmd:MD_ClassificationCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:classification>
+         </gmd:MD_SecurityConstraints>
+         <gmd:CI_ResponsibleParty id="CIResponsiblePartyType_271">
             <gmd:organisationName>
                <gco:CharacterString>Jet Propulsion Laboratory</gco:CharacterString>
             </gmd:organisationName>
             <gmd:contactInfo>
-               <gmd:CI_Contact>
+               <gmd:CI_Contact id="CIContactType_271">
                   <gmd:address>
-                     <gmd:CI_Address>
+                     <gmd:CI_Address id="CIAddressType_271">
                         <gmd:deliveryPoint>
                            <gco:CharacterString>4800 Oak Grove Drive</gco:CharacterString>
                         </gmd:deliveryPoint>
@@ -178,13 +210,22 @@
                   </gmd:address>
                </gmd:CI_Contact>
             </gmd:contactInfo>
+            <gmd:role>
+               <gmd:CI_RoleCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:role>
          </gmd:CI_ResponsibleParty>
       </geo:siteMetadataCustodian>
       <geo:moreInformation>
+         <geo:dataCenter></geo:dataCenter>
+         <geo:urlForMoreInformation></geo:urlForMoreInformation>
          <geo:siteMap>Y</geo:siteMap>
          <geo:siteDiagram>Y</geo:siteDiagram>
          <geo:horizonMask>Y</geo:horizonMask>
+         <geo:monumentDescription></geo:monumentDescription>
          <geo:sitePictures>Y</geo:sitePictures>
+         <geo:antennaGraphicsWithDimensions></geo:antennaGraphicsWithDimensions>
+         <geo:insertTextGraphicFromAntenna></geo:insertTextGraphicFromAntenna>
+         <geo:DOI codeSpace="CodeSpaceTODO">CodeTypeTODO</geo:DOI>
       </geo:moreInformation>
    </geo:siteLog>
 </geo:GeodesyML>

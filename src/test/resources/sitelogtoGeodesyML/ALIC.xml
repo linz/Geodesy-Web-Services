@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.3  ../schemas/geodesyML.xsd" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_20">
+<geo:GeodesyML xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GeodesyMLType_20">
    <geo:siteLog gml:id="SiteLogType_20">
       <geo:formInformation>
          <geo:preparedBy>Nick Dando</geo:preparedBy>
@@ -27,20 +27,21 @@
          <geo:city>Alice Springs</geo:city>
          <geo:state>Northern Territory</geo:state>
          <geo:countryCodeISO>AUS</geo:countryCodeISO>
-         <geo:tectonicPlate>Australian</geo:tectonicPlate>
+         <geo:tectonicPlate codeSpace="">Australian</geo:tectonicPlate>
          <geo:approximatePositionITRF>
             <geo:xCoordinateInMeters>-4052051.767</geo:xCoordinateInMeters>
             <geo:yCoordinateInMeters>4212836.215</geo:yCoordinateInMeters>
             <geo:zCoordinateInMeters>-2545106.027</geo:zCoordinateInMeters>
-            <geo:latitude-North>-234012.445940000005066394805908203125</geo:latitude-North>
-            <geo:longitude-East>1335307.8475899999029934406280517578125</geo:longitude-East>
+            <geo:latitude-North>-23.670123872222223582184597034938633441925048828125</geo:latitude-North>
+            <geo:longitude-East>133.88551321944441951927728950977325439453125</geo:longitude-East>
             <geo:elevation-m_ellips.>603.3581</geo:elevation-m_ellips.>
          </geo:approximatePositionITRF>
          <geo:notes>ARGN (Australian Regional GPS Network)</geo:notes>
       </geo:siteLocation>
       <geo:gnssReceivers>
          <geo:gnssReceiver gml:id="GnssReceiverType_81">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">AOA ICS-4000Z</geo:receiverType>
+            <geo:manufacturerSerialNumber>C128</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">AOA ICS-4000Z</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
             <geo:serialNumber>C128</geo:serialNumber>
             <geo:firmwareVersion>3.2.33.1</geo:firmwareVersion>
@@ -49,35 +50,12 @@
             <geo:dateRemoved>1999-07-31T01:00:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
          </geo:gnssReceiver>
+         <geo:dateInserted>1994-05-15T00:00:00Z</geo:dateInserted>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
          <geo:gnssReceiver gml:id="GnssReceiverType_82">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ASHTECH UZ-12</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>UC2200302004</geo:serialNumber>
-            <geo:firmwareVersion>ZC00</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>2003-10-23T00:00:00Z</geo:dateInstalled>
-            <geo:dateRemoved>2008-04-15T23:59:00Z</geo:dateRemoved>
-            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
-            <geo:notes>The Old AOA Rx still remains on site as a</geo:notes>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver gml:id="GnssReceiverType_83">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">LEICA GRX1200GGPRO</geo:receiverType>
-            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
-            <geo:serialNumber>355318</geo:serialNumber>
-            <geo:firmwareVersion>5.62</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>2008-04-16T00:00:00Z</geo:dateInstalled>
-            <geo:dateRemoved>2008-09-16T23:59:00Z</geo:dateRemoved>
-            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver gml:id="GnssReceiverType_84">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">LEICA GRX1200GGPRO</geo:receiverType>
+            <geo:manufacturerSerialNumber>355318</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">LEICA GRX1200GGPRO</geo:receiverType>
             <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
             <geo:serialNumber>355318</geo:serialNumber>
             <geo:firmwareVersion>7.50</geo:firmwareVersion>
@@ -87,34 +65,26 @@
             <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
             <geo:notes>The tracking was changed from C2 or P2, to P2 only at 2009-07-30T00 Tracking was change to All in view at 2009-09-09T00</geo:notes>
          </geo:gnssReceiver>
+         <geo:dateInserted>2009-07-24T00:00:00Z</geo:dateInserted>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
-         <geo:gnssReceiver gml:id="GnssReceiverType_85">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">LEICA GRX1200GGPRO</geo:receiverType>
+         <geo:gnssReceiver gml:id="GnssReceiverType_83">
+            <geo:manufacturerSerialNumber>355318</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">LEICA GRX1200GGPRO</geo:receiverType>
             <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
             <geo:serialNumber>355318</geo:serialNumber>
-            <geo:firmwareVersion>6.00</geo:firmwareVersion>
+            <geo:firmwareVersion>8.51/3.019</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>2008-09-17T00:00:00Z</geo:dateInstalled>
-            <geo:dateRemoved>2009-07-24T00:00:00Z</geo:dateRemoved>
+            <geo:dateInstalled>2013-03-08T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2013-07-08T00:45:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
          </geo:gnssReceiver>
+         <geo:dateInserted>2013-03-08T00:00:00Z</geo:dateInserted>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
-         <geo:gnssReceiver gml:id="GnssReceiverType_86">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">LEICA GRX1200GGPRO</geo:receiverType>
-            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
-            <geo:serialNumber>355318</geo:serialNumber>
-            <geo:firmwareVersion>8.20/3.019</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>2011-06-27T00:00:00Z</geo:dateInstalled>
-            <geo:dateRemoved>2013-03-08T00:00:00Z</geo:dateRemoved>
-            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver gml:id="GnssReceiverType_87">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">AOA ICS-4000Z ACT</geo:receiverType>
+         <geo:gnssReceiver gml:id="GnssReceiverType_84">
+            <geo:manufacturerSerialNumber>C126U</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">AOA ICS-4000Z ACT</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
             <geo:serialNumber>C126U</geo:serialNumber>
             <geo:firmwareVersion>3.3.32.3</geo:firmwareVersion>
@@ -124,59 +94,55 @@
             <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
             <geo:notes>This receiver is AC/DC</geo:notes>
          </geo:gnssReceiver>
+         <geo:dateInserted>2000-01-24T02:15:00Z</geo:dateInserted>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
-         <geo:gnssReceiver gml:id="GnssReceiverType_88">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">LEICA GRX1200GGPRO</geo:receiverType>
-            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
-            <geo:serialNumber>355318</geo:serialNumber>
-            <geo:firmwareVersion>7.50 / 3.019</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>2010-05-06T00:00:00Z</geo:dateInstalled>
-            <geo:dateRemoved>2011-06-26T23:59:00Z</geo:dateRemoved>
-            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
-            <geo:notes>ME upgrade due to GLONASS tracking problem.</geo:notes>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver gml:id="GnssReceiverType_89">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">LEICA GRX1200GGPRO</geo:receiverType>
-            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
-            <geo:serialNumber>355318</geo:serialNumber>
-            <geo:firmwareVersion>8.51/3.019</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>2013-03-08T00:00:00Z</geo:dateInstalled>
-            <geo:dateRemoved>2013-07-08T00:45:00Z</geo:dateRemoved>
-            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver gml:id="GnssReceiverType_90">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">AOA ICS-4000Z</geo:receiverType>
+         <geo:gnssReceiver gml:id="GnssReceiverType_85">
+            <geo:manufacturerSerialNumber>UC2200302004</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">ASHTECH UZ-12</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>C128</geo:serialNumber>
-            <geo:firmwareVersion>3.2.32.9</geo:firmwareVersion>
+            <geo:serialNumber>UC2200302004</geo:serialNumber>
+            <geo:firmwareVersion>ZC00</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>1999-07-31T01:00:00Z</geo:dateInstalled>
-            <geo:dateRemoved>2000-01-14T01:50:00Z</geo:dateRemoved>
+            <geo:dateInstalled>2003-10-23T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2008-04-15T23:59:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
-            <geo:notes>Upgrade of firmware to avoid GPS week</geo:notes>
+            <geo:notes>The Old AOA Rx still remains on site as a</geo:notes>
          </geo:gnssReceiver>
+         <geo:dateInserted>2003-10-23T00:00:00Z</geo:dateInserted>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
-         <geo:gnssReceiver gml:id="GnssReceiverType_91">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">LEICA GRX1200GGPRO</geo:receiverType>
+         <geo:gnssReceiver gml:id="GnssReceiverType_86">
+            <geo:manufacturerSerialNumber>355318</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">LEICA GRX1200GGPRO</geo:receiverType>
             <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
             <geo:serialNumber>355318</geo:serialNumber>
             <geo:firmwareVersion>8.71/3.822</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
             <geo:dateInstalled>2013-07-08T00:45:00Z</geo:dateInstalled>
+            <geo:dateRemoved></geo:dateRemoved>
             <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
          </geo:gnssReceiver>
+         <geo:dateInserted>2013-07-08T00:45:00Z</geo:dateInserted>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
-         <geo:gnssReceiver gml:id="GnssReceiverType_92">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">AOA SNR-12 ACT</geo:receiverType>
+         <geo:gnssReceiver gml:id="GnssReceiverType_87">
+            <geo:manufacturerSerialNumber>355318</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">LEICA GRX1200GGPRO</geo:receiverType>
+            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
+            <geo:serialNumber>355318</geo:serialNumber>
+            <geo:firmwareVersion>6.00</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2008-09-17T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2009-07-24T00:00:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
+         </geo:gnssReceiver>
+         <geo:dateInserted>2008-09-17T00:00:00Z</geo:dateInserted>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_88">
+            <geo:manufacturerSerialNumber>C102U</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">AOA SNR-12 ACT</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
             <geo:serialNumber>C102U</geo:serialNumber>
             <geo:firmwareVersion>3.3.32.3</geo:firmwareVersion>
@@ -186,110 +152,198 @@
             <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
             <geo:notes>This receiver is AC power only</geo:notes>
          </geo:gnssReceiver>
+         <geo:dateInserted>2000-01-14T02:00:00Z</geo:dateInserted>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_89">
+            <geo:manufacturerSerialNumber>C128</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">AOA ICS-4000Z</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>C128</geo:serialNumber>
+            <geo:firmwareVersion>3.2.32.9</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>1999-07-31T01:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2000-01-14T01:50:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
+            <geo:notes>Upgrade of firmware to avoid GPS week</geo:notes>
+         </geo:gnssReceiver>
+         <geo:dateInserted>1999-07-31T01:00:00Z</geo:dateInserted>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_90">
+            <geo:manufacturerSerialNumber>355318</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">LEICA GRX1200GGPRO</geo:receiverType>
+            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
+            <geo:serialNumber>355318</geo:serialNumber>
+            <geo:firmwareVersion>7.50 / 3.019</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2010-05-06T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2011-06-26T23:59:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
+            <geo:notes>ME upgrade due to GLONASS tracking problem.</geo:notes>
+         </geo:gnssReceiver>
+         <geo:dateInserted>2010-05-06T00:00:00Z</geo:dateInserted>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_91">
+            <geo:manufacturerSerialNumber>355318</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">LEICA GRX1200GGPRO</geo:receiverType>
+            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
+            <geo:serialNumber>355318</geo:serialNumber>
+            <geo:firmwareVersion>5.62</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2008-04-16T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2008-09-16T23:59:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
+         </geo:gnssReceiver>
+         <geo:dateInserted>2008-04-16T00:00:00Z</geo:dateInserted>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_92">
+            <geo:manufacturerSerialNumber>355318</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">LEICA GRX1200GGPRO</geo:receiverType>
+            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
+            <geo:serialNumber>355318</geo:serialNumber>
+            <geo:firmwareVersion>8.20/3.019</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2011-06-27T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2013-03-08T00:00:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
+         </geo:gnssReceiver>
+         <geo:dateInserted>2011-06-27T00:00:00Z</geo:dateInserted>
       </geo:gnssReceivers>
       <geo:gnssAntennas>
          <geo:gnssAntenna gml:id="GnssAntennaType_35">
-            <geo:antennaType codeList="codelist" codeListValue="codeListValue">AOAD/M_T NONE</geo:antennaType>
+            <geo:manufacturerSerialNumber>318</geo:manufacturerSerialNumber>
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue" codeSpace="codespace">AOAD/M_T AUST</geo:antennaType>
             <geo:serialNumber>318</geo:serialNumber>
-            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:antennaReferencePoint codeSpace="">BPA</geo:antennaReferencePoint>
             <geo:marker-arpUpEcc.>0.007</geo:marker-arpUpEcc.>
             <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
-            <geo:antennaCableLength>0.0</geo:antennaCableLength>
-            <geo:dateInstalled>2003-06-15T03:30:00Z</geo:dateInstalled>
-            <geo:dateRemoved>2011-07-20T00:00:00Z</geo:dateRemoved>
-            <geo:notes>Damaged radome was removed.</geo:notes>
-         </geo:gnssAntenna>
-      </geo:gnssAntennas>
-      <geo:gnssAntennas>
-         <geo:gnssAntenna gml:id="GnssAntennaType_36">
-            <geo:antennaType codeList="codelist" codeListValue="codeListValue">LEIAR25.R3 NONE</geo:antennaType>
-            <geo:serialNumber>09370001</geo:serialNumber>
-            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
-            <geo:marker-arpUpEcc.>0.0015</geo:marker-arpUpEcc.>
-            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
-            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
-            <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
-            <geo:antennaCableType>LMR400</geo:antennaCableType>
-            <geo:antennaCableLength>81.0</geo:antennaCableLength>
-            <geo:dateInstalled>2011-07-20T00:00:00Z</geo:dateInstalled>
-         </geo:gnssAntenna>
-      </geo:gnssAntennas>
-      <geo:gnssAntennas>
-         <geo:gnssAntenna gml:id="GnssAntennaType_37">
-            <geo:antennaType codeList="codelist" codeListValue="codeListValue">AOAD/M_T AUST</geo:antennaType>
-            <geo:serialNumber>318</geo:serialNumber>
-            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
-            <geo:marker-arpUpEcc.>0.007</geo:marker-arpUpEcc.>
-            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
-            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
-            <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>AUST</geo:antennaRadomeType>
+            <geo:antennaRadomeType codeSpace="CodeSpaceAttr">AUST</geo:antennaRadomeType>
+            <geo:radomeSerialNumber></geo:radomeSerialNumber>
+            <geo:antennaCableType></geo:antennaCableType>
             <geo:antennaCableLength>0.0</geo:antennaCableLength>
             <geo:dateInstalled>1994-05-15T00:00:00Z</geo:dateInstalled>
             <geo:dateRemoved>2003-06-15T03:30:00Z</geo:dateRemoved>
             <geo:notes>Radome was damaged at an unknown time during this period.</geo:notes>
          </geo:gnssAntenna>
+         <geo:dateInserted>1994-05-15T00:00:00Z</geo:dateInserted>
+      </geo:gnssAntennas>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna gml:id="GnssAntennaType_36">
+            <geo:manufacturerSerialNumber>09370001</geo:manufacturerSerialNumber>
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue" codeSpace="codespace">LEIAR25.R3 NONE</geo:antennaType>
+            <geo:serialNumber>09370001</geo:serialNumber>
+            <geo:antennaReferencePoint codeSpace="">BPA</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>0.0015</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+            <geo:antennaRadomeType codeSpace="CodeSpaceAttr">NONE</geo:antennaRadomeType>
+            <geo:radomeSerialNumber></geo:radomeSerialNumber>
+            <geo:antennaCableType>LMR400</geo:antennaCableType>
+            <geo:antennaCableLength>81.0</geo:antennaCableLength>
+            <geo:dateInstalled>2011-07-20T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved></geo:dateRemoved>
+         </geo:gnssAntenna>
+         <geo:dateInserted>2011-07-20T00:00:00Z</geo:dateInserted>
+      </geo:gnssAntennas>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna gml:id="GnssAntennaType_37">
+            <geo:manufacturerSerialNumber>318</geo:manufacturerSerialNumber>
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue" codeSpace="codespace">AOAD/M_T NONE</geo:antennaType>
+            <geo:serialNumber>318</geo:serialNumber>
+            <geo:antennaReferencePoint codeSpace="">BPA</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>0.007</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+            <geo:antennaRadomeType codeSpace="CodeSpaceAttr">NONE</geo:antennaRadomeType>
+            <geo:radomeSerialNumber></geo:radomeSerialNumber>
+            <geo:antennaCableType></geo:antennaCableType>
+            <geo:antennaCableLength>0.0</geo:antennaCableLength>
+            <geo:dateInstalled>2003-06-15T03:30:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2011-07-20T00:00:00Z</geo:dateRemoved>
+            <geo:notes>Damaged radome was removed.</geo:notes>
+         </geo:gnssAntenna>
+         <geo:dateInserted>2003-06-15T03:30:00Z</geo:dateInserted>
       </geo:gnssAntennas>
       <geo:surveyedLocalTies>
          <geo:surveyedLocalTies gml:id="SurveyedLocalTiesType_5">
-            <geo:tiedMarkerName>RM3</geo:tiedMarkerName>
-            <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
-               <geo:dx>4.399</geo:dx>
-               <geo:dy>15.434</geo:dy>
-               <geo:dz>18.074</geo:dz>
-            </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
-            <geo:localSiteTiesAccuracy>1.0</geo:localSiteTiesAccuracy>
-            <geo:dateMeasured>1992-08-11T14:00:00Z</geo:dateMeasured>
-         </geo:surveyedLocalTies>
-      </geo:surveyedLocalTies>
-      <geo:surveyedLocalTies>
-         <geo:surveyedLocalTies gml:id="SurveyedLocalTiesType_6">
             <geo:tiedMarkerName>RM2</geo:tiedMarkerName>
+            <geo:tiedMarkerUsage></geo:tiedMarkerUsage>
+            <geo:tiedMarkerCDPNumber></geo:tiedMarkerCDPNumber>
+            <geo:tiedMarkerDOMESNumber></geo:tiedMarkerDOMESNumber>
             <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
                <geo:dx>6.89</geo:dx>
                <geo:dy>-0.437</geo:dy>
                <geo:dz>-9.874</geo:dz>
             </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
             <geo:localSiteTiesAccuracy>1.0</geo:localSiteTiesAccuracy>
+            <geo:surveyMethod></geo:surveyMethod>
             <geo:dateMeasured>1992-08-11T14:00:00Z</geo:dateMeasured>
          </geo:surveyedLocalTies>
+         <geo:dateInserted>2016-04-14T00:03:06Z</geo:dateInserted>
+      </geo:surveyedLocalTies>
+      <geo:surveyedLocalTies>
+         <geo:surveyedLocalTies gml:id="SurveyedLocalTiesType_6">
+            <geo:tiedMarkerName>RM3</geo:tiedMarkerName>
+            <geo:tiedMarkerUsage></geo:tiedMarkerUsage>
+            <geo:tiedMarkerCDPNumber></geo:tiedMarkerCDPNumber>
+            <geo:tiedMarkerDOMESNumber></geo:tiedMarkerDOMESNumber>
+            <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+               <geo:dx>4.399</geo:dx>
+               <geo:dy>15.434</geo:dy>
+               <geo:dz>18.074</geo:dz>
+            </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+            <geo:localSiteTiesAccuracy>1.0</geo:localSiteTiesAccuracy>
+            <geo:surveyMethod></geo:surveyMethod>
+            <geo:dateMeasured>1992-08-11T14:00:00Z</geo:dateMeasured>
+         </geo:surveyedLocalTies>
+         <geo:dateInserted>2016-04-14T00:03:06Z</geo:dateInserted>
       </geo:surveyedLocalTies>
       <geo:surveyedLocalTies>
          <geo:surveyedLocalTies gml:id="SurveyedLocalTiesType_7">
             <geo:tiedMarkerName>RM1</geo:tiedMarkerName>
+            <geo:tiedMarkerUsage></geo:tiedMarkerUsage>
+            <geo:tiedMarkerCDPNumber></geo:tiedMarkerCDPNumber>
+            <geo:tiedMarkerDOMESNumber></geo:tiedMarkerDOMESNumber>
             <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
                <geo:dx>-15.366</geo:dx>
                <geo:dy>-9.632</geo:dy>
                <geo:dz>9.099</geo:dz>
             </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
             <geo:localSiteTiesAccuracy>1.0</geo:localSiteTiesAccuracy>
+            <geo:surveyMethod></geo:surveyMethod>
             <geo:dateMeasured>1992-08-11T14:00:00Z</geo:dateMeasured>
          </geo:surveyedLocalTies>
+         <geo:dateInserted>2016-04-14T00:03:06Z</geo:dateInserted>
       </geo:surveyedLocalTies>
       <geo:frequencyStandards>
          <geo:frequencyStandard gml:id="FrequencyStandardType_58">
-            <geo:standardType>QUARTZ/INTERNAL</geo:standardType>
+            <geo:standardType codeSpace="">QUARTZ/INTERNAL</geo:standardType>
             <geo:inputFrequency>0.0</geo:inputFrequency>
-            <gml:validTime>
-               <gml:TimePeriod>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_73">
                   <gml:beginPosition>1994-05-15T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
          </geo:frequencyStandard>
+         <geo:dateInserted>2016-04-14T00:03:06Z</geo:dateInserted>
       </geo:frequencyStandards>
       <geo:humiditySensors>
          <geo:humiditySensor gml:id="HumiditySensorType_7">
-            <geo:type>PAROSCIENTIFIC MET3A</geo:type>
+            <geo:type codeSpace="">PAROSCIENTIFIC MET3A</geo:type>
             <geo:manufacturer>Paroscientific, Inc.</geo:manufacturer>
             <geo:serialNumber>98850</geo:serialNumber>
             <geo:heightDiffToAntenna>2.4</geo:heightDiffToAntenna>
-            <gml:validTime>
-               <gml:TimePeriod>
+            <geo:calibrationDate></geo:calibrationDate>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_74">
                   <gml:beginPosition>2006-03-29T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
@@ -298,15 +352,17 @@
             <geo:accuracy-percentRelativeHumidity>2.0</geo:accuracy-percentRelativeHumidity>
             <geo:aspiration>FAN</geo:aspiration>
          </geo:humiditySensor>
+         <geo:dateInserted>2016-04-14T00:03:06Z</geo:dateInserted>
       </geo:humiditySensors>
       <geo:pressureSensors>
          <geo:pressureSensor gml:id="PressureSensorType_7">
-            <geo:type>PAROSCIENTIFIC MET3A</geo:type>
+            <geo:type codeSpace="">PAROSCIENTIFIC MET3A</geo:type>
             <geo:manufacturer>Paroscientific, Inc.</geo:manufacturer>
             <geo:serialNumber>98850</geo:serialNumber>
             <geo:heightDiffToAntenna>2.4</geo:heightDiffToAntenna>
-            <gml:validTime>
-               <gml:TimePeriod>
+            <geo:calibrationDate></geo:calibrationDate>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_75">
                   <gml:beginPosition>2006-03-29T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
@@ -314,15 +370,17 @@
             <geo:dataSamplingInterval>30.0</geo:dataSamplingInterval>
             <geo:accuracy-hPa>0.1</geo:accuracy-hPa>
          </geo:pressureSensor>
+         <geo:dateInserted>2016-04-14T00:03:06Z</geo:dateInserted>
       </geo:pressureSensors>
       <geo:temperatureSensors>
          <geo:temperatureSensor gml:id="TemperatureSensorType_7">
-            <geo:type>PAROSCIENTIFIC MET3A</geo:type>
+            <geo:type codeSpace="">PAROSCIENTIFIC MET3A</geo:type>
             <geo:manufacturer>Paroscientific, Inc.</geo:manufacturer>
             <geo:serialNumber>98850</geo:serialNumber>
             <geo:heightDiffToAntenna>2.4</geo:heightDiffToAntenna>
-            <gml:validTime>
-               <gml:TimePeriod>
+            <geo:calibrationDate></geo:calibrationDate>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_77">
                   <gml:beginPosition>2006-03-29T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
@@ -331,32 +389,43 @@
             <geo:accuracy-degreesCelcius>0.5</geo:accuracy-degreesCelcius>
             <geo:aspiration>FAN</geo:aspiration>
          </geo:temperatureSensor>
+         <geo:dateInserted>2016-04-14T00:03:06Z</geo:dateInserted>
       </geo:temperatureSensors>
       <geo:waterVaporSensors>
          <geo:waterVaporSensor gml:id="WaterVaporSensorType_2">
+            <geo:type codeSpace=""></geo:type>
+            <geo:manufacturer></geo:manufacturer>
+            <geo:serialNumber></geo:serialNumber>
             <geo:heightDiffToAntenna>0.0</geo:heightDiffToAntenna>
-            <gml:validTime>
-               <gml:TimePeriod>
+            <geo:calibrationDate></geo:calibrationDate>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_76">
                   <gml:beginPosition>2006-03-29T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
             <geo:distanceToAntenna>0.0</geo:distanceToAntenna>
          </geo:waterVaporSensor>
+         <geo:dateInserted>2016-04-14T00:03:06Z</geo:dateInserted>
       </geo:waterVaporSensors>
       <geo:localEpisodicEventsSet>
          <geo:localEpisodicEvents gml:id="LocalEpisodicEventsType_1">
-            <gml:validTime>
-               <gml:TimeInstant>
+            <gml:validTime nilReason="">
+               <gml:TimeInstant gml:id="TimeInstantType_19">
                   <gml:timePosition>20 Jul 2011</gml:timePosition>
                </gml:TimeInstant>
             </gml:validTime>
             <geo:event>TREE CLEARING</geo:event>
          </geo:localEpisodicEvents>
+         <geo:dateInserted>2016-04-14T00:03:06Z</geo:dateInserted>
       </geo:localEpisodicEventsSet>
-      <geo:siteContact>
-         <gmd:MD_SecurityConstraints/>
-         <gmd:CI_ResponsibleParty>
+      <geo:siteContact gml:id="AgencyPropertyType_40">
+         <gmd:MD_SecurityConstraints id="MDSecurityConstraintsType_40">
+            <gmd:classification>
+               <gmd:MD_ClassificationCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:classification>
+         </gmd:MD_SecurityConstraints>
+         <gmd:CI_ResponsibleParty id="CIResponsiblePartyType_40">
             <gmd:individualName>
                <gco:CharacterString>Ryan Ruddick</gco:CharacterString>
             </gmd:individualName>
@@ -364,9 +433,9 @@
                <gco:CharacterString>Geoscience Australia</gco:CharacterString>
             </gmd:organisationName>
             <gmd:contactInfo>
-               <gmd:CI_Contact>
+               <gmd:CI_Contact id="CIContactType_40">
                   <gmd:phone>
-                     <gmd:CI_Telephone>
+                     <gmd:CI_Telephone id="CITelephoneType_12">
                         <gmd:voice>
                            <gco:CharacterString>+61 2 6249 9426</gco:CharacterString>
                         </gmd:voice>
@@ -376,7 +445,7 @@
                      </gmd:CI_Telephone>
                   </gmd:phone>
                   <gmd:address>
-                     <gmd:CI_Address>
+                     <gmd:CI_Address id="CIAddressType_40">
                         <gmd:deliveryPoint>
                            <gco:CharacterString>National Geospatial Reference Frames Project</gco:CharacterString>
                         </gmd:deliveryPoint>
@@ -387,27 +456,44 @@
                   </gmd:address>
                </gmd:CI_Contact>
             </gmd:contactInfo>
+            <gmd:role>
+               <gmd:CI_RoleCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:role>
          </gmd:CI_ResponsibleParty>
       </geo:siteContact>
-      <geo:siteMetadataCustodian>
-         <gmd:MD_SecurityConstraints/>
-         <gmd:CI_ResponsibleParty>
+      <geo:siteMetadataCustodian gml:id="AgencyPropertyType_41">
+         <gmd:MD_SecurityConstraints id="MDSecurityConstraintsType_41">
+            <gmd:classification>
+               <gmd:MD_ClassificationCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:classification>
+         </gmd:MD_SecurityConstraints>
+         <gmd:CI_ResponsibleParty id="CIResponsiblePartyType_41">
             <gmd:organisationName>
                <gco:CharacterString>Geoscience Australia</gco:CharacterString>
             </gmd:organisationName>
             <gmd:contactInfo>
-               <gmd:CI_Contact>
+               <gmd:CI_Contact id="CIContactType_41">
                   <gmd:address>
-                     <gmd:CI_Address/>
+                     <gmd:CI_Address id="CIAddressType_41"/>
                   </gmd:address>
                </gmd:CI_Contact>
             </gmd:contactInfo>
+            <gmd:role>
+               <gmd:CI_RoleCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:role>
          </gmd:CI_ResponsibleParty>
       </geo:siteMetadataCustodian>
       <geo:moreInformation>
+         <geo:dataCenter></geo:dataCenter>
+         <geo:urlForMoreInformation></geo:urlForMoreInformation>
+         <geo:siteMap></geo:siteMap>
          <geo:siteDiagram>Y</geo:siteDiagram>
          <geo:horizonMask>Y</geo:horizonMask>
+         <geo:monumentDescription></geo:monumentDescription>
          <geo:sitePictures>Y</geo:sitePictures>
+         <geo:antennaGraphicsWithDimensions></geo:antennaGraphicsWithDimensions>
+         <geo:insertTextGraphicFromAntenna></geo:insertTextGraphicFromAntenna>
+         <geo:DOI codeSpace="CodeSpaceTODO">CodeTypeTODO</geo:DOI>
       </geo:moreInformation>
    </geo:siteLog>
 </geo:GeodesyML>

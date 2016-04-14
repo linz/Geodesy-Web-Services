@@ -10,98 +10,129 @@
          <geo:siteName>Bairnsdale</geo:siteName>
          <geo:fourCharacterID>BAIR</geo:fourCharacterID>
          <geo:iersDOMESNumber>AUM000015</geo:iersDOMESNumber>
+         <geo:cdpNumber></geo:cdpNumber>
          <geo:dateInstalled>2003-10-30T13:00:00Z</geo:dateInstalled>
       </geo:siteIdentification>
       <geo:siteLocation>
          <geo:city>Bairnsdale</geo:city>
          <geo:state>Victoria</geo:state>
          <geo:countryCodeISO>AUS</geo:countryCodeISO>
-         <geo:tectonicPlate>Australian</geo:tectonicPlate>
+         <geo:tectonicPlate codeSpace="">Australian</geo:tectonicPlate>
          <geo:approximatePositionITRF>
             <geo:xCoordinateInMeters>-4258622.022357</geo:xCoordinateInMeters>
             <geo:yCoordinateInMeters>2702498.727276</geo:yCoordinateInMeters>
             <geo:zCoordinateInMeters>-3890991.02734</geo:zCoordinateInMeters>
-            <geo:latitude-North>-375004.46600000001490116119384765625</geo:latitude-North>
-            <geo:longitude-East>1473603.36299999989569187164306640625</geo:longitude-East>
+            <geo:latitude-North>-37.83457388888889028066842001862823963165283203125</geo:latitude-North>
+            <geo:longitude-East>147.600934166666633018394350074231624603271484375</geo:longitude-East>
             <geo:elevation-m_ellips.>45.0</geo:elevation-m_ellips.>
          </geo:approximatePositionITRF>
       </geo:siteLocation>
       <geo:gnssReceivers>
          <geo:gnssReceiver gml:id="GnssReceiverType_157">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">TRIMBLE 4700</geo:receiverType>
+            <geo:manufacturerSerialNumber>20199467</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">TRIMBLE 4700</geo:receiverType>
             <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
             <geo:serialNumber>20199467</geo:serialNumber>
             <geo:firmwareVersion>4.20/1.39</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
             <geo:dateInstalled>2003-10-31T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved></geo:dateRemoved>
             <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
          </geo:gnssReceiver>
+         <geo:dateInserted>2003-10-31T00:00:00Z</geo:dateInserted>
       </geo:gnssReceivers>
       <geo:gnssAntennas>
          <geo:gnssAntenna gml:id="GnssAntennaType_73">
-            <geo:antennaType codeList="codelist" codeListValue="codeListValue">TRM41249.00     NONE</geo:antennaType>
+            <geo:manufacturerSerialNumber>UNKNOWN</geo:manufacturerSerialNumber>
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue" codeSpace="codespace">TRM41249.00     NONE</geo:antennaType>
             <geo:serialNumber>UNKNOWN</geo:serialNumber>
-            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:antennaReferencePoint codeSpace="">BPA</geo:antennaReferencePoint>
             <geo:marker-arpUpEcc.>0.0</geo:marker-arpUpEcc.>
             <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
+            <geo:antennaRadomeType codeSpace="CodeSpaceAttr">NONE</geo:antennaRadomeType>
+            <geo:radomeSerialNumber></geo:radomeSerialNumber>
+            <geo:antennaCableType></geo:antennaCableType>
             <geo:antennaCableLength>0.0</geo:antennaCableLength>
             <geo:dateInstalled>2003-10-31T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved></geo:dateRemoved>
          </geo:gnssAntenna>
+         <geo:dateInserted>2003-10-31T00:00:00Z</geo:dateInserted>
       </geo:gnssAntennas>
       <geo:frequencyStandards>
          <geo:frequencyStandard gml:id="FrequencyStandardType_78">
-            <geo:standardType>QUARTZ/INTERNAL</geo:standardType>
+            <geo:standardType codeSpace="">QUARTZ/INTERNAL</geo:standardType>
             <geo:inputFrequency>0.0</geo:inputFrequency>
-            <gml:validTime>
-               <gml:TimePeriod>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_107">
                   <gml:beginPosition>2003-10-31T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
          </geo:frequencyStandard>
+         <geo:dateInserted>2016-04-14T00:03:06Z</geo:dateInserted>
       </geo:frequencyStandards>
       <geo:localEpisodicEventsSet>
          <geo:localEpisodicEvents gml:id="LocalEpisodicEventsType_35">
-            <gml:validTime>
-               <gml:TimeInstant>
+            <gml:validTime nilReason="">
+               <gml:TimeInstant gml:id="TimeInstantType_72">
                   <gml:timePosition>23 Dec 2004</gml:timePosition>
                </gml:TimeInstant>
             </gml:validTime>
             <geo:event>EARTHQUAKE</geo:event>
          </geo:localEpisodicEvents>
+         <geo:dateInserted>2016-04-14T00:03:06Z</geo:dateInserted>
       </geo:localEpisodicEventsSet>
-      <geo:siteContact>
-         <gmd:MD_SecurityConstraints/>
-         <gmd:CI_ResponsibleParty>
+      <geo:siteContact gml:id="AgencyPropertyType_82">
+         <gmd:MD_SecurityConstraints id="MDSecurityConstraintsType_82">
+            <gmd:classification>
+               <gmd:MD_ClassificationCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:classification>
+         </gmd:MD_SecurityConstraints>
+         <gmd:CI_ResponsibleParty id="CIResponsiblePartyType_82">
             <gmd:contactInfo>
-               <gmd:CI_Contact>
+               <gmd:CI_Contact id="CIContactType_82">
                   <gmd:address>
-                     <gmd:CI_Address/>
+                     <gmd:CI_Address id="CIAddressType_82"/>
                   </gmd:address>
                </gmd:CI_Contact>
             </gmd:contactInfo>
+            <gmd:role>
+               <gmd:CI_RoleCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:role>
          </gmd:CI_ResponsibleParty>
       </geo:siteContact>
-      <geo:siteMetadataCustodian>
-         <gmd:MD_SecurityConstraints/>
-         <gmd:CI_ResponsibleParty>
+      <geo:siteMetadataCustodian gml:id="AgencyPropertyType_83">
+         <gmd:MD_SecurityConstraints id="MDSecurityConstraintsType_83">
+            <gmd:classification>
+               <gmd:MD_ClassificationCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:classification>
+         </gmd:MD_SecurityConstraints>
+         <gmd:CI_ResponsibleParty id="CIResponsiblePartyType_83">
             <gmd:contactInfo>
-               <gmd:CI_Contact>
+               <gmd:CI_Contact id="CIContactType_83">
                   <gmd:address>
-                     <gmd:CI_Address/>
+                     <gmd:CI_Address id="CIAddressType_83"/>
                   </gmd:address>
                </gmd:CI_Contact>
             </gmd:contactInfo>
+            <gmd:role>
+               <gmd:CI_RoleCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:role>
          </gmd:CI_ResponsibleParty>
       </geo:siteMetadataCustodian>
       <geo:moreInformation>
+         <geo:dataCenter></geo:dataCenter>
+         <geo:urlForMoreInformation></geo:urlForMoreInformation>
          <geo:siteMap>Y</geo:siteMap>
          <geo:siteDiagram>Y</geo:siteDiagram>
          <geo:horizonMask>Y</geo:horizonMask>
+         <geo:monumentDescription></geo:monumentDescription>
          <geo:sitePictures>Y</geo:sitePictures>
+         <geo:antennaGraphicsWithDimensions></geo:antennaGraphicsWithDimensions>
+         <geo:insertTextGraphicFromAntenna></geo:insertTextGraphicFromAntenna>
+         <geo:DOI codeSpace="CodeSpaceTODO">CodeTypeTODO</geo:DOI>
       </geo:moreInformation>
    </geo:siteLog>
 </geo:GeodesyML>

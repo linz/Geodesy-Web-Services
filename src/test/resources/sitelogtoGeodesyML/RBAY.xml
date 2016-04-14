@@ -10,6 +10,7 @@
          <geo:siteName>Richardsbay</geo:siteName>
          <geo:fourCharacterID>RBAY</geo:fourCharacterID>
          <geo:iersDOMESNumber>30315M001</geo:iersDOMESNumber>
+         <geo:cdpNumber></geo:cdpNumber>
          <geo:monumentDescription>STEEL MAST</geo:monumentDescription>
          <geo:heightOfTheMonument>2.5</geo:heightOfTheMonument>
          <geo:monumentFoundation>CONCRETE BLOCK</geo:monumentFoundation>
@@ -21,64 +22,99 @@
          <geo:city>Richardsbay</geo:city>
          <geo:state>Kwa-Zulu Natal</geo:state>
          <geo:countryCodeISO>ZAF</geo:countryCodeISO>
-         <geo:tectonicPlate>Africa</geo:tectonicPlate>
+         <geo:tectonicPlate codeSpace="">Africa</geo:tectonicPlate>
          <geo:approximatePositionITRF>
             <geo:xCoordinateInMeters>4739765.8116</geo:xCoordinateInMeters>
             <geo:yCoordinateInMeters>2970758.3766</geo:yCoordinateInMeters>
             <geo:zCoordinateInMeters>-3054077.6457</geo:zCoordinateInMeters>
-            <geo:latitude-North>-284743.9650000000256113708019256591796875</geo:latitude-North>
-            <geo:longitude-East>320442.1863000000012107193470001220703125</geo:longitude-East>
+            <geo:latitude-North>-28.795545833333338947568336152471601963043212890625</geo:latitude-North>
+            <geo:longitude-East>32.07838508333333038535783998668193817138671875</geo:longitude-East>
             <geo:elevation-m_ellips.>31.7927</geo:elevation-m_ellips.>
          </geo:approximatePositionITRF>
       </geo:siteLocation>
       <geo:gnssReceivers>
          <geo:gnssReceiver gml:id="GnssReceiverType_2241">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ROGUE SNR-8000</geo:receiverType>
+            <geo:manufacturerSerialNumber>T 367</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">ROGUE SNR-8000</geo:receiverType>
+            <geo:satelliteSystem codeSpace="DummyCodeSpace">DummyCodeList</geo:satelliteSystem>
             <geo:serialNumber>T 367</geo:serialNumber>
             <geo:firmwareVersion>3.2.32.11</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
             <geo:dateInstalled>2002-08-07T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved></geo:dateRemoved>
             <geo:notes>firmware upgrade</geo:notes>
          </geo:gnssReceiver>
+         <geo:dateInserted>2002-08-07T00:00:00Z</geo:dateInserted>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
          <geo:gnssReceiver gml:id="GnssReceiverType_2242">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ROGUE SNR-8000</geo:receiverType>
+            <geo:manufacturerSerialNumber>T 367</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">ROGUE SNR-8000</geo:receiverType>
+            <geo:satelliteSystem codeSpace="DummyCodeSpace">DummyCodeList</geo:satelliteSystem>
             <geo:serialNumber>T 367</geo:serialNumber>
             <geo:firmwareVersion>3.2.32.8</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
             <geo:dateInstalled>2000-05-10T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved></geo:dateRemoved>
          </geo:gnssReceiver>
+         <geo:dateInserted>2000-05-10T00:00:00Z</geo:dateInserted>
       </geo:gnssReceivers>
       <geo:gnssAntennas>
          <geo:gnssAntenna gml:id="GnssAntennaType_992">
-            <geo:antennaType codeList="codelist" codeListValue="codeListValue">AOAD/M_T        NONE</geo:antennaType>
+            <geo:manufacturerSerialNumber>153</geo:manufacturerSerialNumber>
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue" codeSpace="codespace">AOAD/M_T        NONE</geo:antennaType>
             <geo:serialNumber>153</geo:serialNumber>
-            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:antennaReferencePoint codeSpace="">BPA</geo:antennaReferencePoint>
             <geo:marker-arpUpEcc.>0.055</geo:marker-arpUpEcc.>
             <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
+            <geo:antennaRadomeType codeSpace="CodeSpaceAttr">NONE</geo:antennaRadomeType>
+            <geo:radomeSerialNumber></geo:radomeSerialNumber>
+            <geo:antennaCableType></geo:antennaCableType>
             <geo:antennaCableLength>0.0</geo:antennaCableLength>
             <geo:dateInstalled>2000-05-10T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved></geo:dateRemoved>
          </geo:gnssAntenna>
+         <geo:dateInserted>2000-05-10T00:00:00Z</geo:dateInserted>
       </geo:gnssAntennas>
       <geo:surveyedLocalTies>
          <geo:surveyedLocalTies gml:id="SurveyedLocalTiesType_282">
+            <geo:tiedMarkerName></geo:tiedMarkerName>
+            <geo:tiedMarkerUsage></geo:tiedMarkerUsage>
+            <geo:tiedMarkerCDPNumber></geo:tiedMarkerCDPNumber>
+            <geo:tiedMarkerDOMESNumber></geo:tiedMarkerDOMESNumber>
+            <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+               <geo:dx>0.0</geo:dx>
+               <geo:dy>0.0</geo:dy>
+               <geo:dz>0.0</geo:dz>
+            </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
             <geo:localSiteTiesAccuracy>0.0</geo:localSiteTiesAccuracy>
+            <geo:surveyMethod></geo:surveyMethod>
+            <geo:dateMeasured>1970-01-22T13:00:00Z</geo:dateMeasured>
             <geo:notes>No footprint has been done yet, but will be done in 2001</geo:notes>
          </geo:surveyedLocalTies>
+         <geo:dateInserted>2016-04-14T00:03:11Z</geo:dateInserted>
       </geo:surveyedLocalTies>
       <geo:frequencyStandards>
          <geo:frequencyStandard gml:id="FrequencyStandardType_778">
-            <geo:standardType>INTERNAL</geo:standardType>
+            <geo:standardType codeSpace="">INTERNAL</geo:standardType>
             <geo:inputFrequency>0.0</geo:inputFrequency>
+            <gml:validTime>
+               <gml:TimeInstant gml:id="TimeInstantType_737">
+                  <gml:timePosition>1970-01-22T13:00:00Z</gml:timePosition>
+               </gml:TimeInstant>
+            </gml:validTime>
          </geo:frequencyStandard>
+         <geo:dateInserted>2016-04-14T00:03:11Z</geo:dateInserted>
       </geo:frequencyStandards>
-      <geo:siteContact>
-         <gmd:MD_SecurityConstraints/>
-         <gmd:CI_ResponsibleParty>
+      <geo:siteContact gml:id="AgencyPropertyType_990">
+         <gmd:MD_SecurityConstraints id="MDSecurityConstraintsType_990">
+            <gmd:classification>
+               <gmd:MD_ClassificationCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:classification>
+         </gmd:MD_SecurityConstraints>
+         <gmd:CI_ResponsibleParty id="CIResponsiblePartyType_990">
             <gmd:individualName>
                <gco:CharacterString>Ludwig Combrinck</gco:CharacterString>
             </gmd:individualName>
@@ -86,9 +122,9 @@
                <gco:CharacterString>HartRAO</gco:CharacterString>
             </gmd:organisationName>
             <gmd:contactInfo>
-               <gmd:CI_Contact>
+               <gmd:CI_Contact id="CIContactType_990">
                   <gmd:phone>
-                     <gmd:CI_Telephone>
+                     <gmd:CI_Telephone id="CITelephoneType_392">
                         <gmd:voice>
                            <gco:CharacterString>27-12-3260742</gco:CharacterString>
                         </gmd:voice>
@@ -98,7 +134,7 @@
                      </gmd:CI_Telephone>
                   </gmd:phone>
                   <gmd:address>
-                     <gmd:CI_Address>
+                     <gmd:CI_Address id="CIAddressType_990">
                         <gmd:deliveryPoint>
                            <gco:CharacterString>PO BOX 443</gco:CharacterString>
                         </gmd:deliveryPoint>
@@ -109,22 +145,44 @@
                   </gmd:address>
                </gmd:CI_Contact>
             </gmd:contactInfo>
+            <gmd:role>
+               <gmd:CI_RoleCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:role>
          </gmd:CI_ResponsibleParty>
       </geo:siteContact>
-      <geo:siteMetadataCustodian>
-         <gmd:MD_SecurityConstraints/>
-         <gmd:CI_ResponsibleParty>
+      <geo:siteMetadataCustodian gml:id="AgencyPropertyType_991">
+         <gmd:MD_SecurityConstraints id="MDSecurityConstraintsType_991">
+            <gmd:classification>
+               <gmd:MD_ClassificationCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:classification>
+         </gmd:MD_SecurityConstraints>
+         <gmd:CI_ResponsibleParty id="CIResponsiblePartyType_991">
             <gmd:organisationName>
                <gco:CharacterString>HartRAO</gco:CharacterString>
             </gmd:organisationName>
             <gmd:contactInfo>
-               <gmd:CI_Contact>
+               <gmd:CI_Contact id="CIContactType_991">
                   <gmd:address>
-                     <gmd:CI_Address/>
+                     <gmd:CI_Address id="CIAddressType_991"/>
                   </gmd:address>
                </gmd:CI_Contact>
             </gmd:contactInfo>
+            <gmd:role>
+               <gmd:CI_RoleCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:role>
          </gmd:CI_ResponsibleParty>
       </geo:siteMetadataCustodian>
+      <geo:moreInformation>
+         <geo:dataCenter></geo:dataCenter>
+         <geo:urlForMoreInformation></geo:urlForMoreInformation>
+         <geo:siteMap></geo:siteMap>
+         <geo:siteDiagram></geo:siteDiagram>
+         <geo:horizonMask></geo:horizonMask>
+         <geo:monumentDescription></geo:monumentDescription>
+         <geo:sitePictures></geo:sitePictures>
+         <geo:antennaGraphicsWithDimensions></geo:antennaGraphicsWithDimensions>
+         <geo:insertTextGraphicFromAntenna></geo:insertTextGraphicFromAntenna>
+         <geo:DOI codeSpace="CodeSpaceTODO">CodeTypeTODO</geo:DOI>
+      </geo:moreInformation>
    </geo:siteLog>
 </geo:GeodesyML>

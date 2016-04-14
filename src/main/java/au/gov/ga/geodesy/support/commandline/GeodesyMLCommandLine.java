@@ -157,6 +157,7 @@ public class GeodesyMLCommandLine {
      */
     private void processFile(Path inputFile, Path outputFile)
             throws IOException, au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, MarshallingException {
+        logger.info("------------------------------------------------------------------------------------------------");
         logger.info("processFile - input: " + inputFile.toString() + ", write to xml file: " + outputFile.toString());
 
         if (Files.isRegularFile(inputFile) && inputFile.toString().endsWith("xml")) {

@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.xml.transform.stream.StreamSource;
 
-import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +21,7 @@ import au.gov.ga.geodesy.port.InvalidSiteLogException;
 import au.gov.ga.geodesy.port.SiteLogReader;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLValidator;
 import au.gov.ga.geodesy.port.adapter.sopac.SiteLogSopacReader;
+import au.gov.ga.xmlschemer.Violation;
 
 @Controller
 @RequestMapping("/siteLog")
@@ -37,13 +37,13 @@ public class SiteLogEndpoint {
     private GeodesyMLValidator geodesyMLValidator;
 
     @RequestMapping(value = "/validate", method = RequestMethod.POST)
-    public ResponseEntity<String> validate(HttpServletRequest req, HttpServletResponse rsp) throws IOException {
+    public ResponseEntity<List<Violation>> validate(HttpServletRequest req, HttpServletResponse rsp) throws IOException {
         StreamSource source = new StreamSource(req.getInputStream(), "data:");
-        List<String> violations = geodesyMLValidator.validate(source);
+        List<Violation> violations = geodesyMLValidator.validate(source);
         if (violations.isEmpty()) {
             return ResponseEntity.ok().body(null);
         } else {
-            return ResponseEntity.badRequest().body(StringUtils.join(violations, "\n"));
+            return ResponseEntity.badRequest().body(violations);
         }
     }
 

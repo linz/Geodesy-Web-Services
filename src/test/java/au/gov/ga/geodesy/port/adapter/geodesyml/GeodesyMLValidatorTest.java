@@ -8,6 +8,8 @@ import org.springframework.util.ResourceUtils;
 import static org.testng.Assert.*;
 import org.testng.annotations.Test;
 
+import au.gov.ga.xmlschemer.Violation;
+
 public class GeodesyMLValidatorTest {
 
     private GeodesyMLValidator validator = new GeodesyMLValidator();
@@ -15,17 +17,17 @@ public class GeodesyMLValidatorTest {
     @Test
     public void testSchemaValidation() throws Exception {
         StreamSource xml = new StreamSource(ResourceUtils.getFile("classpath:sitelog/geodesyml/MOBS.xml"));
-        List<String> violations = validator.validate(xml);
+        List<Violation> violations = validator.validate(xml);
         assertNoViolations(violations);
     }
 
-    private void assertNoViolations(List<String> violations) throws AssertionError {
+    private void assertNoViolations(List<Violation> violations) throws AssertionError {
         assertViolations(violations, 0);
     }
 
-    private void assertViolations(List<String> violations, int n) throws AssertionError {
+    private void assertViolations(List<Violation> violations, int n) throws AssertionError {
         if (n != violations.size()) {
-            violations.forEach(v -> System.out.println(v));
+            violations.forEach(System.out::println);
         }
         assertEquals(violations.size(), n);
     }

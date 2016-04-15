@@ -12,6 +12,7 @@ import org.springframework.util.ResourceUtils;
 import org.xml.sax.SAXException;
 
 import au.gov.ga.xmlschemer.SchemaValidator;
+import au.gov.ga.xmlschemer.Violation;
 
 @Component
 public class GeodesyMLValidator {
@@ -29,11 +30,11 @@ public class GeodesyMLValidator {
         }
     }
 
-    private List<String> validateAgainstSchema(StreamSource xml) throws IOException {
+    private List<Violation> validateAgainstSchema(StreamSource xml) throws IOException {
         return schemaValidator.validate(xml);
     }
 
-    public List<String> validate(StreamSource xml) throws IOException {
+    public List<Violation> validate(StreamSource xml) throws IOException {
         return validateAgainstSchema(xml);
     }
 }

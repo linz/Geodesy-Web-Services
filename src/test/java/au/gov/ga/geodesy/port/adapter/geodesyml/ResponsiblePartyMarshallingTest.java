@@ -23,7 +23,6 @@ import org.testng.annotations.Test;
 import com.jcabi.matchers.XhtmlMatchers;
 import com.jcabi.xml.XPathContext;
 
-import au.gov.ga.geodesy.interfaces.geodesyml.GeodesyMLMarshaller;
 import au.gov.ga.geodesy.support.mapper.orika.ResponsiblePartyOrikaMapper;
 import au.gov.ga.geodesy.support.spring.GeodesySupportConfig;
 

@@ -8,8 +8,8 @@ import org.springframework.context.annotation.aspectj.EnableSpringConfigured;
 
 import au.gov.ga.geodesy.igssitelog.interfaces.xml.IgsSiteLogXmlMarshaller;
 import au.gov.ga.geodesy.igssitelog.support.marshalling.moxy.IgsSiteLogMoxyMarshaller;
-import au.gov.ga.geodesy.interfaces.geodesyml.GeodesyMLMarshaller;
-import au.gov.ga.geodesy.interfaces.geodesyml.MarshallingException;
+import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLMarshaller;
+import au.gov.ga.geodesy.port.adapter.geodesyml.MarshallingException;
 import au.gov.ga.geodesy.support.marshalling.moxy.GeodesyMLMoxy;
 
 @Configuration

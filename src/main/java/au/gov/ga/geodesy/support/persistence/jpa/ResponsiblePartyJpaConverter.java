@@ -5,17 +5,15 @@ import java.io.StringWriter;
 
 import javax.persistence.AttributeConverter;
 import javax.persistence.Converter;
-import javax.xml.bind.JAXBElement;
 
 import org.opengis.metadata.citation.ResponsibleParty;
 
-import au.gov.ga.geodesy.interfaces.geodesyml.GeodesyMLMarshaller;
-import au.gov.ga.geodesy.interfaces.geodesyml.MarshallingException;
+import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLMarshaller;
+import au.gov.ga.geodesy.port.adapter.geodesyml.MarshallingException;
 import au.gov.ga.geodesy.support.mapper.orika.ResponsiblePartyOrikaMapper;
 import au.gov.ga.geodesy.support.marshalling.moxy.GeodesyMLMoxy;
 
 import net.opengis.iso19139.gmd.v_20070417.CIResponsiblePartyType;
-import net.opengis.iso19139.gmd.v_20070417.ObjectFactory;
 
 @Converter
 // TODO: Can JPA converters be @Configurable? It would be good to autowire the marshaller

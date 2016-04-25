@@ -96,8 +96,7 @@ public class GeodesyMLSiteLogDozerTranslator implements GeodesyMLSiteLogTranslat
 
         SiteLogType siteLogType = GeodesyMLDecorators.IdDecorator.addId(new SiteLogType());
 
-        geodesyMl.getNodeOrAbstractPositionOrPositionPairCovariance()
-                .add(geodesyObjectFactory.createSiteLog(siteLogType));
+        geodesyMl.getElements().add(geodesyObjectFactory.createSiteLog(siteLogType));
 
         FormInformation formInformation = sopacSiteLog.getFormInformation();
         // Force version to be created

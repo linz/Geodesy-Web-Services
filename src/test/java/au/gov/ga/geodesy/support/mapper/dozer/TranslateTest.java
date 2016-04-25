@@ -151,11 +151,11 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
     }
 
     private SiteLogType getSiteLog(GeodesyMLType geodesyML) {
-        Assert.assertEquals(geodesyML.getNodeOrAbstractPositionOrPositionPairCovariance().size(), 1);
-        Assert.assertTrue(geodesyML.getNodeOrAbstractPositionOrPositionPairCovariance().get(0) instanceof JAXBElement);
+        Assert.assertEquals(geodesyML.getElements().size(), 1);
+        Assert.assertTrue(geodesyML.getElements().get(0) instanceof JAXBElement); // TODO: remove this check
 
         Stream<SiteLogType> siteLogTypeStream = GeodesyMLUtils.getElementFromJAXBElements(
-                geodesyML.getNodeOrAbstractPositionOrPositionPairCovariance(), SiteLogType.class);
+                geodesyML.getElements(), SiteLogType.class);
 
         SiteLogType siteLogType = siteLogTypeStream.collect(Collectors.toList()).get(0);
         return siteLogType;

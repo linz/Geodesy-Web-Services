@@ -43,10 +43,6 @@ public class CorsSiteLogFactory {
      */
     public class XLinkResolver {
 
-        private List<JAXBElement<?>> topLevelElements() {
-            return geodesyML.getNodeOrAbstractPositionOrPositionPairCovariance();
-        }
-
         private Pair<?, Method> getIdMethod(JAXBElement<?> element) {
             Object x = element.getValue();
             return Pair.of(x, MethodUtils.getAccessibleMethod(x.getClass(), "getId", new Class[] {}));
@@ -54,7 +50,7 @@ public class CorsSiteLogFactory {
 
         @SuppressWarnings("unchecked")
         public <T> Optional<T> resolve(String targetHref, Class<T> type) {
-            return topLevelElements()
+            return geodesyML.getElements()
                     .stream()
                     .map(element -> getIdMethod(element))
                     .filter(pair -> pair.getRight() != null)
@@ -78,7 +74,7 @@ public class CorsSiteLogFactory {
 
     public Stream<SiteLog> create() {
         return GeodesyMLUtils
-                .getElementFromJAXBElements(geodesyML.getNodeOrAbstractPositionOrPositionPairCovariance(),
+                .getElementFromJAXBElements(geodesyML.getElements(),
                         SiteLogType.class)
                 .map(this::create)
                 .filter(Optional::isPresent)

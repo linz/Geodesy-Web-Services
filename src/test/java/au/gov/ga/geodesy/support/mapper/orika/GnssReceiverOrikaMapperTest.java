@@ -1,10 +1,9 @@
 package au.gov.ga.geodesy.support.mapper.orika;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertEquals;
 
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
-import java.util.List;
 import java.util.TimeZone;
 
 import org.testng.annotations.Test;
@@ -21,35 +20,30 @@ public class GnssReceiverOrikaMapperTest {
 
     @Test
     public void testMappingToLogItem() {
-        GnssReceiverType receiver = new GnssReceiverType();
-
-        CodeType gps = new CodeType();
-        gps.setValue("GPS");
-        gps.setCodeSpace("eGeodesy/satelliteSystem");
-
-        CodeType galileo = new CodeType();
-        galileo.setValue("Galileo");
-        galileo.setCodeSpace("eGeodesy/satelliteSystem");
-
-        List<CodeType> satelliteSystems = Arrays.asList(gps, galileo);
-        receiver.setSatelliteSystem(satelliteSystems);
-
-        receiver.setFirmwareVersion("1.2");
-        receiver.setManufacturerSerialNumber("123");
-
         String dateInstalled = "2012-03-24T02:03:23.000Z";
-        receiver.setDateInstalled(timePosition(dateInstalled));
+
+        GnssReceiverType receiver = new GnssReceiverType()
+            .withSatelliteSystem(Arrays.asList(
+                new CodeType().withValue("GPS").withCodeSpace("eGeodesy/satelliteSystem"),
+                new CodeType().withValue("Galileo").withCodeSpace("eGeodesy/satelliteSystem")
+            ))
+            .withFirmwareVersion("1.2")
+            .withManufacturerSerialNumber("123")
+            .withElevationCutoffSetting(4)
+            .withDateInstalled(timePosition(dateInstalled));
 
         GnssReceiverLogItem logItem = mapper.mapFromDto(receiver);
         assertEquals(logItem.getFirmwareVersion(), receiver.getFirmwareVersion());
         assertEquals(logItem.getSerialNumber(), receiver.getManufacturerSerialNumber());
+        assertEquals(logItem.getElevationCutoffSetting(), String.valueOf(receiver.getElevationCutoffSetting()));
         assertEquals(logItem.getSatelliteSystem(), "GPS,Galileo");
         assertEquals(dateFormat().format(logItem.getDateInstalled()), dateInstalled);
 
         GnssReceiverType receiverB = mapper.mapToDto(logItem);
         assertEquals(receiverB.getFirmwareVersion(), logItem.getFirmwareVersion());
         assertEquals(receiverB.getManufacturerSerialNumber(), logItem.getSerialNumber());
-        assertEquals(receiverB.getSatelliteSystem(), satelliteSystems);
+        assertEquals(receiverB.getElevationCutoffSetting(), Double.parseDouble(logItem.getElevationCutoffSetting()));
+        assertEquals(receiverB.getSatelliteSystem(), receiver.getSatelliteSystem());
         assertEquals(receiverB.getDateInstalled().getValue().get(0), dateInstalled);
     }
 

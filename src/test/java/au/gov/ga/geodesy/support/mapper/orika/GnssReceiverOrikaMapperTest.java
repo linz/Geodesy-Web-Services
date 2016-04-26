@@ -2,8 +2,10 @@ package au.gov.ga.geodesy.support.mapper.orika;
 
 import static org.testng.Assert.*;
 
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.List;
+import java.util.TimeZone;
 
 import org.testng.annotations.Test;
 
@@ -11,6 +13,7 @@ import au.gov.ga.geodesy.domain.model.sitelog.GnssReceiverLogItem;
 import au.gov.xml.icsm.geodesyml.v_0_3.GnssReceiverType;
 
 import net.opengis.gml.v_3_2_1.CodeType;
+import net.opengis.gml.v_3_2_1.TimePositionType;
 
 public class GnssReceiverOrikaMapperTest {
 
@@ -33,15 +36,33 @@ public class GnssReceiverOrikaMapperTest {
 
         receiver.setFirmwareVersion("1.2");
         receiver.setManufacturerSerialNumber("123");
+
+        String dateInstalled = "2012-03-24T02:03:23.000Z";
+        receiver.setDateInstalled(timePosition(dateInstalled));
+
         GnssReceiverLogItem logItem = mapper.mapFromDto(receiver);
         assertEquals(logItem.getFirmwareVersion(), receiver.getFirmwareVersion());
         assertEquals(logItem.getSerialNumber(), receiver.getManufacturerSerialNumber());
         assertEquals(logItem.getSatelliteSystem(), "GPS,Galileo");
+        assertEquals(dateFormat().format(logItem.getDateInstalled()), dateInstalled);
 
         GnssReceiverType receiverB = mapper.mapToDto(logItem);
         assertEquals(receiverB.getFirmwareVersion(), logItem.getFirmwareVersion());
         assertEquals(receiverB.getManufacturerSerialNumber(), logItem.getSerialNumber());
         assertEquals(receiverB.getSatelliteSystem(), satelliteSystems);
+        assertEquals(receiverB.getDateInstalled().getValue().get(0), dateInstalled);
+    }
+
+    private TimePositionType timePosition(String date) {
+        TimePositionType timePosition = new TimePositionType();
+        timePosition.getValue().add(date);
+        return timePosition;
+    }
+
+    private SimpleDateFormat dateFormat() {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSXXX");
+        dateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
+        return dateFormat;
     }
 }
 

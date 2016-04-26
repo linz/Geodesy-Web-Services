@@ -5,6 +5,7 @@ import au.gov.xml.icsm.geodesyml.v_0_3.GnssReceiverType;
 
 import ma.glasnost.orika.MapperFacade;
 import ma.glasnost.orika.MapperFactory;
+import ma.glasnost.orika.converter.ConverterFactory;
 import ma.glasnost.orika.impl.DefaultMapperFactory;
 import ma.glasnost.orika.metadata.TypeFactory;
 
@@ -23,11 +24,13 @@ public class GnssReceiverOrikaMapper {
             .byDefault()
             .register();
 
-        mapperFactory.getConverterFactory().registerConverter("satelliteSystemConverter",
+        ConverterFactory converters = mapperFactory.getConverterFactory();
+        converters.registerConverter("satelliteSystemConverter",
                 new StringToListConverter<CodeType>(
                     new StringToCodeTypeConverter("eGeodesy/satelliteSystem"), TypeFactory.valueOf(CodeType.class)
                 )
             );
+        converters.registerConverter(new DateToTimePositionConverter());
         mapper = mapperFactory.getMapperFacade();
     }
 

@@ -2,6 +2,7 @@ package au.gov.ga.geodesy.support.mapper.orika;
 
 import au.gov.ga.geodesy.domain.model.sitelog.GnssReceiverLogItem;
 import au.gov.xml.icsm.geodesyml.v_0_3.GnssReceiverType;
+import au.gov.xml.icsm.geodesyml.v_0_3.IgsReceiverModelCodeType;
 
 import ma.glasnost.orika.MapperFacade;
 import ma.glasnost.orika.MapperFactory;
@@ -19,12 +20,18 @@ public class GnssReceiverOrikaMapper {
 
     public GnssReceiverOrikaMapper() {
         mapperFactory.classMap(GnssReceiverLogItem.class, GnssReceiverType.class)
+            .fieldMap("type", "igsModelCode").converter("typeConverter").add()
             .field("serialNumber", "manufacturerSerialNumber")
             .fieldMap("satelliteSystem", "satelliteSystem").converter("satelliteSystemConverter").add()
             .byDefault()
             .register();
 
+
         ConverterFactory converters = mapperFactory.getConverterFactory();
+        converters.registerConverter("typeConverter", new StringToCodeListValueConverter<IgsReceiverModelCodeType>(
+            "https://igscb.jpl.nasa.gov/igscb/station/general/rcvr_ant.tab",
+            "http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode"
+        ));
         converters.registerConverter("satelliteSystemConverter",
                 new StringToListConverter<CodeType>(
                     new StringToCodeTypeConverter("eGeodesy/satelliteSystem"), TypeFactory.valueOf(CodeType.class)

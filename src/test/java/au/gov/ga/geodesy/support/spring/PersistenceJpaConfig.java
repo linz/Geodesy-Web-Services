@@ -85,13 +85,6 @@ public class PersistenceJpaConfig {
         }
     }
 
-    private DataSource externalOracleDataSource() {
-        DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setUrl("jdbc:oracle:thin:@dm02-scan.prod.lan:7381/ORADEV");
-        dataSource.setUsername("username");
-        dataSource.setPassword("password");
-        return dataSource;
-    }
 
     private DataSource externalPostgresDataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();

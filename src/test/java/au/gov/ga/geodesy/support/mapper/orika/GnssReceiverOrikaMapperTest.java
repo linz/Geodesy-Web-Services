@@ -39,7 +39,7 @@ public class GnssReceiverOrikaMapperTest {
             .withElevationCutoffSetting(4)
             .withDateInstalled(timePosition(dateInstalled));
 
-        GnssReceiverLogItem logItem = mapper.mapFromDto(receiver);
+        GnssReceiverLogItem logItem = mapper.to(receiver);
         assertEquals(logItem.getType(), receiver.getIgsModelCode().getCodeListValue());
         assertEquals(logItem.getFirmwareVersion(), receiver.getFirmwareVersion());
         assertEquals(logItem.getSerialNumber(), receiver.getManufacturerSerialNumber());
@@ -47,7 +47,7 @@ public class GnssReceiverOrikaMapperTest {
         assertEquals(logItem.getSatelliteSystem(), "GPS,Galileo");
         assertEquals(dateFormat().format(logItem.getDateInstalled()), dateInstalled);
 
-        GnssReceiverType receiverB = mapper.mapToDto(logItem);
+        GnssReceiverType receiverB = mapper.from(logItem);
         assertEquals(receiverB.getIgsModelCode().getCodeSpace(), "https://igscb.jpl.nasa.gov/igscb/station/general/rcvr_ant.tab");
         assertEquals(receiverB.getIgsModelCode().getCodeList(), "http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode");
         assertEquals(receiverB.getIgsModelCode().getCodeListValue(), "LEICA GRX1200GGPRO");

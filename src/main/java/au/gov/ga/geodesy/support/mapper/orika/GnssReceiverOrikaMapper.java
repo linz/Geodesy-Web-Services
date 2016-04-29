@@ -1,6 +1,9 @@
 package au.gov.ga.geodesy.support.mapper.orika;
 
+import java.util.function.Function;
+
 import au.gov.ga.geodesy.domain.model.sitelog.GnssReceiverLogItem;
+import au.gov.ga.geodesy.support.java.util.Isomorphism;
 import au.gov.xml.icsm.geodesyml.v_0_3.GnssReceiverType;
 import au.gov.xml.icsm.geodesyml.v_0_3.IgsReceiverModelCodeType;
 
@@ -12,7 +15,7 @@ import ma.glasnost.orika.metadata.TypeFactory;
 
 import net.opengis.gml.v_3_2_1.CodeType;
 
-public class GnssReceiverOrikaMapper {
+public class GnssReceiverOrikaMapper implements Isomorphism<GnssReceiverType, GnssReceiverLogItem> {
 
     private MapperFactory mapperFactory = new DefaultMapperFactory.Builder().build();
 
@@ -41,11 +44,11 @@ public class GnssReceiverOrikaMapper {
         mapper = mapperFactory.getMapperFacade();
     }
 
-    public GnssReceiverLogItem mapFromDto(GnssReceiverType receiver) {
-        return mapper.map(receiver, GnssReceiverLogItem.class);
+    public Function<GnssReceiverType, GnssReceiverLogItem> to() {
+        return receiver -> mapper.map(receiver, GnssReceiverLogItem.class);
     }
 
-    public GnssReceiverType mapToDto(GnssReceiverLogItem logItem) {
-        return mapper.map(logItem, GnssReceiverType.class);
+    public Function<GnssReceiverLogItem, GnssReceiverType> from() {
+        return receiverLogItem -> mapper.map(receiverLogItem, GnssReceiverType.class);
     }
 }

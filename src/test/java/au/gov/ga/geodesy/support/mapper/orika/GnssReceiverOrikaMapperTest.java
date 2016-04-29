@@ -2,10 +2,10 @@ package au.gov.ga.geodesy.support.mapper.orika;
 
 import static org.testng.Assert.assertEquals;
 
-import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.TimeZone;
 
+import org.apache.commons.lang3.time.FastDateFormat;
 import org.testng.annotations.Test;
 
 import au.gov.ga.geodesy.domain.model.sitelog.GnssReceiverLogItem;
@@ -65,10 +65,8 @@ public class GnssReceiverOrikaMapperTest {
         return timePosition;
     }
 
-    private SimpleDateFormat dateFormat() {
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSXXX");
-        dateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
-        return dateFormat;
+    private FastDateFormat dateFormat() {
+        return FastDateFormat.getInstance("yyyy-MM-dd'T'HH:mm:ss.SSSXXX", TimeZone.getTimeZone("UTC"));
     }
 }
 

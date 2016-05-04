@@ -178,7 +178,7 @@ def make_webserver(nat_wait, security_group):
                     }),
                     commands={
                         "00-disable-webapp-auto-deployment": {
-                            "command": "sed -i 's/autoDeploy=\"true\"/autoDeploy=\"false\"/' /usr/share/tomcat7/conf/server.xml"
+                            "command": "sed -i 's/autoDeploy=\"true\"/autoDeploy=\"false\"/' /usr/share/tomcat8/conf/server.xml"
                         },
                         "20-allow-sudo-without-tty": {
                             "command": "sed -i '/Defaults    requiretty/s/^/#/g' /etc/sudoers"
@@ -195,7 +195,7 @@ def make_webserver(nat_wait, security_group):
                     },
                     services={
                         "sysvinit": cf.InitServices({
-                            "tomcat7": cf.InitService(
+                            "tomcat8": cf.InitService(
                                 enabled=True,
                                 ensureRunning=True,
                             ),
@@ -212,7 +212,7 @@ def make_webserver(nat_wait, security_group):
                 ),
                 on_update=cf.InitConfig(
                     files=cf.InitFiles({
-                        "/usr/share/tomcat7/webapps/ROOT.war": cf.InitFile(
+                        "/usr/share/tomcat8/webapps/ROOT.war": cf.InitFile(
                             source=get_geodesy_web_services_war_url(),
                             owner="tomcat",
                             group="tomcat",
@@ -220,13 +220,13 @@ def make_webserver(nat_wait, security_group):
                     }),
                     commands={
                         "00-stop-tomcat": {
-                            "command": "service tomcat7 stop"
+                            "command": "service tomcat8 stop"
                         },
                         "30-undeploy-geodesy-web-services": {
-                            "command": "rm -rf /usr/share/tomcat7/webapps/ROOT",
+                            "command": "rm -rf /usr/share/tomcat8/webapps/ROOT",
                         },
                         "40-start-tomcat": {
-                            "command": "service tomcat7 start"
+                            "command": "service tomcat8 start"
                         },
                     },
                 )

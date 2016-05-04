@@ -1,8 +1,11 @@
-stack.json: stack.py webserver-init.sh nat-init.sh
+stack.json: stack.py webserver-init.sh nat-init.sh war-file
 	python stack.py ${GEODESY_WEB_SERVICES_VERSION} ${ENV} > $@
 
 %.jpg: %.json
 	cat $< | cfviz | dot -Tjpg -o$@
+
+war-file:
+	mvn package -Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true
 
 .PHONEY:
 stack: stack.json
@@ -23,3 +26,4 @@ viz: stack.jpg
 .PHONEY:
 clean:
 	rm -f stack.json stack.jpg *.war
+	mvn clean

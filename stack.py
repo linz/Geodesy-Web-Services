@@ -66,7 +66,7 @@ class GeodesyWebServicesStack(SingleAZenv):
             # ),
             Subnets=[Ref(self.public_subnet)],
             HealthCheck=elb.HealthCheck(
-                Target="HTTP:8080/gmap.html",
+                Target="HTTP:8080/index.html",
                 HealthyThreshold="2",
                 UnhealthyThreshold="5",
                 Interval="60",
@@ -106,12 +106,11 @@ def environment():
 def system_prefix():
     return "GeodesyWebService" + environment()
 
-def get_nexus_artifact_url(group_id, artifact_id, version):
-    arg = GA_PUBLIC_NEXUS + '&g=' + group_id + '&a=' + artifact_id + '&v=' + version + '&e=war'
-    call(["wget", arg, '--content-disposition', "--timestamping"])
-    war_filename = max(glob.iglob(artifact_id + "*.war"), key=os.path.getctime)
+def get_geodesy_web_services_war_url():
+    os.chdir("target")
+    war_filename = max(glob.iglob("*.war"), key=os.path.getctime)
     call(["aws", "s3", "cp", war_filename, "s3://" + MVN_SNAPSHOTS, "--profile", "geodesy", "--quiet", "--acl", "public-read"])
-    call(["rm", war_filename])
+    os.chdir("..")
     s3 = boto3.client("s3")
     bucket, folder = tuple(MVN_SNAPSHOTS.split("/", 1))
     return s3.generate_presigned_url(
@@ -122,9 +121,6 @@ def get_nexus_artifact_url(group_id, artifact_id, version):
         },
         ExpiresIn=31622400, # TODO: a year
         )
-
-def get_geodesy_web_services_war_url():
-    return get_nexus_artifact_url("au.gov.ga", "geoscience-portal", geodesy_web_services_version())
 
 def make_webserver(nat_wait, security_group):
     instance_id = "WebserverLaunchConfig"

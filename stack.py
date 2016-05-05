@@ -192,6 +192,9 @@ def make_webserver(nat_wait, security_group):
                         "60-set-hostname-resolution": {
                             "command": "echo '127.0.0.1   webserver webserver.localdomain localhost localhost.localdomain' > /etc/hosts"
                         },
+                        "70-remove-java7": {
+                            "command": "yum -y remove java-1.7.0-openjdk"
+                        },
                     },
                     services={
                         "sysvinit": cf.InitServices({

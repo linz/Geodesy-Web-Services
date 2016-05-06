@@ -29,6 +29,10 @@ stack_id = Ref("AWS::StackId")
 stack_name = Ref("AWS:StackName")
 region = Ref("AWS::Region")
 
+def read_file(filename):
+    with open(filename, "r") as f:
+        return f.read()
+
 class GeodesyWebServicesStack(SingleAZenv):
     def __init__(self):
         super(GeodesyWebServicesStack, self).__init__(KEY_PAIR_NAME)
@@ -174,6 +178,12 @@ def make_webserver(nat_wait, security_group):
                                 " -c update\n",
                                 "runas=root\n"
                             ]),
+                        ),
+                        "/root/create-geodesy-db.sh": cf.InitFile(
+                            content=read_file("create-geodesy-db.sh"),
+                            mode="000700",
+                            owner="root",
+                            group="root",
                         ),
                     }),
                     commands={

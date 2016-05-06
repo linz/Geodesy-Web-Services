@@ -29,6 +29,10 @@ stack_id = Ref("AWS::StackId")
 stack_name = Ref("AWS:StackName")
 region = Ref("AWS::Region")
 
+def read_file(filename):
+    with open(filename, "r") as f:
+        return f.read()
+
 class GeodesyWebServicesStack(SingleAZenv):
     def __init__(self):
         super(GeodesyWebServicesStack, self).__init__(KEY_PAIR_NAME)
@@ -129,6 +133,7 @@ def make_webserver(nat_wait, security_group):
         ImageId=IMAGE_ID,
         InstanceType="t2.medium",
         KeyName=KEY_PAIR_NAME,
+        IamInstanceProfile="arn:aws:iam::094928090547:role/GeodesyWebServicesD-WebServerRole",
         SecurityGroups=[Ref(security_group)],
         DependsOn=nat_wait.title,
         Metadata=cf.Metadata(
@@ -174,6 +179,18 @@ def make_webserver(nat_wait, security_group):
                                 " -c update\n",
                                 "runas=root\n"
                             ]),
+                        ),
+                        "/root/reset-rds-passwords.sh": cf.InitFile(
+                            content=read_file("reset-rds-passwords.sh"),
+                            mode="000700",
+                            owner="root",
+                            group="root",
+                        ),
+                        "/root/create-geodesy-db.sh": cf.InitFile(
+                            content=read_file("create-geodesy-db.sh"),
+                            mode="000700",
+                            owner="root",
+                            group="root",
                         ),
                     }),
                     commands={
@@ -227,6 +244,12 @@ def make_webserver(nat_wait, security_group):
                         },
                         "30-undeploy-geodesy-web-services": {
                             "command": "rm -rf /usr/share/tomcat8/webapps/ROOT",
+                        },
+                        "35-unpack-war": {
+                            "command": "(cd /usr/share/tomcat8/webapps/; mkdir ROOT; unzip ROOT.war -d ROOT)",
+                        },
+                        "36-reset-rds-passwords": {
+                            "command": "/root/reset-rds-passwords.sh geodesy-dev",
                         },
                         "40-start-tomcat": {
                             "command": "service tomcat8 start"

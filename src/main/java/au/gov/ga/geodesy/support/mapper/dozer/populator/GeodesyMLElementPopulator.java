@@ -112,8 +112,8 @@ public abstract class GeodesyMLElementPopulator<T> implements DozerEventListener
             throws NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException,
             InvocationTargetException {
         Method methodSet = parentObject.getClass().getMethod("set" + capitalise(elementName), defaultObj.getClass());
-        logger.warn(String.format("Possible data error - needed to add required element \"%s\" in this parent: %s",
-                elementName, parentObject));
+        logger.warn(String.format("Possible data error - In parent \"%s\" needed to add required element: %s",
+                parentObject.getClass().getSimpleName(), elementName));
         methodSet.invoke(parentObject, defaultObj);
     }
 

@@ -60,7 +60,7 @@ create table geodesy.x (
 insert into x values ('abcde','sometext',123,current_date,'abc', 	interval '1 day', ST_GeomFromText('POINT(0 0)', 26910) );
 
 
-select * from x;
+select * from geodesy.x;
 EOF
 
 

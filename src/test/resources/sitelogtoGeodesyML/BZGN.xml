@@ -7,64 +7,81 @@
          <geo:reportType>NEW</geo:reportType>
       </geo:formInformation>
       <geo:siteIdentification>
+         <geo:siteName></geo:siteName>
          <geo:fourCharacterID>BZGN</geo:fourCharacterID>
          <geo:iersDOMESNumber>IRM000248</geo:iersDOMESNumber>
+         <geo:cdpNumber></geo:cdpNumber>
       </geo:siteIdentification>
       <geo:siteLocation>
-         <geo:countryCodeISO>Iran</geo:countryCodeISO>
-         <geo:tectonicPlate>EUROASIAN</geo:tectonicPlate>
+         <geo:city></geo:city>
+         <geo:state></geo:state>
+         <geo:countryCodeISO>???</geo:countryCodeISO>
+         <geo:tectonicPlate codeSpace="">EUROASIAN</geo:tectonicPlate>
          <geo:approximatePositionITRF>
             <geo:xCoordinateInMeters>3528420.132</geo:xCoordinateInMeters>
             <geo:yCoordinateInMeters>3454338.362</geo:yCoordinateInMeters>
             <geo:zCoordinateInMeters>4025857.316</geo:zCoordinateInMeters>
-            <geo:latitude-North>392245.17530000000260770320892333984375</geo:latitude-North>
-            <geo:longitude-East>442331.7689000000245869159698486328125</geo:longitude-East>
+            <geo:latitude-North>39.37921536111111464606437948532402515411376953125</geo:latitude-North>
+            <geo:longitude-East>44.3921580277777820811024866998195648193359375</geo:longitude-East>
             <geo:elevation-m_ellips.>1434.705</geo:elevation-m_ellips.>
          </geo:approximatePositionITRF>
          <geo:notes>AUSPOS Coordinates</geo:notes>
       </geo:siteLocation>
       <geo:gnssReceivers>
          <geo:gnssReceiver gml:id="GnssReceiverType_394">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ASHTECH UZ-12</geo:receiverType>
+            <geo:manufacturerSerialNumber>IR2200543011</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">ASHTECH UZ-12</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
             <geo:serialNumber>IR2200543011</geo:serialNumber>
             <geo:firmwareVersion>CN00</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
             <geo:dateInstalled>2010-01-01T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved></geo:dateRemoved>
             <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
             <geo:notes>Install Dates Unknown</geo:notes>
          </geo:gnssReceiver>
+         <geo:dateInserted>2010-01-01T00:00:00Z</geo:dateInserted>
       </geo:gnssReceivers>
       <geo:gnssAntennas>
          <geo:gnssAntenna gml:id="GnssAntennaType_192">
-            <geo:antennaType codeList="codelist" codeListValue="codeListValue">ASH701945B_M    SNOW</geo:antennaType>
+            <geo:manufacturerSerialNumber>CR5200608010</geo:manufacturerSerialNumber>
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue" codeSpace="codespace">ASH701945B_M    SNOW</geo:antennaType>
             <geo:serialNumber>CR5200608010</geo:serialNumber>
-            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:antennaReferencePoint codeSpace="">BPA</geo:antennaReferencePoint>
             <geo:marker-arpUpEcc.>0.144</geo:marker-arpUpEcc.>
             <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>SNOW</geo:antennaRadomeType>
+            <geo:antennaRadomeType codeSpace="CodeSpaceAttr">SNOW</geo:antennaRadomeType>
+            <geo:radomeSerialNumber></geo:radomeSerialNumber>
+            <geo:antennaCableType></geo:antennaCableType>
             <geo:antennaCableLength>0.0</geo:antennaCableLength>
             <geo:dateInstalled>2010-01-01T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved></geo:dateRemoved>
             <geo:notes>Install Dates Unknown</geo:notes>
          </geo:gnssAntenna>
+         <geo:dateInserted>2010-01-01T00:00:00Z</geo:dateInserted>
       </geo:gnssAntennas>
       <geo:frequencyStandards>
          <geo:frequencyStandard gml:id="FrequencyStandardType_152">
-            <geo:standardType>INTERNAL</geo:standardType>
+            <geo:standardType codeSpace="">INTERNAL</geo:standardType>
             <geo:inputFrequency>0.0</geo:inputFrequency>
-            <gml:validTime>
-               <gml:TimePeriod>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_231">
                   <gml:beginPosition>2010-01-01T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
          </geo:frequencyStandard>
+         <geo:dateInserted>2016-04-14T00:03:07Z</geo:dateInserted>
       </geo:frequencyStandards>
-      <geo:siteContact>
-         <gmd:MD_SecurityConstraints/>
-         <gmd:CI_ResponsibleParty>
+      <geo:siteContact gml:id="AgencyPropertyType_196">
+         <gmd:MD_SecurityConstraints id="MDSecurityConstraintsType_196">
+            <gmd:classification>
+               <gmd:MD_ClassificationCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:classification>
+         </gmd:MD_SecurityConstraints>
+         <gmd:CI_ResponsibleParty id="CIResponsiblePartyType_196">
             <gmd:individualName>
                <gco:CharacterString>Hamid Reza Nankali</gco:CharacterString>
             </gmd:individualName>
@@ -72,12 +89,12 @@
                <gco:CharacterString>National Cartographic Centre</gco:CharacterString>
             </gmd:organisationName>
             <gmd:contactInfo>
-               <gmd:CI_Contact>
+               <gmd:CI_Contact id="CIContactType_196">
                   <gmd:phone>
-                     <gmd:CI_Telephone/>
+                     <gmd:CI_Telephone id="CITelephoneType_70"/>
                   </gmd:phone>
                   <gmd:address>
-                     <gmd:CI_Address>
+                     <gmd:CI_Address id="CIAddressType_196">
                         <gmd:electronicMailAddress>
                            <gco:CharacterString>nankali@ncc.org.ir</gco:CharacterString>
                         </gmd:electronicMailAddress>
@@ -85,25 +102,45 @@
                   </gmd:address>
                </gmd:CI_Contact>
             </gmd:contactInfo>
+            <gmd:role>
+               <gmd:CI_RoleCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:role>
          </gmd:CI_ResponsibleParty>
       </geo:siteContact>
-      <geo:siteMetadataCustodian>
-         <gmd:MD_SecurityConstraints/>
-         <gmd:CI_ResponsibleParty>
+      <geo:siteMetadataCustodian gml:id="AgencyPropertyType_197">
+         <gmd:MD_SecurityConstraints id="MDSecurityConstraintsType_197">
+            <gmd:classification>
+               <gmd:MD_ClassificationCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:classification>
+         </gmd:MD_SecurityConstraints>
+         <gmd:CI_ResponsibleParty id="CIResponsiblePartyType_197">
             <gmd:organisationName>
                <gco:CharacterString>National Cartographic Centre</gco:CharacterString>
             </gmd:organisationName>
             <gmd:contactInfo>
-               <gmd:CI_Contact>
+               <gmd:CI_Contact id="CIContactType_197">
                   <gmd:address>
-                     <gmd:CI_Address/>
+                     <gmd:CI_Address id="CIAddressType_197"/>
                   </gmd:address>
                </gmd:CI_Contact>
             </gmd:contactInfo>
+            <gmd:role>
+               <gmd:CI_RoleCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:role>
          </gmd:CI_ResponsibleParty>
       </geo:siteMetadataCustodian>
       <geo:moreInformation>
+         <geo:dataCenter>ftp.ga.gov.au</geo:dataCenter>
+         <geo:dataCenter>ftp.ga.gov.au</geo:dataCenter>
          <geo:urlForMoreInformation>ftp.ga.gov.au</geo:urlForMoreInformation>
+         <geo:siteMap></geo:siteMap>
+         <geo:siteDiagram></geo:siteDiagram>
+         <geo:horizonMask></geo:horizonMask>
+         <geo:monumentDescription></geo:monumentDescription>
+         <geo:sitePictures></geo:sitePictures>
+         <geo:antennaGraphicsWithDimensions></geo:antennaGraphicsWithDimensions>
+         <geo:insertTextGraphicFromAntenna></geo:insertTextGraphicFromAntenna>
+         <geo:DOI codeSpace="CodeSpaceTODO">CodeTypeTODO</geo:DOI>
       </geo:moreInformation>
    </geo:siteLog>
 </geo:GeodesyML>

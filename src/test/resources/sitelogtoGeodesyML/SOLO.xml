@@ -10,6 +10,7 @@
          <geo:siteName>Solomon Islands CGPS</geo:siteName>
          <geo:fourCharacterID>SOLO</geo:fourCharacterID>
          <geo:iersDOMESNumber>51202M001</geo:iersDOMESNumber>
+         <geo:cdpNumber></geo:cdpNumber>
          <geo:monumentDescription>PILLAR</geo:monumentDescription>
          <geo:heightOfTheMonument>1.85</geo:heightOfTheMonument>
          <geo:monumentFoundation>STEEL RODS, CONCRETE BLOCK</geo:monumentFoundation>
@@ -21,20 +22,34 @@
          <geo:city>Honiara</geo:city>
          <geo:state>Guadalcanal</geo:state>
          <geo:countryCodeISO>SLB</geo:countryCodeISO>
-         <geo:tectonicPlate>Pacific</geo:tectonicPlate>
+         <geo:tectonicPlate codeSpace="">Pacific</geo:tectonicPlate>
          <geo:approximatePositionITRF>
             <geo:xCoordinateInMeters>-5911340.124</geo:xCoordinateInMeters>
             <geo:yCoordinateInMeters>2156887.299</geo:yCoordinateInMeters>
             <geo:zCoordinateInMeters>-1038664.005</geo:zCoordinateInMeters>
-            <geo:latitude-North>-92605.72000000000116415321826934814453125</geo:latitude-North>
-            <geo:longitude-East>1595715.63999999989755451679229736328125</geo:longitude-East>
+            <geo:latitude-North>-9.434922222222223098242466221563518047332763671875</geo:latitude-North>
+            <geo:longitude-East>159.95434444444441624000319279730319976806640625</geo:longitude-East>
             <geo:elevation-m_ellips.>122.9</geo:elevation-m_ellips.>
          </geo:approximatePositionITRF>
          <geo:notes>The CGPS station is located inside the Solomon Islands Meteorological</geo:notes>
       </geo:siteLocation>
       <geo:gnssReceivers>
          <geo:gnssReceiver gml:id="GnssReceiverType_2409">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">TRIMBLE NETR9</geo:receiverType>
+            <geo:manufacturerSerialNumber>5041K71018</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">TRIMBLE NETR9</geo:receiverType>
+            <geo:satelliteSystem>GPS+GLO+GAL+QZSS+SBAS</geo:satelliteSystem>
+            <geo:serialNumber>5041K71018</geo:serialNumber>
+            <geo:firmwareVersion>4.61</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2012-09-04T01:43:00Z</geo:dateInstalled>
+            <geo:dateRemoved></geo:dateRemoved>
+         </geo:gnssReceiver>
+         <geo:dateInserted>2012-09-04T01:43:00Z</geo:dateInserted>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_2410">
+            <geo:manufacturerSerialNumber>5041K71018</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">TRIMBLE NETR9</geo:receiverType>
             <geo:satelliteSystem>GPS+GLO+GAL+QZSS+SBAS</geo:satelliteSystem>
             <geo:serialNumber>5041K71018</geo:serialNumber>
             <geo:firmwareVersion>4.46</geo:firmwareVersion>
@@ -42,10 +57,12 @@
             <geo:dateInstalled>2012-05-30T01:06:00Z</geo:dateInstalled>
             <geo:dateRemoved>2012-09-04T01:43:00Z</geo:dateRemoved>
          </geo:gnssReceiver>
+         <geo:dateInserted>2012-05-30T01:06:00Z</geo:dateInserted>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
-         <geo:gnssReceiver gml:id="GnssReceiverType_2410">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ASHTECH UZ-12</geo:receiverType>
+         <geo:gnssReceiver gml:id="GnssReceiverType_2411">
+            <geo:manufacturerSerialNumber>24010</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">ASHTECH UZ-12</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
             <geo:serialNumber>24010</geo:serialNumber>
             <geo:firmwareVersion>CQ00</geo:firmwareVersion>
@@ -53,110 +70,142 @@
             <geo:dateInstalled>2008-06-29T00:00:00Z</geo:dateInstalled>
             <geo:dateRemoved>2012-05-30T00:06:00Z</geo:dateRemoved>
          </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver gml:id="GnssReceiverType_2411">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">TRIMBLE NETR9</geo:receiverType>
-            <geo:satelliteSystem>GPS+GLO+GAL+QZSS+SBAS</geo:satelliteSystem>
-            <geo:serialNumber>5041K71018</geo:serialNumber>
-            <geo:firmwareVersion>4.61</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>2012-09-04T01:43:00Z</geo:dateInstalled>
-         </geo:gnssReceiver>
+         <geo:dateInserted>2008-06-29T00:00:00Z</geo:dateInserted>
       </geo:gnssReceivers>
       <geo:gnssAntennas>
          <geo:gnssAntenna gml:id="GnssAntennaType_1069">
-            <geo:antennaType codeList="codelist" codeListValue="codeListValue">TRM59800.00     NONE</geo:antennaType>
+            <geo:manufacturerSerialNumber>5038353979</geo:manufacturerSerialNumber>
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue" codeSpace="codespace">TRM59800.00     NONE</geo:antennaType>
             <geo:serialNumber>5038353979</geo:serialNumber>
-            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:antennaReferencePoint codeSpace="">BPA</geo:antennaReferencePoint>
             <geo:marker-arpUpEcc.>9.0E-4</geo:marker-arpUpEcc.>
             <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>10.0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
+            <geo:antennaRadomeType codeSpace="CodeSpaceAttr">NONE</geo:antennaRadomeType>
+            <geo:radomeSerialNumber></geo:radomeSerialNumber>
             <geo:antennaCableType>RG8</geo:antennaCableType>
             <geo:antennaCableLength>30.0</geo:antennaCableLength>
             <geo:dateInstalled>2012-05-30T01:06:00Z</geo:dateInstalled>
+            <geo:dateRemoved></geo:dateRemoved>
             <geo:notes>2x0.5m cable RG58 connected to RG8 at antenna end</geo:notes>
          </geo:gnssAntenna>
+         <geo:dateInserted>2012-05-30T01:06:00Z</geo:dateInserted>
       </geo:gnssAntennas>
       <geo:gnssAntennas>
          <geo:gnssAntenna gml:id="GnssAntennaType_1070">
-            <geo:antennaType codeList="codelist" codeListValue="codeListValue">ASH701945C_M    SCIS</geo:antennaType>
+            <geo:manufacturerSerialNumber>48007</geo:manufacturerSerialNumber>
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue" codeSpace="codespace">ASH701945C_M    SCIS</geo:antennaType>
             <geo:serialNumber>48007</geo:serialNumber>
-            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:antennaReferencePoint codeSpace="">BPA</geo:antennaReferencePoint>
             <geo:marker-arpUpEcc.>0.0</geo:marker-arpUpEcc.>
             <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>SCIS</geo:antennaRadomeType>
+            <geo:antennaRadomeType codeSpace="CodeSpaceAttr">SCIS</geo:antennaRadomeType>
+            <geo:radomeSerialNumber></geo:radomeSerialNumber>
             <geo:antennaCableType>RG8</geo:antennaCableType>
             <geo:antennaCableLength>30.0</geo:antennaCableLength>
             <geo:dateInstalled>2008-06-29T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved></geo:dateRemoved>
             <geo:notes>0.5m cable RG58 connected to RG8 at antenna end</geo:notes>
          </geo:gnssAntenna>
+         <geo:dateInserted>2008-06-29T00:00:00Z</geo:dateInserted>
       </geo:gnssAntennas>
       <geo:surveyedLocalTies>
          <geo:surveyedLocalTies gml:id="SurveyedLocalTiesType_307">
-            <geo:tiedMarkerName>RM3</geo:tiedMarkerName>
+            <geo:tiedMarkerName>RM1</geo:tiedMarkerName>
             <geo:tiedMarkerUsage>LOCAL CONTROL</geo:tiedMarkerUsage>
+            <geo:tiedMarkerCDPNumber></geo:tiedMarkerCDPNumber>
+            <geo:tiedMarkerDOMESNumber></geo:tiedMarkerDOMESNumber>
+            <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+               <geo:dx>0.0</geo:dx>
+               <geo:dy>0.0</geo:dy>
+               <geo:dz>0.0</geo:dz>
+            </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
             <geo:localSiteTiesAccuracy>0.0</geo:localSiteTiesAccuracy>
             <geo:surveyMethod>High Accuracy local reference mark survey</geo:surveyMethod>
             <geo:dateMeasured>2016-08-16T14:00:00Z</geo:dateMeasured>
             <geo:notes>High Precision Leica TCA2003 total station used</geo:notes>
          </geo:surveyedLocalTies>
+         <geo:dateInserted>2016-04-14T00:03:12Z</geo:dateInserted>
       </geo:surveyedLocalTies>
       <geo:surveyedLocalTies>
          <geo:surveyedLocalTies gml:id="SurveyedLocalTiesType_308">
-            <geo:tiedMarkerName>RM1</geo:tiedMarkerName>
+            <geo:tiedMarkerName>RM2</geo:tiedMarkerName>
             <geo:tiedMarkerUsage>LOCAL CONTROL</geo:tiedMarkerUsage>
+            <geo:tiedMarkerCDPNumber></geo:tiedMarkerCDPNumber>
+            <geo:tiedMarkerDOMESNumber></geo:tiedMarkerDOMESNumber>
+            <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+               <geo:dx>0.0</geo:dx>
+               <geo:dy>0.0</geo:dy>
+               <geo:dz>0.0</geo:dz>
+            </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
             <geo:localSiteTiesAccuracy>0.0</geo:localSiteTiesAccuracy>
             <geo:surveyMethod>High Accuracy local reference mark survey</geo:surveyMethod>
             <geo:dateMeasured>2016-08-16T14:00:00Z</geo:dateMeasured>
             <geo:notes>High Precision Leica TCA2003 total station used</geo:notes>
          </geo:surveyedLocalTies>
+         <geo:dateInserted>2016-04-14T00:03:12Z</geo:dateInserted>
       </geo:surveyedLocalTies>
       <geo:surveyedLocalTies>
          <geo:surveyedLocalTies gml:id="SurveyedLocalTiesType_309">
-            <geo:tiedMarkerName>RM2</geo:tiedMarkerName>
+            <geo:tiedMarkerName>RM3</geo:tiedMarkerName>
             <geo:tiedMarkerUsage>LOCAL CONTROL</geo:tiedMarkerUsage>
+            <geo:tiedMarkerCDPNumber></geo:tiedMarkerCDPNumber>
+            <geo:tiedMarkerDOMESNumber></geo:tiedMarkerDOMESNumber>
+            <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+               <geo:dx>0.0</geo:dx>
+               <geo:dy>0.0</geo:dy>
+               <geo:dz>0.0</geo:dz>
+            </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
             <geo:localSiteTiesAccuracy>0.0</geo:localSiteTiesAccuracy>
             <geo:surveyMethod>High Accuracy local reference mark survey</geo:surveyMethod>
             <geo:dateMeasured>2016-08-16T14:00:00Z</geo:dateMeasured>
             <geo:notes>High Precision Leica TCA2003 total station used</geo:notes>
          </geo:surveyedLocalTies>
+         <geo:dateInserted>2016-04-14T00:03:12Z</geo:dateInserted>
       </geo:surveyedLocalTies>
       <geo:frequencyStandards>
          <geo:frequencyStandard gml:id="FrequencyStandardType_836">
-            <geo:standardType>INTERNAL</geo:standardType>
+            <geo:standardType codeSpace="">INTERNAL</geo:standardType>
             <geo:inputFrequency>0.0</geo:inputFrequency>
-            <gml:validTime>
-               <gml:TimePeriod>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_1380">
                   <gml:beginPosition>2008-06-30T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
          </geo:frequencyStandard>
+         <geo:dateInserted>2016-04-14T00:03:12Z</geo:dateInserted>
       </geo:frequencyStandards>
       <geo:humiditySensors>
          <geo:humiditySensor gml:id="HumiditySensorType_237">
-            <geo:type>PAROSCIENTIFIC MET4</geo:type>
+            <geo:type codeSpace="">PAROSCIENTIFIC MET4</geo:type>
             <geo:manufacturer>Paroscientific</geo:manufacturer>
             <geo:serialNumber>118047</geo:serialNumber>
             <geo:heightDiffToAntenna>-0.45</geo:heightDiffToAntenna>
+            <geo:calibrationDate></geo:calibrationDate>
+            <gml:validTime>
+               <gml:TimeInstant gml:id="TimeInstantType_802">
+                  <gml:timePosition>1970-01-22T13:00:00Z</gml:timePosition>
+               </gml:TimeInstant>
+            </gml:validTime>
             <geo:dataSamplingInterval>30.0</geo:dataSamplingInterval>
             <geo:accuracy-percentRelativeHumidity>2.0</geo:accuracy-percentRelativeHumidity>
             <geo:aspiration>UNASPIRATED</geo:aspiration>
          </geo:humiditySensor>
+         <geo:dateInserted>2016-04-14T00:03:12Z</geo:dateInserted>
       </geo:humiditySensors>
       <geo:pressureSensors>
          <geo:pressureSensor gml:id="PressureSensorType_243">
-            <geo:type>PAROSCIENTIFIC MET4</geo:type>
+            <geo:type codeSpace="">PAROSCIENTIFIC MET4</geo:type>
             <geo:manufacturer>Paroscientific</geo:manufacturer>
             <geo:serialNumber>118047</geo:serialNumber>
             <geo:heightDiffToAntenna>-0.45</geo:heightDiffToAntenna>
-            <gml:validTime>
-               <gml:TimePeriod>
+            <geo:calibrationDate></geo:calibrationDate>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_1381">
                   <gml:beginPosition>2012-05-31T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
@@ -164,10 +213,15 @@
             <geo:dataSamplingInterval>30.0</geo:dataSamplingInterval>
             <geo:accuracy-hPa>0.08</geo:accuracy-hPa>
          </geo:pressureSensor>
+         <geo:dateInserted>2016-04-14T00:03:12Z</geo:dateInserted>
       </geo:pressureSensors>
-      <geo:siteContact>
-         <gmd:MD_SecurityConstraints/>
-         <gmd:CI_ResponsibleParty>
+      <geo:siteContact gml:id="AgencyPropertyType_1060">
+         <gmd:MD_SecurityConstraints id="MDSecurityConstraintsType_1060">
+            <gmd:classification>
+               <gmd:MD_ClassificationCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:classification>
+         </gmd:MD_SecurityConstraints>
+         <gmd:CI_ResponsibleParty id="CIResponsiblePartyType_1060">
             <gmd:individualName>
                <gco:CharacterString>David Hiba</gco:CharacterString>
             </gmd:individualName>
@@ -175,16 +229,16 @@
                <gco:CharacterString>Solomon Islands Meteorological Office</gco:CharacterString>
             </gmd:organisationName>
             <gmd:contactInfo>
-               <gmd:CI_Contact>
+               <gmd:CI_Contact id="CIContactType_1060">
                   <gmd:phone>
-                     <gmd:CI_Telephone>
+                     <gmd:CI_Telephone id="CITelephoneType_421">
                         <gmd:voice>
                            <gco:CharacterString>+677 20332</gco:CharacterString>
                         </gmd:voice>
                      </gmd:CI_Telephone>
                   </gmd:phone>
                   <gmd:address>
-                     <gmd:CI_Address>
+                     <gmd:CI_Address id="CIAddressType_1060">
                         <gmd:electronicMailAddress>
                            <gco:CharacterString>dhiba@live.com</gco:CharacterString>
                         </gmd:electronicMailAddress>
@@ -192,22 +246,44 @@
                   </gmd:address>
                </gmd:CI_Contact>
             </gmd:contactInfo>
+            <gmd:role>
+               <gmd:CI_RoleCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:role>
          </gmd:CI_ResponsibleParty>
       </geo:siteContact>
-      <geo:siteMetadataCustodian>
-         <gmd:MD_SecurityConstraints/>
-         <gmd:CI_ResponsibleParty>
+      <geo:siteMetadataCustodian gml:id="AgencyPropertyType_1061">
+         <gmd:MD_SecurityConstraints id="MDSecurityConstraintsType_1061">
+            <gmd:classification>
+               <gmd:MD_ClassificationCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:classification>
+         </gmd:MD_SecurityConstraints>
+         <gmd:CI_ResponsibleParty id="CIResponsiblePartyType_1061">
             <gmd:organisationName>
                <gco:CharacterString>Geoscience Australia National Geodetic Reference System</gco:CharacterString>
             </gmd:organisationName>
             <gmd:contactInfo>
-               <gmd:CI_Contact>
+               <gmd:CI_Contact id="CIContactType_1061">
                   <gmd:address>
-                     <gmd:CI_Address/>
+                     <gmd:CI_Address id="CIAddressType_1061"/>
                   </gmd:address>
                </gmd:CI_Contact>
             </gmd:contactInfo>
+            <gmd:role>
+               <gmd:CI_RoleCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:role>
          </gmd:CI_ResponsibleParty>
       </geo:siteMetadataCustodian>
+      <geo:moreInformation>
+         <geo:dataCenter></geo:dataCenter>
+         <geo:urlForMoreInformation></geo:urlForMoreInformation>
+         <geo:siteMap></geo:siteMap>
+         <geo:siteDiagram></geo:siteDiagram>
+         <geo:horizonMask></geo:horizonMask>
+         <geo:monumentDescription></geo:monumentDescription>
+         <geo:sitePictures></geo:sitePictures>
+         <geo:antennaGraphicsWithDimensions></geo:antennaGraphicsWithDimensions>
+         <geo:insertTextGraphicFromAntenna></geo:insertTextGraphicFromAntenna>
+         <geo:DOI codeSpace="CodeSpaceTODO">CodeTypeTODO</geo:DOI>
+      </geo:moreInformation>
    </geo:siteLog>
 </geo:GeodesyML>

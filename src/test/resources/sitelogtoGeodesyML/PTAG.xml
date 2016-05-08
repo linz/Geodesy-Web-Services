@@ -10,6 +10,7 @@
          <geo:siteName>NAMRIA Taguig Active Geodetic Station</geo:siteName>
          <geo:fourCharacterID>PTAG</geo:fourCharacterID>
          <geo:iersDOMESNumber>22006M005</geo:iersDOMESNumber>
+         <geo:cdpNumber></geo:cdpNumber>
          <geo:monumentDescription>ROOF BASED - PILLAR</geo:monumentDescription>
          <geo:markerDescription>NONE</geo:markerDescription>
          <geo:dateInstalled>2008-09-22T14:00:00Z</geo:dateInstalled>
@@ -19,71 +20,108 @@
          <geo:city>Taguig City</geo:city>
          <geo:state>Metro Manila</geo:state>
          <geo:countryCodeISO>PHL</geo:countryCodeISO>
-         <geo:tectonicPlate>Philippine Plate</geo:tectonicPlate>
+         <geo:tectonicPlate codeSpace="">Philippine Plate</geo:tectonicPlate>
          <geo:approximatePositionITRF>
             <geo:xCoordinateInMeters>-3184318.821</geo:xCoordinateInMeters>
             <geo:yCoordinateInMeters>5291065.419</geo:yCoordinateInMeters>
             <geo:zCoordinateInMeters>1590418.2</geo:zCoordinateInMeters>
-            <geo:latitude-North>143207.58999999999650754034519195556640625</geo:latitude-North>
-            <geo:longitude-East>1210226.76000000000931322574615478515625</geo:longitude-East>
+            <geo:latitude-North>14.5354416666666654833761640475131571292877197265625</geo:latitude-North>
+            <geo:longitude-East>121.0407666666666699484267155639827251434326171875</geo:longitude-East>
             <geo:elevation-m_ellips.>86.63</geo:elevation-m_ellips.>
          </geo:approximatePositionITRF>
       </geo:siteLocation>
       <geo:gnssReceivers>
          <geo:gnssReceiver gml:id="GnssReceiverType_2172">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">LEICA GRX1200GGPRO</geo:receiverType>
+            <geo:manufacturerSerialNumber>355445</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">LEICA GRX1200GGPRO</geo:receiverType>
             <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
             <geo:serialNumber>355445</geo:serialNumber>
             <geo:firmwareVersion>5.60</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
             <geo:dateInstalled>2008-09-23T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved></geo:dateRemoved>
             <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
          </geo:gnssReceiver>
+         <geo:dateInserted>2008-09-23T00:00:00Z</geo:dateInserted>
       </geo:gnssReceivers>
       <geo:gnssAntennas>
          <geo:gnssAntenna gml:id="GnssAntennaType_960">
-            <geo:antennaType codeList="codelist" codeListValue="codeListValue">LEIAT504GG      LEIS</geo:antennaType>
+            <geo:manufacturerSerialNumber>200479</geo:manufacturerSerialNumber>
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue" codeSpace="codespace">LEIAT504GG      LEIS</geo:antennaType>
             <geo:serialNumber>200479</geo:serialNumber>
-            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:antennaReferencePoint codeSpace="">BPA</geo:antennaReferencePoint>
             <geo:marker-arpUpEcc.>0.0</geo:marker-arpUpEcc.>
             <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>LEIS</geo:antennaRadomeType>
+            <geo:antennaRadomeType codeSpace="CodeSpaceAttr">LEIS</geo:antennaRadomeType>
+            <geo:radomeSerialNumber></geo:radomeSerialNumber>
+            <geo:antennaCableType></geo:antennaCableType>
             <geo:antennaCableLength>0.0</geo:antennaCableLength>
             <geo:dateInstalled>2008-09-23T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved></geo:dateRemoved>
          </geo:gnssAntenna>
+         <geo:dateInserted>2008-09-23T00:00:00Z</geo:dateInserted>
       </geo:gnssAntennas>
       <geo:frequencyStandards>
          <geo:frequencyStandard gml:id="FrequencyStandardType_760">
-            <geo:standardType>INTERNAL</geo:standardType>
+            <geo:standardType codeSpace="">INTERNAL</geo:standardType>
             <geo:inputFrequency>0.0</geo:inputFrequency>
-            <gml:validTime>
-               <gml:TimePeriod>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_1233">
                   <gml:beginPosition>2008-09-23T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
          </geo:frequencyStandard>
+         <geo:dateInserted>2016-04-14T00:03:11Z</geo:dateInserted>
       </geo:frequencyStandards>
       <geo:collocationInformations>
          <geo:collocationInformation gml:id="CollocationInformationType_169">
-            <geo:status>PERMANENT</geo:status>
+            <geo:instrumentationType codeSpace=""></geo:instrumentationType>
+            <geo:status codeSpace="">PERMANENT</geo:status>
+            <gml:validTime>
+               <gml:TimeInstant gml:id="TimeInstantType_709">
+                  <gml:timePosition>1970-01-22T13:00:00Z</gml:timePosition>
+               </gml:TimeInstant>
+            </gml:validTime>
          </geo:collocationInformation>
+         <geo:dateInserted>2016-04-14T00:03:11Z</geo:dateInserted>
       </geo:collocationInformations>
       <geo:waterVaporSensors>
          <geo:waterVaporSensor gml:id="WaterVaporSensorType_23">
-            <geo:type>NONE</geo:type>
+            <geo:type codeSpace="">NONE</geo:type>
+            <geo:manufacturer></geo:manufacturer>
+            <geo:serialNumber></geo:serialNumber>
             <geo:heightDiffToAntenna>0.0</geo:heightDiffToAntenna>
+            <geo:calibrationDate></geo:calibrationDate>
+            <gml:validTime>
+               <gml:TimeInstant gml:id="TimeInstantType_710">
+                  <gml:timePosition>1970-01-22T13:00:00Z</gml:timePosition>
+               </gml:TimeInstant>
+            </gml:validTime>
             <geo:distanceToAntenna>0.0</geo:distanceToAntenna>
          </geo:waterVaporSensor>
+         <geo:dateInserted>2016-04-14T00:03:11Z</geo:dateInserted>
       </geo:waterVaporSensors>
       <geo:otherInstrumentations>
-         <geo:otherInstrumentation gml:id="OtherInstrumentationType_169"/>
+         <geo:otherInstrumentation gml:id="OtherInstrumentationType_169">
+            <geo:instrumentation></geo:instrumentation>
+            <gml:validTime>
+               <gml:TimeInstant gml:id="TimeInstantType_711">
+                  <gml:timePosition>1970-01-22T13:00:00Z</gml:timePosition>
+               </gml:TimeInstant>
+            </gml:validTime>
+         </geo:otherInstrumentation>
+         <geo:dateInserted>2016-04-14T00:03:11Z</geo:dateInserted>
       </geo:otherInstrumentations>
-      <geo:siteContact>
-         <gmd:MD_SecurityConstraints/>
-         <gmd:CI_ResponsibleParty>
+      <geo:siteContact gml:id="AgencyPropertyType_958">
+         <gmd:MD_SecurityConstraints id="MDSecurityConstraintsType_958">
+            <gmd:classification>
+               <gmd:MD_ClassificationCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:classification>
+         </gmd:MD_SecurityConstraints>
+         <gmd:CI_ResponsibleParty id="CIResponsiblePartyType_958">
             <gmd:individualName>
                <gco:CharacterString>Ronaldo C. Gatchalian</gco:CharacterString>
             </gmd:individualName>
@@ -91,16 +129,16 @@
                <gco:CharacterString>Nat'l Mapping and Resource Info. Authority</gco:CharacterString>
             </gmd:organisationName>
             <gmd:contactInfo>
-               <gmd:CI_Contact>
+               <gmd:CI_Contact id="CIContactType_958">
                   <gmd:phone>
-                     <gmd:CI_Telephone>
+                     <gmd:CI_Telephone id="CITelephoneType_377">
                         <gmd:voice>
                            <gco:CharacterString>(63) 02-88842840</gco:CharacterString>
                         </gmd:voice>
                      </gmd:CI_Telephone>
                   </gmd:phone>
                   <gmd:address>
-                     <gmd:CI_Address>
+                     <gmd:CI_Address id="CIAddressType_958">
                         <gmd:deliveryPoint>
                            <gco:CharacterString>NAMRIA, Lawton Avenue,</gco:CharacterString>
                         </gmd:deliveryPoint>
@@ -111,18 +149,25 @@
                   </gmd:address>
                </gmd:CI_Contact>
             </gmd:contactInfo>
+            <gmd:role>
+               <gmd:CI_RoleCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:role>
          </gmd:CI_ResponsibleParty>
       </geo:siteContact>
-      <geo:siteMetadataCustodian>
-         <gmd:MD_SecurityConstraints/>
-         <gmd:CI_ResponsibleParty>
+      <geo:siteMetadataCustodian gml:id="AgencyPropertyType_959">
+         <gmd:MD_SecurityConstraints id="MDSecurityConstraintsType_959">
+            <gmd:classification>
+               <gmd:MD_ClassificationCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:classification>
+         </gmd:MD_SecurityConstraints>
+         <gmd:CI_ResponsibleParty id="CIResponsiblePartyType_959">
             <gmd:organisationName>
                <gco:CharacterString>Nat'l Mapping and Resource Info. Authority</gco:CharacterString>
             </gmd:organisationName>
             <gmd:contactInfo>
-               <gmd:CI_Contact>
+               <gmd:CI_Contact id="CIContactType_959">
                   <gmd:address>
-                     <gmd:CI_Address>
+                     <gmd:CI_Address id="CIAddressType_959">
                         <gmd:deliveryPoint>
                            <gco:CharacterString>NAMRIA, Lawton Ave</gco:CharacterString>
                         </gmd:deliveryPoint>
@@ -130,11 +175,23 @@
                   </gmd:address>
                </gmd:CI_Contact>
             </gmd:contactInfo>
+            <gmd:role>
+               <gmd:CI_RoleCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:role>
          </gmd:CI_ResponsibleParty>
       </geo:siteMetadataCustodian>
       <geo:moreInformation>
+         <geo:dataCenter>http</geo:dataCenter>
+         <geo:dataCenter>http</geo:dataCenter>
          <geo:urlForMoreInformation>http</geo:urlForMoreInformation>
          <geo:siteMap>http</geo:siteMap>
+         <geo:siteDiagram></geo:siteDiagram>
+         <geo:horizonMask></geo:horizonMask>
+         <geo:monumentDescription></geo:monumentDescription>
+         <geo:sitePictures></geo:sitePictures>
+         <geo:antennaGraphicsWithDimensions></geo:antennaGraphicsWithDimensions>
+         <geo:insertTextGraphicFromAntenna></geo:insertTextGraphicFromAntenna>
+         <geo:DOI codeSpace="CodeSpaceTODO">CodeTypeTODO</geo:DOI>
       </geo:moreInformation>
    </geo:siteLog>
 </geo:GeodesyML>

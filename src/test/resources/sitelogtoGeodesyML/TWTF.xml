@@ -11,6 +11,7 @@
          <geo:fourCharacterID>TWTF</geo:fourCharacterID>
          <geo:monumentInscription>no monument, GPS antenna reference point</geo:monumentInscription>
          <geo:iersDOMESNumber>23603S002</geo:iersDOMESNumber>
+         <geo:cdpNumber></geo:cdpNumber>
          <geo:monumentDescription>STEEL MAST</geo:monumentDescription>
          <geo:heightOfTheMonument>3.3</geo:heightOfTheMonument>
          <geo:monumentFoundation>ROOF</geo:monumentFoundation>
@@ -19,88 +20,103 @@
       <geo:siteLocation>
          <geo:city>Taoyuan</geo:city>
          <geo:state>Taiwan</geo:state>
-         <geo:countryCodeISO>Republic of China</geo:countryCodeISO>
-         <geo:tectonicPlate>Eurasia plate</geo:tectonicPlate>
+         <geo:countryCodeISO>???</geo:countryCodeISO>
+         <geo:tectonicPlate codeSpace="">Eurasia plate</geo:tectonicPlate>
          <geo:approximatePositionITRF>
             <geo:xCoordinateInMeters>-2994425.04</geo:xCoordinateInMeters>
             <geo:yCoordinateInMeters>4951312.24</geo:yCoordinateInMeters>
             <geo:zCoordinateInMeters>2674498.6</geo:zCoordinateInMeters>
-            <geo:latitude-North>245712.95999999999185092747211456298828125</geo:latitude-North>
-            <geo:longitude-East>1210952.19999999995343387126922607421875</geo:longitude-East>
+            <geo:latitude-North>24.953599999999998004795997985638678073883056640625</geo:latitude-North>
+            <geo:longitude-East>121.1644999999999896544977673329412937164306640625</geo:longitude-East>
             <geo:elevation-m_ellips.>203.122</geo:elevation-m_ellips.>
          </geo:approximatePositionITRF>
       </geo:siteLocation>
       <geo:gnssReceivers>
          <geo:gnssReceiver gml:id="GnssReceiverType_2670">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ASHTECH Z-XII3T</geo:receiverType>
+            <geo:manufacturerSerialNumber>RT920012202</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">ASHTECH Z-XII3T</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
             <geo:serialNumber>RT920012202</geo:serialNumber>
             <geo:firmwareVersion>Z-XII3</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
             <geo:dateInstalled>2001-08-01T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved></geo:dateRemoved>
          </geo:gnssReceiver>
+         <geo:dateInserted>2001-08-01T00:00:00Z</geo:dateInserted>
       </geo:gnssReceivers>
       <geo:gnssAntennas>
          <geo:gnssAntenna gml:id="GnssAntennaType_1201">
-            <geo:antennaType codeList="codelist" codeListValue="codeListValue">ASH701945C_M    SCIS</geo:antennaType>
+            <geo:manufacturerSerialNumber>CR620012101</geo:manufacturerSerialNumber>
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue" codeSpace="codespace">ASH701945C_M    SCIS</geo:antennaType>
             <geo:serialNumber>CR620012101</geo:serialNumber>
-            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:antennaReferencePoint codeSpace="">BPA</geo:antennaReferencePoint>
             <geo:marker-arpUpEcc.>0.0</geo:marker-arpUpEcc.>
             <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>SCIS</geo:antennaRadomeType>
+            <geo:antennaRadomeType codeSpace="CodeSpaceAttr">SCIS</geo:antennaRadomeType>
+            <geo:radomeSerialNumber></geo:radomeSerialNumber>
             <geo:antennaCableType>Andraw FSJ1-50A</geo:antennaCableType>
             <geo:antennaCableLength>30.0</geo:antennaCableLength>
             <geo:dateInstalled>2001-08-01T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved></geo:dateRemoved>
          </geo:gnssAntenna>
+         <geo:dateInserted>2001-08-01T00:00:00Z</geo:dateInserted>
       </geo:gnssAntennas>
       <geo:frequencyStandards>
          <geo:frequencyStandard gml:id="FrequencyStandardType_970">
-            <geo:standardType>CESIUM</geo:standardType>
+            <geo:standardType codeSpace="">CESIUM</geo:standardType>
             <geo:inputFrequency>10.0</geo:inputFrequency>
-            <gml:validTime>
-               <gml:TimePeriod>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_1575">
                   <gml:beginPosition>2000-04-24T00:00:00Z</gml:beginPosition>
                   <gml:endPosition>2004-12-21T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
          </geo:frequencyStandard>
+         <geo:dateInserted>2016-04-14T00:03:12Z</geo:dateInserted>
       </geo:frequencyStandards>
       <geo:frequencyStandards>
          <geo:frequencyStandard gml:id="FrequencyStandardType_971">
-            <geo:standardType>steered H-MASER</geo:standardType>
+            <geo:standardType codeSpace="">steered H-MASER</geo:standardType>
             <geo:inputFrequency>5.0</geo:inputFrequency>
-            <gml:validTime>
-               <gml:TimePeriod>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_1576">
                   <gml:beginPosition>2004-12-21T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
          </geo:frequencyStandard>
+         <geo:dateInserted>2016-04-14T00:03:12Z</geo:dateInserted>
       </geo:frequencyStandards>
       <geo:humiditySensors>
          <geo:humiditySensor gml:id="HumiditySensorType_267">
-            <geo:type>Capacitance probe</geo:type>
+            <geo:type codeSpace="">Capacitance probe</geo:type>
             <geo:manufacturer>Paroscientific, Inc.</geo:manufacturer>
+            <geo:serialNumber></geo:serialNumber>
             <geo:heightDiffToAntenna>0.0</geo:heightDiffToAntenna>
-            <gml:validTime>
-               <gml:TimePeriod>
+            <geo:calibrationDate></geo:calibrationDate>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_1577">
                   <gml:beginPosition>2001-08-01T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
             <geo:dataSamplingInterval>5.0</geo:dataSamplingInterval>
             <geo:accuracy-percentRelativeHumidity>2.0</geo:accuracy-percentRelativeHumidity>
+            <geo:aspiration></geo:aspiration>
          </geo:humiditySensor>
+         <geo:dateInserted>2016-04-14T00:03:12Z</geo:dateInserted>
       </geo:humiditySensors>
       <geo:pressureSensors>
          <geo:pressureSensor gml:id="PressureSensorType_273">
-            <geo:type>Digiquartz barometric transducer</geo:type>
+            <geo:type codeSpace="">Digiquartz barometric transducer</geo:type>
             <geo:manufacturer>Paroscientific, Inc.</geo:manufacturer>
+            <geo:serialNumber></geo:serialNumber>
             <geo:heightDiffToAntenna>1.0</geo:heightDiffToAntenna>
-            <gml:validTime>
-               <gml:TimePeriod>
+            <geo:calibrationDate></geo:calibrationDate>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_1578">
                   <gml:beginPosition>2001-08-01T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
@@ -108,25 +124,34 @@
             <geo:dataSamplingInterval>5.0</geo:dataSamplingInterval>
             <geo:accuracy-hPa>0.08</geo:accuracy-hPa>
          </geo:pressureSensor>
+         <geo:dateInserted>2016-04-14T00:03:12Z</geo:dateInserted>
       </geo:pressureSensors>
       <geo:temperatureSensors>
          <geo:temperatureSensor gml:id="TemperatureSensorType_263">
-            <geo:type>Resistance temperature device</geo:type>
+            <geo:type codeSpace="">Resistance temperature device</geo:type>
             <geo:manufacturer>Paroscientific, Inc.</geo:manufacturer>
+            <geo:serialNumber></geo:serialNumber>
             <geo:heightDiffToAntenna>0.0</geo:heightDiffToAntenna>
-            <gml:validTime>
-               <gml:TimePeriod>
+            <geo:calibrationDate></geo:calibrationDate>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_1579">
                   <gml:beginPosition>2001-08-01T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
             <geo:dataSamplingInterval>5.0</geo:dataSamplingInterval>
             <geo:accuracy-degreesCelcius>0.5</geo:accuracy-degreesCelcius>
+            <geo:aspiration></geo:aspiration>
          </geo:temperatureSensor>
+         <geo:dateInserted>2016-04-14T00:03:12Z</geo:dateInserted>
       </geo:temperatureSensors>
-      <geo:siteContact>
-         <gmd:MD_SecurityConstraints/>
-         <gmd:CI_ResponsibleParty>
+      <geo:siteContact gml:id="AgencyPropertyType_1184">
+         <gmd:MD_SecurityConstraints id="MDSecurityConstraintsType_1184">
+            <gmd:classification>
+               <gmd:MD_ClassificationCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:classification>
+         </gmd:MD_SecurityConstraints>
+         <gmd:CI_ResponsibleParty id="CIResponsiblePartyType_1184">
             <gmd:individualName>
                <gco:CharacterString>Hsin-Min Peng</gco:CharacterString>
             </gmd:individualName>
@@ -134,9 +159,9 @@
                <gco:CharacterString>National Standard Time and Frequency</gco:CharacterString>
             </gmd:organisationName>
             <gmd:contactInfo>
-               <gmd:CI_Contact>
+               <gmd:CI_Contact id="CIContactType_1184">
                   <gmd:phone>
-                     <gmd:CI_Telephone>
+                     <gmd:CI_Telephone id="CITelephoneType_472">
                         <gmd:voice>
                            <gco:CharacterString>886 3 424-5174</gco:CharacterString>
                         </gmd:voice>
@@ -146,7 +171,7 @@
                      </gmd:CI_Telephone>
                   </gmd:phone>
                   <gmd:address>
-                     <gmd:CI_Address>
+                     <gmd:CI_Address id="CIAddressType_1184">
                         <gmd:deliveryPoint>
                            <gco:CharacterString>12, Lane 551, Min-Tsu Road Sec. 5,</gco:CharacterString>
                         </gmd:deliveryPoint>
@@ -157,22 +182,44 @@
                   </gmd:address>
                </gmd:CI_Contact>
             </gmd:contactInfo>
+            <gmd:role>
+               <gmd:CI_RoleCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:role>
          </gmd:CI_ResponsibleParty>
       </geo:siteContact>
-      <geo:siteMetadataCustodian>
-         <gmd:MD_SecurityConstraints/>
-         <gmd:CI_ResponsibleParty>
+      <geo:siteMetadataCustodian gml:id="AgencyPropertyType_1185">
+         <gmd:MD_SecurityConstraints id="MDSecurityConstraintsType_1185">
+            <gmd:classification>
+               <gmd:MD_ClassificationCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:classification>
+         </gmd:MD_SecurityConstraints>
+         <gmd:CI_ResponsibleParty id="CIResponsiblePartyType_1185">
             <gmd:organisationName>
                <gco:CharacterString>National Standard Time and Frequency</gco:CharacterString>
             </gmd:organisationName>
             <gmd:contactInfo>
-               <gmd:CI_Contact>
+               <gmd:CI_Contact id="CIContactType_1185">
                   <gmd:address>
-                     <gmd:CI_Address/>
+                     <gmd:CI_Address id="CIAddressType_1185"/>
                   </gmd:address>
                </gmd:CI_Contact>
             </gmd:contactInfo>
+            <gmd:role>
+               <gmd:CI_RoleCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:role>
          </gmd:CI_ResponsibleParty>
       </geo:siteMetadataCustodian>
+      <geo:moreInformation>
+         <geo:dataCenter></geo:dataCenter>
+         <geo:urlForMoreInformation></geo:urlForMoreInformation>
+         <geo:siteMap></geo:siteMap>
+         <geo:siteDiagram></geo:siteDiagram>
+         <geo:horizonMask></geo:horizonMask>
+         <geo:monumentDescription></geo:monumentDescription>
+         <geo:sitePictures></geo:sitePictures>
+         <geo:antennaGraphicsWithDimensions></geo:antennaGraphicsWithDimensions>
+         <geo:insertTextGraphicFromAntenna></geo:insertTextGraphicFromAntenna>
+         <geo:DOI codeSpace="CodeSpaceTODO">CodeTypeTODO</geo:DOI>
+      </geo:moreInformation>
    </geo:siteLog>
 </geo:GeodesyML>

@@ -10,54 +10,74 @@
          <geo:siteName>Gough Island</geo:siteName>
          <geo:fourCharacterID>GOUG</geo:fourCharacterID>
          <geo:iersDOMESNumber>30608M001</geo:iersDOMESNumber>
+         <geo:cdpNumber></geo:cdpNumber>
          <geo:dateInstalled>1998-01-07T13:00:00Z</geo:dateInstalled>
       </geo:siteIdentification>
       <geo:siteLocation>
          <geo:city>Gough Island</geo:city>
          <geo:state>Saint Helena</geo:state>
-         <geo:countryCodeISO>dependent territory of the U.K.</geo:countryCodeISO>
-         <geo:tectonicPlate>AFRICAN</geo:tectonicPlate>
+         <geo:countryCodeISO>???</geo:countryCodeISO>
+         <geo:tectonicPlate codeSpace="">AFRICAN</geo:tectonicPlate>
          <geo:approximatePositionITRF>
             <geo:xCoordinateInMeters>4795578.6</geo:xCoordinateInMeters>
             <geo:yCoordinateInMeters>-835299.5</geo:yCoordinateInMeters>
             <geo:zCoordinateInMeters>-4107634.1</geo:zCoordinateInMeters>
-            <geo:latitude-North>-402055.6799999999930150806903839111328125</geo:latitude-North>
-            <geo:longitude-East>-95200.119999999995343387126922607421875</geo:longitude-East>
+            <geo:latitude-North>-40.3487999999999971123543218709528446197509765625</geo:latitude-North>
+            <geo:longitude-East>-9.866699999999998027533365529961884021759033203125</geo:longitude-East>
             <geo:elevation-m_ellips.>81.3</geo:elevation-m_ellips.>
          </geo:approximatePositionITRF>
       </geo:siteLocation>
       <geo:gnssReceivers>
          <geo:gnssReceiver gml:id="GnssReceiverType_940">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">TRIMBLE 4000SSI</geo:receiverType>
+            <geo:manufacturerSerialNumber>3743A20395</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">TRIMBLE 4000SSI</geo:receiverType>
+            <geo:satelliteSystem codeSpace="DummyCodeSpace">DummyCodeList</geo:satelliteSystem>
             <geo:serialNumber>3743A20395</geo:serialNumber>
             <geo:firmwareVersion>7.19</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
             <geo:dateInstalled>1998-01-08T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved></geo:dateRemoved>
          </geo:gnssReceiver>
+         <geo:dateInserted>1998-01-08T00:00:00Z</geo:dateInserted>
       </geo:gnssReceivers>
       <geo:gnssAntennas>
          <geo:gnssAntenna gml:id="GnssAntennaType_427">
-            <geo:antennaType codeList="codelist" codeListValue="codeListValue">TRM29659.00     TCWD</geo:antennaType>
+            <geo:manufacturerSerialNumber>0220101988</geo:manufacturerSerialNumber>
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue" codeSpace="codespace">TRM29659.00     TCWD</geo:antennaType>
             <geo:serialNumber>0220101988</geo:serialNumber>
-            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:antennaReferencePoint codeSpace="">BPA</geo:antennaReferencePoint>
             <geo:marker-arpUpEcc.>0.003</geo:marker-arpUpEcc.>
             <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>TCWD</geo:antennaRadomeType>
+            <geo:antennaRadomeType codeSpace="CodeSpaceAttr">TCWD</geo:antennaRadomeType>
+            <geo:radomeSerialNumber></geo:radomeSerialNumber>
+            <geo:antennaCableType></geo:antennaCableType>
             <geo:antennaCableLength>0.0</geo:antennaCableLength>
             <geo:dateInstalled>1998-01-08T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved></geo:dateRemoved>
          </geo:gnssAntenna>
+         <geo:dateInserted>1998-01-08T00:00:00Z</geo:dateInserted>
       </geo:gnssAntennas>
       <geo:frequencyStandards>
          <geo:frequencyStandard gml:id="FrequencyStandardType_357">
-            <geo:standardType>INTERNAL</geo:standardType>
+            <geo:standardType codeSpace="">INTERNAL</geo:standardType>
             <geo:inputFrequency>0.0</geo:inputFrequency>
+            <gml:validTime>
+               <gml:TimeInstant gml:id="TimeInstantType_255">
+                  <gml:timePosition>1970-01-22T13:00:00Z</gml:timePosition>
+               </gml:TimeInstant>
+            </gml:validTime>
          </geo:frequencyStandard>
+         <geo:dateInserted>2016-04-14T00:03:09Z</geo:dateInserted>
       </geo:frequencyStandards>
-      <geo:siteContact>
-         <gmd:MD_SecurityConstraints/>
-         <gmd:CI_ResponsibleParty>
+      <geo:siteContact gml:id="AgencyPropertyType_436">
+         <gmd:MD_SecurityConstraints id="MDSecurityConstraintsType_436">
+            <gmd:classification>
+               <gmd:MD_ClassificationCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:classification>
+         </gmd:MD_SecurityConstraints>
+         <gmd:CI_ResponsibleParty id="CIResponsiblePartyType_436">
             <gmd:individualName>
                <gco:CharacterString>Richard Wonnacott</gco:CharacterString>
             </gmd:individualName>
@@ -65,9 +85,9 @@
                <gco:CharacterString>Chief Directorate Surveys and Mapping</gco:CharacterString>
             </gmd:organisationName>
             <gmd:contactInfo>
-               <gmd:CI_Contact>
+               <gmd:CI_Contact id="CIContactType_436">
                   <gmd:phone>
-                     <gmd:CI_Telephone>
+                     <gmd:CI_Telephone id="CITelephoneType_170">
                         <gmd:voice>
                            <gco:CharacterString>+27 21 6854070</gco:CharacterString>
                         </gmd:voice>
@@ -77,7 +97,7 @@
                      </gmd:CI_Telephone>
                   </gmd:phone>
                   <gmd:address>
-                     <gmd:CI_Address>
+                     <gmd:CI_Address id="CIAddressType_436">
                         <gmd:deliveryPoint>
                            <gco:CharacterString>Private Bag X10</gco:CharacterString>
                         </gmd:deliveryPoint>
@@ -88,18 +108,25 @@
                   </gmd:address>
                </gmd:CI_Contact>
             </gmd:contactInfo>
+            <gmd:role>
+               <gmd:CI_RoleCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:role>
          </gmd:CI_ResponsibleParty>
       </geo:siteContact>
-      <geo:siteMetadataCustodian>
-         <gmd:MD_SecurityConstraints/>
-         <gmd:CI_ResponsibleParty>
+      <geo:siteMetadataCustodian gml:id="AgencyPropertyType_437">
+         <gmd:MD_SecurityConstraints id="MDSecurityConstraintsType_437">
+            <gmd:classification>
+               <gmd:MD_ClassificationCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:classification>
+         </gmd:MD_SecurityConstraints>
+         <gmd:CI_ResponsibleParty id="CIResponsiblePartyType_437">
             <gmd:organisationName>
                <gco:CharacterString>Alfred Wegener Institute for Polar and</gco:CharacterString>
             </gmd:organisationName>
             <gmd:contactInfo>
-               <gmd:CI_Contact>
+               <gmd:CI_Contact id="CIContactType_437">
                   <gmd:address>
-                     <gmd:CI_Address>
+                     <gmd:CI_Address id="CIAddressType_437">
                         <gmd:deliveryPoint>
                            <gco:CharacterString>D-27568 Bremerhaven, Columbusstrasse, Germany</gco:CharacterString>
                         </gmd:deliveryPoint>
@@ -107,7 +134,22 @@
                   </gmd:address>
                </gmd:CI_Contact>
             </gmd:contactInfo>
+            <gmd:role>
+               <gmd:CI_RoleCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:role>
          </gmd:CI_ResponsibleParty>
       </geo:siteMetadataCustodian>
+      <geo:moreInformation>
+         <geo:dataCenter></geo:dataCenter>
+         <geo:urlForMoreInformation></geo:urlForMoreInformation>
+         <geo:siteMap></geo:siteMap>
+         <geo:siteDiagram></geo:siteDiagram>
+         <geo:horizonMask></geo:horizonMask>
+         <geo:monumentDescription></geo:monumentDescription>
+         <geo:sitePictures></geo:sitePictures>
+         <geo:antennaGraphicsWithDimensions></geo:antennaGraphicsWithDimensions>
+         <geo:insertTextGraphicFromAntenna></geo:insertTextGraphicFromAntenna>
+         <geo:DOI codeSpace="CodeSpaceTODO">CodeTypeTODO</geo:DOI>
+      </geo:moreInformation>
    </geo:siteLog>
 </geo:GeodesyML>

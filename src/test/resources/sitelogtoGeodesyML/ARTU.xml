@@ -10,6 +10,7 @@
          <geo:siteName>Arti</geo:siteName>
          <geo:fourCharacterID>ARTU</geo:fourCharacterID>
          <geo:iersDOMESNumber>12362M001</geo:iersDOMESNumber>
+         <geo:cdpNumber></geo:cdpNumber>
          <geo:dateInstalled>1999-08-05T14:00:00Z</geo:dateInstalled>
          <geo:geologicCharacteristic>Pre-Uralian foredeep</geo:geologicCharacteristic>
          <geo:bedrockType>Accretionary complex</geo:bedrockType>
@@ -21,75 +22,99 @@
          <geo:city>Arti</geo:city>
          <geo:state>Ekaterinburg region</geo:state>
          <geo:countryCodeISO>RUS</geo:countryCodeISO>
-         <geo:tectonicPlate>Eurasia</geo:tectonicPlate>
+         <geo:tectonicPlate codeSpace="">Eurasia</geo:tectonicPlate>
          <geo:approximatePositionITRF>
             <geo:xCoordinateInMeters>1843956.968</geo:xCoordinateInMeters>
             <geo:yCoordinateInMeters>3016202.97</geo:yCoordinateInMeters>
             <geo:zCoordinateInMeters>5291261.66</geo:zCoordinateInMeters>
-            <geo:latitude-North>562547.359999999986030161380767822265625</geo:latitude-North>
-            <geo:longitude-East>583337.630000000004656612873077392578125</geo:longitude-East>
+            <geo:latitude-North>56.42982222222222077334663481451570987701416015625</geo:latitude-North>
+            <geo:longitude-East>58.56045277777777613437137915752828121185302734375</geo:longitude-East>
             <geo:elevation-m_ellips.>247.511</geo:elevation-m_ellips.>
          </geo:approximatePositionITRF>
          <geo:notes>GAMIT Solution ITRF94. Epoch 1996.5845</geo:notes>
       </geo:siteLocation>
       <geo:gnssReceivers>
          <geo:gnssReceiver gml:id="GnssReceiverType_128">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ASHTECH Z-XII3</geo:receiverType>
+            <geo:manufacturerSerialNumber>LP03316</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">ASHTECH Z-XII3</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
             <geo:serialNumber>LP03316</geo:serialNumber>
             <geo:firmwareVersion>NAV CC00 CH 1D02</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
             <geo:dateInstalled>1999-08-05T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved></geo:dateRemoved>
             <geo:notes>Model 700845-10F (Z-12 CGRS)</geo:notes>
          </geo:gnssReceiver>
+         <geo:dateInserted>1999-08-05T00:00:00Z</geo:dateInserted>
       </geo:gnssReceivers>
       <geo:gnssAntennas>
          <geo:gnssAntenna gml:id="GnssAntennaType_57">
-            <geo:antennaType codeList="codelist" codeListValue="codeListValue">ASH700936D_M    DOME</geo:antennaType>
+            <geo:manufacturerSerialNumber>CR13077</geo:manufacturerSerialNumber>
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue" codeSpace="codespace">ASH700936D_M    DOME</geo:antennaType>
             <geo:serialNumber>CR13077</geo:serialNumber>
-            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:antennaReferencePoint codeSpace="">BPA</geo:antennaReferencePoint>
             <geo:marker-arpUpEcc.>0.0796</geo:marker-arpUpEcc.>
             <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>DOME</geo:antennaRadomeType>
+            <geo:antennaRadomeType codeSpace="CodeSpaceAttr">DOME</geo:antennaRadomeType>
+            <geo:radomeSerialNumber></geo:radomeSerialNumber>
+            <geo:antennaCableType></geo:antennaCableType>
             <geo:antennaCableLength>0.0</geo:antennaCableLength>
             <geo:dateInstalled>1999-08-06T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved></geo:dateRemoved>
             <geo:notes>Antenna Diagram below</geo:notes>
          </geo:gnssAntenna>
+         <geo:dateInserted>1999-08-06T00:00:00Z</geo:dateInserted>
       </geo:gnssAntennas>
       <geo:surveyedLocalTies>
          <geo:surveyedLocalTies gml:id="SurveyedLocalTiesType_10">
             <geo:tiedMarkerName>ARTB</geo:tiedMarkerName>
+            <geo:tiedMarkerUsage></geo:tiedMarkerUsage>
+            <geo:tiedMarkerCDPNumber></geo:tiedMarkerCDPNumber>
+            <geo:tiedMarkerDOMESNumber></geo:tiedMarkerDOMESNumber>
             <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
                <geo:dx>-72.608</geo:dx>
                <geo:dy>-4.469</geo:dy>
                <geo:dz>26.138</geo:dz>
             </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
             <geo:localSiteTiesAccuracy>1.0</geo:localSiteTiesAccuracy>
+            <geo:surveyMethod></geo:surveyMethod>
             <geo:dateMeasured>1999-09-30T14:00:00Z</geo:dateMeasured>
             <geo:notes>GAMIT solution of simultaneous GPS observations (baseline mode in sestbl.).</geo:notes>
          </geo:surveyedLocalTies>
+         <geo:dateInserted>2016-04-14T00:03:06Z</geo:dateInserted>
       </geo:surveyedLocalTies>
       <geo:frequencyStandards>
          <geo:frequencyStandard gml:id="FrequencyStandardType_70">
-            <geo:standardType>INTERNAL</geo:standardType>
+            <geo:standardType codeSpace="">INTERNAL</geo:standardType>
             <geo:inputFrequency>0.0</geo:inputFrequency>
+            <gml:validTime>
+               <gml:TimeInstant gml:id="TimeInstantType_60">
+                  <gml:timePosition>1970-01-22T13:00:00Z</gml:timePosition>
+               </gml:TimeInstant>
+            </gml:validTime>
          </geo:frequencyStandard>
+         <geo:dateInserted>2016-04-14T00:03:06Z</geo:dateInserted>
       </geo:frequencyStandards>
       <geo:localEpisodicEventsSet>
          <geo:localEpisodicEvents gml:id="LocalEpisodicEventsType_34">
-            <gml:validTime>
-               <gml:TimeInstant>
+            <gml:validTime nilReason="">
+               <gml:TimeInstant gml:id="TimeInstantType_61">
                   <gml:timePosition>07 Feb 2012</gml:timePosition>
                </gml:TimeInstant>
             </gml:validTime>
             <geo:event>Transition from .soc to .ash data types.</geo:event>
          </geo:localEpisodicEvents>
+         <geo:dateInserted>2016-04-14T00:03:06Z</geo:dateInserted>
       </geo:localEpisodicEventsSet>
-      <geo:siteContact>
-         <gmd:MD_SecurityConstraints/>
-         <gmd:CI_ResponsibleParty>
+      <geo:siteContact gml:id="AgencyPropertyType_66">
+         <gmd:MD_SecurityConstraints id="MDSecurityConstraintsType_66">
+            <gmd:classification>
+               <gmd:MD_ClassificationCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:classification>
+         </gmd:MD_SecurityConstraints>
+         <gmd:CI_ResponsibleParty id="CIResponsiblePartyType_66">
             <gmd:individualName>
                <gco:CharacterString>Oleg Kusonskiy</gco:CharacterString>
             </gmd:individualName>
@@ -97,16 +122,16 @@
                <gco:CharacterString>Geophysical Observatory Arti</gco:CharacterString>
             </gmd:organisationName>
             <gmd:contactInfo>
-               <gmd:CI_Contact>
+               <gmd:CI_Contact id="CIContactType_66">
                   <gmd:phone>
-                     <gmd:CI_Telephone>
+                     <gmd:CI_Telephone id="CITelephoneType_20">
                         <gmd:voice>
                            <gco:CharacterString>+7 343-952-1638 work</gco:CharacterString>
                         </gmd:voice>
                      </gmd:CI_Telephone>
                   </gmd:phone>
                   <gmd:address>
-                     <gmd:CI_Address>
+                     <gmd:CI_Address id="CIAddressType_66">
                         <gmd:deliveryPoint>
                            <gco:CharacterString>2A Geofizicheskaya ul.</gco:CharacterString>
                         </gmd:deliveryPoint>
@@ -117,18 +142,25 @@
                   </gmd:address>
                </gmd:CI_Contact>
             </gmd:contactInfo>
+            <gmd:role>
+               <gmd:CI_RoleCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:role>
          </gmd:CI_ResponsibleParty>
       </geo:siteContact>
-      <geo:siteMetadataCustodian>
-         <gmd:MD_SecurityConstraints/>
-         <gmd:CI_ResponsibleParty>
+      <geo:siteMetadataCustodian gml:id="AgencyPropertyType_67">
+         <gmd:MD_SecurityConstraints id="MDSecurityConstraintsType_67">
+            <gmd:classification>
+               <gmd:MD_ClassificationCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:classification>
+         </gmd:MD_SecurityConstraints>
+         <gmd:CI_ResponsibleParty id="CIResponsiblePartyType_67">
             <gmd:organisationName>
                <gco:CharacterString>RDAAC/JPL/IRIS</gco:CharacterString>
             </gmd:organisationName>
             <gmd:contactInfo>
-               <gmd:CI_Contact>
+               <gmd:CI_Contact id="CIContactType_67">
                   <gmd:address>
-                     <gmd:CI_Address>
+                     <gmd:CI_Address id="CIAddressType_67">
                         <gmd:deliveryPoint>
                            <gco:CharacterString>6-3 Universitetskiy Prospect</gco:CharacterString>
                         </gmd:deliveryPoint>
@@ -136,11 +168,24 @@
                   </gmd:address>
                </gmd:CI_Contact>
             </gmd:contactInfo>
+            <gmd:role>
+               <gmd:CI_RoleCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:role>
          </gmd:CI_ResponsibleParty>
       </geo:siteMetadataCustodian>
       <geo:moreInformation>
+         <geo:dataCenter>http</geo:dataCenter>
+         <geo:dataCenter>http</geo:dataCenter>
          <geo:urlForMoreInformation>http</geo:urlForMoreInformation>
+         <geo:siteMap></geo:siteMap>
+         <geo:siteDiagram></geo:siteDiagram>
+         <geo:horizonMask></geo:horizonMask>
+         <geo:monumentDescription></geo:monumentDescription>
+         <geo:sitePictures></geo:sitePictures>
          <geo:notes>Hardcopy Information available from Responsible Agency</geo:notes>
+         <geo:antennaGraphicsWithDimensions></geo:antennaGraphicsWithDimensions>
+         <geo:insertTextGraphicFromAntenna></geo:insertTextGraphicFromAntenna>
+         <geo:DOI codeSpace="CodeSpaceTODO">CodeTypeTODO</geo:DOI>
       </geo:moreInformation>
    </geo:siteLog>
 </geo:GeodesyML>

@@ -26,30 +26,20 @@
          <geo:city>Wharekauri</geo:city>
          <geo:state>Chatham Island</geo:state>
          <geo:countryCodeISO>NZL</geo:countryCodeISO>
-         <geo:tectonicPlate>PAC</geo:tectonicPlate>
+         <geo:tectonicPlate codeSpace="">PAC</geo:tectonicPlate>
          <geo:approximatePositionITRF>
             <geo:xCoordinateInMeters>-4607855.9</geo:xCoordinateInMeters>
             <geo:yCoordinateInMeters>-272375.8</geo:yCoordinateInMeters>
             <geo:zCoordinateInMeters>-4386954.5</geo:zCoordinateInMeters>
-            <geo:latitude-North>-434407.7100000000209547579288482666015625</geo:latitude-North>
-            <geo:longitude-East>-1763701.61000000010244548320770263671875</geo:longitude-East>
+            <geo:latitude-North>-43.73547500000000809450284577906131744384765625</geo:latitude-North>
+            <geo:longitude-East>-176.61711388888892315662815235555171966552734375</geo:longitude-East>
             <geo:elevation-m_ellips.>75.7</geo:elevation-m_ellips.>
          </geo:approximatePositionITRF>
       </geo:siteLocation>
       <geo:gnssReceivers>
          <geo:gnssReceiver gml:id="GnssReceiverType_470">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">TRIMBLE NETR9</geo:receiverType>
-            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
-            <geo:serialNumber>5049K72269</geo:serialNumber>
-            <geo:firmwareVersion>4.17</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>3.0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>2011-04-05T01:24:00Z</geo:dateInstalled>
-            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver gml:id="GnssReceiverType_471">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">TRIMBLE NETRS</geo:receiverType>
+            <geo:manufacturerSerialNumber>4445240414</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">TRIMBLE NETRS</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
             <geo:serialNumber>4445240414</geo:serialNumber>
             <geo:firmwareVersion>1.20</geo:firmwareVersion>
@@ -58,36 +48,61 @@
             <geo:dateRemoved>2011-04-04T23:59:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
          </geo:gnssReceiver>
+         <geo:dateInserted>2007-12-10T00:00:00Z</geo:dateInserted>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_471">
+            <geo:manufacturerSerialNumber>5049K72269</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">TRIMBLE NETR9</geo:receiverType>
+            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
+            <geo:serialNumber>5049K72269</geo:serialNumber>
+            <geo:firmwareVersion>4.17</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>3.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2011-04-05T01:24:00Z</geo:dateInstalled>
+            <geo:dateRemoved></geo:dateRemoved>
+            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
+         </geo:gnssReceiver>
+         <geo:dateInserted>2011-04-05T01:24:00Z</geo:dateInserted>
       </geo:gnssReceivers>
       <geo:gnssAntennas>
          <geo:gnssAntenna gml:id="GnssAntennaType_219">
-            <geo:antennaType codeList="codelist" codeListValue="codeListValue">TRM55971.00     NONE</geo:antennaType>
+            <geo:manufacturerSerialNumber>30260402</geo:manufacturerSerialNumber>
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue" codeSpace="codespace">TRM55971.00     NONE</geo:antennaType>
             <geo:serialNumber>30260402</geo:serialNumber>
-            <geo:antennaReferencePoint>BAM</geo:antennaReferencePoint>
+            <geo:antennaReferencePoint codeSpace="">BAM</geo:antennaReferencePoint>
             <geo:marker-arpUpEcc.>0.002</geo:marker-arpUpEcc.>
             <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
+            <geo:antennaRadomeType codeSpace="CodeSpaceAttr">NONE</geo:antennaRadomeType>
+            <geo:radomeSerialNumber></geo:radomeSerialNumber>
+            <geo:antennaCableType></geo:antennaCableType>
             <geo:antennaCableLength>0.0</geo:antennaCableLength>
             <geo:dateInstalled>2007-12-10T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved></geo:dateRemoved>
          </geo:gnssAntenna>
+         <geo:dateInserted>2007-12-10T00:00:00Z</geo:dateInserted>
       </geo:gnssAntennas>
       <geo:frequencyStandards>
          <geo:frequencyStandard gml:id="FrequencyStandardType_182">
-            <geo:standardType>INTERNAL</geo:standardType>
+            <geo:standardType codeSpace="">INTERNAL</geo:standardType>
             <geo:inputFrequency>0.0</geo:inputFrequency>
-            <gml:validTime>
-               <gml:TimePeriod>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_275">
                   <gml:beginPosition>2007-12-10T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
          </geo:frequencyStandard>
+         <geo:dateInserted>2016-04-14T00:03:07Z</geo:dateInserted>
       </geo:frequencyStandards>
-      <geo:siteContact>
-         <gmd:MD_SecurityConstraints/>
-         <gmd:CI_ResponsibleParty>
+      <geo:siteContact gml:id="AgencyPropertyType_226">
+         <gmd:MD_SecurityConstraints id="MDSecurityConstraintsType_226">
+            <gmd:classification>
+               <gmd:MD_ClassificationCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:classification>
+         </gmd:MD_SecurityConstraints>
+         <gmd:CI_ResponsibleParty id="CIResponsiblePartyType_226">
             <gmd:individualName>
                <gco:CharacterString>GeoNet Reception</gco:CharacterString>
             </gmd:individualName>
@@ -95,9 +110,9 @@
                <gco:CharacterString>GNS Science</gco:CharacterString>
             </gmd:organisationName>
             <gmd:contactInfo>
-               <gmd:CI_Contact>
+               <gmd:CI_Contact id="CIContactType_226">
                   <gmd:phone>
-                     <gmd:CI_Telephone>
+                     <gmd:CI_Telephone id="CITelephoneType_84">
                         <gmd:voice>
                            <gco:CharacterString>+64 4 570 1444</gco:CharacterString>
                         </gmd:voice>
@@ -107,7 +122,7 @@
                      </gmd:CI_Telephone>
                   </gmd:phone>
                   <gmd:address>
-                     <gmd:CI_Address>
+                     <gmd:CI_Address id="CIAddressType_226">
                         <gmd:deliveryPoint>
                            <gco:CharacterString>GNS Science</gco:CharacterString>
                         </gmd:deliveryPoint>
@@ -118,26 +133,46 @@
                   </gmd:address>
                </gmd:CI_Contact>
             </gmd:contactInfo>
+            <gmd:role>
+               <gmd:CI_RoleCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:role>
          </gmd:CI_ResponsibleParty>
       </geo:siteContact>
-      <geo:siteMetadataCustodian>
-         <gmd:MD_SecurityConstraints/>
-         <gmd:CI_ResponsibleParty>
+      <geo:siteMetadataCustodian gml:id="AgencyPropertyType_227">
+         <gmd:MD_SecurityConstraints id="MDSecurityConstraintsType_227">
+            <gmd:classification>
+               <gmd:MD_ClassificationCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:classification>
+         </gmd:MD_SecurityConstraints>
+         <gmd:CI_ResponsibleParty id="CIResponsiblePartyType_227">
             <gmd:organisationName>
                <gco:CharacterString>GNS Science</gco:CharacterString>
             </gmd:organisationName>
             <gmd:contactInfo>
-               <gmd:CI_Contact>
+               <gmd:CI_Contact id="CIContactType_227">
                   <gmd:address>
-                     <gmd:CI_Address/>
+                     <gmd:CI_Address id="CIAddressType_227"/>
                   </gmd:address>
                </gmd:CI_Contact>
             </gmd:contactInfo>
+            <gmd:role>
+               <gmd:CI_RoleCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:role>
          </gmd:CI_ResponsibleParty>
       </geo:siteMetadataCustodian>
       <geo:moreInformation>
+         <geo:dataCenter>www.geonet.org.nz</geo:dataCenter>
+         <geo:dataCenter>www.geonet.org.nz</geo:dataCenter>
          <geo:urlForMoreInformation>www.geonet.org.nz</geo:urlForMoreInformation>
+         <geo:siteMap></geo:siteMap>
+         <geo:siteDiagram></geo:siteDiagram>
+         <geo:horizonMask></geo:horizonMask>
+         <geo:monumentDescription></geo:monumentDescription>
+         <geo:sitePictures></geo:sitePictures>
          <geo:notes>From www.geonet.org.nz, navigate Resources -> Network -> DELTA for site information.</geo:notes>
+         <geo:antennaGraphicsWithDimensions></geo:antennaGraphicsWithDimensions>
+         <geo:insertTextGraphicFromAntenna></geo:insertTextGraphicFromAntenna>
+         <geo:DOI codeSpace="CodeSpaceTODO">CodeTypeTODO</geo:DOI>
       </geo:moreInformation>
    </geo:siteLog>
 </geo:GeodesyML>

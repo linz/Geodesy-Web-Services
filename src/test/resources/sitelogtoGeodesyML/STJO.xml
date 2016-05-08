@@ -11,6 +11,7 @@
          <geo:fourCharacterID>STJO</geo:fourCharacterID>
          <geo:monumentInscription>920000</geo:monumentInscription>
          <geo:iersDOMESNumber>40101M001</geo:iersDOMESNumber>
+         <geo:cdpNumber></geo:cdpNumber>
          <geo:monumentDescription>concrete pier</geo:monumentDescription>
          <geo:heightOfTheMonument>1.5</geo:heightOfTheMonument>
          <geo:monumentFoundation>Exposed bedrock</geo:monumentFoundation>
@@ -27,129 +28,34 @@
          <geo:city>St. John's</geo:city>
          <geo:state>NL</geo:state>
          <geo:countryCodeISO>CAN</geo:countryCodeISO>
-         <geo:tectonicPlate>North American</geo:tectonicPlate>
+         <geo:tectonicPlate codeSpace="">North American</geo:tectonicPlate>
          <geo:approximatePositionITRF>
             <geo:xCoordinateInMeters>2612631.2</geo:xCoordinateInMeters>
             <geo:yCoordinateInMeters>-3426807.0</geo:yCoordinateInMeters>
             <geo:zCoordinateInMeters>4686757.8</geo:zCoordinateInMeters>
-            <geo:latitude-North>473542.859999999986030161380767822265625</geo:latitude-North>
-            <geo:longitude-East>-524039.890000000013969838619232177734375</geo:longitude-East>
+            <geo:latitude-North>47.5952388888888862084058928303420543670654296875</geo:latitude-North>
+            <geo:longitude-East>-52.677747222222222944765235297381877899169921875</geo:longitude-East>
             <geo:elevation-m_ellips.>152.80</geo:elevation-m_ellips.>
          </geo:approximatePositionITRF>
          <geo:notes>STJO is a continuously tracking GNSS station and is part of the Canadian Active Control System (CACS). The station is located at Newfoundland. The station is colocated with the STJ2 GNSS station, the STJ3 GNSS beacon and the VLBI reference mark.</geo:notes>
       </geo:siteLocation>
       <geo:gnssReceivers>
          <geo:gnssReceiver gml:id="GnssReceiverType_2429">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">AOA SNR-12 ACT</geo:receiverType>
+            <geo:manufacturerSerialNumber>T161</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">ROGUE SNR-8000</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>203-U</geo:serialNumber>
-            <geo:firmwareVersion>3.3.32.2N</geo:firmwareVersion>
+            <geo:serialNumber>T161</geo:serialNumber>
+            <geo:firmwareVersion>TURBO 3.2.32.5X</geo:firmwareVersion>
             <geo:elevationCutoffSetting>10.0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>2003-06-11T16:45:00Z</geo:dateInstalled>
-            <geo:dateRemoved>2003-08-08T13:35:00Z</geo:dateRemoved>
+            <geo:dateInstalled>1996-12-14T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1997-01-30T20:02:00Z</geo:dateRemoved>
          </geo:gnssReceiver>
+         <geo:dateInserted>1996-12-14T00:00:00Z</geo:dateInserted>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
          <geo:gnssReceiver gml:id="GnssReceiverType_2430">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ROGUE SNR-12 RM</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>234</geo:serialNumber>
-            <geo:firmwareVersion>TURBO 3.2.32.5X</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>10.0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>1997-06-24T17:34:00Z</geo:dateInstalled>
-            <geo:dateRemoved>1999-02-08T20:11:00Z</geo:dateRemoved>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver gml:id="GnssReceiverType_2431">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ROGUE SNR-12 RM</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>236</geo:serialNumber>
-            <geo:firmwareVersion>TURBO 3.2.32.5X</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>10.0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>1997-01-30T21:20:00Z</geo:dateInstalled>
-            <geo:dateRemoved>1997-06-23T13:28:00Z</geo:dateRemoved>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver gml:id="GnssReceiverType_2432">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ROGUE SNR-8C</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>CR310/DIS</geo:serialNumber>
-            <geo:firmwareVersion>MEENIX 7.?</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>10.0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>1992-05-24T00:00:00Z</geo:dateInstalled>
-            <geo:dateRemoved>1992-12-21T00:00:00Z</geo:dateRemoved>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver gml:id="GnssReceiverType_2433">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ROGUE SNR-8000</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>T161</geo:serialNumber>
-            <geo:firmwareVersion>TURBO 3.2.32.1</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>10.0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>1995-10-12T19:33:00Z</geo:dateInstalled>
-            <geo:dateRemoved>1995-11-03T12:30:00Z</geo:dateRemoved>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver gml:id="GnssReceiverType_2434">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">JAVAD TRE_G3T DELTA</geo:receiverType>
-            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
-            <geo:serialNumber>00535</geo:serialNumber>
-            <geo:firmwareVersion>3.5.0</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>5.0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>2013-01-31T23:00:00Z</geo:dateInstalled>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver gml:id="GnssReceiverType_2435">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ROGUE SNR-8C</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>CR310/DIS</geo:serialNumber>
-            <geo:firmwareVersion>MEENIX 7.3</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>10.0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>1992-12-21T00:00:00Z</geo:dateInstalled>
-            <geo:dateRemoved>1994-02-25T20:00:00Z</geo:dateRemoved>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver gml:id="GnssReceiverType_2436">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">AOA SNR-8000 ACT</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>T292-U</geo:serialNumber>
-            <geo:firmwareVersion>3.3.32.2N</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>10.0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>2010-03-18T15:00:00Z</geo:dateInstalled>
-            <geo:dateRemoved>2013-01-31T23:00:00Z</geo:dateRemoved>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver gml:id="GnssReceiverType_2437">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">AOA BENCHMARK ACT</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>1130</geo:serialNumber>
-            <geo:firmwareVersion>3.3.32.2N</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>10.0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>2004-02-25T00:00:00Z</geo:dateInstalled>
-            <geo:dateRemoved>2010-03-18T14:55:00Z</geo:dateRemoved>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver gml:id="GnssReceiverType_2438">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ROGUE SNR-8000</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>T350</geo:serialNumber>
-            <geo:firmwareVersion>TURBO 3.2.32.5X</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>10.0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>1999-02-22T22:00:00Z</geo:dateInstalled>
-            <geo:dateRemoved>1999-07-29T23:59:00Z</geo:dateRemoved>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver gml:id="GnssReceiverType_2439">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ROGUE SNR-8000</geo:receiverType>
+            <geo:manufacturerSerialNumber>T350</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">ROGUE SNR-8000</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
             <geo:serialNumber>T350</geo:serialNumber>
             <geo:firmwareVersion>TURBO 3.2.32.5X</geo:firmwareVersion>
@@ -157,10 +63,155 @@
             <geo:dateInstalled>1999-08-01T00:00:00Z</geo:dateInstalled>
             <geo:dateRemoved>1999-08-05T23:59:00Z</geo:dateRemoved>
          </geo:gnssReceiver>
+         <geo:dateInserted>1999-08-01T00:00:00Z</geo:dateInserted>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_2431">
+            <geo:manufacturerSerialNumber>T161</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">ROGUE SNR-8000</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>T161</geo:serialNumber>
+            <geo:firmwareVersion>TURBO 3.2.32.1</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>10.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>1995-10-12T19:33:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1995-11-03T12:30:00Z</geo:dateRemoved>
+         </geo:gnssReceiver>
+         <geo:dateInserted>1995-10-12T19:33:00Z</geo:dateInserted>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_2432">
+            <geo:manufacturerSerialNumber>203-U</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">AOA SNR-12 ACT</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>203-U</geo:serialNumber>
+            <geo:firmwareVersion>3.3.32.2N</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>10.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2003-06-11T16:45:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2003-08-08T13:35:00Z</geo:dateRemoved>
+         </geo:gnssReceiver>
+         <geo:dateInserted>2003-06-11T16:45:00Z</geo:dateInserted>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_2433">
+            <geo:manufacturerSerialNumber>T161</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">ROGUE SNR-8000</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>T161</geo:serialNumber>
+            <geo:firmwareVersion>TURBO 3.0.32.2</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>10.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>1995-03-02T15:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1995-10-12T19:33:00Z</geo:dateRemoved>
+         </geo:gnssReceiver>
+         <geo:dateInserted>1995-03-02T15:00:00Z</geo:dateInserted>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_2434">
+            <geo:manufacturerSerialNumber>00535</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">JAVAD TRE_G3T DELTA</geo:receiverType>
+            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
+            <geo:serialNumber>00535</geo:serialNumber>
+            <geo:firmwareVersion>3.5.0</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>5.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2013-01-31T23:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved></geo:dateRemoved>
+         </geo:gnssReceiver>
+         <geo:dateInserted>2013-01-31T23:00:00Z</geo:dateInserted>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_2435">
+            <geo:manufacturerSerialNumber>T305</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">ROGUE SNR-8000</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>T305</geo:serialNumber>
+            <geo:firmwareVersion>TURBO 3.2.32.5X</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>10.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>1999-02-08T21:11:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1999-02-22T20:35:00Z</geo:dateRemoved>
+         </geo:gnssReceiver>
+         <geo:dateInserted>1999-02-08T21:11:00Z</geo:dateInserted>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_2436">
+            <geo:manufacturerSerialNumber>1130</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">AOA BENCHMARK ACT</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>1130</geo:serialNumber>
+            <geo:firmwareVersion>3.3.32.2N</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>10.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2004-02-25T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2010-03-18T14:55:00Z</geo:dateRemoved>
+         </geo:gnssReceiver>
+         <geo:dateInserted>2004-02-25T00:00:00Z</geo:dateInserted>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_2437">
+            <geo:manufacturerSerialNumber>CR310/DIS</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">ROGUE SNR-8C</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>CR310/DIS</geo:serialNumber>
+            <geo:firmwareVersion>MEENIX 7.?</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>10.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>1992-05-24T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1992-12-21T00:00:00Z</geo:dateRemoved>
+         </geo:gnssReceiver>
+         <geo:dateInserted>1992-05-24T00:00:00Z</geo:dateInserted>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_2438">
+            <geo:manufacturerSerialNumber>CR310/DIS</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">ROGUE SNR-8C</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>CR310/DIS</geo:serialNumber>
+            <geo:firmwareVersion>MEENIX 7.3</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>10.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>1992-12-21T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1994-02-25T20:00:00Z</geo:dateRemoved>
+         </geo:gnssReceiver>
+         <geo:dateInserted>1992-12-21T00:00:00Z</geo:dateInserted>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_2439">
+            <geo:manufacturerSerialNumber>2025</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">AOA BENCHMARK ACT</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>2025</geo:serialNumber>
+            <geo:firmwareVersion>3.3.32.2N</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>10.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2003-09-24T13:15:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2004-02-24T18:00:00Z</geo:dateRemoved>
+         </geo:gnssReceiver>
+         <geo:dateInserted>2003-09-24T13:15:00Z</geo:dateInserted>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
          <geo:gnssReceiver gml:id="GnssReceiverType_2440">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ROGUE SNR-8000</geo:receiverType>
+            <geo:manufacturerSerialNumber>T350</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">ROGUE SNR-8000</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>T350</geo:serialNumber>
+            <geo:firmwareVersion>TURBO 3.2.32.5X</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>10.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>1999-02-22T22:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1999-07-29T23:59:00Z</geo:dateRemoved>
+         </geo:gnssReceiver>
+         <geo:dateInserted>1999-02-22T22:00:00Z</geo:dateInserted>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_2441">
+            <geo:manufacturerSerialNumber>234-U</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">AOA SNR-12 ACT</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>234-U</geo:serialNumber>
+            <geo:firmwareVersion>3.3.32.2N</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>10.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2003-08-08T14:30:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2003-09-08T05:45:00Z</geo:dateRemoved>
+         </geo:gnssReceiver>
+         <geo:dateInserted>2003-08-08T14:30:00Z</geo:dateInserted>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_2442">
+            <geo:manufacturerSerialNumber>T230</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">ROGUE SNR-8000</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
             <geo:serialNumber>T230</geo:serialNumber>
             <geo:firmwareVersion>TURBO 3.0.32.2</geo:firmwareVersion>
@@ -168,21 +219,51 @@
             <geo:dateInstalled>1995-02-26T13:28:00Z</geo:dateInstalled>
             <geo:dateRemoved>1995-03-02T15:00:00Z</geo:dateRemoved>
          </geo:gnssReceiver>
+         <geo:dateInserted>1995-02-26T13:28:00Z</geo:dateInserted>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
-         <geo:gnssReceiver gml:id="GnssReceiverType_2441">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ROGUE SNR-8000</geo:receiverType>
+         <geo:gnssReceiver gml:id="GnssReceiverType_2443">
+            <geo:manufacturerSerialNumber>T230</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">ROGUE SNR-8000</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>T161</geo:serialNumber>
-            <geo:firmwareVersion>TURBO 3.2.32.6X</geo:firmwareVersion>
+            <geo:serialNumber>T230</geo:serialNumber>
+            <geo:firmwareVersion>TURBO 3.2.32.1</geo:firmwareVersion>
             <geo:elevationCutoffSetting>10.0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>1996-08-01T22:00:00Z</geo:dateInstalled>
-            <geo:dateRemoved>1996-12-14T00:00:00Z</geo:dateRemoved>
+            <geo:dateInstalled>1995-11-03T12:30:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1996-08-01T22:00:00Z</geo:dateRemoved>
          </geo:gnssReceiver>
+         <geo:dateInserted>1995-11-03T12:30:00Z</geo:dateInserted>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
-         <geo:gnssReceiver gml:id="GnssReceiverType_2442">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">AOA SNR-12 ACT</geo:receiverType>
+         <geo:gnssReceiver gml:id="GnssReceiverType_2444">
+            <geo:manufacturerSerialNumber>T292-U</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">AOA SNR-8000 ACT</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>T292-U</geo:serialNumber>
+            <geo:firmwareVersion>3.3.32.2N</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>10.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2010-03-18T15:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2013-01-31T23:00:00Z</geo:dateRemoved>
+         </geo:gnssReceiver>
+         <geo:dateInserted>2010-03-18T15:00:00Z</geo:dateInserted>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_2445">
+            <geo:manufacturerSerialNumber>236</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">ROGUE SNR-12 RM</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>236</geo:serialNumber>
+            <geo:firmwareVersion>TURBO 3.2.32.5X</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>10.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>1997-01-30T21:20:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1997-06-23T13:28:00Z</geo:dateRemoved>
+         </geo:gnssReceiver>
+         <geo:dateInserted>1997-01-30T21:20:00Z</geo:dateInserted>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_2446">
+            <geo:manufacturerSerialNumber>234-U</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">AOA SNR-12 ACT</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
             <geo:serialNumber>234-U</geo:serialNumber>
             <geo:firmwareVersion>3.3.32.2N</geo:firmwareVersion>
@@ -191,65 +272,12 @@
             <geo:dateRemoved>1999-07-31T23:59:00Z</geo:dateRemoved>
             <geo:notes>Tracking problems</geo:notes>
          </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver gml:id="GnssReceiverType_2443">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">AOA SNR-12 ACT</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>234-U</geo:serialNumber>
-            <geo:firmwareVersion>3.3.32.2N</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>10.0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>2003-08-08T14:30:00Z</geo:dateInstalled>
-            <geo:dateRemoved>2003-09-08T05:45:00Z</geo:dateRemoved>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver gml:id="GnssReceiverType_2444">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ROGUE SNR-8000</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>T161</geo:serialNumber>
-            <geo:firmwareVersion>TURBO 3.0.32.2</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>10.0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>1995-03-02T15:00:00Z</geo:dateInstalled>
-            <geo:dateRemoved>1995-10-12T19:33:00Z</geo:dateRemoved>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver gml:id="GnssReceiverType_2445">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">AOA SNR-12 ACT</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>204-U</geo:serialNumber>
-            <geo:firmwareVersion>3.3.32.2N</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>10.0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>1999-08-06T00:00:00Z</geo:dateInstalled>
-            <geo:dateRemoved>2003-06-08T18:26:00Z</geo:dateRemoved>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver gml:id="GnssReceiverType_2446">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ROGUE SNR-8000</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>T305</geo:serialNumber>
-            <geo:firmwareVersion>TURBO 3.2.32.5X</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>10.0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>1999-02-08T21:11:00Z</geo:dateInstalled>
-            <geo:dateRemoved>1999-02-22T20:35:00Z</geo:dateRemoved>
-         </geo:gnssReceiver>
+         <geo:dateInserted>1999-07-30T00:00:00Z</geo:dateInserted>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
          <geo:gnssReceiver gml:id="GnssReceiverType_2447">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">AOA BENCHMARK ACT</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>2025</geo:serialNumber>
-            <geo:firmwareVersion>3.3.32.2N</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>10.0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>2003-09-24T13:15:00Z</geo:dateInstalled>
-            <geo:dateRemoved>2004-02-24T18:00:00Z</geo:dateRemoved>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver gml:id="GnssReceiverType_2448">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ROGUE SNR-8000</geo:receiverType>
+            <geo:manufacturerSerialNumber>T164</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">ROGUE SNR-8000</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
             <geo:serialNumber>T164</geo:serialNumber>
             <geo:firmwareVersion>TURBO 2.8</geo:firmwareVersion>
@@ -257,150 +285,199 @@
             <geo:dateInstalled>1994-02-26T00:10:00Z</geo:dateInstalled>
             <geo:dateRemoved>1995-02-26T12:00:00Z</geo:dateRemoved>
          </geo:gnssReceiver>
+         <geo:dateInserted>1994-02-26T00:10:00Z</geo:dateInserted>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_2448">
+            <geo:manufacturerSerialNumber>204-U</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">AOA SNR-12 ACT</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>204-U</geo:serialNumber>
+            <geo:firmwareVersion>3.3.32.2N</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>10.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>1999-08-06T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2003-06-08T18:26:00Z</geo:dateRemoved>
+         </geo:gnssReceiver>
+         <geo:dateInserted>1999-08-06T00:00:00Z</geo:dateInserted>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
          <geo:gnssReceiver gml:id="GnssReceiverType_2449">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ROGUE SNR-8000</geo:receiverType>
+            <geo:manufacturerSerialNumber>234</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">ROGUE SNR-12 RM</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>T230</geo:serialNumber>
-            <geo:firmwareVersion>TURBO 3.2.32.1</geo:firmwareVersion>
+            <geo:serialNumber>234</geo:serialNumber>
+            <geo:firmwareVersion>TURBO 3.2.32.5X</geo:firmwareVersion>
             <geo:elevationCutoffSetting>10.0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>1995-11-03T12:30:00Z</geo:dateInstalled>
-            <geo:dateRemoved>1996-08-01T22:00:00Z</geo:dateRemoved>
+            <geo:dateInstalled>1997-06-24T17:34:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1999-02-08T20:11:00Z</geo:dateRemoved>
          </geo:gnssReceiver>
+         <geo:dateInserted>1997-06-24T17:34:00Z</geo:dateInserted>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
          <geo:gnssReceiver gml:id="GnssReceiverType_2450">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ROGUE SNR-8000</geo:receiverType>
+            <geo:manufacturerSerialNumber>T161</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">ROGUE SNR-8000</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
             <geo:serialNumber>T161</geo:serialNumber>
-            <geo:firmwareVersion>TURBO 3.2.32.5X</geo:firmwareVersion>
+            <geo:firmwareVersion>TURBO 3.2.32.6X</geo:firmwareVersion>
             <geo:elevationCutoffSetting>10.0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>1996-12-14T00:00:00Z</geo:dateInstalled>
-            <geo:dateRemoved>1997-01-30T20:02:00Z</geo:dateRemoved>
+            <geo:dateInstalled>1996-08-01T22:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1996-12-14T00:00:00Z</geo:dateRemoved>
          </geo:gnssReceiver>
+         <geo:dateInserted>1996-08-01T22:00:00Z</geo:dateInserted>
       </geo:gnssReceivers>
       <geo:gnssAntennas>
          <geo:gnssAntenna gml:id="GnssAntennaType_1078">
-            <geo:antennaType codeList="codelist" codeListValue="codeListValue">AOAD/M_T        NONE</geo:antennaType>
+            <geo:manufacturerSerialNumber>171</geo:manufacturerSerialNumber>
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue" codeSpace="codespace">AOAD/M_T        NONE</geo:antennaType>
             <geo:serialNumber>171</geo:serialNumber>
-            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
-            <geo:marker-arpUpEcc.>0.003</geo:marker-arpUpEcc.>
-            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
-            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
-            <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
-            <geo:antennaCableLength>0.0</geo:antennaCableLength>
-            <geo:dateInstalled>1994-03-14T20:03:00Z</geo:dateInstalled>
-            <geo:dateRemoved>1995-02-26T12:00:00Z</geo:dateRemoved>
-         </geo:gnssAntenna>
-      </geo:gnssAntennas>
-      <geo:gnssAntennas>
-         <geo:gnssAntenna gml:id="GnssAntennaType_1079">
-            <geo:antennaType codeList="codelist" codeListValue="codeListValue">AOAD/M_T        NONE</geo:antennaType>
-            <geo:serialNumber>366</geo:serialNumber>
-            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:antennaReferencePoint codeSpace="">BPA</geo:antennaReferencePoint>
             <geo:marker-arpUpEcc.>0.1</geo:marker-arpUpEcc.>
             <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
-            <geo:antennaCableLength>0.0</geo:antennaCableLength>
-            <geo:dateInstalled>1995-02-26T13:28:00Z</geo:dateInstalled>
-            <geo:dateRemoved>1995-03-02T21:50:00Z</geo:dateRemoved>
-         </geo:gnssAntenna>
-      </geo:gnssAntennas>
-      <geo:gnssAntennas>
-         <geo:gnssAntenna gml:id="GnssAntennaType_1080">
-            <geo:antennaType codeList="codelist" codeListValue="codeListValue">AOAD/M_T        NONE</geo:antennaType>
-            <geo:serialNumber>388</geo:serialNumber>
-            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
-            <geo:marker-arpUpEcc.>0.1</geo:marker-arpUpEcc.>
-            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
-            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
-            <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
-            <geo:antennaCableLength>0.0</geo:antennaCableLength>
-            <geo:dateInstalled>1995-11-03T12:30:00Z</geo:dateInstalled>
-            <geo:dateRemoved>1996-07-31T00:00:00Z</geo:dateRemoved>
-         </geo:gnssAntenna>
-      </geo:gnssAntennas>
-      <geo:gnssAntennas>
-         <geo:gnssAntenna gml:id="GnssAntennaType_1081">
-            <geo:antennaType codeList="codelist" codeListValue="codeListValue">AOAD/M_T        NONE</geo:antennaType>
-            <geo:serialNumber>473</geo:serialNumber>
-            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
-            <geo:marker-arpUpEcc.>0.1</geo:marker-arpUpEcc.>
-            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
-            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
-            <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
-            <geo:antennaCableType>LDF4-50A</geo:antennaCableType>
-            <geo:antennaCableLength>34.0</geo:antennaCableLength>
-            <geo:dateInstalled>2013-01-31T23:00:00Z</geo:dateInstalled>
-            <geo:notes>Upgraded LNA accepts GNSS spectrum</geo:notes>
-         </geo:gnssAntenna>
-      </geo:gnssAntennas>
-      <geo:gnssAntennas>
-         <geo:gnssAntenna gml:id="GnssAntennaType_1082">
-            <geo:antennaType codeList="codelist" codeListValue="codeListValue">AOAD/M_B        NONE</geo:antennaType>
-            <geo:serialNumber>114</geo:serialNumber>
-            <geo:antennaReferencePoint>BCR</geo:antennaReferencePoint>
-            <geo:marker-arpUpEcc.>0.162</geo:marker-arpUpEcc.>
-            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
-            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
-            <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
-            <geo:antennaCableLength>0.0</geo:antennaCableLength>
-            <geo:dateInstalled>1992-05-24T00:00:00Z</geo:dateInstalled>
-            <geo:dateRemoved>1994-03-14T15:00:00Z</geo:dateRemoved>
-         </geo:gnssAntenna>
-      </geo:gnssAntennas>
-      <geo:gnssAntennas>
-         <geo:gnssAntenna gml:id="GnssAntennaType_1083">
-            <geo:antennaType codeList="codelist" codeListValue="codeListValue">AOAD/M_T        NONE</geo:antennaType>
-            <geo:serialNumber>171</geo:serialNumber>
-            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
-            <geo:marker-arpUpEcc.>0.1</geo:marker-arpUpEcc.>
-            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
-            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
-            <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
+            <geo:antennaRadomeType codeSpace="CodeSpaceAttr">NONE</geo:antennaRadomeType>
+            <geo:radomeSerialNumber></geo:radomeSerialNumber>
+            <geo:antennaCableType></geo:antennaCableType>
             <geo:antennaCableLength>0.0</geo:antennaCableLength>
             <geo:dateInstalled>1995-03-02T21:56:00Z</geo:dateInstalled>
             <geo:dateRemoved>1995-11-03T12:30:00Z</geo:dateRemoved>
          </geo:gnssAntenna>
+         <geo:dateInserted>1995-03-02T21:56:00Z</geo:dateInserted>
       </geo:gnssAntennas>
       <geo:gnssAntennas>
-         <geo:gnssAntenna gml:id="GnssAntennaType_1084">
-            <geo:antennaType codeList="codelist" codeListValue="codeListValue">AOAD/M_T        NONE</geo:antennaType>
-            <geo:serialNumber>362</geo:serialNumber>
-            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+         <geo:gnssAntenna gml:id="GnssAntennaType_1079">
+            <geo:manufacturerSerialNumber>284</geo:manufacturerSerialNumber>
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue" codeSpace="codespace">AOAD/M_T        NONE</geo:antennaType>
+            <geo:serialNumber>284</geo:serialNumber>
+            <geo:antennaReferencePoint codeSpace="">BPA</geo:antennaReferencePoint>
             <geo:marker-arpUpEcc.>0.1</geo:marker-arpUpEcc.>
             <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
+            <geo:antennaRadomeType codeSpace="CodeSpaceAttr">NONE</geo:antennaRadomeType>
+            <geo:radomeSerialNumber></geo:radomeSerialNumber>
+            <geo:antennaCableType></geo:antennaCableType>
+            <geo:antennaCableLength>0.0</geo:antennaCableLength>
+            <geo:dateInstalled>1996-08-01T22:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2000-05-26T20:20:00Z</geo:dateRemoved>
+         </geo:gnssAntenna>
+         <geo:dateInserted>1996-08-01T22:00:00Z</geo:dateInserted>
+      </geo:gnssAntennas>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna gml:id="GnssAntennaType_1080">
+            <geo:manufacturerSerialNumber>388</geo:manufacturerSerialNumber>
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue" codeSpace="codespace">AOAD/M_T        NONE</geo:antennaType>
+            <geo:serialNumber>388</geo:serialNumber>
+            <geo:antennaReferencePoint codeSpace="">BPA</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>0.1</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+            <geo:antennaRadomeType codeSpace="CodeSpaceAttr">NONE</geo:antennaRadomeType>
+            <geo:radomeSerialNumber></geo:radomeSerialNumber>
+            <geo:antennaCableType></geo:antennaCableType>
+            <geo:antennaCableLength>0.0</geo:antennaCableLength>
+            <geo:dateInstalled>1995-11-03T12:30:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1996-07-31T00:00:00Z</geo:dateRemoved>
+         </geo:gnssAntenna>
+         <geo:dateInserted>1995-11-03T12:30:00Z</geo:dateInserted>
+      </geo:gnssAntennas>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna gml:id="GnssAntennaType_1081">
+            <geo:manufacturerSerialNumber>171</geo:manufacturerSerialNumber>
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue" codeSpace="codespace">AOAD/M_T        NONE</geo:antennaType>
+            <geo:serialNumber>171</geo:serialNumber>
+            <geo:antennaReferencePoint codeSpace="">BPA</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>0.003</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+            <geo:antennaRadomeType codeSpace="CodeSpaceAttr">NONE</geo:antennaRadomeType>
+            <geo:radomeSerialNumber></geo:radomeSerialNumber>
+            <geo:antennaCableType></geo:antennaCableType>
+            <geo:antennaCableLength>0.0</geo:antennaCableLength>
+            <geo:dateInstalled>1994-03-14T20:03:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1995-02-26T12:00:00Z</geo:dateRemoved>
+         </geo:gnssAntenna>
+         <geo:dateInserted>1994-03-14T20:03:00Z</geo:dateInserted>
+      </geo:gnssAntennas>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna gml:id="GnssAntennaType_1082">
+            <geo:manufacturerSerialNumber>362</geo:manufacturerSerialNumber>
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue" codeSpace="codespace">AOAD/M_T        NONE</geo:antennaType>
+            <geo:serialNumber>362</geo:serialNumber>
+            <geo:antennaReferencePoint codeSpace="">BPA</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>0.1</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+            <geo:antennaRadomeType codeSpace="CodeSpaceAttr">NONE</geo:antennaRadomeType>
+            <geo:radomeSerialNumber></geo:radomeSerialNumber>
             <geo:antennaCableType>LDF4-50A</geo:antennaCableType>
             <geo:antennaCableLength>34.0</geo:antennaCableLength>
             <geo:dateInstalled>2000-05-26T20:20:00Z</geo:dateInstalled>
             <geo:dateRemoved>2013-01-31T23:00:00Z</geo:dateRemoved>
          </geo:gnssAntenna>
+         <geo:dateInserted>2000-05-26T20:20:00Z</geo:dateInserted>
       </geo:gnssAntennas>
       <geo:gnssAntennas>
-         <geo:gnssAntenna gml:id="GnssAntennaType_1085">
-            <geo:antennaType codeList="codelist" codeListValue="codeListValue">AOAD/M_T        NONE</geo:antennaType>
-            <geo:serialNumber>284</geo:serialNumber>
-            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+         <geo:gnssAntenna gml:id="GnssAntennaType_1083">
+            <geo:manufacturerSerialNumber>473</geo:manufacturerSerialNumber>
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue" codeSpace="codespace">AOAD/M_T        NONE</geo:antennaType>
+            <geo:serialNumber>473</geo:serialNumber>
+            <geo:antennaReferencePoint codeSpace="">BPA</geo:antennaReferencePoint>
             <geo:marker-arpUpEcc.>0.1</geo:marker-arpUpEcc.>
             <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
-            <geo:antennaCableLength>0.0</geo:antennaCableLength>
-            <geo:dateInstalled>1996-08-01T22:00:00Z</geo:dateInstalled>
-            <geo:dateRemoved>2000-05-26T20:20:00Z</geo:dateRemoved>
+            <geo:antennaRadomeType codeSpace="CodeSpaceAttr">NONE</geo:antennaRadomeType>
+            <geo:radomeSerialNumber></geo:radomeSerialNumber>
+            <geo:antennaCableType>LDF4-50A</geo:antennaCableType>
+            <geo:antennaCableLength>34.0</geo:antennaCableLength>
+            <geo:dateInstalled>2013-01-31T23:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved></geo:dateRemoved>
+            <geo:notes>Upgraded LNA accepts GNSS spectrum</geo:notes>
          </geo:gnssAntenna>
+         <geo:dateInserted>2013-01-31T23:00:00Z</geo:dateInserted>
+      </geo:gnssAntennas>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna gml:id="GnssAntennaType_1084">
+            <geo:manufacturerSerialNumber>366</geo:manufacturerSerialNumber>
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue" codeSpace="codespace">AOAD/M_T        NONE</geo:antennaType>
+            <geo:serialNumber>366</geo:serialNumber>
+            <geo:antennaReferencePoint codeSpace="">BPA</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>0.1</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+            <geo:antennaRadomeType codeSpace="CodeSpaceAttr">NONE</geo:antennaRadomeType>
+            <geo:radomeSerialNumber></geo:radomeSerialNumber>
+            <geo:antennaCableType></geo:antennaCableType>
+            <geo:antennaCableLength>0.0</geo:antennaCableLength>
+            <geo:dateInstalled>1995-02-26T13:28:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1995-03-02T21:50:00Z</geo:dateRemoved>
+         </geo:gnssAntenna>
+         <geo:dateInserted>1995-02-26T13:28:00Z</geo:dateInserted>
+      </geo:gnssAntennas>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna gml:id="GnssAntennaType_1085">
+            <geo:manufacturerSerialNumber>114</geo:manufacturerSerialNumber>
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue" codeSpace="codespace">AOAD/M_B        NONE</geo:antennaType>
+            <geo:serialNumber>114</geo:serialNumber>
+            <geo:antennaReferencePoint codeSpace="">BCR</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>0.162</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+            <geo:antennaRadomeType codeSpace="CodeSpaceAttr">NONE</geo:antennaRadomeType>
+            <geo:radomeSerialNumber></geo:radomeSerialNumber>
+            <geo:antennaCableType></geo:antennaCableType>
+            <geo:antennaCableLength>0.0</geo:antennaCableLength>
+            <geo:dateInstalled>1992-05-24T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>1994-03-14T15:00:00Z</geo:dateRemoved>
+         </geo:gnssAntenna>
+         <geo:dateInserted>1992-05-24T00:00:00Z</geo:dateInserted>
       </geo:gnssAntennas>
       <geo:surveyedLocalTies>
          <geo:surveyedLocalTies gml:id="SurveyedLocalTiesType_310">
@@ -417,11 +494,13 @@
             <geo:surveyMethod>GPS TIE + LEVELLING</geo:surveyMethod>
             <geo:dateMeasured>2010-07-03T14:00:00Z</geo:dateMeasured>
          </geo:surveyedLocalTies>
+         <geo:dateInserted>2016-04-14T00:03:12Z</geo:dateInserted>
       </geo:surveyedLocalTies>
       <geo:surveyedLocalTies>
          <geo:surveyedLocalTies gml:id="SurveyedLocalTiesType_311">
             <geo:tiedMarkerName>STJ2</geo:tiedMarkerName>
             <geo:tiedMarkerUsage>GPS ANTENNA REF PT</geo:tiedMarkerUsage>
+            <geo:tiedMarkerCDPNumber></geo:tiedMarkerCDPNumber>
             <geo:tiedMarkerDOMESNumber>40101M004</geo:tiedMarkerDOMESNumber>
             <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
                <geo:dx>-32.91</geo:dx>
@@ -432,6 +511,7 @@
             <geo:surveyMethod>GPS TIE + LEVELLING</geo:surveyMethod>
             <geo:dateMeasured>2010-07-03T14:00:00Z</geo:dateMeasured>
          </geo:surveyedLocalTies>
+         <geo:dateInserted>2016-04-14T00:03:12Z</geo:dateInserted>
       </geo:surveyedLocalTies>
       <geo:surveyedLocalTies>
          <geo:surveyedLocalTies gml:id="SurveyedLocalTiesType_312">
@@ -448,399 +528,419 @@
             <geo:surveyMethod>GPS TIE + LEVELLING</geo:surveyMethod>
             <geo:dateMeasured>1999-09-25T14:00:00Z</geo:dateMeasured>
          </geo:surveyedLocalTies>
+         <geo:dateInserted>2016-04-14T00:03:12Z</geo:dateInserted>
       </geo:surveyedLocalTies>
       <geo:frequencyStandards>
          <geo:frequencyStandard gml:id="FrequencyStandardType_842">
-            <geo:standardType>RUBIDIUM</geo:standardType>
+            <geo:standardType codeSpace="">INTERNAL</geo:standardType>
             <geo:inputFrequency>5.0</geo:inputFrequency>
-            <gml:validTime>
-               <gml:TimePeriod>
-                  <gml:beginPosition>2004-12-04T00:00:00Z</gml:beginPosition>
-                  <gml:endPosition>2004-12-06T00:00:00Z</gml:endPosition>
-               </gml:TimePeriod>
-            </gml:validTime>
-         </geo:frequencyStandard>
-      </geo:frequencyStandards>
-      <geo:frequencyStandards>
-         <geo:frequencyStandard gml:id="FrequencyStandardType_843">
-            <geo:standardType>H-MASER</geo:standardType>
-            <geo:inputFrequency>5.0</geo:inputFrequency>
-            <gml:validTime>
-               <gml:TimePeriod>
-                  <gml:beginPosition>2004-12-15T00:00:00Z</gml:beginPosition>
-                  <gml:endPosition>2005-10-30T00:00:00Z</gml:endPosition>
-               </gml:TimePeriod>
-            </gml:validTime>
-         </geo:frequencyStandard>
-      </geo:frequencyStandards>
-      <geo:frequencyStandards>
-         <geo:frequencyStandard gml:id="FrequencyStandardType_844">
-            <geo:standardType>MASER</geo:standardType>
-            <geo:inputFrequency>5.0</geo:inputFrequency>
-            <gml:validTime>
-               <gml:TimePeriod>
-                  <gml:beginPosition>2007-12-07T00:00:00Z</gml:beginPosition>
-                  <gml:endPosition>2009-06-16T00:00:00Z</gml:endPosition>
-               </gml:TimePeriod>
-            </gml:validTime>
-         </geo:frequencyStandard>
-      </geo:frequencyStandards>
-      <geo:frequencyStandards>
-         <geo:frequencyStandard gml:id="FrequencyStandardType_845">
-            <geo:standardType>RUBIDIUM</geo:standardType>
-            <geo:inputFrequency>5.0</geo:inputFrequency>
-            <gml:validTime>
-               <gml:TimePeriod>
-                  <gml:beginPosition>2005-10-30T00:00:00Z</gml:beginPosition>
-                  <gml:endPosition>2005-12-07T00:00:00Z</gml:endPosition>
-               </gml:TimePeriod>
-            </gml:validTime>
-         </geo:frequencyStandard>
-      </geo:frequencyStandards>
-      <geo:frequencyStandards>
-         <geo:frequencyStandard gml:id="FrequencyStandardType_846">
-            <geo:standardType>H-MASER</geo:standardType>
-            <geo:inputFrequency>5.0</geo:inputFrequency>
-            <gml:validTime>
-               <gml:TimePeriod>
-                  <gml:beginPosition>2005-12-07T00:00:00Z</gml:beginPosition>
-                  <gml:endPosition>2007-12-03T00:00:00Z</gml:endPosition>
-               </gml:TimePeriod>
-            </gml:validTime>
-         </geo:frequencyStandard>
-      </geo:frequencyStandards>
-      <geo:frequencyStandards>
-         <geo:frequencyStandard gml:id="FrequencyStandardType_847">
-            <geo:standardType>H-MASER</geo:standardType>
-            <geo:inputFrequency>5.0</geo:inputFrequency>
-            <gml:validTime>
-               <gml:TimePeriod>
-                  <gml:beginPosition>2011-12-08T00:00:00Z</gml:beginPosition>
-                  <gml:endPosition>2012-12-09T00:00:00Z</gml:endPosition>
-               </gml:TimePeriod>
-            </gml:validTime>
-         </geo:frequencyStandard>
-      </geo:frequencyStandards>
-      <geo:frequencyStandards>
-         <geo:frequencyStandard gml:id="FrequencyStandardType_848">
-            <geo:standardType>H-MASER</geo:standardType>
-            <geo:inputFrequency>5.0</geo:inputFrequency>
-            <gml:validTime>
-               <gml:TimePeriod>
-                  <gml:beginPosition>2003-07-29T00:00:00Z</gml:beginPosition>
-                  <gml:endPosition>2004-11-08T00:00:00Z</gml:endPosition>
-               </gml:TimePeriod>
-            </gml:validTime>
-         </geo:frequencyStandard>
-      </geo:frequencyStandards>
-      <geo:frequencyStandards>
-         <geo:frequencyStandard gml:id="FrequencyStandardType_849">
-            <geo:standardType>CESIUM</geo:standardType>
-            <geo:inputFrequency>5.0</geo:inputFrequency>
-            <gml:validTime>
-               <gml:TimePeriod>
-                  <gml:beginPosition>1995-11-03T00:00:00Z</gml:beginPosition>
-                  <gml:endPosition>1998-08-24T00:00:00Z</gml:endPosition>
-               </gml:TimePeriod>
-            </gml:validTime>
-         </geo:frequencyStandard>
-      </geo:frequencyStandards>
-      <geo:frequencyStandards>
-         <geo:frequencyStandard gml:id="FrequencyStandardType_850">
-            <geo:standardType>RUBIDIUM</geo:standardType>
-            <geo:inputFrequency>5.0</geo:inputFrequency>
-            <gml:validTime>
-               <gml:TimePeriod>
-                  <gml:beginPosition>1992-05-24T00:00:00Z</gml:beginPosition>
-                  <gml:endPosition>1995-11-03T00:00:00Z</gml:endPosition>
-               </gml:TimePeriod>
-            </gml:validTime>
-         </geo:frequencyStandard>
-      </geo:frequencyStandards>
-      <geo:frequencyStandards>
-         <geo:frequencyStandard gml:id="FrequencyStandardType_851">
-            <geo:standardType>INTERNAL</geo:standardType>
-            <geo:inputFrequency>0.0</geo:inputFrequency>
-            <gml:validTime>
-               <gml:TimePeriod>
-                  <gml:beginPosition>2009-12-21T00:00:00Z</gml:beginPosition>
-                  <gml:endPosition>2010-03-18T00:00:00Z</gml:endPosition>
-               </gml:TimePeriod>
-            </gml:validTime>
-         </geo:frequencyStandard>
-      </geo:frequencyStandards>
-      <geo:frequencyStandards>
-         <geo:frequencyStandard gml:id="FrequencyStandardType_852">
-            <geo:standardType>H-MASER</geo:standardType>
-            <geo:inputFrequency>5.0</geo:inputFrequency>
-            <gml:validTime>
-               <gml:TimePeriod>
-                  <gml:beginPosition>2013-01-31T00:00:00Z</gml:beginPosition>
-                  <gml:endPosition></gml:endPosition>
-               </gml:TimePeriod>
-            </gml:validTime>
-         </geo:frequencyStandard>
-      </geo:frequencyStandards>
-      <geo:frequencyStandards>
-         <geo:frequencyStandard gml:id="FrequencyStandardType_853">
-            <geo:standardType>H-MASER</geo:standardType>
-            <geo:inputFrequency>5.0</geo:inputFrequency>
-            <gml:validTime>
-               <gml:TimePeriod>
-                  <gml:beginPosition>2002-11-27T00:00:00Z</gml:beginPosition>
-                  <gml:endPosition>2003-03-08T00:00:00Z</gml:endPosition>
-               </gml:TimePeriod>
-            </gml:validTime>
-         </geo:frequencyStandard>
-      </geo:frequencyStandards>
-      <geo:frequencyStandards>
-         <geo:frequencyStandard gml:id="FrequencyStandardType_854">
-            <geo:standardType>CESIUM</geo:standardType>
-            <geo:inputFrequency>5.0</geo:inputFrequency>
-            <gml:validTime>
-               <gml:TimePeriod>
-                  <gml:beginPosition>1998-10-23T00:00:00Z</gml:beginPosition>
-                  <gml:endPosition>1999-01-10T00:00:00Z</gml:endPosition>
-               </gml:TimePeriod>
-            </gml:validTime>
-         </geo:frequencyStandard>
-      </geo:frequencyStandards>
-      <geo:frequencyStandards>
-         <geo:frequencyStandard gml:id="FrequencyStandardType_855">
-            <geo:standardType>RUBIDIUM</geo:standardType>
-            <geo:inputFrequency>5.0</geo:inputFrequency>
-            <gml:validTime>
-               <gml:TimePeriod>
-                  <gml:beginPosition>2003-04-02T00:00:00Z</gml:beginPosition>
-                  <gml:endPosition>2003-06-08T00:00:00Z</gml:endPosition>
-               </gml:TimePeriod>
-            </gml:validTime>
-         </geo:frequencyStandard>
-      </geo:frequencyStandards>
-      <geo:frequencyStandards>
-         <geo:frequencyStandard gml:id="FrequencyStandardType_856">
-            <geo:standardType>H-MASER</geo:standardType>
-            <geo:inputFrequency>5.0</geo:inputFrequency>
-            <gml:validTime>
-               <gml:TimePeriod>
-                  <gml:beginPosition>2004-12-06T00:00:00Z</gml:beginPosition>
-                  <gml:endPosition>2004-12-10T00:00:00Z</gml:endPosition>
-               </gml:TimePeriod>
-            </gml:validTime>
-         </geo:frequencyStandard>
-      </geo:frequencyStandards>
-      <geo:frequencyStandards>
-         <geo:frequencyStandard gml:id="FrequencyStandardType_857">
-            <geo:standardType>RUBIDIUM</geo:standardType>
-            <geo:inputFrequency>5.0</geo:inputFrequency>
-            <gml:validTime>
-               <gml:TimePeriod>
-                  <gml:beginPosition>2003-07-18T00:00:00Z</gml:beginPosition>
-                  <gml:endPosition>2003-07-29T00:00:00Z</gml:endPosition>
-               </gml:TimePeriod>
-            </gml:validTime>
-         </geo:frequencyStandard>
-      </geo:frequencyStandards>
-      <geo:frequencyStandards>
-         <geo:frequencyStandard gml:id="FrequencyStandardType_858">
-            <geo:standardType>RUBIDIUM</geo:standardType>
-            <geo:inputFrequency>5.0</geo:inputFrequency>
-            <gml:validTime>
-               <gml:TimePeriod>
-                  <gml:beginPosition>2007-12-05T00:00:00Z</gml:beginPosition>
-                  <gml:endPosition>2007-12-06T00:00:00Z</gml:endPosition>
-               </gml:TimePeriod>
-            </gml:validTime>
-         </geo:frequencyStandard>
-      </geo:frequencyStandards>
-      <geo:frequencyStandards>
-         <geo:frequencyStandard gml:id="FrequencyStandardType_859">
-            <geo:standardType>INTERNAL</geo:standardType>
-            <geo:inputFrequency>5.0</geo:inputFrequency>
-            <gml:validTime>
-               <gml:TimePeriod>
-                  <gml:beginPosition>2011-02-09T00:00:00Z</gml:beginPosition>
-                  <gml:endPosition>2011-12-08T00:00:00Z</gml:endPosition>
-               </gml:TimePeriod>
-            </gml:validTime>
-         </geo:frequencyStandard>
-      </geo:frequencyStandards>
-      <geo:frequencyStandards>
-         <geo:frequencyStandard gml:id="FrequencyStandardType_860">
-            <geo:standardType>CESIUM</geo:standardType>
-            <geo:inputFrequency>5.0</geo:inputFrequency>
-            <gml:validTime>
-               <gml:TimePeriod>
-                  <gml:beginPosition>1999-01-12T00:00:00Z</gml:beginPosition>
-                  <gml:endPosition>2002-11-27T00:00:00Z</gml:endPosition>
-               </gml:TimePeriod>
-            </gml:validTime>
-         </geo:frequencyStandard>
-      </geo:frequencyStandards>
-      <geo:frequencyStandards>
-         <geo:frequencyStandard gml:id="FrequencyStandardType_861">
-            <geo:standardType>RUBIDIUM</geo:standardType>
-            <geo:inputFrequency>5.0</geo:inputFrequency>
-            <gml:validTime>
-               <gml:TimePeriod>
-                  <gml:beginPosition>2009-09-15T00:00:00Z</gml:beginPosition>
-                  <gml:endPosition>2009-12-20T00:00:00Z</gml:endPosition>
-               </gml:TimePeriod>
-            </gml:validTime>
-         </geo:frequencyStandard>
-      </geo:frequencyStandards>
-      <geo:frequencyStandards>
-         <geo:frequencyStandard gml:id="FrequencyStandardType_862">
-            <geo:standardType>INTERNAL</geo:standardType>
-            <geo:inputFrequency>5.0</geo:inputFrequency>
-            <gml:validTime>
-               <gml:TimePeriod>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_1395">
                   <gml:beginPosition>2009-06-17T00:00:00Z</gml:beginPosition>
                   <gml:endPosition>2009-09-14T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
          </geo:frequencyStandard>
+         <geo:dateInserted>2016-04-14T00:03:12Z</geo:dateInserted>
       </geo:frequencyStandards>
       <geo:frequencyStandards>
-         <geo:frequencyStandard gml:id="FrequencyStandardType_863">
-            <geo:standardType>INTERNAL</geo:standardType>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_843">
+            <geo:standardType codeSpace="">CESIUM</geo:standardType>
             <geo:inputFrequency>5.0</geo:inputFrequency>
-            <gml:validTime>
-               <gml:TimePeriod>
-                  <gml:beginPosition>2003-03-08T00:00:00Z</gml:beginPosition>
-                  <gml:endPosition>2003-04-02T00:00:00Z</gml:endPosition>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_1396">
+                  <gml:beginPosition>1998-10-23T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>1999-01-10T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
          </geo:frequencyStandard>
+         <geo:dateInserted>2016-04-14T00:03:12Z</geo:dateInserted>
       </geo:frequencyStandards>
       <geo:frequencyStandards>
-         <geo:frequencyStandard gml:id="FrequencyStandardType_864">
-            <geo:standardType>RUBIDIUM</geo:standardType>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_844">
+            <geo:standardType codeSpace="">RUBIDIUM</geo:standardType>
             <geo:inputFrequency>5.0</geo:inputFrequency>
-            <gml:validTime>
-               <gml:TimePeriod>
-                  <gml:beginPosition>1998-08-24T00:00:00Z</gml:beginPosition>
-                  <gml:endPosition>1998-10-23T00:00:00Z</gml:endPosition>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_1397">
+                  <gml:beginPosition>2003-04-02T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2003-06-08T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
          </geo:frequencyStandard>
+         <geo:dateInserted>2016-04-14T00:03:12Z</geo:dateInserted>
       </geo:frequencyStandards>
       <geo:frequencyStandards>
-         <geo:frequencyStandard gml:id="FrequencyStandardType_865">
-            <geo:standardType>QUARTZ</geo:standardType>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_845">
+            <geo:standardType codeSpace="">H-MASER</geo:standardType>
             <geo:inputFrequency>5.0</geo:inputFrequency>
-            <gml:validTime>
-               <gml:TimePeriod>
-                  <gml:beginPosition>1999-01-10T00:00:00Z</gml:beginPosition>
-                  <gml:endPosition>1999-01-12T00:00:00Z</gml:endPosition>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_1398">
+                  <gml:beginPosition>2011-12-08T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2012-12-09T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
          </geo:frequencyStandard>
+         <geo:dateInserted>2016-04-14T00:03:12Z</geo:dateInserted>
       </geo:frequencyStandards>
       <geo:frequencyStandards>
-         <geo:frequencyStandard gml:id="FrequencyStandardType_866">
-            <geo:standardType>H-MASER</geo:standardType>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_846">
+            <geo:standardType codeSpace="">RUBIDIUM</geo:standardType>
             <geo:inputFrequency>5.0</geo:inputFrequency>
-            <gml:validTime>
-               <gml:TimePeriod>
-                  <gml:beginPosition>2003-06-11T00:00:00Z</gml:beginPosition>
-                  <gml:endPosition>2003-07-18T00:00:00Z</gml:endPosition>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_1399">
+                  <gml:beginPosition>2003-07-18T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2003-07-29T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
          </geo:frequencyStandard>
+         <geo:dateInserted>2016-04-14T00:03:12Z</geo:dateInserted>
       </geo:frequencyStandards>
       <geo:frequencyStandards>
-         <geo:frequencyStandard gml:id="FrequencyStandardType_867">
-            <geo:standardType>RUBIDIUM</geo:standardType>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_847">
+            <geo:standardType codeSpace="">H-MASER</geo:standardType>
             <geo:inputFrequency>5.0</geo:inputFrequency>
-            <gml:validTime>
-               <gml:TimePeriod>
-                  <gml:beginPosition>2010-03-18T00:00:00Z</gml:beginPosition>
-                  <gml:endPosition>2011-02-09T00:00:00Z</gml:endPosition>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_1400">
+                  <gml:beginPosition>2003-07-29T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2004-11-08T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
          </geo:frequencyStandard>
+         <geo:dateInserted>2016-04-14T00:03:12Z</geo:dateInserted>
       </geo:frequencyStandards>
       <geo:frequencyStandards>
-         <geo:frequencyStandard gml:id="FrequencyStandardType_868">
-            <geo:standardType>RUBIDIUM</geo:standardType>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_848">
+            <geo:standardType codeSpace="">RUBIDIUM</geo:standardType>
             <geo:inputFrequency>5.0</geo:inputFrequency>
-            <gml:validTime>
-               <gml:TimePeriod>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_1401">
+                  <gml:beginPosition>2004-12-04T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2004-12-06T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+         </geo:frequencyStandard>
+         <geo:dateInserted>2016-04-14T00:03:12Z</geo:dateInserted>
+      </geo:frequencyStandards>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_849">
+            <geo:standardType codeSpace="">H-MASER</geo:standardType>
+            <geo:inputFrequency>5.0</geo:inputFrequency>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_1402">
+                  <gml:beginPosition>2004-12-06T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2004-12-10T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+         </geo:frequencyStandard>
+         <geo:dateInserted>2016-04-14T00:03:12Z</geo:dateInserted>
+      </geo:frequencyStandards>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_850">
+            <geo:standardType codeSpace="">RUBIDIUM</geo:standardType>
+            <geo:inputFrequency>5.0</geo:inputFrequency>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_1403">
                   <gml:beginPosition>2004-12-10T00:00:00Z</gml:beginPosition>
                   <gml:endPosition>2004-12-15T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
          </geo:frequencyStandard>
+         <geo:dateInserted>2016-04-14T00:03:12Z</geo:dateInserted>
       </geo:frequencyStandards>
       <geo:frequencyStandards>
-         <geo:frequencyStandard gml:id="FrequencyStandardType_869">
-            <geo:standardType>RUBIDIUM</geo:standardType>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_851">
+            <geo:standardType codeSpace="">INTERNAL</geo:standardType>
             <geo:inputFrequency>5.0</geo:inputFrequency>
-            <gml:validTime>
-               <gml:TimePeriod>
-                  <gml:beginPosition>2004-11-08T00:00:00Z</gml:beginPosition>
-                  <gml:endPosition>2004-11-10T00:00:00Z</gml:endPosition>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_1404">
+                  <gml:beginPosition>2003-03-08T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2003-04-02T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
          </geo:frequencyStandard>
+         <geo:dateInserted>2016-04-14T00:03:12Z</geo:dateInserted>
       </geo:frequencyStandards>
       <geo:frequencyStandards>
-         <geo:frequencyStandard gml:id="FrequencyStandardType_870">
-            <geo:standardType>INTERNAL</geo:standardType>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_852">
+            <geo:standardType codeSpace="">H-MASER</geo:standardType>
             <geo:inputFrequency>5.0</geo:inputFrequency>
-            <gml:validTime>
-               <gml:TimePeriod>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_1405">
+                  <gml:beginPosition>2003-06-11T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2003-07-18T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+         </geo:frequencyStandard>
+         <geo:dateInserted>2016-04-14T00:03:12Z</geo:dateInserted>
+      </geo:frequencyStandards>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_853">
+            <geo:standardType codeSpace="">RUBIDIUM</geo:standardType>
+            <geo:inputFrequency>5.0</geo:inputFrequency>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_1406">
+                  <gml:beginPosition>1992-05-24T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>1995-11-03T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+         </geo:frequencyStandard>
+         <geo:dateInserted>2016-04-14T00:03:12Z</geo:dateInserted>
+      </geo:frequencyStandards>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_854">
+            <geo:standardType codeSpace="">INTERNAL</geo:standardType>
+            <geo:inputFrequency>5.0</geo:inputFrequency>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_1407">
                   <gml:beginPosition>2012-12-09T00:00:00Z</gml:beginPosition>
                   <gml:endPosition>2013-01-31T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
          </geo:frequencyStandard>
+         <geo:dateInserted>2016-04-14T00:03:12Z</geo:dateInserted>
       </geo:frequencyStandards>
       <geo:frequencyStandards>
-         <geo:frequencyStandard gml:id="FrequencyStandardType_871">
-            <geo:standardType>H-MASER</geo:standardType>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_855">
+            <geo:standardType codeSpace="">H-MASER</geo:standardType>
             <geo:inputFrequency>5.0</geo:inputFrequency>
-            <gml:validTime>
-               <gml:TimePeriod>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_1408">
+                  <gml:beginPosition>2005-12-07T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2007-12-03T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+         </geo:frequencyStandard>
+         <geo:dateInserted>2016-04-14T00:03:12Z</geo:dateInserted>
+      </geo:frequencyStandards>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_856">
+            <geo:standardType codeSpace="">RUBIDIUM</geo:standardType>
+            <geo:inputFrequency>5.0</geo:inputFrequency>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_1409">
+                  <gml:beginPosition>2005-10-30T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2005-12-07T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+         </geo:frequencyStandard>
+         <geo:dateInserted>2016-04-14T00:03:12Z</geo:dateInserted>
+      </geo:frequencyStandards>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_857">
+            <geo:standardType codeSpace="">H-MASER</geo:standardType>
+            <geo:inputFrequency>5.0</geo:inputFrequency>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_1410">
+                  <gml:beginPosition>2013-01-31T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition></gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+         </geo:frequencyStandard>
+         <geo:dateInserted>2016-04-14T00:03:12Z</geo:dateInserted>
+      </geo:frequencyStandards>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_858">
+            <geo:standardType codeSpace="">H-MASER</geo:standardType>
+            <geo:inputFrequency>5.0</geo:inputFrequency>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_1411">
+                  <gml:beginPosition>2004-12-15T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2005-10-30T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+         </geo:frequencyStandard>
+         <geo:dateInserted>2016-04-14T00:03:12Z</geo:dateInserted>
+      </geo:frequencyStandards>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_859">
+            <geo:standardType codeSpace="">RUBIDIUM</geo:standardType>
+            <geo:inputFrequency>5.0</geo:inputFrequency>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_1412">
+                  <gml:beginPosition>1998-08-24T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>1998-10-23T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+         </geo:frequencyStandard>
+         <geo:dateInserted>2016-04-14T00:03:12Z</geo:dateInserted>
+      </geo:frequencyStandards>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_860">
+            <geo:standardType codeSpace="">CESIUM</geo:standardType>
+            <geo:inputFrequency>5.0</geo:inputFrequency>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_1413">
+                  <gml:beginPosition>1995-11-03T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>1998-08-24T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+         </geo:frequencyStandard>
+         <geo:dateInserted>2016-04-14T00:03:12Z</geo:dateInserted>
+      </geo:frequencyStandards>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_861">
+            <geo:standardType codeSpace="">RUBIDIUM</geo:standardType>
+            <geo:inputFrequency>5.0</geo:inputFrequency>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_1414">
+                  <gml:beginPosition>2004-11-08T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2004-11-10T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+         </geo:frequencyStandard>
+         <geo:dateInserted>2016-04-14T00:03:12Z</geo:dateInserted>
+      </geo:frequencyStandards>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_862">
+            <geo:standardType codeSpace="">INTERNAL</geo:standardType>
+            <geo:inputFrequency>0.0</geo:inputFrequency>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_1415">
+                  <gml:beginPosition>2009-12-21T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2010-03-18T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+         </geo:frequencyStandard>
+         <geo:dateInserted>2016-04-14T00:03:12Z</geo:dateInserted>
+      </geo:frequencyStandards>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_863">
+            <geo:standardType codeSpace="">H-MASER</geo:standardType>
+            <geo:inputFrequency>5.0</geo:inputFrequency>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_1416">
+                  <gml:beginPosition>2002-11-27T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2003-03-08T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+         </geo:frequencyStandard>
+         <geo:dateInserted>2016-04-14T00:03:12Z</geo:dateInserted>
+      </geo:frequencyStandards>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_864">
+            <geo:standardType codeSpace="">QUARTZ</geo:standardType>
+            <geo:inputFrequency>5.0</geo:inputFrequency>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_1417">
+                  <gml:beginPosition>1999-01-10T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>1999-01-12T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+         </geo:frequencyStandard>
+         <geo:dateInserted>2016-04-14T00:03:12Z</geo:dateInserted>
+      </geo:frequencyStandards>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_865">
+            <geo:standardType codeSpace="">RUBIDIUM</geo:standardType>
+            <geo:inputFrequency>5.0</geo:inputFrequency>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_1418">
+                  <gml:beginPosition>2009-09-15T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2009-12-20T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+         </geo:frequencyStandard>
+         <geo:dateInserted>2016-04-14T00:03:12Z</geo:dateInserted>
+      </geo:frequencyStandards>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_866">
+            <geo:standardType codeSpace="">RUBIDIUM</geo:standardType>
+            <geo:inputFrequency>5.0</geo:inputFrequency>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_1419">
+                  <gml:beginPosition>2007-12-05T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2007-12-06T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+         </geo:frequencyStandard>
+         <geo:dateInserted>2016-04-14T00:03:12Z</geo:dateInserted>
+      </geo:frequencyStandards>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_867">
+            <geo:standardType codeSpace="">MASER</geo:standardType>
+            <geo:inputFrequency>5.0</geo:inputFrequency>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_1420">
+                  <gml:beginPosition>2007-12-07T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2009-06-16T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+         </geo:frequencyStandard>
+         <geo:dateInserted>2016-04-14T00:03:12Z</geo:dateInserted>
+      </geo:frequencyStandards>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_868">
+            <geo:standardType codeSpace="">RUBIDIUM</geo:standardType>
+            <geo:inputFrequency>5.0</geo:inputFrequency>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_1421">
+                  <gml:beginPosition>2010-03-18T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2011-02-09T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+         </geo:frequencyStandard>
+         <geo:dateInserted>2016-04-14T00:03:12Z</geo:dateInserted>
+      </geo:frequencyStandards>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_869">
+            <geo:standardType codeSpace="">H-MASER</geo:standardType>
+            <geo:inputFrequency>5.0</geo:inputFrequency>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_1422">
                   <gml:beginPosition>2004-11-10T00:00:00Z</gml:beginPosition>
                   <gml:endPosition>2004-12-04T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
          </geo:frequencyStandard>
+         <geo:dateInserted>2016-04-14T00:03:12Z</geo:dateInserted>
+      </geo:frequencyStandards>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_870">
+            <geo:standardType codeSpace="">CESIUM</geo:standardType>
+            <geo:inputFrequency>5.0</geo:inputFrequency>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_1423">
+                  <gml:beginPosition>1999-01-12T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2002-11-27T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+         </geo:frequencyStandard>
+         <geo:dateInserted>2016-04-14T00:03:12Z</geo:dateInserted>
+      </geo:frequencyStandards>
+      <geo:frequencyStandards>
+         <geo:frequencyStandard gml:id="FrequencyStandardType_871">
+            <geo:standardType codeSpace="">INTERNAL</geo:standardType>
+            <geo:inputFrequency>5.0</geo:inputFrequency>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_1424">
+                  <gml:beginPosition>2011-02-09T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2011-12-08T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+         </geo:frequencyStandard>
+         <geo:dateInserted>2016-04-14T00:03:12Z</geo:dateInserted>
       </geo:frequencyStandards>
       <geo:collocationInformations>
          <geo:collocationInformation gml:id="CollocationInformationType_193">
-            <geo:status>PERMANENT</geo:status>
+            <geo:instrumentationType codeSpace=""></geo:instrumentationType>
+            <geo:status codeSpace="">PERMANENT</geo:status>
+            <gml:validTime>
+               <gml:TimeInstant gml:id="TimeInstantType_807">
+                  <gml:timePosition>1970-01-22T13:00:00Z</gml:timePosition>
+               </gml:TimeInstant>
+            </gml:validTime>
          </geo:collocationInformation>
+         <geo:dateInserted>2016-04-14T00:03:12Z</geo:dateInserted>
       </geo:collocationInformations>
       <geo:humiditySensors>
          <geo:humiditySensor gml:id="HumiditySensorType_242">
-            <geo:type>HMP-35A</geo:type>
-            <geo:manufacturer>VAISALA</geo:manufacturer>
-            <geo:serialNumber>XXX</geo:serialNumber>
-            <geo:heightDiffToAntenna>-4.83</geo:heightDiffToAntenna>
-            <geo:calibrationDate>2003-07-24T14:00:00Z</geo:calibrationDate>
-            <gml:validTime>
-               <gml:TimePeriod>
-                  <gml:beginPosition>2003-07-25T00:00:00Z</gml:beginPosition>
-                  <gml:endPosition>2009-06-19T00:00:00Z</gml:endPosition>
-               </gml:TimePeriod>
-            </gml:validTime>
-            <geo:dataSamplingInterval>300.0</geo:dataSamplingInterval>
-            <geo:accuracy-percentRelativeHumidity>2.0</geo:accuracy-percentRelativeHumidity>
-            <geo:aspiration>NONE</geo:aspiration>
-         </geo:humiditySensor>
-      </geo:humiditySensors>
-      <geo:humiditySensors>
-         <geo:humiditySensor gml:id="HumiditySensorType_243">
-            <geo:type>HMP-35A</geo:type>
+            <geo:type codeSpace="">HMP-35A</geo:type>
             <geo:manufacturer>VAISALA</geo:manufacturer>
             <geo:serialNumber>XXX</geo:serialNumber>
             <geo:heightDiffToAntenna>-4.83</geo:heightDiffToAntenna>
             <geo:calibrationDate>2003-02-20T13:00:00Z</geo:calibrationDate>
-            <gml:validTime>
-               <gml:TimePeriod>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_1425">
                   <gml:beginPosition>1996-06-01T00:00:00Z</gml:beginPosition>
                   <gml:endPosition>2003-07-25T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
@@ -850,51 +950,36 @@
             <geo:aspiration>NONE</geo:aspiration>
             <geo:notes>Sensor elevated 6 metres above ground level.</geo:notes>
          </geo:humiditySensor>
+         <geo:dateInserted>2016-04-14T00:03:12Z</geo:dateInserted>
       </geo:humiditySensors>
-      <geo:pressureSensors>
-         <geo:pressureSensor gml:id="PressureSensorType_248">
-            <geo:type>PTB-100A</geo:type>
+      <geo:humiditySensors>
+         <geo:humiditySensor gml:id="HumiditySensorType_243">
+            <geo:type codeSpace="">HMP-35A</geo:type>
             <geo:manufacturer>VAISALA</geo:manufacturer>
             <geo:serialNumber>XXX</geo:serialNumber>
-            <geo:heightDiffToAntenna>0.0</geo:heightDiffToAntenna>
-            <geo:calibrationDate>2003-02-20T13:00:00Z</geo:calibrationDate>
-            <gml:validTime>
-               <gml:TimePeriod>
-                  <gml:beginPosition>1996-06-01T00:00:00Z</gml:beginPosition>
-                  <gml:endPosition>2002-11-13T00:00:00Z</gml:endPosition>
-               </gml:TimePeriod>
-            </gml:validTime>
-            <geo:dataSamplingInterval>300.0</geo:dataSamplingInterval>
-            <geo:accuracy-hPa>0.1</geo:accuracy-hPa>
-            <geo:notes>The readings are modeled as a function of the pressure transducer output and the temperature.</geo:notes>
-         </geo:pressureSensor>
-      </geo:pressureSensors>
-      <geo:pressureSensors>
-         <geo:pressureSensor gml:id="PressureSensorType_249">
-            <geo:type>PTB-100A</geo:type>
-            <geo:manufacturer>VAISALA</geo:manufacturer>
-            <geo:serialNumber>XXX</geo:serialNumber>
-            <geo:heightDiffToAntenna>0.0</geo:heightDiffToAntenna>
-            <geo:calibrationDate>2003-06-10T14:00:00Z</geo:calibrationDate>
-            <gml:validTime>
-               <gml:TimePeriod>
+            <geo:heightDiffToAntenna>-4.83</geo:heightDiffToAntenna>
+            <geo:calibrationDate>2003-07-24T14:00:00Z</geo:calibrationDate>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_1426">
                   <gml:beginPosition>2003-07-25T00:00:00Z</gml:beginPosition>
                   <gml:endPosition>2009-06-19T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
             <geo:dataSamplingInterval>300.0</geo:dataSamplingInterval>
-            <geo:accuracy-hPa>0.1</geo:accuracy-hPa>
-         </geo:pressureSensor>
-      </geo:pressureSensors>
+            <geo:accuracy-percentRelativeHumidity>2.0</geo:accuracy-percentRelativeHumidity>
+            <geo:aspiration>NONE</geo:aspiration>
+         </geo:humiditySensor>
+         <geo:dateInserted>2016-04-14T00:03:12Z</geo:dateInserted>
+      </geo:humiditySensors>
       <geo:pressureSensors>
-         <geo:pressureSensor gml:id="PressureSensorType_250">
-            <geo:type>PTB-100A</geo:type>
+         <geo:pressureSensor gml:id="PressureSensorType_248">
+            <geo:type codeSpace="">PTB-100A</geo:type>
             <geo:manufacturer>VAISALA</geo:manufacturer>
             <geo:serialNumber>XXX</geo:serialNumber>
             <geo:heightDiffToAntenna>0.0</geo:heightDiffToAntenna>
             <geo:calibrationDate>2003-02-20T13:00:00Z</geo:calibrationDate>
-            <gml:validTime>
-               <gml:TimePeriod>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_1427">
                   <gml:beginPosition>2002-11-13T00:00:00Z</gml:beginPosition>
                   <gml:endPosition>2003-07-25T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
@@ -903,16 +988,54 @@
             <geo:accuracy-hPa>0.1</geo:accuracy-hPa>
             <geo:notes>The readings are modeled as a function of the pressure transducer output and the temperature.</geo:notes>
          </geo:pressureSensor>
+         <geo:dateInserted>2016-04-14T00:03:12Z</geo:dateInserted>
+      </geo:pressureSensors>
+      <geo:pressureSensors>
+         <geo:pressureSensor gml:id="PressureSensorType_249">
+            <geo:type codeSpace="">PTB-100A</geo:type>
+            <geo:manufacturer>VAISALA</geo:manufacturer>
+            <geo:serialNumber>XXX</geo:serialNumber>
+            <geo:heightDiffToAntenna>0.0</geo:heightDiffToAntenna>
+            <geo:calibrationDate>2003-06-10T14:00:00Z</geo:calibrationDate>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_1428">
+                  <gml:beginPosition>2003-07-25T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2009-06-19T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+            <geo:dataSamplingInterval>300.0</geo:dataSamplingInterval>
+            <geo:accuracy-hPa>0.1</geo:accuracy-hPa>
+         </geo:pressureSensor>
+         <geo:dateInserted>2016-04-14T00:03:12Z</geo:dateInserted>
+      </geo:pressureSensors>
+      <geo:pressureSensors>
+         <geo:pressureSensor gml:id="PressureSensorType_250">
+            <geo:type codeSpace="">PTB-100A</geo:type>
+            <geo:manufacturer>VAISALA</geo:manufacturer>
+            <geo:serialNumber>XXX</geo:serialNumber>
+            <geo:heightDiffToAntenna>0.0</geo:heightDiffToAntenna>
+            <geo:calibrationDate>2003-02-20T13:00:00Z</geo:calibrationDate>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_1429">
+                  <gml:beginPosition>1996-06-01T00:00:00Z</gml:beginPosition>
+                  <gml:endPosition>2002-11-13T00:00:00Z</gml:endPosition>
+               </gml:TimePeriod>
+            </gml:validTime>
+            <geo:dataSamplingInterval>300.0</geo:dataSamplingInterval>
+            <geo:accuracy-hPa>0.1</geo:accuracy-hPa>
+            <geo:notes>The readings are modeled as a function of the pressure transducer output and the temperature.</geo:notes>
+         </geo:pressureSensor>
+         <geo:dateInserted>2016-04-14T00:03:12Z</geo:dateInserted>
       </geo:pressureSensors>
       <geo:temperatureSensors>
          <geo:temperatureSensor gml:id="TemperatureSensorType_239">
-            <geo:type>YSI 44212</geo:type>
+            <geo:type codeSpace="">YSI 44212</geo:type>
             <geo:manufacturer>YSI</geo:manufacturer>
             <geo:serialNumber>XXX</geo:serialNumber>
             <geo:heightDiffToAntenna>-4.83</geo:heightDiffToAntenna>
             <geo:calibrationDate>2003-02-20T13:00:00Z</geo:calibrationDate>
-            <gml:validTime>
-               <gml:TimePeriod>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_1430">
                   <gml:beginPosition>1996-06-01T00:00:00Z</gml:beginPosition>
                   <gml:endPosition>2003-07-25T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
@@ -922,16 +1045,17 @@
             <geo:aspiration>NONE</geo:aspiration>
             <geo:notes>Sensor elevated 6 metres above ground level.</geo:notes>
          </geo:temperatureSensor>
+         <geo:dateInserted>2016-04-14T00:03:12Z</geo:dateInserted>
       </geo:temperatureSensors>
       <geo:temperatureSensors>
          <geo:temperatureSensor gml:id="TemperatureSensorType_240">
-            <geo:type>VSI 44212</geo:type>
+            <geo:type codeSpace="">VSI 44212</geo:type>
             <geo:manufacturer>VSI</geo:manufacturer>
             <geo:serialNumber>XXX</geo:serialNumber>
             <geo:heightDiffToAntenna>-4.83</geo:heightDiffToAntenna>
             <geo:calibrationDate>2003-07-24T14:00:00Z</geo:calibrationDate>
-            <gml:validTime>
-               <gml:TimePeriod>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_1431">
                   <gml:beginPosition>2003-07-25T00:00:00Z</gml:beginPosition>
                   <gml:endPosition>2009-06-19T00:00:00Z</gml:endPosition>
                </gml:TimePeriod>
@@ -940,13 +1064,26 @@
             <geo:accuracy-degreesCelcius>0.2</geo:accuracy-degreesCelcius>
             <geo:aspiration>NONE</geo:aspiration>
          </geo:temperatureSensor>
+         <geo:dateInserted>2016-04-14T00:03:12Z</geo:dateInserted>
       </geo:temperatureSensors>
       <geo:otherInstrumentations>
-         <geo:otherInstrumentation gml:id="OtherInstrumentationType_193"/>
+         <geo:otherInstrumentation gml:id="OtherInstrumentationType_193">
+            <geo:instrumentation></geo:instrumentation>
+            <gml:validTime>
+               <gml:TimeInstant gml:id="TimeInstantType_808">
+                  <gml:timePosition>1970-01-22T13:00:00Z</gml:timePosition>
+               </gml:TimeInstant>
+            </gml:validTime>
+         </geo:otherInstrumentation>
+         <geo:dateInserted>2016-04-14T00:03:12Z</geo:dateInserted>
       </geo:otherInstrumentations>
-      <geo:siteContact>
-         <gmd:MD_SecurityConstraints/>
-         <gmd:CI_ResponsibleParty>
+      <geo:siteContact gml:id="AgencyPropertyType_1074">
+         <gmd:MD_SecurityConstraints id="MDSecurityConstraintsType_1074">
+            <gmd:classification>
+               <gmd:MD_ClassificationCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:classification>
+         </gmd:MD_SecurityConstraints>
+         <gmd:CI_ResponsibleParty id="CIResponsiblePartyType_1074">
             <gmd:individualName>
                <gco:CharacterString>Mark Caissy</gco:CharacterString>
             </gmd:individualName>
@@ -954,9 +1091,9 @@
                <gco:CharacterString>NRCan/GEODETIC SURVEY OF CANADA</gco:CharacterString>
             </gmd:organisationName>
             <gmd:contactInfo>
-               <gmd:CI_Contact>
+               <gmd:CI_Contact id="CIContactType_1074">
                   <gmd:phone>
-                     <gmd:CI_Telephone>
+                     <gmd:CI_Telephone id="CITelephoneType_427">
                         <gmd:voice>
                            <gco:CharacterString>613-995-4024</gco:CharacterString>
                         </gmd:voice>
@@ -966,7 +1103,7 @@
                      </gmd:CI_Telephone>
                   </gmd:phone>
                   <gmd:address>
-                     <gmd:CI_Address>
+                     <gmd:CI_Address id="CIAddressType_1074">
                         <gmd:deliveryPoint>
                            <gco:CharacterString>615 Booth Street, Ottawa,Ontario</gco:CharacterString>
                         </gmd:deliveryPoint>
@@ -977,25 +1114,45 @@
                   </gmd:address>
                </gmd:CI_Contact>
             </gmd:contactInfo>
+            <gmd:role>
+               <gmd:CI_RoleCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:role>
          </gmd:CI_ResponsibleParty>
       </geo:siteContact>
-      <geo:siteMetadataCustodian>
-         <gmd:MD_SecurityConstraints/>
-         <gmd:CI_ResponsibleParty>
+      <geo:siteMetadataCustodian gml:id="AgencyPropertyType_1075">
+         <gmd:MD_SecurityConstraints id="MDSecurityConstraintsType_1075">
+            <gmd:classification>
+               <gmd:MD_ClassificationCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:classification>
+         </gmd:MD_SecurityConstraints>
+         <gmd:CI_ResponsibleParty id="CIResponsiblePartyType_1075">
             <gmd:organisationName>
                <gco:CharacterString>NRCan/GEODETIC SURVEY OF CANADA</gco:CharacterString>
             </gmd:organisationName>
             <gmd:contactInfo>
-               <gmd:CI_Contact>
+               <gmd:CI_Contact id="CIContactType_1075">
                   <gmd:address>
-                     <gmd:CI_Address/>
+                     <gmd:CI_Address id="CIAddressType_1075"/>
                   </gmd:address>
                </gmd:CI_Contact>
             </gmd:contactInfo>
+            <gmd:role>
+               <gmd:CI_RoleCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:role>
          </gmd:CI_ResponsibleParty>
       </geo:siteMetadataCustodian>
       <geo:moreInformation>
+         <geo:dataCenter>http</geo:dataCenter>
+         <geo:dataCenter>http</geo:dataCenter>
          <geo:urlForMoreInformation>http</geo:urlForMoreInformation>
+         <geo:siteMap></geo:siteMap>
+         <geo:siteDiagram></geo:siteDiagram>
+         <geo:horizonMask></geo:horizonMask>
+         <geo:monumentDescription></geo:monumentDescription>
+         <geo:sitePictures></geo:sitePictures>
+         <geo:antennaGraphicsWithDimensions></geo:antennaGraphicsWithDimensions>
+         <geo:insertTextGraphicFromAntenna></geo:insertTextGraphicFromAntenna>
+         <geo:DOI codeSpace="CodeSpaceTODO">CodeTypeTODO</geo:DOI>
       </geo:moreInformation>
    </geo:siteLog>
 </geo:GeodesyML>

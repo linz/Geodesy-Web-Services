@@ -10,6 +10,7 @@
          <geo:siteName>Pahoa 6</geo:siteName>
          <geo:fourCharacterID>PAH6</geo:fourCharacterID>
          <geo:iersDOMESNumber>USM000082</geo:iersDOMESNumber>
+         <geo:cdpNumber></geo:cdpNumber>
          <geo:dateInstalled>2002-10-31T13:00:00Z</geo:dateInstalled>
          <geo:notes>PAH6 replaced PAH2 on 01-16-2007 with addition of a new antenna, mount, and radome.</geo:notes>
       </geo:siteIdentification>
@@ -17,20 +18,21 @@
          <geo:city>Pahoa</geo:city>
          <geo:state>Hawaii</geo:state>
          <geo:countryCodeISO>USA</geo:countryCodeISO>
-         <geo:tectonicPlate>Pacific</geo:tectonicPlate>
+         <geo:tectonicPlate codeSpace="">Pacific</geo:tectonicPlate>
          <geo:approximatePositionITRF>
             <geo:xCoordinateInMeters>-5448913.753</geo:xCoordinateInMeters>
             <geo:yCoordinateInMeters>-2545274.698</geo:yCoordinateInMeters>
             <geo:zCoordinateInMeters>2117512.817</geo:zCoordinateInMeters>
-            <geo:latitude-North>193103.628469999996013939380645751953125</geo:latitude-North>
-            <geo:longitude-East>-1545743.092459999956190586090087890625</geo:longitude-East>
+            <geo:latitude-North>19.517674574999997361146597540937364101409912109375</geo:latitude-North>
+            <geo:longitude-East>-154.96197012777776080838521011173725128173828125</geo:longitude-East>
             <geo:elevation-m_ellips.>198.436</geo:elevation-m_ellips.>
          </geo:approximatePositionITRF>
          <geo:notes>ARP  ITRF00 POSITION (EPOCH 1997.0) Computed in Mar. 2008 using 40 days of data.</geo:notes>
       </geo:siteLocation>
       <geo:gnssReceivers>
          <geo:gnssReceiver gml:id="GnssReceiverType_2057">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ASHTECH Z-XII3</geo:receiverType>
+            <geo:manufacturerSerialNumber>02464</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">ASHTECH Z-XII3</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
             <geo:serialNumber>02464</geo:serialNumber>
             <geo:firmwareVersion>RE00-1C19</geo:firmwareVersion>
@@ -39,34 +41,47 @@
             <geo:dateRemoved>2009-04-15T00:00:00Z</geo:dateRemoved>
             <geo:notes>Receiver upgrade.</geo:notes>
          </geo:gnssReceiver>
+         <geo:dateInserted>2002-11-01T00:00:00Z</geo:dateInserted>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
          <geo:gnssReceiver gml:id="GnssReceiverType_2058">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">TRIMBLE NETRS</geo:receiverType>
+            <geo:manufacturerSerialNumber>4732137191</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">TRIMBLE NETRS</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
             <geo:serialNumber>4732137191</geo:serialNumber>
             <geo:firmwareVersion>1.2-5</geo:firmwareVersion>
             <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
             <geo:dateInstalled>2009-04-15T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved></geo:dateRemoved>
          </geo:gnssReceiver>
+         <geo:dateInserted>2009-04-15T00:00:00Z</geo:dateInserted>
       </geo:gnssReceivers>
       <geo:gnssAntennas>
          <geo:gnssAntenna gml:id="GnssAntennaType_897">
-            <geo:antennaType codeList="codelist" codeListValue="codeListValue">TRM41249USCG    SCIT</geo:antennaType>
+            <geo:manufacturerSerialNumber>60020667</geo:manufacturerSerialNumber>
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue" codeSpace="codespace">TRM41249USCG    SCIT</geo:antennaType>
             <geo:serialNumber>60020667</geo:serialNumber>
-            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:antennaReferencePoint codeSpace="">BPA</geo:antennaReferencePoint>
             <geo:marker-arpUpEcc.>0.0</geo:marker-arpUpEcc.>
             <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>SCIT</geo:antennaRadomeType>
+            <geo:antennaRadomeType codeSpace="CodeSpaceAttr">SCIT</geo:antennaRadomeType>
+            <geo:radomeSerialNumber></geo:radomeSerialNumber>
+            <geo:antennaCableType></geo:antennaCableType>
             <geo:antennaCableLength>0.0</geo:antennaCableLength>
             <geo:dateInstalled>2008-01-16T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved></geo:dateRemoved>
          </geo:gnssAntenna>
+         <geo:dateInserted>2008-01-16T00:00:00Z</geo:dateInserted>
       </geo:gnssAntennas>
-      <geo:siteContact>
-         <gmd:MD_SecurityConstraints/>
-         <gmd:CI_ResponsibleParty>
+      <geo:siteContact gml:id="AgencyPropertyType_902">
+         <gmd:MD_SecurityConstraints id="MDSecurityConstraintsType_902">
+            <gmd:classification>
+               <gmd:MD_ClassificationCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:classification>
+         </gmd:MD_SecurityConstraints>
+         <gmd:CI_ResponsibleParty id="CIResponsiblePartyType_902">
             <gmd:individualName>
                <gco:CharacterString>Bion Holbrook</gco:CharacterString>
             </gmd:individualName>
@@ -74,16 +89,16 @@
                <gco:CharacterString>U.S. Coast Guard</gco:CharacterString>
             </gmd:organisationName>
             <gmd:contactInfo>
-               <gmd:CI_Contact>
+               <gmd:CI_Contact id="CIContactType_902">
                   <gmd:phone>
-                     <gmd:CI_Telephone>
+                     <gmd:CI_Telephone id="CITelephoneType_354">
                         <gmd:voice>
                            <gco:CharacterString>703-313-5939</gco:CharacterString>
                         </gmd:voice>
                      </gmd:CI_Telephone>
                   </gmd:phone>
                   <gmd:address>
-                     <gmd:CI_Address>
+                     <gmd:CI_Address id="CIAddressType_902">
                         <gmd:electronicMailAddress>
                            <gco:CharacterString>bion.j.holbrook@uscg.mil</gco:CharacterString>
                         </gmd:electronicMailAddress>
@@ -91,22 +106,44 @@
                   </gmd:address>
                </gmd:CI_Contact>
             </gmd:contactInfo>
+            <gmd:role>
+               <gmd:CI_RoleCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:role>
          </gmd:CI_ResponsibleParty>
       </geo:siteContact>
-      <geo:siteMetadataCustodian>
-         <gmd:MD_SecurityConstraints/>
-         <gmd:CI_ResponsibleParty>
+      <geo:siteMetadataCustodian gml:id="AgencyPropertyType_903">
+         <gmd:MD_SecurityConstraints id="MDSecurityConstraintsType_903">
+            <gmd:classification>
+               <gmd:MD_ClassificationCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:classification>
+         </gmd:MD_SecurityConstraints>
+         <gmd:CI_ResponsibleParty id="CIResponsiblePartyType_903">
             <gmd:organisationName>
                <gco:CharacterString>U.S. Coast Guard</gco:CharacterString>
             </gmd:organisationName>
             <gmd:contactInfo>
-               <gmd:CI_Contact>
+               <gmd:CI_Contact id="CIContactType_903">
                   <gmd:address>
-                     <gmd:CI_Address/>
+                     <gmd:CI_Address id="CIAddressType_903"/>
                   </gmd:address>
                </gmd:CI_Contact>
             </gmd:contactInfo>
+            <gmd:role>
+               <gmd:CI_RoleCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:role>
          </gmd:CI_ResponsibleParty>
       </geo:siteMetadataCustodian>
+      <geo:moreInformation>
+         <geo:dataCenter></geo:dataCenter>
+         <geo:urlForMoreInformation></geo:urlForMoreInformation>
+         <geo:siteMap></geo:siteMap>
+         <geo:siteDiagram></geo:siteDiagram>
+         <geo:horizonMask></geo:horizonMask>
+         <geo:monumentDescription></geo:monumentDescription>
+         <geo:sitePictures></geo:sitePictures>
+         <geo:antennaGraphicsWithDimensions></geo:antennaGraphicsWithDimensions>
+         <geo:insertTextGraphicFromAntenna></geo:insertTextGraphicFromAntenna>
+         <geo:DOI codeSpace="CodeSpaceTODO">CodeTypeTODO</geo:DOI>
+      </geo:moreInformation>
    </geo:siteLog>
 </geo:GeodesyML>

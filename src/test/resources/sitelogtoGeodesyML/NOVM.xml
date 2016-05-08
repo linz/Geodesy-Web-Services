@@ -10,6 +10,7 @@
          <geo:siteName>Novosibirsk, SNIIM</geo:siteName>
          <geo:fourCharacterID>NOVM</geo:fourCharacterID>
          <geo:iersDOMESNumber>12367M002</geo:iersDOMESNumber>
+         <geo:cdpNumber></geo:cdpNumber>
          <geo:monumentDescription>stable pillar on the roof 11-floor</geo:monumentDescription>
          <geo:dateInstalled>2006-11-06T13:00:00Z</geo:dateInstalled>
          <geo:bedrockType>SEDIMENTARY</geo:bedrockType>
@@ -17,58 +18,71 @@
       </geo:siteIdentification>
       <geo:siteLocation>
          <geo:city>Novosibirsk</geo:city>
-         <geo:countryCodeISO>RUSSIA</geo:countryCodeISO>
-         <geo:tectonicPlate>Eurasian Plate</geo:tectonicPlate>
+         <geo:state></geo:state>
+         <geo:countryCodeISO>???</geo:countryCodeISO>
+         <geo:tectonicPlate codeSpace="">Eurasian Plate</geo:tectonicPlate>
          <geo:approximatePositionITRF>
             <geo:xCoordinateInMeters>452261.2</geo:xCoordinateInMeters>
             <geo:yCoordinateInMeters>3635877.47</geo:yCoordinateInMeters>
             <geo:zCoordinateInMeters>5203453.26</geo:zCoordinateInMeters>
-            <geo:latitude-North>550149.80000000004656612873077392578125</geo:latitude-North>
-            <geo:longitude-East>825434.160000000032596290111541748046875</geo:longitude-East>
+            <geo:latitude-North>55.03050000000001062971932697109878063201904296875</geo:latitude-North>
+            <geo:longitude-East>82.9094888888889016698158229701220989227294921875</geo:longitude-East>
             <geo:elevation-m_ellips.>149.98</geo:elevation-m_ellips.>
          </geo:approximatePositionITRF>
       </geo:siteLocation>
       <geo:gnssReceivers>
          <geo:gnssReceiver gml:id="GnssReceiverType_1918">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">JPS LEGACY</geo:receiverType>
+            <geo:manufacturerSerialNumber>00202</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">JPS LEGACY</geo:receiverType>
             <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
             <geo:serialNumber>00202</geo:serialNumber>
             <geo:firmwareVersion>2.2</geo:firmwareVersion>
             <geo:elevationCutoffSetting>10.0</geo:elevationCutoffSetting>
             <geo:dateInstalled>2001-07-24T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved></geo:dateRemoved>
          </geo:gnssReceiver>
+         <geo:dateInserted>2001-07-24T00:00:00Z</geo:dateInserted>
       </geo:gnssReceivers>
       <geo:gnssAntennas>
          <geo:gnssAntenna gml:id="GnssAntennaType_836">
-            <geo:antennaType codeList="codelist" codeListValue="codeListValue">JPSREGANT_SD_E1 NONE</geo:antennaType>
+            <geo:manufacturerSerialNumber>RA0038</geo:manufacturerSerialNumber>
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue" codeSpace="codespace">JPSREGANT_SD_E1 NONE</geo:antennaType>
             <geo:serialNumber>RA0038</geo:serialNumber>
-            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:antennaReferencePoint codeSpace="">BPA</geo:antennaReferencePoint>
             <geo:marker-arpUpEcc.>0.08</geo:marker-arpUpEcc.>
             <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>NONE</geo:antennaRadomeType>
+            <geo:antennaRadomeType codeSpace="CodeSpaceAttr">NONE</geo:antennaRadomeType>
+            <geo:radomeSerialNumber></geo:radomeSerialNumber>
             <geo:antennaCableType>&#65533;&#65533;-50-7-35</geo:antennaCableType>
             <geo:antennaCableLength>55.0</geo:antennaCableLength>
             <geo:dateInstalled>2006-11-07T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved></geo:dateRemoved>
             <geo:notes>Antenna type listed in this section retro- actively changed from JPSREGANT_SD_E to JPSREGANT_SD_E1 starting with log file novm_20121007.log. See IGSMAIL-6662 and IGSMAIL-6663 for details.</geo:notes>
          </geo:gnssAntenna>
+         <geo:dateInserted>2006-11-07T00:00:00Z</geo:dateInserted>
       </geo:gnssAntennas>
       <geo:frequencyStandards>
          <geo:frequencyStandard gml:id="FrequencyStandardType_671">
-            <geo:standardType>EXTERNAL H-MASER</geo:standardType>
+            <geo:standardType codeSpace="">EXTERNAL H-MASER</geo:standardType>
             <geo:inputFrequency>5.0</geo:inputFrequency>
-            <gml:validTime>
-               <gml:TimePeriod>
+            <gml:validTime nilReason="">
+               <gml:TimePeriod gml:id="TimePeriodType_1073">
                   <gml:beginPosition>2001-07-24T00:00:00Z</gml:beginPosition>
                   <gml:endPosition></gml:endPosition>
                </gml:TimePeriod>
             </gml:validTime>
          </geo:frequencyStandard>
+         <geo:dateInserted>2016-04-14T00:03:11Z</geo:dateInserted>
       </geo:frequencyStandards>
-      <geo:siteContact>
-         <gmd:MD_SecurityConstraints/>
-         <gmd:CI_ResponsibleParty>
+      <geo:siteContact gml:id="AgencyPropertyType_848">
+         <gmd:MD_SecurityConstraints id="MDSecurityConstraintsType_848">
+            <gmd:classification>
+               <gmd:MD_ClassificationCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:classification>
+         </gmd:MD_SecurityConstraints>
+         <gmd:CI_ResponsibleParty id="CIResponsiblePartyType_848">
             <gmd:individualName>
                <gco:CharacterString>Alexandr Tolstikov</gco:CharacterString>
             </gmd:individualName>
@@ -76,16 +90,16 @@
                <gco:CharacterString>Siberian Research Institute for</gco:CharacterString>
             </gmd:organisationName>
             <gmd:contactInfo>
-               <gmd:CI_Contact>
+               <gmd:CI_Contact id="CIContactType_848">
                   <gmd:phone>
-                     <gmd:CI_Telephone>
+                     <gmd:CI_Telephone id="CITelephoneType_331">
                         <gmd:voice>
                            <gco:CharacterString>+7-383-210-1185</gco:CharacterString>
                         </gmd:voice>
                      </gmd:CI_Telephone>
                   </gmd:phone>
                   <gmd:address>
-                     <gmd:CI_Address>
+                     <gmd:CI_Address id="CIAddressType_848">
                         <gmd:deliveryPoint>
                            <gco:CharacterString>4, Dimitrov str.,</gco:CharacterString>
                         </gmd:deliveryPoint>
@@ -96,18 +110,25 @@
                   </gmd:address>
                </gmd:CI_Contact>
             </gmd:contactInfo>
+            <gmd:role>
+               <gmd:CI_RoleCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:role>
          </gmd:CI_ResponsibleParty>
       </geo:siteContact>
-      <geo:siteMetadataCustodian>
-         <gmd:MD_SecurityConstraints/>
-         <gmd:CI_ResponsibleParty>
+      <geo:siteMetadataCustodian gml:id="AgencyPropertyType_849">
+         <gmd:MD_SecurityConstraints id="MDSecurityConstraintsType_849">
+            <gmd:classification>
+               <gmd:MD_ClassificationCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:classification>
+         </gmd:MD_SecurityConstraints>
+         <gmd:CI_ResponsibleParty id="CIResponsiblePartyType_849">
             <gmd:organisationName>
                <gco:CharacterString>Institute of Metrology for Time and Space</gco:CharacterString>
             </gmd:organisationName>
             <gmd:contactInfo>
-               <gmd:CI_Contact>
+               <gmd:CI_Contact id="CIContactType_849">
                   <gmd:address>
-                     <gmd:CI_Address>
+                     <gmd:CI_Address id="CIAddressType_849">
                         <gmd:deliveryPoint>
                            <gco:CharacterString>IMVP / VNIIFTRI, Mendeleevo,</gco:CharacterString>
                         </gmd:deliveryPoint>
@@ -115,15 +136,24 @@
                   </gmd:address>
                </gmd:CI_Contact>
             </gmd:contactInfo>
+            <gmd:role>
+               <gmd:CI_RoleCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:role>
          </gmd:CI_ResponsibleParty>
       </geo:siteMetadataCustodian>
       <geo:moreInformation>
+         <geo:dataCenter>ftp.imvp.ru</geo:dataCenter>
+         <geo:dataCenter>ftp.imvp.ru</geo:dataCenter>
          <geo:urlForMoreInformation>ftp.imvp.ru</geo:urlForMoreInformation>
          <geo:siteMap>N</geo:siteMap>
          <geo:siteDiagram>N</geo:siteDiagram>
          <geo:horizonMask>N</geo:horizonMask>
+         <geo:monumentDescription></geo:monumentDescription>
          <geo:sitePictures>N</geo:sitePictures>
          <geo:notes>N</geo:notes>
+         <geo:antennaGraphicsWithDimensions></geo:antennaGraphicsWithDimensions>
+         <geo:insertTextGraphicFromAntenna></geo:insertTextGraphicFromAntenna>
+         <geo:DOI codeSpace="CodeSpaceTODO">CodeTypeTODO</geo:DOI>
       </geo:moreInformation>
    </geo:siteLog>
 </geo:GeodesyML>

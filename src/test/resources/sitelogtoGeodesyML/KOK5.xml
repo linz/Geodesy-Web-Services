@@ -10,6 +10,7 @@
          <geo:siteName>Kokole Point 5</geo:siteName>
          <geo:fourCharacterID>KOK5</geo:fourCharacterID>
          <geo:iersDOMESNumber>USM000087</geo:iersDOMESNumber>
+         <geo:cdpNumber></geo:cdpNumber>
          <geo:dateInstalled>2007-11-05T13:00:00Z</geo:dateInstalled>
          <geo:notes>KOK5 replaced KOK1(49896S001)on 11-06-2007.</geo:notes>
       </geo:siteIdentification>
@@ -17,20 +18,34 @@
          <geo:city>Kokole Point</geo:city>
          <geo:state>Hawaii</geo:state>
          <geo:countryCodeISO>USA</geo:countryCodeISO>
-         <geo:tectonicPlate>Pacific</geo:tectonicPlate>
+         <geo:tectonicPlate codeSpace="">Pacific</geo:tectonicPlate>
          <geo:approximatePositionITRF>
             <geo:xCoordinateInMeters>-5551750.014</geo:xCoordinateInMeters>
             <geo:yCoordinateInMeters>-2047250.282</geo:yCoordinateInMeters>
             <geo:zCoordinateInMeters>2372726.696</geo:zCoordinateInMeters>
-            <geo:latitude-North>215900.56408000001101754605770111083984375</geo:latitude-North>
-            <geo:longitude-East>-1594529.3822800000198185443878173828125</geo:longitude-East>
+            <geo:latitude-North>21.983490022222223814196695457212626934051513671875</geo:latitude-North>
+            <geo:longitude-East>-159.758161744444436180856428109109401702880859375</geo:longitude-East>
             <geo:elevation-m_ellips.>23.864</geo:elevation-m_ellips.>
          </geo:approximatePositionITRF>
          <geo:notes>ARP  ITRF00 POSITION (EPOCH 1997.0) Computed in Jan. 2008 using 56 days of data.</geo:notes>
       </geo:siteLocation>
       <geo:gnssReceivers>
          <geo:gnssReceiver gml:id="GnssReceiverType_1363">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">ASHTECH Z-XII3</geo:receiverType>
+            <geo:manufacturerSerialNumber>4724134662</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">TRIMBLE NETRS</geo:receiverType>
+            <geo:satelliteSystem>GPS</geo:satelliteSystem>
+            <geo:serialNumber>4724134662</geo:serialNumber>
+            <geo:firmwareVersion>1.2-5</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2009-05-07T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved></geo:dateRemoved>
+         </geo:gnssReceiver>
+         <geo:dateInserted>2009-05-07T00:00:00Z</geo:dateInserted>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_1364">
+            <geo:manufacturerSerialNumber>04435</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">ASHTECH Z-XII3</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
             <geo:serialNumber>04435</geo:serialNumber>
             <geo:firmwareVersion>RE00-1C19</geo:firmwareVersion>
@@ -39,40 +54,46 @@
             <geo:dateRemoved>2009-05-07T00:00:00Z</geo:dateRemoved>
             <geo:notes>Receiver upgrade.</geo:notes>
          </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver gml:id="GnssReceiverType_1364">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">TRIMBLE NETRS</geo:receiverType>
-            <geo:satelliteSystem>GPS</geo:satelliteSystem>
-            <geo:serialNumber>4724134662</geo:serialNumber>
-            <geo:firmwareVersion>1.2-5</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>2009-05-07T00:00:00Z</geo:dateInstalled>
-         </geo:gnssReceiver>
+         <geo:dateInserted>1999-06-22T00:00:00Z</geo:dateInserted>
       </geo:gnssReceivers>
       <geo:gnssAntennas>
          <geo:gnssAntenna gml:id="GnssAntennaType_615">
-            <geo:antennaType codeList="codelist" codeListValue="codeListValue">TRM41249USCG    SCIT</geo:antennaType>
+            <geo:manufacturerSerialNumber>12694100</geo:manufacturerSerialNumber>
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue" codeSpace="codespace">TRM41249USCG    SCIT</geo:antennaType>
             <geo:serialNumber>12694100</geo:serialNumber>
-            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:antennaReferencePoint codeSpace="">BPA</geo:antennaReferencePoint>
             <geo:marker-arpUpEcc.>0.0</geo:marker-arpUpEcc.>
             <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>SCIT</geo:antennaRadomeType>
+            <geo:antennaRadomeType codeSpace="CodeSpaceAttr">SCIT</geo:antennaRadomeType>
+            <geo:radomeSerialNumber></geo:radomeSerialNumber>
+            <geo:antennaCableType></geo:antennaCableType>
             <geo:antennaCableLength>0.0</geo:antennaCableLength>
             <geo:dateInstalled>2007-11-06T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved></geo:dateRemoved>
          </geo:gnssAntenna>
+         <geo:dateInserted>2007-11-06T00:00:00Z</geo:dateInserted>
       </geo:gnssAntennas>
       <geo:frequencyStandards>
          <geo:frequencyStandard gml:id="FrequencyStandardType_465">
-            <geo:standardType>INTERNAL</geo:standardType>
+            <geo:standardType codeSpace="">INTERNAL</geo:standardType>
             <geo:inputFrequency>0.0</geo:inputFrequency>
+            <gml:validTime>
+               <gml:TimeInstant gml:id="TimeInstantType_378">
+                  <gml:timePosition>1970-01-22T13:00:00Z</gml:timePosition>
+               </gml:TimeInstant>
+            </gml:validTime>
          </geo:frequencyStandard>
+         <geo:dateInserted>2016-04-14T00:03:10Z</geo:dateInserted>
       </geo:frequencyStandards>
-      <geo:siteContact>
-         <gmd:MD_SecurityConstraints/>
-         <gmd:CI_ResponsibleParty>
+      <geo:siteContact gml:id="AgencyPropertyType_604">
+         <gmd:MD_SecurityConstraints id="MDSecurityConstraintsType_604">
+            <gmd:classification>
+               <gmd:MD_ClassificationCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:classification>
+         </gmd:MD_SecurityConstraints>
+         <gmd:CI_ResponsibleParty id="CIResponsiblePartyType_604">
             <gmd:individualName>
                <gco:CharacterString>Samuel Coker, ELC2</gco:CharacterString>
             </gmd:individualName>
@@ -80,16 +101,16 @@
                <gco:CharacterString>U.S. Coast Guard</gco:CharacterString>
             </gmd:organisationName>
             <gmd:contactInfo>
-               <gmd:CI_Contact>
+               <gmd:CI_Contact id="CIContactType_604">
                   <gmd:phone>
-                     <gmd:CI_Telephone>
+                     <gmd:CI_Telephone id="CITelephoneType_234">
                         <gmd:voice>
                            <gco:CharacterString>703-313-5822</gco:CharacterString>
                         </gmd:voice>
                      </gmd:CI_Telephone>
                   </gmd:phone>
                   <gmd:address>
-                     <gmd:CI_Address>
+                     <gmd:CI_Address id="CIAddressType_604">
                         <gmd:deliveryPoint>
                            <gco:CharacterString>Nationwide DGPS Planning &amp; Mgmt</gco:CharacterString>
                         </gmd:deliveryPoint>
@@ -100,22 +121,44 @@
                   </gmd:address>
                </gmd:CI_Contact>
             </gmd:contactInfo>
+            <gmd:role>
+               <gmd:CI_RoleCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:role>
          </gmd:CI_ResponsibleParty>
       </geo:siteContact>
-      <geo:siteMetadataCustodian>
-         <gmd:MD_SecurityConstraints/>
-         <gmd:CI_ResponsibleParty>
+      <geo:siteMetadataCustodian gml:id="AgencyPropertyType_605">
+         <gmd:MD_SecurityConstraints id="MDSecurityConstraintsType_605">
+            <gmd:classification>
+               <gmd:MD_ClassificationCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:classification>
+         </gmd:MD_SecurityConstraints>
+         <gmd:CI_ResponsibleParty id="CIResponsiblePartyType_605">
             <gmd:organisationName>
                <gco:CharacterString>U.S. Coast Guard</gco:CharacterString>
             </gmd:organisationName>
             <gmd:contactInfo>
-               <gmd:CI_Contact>
+               <gmd:CI_Contact id="CIContactType_605">
                   <gmd:address>
-                     <gmd:CI_Address/>
+                     <gmd:CI_Address id="CIAddressType_605"/>
                   </gmd:address>
                </gmd:CI_Contact>
             </gmd:contactInfo>
+            <gmd:role>
+               <gmd:CI_RoleCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:role>
          </gmd:CI_ResponsibleParty>
       </geo:siteMetadataCustodian>
+      <geo:moreInformation>
+         <geo:dataCenter></geo:dataCenter>
+         <geo:urlForMoreInformation></geo:urlForMoreInformation>
+         <geo:siteMap></geo:siteMap>
+         <geo:siteDiagram></geo:siteDiagram>
+         <geo:horizonMask></geo:horizonMask>
+         <geo:monumentDescription></geo:monumentDescription>
+         <geo:sitePictures></geo:sitePictures>
+         <geo:antennaGraphicsWithDimensions></geo:antennaGraphicsWithDimensions>
+         <geo:insertTextGraphicFromAntenna></geo:insertTextGraphicFromAntenna>
+         <geo:DOI codeSpace="CodeSpaceTODO">CodeTypeTODO</geo:DOI>
+      </geo:moreInformation>
    </geo:siteLog>
 </geo:GeodesyML>

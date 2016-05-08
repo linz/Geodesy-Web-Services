@@ -10,6 +10,7 @@
          <geo:siteName>COLOANE ALTO</geo:siteName>
          <geo:fourCharacterID>COAL</geo:fourCharacterID>
          <geo:iersDOMESNumber>MOM000061</geo:iersDOMESNumber>
+         <geo:cdpNumber></geo:cdpNumber>
          <geo:monumentDescription>CONCRETE PILLAR</geo:monumentDescription>
          <geo:heightOfTheMonument>3.0</geo:heightOfTheMonument>
          <geo:monumentFoundation>CONCRETE SLAB</geo:monumentFoundation>
@@ -19,57 +20,22 @@
       </geo:siteIdentification>
       <geo:siteLocation>
          <geo:city>MACAU</geo:city>
+         <geo:state></geo:state>
          <geo:countryCodeISO>CHN</geo:countryCodeISO>
+         <geo:tectonicPlate codeSpace=""></geo:tectonicPlate>
          <geo:approximatePositionITRF>
             <geo:xCoordinateInMeters>-2363060.9985</geo:xCoordinateInMeters>
             <geo:yCoordinateInMeters>5418784.9658</geo:yCoordinateInMeters>
             <geo:zCoordinateInMeters>2386862.0393</geo:zCoordinateInMeters>
-            <geo:latitude-North>220714.470600000000558793544769287109375</geo:latitude-North>
-            <geo:longitude-East>1133340.98249999992549419403076171875</geo:longitude-East>
+            <geo:latitude-North>22.1206862777777786277511040680110454559326171875</geo:latitude-North>
+            <geo:longitude-East>113.5613840277777626397437416017055511474609375</geo:longitude-East>
             <geo:elevation-m_ellips.>00169.4220</geo:elevation-m_ellips.>
          </geo:approximatePositionITRF>
       </geo:siteLocation>
       <geo:gnssReceivers>
          <geo:gnssReceiver gml:id="GnssReceiverType_523">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">LEICA GRX1200+GNSS</geo:receiverType>
-            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
-            <geo:serialNumber>496766</geo:serialNumber>
-            <geo:firmwareVersion>8.1</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>10.0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>2012-06-21T00:00:00Z</geo:dateInstalled>
-            <geo:dateRemoved>2012-09-25T00:00:00Z</geo:dateRemoved>
-            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
-            <geo:notes>Back Up Sensor</geo:notes>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver gml:id="GnssReceiverType_524">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">LEICA GRX1200+GNSS</geo:receiverType>
-            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
-            <geo:serialNumber>460755</geo:serialNumber>
-            <geo:firmwareVersion>8.2</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>10.0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>2013-07-04T02:40:00Z</geo:dateInstalled>
-            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
-            <geo:notes>Maintenance finished</geo:notes>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver gml:id="GnssReceiverType_525">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">LEICA GRX1200+GNSS</geo:receiverType>
-            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
-            <geo:serialNumber>460755</geo:serialNumber>
-            <geo:firmwareVersion>8.0</geo:firmwareVersion>
-            <geo:elevationCutoffSetting>10.0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>2010-01-04T00:00:00Z</geo:dateInstalled>
-            <geo:dateRemoved>2012-06-21T00:00:00Z</geo:dateRemoved>
-            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
-            <geo:notes>Removal due to maintenance needed</geo:notes>
-         </geo:gnssReceiver>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver gml:id="GnssReceiverType_526">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">LEICA GRX1200+GNSS</geo:receiverType>
+            <geo:manufacturerSerialNumber>460755</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">LEICA GRX1200+GNSS</geo:receiverType>
             <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
             <geo:serialNumber>460755</geo:serialNumber>
             <geo:firmwareVersion>8.2</geo:firmwareVersion>
@@ -79,10 +45,12 @@
             <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
             <geo:notes>Maintenance finished, firmware upgrade to v8.2</geo:notes>
          </geo:gnssReceiver>
+         <geo:dateInserted>2012-09-25T00:00:00Z</geo:dateInserted>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
-         <geo:gnssReceiver gml:id="GnssReceiverType_527">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">LEICA GRX1200+GNSS</geo:receiverType>
+         <geo:gnssReceiver gml:id="GnssReceiverType_524">
+            <geo:manufacturerSerialNumber>496766</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">LEICA GRX1200+GNSS</geo:receiverType>
             <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
             <geo:serialNumber>496766</geo:serialNumber>
             <geo:firmwareVersion>8.1</geo:firmwareVersion>
@@ -92,23 +60,57 @@
             <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
             <geo:notes>Change to BackUp Sensor (Internal battery low, Maintenance needed)</geo:notes>
          </geo:gnssReceiver>
+         <geo:dateInserted>2013-03-04T00:00:00Z</geo:dateInserted>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
-         <geo:gnssReceiver gml:id="GnssReceiverType_528">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">LEICA GRX1200+GNSS</geo:receiverType>
+         <geo:gnssReceiver gml:id="GnssReceiverType_525">
+            <geo:manufacturerSerialNumber>496766</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">LEICA GRX1200+GNSS</geo:receiverType>
+            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
+            <geo:serialNumber>496766</geo:serialNumber>
+            <geo:firmwareVersion>8.1</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>10.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2012-06-21T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2012-09-25T00:00:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
+            <geo:notes>Back Up Sensor</geo:notes>
+         </geo:gnssReceiver>
+         <geo:dateInserted>2012-06-21T00:00:00Z</geo:dateInserted>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_526">
+            <geo:manufacturerSerialNumber>460755</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">LEICA GRX1200+GNSS</geo:receiverType>
+            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
+            <geo:serialNumber>460755</geo:serialNumber>
+            <geo:firmwareVersion>8.0</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>10.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2010-01-04T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2012-06-21T00:00:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
+            <geo:notes>Removal due to maintenance needed</geo:notes>
+         </geo:gnssReceiver>
+         <geo:dateInserted>2010-01-04T00:00:00Z</geo:dateInserted>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_527">
+            <geo:manufacturerSerialNumber>460755</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">LEICA GRX1200+GNSS</geo:receiverType>
             <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
             <geo:serialNumber>460755</geo:serialNumber>
             <geo:firmwareVersion>8.2</geo:firmwareVersion>
             <geo:elevationCutoffSetting>10.0</geo:elevationCutoffSetting>
-            <geo:dateInstalled>2013-04-12T00:00:00Z</geo:dateInstalled>
-            <geo:dateRemoved>2013-05-10T00:00:00Z</geo:dateRemoved>
+            <geo:dateInstalled>2013-07-04T02:40:00Z</geo:dateInstalled>
+            <geo:dateRemoved></geo:dateRemoved>
             <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
             <geo:notes>Maintenance finished</geo:notes>
          </geo:gnssReceiver>
+         <geo:dateInserted>2013-07-04T02:40:00Z</geo:dateInserted>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
-         <geo:gnssReceiver gml:id="GnssReceiverType_529">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">LEICA GRX1200PRO</geo:receiverType>
+         <geo:gnssReceiver gml:id="GnssReceiverType_528">
+            <geo:manufacturerSerialNumber>460755</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">LEICA GRX1200PRO</geo:receiverType>
             <geo:satelliteSystem>GPS</geo:satelliteSystem>
             <geo:serialNumber>460755</geo:serialNumber>
             <geo:firmwareVersion>Unknown</geo:firmwareVersion>
@@ -117,10 +119,12 @@
             <geo:dateRemoved>2009-12-21T00:00:00Z</geo:dateRemoved>
             <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
          </geo:gnssReceiver>
+         <geo:dateInserted>2007-02-01T00:00:00Z</geo:dateInserted>
       </geo:gnssReceivers>
       <geo:gnssReceivers>
-         <geo:gnssReceiver gml:id="GnssReceiverType_530">
-            <geo:receiverType codeList="codelist" codeListValue="codeListValue">LEICA GRX1200+GNSS</geo:receiverType>
+         <geo:gnssReceiver gml:id="GnssReceiverType_529">
+            <geo:manufacturerSerialNumber>496766</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">LEICA GRX1200+GNSS</geo:receiverType>
             <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
             <geo:serialNumber>496766</geo:serialNumber>
             <geo:firmwareVersion>8.1</geo:firmwareVersion>
@@ -130,41 +134,68 @@
             <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
             <geo:notes>Change to BackUp Sensor (Damaged by lightning, Maintenance needed)</geo:notes>
          </geo:gnssReceiver>
+         <geo:dateInserted>2013-05-10T03:52:00Z</geo:dateInserted>
+      </geo:gnssReceivers>
+      <geo:gnssReceivers>
+         <geo:gnssReceiver gml:id="GnssReceiverType_530">
+            <geo:manufacturerSerialNumber>460755</geo:manufacturerSerialNumber>
+            <geo:receiverType codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">LEICA GRX1200+GNSS</geo:receiverType>
+            <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
+            <geo:serialNumber>460755</geo:serialNumber>
+            <geo:firmwareVersion>8.2</geo:firmwareVersion>
+            <geo:elevationCutoffSetting>10.0</geo:elevationCutoffSetting>
+            <geo:dateInstalled>2013-04-12T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved>2013-05-10T00:00:00Z</geo:dateRemoved>
+            <geo:temperatureStabilization>0.0</geo:temperatureStabilization>
+            <geo:notes>Maintenance finished</geo:notes>
+         </geo:gnssReceiver>
+         <geo:dateInserted>2013-04-12T00:00:00Z</geo:dateInserted>
       </geo:gnssReceivers>
       <geo:gnssAntennas>
          <geo:gnssAntenna gml:id="GnssAntennaType_244">
-            <geo:antennaType codeList="codelist" codeListValue="codeListValue">LEIAT504        LEIS</geo:antennaType>
-            <geo:serialNumber>102558</geo:serialNumber>
-            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
+            <geo:manufacturerSerialNumber>9460001</geo:manufacturerSerialNumber>
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue" codeSpace="codespace">LEIAR25.R3      LEIT</geo:antennaType>
+            <geo:serialNumber>9460001</geo:serialNumber>
+            <geo:antennaReferencePoint codeSpace="">BPA</geo:antennaReferencePoint>
             <geo:marker-arpUpEcc.>0.0083</geo:marker-arpUpEcc.>
             <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
             <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
             <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>LEIS</geo:antennaRadomeType>
+            <geo:antennaRadomeType codeSpace="CodeSpaceAttr">LEIT</geo:antennaRadomeType>
+            <geo:radomeSerialNumber></geo:radomeSerialNumber>
+            <geo:antennaCableType>LEICA GEV119 / LEICA GEV120</geo:antennaCableType>
+            <geo:antennaCableLength>102.8</geo:antennaCableLength>
+            <geo:dateInstalled>2010-01-15T00:00:00Z</geo:dateInstalled>
+            <geo:dateRemoved></geo:dateRemoved>
+         </geo:gnssAntenna>
+         <geo:dateInserted>2010-01-15T00:00:00Z</geo:dateInserted>
+      </geo:gnssAntennas>
+      <geo:gnssAntennas>
+         <geo:gnssAntenna gml:id="GnssAntennaType_245">
+            <geo:manufacturerSerialNumber>102558</geo:manufacturerSerialNumber>
+            <geo:antennaType codeList="codelist" codeListValue="codeListValue" codeSpace="codespace">LEIAT504        LEIS</geo:antennaType>
+            <geo:serialNumber>102558</geo:serialNumber>
+            <geo:antennaReferencePoint codeSpace="">BPA</geo:antennaReferencePoint>
+            <geo:marker-arpUpEcc.>0.0083</geo:marker-arpUpEcc.>
+            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+            <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+            <geo:antennaRadomeType codeSpace="CodeSpaceAttr">LEIS</geo:antennaRadomeType>
+            <geo:radomeSerialNumber></geo:radomeSerialNumber>
             <geo:antennaCableType>LEICA GEV119 / LEICA GEV120</geo:antennaCableType>
             <geo:antennaCableLength>102.8</geo:antennaCableLength>
             <geo:dateInstalled>2007-02-01T00:00:00Z</geo:dateInstalled>
             <geo:dateRemoved>2010-01-15T00:00:00Z</geo:dateRemoved>
          </geo:gnssAntenna>
+         <geo:dateInserted>2007-02-01T00:00:00Z</geo:dateInserted>
       </geo:gnssAntennas>
-      <geo:gnssAntennas>
-         <geo:gnssAntenna gml:id="GnssAntennaType_245">
-            <geo:antennaType codeList="codelist" codeListValue="codeListValue">LEIAR25.R3      LEIT</geo:antennaType>
-            <geo:serialNumber>9460001</geo:serialNumber>
-            <geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
-            <geo:marker-arpUpEcc.>0.0083</geo:marker-arpUpEcc.>
-            <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
-            <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
-            <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
-            <geo:antennaRadomeType>LEIT</geo:antennaRadomeType>
-            <geo:antennaCableType>LEICA GEV119 / LEICA GEV120</geo:antennaCableType>
-            <geo:antennaCableLength>102.8</geo:antennaCableLength>
-            <geo:dateInstalled>2010-01-15T00:00:00Z</geo:dateInstalled>
-         </geo:gnssAntenna>
-      </geo:gnssAntennas>
-      <geo:siteContact>
-         <gmd:MD_SecurityConstraints/>
-         <gmd:CI_ResponsibleParty>
+      <geo:siteContact gml:id="AgencyPropertyType_248">
+         <gmd:MD_SecurityConstraints id="MDSecurityConstraintsType_248">
+            <gmd:classification>
+               <gmd:MD_ClassificationCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:classification>
+         </gmd:MD_SecurityConstraints>
+         <gmd:CI_ResponsibleParty id="CIResponsiblePartyType_248">
             <gmd:individualName>
                <gco:CharacterString>Sally Fong</gco:CharacterString>
             </gmd:individualName>
@@ -172,9 +203,9 @@
                <gco:CharacterString>Macao Cartography and Cadastre Bureau</gco:CharacterString>
             </gmd:organisationName>
             <gmd:contactInfo>
-               <gmd:CI_Contact>
+               <gmd:CI_Contact id="CIContactType_248">
                   <gmd:phone>
-                     <gmd:CI_Telephone>
+                     <gmd:CI_Telephone id="CITelephoneType_94">
                         <gmd:voice>
                            <gco:CharacterString>(853) 8799-1602</gco:CharacterString>
                         </gmd:voice>
@@ -184,7 +215,7 @@
                      </gmd:CI_Telephone>
                   </gmd:phone>
                   <gmd:address>
-                     <gmd:CI_Address>
+                     <gmd:CI_Address id="CIAddressType_248">
                         <gmd:deliveryPoint>
                            <gco:CharacterString>Estrada de D. Maria II, 32-36,</gco:CharacterString>
                         </gmd:deliveryPoint>
@@ -195,25 +226,45 @@
                   </gmd:address>
                </gmd:CI_Contact>
             </gmd:contactInfo>
+            <gmd:role>
+               <gmd:CI_RoleCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:role>
          </gmd:CI_ResponsibleParty>
       </geo:siteContact>
-      <geo:siteMetadataCustodian>
-         <gmd:MD_SecurityConstraints/>
-         <gmd:CI_ResponsibleParty>
+      <geo:siteMetadataCustodian gml:id="AgencyPropertyType_249">
+         <gmd:MD_SecurityConstraints id="MDSecurityConstraintsType_249">
+            <gmd:classification>
+               <gmd:MD_ClassificationCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:classification>
+         </gmd:MD_SecurityConstraints>
+         <gmd:CI_ResponsibleParty id="CIResponsiblePartyType_249">
             <gmd:organisationName>
                <gco:CharacterString>Macao Cartography and Cadastre Bureau</gco:CharacterString>
             </gmd:organisationName>
             <gmd:contactInfo>
-               <gmd:CI_Contact>
+               <gmd:CI_Contact id="CIContactType_249">
                   <gmd:address>
-                     <gmd:CI_Address/>
+                     <gmd:CI_Address id="CIAddressType_249"/>
                   </gmd:address>
                </gmd:CI_Contact>
             </gmd:contactInfo>
+            <gmd:role>
+               <gmd:CI_RoleCode codeList="codelist" codeListValue="codeListValue"/>
+            </gmd:role>
          </gmd:CI_ResponsibleParty>
       </geo:siteMetadataCustodian>
       <geo:moreInformation>
+         <geo:dataCenter>http</geo:dataCenter>
+         <geo:dataCenter>http</geo:dataCenter>
          <geo:urlForMoreInformation>http</geo:urlForMoreInformation>
+         <geo:siteMap></geo:siteMap>
+         <geo:siteDiagram></geo:siteDiagram>
+         <geo:horizonMask></geo:horizonMask>
+         <geo:monumentDescription></geo:monumentDescription>
+         <geo:sitePictures></geo:sitePictures>
+         <geo:antennaGraphicsWithDimensions></geo:antennaGraphicsWithDimensions>
+         <geo:insertTextGraphicFromAntenna></geo:insertTextGraphicFromAntenna>
+         <geo:DOI codeSpace="CodeSpaceTODO">CodeTypeTODO</geo:DOI>
       </geo:moreInformation>
    </geo:siteLog>
 </geo:GeodesyML>

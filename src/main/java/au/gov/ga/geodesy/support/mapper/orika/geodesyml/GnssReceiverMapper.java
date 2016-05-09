@@ -1,4 +1,4 @@
-package au.gov.ga.geodesy.support.mapper.orika;
+package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 
 import java.util.function.Function;
 
@@ -15,13 +15,13 @@ import ma.glasnost.orika.metadata.TypeFactory;
 
 import net.opengis.gml.v_3_2_1.CodeType;
 
-public class GnssReceiverOrikaMapper implements Isomorphism<GnssReceiverType, GnssReceiverLogItem> {
+public class GnssReceiverMapper implements Isomorphism<GnssReceiverType, GnssReceiverLogItem> {
 
     private MapperFactory mapperFactory = new DefaultMapperFactory.Builder().build();
 
     private MapperFacade mapper;
 
-    public GnssReceiverOrikaMapper() {
+    public GnssReceiverMapper() {
         mapperFactory.classMap(GnssReceiverLogItem.class, GnssReceiverType.class)
             .fieldMap("type", "igsModelCode").converter("typeConverter").add()
             .field("serialNumber", "manufacturerSerialNumber")

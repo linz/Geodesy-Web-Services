@@ -16,7 +16,7 @@ import org.testng.annotations.Test;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLogRepository;
 import au.gov.ga.geodesy.port.InvalidSiteLogException;
 import au.gov.ga.geodesy.port.SiteLogSource;
-import au.gov.ga.geodesy.port.adapter.sopac.SiteLogSopacReader;
+import au.gov.ga.geodesy.port.adapter.sopac.SopacSiteLogReader;
 import au.gov.ga.geodesy.support.spring.GeodesyServiceTestConfig;
 import au.gov.ga.geodesy.support.spring.GeodesySupportConfig;
 import au.gov.ga.geodesy.support.spring.PersistenceJpaConfig;
@@ -49,7 +49,7 @@ public class MultipleSitesTest extends AbstractTransactionalTestNGSpringContextT
 		});
 		numberOfSites = siteLogFiles.length;
 		for (File f : siteLogFiles) {
-            SiteLogSource input = new SiteLogSopacReader(new FileReader(f));
+            SiteLogSource input = new SopacSiteLogReader(new FileReader(f));
 			siteLogService.upload(input.getSiteLog());
 		}
 	}

@@ -12,7 +12,7 @@ import au.gov.ga.geodesy.port.InvalidSiteLogException;
 import au.gov.ga.geodesy.port.SiteLogReader;
 
 @Configurable(preConstruction = true)
-public class SiteLogSopacReader extends SiteLogReader {
+public class SopacSiteLogReader extends SiteLogReader {
 
     private SiteLog siteLog;
 
@@ -20,9 +20,9 @@ public class SiteLogSopacReader extends SiteLogReader {
     private IgsSiteLogXmlMarshaller marshaller;
 
     @Autowired
-    private SiteLogSopacMapper mapper;
+    private SopacSiteLogMapper mapper;
 
-    public SiteLogSopacReader(Reader input) {
+    public SopacSiteLogReader(Reader input) {
         super(input);
     }
 

@@ -1,4 +1,4 @@
-package au.gov.ga.geodesy.support.mapper.orika;
+package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 
 import java.text.ParseException;
 import java.util.Arrays;

@@ -20,7 +20,7 @@ import au.gov.ga.geodesy.domain.service.IgsSiteLogService;
 import au.gov.ga.geodesy.port.InvalidSiteLogException;
 import au.gov.ga.geodesy.port.SiteLogReader;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLValidator;
-import au.gov.ga.geodesy.port.adapter.sopac.SiteLogSopacReader;
+import au.gov.ga.geodesy.port.adapter.sopac.SopacSiteLogReader;
 import au.gov.ga.xmlschemer.Violation;
 
 @Controller
@@ -49,7 +49,7 @@ public class SiteLogEndpoint {
 
     @RequestMapping(value = "/sopac/upload", method = RequestMethod.POST)
     public void upload(HttpServletRequest req, HttpServletResponse rsp) throws IOException {
-        SiteLogReader reader = new SiteLogSopacReader(new InputStreamReader(req.getInputStream()));
+        SiteLogReader reader = new SopacSiteLogReader(new InputStreamReader(req.getInputStream()));
         try {
             service.upload(reader.getSiteLog());
         }

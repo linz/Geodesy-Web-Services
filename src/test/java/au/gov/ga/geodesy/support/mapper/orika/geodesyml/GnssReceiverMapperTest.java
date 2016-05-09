@@ -1,4 +1,4 @@
-package au.gov.ga.geodesy.support.mapper.orika;
+package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 
 import static org.testng.Assert.assertEquals;
 
@@ -9,15 +9,16 @@ import org.apache.commons.lang3.time.FastDateFormat;
 import org.testng.annotations.Test;
 
 import au.gov.ga.geodesy.domain.model.sitelog.GnssReceiverLogItem;
+import au.gov.ga.geodesy.support.mapper.orika.geodesyml.GnssReceiverMapper;
 import au.gov.xml.icsm.geodesyml.v_0_3.GnssReceiverType;
 import au.gov.xml.icsm.geodesyml.v_0_3.IgsReceiverModelCodeType;
 
 import net.opengis.gml.v_3_2_1.CodeType;
 import net.opengis.gml.v_3_2_1.TimePositionType;
 
-public class GnssReceiverOrikaMapperTest {
+public class GnssReceiverMapperTest {
 
-    private GnssReceiverOrikaMapper mapper = new GnssReceiverOrikaMapper();
+    private GnssReceiverMapper mapper = new GnssReceiverMapper();
 
     @Test
     public void testMappingToLogItem() {

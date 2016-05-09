@@ -1,4 +1,4 @@
-package au.gov.ga.geodesy.support.mapper.orika;
+package au.gov.ga.geodesy.support.mapper.orika.sopac;
 
 import org.geotools.metadata.iso.citation.ContactImpl;
 import org.geotools.metadata.iso.citation.ResponsiblePartyImpl;
@@ -9,8 +9,9 @@ import org.springframework.stereotype.Component;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLog;
 import au.gov.ga.geodesy.igssitelog.domain.model.Agency;
 import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLog;
-import au.gov.ga.geodesy.port.adapter.sopac.SiteLogSopacMapper;
-
+import au.gov.ga.geodesy.port.adapter.sopac.SopacSiteLogMapper;
+import au.gov.ga.geodesy.support.mapper.orika.StringToInternationalStringConverter;
+import au.gov.ga.geodesy.support.mapper.orika.StringToStringPropertyConverter;
 import ma.glasnost.orika.MapperFacade;
 import ma.glasnost.orika.MapperFactory;
 import ma.glasnost.orika.OrikaSystemProperties;
@@ -18,7 +19,7 @@ import ma.glasnost.orika.impl.DefaultMapperFactory;
 import ma.glasnost.orika.impl.generator.EclipseJdtCompilerStrategy;
 
 @Component
-public class SiteLogSopacOrikaMapper implements SiteLogSopacMapper {
+public class SiteLogSopacOrikaMapper implements SopacSiteLogMapper {
 
     static {
         System.setProperty(OrikaSystemProperties.WRITE_SOURCE_FILES, "true");

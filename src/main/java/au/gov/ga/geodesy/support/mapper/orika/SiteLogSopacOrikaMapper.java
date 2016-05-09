@@ -18,7 +18,7 @@ import ma.glasnost.orika.impl.DefaultMapperFactory;
 import ma.glasnost.orika.impl.generator.EclipseJdtCompilerStrategy;
 
 @Component
-public class SiteLogOrikaMapper implements SiteLogSopacMapper {
+public class SiteLogSopacOrikaMapper implements SiteLogSopacMapper {
 
     static {
         System.setProperty(OrikaSystemProperties.WRITE_SOURCE_FILES, "true");
@@ -26,7 +26,7 @@ public class SiteLogOrikaMapper implements SiteLogSopacMapper {
 
     private MapperFacade mapper;
 
-    public SiteLogOrikaMapper() {
+    public SiteLogSopacOrikaMapper() {
         MapperFactory factory = new DefaultMapperFactory.Builder()
             .compilerStrategy(new EclipseJdtCompilerStrategy())
             .build();

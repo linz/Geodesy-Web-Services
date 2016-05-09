@@ -20,7 +20,7 @@ public class SopacSiteLogReader extends SiteLogReader {
     private IgsSiteLogXmlMarshaller marshaller;
 
     @Autowired
-    private SiteLogSopacMapper mapper;
+    private SopacSiteLogMapper mapper;
 
     public SopacSiteLogReader(Reader input) {
         super(input);

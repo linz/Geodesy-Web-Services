@@ -46,14 +46,14 @@ public class SiteLocationMapper implements Isomorphism<SiteLocationType, SiteLoc
     /**
      * {@inheritDoc}
      */
-    public Function<SiteLocationType, SiteLocation> to() {
-        return siteLocationType -> mapper.map(siteLocationType, SiteLocation.class);
+    public SiteLocation to(SiteLocationType siteLocType) {
+        return mapper.map(siteLocType, SiteLocation.class);
     }
 
     /**
      * {@inheritDoc}
      */
-    public Function<SiteLocation, SiteLocationType> from() {
-        return siteLocation -> mapper.map(siteLocation, SiteLocationType.class);
+    public SiteLocationType from(SiteLocation siteLoc) {
+        return mapper.map(siteLoc, SiteLocationType.class);
     }
 }

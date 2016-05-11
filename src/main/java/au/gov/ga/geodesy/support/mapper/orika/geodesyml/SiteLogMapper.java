@@ -46,14 +46,14 @@ public class SiteLogMapper implements Isomorphism<SiteLogType, SiteLog> {
     /**
      * {@inheritDoc}
      */
-    public Function<SiteLogType, SiteLog> to() {
-        return siteLogType -> mapper.map(siteLogType, SiteLog.class);
+    public SiteLog to(SiteLogType siteLogType) {
+        return mapper.map(siteLogType, SiteLog.class);
     }
 
     /**
      * {@inheritDoc}
      */
-    public Function<SiteLog, SiteLogType> from() {
-        return siteLog -> mapper.map(siteLog, SiteLogType.class);
+    public SiteLogType from(SiteLog siteLog) {
+        return mapper.map(siteLog, SiteLogType.class);
     }
 }

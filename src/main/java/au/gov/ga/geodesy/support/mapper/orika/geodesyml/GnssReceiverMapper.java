@@ -1,7 +1,5 @@
 package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 
-import java.util.function.Function;
-
 import au.gov.ga.geodesy.domain.model.sitelog.GnssReceiverLogItem;
 import au.gov.ga.geodesy.support.java.util.Isomorphism;
 import au.gov.xml.icsm.geodesyml.v_0_3.GnssReceiverType;
@@ -44,11 +42,11 @@ public class GnssReceiverMapper implements Isomorphism<GnssReceiverType, GnssRec
         mapper = mapperFactory.getMapperFacade();
     }
 
-    public Function<GnssReceiverType, GnssReceiverLogItem> to() {
-        return receiver -> mapper.map(receiver, GnssReceiverLogItem.class);
+    public GnssReceiverLogItem to(GnssReceiverType receiver) {
+        return mapper.map(receiver, GnssReceiverLogItem.class);
     }
 
-    public Function<GnssReceiverLogItem, GnssReceiverType> from() {
-        return receiverLogItem -> mapper.map(receiverLogItem, GnssReceiverType.class);
+    public GnssReceiverType from(GnssReceiverLogItem receiverLogItem) {
+        return mapper.map(receiverLogItem, GnssReceiverType.class);
     }
 }

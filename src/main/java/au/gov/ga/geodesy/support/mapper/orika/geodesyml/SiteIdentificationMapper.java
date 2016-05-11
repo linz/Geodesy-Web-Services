@@ -42,14 +42,14 @@ public class SiteIdentificationMapper implements Isomorphism<SiteIdentificationT
     /**
      * {@inheritDoc}
      */
-    public Function<SiteIdentificationType, SiteIdentification> to() {
-        return siteIdentificationType -> mapper.map(siteIdentificationType, SiteIdentification.class);
+    public SiteIdentification to(SiteIdentificationType siteIdType) {
+        return mapper.map(siteIdType, SiteIdentification.class);
     }
 
     /**
      * {@inheritDoc}
      */
-    public Function<SiteIdentification, SiteIdentificationType> from() {
-        return siteIdentification -> mapper.map(siteIdentification, SiteIdentificationType.class);
+    public SiteIdentificationType from(SiteIdentification siteId) {
+        return mapper.map(siteId, SiteIdentificationType.class);
     }
 }

@@ -1,18 +1,18 @@
 package au.gov.ga.geodesy.port.adapter.geodesyml;
 
-import java.util.List;
-
-import javax.xml.transform.stream.StreamSource;
-
+import au.gov.ga.xmlschemer.Violation;
 import org.springframework.util.ResourceUtils;
-import static org.testng.Assert.*;
 import org.testng.annotations.Test;
 
-import au.gov.ga.xmlschemer.Violation;
+import javax.xml.transform.stream.StreamSource;
+import java.util.List;
+
+import static org.testng.Assert.assertEquals;
 
 public class GeodesyMLValidatorTest {
 
-    private GeodesyMLValidator validator = new GeodesyMLValidator();
+    // TODO fix the constructor so that the unit tests will pass
+    private GeodesyMLValidator validator = new GeodesyMLValidator(null, "");
 
     @Test
     public void testSchemaValidation() throws Exception {

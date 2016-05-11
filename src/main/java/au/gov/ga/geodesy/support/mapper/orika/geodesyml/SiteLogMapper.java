@@ -5,7 +5,7 @@ import java.util.function.Function;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteIdentification;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLocation;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLog;
-import au.gov.ga.geodesy.support.java.util.Isomorphism;
+import au.gov.ga.geodesy.support.java.util.Iso;
 import au.gov.xml.icsm.geodesyml.v_0_3.SiteIdentificationType;
 import au.gov.xml.icsm.geodesyml.v_0_3.SiteLocationType;
 import au.gov.xml.icsm.geodesyml.v_0_3.SiteLogType;
@@ -19,7 +19,7 @@ import ma.glasnost.orika.impl.DefaultMapperFactory;
  * Reversible mapping between GeodesyML SiteLogType DTO and
  * SiteLog site log entity.
  */
-public class SiteLogMapper implements Isomorphism<SiteLogType, SiteLog> {
+public class SiteLogMapper implements Iso<SiteLogType, SiteLog> {
 
     private MapperFactory mapperFactory = new DefaultMapperFactory.Builder().build();
 
@@ -35,10 +35,10 @@ public class SiteLogMapper implements Isomorphism<SiteLogType, SiteLog> {
         ConverterFactory converters = mapperFactory.getConverterFactory();
 
         converters.registerConverter("siteIdentification",
-                new IsomorphismConverter<SiteIdentificationType, SiteIdentification>(new SiteIdentificationMapper()) {});
+                new IsoConverter<SiteIdentificationType, SiteIdentification>(new SiteIdentificationMapper()) {});
 
         converters.registerConverter("siteLocation",
-                new IsomorphismConverter<SiteLocationType, SiteLocation>(new SiteLocationMapper()) {});
+                new IsoConverter<SiteLocationType, SiteLocation>(new SiteLocationMapper()) {});
 
         mapper = mapperFactory.getMapperFacade();
     }

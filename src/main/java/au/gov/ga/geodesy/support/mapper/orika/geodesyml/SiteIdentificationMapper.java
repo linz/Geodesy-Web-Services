@@ -3,7 +3,7 @@ package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 import java.util.function.Function;
 
 import au.gov.ga.geodesy.domain.model.sitelog.SiteIdentification;
-import au.gov.ga.geodesy.support.java.util.Isomorphism;
+import au.gov.ga.geodesy.support.java.util.Iso;
 import au.gov.xml.icsm.geodesyml.v_0_3.SiteIdentificationType;
 
 import ma.glasnost.orika.MapperFacade;
@@ -15,7 +15,7 @@ import ma.glasnost.orika.impl.DefaultMapperFactory;
  * Reversible mapping between GeodesyML SiteIdentificationType DTO and
  * SiteIdentification site log entity.
  */
-public class SiteIdentificationMapper implements Isomorphism<SiteIdentificationType, SiteIdentification> {
+public class SiteIdentificationMapper implements Iso<SiteIdentificationType, SiteIdentification> {
 
     private MapperFactory mapperFactory = new DefaultMapperFactory.Builder().build();
 

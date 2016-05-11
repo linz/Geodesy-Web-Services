@@ -1,7 +1,7 @@
 package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 
 import au.gov.ga.geodesy.domain.model.sitelog.GnssReceiverLogItem;
-import au.gov.ga.geodesy.support.java.util.Isomorphism;
+import au.gov.ga.geodesy.support.java.util.Iso;
 import au.gov.xml.icsm.geodesyml.v_0_3.GnssReceiverType;
 import au.gov.xml.icsm.geodesyml.v_0_3.IgsReceiverModelCodeType;
 
@@ -13,7 +13,7 @@ import ma.glasnost.orika.metadata.TypeFactory;
 
 import net.opengis.gml.v_3_2_1.CodeType;
 
-public class GnssReceiverMapper implements Isomorphism<GnssReceiverType, GnssReceiverLogItem> {
+public class GnssReceiverMapper implements Iso<GnssReceiverType, GnssReceiverLogItem> {
 
     private MapperFactory mapperFactory = new DefaultMapperFactory.Builder().build();
 

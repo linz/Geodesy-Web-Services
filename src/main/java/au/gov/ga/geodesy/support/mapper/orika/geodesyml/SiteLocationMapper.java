@@ -4,7 +4,7 @@ import java.util.function.Function;
 
 import au.gov.ga.geodesy.domain.model.sitelog.ApproximatePosition;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLocation;
-import au.gov.ga.geodesy.support.java.util.Isomorphism;
+import au.gov.ga.geodesy.support.java.util.Iso;
 import au.gov.xml.icsm.geodesyml.v_0_3.SiteLocationType;
 
 import ma.glasnost.orika.MapperFacade;
@@ -16,7 +16,7 @@ import ma.glasnost.orika.impl.DefaultMapperFactory;
  * Reversible mapping between GeodesyML SiteLocationType DTO and
  * SiteLocation site log entity.
  */
-public class SiteLocationMapper implements Isomorphism<SiteLocationType, SiteLocation> {
+public class SiteLocationMapper implements Iso<SiteLocationType, SiteLocation> {
 
     private MapperFactory mapperFactory = new DefaultMapperFactory.Builder().build();
 

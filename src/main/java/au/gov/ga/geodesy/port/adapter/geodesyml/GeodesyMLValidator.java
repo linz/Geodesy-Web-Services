@@ -1,13 +1,17 @@
 package au.gov.ga.geodesy.port.adapter.geodesyml;
 
-import au.gov.ga.xmlschemer.SchemaValidator;
-import au.gov.ga.xmlschemer.Violation;
-import org.xml.sax.SAXException;
+import java.io.IOException;
+import java.net.URL;
+import java.util.List;
 
 import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamSource;
-import java.io.IOException;
-import java.util.List;
+
+import org.springframework.util.ResourceUtils;
+import org.xml.sax.SAXException;
+
+import au.gov.ga.xmlschemer.SchemaValidator;
+import au.gov.ga.xmlschemer.Violation;
 
 /**
  * A validator for XML files that are supposed to be valid according to the GeodesyML schemas.
@@ -17,15 +21,17 @@ public class GeodesyMLValidator {
     private SchemaValidator schemaValidator;
 
     /**
-     * Constructor, takes the root level XSD source and the path to the catalog file.
-     * @param xsdSource
-     * @param catalogPath
+     * Constructor, takes the root level GeodesyML XSD source and the path to the catalog file.
+     * @param catalogPath full path to the catalog file, may be null
      */
-    public GeodesyMLValidator(Source xsdSource, String catalogPath) {
+    public GeodesyMLValidator(String catalogPath) {
+
         try {
+            URL schemaUrl = ResourceUtils.getURL("classpath:xsd/geodesyml-1.0.0-SNAPSHOT/geodesyML.xsd");
+            Source xsdSource = new StreamSource(schemaUrl.openStream());
             schemaValidator = new SchemaValidator(xsdSource, catalogPath);
         }
-        catch (SAXException e) {
+        catch (IOException | SAXException e) {
             throw new RuntimeException("Failed to initialise GeodesyMLValidator", e);
         }
     }

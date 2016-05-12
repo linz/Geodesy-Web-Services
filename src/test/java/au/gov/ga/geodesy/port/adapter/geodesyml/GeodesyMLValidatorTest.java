@@ -1,22 +1,23 @@
 package au.gov.ga.geodesy.port.adapter.geodesyml;
 
-import au.gov.ga.xmlschemer.Violation;
+import static org.testng.Assert.assertEquals;
+
+import java.io.IOException;
+import java.util.List;
+
+import javax.xml.transform.stream.StreamSource;
+
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.Resource;
 import org.springframework.util.ResourceUtils;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import javax.xml.transform.Source;
-import javax.xml.transform.stream.StreamSource;
-import java.io.IOException;
-import java.util.List;
+import au.gov.ga.xmlschemer.Violation;
 
-import static org.testng.Assert.assertEquals;
+public class GeodesyMLValidatorTest  {
 
-public class GeodesyMLValidatorTest {
-
-    private GeodesyMLValidator geodesyMLValidator = null;
+    private GeodesyMLValidator geodesyMLValidator;
 
     @BeforeTest
     public void setup() {
@@ -24,11 +25,8 @@ public class GeodesyMLValidatorTest {
         try {
             context = new ClassPathXmlApplicationContext();
             Resource catalogResource = context.getResource("classpath:xsd/geodesyml-1.0.0-SNAPSHOT/catalog.xml");
-            Resource xsdResource = context.getResource("classpath:xsd/geodesyml-1.0.0-SNAPSHOT/geodesyML.xsd");
-            Source xsdSource = new StreamSource(xsdResource.getInputStream());
             String catalogPath = catalogResource.getFile().getAbsolutePath();
-
-            geodesyMLValidator = new GeodesyMLValidator(xsdSource, catalogPath);
+            geodesyMLValidator = new GeodesyMLValidator(catalogPath);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -43,7 +41,6 @@ public class GeodesyMLValidatorTest {
 
     @Test
     public void testSchemaValidationFailure() throws Exception {
-        // load a file with 2 known schema violations
         StreamSource xml = new StreamSource(ResourceUtils.getFile("classpath:sitelog/geodesyml/MOBS-invalid-schema.xml"));
         List<Violation> violations = geodesyMLValidator.validate(xml);
         assertViolations(violations, 2);

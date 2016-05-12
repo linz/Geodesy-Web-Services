@@ -1,6 +1,6 @@
 package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 
-import au.gov.ga.geodesy.support.java.util.Isomorphism;
+import au.gov.ga.geodesy.support.java.util.Iso;
 
 import ma.glasnost.orika.MappingContext;
 import ma.glasnost.orika.converter.BidirectionalConverter;
@@ -13,11 +13,11 @@ import ma.glasnost.orika.metadata.Type;
  *
  * @see au.gov.ga.geodesy.support.mapper.orika.geodesyml.SiteLogMapper
  */
-public class IsomorphismConverter<A, B> extends BidirectionalConverter<A, B> {
+public class IsoConverter<A, B> extends BidirectionalConverter<A, B> {
 
-    private Isomorphism<A, B> iso;
+    private Iso<A, B> iso;
 
-    public IsomorphismConverter(Isomorphism<A, B> iso) {
+    public IsoConverter(Iso<A, B> iso) {
         this.iso = iso;
     }
 

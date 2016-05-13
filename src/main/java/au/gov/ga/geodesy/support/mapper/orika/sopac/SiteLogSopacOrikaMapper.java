@@ -14,16 +14,11 @@ import au.gov.ga.geodesy.support.mapper.orika.StringToInternationalStringConvert
 import au.gov.ga.geodesy.support.mapper.orika.StringToStringPropertyConverter;
 import ma.glasnost.orika.MapperFacade;
 import ma.glasnost.orika.MapperFactory;
-import ma.glasnost.orika.OrikaSystemProperties;
 import ma.glasnost.orika.impl.DefaultMapperFactory;
 import ma.glasnost.orika.impl.generator.EclipseJdtCompilerStrategy;
 
 @Component
 public class SiteLogSopacOrikaMapper implements SopacSiteLogMapper {
-
-    static {
-        System.setProperty(OrikaSystemProperties.WRITE_SOURCE_FILES, "true");
-    }
 
     private MapperFacade mapper;
 

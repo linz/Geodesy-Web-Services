@@ -133,7 +133,7 @@ def make_webserver(nat_wait, security_group):
         ImageId=IMAGE_ID,
         InstanceType="t2.medium",
         KeyName=KEY_PAIR_NAME,
-        IamInstanceProfile="arn:aws:iam::094928090547:role/GeodesyWebServicesD-WebServerRole",
+        IamInstanceProfile="arn:aws:iam::094928090547:instance-profile/GeodesyWebServicesD-WebServerRole",
         SecurityGroups=[Ref(security_group)],
         DependsOn=nat_wait.title,
         Metadata=cf.Metadata(

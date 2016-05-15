@@ -70,7 +70,7 @@ class GeodesyWebServicesStack(SingleAZenv):
             # ),
             Subnets=[Ref(self.public_subnet)],
             HealthCheck=elb.HealthCheck(
-                Target="HTTP:8080/index.html",
+                Target="HTTP:8080/",
                 HealthyThreshold="2",
                 UnhealthyThreshold="5",
                 Interval="60",

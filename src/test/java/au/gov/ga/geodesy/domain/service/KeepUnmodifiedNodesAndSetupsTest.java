@@ -5,6 +5,7 @@ import static org.testng.Assert.assertEquals;
 import java.io.File;
 import java.io.FileReader;
 
+import au.gov.ga.geodesy.support.spring.IntegrationTestConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ContextConfiguration;
@@ -27,12 +28,8 @@ import au.gov.ga.geodesy.support.spring.GeodesyServiceTestConfig;
 import au.gov.ga.geodesy.support.spring.GeodesySupportConfig;
 import au.gov.ga.geodesy.support.spring.PersistenceJpaConfig;
 
-@ContextConfiguration(
-        classes = {GeodesySupportConfig.class, GeodesyServiceTestConfig.class, PersistenceJpaConfig.class},
-        loader = AnnotationConfigContextLoader.class)
-
 @Transactional("geodesyTransactionManager")
-public class KeepUnmodifiedNodesAndSetupsTest extends AbstractTransactionalTestNGSpringContextTests {
+public class KeepUnmodifiedNodesAndSetupsTest extends IntegrationTestConfig {
 
     private static final String siteLogsDir = "src/test/resources/sitelog/";
 

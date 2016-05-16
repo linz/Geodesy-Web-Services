@@ -9,6 +9,7 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 
+import au.gov.ga.geodesy.support.spring.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.testng.AbstractTransactionalTestNGSpringContextTests;
@@ -20,25 +21,13 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.context.WebApplicationContext;
 import org.testng.annotations.BeforeClass;
 
-import au.gov.ga.geodesy.support.spring.GeodesyRepositoryRestMvcConfig;
-import au.gov.ga.geodesy.support.spring.GeodesyRestMvcConfig;
-import au.gov.ga.geodesy.support.spring.GeodesyServiceTestConfig;
-import au.gov.ga.geodesy.support.spring.GeodesySupportConfig;
-import au.gov.ga.geodesy.support.spring.PersistenceJpaConfig;
-
 @ContextConfiguration(
-        classes = {
-            GeodesySupportConfig.class,
-            GeodesyServiceTestConfig.class,
-            GeodesyRepositoryRestMvcConfig.class,
-            GeodesyRestMvcConfig.class,
-            PersistenceJpaConfig.class
-        },
+        classes = {GeodesyRepositoryRestMvcConfig.class, GeodesyRestMvcConfig.class},
         loader = AnnotationConfigWebContextLoader.class)
 
 @WebAppConfiguration
 @Transactional("geodesyTransactionManager")
-public class RestTest extends AbstractTransactionalTestNGSpringContextTests {
+public class RestTest extends IntegrationTestConfig {
 
     @Autowired
     private WebApplicationContext webApplicationContext;

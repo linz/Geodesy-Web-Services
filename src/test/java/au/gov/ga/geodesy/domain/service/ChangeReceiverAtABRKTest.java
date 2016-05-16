@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 
+import au.gov.ga.geodesy.support.spring.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ContextConfiguration;
@@ -17,16 +18,10 @@ import au.gov.ga.geodesy.domain.model.sitelog.SiteLogRepository;
 import au.gov.ga.geodesy.port.InvalidSiteLogException;
 import au.gov.ga.geodesy.port.SiteLogSource;
 import au.gov.ga.geodesy.port.adapter.sopac.SopacSiteLogReader;
-import au.gov.ga.geodesy.support.spring.GeodesyServiceTestConfig;
-import au.gov.ga.geodesy.support.spring.GeodesySupportConfig;
-import au.gov.ga.geodesy.support.spring.PersistenceJpaConfig;
 
-@ContextConfiguration(
-        classes = {GeodesySupportConfig.class, GeodesyServiceTestConfig.class, PersistenceJpaConfig.class},
-        loader = AnnotationConfigContextLoader.class)
 
 @Transactional("geodesyTransactionManager")
-public class ChangeReceiverAtABRKTest extends AbstractTransactionalTestNGSpringContextTests {
+public class ChangeReceiverAtABRKTest extends IntegrationTestConfig {
 
     private static final String scenarioDirName = "src/test/resources/change-receiver-at-abrk/";
 

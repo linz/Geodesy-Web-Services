@@ -7,6 +7,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.util.List;
 
+import au.gov.ga.geodesy.support.spring.IntegrationTestConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ContextConfiguration;
@@ -30,12 +31,9 @@ import au.gov.ga.geodesy.support.spring.GeodesyServiceTestConfig;
 import au.gov.ga.geodesy.support.spring.GeodesySupportConfig;
 import au.gov.ga.geodesy.support.spring.PersistenceJpaConfig;
 
-@ContextConfiguration(
-        classes = {GeodesySupportConfig.class, GeodesyServiceTestConfig.class, PersistenceJpaConfig.class},
-        loader = AnnotationConfigContextLoader.class)
 
 @Transactional("geodesyTransactionManager")
-public class UploadADE1Test extends AbstractTransactionalTestNGSpringContextTests {
+public class UploadADE1Test extends IntegrationTestConfig {
 
     private static final String siteLogsDir = "src/test/resources/sitelog/";
 

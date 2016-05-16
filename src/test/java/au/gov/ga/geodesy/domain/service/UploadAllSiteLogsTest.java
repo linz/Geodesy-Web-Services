@@ -5,6 +5,7 @@ import java.io.FileFilter;
 import java.io.FileReader;
 import java.util.List;
 
+import au.gov.ga.geodesy.support.spring.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ContextConfiguration;
@@ -20,16 +21,10 @@ import au.gov.ga.geodesy.domain.model.event.Event;
 import au.gov.ga.geodesy.domain.model.event.SiteLogReceived;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLogRepository;
 import au.gov.ga.geodesy.port.adapter.sopac.SopacSiteLogReader;
-import au.gov.ga.geodesy.support.spring.GeodesyServiceUnitTestConfig;
-import au.gov.ga.geodesy.support.spring.GeodesySupportConfig;
-import au.gov.ga.geodesy.support.spring.PersistenceJpaConfig;
 
-@ContextConfiguration(
-        classes = {GeodesySupportConfig.class, GeodesyServiceUnitTestConfig.class, PersistenceJpaConfig.class},
-        loader = AnnotationConfigContextLoader.class)
 
 @Transactional("geodesyTransactionManager")
-public class UploadAllSiteLogsTest extends AbstractTransactionalTestNGSpringContextTests {
+public class UploadAllSiteLogsTest extends UnitTestConfig {
 
     private static final String siteLogsDir = "src/test/resources/sitelog/";
     private File[] siteLogFiles = null;

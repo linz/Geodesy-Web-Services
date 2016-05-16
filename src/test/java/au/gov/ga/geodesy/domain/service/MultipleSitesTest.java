@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
+import au.gov.ga.geodesy.support.spring.IntegrationTestConfig;
 import org.junit.Assert;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.annotation.Rollback;
@@ -21,11 +22,8 @@ import au.gov.ga.geodesy.support.spring.GeodesyServiceTestConfig;
 import au.gov.ga.geodesy.support.spring.GeodesySupportConfig;
 import au.gov.ga.geodesy.support.spring.PersistenceJpaConfig;
 
-@ContextConfiguration(classes = { GeodesySupportConfig.class, GeodesyServiceTestConfig.class,
-		PersistenceJpaConfig.class }, loader = AnnotationConfigContextLoader.class)
-
 @Transactional("geodesyTransactionManager")
-public class MultipleSitesTest extends AbstractTransactionalTestNGSpringContextTests {
+public class MultipleSitesTest extends IntegrationTestConfig {
 
 	private static final String scenarioDirName = "src/test/resources/multiple-sites/";
 

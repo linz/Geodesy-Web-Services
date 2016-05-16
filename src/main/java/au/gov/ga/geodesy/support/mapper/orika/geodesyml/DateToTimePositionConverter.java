@@ -24,6 +24,7 @@ public class DateToTimePositionConverter extends BidirectionalConverter<Date, Ti
     private static final String[] timePositionPatterns = {
         defaultTimePositionPattern,
         "yyyy-MM-dd'T'HH:mm:ss.SSSZ",
+        "yyyy-MM-dd'T'HH:mm:ssX",
         "yyyy-MM-ddX",
     };
 

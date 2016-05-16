@@ -48,6 +48,7 @@ public abstract class Event implements Cloneable {
      * 
      * @return the message
      */
+     // TODO: could this be toString instead?
     public String getMessage() {
         String message = "Event: " + this.getClass().getSimpleName() + ", Time Raised: " + this.getEventTime();
         return message;

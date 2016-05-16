@@ -16,6 +16,7 @@ public class NotificationService implements EventSubscriber<Event> {
     Logger logger = LoggerFactory.getLogger(getClass());
 
     @Autowired
+    // TODO: would one be enough?
     private List<NotificationPort> notificationPorts;
     
 //    It would be good to have some kind of template here for the

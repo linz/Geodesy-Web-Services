@@ -76,7 +76,7 @@ public class SiteLogMapperTest {
     private <T extends EquipmentLogItem> SortedSet<T> sort(Set<T> logItems) {
         SortedSet<T> sorted = new TreeSet<>(new Comparator<T>() {
             public int compare(T e, T f) {
-                int c = e.getEffectiveDates().getFrom().compareTo(f.getEffectiveDates().getTo());
+                int c = e.getEffectiveDates().getFrom().compareTo(f.getEffectiveDates().getFrom());
                 // keep duplicates
                 return c != 0 ? c : 1;
             }

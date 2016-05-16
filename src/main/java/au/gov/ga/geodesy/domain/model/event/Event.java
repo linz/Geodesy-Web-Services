@@ -11,7 +11,6 @@ import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
-import javax.persistence.Transient;
 
 import org.springframework.beans.factory.annotation.Configurable;
 
@@ -41,18 +40,6 @@ public abstract class Event implements Cloneable {
 
     @Column(name = "RETRIES")
     public Integer retries;
-
-    @Transient
-    /**
-     * Return a Human digestable message about this event. Used in email for example.
-     * 
-     * @return the message
-     */
-     // TODO: could this be toString instead?
-    public String getMessage() {
-        String message = "Event: " + this.getClass().getSimpleName() + ", Time Raised: " + this.getEventTime();
-        return message;
-    }
 
     public Event() {
         setTimeRaised(new Date());

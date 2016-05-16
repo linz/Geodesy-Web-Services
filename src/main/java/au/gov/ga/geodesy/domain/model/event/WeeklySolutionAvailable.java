@@ -4,7 +4,6 @@ import javax.persistence.Column;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.Table;
-import javax.persistence.Transient;
 
 @Entity
 @Table(name = "WEEKLY_SOLUTION_AVAILABLE")
@@ -24,16 +23,5 @@ public class WeeklySolutionAvailable extends Event {
 
     public Integer getWeeklySolutionId() {
         return weeklySolutionId;
-    }
-
-    @Transient
-    /**
-     * Return a Human digestable message about this event. Used in email for example.
-     * 
-     * @return the message
-     */
-    public String getMessage() {
-        String message = super.getMessage() + ", WEEKLY_SOLUTION_ID: " + getWeeklySolutionId();
-        return message;
     }
 }

@@ -9,8 +9,7 @@ import org.springframework.test.context.testng.AbstractTransactionalTestNGSpring
  */
 
 @ContextConfiguration(
-        classes = {GeodesySupportConfig.class, GeodesyServiceUnitTestConfig.class, PersistenceJpaConfig.class,
-                TestAppConfig.class },
+        classes = {GeodesySupportConfig.class, GeodesyServiceUnitTestConfig.class, PersistenceJpaConfig.class,}
         loader = AnnotationConfigContextLoader.class)
 public class UnitTestConfig extends AbstractTransactionalTestNGSpringContextTests {
 }

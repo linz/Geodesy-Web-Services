@@ -13,7 +13,6 @@ import org.springframework.test.context.testng.AbstractTransactionalTestNGSpring
                 GeodesySupportConfig.class,
                 GeodesyServiceTestConfig.class,
                 PersistenceJpaConfig.class,
-                TestAppConfig.class,
         },
         loader = AnnotationConfigContextLoader.class)
 public class IntegrationTestConfig extends AbstractTransactionalTestNGSpringContextTests {

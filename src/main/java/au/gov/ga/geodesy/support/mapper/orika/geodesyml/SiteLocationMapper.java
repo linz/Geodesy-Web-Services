@@ -1,7 +1,5 @@
 package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 
-import java.util.function.Function;
-
 import au.gov.ga.geodesy.domain.model.sitelog.ApproximatePosition;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLocation;
 import au.gov.ga.geodesy.support.java.util.Iso;

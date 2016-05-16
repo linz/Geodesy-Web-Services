@@ -1,7 +1,5 @@
 package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 
-import java.util.function.Function;
-
 import au.gov.ga.geodesy.domain.model.sitelog.SiteIdentification;
 import au.gov.ga.geodesy.support.java.util.Iso;
 import au.gov.xml.icsm.geodesyml.v_0_3.SiteIdentificationType;

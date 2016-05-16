@@ -48,6 +48,7 @@ public class SMTPNoficationAdapter implements NotificationPort {
     }
 
     private String[] getNotificationTo(Event e) {
+        // TODO: could we avoid using instanceof here?
         if (e instanceof InvalidSiteLogReceived) {
             return mailNotifications.getInvalidSiteLogReceivedEmailAddressees().toArray(new String[0]);
         } else if (e instanceof SiteLogReceived) {

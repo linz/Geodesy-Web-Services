@@ -53,8 +53,7 @@
             <url>https://repository.jboss.org/nexus/content/groups/public-jboss/</url>
         </repository>
     </repositories>
-    <!-- <repositories> <repository> <id>ga-maven-int</id> <name>Geoscience 
-        Internal Maven Repo</name> <url>http://maven-int.ga.gov.au/nexus/content/groups/public/</url> 
+    <!-- <repositories> <repository> <id>ga-maven-int</id> <name>Geoscience Internal Maven Repo</name> <url>http://maven-int.ga.gov.au/nexus/content/groups/public/</url> 
         </repository> </repositories> -->
     <dependencies>
         <dependency>
@@ -65,9 +64,9 @@
             <version>1.5.0-beta0</version>
         </dependency>
         <dependency>
-           <groupId>ma.glasnost.orika</groupId>
-           <artifactId>orika-eclipse-tools</artifactId>
-           <version>1.5.0-beta0</version>
+            <groupId>ma.glasnost.orika</groupId>
+            <artifactId>orika-eclipse-tools</artifactId>
+            <version>1.5.0-beta0</version>
         </dependency>
         <dependency>
             <groupId>au.gov.ga.geodesy</groupId>
@@ -307,6 +306,22 @@
             <artifactId>jcabi-xml</artifactId>
             <version>0.17.2</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.icegreen</groupId>
+            <artifactId>greenmail</artifactId>
+            <version>1.5.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>mail</artifactId>
+            <version>1.4.5</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+            <version>4.2.5.RELEASE</version>
         </dependency>
     </dependencies>
     <build>

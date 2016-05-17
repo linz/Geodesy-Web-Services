@@ -56,7 +56,7 @@ public class GeodesyRepositoryRestMvcConfig extends RepositoryRestMvcConfigurati
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"); // ISO 8601
         format.setTimeZone(TimeZone.getTimeZone("UTC"));
         mapper.setDateFormat(format);
- 
+        mapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
         mapper.registerModule(new SimpleModule() {
             public void setupModule(SetupContext context) {
                 super.setupModule(context);

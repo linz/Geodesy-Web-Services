@@ -22,7 +22,6 @@ import au.gov.ga.geodesy.domain.model.event.EventPublisher;
     "au.gov.ga.geodesy.port.adapter.geodesyml",
     "au.gov.ga.geodesy.port.adapter.smtp",
     "au.gov.ga.geodesy.support.email",
-    "au.gov.ga.geodesy.support.moxy",
     "au.gov.ga.geodesy.support.properties"
 })
 public class GeodesyServiceConfig {

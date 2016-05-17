@@ -6,6 +6,7 @@ import javax.mail.Address;
 import javax.mail.Message;
 import javax.mail.MessagingException;
 
+import au.gov.ga.geodesy.domain.model.event.*;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.After;
@@ -21,10 +22,6 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import com.icegreen.greenmail.util.GreenMail;
 import com.icegreen.greenmail.util.ServerSetupTest;
 
-import au.gov.ga.geodesy.domain.model.event.InvalidSiteLogReceived;
-import au.gov.ga.geodesy.domain.model.event.SiteLogReceived;
-import au.gov.ga.geodesy.domain.model.event.SiteUpdated;
-import au.gov.ga.geodesy.domain.model.event.WeeklySolutionAvailable;
 import au.gov.ga.geodesy.port.adapter.smtp.SMTPNoficationAdapter;
 import au.gov.ga.geodesy.support.email.SpringMailAdapter;
 import au.gov.ga.geodesy.support.properties.GeodesyMailConfig;
@@ -60,6 +57,20 @@ public class NotificationServiceTest {
         testSMTP.stop();
     }
 
+    private void assertMessageContentsAsExpected(String content, Event event, String fromConfig, Message[] messages)
+            throws MessagingException, IOException {
+        for (Message message : messages) {
+            Address from = message.getFrom()[0];
+            Assert.assertEquals(fromConfig, from.toString());
+            MatcherAssert.assertThat("the message content", (String) message.getContent(),
+                    Matchers.containsString(event.getMessage()));
+            MatcherAssert.assertThat("the message content", (String) message.getContent(),
+                    Matchers.containsString(content));
+
+            System.out.println("Message: " + message.getContent());
+        }
+    }
+
     @Test
     public void testNotificationServiceInvalidSiteLogReceived() throws MessagingException, IOException {
         String content = "Sitelog text";
@@ -72,16 +83,7 @@ public class NotificationServiceTest {
 
         Message[] messages = testSMTP.getReceivedMessages();
         Assert.assertEquals(numberMsgEqualNumberTos, messages.length);
-        for (Message message : messages) {
-            Address from = message.getFrom()[0];
-            Assert.assertEquals(fromConfig, from.toString());
-            MatcherAssert.assertThat("the message content", (String) message.getContent(),
-                    Matchers.containsString(event.getMessage()));
-            MatcherAssert.assertThat("the message content", (String) message.getContent(),
-                    Matchers.containsString(content));
-
-            System.out.println("Message: " + message.getContent());
-        }
+        assertMessageContentsAsExpected(content, event, fromConfig, messages);
     }
 
     @Test
@@ -96,16 +98,7 @@ public class NotificationServiceTest {
 
         Message[] messages = testSMTP.getReceivedMessages();
         Assert.assertEquals(numberMsgEqualNumberTos, messages.length);
-        for (Message message : messages) {
-            Address from = message.getFrom()[0];
-            Assert.assertEquals(fromConfig, from.toString());
-            MatcherAssert.assertThat("the message content", (String) message.getContent(),
-                    Matchers.containsString(event.getMessage()));
-            MatcherAssert.assertThat("the message content", (String) message.getContent(),
-                    Matchers.containsString(fourCharID));
-
-            System.out.println("Message: " + message.getContent());
-        }
+        assertMessageContentsAsExpected(fourCharID, event, fromConfig, messages);
     }
 
     @Test
@@ -120,16 +113,7 @@ public class NotificationServiceTest {
 
         Message[] messages = testSMTP.getReceivedMessages();
         Assert.assertEquals(numberMsgEqualNumberTos, messages.length);
-        for (Message message : messages) {
-            Address from = message.getFrom()[0];
-            Assert.assertEquals(fromConfig, from.toString());
-            MatcherAssert.assertThat("the message content", (String) message.getContent(),
-                    Matchers.containsString(event.getMessage()));
-            MatcherAssert.assertThat("the message content", (String) message.getContent(),
-                    Matchers.containsString(fourCharID));
-
-            System.out.println("Message: " + message.getContent());
-        }
+        assertMessageContentsAsExpected(fourCharID, event, fromConfig, messages);
     }
 
     @Test
@@ -144,16 +128,7 @@ public class NotificationServiceTest {
 
         Message[] messages = testSMTP.getReceivedMessages();
         Assert.assertEquals(numberMsgEqualNumberTos, messages.length);
-        for (Message message : messages) {
-            Address from = message.getFrom()[0];
-            Assert.assertEquals(fromConfig, from.toString());
-            MatcherAssert.assertThat("the message content", (String) message.getContent(),
-                    Matchers.containsString(event.getMessage()));
-            MatcherAssert.assertThat("the message content", (String) message.getContent(),
-                    Matchers.containsString(weeklySolutionId.toString()));
-
-            System.out.println("Message: " + message.getContent());
-        }
+        assertMessageContentsAsExpected(weeklySolutionId.toString(), event, fromConfig, messages);
     }
 
 }

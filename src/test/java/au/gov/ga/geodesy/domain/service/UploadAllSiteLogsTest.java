@@ -1,16 +1,12 @@
 package au.gov.ga.geodesy.domain.service;
 
 import java.io.File;
-import java.io.FileFilter;
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.List;
 
-import au.gov.ga.geodesy.support.spring.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.annotation.Rollback;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.support.AnnotationConfigContextLoader;
-import org.springframework.test.context.testng.AbstractTransactionalTestNGSpringContextTests;
 import org.springframework.transaction.annotation.Transactional;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
@@ -21,13 +17,14 @@ import au.gov.ga.geodesy.domain.model.event.Event;
 import au.gov.ga.geodesy.domain.model.event.SiteLogReceived;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLogRepository;
 import au.gov.ga.geodesy.port.adapter.sopac.SopacSiteLogReader;
+import au.gov.ga.geodesy.support.TestResources;
+import au.gov.ga.geodesy.support.spring.UnitTestConfig;
 
 
 @Transactional("geodesyTransactionManager")
 public class UploadAllSiteLogsTest extends UnitTestConfig {
 
-    private static final String siteLogsDir = "src/test/resources/sitelog/";
-    private File[] siteLogFiles = null;
+    private List<File> siteLogFiles = null;
 
     @Autowired
     private IgsSiteLogService service;
@@ -39,13 +36,8 @@ public class UploadAllSiteLogsTest extends UnitTestConfig {
     public MockEventPublisher eventPublisher;
 
     @BeforeClass
-    private void setup() throws Exception {
-        siteLogFiles = new File(siteLogsDir).listFiles(new FileFilter() {
-            public boolean accept(File f) {
-                return f.getName().startsWith("A") && f.getName().endsWith(".xml");
-                /* return f.getName().endsWith(".xml"); */
-            }
-        });
+    private void setup() throws IOException {
+        siteLogFiles = TestResources.sopacSiteLogs("A*");
     }
 
     @Test
@@ -59,10 +51,10 @@ public class UploadAllSiteLogsTest extends UnitTestConfig {
     @Test(dependsOnMethods = {"upload"})
     public void check() throws Exception {
         List<Event> events = eventPublisher.getPublishedEvents();
-        Assert.assertEquals(34, events.size());
+        Assert.assertEquals(events.size(), 34);
         for (Event e : events) {
             Assert.assertTrue(e instanceof SiteLogReceived);
         }
-        Assert.assertEquals(34, siteLogs.count());
+        Assert.assertEquals(siteLogs.count(), 34);
     }
 }

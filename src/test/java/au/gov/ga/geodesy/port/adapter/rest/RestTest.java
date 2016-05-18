@@ -9,10 +9,8 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 
-import au.gov.ga.geodesy.support.spring.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.testng.AbstractTransactionalTestNGSpringContextTests;
 import org.springframework.test.context.web.AnnotationConfigWebContextLoader;
 import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
@@ -20,6 +18,10 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.context.WebApplicationContext;
 import org.testng.annotations.BeforeClass;
+
+import au.gov.ga.geodesy.support.spring.GeodesyRepositoryRestMvcConfig;
+import au.gov.ga.geodesy.support.spring.GeodesyRestMvcConfig;
+import au.gov.ga.geodesy.support.spring.IntegrationTestConfig;
 
 @ContextConfiguration(
         classes = {GeodesyRepositoryRestMvcConfig.class, GeodesyRestMvcConfig.class},
@@ -39,20 +41,8 @@ public class RestTest extends IntegrationTestConfig {
         mvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
     }
 
-    protected String siteLogsDir() {
-        return "src/test/resources/sitelog/";
-    }
-
     protected String weeklyFinalSolutionsDir() {
         return "target/test-classes/solutions/final/weekly/15647-16157";
-    }
-
-    protected List<File> siteLogs() throws Exception {
-        return files(siteLogsDir(), "*.xml");
-    }
-
-    protected File siteLog(String fourCharacterId) throws Exception {
-        return new File(siteLogsDir() + fourCharacterId + ".xml");
     }
 
     protected List<File> weeklyFinalSolutions() throws Exception {

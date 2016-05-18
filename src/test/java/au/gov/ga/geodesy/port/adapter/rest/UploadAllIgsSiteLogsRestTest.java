@@ -15,6 +15,7 @@ import org.springframework.test.annotation.Rollback;
 import org.testng.annotations.Test;
 
 import au.gov.ga.geodesy.domain.model.CorsSiteRepository;
+import au.gov.ga.geodesy.support.TestResources;
 
 public class UploadAllIgsSiteLogsRestTest extends RestTest {
 
@@ -26,7 +27,7 @@ public class UploadAllIgsSiteLogsRestTest extends RestTest {
     @Test
     @Rollback(false)
     public void upload() throws Exception {
-        siteLogs().forEach(file -> {
+        TestResources.sopacSiteLogs().forEach(file -> {
             try {
                 // TODO: this test takes too long, so for now we just upload some site logs
                 if (file.getName().startsWith("A")) {

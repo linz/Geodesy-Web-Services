@@ -1,7 +1,6 @@
 package au.gov.ga.geodesy.domain.model.sitelog;
 
 import java.io.File;
-import java.io.FileFilter;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 
@@ -18,6 +17,7 @@ import org.testng.annotations.Test;
 
 import au.gov.ga.geodesy.port.SiteLogSource;
 import au.gov.ga.geodesy.port.adapter.sopac.SopacSiteLogReader;
+import au.gov.ga.geodesy.support.TestResources;
 import au.gov.ga.geodesy.support.spring.GeodesySupportConfig;
 import au.gov.ga.geodesy.support.spring.PersistenceJpaConfig;
 
@@ -33,13 +33,10 @@ public class SiteLogRepositoryTest extends AbstractTransactionalTestNGSpringCont
     @Autowired
     private SiteLogRepository igsSiteLogs;
 
-    private static final String sampleSiteLogsDir = "src/test/resources/sitelog";
-
     @Test(groups = "first")
     @Rollback(false)
     public void saveALIC() throws Exception {
-        File alic = new File(sampleSiteLogsDir + "/ALIC.xml");
-        SiteLogSource input = new SopacSiteLogReader(new InputStreamReader(new FileInputStream(alic)));
+        SiteLogSource input = new SopacSiteLogReader(TestResources.sopacSiteLogReader("ALIC"));
         igsSiteLogs.saveAndFlush(input.getSiteLog());
     }
 
@@ -49,8 +46,7 @@ public class SiteLogRepositoryTest extends AbstractTransactionalTestNGSpringCont
     @Test(groups = "first")
     @Rollback(false)
     public void saveBZGN() throws Exception {
-        File alic = new File(sampleSiteLogsDir + "/BZGN.xml");
-        SiteLogSource input = new SopacSiteLogReader(new InputStreamReader(new FileInputStream(alic)));
+        SiteLogSource input = new SopacSiteLogReader(TestResources.sopacSiteLogReader("BZGN"));
         igsSiteLogs.saveAndFlush(input.getSiteLog());
     }
 
@@ -58,7 +54,7 @@ public class SiteLogRepositoryTest extends AbstractTransactionalTestNGSpringCont
     @Rollback(false)
     public void saveAllSiteLogs() throws Exception {
         igsSiteLogs.deleteAll();
-        for (File f : getSiteLogFiles()) {
+        for (File f : TestResources.sopacSiteLogs()) {
             log.info("Saving " + f.getName());
             SiteLogSource input = new SopacSiteLogReader(new InputStreamReader(new FileInputStream(f)));
             SiteLog siteLog = input.getSiteLog();
@@ -82,13 +78,5 @@ public class SiteLogRepositoryTest extends AbstractTransactionalTestNGSpringCont
     @Rollback(false)
     public void checkNumberOfDeleteSiteLogs() throws Exception {
         Assert.assertEquals(igsSiteLogs.count(), 0);
-    }
-
-    private File[] getSiteLogFiles() throws Exception {
-        return new File(sampleSiteLogsDir).listFiles(new FileFilter() {
-            public boolean accept(File f) {
-                return f.getName().endsWith(".xml");
-            }
-        });
     }
 }

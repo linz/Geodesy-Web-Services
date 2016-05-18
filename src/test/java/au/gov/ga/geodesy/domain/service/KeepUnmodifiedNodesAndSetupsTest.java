@@ -2,15 +2,8 @@ package au.gov.ga.geodesy.domain.service;
 
 import static org.testng.Assert.assertEquals;
 
-import java.io.File;
-import java.io.FileReader;
-
-import au.gov.ga.geodesy.support.spring.IntegrationTestConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.annotation.Rollback;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.support.AnnotationConfigContextLoader;
-import org.springframework.test.context.testng.AbstractTransactionalTestNGSpringContextTests;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.TransactionStatus;
 import org.springframework.transaction.annotation.Transactional;
@@ -24,19 +17,13 @@ import au.gov.ga.geodesy.domain.model.equipment.EquipmentRepository;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLogRepository;
 import au.gov.ga.geodesy.port.SiteLogSource;
 import au.gov.ga.geodesy.port.adapter.sopac.SopacSiteLogReader;
-import au.gov.ga.geodesy.support.spring.GeodesyServiceTestConfig;
-import au.gov.ga.geodesy.support.spring.GeodesySupportConfig;
-import au.gov.ga.geodesy.support.spring.PersistenceJpaConfig;
+import au.gov.ga.geodesy.support.TestResources;
+import au.gov.ga.geodesy.support.spring.IntegrationTestConfig;
 
 @Transactional("geodesyTransactionManager")
 public class KeepUnmodifiedNodesAndSetupsTest extends IntegrationTestConfig {
 
-    private static final String siteLogsDir = "src/test/resources/sitelog/";
-
     private static final String fourCharId = "ABRK";
-
-    @Autowired
-    private CorsSiteService siteService;
 
     @Autowired
     private CorsSiteRepository sites;
@@ -74,7 +61,7 @@ public class KeepUnmodifiedNodesAndSetupsTest extends IntegrationTestConfig {
 
     private InTransaction uploadABRK = new InTransaction() {
         public void f() throws Exception {
-            SiteLogSource input = new SopacSiteLogReader(new FileReader(new File(siteLogsDir + fourCharId + ".xml")));
+            SiteLogSource input = new SopacSiteLogReader(TestResources.sopacSiteLogReader(fourCharId));
             siteLogService.upload(input.getSiteLog());
         }
     };

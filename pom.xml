@@ -53,8 +53,6 @@
             <url>https://repository.jboss.org/nexus/content/groups/public-jboss/</url>
         </repository>
     </repositories>
-    <!-- <repositories> <repository> <id>ga-maven-int</id> <name>Geoscience Internal Maven Repo</name> <url>http://maven-int.ga.gov.au/nexus/content/groups/public/</url> 
-        </repository> </repositories> -->
     <dependencies>
         <dependency>
             <groupId>ma.glasnost.orika</groupId>
@@ -122,13 +120,6 @@
             <artifactId>hibernate-spatial</artifactId>
             <version>4.3</version>
         </dependency>
-        <!-- remove ojdbc dependency - need Postgres, not Oracle, and EC2 doesn't have easy access to ojdbc -->
-        <!--  <dependency> -->
-        <!--     <groupId>com.oracle</groupId> -->
-        <!--     <artifactId>ojdbc6</artifactId> -->
-        <!--     <version>11.2.0.4.0</version> -->
-        <!--     <scope>test</scope> -->
-        <!--  </dependency> -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
@@ -290,11 +281,6 @@
             <artifactId>commons-cli</artifactId>
             <version>1.3.1</version>
         </dependency>
-        <!-- <dependency> -->
-        <!-- <groupId>org.slf4j</groupId> -->
-        <!-- <artifactId>slf4j-api</artifactId> -->
-        <!-- <version>1.7.19</version> -->
-        <!-- </dependency> -->
         <dependency>
             <groupId>com.jcabi</groupId>
             <artifactId>jcabi-matchers</artifactId>
@@ -334,33 +320,33 @@
             </resource>
         </resources>
         <plugins>
-	    <plugin>
-		<groupId>org.apache.maven.plugins</groupId>
-		<artifactId>maven-surefire-plugin</artifactId>
-		<version>2.18.1</version>
-		<configuration>
-            <excludes>
-                <exclude>au/gov/ga/geodesy/ngcp/**/*</exclude>
-                  <!-- exclude the following 2 tests, they broke due to sinex files being exluded - see commit https://github.com/GeoscienceAustralia/geodesy-domain-model/commit/e05fd32883405b9f1901c038424012a780019eeb  -->
-                  <exclude>au/gov/ga/geodesy/support/mapper/dozer/**/*</exclude>
-                  <exclude>au/gov/ga/geodesy/port/adapter/rest/UploadSolutionRestTest.java</exclude>
-            </excludes>
-		    <forkCount>1</forkCount>
-		    <reuseForks>false</reuseForks>
-		    <properties>
-			<property>
-			    <name>listener</name>
-			    <value>
-				au.gov.ga.geodesy.support.testng.TestSuiteListener,
-				au.gov.ga.geodesy.support.testng.TestListener,
-				au.gov.ga.geodesy.support.testng.TestDependencyController
-			    </value>
-			</property>
-		    </properties>
-		    <!-- prevent the annoying ForkedBooter process from stealing window focus on Mac OS -->
-		    <argLine>-Djava.awt.headless=true</argLine>
-		</configuration>
-	    </plugin>
+            <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>2.18.1</version>
+            <configuration>
+                <excludes>
+                    <exclude>au/gov/ga/geodesy/ngcp/**/*</exclude>
+                      <!-- exclude the following 2 tests, they broke due to sinex files being exluded - see commit https://github.com/GeoscienceAustralia/geodesy-domain-model/commit/e05fd32883405b9f1901c038424012a780019eeb  -->
+                      <exclude>au/gov/ga/geodesy/support/mapper/dozer/**/*</exclude>
+                      <exclude>au/gov/ga/geodesy/port/adapter/rest/UploadSolutionRestTest.java</exclude>
+                </excludes>
+                <forkCount>1</forkCount>
+                <reuseForks>false</reuseForks>
+                <properties>
+                <property>
+                    <name>listener</name>
+                    <value>
+                    au.gov.ga.geodesy.support.testng.TestSuiteListener,
+                    au.gov.ga.geodesy.support.testng.TestListener,
+                    au.gov.ga.geodesy.support.testng.TestDependencyController
+                    </value>
+                </property>
+                </properties>
+                <!-- prevent the annoying ForkedBooter process from stealing window focus on Mac OS -->
+                <argLine>-Djava.awt.headless=true</argLine>
+            </configuration>
+            </plugin>
             <plugin>
                 <!-- Unzip GeodesyML and dependent schemas -->
                 <groupId>org.apache.maven.plugins</groupId>
@@ -414,7 +400,6 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <!-- <classpathPrefix>lib/</classpathPrefix> -->
                             <mainClass>au.gov.ga.geodesy.support.commandline.GeodesyMLCommandLine</mainClass>
                         </manifest>
                     </archive>

@@ -28,14 +28,14 @@ public class UploadAliceIgsSiteLogRestTest extends RestTest {
     @Test(dependsOnMethods = {"uploadALIC"})
     public void printSiteLog() throws Exception {
         mvc.perform(get("/siteLogs/search/findByFourCharacterId?id=ALIC"))
-            .andExpect(status().isCreated())
+            .andExpect(status().isOk())
             .andDo(print);
     }
 
     @Test(dependsOnMethods = {"uploadALIC"})
     public void printSite() throws Exception {
         mvc.perform(get("/corsSites/search/findByFourCharacterId?id=ALIC"))
-            .andExpect(status().isCreated())
+            .andExpect(status().isOk())
             .andDo(print);
     }
 }

@@ -34,7 +34,7 @@ public class UploadAllIgsSiteLogsRestTest extends RestTest {
                     log.info("Uploading " + file.getPath());
                     String content = FileUtils.readFileToString(file, Charset.defaultCharset());
                     mvc.perform(post("/siteLog/sopac/upload").contentType(MediaType.APPLICATION_XML).content(content))
-                        .andExpect(status().isOk());
+                        .andExpect(status().isCreated());
                 }
             } catch (Exception e) {
                 e.printStackTrace();

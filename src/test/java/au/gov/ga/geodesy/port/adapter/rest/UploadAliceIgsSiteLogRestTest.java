@@ -22,7 +22,7 @@ public class UploadAliceIgsSiteLogRestTest extends RestTest {
     public void uploadALIC() throws Exception {
         String content = FileUtils.readFileToString(TestResources.sopacSiteLog("ALIC"), Charset.defaultCharset());
         mvc.perform(post("/siteLog/sopac/upload").contentType(MediaType.APPLICATION_XML).content(content))
-            .andExpect(status().isOk());
+            .andExpect(status().isCreated());
     }
 
     @Test(dependsOnMethods = {"uploadALIC"})

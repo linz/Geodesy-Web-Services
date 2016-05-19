@@ -22,7 +22,19 @@
 # If you create the POSTGIS extension in the public schema, all databases you create will inherit it
 # and the CREATE EXTENSION below will error. The error can be ignored.
 
-
+# On Linux you will need to make these changes (not so on Macs, apparently.  No knowledge of Windows).
+# Change the following pg_hba.conf line (file found in /etc/postgresql/9.5/main):
+#
+# from
+# TYPE DATABASE USER ADDRESS METHOD
+#local  all      all          peer
+#
+# to
+#
+# TYPE DATABASE USER ADDRESS METHOD
+#local  all      all          md5
+#
+# And restart PostgreSQL if it's running. E.g. sudo service postgresql restart
 
 
 psql <<EOF

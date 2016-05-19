@@ -24,14 +24,7 @@ public class SiteLogSopacOrikaMapper implements SopacSiteLogMapper {
     private MapperFacade mapper;
 
     public SiteLogSopacOrikaMapper() {
-        MapperFactory factory;
-
-        if (logger.isDebugEnabled()) {
-            // This configuration will dump the generated java files to the target directory
-            factory = new DefaultMapperFactory.Builder().compilerStrategy(new EclipseJdtCompilerStrategy()).build();
-        } else {
-            factory = new DefaultMapperFactory.Builder().build();
-        }
+        MapperFactory factory = new DefaultMapperFactory.Builder().build();
 
         factory.classMap(IgsSiteLog.class, SiteLog.class)
                 .field("contactAgency", "siteContact.party")

@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.annotation.PostConstruct;
 
+import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,7 +47,7 @@ public class AsynchronousEventPublisher implements EventPublisher {
 
     public class EventLoop extends Thread {
 
-        private EventRepository events; 
+        private EventRepository events;
 
         public EventLoop(EventRepository es) {
             events = es;
@@ -75,19 +76,28 @@ public class AsynchronousEventPublisher implements EventPublisher {
             }
         }
 
+        @SuppressWarnings("unchecked")
         private void handle(final EventSubscriber<?> s, final Event e) {
-            new Thread() {
-                @SuppressWarnings("unchecked")
-                public void run() {
-                    log.info("Publishing event " + e + " to " + s);
-                    try {
-                        ((EventSubscriber<Event>) s).handle(e);
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                        throw e;
-                    }
-                }
-            }.start();
+            log.info("publishing event " + e + " to " + s);
+            try {
+                ((EventSubscriber<Event>) s).handle(e);
+            } catch (Exception ex) {
+                e.setError(ExceptionUtils.getStackTrace(ex));
+                ex.printStackTrace();
+            }
+            // TODO: try this again at some stage, it deadlocks
+            /* new Thread() { */
+            /*     @SuppressWarnings("unchecked") */
+            /*     public void run() { */
+            /*         log.info("publishing event " + e + " to " + s); */
+            /*         try { */
+            /*             ((EventSubscriber<Event>) s).handle(e); */
+            /*         } catch (Exception e) { */
+            /*             e.printStackTrace(); */
+            /*             throw e; */
+            /*         } */
+            /*     } */
+            /* }.start(); */
         }
     }
 

@@ -14,8 +14,9 @@ public class EventRepositoryImpl implements EventRepositoryCustom {
 
     public List<Event> getPendingEvents() {
 
+        // TODO: try to remove oneMinuteAgo
         String queryString = "select e from Event e "
-            + "where e.timeHandled is null and (e.retries is null or e.retries < 3) and (e.timePublished is null or e.timePublished < :oneMinuteAgo)";
+            + "where e.timeHandled is null and (e.retries is null or e.retries < " + Event.MAX_RETRIES + ") and (e.timePublished is null or e.timePublished < :oneMinuteAgo)";
 
         TypedQuery<Event> query = entityManager.createQuery(queryString, Event.class);
         Calendar c = Calendar.getInstance();

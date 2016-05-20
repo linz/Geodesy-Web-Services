@@ -22,6 +22,9 @@ import org.springframework.beans.factory.annotation.Configurable;
 @Configurable
 public abstract class Event implements Cloneable {
 
+    @Transient
+    public static final short MAX_RETRIES = 3;
+
     @Id
     @GeneratedValue(generator = "surrogateKeyGenerator")
     @SequenceGenerator(name = "surrogateKeyGenerator", sequenceName = "SEQ_EVENT")
@@ -45,13 +48,13 @@ public abstract class Event implements Cloneable {
     @Column(name = "ERROR")
     private String error;
 
-    @Transient
     /**
      * Return a Human digestable message about this event. Used in email for example.
-     * 
+     *
      * @return the message
      */
      // TODO: could this be toString instead?
+    @Transient
     public String getMessage() {
         String message = "Event: " + this.getClass().getSimpleName() + ", Time Raised: " + this.getEventTime();
         return message;
@@ -120,6 +123,12 @@ public abstract class Event implements Cloneable {
         if (timeHandled == null) {
             setTimeHandled(new Date());
         }
+    }
+
+    @Transient
+    public boolean hasFailed() {
+        // TODO: this test is duplicated in EventRepository
+        return getRetries() == MAX_RETRIES;
     }
 
     public Object clone() throws CloneNotSupportedException {

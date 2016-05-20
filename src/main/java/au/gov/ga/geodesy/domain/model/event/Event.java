@@ -42,6 +42,9 @@ public abstract class Event implements Cloneable {
     @Column(name = "RETRIES")
     public Integer retries;
 
+    @Column(name = "ERROR")
+    private String error;
+
     @Transient
     /**
      * Return a Human digestable message about this event. Used in email for example.
@@ -96,6 +99,14 @@ public abstract class Event implements Cloneable {
 
     public void setRetries(Integer retries) {
         this.retries = retries;
+    }
+
+    public String getError() {
+        return error;
+    }
+
+    public void setError(String error) {
+        this.error = error;
     }
 
     public void published() {

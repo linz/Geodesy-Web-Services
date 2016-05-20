@@ -1,5 +1,5 @@
 stack.json: stack.py webserver-init.sh nat-init.sh war-file
-	python stack.py ${GEODESY_WEB_SERVICES_VERSION} ${ENV} > $@
+	python stack.py ${GEODESY_WEB_SERVICES_VERSION} ${ENV} ${DB_ID}> $@
 
 %.jpg: %.json
 	cat $< | cfviz | dot -Tjpg -o$@

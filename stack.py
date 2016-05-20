@@ -107,6 +107,9 @@ def geodesy_web_services_version():
 def environment():
     return sys.argv[2]
 
+def db_id():
+    return sys.argv[3]
+
 def system_prefix():
     return "GeodesyWebService" + environment()
 
@@ -249,7 +252,7 @@ def make_webserver(nat_wait, security_group):
                             "command": "(cd /usr/share/tomcat8/webapps/; mkdir ROOT; unzip ROOT.war -d ROOT)",
                         },
                         "36-reset-rds-passwords": {
-                            "command": "/root/reset-rds-passwords.sh geodesy-dev",
+                            "command": "/root/reset-rds-passwords.sh " + db_id(),
                         },
                         "40-start-tomcat": {
                             "command": "service tomcat8 start"

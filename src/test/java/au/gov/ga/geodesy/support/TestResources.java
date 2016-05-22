@@ -24,6 +24,20 @@ public class TestResources {
     }
 
     /**
+     * SOPAC site logs directory relative to classpath root.
+     */
+    private static String sopacSiteLogsDirectory() {
+        return "/sitelog/sopac/";
+    }
+
+    /**
+     * GeodesyML site logs directory relative to classpath root.
+     */
+    private static String geodesyMLSiteLogsDirectory() {
+        return "/sitelog/geodesyml/";
+    }
+
+    /**
      * Given a site id, return a SOPAC site log test file.
      */
     public static File sopacSiteLog(String siteId) throws IOException {
@@ -35,6 +49,13 @@ public class TestResources {
      */
     public static Reader sopacSiteLogReader(String siteId) throws IOException {
         return new FileReader(resourceAsFile(sopacSiteLogResourceName(siteId)));
+    }
+
+    /**
+     * Given a site id, return a GeodesyML site log test file reader.
+     */
+    public static Reader geodesyMLSiteLogReader(String siteId) throws IOException {
+        return new FileReader(resourceAsFile(geodesyMLSiteLogResourceName(siteId)));
     }
 
     /**
@@ -57,17 +78,17 @@ public class TestResources {
     }
 
     /**
-     * SOPAC site logs directory relative to classpath root.
-     */
-    private static String sopacSiteLogsDirectory() {
-        return "/sitelog/sopac/";
-    }
-
-    /**
      * SOPAC site log resource name relative to classpath root.
      */
     private static String sopacSiteLogResourceName(String id) {
         return sopacSiteLogsDirectory() + id + ".xml";
+    }
+
+    /**
+     * GeodesyML site log resource name relative to classpath root.
+     */
+    private static String geodesyMLSiteLogResourceName(String id) {
+        return geodesyMLSiteLogsDirectory() + id + ".xml";
     }
 
     /**

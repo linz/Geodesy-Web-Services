@@ -15,6 +15,7 @@ import ma.glasnost.orika.metadata.Type;
 
 import net.opengis.gml.v_3_2_1.TimePositionType;
 
+// TODO: swap type parameters, DTO first
 public class DateToTimePositionConverter extends BidirectionalConverter<Date, TimePositionType> {
 
     private static final TimeZone UTC = TimeZone.getTimeZone("UTC");

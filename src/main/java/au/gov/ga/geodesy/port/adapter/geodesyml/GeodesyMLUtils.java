@@ -118,4 +118,25 @@ public class GeodesyMLUtils {
         return stringList.stream().collect(Collectors.joining(",", "(", ")"));
     }
 
+    /**
+     * Wrap argument in JAXBElement.
+     */
+    // TODO: robustness, what about buildJAXBElementEquivalent?
+    @SuppressWarnings("unchecked")
+    public static <T> JAXBElement<T> wrapInJAXBElement(T t) {
+        String typeName = t.getClass().getSimpleName();
+        String factoryName = t.getClass().getPackage().getName() + ".ObjectFactory";
+        String factoryMethodName = "create" + typeName.substring(0, typeName.length() - "Type".length());
+        try {
+            Class<?> factoryClass = Class.forName(factoryName);
+            Object factory = factoryClass.newInstance();
+            Method factoryMethod;
+            factoryMethod = factoryClass.getMethod(factoryMethodName, new Class<?>[] { t.getClass() });
+            JAXBElement<T> element;
+            element = (JAXBElement<T>) factoryMethod.invoke(factory, new Object[] { t });
+            return element;
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
 }

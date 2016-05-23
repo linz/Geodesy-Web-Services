@@ -14,13 +14,13 @@ public class GnssAntennaConfiguration extends EquipmentConfiguration {
     private String antennaReferencePoint;
 
     @Column(name = "MARKER_ARP_UP_ECCENTRICITY")
-    private String markerArpUpEccentricity;
+    private Double markerArpUpEccentricity;
 
     @Column(name = "MARKER_ARP_NORTH_ECCENTRICITY")
-    private String markerArpNorthEccentricity;
+    private Double markerArpNorthEccentricity;
 
     @Column(name = "MARKER_ARP_EAST_ECCENTRICITY")
-    private String markerArpEastEccentricity;
+    private Double markerArpEastEccentricity;
 
     @Column(name = "ALIGNMENT_FROM_TRUE_NORTH")
     private String alignmentFromTrueNorth;
@@ -57,27 +57,27 @@ public class GnssAntennaConfiguration extends EquipmentConfiguration {
         this.antennaReferencePoint = antennaReferencePoint;
     }
 
-    public String getMarkerArpUpEccentricity() {
+    public Double getMarkerArpUpEccentricity() {
         return markerArpUpEccentricity;
     }
 
-    public void setMarkerArpUpEccentricity(String markerArpUpEccentricity) {
+    public void setMarkerArpUpEccentricity(Double markerArpUpEccentricity) {
         this.markerArpUpEccentricity = markerArpUpEccentricity;
     }
 
-    public String getMarkerArpNorthEccentricity() {
+    public Double getMarkerArpNorthEccentricity() {
         return markerArpNorthEccentricity;
     }
 
-    public void setMarkerArpNorthEccentricity(String markerArpNorthEccentricity) {
+    public void setMarkerArpNorthEccentricity(Double markerArpNorthEccentricity) {
         this.markerArpNorthEccentricity = markerArpNorthEccentricity;
     }
 
-    public String getMarkerArpEastEccentricity() {
+    public Double getMarkerArpEastEccentricity() {
         return markerArpEastEccentricity;
     }
 
-    public void setMarkerArpEastEccentricity(String markerArpEastEccentricity) {
+    public void setMarkerArpEastEccentricity(Double markerArpEastEccentricity) {
         this.markerArpEastEccentricity = markerArpEastEccentricity;
     }
 

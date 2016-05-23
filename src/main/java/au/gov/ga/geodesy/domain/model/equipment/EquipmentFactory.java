@@ -63,6 +63,9 @@ public class EquipmentFactory {
                 getConfiguration(GnssAntennaConfiguration.class, antenna.getId(), logItem);
 
             config.setAlignmentFromTrueNorth(logItem.getAlignmentFromTrueNorth());
+            config.setMarkerArpUpEccentricity(logItem.getMarkerArpUpEcc());
+            config.setMarkerArpNorthEccentricity(logItem.getMarkerArpNorthEcc());
+            config.setMarkerArpEastEccentricity(logItem.getMarkerArpEastEcc());
             return Pair.of(antenna, config);
         }
 

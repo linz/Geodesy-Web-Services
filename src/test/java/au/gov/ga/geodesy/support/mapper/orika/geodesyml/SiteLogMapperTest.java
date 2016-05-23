@@ -5,32 +5,19 @@ import static org.testng.Assert.assertEquals;
 import java.io.FileReader;
 import java.io.Reader;
 import java.lang.reflect.InvocationTargetException;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Date;
-import java.util.List;
-import java.util.Set;
-import java.util.SortedSet;
-import java.util.TreeSet;
+import java.util.*;
 
+import au.gov.ga.geodesy.domain.model.sitelog.*;
 import org.apache.commons.beanutils.PropertyUtils;
 import org.springframework.util.ResourceUtils;
 import org.testng.annotations.Test;
 
-import au.gov.ga.geodesy.domain.model.sitelog.EquipmentLogItem;
-import au.gov.ga.geodesy.domain.model.sitelog.GnssReceiverLogItem;
-import au.gov.ga.geodesy.domain.model.sitelog.SiteLog;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLMarshaller;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLUtils;
 import au.gov.ga.geodesy.support.gml.GMLPropertyType;
 import au.gov.ga.geodesy.support.marshalling.moxy.GeodesyMLMoxy;
-import au.gov.xml.icsm.geodesyml.v_0_3.GeodesyMLType;
-import au.gov.xml.icsm.geodesyml.v_0_3.GnssReceiverPropertyType;
-import au.gov.xml.icsm.geodesyml.v_0_3.GnssReceiverType;
-import au.gov.xml.icsm.geodesyml.v_0_3.SiteLogType;
-
+import au.gov.xml.icsm.geodesyml.v_0_3.*;
 import ma.glasnost.orika.metadata.TypeFactory;
-
 import net.opengis.gml.v_3_2_1.TimePositionType;
 
 public class SiteLogMapperTest {
@@ -47,27 +34,46 @@ public class SiteLogMapperTest {
         try (Reader mobs = new FileReader(ResourceUtils.getFile("classpath:sitelog/geodesyml/MOBS.xml"))) {
             GeodesyMLType geodesyML = marshaller.unmarshal(mobs, GeodesyMLType.class).getValue();
             SiteLogType siteLogType = GeodesyMLUtils.getElementFromJAXBElements(geodesyML.getElements(), SiteLogType.class)
-                .findFirst()
-                .get();
+                    .findFirst()
+                    .get();
 
             SiteLog siteLog = mapper.to(siteLogType);
-            assertEquals(siteLog.getSiteIdentification().getSiteName(), siteLogType.getSiteIdentification().getSiteName());
-            assertEquals(siteLog.getSiteLocation().getTectonicPlate(), siteLogType.getSiteLocation().getTectonicPlate().getValue());
+            testMappingValues(siteLogType, siteLog);
 
-            List<GnssReceiverPropertyType> receiverProperties = siteLogType.getGnssReceivers();
-            sort(receiverProperties);
-            assertEquals(siteLog.getGnssReceivers().size(), 9);
-            assertEquals(receiverProperties.size(), 9);
+            // TODO: test the from mapping when the mapper
+            // SiteLogType mappedSiteLogType = mapper.from(siteLog);
+            // testMappingValues(mappedSiteLogType, siteLog);
+        }
+    }
 
-            {
-                int i = 0;
-                for (GnssReceiverLogItem receiverLogItem : sort(siteLog.getGnssReceivers())) {
-                    GnssReceiverType receiverType = receiverProperties.get(i++).getGnssReceiver();
-                    assertEquals(receiverLogItem.getFirmwareVersion(), receiverType.getFirmwareVersion());
-                }
+    private void testMappingValues(SiteLogType siteLogType, SiteLog siteLog) {
+        assertEquals(siteLog.getSiteIdentification().getSiteName(), siteLogType.getSiteIdentification().getSiteName());
+        assertEquals(siteLog.getSiteLocation().getTectonicPlate(), siteLogType.getSiteLocation().getTectonicPlate().getValue());
+
+        List<GnssReceiverPropertyType> receiverProperties = siteLogType.getGnssReceivers();
+        sort(receiverProperties);
+        assertEquals(siteLog.getGnssReceivers().size(), 9);
+        assertEquals(receiverProperties.size(), 9);
+
+        List<HumiditySensorPropertyType> humiditySensors = siteLogType.getHumiditySensors();
+        assertEquals(siteLog.getHumiditySensors().size(), 2);
+        assertEquals(humiditySensors.size(), 2);
+
+        {
+            int i = 0;
+            for (GnssReceiverLogItem receiverLogItem : sort(siteLog.getGnssReceivers())) {
+                GnssReceiverType receiverType = receiverProperties.get(i++).getGnssReceiver();
+                assertEquals(receiverLogItem.getFirmwareVersion(), receiverType.getFirmwareVersion());
             }
         }
-        // TODO: complete test
+
+        {
+            int i = 0;
+            for (HumiditySensorLogItem logItem : sort(siteLog.getHumiditySensors())) {
+                HumiditySensorType xmlType = humiditySensors.get(i++).getHumiditySensor();
+                assertEquals(logItem.getSerialNumber(), xmlType.getSerialNumber());
+            }
+        }
     }
 
     /**
@@ -84,6 +90,7 @@ public class SiteLogMapperTest {
         sorted.addAll(logItems);
         return sorted;
     }
+
 
     /**
      * Sort list of equipment properties by installation date.

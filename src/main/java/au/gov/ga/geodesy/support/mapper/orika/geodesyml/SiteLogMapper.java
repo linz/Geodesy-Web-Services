@@ -4,22 +4,19 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import au.gov.ga.geodesy.domain.model.sitelog.EquipmentLogItem;
-import au.gov.ga.geodesy.domain.model.sitelog.SiteIdentification;
-import au.gov.ga.geodesy.domain.model.sitelog.SiteLocation;
-import au.gov.ga.geodesy.domain.model.sitelog.SiteLog;
-import au.gov.ga.geodesy.support.java.util.Iso;
+import au.gov.ga.geodesy.domain.model.sitelog.*;
 import au.gov.ga.geodesy.support.gml.GMLPropertyType;
+import au.gov.ga.geodesy.support.java.util.Iso;
 import au.gov.xml.icsm.geodesyml.v_0_3.SiteIdentificationType;
 import au.gov.xml.icsm.geodesyml.v_0_3.SiteLocationType;
 import au.gov.xml.icsm.geodesyml.v_0_3.SiteLogType;
-
 import ma.glasnost.orika.MapperFacade;
 import ma.glasnost.orika.MapperFactory;
+import ma.glasnost.orika.MappingContext;
 import ma.glasnost.orika.converter.BidirectionalConverter;
 import ma.glasnost.orika.converter.ConverterFactory;
 import ma.glasnost.orika.impl.DefaultMapperFactory;
-
+import ma.glasnost.orika.metadata.Type;
 import net.opengis.gml.v_3_2_1.AbstractGMLType;
 
 /**
@@ -37,6 +34,7 @@ public class SiteLogMapper implements Iso<SiteLogType, SiteLog> {
             .fieldMap("siteIdentification", "siteIdentification").converter("siteIdentification").add()
             .fieldMap("siteLocation", "siteLocation").converter("siteLocation").add()
             .fieldMap("gnssReceivers", "gnssReceivers").converter("gnssReceivers").add()
+            .fieldMap("humiditySensors", "humiditySensors").converter("humiditySensors").add()
             /* .byDefault() */
             .register();
 
@@ -48,11 +46,41 @@ public class SiteLogMapper implements Iso<SiteLogType, SiteLog> {
         converters.registerConverter("siteLocation",
                 new IsoConverter<SiteLocationType, SiteLocation>(new SiteLocationMapper()) {});
 
-        converters.registerConverter("gnssReceivers", equipmentCollectionConverter(new GnssReceiverMapper()));
+        converters.registerConverter("gnssReceivers",
+                new BidirectionalConverterWrapper<List<GMLPropertyType>, Set<GnssReceiverLogItem>>(
+                        equipmentCollectionConverter(new GnssReceiverMapper())
+                ) {}
+        );
+
+        converters.registerConverter("humiditySensors",
+                new BidirectionalConverterWrapper<List<GMLPropertyType>, Set<HumiditySensorLogItem>>(
+                        equipmentCollectionConverter(new HumiditySensorMapper())
+                ) {}
+        );
 
         mapper = mapperFactory.getMapperFacade();
     }
 
+
+    // TODO: refactor and document
+    public class BidirectionalConverterWrapper<A, B> extends BidirectionalConverter<A, B> {
+
+        private BidirectionalConverter<A ,B> delegate;
+
+        public BidirectionalConverterWrapper(BidirectionalConverter<A, B> delegate) {
+            this.delegate = delegate;
+        }
+
+        @Override
+        public B convertTo(A a, Type<B> type, MappingContext mappingContext) {
+            return delegate.convertTo(a, type, mappingContext);
+        }
+
+        @Override
+        public A convertFrom(B b, Type<A> type, MappingContext mappingContext) {
+            return delegate.convertFrom(b, type, mappingContext);
+        }
+    }
 
     /**
      * Given an equipment isomorphism (from DTO to domain model), return a

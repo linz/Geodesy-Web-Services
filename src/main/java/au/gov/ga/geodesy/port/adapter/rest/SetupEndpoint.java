@@ -1,7 +1,11 @@
 package au.gov.ga.geodesy.port.adapter.rest;
 
+import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.TimeZone;
 
+import org.apache.commons.lang3.time.FastDateFormat;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
@@ -18,6 +22,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import au.gov.ga.geodesy.domain.model.CorsSite;
@@ -31,35 +36,69 @@ public class SetupEndpoint {
 
     @Autowired
     private SetupRepository setups;
-    
+
     @Autowired
     private CorsSiteRepository sites;
 
     @Autowired
     private PagedResourcesAssembler<Setup> assembler;
 
-    @RequestMapping(value = "/search/findCurrentBySiteId", method = RequestMethod.GET,
-            produces = "application/hal+json")
-    @Transactional("geodesyTransactionManager")
-    @ResponseBody
-    public PersistentEntityResource findCurrentBySiteId(Integer siteId, PersistentEntityResourceAssembler assembler) {
-        return assembler.toResource(setups.findCurrentBySiteId(siteId));
-    }
+    @RequestMapping(
+        value = "/search/findByFourCharacterId",
+        method = RequestMethod.GET,
+        produces = "application/hal+json")
 
-    @RequestMapping(value = "/search/findByFourCharacterId", method = RequestMethod.GET,
-            produces = "application/hal+json")
     public ResponseEntity<PagedResources<Resource<Setup>>> findByFourCharacterId(
-            String id, Pageable pageRequest) {
+            String fourCharId,
+            String effectiveFrom,
+            String effectiveTo,
+            @RequestParam(defaultValue = "yyyy-MM-dd") String timeFormat,
+            Pageable pageRequest) {
 
         Page<Setup> page = null;
-        CorsSite site = sites.findByFourCharacterId(id);
+        CorsSite site = sites.findByFourCharacterId(fourCharId);
 
         if (site != null) {
-            page = setups.findBySiteId(site.getId(), pageRequest);
+            page = setups.findBySiteIdAndDateRange(
+                    site.getId(),
+                    parseDate(timeFormat, effectiveFrom),
+                    parseDate(timeFormat, effectiveTo),
+                    pageRequest);
         } else {
             page = new PageImpl<Setup>(new ArrayList<Setup>());
         }
         PagedResources<Resource<Setup>> paged = assembler.toResource(page);
         return new ResponseEntity<>(paged, new HttpHeaders(), HttpStatus.OK);
+    }
+
+    @RequestMapping(
+        value = "/search/findCurrentByFourCharacterId",
+        method = RequestMethod.GET,
+        produces = "application/hal+json")
+
+    @ResponseBody
+    @Transactional("geodesyTransactionManager")
+    public ResponseEntity<PersistentEntityResource> findCurrentByFourCharacterId(
+            String fourCharId,
+            PersistentEntityResourceAssembler assembler) {
+
+        CorsSite site = sites.findByFourCharacterId(fourCharId);
+        if (site == null) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+        Setup setup = setups.findCurrentBySiteId(site.getId());
+        if (setup == null) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+        return ResponseEntity.ok(assembler.toResource(setup));
+    }
+
+    private Date parseDate(String pattern, String str) {
+        try {
+            return FastDateFormat.getInstance(pattern, TimeZone.getTimeZone("UTC")).parse(str);
+        }
+        catch (ParseException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

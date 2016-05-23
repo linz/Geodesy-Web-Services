@@ -26,7 +26,7 @@ public interface SetupRepository extends JpaRepository<Setup, Integer>, SetupRep
 
     @RestResource(exported = false)
     @Query("select s from Setup s where "
-                + "s.siteId = :siteId"
+                + "s.siteId = :siteId and s.invalidated = false"
                 + " and ((s.effectivePeriod.from >= :effectiveFrom and s.effectivePeriod.to <= :effectiveTo)"
                 + " or (s.effectivePeriod.from <= :effectiveTo and (:effectiveTo <= s.effectivePeriod.to or s.effectivePeriod.to is null))"
                 + " or (s.effectivePeriod.from <= :effectiveFrom   and :effectiveFrom   <= s.effectivePeriod.to))")
@@ -40,7 +40,7 @@ public interface SetupRepository extends JpaRepository<Setup, Integer>, SetupRep
 
     @RestResource(exported = false)
     @Query("select s from Setup s where "
-                + "s.siteId = :siteId"
+                + "s.siteId = :siteId and s.invalidated = false"
                 + " and ((s.effectivePeriod.from >= :effectiveFrom and s.effectivePeriod.to <= :effectiveTo)"
                 + " or (s.effectivePeriod.from <= :effectiveTo and (:effectiveTo <= s.effectivePeriod.to or s.effectivePeriod.to is null))"
                 + " or (s.effectivePeriod.from <= :effectiveFrom   and :effectiveFrom   <= s.effectivePeriod.to))")

@@ -49,7 +49,7 @@ public class SetupEndpoint {
         produces = "application/hal+json")
 
     public ResponseEntity<PagedResources<Resource<Setup>>> findByFourCharacterId(
-            String fourCharId,
+            @RequestParam("id") String fourCharId,
             String effectiveFrom,
             String effectiveTo,
             @RequestParam(defaultValue = "yyyy-MM-dd") String timeFormat,
@@ -79,7 +79,7 @@ public class SetupEndpoint {
     @ResponseBody
     @Transactional("geodesyTransactionManager")
     public ResponseEntity<PersistentEntityResource> findCurrentByFourCharacterId(
-            String fourCharId,
+            @RequestParam("id") String fourCharId,
             PersistentEntityResourceAssembler assembler) {
 
         CorsSite site = sites.findByFourCharacterId(fourCharId);

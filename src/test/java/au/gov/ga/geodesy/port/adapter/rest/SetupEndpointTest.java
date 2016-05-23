@@ -29,14 +29,14 @@ public class SetupEndpointTest extends RestTest {
     @Test(dependsOnMethods = {"upload"})
     @Rollback(false)
     public void testFindCurrentByFourCharacterId() throws Exception {
-        mvc.perform(get("/setups/search/findCurrentByFourCharacterId?fourCharId=ALIC"))
+        mvc.perform(get("/setups/search/findCurrentByFourCharacterId?id=ALIC"))
             .andExpect(status().isOk());
     }
 
     @Test(dependsOnMethods = {"upload"})
     @Rollback(false)
     public void testFindByFourCharacterIdAndDate() throws Exception {
-        mvc.perform(get("/setups/search/findByFourCharacterId?fourCharId=ALIC&effectiveFrom=2011-12-12&effectiveTo=2014-12-12&timeFormat=yyyy-MM-dd"))
+        mvc.perform(get("/setups/search/findByFourCharacterId?id=ALIC&effectiveFrom=2011-12-12&effectiveTo=2014-12-12&timeFormat=yyyy-MM-dd"))
             .andExpect(status().isOk())
             .andExpect(jsonPath("$.page.totalElements").value(3));
     }

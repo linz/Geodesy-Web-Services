@@ -23,6 +23,6 @@ public class InternationalStringToStringPropertyConverter extends BidirectionalC
     public InternationalString convertFrom(CharacterStringPropertyType stringP, Type<InternationalString> destType,
             MappingContext ctx) {
 
-        return new SimpleInternationalString(stringP.toString());
+        return new SimpleInternationalString((String) stringP.getCharacterString().getValue());
     }
 }

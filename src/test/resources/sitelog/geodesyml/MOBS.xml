@@ -152,40 +152,6 @@
         <geo:dateRemoved/>
         <geo:notes/>
     </geo:gnssAntenna>
-    <geo:humiditySensor gml:id="HUMID_1">
-        <geo:type codeSpace="">HMP233</geo:type>
-        <geo:manufacturer>PAROSCIENTIFIC</geo:manufacturer>
-        <geo:serialNumber>107257</geo:serialNumber>
-        <geo:heightDiffToAntenna>0.1</geo:heightDiffToAntenna>
-        <geo:calibrationDate>2009-05-23Z</geo:calibrationDate>
-        <gml:validTime nilReason="">
-            <gml:TimePeriod gml:id="humiditySensorValidTime1">
-                <gml:beginPosition>2009-10-23Z</gml:beginPosition>
-                <gml:endPosition>2009-11-23Z</gml:endPosition>
-            </gml:TimePeriod>
-        </gml:validTime>
-        <geo:dataSamplingInterval>0.1</geo:dataSamplingInterval>
-        <geo:accuracy-percentRelativeHumidity>2.0</geo:accuracy-percentRelativeHumidity>
-        <geo:aspiration>NATURAL</geo:aspiration>
-        <geo:notes>10m Cable</geo:notes>
-    </geo:humiditySensor>
-    <geo:humiditySensor gml:id="HUMID_2">
-        <geo:type codeSpace="">HMP233</geo:type>
-        <geo:manufacturer>PAROSCIENTIFIC</geo:manufacturer>
-        <geo:serialNumber>107258</geo:serialNumber>
-        <geo:heightDiffToAntenna>0.1</geo:heightDiffToAntenna>
-        <geo:calibrationDate>2009-06-23Z</geo:calibrationDate>
-        <gml:validTime nilReason="">
-            <gml:TimePeriod gml:id="humiditySensorValidTime2">
-                <gml:beginPosition>2009-11-23Z</gml:beginPosition>
-                <gml:endPosition>2009-12-23Z</gml:endPosition>
-            </gml:TimePeriod>
-        </gml:validTime>
-        <geo:dataSamplingInterval>0.1</geo:dataSamplingInterval>
-        <geo:accuracy-percentRelativeHumidity>2.0</geo:accuracy-percentRelativeHumidity>
-        <geo:aspiration>NATURAL</geo:aspiration>
-        <geo:notes>10m Cable</geo:notes>
-    </geo:humiditySensor>
     <geo:SiteCertificate gml:id="SITECERT_1">
         <geo:aggregationType codeSpace="urn:ga-gov-au:node-reg13-certificate"/>
         <gml:validTime>
@@ -419,12 +385,6 @@
             </geo:frequencyStandard>
             <geo:dateInserted>2002-10-29Z</geo:dateInserted>
         </geo:frequencyStandards>
-        <geo:humiditySensors xlink:href="#HUMID_1">
-            <geo:dateInserted>2010-05-03T04:30:00Z</geo:dateInserted>
-        </geo:humiditySensors>
-        <geo:humiditySensors xlink:href="#HUMID_2">
-            <geo:dateInserted>2010-06-03T04:30:00Z</geo:dateInserted>
-        </geo:humiditySensors>
         <geo:siteOwner gml:id="SO">
             <gmd:CI_ResponsibleParty>
                 <gmd:individualName>

@@ -8,6 +8,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.*;
 
 import au.gov.ga.geodesy.domain.model.sitelog.*;
+import au.gov.ga.geodesy.support.TestResources;
 import org.apache.commons.beanutils.PropertyUtils;
 import org.springframework.util.ResourceUtils;
 import org.testng.annotations.Test;
@@ -31,19 +32,63 @@ public class SiteLogMapperTest {
      **/
     @Test
     public void testMapping() throws Exception {
-        try (Reader mobs = new FileReader(ResourceUtils.getFile("classpath:sitelog/geodesyml/MOBS.xml"))) {
-            GeodesyMLType geodesyML = marshaller.unmarshal(mobs, GeodesyMLType.class).getValue();
-            SiteLogType siteLogType = GeodesyMLUtils.getElementFromJAXBElements(geodesyML.getElements(), SiteLogType.class)
-                    .findFirst()
-                    .get();
+        GeodesyMLType mobs = marshaller.unmarshal(TestResources.geodesyMLSiteLogReader("MOBS"), GeodesyMLType.class)
+                .getValue();
 
-            SiteLog siteLog = mapper.to(siteLogType);
-            testMappingValues(siteLogType, siteLog);
+        SiteLogType siteLogType = GeodesyMLUtils.getElementFromJAXBElements(mobs.getElements(), SiteLogType.class)
+                .findFirst().get();
 
-            // TODO: test the from mapping when the mapper
-            // SiteLogType mappedSiteLogType = mapper.from(siteLog);
-            // testMappingValues(mappedSiteLogType, siteLog);
+        SiteLog siteLog = mapper.to(siteLogType);
+        testMappingValues(siteLogType, siteLog);
+
+        // TODO: test the from mapping when it is implemented
+        // SiteLogType mappedSiteLogType = mapper.from(siteLog);
+        // testMappingValues(mappedSiteLogType, siteLog);
+
+    }
+
+    /**
+     * Test mapping from SiteLogType to SiteLog and back
+     * to SiteLogType. Based on the MOBS site with added sensors.
+     **/
+    @Test
+    public void testSensorsMapping() throws Exception {
+        GeodesyMLType mobs = marshaller.unmarshal(TestResources.geodesyMLSiteLogReader("MOBS-sensors"), GeodesyMLType.class)
+                .getValue();
+
+        SiteLogType siteLogType = GeodesyMLUtils.getElementFromJAXBElements(mobs.getElements(), SiteLogType.class)
+                .findFirst().get();
+
+        SiteLog siteLog = mapper.to(siteLogType);
+        testMappingValues(siteLogType, siteLog);
+
+        List<HumiditySensorPropertyType> humiditySensors = siteLogType.getHumiditySensors();
+        assertEquals(siteLog.getHumiditySensors().size(), 2);
+        assertEquals(humiditySensors.size(), 2);
+
+        {
+            int i = 0;
+            for (HumiditySensorLogItem logItem : sort(siteLog.getHumiditySensors())) {
+                HumiditySensorType xmlType = humiditySensors.get(i++).getHumiditySensor();
+                assertEquals(logItem.getSerialNumber(), xmlType.getSerialNumber());
+            }
         }
+
+        List<PressureSensorPropertyType> pressureSensors = siteLogType.getPressureSensors();
+        assertEquals(siteLog.getPressureSensors().size(), 2);
+        assertEquals(pressureSensors.size(), 2);
+
+        {
+            int i = 0;
+            for (PressureSensorLogItem logItem : sort(siteLog.getPressureSensors())) {
+                PressureSensorType xmlType = pressureSensors.get(i++).getPressureSensor();
+                assertEquals(logItem.getSerialNumber(), xmlType.getSerialNumber());
+            }
+        }
+        // TODO: test the from mapping when it is implemented
+        // SiteLogType mappedSiteLogType = mapper.from(siteLog);
+        // testMappingValues(mappedSiteLogType, siteLog);
+
     }
 
     private void testMappingValues(SiteLogType siteLogType, SiteLog siteLog) {
@@ -55,23 +100,11 @@ public class SiteLogMapperTest {
         assertEquals(siteLog.getGnssReceivers().size(), 9);
         assertEquals(receiverProperties.size(), 9);
 
-        List<HumiditySensorPropertyType> humiditySensors = siteLogType.getHumiditySensors();
-        assertEquals(siteLog.getHumiditySensors().size(), 2);
-        assertEquals(humiditySensors.size(), 2);
-
         {
             int i = 0;
             for (GnssReceiverLogItem receiverLogItem : sort(siteLog.getGnssReceivers())) {
                 GnssReceiverType receiverType = receiverProperties.get(i++).getGnssReceiver();
                 assertEquals(receiverLogItem.getFirmwareVersion(), receiverType.getFirmwareVersion());
-            }
-        }
-
-        {
-            int i = 0;
-            for (HumiditySensorLogItem logItem : sort(siteLog.getHumiditySensors())) {
-                HumiditySensorType xmlType = humiditySensors.get(i++).getHumiditySensor();
-                assertEquals(logItem.getSerialNumber(), xmlType.getSerialNumber());
             }
         }
     }

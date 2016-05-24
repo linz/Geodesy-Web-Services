@@ -50,8 +50,8 @@ public class SetupEndpoint {
 
     public ResponseEntity<PagedResources<Resource<Setup>>> findByFourCharacterId(
             @RequestParam("id") String fourCharId,
-            String effectiveFrom,
-            String effectiveTo,
+            @RequestParam() String effectiveFrom,
+            @RequestParam() String effectiveTo,
             @RequestParam(defaultValue = "yyyy-MM-dd") String timeFormat,
             Pageable pageRequest) {
 

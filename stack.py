@@ -183,18 +183,6 @@ def make_webserver(nat_wait, security_group):
                                 "runas=root\n"
                             ]),
                         ),
-                        "/root/reset-rds-passwords.sh": cf.InitFile(
-                            content=read_file("reset-rds-passwords.sh"),
-                            mode="000700",
-                            owner="root",
-                            group="root",
-                        ),
-                        "/root/create-geodesy-db.sh": cf.InitFile(
-                            content=read_file("create-geodesy-db.sh"),
-                            mode="000700",
-                            owner="root",
-                            group="root",
-                        ),
                     }),
                     commands={
                         "00-disable-webapp-auto-deployment": {
@@ -239,6 +227,18 @@ def make_webserver(nat_wait, security_group):
                             source=get_geodesy_web_services_war_url(),
                             owner="tomcat",
                             group="tomcat",
+                        ),
+                        "/root/reset-rds-passwords.sh": cf.InitFile(
+                            content=read_file("reset-rds-passwords.sh"),
+                            mode="000700",
+                            owner="root",
+                            group="root",
+                        ),
+                        "/root/create-geodesy-db.sh": cf.InitFile(
+                            content=read_file("create-geodesy-db.sh"),
+                            mode="000700",
+                            owner="root",
+                            group="root",
                         ),
                     }),
                     commands={

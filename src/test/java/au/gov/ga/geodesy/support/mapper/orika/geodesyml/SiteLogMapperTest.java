@@ -85,6 +85,19 @@ public class SiteLogMapperTest {
                 assertEquals(logItem.getSerialNumber(), xmlType.getSerialNumber());
             }
         }
+
+        List<TemperatureSensorPropertyType> temperatureSensors = siteLogType.getTemperatureSensors();
+        assertEquals(siteLog.getTemperatureSensors().size(), 2);
+        assertEquals(temperatureSensors.size(), 2);
+
+        {
+            int i = 0;
+            for (TemperatureSensorLogItem logItem : sort(siteLog.getTemperatureSensors())) {
+                TemperatureSensorType xmlType = temperatureSensors.get(i++).getTemperatureSensor();
+                assertEquals(logItem.getSerialNumber(), xmlType.getSerialNumber());
+            }
+        }
+
         // TODO: test the from mapping when it is implemented
         // SiteLogType mappedSiteLogType = mapper.from(siteLog);
         // testMappingValues(mappedSiteLogType, siteLog);

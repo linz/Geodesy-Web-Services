@@ -36,6 +36,7 @@ public class SiteLogMapper implements Iso<SiteLogType, SiteLog> {
             .fieldMap("gnssReceivers", "gnssReceivers").converter("gnssReceivers").add()
             .fieldMap("humiditySensors", "humiditySensors").converter("humiditySensors").add()
             .fieldMap("pressureSensors", "pressureSensors").converter("pressureSensors").add()
+            .fieldMap("temperatureSensors", "temperatureSensors").converter("temperatureSensors").add()
             /* .byDefault() */
             .register();
 
@@ -62,6 +63,12 @@ public class SiteLogMapper implements Iso<SiteLogType, SiteLog> {
         converters.registerConverter("pressureSensors",
                 new BidirectionalConverterWrapper<List<GMLPropertyType>, Set<PressureSensorLogItem>>(
                         equipmentCollectionConverter(new PressureSensorMapper())
+                ) {}
+        );
+
+        converters.registerConverter("temperatureSensors",
+                new BidirectionalConverterWrapper<List<GMLPropertyType>, Set<TemperatureSensorLogItem>>(
+                        equipmentCollectionConverter(new TemperatureSensorMapper())
                 ) {}
         );
 

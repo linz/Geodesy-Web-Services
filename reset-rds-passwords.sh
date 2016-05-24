@@ -52,5 +52,5 @@ psql --host=${RDS_ENDPOINT} --port=5432 --username postgres   --dbname=geodesy <
 alter user geodesy with password '${NEW_GEODESY_PASSWORD}';
 EOF
 
-sed -i 's/${geodesy-db-url}/jdbc:postgresql:\/\/'"${RDS_ENDPOINT}/" /usr/share/tomcat8/webapps/ROOT/META-INF/context.xml
+sed -i 's/${geodesy-db-url}/jdbc:postgresql:\/\/'"${RDS_ENDPOINT}\/geodesy/" /usr/share/tomcat8/webapps/ROOT/META-INF/context.xml
 sed -i 's/${geodesy-db-password}/'"${NEW_GEODESY_PASSWORD}/" /usr/share/tomcat8/webapps/ROOT/META-INF/context.xml

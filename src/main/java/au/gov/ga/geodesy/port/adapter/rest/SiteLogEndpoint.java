@@ -26,6 +26,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import au.gov.ga.geodesy.domain.service.IgsSiteLogService;
 import au.gov.ga.geodesy.port.InvalidSiteLogException;
 import au.gov.ga.geodesy.port.SiteLogReader;
+import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLSiteLogReader;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLValidator;
 import au.gov.ga.geodesy.port.adapter.sopac.SopacSiteLogReader;
 import au.gov.ga.xmlschemer.Violation;
@@ -43,7 +44,7 @@ public class SiteLogEndpoint {
     private GeodesyMLValidator geodesyMLValidator;
 
     @RequestMapping(value = "/validate", method = RequestMethod.POST)
-    public ResponseEntity<List<Violation>> validate(HttpServletRequest req, HttpServletResponse rsp) throws IOException {
+    public ResponseEntity<List<Violation>> validateGeodesyMLSiteLog(HttpServletRequest req, HttpServletResponse rsp) throws IOException {
         StreamSource source = new StreamSource(req.getInputStream(), "data:");
         List<Violation> violations = geodesyMLValidator.validate(source);
         if (violations.isEmpty()) {
@@ -53,8 +54,15 @@ public class SiteLogEndpoint {
         }
     }
 
+    @RequestMapping(value = "/upload", method = RequestMethod.POST)
+    public void uploadGeodesyMLSiteLog(HttpServletRequest req, HttpServletResponse rsp) throws IOException, InvalidSiteLogException {
+        SiteLogReader reader = new GeodesyMLSiteLogReader(new InputStreamReader(req.getInputStream()));
+        service.upload(reader.getSiteLog());
+        // TODO: return a URI to the created resource
+    }
+
     @RequestMapping(value = "/sopac/upload", method = RequestMethod.POST)
-    public ResponseEntity<String> upload(HttpServletRequest req, HttpServletResponse rsp) throws IOException, InvalidSiteLogException {
+    public ResponseEntity<String> uploadSopacSiteLog(HttpServletRequest req, HttpServletResponse rsp) throws IOException, InvalidSiteLogException {
         String siteLogText = IOUtils.toString(req.getInputStream());
         log.debug("Received SOPAC site log: " + siteLogText);
         SiteLogReader reader = new SopacSiteLogReader(new StringReader(siteLogText));

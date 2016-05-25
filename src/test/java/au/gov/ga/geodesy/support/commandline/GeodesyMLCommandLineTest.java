@@ -36,7 +36,7 @@ public class GeodesyMLCommandLineTest {
 	public void testreturnTestFileStringVer01() throws IOException {
 		String pathString = "a/b/c/file.txt";
 		String expected = outputDir + "/file.txt";
-		Assert.assertEquals(expected, GeodesyMLCommandLine.returnTestFile(outputDir, pathString).toString());
+		Assert.assertEquals(expected, GeodesyMLCommandLine.returnTestFile(outputDir, pathString).toString().replaceAll("\\+", "/"));
 		
 	}
 	@Test
@@ -44,13 +44,13 @@ public class GeodesyMLCommandLineTest {
 		String pathString = "a/b/c/file.txt";
 		String expected = outputDir + "/file.txt";
 		Path pathStringPath = Paths.get(pathString);
-		Assert.assertEquals(expected, GeodesyMLCommandLine.returnTestFile(outputDir, pathStringPath).toString());
+		Assert.assertEquals(expected, GeodesyMLCommandLine.returnTestFile(outputDir, pathStringPath).toString().replaceAll("\\+", "/"));
 	}
 	@Test
 	public void testreturnTestFileStringVer02() throws IOException {
 		String pathString = "file.txt";
 		String expected = outputDir + "/file.txt";
-		Assert.assertEquals(expected, GeodesyMLCommandLine.returnTestFile(outputDir, pathString).toString());
+		Assert.assertEquals(expected, GeodesyMLCommandLine.returnTestFile(outputDir, pathString).toString().replaceAll("\\+", "/"));
 		
 	}
 	@Test
@@ -58,7 +58,7 @@ public class GeodesyMLCommandLineTest {
 		String pathString = "file.txt";
 		String expected = outputDir + "/file.txt";
 		Path pathStringPath = Paths.get(pathString);
-		Assert.assertEquals(expected, GeodesyMLCommandLine.returnTestFile(outputDir, pathStringPath).toString());
+		Assert.assertEquals(expected, GeodesyMLCommandLine.returnTestFile(outputDir, pathStringPath).toString().replaceAll("\\+", "/"));
 	}
 
 }

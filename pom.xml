@@ -412,9 +412,14 @@
                 <configuration>
                     <archive>
                         <manifest>
+                            <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
                             <addClasspath>true</addClasspath>
                             <mainClass>au.gov.ga.geodesy.support.commandline.GeodesyMLCommandLine</mainClass>
                         </manifest>
+                        <manifestEntries>
+                            <project-version>${project.version}</project-version>
+                            <git-sha>${buildNumber}</git-sha>
+                        </manifestEntries>
                     </archive>
                 </configuration>
             </plugin>
@@ -496,6 +501,19 @@
                         <version>11.2.0.3</version>
                     </dependency>
                 </dependencies>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>buildnumber-maven-plugin</artifactId>
+                <version>1.4</version>
+                <executions>
+                    <execution>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>create</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

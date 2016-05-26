@@ -1,0 +1,15 @@
+#!/usr/bin/env python
+
+# pylint: disable=missing-docstring, invalid-name, line-too-long, redefined-outer-name, too-many-arguments
+
+from troposphere import Template
+
+from amazonia.default_vpc import add_vpc
+
+def main():
+    template = Template()
+    add_vpc(template, "", "")
+    print(template.to_json())
+
+if __name__ == "__main__":
+    main()

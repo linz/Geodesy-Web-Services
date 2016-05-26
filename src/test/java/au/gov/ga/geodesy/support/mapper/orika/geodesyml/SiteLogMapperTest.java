@@ -98,6 +98,18 @@ public class SiteLogMapperTest {
             }
         }
 
+        List<WaterVaporSensorPropertyType> waterVaporSensors = siteLogType.getWaterVaporSensors();
+        assertEquals(siteLog.getWaterVaporSensors().size(), 2);
+        assertEquals(waterVaporSensors.size(), 2);
+
+        {
+            int i = 0;
+            for (WaterVaporSensorLogItem logItem : sort(siteLog.getWaterVaporSensors())) {
+                WaterVaporSensorType xmlType = waterVaporSensors.get(i++).getWaterVaporSensor();
+                assertEquals(logItem.getSerialNumber(), xmlType.getSerialNumber());
+            }
+        }
+
         // TODO: test the from mapping when it is implemented
         // SiteLogType mappedSiteLogType = mapper.from(siteLog);
         // testMappingValues(mappedSiteLogType, siteLog);

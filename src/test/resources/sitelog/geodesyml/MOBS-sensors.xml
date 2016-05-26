@@ -252,6 +252,34 @@
         <geo:aspiration>UNASPIRATED</geo:aspiration>
         <geo:notes>10 m Cable</geo:notes>
     </geo:temperatureSensor>
+    <geo:waterVaporSensor gml:id="WATERVAPORSENSOR_1">
+        <geo:type codeSpace="">UNK</geo:type>
+        <geo:manufacturer>STEAMPUNK</geo:manufacturer>
+        <geo:serialNumber>123</geo:serialNumber>
+        <geo:heightDiffToAntenna>0.0</geo:heightDiffToAntenna>
+        <geo:calibrationDate>2010-10-28T00:00:00Z</geo:calibrationDate>
+        <gml:validTime nilReason="">
+            <gml:TimePeriod gml:id="TimePeriodType_413">
+                <gml:beginPosition>2010-10-28T00:00:00Z</gml:beginPosition>
+                <gml:endPosition>2010-11-28T00:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+        </gml:validTime>
+        <geo:distanceToAntenna>0.1</geo:distanceToAntenna>
+    </geo:waterVaporSensor>
+    <geo:waterVaporSensor gml:id="WATERVAPORSENSOR_2">
+        <geo:type codeSpace="">UNK</geo:type>
+        <geo:manufacturer>STEAMPUNK</geo:manufacturer>
+        <geo:serialNumber>123</geo:serialNumber>
+        <geo:heightDiffToAntenna>0.0</geo:heightDiffToAntenna>
+        <geo:calibrationDate>2009-11-22T13:00:00Z</geo:calibrationDate>
+        <gml:validTime nilReason="">
+            <gml:TimePeriod gml:id="TimePeriodType_413">
+                <gml:beginPosition>2010-11-28T00:00:00Z</gml:beginPosition>
+                <gml:endPosition></gml:endPosition>
+            </gml:TimePeriod>
+        </gml:validTime>
+        <geo:distanceToAntenna>0.2</geo:distanceToAntenna>
+    </geo:waterVaporSensor>
     <geo:SiteCertificate gml:id="SITECERT_1">
         <geo:aggregationType codeSpace="urn:ga-gov-au:node-reg13-certificate"/>
         <gml:validTime>
@@ -503,6 +531,12 @@
         <geo:temperatureSensors xlink:href="#TEMP_2">
             <geo:dateInserted>2010-06-03T04:30:00Z</geo:dateInserted>
         </geo:temperatureSensors>
+        <geo:waterVaporSensors xlink:href="#WATERVAPORSENSOR_1">
+            <geo:dateInserted>2010-06-03T04:30:00Z</geo:dateInserted>
+        </geo:waterVaporSensors>
+        <geo:waterVaporSensors xlink:href="#WATERVAPORSENSOR_2">
+            <geo:dateInserted>2010-06-03T04:30:00Z</geo:dateInserted>
+        </geo:waterVaporSensors>
         <geo:siteOwner gml:id="SO">
             <gmd:CI_ResponsibleParty>
                 <gmd:individualName>

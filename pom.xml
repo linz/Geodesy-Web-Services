@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>au.gov.ga.geodesy</groupId>
     <artifactId>geodesy-domain-model</artifactId>
@@ -333,32 +333,32 @@
         </resources>
         <plugins>
             <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-surefire-plugin</artifactId>
-            <version>2.18.1</version>
-            <configuration>
-                <excludes>
-                    <exclude>au/gov/ga/geodesy/ngcp/**/*</exclude>
-                      <!-- exclude the following 2 tests, they broke due to sinex files being exluded - see commit https://github.com/GeoscienceAustralia/geodesy-domain-model/commit/e05fd32883405b9f1901c038424012a780019eeb  -->
-                      <exclude>au/gov/ga/geodesy/support/mapper/dozer/**/*</exclude>
-                      <exclude>au/gov/ga/geodesy/port/adapter/rest/UploadSolutionRestTest.java</exclude>
-                      <exclude>au/gov/ga/geodesy/test/integration/standalone/*.java</exclude>
-                </excludes>
-                <forkCount>1</forkCount>
-                <reuseForks>false</reuseForks>
-                <properties>
-                <property>
-                    <name>listener</name>
-                    <value>
-                    au.gov.ga.geodesy.support.testng.TestSuiteListener,
-                    au.gov.ga.geodesy.support.testng.TestListener,
-                    au.gov.ga.geodesy.support.testng.TestDependencyController
-                    </value>
-                </property>
-                </properties>
-                <!-- prevent the annoying ForkedBooter process from stealing window focus on Mac OS -->
-                <argLine>-Djava.awt.headless=true</argLine>
-            </configuration>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.18.1</version>
+                <configuration>
+                    <excludes>
+                        <exclude>au/gov/ga/geodesy/ngcp/**/*</exclude>
+                        <!-- exclude the following 2 tests, they broke due to sinex files being exluded - see commit https://github.com/GeoscienceAustralia/geodesy-domain-model/commit/e05fd32883405b9f1901c038424012a780019eeb  -->
+                        <exclude>au/gov/ga/geodesy/support/mapper/dozer/**/*</exclude>
+                        <exclude>au/gov/ga/geodesy/port/adapter/rest/UploadSolutionRestTest.java</exclude>
+                        <exclude>au/gov/ga/geodesy/test/integration/standalone/*.java</exclude>
+                    </excludes>
+                    <forkCount>1</forkCount>
+                    <reuseForks>false</reuseForks>
+                    <properties>
+                        <property>
+                            <name>listener</name>
+                            <value>
+                                au.gov.ga.geodesy.support.testng.TestSuiteListener,
+                                au.gov.ga.geodesy.support.testng.TestListener,
+                                au.gov.ga.geodesy.support.testng.TestDependencyController
+                            </value>
+                        </property>
+                    </properties>
+                    <!-- prevent the annoying ForkedBooter process from stealing window focus on Mac OS -->
+                    <argLine>-Djava.awt.headless=true</argLine>
+                </configuration>
             </plugin>
             <plugin>
                 <!-- Unzip GeodesyML and dependent schemas -->
@@ -402,6 +402,17 @@
                             </sources>
                         </configuration>
                     </execution>
+                    <execution>
+                        <id>timestamp-property</id>
+                        <goals>
+                            <goal>timestamp-property</goal>
+                        </goals>
+                        <configuration>
+                            <name>current.time</name>
+                            <pattern>yyyy-MM-dd HH:mm:ss Z</pattern>
+                            <timeZone>GMT+0</timeZone>
+                        </configuration>
+                    </execution>
                 </executions>
             </plugin>
             <plugin>
@@ -417,8 +428,10 @@
                             <mainClass>au.gov.ga.geodesy.support.commandline.GeodesyMLCommandLine</mainClass>
                         </manifest>
                         <manifestEntries>
-                            <project-version>${project.version}</project-version>
+                            <!-- project-version>${project.version}</project-version - by default seem to always have this as Implementation-Version -->
                             <git-sha>${buildNumber}</git-sha>
+                            <git-branch>${scmBranch}</git-branch>
+                            <build-date>${current.time}</build-date>
                         </manifestEntries>
                     </archive>
                 </configuration>
@@ -533,10 +546,10 @@
                             <systemPropertyVariables>
                                 <unitTestDatabaseType>IN_MEMORY</unitTestDatabaseType>
                             </systemPropertyVariables>
-<!--test exclusions should be defined in the build section, otherwise profiles override them, at least in some cases. -->
-<!--                             <excludes> -->
-<!--                                 <exclude>au/gov/ga/geodesy/ngcp/**/*</exclude> -->
-<!--                             </excludes> -->
+                            <!--test exclusions should be defined in the build section, otherwise profiles override them, at least in some cases. -->
+                            <!--                             <excludes> -->
+                            <!--                                 <exclude>au/gov/ga/geodesy/ngcp/**/*</exclude> -->
+                            <!--                             </excludes> -->
                             <forkCount>1</forkCount>
                             <reuseForks>false</reuseForks>
                             <properties>

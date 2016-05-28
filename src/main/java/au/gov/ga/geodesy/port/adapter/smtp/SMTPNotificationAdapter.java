@@ -17,7 +17,7 @@ import au.gov.ga.geodesy.support.email.GeodesyMailMessage;
 import au.gov.ga.geodesy.support.properties.GeodesyNotificationsConfig;
 
 @Component
-public class SMTPNoficationAdapter implements NotificationPort {
+public class SMTPNotificationAdapter implements NotificationPort {
     Logger logger = LoggerFactory.getLogger(getClass());
 
     @Autowired

@@ -22,7 +22,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import com.icegreen.greenmail.util.GreenMail;
 import com.icegreen.greenmail.util.ServerSetupTest;
 
-import au.gov.ga.geodesy.port.adapter.smtp.SMTPNoficationAdapter;
+import au.gov.ga.geodesy.port.adapter.smtp.SMTPNotificationAdapter;
 import au.gov.ga.geodesy.support.email.SpringMailAdapter;
 import au.gov.ga.geodesy.support.properties.GeodesyMailConfig;
 import au.gov.ga.geodesy.support.properties.GeodesyNotificationsConfig;

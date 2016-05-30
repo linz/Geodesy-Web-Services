@@ -544,7 +544,8 @@
                         <version>2.18.1</version>
                         <configuration>
                             <systemPropertyVariables>
-                                <unitTestDatabaseType>IN_MEMORY</unitTestDatabaseType>
+                                <!-- <unitTestDatabaseType>IN_MEMORY</unitTestDatabaseType> -->
+                                <unitTestDatabaseType>EXTERNAL</unitTestDatabaseType>
                             </systemPropertyVariables>
                             <!--test exclusions should be defined in the build section, otherwise profiles override them, at least in some cases. -->
                             <!--                             <excludes> -->

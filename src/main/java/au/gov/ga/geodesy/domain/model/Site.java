@@ -1,5 +1,6 @@
-package au.gov.ga.geodesy.domain.model; 
-import java.util.Date;
+package au.gov.ga.geodesy.domain.model;
+
+import java.time.Instant;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -35,7 +36,7 @@ abstract public class Site {
     private String description;
 
     @Column(name = "DATE_INSTALLED")
-    private Date dateInstalled;
+    private Instant dateInstalled;
 
     public Integer getId() {
         return id;
@@ -57,11 +58,11 @@ abstract public class Site {
         this.description = description;
     }
 
-    public Date getDateInstalled() {
+    public Instant getDateInstalled() {
         return dateInstalled;
     }
 
-    public void setDateInstalled(Date dateInstalled) {
+    public void setDateInstalled(Instant dateInstalled) {
         this.dateInstalled = dateInstalled;
     }
 }

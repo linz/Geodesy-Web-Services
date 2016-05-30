@@ -1,6 +1,6 @@
 package au.gov.ga.geodesy.domain.model.sitelog;
 
-import java.util.Date;
+import java.time.Instant;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
@@ -17,7 +17,7 @@ public class FormInformation {
 
     @Column(name = "FORM_DATE_PREPARED")
     @Past
-    protected Date datePrepared;
+    protected Instant datePrepared;
 
     @Column(name = "FORM_REPORT_TYPE", length = 200)
     protected String reportType;
@@ -39,14 +39,14 @@ public class FormInformation {
     /**
      * Return date prepared.
      */
-    public Date getDatePrepared() {
+    public Instant getDatePrepared() {
         return datePrepared;
     }
 
     /**
      * Set date prepared.
      */
-    public void setDatePrepared(Date value) {
+    public void setDatePrepared(Instant value) {
         this.datePrepared = value;
     }
 

@@ -1,6 +1,6 @@
 package au.gov.ga.geodesy.domain.model.equipment;
 
-import java.util.Date;
+import java.time.Instant;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -28,13 +28,13 @@ public abstract class EquipmentConfiguration {
 
     @Column(name = "CONFIGURATION_TIME")
     @JsonIgnore
-    private Date configurationTime;
+    private Instant configurationTime;
 
     @SuppressWarnings("unused") // used by hibernate
     private EquipmentConfiguration() {
     }
 
-    public EquipmentConfiguration(Integer equipmentId, Date configurationTime) {
+    public EquipmentConfiguration(Integer equipmentId, Instant configurationTime) {
         this.equipmentId = equipmentId;
         this.configurationTime = configurationTime;
     }
@@ -56,11 +56,11 @@ public abstract class EquipmentConfiguration {
         this.equipmentId = equipmentId;
     }
 
-    public Date getConfigurationTime() {
+    public Instant getConfigurationTime() {
         return configurationTime;
     }
 
-    public void setConfigurationTime(Date configurationTime) {
+    public void setConfigurationTime(Instant configurationTime) {
         this.configurationTime = configurationTime;
     }
 }

@@ -36,7 +36,7 @@ public class FrequencyStandardMapper implements Iso<FrequencyStandardType, Frequ
         ConverterFactory converters = mapperFactory.getConverterFactory();
         converters.registerConverter("typeConverter", new StringToCodeTypeConverter("eGeodesy/frequencyStandardType") {});
         converters.registerConverter("jaxbElementConverter", new JAXBElementConverter<TimePeriodType, EffectiveDates>() {});
-        converters.registerConverter(new DateToTimePositionConverter());
+        converters.registerConverter(new InstantToTimePositionConverter());
         mapper = mapperFactory.getMapperFacade();
     }
 

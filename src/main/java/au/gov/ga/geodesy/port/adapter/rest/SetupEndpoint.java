@@ -1,11 +1,7 @@
 package au.gov.ga.geodesy.port.adapter.rest;
 
-import java.text.ParseException;
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.TimeZone;
 
-import org.apache.commons.lang3.time.FastDateFormat;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
@@ -29,6 +25,7 @@ import au.gov.ga.geodesy.domain.model.CorsSite;
 import au.gov.ga.geodesy.domain.model.CorsSiteRepository;
 import au.gov.ga.geodesy.domain.model.Setup;
 import au.gov.ga.geodesy.domain.model.SetupRepository;
+import au.gov.ga.geodesy.support.utils.GMLDateUtils;
 
 @RepositoryRestController
 @RequestMapping("/setups")
@@ -52,7 +49,7 @@ public class SetupEndpoint {
             @RequestParam("id") String fourCharId,
             @RequestParam() String effectiveFrom,
             @RequestParam() String effectiveTo,
-            @RequestParam(defaultValue = "yyyy-MM-dd") String timeFormat,
+            @RequestParam(defaultValue = "uuuu-MM-dd") String timeFormat,
             Pageable pageRequest) {
 
         Page<Setup> page = null;
@@ -61,8 +58,8 @@ public class SetupEndpoint {
         if (site != null) {
             page = setups.findBySiteIdAndDateRange(
                     site.getId(),
-                    parseDate(timeFormat, effectiveFrom),
-                    parseDate(timeFormat, effectiveTo),
+                    GMLDateUtils.stringToDate(effectiveFrom, timeFormat),
+                    GMLDateUtils.stringToDate(effectiveTo, timeFormat),
                     pageRequest);
         } else {
             page = new PageImpl<Setup>(new ArrayList<Setup>());
@@ -91,14 +88,5 @@ public class SetupEndpoint {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
         return ResponseEntity.ok(assembler.toResource(setup));
-    }
-
-    private Date parseDate(String pattern, String str) {
-        try {
-            return FastDateFormat.getInstance(pattern, TimeZone.getTimeZone("UTC")).parse(str);
-        }
-        catch (ParseException e) {
-            throw new RuntimeException(e);
-        }
     }
 }

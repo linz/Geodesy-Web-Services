@@ -4,9 +4,7 @@ import static org.testng.Assert.assertEquals;
 
 import java.io.FileReader;
 import java.io.Reader;
-import java.util.TimeZone;
 
-import org.apache.commons.lang3.time.FastDateFormat;
 import org.springframework.util.ResourceUtils;
 import org.testng.annotations.Test;
 
@@ -14,6 +12,7 @@ import au.gov.ga.geodesy.domain.model.sitelog.SiteIdentification;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLMarshaller;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLUtils;
 import au.gov.ga.geodesy.support.marshalling.moxy.GeodesyMLMoxy;
+import au.gov.ga.geodesy.support.utils.GMLDateUtils;
 import au.gov.xml.icsm.geodesyml.v_0_3.GeodesyMLType;
 import au.gov.xml.icsm.geodesyml.v_0_3.SiteIdentificationType;
 import au.gov.xml.icsm.geodesyml.v_0_3.SiteLogType;
@@ -48,7 +47,7 @@ public class SiteIdentificationMapperTest {
             assertEquals(siteId.getMonumentFoundation(), siteIdTypeA.getMonumentFoundation());
             assertEquals(siteId.getFoundationDepth(), String.valueOf(siteIdTypeA.getFoundationDepth()));
             assertEquals(siteId.getMarkerDescription(), siteIdTypeA.getMarkerDescription());
-            assertEquals(siteId.getDateInstalled(), actualDateFormat().parse(siteIdTypeA.getDateInstalled().getValue().get(0)));
+            assertEquals(siteId.getDateInstalled(), GMLDateUtils.stringToDateMultiParsers(siteIdTypeA.getDateInstalled().getValue().get(0)));
             assertEquals(siteId.getGeologicCharacteristic(), siteIdTypeA.getGeologicCharacteristic().getValue());
             assertEquals(siteId.getBedrockType(), siteIdTypeA.getBedrockType());
             assertEquals(siteId.getBedrockCondition(), siteIdTypeA.getBedrockCondition());
@@ -70,7 +69,7 @@ public class SiteIdentificationMapperTest {
             assertEquals(siteIdTypeB.getMonumentFoundation(), siteId.getMonumentFoundation());
             assertEquals(String.valueOf(siteIdTypeB.getFoundationDepth()), siteId.getFoundationDepth());
             assertEquals(siteIdTypeB.getMarkerDescription(), siteId.getMarkerDescription());
-            assertEquals(defaultDateFormat().parse(siteIdTypeB.getDateInstalled().getValue().get(0)), siteId.getDateInstalled());
+            assertEquals(GMLDateUtils.stringToDateMultiParsers(siteIdTypeB.getDateInstalled().getValue().get(0)), siteId.getDateInstalled());
             assertEquals(siteIdTypeB.getGeologicCharacteristic().getValue(), siteId.getGeologicCharacteristic());
             assertEquals(siteIdTypeB.getGeologicCharacteristic().getCodeSpace(), "eGeodesy/geologicCharacteristic");
             assertEquals(siteIdTypeB.getBedrockType(), siteId.getBedrockType());
@@ -81,13 +80,5 @@ public class SiteIdentificationMapperTest {
             assertEquals(siteIdTypeB.getDistanceActivity(), siteId.getDistanceActivity());
             assertEquals(siteIdTypeB.getNotes(), siteId.getNotes());
         }
-    }
-
-    private FastDateFormat actualDateFormat() {
-        return FastDateFormat.getInstance("yyyy-MM-ddX", TimeZone.getTimeZone("UTC"));
-    }
-
-    private FastDateFormat defaultDateFormat() {
-        return FastDateFormat.getInstance("yyyy-MM-dd'T'HH:mm:ss.SSSXXX", TimeZone.getTimeZone("UTC"));
     }
 }

@@ -1,10 +1,12 @@
 package au.gov.ga.geodesy.support.mapper.decorator;
 
+import static au.gov.ga.geodesy.support.utils.GMLDateUtils.GEODESYML_DATE_FORMAT_TIME_SEC;
+
 import java.lang.reflect.Method;
 import java.text.ParseException;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.ZoneOffset;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -54,11 +56,10 @@ public class ChangeTrackingDecoratorTest {
         Assert.assertNotNull(out2.getDateInserted());
         Assert.assertEquals(out.getDateInserted().getValue().get(0), out2.getDateInserted().getValue().get(0));
 
-        Date theDate = GMLDateUtils.GEODESYML_DATE_FORMAT_TIME_SEC.parse(out2.getDateInserted().getValue().get(0));
-        Calendar theCal = GregorianCalendar.getInstance();
-        theCal.setTime(theDate);
-        Assert.assertEquals(USE_THIS_HOUR, theCal.get(Calendar.HOUR_OF_DAY));
-        Assert.assertEquals(USE_THIS_MINUTE, theCal.get(Calendar.MINUTE));
+        Instant theDate = GMLDateUtils.stringToDate(out2.getDateInserted().getValue().get(0), GEODESYML_DATE_FORMAT_TIME_SEC);
+
+        Assert.assertEquals(USE_THIS_HOUR, theDate.atOffset(ZoneOffset.UTC).getHour());
+        Assert.assertEquals(USE_THIS_MINUTE, theDate.atOffset(ZoneOffset.UTC).getMinute());
     }
 
     @Test
@@ -130,11 +131,12 @@ public class ChangeTrackingDecoratorTest {
     private static TimePositionType createTimePositionType() {
         TimePositionType tpt = new TimePositionType();
 
-        Calendar cal = GregorianCalendar.getInstance();
-        cal.set(Calendar.HOUR_OF_DAY, USE_THIS_HOUR);
-        cal.set(Calendar.MINUTE, USE_THIS_MINUTE);
+        Instant dateTime = LocalDateTime.now()
+                .withHour(USE_THIS_HOUR)
+                .withMinute(USE_THIS_MINUTE).toInstant(ZoneOffset.UTC);
+
         tpt.setValue(
-                Stream.of(GMLDateUtils.GEODESYML_DATE_FORMAT_TIME_SEC.format(cal.getTime())).collect(Collectors.toList()));
+                Stream.of(GMLDateUtils.dateToString(dateTime, GEODESYML_DATE_FORMAT_TIME_SEC)).collect(Collectors.toList()));
         return tpt;
     }
 }

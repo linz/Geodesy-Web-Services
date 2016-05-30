@@ -1,6 +1,6 @@
 package au.gov.ga.geodesy.domain.model.equipment;
 
-import java.util.Date;
+import java.time.Instant;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -45,7 +45,7 @@ public class GnssAntennaConfiguration extends EquipmentConfiguration {
         super(null, null);
     }
 
-    public GnssAntennaConfiguration(Integer gnssAntennaId, Date configurationTime) {
+    public GnssAntennaConfiguration(Integer gnssAntennaId, Instant configurationTime) {
         super(gnssAntennaId, configurationTime);
     }
 

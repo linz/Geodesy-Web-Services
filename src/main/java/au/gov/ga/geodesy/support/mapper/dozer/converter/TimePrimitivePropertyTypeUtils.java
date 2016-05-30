@@ -1,7 +1,7 @@
 package au.gov.ga.geodesy.support.mapper.dozer.converter;
 
+import java.time.Instant;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import javax.xml.bind.JAXBElement;
@@ -91,7 +91,7 @@ public class TimePrimitivePropertyTypeUtils {
      * @param date
      * @return TimePositionType with the given date in text with GMLDateUtils.GEODESYML_DATE_FORMAT_TIME format.
      */
-    public static TimePositionType buildTimePositionType(Date date) {
+    public static TimePositionType buildTimePositionType(Instant date) {
         List<String> dateStrings = new ArrayList<>();
         if (date == null) {
             // Date wasn't included in data - leave List empty
@@ -155,7 +155,7 @@ public class TimePrimitivePropertyTypeUtils {
         return timeInstantType;
     }
     
-    public static TimePrimitivePropertyType buildTimePrimitivePropertyType(Date timePositionTypeDate) {
+    public static TimePrimitivePropertyType buildTimePrimitivePropertyType(Instant timePositionTypeDate) {
         TimePrimitivePropertyType timePrimitivePropertyType = TimePrimitivePropertyTypeUtils
                 .addTimeInstantType(TimePrimitivePropertyTypeUtils.newOrUsingExistingTimePrimitivePropertyType(null));
         TimePrimitivePropertyTypeUtils.getTheTimeInstantType(timePrimitivePropertyType)

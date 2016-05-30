@@ -1,12 +1,12 @@
 package au.gov.ga.geodesy.support.mapper.decorator;
 
+import static au.gov.ga.geodesy.support.utils.GMLDateUtils.GEODESYML_DATE_FORMAT_TIME_SEC;
+
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.text.ParseException;
-import java.util.Arrays;
-import java.util.Date;
+import java.time.Instant;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -138,16 +138,14 @@ public class GeodesyMLDecorators {
         private static <C> TimePositionType createTimePositionType(C childElement) throws ParseException {
             TimePositionType tpt = new TimePositionType();
             Method getter = null;
-            Date useThisDate = null;
+            Instant useThisDate = Instant.now();
             try {
                 getter = childElement.getClass().getMethod("getDateInstalled");
                 try {
                     TimePositionType childTpt = (TimePositionType) getter.invoke(childElement);
                     if (childTpt != null) {
                         String stringDate = childTpt.getValue().get(0);
-                        useThisDate = GMLDateUtils.GEODESYML_DATE_FORMAT_TIME_SEC.parse(stringDate);
-                    } else {
-                        useThisDate = new Date();
+                        useThisDate = GMLDateUtils.stringToDate(stringDate, GEODESYML_DATE_FORMAT_TIME_SEC);
                     }
                 } catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
                     logger.error("Trying to getDateInstalled() on element: " + childElement.getClass().getSimpleName()
@@ -159,11 +157,8 @@ public class GeodesyMLDecorators {
                 logger.error("Trying to get method getDateInstalled() on element: "
                         + childElement.getClass().getSimpleName() + "; just use now() instead", e);
             }
-            if (useThisDate == null) {
-                useThisDate = new Date();
-            }
 
-            tpt.setValue(Stream.of(GMLDateUtils.GEODESYML_DATE_FORMAT_TIME_SEC.format(useThisDate))
+            tpt.setValue(Stream.of(GEODESYML_DATE_FORMAT_TIME_SEC.format(useThisDate))
                     .collect(Collectors.toList()));
             return tpt;
         }
@@ -179,8 +174,6 @@ public class GeodesyMLDecorators {
          * 
          * @param element
          *            - that should have an Id attribute (but will check if so)
-         * @param P
-         *            - element class
          * @return Same element but with id attribute set to unique id (if it exists)
          * @throws SecurityException
          * @throws NoSuchMethodException

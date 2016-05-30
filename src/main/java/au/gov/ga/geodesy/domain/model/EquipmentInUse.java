@@ -10,9 +10,9 @@ import javax.persistence.Table;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 
-import au.gov.ga.geodesy.domain.model.sitelog.EffectiveDates;
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import au.gov.ga.geodesy.domain.model.sitelog.EffectiveDates;
 
 @Entity
 @Table(name = "EQUIPMENT_IN_USE")

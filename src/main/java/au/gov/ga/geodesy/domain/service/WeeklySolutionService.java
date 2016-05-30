@@ -1,14 +1,13 @@
 package au.gov.ga.geodesy.domain.service;
 
+import static java.time.temporal.ChronoUnit.DAYS;
+
 import java.io.File;
 import java.io.IOException;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
+import java.time.Instant;
 import java.util.Scanner;
 import java.util.StringTokenizer;
-import java.util.TimeZone;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -18,6 +17,7 @@ import au.gov.ga.geodesy.domain.model.WeeklySolution;
 import au.gov.ga.geodesy.domain.model.WeeklySolutionRepository;
 import au.gov.ga.geodesy.domain.model.event.EventPublisher;
 import au.gov.ga.geodesy.domain.model.event.WeeklySolutionAvailable;
+import au.gov.ga.geodesy.support.utils.GMLDateUtils;
 
 @Component
 @Transactional("geodesyTransactionManager")
@@ -38,18 +38,16 @@ public class WeeklySolutionService {
 
             StringTokenizer tokenizer = new StringTokenizer(firstLine);
             drop(tokenizer, 3);
-            Date asAt = parseGpsEpoch(tokenizer.nextToken());
+            Instant asAt = parseGpsEpoch(tokenizer.nextToken());
             drop(tokenizer, 1);
-            Date firstObservation = parseGpsEpoch(tokenizer.nextToken());
+            Instant firstObservation = parseGpsEpoch(tokenizer.nextToken());
 
             @SuppressWarnings("unused")
-            Date lastObservation = parseGpsEpoch(tokenizer.nextToken());
+            Instant lastObservation = parseGpsEpoch(tokenizer.nextToken());
 
-            Calendar epoch = Calendar.getInstance(TimeZone.getTimeZone("UTC"));
-            epoch.setTime(firstObservation);
-            epoch.add(Calendar.DAY_OF_WEEK, 3);
+            Instant epoch = firstObservation.plus(3, DAYS);
 
-            WeeklySolution solution = new WeeklySolution(asAt, epoch.getTime(), sinexFileName);
+            WeeklySolution solution = new WeeklySolution(asAt, epoch, sinexFileName);
             solutions.saveAndFlush(solution);
             eventPublisher.publish(new WeeklySolutionAvailable(solution.getId()));
         } catch (IOException | ParseException e) {
@@ -61,18 +59,9 @@ public class WeeklySolutionService {
      * YY:DOY:SECOD (YY = year, DOY = day of year, SECOD = second of day)
      * ignore seconds
      */
-    private Date parseGpsEpoch(String gpsEpoch) throws ParseException {
+    private Instant parseGpsEpoch(String gpsEpoch) throws ParseException {
         String dayAndYear = gpsEpoch.substring(0, gpsEpoch.lastIndexOf(':'));
-        SimpleDateFormat gpsEpochFormat = new SimpleDateFormat("yy':'DDD");
-        gpsEpochFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
-        return gpsEpochFormat.parse(dayAndYear);
-    }
-
-    @SuppressWarnings("unused")
-    private String formatDate(Date d) {
-        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssss");
-        format.setTimeZone(TimeZone.getTimeZone("UTC"));
-        return format.format(d);
+        return GMLDateUtils.stringToDate(dayAndYear, "yy':'DDD");
     }
 
     private void drop(StringTokenizer tokenizer, int n) {

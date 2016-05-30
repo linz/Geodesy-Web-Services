@@ -1,7 +1,8 @@
 package au.gov.ga.geodesy.support.mapper.decorator;
 
 import java.lang.reflect.Method;
-import java.util.Date;
+import java.time.Instant;
+import java.time.ZoneId;
 import java.util.List;
 
 import org.hamcrest.MatcherAssert;
@@ -20,21 +21,13 @@ import net.opengis.gml.v_3_2_1.TimePrimitivePropertyType;
 
 public class IdDecoratorTest {
     private ObjectFactory geoFactory = new ObjectFactory();
-    private Date instantDate;
-
-    public IdDecoratorTest() {
-        instantDate = new Date();
-    }
-
-    public Date getInstantDate() {
-        return instantDate;
-    }
+    private Instant dateTime = Instant.now();
 
     @Test
     public void test01_WithRecursiveIDApplication() {
         GeodesyMLType element = new GeodesyMLType();
         // Test recursively applying Ids with this child field element
-        element.setValidTime(TimePrimitivePropertyTypeUtils.buildTimePrimitivePropertyType(getInstantDate()));
+        element.setValidTime(TimePrimitivePropertyTypeUtils.buildTimePrimitivePropertyType(dateTime));
         Assert.assertNotNull(element.getValidTime().getAbstractTimePrimitive().getValue());
         Assert.assertNull(element.getId());
         Assert.assertNull(element.getValidTime().getAbstractTimePrimitive().getValue().getId());
@@ -60,7 +53,7 @@ public class IdDecoratorTest {
         HumiditySensorPropertyType humidityParent = geoFactory.createHumiditySensorPropertyType();
         HumiditySensorType humidityChild = geoFactory.createHumiditySensorType();
         humidityParent.setHumiditySensor(humidityChild);
-        humidityChild.setValidTime(TimePrimitivePropertyTypeUtils.buildTimePrimitivePropertyType(getInstantDate()));
+        humidityChild.setValidTime(TimePrimitivePropertyTypeUtils.buildTimePrimitivePropertyType(dateTime));
         Assert.assertNotNull(humidityChild.getValidTime().getAbstractTimePrimitive().getValue());
         // Confirm the parent hasn't an id attribute
         boolean foundExpectedException = false;

@@ -1,38 +1,33 @@
 package au.gov.ga.geodesy.support.java.util;
 
-import java.text.ParseException;
-import java.util.Date;
+import java.time.Instant;
+import java.time.format.DateTimeParseException;
 
-import org.apache.commons.lang3.time.FastDateFormat;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import au.gov.ga.geodesy.support.utils.GMLDateUtils;
+
 public class IsoTest {
 
-    private class StringToDate implements Iso<String, Date> {
+    private class StringToDate implements Iso<String, Instant> {
 
-        private FastDateFormat dateFormat = FastDateFormat.getInstance("yyyy-MM-dd'T'hh:mm:ss.SSS");
-
-        public Date to(String str) {
-            try {
-                return dateFormat.parse(str);
-            } catch (ParseException e) {
-                throw new RuntimeException(e);
-            }
+        public Instant to(String str) throws DateTimeParseException {
+            return GMLDateUtils.stringToDate(str, "uuuu-MM-dd'T'HH:mm:ss.SSX");
         }
 
-        public String from(Date date) {
-            return dateFormat.format(date);
+        public String from(Instant date) {
+            return GMLDateUtils.dateToString(date, "uuuu-MM-dd'T'HH:mm:ss.SSX");
         }
     }
 
-    private class DateToLong implements Iso<Date, Long> {
-        public Long to(Date date) {
-            return date.getTime();
+    private class DateToLong implements Iso<Instant, Long> {
+        public Long to(Instant date) {
+            return date.getEpochSecond();
         }
 
-        public Date from(Long n) {
-            return new Date(n);
+        public Instant from(Long n) {
+            return Instant.ofEpochSecond(n);
         }
     }
 

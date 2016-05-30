@@ -1,17 +1,20 @@
 package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 
+import java.time.Instant;
+
+import au.gov.ga.geodesy.domain.model.sitelog.EffectiveDates;
 import au.gov.ga.geodesy.domain.model.sitelog.GnssReceiverLogItem;
 import au.gov.ga.geodesy.support.java.util.Iso;
 import au.gov.xml.icsm.geodesyml.v_0_3.GnssReceiverType;
 import au.gov.xml.icsm.geodesyml.v_0_3.IgsReceiverModelCodeType;
-
 import ma.glasnost.orika.MapperFacade;
 import ma.glasnost.orika.MapperFactory;
 import ma.glasnost.orika.converter.ConverterFactory;
+import ma.glasnost.orika.converter.builtin.PassThroughConverter;
 import ma.glasnost.orika.impl.DefaultMapperFactory;
 import ma.glasnost.orika.metadata.TypeFactory;
-
 import net.opengis.gml.v_3_2_1.CodeType;
+import net.opengis.gml.v_3_2_1.TimePeriodType;
 
 public class GnssReceiverMapper implements Iso<GnssReceiverType, GnssReceiverLogItem> {
 
@@ -38,7 +41,9 @@ public class GnssReceiverMapper implements Iso<GnssReceiverType, GnssReceiverLog
                     new StringToCodeTypeConverter("eGeodesy/satelliteSystem"), TypeFactory.valueOf(CodeType.class)
                 )
             );
-        converters.registerConverter(new DateToTimePositionConverter());
+        mapperFactory.getConverterFactory().registerConverter(new PassThroughConverter(Instant.class));
+        converters.registerConverter("jaxbElementConverter", new JAXBElementConverter<TimePeriodType, EffectiveDates>() {});
+        converters.registerConverter(new InstantToTimePositionConverter());
         mapper = mapperFactory.getMapperFacade();
     }
 

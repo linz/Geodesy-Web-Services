@@ -1,6 +1,6 @@
 package au.gov.ga.geodesy.domain.model;
 
-import java.util.Date;
+import java.time.Instant;
 import java.util.List;
 
 import org.springframework.data.domain.Page;
@@ -33,8 +33,8 @@ public interface SetupRepository extends JpaRepository<Setup, Integer>, SetupRep
 
     Page<Setup> findBySiteIdAndDateRange(
         @Param("siteId") Integer id,
-        @Param("effectiveFrom") Date effectiveFrom,
-        @Param("effectiveTo") Date effectiveTo,
+        @Param("effectiveFrom") Instant effectiveFrom,
+        @Param("effectiveTo") Instant effectiveTo,
         Pageable pageRequest
     );
 
@@ -47,7 +47,7 @@ public interface SetupRepository extends JpaRepository<Setup, Integer>, SetupRep
 
     List<Setup> findBySiteIdAndDateRange(
         @Param("siteId") Integer id,
-        @Param("effectiveFrom") Date effectiveFrom,
-        @Param("effectiveTo") Date effectiveTo
+        @Param("effectiveFrom") Instant effectiveFrom,
+        @Param("effectiveTo") Instant effectiveTo
     );
 }

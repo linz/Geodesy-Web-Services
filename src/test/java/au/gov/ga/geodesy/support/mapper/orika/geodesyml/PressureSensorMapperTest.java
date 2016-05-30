@@ -2,11 +2,7 @@ package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 
 import static org.testng.Assert.assertEquals;
 
-import java.text.ParseException;
-import java.util.Date;
-import java.util.TimeZone;
-
-import org.apache.commons.lang3.time.FastDateFormat;
+import au.gov.ga.geodesy.support.utils.GMLDateUtils;
 import org.testng.annotations.Test;
 
 import au.gov.ga.geodesy.domain.model.sitelog.PressureSensorLogItem;
@@ -46,10 +42,10 @@ public class PressureSensorMapperTest {
         assertEquals(logItem.getSerialNumber(), pressureSensorTypeA.getSerialNumber());
         assertEquals(logItem.getHeightDiffToAntenna(), String.valueOf(pressureSensorTypeA.getHeightDiffToAntenna()));
         assertEquals(logItem.getCalibrationDate(),
-                parseDate("yyyy-MM-dd'T'hh:mm:ssX", pressureSensorTypeA.getCalibrationDate().getValue().get(0)));
-        assertEquals(logItem.getEffectiveDates().getFrom(), parseDate("yyyy-MM-dd'T'hh:mm:ssX",
+                GMLDateUtils.stringToDate(pressureSensorTypeA.getCalibrationDate().getValue().get(0)), "uuuu-MM-dd'T'hh:mm:ssX");
+        assertEquals(logItem.getEffectiveDates().getFrom(), GMLDateUtils.stringToDate(
                 ((TimePeriodType) pressureSensorTypeA.getValidTime().getAbstractTimePrimitive().getValue())
-                        .getBeginPosition().getValue().get(0)
+                        .getBeginPosition().getValue().get(0), "uuuu-MM-dd'T'hh:mm:ssX"
         ));
         assertEquals(logItem.getAccuracyHPa(),
                 String.valueOf(pressureSensorTypeA.getAccuracyHPa()));
@@ -61,18 +57,15 @@ public class PressureSensorMapperTest {
         assertEquals(logItem.getSerialNumber(), pressureSensorTypeB.getSerialNumber());
         assertEquals(logItem.getHeightDiffToAntenna(), String.valueOf(pressureSensorTypeB.getHeightDiffToAntenna()));
         assertEquals(logItem.getCalibrationDate(),
-                parseDate("yyyy-MM-dd'T'HH:mm:ss.SSSX", pressureSensorTypeB.getCalibrationDate().getValue().get(0)));
-        assertEquals(logItem.getEffectiveDates().getFrom(), parseDate("yyyy-MM-dd'T'HH:mm:ss.SSSX",
+                GMLDateUtils.stringToDate(pressureSensorTypeB.getCalibrationDate().getValue().get(0), "uuuu-MM-dd'T'HH:mm:ss.SSSX"));
+        assertEquals(logItem.getEffectiveDates().getFrom(), GMLDateUtils.stringToDate(
                 ((TimePeriodType) pressureSensorTypeB.getValidTime().getAbstractTimePrimitive().getValue())
-                        .getBeginPosition().getValue().get(0)
+                        .getBeginPosition().getValue().get(0), "uuuu-MM-dd'T'HH:mm:ss.SSSX"
         ));
         assertEquals(logItem.getAccuracyHPa(),
                 String.valueOf(pressureSensorTypeB.getAccuracyHPa()));
         assertEquals(logItem.getNotes(), pressureSensorTypeB.getNotes());
     }
 
-    private Date parseDate(String pattern, String str) throws ParseException {
-        return FastDateFormat.getInstance(pattern, TimeZone.getTimeZone("UTC")).parse(str);
-    }
 }
 

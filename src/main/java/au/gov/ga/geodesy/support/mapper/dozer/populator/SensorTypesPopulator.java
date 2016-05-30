@@ -1,11 +1,9 @@
 package au.gov.ga.geodesy.support.mapper.dozer.populator;
 
 import java.math.BigDecimal;
-
-import javax.xml.bind.annotation.XmlElement;
+import java.time.Instant;
 
 import au.gov.ga.geodesy.support.mapper.dozer.converter.TimePrimitivePropertyTypeUtils;
-import au.gov.ga.geodesy.support.utils.GMLDateUtils;
 import au.gov.ga.geodesy.support.utils.GMLGmlTools;
 import au.gov.ga.geodesy.support.utils.GMLMiscTools;
 import au.gov.xml.icsm.geodesyml.v_0_3.BaseSensorEquipmentType;
@@ -30,7 +28,7 @@ public class SensorTypesPopulator extends GeodesyMLElementPopulator<BaseSensorEq
     /**
      * Consider all required elements for this type and add any missing ones with default values.
      * 
-     * @param gnssReceiverType
+     * @param sensorType
      */
     void checkAllRequiredElementsPopulated(BaseSensorEquipmentType sensorType) {
         checkElementPopulated(sensorType, "calibrationDate", GMLGmlTools.getEmptyTimePositionType());
@@ -39,7 +37,7 @@ public class SensorTypesPopulator extends GeodesyMLElementPopulator<BaseSensorEq
         checkElementPopulated(sensorType, "type", GMLGmlTools.getEmptyCodeType());
         checkElementPopulated(sensorType, "heightDiffToAntenna", GMLMiscTools.getEmptyDouble());
         checkElementPopulated(sensorType, "validTime",
-                TimePrimitivePropertyTypeUtils.buildTimePrimitivePropertyType(GMLDateUtils.buildStartOfTime()));
+                TimePrimitivePropertyTypeUtils.buildTimePrimitivePropertyType(Instant.EPOCH));
         if (sensorType instanceof TemperatureSensorType) {
             checkElementPopulated(sensorType, "accuracyDegreesCelcius", new BigDecimal(0));
         }

@@ -1,6 +1,6 @@
 package au.gov.ga.geodesy.domain.model.sitelog;
 
-import java.util.Date;
+import java.time.Instant;
 
 import javax.persistence.Column;
 import javax.persistence.Embedded;
@@ -33,7 +33,7 @@ public abstract class SensorEquipmentLogItem implements EquipmentLogItem {
 
     @Past
     @Column(name = "CALLIBRATION_DATE", length = 256)
-    protected Date calibrationDate;
+    protected Instant calibrationDate;
 
     @Valid
     @Embedded
@@ -98,14 +98,14 @@ public abstract class SensorEquipmentLogItem implements EquipmentLogItem {
     /**
      * Return calibration date.
      */
-    public Date getCalibrationDate() {
+    public Instant getCalibrationDate() {
         return calibrationDate;
     }
 
     /**
      * Set calibration date.
      */
-    public void setCalibrationDate(Date value) {
+    public void setCalibrationDate(Instant value) {
         this.calibrationDate = value;
     }
 

@@ -1,6 +1,6 @@
 package au.gov.ga.geodesy.domain.model.sitelog;
 
-import java.util.Date;
+import java.time.Instant;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
@@ -57,7 +57,7 @@ public class SiteIdentification {
 
     @Past
     @Column(name = "DATE_INSTALLED")
-    protected Date dateInstalled;
+    protected Instant dateInstalled;
 
     @Size(max = 256)
     @Column(name = "GEOLOGIC_CHARACTERISTIC", length = 256)
@@ -230,14 +230,14 @@ public class SiteIdentification {
     /**
      * Return date installed.
      */
-    public Date getDateInstalled() {
+    public Instant getDateInstalled() {
         return dateInstalled;
     }
 
     /**
      * Set date installed.
      */
-    public void setDateInstalled(Date value) {
+    public void setDateInstalled(Instant value) {
         this.dateInstalled = value;
     }
 

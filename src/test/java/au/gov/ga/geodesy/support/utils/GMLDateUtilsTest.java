@@ -1,5 +1,12 @@
 package au.gov.ga.geodesy.support.utils;
 
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
+import java.time.format.ResolverStyle;
+
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -13,6 +20,32 @@ import au.gov.ga.geodesy.exception.GeodesyRuntimeException;
  * 
  **/
 public class GMLDateUtilsTest {
+
+    @Test
+    public void testParser() {
+        Instant dateTime = Instant.parse("2000-01-12T13:00:00Z");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("uuuu-MM-dd'T'HH:mm:ssX")
+                .withZone(ZoneId.of("UTC"));
+        Assert.assertEquals("2000-01-12T13:00:00Z", formatter.format(dateTime));
+
+        formatter = DateTimeFormatter.ofPattern("uuuu-MM-dd'T'HH:mm:ssX").withResolverStyle(ResolverStyle.STRICT)
+                .withZone(ZoneId.of("UTC"));
+
+        OffsetDateTime offsetDateTime = OffsetDateTime.parse("2009-10-22T13:30:00Z", formatter);
+        dateTime = offsetDateTime.toInstant();
+        Assert.assertEquals("2009-10-22T13:30:00Z", formatter.format(dateTime));
+
+
+        formatter = DateTimeFormatter.ofPattern("uuuu-MM-dd")
+                .withZone(ZoneId.of("UTC"));
+        LocalDate date = LocalDate.parse("2000-08-12", formatter);
+        dateTime = date.atStartOfDay(ZoneId.of("UTC")).toInstant();
+
+        formatter = DateTimeFormatter.ofPattern("dd MMM uuuu HH:mm z")
+                .withZone(ZoneId.of("UTC"));
+
+        Assert.assertEquals("12 Aug 2000 00:00 UTC", formatter.format(dateTime));
+    }
 
     @Test
     public void testMultiFormats01() {
@@ -35,7 +68,7 @@ public class GMLDateUtilsTest {
     @Test
     public void testMultiFormats013() {
         String in = "1994-05-15T00:00Z";
-        String expected = "15 May 1994 00:00 GMT";
+        String expected = "15 May 1994 00:00 UTC";
         String out = GMLDateUtils.stringToDateToStringMultiParsers(in);
         System.out.println("In date: " + in + ", out date: " + out);
         Assert.assertEquals(expected, out);

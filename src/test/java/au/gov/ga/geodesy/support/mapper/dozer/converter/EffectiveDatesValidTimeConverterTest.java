@@ -1,21 +1,20 @@
 package au.gov.ga.geodesy.support.mapper.dozer.converter;
 
 import java.text.ParseException;
+import java.time.Instant;
+import java.time.OffsetDateTime;
+import java.time.ZoneId;
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
 import java.util.List;
-import java.util.TimeZone;
 
 import javax.xml.bind.JAXBElement;
 
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
+
 import au.gov.ga.geodesy.igssitelog.domain.model.EffectiveDates;
-import au.gov.ga.geodesy.support.mapper.dozer.converter.TimePrimitivePropertyTypeEffectiveDatesConverter;
-import au.gov.ga.geodesy.support.mapper.dozer.converter.TimePrimitivePropertyTypeUtils;
 import au.gov.ga.geodesy.support.utils.GMLDateUtils;
 import net.opengis.gml.v_3_2_1.TimePeriodType;
 import net.opengis.gml.v_3_2_1.TimePositionType;
@@ -24,16 +23,14 @@ import net.opengis.gml.v_3_2_1.TimePrimitivePropertyType;
 public class EffectiveDatesValidTimeConverterTest {
 
     private TimePrimitivePropertyTypeEffectiveDatesConverter edc = new TimePrimitivePropertyTypeEffectiveDatesConverter();
-    private Date fromDate;
-    private Date toDate;
+    private Instant fromDate;
+    private Instant toDate;
     private static final boolean dontIncludeToOrEndDate = false;
 
-    public EffectiveDatesValidTimeConverterTest() {
-        Calendar fromCal = GregorianCalendar.getInstance(TimeZone.getTimeZone(TimeZone.getAvailableIDs()[0]));
-        fromCal.add(Calendar.YEAR, -1);
-        fromDate = fromCal.getTime();
-        Calendar toCal = GregorianCalendar.getInstance(TimeZone.getTimeZone(TimeZone.getAvailableIDs()[0]));
-        toDate = toCal.getTime();
+    @Before
+    public void setup() {
+        fromDate = OffsetDateTime.now(ZoneId.of("UTC")).minusYears(1).toInstant();
+        toDate = Instant.now();
     }
 
     @Test
@@ -159,11 +156,11 @@ public class EffectiveDatesValidTimeConverterTest {
         return ed;
     }
 
-    private Date getEffectiveDateEnd(EffectiveDates ed) {
+    private Instant getEffectiveDateEnd(EffectiveDates ed) {
         return ed.getTo();
     }
 
-    private Date getEffectiveDateBegin(EffectiveDates ed) {
+    private Instant getEffectiveDateBegin(EffectiveDates ed) {
         return ed.getFrom();
     }
 

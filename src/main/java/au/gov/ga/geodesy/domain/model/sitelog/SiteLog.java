@@ -1,9 +1,9 @@
 package au.gov.ga.geodesy.domain.model.sitelog;
 
 import java.lang.reflect.Field;
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -44,7 +44,7 @@ public class SiteLog {
     @SequenceGenerator(name = "surrogateKeyGenerator", sequenceName = "SEQ_SITELOGSITE")
     private Integer id;
 
-    private Date entryDate;
+    private Instant entryDate;
 
     @Valid
     @Embedded
@@ -151,11 +151,11 @@ public class SiteLog {
         this.id = id;
     }
 
-    public Date getEntryDate() {
+    public Instant getEntryDate() {
         return entryDate;
     }
 
-    protected void setEntryDate(Date d) {
+    protected void setEntryDate(Instant d) {
         this.entryDate = d;
     }
 

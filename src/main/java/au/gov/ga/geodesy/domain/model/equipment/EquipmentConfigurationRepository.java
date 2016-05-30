@@ -1,6 +1,6 @@
 package au.gov.ga.geodesy.domain.model.equipment;
 
-import java.util.Date;
+import java.time.Instant;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -16,5 +16,5 @@ public interface EquipmentConfigurationRepository
 
     @Query("select c from EquipmentConfiguration c" +
            " where c.equipmentId.id = :equipmentId and c.configurationTime = :configurationTime")
-    EquipmentConfiguration findOne(@Param("equipmentId") Integer id, @Param("configurationTime") Date time);
+    EquipmentConfiguration findOne(@Param("equipmentId") Integer id, @Param("configurationTime") Instant time);
 }

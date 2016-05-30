@@ -1,6 +1,6 @@
 package au.gov.ga.geodesy.domain.model.event;
 
-import java.util.Date;
+import java.time.Instant;
 
 import javax.persistence.Column;
 import javax.persistence.DiscriminatorColumn;
@@ -31,16 +31,16 @@ public abstract class Event implements Cloneable {
     private Integer id;
 
     @Column(name = "TIME_RAISED", nullable = false)
-    private Date timeRaised;
+    private Instant timeRaised;
 
     @Column(name = "SUBSCRIBER", nullable = false)
     public String subscriber;
 
     @Column(name = "TIME_HANDLED")
-    public Date timeHandled;
+    public Instant timeHandled;
 
     @Column(name = "TIME_PUBLISHED")
-    public Date timePublished;
+    public Instant timePublished;
 
     @Column(name = "RETRIES")
     public Integer retries;
@@ -53,7 +53,7 @@ public abstract class Event implements Cloneable {
      *
      * @return the message
      */
-     // TODO: could this be toString instead?
+    // TODO: could this be toString instead?
     @Transient
     public String getMessage() {
         String message = "Event: " + this.getClass().getSimpleName() + ", Time Raised: " + this.getEventTime();
@@ -61,14 +61,14 @@ public abstract class Event implements Cloneable {
     }
 
     public Event() {
-        setTimeRaised(new Date());
+        setTimeRaised(Instant.now());
     }
 
-    public Date getEventTime() {
+    public Instant getEventTime() {
         return timeRaised;
     }
 
-    private void setTimeRaised(Date t) {
+    private void setTimeRaised(Instant t) {
         timeRaised = t;
     }
 
@@ -80,19 +80,19 @@ public abstract class Event implements Cloneable {
         subscriber = s;
     }
 
-    public Date getTimeHandled() {
+    public Instant getTimeHandled() {
         return timeHandled;
     }
 
-    private void setTimeHandled(Date t) {
+    private void setTimeHandled(Instant t) {
         timeHandled = t;
     }
 
-    public Date getTimePublished() {
+    public Instant getTimePublished() {
         return timePublished;
     }
 
-    public void setTimePublished(Date timePublished) {
+    public void setTimePublished(Instant timePublished) {
         this.timePublished = timePublished;
     }
 
@@ -116,12 +116,12 @@ public abstract class Event implements Cloneable {
         if (getTimePublished() != null) {
             setRetries(getRetries() == null ? 1 : getRetries() + 1);
         }
-        setTimePublished(new Date());
+        setTimePublished(Instant.now());
     }
 
     public void handled() {
         if (timeHandled == null) {
-            setTimeHandled(new Date());
+            setTimeHandled(Instant.now());
         }
     }
 

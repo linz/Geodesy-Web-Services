@@ -1,5 +1,8 @@
 package au.gov.ga.geodesy.domain.model;
 
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertNull;
+
 import java.text.ParseException;
 import java.util.Date;
 import java.util.List;
@@ -10,9 +13,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.support.AnnotationConfigContextLoader;
-import org.springframework.test.context.testng.AbstractTransactionalTestNGSpringContextTests;
-import org.springframework.transaction.annotation.Transactional;
-import static org.testng.Assert.*;
 import org.testng.annotations.Test;
 
 import au.gov.ga.geodesy.domain.model.sitelog.EffectiveDates;
@@ -21,15 +21,12 @@ import au.gov.ga.geodesy.domain.service.IgsSiteLogService;
 import au.gov.ga.geodesy.port.adapter.sopac.SopacSiteLogReader;
 import au.gov.ga.geodesy.support.TestResources;
 import au.gov.ga.geodesy.support.spring.GeodesyServiceTestConfig;
-import au.gov.ga.geodesy.support.spring.GeodesySupportConfig;
-import au.gov.ga.geodesy.support.spring.PersistenceJpaConfig;
+import au.gov.ga.geodesy.support.spring.RepositoryTest;
 
 @ContextConfiguration(
-        classes = {GeodesyServiceTestConfig.class, GeodesySupportConfig.class, PersistenceJpaConfig.class },
+        classes = {GeodesyServiceTestConfig.class},
         loader = AnnotationConfigContextLoader.class)
-
-@Transactional("geodesyTransactionManager")
-public class SetupRepositoryTest extends AbstractTransactionalTestNGSpringContextTests {
+public class SetupRepositoryTest extends RepositoryTest {
 
     @Autowired
     private SetupRepository setups;

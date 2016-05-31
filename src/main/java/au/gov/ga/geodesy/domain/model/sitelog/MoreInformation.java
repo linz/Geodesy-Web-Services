@@ -56,6 +56,10 @@ public class MoreInformation {
     @Column(name = "MI_TEXT_GRAPHICS_FROM_ANTENNA", length = 256)
     protected String insertTextGraphicFromAntenna;
 
+    @Size(max = 256)
+    @Column(name = "MI_DIGITAL_OBJECT_ID", length = 256)
+    protected String doi;
+	
     /**
      * Return primary data center.
      */
@@ -226,5 +230,19 @@ public class MoreInformation {
      */
     public void setInsertTextGraphicFromAntenna(String value) {
         this.insertTextGraphicFromAntenna = value;
+    }
+	
+    /**
+     * Return insert digital object ID.
+     */
+    public String getDoi() {
+        return doi;
+    }
+
+    /**
+     * Set insert digital object ID.
+     */
+    public void setDoi(String value) {
+        this.doi = value;
     }
 }

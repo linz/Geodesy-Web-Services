@@ -1,20 +1,19 @@
 package au.gov.ga.geodesy.support.mapper.orika;
 
+import org.geotools.metadata.iso.citation.ContactImpl;
 import org.geotools.metadata.iso.citation.ResponsiblePartyImpl;
+import org.geotools.metadata.iso.citation.TelephoneImpl;
 import org.geotools.util.SimpleInternationalString;
 import org.opengis.metadata.citation.Address;
 import org.opengis.metadata.citation.ResponsibleParty;
-import org.opengis.metadata.citation.Role;
-import org.opengis.metadata.citation.Telephone;
 import org.opengis.util.InternationalString;
 
 import ma.glasnost.orika.MapperFacade;
 import ma.glasnost.orika.MapperFactory;
 import ma.glasnost.orika.impl.DefaultMapperFactory;
 
-import net.opengis.gml.v_3_2_1.CodeListType;
-import net.opengis.iso19139.gco.v_20070417.CodeListValueType;
 import net.opengis.iso19139.gmd.v_20070417.CIAddressType;
+import net.opengis.iso19139.gmd.v_20070417.CIContactType;
 import net.opengis.iso19139.gmd.v_20070417.CIResponsiblePartyType;
 import net.opengis.iso19139.gmd.v_20070417.CITelephoneType;
 
@@ -26,12 +25,6 @@ public class ResponsiblePartyOrikaMapper {
 
     public ResponsiblePartyOrikaMapper() {
 
-        mapperFactory.classMap(Telephone.class, CITelephoneType.class)
-            .field("voices", "voice")
-            .field("facsimiles", "facsimile")
-            .byDefault()
-            .register();
-
         mapperFactory.classMap(Address.class, CIAddressType.class)
             .field("deliveryPoints", "deliveryPoint")
             .field("electronicMailAddresses", "electronicMailAddress")
@@ -41,8 +34,18 @@ public class ResponsiblePartyOrikaMapper {
         mapperFactory.classMap(ResponsiblePartyImpl.class, CIResponsiblePartyType.class)
             .field("role", "role.CIRoleCode")
             .field("contactInfo", "contactInfo.CIContact")
-            .field("contactInfo.address", "contactInfo.CIContact.address.CIAddress")
-            .field("contactInfo.phone", "contactInfo.CIContact.phone.CITelephone")
+            .byDefault()
+            .register();
+
+        mapperFactory.classMap(ContactImpl.class, CIContactType.class)
+            .field("address", "address.CIAddress")
+            .field("phone", "phone.CITelephone")
+            .byDefault()
+            .register();
+
+        mapperFactory.classMap(TelephoneImpl.class, CITelephoneType.class)
+            .field("voices", "voice")
+            .field("facsimiles", "facsimile")
             .byDefault()
             .register();
 

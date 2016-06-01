@@ -189,6 +189,7 @@ public class CorsSiteService implements EventSubscriber<SiteLogReceived> {
                 // equipment log entries with empty periods are corrections
                 return;
             }
+            // TODO: why is this commented out?
             /* while (!setups.get(i).getEffectivePeriod().getFrom().equals(equipmentFrom)) { */
             /*     i++; */
             /* } */

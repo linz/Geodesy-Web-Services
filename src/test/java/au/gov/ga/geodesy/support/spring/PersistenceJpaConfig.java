@@ -15,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.DependsOn;
 import org.springframework.context.annotation.Primary;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
@@ -63,7 +64,7 @@ public class PersistenceJpaConfig {
 
     @Bean
     @Primary
-    /* @DependsOn("liquibase") */
+    @DependsOn("liquibase") 
     public LocalContainerEntityManagerFactoryBean geodesyEntityManagerFactory() {
         LocalContainerEntityManagerFactoryBean springFactoryBean = new LocalContainerEntityManagerFactoryBean();
         springFactoryBean.setPackagesToScan(new String[]{"au.gov.ga.geodesy.domain.model"});
@@ -88,6 +89,7 @@ public class PersistenceJpaConfig {
 
     private DataSource externalPostgresDataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
+        //dataSource.setUrl("jdbc:postgresql://localhost/geodesy_baseline_db");
         dataSource.setUrl("jdbc:postgresql://localhost/geodesydb");
         dataSource.setUsername("geodesy");
         dataSource.setPassword("geodesypw");
@@ -119,7 +121,7 @@ public class PersistenceJpaConfig {
         return dataSource;
     }
 
-    /* @Bean */
+   @Bean 
     public SpringLiquibase liquibase() {
         if (databaseType == DatabaseType.IN_MEMORY) {
             SpringLiquibase liquibase = new SpringLiquibase();
@@ -153,7 +155,8 @@ public class PersistenceJpaConfig {
                 break;
             case EXTERNAL:
                 properties.setProperty("hibernate.dialect", "org.hibernate.spatial.dialect.postgis.PostgisDialect");
-                properties.setProperty("hibernate.hbm2ddl.auto", "none");
+                properties.setProperty("hibernate.hbm2ddl.auto", "create");
+//                properties.setProperty("hibernate.FlushMode", "commit");
 //                properties.setProperty("hibernate.show_sql", "true");
 //                properties.setProperty("hibernate.format_sql", "true");
                 /* properties.setProperty("hibernate.use_sql_comments", "true"); */

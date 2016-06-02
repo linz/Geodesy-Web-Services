@@ -569,11 +569,6 @@
             </column>
         </createTable>
     </changeSet>
-    <changeSet author="simon (generated)" id="1464742487660-53" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
-        <createTable tableName="x">
-            <column name="c1" type="VARCHAR(10)"/>
-        </createTable>
-    </changeSet>
     <changeSet author="simon (generated)" id="1464742487660-54" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
         <addPrimaryKey columnNames="id" constraintName="clock_configuration_pkey" tableName="clock_configuration"/>
     </changeSet>

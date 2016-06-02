@@ -3,6 +3,9 @@
 # Quick and Dirty script to set up postgres DB and Schema for geodesy-domain-model
 # TODO: consider security and passwords.
 
+# run this script easily with
+# $ sudo -u postgres src/test/bash/createPostgresDB.sh
+
 #PREREQS
 # Install Postgres  [ $ sudo pacman -S postgresql ]
 # Install the PostGIS Libraries [ $ sudo pacman -S postgis ]
@@ -66,7 +69,7 @@ select * from geodesy.x;
 \c
 \d
 
---drop table x;
+drop table x;
 
 EOF
 
@@ -97,7 +100,7 @@ select * from geodesy.y;
 \c
 \d
 
---drop table y;
+drop table y;
 
 EOF
 

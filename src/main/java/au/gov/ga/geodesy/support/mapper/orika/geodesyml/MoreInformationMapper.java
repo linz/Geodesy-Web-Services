@@ -9,12 +9,12 @@ import ma.glasnost.orika.converter.ConverterFactory;
 import ma.glasnost.orika.impl.DefaultMapperFactory;
 
 /**
- * Created by u43894 on 30/05/2016.
+ * Reversible mapping between GeodesyML MoreInformationType DTO and
+ * MoreInformation site log entity.
  */
 public class MoreInformationMapper implements Iso<MoreInformationType, MoreInformation> {
 
     private MapperFactory mapperFactory = new DefaultMapperFactory.Builder().build();
-
     private MapperFacade mapper;
 
     public MoreInformationMapper() {

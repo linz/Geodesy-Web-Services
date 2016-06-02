@@ -57,7 +57,7 @@ public class MoreInformation {
     protected String insertTextGraphicFromAntenna;
 
     @Size(max = 256)
-    @Column(name = "MI_DIGITAL_OBJECT_ID", length = 256)
+    @Column(name = "MI_DOI", length = 256)
     protected String doi;
 	
     /**
@@ -233,14 +233,14 @@ public class MoreInformation {
     }
 	
     /**
-     * Return insert digital object ID.
+     * Return digital object identifier (DOI).
      */
     public String getDoi() {
         return doi;
     }
 
     /**
-     * Set insert digital object ID.
+     * Set digital object identifier (DOI).
      */
     public void setDoi(String value) {
         this.doi = value;

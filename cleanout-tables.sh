@@ -16,6 +16,7 @@ if [ "${DB_ID}" == "geodesy-dev" ]; then
 		   || ' CASCADE'
 	   FROM   pg_tables
 	   WHERE  schemaname = 'geodesy'
+       AND    tablename not in ('databasechangelog', 'databasechangeloglock')
 	   );
 	END
 	$func$;

@@ -240,6 +240,12 @@ def make_webserver(nat_wait, security_group):
                             owner="root",
                             group="root",
                         ),
+                        "/root/cleanout-tables.sh": cf.InitFile(
+                            content=read_file("cleanout-tables.sh"),
+                            mode="000700",
+                            owner="root",
+                            group="root",
+                        ),
                     }),
                     commands={
                         "00-stop-tomcat": {
@@ -253,6 +259,9 @@ def make_webserver(nat_wait, security_group):
                         },
                         "36-reset-rds-passwords": {
                             "command": "/root/reset-rds-passwords.sh " + db_id(),
+                        },
+                        "38-cleanout-tables.sh": {
+                            "command": "/root/cleanout-tables.sh " + db_id(),
                         },
                         "40-start-tomcat": {
                             "command": "service tomcat8 start"

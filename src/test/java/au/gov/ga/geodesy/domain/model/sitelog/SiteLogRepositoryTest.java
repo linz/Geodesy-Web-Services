@@ -8,25 +8,15 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.annotation.Rollback;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.support.AnnotationConfigContextLoader;
-import org.springframework.test.context.testng.AbstractTransactionalTestNGSpringContextTests;
-import org.springframework.transaction.annotation.Transactional;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import au.gov.ga.geodesy.port.SiteLogSource;
 import au.gov.ga.geodesy.port.adapter.sopac.SopacSiteLogReader;
 import au.gov.ga.geodesy.support.TestResources;
-import au.gov.ga.geodesy.support.spring.GeodesySupportConfig;
-import au.gov.ga.geodesy.support.spring.PersistenceJpaConfig;
+import au.gov.ga.geodesy.support.spring.RepositoryTest;
 
-@ContextConfiguration(
-        classes = {GeodesySupportConfig.class, PersistenceJpaConfig.class},
-        loader = AnnotationConfigContextLoader.class)
-
-@Transactional("geodesyTransactionManager")
-public class SiteLogRepositoryTest extends AbstractTransactionalTestNGSpringContextTests {
+public class SiteLogRepositoryTest extends RepositoryTest {
 
     private static final Logger log = LoggerFactory.getLogger(SiteLogRepositoryTest.class);
 

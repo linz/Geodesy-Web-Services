@@ -13,7 +13,8 @@
     </scm>
     <properties>
         <java.version>1.8</java.version>
-        <liquibase.version>3.3.2</liquibase.version>
+        <!-- TODO: https://liquibase.jira.com/browse/CORE-2780 -->
+        <liquibase.version>3.5.2-SNAPSHOT</liquibase.version>
         <spring.version>4.1.6.RELEASE</spring.version>
         <hibernate.version>5.1.0.Final</hibernate.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
@@ -245,8 +246,7 @@
         <dependency>
             <groupId>org.liquibase</groupId>
             <artifactId>liquibase-core</artifactId>
-            <version>3.3.2</version>
-            <scope>test</scope>
+            <version>${liquibase.version}</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
@@ -479,41 +479,12 @@
                 <artifactId>liquibase-maven-plugin</artifactId>
                 <version>${liquibase.version}</version>
                 <configuration>
-                    <propertyFile>src/main/resources/liquibase-diff.properties</propertyFile>
-                    <changeLogFile>src/main/resources/db/geodesy-database-changelog.xml</changeLogFile>
                     <diffChangeLogFile>target/db-changelog-${maven.build.timestamp}.xml</diffChangeLogFile>
                     <promptOnNonLocalDatabase>false</promptOnNonLocalDatabase>
-                    <changelogSchemaName>u62208</changelogSchemaName>
-                    <changelogCatalogName>u62208</changelogCatalogName>
+                    <changelogSchemaName>geodesy</changelogSchemaName>
+                    <changelogCatalogName>geodesy</changelogCatalogName>
                     <logging>info</logging>
                 </configuration>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.liquibase.ext</groupId>
-                        <artifactId>liquibase-hibernate4</artifactId>
-                        <version>3.5</version>
-                    </dependency>
-                    <dependency>
-                        <groupId>org.springframework</groupId>
-                        <artifactId>spring-orm</artifactId>
-                        <version>${spring.version}</version>
-                    </dependency>
-                    <dependency>
-                        <groupId>org.springframework</groupId>
-                        <artifactId>spring-context</artifactId>
-                        <version>${spring.version}</version>
-                    </dependency>
-                    <dependency>
-                        <groupId>org.hibernate</groupId>
-                        <artifactId>hibernate-spatial</artifactId>
-                        <version>4.3</version>
-                    </dependency>
-                    <dependency>
-                        <groupId>com.oracle</groupId>
-                        <artifactId>ojdbc6</artifactId>
-                        <version>11.2.0.3</version>
-                    </dependency>
-                </dependencies>
             </plugin>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
@@ -544,7 +515,8 @@
                         <version>2.18.1</version>
                         <configuration>
                             <systemPropertyVariables>
-                                <unitTestDatabaseType>IN_MEMORY</unitTestDatabaseType>
+                                <!-- <unitTestDatabaseType>IN_MEMORY</unitTestDatabaseType> -->
+                                <unitTestDatabaseType>EXTERNAL</unitTestDatabaseType>
                             </systemPropertyVariables>
                             <!--test exclusions should be defined in the build section, otherwise profiles override them, at least in some cases. -->
                             <!--                             <excludes> -->
@@ -633,69 +605,65 @@
                             </properties>
                         </configuration>
                     </plugin>
-                    <!--<plugin> -->
-                    <!-- <groupId>org.liquibase</groupId> -->
-                    <!-- <artifactId>liquibase-maven-plugin</artifactId> -->
-                    <!-- <version>${liquibase.version}</version> -->
-                    <!-- <executions> -->
-                    <!-- <execution> -->
-                    <!-- <id>update-db</id> -->
-                    <!-- <phase>process-test-resources</phase> -->
-                    <!-- <goals> -->
-                    <!-- <goal>update</goal> -->
-                    <!-- </goals> -->
-                    <!-- </execution> -->
-                    <!-- <execution> -->
-                    <!-- <id>diff-db</id> -->
-                    <!-- <phase>process-test-resources</phase> -->
-                    <!-- <goals> -->
-                    <!-- <goal>diff</goal> -->
-                    <!-- </goals> -->
-                    <!-- </execution> -->
-                    <!-- </executions> -->
-                    <!--</plugin> -->
                 </plugins>
             </build>
         </profile>
         <profile>
-            <id>db-diff</id>
-            <build>
-                <defaultGoal>process-test-resources</defaultGoal>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-surefire-plugin</artifactId>
-                        <version>2.18.1</version>
-                        <configuration>
-                            <systemPropertyVariables>
-                                <unitTestDatabaseType>EXTERNAL</unitTestDatabaseType>
-                            </systemPropertyVariables>
-                        </configuration>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.liquibase</groupId>
-                        <artifactId>liquibase-maven-plugin</artifactId>
-                        <version>${liquibase.version}</version>
-                        <executions>
-                            <execution>
-                                <id>update-db</id>
-                                <phase>process-test-resources</phase>
-                                <goals>
-                                    <goal>update</goal>
-                                </goals>
-                            </execution>
-                            <execution>
-                                <id>diff-db</id>
-                                <phase>process-test-resources</phase>
-                                <goals>
-                                    <goal>diff</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
+              <id>db-diff</id>
+              <build>
+                  <defaultGoal>process-test-resources</defaultGoal>
+                  <plugins>
+                      <plugin>
+                          <groupId>org.apache.maven.plugins</groupId>
+                          <artifactId>maven-surefire-plugin</artifactId>
+                          <version>2.18.1</version>
+                          <configuration>
+                              <systemPropertyVariables>
+                                  <unitTestDatabaseType>EXTERNAL</unitTestDatabaseType>
+                              </systemPropertyVariables>
+                          </configuration>
+                      </plugin>
+                      <plugin>
+                          <groupId>org.liquibase</groupId>
+                          <artifactId>liquibase-maven-plugin</artifactId>
+                          <version>${liquibase.version}</version>
+                          <executions>
+                              <execution>
+                                 <id>postgres-drop</id>
+                                 <phase>process-test-resources</phase>
+                                 <goals>
+                                     <goal>dropAll</goal>
+                                 </goals>
+                                 <configuration>
+                                     <propertyFile>src/main/resources/liquibase-postgres-baseline.properties</propertyFile>
+                                 </configuration>
+                             </execution>
+                             <execution>
+                                 <id>postgres-baseline-build</id>
+                                  <phase>process-test-resources</phase>
+                                  <goals>
+                                      <goal>update</goal>
+                                  </goals>
+                                 <configuration>
+                                     <propertyFile>src/main/resources/liquibase-postgres-baseline.properties</propertyFile>
+                                 </configuration>
+                              </execution>
+                              <execution>
+                                  <id>diff-db</id>
+                                  <phase>process-test-resources</phase>
+                                  <goals>
+                                      <goal>diff</goal>
+                                  </goals>
+                                 <configuration>
+                                     <propertyFile>src/main/resources/liquibase-postgres-diff.properties</propertyFile>
+                                 </configuration>
+                             </execution>
+                         </executions>
+                     </plugin>
+                 </plugins>
+             </build>
+         </profile>
+
         <profile>
             <id>integration</id>
             <build>

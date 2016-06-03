@@ -1,0 +1,752 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <changeSet author="simon (generated)" id="1464742487660-1" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createSequence sequenceName="seq_event"  incrementBy="50"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-2" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createSequence sequenceName="seq_sitelogantenna" incrementBy="50"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-3" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createSequence sequenceName="seq_sitelogcollocationinfo" incrementBy="50"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-4" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createSequence sequenceName="seq_sitelogfrequencystandard" incrementBy="50"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-5" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createSequence sequenceName="seq_siteloghumiditysensor" incrementBy="50"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-6" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createSequence sequenceName="seq_siteloglocalepisodicevent" incrementBy="50"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-7" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createSequence sequenceName="seq_siteloglocaltie" incrementBy="50"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-8" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createSequence sequenceName="seq_sitelogmultipathsource" incrementBy="50"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-9" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createSequence sequenceName="seq_sitelogotherinstrument" incrementBy="50"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-10" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createSequence sequenceName="seq_sitelogpressuresensor" incrementBy="50"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-11" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createSequence sequenceName="seq_sitelogradiointerference" incrementBy="50"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-12" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createSequence sequenceName="seq_sitelogreceiver"  incrementBy="50"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-13" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createSequence sequenceName="seq_sitelogsignalobstruction" incrementBy="50"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-14" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createSequence sequenceName="seq_sitelogsite" incrementBy="50"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-15" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createSequence sequenceName="seq_sitelogtemperaturesensor" incrementBy="50"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-16" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createSequence sequenceName="seq_sitelogwatervaporsensor" incrementBy="50"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-17" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createSequence sequenceName="seq_surrogate_keys" incrementBy="50"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-18" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="clock_configuration">
+            <column name="id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="configuration_time" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="equipment_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="input_frequency" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-19" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="cors_site">
+            <column name="bedrock_condition" type="VARCHAR(255)"/>
+            <column name="bedrock_type" type="VARCHAR(255)"/>
+            <column name="domes_number" type="VARCHAR(255)"/>
+            <column name="four_character_id" type="VARCHAR(4)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="geologic_characteristic" type="VARCHAR(255)"/>
+            <column name="id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="monument_id" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-20" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="domain_event">
+            <column name="event_name" type="VARCHAR(31)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="error" type="VARCHAR(255)"/>
+            <column name="retries" type="INT"/>
+            <column name="subscriber" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="time_handled" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="time_published" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="time_raised" type="TIMESTAMP(6) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-21" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="equipment">
+            <column name="equipment_type" type="VARCHAR(31)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="manufacturer" type="VARCHAR(255)"/>
+            <column name="serial_number" type="VARCHAR(255)"/>
+            <column name="type" type="VARCHAR(255)"/>
+            <column name="version" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-22" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="equipment_in_use">
+            <column name="id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="equipment_configuration_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="equipment_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="effective_from" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="effective_to" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="setup_id" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-23" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="gnss_antenna_configuration">
+            <column name="id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="configuration_time" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="equipment_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="alignment_from_true_north" type="VARCHAR(255)"/>
+            <column name="antenna_cable_length" type="VARCHAR(255)"/>
+            <column name="antenna_cable_type" type="VARCHAR(255)"/>
+            <column name="antenna_reference_point" type="VARCHAR(255)"/>
+            <column name="marker_arp_east_eccentricity" type="FLOAT8"/>
+            <column name="marker_arp_north_eccentricity" type="FLOAT8"/>
+            <column name="marker_arp_up_eccentricity" type="FLOAT8"/>
+            <column name="notes" type="VARCHAR(4000)"/>
+            <column name="radome_serial_number" type="VARCHAR(255)"/>
+            <column name="radome_type" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-24" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="gnss_receiver_configuration">
+            <column name="id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="configuration_time" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="equipment_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="elevation_cutoff_setting" type="VARCHAR(255)"/>
+            <column name="firmware_version" type="VARCHAR(255)"/>
+            <column name="notes" type="VARCHAR(4000)"/>
+            <column name="satellite_system" type="VARCHAR(255)"/>
+            <column name="temperature_stabilization" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-25" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="humidity_sensor">
+            <column name="aspiration" type="VARCHAR(255)"/>
+            <column name="id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-26" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="humidity_sensor_configuration">
+            <column name="id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="configuration_time" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="equipment_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="height_diff_to_antenna" type="VARCHAR(255)"/>
+            <column name="notes" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-27" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="invalid_site_log_received">
+            <column name="site_log_text" type="VARCHAR(1048576)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-28" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="monument">
+            <column name="id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="description" type="VARCHAR(255)"/>
+            <column name="foundation" type="VARCHAR(255)"/>
+            <column name="height" type="VARCHAR(255)"/>
+            <column name="marker_description" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-29" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="node">
+            <column name="id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="effective_from" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="effective_to" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="invalidated" type="BOOL">
+                <constraints nullable="false"/>
+            </column>
+            <column name="setup_id" type="INT"/>
+            <column name="site_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="version" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-30" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="position">
+            <column name="id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="as_at" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="datum_epsg_code" type="INT"/>
+            <column name="epoch" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="four_character_id" type="VARCHAR(255)"/>
+            <column name="node_id" type="INT"/>
+            <column name="position_source_id" type="INT"/>
+            <column name="x" type="FLOAT8"/>
+            <column name="y" type="FLOAT8"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-31" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="responsible_party">
+            <column name="id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="iso_19115" type="VARCHAR(4096)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-32" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="setup">
+            <column name="id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="effective_from" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="effective_to" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="invalidated" type="BOOL">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="site_id" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-33" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="site">
+            <column name="id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="date_installed" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="description" type="VARCHAR(255)"/>
+            <column name="site_name" type="VARCHAR(255)"/>
+            <column name="version" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-34" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="site_log_received">
+            <column name="four_char_id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-35" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="site_updated">
+            <column name="four_character_id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-36" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="sitelog_collocationinformation">
+            <column name="id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="effective_from" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="effective_to" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="instrument_type" type="VARCHAR(256)"/>
+            <column name="notes" type="VARCHAR(256)"/>
+            <column name="status" type="VARCHAR(256)"/>
+            <column name="site_id" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-37" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="sitelog_frequencystandard">
+            <column name="id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="effective_from" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="effective_to" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="input_frequency" type="VARCHAR(256)"/>
+            <column name="notes" type="VARCHAR(4000)"/>
+            <column name="type" type="VARCHAR(256)"/>
+            <column name="site_id" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-38" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="sitelog_gnssantenna">
+            <column name="id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="alignment_from_true_north" type="VARCHAR(256)"/>
+            <column name="antenna_cable_length" type="VARCHAR(256)"/>
+            <column name="antenna_cable_type" type="VARCHAR(256)"/>
+            <column name="antenna_radome_type" type="VARCHAR(256)"/>
+            <column name="antenna_reference_point" type="VARCHAR(256)"/>
+            <column name="date_installed" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="date_removed" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="marker_arp_east_ecc" type="FLOAT8"/>
+            <column name="marker_arp_north_ecc" type="FLOAT8"/>
+            <column name="marker_arp_up_ecc" type="FLOAT8"/>
+            <column name="notes" type="VARCHAR(4000)"/>
+            <column name="radome_serial_number" type="VARCHAR(256)"/>
+            <column name="serial_number" type="VARCHAR(256)"/>
+            <column name="antenna_type" type="VARCHAR(256)"/>
+            <column name="site_id" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-39" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="sitelog_gnssgreceiver">
+            <column name="id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="date_installed" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="date_removed" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="elevation_cutoff_setting" type="VARCHAR(256)"/>
+            <column name="firmware_version" type="VARCHAR(256)"/>
+            <column name="notes" type="VARCHAR(4000)"/>
+            <column name="satellite_system" type="VARCHAR(256)"/>
+            <column name="serial_number" type="VARCHAR(256)"/>
+            <column name="temperature_stabilization" type="VARCHAR(256)"/>
+            <column name="receiver_type" type="VARCHAR(256)"/>
+            <column name="site_id" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-40" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="sitelog_humiditysensor">
+            <column name="id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="callibration_date" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="effective_from" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="effective_to" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="height_diff_to_antenna" type="VARCHAR(256)"/>
+            <column name="manufacturer" type="VARCHAR(256)"/>
+            <column name="serial_number" type="VARCHAR(256)"/>
+            <column name="type" type="VARCHAR(256)"/>
+            <column name="accuracy_percent_rel_humidity" type="VARCHAR(256)"/>
+            <column name="aspiration" type="VARCHAR(256)"/>
+            <column name="data_sampling_interval" type="VARCHAR(256)"/>
+            <column name="notes" type="VARCHAR(4000)"/>
+            <column name="site_id" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-41" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="sitelog_localepisodicevent">
+            <column name="id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="event_date" type="VARCHAR(256)"/>
+            <column name="event" type="VARCHAR(256)"/>
+            <column name="site_id" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-42" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="sitelog_mutlipathsource">
+            <column name="id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="site_id" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-43" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="sitelog_otherinstrumentation">
+            <column name="id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="effective_from" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="effective_to" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="instrumentation" type="VARCHAR(4000)"/>
+            <column name="site_id" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-44" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="sitelog_pressuresensor">
+            <column name="id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="callibration_date" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="effective_from" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="effective_to" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="height_diff_to_antenna" type="VARCHAR(256)"/>
+            <column name="manufacturer" type="VARCHAR(256)"/>
+            <column name="serial_number" type="VARCHAR(256)"/>
+            <column name="type" type="VARCHAR(256)"/>
+            <column name="accuracy_hpa" type="VARCHAR(256)"/>
+            <column name="data_sampling_interval" type="VARCHAR(256)"/>
+            <column name="notes" type="VARCHAR(4000)"/>
+            <column name="site_id" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-45" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="sitelog_radiointerference">
+            <column name="id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="observed_degradation" type="VARCHAR(256)"/>
+            <column name="site_id" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-46" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="sitelog_signalobstraction">
+            <column name="id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="site_id" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-47" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="sitelog_site">
+            <column name="id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="entrydate" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="form_date_prepared" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="form_prepared_by" type="VARCHAR(200)"/>
+            <column name="form_report_type" type="VARCHAR(200)"/>
+            <column name="mi_antenna_graphics" type="VARCHAR(256)"/>
+            <column name="mi_hard_copy_on_file" type="VARCHAR(256)"/>
+            <column name="mi_horizontal_mask" type="VARCHAR(256)"/>
+            <column name="mi_text_graphics_from_antenna" type="VARCHAR(256)"/>
+            <column name="mi_monument_description" type="VARCHAR(256)"/>
+            <column name="mi_notes" type="VARCHAR(4000)"/>
+            <column name="mi_primary_data_center" type="VARCHAR(256)"/>
+            <column name="mi_secondary_data_center" type="VARCHAR(256)"/>
+            <column name="mi_site_diagram" type="VARCHAR(256)"/>
+            <column name="mi_site_map" type="VARCHAR(256)"/>
+            <column name="mi_site_pictires" type="VARCHAR(256)"/>
+            <column name="mi_url_for_more_information" type="VARCHAR(256)"/>
+            <column name="bedrock_condition" type="VARCHAR(256)"/>
+            <column name="bedrock_type" type="VARCHAR(256)"/>
+            <column name="cdp_number" type="VARCHAR(256)"/>
+            <column name="date_installed" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="distance_activity" type="VARCHAR(256)"/>
+            <column name="fault_zones_nearby" type="VARCHAR(256)"/>
+            <column name="foundation_depth" type="VARCHAR(256)"/>
+            <column name="four_character_id" type="VARCHAR(4)"/>
+            <column name="fracture_spacing" type="VARCHAR(256)"/>
+            <column name="geologic_characteristic" type="VARCHAR(256)"/>
+            <column name="height_of_monument" type="VARCHAR(256)"/>
+            <column name="iers_domes_number" type="VARCHAR(256)"/>
+            <column name="marker_description" type="VARCHAR(256)"/>
+            <column name="monument_description" type="VARCHAR(256)"/>
+            <column name="monument_foundation" type="VARCHAR(256)"/>
+            <column name="monument_inscription" type="VARCHAR(256)"/>
+            <column name="notes" type="VARCHAR(4000)"/>
+            <column name="site_name" type="VARCHAR(256)"/>
+            <column name="elevation_grs80" type="VARCHAR(200)"/>
+            <column name="itrf_x" type="FLOAT8"/>
+            <column name="itrf_y" type="FLOAT8"/>
+            <column name="itrf_z" type="FLOAT8"/>
+            <column name="city" type="VARCHAR(256)"/>
+            <column name="country" type="VARCHAR(256)"/>
+            <column name="location_notes" type="VARCHAR(4000)"/>
+            <column name="state" type="VARCHAR(256)"/>
+            <column name="tectonic_plate" type="VARCHAR(256)"/>
+            <column name="site_contact_id" type="INT"/>
+            <column name="site_metadata_custodian_id" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-48" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="sitelog_surveyedlocaltie">
+            <column name="id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="date_measured" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="dx" type="FLOAT8"/>
+            <column name="dy" type="FLOAT8"/>
+            <column name="dz" type="FLOAT8"/>
+            <column name="local_site_tie_accuracy" type="VARCHAR(256)"/>
+            <column name="notes" type="VARCHAR(4000)"/>
+            <column name="survey_method" type="VARCHAR(256)"/>
+            <column name="tied_marker_cdp_number" type="VARCHAR(256)"/>
+            <column name="tied_marker_domes_number" type="VARCHAR(256)"/>
+            <column name="tied_marker_name" type="VARCHAR(256)"/>
+            <column name="tied_marker_usage" type="VARCHAR(256)"/>
+            <column name="site_id" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-49" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="sitelog_temperaturesensor">
+            <column name="id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="callibration_date" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="effective_from" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="effective_to" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="height_diff_to_antenna" type="VARCHAR(256)"/>
+            <column name="manufacturer" type="VARCHAR(256)"/>
+            <column name="serial_number" type="VARCHAR(256)"/>
+            <column name="type" type="VARCHAR(256)"/>
+            <column name="accurace_degree_celcius" type="VARCHAR(256)"/>
+            <column name="aspiration" type="VARCHAR(256)"/>
+            <column name="data_sampling_interval" type="VARCHAR(256)"/>
+            <column name="notes" type="VARCHAR(4000)"/>
+            <column name="site_id" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-50" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="sitelog_watervaporsensor">
+            <column name="id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="callibration_date" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="effective_from" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="effective_to" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="height_diff_to_antenna" type="VARCHAR(256)"/>
+            <column name="manufacturer" type="VARCHAR(256)"/>
+            <column name="serial_number" type="VARCHAR(256)"/>
+            <column name="type" type="VARCHAR(256)"/>
+            <column name="distance_to_antenna" type="FLOAT8"/>
+            <column name="notes" type="VARCHAR(4000)"/>
+            <column name="site_id" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-51" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="weekly_solution">
+            <column name="id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="as_at" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="epoch" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="sinex_file_name" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-52" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="weekly_solution_available">
+            <column name="weekly_solution_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-54" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addPrimaryKey columnNames="id" constraintName="clock_configuration_pkey" tableName="clock_configuration"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-55" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addPrimaryKey columnNames="id" constraintName="cors_site_pkey" tableName="cors_site"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-56" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addPrimaryKey columnNames="id" constraintName="domain_event_pkey" tableName="domain_event"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-57" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addPrimaryKey columnNames="id" constraintName="equipment_in_use_pkey" tableName="equipment_in_use"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-58" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addPrimaryKey columnNames="id" constraintName="equipment_pkey" tableName="equipment"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-59" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addPrimaryKey columnNames="id" constraintName="gnss_antenna_configuration_pkey" tableName="gnss_antenna_configuration"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-60" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addPrimaryKey columnNames="id" constraintName="gnss_receiver_configuration_pkey" tableName="gnss_receiver_configuration"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-61" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addPrimaryKey columnNames="id" constraintName="humidity_sensor_configuration_pkey" tableName="humidity_sensor_configuration"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-62" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addPrimaryKey columnNames="id" constraintName="humidity_sensor_pkey" tableName="humidity_sensor"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-63" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addPrimaryKey columnNames="id" constraintName="invalid_site_log_received_pkey" tableName="invalid_site_log_received"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-64" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addPrimaryKey columnNames="id" constraintName="monument_pkey" tableName="monument"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-65" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addPrimaryKey columnNames="id" constraintName="node_pkey" tableName="node"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-66" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addPrimaryKey columnNames="id" constraintName="position_pkey" tableName="position"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-67" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addPrimaryKey columnNames="id" constraintName="responsible_party_pkey" tableName="responsible_party"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-68" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addPrimaryKey columnNames="id" constraintName="setup_pkey" tableName="setup"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-69" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addPrimaryKey columnNames="id" constraintName="site_log_received_pkey" tableName="site_log_received"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-70" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addPrimaryKey columnNames="id" constraintName="site_pkey" tableName="site"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-71" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addPrimaryKey columnNames="id" constraintName="site_updated_pkey" tableName="site_updated"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-72" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addPrimaryKey columnNames="id" constraintName="sitelog_collocationinformation_pkey" tableName="sitelog_collocationinformation"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-73" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addPrimaryKey columnNames="id" constraintName="sitelog_frequencystandard_pkey" tableName="sitelog_frequencystandard"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-74" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addPrimaryKey columnNames="id" constraintName="sitelog_gnssantenna_pkey" tableName="sitelog_gnssantenna"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-75" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addPrimaryKey columnNames="id" constraintName="sitelog_gnssgreceiver_pkey" tableName="sitelog_gnssgreceiver"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-76" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addPrimaryKey columnNames="id" constraintName="sitelog_humiditysensor_pkey" tableName="sitelog_humiditysensor"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-77" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addPrimaryKey columnNames="id" constraintName="sitelog_localepisodicevent_pkey" tableName="sitelog_localepisodicevent"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-78" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addPrimaryKey columnNames="id" constraintName="sitelog_mutlipathsource_pkey" tableName="sitelog_mutlipathsource"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-79" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addPrimaryKey columnNames="id" constraintName="sitelog_otherinstrumentation_pkey" tableName="sitelog_otherinstrumentation"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-80" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addPrimaryKey columnNames="id" constraintName="sitelog_pressuresensor_pkey" tableName="sitelog_pressuresensor"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-81" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addPrimaryKey columnNames="id" constraintName="sitelog_radiointerference_pkey" tableName="sitelog_radiointerference"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-82" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addPrimaryKey columnNames="id" constraintName="sitelog_signalobstraction_pkey" tableName="sitelog_signalobstraction"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-83" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addPrimaryKey columnNames="id" constraintName="sitelog_site_pkey" tableName="sitelog_site"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-84" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addPrimaryKey columnNames="id" constraintName="sitelog_surveyedlocaltie_pkey" tableName="sitelog_surveyedlocaltie"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-85" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addPrimaryKey columnNames="id" constraintName="sitelog_temperaturesensor_pkey" tableName="sitelog_temperaturesensor"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-86" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addPrimaryKey columnNames="id" constraintName="sitelog_watervaporsensor_pkey" tableName="sitelog_watervaporsensor"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-87" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addPrimaryKey columnNames="id" constraintName="weekly_solution_available_pkey" tableName="weekly_solution_available"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-88" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addPrimaryKey columnNames="id" constraintName="weekly_solution_pkey" tableName="weekly_solution"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-89" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addUniqueConstraint columnNames="four_character_id" constraintName="uk_fg9w6m54cvx6bhnjag7t1i4a8" tableName="cors_site"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-90" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addForeignKeyConstraint baseColumnNames="site_id" baseTableName="sitelog_signalobstraction" constraintName="fk1cs9mfi9h443h8b8fwp2g8o2j" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="sitelog_site"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-91" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addForeignKeyConstraint baseColumnNames="monument_id" baseTableName="cors_site" constraintName="fk25mip9h81ast4isagcbn5nnsk" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="monument"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-92" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addForeignKeyConstraint baseColumnNames="site_id" baseTableName="sitelog_gnssantenna" constraintName="fk2kaqvog12n3c227vv9wmka8sk" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="sitelog_site"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-93" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addForeignKeyConstraint baseColumnNames="id" baseTableName="humidity_sensor" constraintName="fk3v3u8pev0722n8fjgvx596fsg" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="equipment"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-94" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addForeignKeyConstraint baseColumnNames="id" baseTableName="site_updated" constraintName="fk4k5lbyl5p83qh9dikhri2m5v3" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="domain_event"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-95" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addForeignKeyConstraint baseColumnNames="id" baseTableName="site_log_received" constraintName="fk66u1s5twhejx5r71kce1xbndo" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="domain_event"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-96" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addForeignKeyConstraint baseColumnNames="site_contact_id" baseTableName="sitelog_site" constraintName="fk6j824swpk9wrunv18oltj7r4h" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="responsible_party"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-97" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addForeignKeyConstraint baseColumnNames="setup_id" baseTableName="equipment_in_use" constraintName="fk6l38ggororukg4q0921somuq2" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="setup"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-98" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addForeignKeyConstraint baseColumnNames="site_id" baseTableName="sitelog_collocationinformation" constraintName="fk7dvx9fjqujrwswcq5ai8yrbgd" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="sitelog_site"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-99" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addForeignKeyConstraint baseColumnNames="site_id" baseTableName="sitelog_gnssgreceiver" constraintName="fk9pk6uvtcik5nbfnxqbj57sl7a" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="sitelog_site"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-100" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addForeignKeyConstraint baseColumnNames="site_id" baseTableName="sitelog_pressuresensor" constraintName="fkac6h7fcxwqdb02wmd9ioa9qxy" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="sitelog_site"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-101" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addForeignKeyConstraint baseColumnNames="site_id" baseTableName="sitelog_frequencystandard" constraintName="fkdbdv2fxny6htdef63toxeouo4" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="sitelog_site"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-102" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addForeignKeyConstraint baseColumnNames="site_id" baseTableName="sitelog_otherinstrumentation" constraintName="fkeuy2r6xamax3cuji4c48scctu" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="sitelog_site"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-103" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addForeignKeyConstraint baseColumnNames="site_metadata_custodian_id" baseTableName="sitelog_site" constraintName="fkfhimbva6rwtmx2jwvtimp1iau" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="responsible_party"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-104" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addForeignKeyConstraint baseColumnNames="site_id" baseTableName="sitelog_watervaporsensor" constraintName="fkgu7ol5xrkfrdcx68jg7y3yfnx" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="sitelog_site"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-105" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addForeignKeyConstraint baseColumnNames="id" baseTableName="cors_site" constraintName="fkhsotbco85rmtycrk2fydldkv5" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="site"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-106" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addForeignKeyConstraint baseColumnNames="site_id" baseTableName="sitelog_radiointerference" constraintName="fkketnpsi74n9jy8h4ivigf0rm5" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="sitelog_site"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-107" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addForeignKeyConstraint baseColumnNames="site_id" baseTableName="sitelog_mutlipathsource" constraintName="fkkria59xm558w92kh5lqpd1f3x" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="sitelog_site"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-108" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addForeignKeyConstraint baseColumnNames="site_id" baseTableName="sitelog_humiditysensor" constraintName="fkmlt0smj74de6jldjl24s27vj8" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="sitelog_site"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-109" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addForeignKeyConstraint baseColumnNames="site_id" baseTableName="sitelog_localepisodicevent" constraintName="fkmx1d8uddptk7ey2qqemjblaqh" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="sitelog_site"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-110" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addForeignKeyConstraint baseColumnNames="site_id" baseTableName="sitelog_temperaturesensor" constraintName="fkqi6nwchgfbv76i7lbyommqfb5" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="sitelog_site"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-111" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addForeignKeyConstraint baseColumnNames="site_id" baseTableName="sitelog_surveyedlocaltie" constraintName="fksve549v5ist4ri18uvf8sxjn3" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="sitelog_site"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-112" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addForeignKeyConstraint baseColumnNames="id" baseTableName="invalid_site_log_received" constraintName="fkt0wcgi5uifpvl1m5vbxtbql2d" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="domain_event"/>
+    </changeSet>
+    <changeSet author="simon (generated)" id="1464742487660-113" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addForeignKeyConstraint baseColumnNames="id" baseTableName="weekly_solution_available" constraintName="fktiaeyjhtj7j08vvfdab8ft66y" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="domain_event"/>
+    </changeSet>
+</databaseChangeLog>

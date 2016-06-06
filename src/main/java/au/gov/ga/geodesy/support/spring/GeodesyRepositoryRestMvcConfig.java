@@ -59,7 +59,7 @@ public class GeodesyRepositoryRestMvcConfig extends RepositoryRestMvcConfigurati
     @SuppressWarnings("serial")
     @Override
     protected void configureJacksonObjectMapper(ObjectMapper mapper) {
-        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"); // ISO 8601
+        SimpleDateFormat format = new SimpleDateFormat("uuuu-MM-dd HH:mm:ss"); // ISO 8601
         format.setTimeZone(TimeZone.getTimeZone("UTC"));
         mapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
         mapper.addMixIn(TelephoneImpl.class, TelephoneImplMixin.class);

@@ -1,6 +1,6 @@
 package au.gov.ga.geodesy.domain.model;
 
-import java.util.Date;
+import java.time.Instant;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -38,10 +38,10 @@ public class Position {
     private Double y;
 
     @Column(name = "EPOCH")
-    private Date epoch;
+    private Instant epoch;
 
     @Column(name = "AS_AT")
-    private Date asAt;
+    private Instant asAt;
 
     @Column(name = "POSITION_SOURCE_ID")
     private Integer positionSourceId;
@@ -50,9 +50,8 @@ public class Position {
     private Position() {
     }
 
-    public Position(String fourCharacterId, Integer nodeId, Integer datumEpsgCode, Double x, Double y, Date epoch, Date asAt,
-            Integer positionSourceId) {
-
+    public Position(String fourCharacterId, Integer nodeId, Integer datumEpsgCode, Double x, Double y,
+            Instant epoch, Instant asAt, Integer positionSourceId) {
         setFourCharacterId(fourCharacterId);
         setNodeId(nodeId);
         setDatumEpsgCode(datumEpsgCode);
@@ -103,19 +102,19 @@ public class Position {
         this.y = y;
     }
 
-    public Date getEpoch() {
+    public Instant getEpoch() {
         return epoch;
     }
 
-    public void setEpoch(Date epoch) {
+    public void setEpoch(Instant epoch) {
         this.epoch = epoch;
     }
 
-    public Date getAsAt() {
+    public Instant getAsAt() {
         return asAt;
     }
 
-    public void setAsAt(Date asAt) {
+    public void setAsAt(Instant asAt) {
         this.asAt = asAt;
     }
 

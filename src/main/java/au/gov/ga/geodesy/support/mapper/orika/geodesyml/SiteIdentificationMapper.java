@@ -33,7 +33,7 @@ public class SiteIdentificationMapper implements Iso<SiteIdentificationType, Sit
         converters.registerConverter("monumentDescription", new StringToCodeTypeConverter("eGeodesy/monumentDescription") {});
         converters.registerConverter("geologicCharacteristic", new StringToCodeTypeConverter("eGeodesy/geologicCharacteristic") {});
         converters.registerConverter("faultZonesNearby", new StringToCodeTypeConverter("eGeodesy/faultZonesNearby") {});
-        converters.registerConverter(new DateToTimePositionConverter());
+        converters.registerConverter(new InstantToTimePositionConverter());
         mapper = mapperFactory.getMapperFacade();
     }
 

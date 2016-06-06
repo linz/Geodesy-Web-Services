@@ -9,7 +9,7 @@ import org.dozer.MappingException;
 import net.opengis.gml.v_3_2_1.CodeType;
 
 /**
- * Convert: java.lang.String <--> java.util.List<CodeType>
+ * Convert: java.lang.String <--> java.converter.List<CodeType>
  */
 public class StringListConverter implements CustomConverter {
 

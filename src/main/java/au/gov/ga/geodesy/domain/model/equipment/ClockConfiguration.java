@@ -1,6 +1,6 @@
 package au.gov.ga.geodesy.domain.model.equipment;
 
-import java.util.Date;
+import java.time.Instant;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -18,7 +18,7 @@ public class ClockConfiguration extends EquipmentConfiguration {
         this(null, null);
     }
 
-    public ClockConfiguration(Integer equipmentId, Date configurationTime) {
+    public ClockConfiguration(Integer equipmentId, Instant configurationTime) {
         super(equipmentId, configurationTime);
     }
 

@@ -34,7 +34,7 @@ public class PressureSensorMapper implements Iso<PressureSensorType, PressureSen
 
         ConverterFactory converters = mapperFactory.getConverterFactory();
         converters.registerConverter("typeConverter", new StringToCodeTypeConverter("eGeodesy/type") {});
-        converters.registerConverter(new DateToTimePositionConverter());
+        converters.registerConverter(new InstantToTimePositionConverter());
         converters.registerConverter("jaxbElementConverter", new JAXBElementConverter<TimePeriodType, EffectiveDates>() {});
         mapper = mapperFactory.getMapperFacade();
     }

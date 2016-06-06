@@ -1,8 +1,7 @@
 package au.gov.ga.geodesy.domain.model.equipment;
 
 import java.lang.reflect.InvocationTargetException;
-import java.util.Date;
-import java.util.List;
+import java.time.Instant;
 import java.util.Optional;
 
 import org.apache.commons.lang3.tuple.Pair;
@@ -130,14 +129,14 @@ public class EquipmentFactory {
                 EquipmentLogItem logItem) {
 
             EffectiveDates period = logItem.getEffectiveDates();
-            Date effectiveFrom = period == null ? null : period.getFrom();
+            Instant effectiveFrom = period == null ? null : period.getFrom();
             T c = null;
             if (effectiveFrom != null) {
                 c = configurations.findOne(configClass, equipId, effectiveFrom);
             }
             if (c == null) {
                 try {
-                    return configClass.getConstructor(Integer.class, Date.class).newInstance(equipId, effectiveFrom);
+                    return configClass.getConstructor(Integer.class, Instant.class).newInstance(equipId, effectiveFrom);
                 } catch (IllegalAccessException | InstantiationException
                         | NoSuchMethodException | InvocationTargetException ex) {
                     throw new RuntimeException(ex);

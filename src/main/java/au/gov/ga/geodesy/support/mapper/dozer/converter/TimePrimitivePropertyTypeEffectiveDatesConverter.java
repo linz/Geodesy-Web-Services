@@ -1,5 +1,7 @@
 package au.gov.ga.geodesy.support.mapper.dozer.converter;
 
+import static au.gov.ga.geodesy.support.utils.GMLDateUtils.GEODESYML_DATE_FORMAT_TIME_SEC;
+
 import java.text.ParseException;
 
 import org.dozer.CustomConverter;
@@ -59,12 +61,12 @@ public class TimePrimitivePropertyTypeEffectiveDatesConverter implements CustomC
 
         TimePeriodType timePeriodType = TimePrimitivePropertyTypeUtils.getTheTimePeriodType(timePrimitivePropertyType);
 
-        ed.setFrom(GMLDateUtils.GEODESYML_DATE_FORMAT_TIME_SEC.parse(timePeriodType.getBeginPosition().getValue().get(0)));
+        ed.setFrom(GMLDateUtils.stringToDate(timePeriodType.getBeginPosition().getValue().get(0), GEODESYML_DATE_FORMAT_TIME_SEC));
         if (timePeriodType.getEndPosition() == null) {
             // To date wasn't included in data
             ed.setTo(null);
         } else {
-            ed.setTo(GMLDateUtils.GEODESYML_DATE_FORMAT_TIME_SEC.parse(timePeriodType.getEndPosition().getValue().get(0)));
+            ed.setTo(GMLDateUtils.stringToDate(timePeriodType.getEndPosition().getValue().get(0), GEODESYML_DATE_FORMAT_TIME_SEC));
         }
         return ed;
     }

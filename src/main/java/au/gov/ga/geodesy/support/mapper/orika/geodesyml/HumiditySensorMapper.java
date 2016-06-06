@@ -34,7 +34,7 @@ public class HumiditySensorMapper implements Iso<HumiditySensorType, HumiditySen
 
         ConverterFactory converters = mapperFactory.getConverterFactory();
         converters.registerConverter("typeConverter", new StringToCodeTypeConverter("eGeodesy/type") {});
-        converters.registerConverter(new DateToTimePositionConverter());
+        converters.registerConverter(new InstantToTimePositionConverter());
         converters.registerConverter("jaxbElementConverter", new JAXBElementConverter<TimePeriodType, EffectiveDates>() {});
         mapper = mapperFactory.getMapperFacade();
     }

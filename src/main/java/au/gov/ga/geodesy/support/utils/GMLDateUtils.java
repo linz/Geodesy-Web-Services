@@ -1,13 +1,12 @@
 package au.gov.ga.geodesy.support.utils;
 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
 import java.time.ZoneId;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
-import java.util.TimeZone;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
+import java.time.format.ResolverStyle;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,6 +21,8 @@ import au.gov.ga.geodesy.exception.GeodesyRuntimeException;
 public class GMLDateUtils {
     private static Logger logger = LoggerFactory.getLogger(GMLDateUtils.class);
 
+    private static final ZoneId UTC = ZoneId.of("UTC");
+    
     /*
      * Date formats have observed in input data:
      * 1992-08-12
@@ -30,90 +31,112 @@ public class GMLDateUtils {
      * 
      */
     /**
-     * "yyyy-MM-dd'T'HH:mm:ssX"
+     * "uuuu-MM-dd'T'HH:mm:ssX"
      */
-    public static final DateFormat GEODESYML_DATE_FORMAT_TIME_SEC = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssX");
+    public static final DateTimeFormatter GEODESYML_DATE_FORMAT_TIME_SEC =
+            DateTimeFormatDecorator.ofPattern("uuuu-MM-dd'T'HH:mm:ssX");
+
     /**
-     * "yyyy-MM-dd'T'HH:mmX"
+     * "uuuu-MM-dd'T'HH:mm:ss.SSSX"
      */
-    public static final DateFormat GEODESYML_DATE_FORMAT_TIME = new SimpleDateFormat("yyyy-MM-dd'T'HH:mmX");
+    public static final DateTimeFormatter GEODESYML_DATE_FORMAT_TIME_MILLISEC =
+            DateTimeFormatDecorator.ofPattern("uuuu-MM-dd'T'HH:mm:ss.SSSX");
+
     /**
-     * "dd MMM yyyy HH:mm z"
+     * "uuuu-MM-dd'T'HH:mmX"
      */
-    public static final DateFormat GEODESYML_DATE_FORMAT_TIME_OUTPUT = new SimpleDateFormat("dd MMM yyyy HH:mm z");
+    public static final DateTimeFormatter GEODESYML_DATE_FORMAT_TIME =
+            DateTimeFormatDecorator.ofPattern("uuuu-MM-dd'T'HH:mmX");
+
     /**
-     * "yyyy-MM-dd"
+     * "dd MMM uuuu HH:mm z"
      */
-    public static final DateFormat GEODESYML_DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd");
+    public static final DateTimeFormatter GEODESYML_DATE_FORMAT_TIME_OUTPUT =
+            DateTimeFormatDecorator.ofPattern("dd MMM uuuu HH:mm z");
+
     /**
-     * "yyyy MMM dd"
+     * "uuuu-MM-ddZ"
      */
-    public static final DateFormat GEODESYML_DATE_FORMAT_MONTH = new SimpleDateFormat("yyyy MMM dd");
+    public static final DateTimeFormatter GEODESYML_DATE_FORMAT =
+            DateTimeFormatDecorator.ofPattern("uuuu-MM-ddX");
+
     /**
-     * "dd MMM yyyy"
+     * "uuuu-MM-dd"
      */
-    public static final DateFormat GEODESYML_DATE_FORMAT_MONTH_BWARDS = new SimpleDateFormat("dd MMM yyyy");
+    public static final DateTimeFormatter GEODESYML_DATE_FORMAT_NO_ZONE =
+            DateTimeFormatDecorator.ofPattern("uuuu-MM-dd");
+
     /**
-     * "yyyy-dd-MM"
+     * "uuuu MMM dd"
      */
-    private static final DateFormat GEODESYML_DATE_FORMAT_BAD = new SimpleDateFormat("yyyy-dd-MM");
+    public static final DateTimeFormatter GEODESYML_DATE_FORMAT_MONTH =
+            DateTimeFormatDecorator.ofPattern("uuuu MMM dd");
+
     /**
-     * "dd MMM yyyy"
+     * "dd MMM uuuu"
      */
-    public static final DateFormat GEODESYML_DATE_FORMAT_OUTPUT = new SimpleDateFormat("dd MMM yyyy");
+    public static final DateTimeFormatter GEODESYML_DATE_FORMAT_MONTH_BWARDS =
+            DateTimeFormatDecorator.ofPattern("dd MMM uuuu");
+
+    /**
+     * "uuuu-dd-MM"
+     */
+    public static final DateTimeFormatter GEODESYML_DATE_FORMAT_DAY_US_STYLE =
+            DateTimeFormatDecorator.ofPattern("uuuu-dd-MM").withResolverStyle(ResolverStyle.SMART);
+
+    /**
+     * "dd MMM uuuu"
+     */
+    public static final DateTimeFormatter GEODESYML_DATE_FORMAT_OUTPUT =
+            DateTimeFormatDecorator.ofPattern("dd MMM uuuu");
 
     /*
      * Array of 2 place arrays of formats for parsing and output (used by stringToDateToStringMultiParsers(String dateString)):
      * 
      * - first=parse, second=output or correction
      */
-    private static final DateFormat[][] dateFormats = new DateFormat[][] {
-            new DateFormat[] {GEODESYML_DATE_FORMAT_TIME_SEC, GEODESYML_DATE_FORMAT_TIME_OUTPUT},
-            new DateFormat[] {GEODESYML_DATE_FORMAT_TIME, GEODESYML_DATE_FORMAT_TIME_OUTPUT},
-            new DateFormat[] {GEODESYML_DATE_FORMAT, GEODESYML_DATE_FORMAT_OUTPUT},
-            new DateFormat[] {GEODESYML_DATE_FORMAT_BAD, GEODESYML_DATE_FORMAT_OUTPUT},
-            new DateFormat[] {GEODESYML_DATE_FORMAT_MONTH, GEODESYML_DATE_FORMAT_MONTH},
-            new DateFormat[] {GEODESYML_DATE_FORMAT_MONTH_BWARDS, GEODESYML_DATE_FORMAT_MONTH_BWARDS}};
-
-    static {
-        GEODESYML_DATE_FORMAT_TIME_SEC.setTimeZone(TimeZone.getTimeZone("GMT"));
-        GEODESYML_DATE_FORMAT_TIME_SEC.setLenient(false);
-        GEODESYML_DATE_FORMAT_TIME.setTimeZone(TimeZone.getTimeZone("GMT"));
-        GEODESYML_DATE_FORMAT_TIME.setLenient(false);
-        GEODESYML_DATE_FORMAT.setTimeZone(TimeZone.getTimeZone("GMT"));
-        GEODESYML_DATE_FORMAT.setLenient(false);
-        GEODESYML_DATE_FORMAT_BAD.setTimeZone(TimeZone.getTimeZone("GMT"));
-        GEODESYML_DATE_FORMAT_BAD.setLenient(false);
-        GEODESYML_DATE_FORMAT_TIME_OUTPUT.setTimeZone(TimeZone.getTimeZone("GMT"));
-        GEODESYML_DATE_FORMAT_TIME_OUTPUT.setLenient(false);
-        GEODESYML_DATE_FORMAT_MONTH.setTimeZone(TimeZone.getTimeZone("GMT"));
-        GEODESYML_DATE_FORMAT_MONTH.setLenient(false);
-        GEODESYML_DATE_FORMAT_MONTH_BWARDS.setTimeZone(TimeZone.getTimeZone("GMT"));
-        GEODESYML_DATE_FORMAT_MONTH_BWARDS.setLenient(false);
-        GEODESYML_DATE_FORMAT_OUTPUT.setTimeZone(TimeZone.getTimeZone("GMT"));
-        GEODESYML_DATE_FORMAT_OUTPUT.setLenient(false);
-    }
+    private static final DateTimeFormatter[][] dateFormats = new DateTimeFormatter[][] {
+            new DateTimeFormatter[] {GEODESYML_DATE_FORMAT_TIME_SEC, GEODESYML_DATE_FORMAT_TIME_OUTPUT},
+            new DateTimeFormatter[] {GEODESYML_DATE_FORMAT_TIME_MILLISEC, GEODESYML_DATE_FORMAT_TIME_OUTPUT},
+            new DateTimeFormatter[] {GEODESYML_DATE_FORMAT_TIME, GEODESYML_DATE_FORMAT_TIME_OUTPUT},
+            new DateTimeFormatter[] {GEODESYML_DATE_FORMAT, GEODESYML_DATE_FORMAT_OUTPUT},
+            new DateTimeFormatter[] {GEODESYML_DATE_FORMAT_NO_ZONE, GEODESYML_DATE_FORMAT_OUTPUT},
+            new DateTimeFormatter[] {GEODESYML_DATE_FORMAT_DAY_US_STYLE, GEODESYML_DATE_FORMAT_OUTPUT},
+            new DateTimeFormatter[] {GEODESYML_DATE_FORMAT_MONTH, GEODESYML_DATE_FORMAT_MONTH},
+            new DateTimeFormatter[] {GEODESYML_DATE_FORMAT_MONTH_BWARDS, GEODESYML_DATE_FORMAT_MONTH_BWARDS}};
 
     /**
      * Uses default dateFormat of GEODESYML_DATE_FORMAT_FULL
      * 
      * @param date
      */
-    public static String dateToString(Date date) {
+    public static String dateToString(Instant date) {
         return dateToString(date, GEODESYML_DATE_FORMAT_TIME_SEC);
     }
 
     /**
+     * Formats a date using the specified pattern
+     * @param date
+     * @param pattern
+     * @return
+     */
+    public static String dateToString(Instant date, String pattern) {
+        return dateToString(date, DateTimeFormatter.ofPattern(pattern).withZone(UTC));
+    }
+    
+    /**
      * 
      * @param date
      * @param dateFormat
      * @return
      */
-    public static String dateToString(Date date, DateFormat dateFormat) {
-        if (date == null)
+    public static String dateToString(Instant date, DateTimeFormatter dateFormat) {
+        if (date == null) {
             return null;
-        else
+        }
+        else {
             return dateFormat.format(date);
+        }
     }
 
     /**
@@ -121,52 +144,74 @@ public class GMLDateUtils {
      * 
      * @param dateString
      * @return
-     * @throws ParseException
+     * @throws DateTimeParseException
      */
-    public static Date stringToDate(String dateString) throws ParseException {
+    public static Instant stringToDate(String dateString) throws DateTimeParseException {
         return stringToDate(dateString, GEODESYML_DATE_FORMAT_TIME_SEC);
+    }
+
+    /**
+     * Utility method to parse a String using the specified pattern
+     *
+     * @param dateString
+     * @param pattern
+     * @return
+     * @throws DateTimeParseException
+     */
+    public static Instant stringToDate(String dateString, String pattern) throws DateTimeParseException {
+        return stringToDate(dateString, DateTimeFormatter.ofPattern(pattern));
     }
 
     /**
      * 
      * @param dateString
      * @param dateFormat
-     * @return
-     * @throws ParseException
+     * @return an
+     * @throws DateTimeParseException
      */
-    public static Date stringToDate(String dateString, DateFormat dateFormat) throws ParseException {
-        Date date = null;
-        if (dateString == null)
-            return null;
-        else
+    public static Instant stringToDate(String dateString, DateTimeFormatter dateFormat) throws DateTimeParseException {
+        Instant parsedLocalDate = null;
+        if (dateString != null) {
             try {
-                date = dateFormat.parse(dateString);
-            } catch (ParseException e) {
-                logger.debug(String.format("Unable to parse date string: %s, with dateFormat: %s", dateString,
-                        ((SimpleDateFormat) dateFormat).toLocalizedPattern()));
+                parsedLocalDate = OffsetDateTime.parse(dateString, dateFormat).toInstant();
+            } catch (DateTimeParseException e) {
+                logger.debug(String.format("Unable to parse date string: %s, with dateFormat: %s",
+                        dateString,
+                        DateTimeFormatDecorator.getPattern(dateFormat)));
+                try {
+                    // try parsing the string into a date only (no time fields)
+                    LocalDate localDate = LocalDate.parse(dateString, dateFormat);
+                    parsedLocalDate = localDate.atStartOfDay(ZoneId.of("UTC")).toInstant();
+                    return parsedLocalDate;
+                } catch (DateTimeParseException e2) {
+                    logger.debug(String.format("Unable to parse date string: %s, with dateFormat: %s",
+                            dateString,
+                            DateTimeFormatDecorator.getPattern(dateFormat)));
+                }
                 throw e;
             }
-        return date;
+        }
+        return parsedLocalDate;
     }
 
     /**
      * Perform this dateToString and stringToDate dance so can lose the ms precision that renders dates different. Uses default dateFormat of
      * GEODESYML_DATE_FORMAT_FULL
      * 
-     * @param date
+     * @param dateString
      */
-    public static String stringToDateToString(String dateString) throws ParseException {
+    public static String stringToDateToString(String dateString) throws DateTimeParseException {
         return dateToString(stringToDate(dateString));
     }
 
     /**
      * Perform this dateToString and stringToDate dance so can lose the ms precision that renders dates different.
      * 
-     * @param date
+     * @param dateString
      * @param dateFormat
      *            - used for parsing and for output
      */
-    public static String stringToDateToString(String dateString, DateFormat dateFormat) throws ParseException {
+    public static String stringToDateToString(String dateString, DateTimeFormatter dateFormat) throws DateTimeParseException {
         return dateToString(stringToDate(dateString, dateFormat), dateFormat);
     }
 
@@ -180,8 +225,8 @@ public class GMLDateUtils {
      * @param dateFormatForOutput
      *            - used to output the date that is parsed
      */
-    public static String stringToDateToString(String dateString, DateFormat dateFormatForParsing,
-            DateFormat dateFormatForOutput) throws ParseException {
+    public static String stringToDateToString(String dateString, DateTimeFormatter dateFormatForParsing,
+            DateTimeFormatter dateFormatForOutput) throws DateTimeParseException {
         return dateToString(stringToDate(dateString, dateFormatForParsing), dateFormatForOutput);
     }
 
@@ -197,13 +242,13 @@ public class GMLDateUtils {
         String result = null;
         StringBuilder formatsFailed = new StringBuilder();
         logger.debug("stringToDateToStringMultiParsers - input: " + dateString);
-        for (DateFormat[] dfPairs : dateFormats) {
+        for (DateTimeFormatter[] dfPairs : dateFormats) {
             try {
-                logger.debug("  Attempt to parse with: " + ((SimpleDateFormat) dfPairs[0]).toPattern());
+                logger.debug("  Attempt to parse with: " + DateTimeFormatDecorator.getPattern(dfPairs[0]));
                 result = stringToDateToString(dateString, dfPairs[0], dfPairs[1]);
                 break;
-            } catch (ParseException e) {
-                formatsFailed.append(((SimpleDateFormat) dfPairs[0]).toPattern()).append(", ");
+            } catch (DateTimeParseException e) {
+                formatsFailed.append(DateTimeFormatDecorator.getPattern(dfPairs[0])).append(", ");
             }
         }
         if (result == null) {
@@ -230,17 +275,17 @@ public class GMLDateUtils {
      * @param dateString
      * @return date version of stringDate
      */
-    public static Date stringToDateMultiParsers(String dateString) {
-        Date result = null;
+    public static Instant stringToDateMultiParsers(String dateString) {
+        Instant result = null;
         StringBuilder formatsFailed = new StringBuilder();
         logger.debug("stringToDateMultiParsers - input: " + dateString);
-        for (DateFormat[] dfPairs : dateFormats) {
+        for (DateTimeFormatter[] dfPairs : dateFormats) {
             try {
-                logger.debug("  Attempt to parse with: " + ((SimpleDateFormat) dfPairs[0]).toPattern());
+                logger.debug("  Attempt to parse with: " + DateTimeFormatDecorator.getPattern(dfPairs[0]));
                 result = stringToDate(dateString, dfPairs[0]);
                 break;
-            } catch (ParseException e) {
-                formatsFailed.append(((SimpleDateFormat) dfPairs[0]).toPattern()).append(", ");
+            } catch (DateTimeParseException e) {
+                formatsFailed.append(DateTimeFormatDecorator.getPattern(dfPairs[0])).append(", ");
             }
         }
         if (result == null) {
@@ -250,16 +295,5 @@ public class GMLDateUtils {
             throw new GeodesyRuntimeException(msg);
         }
         return result;
-    }
-
-    public static Date buildStartOfTime() {
-        Calendar cal = new GregorianCalendar(TimeZone.getTimeZone(ZoneId.of("+11")));
-        cal.set(Calendar.YEAR,1970);
-        cal.set(Calendar.MONTH,Calendar.JANUARY);
-        cal.set(Calendar.DAY_OF_MONTH,23);
-        cal.set(Calendar.HOUR_OF_DAY,0);
-        cal.set(Calendar.MINUTE,0);
-        cal.set(Calendar.SECOND,0);
-        return cal.getTime();
     }
 }

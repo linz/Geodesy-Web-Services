@@ -2,22 +2,42 @@ package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 
 import static org.testng.Assert.assertEquals;
 
-import java.io.FileReader;
-import java.io.Reader;
 import java.lang.reflect.InvocationTargetException;
-import java.util.*;
+import java.time.Instant;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Set;
+import java.util.SortedSet;
+import java.util.TreeSet;
 
-import au.gov.ga.geodesy.domain.model.sitelog.*;
-import au.gov.ga.geodesy.support.TestResources;
 import org.apache.commons.beanutils.PropertyUtils;
-import org.springframework.util.ResourceUtils;
 import org.testng.annotations.Test;
 
+import au.gov.ga.geodesy.domain.model.sitelog.EquipmentLogItem;
+import au.gov.ga.geodesy.domain.model.sitelog.GnssReceiverLogItem;
+import au.gov.ga.geodesy.domain.model.sitelog.HumiditySensorLogItem;
+import au.gov.ga.geodesy.domain.model.sitelog.PressureSensorLogItem;
+import au.gov.ga.geodesy.domain.model.sitelog.SiteLog;
+import au.gov.ga.geodesy.domain.model.sitelog.TemperatureSensorLogItem;
+import au.gov.ga.geodesy.domain.model.sitelog.WaterVaporSensorLogItem;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLMarshaller;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLUtils;
+import au.gov.ga.geodesy.support.TestResources;
 import au.gov.ga.geodesy.support.gml.GMLPropertyType;
 import au.gov.ga.geodesy.support.marshalling.moxy.GeodesyMLMoxy;
-import au.gov.xml.icsm.geodesyml.v_0_3.*;
+import au.gov.xml.icsm.geodesyml.v_0_3.GeodesyMLType;
+import au.gov.xml.icsm.geodesyml.v_0_3.GnssReceiverPropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_3.GnssReceiverType;
+import au.gov.xml.icsm.geodesyml.v_0_3.HumiditySensorPropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_3.HumiditySensorType;
+import au.gov.xml.icsm.geodesyml.v_0_3.PressureSensorPropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_3.PressureSensorType;
+import au.gov.xml.icsm.geodesyml.v_0_3.SiteLogType;
+import au.gov.xml.icsm.geodesyml.v_0_3.TemperatureSensorPropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_3.TemperatureSensorType;
+import au.gov.xml.icsm.geodesyml.v_0_3.WaterVaporSensorPropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_3.WaterVaporSensorType;
 import ma.glasnost.orika.metadata.TypeFactory;
 import net.opengis.gml.v_3_2_1.TimePositionType;
 
@@ -159,10 +179,10 @@ public class SiteLogMapperTest {
                 return dateInstalled(p).compareTo(dateInstalled(q));
             }
 
-            private Date dateInstalled(P p) {
+            private Instant dateInstalled(P p) {
                 try {
                     TimePositionType time = (TimePositionType) PropertyUtils.getProperty(p.getTargetElement(),"dateInstalled");
-                    return new DateToTimePositionConverter().convertFrom(time, TypeFactory.valueOf(Date.class), null);
+                    return new InstantToTimePositionConverter().convertFrom(time, TypeFactory.valueOf(Instant.class), null);
                 } catch (IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
                     throw new RuntimeException(e);
                 }

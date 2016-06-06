@@ -1,6 +1,6 @@
 package au.gov.ga.geodesy.domain.model;
 
-import java.util.Date;
+import java.time.Instant;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -23,10 +23,10 @@ public class WeeklySolution {
     private Integer id;
 
     @Column(name = "AS_AT")
-    private Date asAt;
+    private Instant asAt;
 
     @Column(name = "EPOCH")
-    private Date epoch;
+    private Instant epoch;
 
     @Column(name = "SINEX_FILE_NAME")
     private String sinexFile;
@@ -35,7 +35,7 @@ public class WeeklySolution {
     private WeeklySolution() {
     }
 
-    public WeeklySolution(Date asAt, Date epoch, String sinexFile) {
+    public WeeklySolution(Instant asAt, Instant epoch, String sinexFile) {
         setAsAt(asAt);
         setEpoch(epoch);
         setSinexFile(sinexFile);
@@ -45,19 +45,19 @@ public class WeeklySolution {
         return id;
     }
 
-    public Date getAsAt() {
+    public Instant getAsAt() {
         return asAt;
     }
 
-    private void setAsAt(Date asAt) {
+    private void setAsAt(Instant asAt) {
         this.asAt = asAt;
     }
 
-    public Date getEpoch() {
+    public Instant getEpoch() {
         return epoch;
     }
 
-    private void setEpoch(Date epoch) {
+    private void setEpoch(Instant epoch) {
         this.epoch = epoch;
     }
 

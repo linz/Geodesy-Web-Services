@@ -1,6 +1,6 @@
 package au.gov.ga.geodesy.domain.model.equipment;
 
-import java.util.Date;
+import java.time.Instant;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -20,7 +20,7 @@ public class HumiditySensorConfiguration extends EquipmentConfiguration {
         super(null, null);
     }
 
-    public HumiditySensorConfiguration(Integer humiditySensorId, Date configurationTime) {
+    public HumiditySensorConfiguration(Integer humiditySensorId, Instant configurationTime) {
         super(humiditySensorId, configurationTime);
     }
 

@@ -1,27 +1,18 @@
 package au.gov.ga.geodesy.support.mapper.dozer.converter;
 
-import java.util.Date;
+import java.time.Instant;
+import java.time.ZoneId;
 
 import org.junit.Assert;
 import org.junit.Test;
 
-import au.gov.ga.geodesy.support.mapper.dozer.converter.TimePrimitivePropertyTypeStringConverter;
-import au.gov.ga.geodesy.support.mapper.dozer.converter.TimePrimitivePropertyTypeUtils;
 import au.gov.ga.geodesy.support.utils.GMLDateUtils;
 import net.opengis.gml.v_3_2_1.TimePrimitivePropertyType;
 
 public class TimePrimitivePropertyTypeStringConverterTest {
-    private Date instantDate;
+    private Instant instantDate = Instant.now();
 
     TimePrimitivePropertyTypeStringConverter conv = new TimePrimitivePropertyTypeStringConverter();
-
-    public TimePrimitivePropertyTypeStringConverterTest() {
-        instantDate = new Date();
-    }
-
-    public Date getInstantDate() {
-        return instantDate;
-    }
 
     /**
      * source: String
@@ -32,9 +23,7 @@ public class TimePrimitivePropertyTypeStringConverterTest {
         String in = "2011-07-20"; // correct format
         TimePrimitivePropertyType out = null;
         String expected = "20 Jul 2011";
-
         out = (TimePrimitivePropertyType) conv.convert(out, in, TimePrimitivePropertyType.class, String.class);
-
         Assert.assertEquals(expected,
                 TimePrimitivePropertyTypeUtils.getTheTimeInstantType(out).getTimePosition().getValue().get(0));
     }
@@ -44,9 +33,7 @@ public class TimePrimitivePropertyTypeStringConverterTest {
         String in = "2011-20-07"; // in-correct format
         TimePrimitivePropertyType out = null;
         String expected = "20 Jul 2011";
-
         out = (TimePrimitivePropertyType) conv.convert(out, in, TimePrimitivePropertyType.class, String.class);
-
         Assert.assertEquals(expected,
                 TimePrimitivePropertyTypeUtils.getTheTimeInstantType(out).getTimePosition().getValue().get(0));
     }
@@ -56,9 +43,7 @@ public class TimePrimitivePropertyTypeStringConverterTest {
         String in = "2011-07-20T16:00Z";
         TimePrimitivePropertyType out = null;
         String expected = "20 Jul 2011 16:00 GMT";
-
         out = (TimePrimitivePropertyType) conv.convert(out, in, TimePrimitivePropertyType.class, String.class);
-
         Assert.assertEquals(expected,
                 TimePrimitivePropertyTypeUtils.getTheTimeInstantType(out).getTimePosition().getValue().get(0));
     }
@@ -71,10 +56,8 @@ public class TimePrimitivePropertyTypeStringConverterTest {
     public void test2_1() {
         TimePrimitivePropertyType in = getGoedMLTimePrimitive();
         String out = null;
-        String expected = GMLDateUtils.dateToString(getInstantDate(), GMLDateUtils.GEODESYML_DATE_FORMAT_TIME_OUTPUT);
-
+        String expected = GMLDateUtils.dateToString(instantDate, GMLDateUtils.GEODESYML_DATE_FORMAT_TIME_OUTPUT);
         out = (String) conv.convert(out, in, TimePrimitivePropertyType.class, String.class);
-
         Assert.assertEquals(expected, out);
     }
 
@@ -83,8 +66,7 @@ public class TimePrimitivePropertyTypeStringConverterTest {
         TimePrimitivePropertyType timePrimitivePropertyType = TimePrimitivePropertyTypeUtils
                 .addTimeInstantType(TimePrimitivePropertyTypeUtils.newOrUsingExistingTimePrimitivePropertyType(null));
         TimePrimitivePropertyTypeUtils.getTheTimeInstantType(timePrimitivePropertyType)
-                .setTimePosition(TimePrimitivePropertyTypeUtils.buildTimePositionType(getInstantDate()));
-
+                .setTimePosition(TimePrimitivePropertyTypeUtils.buildTimePositionType(instantDate));
         return timePrimitivePropertyType;
     }
 }

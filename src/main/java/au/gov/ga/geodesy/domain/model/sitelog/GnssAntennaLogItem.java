@@ -1,6 +1,6 @@
 package au.gov.ga.geodesy.domain.model.sitelog;
 
-import java.util.Date;
+import java.time.Instant;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -66,11 +66,11 @@ public class GnssAntennaLogItem implements EquipmentLogItem {
 
     @Past
     @Column(name = "DATE_INSTALLED")
-    protected Date dateInstalled;
+    protected Instant dateInstalled;
 
     @Past
     @Column(name = "DATE_REMOVED")
-    protected Date dateRemoved;
+    protected Instant dateRemoved;
 
     @Size(max = 4000)
     @Column(name = "NOTES", length = 4000)
@@ -243,28 +243,28 @@ public class GnssAntennaLogItem implements EquipmentLogItem {
     /**
      * Return date installed.
      */
-    public Date getDateInstalled() {
+    public Instant getDateInstalled() {
         return dateInstalled;
     }
 
     /**
      * Set date installed.
      */
-    public void setDateInstalled(Date value) {
+    public void setDateInstalled(Instant value) {
         this.dateInstalled = value;
     }
 
     /**
      * Return date removed.
      */
-    public Date getDateRemoved() {
+    public Instant getDateRemoved() {
         return dateRemoved;
     }
 
     /**
      * Set date removed.
      */
-    public void setDateRemoved(Date value) {
+    public void setDateRemoved(Instant value) {
         this.dateRemoved = value;
     }
 

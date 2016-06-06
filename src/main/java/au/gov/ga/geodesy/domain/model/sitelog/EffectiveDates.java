@@ -1,6 +1,6 @@
 package au.gov.ga.geodesy.domain.model.sitelog;
 
-import java.util.Date;
+import java.time.Instant;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
@@ -14,36 +14,34 @@ import javax.persistence.Embeddable;
 public class EffectiveDates {
 
     @Column(name = "EFFECTIVE_FROM")
-    private Date from;
+    private Instant from;
 
     @Column(name = "EFFECTIVE_TO")
-    private Date to;
+    private Instant to;
 
     public EffectiveDates() {
     }
 
-    public EffectiveDates(Date from) {
+    public EffectiveDates(Instant from) {
         this(from, null);
     }
 
-    public EffectiveDates(Date from, Date to) {
+    public EffectiveDates(Instant from, Instant to) {
         setFrom(from);
         setTo(to);
     }
 
-    public Date getFrom() {
+    public Instant getFrom() {
         return from;
     }
 
-    public void setFrom(Date from) {
+    public void setFrom(Instant from) {
         this.from = from;
     }
 
-    public Date getTo() {
-        return to;
-    }
+    public Instant getTo() { return to; }
 
-    public void setTo(Date to) {
+    public void setTo(Instant to) {
         this.to = to;
     }
 
@@ -58,20 +56,15 @@ public class EffectiveDates {
             return false;
         }
         EffectiveDates other = (EffectiveDates) x;
-        return equals(from, other.getFrom()) && equals(to, other.getTo());
-    }
-
-    /**
-     * We compare dates ourselves because some are java.util.Dates and some are
-     * java.sql.Timestamps.
-     */
-    private boolean equals(Date a, Date b) {
-        if (a == b) {
-            return true;
+        if (from == null && to == null) {
+            return other.getFrom() == null && other.getTo() == null;
         }
-        if (a == null || b == null) {
-            return false;
+        if (from == null) {
+            return other.getFrom() == null && other.getTo().equals(to);
         }
-        return a.getTime() == b.getTime();
+        if (to == null) {
+            return other.getTo() == null && other.getFrom().equals(from);
+        }
+        return from.equals(other.getFrom()) && to.equals(other.getTo());
     }
 }

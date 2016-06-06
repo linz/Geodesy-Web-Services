@@ -1,6 +1,6 @@
 package au.gov.ga.geodesy.domain.model.equipment;
 
-import java.util.Date;
+import java.time.Instant;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -12,7 +12,7 @@ public class EquipmentConfigurationRepositoryImpl implements EquipmentConfigurat
     @PersistenceContext(unitName = "geodesy")
     private EntityManager entityManager;
 
-    public <T extends EquipmentConfiguration> T findOne(Class<T> configClass, Integer equipId, Date configurationTime) {
+    public <T extends EquipmentConfiguration> T findOne(Class<T> configClass, Integer equipId, Instant configurationTime) {
         String entityName = configClass.getName();
 
         String queryString = "select e from " + entityName + " e " +

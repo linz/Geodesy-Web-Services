@@ -1,7 +1,8 @@
 package au.gov.ga.geodesy.support.mapper.dozer.populator;
 
+import java.time.Instant;
+
 import au.gov.ga.geodesy.support.mapper.dozer.converter.TimePrimitivePropertyTypeUtils;
-import au.gov.ga.geodesy.support.utils.GMLDateUtils;
 import au.gov.ga.geodesy.support.utils.GMLMiscTools;
 import au.gov.xml.icsm.geodesyml.v_0_3.SurveyedLocalTiesType;
 
@@ -16,7 +17,7 @@ public class SurveyedLocalTiesTypePopulator extends GeodesyMLElementPopulator<Su
     /**
      * Consider all required elements for this type and add any missing ones with default values.
      * 
-     * @param gnssReceiverType
+     * @param surveyedLocalTiesType
      */
     void checkAllRequiredElementsPopulated(SurveyedLocalTiesType surveyedLocalTiesType) {
         checkElementPopulated(surveyedLocalTiesType, "tiedMarkerName", GMLMiscTools.getEmptyString());
@@ -24,7 +25,8 @@ public class SurveyedLocalTiesTypePopulator extends GeodesyMLElementPopulator<Su
         checkElementPopulated(surveyedLocalTiesType, "tiedMarkerCDPNumber", GMLMiscTools.getEmptyString());
         checkElementPopulated(surveyedLocalTiesType, "tiedMarkerDOMESNumber", GMLMiscTools.getEmptyString());
         checkElementPopulated(surveyedLocalTiesType, "surveyMethod", GMLMiscTools.getEmptyString());
-        checkElementPopulated(surveyedLocalTiesType, "dateMeasured", TimePrimitivePropertyTypeUtils.buildTimePositionType(GMLDateUtils.buildStartOfTime()));
+        checkElementPopulated(surveyedLocalTiesType, "dateMeasured", TimePrimitivePropertyTypeUtils.buildTimePositionType(
+                Instant.EPOCH));
         checkElementPopulated(surveyedLocalTiesType, "differentialComponentsGNSSMarkerToTiedMonumentITRS",
                 getDifferentialComponentsGNSSMarkerToTiedMonumentITRS());
     }

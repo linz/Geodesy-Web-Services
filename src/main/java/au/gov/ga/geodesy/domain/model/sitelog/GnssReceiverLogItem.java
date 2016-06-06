@@ -1,6 +1,6 @@
 package au.gov.ga.geodesy.domain.model.sitelog;
 
-import java.util.Date;
+import java.time.Instant;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -45,11 +45,11 @@ public class GnssReceiverLogItem implements EquipmentLogItem {
 
     @Past
     @Column(name = "DATE_INSTALLED")
-    protected Date dateInstalled;
+    protected Instant dateInstalled;
 
     @Past
     @Column(name = "DATE_REMOVED")
-    protected Date dateRemoved;
+    protected Instant dateRemoved;
 
     @Size(max = 256)
     @Column(name = "TEMPERATURE_STABILIZATION", length = 256)
@@ -142,14 +142,14 @@ public class GnssReceiverLogItem implements EquipmentLogItem {
     /**
      * Return date installed.
      */
-    public Date getDateInstalled() {
+    public Instant getDateInstalled() {
         return dateInstalled;
     }
 
     /**
      * Set date installed.
      */
-    public void setDateInstalled(Date value) {
+    public void setDateInstalled(Instant value) {
         this.dateInstalled = value;
     }
 
@@ -157,7 +157,7 @@ public class GnssReceiverLogItem implements EquipmentLogItem {
      * Return date removed.
      *
      */
-    public Date getDateRemoved() {
+    public Instant getDateRemoved() {
         return dateRemoved;
     }
 
@@ -165,7 +165,7 @@ public class GnssReceiverLogItem implements EquipmentLogItem {
      * Set date removed.
      *
      */
-    public void setDateRemoved(Date value) {
+    public void setDateRemoved(Instant value) {
         this.dateRemoved = value;
     }
 

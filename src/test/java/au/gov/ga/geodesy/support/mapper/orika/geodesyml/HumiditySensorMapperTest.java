@@ -2,11 +2,6 @@ package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 
 import static org.testng.Assert.assertEquals;
 
-import java.text.ParseException;
-import java.util.Date;
-import java.util.TimeZone;
-
-import org.apache.commons.lang3.time.FastDateFormat;
 import org.testng.annotations.Test;
 
 import au.gov.ga.geodesy.domain.model.sitelog.HumiditySensorLogItem;
@@ -14,6 +9,7 @@ import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLMarshaller;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLUtils;
 import au.gov.ga.geodesy.support.TestResources;
 import au.gov.ga.geodesy.support.marshalling.moxy.GeodesyMLMoxy;
+import au.gov.ga.geodesy.support.utils.GMLDateUtils;
 import au.gov.xml.icsm.geodesyml.v_0_3.GeodesyMLType;
 import au.gov.xml.icsm.geodesyml.v_0_3.HumiditySensorType;
 import au.gov.xml.icsm.geodesyml.v_0_3.SiteLogType;
@@ -46,11 +42,11 @@ public class HumiditySensorMapperTest {
         assertEquals(logItem.getSerialNumber(), humiditySensorTypeA.getSerialNumber());
         assertEquals(logItem.getHeightDiffToAntenna(), String.valueOf(humiditySensorTypeA.getHeightDiffToAntenna()));
         assertEquals(logItem.getCalibrationDate(),
-                parseDate("yyyy-MM-dd", humiditySensorTypeA.getCalibrationDate().getValue().get(0)));
-        assertEquals(logItem.getEffectiveDates().getFrom(), parseDate("yyyy-MM-ddX",
+                GMLDateUtils.stringToDate(humiditySensorTypeA.getCalibrationDate().getValue().get(0), "uuuu-MM-ddX"));
+        assertEquals(logItem.getEffectiveDates().getFrom(), GMLDateUtils.stringToDate(
                 ((TimePeriodType) humiditySensorTypeA.getValidTime().getAbstractTimePrimitive().getValue())
-                        .getBeginPosition().getValue().get(0)
-        ));
+                        .getBeginPosition().getValue().get(0), "uuuu-MM-ddX")
+        );
         assertEquals(logItem.getAccuracyPercentRelativeHumidity(),
                 String.valueOf(humiditySensorTypeA.getAccuracyPercentRelativeHumidity()));
         assertEquals(logItem.getAspiration(), humiditySensorTypeA.getAspiration());
@@ -62,19 +58,15 @@ public class HumiditySensorMapperTest {
         assertEquals(logItem.getSerialNumber(), humiditySensorTypeB.getSerialNumber());
         assertEquals(logItem.getHeightDiffToAntenna(), String.valueOf(humiditySensorTypeB.getHeightDiffToAntenna()));
         assertEquals(logItem.getCalibrationDate(),
-                parseDate("yyyy-MM-dd", humiditySensorTypeB.getCalibrationDate().getValue().get(0)));
-        assertEquals(logItem.getEffectiveDates().getFrom(), parseDate("yyyy-MM-dd'T'HH:mm:ss.SSSX",
+                GMLDateUtils.stringToDate(humiditySensorTypeB.getCalibrationDate().getValue().get(0), "uuuu-MM-dd'T'HH:mm:ss.SSSX"));
+        assertEquals(logItem.getEffectiveDates().getFrom(), GMLDateUtils.stringToDate(
                 ((TimePeriodType) humiditySensorTypeB.getValidTime().getAbstractTimePrimitive().getValue())
-                        .getBeginPosition().getValue().get(0)
-        ));
+                        .getBeginPosition().getValue().get(0), "uuuu-MM-dd'T'HH:mm:ss.SSSX")
+        );
         assertEquals(logItem.getAccuracyPercentRelativeHumidity(),
                 String.valueOf(humiditySensorTypeB.getAccuracyPercentRelativeHumidity()));
         assertEquals(logItem.getAspiration(), humiditySensorTypeB.getAspiration());
         assertEquals(logItem.getNotes(), humiditySensorTypeB.getNotes());
-    }
-
-    private Date parseDate(String pattern, String str) throws ParseException {
-        return FastDateFormat.getInstance(pattern, TimeZone.getTimeZone("UTC")).parse(str);
     }
 }
 

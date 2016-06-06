@@ -1,8 +1,8 @@
 package au.gov.ga.geodesy.domain.service;
 
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Comparator;
-import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 import java.util.SortedSet;
@@ -19,9 +19,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
-import au.gov.ga.geodesy.domain.model.EquipmentInUse;
 import au.gov.ga.geodesy.domain.model.CorsSite;
 import au.gov.ga.geodesy.domain.model.CorsSiteRepository;
+import au.gov.ga.geodesy.domain.model.EquipmentInUse;
 import au.gov.ga.geodesy.domain.model.Monument;
 import au.gov.ga.geodesy.domain.model.Setup;
 import au.gov.ga.geodesy.domain.model.SetupRepository;
@@ -35,11 +35,11 @@ import au.gov.ga.geodesy.domain.model.event.EventPublisher;
 import au.gov.ga.geodesy.domain.model.event.EventSubscriber;
 import au.gov.ga.geodesy.domain.model.event.SiteLogReceived;
 import au.gov.ga.geodesy.domain.model.event.SiteUpdated;
-import au.gov.ga.geodesy.domain.model.sitelog.SiteLogRepository;
 import au.gov.ga.geodesy.domain.model.sitelog.EffectiveDates;
 import au.gov.ga.geodesy.domain.model.sitelog.EquipmentLogItem;
-import au.gov.ga.geodesy.domain.model.sitelog.SiteLog;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteIdentification;
+import au.gov.ga.geodesy.domain.model.sitelog.SiteLog;
+import au.gov.ga.geodesy.domain.model.sitelog.SiteLogRepository;
 
 @Component
 @Transactional("geodesyTransactionManager")
@@ -129,8 +129,8 @@ public class CorsSiteService implements EventSubscriber<SiteLogReceived> {
 
     private List<Setup> getSetups(SiteLog siteLog) {
         @SuppressWarnings("unchecked")
-        Comparator<Date> fromC = ComparatorUtils.nullLowComparator(ComparatorUtils.NATURAL_COMPARATOR);
-        SortedSet<Date> datesOfChange = new TreeSet<>(fromC);
+        Comparator<Instant> fromC = ComparatorUtils.nullLowComparator(ComparatorUtils.NATURAL_COMPARATOR);
+        SortedSet<Instant> datesOfChange = new TreeSet<>(fromC);
 
         for (EquipmentLogItem logItem : siteLog.getEquipmentLogItems()) {
             EffectiveDates dates = logItem.getEffectiveDates();
@@ -147,16 +147,16 @@ public class CorsSiteService implements EventSubscriber<SiteLogReceived> {
 
         if (datesOfChange.size() > 0) {
             if (datesOfChange.size() == 1) {
-                Date d = datesOfChange.iterator().next();
+                Instant d = datesOfChange.iterator().next();
                 setups.add(new Setup(gnssCorsSetupName, new EffectiveDates(d, null)));
             } else {
-                Iterator<Date> i = datesOfChange.iterator();
-                Iterator<Date> j = datesOfChange.iterator();
+                Iterator<Instant> i = datesOfChange.iterator();
+                Iterator<Instant> j = datesOfChange.iterator();
                 j.next();
                 Setup s = null;
                 do {
-                    Date from = i.next();
-                    Date to = j.next();
+                    Instant from = i.next();
+                    Instant to = j.next();
                     s = new Setup(gnssCorsSetupName, new EffectiveDates(from, to));
                     setups.add(s);
                 }
@@ -176,8 +176,8 @@ public class CorsSiteService implements EventSubscriber<SiteLogReceived> {
 
     private void addEquipment(EquipmentLogItem logItem, List<Setup> setups) {
         EffectiveDates period = logItem.getEffectiveDates();
-        Date equipmentFrom = null;
-        Date equipmentTo = null;
+        Instant equipmentFrom = null;
+        Instant equipmentTo = null;
 
         int i = 0;
         int j = setups.size();
@@ -205,7 +205,7 @@ public class CorsSiteService implements EventSubscriber<SiteLogReceived> {
             if (equipmentTo == null) {
                 j = setups.size();
             } else {
-                Date setupTo = null;
+                Instant setupTo = null;
                 do {
                     setupTo = setups.get(j++).getEffectivePeriod().getTo();
                 } while (setupTo != null && !setupTo.equals(equipmentTo));

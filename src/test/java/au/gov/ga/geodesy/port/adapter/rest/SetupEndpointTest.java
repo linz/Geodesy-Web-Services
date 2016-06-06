@@ -36,7 +36,7 @@ public class SetupEndpointTest extends RestTest {
     @Test(dependsOnMethods = {"upload"})
     @Rollback(false)
     public void testFindByFourCharacterIdAndDate() throws Exception {
-        mvc.perform(get("/setups/search/findByFourCharacterId?id=ALIC&effectiveFrom=2011-12-12&effectiveTo=2014-12-12&timeFormat=yyyy-MM-dd"))
+        mvc.perform(get("/setups/search/findByFourCharacterId?id=ALIC&effectiveFrom=2011-12-12&effectiveTo=2014-12-12&timeFormat=uuuu-MM-dd"))
             .andExpect(status().isOk())
             .andExpect(jsonPath("$.page.totalElements").value(3));
     }

@@ -1,6 +1,6 @@
 package au.gov.ga.geodesy.domain.model.sitelog;
 
-import java.util.Date;
+import java.time.Instant;
 
 import javax.persistence.Column;
 import javax.persistence.Embedded;
@@ -55,7 +55,7 @@ public class SurveyedLocalTie {
 
     @Past
     @Column(name = "DATE_MEASURED")
-    protected Date dateMeasured;
+    protected Instant dateMeasured;
 
     @Size(max = 4000)
     @Column(name = "NOTES", length = 4000)
@@ -172,14 +172,14 @@ public class SurveyedLocalTie {
     /**
      * Return date measured.
      */
-    public Date getDateMeasured() {
+    public Instant getDateMeasured() {
         return dateMeasured;
     }
 
     /**
      * Set date measured.
      */
-    public void setDateMeasured(Date value) {
+    public void setDateMeasured(Instant value) {
         this.dateMeasured = value;
     }
 

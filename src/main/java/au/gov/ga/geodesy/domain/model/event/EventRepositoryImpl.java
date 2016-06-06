@@ -1,5 +1,6 @@
 package au.gov.ga.geodesy.domain.model.event;
 
+import java.time.Instant;
 import java.util.Calendar;
 import java.util.List;
 

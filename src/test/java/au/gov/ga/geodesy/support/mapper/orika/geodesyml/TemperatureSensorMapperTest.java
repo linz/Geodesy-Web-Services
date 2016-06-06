@@ -2,12 +2,6 @@ package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 
 import static org.testng.Assert.assertEquals;
 
-import java.math.BigDecimal;
-import java.text.ParseException;
-import java.util.Date;
-import java.util.TimeZone;
-
-import org.apache.commons.lang3.time.FastDateFormat;
 import org.testng.annotations.Test;
 
 import au.gov.ga.geodesy.domain.model.sitelog.TemperatureSensorLogItem;
@@ -15,9 +9,10 @@ import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLMarshaller;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLUtils;
 import au.gov.ga.geodesy.support.TestResources;
 import au.gov.ga.geodesy.support.marshalling.moxy.GeodesyMLMoxy;
+import au.gov.ga.geodesy.support.utils.GMLDateUtils;
 import au.gov.xml.icsm.geodesyml.v_0_3.GeodesyMLType;
-import au.gov.xml.icsm.geodesyml.v_0_3.TemperatureSensorType;
 import au.gov.xml.icsm.geodesyml.v_0_3.SiteLogType;
+import au.gov.xml.icsm.geodesyml.v_0_3.TemperatureSensorType;
 import net.opengis.gml.v_3_2_1.TimePeriodType;
 
 /**
@@ -47,10 +42,10 @@ public class TemperatureSensorMapperTest {
         assertEquals(logItem.getSerialNumber(), temperatureSensorTypeA.getSerialNumber());
         assertEquals(logItem.getHeightDiffToAntenna(), String.valueOf(temperatureSensorTypeA.getHeightDiffToAntenna()));
         assertEquals(logItem.getCalibrationDate(),
-                parseDate("yyyy-MM-dd'T'HH:mm:ssX", temperatureSensorTypeA.getCalibrationDate().getValue().get(0)));
-        assertEquals(logItem.getEffectiveDates().getFrom(), parseDate("yyyy-MM-dd'T'hh:mm:ssX",
+                GMLDateUtils.stringToDate(temperatureSensorTypeA.getCalibrationDate().getValue().get(0)), "uuuu-MM-dd'T'HH:mm:ssX");
+        assertEquals(logItem.getEffectiveDates().getFrom(), GMLDateUtils.stringToDate(
                 ((TimePeriodType) temperatureSensorTypeA.getValidTime().getAbstractTimePrimitive().getValue())
-                        .getBeginPosition().getValue().get(0)
+                        .getBeginPosition().getValue().get(0),"uuuu-MM-dd'T'HH:mm:ssX"
         ));
         assertEquals(logItem.getAccuracyDegreesCelcius(),
                 String.valueOf(temperatureSensorTypeA.getAccuracyDegreesCelcius()));
@@ -64,20 +59,16 @@ public class TemperatureSensorMapperTest {
         assertEquals(logItem.getSerialNumber(), temperatureSensorTypeB.getSerialNumber());
         assertEquals(logItem.getHeightDiffToAntenna(), String.valueOf(temperatureSensorTypeB.getHeightDiffToAntenna()));
         assertEquals(logItem.getCalibrationDate(),
-                parseDate("yyyy-MM-dd'T'HH:mm:ss.SSSX", temperatureSensorTypeB.getCalibrationDate().getValue().get(0)));
-        assertEquals(logItem.getEffectiveDates().getFrom(), parseDate("yyyy-MM-dd'T'HH:mm:ss.SSSX",
+                GMLDateUtils.stringToDate(temperatureSensorTypeB.getCalibrationDate().getValue().get(0), "uuuu-MM-dd'T'HH:mm:ss.SSSX"));
+        assertEquals(logItem.getEffectiveDates().getFrom(), GMLDateUtils.stringToDate(
                 ((TimePeriodType) temperatureSensorTypeB.getValidTime().getAbstractTimePrimitive().getValue())
-                        .getBeginPosition().getValue().get(0)
+                        .getBeginPosition().getValue().get(0), "uuuu-MM-dd'T'HH:mm:ss.SSSX"
         ));
         assertEquals(logItem.getAccuracyDegreesCelcius(),
                 String.valueOf(temperatureSensorTypeB.getAccuracyDegreesCelcius()));
         assertEquals(logItem.getAspiration(), temperatureSensorTypeB.getAspiration());
         assertEquals(logItem.getDataSamplingInterval(), temperatureSensorTypeB.getDataSamplingInterval().toString());
         assertEquals(logItem.getNotes(), temperatureSensorTypeB.getNotes());
-    }
-
-    private Date parseDate(String pattern, String str) throws ParseException {
-        return FastDateFormat.getInstance(pattern, TimeZone.getTimeZone("UTC")).parse(str);
     }
 }
 

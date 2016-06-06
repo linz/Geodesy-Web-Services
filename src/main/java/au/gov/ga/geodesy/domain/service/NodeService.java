@@ -1,13 +1,12 @@
 package au.gov.ga.geodesy.domain.service;
 
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
-import java.util.Date;
 import java.util.List;
 import java.util.Objects;
-import java.util.stream.Stream;
 
 import javax.annotation.PostConstruct;
 
@@ -18,9 +17,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
-import au.gov.ga.geodesy.domain.model.EquipmentInUse;
+import com.google.common.base.Function;
+import com.google.common.base.Predicate;
+import com.google.common.collect.Collections2;
+import com.google.common.collect.Lists;
+
 import au.gov.ga.geodesy.domain.model.CorsSite;
 import au.gov.ga.geodesy.domain.model.CorsSiteRepository;
+import au.gov.ga.geodesy.domain.model.EquipmentInUse;
 import au.gov.ga.geodesy.domain.model.Node;
 import au.gov.ga.geodesy.domain.model.NodeRepository;
 import au.gov.ga.geodesy.domain.model.Setup;
@@ -36,11 +40,6 @@ import au.gov.ga.geodesy.domain.model.event.EventRepository;
 import au.gov.ga.geodesy.domain.model.event.EventSubscriber;
 import au.gov.ga.geodesy.domain.model.event.SiteUpdated;
 import au.gov.ga.geodesy.domain.model.sitelog.EffectiveDates;
-
-import com.google.common.base.Function;
-import com.google.common.base.Predicate;
-import com.google.common.collect.Collections2;
-import com.google.common.collect.Lists;
 
 @Component
 @Transactional("geodesyTransactionManager")
@@ -100,7 +99,7 @@ public class NodeService implements EventSubscriber<SiteUpdated> {
 
         for (final Setup setup : setups.findBySiteId(site.getId())) {
             if (nodePeriod != null) {
-                Date nodeEffectiveTo = nodePeriod.getTo();
+                Instant nodeEffectiveTo = nodePeriod.getTo();
                 if (nodeEffectiveTo == null) {
                     break;
                 }
@@ -141,14 +140,14 @@ public class NodeService implements EventSubscriber<SiteUpdated> {
     @SuppressWarnings("unchecked")
     private EffectiveDates lcd(List<EffectiveDates> es) {
         return new EffectiveDates(
-            Collections.max(Lists.transform(es, new Function<EffectiveDates, Date>() {
-                public Date apply(EffectiveDates dates) {
+            Collections.max(Lists.transform(es, new Function<EffectiveDates, Instant>() {
+                public Instant apply(EffectiveDates dates) {
                     return dates == null ? null : dates.getFrom();
                 }
             }), ComparatorUtils.nullLowComparator(ComparatorUtils.NATURAL_COMPARATOR))
             ,
-            Collections.min(Lists.transform(es, new Function<EffectiveDates, Date>() {
-                public Date apply(EffectiveDates dates) {
+            Collections.min(Lists.transform(es, new Function<EffectiveDates, Instant>() {
+                public Instant apply(EffectiveDates dates) {
                     return dates == null ? null : dates.getTo();
                 }
             }), ComparatorUtils.nullHighComparator(ComparatorUtils.NATURAL_COMPARATOR)));

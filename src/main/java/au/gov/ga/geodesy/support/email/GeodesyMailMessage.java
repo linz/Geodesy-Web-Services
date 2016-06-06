@@ -2,7 +2,7 @@ package au.gov.ga.geodesy.support.email;
 
 import org.springframework.mail.SimpleMailMessage;
 
-// TODO: could use SimpleMailMessage directly?
+// TODO: remove and use SimpleMailMessage directly
 public class GeodesyMailMessage {
     private final SimpleMailMessage message = new SimpleMailMessage();
 

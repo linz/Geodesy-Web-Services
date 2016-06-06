@@ -1,4 +1,4 @@
-package au.gov.ga.geodesy.domain.service;
+package au.gov.ga.geodesy.port.adapter.smtp;
 
 import java.io.IOException;
 
@@ -6,7 +6,6 @@ import javax.mail.Address;
 import javax.mail.Message;
 import javax.mail.MessagingException;
 
-import au.gov.ga.geodesy.domain.model.event.*;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.After;
@@ -22,18 +21,30 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import com.icegreen.greenmail.util.GreenMail;
 import com.icegreen.greenmail.util.ServerSetupTest;
 
-import au.gov.ga.geodesy.port.adapter.smtp.SMTPNoficationAdapter;
+import au.gov.ga.geodesy.domain.model.event.Event;
+import au.gov.ga.geodesy.domain.model.event.InvalidSiteLogReceived;
+import au.gov.ga.geodesy.domain.model.event.SiteLogReceived;
+import au.gov.ga.geodesy.domain.model.event.SiteUpdated;
+import au.gov.ga.geodesy.domain.model.event.WeeklySolutionAvailable;
+import au.gov.ga.geodesy.domain.service.NotificationService;
+import au.gov.ga.geodesy.port.adapter.smtp.SMTPNotificationAdapter;
 import au.gov.ga.geodesy.support.email.SpringMailAdapter;
 import au.gov.ga.geodesy.support.properties.GeodesyMailConfig;
 import au.gov.ga.geodesy.support.properties.GeodesyNotificationsConfig;
 import au.gov.ga.geodesy.support.spring.TestAppConfig;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = {TestAppConfig.class, SpringMailAdapter.class, SMTPNoficationAdapter.class,
-        NotificationService.class, GeodesyMailConfig.class, GeodesyNotificationsConfig.class})
-public class NotificationServiceTest {
+@ContextConfiguration(classes = {
+    TestAppConfig.class,
+    SpringMailAdapter.class,
+    SMTPNotificationAdapter.class,
+    NotificationService.class,
+    GeodesyMailConfig.class,
+    GeodesyNotificationsConfig.class,
+})
+public class SMTPNotificationAdapterTest {
     @Autowired
-    private NotificationService notificationService;
+    private SMTPNotificationAdapter smtpNotifier;
 
     @Autowired
     private JavaMailSenderImpl emailSender;
@@ -77,7 +88,7 @@ public class NotificationServiceTest {
         InvalidSiteLogReceived event = new InvalidSiteLogReceived(content);
         int numberMsgEqualNumberTos = geodesyNotificationsConfig.getInvalidSiteLogReceivedEmailAddressees().size();
         String fromConfig = geodesyNotificationsConfig.getFromEmail();
-        notificationService.handle(event);
+        smtpNotifier.sendNotification(event);
 
         // Check emails
 
@@ -92,7 +103,7 @@ public class NotificationServiceTest {
         SiteLogReceived event = new SiteLogReceived(fourCharID);
         int numberMsgEqualNumberTos = geodesyNotificationsConfig.getInvalidSiteLogReceivedEmailAddressees().size();
         String fromConfig = geodesyNotificationsConfig.getFromEmail();
-        notificationService.handle(event);
+        smtpNotifier.sendNotification(event);
 
         // Check emails
 
@@ -107,7 +118,7 @@ public class NotificationServiceTest {
         SiteUpdated event = new SiteUpdated(fourCharID);
         int numberMsgEqualNumberTos = geodesyNotificationsConfig.getInvalidSiteLogReceivedEmailAddressees().size();
         String fromConfig = geodesyNotificationsConfig.getFromEmail();
-        notificationService.handle(event);
+        smtpNotifier.sendNotification(event);
 
         // Check emails
 
@@ -122,7 +133,7 @@ public class NotificationServiceTest {
         WeeklySolutionAvailable event = new WeeklySolutionAvailable(weeklySolutionId);
         int numberMsgEqualNumberTos = geodesyNotificationsConfig.getInvalidSiteLogReceivedEmailAddressees().size();
         String fromConfig = geodesyNotificationsConfig.getFromEmail();
-        notificationService.handle(event);
+        smtpNotifier.sendNotification(event);
 
         // Check emails
 

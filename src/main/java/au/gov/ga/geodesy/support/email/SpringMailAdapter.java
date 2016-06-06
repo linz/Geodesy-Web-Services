@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 
 import au.gov.ga.geodesy.port.adapter.smtp.SMTPAdapter;
 
+// TODO: remove and use JavaMailSender directly in SMTPNotificationAdapter
 @Component
 public class SpringMailAdapter implements SMTPAdapter {
     private Logger logger = LoggerFactory.getLogger(getClass());

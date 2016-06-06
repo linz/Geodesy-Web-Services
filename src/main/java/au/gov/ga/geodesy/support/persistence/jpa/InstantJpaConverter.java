@@ -1,4 +1,4 @@
-package au.gov.ga.geodesy.domain.model.converter;
+package au.gov.ga.geodesy.support.persistence.jpa;
 
 import java.sql.Timestamp;
 import java.time.Instant;

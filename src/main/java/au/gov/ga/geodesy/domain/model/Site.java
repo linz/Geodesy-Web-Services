@@ -29,7 +29,7 @@ abstract public class Site {
     @SequenceGenerator(name = "surrogateKeyGenerator", sequenceName = "seq_surrogate_keys")
     protected Integer id;
 
-    @Column(name = "SITE_NAME")
+    @Column(name = "NAME")
     private String name;
 
     @Column(name = "DESCRIPTION")

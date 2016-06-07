@@ -20,7 +20,6 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import javax.xml.bind.Unmarshaller;
 
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.collections.functors.NotNullPredicate;
@@ -442,18 +441,6 @@ public class SiteLog {
      */
     public void setSiteMetadataCustodian(SiteResponsibleParty siteMetadataCustodian) {
         this.siteMetadataCustodian = siteMetadataCustodian;
-    }
-
-    void afterUnmarshal(Unmarshaller unmarshaller, Object parent) {
-        for (Field f : getClass().getDeclaredFields()) {
-            if (Collection.class.isAssignableFrom(f.getType())) {
-                try {
-                    CollectionUtils.filter((Collection<?>) f.get(this), NotNullPredicate.getInstance());
-                } catch (IllegalAccessException e) {
-                    log.warn(e);
-                }
-            }
-        }
     }
 
     public List<EquipmentLogItem> getEquipmentLogItems() {

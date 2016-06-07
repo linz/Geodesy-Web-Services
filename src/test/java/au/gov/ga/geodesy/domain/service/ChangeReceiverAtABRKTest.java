@@ -4,20 +4,17 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 
-import au.gov.ga.geodesy.support.spring.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.annotation.Rollback;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.support.AnnotationConfigContextLoader;
-import org.springframework.test.context.testng.AbstractTransactionalTestNGSpringContextTests;
 import org.springframework.transaction.annotation.Transactional;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLogRepository;
 import au.gov.ga.geodesy.port.InvalidSiteLogException;
-import au.gov.ga.geodesy.port.SiteLogSource;
+import au.gov.ga.geodesy.port.SiteLogReader;
 import au.gov.ga.geodesy.port.adapter.sopac.SopacSiteLogReader;
+import au.gov.ga.geodesy.support.spring.IntegrationTestConfig;
 
 
 @Transactional("geodesyTransactionManager")
@@ -36,7 +33,7 @@ public class ChangeReceiverAtABRKTest extends IntegrationTestConfig {
             return f.endsWith(".xml");
         });
         for (File siteLogFile : siteLogFiles) {
-            SiteLogSource input = new SopacSiteLogReader(new FileReader(siteLogFile));
+            SiteLogReader input = new SopacSiteLogReader(new FileReader(siteLogFile));
             siteLogService.upload(input.getSiteLog());
         }
     }

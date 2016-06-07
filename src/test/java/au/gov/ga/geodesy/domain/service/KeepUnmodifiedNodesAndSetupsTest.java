@@ -14,8 +14,7 @@ import au.gov.ga.geodesy.domain.model.CorsSiteRepository;
 import au.gov.ga.geodesy.domain.model.NodeRepository;
 import au.gov.ga.geodesy.domain.model.SetupRepository;
 import au.gov.ga.geodesy.domain.model.equipment.EquipmentRepository;
-import au.gov.ga.geodesy.domain.model.sitelog.SiteLogRepository;
-import au.gov.ga.geodesy.port.SiteLogSource;
+import au.gov.ga.geodesy.port.SiteLogReader;
 import au.gov.ga.geodesy.port.adapter.sopac.SopacSiteLogReader;
 import au.gov.ga.geodesy.support.TestResources;
 import au.gov.ga.geodesy.support.spring.IntegrationTestConfig;
@@ -41,9 +40,6 @@ public class KeepUnmodifiedNodesAndSetupsTest extends IntegrationTestConfig {
     private EquipmentRepository equipment;
 
     @Autowired
-    private SiteLogRepository siteLogs;
-
-    @Autowired
     private PlatformTransactionManager txnManager;
 
     private abstract class InTransaction {
@@ -61,7 +57,7 @@ public class KeepUnmodifiedNodesAndSetupsTest extends IntegrationTestConfig {
 
     private InTransaction uploadABRK = new InTransaction() {
         public void f() throws Exception {
-            SiteLogSource input = new SopacSiteLogReader(TestResources.sopacSiteLogReader(fourCharId));
+            SiteLogReader input = new SopacSiteLogReader(TestResources.sopacSiteLogReader(fourCharId));
             siteLogService.upload(input.getSiteLog());
         }
     };

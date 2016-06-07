@@ -1,6 +1,7 @@
 package au.gov.ga.geodesy.port.adapter.geodesyml;
 
 import java.io.Reader;
+import java.io.StringReader;
 
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLog;
 import au.gov.ga.geodesy.port.InvalidSiteLogException;
@@ -29,9 +30,9 @@ public class GeodesyMLSiteLogReader extends SiteLogReader {
     /**
      * {@inheritDoc}
      */
-    public SiteLog getSiteLog() throws InvalidSiteLogException {
+    public SiteLog getSiteLog(String siteLogText) throws InvalidSiteLogException {
         try {
-            GeodesyMLType geodesyML = marshaller.unmarshal(this.input, GeodesyMLType.class).getValue();
+            GeodesyMLType geodesyML = marshaller.unmarshal(new StringReader(siteLogText), GeodesyMLType.class).getValue();
             return GeodesyMLUtils
                     .getElementFromJAXBElements(geodesyML.getElements(), SiteLogType.class)
                     .map(siteLogMapper::to)

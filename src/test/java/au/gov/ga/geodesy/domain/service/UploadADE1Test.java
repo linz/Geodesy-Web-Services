@@ -19,7 +19,7 @@ import au.gov.ga.geodesy.domain.model.SetupRepository;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteIdentification;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLog;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLogRepository;
-import au.gov.ga.geodesy.port.SiteLogSource;
+import au.gov.ga.geodesy.port.SiteLogReader;
 import au.gov.ga.geodesy.port.adapter.sopac.SopacSiteLogReader;
 import au.gov.ga.geodesy.support.TestResources;
 import au.gov.ga.geodesy.support.spring.IntegrationTestConfig;
@@ -54,7 +54,7 @@ public class UploadADE1Test extends IntegrationTestConfig {
     @Test
     @Rollback(false)
     public void saveSiteLog() throws Exception {
-        SiteLogSource input = new SopacSiteLogReader(TestResources.sopacSiteLogReader(fourCharId));
+        SiteLogReader input = new SopacSiteLogReader(TestResources.sopacSiteLogReader(fourCharId));
         siteLogService.upload(input.getSiteLog());
     }
 

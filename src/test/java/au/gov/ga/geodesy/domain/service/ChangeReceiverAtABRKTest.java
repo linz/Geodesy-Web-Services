@@ -16,7 +16,7 @@ import org.testng.annotations.Test;
 
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLogRepository;
 import au.gov.ga.geodesy.port.InvalidSiteLogException;
-import au.gov.ga.geodesy.port.SiteLogSource;
+import au.gov.ga.geodesy.port.SiteLogReader;
 import au.gov.ga.geodesy.port.adapter.sopac.SopacSiteLogReader;
 
 
@@ -36,7 +36,7 @@ public class ChangeReceiverAtABRKTest extends IntegrationTestConfig {
             return f.endsWith(".xml");
         });
         for (File siteLogFile : siteLogFiles) {
-            SiteLogSource input = new SopacSiteLogReader(new FileReader(siteLogFile));
+            SiteLogReader input = new SopacSiteLogReader(new FileReader(siteLogFile));
             siteLogService.upload(input.getSiteLog());
         }
     }

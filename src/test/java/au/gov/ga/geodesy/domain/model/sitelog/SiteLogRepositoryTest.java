@@ -11,7 +11,7 @@ import org.springframework.test.annotation.Rollback;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import au.gov.ga.geodesy.port.SiteLogSource;
+import au.gov.ga.geodesy.port.SiteLogReader;
 import au.gov.ga.geodesy.port.adapter.sopac.SopacSiteLogReader;
 import au.gov.ga.geodesy.support.TestResources;
 import au.gov.ga.geodesy.support.spring.RepositoryTest;
@@ -26,7 +26,7 @@ public class SiteLogRepositoryTest extends RepositoryTest {
     @Test(groups = "first")
     @Rollback(false)
     public void saveALIC() throws Exception {
-        SiteLogSource input = new SopacSiteLogReader(TestResources.sopacSiteLogReader("ALIC"));
+        SiteLogReader input = new SopacSiteLogReader(TestResources.sopacSiteLogReader("ALIC"));
         igsSiteLogs.saveAndFlush(input.getSiteLog());
     }
 
@@ -36,7 +36,7 @@ public class SiteLogRepositoryTest extends RepositoryTest {
     @Test(groups = "first")
     @Rollback(false)
     public void saveBZGN() throws Exception {
-        SiteLogSource input = new SopacSiteLogReader(TestResources.sopacSiteLogReader("BZGN"));
+        SiteLogReader input = new SopacSiteLogReader(TestResources.sopacSiteLogReader("BZGN"));
         igsSiteLogs.saveAndFlush(input.getSiteLog());
     }
 
@@ -46,7 +46,7 @@ public class SiteLogRepositoryTest extends RepositoryTest {
         igsSiteLogs.deleteAll();
         for (File f : TestResources.sopacSiteLogs()) {
             log.info("Saving " + f.getName());
-            SiteLogSource input = new SopacSiteLogReader(new InputStreamReader(new FileInputStream(f)));
+            SiteLogReader input = new SopacSiteLogReader(new InputStreamReader(new FileInputStream(f)));
             SiteLog siteLog = input.getSiteLog();
             igsSiteLogs.saveAndFlush(siteLog);
         }

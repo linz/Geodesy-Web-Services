@@ -58,7 +58,7 @@ public class CorsSiteService implements EventSubscriber<SiteLogReceived> {
     private EquipmentConfigurationRepository configurationRepository;
 
     @Autowired
-    private CorsSiteRepository gnssSites;
+    private CorsSiteRepository corsSites;
 
     @Autowired
     private EventPublisher eventPublisher;
@@ -84,30 +84,30 @@ public class CorsSiteService implements EventSubscriber<SiteLogReceived> {
         String fourCharacterId = siteLogReceived.getFourCharacterId();
         SiteLog siteLog = siteLogs.findByFourCharacterId(fourCharacterId);
 
-        CorsSite gnssSite = gnssSites.findByFourCharacterId(fourCharacterId);
-        if (gnssSite == null) {
-            gnssSite = new CorsSite(fourCharacterId);
+        CorsSite corsSite = corsSites.findByFourCharacterId(fourCharacterId);
+        if (corsSite == null) {
+            corsSite = new CorsSite(fourCharacterId);
         }
-        gnssSite.setName(siteLog.getSiteIdentification().getSiteName());
+        corsSite.setName(siteLog.getSiteIdentification().getSiteName());
 
         SiteIdentification siteId = siteLog.getSiteIdentification();
-        gnssSite.setDomesNumber(siteId.getIersDOMESNumber());
-        gnssSite.setDateInstalled(siteId.getDateInstalled());
+        corsSite.setDomesNumber(siteId.getIersDOMESNumber());
+        corsSite.setDateInstalled(siteId.getDateInstalled());
 
         Monument monument = new Monument();
         monument.setDescription(siteId.getMonumentDescription());
         monument.setHeight(siteId.getHeightOfMonument());
         monument.setFoundation(siteId.getMonumentFoundation());
         monument.setMarkerDescription(siteId.getMarkerDescription());
-        gnssSite.setMonument(monument);
+        corsSite.setMonument(monument);
 
-        gnssSites.saveAndFlush(gnssSite);
+        corsSites.saveAndFlush(corsSite);
 
         List<Setup> newSetups = getSetups(siteLog);
         for (Setup s : newSetups) {
-            s.setSiteId(gnssSite.getId());
+            s.setSiteId(corsSite.getId());
         }
-        List<Setup> oldSetups = setups.findBySiteId(gnssSite.getId());
+        List<Setup> oldSetups = setups.findBySiteId(corsSite.getId());
         @SuppressWarnings("unchecked")
         List<Setup> commonSetups = ListUtils.intersection(oldSetups, newSetups);
         newSetups.removeAll(commonSetups);

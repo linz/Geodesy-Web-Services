@@ -5,68 +5,31 @@ import static org.testng.Assert.assertEquals;
 import org.testng.annotations.Test;
 
 import au.gov.ga.geodesy.domain.model.sitelog.HumiditySensorLogItem;
-import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLMarshaller;
-import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLUtils;
-import au.gov.ga.geodesy.support.TestResources;
-import au.gov.ga.geodesy.support.marshalling.moxy.GeodesyMLMoxy;
-import au.gov.ga.geodesy.support.utils.GMLDateUtils;
-import au.gov.xml.icsm.geodesyml.v_0_3.GeodesyMLType;
+import au.gov.ga.geodesy.support.utils.MappingDirection;
 import au.gov.xml.icsm.geodesyml.v_0_3.HumiditySensorType;
-import au.gov.xml.icsm.geodesyml.v_0_3.SiteLogType;
-import net.opengis.gml.v_3_2_1.TimePeriodType;
 
 /**
  * Tests the mapping of a GeodesyML humiditySensor element
  * to and from a HumiditySensorLogItem domain object.
  */
-public class HumiditySensorMapperTest {
+public class HumiditySensorMapperTest extends SensorEquipmentMapperTest {
 
     private HumiditySensorMapper mapper = new HumiditySensorMapper();
-    private GeodesyMLMarshaller marshaller = new GeodesyMLMoxy();
 
     @Test
     public void testMapping() throws Exception {
 
-        GeodesyMLType mobs = marshaller.unmarshal(TestResources.geodesyMLSiteLogReader("MOBS-sensors"), GeodesyMLType.class)
-                .getValue();
-
-        SiteLogType siteLog = GeodesyMLUtils.getElementFromJAXBElements(mobs.getElements(), SiteLogType.class)
-                .findFirst().get();
-
-        HumiditySensorType humiditySensorTypeA = siteLog.getHumiditySensors().get(0).getHumiditySensor();
+        HumiditySensorType humiditySensorTypeA = getSiteLog().getHumiditySensors().get(0).getHumiditySensor();
 
         HumiditySensorLogItem logItem = mapper.to(humiditySensorTypeA);
-        assertEquals(logItem.getType(),
-                humiditySensorTypeA.getType().getValue());
-        assertEquals(logItem.getManufacturer(), humiditySensorTypeA.getManufacturer());
-        assertEquals(logItem.getSerialNumber(), humiditySensorTypeA.getSerialNumber());
-        assertEquals(logItem.getHeightDiffToAntenna(), String.valueOf(humiditySensorTypeA.getHeightDiffToAntenna()));
-        assertEquals(logItem.getCalibrationDate(),
-                GMLDateUtils.stringToDate(humiditySensorTypeA.getCalibrationDate().getValue().get(0), "uuuu-MM-ddX"));
-        assertEquals(logItem.getEffectiveDates().getFrom(), GMLDateUtils.stringToDate(
-                ((TimePeriodType) humiditySensorTypeA.getValidTime().getAbstractTimePrimitive().getValue())
-                        .getBeginPosition().getValue().get(0), "uuuu-MM-ddX")
-        );
-        assertEquals(logItem.getAccuracyPercentRelativeHumidity(),
-                String.valueOf(humiditySensorTypeA.getAccuracyPercentRelativeHumidity()));
+        super.testMapping(logItem, humiditySensorTypeA, MappingDirection.FROM_DTO_TO_ENTITY);
         assertEquals(logItem.getAspiration(), humiditySensorTypeA.getAspiration());
         assertEquals(logItem.getNotes(), humiditySensorTypeA.getNotes());
 
         HumiditySensorType humiditySensorTypeB = mapper.from(logItem);
-        assertEquals(logItem.getType(), humiditySensorTypeB.getType().getValue());
-        assertEquals(logItem.getManufacturer(), humiditySensorTypeB.getManufacturer());
-        assertEquals(logItem.getSerialNumber(), humiditySensorTypeB.getSerialNumber());
-        assertEquals(logItem.getHeightDiffToAntenna(), String.valueOf(humiditySensorTypeB.getHeightDiffToAntenna()));
-        assertEquals(logItem.getCalibrationDate(),
-                GMLDateUtils.stringToDate(humiditySensorTypeB.getCalibrationDate().getValue().get(0), "uuuu-MM-dd'T'HH:mm:ss.SSSX"));
-        assertEquals(logItem.getEffectiveDates().getFrom(), GMLDateUtils.stringToDate(
-                ((TimePeriodType) humiditySensorTypeB.getValidTime().getAbstractTimePrimitive().getValue())
-                        .getBeginPosition().getValue().get(0), "uuuu-MM-dd'T'HH:mm:ss.SSSX")
-        );
-        assertEquals(logItem.getAccuracyPercentRelativeHumidity(),
-                String.valueOf(humiditySensorTypeB.getAccuracyPercentRelativeHumidity()));
+        super.testMapping(logItem, humiditySensorTypeB, MappingDirection.FROM_ENTITY_TO_DTO);
         assertEquals(logItem.getAspiration(), humiditySensorTypeB.getAspiration());
         assertEquals(logItem.getNotes(), humiditySensorTypeB.getNotes());
     }
-}
 
+}

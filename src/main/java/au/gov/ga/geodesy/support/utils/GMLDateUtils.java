@@ -79,7 +79,7 @@ public class GMLDateUtils {
             DateTimeFormatDecorator.ofPattern("dd MMM uuuu");
 
     /**
-     * "uuuu-dd-MM"
+     * "uuuu-dd-MM" - we should reject this
      */
     public static final DateTimeFormatter GEODESYML_DATE_FORMAT_DAY_US_STYLE =
             DateTimeFormatDecorator.ofPattern("uuuu-dd-MM").withResolverStyle(ResolverStyle.SMART);
@@ -95,15 +95,15 @@ public class GMLDateUtils {
      * 
      * - first=parse, second=output or correction
      */
-    private static final DateTimeFormatter[][] dateFormats = new DateTimeFormatter[][] {
-            new DateTimeFormatter[] {GEODESYML_DATE_FORMAT_TIME_SEC, GEODESYML_DATE_FORMAT_TIME_OUTPUT},
-            new DateTimeFormatter[] {GEODESYML_DATE_FORMAT_TIME_MILLISEC, GEODESYML_DATE_FORMAT_TIME_OUTPUT},
-            new DateTimeFormatter[] {GEODESYML_DATE_FORMAT_TIME, GEODESYML_DATE_FORMAT_TIME_OUTPUT},
-            new DateTimeFormatter[] {GEODESYML_DATE_FORMAT, GEODESYML_DATE_FORMAT_OUTPUT},
-            new DateTimeFormatter[] {GEODESYML_DATE_FORMAT_NO_ZONE, GEODESYML_DATE_FORMAT_OUTPUT},
-            new DateTimeFormatter[] {GEODESYML_DATE_FORMAT_DAY_US_STYLE, GEODESYML_DATE_FORMAT_OUTPUT},
-            new DateTimeFormatter[] {GEODESYML_DATE_FORMAT_MONTH, GEODESYML_DATE_FORMAT_MONTH},
-            new DateTimeFormatter[] {GEODESYML_DATE_FORMAT_MONTH_BWARDS, GEODESYML_DATE_FORMAT_MONTH_BWARDS}};
+    private static final DateTimeFormatter[] dateFormats = new DateTimeFormatter[] {
+            GEODESYML_DATE_FORMAT_TIME_MILLISEC,
+            GEODESYML_DATE_FORMAT_TIME_SEC,
+            GEODESYML_DATE_FORMAT_TIME,
+            GEODESYML_DATE_FORMAT,
+            GEODESYML_DATE_FORMAT_NO_ZONE,
+            GEODESYML_DATE_FORMAT_MONTH,
+            GEODESYML_DATE_FORMAT_MONTH_BWARDS
+    };
 
     /**
      * Uses default dateFormat of GEODESYML_DATE_FORMAT_FULL
@@ -242,13 +242,13 @@ public class GMLDateUtils {
         String result = null;
         StringBuilder formatsFailed = new StringBuilder();
         logger.debug("stringToDateToStringMultiParsers - input: " + dateString);
-        for (DateTimeFormatter[] dfPairs : dateFormats) {
+        for (DateTimeFormatter parseFormat : dateFormats) {
             try {
-                logger.debug("  Attempt to parse with: " + DateTimeFormatDecorator.getPattern(dfPairs[0]));
-                result = stringToDateToString(dateString, dfPairs[0], dfPairs[1]);
+                logger.debug("  Attempt to parse with: " + DateTimeFormatDecorator.getPattern(parseFormat));
+                result = stringToDateToString(dateString, parseFormat, GEODESYML_DATE_FORMAT_TIME_MILLISEC);
                 break;
             } catch (DateTimeParseException e) {
-                formatsFailed.append(DateTimeFormatDecorator.getPattern(dfPairs[0])).append(", ");
+                formatsFailed.append(DateTimeFormatDecorator.getPattern(parseFormat)).append(", ");
             }
         }
         if (result == null) {
@@ -279,13 +279,13 @@ public class GMLDateUtils {
         Instant result = null;
         StringBuilder formatsFailed = new StringBuilder();
         logger.debug("stringToDateMultiParsers - input: " + dateString);
-        for (DateTimeFormatter[] dfPairs : dateFormats) {
+        for (DateTimeFormatter parseFormat : dateFormats) {
             try {
-                logger.debug("  Attempt to parse with: " + DateTimeFormatDecorator.getPattern(dfPairs[0]));
-                result = stringToDate(dateString, dfPairs[0]);
+                logger.debug("  Attempt to parse with: " + DateTimeFormatDecorator.getPattern(parseFormat));
+                result = stringToDate(dateString, parseFormat);
                 break;
             } catch (DateTimeParseException e) {
-                formatsFailed.append(DateTimeFormatDecorator.getPattern(dfPairs[0])).append(", ");
+                formatsFailed.append(DateTimeFormatDecorator.getPattern(parseFormat)).append(", ");
             }
         }
         if (result == null) {

@@ -73,7 +73,7 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
     /**
      * Location of input test data - same as that in SITEDATADIR though modified in some way to improve or fix test
      */
-    private final static String TESTDATADIR = "sitelog/testData";
+    private final static String TESTDATADIR = "testData";
 
     // @Autowired
     private IgsSiteLogXmlMarshaller marshaller;

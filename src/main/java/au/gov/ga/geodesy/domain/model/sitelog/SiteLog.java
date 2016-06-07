@@ -19,8 +19,6 @@ import javax.persistence.Table;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Configurable;
 
 import au.gov.ga.geodesy.domain.model.SiteResponsibleParty;
@@ -32,8 +30,6 @@ import au.gov.ga.geodesy.domain.model.SiteResponsibleParty;
 @Entity
 @Table(name = "SITELOG_SITE")
 public class SiteLog {
-    private static final Log log = LogFactory.getLog(SiteLog.class);
-
     @Id
     @GeneratedValue(generator = "surrogateKeyGenerator")
     @SequenceGenerator(name = "surrogateKeyGenerator", sequenceName = "SEQ_SITELOGSITE")

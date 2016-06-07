@@ -1,6 +1,7 @@
 package au.gov.ga.geodesy.port.adapter.sopac;
 
 import java.io.Reader;
+import java.io.StringReader;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
@@ -22,14 +23,20 @@ public class SopacSiteLogReader extends SiteLogReader {
     @Autowired
     private SopacSiteLogMapper mapper;
 
+    /**
+     * {@inheritDoc}
+     */
     public SopacSiteLogReader(Reader input) {
         super(input);
     }
 
-    public SiteLog getSiteLog() throws InvalidSiteLogException {
+    /**
+     * {@inheritDoc}
+     */
+    public SiteLog getSiteLog(String siteLogText) throws InvalidSiteLogException {
         try {
             if (siteLog == null) {
-                siteLog = mapper.fromDTO(marshaller.unmarshal(input));
+                siteLog = mapper.fromDTO(marshaller.unmarshal(new StringReader(siteLogText)));
             }
             return siteLog;
         }

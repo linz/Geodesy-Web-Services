@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -36,6 +37,10 @@ public class SiteLog {
     private Integer id;
 
     private Instant entryDate;
+
+    @NotNull
+    @Column(name = "SITE_LOG_TEXT", length = 500000 /* ~500KB */, nullable = false)
+    private String siteLogText;
 
     @Valid
     @Embedded
@@ -150,8 +155,18 @@ public class SiteLog {
         this.entryDate = d;
     }
 
-    @SuppressWarnings("unused")
-    private void setSiteLogXml(String xml) {
+    /**
+     * Return site log text.
+     */
+    public String getSiteLogText() {
+        return siteLogText;
+    }
+
+    /**
+     * Set site log text.
+     */
+    public void setSiteLogText(String siteLogText) {
+        this.siteLogText = siteLogText;
     }
 
     /**

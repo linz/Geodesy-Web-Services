@@ -14,7 +14,6 @@ import au.gov.ga.geodesy.domain.model.CorsSiteRepository;
 import au.gov.ga.geodesy.domain.model.NodeRepository;
 import au.gov.ga.geodesy.domain.model.SetupRepository;
 import au.gov.ga.geodesy.domain.model.equipment.EquipmentRepository;
-import au.gov.ga.geodesy.domain.model.sitelog.SiteLogRepository;
 import au.gov.ga.geodesy.port.SiteLogReader;
 import au.gov.ga.geodesy.port.adapter.sopac.SopacSiteLogReader;
 import au.gov.ga.geodesy.support.TestResources;
@@ -39,9 +38,6 @@ public class KeepUnmodifiedNodesAndSetupsTest extends IntegrationTestConfig {
 
     @Autowired
     private EquipmentRepository equipment;
-
-    @Autowired
-    private SiteLogRepository siteLogs;
 
     @Autowired
     private PlatformTransactionManager txnManager;

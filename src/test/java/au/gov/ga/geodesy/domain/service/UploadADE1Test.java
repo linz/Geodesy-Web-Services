@@ -34,9 +34,6 @@ public class UploadADE1Test extends IntegrationTestConfig {
     private IgsSiteLogService siteLogService;
 
     @Autowired
-    private CorsSiteService siteService;
-
-    @Autowired
     private CorsSiteRepository sites;
 
     @Autowired
@@ -44,9 +41,6 @@ public class UploadADE1Test extends IntegrationTestConfig {
 
     @Autowired
     private NodeRepository nodeRepo;
-
-    @Autowired
-    private NodeService nodeService;
 
     @Autowired
     private SiteLogRepository siteLogs;

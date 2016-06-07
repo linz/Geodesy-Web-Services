@@ -19,38 +19,38 @@ import au.gov.ga.geodesy.support.spring.IntegrationTestConfig;
 @Transactional("geodesyTransactionManager")
 public class MultipleSitesTest extends IntegrationTestConfig {
 
-	private static final String scenarioDirName = "src/test/resources/multiple-sites/";
+    private static final String scenarioDirName = "src/test/resources/multiple-sites/";
 
-	@Autowired
-	private IgsSiteLogService siteLogService;
+    @Autowired
+    private IgsSiteLogService siteLogService;
 
-	@Autowired
-	private SiteLogRepository siteLogs;
+    @Autowired
+    private SiteLogRepository siteLogs;
 
-	private int numberOfSites;
+    private int numberOfSites;
 
-	/**
-	 * Each siteLog file must have a unique getSiteIdentification.
-	 * @param scenarioDirName
-	 * @throws InvalidSiteLogException
-	 * @throws IOException
-	 */
-	private void executeSiteLogScenario(String scenarioDirName) throws IOException, InvalidSiteLogException {
-		File[] siteLogFiles = new File(scenarioDirName).listFiles((File dir, String f) -> {
-			return f.endsWith(".xml");
-		});
-		numberOfSites = siteLogFiles.length;
-		for (File f : siteLogFiles) {
+    /**
+     * Each siteLog file must have a unique getSiteIdentification.
+     * @param scenarioDirName
+     * @throws InvalidSiteLogException
+     * @throws IOException
+     */
+    private void executeSiteLogScenario(String scenarioDirName) throws IOException, InvalidSiteLogException {
+        File[] siteLogFiles = new File(scenarioDirName).listFiles((File dir, String f) -> {
+            return f.endsWith(".xml");
+        });
+        numberOfSites = siteLogFiles.length;
+        for (File f : siteLogFiles) {
             SiteLogReader input = new SopacSiteLogReader(new FileReader(f));
-			siteLogService.upload(input.getSiteLog());
-		}
-	}
+            siteLogService.upload(input.getSiteLog());
+        }
+    }
 
-	@Test
-	@Rollback(false)
-	public void checkSetupId() throws Exception {
-		Assert.assertEquals(0, siteLogs.count());
-		executeSiteLogScenario(scenarioDirName);
-		Assert.assertEquals(numberOfSites, siteLogs.count());
-	}
+    @Test
+    @Rollback(false)
+    public void checkSetupId() throws Exception {
+        Assert.assertEquals(0, siteLogs.count());
+        executeSiteLogScenario(scenarioDirName);
+        Assert.assertEquals(numberOfSites, siteLogs.count());
+    }
 }

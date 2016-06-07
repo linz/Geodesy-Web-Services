@@ -67,7 +67,12 @@ public class PersistenceJpaConfig {
     @DependsOn("liquibase") 
     public LocalContainerEntityManagerFactoryBean geodesyEntityManagerFactory() {
         LocalContainerEntityManagerFactoryBean springFactoryBean = new LocalContainerEntityManagerFactoryBean();
-        springFactoryBean.setPackagesToScan(new String[]{"au.gov.ga.geodesy.domain.model"});
+
+        springFactoryBean.setPackagesToScan(new String[]{
+            "au.gov.ga.geodesy.domain.model",
+            "au.gov.ga.geodesy.support.persistence.jpa"
+        });
+
         springFactoryBean.setDataSource(dataSource());
         springFactoryBean.setPersistenceUnitName("geodesy");
         JpaVendorAdapter vendor = new HibernateJpaVendorAdapter();

@@ -25,13 +25,13 @@ public class SiteLogReceived extends Event {
     public String getFourCharacterId() {
         return fourCharacterId;
     }
-    
-    @Transient
+
     /**
      * Return a Human digestable message about this event. Used in email for example.
-     * 
+     *
      * @return the message
      */
+    @Transient
     public String getMessage() {
         String message = super.getMessage() + ", FOUR_CHAR_ID: " + getFourCharacterId();
         return message;

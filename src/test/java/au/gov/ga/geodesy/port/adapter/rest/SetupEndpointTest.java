@@ -8,14 +8,14 @@ import org.springframework.test.annotation.Rollback;
 import org.testng.annotations.Test;
 
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLog;
-import au.gov.ga.geodesy.domain.service.IgsSiteLogService;
+import au.gov.ga.geodesy.domain.service.CorsSiteLogService;
 import au.gov.ga.geodesy.port.adapter.sopac.SopacSiteLogReader;
 import au.gov.ga.geodesy.support.TestResources;
 
 public class SetupEndpointTest extends RestTest {
 
     @Autowired
-    private IgsSiteLogService siteLogService;
+    private CorsSiteLogService siteLogService;
 
     @Test
     @Rollback(false)

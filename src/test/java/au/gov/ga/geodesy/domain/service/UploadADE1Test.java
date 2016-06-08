@@ -31,7 +31,7 @@ public class UploadADE1Test extends IntegrationTestConfig {
     private static final String fourCharId = "ADE1";
 
     @Autowired
-    private IgsSiteLogService siteLogService;
+    private CorsSiteLogService siteLogService;
 
     @Autowired
     private CorsSiteRepository sites;

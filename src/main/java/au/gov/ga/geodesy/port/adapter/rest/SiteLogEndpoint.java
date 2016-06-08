@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
-import au.gov.ga.geodesy.domain.service.IgsSiteLogService;
+import au.gov.ga.geodesy.domain.service.CorsSiteLogService;
 import au.gov.ga.geodesy.port.InvalidSiteLogException;
 import au.gov.ga.geodesy.port.SiteLogReader;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLSiteLogReader;
@@ -38,7 +38,7 @@ public class SiteLogEndpoint {
     private static final Logger log = LoggerFactory.getLogger(SiteLogEndpoint.class);
 
     @Autowired
-    private IgsSiteLogService service;
+    private CorsSiteLogService service;
 
     @Autowired
     private GeodesyMLValidator geodesyMLValidator;

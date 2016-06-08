@@ -22,7 +22,7 @@ public class MultipleSitesTest extends IntegrationTestConfig {
     private static final String scenarioDirName = "src/test/resources/multiple-sites/";
 
     @Autowired
-    private IgsSiteLogService siteLogService;
+    private CorsSiteLogService siteLogService;
 
     @Autowired
     private SiteLogRepository siteLogs;

@@ -28,7 +28,7 @@ public class KeepUnmodifiedNodesAndSetupsTest extends IntegrationTestConfig {
     private CorsSiteRepository sites;
 
     @Autowired
-    private IgsSiteLogService siteLogService;
+    private CorsSiteLogService siteLogService;
 
     @Autowired
     private SetupRepository setups;

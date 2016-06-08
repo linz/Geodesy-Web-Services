@@ -2,8 +2,10 @@ package au.gov.ga.geodesy.port.adapter.rest;
 
 import static au.gov.ga.geodesy.port.adapter.rest.ResultHandlers.print;
 
+import static org.hamcrest.Matchers.is;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import java.nio.charset.Charset;
@@ -11,6 +13,7 @@ import java.nio.charset.Charset;
 import org.apache.commons.io.FileUtils;
 import org.springframework.http.MediaType;
 import org.springframework.test.annotation.Rollback;
+import org.springframework.test.web.servlet.MvcResult;
 import org.testng.annotations.Test;
 
 import au.gov.ga.geodesy.support.TestResources;
@@ -21,8 +24,14 @@ public class UploadAliceIgsSiteLogRestTest extends RestTest {
     @Rollback(false)
     public void uploadALIC() throws Exception {
         String content = FileUtils.readFileToString(TestResources.sopacSiteLog("ALIC"), Charset.defaultCharset());
-        mvc.perform(post("/siteLog/sopac/upload").contentType(MediaType.APPLICATION_XML).content(content))
-            .andExpect(status().isCreated());
+        MvcResult result = mvc.perform(post("/siteLog/sopac/upload").contentType(MediaType.APPLICATION_XML).content(content))
+            .andExpect(status().isCreated())
+            .andReturn();
+
+        String location = (String) result.getResponse().getHeaderValue("location");
+        mvc.perform(get(location))
+            .andExpect(status().isOk())
+            .andExpect(jsonPath("$.siteIdentification.fourCharacterId", is("ALIC")));
     }
 
     @Test(dependsOnMethods = {"uploadALIC"})

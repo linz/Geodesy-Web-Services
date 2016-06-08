@@ -15,6 +15,8 @@ import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.hateoas.EntityLinks;
+import org.springframework.hateoas.config.EnableEntityLinks;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -23,6 +25,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
+import au.gov.ga.geodesy.domain.model.sitelog.SiteLog;
 import au.gov.ga.geodesy.domain.service.CorsSiteLogService;
 import au.gov.ga.geodesy.port.InvalidSiteLogException;
 import au.gov.ga.geodesy.port.SiteLogReader;
@@ -32,6 +35,7 @@ import au.gov.ga.geodesy.port.adapter.sopac.SopacSiteLogReader;
 import au.gov.ga.xmlschemer.Violation;
 
 @Controller
+@EnableEntityLinks
 @RequestMapping("/siteLog")
 public class SiteLogEndpoint {
 
@@ -39,6 +43,9 @@ public class SiteLogEndpoint {
 
     @Autowired
     private CorsSiteLogService service;
+
+    @Autowired
+    private EntityLinks entityLinks;
 
     @Autowired
     private GeodesyMLValidator geodesyMLValidator;
@@ -55,21 +62,31 @@ public class SiteLogEndpoint {
     }
 
     @RequestMapping(value = "/upload", method = RequestMethod.POST)
-    public void uploadGeodesyMLSiteLog(HttpServletRequest req, HttpServletResponse rsp) throws IOException, InvalidSiteLogException {
+    public ResponseEntity<String> uploadGeodesyMLSiteLog(HttpServletRequest req, HttpServletResponse rsp) throws IOException, InvalidSiteLogException {
         SiteLogReader reader = new GeodesyMLSiteLogReader(new InputStreamReader(req.getInputStream()));
-        service.upload(reader.getSiteLog());
-        // TODO: return a URI to the created resource
+        SiteLog siteLog = reader.getSiteLog();
+        service.upload(siteLog);
+        try {
+            String location = entityLinks.linkToSingleResource(SiteLog.class, siteLog.getId()).getHref();
+            return ResponseEntity.created(new URI(location)).body("");
+        }
+        catch (URISyntaxException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @RequestMapping(value = "/sopac/upload", method = RequestMethod.POST)
-    public ResponseEntity<String> uploadSopacSiteLog(HttpServletRequest req, HttpServletResponse rsp) throws IOException, InvalidSiteLogException {
+    public ResponseEntity<String> uploadSopacSiteLog(
+            HttpServletRequest req, HttpServletResponse rsp) throws IOException, InvalidSiteLogException {
+
         String siteLogText = IOUtils.toString(req.getInputStream());
         log.debug("Received SOPAC site log: " + siteLogText);
         SiteLogReader reader = new SopacSiteLogReader(new StringReader(siteLogText));
+        SiteLog siteLog = reader.getSiteLog();
+        service.upload(siteLog);
         try {
-            service.upload(reader.getSiteLog());
-            // TODO: return a URI to the created resource
-            return ResponseEntity.created(new URI("/siteLog/X")).body("");
+            String location = entityLinks.linkToSingleResource(SiteLog.class, siteLog.getId()).getHref();
+            return ResponseEntity.created(new URI(location)).body("");
         }
         catch (URISyntaxException e) {
             throw new RuntimeException(e);

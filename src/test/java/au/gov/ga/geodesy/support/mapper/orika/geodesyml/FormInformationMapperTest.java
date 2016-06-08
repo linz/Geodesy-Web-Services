@@ -37,9 +37,7 @@ public class FormInformationMapperTest {
         FormInformation formInfo = mapper.to(formInfoTypeA);
         assertEquals(formInfo.getPreparedBy(), formInfoTypeA.getPreparedBy());
         assertEquals(formInfo.getReportType(), formInfoTypeA.getReportType());
-        assertEquals(formInfo.getDatePrepared(), GMLDateUtils.stringToDateMultiParsers(formInfoTypeA.getDatePrepared()
-                .getValue()
-                .get(0)));
+        assertEquals(formInfo.getDatePrepared(), GMLDateUtils.stringToDateMultiParsers(formInfoTypeA.getDatePrepared().getValue().get(0)));
 
         FormInformationType formInfoTypeB = mapper.from(formInfo);
         assertEquals(formInfoTypeB.getPreparedBy(), formInfo.getPreparedBy());

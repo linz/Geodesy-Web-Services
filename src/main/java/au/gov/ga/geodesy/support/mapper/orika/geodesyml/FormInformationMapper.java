@@ -19,7 +19,6 @@ public class FormInformationMapper implements Iso<FormInformationType, FormInfor
 
     public FormInformationMapper() {
         mapperFactory.classMap(FormInformationType.class, FormInformation.class)
-                .fieldMap("datePrepared", "datePrepared").add()
                 .byDefault()
                 .register();
 

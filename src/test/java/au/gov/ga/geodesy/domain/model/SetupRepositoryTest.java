@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 
 import au.gov.ga.geodesy.domain.model.sitelog.EffectiveDates;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLog;
-import au.gov.ga.geodesy.domain.service.IgsSiteLogService;
+import au.gov.ga.geodesy.domain.service.CorsSiteLogService;
 import au.gov.ga.geodesy.port.adapter.sopac.SopacSiteLogReader;
 import au.gov.ga.geodesy.support.TestResources;
 import au.gov.ga.geodesy.support.spring.GeodesyServiceTestConfig;
@@ -35,7 +35,7 @@ public class SetupRepositoryTest extends RepositoryTest {
     private CorsSiteRepository sites;
 
     @Autowired
-    private IgsSiteLogService siteLogService;
+    private CorsSiteLogService siteLogService;
 
     @Test
     @Rollback(false)

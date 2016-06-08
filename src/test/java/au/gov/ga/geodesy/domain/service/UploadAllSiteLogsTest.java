@@ -27,7 +27,7 @@ public class UploadAllSiteLogsTest extends UnitTestConfig {
     private List<File> siteLogFiles = null;
 
     @Autowired
-    private IgsSiteLogService service;
+    private CorsSiteLogService service;
 
     @Autowired
     private SiteLogRepository siteLogs;

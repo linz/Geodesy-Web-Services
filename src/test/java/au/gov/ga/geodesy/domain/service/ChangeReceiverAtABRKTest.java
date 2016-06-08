@@ -23,7 +23,7 @@ public class ChangeReceiverAtABRKTest extends IntegrationTestConfig {
     private static final String scenarioDirName = "src/test/resources/change-receiver-at-abrk/";
 
     @Autowired
-    private IgsSiteLogService siteLogService;
+    private CorsSiteLogService siteLogService;
 
     @Autowired
     private SiteLogRepository siteLogs;

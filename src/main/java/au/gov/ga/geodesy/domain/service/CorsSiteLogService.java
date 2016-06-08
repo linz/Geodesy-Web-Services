@@ -13,9 +13,9 @@ import au.gov.ga.geodesy.domain.model.sitelog.SiteLogRepository;
 
 @Component
 @Transactional("geodesyTransactionManager")
-public class IgsSiteLogService {
+public class CorsSiteLogService {
 
-    private static final Logger log = LoggerFactory.getLogger(IgsSiteLogService.class);
+    private static final Logger log = LoggerFactory.getLogger(CorsSiteLogService.class);
 
     @Autowired
     private SiteLogRepository siteLogs;

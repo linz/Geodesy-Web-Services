@@ -138,7 +138,7 @@ public class SiteLog {
     protected SiteResponsibleParty siteMetadataCustodian;
 
     @SuppressWarnings("unused") // used by hibernate
-    private Integer getId() {
+    public Integer getId() {
         return id;
     }
 

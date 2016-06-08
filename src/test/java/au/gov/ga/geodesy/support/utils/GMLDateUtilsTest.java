@@ -50,25 +50,22 @@ public class GMLDateUtilsTest {
     @Test
     public void testMultiFormats01() {
         String in = "1992-08-12";
-        String expected = "12 Aug 1992";
+        String expected = "1992-08-12T00:00:00.000Z";
         String out = GMLDateUtils.stringToDateToStringMultiParsers(in);
         System.out.println("In date: " + in + ", out date: " + out);
         Assert.assertEquals(expected, out);
     }
 
-    @Test
+    @Test(expected = GeodesyRuntimeException.class)
     public void testMultiFormats012() {
         String in = "2011-20-07";
-        String expected = "20 Jul 2011";
         String out = GMLDateUtils.stringToDateToStringMultiParsers(in);
-        System.out.println("In date: " + in + ", out date: " + out);
-        Assert.assertEquals(expected, out);
     }
 
     @Test
     public void testMultiFormats013() {
         String in = "1994-05-15T00:00Z";
-        String expected = "15 May 1994 00:00 UTC";
+        String expected = "1994-05-15T00:00:00.000Z";
         String out = GMLDateUtils.stringToDateToStringMultiParsers(in);
         System.out.println("In date: " + in + ", out date: " + out);
         Assert.assertEquals(expected, out);

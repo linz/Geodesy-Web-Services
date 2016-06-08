@@ -2,7 +2,7 @@ package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 
 import static org.junit.Assert.assertEquals;
 
-import org.junit.Test;
+import org.testng.annotations.Test;
 
 import au.gov.ga.geodesy.domain.model.sitelog.TemperatureSensorLogItem;
 import au.gov.ga.geodesy.support.utils.MappingDirection;

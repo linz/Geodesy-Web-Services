@@ -1,6 +1,5 @@
 package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 
-import static afu.plume.TaskManager.format;
 import static org.testng.Assert.assertEquals;
 
 import java.time.ZoneId;
@@ -27,32 +26,35 @@ public class SensorEquipmentMapperTest {
 
     public void testMapping(SensorEquipmentLogItem logItem, BaseSensorEquipmentType sensorType, MappingDirection mappingDirection) {
 
-        DateTimeFormatter format = null;
+        DateTimeFormatter outputFormat = dateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSXXX");
 
         if (mappingDirection == MappingDirection.FROM_DTO_TO_ENTITY) {
-            format = dateFormat("yyyy-MM-dd'T'HH:mm:ssX");
 
             assertEquals(logItem.getType(), sensorType.getType().getValue());
             assertEquals(logItem.getManufacturer(), sensorType.getManufacturer());
             assertEquals(logItem.getSerialNumber(), sensorType.getSerialNumber());
             assertEquals(logItem.getHeightDiffToAntenna(), String.valueOf(sensorType.getHeightDiffToAntenna()));
-            assertEquals(format.format(logItem.getCalibrationDate()),
-                    GMLDateUtils.stringToDateToString(sensorType.getCalibrationDate().getValue().get(0), format));
-            assertEquals(format.format(logItem.getEffectiveDates().getFrom()),
-                    ((TimePeriodType) sensorType.getValidTime().getAbstractTimePrimitive().getValue())
-                            .getBeginPosition().getValue().get(0));
+            assertEquals(outputFormat.format(logItem.getCalibrationDate()),
+                    GMLDateUtils.stringToDateToStringMultiParsers(sensorType.getCalibrationDate().getValue().get(0)));
+
+            String xmlEffectiveDateFrom = ((TimePeriodType) sensorType.getValidTime().getAbstractTimePrimitive().getValue())
+                    .getBeginPosition().getValue().get(0);
+            assertEquals(outputFormat.format(logItem.getEffectiveDates().getFrom()),
+                    GMLDateUtils.stringToDateToStringMultiParsers(xmlEffectiveDateFrom));
         } else {
-            format = dateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSXXX");
+
 
             assertEquals(sensorType.getType().getValue(), logItem.getType());
             assertEquals(sensorType.getManufacturer(), logItem.getManufacturer());
             assertEquals(sensorType.getSerialNumber(), logItem.getSerialNumber());
             assertEquals(String.valueOf(sensorType.getHeightDiffToAntenna()), logItem.getHeightDiffToAntenna());
-            assertEquals(GMLDateUtils.stringToDateToString(sensorType.getCalibrationDate().getValue().get(0), format),
-                    format.format(logItem.getCalibrationDate()));
+            assertEquals(GMLDateUtils.stringToDateToStringMultiParsers(sensorType.getCalibrationDate().getValue().get(0)),
+                    outputFormat.format(logItem.getCalibrationDate()));
+            String xmlEffectiveDateFrom = ((TimePeriodType) sensorType.getValidTime().getAbstractTimePrimitive().getValue())
+                    .getBeginPosition().getValue().get(0);
             assertEquals(
-                    ((TimePeriodType) sensorType.getValidTime().getAbstractTimePrimitive().getValue())
-                            .getBeginPosition().getValue().get(0), format.format(logItem.getEffectiveDates().getFrom()));
+                    GMLDateUtils.stringToDateToStringMultiParsers(xmlEffectiveDateFrom),
+                    outputFormat.format(logItem.getEffectiveDates().getFrom()));
         }
     }
 

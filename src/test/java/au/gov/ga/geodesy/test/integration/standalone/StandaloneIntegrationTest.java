@@ -8,8 +8,8 @@ import org.springframework.test.context.support.AnnotationConfigContextLoader;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.testng.annotations.BeforeClass;
 
-import com.jayway.restassured.RestAssured;
-import com.jayway.restassured.specification.ProxySpecification;
+import io.restassured.RestAssured;
+import io.restassured.specification.ProxySpecification;
 
 import au.gov.ga.geodesy.support.spring.StandaloneIntegrationTestConfig;
 

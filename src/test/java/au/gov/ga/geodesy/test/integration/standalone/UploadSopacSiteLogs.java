@@ -1,6 +1,6 @@
 package au.gov.ga.geodesy.test.integration.standalone;
 
-import static com.jayway.restassured.RestAssured.given;
+import static io.restassured.RestAssured.given;
 
 import java.io.File;
 

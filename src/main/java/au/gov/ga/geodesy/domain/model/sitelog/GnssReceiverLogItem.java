@@ -15,7 +15,7 @@ import javax.validation.constraints.Size;
  * http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2564/receiver.xsd:gnssReceiverType
  */
 @Entity
-@Table(name = "SITELOG_GNSSGRECEIVER")
+@Table(name = "SITELOG_GNSSRECEIVER")
 public class GnssReceiverLogItem implements EquipmentLogItem {
 
     @Id

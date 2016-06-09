@@ -1,0 +1,22 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <changeSet author="simon" id="renameTable sitelog_gnssgreceiver to sitelog_gnssreceiver -1" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+      <renameTable 
+            newTableName="sitelog_gnssreceiver"
+            oldTableName="sitelog_gnssgreceiver"
+            schemaName="geodesy"/>
+    </changeSet>
+
+    <changeSet author="simon" id="renameTable sitelog_gnssgreceiver to sitelog_gnssreceiver -2" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+       <dropPrimaryKey 
+            constraintName="sitelog_gnssgreceiver_pkey"
+            schemaName="geodesy"
+            tableName="sitelog_gnssreceiver"/>
+    </changeSet>
+
+    <changeSet author="simon" id="renameTable sitelog_gnssgreceiver to sitelog_gnssreceiver -3" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addPrimaryKey columnNames="id" 
+                       constraintName="sitelog_gnssreceiver_pkey" 
+                       tableName="sitelog_gnssreceiver"/>
+    </changeSet>
+</databaseChangeLog>

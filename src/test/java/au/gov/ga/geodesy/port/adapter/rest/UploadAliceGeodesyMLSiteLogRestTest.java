@@ -20,7 +20,7 @@ public class UploadAliceGeodesyMLSiteLogRestTest extends RestTest {
     public void uploadALIC() throws Exception {
         String content = IOUtils.toString(TestResources.geodesyMLSiteLogReader("ALIC"));
         mvc.perform(post("/siteLog/upload").contentType(MediaType.APPLICATION_XML).content(content))
-            .andExpect(status().isOk());
+            .andExpect(status().isCreated());
     }
 
     @Test(dependsOnMethods = {"uploadALIC"})

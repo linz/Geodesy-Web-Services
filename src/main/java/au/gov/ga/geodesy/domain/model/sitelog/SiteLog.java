@@ -103,7 +103,7 @@ public class SiteLog {
     @Valid
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "SITE_ID", referencedColumnName = "ID")
-    protected Set<OtherInstrumentation> otherInstrumentation;
+    protected Set<OtherInstrumentationLogItem> otherInstrumentationLogItem;
 
     @Valid
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
@@ -340,15 +340,15 @@ public class SiteLog {
     /**
      * Return other instrumentation.
      */
-    public Set<OtherInstrumentation> getOtherInstrumentation() {
-        return this.otherInstrumentation;
+    public Set<OtherInstrumentationLogItem> getOtherInstrumentationLogItem() {
+        return this.otherInstrumentationLogItem;
     }
 
     /**
      * Set other instrumentation.
      */
-    public void setOtherInstrumentation(Set<OtherInstrumentation> i) {
-        otherInstrumentation = i;
+    public void setOtherInstrumentationLogItem(Set<OtherInstrumentationLogItem> i) {
+        otherInstrumentationLogItem = i;
     }
 
     /**

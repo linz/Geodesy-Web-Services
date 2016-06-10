@@ -8,5 +8,6 @@ public interface LogItemVisitor<T> {
     T visit(TemperatureSensorLogItem logItem);
     T visit(PressureSensorLogItem logItem);
     T visit(FrequencyStandardLogItem logItem);
+    T visit(OtherInstrumentationLogItem logItem);
 }
 

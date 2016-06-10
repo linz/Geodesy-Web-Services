@@ -14,9 +14,10 @@ import java.util.TreeSet;
 import org.apache.commons.beanutils.PropertyUtils;
 import org.testng.annotations.Test;
 
-import au.gov.ga.geodesy.domain.model.sitelog.EquipmentLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.GnssReceiverLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.HumiditySensorLogItem;
+import au.gov.ga.geodesy.domain.model.sitelog.LogItem;
+import au.gov.ga.geodesy.domain.model.sitelog.OtherInstrumentationLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.PressureSensorLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLog;
 import au.gov.ga.geodesy.domain.model.sitelog.TemperatureSensorLogItem;
@@ -31,6 +32,8 @@ import au.gov.xml.icsm.geodesyml.v_0_3.GnssReceiverPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_3.GnssReceiverType;
 import au.gov.xml.icsm.geodesyml.v_0_3.HumiditySensorPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_3.HumiditySensorType;
+import au.gov.xml.icsm.geodesyml.v_0_3.OtherInstrumentationPropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_3.OtherInstrumentationType;
 import au.gov.xml.icsm.geodesyml.v_0_3.PressureSensorPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_3.PressureSensorType;
 import au.gov.xml.icsm.geodesyml.v_0_3.SiteLogType;
@@ -136,6 +139,40 @@ public class SiteLogMapperTest {
 
     }
 
+    /**
+     * Test mapping from SiteLogType to SiteLog and back
+     * to SiteLogType. Based on the QIKI site with added sensors.
+     **/
+    @Test
+    public void testOtherInstrumentationsMapping() throws Exception {
+        GeodesyMLType mobs = marshaller
+                .unmarshal(TestResources.geodesyMLTestDataSiteLogReader("QIKI-otherInstrumentation"),
+                        GeodesyMLType.class)
+                .getValue();
+
+        SiteLogType siteLogType = GeodesyMLUtils.getElementFromJAXBElements(mobs.getElements(), SiteLogType.class)
+                .findFirst().get();
+
+        SiteLog siteLog = mapper.to(siteLogType);
+
+        List<OtherInstrumentationPropertyType> otherInstrumentationPropertyTypes = siteLogType.getOtherInstrumentations();
+
+        sort(otherInstrumentationPropertyTypes);
+        sort(siteLog.getOtherInstrumentationLogItem());
+
+        assertEquals(siteLogType.getOtherInstrumentations().size(), 3);
+        assertEquals(otherInstrumentationPropertyTypes.size(), 3);
+
+        {
+            int i = 0;
+            for (OtherInstrumentationLogItem logItem : sort(siteLog.getOtherInstrumentationLogItem())) {
+                OtherInstrumentationType xmlType = otherInstrumentationPropertyTypes.get(i++).getOtherInstrumentation();
+                assertEquals(logItem.getInstrumentation(), xmlType.getInstrumentation());
+            }
+        }
+    }
+
+
     private void testMappingValues(SiteLogType siteLogType, SiteLog siteLog) {
         assertEquals(siteLog.getSiteIdentification().getSiteName(), siteLogType.getSiteIdentification().getSiteName());
         assertEquals(siteLog.getSiteLocation().getTectonicPlate(), siteLogType.getSiteLocation().getTectonicPlate().getValue());
@@ -157,10 +194,10 @@ public class SiteLogMapperTest {
     /**
      * Sort set of equipment log items by installation date.
      */
-    private <T extends EquipmentLogItem> SortedSet<T> sort(Set<T> logItems) {
+    private <T extends LogItem> SortedSet<T> sort(Set<T> logItems) {
         SortedSet<T> sorted = new TreeSet<>(new Comparator<T>() {
             public int compare(T e, T f) {
-                int c = e.getEffectiveDates().getFrom().compareTo(f.getEffectiveDates().getFrom());
+                int c = e.getEffectiveDates().compareTo(f.getEffectiveDates());
                 // keep duplicates
                 return c != 0 ? c : 1;
             }
@@ -168,7 +205,6 @@ public class SiteLogMapperTest {
         sorted.addAll(logItems);
         return sorted;
     }
-
 
     /**
      * Sort list of equipment properties by installation date.
@@ -180,12 +216,22 @@ public class SiteLogMapperTest {
             }
 
             private Instant dateInstalled(P p) {
+
+                TimePositionType time = null;
+
                 try {
-                    TimePositionType time = (TimePositionType) PropertyUtils.getProperty(p.getTargetElement(),"dateInstalled");
+                    time = (TimePositionType) PropertyUtils.getProperty(p.getTargetElement(),"dateInstalled");
                     return new InstantToTimePositionConverter().convertFrom(time, TypeFactory.valueOf(Instant.class), null);
                 } catch (IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
-                    throw new RuntimeException(e);
+                    // try a different version of the "installation date"
+                    try {
+                        time = (TimePositionType)PropertyUtils.getProperty(p.getTargetElement(),
+                                "validTime.abstractTimePrimitive.value.beginPosition");
+                    } catch (IllegalAccessException | InvocationTargetException | NoSuchMethodException e2) {
+                        throw new RuntimeException(e2);
+                    }
                 }
+                return new InstantToTimePositionConverter().convertFrom(time, TypeFactory.valueOf(Instant.class), null);
             }
         });
     }

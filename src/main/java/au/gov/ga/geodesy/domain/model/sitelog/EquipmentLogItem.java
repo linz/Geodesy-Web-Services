@@ -1,9 +1,7 @@
 package au.gov.ga.geodesy.domain.model.sitelog;
 
-public interface EquipmentLogItem {
+public interface EquipmentLogItem extends LogItem {
     String getType();
     String getSerialNumber();
-    EffectiveDates getEffectiveDates();
-    <T> T accept(LogItemVisitor<T> v);
 }
 

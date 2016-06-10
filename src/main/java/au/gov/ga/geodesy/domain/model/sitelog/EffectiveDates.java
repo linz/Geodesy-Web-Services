@@ -67,4 +67,24 @@ public class EffectiveDates {
         }
         return from.equals(other.getFrom()) && to.equals(other.getTo());
     }
+
+    /**
+     * Implement compareTo method so that collections of EffectiveDate objects can be sorted properly
+     * @param other the EffectiveDate to compare with this one
+     * @return int value of comparison
+     */
+    public int compareTo(EffectiveDates other) {
+        int result = 0;
+        if (other == null) {
+            result = 1;
+        } else {
+            if (from != null && other.getFrom() != null) {
+                result += from.compareTo(other.getFrom());
+            }
+            if (result == 0 && to != null && other.getTo() != null) {
+                result += to.compareTo(other.getTo());
+            }
+        }
+        return result;
+    }
 }

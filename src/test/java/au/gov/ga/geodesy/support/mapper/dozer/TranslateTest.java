@@ -69,11 +69,11 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
     /**
      * Location of input test data - original location of files that haven't been modified
      */
-    private final static String SITEDATADIR = "sitelog";
+    private final static String SITEDATADIR = "sitelog/sopac";
     /**
      * Location of input test data - same as that in SITEDATADIR though modified in some way to improve or fix test
      */
-    private final static String TESTDATADIR = "testData";
+    private final static String TESTDATADIR = "sitelog/testData";
 
     // @Autowired
     private IgsSiteLogXmlMarshaller marshaller;
@@ -172,11 +172,8 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
         FormInformationType formIdentificationType = siteLogType.getFormInformation();
         Assert.assertEquals(formIdentificationType.getPreparedBy(), "Nick Dando");
 
-        // Input is 2013-07-08 and because there is no time-zone, it gets the local one (8 July 2013 +10 or +11)
-        // GMT (the dateFormat uses forces GMT) will be the day before and due to daylight savings ambiguity I won't
-        // check the time
         MatcherAssert.assertThat("formIdentificationType.getDatePrepared()",
-                formIdentificationType.getDatePrepared().getValue().get(0), Matchers.startsWith("2013-07-07"));
+                formIdentificationType.getDatePrepared().getValue().get(0), Matchers.startsWith("2013-07-08"));
 
         Assert.assertEquals(formIdentificationType.getReportType(), "UPDATE");
         // These don't exist (should they - Mmm, not in Sopac SiteLog either so no)?
@@ -290,7 +287,7 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
         Assert.assertEquals(frequencyStandardType.getStandardType().getValue(), "QUARTZ/INTERNAL");
         Assert.assertEquals(GMLDateUtils.stringToDateToStringMultiParsers(TimePrimitivePropertyTypeUtils
                 .getTheTimePeriodType(frequencyStandardType.getValidTime()).getBeginPosition().getValue().get(0)),
-                "15 May 1994 00:00 GMT");
+                "1994-05-15T00:00:00.000Z");
 
         // Humidity Sensors
         List<HumiditySensorPropertyType> humiditySensors = siteLogType.getHumiditySensors();
@@ -302,7 +299,7 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
         Assert.assertEquals(
                 GMLDateUtils.stringToDateToStringMultiParsers(TimePrimitivePropertyTypeUtils
                         .getTheTimePeriodType(humiditySensor.getValidTime()).getBeginPosition().getValue().get(0)),
-                "29 Mar 2006 00:00 GMT");
+                "2006-03-29T00:00:00.000Z");
         Assert.assertEquals(humiditySensor.getSerialNumber(), "98850");
         Assert.assertEquals(humiditySensor.getHeightDiffToAntenna(), 2.4, 0.001);
         Assert.assertEquals(humiditySensor.getDataSamplingInterval(), 30, 0.01);
@@ -319,7 +316,7 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
         Assert.assertEquals(
                 GMLDateUtils.stringToDateToStringMultiParsers(TimePrimitivePropertyTypeUtils
                         .getTheTimePeriodType(pressureSensor.getValidTime()).getBeginPosition().getValue().get(0)),
-                "29 Mar 2006 00:00 GMT");
+                "2006-03-29T00:00:00.000Z");
         Assert.assertEquals(pressureSensor.getManufacturer(), "Paroscientific, Inc.");
         Assert.assertEquals(pressureSensor.getSerialNumber(), "98850");
         Assert.assertEquals(pressureSensor.getHeightDiffToAntenna(), 2.4, 0.01);
@@ -335,7 +332,7 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
         Assert.assertEquals(
                 GMLDateUtils.stringToDateToStringMultiParsers(TimePrimitivePropertyTypeUtils
                         .getTheTimePeriodType(waterVapourSensor.getValidTime()).getBeginPosition().getValue().get(0)),
-                "29 Mar 2006 00:00 GMT");
+                "2006-03-29T00:00:00.000Z");
 
         // Temperature Sensors
         List<TemperatureSensorPropertyType> temperatureSensors = siteLogType.getTemperatureSensors();
@@ -348,7 +345,7 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
         Assert.assertEquals(
                 GMLDateUtils.stringToDateToStringMultiParsers(TimePrimitivePropertyTypeUtils
                         .getTheTimePeriodType(temperatureSensor.getValidTime()).getBeginPosition().getValue().get(0)),
-                "29 Mar 2006 00:00 GMT");
+                "2006-03-29T00:00:00.000Z");
         Assert.assertEquals(temperatureSensor.getSerialNumber(), "98850");
         Assert.assertEquals(temperatureSensor.getHeightDiffToAntenna(), 2.4, 0.001);
         Assert.assertEquals(temperatureSensor.getDataSamplingInterval().doubleValue(), 30, 0.001);
@@ -365,7 +362,7 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
         Assert.assertEquals(
                 GMLDateUtils.stringToDateToStringMultiParsers(TimePrimitivePropertyTypeUtils
                         .getTheTimeInstantType(localEpisodicEvent.getValidTime()).getTimePosition().getValue().get(0)),
-                "20 Jul 2011");
+                "2011-07-20T00:00:00.000Z");
 
         // Contacts
         CIResponsiblePartyType siteContact = siteLogType.getSiteContact().get(0).getCIResponsibleParty();
@@ -399,7 +396,7 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
     @Test
     public void testARTU() throws MarshallingException, IOException,
             au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
-        GeodesyMLType geodesyML = testTranslate(SITEDATADIR, "ARTU");
+        GeodesyMLType geodesyML = testTranslate(TESTDATADIR, "ARTU");
 
         Assert.assertNotNull(geodesyML);
     }
@@ -438,7 +435,7 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
         Assert.assertEquals(
                 GMLDateUtils.stringToDateToStringMultiParsers(TimePrimitivePropertyTypeUtils
                         .getTheTimePeriodType(radioInterference.getValidTime()).getBeginPosition().getValue().get(0)),
-                "31 Mar 2015 00:00 GMT");
+                "2015-03-31T00:00:00.000Z");
 
         // MultipathSourcesPropertyType
         List<MultipathSourcesPropertyType> multipathSources = siteLogType.getMultipathSourcesSet();
@@ -451,7 +448,7 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
         Assert.assertEquals(
                 GMLDateUtils.stringToDateToStringMultiParsers(TimePrimitivePropertyTypeUtils
                         .getTheTimePeriodType(multipathSource.getValidTime()).getBeginPosition().getValue().get(0)),
-                "30 Mar 2015 00:00 GMT");
+                "2015-03-30T00:00:00.000Z");
 
         // SignalObstructionsPropertyType
         List<SignalObstructionsPropertyType> signalObstructions = siteLogType.getSignalObstructionsSet();
@@ -464,7 +461,7 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
         Assert.assertEquals(
                 GMLDateUtils.stringToDateToStringMultiParsers(TimePrimitivePropertyTypeUtils
                         .getTheTimePeriodType(signalObstruction.getValidTime()).getBeginPosition().getValue().get(0)),
-                "29 Mar 2015 00:00 GMT");
+                "2015-03-29T00:00:00.000Z");
 
         // Contacts - just different and new parts (compared to ALIC)
         CIResponsiblePartyType siteContact = siteLogType.getSiteContact().get(0).getCIResponsibleParty();
@@ -511,7 +508,7 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
     @Test
     public void testAMC2() throws MarshallingException, IOException,
             au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
-        GeodesyMLType geodesyML = testTranslate(SITEDATADIR, "AMC2");
+        GeodesyMLType geodesyML = testTranslate(TESTDATADIR, "AMC2");
 
         Assert.assertNotNull(geodesyML);
     }
@@ -559,7 +556,7 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
     @Test
     public void testZAMB() throws MarshallingException, IOException,
             au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
-        GeodesyMLType geodesyML = testTranslate(SITEDATADIR, "ZAMB");
+        GeodesyMLType geodesyML = testTranslate(TESTDATADIR, "ZAMB");
 
         Assert.assertNotNull(geodesyML);
     }
@@ -655,7 +652,7 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
     @Test
     public void testCRAO() throws MarshallingException, IOException,
             au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
-        GeodesyMLType geodesyML = testTranslate(SITEDATADIR, "CRAO");
+        GeodesyMLType geodesyML = testTranslate(TESTDATADIR, "CRAO");
 
         Assert.assertNotNull(geodesyML);
     }
@@ -663,7 +660,8 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
     @Test
     public void testCRO1() throws MarshallingException, IOException,
             au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
-        GeodesyMLType geodesyML = testTranslate(SITEDATADIR, "CRO1");
+        GeodesyMLType geodesyML = testTranslate(TESTDATADIR, "CRO1");
+
 
         Assert.assertNotNull(geodesyML);
     }

@@ -10,6 +10,7 @@ import java.time.ZoneOffset;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import au.gov.ga.geodesy.domain.model.sitelog.GnssReceiverLogItem;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -126,6 +127,19 @@ public class ChangeTrackingDecoratorTest {
 
         GnssReceiverType out = GeodesyMLDecorators.addDecorators(element,element);
         Assert.assertEquals(element, out);
+    }
+
+    @Test public void test03_GNSSReceiver() {
+        // After some changes the dateInstalled TimePositionType's value is not being mapped to the decorated object - find out why
+        // Good test to have but this is not where the error is
+        String testDate = "2007-12-03T10:15:30Z";
+        GnssReceiverLogItem gnssReceiverLogItem = new GnssReceiverLogItem();
+        gnssReceiverLogItem.setSerialNumber("1234");
+        gnssReceiverLogItem.setDateInstalled(Instant.parse(testDate));
+        GnssReceiverLogItem out = GeodesyMLDecorators.addDecorators(gnssReceiverLogItem);
+        Assert.assertNotNull(out);
+        Assert.assertNotNull(out.getDateInstalled());
+        Assert.assertEquals(testDate, out.getDateInstalled().toString());
     }
 
     private static TimePositionType createTimePositionType() {

@@ -11,7 +11,7 @@ import net.opengis.gml.v_3_2_1.TimePositionType;
 /**
  * Converter: java.time.Instant <--> net.opengis.gml.v_3_2_1.TimePositionType
  */
-public class TimePositionTypeDateConverter implements CustomConverter {
+public class TimePositionTypeInstantConverter implements CustomConverter {
 
     @SuppressWarnings("rawtypes")
     public Object convert(Object destination, Object source, Class destClass, Class sourceClass) {

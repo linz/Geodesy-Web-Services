@@ -2,23 +2,23 @@ package au.gov.ga.geodesy.support.mapper.dozer.converter;
 
 import java.text.ParseException;
 import java.time.Instant;
-import java.time.ZoneId;
 
+import au.gov.ga.geodesy.exception.GeodesyRuntimeException;
 import org.junit.Assert;
 import org.junit.Test;
 
 import au.gov.ga.geodesy.support.utils.GMLDateUtils;
 import net.opengis.gml.v_3_2_1.TimePositionType;
 
-public class TimePositionTypeDateConverterTest {
+public class TimePositionTypeInstantConverterTest {
     private Instant instantDate = Instant.now();
 
-    TimePositionTypeDateConverter conv = new TimePositionTypeDateConverter();
+    TimePositionTypeInstantConverter conv = new TimePositionTypeInstantConverter();
 
     /**
      * source: String
      * dest: TimePositionType (TimeInstantType)
-     * 
+     *
      * @throws ParseException
      */
     @Test
@@ -30,13 +30,9 @@ public class TimePositionTypeDateConverterTest {
         Assert.assertEquals(expected, out.getValue().get(0));
     }
 
-    @Test
+    @Test(expected = GeodesyRuntimeException.class)
     public void test2() throws ParseException {
         Instant in = GMLDateUtils.stringToDateMultiParsers("2011-20-07"); // in-correct format
-        TimePositionType out = null;
-        String expected = "2011-07-20T00:00:00Z";
-        out = (TimePositionType) conv.convert(out, in, TimePositionType.class, String.class);
-        Assert.assertEquals(expected, out.getValue().get(0));
     }
 
     @Test
@@ -60,6 +56,11 @@ public class TimePositionTypeDateConverterTest {
         out = (Instant) conv.convert(out, in, TimePositionType.class, Instant.class);
         String dateOut = GMLDateUtils.dateToString(out, GMLDateUtils.GEODESYML_DATE_FORMAT_TIME_OUTPUT);
         Assert.assertEquals(expected, dateOut);
+    }
+
+    @Test(expected = GeodesyRuntimeException.class)
+    public void testBadFormat() {
+        Instant in = GMLDateUtils.stringToDateMultiParsers("2008-03-26T00");
     }
 
     /* ****************************************** */

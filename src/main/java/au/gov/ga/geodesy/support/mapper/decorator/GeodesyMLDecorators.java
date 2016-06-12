@@ -134,6 +134,7 @@ public class GeodesyMLDecorators {
          *            of the parent which may have some required fields (like dateInstalled)
          * @return
          * @throws ParseException
+         * // TODO - here is where the default date is being inserted
          */
         private static <C> TimePositionType createTimePositionType(C childElement) throws ParseException {
             TimePositionType tpt = new TimePositionType();

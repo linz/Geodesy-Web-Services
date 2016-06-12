@@ -20,6 +20,7 @@ import net.opengis.gml.v_3_2_1.TimePrimitivePropertyType;
 public class TimePrimitivePropertyTypeEffectiveDatesConverter implements CustomConverter {
     Logger logger = LoggerFactory.getLogger(getClass());
 
+    // TODO - EffectiveDates problem with RadioInterference comes in here
     @SuppressWarnings("rawtypes")
     public Object convert(Object destination, Object source, Class destClass, Class sourceClass) {
         if (source == null) {

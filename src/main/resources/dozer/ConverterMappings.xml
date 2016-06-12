@@ -8,8 +8,8 @@
                 <class-a>java.util.List</class-a>
                 <class-b>java.lang.String</class-b>
             </converter>
-            <converter type="au.gov.ga.geodesy.support.mapper.dozer.converter.TimePositionTypeDateConverter">
-                <class-a>java.util.Date</class-a>
+            <converter type="au.gov.ga.geodesy.support.mapper.dozer.converter.TimePositionTypeInstantConverter">
+                <class-a>java.time.Instant</class-a>
                 <class-b>net.opengis.gml.v_3_2_1.TimePositionType</class-b>
             </converter>
             <converter type="au.gov.ga.geodesy.support.mapper.dozer.converter.TimePostitionTypeStringConverter">

@@ -78,7 +78,7 @@ public class GMLDateUtilsTest {
 
     @Test
     public void testStringToDateToString01() {
-        String in = "2015-06-12T06:20:08Z";
+        String in = "2015-06-12T06:20:08.000Z";
         String out = GMLDateUtils.stringToDateToString(in);
 
         Assert.assertNotNull(out);
@@ -86,7 +86,7 @@ public class GMLDateUtilsTest {
 
     @Test
     public void testStringToDate01() {
-        String in = "2015-06-12T06:20:08Z";
+        String in = "2015-06-12T06:20:08.000Z";
         Instant out = GMLDateUtils.stringToDate(in);
 
         Assert.assertNotNull(out);

@@ -147,7 +147,7 @@ public class GMLDateUtils {
      * @throws DateTimeParseException
      */
     public static Instant stringToDate(String dateString) throws DateTimeParseException {
-        return stringToDate(dateString, GEODESYML_DATE_FORMAT_TIME_SEC);
+        return stringToDate(dateString, GEODESYML_DATE_FORMAT_TIME_MILLISEC);
     }
 
     /**

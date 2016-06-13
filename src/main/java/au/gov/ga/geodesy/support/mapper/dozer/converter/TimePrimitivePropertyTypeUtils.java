@@ -96,7 +96,7 @@ public class TimePrimitivePropertyTypeUtils {
         if (date == null) {
             // Date wasn't included in data - leave List empty
         } else {
-            dateStrings.add(GMLDateUtils.GEODESYML_DATE_FORMAT_TIME_SEC.format(date));
+            dateStrings.add(GMLDateUtils.GEODESYML_DATE_FORMAT_TIME_MILLISEC.format(date));
         }
 
         TimePositionType timePositionType = new TimePositionType();

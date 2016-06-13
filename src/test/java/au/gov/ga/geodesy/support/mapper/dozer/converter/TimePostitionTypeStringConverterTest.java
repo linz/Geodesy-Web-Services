@@ -3,6 +3,8 @@ package au.gov.ga.geodesy.support.mapper.dozer.converter;
 import java.time.Instant;
 import java.time.ZoneId;
 
+import au.gov.ga.geodesy.exception.GeodesyRuntimeException;
+import org.dozer.MappingException;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -22,25 +24,23 @@ public class TimePostitionTypeStringConverterTest {
     public void test1() {
         String in = "2011-07-20"; // correct format
         TimePositionType out = null;
-        String expected = "20 Jul 2011";
+        String expected = "2011-07-20T00:00:00.000Z";
         out = (TimePositionType) conv.convert(out, in, TimePositionType.class, String.class);
         Assert.assertEquals(expected, out.getValue().get(0));
     }
 
-    @Test
+    @Test(expected = MappingException.class)
     public void test2() {
         String in = "2011-20-07"; // in-correct format
         TimePositionType out = null;
-        String expected = "20 Jul 2011";
         out = (TimePositionType) conv.convert(out, in, TimePositionType.class, String.class);
-        Assert.assertEquals(expected, out.getValue().get(0));
     }
 
     @Test
     public void test3() {
         String in = "2011-07-20T16:00Z";
         TimePositionType out = null;
-        String expected = "20 Jul 2011 16:00 GMT";
+        String expected = "2011-07-20T16:00:00.000Z";
         out = (TimePositionType) conv.convert(out, in, TimePositionType.class, String.class);
         Assert.assertEquals(expected, out.getValue().get(0));
     }
@@ -53,7 +53,7 @@ public class TimePostitionTypeStringConverterTest {
     public void test2_1() {
         TimePositionType in = getGoedMLTimePrimitive();
         String out = null;
-        String expected = GMLDateUtils.dateToString(instantDate, GMLDateUtils.GEODESYML_DATE_FORMAT_TIME_OUTPUT);
+        String expected = GMLDateUtils.dateToString(instantDate, GMLDateUtils.GEODESYML_DATE_FORMAT_TIME_MILLISEC);
         out = (String) conv.convert(out, in, TimePositionType.class, String.class);
         Assert.assertEquals(expected, out);
     }
@@ -61,7 +61,7 @@ public class TimePostitionTypeStringConverterTest {
     /* ****************************************** */
     private TimePositionType getGoedMLTimePrimitive() {
         TimePositionType tpt = new TimePositionType();
-        tpt.getValue().add(GMLDateUtils.dateToString(instantDate, GMLDateUtils.GEODESYML_DATE_FORMAT_TIME_SEC));
+        tpt.getValue().add(GMLDateUtils.dateToString(instantDate, GMLDateUtils.GEODESYML_DATE_FORMAT_TIME_MILLISEC));
         return tpt;
     }
 

@@ -17,7 +17,6 @@ import au.gov.ga.geodesy.exception.GeodesyRuntimeException;
  * 1992-08-12
  * 2011-20-07 (wrong way around)
  * 1994-05-15T00:00Z
- * 
  **/
 public class GMLDateUtilsTest {
 
@@ -75,5 +74,21 @@ public class GMLDateUtilsTest {
     public void testMultiFormatsUnacceptedFormat() {
         String in = "15 07 1994";
         String out = GMLDateUtils.stringToDateToStringMultiParsers(in);
+    }
+
+    @Test
+    public void testStringToDateToString01() {
+        String in = "2015-06-12T06:20:08.000Z";
+        String out = GMLDateUtils.stringToDateToString(in);
+
+        Assert.assertNotNull(out);
+    }
+
+    @Test
+    public void testStringToDate01() {
+        String in = "2015-06-12T06:20:08.000Z";
+        Instant out = GMLDateUtils.stringToDate(in);
+
+        Assert.assertNotNull(out);
     }
 }

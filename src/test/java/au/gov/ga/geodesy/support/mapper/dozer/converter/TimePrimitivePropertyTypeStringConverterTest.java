@@ -3,6 +3,7 @@ package au.gov.ga.geodesy.support.mapper.dozer.converter;
 import java.time.Instant;
 import java.time.ZoneId;
 
+import au.gov.ga.geodesy.exception.GeodesyRuntimeException;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -22,27 +23,24 @@ public class TimePrimitivePropertyTypeStringConverterTest {
     public void test1() {
         String in = "2011-07-20"; // correct format
         TimePrimitivePropertyType out = null;
-        String expected = "20 Jul 2011";
+        String expected = "2011-07-20T00:00:00.000Z";
         out = (TimePrimitivePropertyType) conv.convert(out, in, TimePrimitivePropertyType.class, String.class);
         Assert.assertEquals(expected,
                 TimePrimitivePropertyTypeUtils.getTheTimeInstantType(out).getTimePosition().getValue().get(0));
     }
 
-    @Test
+    @Test(expected = GeodesyRuntimeException.class)
     public void test2() {
         String in = "2011-20-07"; // in-correct format
         TimePrimitivePropertyType out = null;
-        String expected = "20 Jul 2011";
         out = (TimePrimitivePropertyType) conv.convert(out, in, TimePrimitivePropertyType.class, String.class);
-        Assert.assertEquals(expected,
-                TimePrimitivePropertyTypeUtils.getTheTimeInstantType(out).getTimePosition().getValue().get(0));
     }
 
     @Test
     public void test3() {
         String in = "2011-07-20T16:00Z";
         TimePrimitivePropertyType out = null;
-        String expected = "20 Jul 2011 16:00 GMT";
+        String expected = "2011-07-20T16:00:00.000Z";
         out = (TimePrimitivePropertyType) conv.convert(out, in, TimePrimitivePropertyType.class, String.class);
         Assert.assertEquals(expected,
                 TimePrimitivePropertyTypeUtils.getTheTimeInstantType(out).getTimePosition().getValue().get(0));
@@ -56,7 +54,7 @@ public class TimePrimitivePropertyTypeStringConverterTest {
     public void test2_1() {
         TimePrimitivePropertyType in = getGoedMLTimePrimitive();
         String out = null;
-        String expected = GMLDateUtils.dateToString(instantDate, GMLDateUtils.GEODESYML_DATE_FORMAT_TIME_OUTPUT);
+        String expected = GMLDateUtils.dateToString(instantDate, GMLDateUtils.GEODESYML_DATE_FORMAT_TIME_MILLISEC);
         out = (String) conv.convert(out, in, TimePrimitivePropertyType.class, String.class);
         Assert.assertEquals(expected, out);
     }

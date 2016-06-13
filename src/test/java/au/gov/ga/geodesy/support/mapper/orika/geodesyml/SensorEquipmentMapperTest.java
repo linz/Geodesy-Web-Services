@@ -68,7 +68,7 @@ public class SensorEquipmentMapperTest {
         return siteLog;
     }
 
-    protected static DateTimeFormatter dateFormat(String pattern) {
+    private DateTimeFormatter dateFormat(String pattern) {
         return DateTimeFormatter.ofPattern(pattern).withZone(ZoneId.of("UTC"));
     }
 }

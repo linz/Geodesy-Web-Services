@@ -15,7 +15,7 @@ import javax.validation.constraints.Size;
  */
 @Entity
 @Table(name = "SITELOG_OTHERINSTRUMENTATION")
-public class OtherInstrumentationLogItem implements LogItem {
+public class OtherInstrumentation {
 
     @Id
     @GeneratedValue(generator = "surrogateKeyGenerator")
@@ -66,9 +66,5 @@ public class OtherInstrumentationLogItem implements LogItem {
      */
     public void setEffectiveDates(EffectiveDates value) {
         this.effectiveDates = value;
-    }
-
-    public <T> T accept(LogItemVisitor<T> v) {
-        return v.visit(this);
     }
 }

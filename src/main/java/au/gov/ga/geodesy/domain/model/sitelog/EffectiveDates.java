@@ -72,6 +72,7 @@ public class EffectiveDates implements Comparable {
 
     /**
      * Implement compareTo method so that collections of EffectiveDate objects can be sorted properly
+     * Compares from and to dates, accounting for null values.
      * @param otherObject the EffectiveDate to compare with this one
      * @return int value of comparison
      */
@@ -85,13 +86,30 @@ public class EffectiveDates implements Comparable {
         }
         else {
             EffectiveDates other = (EffectiveDates)otherObject;
-            if (from != null && other.getFrom() != null) {
+            if (from == null && other.getFrom() != null) {
+                result = 1;
+            } else if (from != null && other.getFrom() == null) {
+                result = -1;
+            } else if (from != null && other.getFrom() != null) {
                 result += from.compareTo(other.getFrom());
             }
-            if (result == 0 && to != null && other.getTo() != null) {
-                result += to.compareTo(other.getTo());
+            if (result == 0) {
+                if (to == null && other.getTo() != null) {
+                    result = 1;
+                } else if (to != null && other.getTo() == null) {
+                    result = -1;
+                } else if (to != null && other.getTo() != null) {
+                    result += to.compareTo(other.getTo());
+                }
             }
         }
         return result;
+    }
+
+    @Override public String toString() {
+        return "EffectiveDates{" +
+                "from=" + from +
+                ", to=" + to +
+                '}';
     }
 }

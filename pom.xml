@@ -17,6 +17,7 @@
         <liquibase.version>3.5.2-SNAPSHOT</liquibase.version>
         <spring.version>4.2.6.RELEASE</spring.version>
         <jackson.version>2.7.3</jackson.version>
+        <rest-assured.version>3.0.0</rest-assured.version>
         <hibernate.version>5.1.0.Final</hibernate.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
@@ -125,15 +126,15 @@
         <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>rest-assured</artifactId>
-            <version>3.0.0</version>
+            <version>${rest-assured.version}</version>
             <scope>test</scope>
         </dependency>
-        <!-- <dependency> -->
-        <!--     <groupId>com.jayway.restassured</groupId> -->
-        <!--     <artifactId>rest-assured</artifactId> -->
-        <!--     <version>2.9.0</version> -->
-        <!--     <scope>test</scope> -->
-        <!-- </dependency> -->
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>spring-mock-mvc</artifactId>
+            <version>${rest-assured.version}</version>
+            <scope>test</scope>
+        </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>

@@ -26,6 +26,7 @@ import com.fasterxml.jackson.databind.ser.BeanSerializerModifier;
 import com.fasterxml.jackson.databind.ser.impl.BeanAsArraySerializer;
 import com.fasterxml.jackson.databind.ser.impl.ObjectIdWriter;
 import com.fasterxml.jackson.databind.ser.std.BeanSerializerBase;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
 import au.gov.ga.geodesy.domain.model.CorsSite;
 import au.gov.ga.geodesy.domain.model.EquipmentInUse;
@@ -64,6 +65,7 @@ public class GeodesyRepositoryRestMvcConfig extends RepositoryRestMvcConfigurati
         mapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
         mapper.addMixIn(TelephoneImpl.class, TelephoneImplMixin.class);
         mapper.setDateFormat(format);
+        mapper.registerModule(new JavaTimeModule());
         mapper.registerModule(new SimpleModule() {
             public void setupModule(SetupContext context) {
                 super.setupModule(context);

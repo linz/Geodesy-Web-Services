@@ -40,4 +40,11 @@ public class SetupEndpointTest extends RestTest {
             .andExpect(status().isOk())
             .andExpect(jsonPath("$.page.totalElements").value(3));
     }
+
+    @Test(dependsOnMethods = {"upload"})
+    public void testDateFormat() throws Exception {
+        mvc.perform(get("/setups/search/findByFourCharacterId?id=ALIC&effectiveFrom=2011-12-12&effectiveTo=2011-12-12&timeFormat=uuuu-MM-dd"))
+            .andExpect(jsonPath("$._embedded.setups[0].effectivePeriod.from").value("2011-07-20T00:00:00Z"))
+            .andExpect(jsonPath("$._embedded.setups[0].effectivePeriod.to").value("2013-03-08T00:00:00Z"));
+    }
 }

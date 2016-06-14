@@ -16,6 +16,7 @@
         <!-- TODO: https://liquibase.jira.com/browse/CORE-2780 -->
         <liquibase.version>3.5.2-SNAPSHOT</liquibase.version>
         <spring.version>4.2.6.RELEASE</spring.version>
+        <jackson.version>2.7.3</jackson.version>
         <hibernate.version>5.1.0.Final</hibernate.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
@@ -136,12 +137,17 @@
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <version>2.7.3</version>
+            <version>${jackson.version}</version>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-annotations</artifactId>
-            <version>2.7.3</version>
+            <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-jsr310</artifactId>
+            <version>${jackson.version}</version>
         </dependency>
         <dependency>
             <groupId>org.jvnet.ogc</groupId>

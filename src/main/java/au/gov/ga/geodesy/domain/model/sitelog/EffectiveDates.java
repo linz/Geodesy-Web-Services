@@ -18,7 +18,7 @@ public class EffectiveDates implements Comparable {
 
     @Column(name = "EFFECTIVE_TO")
     private Instant to;
-sdfasdfASDFasdfasdfasdfasdfasdfasdf
+
     public EffectiveDates() {
     }
 

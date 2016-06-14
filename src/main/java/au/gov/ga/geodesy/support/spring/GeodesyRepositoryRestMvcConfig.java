@@ -8,6 +8,7 @@ import org.geotools.metadata.iso.citation.TelephoneImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
 import org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration;
@@ -38,6 +39,11 @@ import au.gov.ga.geodesy.domain.model.sitelog.SiteLog;
 
 @Configuration
 public class GeodesyRepositoryRestMvcConfig extends RepositoryRestMvcConfiguration {
+
+    @Bean
+    public RootResourceProcessor getRootResourceProcessor() {
+        return new RootResourceProcessor();
+    }
 
     @Override
     protected void configureRepositoryRestConfiguration(RepositoryRestConfiguration config) {

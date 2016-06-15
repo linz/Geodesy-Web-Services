@@ -25,15 +25,15 @@ public class TimePrimitivePropertyTypeUtils {
 
     /**
      * Create a new or resurrect the optionalExistingObject (TimePrimitivePropertyType).
-     * 
+     *
      * @param optionalExistingObject
      * @return new TimePrimitivePropertyType or resurrect the optionalExistingObject TimePrimitivePropertyType.
      */
-    public static TimePrimitivePropertyType newOrUsingExistingTimePrimitivePropertyType(Object optionalExistingObject) {
+    public static TimePrimitivePropertyType newOrUsingExistingTimePrimitivePropertyType(TimePrimitivePropertyType optionalExistingObject) {
         TimePrimitivePropertyType timePrimitivePropertyType = null;
 
         if (optionalExistingObject != null) {
-            timePrimitivePropertyType = (TimePrimitivePropertyType) optionalExistingObject;
+            timePrimitivePropertyType = optionalExistingObject;
         } else {
             timePrimitivePropertyType = new TimePrimitivePropertyType();
         }
@@ -41,7 +41,6 @@ public class TimePrimitivePropertyTypeUtils {
     }
 
     /**
-     * 
      * @param timePrimitivePropertyType
      * @return given timePrimitivePropertyType with a TimePeriodType payload
      */
@@ -54,7 +53,6 @@ public class TimePrimitivePropertyTypeUtils {
     }
 
     /**
-     * 
      * @param timePeriodType
      * @return JAXBElement genericised with given timePeriodType
      */
@@ -64,11 +62,10 @@ public class TimePrimitivePropertyTypeUtils {
     }
 
     /**
-     * 
      * @param timePrimitivePropertyType
      * @return given timePrimitivePropertyType with a TimePeriodType payload
      */
-    public static TimePrimitivePropertyType addTimeInstantType(TimePrimitivePropertyType timePrimitivePropertyType) {
+    static TimePrimitivePropertyType addTimeInstantType(TimePrimitivePropertyType timePrimitivePropertyType) {
         TimeInstantType timePeriodType = getGmlObjectFactory().createTimeInstantType();
         JAXBElement<TimeInstantType> jaxbTimeInstantType = buildJaxBElementTimePropertyType(timePeriodType);
 
@@ -77,17 +74,15 @@ public class TimePrimitivePropertyTypeUtils {
     }
 
     /**
-     * 
      * @param timeInstantType
      * @return JAXBElement genericised with given timeInstantType
      */
-    static JAXBElement<TimeInstantType> buildJaxBElementTimePropertyType(TimeInstantType timeInstantType) {
+    private static JAXBElement<TimeInstantType> buildJaxBElementTimePropertyType(TimeInstantType timeInstantType) {
         JAXBElement<TimeInstantType> jaxbTimeInstantType = getGmlObjectFactory().createTimeInstant(timeInstantType);
         return jaxbTimeInstantType;
     }
 
     /**
-     * 
      * @param date
      * @return TimePositionType with the given date in text with GMLDateUtils.GEODESYML_DATE_FORMAT_TIME format.
      */
@@ -106,13 +101,13 @@ public class TimePrimitivePropertyTypeUtils {
 
     /**
      * DateFormat parse the given stringDate with all possible DateFormats and add a preferred text format to the returned TimePositionType
-     * 
-     * @See au.gov.ga.geodesy.support.utils.GMLDateUtils
+     *
      * @param stringDate
      * @return TimePositionType with the given date in text with GMLDateUtils DateFormat that is the output format for the DateFormat that
-     *         matches
+     * matches
+     * @See au.gov.ga.geodesy.support.utils.GMLDateUtils
      */
-    static TimePositionType buildTimePositionType(String stringDate) {
+    public static TimePositionType buildTimePositionType(String stringDate) {
         List<String> dateStrings = new ArrayList<>();
         if (stringDate == null) {
             // Date wasn't included in data - leave List empty
@@ -128,9 +123,9 @@ public class TimePrimitivePropertyTypeUtils {
     /**
      * TimePrimitivePropertyType can hold various payloads. It will be a ClassCastException if the wrong type is asked for so be aware of
      * which type is used where.
-     * 
+     * <p>
      * Also @see TimePeriodPropertyTypeUtils#getTheTimeInstantType(TimePrimitivePropertyType)
-     * 
+     *
      * @param timePrimitivePropertyType
      * @return TimePeriodType payload of the given timePrimitivePropertyType
      */
@@ -143,9 +138,9 @@ public class TimePrimitivePropertyTypeUtils {
     /**
      * TimePrimitivePropertyType can hold various payloads. It will be a ClassCastException if the wrong type is asked for so be aware of
      * which type is used where.
-     * 
+     * <p>
      * Also @see {@link #getTheTimePeriodType(TimePrimitivePropertyType)}
-     * 
+     *
      * @param timePrimitivePropertyType
      * @return TimeInstantType payload of the given timePrimitivePropertyType
      */
@@ -154,13 +149,65 @@ public class TimePrimitivePropertyTypeUtils {
                 .getValue();
         return timeInstantType;
     }
-    
-    public static TimePrimitivePropertyType buildTimePrimitivePropertyType(Instant timePositionTypeDate) {
+
+    private static TimePrimitivePropertyType buildTimePrimitivePropertyType_TimeInstantType(Instant timePositionTypeDate) {
         TimePrimitivePropertyType timePrimitivePropertyType = TimePrimitivePropertyTypeUtils
                 .addTimeInstantType(TimePrimitivePropertyTypeUtils.newOrUsingExistingTimePrimitivePropertyType(null));
         TimePrimitivePropertyTypeUtils.getTheTimeInstantType(timePrimitivePropertyType)
                 .setTimePosition(TimePrimitivePropertyTypeUtils.buildTimePositionType(timePositionTypeDate));
 
         return timePrimitivePropertyType;
+    }
+
+    /**
+     * Build a TimePrimitivePropertyType containint a TimePeriodType.  If either of Being or End are null then the
+     * beginPosition or endPosition of the TimePeriodDtype will be null.
+     *
+     * @param begin
+     * @param end
+     * @return
+     */
+    private static TimePrimitivePropertyType buildTimePrimitivePropertyType_TimePeriodType(Instant begin, Instant end) {
+        TimePrimitivePropertyType timePrimitivePropertyType = TimePrimitivePropertyTypeUtils
+                .addTimePeriodType(TimePrimitivePropertyTypeUtils.newOrUsingExistingTimePrimitivePropertyType(null));
+        TimePeriodType tpt = TimePrimitivePropertyTypeUtils.getTheTimePeriodType(timePrimitivePropertyType);
+        if (begin != null) {
+            tpt.setBeginPosition(TimePrimitivePropertyTypeUtils.buildTimePositionType(begin));
+        }
+        if (end != null) {
+            tpt.setEndPosition(TimePrimitivePropertyTypeUtils.buildTimePositionType(end));
+        }
+        return timePrimitivePropertyType;
+    }
+
+    /**
+     * @return new TimePrimitivePropertyType without any Time type payload
+     */
+    public static TimePrimitivePropertyType buildTimePrimitivePropertyType() {
+        return TimePrimitivePropertyTypeUtils.newOrUsingExistingTimePrimitivePropertyType(null);
+    }
+
+    public static TimePrimitivePropertyType buildTimePrimitivePropertyType(Instant instant) {
+        if (instant == null) {
+            return buildTimePrimitivePropertyType();
+        }
+        return buildTimePrimitivePropertyType_TimeInstantType(instant);
+    }
+
+    /**
+     * Build a TimePrimitivePropertyType containing a TimePeriodType.  If either of Being or End are null then the
+     * beginPosition or endPosition of the TimePeriodDtype will be null.  If both are null the TimePrimitivePropertyType
+     * will contain now Time payload.
+     *
+     * @param begin
+     * @param end
+     * @return new TimePrimitivePropertyType with optional TimePeriodType or TimeInstantType payload if those
+     * arguments are given.
+     */
+    public static TimePrimitivePropertyType buildTimePrimitivePropertyType(Instant begin, Instant end) {
+        if (begin == null && end == null) {
+            return buildTimePrimitivePropertyType();
+        }
+        return buildTimePrimitivePropertyType_TimePeriodType(begin, end);
     }
 }

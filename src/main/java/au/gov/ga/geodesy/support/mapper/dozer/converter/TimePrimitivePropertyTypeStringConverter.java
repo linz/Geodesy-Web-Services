@@ -23,8 +23,10 @@ public class TimePrimitivePropertyTypeStringConverter implements CustomConverter
             return null;
         }
         if (source instanceof String) {
+            TimePrimitivePropertyType castDestination = (TimePrimitivePropertyType) destination;
+
             TimePrimitivePropertyType dest = TimePrimitivePropertyTypeUtils.addTimeInstantType(
-                    TimePrimitivePropertyTypeUtils.newOrUsingExistingTimePrimitivePropertyType(destination));
+                    TimePrimitivePropertyTypeUtils.newOrUsingExistingTimePrimitivePropertyType(castDestination));
             TimePrimitivePropertyTypeUtils.getTheTimeInstantType(dest)
                     .setTimePosition(TimePrimitivePropertyTypeUtils.buildTimePositionType((String) source));
 

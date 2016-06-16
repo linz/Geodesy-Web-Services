@@ -22,7 +22,7 @@ public class GnssReceiverMapperTest {
         String dateInstalled = "2012-03-24T02:03:23.000Z";
 
         GnssReceiverType receiver = new GnssReceiverType()
-            .withIgsModelCode((IgsReceiverModelCodeType) new IgsReceiverModelCodeType()
+            .withReceiverType((IgsReceiverModelCodeType) new IgsReceiverModelCodeType()
                 .withCodeSpace("https://igscb.jpl.nasa.gov/igscb/station/general/rcvr_ant.tab")
                 .withCodeList("http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode")
                 .withCodeListValue("LEICA GRX1200GGPRO")
@@ -38,7 +38,7 @@ public class GnssReceiverMapperTest {
             .withDateInstalled(timePosition(dateInstalled));
 
         GnssReceiverLogItem logItem = mapper.to(receiver);
-        assertEquals(logItem.getType(), receiver.getIgsModelCode().getCodeListValue());
+        assertEquals(logItem.getType(), receiver.getReceiverType().getCodeListValue());
         assertEquals(logItem.getFirmwareVersion(), receiver.getFirmwareVersion());
         assertEquals(logItem.getSerialNumber(), receiver.getManufacturerSerialNumber());
         assertEquals(logItem.getElevationCutoffSetting(), String.valueOf(receiver.getElevationCutoffSetting()));
@@ -47,10 +47,10 @@ public class GnssReceiverMapperTest {
         assertEquals(logItem.getEffectiveDates().getFrom(), GMLDateUtils.stringToDateMultiParsers(receiver.getDateInstalled().getValue().get(0)));
 
         GnssReceiverType receiverB = mapper.from(logItem);
-        assertEquals(receiverB.getIgsModelCode().getCodeSpace(), "https://igscb.jpl.nasa.gov/igscb/station/general/rcvr_ant.tab");
-        assertEquals(receiverB.getIgsModelCode().getCodeList(), "http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode");
-        assertEquals(receiverB.getIgsModelCode().getCodeListValue(), "LEICA GRX1200GGPRO");
-        assertEquals(receiverB.getIgsModelCode().getValue(), "LEICA GRX1200GGPRO");
+        assertEquals(receiverB.getReceiverType().getCodeSpace(), "https://igscb.jpl.nasa.gov/igscb/station/general/rcvr_ant.tab");
+        assertEquals(receiverB.getReceiverType().getCodeList(), "http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode");
+        assertEquals(receiverB.getReceiverType().getCodeListValue(), "LEICA GRX1200GGPRO");
+        assertEquals(receiverB.getReceiverType().getValue(), "LEICA GRX1200GGPRO");
         assertEquals(receiverB.getFirmwareVersion(), logItem.getFirmwareVersion());
         assertEquals(receiverB.getManufacturerSerialNumber(), logItem.getSerialNumber());
         assertEquals(receiverB.getElevationCutoffSetting(), Double.parseDouble(logItem.getElevationCutoffSetting()));

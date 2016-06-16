@@ -2,6 +2,8 @@ package au.gov.ga.geodesy.port.adapter.rest;
 
 import static io.restassured.module.mockmvc.RestAssuredMockMvc.given;
 
+import static org.hamcrest.Matchers.is;
+
 import org.apache.commons.io.IOUtils;
 import org.springframework.test.annotation.Rollback;
 import org.testng.annotations.BeforeClass;
@@ -38,6 +40,20 @@ public class UploadAliceGeodesyMLSiteLogRestTest extends RestTest {
         then()
             .statusCode(200)
             .log().body();
+    }
+
+    @Test(dependsOnMethods = {"upload"})
+    public void checkReceivers() throws Exception {
+        given().
+        when()
+            .get("/gnssReceivers").
+        then()
+            .statusCode(200)
+            .log().body()
+            .body("page.totalElements", is(5))
+            .body("_embedded.gnssReceivers[0].content.type", is("codeListValue"))
+            ;
+
     }
 
     // TODO: checkout uploaded site log, site, setups, equipment, and nodes

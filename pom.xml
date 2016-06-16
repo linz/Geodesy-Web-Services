@@ -17,6 +17,7 @@
         <liquibase.version>3.5.2-SNAPSHOT</liquibase.version>
         <spring.version>4.3.0.RELEASE</spring.version>
         <jackson.version>2.7.3</jackson.version>
+        <checker-framework.version>2.0.1</checker-framework.version>
         <rest-assured.version>3.0.0</rest-assured.version>
         <hibernate.version>5.1.0.Final</hibernate.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
@@ -56,17 +57,17 @@
         <dependency>
             <groupId>org.checkerframework</groupId>
             <artifactId>checker-qual</artifactId>
-            <version>1.9.13</version>
+            <version>${checker-framework.version}</version>
         </dependency>
         <dependency>
             <groupId>org.checkerframework</groupId>
             <artifactId>checker</artifactId>
-            <version>1.9.13</version>
+            <version>${checker-framework.version}</version>
         </dependency>
         <dependency>
             <groupId>org.checkerframework</groupId>
             <artifactId>jdk8</artifactId>
-            <version>1.9.13</version>
+            <version>${checker-framework.version}</version>
             <scope>compile</scope>
         </dependency>
         <dependency>

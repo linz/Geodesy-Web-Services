@@ -1,5 +1,6 @@
 package au.gov.ga.geodesy.support.mapper.decorator;
 
+import static au.gov.ga.geodesy.support.utils.GMLDateUtils.GEODESYML_DATE_FORMAT_TIME_MILLISEC;
 import static au.gov.ga.geodesy.support.utils.GMLDateUtils.GEODESYML_DATE_FORMAT_TIME_SEC;
 
 import java.lang.reflect.InvocationTargetException;
@@ -145,7 +146,8 @@ public class GeodesyMLDecorators {
                     TimePositionType childTpt = (TimePositionType) getter.invoke(childElement);
                     if (childTpt != null) {
                         String stringDate = childTpt.getValue().get(0);
-                        useThisDate = GMLDateUtils.stringToDate(stringDate, GEODESYML_DATE_FORMAT_TIME_SEC);
+                        String useThisDateString = GMLDateUtils.stringToDateToStringMultiParsers(stringDate);//, );
+                        useThisDate = GMLDateUtils.stringToDate(useThisDateString, GEODESYML_DATE_FORMAT_TIME_MILLISEC);
                     }
                 } catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
                     logger.error("Trying to getDateInstalled() on element: " + childElement.getClass().getSimpleName()

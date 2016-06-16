@@ -1,5 +1,6 @@
 package au.gov.ga.geodesy.support.mapper.dozer;
 
+import au.gov.ga.geodesy.exception.GeodesyRuntimeException;
 import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLog;
 import au.gov.ga.geodesy.igssitelog.interfaces.xml.IgsSiteLogXmlMarshaller;
 import au.gov.ga.geodesy.igssitelog.support.marshalling.moxy.IgsSiteLogMoxyMarshaller;
@@ -717,5 +718,13 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
         testZIMJ_RadioInterference_WithEffectiveDates_NoToForms(geodesyML);
     }
 
+    // Bad data - want it to fail
+    @Test(expectedExceptions = GeodesyRuntimeException.class)
+    public void testBATH() throws MarshallingException, IOException,
+            au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
+        GeodesyMLType geodesyML = testTranslate(SITEDATADIR, "BATH");
+
+        Assert.assertNotNull(geodesyML);
+    }
 
 }

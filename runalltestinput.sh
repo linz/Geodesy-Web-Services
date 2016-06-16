@@ -15,8 +15,8 @@
 #   so you don't see 653 modified files.
 
 
-INPUTDIR=src/test/resources/sitelog
-OUTPUTDIR=$INPUTDIR/../sitelogtoGeodesyML
+INPUTDIR=src/test/resources/sitelog/sopac
+OUTPUTDIR=src/test/resources/sitelog/geodesyml
 TMPOUTPUTDIR=/tmp/geodesyml/runall
 # OUTDIR= - not set yet
 DEFAULTOUTDIR=$OUTPUTDIR

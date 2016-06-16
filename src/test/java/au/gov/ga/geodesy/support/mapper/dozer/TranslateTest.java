@@ -328,7 +328,7 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
 
         LocalEpisodicEventsType localEpisodicEvent = localEpisodicEvents.get(0).getLocalEpisodicEvents();
         // Test some required fields
-        Assert.assertEquals(localEpisodicEvent.getEvent(), "TREE CLEARING");
+        MatcherAssert.assertThat(localEpisodicEvent.getEvent(), Matchers.startsWith("TREE CLEARING"));
         Assert.assertEquals(
                 GMLDateUtils.stringToDateToStringMultiParsers(TimePrimitivePropertyTypeUtils
                         .getTheTimeInstantType(localEpisodicEvent.getValidTime()).getTimePosition().getValue().get(0)),

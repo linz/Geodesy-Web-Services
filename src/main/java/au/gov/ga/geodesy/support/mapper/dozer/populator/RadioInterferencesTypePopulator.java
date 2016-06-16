@@ -10,14 +10,13 @@ public class RadioInterferencesTypePopulator extends GeodesyMLElementPopulator<R
 
     /**
      * Consider all required elements for this type and add any missing ones with default values.
-     * 
+     *
      * @param radioInterferencesType
      */
     @Override
     public void checkAllRequiredElementsPopulated(RadioInterferencesType radioInterferencesType) {
         checkElementPopulated(radioInterferencesType, "observedDegradations", GMLMiscTools.getEmptyString());
         checkElementPopulated(radioInterferencesType, "possibleProblemSources", GMLMiscTools.getEmptyString());
-        checkElementPopulated(radioInterferencesType, "validTime",
-                TimePrimitivePropertyTypeUtils.buildTimePrimitivePropertyType(Instant.EPOCH));
+        // No longer checking validTime as if null I want it to remain that way (because input was null)
     }
 }

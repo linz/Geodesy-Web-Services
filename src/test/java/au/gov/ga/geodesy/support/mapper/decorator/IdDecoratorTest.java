@@ -2,7 +2,6 @@ package au.gov.ga.geodesy.support.mapper.decorator;
 
 import java.lang.reflect.Method;
 import java.time.Instant;
-import java.time.ZoneId;
 import java.util.List;
 
 import org.hamcrest.MatcherAssert;
@@ -17,7 +16,6 @@ import au.gov.xml.icsm.geodesyml.v_0_3.GeodesyMLType;
 import au.gov.xml.icsm.geodesyml.v_0_3.HumiditySensorPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_3.HumiditySensorType;
 import au.gov.xml.icsm.geodesyml.v_0_3.ObjectFactory;
-import net.opengis.gml.v_3_2_1.TimePrimitivePropertyType;
 
 public class IdDecoratorTest {
     private ObjectFactory geoFactory = new ObjectFactory();

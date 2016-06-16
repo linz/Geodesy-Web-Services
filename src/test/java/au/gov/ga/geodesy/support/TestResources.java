@@ -1,14 +1,14 @@
 package au.gov.ga.geodesy.support;
 
+import org.springframework.core.io.Resource;
+import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
+
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
 import java.util.ArrayList;
 import java.util.List;
-
-import org.springframework.core.io.Resource;
-import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 
 /**
  * A collection of static methods to access regression test data.
@@ -37,6 +37,10 @@ public class TestResources {
         return "/sitelog/geodesyml/";
     }
 
+    private static String geodesyMLSiteLogsTestDataDirectory() {
+        return "/sitelog/testData/";
+    }
+
     /**
      * GeodesyML site logs directory relative to classpath root.  Files that have been converted from production Sopac Sitelogs
      */
@@ -59,6 +63,13 @@ public class TestResources {
     }
 
     /**
+     * Given a site id, return a SOPAC site log test file.
+     */
+    public static File sopacSiteLogTestData(String siteId) throws IOException {
+        return resourceAsFile(geodesyMLSiteLogTestDataResourceName(siteId));
+    }
+
+    /**
      * Given a site id, return a SOPAC site log test file reader.
      */
     public static Reader sopacSiteLogReader(String siteId) throws IOException {
@@ -73,17 +84,17 @@ public class TestResources {
     }
 
     /**
-     * Given a site id, return a sopac converted to GeodesyML site log test file reader.  File from resources:/sitelogtoGeodesyML
-     */
-    public static Reader geodesyMLSopacConvertedSiteLogReader(String siteId) throws IOException {
-        return new FileReader(resourceAsFile(geodesyMLSopacConvertedSiteLogResourceName(siteId)));
-    }
-
-    /**
      * Given a site id, return a sopac converted to GeodesyML site log test file reader.  File from resources:/sitelog/geodesyMLTestData
      */
     public static Reader geodesyMLTestDataSiteLogReader(String siteId) throws IOException {
         return new FileReader(resourceAsFile(geodesyMLTestDataSiteLogResourceName(siteId)));
+    }
+
+    /**
+     * Given a site id, return a GeodesyML site log test file reader.
+     */
+    public static Reader geodesyMLSiteLogTestDataReader(String siteId) throws IOException {
+        return new FileReader(resourceAsFile(geodesyMLSiteLogTestDataResourceName(siteId)));
     }
 
     /**
@@ -119,6 +130,10 @@ public class TestResources {
         return geodesyMLSiteLogsDirectory() + id + ".xml";
     }
 
+    private static String geodesyMLSiteLogTestDataResourceName(String id) {
+        return geodesyMLSiteLogsTestDataDirectory() + id + ".xml";
+    }
+
     /**
      * GeodesyML site log resource name relative to classpath root.
      */
@@ -137,7 +152,7 @@ public class TestResources {
     /**
      * Find a resource relative to classpath root.
      */
-    private static File resourceAsFile(String resourceName) throws IOException {
+    public static File resourceAsFile(String resourceName) throws IOException {
         Resource resource = new PathMatchingResourcePatternResolver().getResource("classpath:" + resourceName);
         if (resource == null) {
             throw new IllegalArgumentException("Resource " + resourceName + " must exist.");

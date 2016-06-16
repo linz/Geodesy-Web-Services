@@ -84,15 +84,13 @@ public class TimePrimitivePropertyTypeEffectiveDatesConverter implements CustomC
         if (!(source instanceof EffectiveDates)) {
             return null;
         }
-        // new TimePrimitivePropertyType or use existing one if exists
-        TimePrimitivePropertyType dest = TimePrimitivePropertyTypeUtils.addTimePeriodType(
-                TimePrimitivePropertyTypeUtils.newOrUsingExistingTimePrimitivePropertyType(destination));
+        // I am ignoring the destination being an object that shouuld be used since I've never encountered such a circumstance
 
-        // Populate begin and end from the EffectiveDates
-        TimePrimitivePropertyTypeUtils.getTheTimePeriodType(dest).setBeginPosition(
-                TimePrimitivePropertyTypeUtils.buildTimePositionType(((EffectiveDates) source).getFrom()));
-        TimePrimitivePropertyTypeUtils.getTheTimePeriodType(dest)
-                .setEndPosition(TimePrimitivePropertyTypeUtils.buildTimePositionType(((EffectiveDates) source).getTo()));
+        EffectiveDates sourceCast = (EffectiveDates)  source;
+        TimePrimitivePropertyType dest = TimePrimitivePropertyTypeUtils.buildTimePrimitivePropertyType(sourceCast.getFrom(), sourceCast.getTo());
+        if (dest.getAbstractTimePrimitive() == null) {
+            return null;
+        }
         return dest;
     }
 

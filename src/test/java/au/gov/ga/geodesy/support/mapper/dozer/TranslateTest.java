@@ -665,4 +665,87 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
 
         Assert.assertNotNull(geodesyML);
     }
+
+    @Test
+    public void testZIMJ_RadioInterference_WithEffectiveDates() throws MarshallingException, IOException,
+            au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
+        GeodesyMLType geodesyML = testTranslate(TESTDATADIR, "ZIMJ-radioInterference-withEffectiveDates");
+
+        Assert.assertNotNull(geodesyML);
+        SiteLogType siteLogType = getSiteLog(geodesyML);
+
+        List<RadioInterferencesPropertyType> radioInterferences = siteLogType.getRadioInterferencesSet();
+        Assert.assertNotNull(radioInterferences);
+        Assert.assertEquals(radioInterferences.size(), 1);
+        RadioInterferencesPropertyType radioInterference = radioInterferences.get(0);
+
+        AbstractTimePrimitiveType validTime = radioInterference.getRadioInterferences().getValidTime().getAbstractTimePrimitive().getValue();
+        Assert.assertTrue(validTime instanceof TimePeriodType, "Should be a TimePeriodType");
+
+        TimePositionType begin = ((TimePeriodType) validTime).getBeginPosition();
+        TimePositionType end = ((TimePeriodType) validTime).getEndPosition();
+
+        Assert.assertNotNull(begin);
+        Assert.assertEquals(1, begin.getValue().size());
+        Assert.assertNotNull(end);
+        Assert.assertEquals(1, end.getValue().size());
+    }
+
+    @Test
+    public void testZIMJ_RadioInterference_WithNoEffectiveDates() throws MarshallingException, IOException,
+            au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
+        GeodesyMLType geodesyML = testTranslate(TESTDATADIR, "ZIMJ-radioInterference-noEffectiveDates");
+
+        Assert.assertNotNull(geodesyML);
+        SiteLogType siteLogType = getSiteLog(geodesyML);
+
+        List<RadioInterferencesPropertyType> radioInterferences = siteLogType.getRadioInterferencesSet();
+        Assert.assertNotNull(radioInterferences);
+        Assert.assertEquals(radioInterferences.size(), 1);
+        RadioInterferencesType radioInterference = radioInterferences.get(0).getRadioInterferences();
+
+        TimePrimitivePropertyType timePrimitive = radioInterference.getValidTime();
+
+        Assert.assertNull(timePrimitive);
+    }
+
+
+    // EffectiveDates without a To Date should return a TimePeriodType with a getEndPosition() that ISN'T NULL but is an empty list
+    public void testZIMJ_RadioInterference_WithEffectiveDates_NoToForms(GeodesyMLType geodesyML) {
+        Assert.assertNotNull(geodesyML);
+        SiteLogType siteLogType = getSiteLog(geodesyML);
+
+        List<RadioInterferencesPropertyType> radioInterferences = siteLogType.getRadioInterferencesSet();
+        Assert.assertNotNull(radioInterferences);
+        Assert.assertEquals(radioInterferences.size(), 1);
+        RadioInterferencesPropertyType radioInterference = radioInterferences.get(0);
+
+        AbstractTimePrimitiveType validTime = radioInterference.getRadioInterferences().getValidTime().getAbstractTimePrimitive().getValue();
+        Assert.assertTrue(validTime instanceof TimePeriodType, "Should be a TimePeriodType");
+
+        TimePositionType begin = ((TimePeriodType) validTime).getBeginPosition();
+        TimePositionType end = ((TimePeriodType) validTime).getEndPosition();
+
+        Assert.assertNotNull(begin);
+        Assert.assertEquals(1, begin.getValue().size());
+        Assert.assertNull(end);
+
+        Assert.assertEquals(
+                GMLDateUtils.stringToDateToStringMultiParsers(begin.getValue().get(0)),
+                "2012-01-15T00:00:00.000Z");
+    }
+
+    @Test
+    public void testZIMJ_RadioInterference_WithEffectiveDates_NoToForm1() throws ParseException, au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, MarshallingException, IOException {
+        GeodesyMLType geodesyML = testTranslate(TESTDATADIR, "ZIMJ-radioInterference-withEffectiveDatesNoToForm1");
+        testZIMJ_RadioInterference_WithEffectiveDates_NoToForms(geodesyML);
+    }
+
+    @Test
+    public void testZIMJ_RadioInterference_WithEffectiveDates_NoToForm2() throws ParseException, au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, MarshallingException, IOException {
+        GeodesyMLType geodesyML = testTranslate(TESTDATADIR, "ZIMJ-radioInterference-withEffectiveDatesNoToForm2");
+        testZIMJ_RadioInterference_WithEffectiveDates_NoToForms(geodesyML);
+    }
+
+
 }

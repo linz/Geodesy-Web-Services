@@ -1,7 +1,8 @@
 package au.gov.ga.geodesy.port.adapter.rest;
 
 import static io.restassured.module.mockmvc.RestAssuredMockMvc.given;
-import static org.hamcrest.Matchers.*;
+
+import static org.hamcrest.Matchers.is;
 
 import org.apache.commons.io.IOUtils;
 import org.springframework.test.annotation.Rollback;

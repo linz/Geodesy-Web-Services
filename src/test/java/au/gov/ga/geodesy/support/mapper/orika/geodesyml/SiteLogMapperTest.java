@@ -17,6 +17,7 @@ import org.testng.annotations.Test;
 import au.gov.ga.geodesy.domain.model.sitelog.GnssReceiverLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.HumiditySensorLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.LogItem;
+import au.gov.ga.geodesy.domain.model.sitelog.MultipathSourceLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.OtherInstrumentationLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.PressureSensorLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.SignalObstructionLogItem;
@@ -34,6 +35,7 @@ import au.gov.xml.icsm.geodesyml.v_0_3.GnssReceiverPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_3.GnssReceiverType;
 import au.gov.xml.icsm.geodesyml.v_0_3.HumiditySensorPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_3.HumiditySensorType;
+import au.gov.xml.icsm.geodesyml.v_0_3.MultipathSourcesPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_3.OtherInstrumentationPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_3.OtherInstrumentationType;
 import au.gov.xml.icsm.geodesyml.v_0_3.PressureSensorPropertyType;
@@ -199,6 +201,37 @@ public class SiteLogMapperTest {
             int i = 0;
             for (SignalObstructionLogItem logItem : sortLogItems(siteLog.getSignalObstructionLogItems())) {
                 BasePossibleProblemSourcesType xmlType = signalObstructionsPropertyTypes.get(i++).getSignalObstructions();
+                assertEquals(logItem.getPossibleProblemSource(), xmlType.getPossibleProblemSources());
+            }
+        }
+    }
+
+    /**
+     * Test mapping from SiteLogType to SiteLog and back
+     * to SiteLogType. Based on the METZ site log with added multipath sources.
+     **/
+    @Test
+    public void testMultipathSourcesMapping() throws Exception {
+        GeodesyMLType mobs = marshaller
+                .unmarshal(TestResources.geodesyMLTestDataSiteLogReader("METZ-multipathSources"),
+                        GeodesyMLType.class)
+                .getValue();
+
+        SiteLogType siteLogType = GeodesyMLUtils.getElementFromJAXBElements(mobs.getElements(), SiteLogType.class)
+                .findFirst().get();
+
+        SiteLog siteLog = mapper.to(siteLogType);
+
+        List<MultipathSourcesPropertyType> multipathSourcesPropertyTypes = siteLogType.getMultipathSourcesSet();
+        sortGMLPropertyTypes(multipathSourcesPropertyTypes);
+
+        assertEquals(siteLogType.getMultipathSourcesSet().size(), 2);
+        assertEquals(multipathSourcesPropertyTypes.size(), 2);
+
+        {
+            int i = 0;
+            for (MultipathSourceLogItem logItem : sortLogItems(siteLog.getMultipathSourceLogItems())) {
+                BasePossibleProblemSourcesType xmlType = multipathSourcesPropertyTypes.get(i++).getMultipathSources();
                 assertEquals(logItem.getPossibleProblemSource(), xmlType.getPossibleProblemSources());
             }
         }

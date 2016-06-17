@@ -113,12 +113,12 @@ public class SiteLog {
     @Valid
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "SITE_ID", referencedColumnName = "ID")
-    protected Set<MultipathSource> multipathSources;
+    protected Set<MultipathSourceLogItem> multipathSources;
 
     @Valid
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "SITE_ID", referencedColumnName = "ID")
-    protected Set<SignalObstruction> signalObstructions;
+    protected Set<SignalObstructionLogItem> signalObstructionLogItems;
 
     @Valid
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
@@ -369,29 +369,29 @@ public class SiteLog {
     /**
      * Return multipath sources.
      */
-    public Set<MultipathSource> getMultipathSources() {
+    public Set<MultipathSourceLogItem> getMultipathSources() {
         return this.multipathSources;
     }
 
     /**
      * Set multipath sources.
      */
-    public void setMultipathSources(Set<MultipathSource> ms) {
+    public void setMultipathSources(Set<MultipathSourceLogItem> ms) {
         multipathSources = ms;
     }
 
     /**
      * Return signal obstructions.
      */
-    public Set<SignalObstruction> getSignalObstructions() {
-        return this.signalObstructions;
+    public Set<SignalObstructionLogItem> getSignalObstructionLogItems() {
+        return this.signalObstructionLogItems;
     }
 
     /**
      * Set signal obstructions.
      */
-    public void setSignalObstructions(Set<SignalObstruction> s) {
-        signalObstructions = s;
+    public void setSignalObstructionLogItems(Set<SignalObstructionLogItem> s) {
+        signalObstructionLogItems = s;
     }
 
     /**

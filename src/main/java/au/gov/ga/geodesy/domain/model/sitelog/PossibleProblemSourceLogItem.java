@@ -6,9 +6,9 @@ import javax.validation.Valid;
 import javax.validation.constraints.Size;
 
 /**
- * http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004/baseLocalInterferencesLib.xsd:basePossiblePorblemSourcesType
+ * http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004/baseLocalInterferencesLib.xsd:basePossibleProblemSourcesType
  */
-public class PossibleProblemSource {
+public class PossibleProblemSourceLogItem implements LogItem {
 
     @Size(max = 4000)
     @Column(name = "POSSIBLE_PROBLEM_SOURCE", length = 4000)
@@ -62,5 +62,8 @@ public class PossibleProblemSource {
      */
     public void setNotes(String value) {
         this.notes = value;
+    }
+    public <T> T accept(LogItemVisitor<T> v) {
+        return v.visit(this);
     }
 }

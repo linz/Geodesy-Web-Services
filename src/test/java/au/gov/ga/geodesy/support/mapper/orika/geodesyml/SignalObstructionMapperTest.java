@@ -2,9 +2,9 @@ package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 
 import static org.testng.Assert.assertEquals;
 
+import au.gov.ga.geodesy.domain.model.sitelog.SignalObstructionLogItem;
 import org.testng.annotations.Test;
 
-import au.gov.ga.geodesy.domain.model.sitelog.SignalObstructionLogItem;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLMarshaller;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLUtils;
 import au.gov.ga.geodesy.support.TestResources;

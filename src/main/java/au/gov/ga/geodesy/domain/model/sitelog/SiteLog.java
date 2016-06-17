@@ -113,7 +113,7 @@ public class SiteLog {
     @Valid
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "SITE_ID", referencedColumnName = "ID")
-    protected Set<MultipathSourceLogItem> multipathSourceLogItems;
+    protected Set<MultipathSourceLogItem> multipathSources;
 
     @Valid
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
@@ -369,15 +369,15 @@ public class SiteLog {
     /**
      * Return multipath sources.
      */
-    public Set<MultipathSourceLogItem> getMultipathSourceLogItems() {
-        return this.multipathSourceLogItems;
+    public Set<MultipathSourceLogItem> getMultipathSources() {
+        return this.multipathSources;
     }
 
     /**
      * Set multipath sources.
      */
-    public void setMultipathSourceLogItems(Set<MultipathSourceLogItem> ms) {
-        multipathSourceLogItems = ms;
+    public void setMultipathSources(Set<MultipathSourceLogItem> ms) {
+        multipathSources = ms;
     }
 
     /**

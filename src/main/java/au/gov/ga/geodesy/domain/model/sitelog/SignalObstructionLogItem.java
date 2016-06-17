@@ -10,12 +10,12 @@ import javax.persistence.Table;
  * http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004/baseLocalInterferencesLib.xsd:basePossibleProblemSourcesType
  */
 @Entity
-@Table(name = "SITELOG_MUTLIPATHSOURCE")
-public class MultipathSource extends PossibleProblemSource {
+@Table(name = "SITELOG_SIGNALOBSTRACTION")
+public class SignalObstructionLogItem extends PossibleProblemSourceLogItem {
 
     @Id
     @GeneratedValue(generator = "surrogateKeyGenerator")
-    @SequenceGenerator(name = "surrogateKeyGenerator", sequenceName = "SEQ_SITELOGMULTIPATHSOURCE")
+    @SequenceGenerator(name = "surrogateKeyGenerator", sequenceName = "SEQ_SITELOGSIGNALOBSTRUCTION")
     private Integer id;
 
     @SuppressWarnings("unused")

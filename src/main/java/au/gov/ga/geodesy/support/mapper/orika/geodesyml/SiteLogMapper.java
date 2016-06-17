@@ -4,11 +4,12 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import au.gov.ga.geodesy.domain.model.sitelog.LogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.GnssReceiverLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.HumiditySensorLogItem;
+import au.gov.ga.geodesy.domain.model.sitelog.LogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.OtherInstrumentationLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.PressureSensorLogItem;
+import au.gov.ga.geodesy.domain.model.sitelog.SignalObstructionLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteIdentification;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLocation;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLog;
@@ -16,6 +17,7 @@ import au.gov.ga.geodesy.domain.model.sitelog.TemperatureSensorLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.WaterVaporSensorLogItem;
 import au.gov.ga.geodesy.support.gml.GMLPropertyType;
 import au.gov.ga.geodesy.support.java.util.Iso;
+import au.gov.xml.icsm.geodesyml.v_0_3.SignalObstructionsPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_3.SiteIdentificationType;
 import au.gov.xml.icsm.geodesyml.v_0_3.SiteLocationType;
 import au.gov.xml.icsm.geodesyml.v_0_3.SiteLogType;
@@ -48,7 +50,8 @@ public class SiteLogMapper implements Iso<SiteLogType, SiteLog> {
             .fieldMap("temperatureSensors", "temperatureSensors").converter("temperatureSensors").add()
             .fieldMap("waterVaporSensors", "waterVaporSensors").converter("waterVaporSensors").add()
             .fieldMap("otherInstrumentations", "otherInstrumentationLogItem").converter("otherInstrumentations").add()
-                /* .byDefault() */
+            .fieldMap("signalObstructionsSet", "signalObstructionLogItems").converter("signalObstructionsSet").add()
+            /* .byDefault() */
             .register();
 
         ConverterFactory converters = mapperFactory.getConverterFactory();
@@ -61,37 +64,43 @@ public class SiteLogMapper implements Iso<SiteLogType, SiteLog> {
 
         converters.registerConverter("gnssReceivers",
                 new BidirectionalConverterWrapper<List<GMLPropertyType>, Set<GnssReceiverLogItem>>(
-                        equipmentCollectionConverter(new GnssReceiverMapper())
+                        logItemsConverter(new GnssReceiverMapper())
                 ) {}
         );
 
         converters.registerConverter("humiditySensors",
                 new BidirectionalConverterWrapper<List<GMLPropertyType>, Set<HumiditySensorLogItem>>(
-                        equipmentCollectionConverter(new HumiditySensorMapper())
+                        logItemsConverter(new HumiditySensorMapper())
                 ) {}
         );
 
         converters.registerConverter("pressureSensors",
                 new BidirectionalConverterWrapper<List<GMLPropertyType>, Set<PressureSensorLogItem>>(
-                        equipmentCollectionConverter(new PressureSensorMapper())
+                        logItemsConverter(new PressureSensorMapper())
                 ) {}
         );
 
         converters.registerConverter("temperatureSensors",
                 new BidirectionalConverterWrapper<List<GMLPropertyType>, Set<TemperatureSensorLogItem>>(
-                        equipmentCollectionConverter(new TemperatureSensorMapper())
+                        logItemsConverter(new TemperatureSensorMapper())
                 ) {}
         );
 
         converters.registerConverter("waterVaporSensors",
                 new BidirectionalConverterWrapper<List<GMLPropertyType>, Set<WaterVaporSensorLogItem>>(
-                        equipmentCollectionConverter(new WaterVaporSensorMapper())
+                        logItemsConverter(new WaterVaporSensorMapper())
                 ) {}
         );
 
         converters.registerConverter("otherInstrumentations",
                 new BidirectionalConverterWrapper<List<GMLPropertyType>, Set<OtherInstrumentationLogItem>>(
-                        equipmentCollectionConverter(new OtherInstrumentationMapper())
+                        logItemsConverter(new OtherInstrumentationMapper())
+                ) {}
+        );
+
+        converters.registerConverter("signalObstructionsSet",
+                new BidirectionalConverterWrapper<List<SignalObstructionsPropertyType>, Set<SignalObstructionLogItem>>(
+                        logItemsConverter(new SignalObstructionMapper())
                 ) {}
         );
 
@@ -120,19 +129,19 @@ public class SiteLogMapper implements Iso<SiteLogType, SiteLog> {
     }
 
 
-
     /**
-     * Given an equipment isomorphism (from DTO to domain model), return a
-     * bidirectional converter from a list of GML equipment property types to a
-     * set of domain model equipment log items.
+     * Given a GMLPropertyType isomorphism (from DTO to domain model), return a
+     * bidirectional converter from a list of GML property types to a
+     * set of domain model log items.
      */
     private <P extends GMLPropertyType, T extends AbstractGMLType, L extends LogItem>
-    BidirectionalConverter<List<P>, Set<L>> equipmentCollectionConverter(Iso<T, L> equipmentIso) {
+    BidirectionalConverter<List<P>, Set<L>> logItemsConverter(Iso<T, L> logItemsIso) {
 
         Iso<P, T> propertyIso = new GMLPropertyTypeMapper<>();
-        Iso<P, L> elementIso = propertyIso.compose(equipmentIso);
+        Iso<P, L> elementIso = propertyIso.compose(logItemsIso);
         return new IsoConverter<>(new ListToSet<>(elementIso));
     }
+
 
     /**
      * Given an isomorphism from A to B, return an isomorphism from a set of A

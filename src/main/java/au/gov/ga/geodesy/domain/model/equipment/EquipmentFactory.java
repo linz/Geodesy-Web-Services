@@ -18,6 +18,7 @@ import au.gov.ga.geodesy.domain.model.sitelog.GnssReceiverLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.HumiditySensorLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.LogItemVisitor;
 import au.gov.ga.geodesy.domain.model.sitelog.OtherInstrumentationLogItem;
+import au.gov.ga.geodesy.domain.model.sitelog.PossibleProblemSourceLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.PressureSensorLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.TemperatureSensorLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.WaterVaporSensorLogItem;
@@ -109,6 +110,10 @@ public class EquipmentFactory {
         }
 
         public Pair<Equipment, EquipmentConfiguration> visit(OtherInstrumentationLogItem logItem) {
+            throw new UnsupportedOperationException();
+        }
+
+        public Pair<Equipment, EquipmentConfiguration> visit(PossibleProblemSourceLogItem logItem) {
             throw new UnsupportedOperationException();
         }
 

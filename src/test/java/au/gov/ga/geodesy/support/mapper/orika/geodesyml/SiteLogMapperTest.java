@@ -19,6 +19,7 @@ import au.gov.ga.geodesy.domain.model.sitelog.HumiditySensorLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.LogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.OtherInstrumentationLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.PressureSensorLogItem;
+import au.gov.ga.geodesy.domain.model.sitelog.SignalObstructionLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLog;
 import au.gov.ga.geodesy.domain.model.sitelog.TemperatureSensorLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.WaterVaporSensorLogItem;
@@ -27,6 +28,7 @@ import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLUtils;
 import au.gov.ga.geodesy.support.TestResources;
 import au.gov.ga.geodesy.support.gml.GMLPropertyType;
 import au.gov.ga.geodesy.support.marshalling.moxy.GeodesyMLMoxy;
+import au.gov.xml.icsm.geodesyml.v_0_3.BasePossibleProblemSourcesType;
 import au.gov.xml.icsm.geodesyml.v_0_3.GeodesyMLType;
 import au.gov.xml.icsm.geodesyml.v_0_3.GnssReceiverPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_3.GnssReceiverType;
@@ -36,6 +38,7 @@ import au.gov.xml.icsm.geodesyml.v_0_3.OtherInstrumentationPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_3.OtherInstrumentationType;
 import au.gov.xml.icsm.geodesyml.v_0_3.PressureSensorPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_3.PressureSensorType;
+import au.gov.xml.icsm.geodesyml.v_0_3.SignalObstructionsPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_3.SiteLogType;
 import au.gov.xml.icsm.geodesyml.v_0_3.TemperatureSensorPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_3.TemperatureSensorType;
@@ -91,7 +94,7 @@ public class SiteLogMapperTest {
 
         {
             int i = 0;
-            for (HumiditySensorLogItem logItem : sort(siteLog.getHumiditySensors())) {
+            for (HumiditySensorLogItem logItem : sortLogItems(siteLog.getHumiditySensors())) {
                 HumiditySensorType xmlType = humiditySensors.get(i++).getHumiditySensor();
                 assertEquals(logItem.getSerialNumber(), xmlType.getSerialNumber());
             }
@@ -103,7 +106,7 @@ public class SiteLogMapperTest {
 
         {
             int i = 0;
-            for (PressureSensorLogItem logItem : sort(siteLog.getPressureSensors())) {
+            for (PressureSensorLogItem logItem : sortLogItems(siteLog.getPressureSensors())) {
                 PressureSensorType xmlType = pressureSensors.get(i++).getPressureSensor();
                 assertEquals(logItem.getSerialNumber(), xmlType.getSerialNumber());
             }
@@ -115,7 +118,7 @@ public class SiteLogMapperTest {
 
         {
             int i = 0;
-            for (TemperatureSensorLogItem logItem : sort(siteLog.getTemperatureSensors())) {
+            for (TemperatureSensorLogItem logItem : sortLogItems(siteLog.getTemperatureSensors())) {
                 TemperatureSensorType xmlType = temperatureSensors.get(i++).getTemperatureSensor();
                 assertEquals(logItem.getSerialNumber(), xmlType.getSerialNumber());
             }
@@ -127,7 +130,7 @@ public class SiteLogMapperTest {
 
         {
             int i = 0;
-            for (WaterVaporSensorLogItem logItem : sort(siteLog.getWaterVaporSensors())) {
+            for (WaterVaporSensorLogItem logItem : sortLogItems(siteLog.getWaterVaporSensors())) {
                 WaterVaporSensorType xmlType = waterVaporSensors.get(i++).getWaterVaporSensor();
                 assertEquals(logItem.getSerialNumber(), xmlType.getSerialNumber());
             }
@@ -156,35 +159,63 @@ public class SiteLogMapperTest {
         SiteLog siteLog = mapper.to(siteLogType);
 
         List<OtherInstrumentationPropertyType> otherInstrumentationPropertyTypes = siteLogType.getOtherInstrumentations();
-
-        sort(otherInstrumentationPropertyTypes);
-        sort(siteLog.getOtherInstrumentationLogItem());
+        sortGMLPropertyTypes(otherInstrumentationPropertyTypes);
 
         assertEquals(siteLogType.getOtherInstrumentations().size(), 3);
         assertEquals(otherInstrumentationPropertyTypes.size(), 3);
 
         {
             int i = 0;
-            for (OtherInstrumentationLogItem logItem : sort(siteLog.getOtherInstrumentationLogItem())) {
+            for (OtherInstrumentationLogItem logItem : sortLogItems(siteLog.getOtherInstrumentationLogItem())) {
                 OtherInstrumentationType xmlType = otherInstrumentationPropertyTypes.get(i++).getOtherInstrumentation();
                 assertEquals(logItem.getInstrumentation(), xmlType.getInstrumentation());
             }
         }
     }
 
+    /**
+     * Test mapping from SiteLogType to SiteLog and back
+     * to SiteLogType. Based on the METZ site log with added signal obstructions.
+     **/
+    @Test
+    public void testSignalObstructionsMapping() throws Exception {
+        GeodesyMLType mobs = marshaller
+                .unmarshal(TestResources.geodesyMLTestDataSiteLogReader("METZ-signalObstructionSet"),
+                        GeodesyMLType.class)
+                .getValue();
+
+        SiteLogType siteLogType = GeodesyMLUtils.getElementFromJAXBElements(mobs.getElements(), SiteLogType.class)
+                .findFirst().get();
+
+        SiteLog siteLog = mapper.to(siteLogType);
+
+        List<SignalObstructionsPropertyType> signalObstructionsPropertyTypes = siteLogType.getSignalObstructionsSet();
+        sortGMLPropertyTypes(signalObstructionsPropertyTypes);
+
+        assertEquals(siteLogType.getSignalObstructionsSet().size(), 2);
+        assertEquals(signalObstructionsPropertyTypes.size(), 2);
+
+        {
+            int i = 0;
+            for (SignalObstructionLogItem logItem : sortLogItems(siteLog.getSignalObstructionLogItems())) {
+                BasePossibleProblemSourcesType xmlType = signalObstructionsPropertyTypes.get(i++).getSignalObstructions();
+                assertEquals(logItem.getPossibleProblemSource(), xmlType.getPossibleProblemSources());
+            }
+        }
+    }
 
     private void testMappingValues(SiteLogType siteLogType, SiteLog siteLog) {
         assertEquals(siteLog.getSiteIdentification().getSiteName(), siteLogType.getSiteIdentification().getSiteName());
         assertEquals(siteLog.getSiteLocation().getTectonicPlate(), siteLogType.getSiteLocation().getTectonicPlate().getValue());
 
         List<GnssReceiverPropertyType> receiverProperties = siteLogType.getGnssReceivers();
-        sort(receiverProperties);
+        sortGMLPropertyTypes(receiverProperties);
         assertEquals(siteLog.getGnssReceivers().size(), 9);
         assertEquals(receiverProperties.size(), 9);
 
         {
             int i = 0;
-            for (GnssReceiverLogItem receiverLogItem : sort(siteLog.getGnssReceivers())) {
+            for (GnssReceiverLogItem receiverLogItem : sortLogItems(siteLog.getGnssReceivers())) {
                 GnssReceiverType receiverType = receiverProperties.get(i++).getGnssReceiver();
                 assertEquals(receiverLogItem.getFirmwareVersion(), receiverType.getFirmwareVersion());
             }
@@ -192,9 +223,9 @@ public class SiteLogMapperTest {
     }
 
     /**
-     * Sort set of equipment log items by installation date.
+     * Sort set of log items by installation date.
      */
-    private <T extends LogItem> SortedSet<T> sort(Set<T> logItems) {
+    private <T extends LogItem> SortedSet<T> sortLogItems(Set<T> logItems) {
         SortedSet<T> sorted = new TreeSet<>(new Comparator<T>() {
             public int compare(T e, T f) {
                 int c = e.getEffectiveDates().compareTo(f.getEffectiveDates());
@@ -207,9 +238,9 @@ public class SiteLogMapperTest {
     }
 
     /**
-     * Sort list of equipment properties by installation date.
+     * Sort list of GMLPropertyType objects by installation date.
      */
-    private <P extends GMLPropertyType> void sort(List<P> list) {
+    private <P extends GMLPropertyType> void sortGMLPropertyTypes(List<P> list) {
         Collections.sort(list, new Comparator<P>() {
             public int compare(P p, P q) {
                 return dateInstalled(p).compareTo(dateInstalled(q));
@@ -235,5 +266,7 @@ public class SiteLogMapperTest {
             }
         });
     }
+
+
 }
 

@@ -14,7 +14,7 @@ public class SiteLogReceived extends Event {
     @Column(name = "FOUR_CHAR_ID", nullable = false)
     private String fourCharacterId;
 
-    @SuppressWarnings("unused") // used by hibernate
+    @SuppressWarnings({"unused", "initialization.fields.uninitialized"}) // used by hibernate
     private SiteLogReceived() {
     }
 

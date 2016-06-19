@@ -13,6 +13,8 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
+import org.checkerframework.checker.nullness.qual.MonotonicNonNull;
+import org.checkerframework.checker.nullness.qual.Nullable;
 import org.springframework.beans.factory.annotation.Configurable;
 
 @Entity
@@ -28,25 +30,25 @@ public abstract class Event implements Cloneable {
     @Id
     @GeneratedValue(generator = "surrogateKeyGenerator")
     @SequenceGenerator(name = "surrogateKeyGenerator", sequenceName = "SEQ_EVENT")
-    private Integer id;
+    private @MonotonicNonNull Integer id;
 
     @Column(name = "TIME_RAISED", nullable = false)
-    private Instant timeRaised;
+    private Instant timeRaised = Instant.now();
 
     @Column(name = "SUBSCRIBER", nullable = false)
-    public String subscriber;
+    public @MonotonicNonNull String subscriber;
 
     @Column(name = "TIME_HANDLED")
-    public Instant timeHandled;
+    public @MonotonicNonNull Instant timeHandled;
 
     @Column(name = "TIME_PUBLISHED")
-    public Instant timePublished;
+    public @MonotonicNonNull Instant timePublished;
 
-    @Column(name = "RETRIES")
-    public Integer retries;
+    @Column(name = "RETRIES", nullable = false)
+    public Integer retries = 0;
 
     @Column(name = "ERROR")
-    private String error;
+    private @MonotonicNonNull String error;
 
     /**
      * Return a Human digestable message about this event. Used in email for example.
@@ -60,19 +62,11 @@ public abstract class Event implements Cloneable {
         return message;
     }
 
-    public Event() {
-        setTimeRaised(Instant.now());
-    }
-
     public Instant getEventTime() {
         return timeRaised;
     }
 
-    private void setTimeRaised(Instant t) {
-        timeRaised = t;
-    }
-
-    public String getSubscriber() {
+    public @Nullable String getSubscriber() {
         return subscriber;
     }
 
@@ -80,7 +74,7 @@ public abstract class Event implements Cloneable {
         subscriber = s;
     }
 
-    public Instant getTimeHandled() {
+    public @Nullable Instant getTimeHandled() {
         return timeHandled;
     }
 
@@ -88,7 +82,7 @@ public abstract class Event implements Cloneable {
         timeHandled = t;
     }
 
-    public Instant getTimePublished() {
+    public @Nullable Instant getTimePublished() {
         return timePublished;
     }
 
@@ -100,11 +94,7 @@ public abstract class Event implements Cloneable {
         return retries;
     }
 
-    public void setRetries(Integer retries) {
-        this.retries = retries;
-    }
-
-    public String getError() {
+    public @Nullable String getError() {
         return error;
     }
 
@@ -114,7 +104,7 @@ public abstract class Event implements Cloneable {
 
     public void published() {
         if (getTimePublished() != null) {
-            setRetries(getRetries() == null ? 1 : getRetries() + 1);
+            retries++;
         }
         setTimePublished(Instant.now());
     }

@@ -18,8 +18,9 @@ import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
+import org.checkerframework.checker.nullness.qual.MonotonicNonNull;
+import org.checkerframework.checker.nullness.qual.Nullable;
 import org.springframework.beans.factory.annotation.Configurable;
 
 import au.gov.ga.geodesy.domain.model.SiteResponsibleParty;
@@ -34,111 +35,109 @@ public class SiteLog {
     @Id
     @GeneratedValue(generator = "surrogateKeyGenerator")
     @SequenceGenerator(name = "surrogateKeyGenerator", sequenceName = "SEQ_SITELOGSITE")
-    private Integer id;
+    private @MonotonicNonNull Integer id;
 
-    private Instant entryDate;
+    // TODO: does every table need entryDate?
+    private @MonotonicNonNull Instant entryDate;
 
-    @NotNull
     @Column(name = "SITE_LOG_TEXT", length = 500000 /* ~500KB */, nullable = false)
-    private String siteLogText;
+    private @MonotonicNonNull String siteLogText;
 
     @Valid
     @Embedded
-    protected FormInformation formInformation;
-
-    @Valid
-    @NotNull
-    @Embedded
-    protected SiteIdentification siteIdentification;
+    protected FormInformation formInformation = new FormInformation();
 
     @Valid
     @Embedded
-    protected SiteLocation siteLocation;
-
-    @Valid
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID")
-    protected Set<GnssReceiverLogItem> gnssReceivers = new HashSet<GnssReceiverLogItem>();
-
-    @Valid
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID")
-    protected Set<GnssAntennaLogItem> gnssAntennas = new HashSet<GnssAntennaLogItem>();
-
-    @Valid
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID")
-    protected Set<SurveyedLocalTie> surveyedLocalTies;
-
-    @Valid
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID")
-    protected Set<FrequencyStandardLogItem> frequencyStandards = new HashSet<FrequencyStandardLogItem>();
-
-    @Valid
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID")
-    protected Set<CollocationInformation> collocationInformation;
-
-    @Valid
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID")
-    protected Set<HumiditySensorLogItem> humiditySensors = new HashSet<HumiditySensorLogItem>();
-
-    @Valid
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID")
-    protected Set<PressureSensorLogItem> pressureSensors;
-
-    @Valid
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID")
-    protected Set<TemperatureSensorLogItem> temperatureSensors;
-
-    @Valid
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID")
-    protected Set<WaterVaporSensorLogItem> waterVaporSensors;
-
-    @Valid
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID")
-    protected Set<OtherInstrumentationLogItem> otherInstrumentationLogItem;
-
-    @Valid
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID")
-    protected Set<RadioInterference> radioInterferences;
-
-    @Valid
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID")
-    protected Set<MultipathSourceLogItem> multipathSourceLogItems;
-
-    @Valid
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID")
-    protected Set<SignalObstructionLogItem> signalObstructionLogItems;
-
-    @Valid
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID")
-    protected Set<LocalEpisodicEventLogItem> localEpisodicEventLogItems;
+    protected SiteIdentification siteIdentification = new SiteIdentification();
 
     @Valid
     @Embedded
-    protected MoreInformation moreInformation;
+    protected SiteLocation siteLocation = new SiteLocation();
+
+    @Valid
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID")
+    protected Set<GnssReceiverLogItem> gnssReceivers = new HashSet<>();
+
+    @Valid
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID")
+    protected Set<GnssAntennaLogItem> gnssAntennas = new HashSet<>();
+
+    @Valid
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID")
+    protected Set<SurveyedLocalTie> surveyedLocalTies = new HashSet<>();
+
+    @Valid
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID")
+    protected Set<FrequencyStandardLogItem> frequencyStandards = new HashSet<>();
+
+    @Valid
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID")
+    protected Set<CollocationInformation> collocationInformation = new HashSet<>();
+
+    @Valid
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID")
+    protected Set<HumiditySensorLogItem> humiditySensors = new HashSet<>();
+
+    @Valid
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID")
+    protected Set<PressureSensorLogItem> pressureSensors = new HashSet<>();
+
+    @Valid
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID")
+    protected Set<TemperatureSensorLogItem> temperatureSensors = new HashSet<>();
+
+    @Valid
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID")
+    protected Set<WaterVaporSensorLogItem> waterVaporSensors = new HashSet<>();
+
+    @Valid
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID")
+    protected Set<OtherInstrumentationLogItem> otherInstrumentationLogItem = new HashSet<>();
+
+    @Valid
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID")
+    protected Set<RadioInterference> radioInterferences = new HashSet<>();
+
+    @Valid
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID")
+    protected Set<MultipathSourceLogItem> multipathSourceLogItems = new HashSet<>();
+
+    @Valid
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID")
+    protected Set<SignalObstructionLogItem> signalObstructionLogItems = new HashSet<>();
+
+    @Valid
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID")
+    protected Set<LocalEpisodicEventLogItem> localEpisodicEventLogItems = new HashSet<>();
+
+    @Valid
+    @Embedded
+    protected MoreInformation moreInformation = new MoreInformation();
 
     @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "SITE_CONTACT_ID")
-    protected SiteResponsibleParty siteContact;
+    protected @Nullable SiteResponsibleParty siteContact;
 
     @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "SITE_METADATA_CUSTODIAN_ID")
-    protected SiteResponsibleParty siteMetadataCustodian;
+    protected @Nullable SiteResponsibleParty siteMetadataCustodian;
 
-    @SuppressWarnings("unused") // used by hibernate
-    public Integer getId() {
+    public @Nullable Integer getId() {
         return id;
     }
 
@@ -147,7 +146,7 @@ public class SiteLog {
         this.id = id;
     }
 
-    public Instant getEntryDate() {
+    public @Nullable Instant getEntryDate() {
         return entryDate;
     }
 
@@ -158,7 +157,7 @@ public class SiteLog {
     /**
      * Return site log text.
      */
-    public String getSiteLogText() {
+    public @Nullable String getSiteLogText() {
         return siteLogText;
     }
 
@@ -425,7 +424,7 @@ public class SiteLog {
     /**
      * @return the siteContact
      */
-    public SiteResponsibleParty getSiteContact() {
+    public @Nullable SiteResponsibleParty getSiteContact() {
         return siteContact;
     }
 
@@ -439,7 +438,7 @@ public class SiteLog {
     /**
      * @return the siteMetadataCustodian
      */
-    public SiteResponsibleParty getSiteMetadataCustodian() {
+    public @Nullable SiteResponsibleParty getSiteMetadataCustodian() {
         return siteMetadataCustodian;
     }
 

@@ -11,14 +11,18 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Version;
 
+import org.checkerframework.checker.nullness.qual.MonotonicNonNull;
+import org.checkerframework.checker.nullness.qual.Nullable;
+
 @Entity
 @Table(name = "EQUIPMENT")
 @DiscriminatorColumn(name = "EQUIPMENT_TYPE")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+// TODO: lbodor, make abstract
 public class Equipment {
 
     @Version
-    private Integer version;
+    private @MonotonicNonNull Integer version;
 
     /**
      * RDBMS surrogate key
@@ -27,46 +31,42 @@ public class Equipment {
     @Column(name = "ID")
     @GeneratedValue(generator = "surrogateKeyGenerator")
     @SequenceGenerator(name = "surrogateKeyGenerator", sequenceName = "seq_surrogate_keys")
-    protected Integer id;
+    protected @MonotonicNonNull Integer id;
 
-    @Column(name = "TYPE")
+    @Column(name = "TYPE", nullable = false)
     private String type;
 
     @Column(name = "EQUIPMENT_TYPE", insertable = false, updatable = false)
-    private String equipmentType;
+    private @MonotonicNonNull String equipmentType;
 
     @Column(name = "MANUFACTURER")
-    private String manufacturer;
+    private @MonotonicNonNull String manufacturer;
 
-    @Column(name = "SERIAL_NUMBER", nullable = true)
-    private String serialNumber;
+    @Column(name = "SERIAL_NUMBER")
+    private @MonotonicNonNull String serialNumber;
 
-    @SuppressWarnings("unused") // used by hibernate
+    @SuppressWarnings({"unused", "initialization.fields.uninitialized"}) // used by hibernate
     private Equipment() {
     }
 
     public Equipment(String type) {
-        setType(type);
+        this.type = type;
     }
 
     public Equipment(String type, String serialNumber) {
-        setType(type);
-        setSerialNumber(serialNumber);
+        this(type);
+        this.serialNumber = serialNumber;
     }
 
-    public Integer getVersion() {
+    public @Nullable Integer getVersion() {
         return version;
     }
 
-    public void setVersion(Integer version) {
-        this.version = version;
-    }
-
-    public Integer getId() {
+    public @Nullable Integer getId() {
         return id;
     }
 
-    protected void setId(Integer id) {
+    private void setId(Integer id) {
         this.id = id;
     }
 
@@ -74,15 +74,12 @@ public class Equipment {
         return type;
     }
 
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public String getEquipmentType() {
+    // TODO: lbodor, remove
+    public @Nullable String getEquipmentType() {
         return equipmentType;
     }
 
-    public String getManufacturer() {
+    public @Nullable String getManufacturer() {
         return manufacturer;
     }
 
@@ -90,11 +87,7 @@ public class Equipment {
         this.manufacturer = manufacturer;
     }
 
-    public String getSerialNumber() {
+    public @Nullable String getSerialNumber() {
         return serialNumber;
-    }
-
-    public void setSerialNumber(String serialNumber) {
-        this.serialNumber = serialNumber;
     }
 }

@@ -103,7 +103,7 @@ public class CorsSiteService implements EventSubscriber<SiteLogReceived> {
 
         corsSites.saveAndFlush(corsSite);
 
-        List<Setup> newSetups = getSetups(siteLog);
+        List<Setup> newSetups = getSetups(corsSite.getId(), siteLog);
         for (Setup s : newSetups) {
             s.setSiteId(corsSite.getId());
         }
@@ -127,7 +127,7 @@ public class CorsSiteService implements EventSubscriber<SiteLogReceived> {
         log.info("Saving site: " + fourCharacterId);
     }
 
-    private List<Setup> getSetups(SiteLog siteLog) {
+    private List<Setup> getSetups(Integer siteId, SiteLog siteLog) {
         @SuppressWarnings("unchecked")
         Comparator<Instant> fromC = ComparatorUtils.nullLowComparator(ComparatorUtils.NATURAL_COMPARATOR);
         SortedSet<Instant> datesOfChange = new TreeSet<>(fromC);
@@ -148,7 +148,7 @@ public class CorsSiteService implements EventSubscriber<SiteLogReceived> {
         if (datesOfChange.size() > 0) {
             if (datesOfChange.size() == 1) {
                 Instant d = datesOfChange.iterator().next();
-                setups.add(new Setup(gnssCorsSetupName, new EffectiveDates(d, null)));
+                setups.add(new Setup(siteId, gnssCorsSetupName, new EffectiveDates(d, null)));
             } else {
                 Iterator<Instant> i = datesOfChange.iterator();
                 Iterator<Instant> j = datesOfChange.iterator();
@@ -157,13 +157,13 @@ public class CorsSiteService implements EventSubscriber<SiteLogReceived> {
                 do {
                     Instant from = i.next();
                     Instant to = j.next();
-                    s = new Setup(gnssCorsSetupName, new EffectiveDates(from, to));
+                    s = new Setup(siteId, gnssCorsSetupName, new EffectiveDates(from, to));
                     setups.add(s);
                 }
                 while (j.hasNext());
                 EffectiveDates lastPeriod = s.getEffectivePeriod();
                 if (lastPeriod.getTo() != null) {
-                    s = new Setup(gnssCorsSetupName, new EffectiveDates(lastPeriod.getTo(), null));
+                    s = new Setup(siteId, gnssCorsSetupName, new EffectiveDates(lastPeriod.getTo(), null));
                     setups.add(s);
                 }
             }

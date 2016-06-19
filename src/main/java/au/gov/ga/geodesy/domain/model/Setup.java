@@ -19,6 +19,8 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.checkerframework.checker.nullness.qual.MonotonicNonNull;
+import org.checkerframework.checker.nullness.qual.Nullable;
 
 import au.gov.ga.geodesy.domain.model.sitelog.EffectiveDates;
 
@@ -33,10 +35,10 @@ public class Setup {
     @Column(name = "ID")
     @GeneratedValue(generator = "surrogateKeyGenerator")
     @SequenceGenerator(name = "surrogateKeyGenerator", sequenceName = "seq_surrogate_keys")
-    protected Integer id;
+    protected @MonotonicNonNull Integer id;
 
-    @Column(name = "SITE_ID")
-    private Integer siteId; 
+    @Column(name = "SITE_ID", nullable = false)
+    private Integer siteId;
 
     @Column(name = "NAME", nullable = false)
     private String name;
@@ -50,18 +52,19 @@ public class Setup {
 
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "SETUP_ID")
-    private List<EquipmentInUse> equipmentInUse = new ArrayList<EquipmentInUse>();
+    private List<EquipmentInUse> equipmentInUse = new ArrayList<>();
 
-    @SuppressWarnings("unused") // used by hibernate
+    @SuppressWarnings({"unused", "initialization.fields.uninitialized"}) // used by hibernate
     private Setup() {
     }
 
-    public Setup(String name, EffectiveDates period) {
-        setName(name);
-        setEffectivePeriod(period);
+    public Setup(Integer siteId, String name, EffectiveDates effectivePeriod) {
+        this.siteId = siteId;
+        this.name = name;
+        this.effectivePeriod = effectivePeriod;
     }
 
-    public Integer getId() {
+    public @Nullable Integer getId() {
         return id;
     }
 
@@ -77,28 +80,16 @@ public class Setup {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public EffectiveDates getEffectivePeriod() {
         return effectivePeriod;
-    }
-
-    public void setEffectivePeriod(EffectiveDates effectivePeriod) {
-        this.effectivePeriod = effectivePeriod;
     }
 
     public Boolean getInvalidated() {
         return invalidated;
     }
 
-    private void setInvalidated(Boolean invalidated) {
-        this.invalidated = invalidated;
-    }
-
     public void invalidate() {
-        setInvalidated(true);
+        invalidated = true;
     }
 
     public List<EquipmentInUse> getEquipmentInUse() {
@@ -114,7 +105,7 @@ public class Setup {
     }
 
     @Override
-    public boolean equals(Object x) {
+    public boolean equals(@Nullable Object x) {
         if (x == null) {
             return false;
         }
@@ -139,18 +130,15 @@ public class Setup {
      * wrong thing when called with ordinary Java collections. We disregard the
      * types of colletions and define equality element-wise.
      */
-    private boolean equals(Collection<?> as, Collection<?> bs) {
+    private boolean equals(Collection<EquipmentInUse> as, Collection<EquipmentInUse> bs) {
         if (as == bs) {
             return true;
-        }
-        if (as == null || bs == null) {
-            return false;
         }
         if (as.size() != bs.size()) {
             return false;
         }
-        Iterator<?> a = as.iterator();
-        Iterator<?> b = bs.iterator();
+        Iterator<EquipmentInUse> a = as.iterator();
+        Iterator<EquipmentInUse> b = bs.iterator();
         while (a.hasNext()) {
             if (!new EqualsBuilder().append(a.next(), b.next()).isEquals()) {
                 return false;

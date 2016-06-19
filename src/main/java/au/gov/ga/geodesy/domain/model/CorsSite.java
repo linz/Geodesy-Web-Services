@@ -7,6 +7,9 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import org.checkerframework.checker.nullness.qual.MonotonicNonNull;
+import org.checkerframework.checker.nullness.qual.Nullable;
+
 @Entity
 @Table(name = "CORS_SITE")
 public class CorsSite extends Site {
@@ -18,39 +21,34 @@ public class CorsSite extends Site {
     private String fourCharacterId;
 
     @Column(name = "DOMES_NUMBER")
-    private String domesNumber;
+    private @MonotonicNonNull String domesNumber;
 
     @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "MONUMENT_ID")
-    private Monument monument;
+    private @MonotonicNonNull Monument monument;
 
     @Column(name = "GEOLOGIC_CHARACTERISTIC")
-    private String geologicCharacteristic;
+    private @MonotonicNonNull String geologicCharacteristic;
 
     @Column(name = "BEDROCK_TYPE")
-    private String bedrockType;
+    private @MonotonicNonNull String bedrockType;
 
     @Column(name = "BEDROCK_CONDITION")
-    private String bedrockCondition;
+    private @MonotonicNonNull String bedrockCondition;
 
-    @SuppressWarnings("unused") // hibernate needs the default constructor
+    @SuppressWarnings({"unused", "initialization.fields.uninitialized"}) // hibernate needs the default constructor
     private CorsSite() {
     }
 
     public CorsSite(String fourCharacterId) {
-        super();
-        setFourCharacterId(fourCharacterId);
+        this.fourCharacterId = fourCharacterId;
     }
 
     public String getFourCharacterId() {
         return fourCharacterId;
     }
 
-    private void setFourCharacterId(String fourCharacterId) {
-        this.fourCharacterId = fourCharacterId;
-    }
-
-    public String getDomesNumber() {
+    public @Nullable String getDomesNumber() {
         return domesNumber;
     }
 
@@ -58,7 +56,7 @@ public class CorsSite extends Site {
         this.domesNumber = domesNumber;
     }
 
-    public Monument getMonument() {
+    public @Nullable Monument getMonument() {
         return monument;
     }
 
@@ -66,7 +64,7 @@ public class CorsSite extends Site {
         this.monument = monument;
     }
 
-    public String getGeologicCharacteristic() {
+    public @Nullable String getGeologicCharacteristic() {
         return geologicCharacteristic;
     }
 
@@ -74,7 +72,7 @@ public class CorsSite extends Site {
         this.geologicCharacteristic = geologicCharacteristic;
     }
 
-    public String getBedrockType() {
+    public @Nullable String getBedrockType() {
         return bedrockType;
     }
 

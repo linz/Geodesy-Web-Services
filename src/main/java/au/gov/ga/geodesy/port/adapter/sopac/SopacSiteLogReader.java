@@ -3,6 +3,7 @@ package au.gov.ga.geodesy.port.adapter.sopac;
 import java.io.Reader;
 import java.io.StringReader;
 
+import org.checkerframework.checker.nullness.qual.MonotonicNonNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
 
@@ -15,12 +16,14 @@ import au.gov.ga.geodesy.port.SiteLogReader;
 @Configurable(preConstruction = true)
 public class SopacSiteLogReader extends SiteLogReader {
 
-    private SiteLog siteLog;
+    private @MonotonicNonNull SiteLog siteLog;
 
     @Autowired
+    @SuppressWarnings("initialization.fields.uninitialized")
     private IgsSiteLogXmlMarshaller marshaller;
 
     @Autowired
+    @SuppressWarnings("initialization.fields.uninitialized")
     private SopacSiteLogMapper mapper;
 
     /**

@@ -1,6 +1,7 @@
 package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 
-import static org.testng.Assert.assertEquals;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.core.IsEqual.equalTo;
 
 import java.lang.reflect.InvocationTargetException;
 import java.time.Instant;
@@ -17,6 +18,7 @@ import org.testng.annotations.Test;
 import au.gov.ga.geodesy.domain.model.sitelog.GnssReceiverLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.HumiditySensorLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.LogItem;
+import au.gov.ga.geodesy.domain.model.sitelog.MultipathSourceLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.OtherInstrumentationLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.PressureSensorLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.SignalObstructionLogItem;
@@ -34,6 +36,7 @@ import au.gov.xml.icsm.geodesyml.v_0_3.GnssReceiverPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_3.GnssReceiverType;
 import au.gov.xml.icsm.geodesyml.v_0_3.HumiditySensorPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_3.HumiditySensorType;
+import au.gov.xml.icsm.geodesyml.v_0_3.MultipathSourcesPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_3.OtherInstrumentationPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_3.OtherInstrumentationType;
 import au.gov.xml.icsm.geodesyml.v_0_3.PressureSensorPropertyType;
@@ -89,50 +92,50 @@ public class SiteLogMapperTest {
         testMappingValues(siteLogType, siteLog);
 
         List<HumiditySensorPropertyType> humiditySensors = siteLogType.getHumiditySensors();
-        assertEquals(siteLog.getHumiditySensors().size(), 2);
-        assertEquals(humiditySensors.size(), 2);
+        assertThat(siteLog.getHumiditySensors().size(), equalTo(2));
+        assertThat(humiditySensors.size(), equalTo(2));
 
         {
             int i = 0;
             for (HumiditySensorLogItem logItem : sortLogItems(siteLog.getHumiditySensors())) {
                 HumiditySensorType xmlType = humiditySensors.get(i++).getHumiditySensor();
-                assertEquals(logItem.getSerialNumber(), xmlType.getSerialNumber());
+                assertThat(logItem.getSerialNumber(), equalTo(xmlType.getSerialNumber()));
             }
         }
 
         List<PressureSensorPropertyType> pressureSensors = siteLogType.getPressureSensors();
-        assertEquals(siteLog.getPressureSensors().size(), 2);
-        assertEquals(pressureSensors.size(), 2);
+        assertThat(siteLog.getPressureSensors().size(), equalTo(2));
+        assertThat(pressureSensors.size(), equalTo(2));
 
         {
             int i = 0;
             for (PressureSensorLogItem logItem : sortLogItems(siteLog.getPressureSensors())) {
                 PressureSensorType xmlType = pressureSensors.get(i++).getPressureSensor();
-                assertEquals(logItem.getSerialNumber(), xmlType.getSerialNumber());
+                assertThat(logItem.getSerialNumber(), equalTo(xmlType.getSerialNumber()));
             }
         }
 
         List<TemperatureSensorPropertyType> temperatureSensors = siteLogType.getTemperatureSensors();
-        assertEquals(siteLog.getTemperatureSensors().size(), 2);
-        assertEquals(temperatureSensors.size(), 2);
+        assertThat(siteLog.getTemperatureSensors().size(), equalTo(2));
+        assertThat(temperatureSensors.size(), equalTo(2));
 
         {
             int i = 0;
             for (TemperatureSensorLogItem logItem : sortLogItems(siteLog.getTemperatureSensors())) {
                 TemperatureSensorType xmlType = temperatureSensors.get(i++).getTemperatureSensor();
-                assertEquals(logItem.getSerialNumber(), xmlType.getSerialNumber());
+                assertThat(logItem.getSerialNumber(), equalTo(xmlType.getSerialNumber()));
             }
         }
 
         List<WaterVaporSensorPropertyType> waterVaporSensors = siteLogType.getWaterVaporSensors();
-        assertEquals(siteLog.getWaterVaporSensors().size(), 2);
-        assertEquals(waterVaporSensors.size(), 2);
+        assertThat(siteLog.getWaterVaporSensors().size(), equalTo(2));
+        assertThat(waterVaporSensors.size(), equalTo(2));
 
         {
             int i = 0;
             for (WaterVaporSensorLogItem logItem : sortLogItems(siteLog.getWaterVaporSensors())) {
                 WaterVaporSensorType xmlType = waterVaporSensors.get(i++).getWaterVaporSensor();
-                assertEquals(logItem.getSerialNumber(), xmlType.getSerialNumber());
+                assertThat(logItem.getSerialNumber(), equalTo(xmlType.getSerialNumber()));
             }
         }
 
@@ -144,7 +147,7 @@ public class SiteLogMapperTest {
 
     /**
      * Test mapping from SiteLogType to SiteLog and back
-     * to SiteLogType. Based on the QIKI site with added sensors.
+     * to SiteLogType. Based on the QIKI site with added otherInstrumentations.
      **/
     @Test
     public void testOtherInstrumentationsMapping() throws Exception {
@@ -161,14 +164,14 @@ public class SiteLogMapperTest {
         List<OtherInstrumentationPropertyType> otherInstrumentationPropertyTypes = siteLogType.getOtherInstrumentations();
         sortGMLPropertyTypes(otherInstrumentationPropertyTypes);
 
-        assertEquals(siteLogType.getOtherInstrumentations().size(), 3);
-        assertEquals(otherInstrumentationPropertyTypes.size(), 3);
+        assertThat(siteLogType.getOtherInstrumentations().size(), equalTo(3));
+        assertThat(otherInstrumentationPropertyTypes.size(), equalTo(3));
 
         {
             int i = 0;
             for (OtherInstrumentationLogItem logItem : sortLogItems(siteLog.getOtherInstrumentationLogItem())) {
                 OtherInstrumentationType xmlType = otherInstrumentationPropertyTypes.get(i++).getOtherInstrumentation();
-                assertEquals(logItem.getInstrumentation(), xmlType.getInstrumentation());
+                assertThat(logItem.getInstrumentation(), equalTo(xmlType.getInstrumentation()));
             }
         }
     }
@@ -192,32 +195,63 @@ public class SiteLogMapperTest {
         List<SignalObstructionsPropertyType> signalObstructionsPropertyTypes = siteLogType.getSignalObstructionsSet();
         sortGMLPropertyTypes(signalObstructionsPropertyTypes);
 
-        assertEquals(siteLogType.getSignalObstructionsSet().size(), 2);
-        assertEquals(signalObstructionsPropertyTypes.size(), 2);
+        assertThat(siteLogType.getSignalObstructionsSet().size(), equalTo(2));
+        assertThat(signalObstructionsPropertyTypes.size(), equalTo(2));
 
         {
             int i = 0;
             for (SignalObstructionLogItem logItem : sortLogItems(siteLog.getSignalObstructionLogItems())) {
                 BasePossibleProblemSourcesType xmlType = signalObstructionsPropertyTypes.get(i++).getSignalObstructions();
-                assertEquals(logItem.getPossibleProblemSource(), xmlType.getPossibleProblemSources());
+                assertThat(logItem.getPossibleProblemSource(), equalTo(xmlType.getPossibleProblemSources()));
+            }
+        }
+    }
+
+    /**
+     * Test mapping from SiteLogType to SiteLog and back
+     * to SiteLogType. Based on the METZ site log with added multipath sources.
+     **/
+    @Test
+    public void testMultipathSourcesMapping() throws Exception {
+        GeodesyMLType mobs = marshaller
+                .unmarshal(TestResources.geodesyMLTestDataSiteLogReader("METZ-multipathSources"),
+                        GeodesyMLType.class)
+                .getValue();
+
+        SiteLogType siteLogType = GeodesyMLUtils.getElementFromJAXBElements(mobs.getElements(), SiteLogType.class)
+                .findFirst().get();
+
+        SiteLog siteLog = mapper.to(siteLogType);
+
+        List<MultipathSourcesPropertyType> multipathSourcesPropertyTypes = siteLogType.getMultipathSourcesSet();
+        sortGMLPropertyTypes(multipathSourcesPropertyTypes);
+
+        assertThat(siteLogType.getMultipathSourcesSet().size(), equalTo(2));
+        assertThat(multipathSourcesPropertyTypes.size(), equalTo(2));
+
+        {
+            int i = 0;
+            for (MultipathSourceLogItem logItem : sortLogItems(siteLog.getMultipathSourceLogItems())) {
+                BasePossibleProblemSourcesType xmlType = multipathSourcesPropertyTypes.get(i++).getMultipathSources();
+                assertThat(logItem.getPossibleProblemSource(), equalTo(xmlType.getPossibleProblemSources()));
             }
         }
     }
 
     private void testMappingValues(SiteLogType siteLogType, SiteLog siteLog) {
-        assertEquals(siteLog.getSiteIdentification().getSiteName(), siteLogType.getSiteIdentification().getSiteName());
-        assertEquals(siteLog.getSiteLocation().getTectonicPlate(), siteLogType.getSiteLocation().getTectonicPlate().getValue());
+        assertThat(siteLog.getSiteIdentification().getSiteName(), equalTo(siteLogType.getSiteIdentification().getSiteName()));
+        assertThat(siteLog.getSiteLocation().getTectonicPlate(), equalTo(siteLogType.getSiteLocation().getTectonicPlate().getValue()));
 
         List<GnssReceiverPropertyType> receiverProperties = siteLogType.getGnssReceivers();
         sortGMLPropertyTypes(receiverProperties);
-        assertEquals(siteLog.getGnssReceivers().size(), 9);
-        assertEquals(receiverProperties.size(), 9);
+        assertThat(siteLog.getGnssReceivers().size(), equalTo(9));
+        assertThat(receiverProperties.size(), equalTo(9));
 
         {
             int i = 0;
             for (GnssReceiverLogItem receiverLogItem : sortLogItems(siteLog.getGnssReceivers())) {
                 GnssReceiverType receiverType = receiverProperties.get(i++).getGnssReceiver();
-                assertEquals(receiverLogItem.getFirmwareVersion(), receiverType.getFirmwareVersion());
+                assertThat(receiverLogItem.getFirmwareVersion(), equalTo(receiverType.getFirmwareVersion()));
             }
         }
     }

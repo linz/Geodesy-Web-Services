@@ -63,7 +63,7 @@ public class SiteLogMapperTest {
     public void testMapping() throws Exception {
         GeodesyMLType mobs = marshaller.unmarshal(TestResources.geodesyMLSiteLogReader("MOBS"), GeodesyMLType.class)
                 .getValue();
-
+asef
         SiteLogType siteLogType = GeodesyMLUtils.getElementFromJAXBElements(mobs.getElements(), SiteLogType.class)
                 .findFirst().get();
 

@@ -17,11 +17,13 @@
         <liquibase.version>3.5.2-SNAPSHOT</liquibase.version>
         <spring.version>4.3.0.RELEASE</spring.version>
         <jackson.version>2.7.3</jackson.version>
+        <checker-framework.version>2.0.1</checker-framework.version>
         <rest-assured.version>3.0.0</rest-assured.version>
         <hibernate.version>5.1.0.Final</hibernate.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <aspectj.version>1.8.6</aspectj.version>
+        <annotatedJdk>${org.checkerframework:jdk8:jar}</annotatedJdk>
         <encoding>UTF-8</encoding>
     </properties>
     <repositories>
@@ -52,6 +54,22 @@
         </repository>
     </repositories>
     <dependencies>
+        <dependency>
+            <groupId>org.checkerframework</groupId>
+            <artifactId>checker-qual</artifactId>
+            <version>${checker-framework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.checkerframework</groupId>
+            <artifactId>checker</artifactId>
+            <version>${checker-framework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.checkerframework</groupId>
+            <artifactId>jdk8</artifactId>
+            <version>${checker-framework.version}</version>
+            <scope>compile</scope>
+        </dependency>
         <dependency>
             <groupId>ma.glasnost.orika</groupId>
             <artifactId>orika-core</artifactId>
@@ -385,6 +403,11 @@
                 <artifactId>maven-dependency-plugin</artifactId>
                 <executions>
                     <execution>
+                        <goals>
+                            <goal>properties</goal>
+                        </goals>
+                    </execution>
+                    <execution>
                         <id>unpack-geodesyml</id>
                         <goals>
                             <goal>unpack</goal>
@@ -699,6 +722,29 @@
                             <includes>
                                 <include>au/gov/ga/geodesy/test/integration/standalone/*.java</include>
                             </includes>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>checker</id>
+            <build>
+                <defaultGoal>compile</defaultGoal>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-compiler-plugin</artifactId>
+                        <version>3.3</version>
+                        <configuration>
+                            <source>${java.version}</source>
+                            <target>${java.version}</target>
+                            <fork>true</fork>
+                            <annotationProcessors>
+                                <annotationProcessor>org.checkerframework.checker.nullness.NullnessChecker</annotationProcessor>
+                            </annotationProcessors>
+                            <compilerArgs>
+                                <arg>-Xbootclasspath/p:${annotatedJdk}</arg>
+                            </compilerArgs>
                         </configuration>
                     </plugin>
                 </plugins>

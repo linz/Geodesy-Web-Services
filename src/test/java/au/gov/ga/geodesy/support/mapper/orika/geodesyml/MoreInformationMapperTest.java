@@ -26,7 +26,7 @@ public class MoreInformationMapperTest {
      **/
     @Test
     public void testMapping() throws Exception {
-        GeodesyMLType mobs = marshaller.unmarshal(TestResources.geodesyMLSiteLogReader("MOBS-moreInfo"), GeodesyMLType.class)
+        GeodesyMLType mobs = marshaller.unmarshal(TestResources.geodesyMLTestDataSiteLogReader("MOBS-moreInfo"), GeodesyMLType.class)
                 .getValue();
 
         SiteLogType siteLogType = GeodesyMLUtils.getElementFromJAXBElements(mobs.getElements(), SiteLogType.class)

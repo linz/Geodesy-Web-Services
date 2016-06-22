@@ -45,12 +45,12 @@ import au.gov.xml.icsm.geodesyml.v_0_3.TemperatureSensorPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_3.TemperatureSensorType;
 import au.gov.xml.icsm.geodesyml.v_0_3.WaterVaporSensorPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_3.WaterVaporSensorType;
+import java.io.IOException;
 import ma.glasnost.orika.metadata.TypeFactory;
 import net.opengis.gml.v_3_2_1.TimePositionType;
 import org.apache.commons.beanutils.PropertyUtils;
 import org.testng.annotations.Test;
 
-import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.time.Instant;
 import java.util.Collections;
@@ -64,6 +64,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.hasSize;
 import static org.hamcrest.core.IsEqual.equalTo;
+
 
 public class SiteLogMapperTest {
 
@@ -349,7 +350,7 @@ public class SiteLogMapperTest {
     }
 
     /**
-     * Test the mapping of CollocationInformation from SiteLogType to SiteLog and back
+     * Test mapping of CollocationInformation from SiteLogType to SiteLog and back
      * to SiteLogType. Based on the AIRA-collocationInfo site with added sensors.
      **/
     @Test

@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 
 import au.gov.ga.geodesy.domain.model.sitelog.GnssReceiverLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.HumiditySensorLogItem;
+import au.gov.ga.geodesy.domain.model.sitelog.LocalEpisodicEventLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.LogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.MultipathSourceLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.OtherInstrumentationLogItem;
@@ -18,6 +19,7 @@ import au.gov.ga.geodesy.domain.model.sitelog.TemperatureSensorLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.WaterVaporSensorLogItem;
 import au.gov.ga.geodesy.support.gml.GMLPropertyType;
 import au.gov.ga.geodesy.support.java.util.Iso;
+import au.gov.xml.icsm.geodesyml.v_0_3.LocalEpisodicEventsPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_3.MultipathSourcesPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_3.SignalObstructionsPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_3.SiteIdentificationType;
@@ -54,6 +56,7 @@ public class SiteLogMapper implements Iso<SiteLogType, SiteLog> {
             .fieldMap("otherInstrumentations", "otherInstrumentationLogItem").converter("otherInstrumentations").add()
             .fieldMap("signalObstructionsSet", "signalObstructionLogItems").converter("signalObstructionsSet").add()
             .fieldMap("multipathSourcesSet", "multipathSourceLogItems").converter("multipathSourcesSet").add()
+            .fieldMap("localEpisodicEventsSet", "localEpisodicEventLogItems").converter("localEpisodicEventsSet").add()
             /* .byDefault() */
             .register();
 
@@ -110,6 +113,12 @@ public class SiteLogMapper implements Iso<SiteLogType, SiteLog> {
         converters.registerConverter("multipathSourcesSet",
                 new BidirectionalConverterWrapper<List<MultipathSourcesPropertyType>, Set<MultipathSourceLogItem>>(
                         logItemsConverter(new MultipathSourcesMapper())
+                ) {}
+        );
+
+        converters.registerConverter("localEpisodicEventsSet",
+                new BidirectionalConverterWrapper<List<LocalEpisodicEventsPropertyType>, Set<LocalEpisodicEventLogItem>>(
+                        logItemsConverter(new LocalEpisodicEventMapper())
                 ) {}
         );
 

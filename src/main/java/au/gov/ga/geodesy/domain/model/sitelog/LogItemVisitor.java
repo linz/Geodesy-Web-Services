@@ -10,5 +10,6 @@ public interface LogItemVisitor<T> {
     T visit(FrequencyStandardLogItem logItem);
     T visit(OtherInstrumentationLogItem logItem);
     T visit(PossibleProblemSourceLogItem logItem);
+    T visit(LocalEpisodicEventLogItem logItem);
 }
 

@@ -323,10 +323,12 @@ public class SiteLogMapperTest {
                 .findFirst().get();
 
         SiteLog siteLog = mapper.to(siteLogType);
+
         assertThat(siteLog.getMoreInformation().getPrimaryDataCenter(), is(siteLogType.getMoreInformation().getDataCenter().get(0)));
         assertThat(siteLog.getMoreInformation().getNotes(), is(siteLogType.getMoreInformation().getNotes()));
         assertThat(siteLog.getMoreInformation().getDoi(), is(siteLogType.getMoreInformation().getDOI().getValue()));
     }
+
 
     /**
      * Test the mapping of FormInformation from SiteLogType to SiteLog and back

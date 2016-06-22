@@ -230,8 +230,7 @@ public class SiteLogMapperTest {
     public void testMultipathSourcesMapping() throws Exception {
         GeodesyMLType mobs = marshaller
                 .unmarshal(TestResources.geodesyMLTestDataSiteLogReader("METZ-multipathSources"),
-                        GeodesyMLType.class)
-                .getValue();
+                        GeodesyMLType.class).getValue();
 
         SiteLogType siteLogType = GeodesyMLUtils.getElementFromJAXBElements(mobs.getElements(), SiteLogType.class)
                 .findFirst().get();

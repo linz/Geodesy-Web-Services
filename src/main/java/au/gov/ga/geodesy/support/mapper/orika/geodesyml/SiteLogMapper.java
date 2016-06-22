@@ -158,7 +158,6 @@ public class SiteLogMapper implements Iso<SiteLogType, SiteLog> {
                         infoCollectionConverter(new CollocationInformationMapper())
                 ) {}
         );
-
         mapper = mapperFactory.getMapperFacade();
     }
 

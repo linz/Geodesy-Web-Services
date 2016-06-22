@@ -35,7 +35,7 @@ public class CollocationInformationMapperTest {
     public void testMapping() throws Exception {
         DateTimeFormatter outputFormat = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSSXXX").withZone(ZoneId.of("UTC"));
         GeodesyMLType mobs = marshaller.unmarshal(TestResources.geodesyMLTestDataSiteLogReader("AIRA-collocationInfo"), GeodesyMLType.class)
-                .getValue();
+            .getValue();
 
         SiteLogType siteLog = GeodesyMLUtils.getElementFromJAXBElements(mobs.getElements(), SiteLogType.class)
             .findFirst().get();

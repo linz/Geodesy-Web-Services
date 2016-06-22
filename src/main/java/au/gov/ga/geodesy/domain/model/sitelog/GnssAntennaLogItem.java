@@ -89,6 +89,7 @@ public class GnssAntennaLogItem implements EquipmentLogItem {
     /**
      * Return antenna type.
      */
+    @Override
     public String getType() {
         return type;
     }
@@ -103,6 +104,7 @@ public class GnssAntennaLogItem implements EquipmentLogItem {
     /**
      * Return serial number.
      */
+    @Override
     public String getSerialNumber() {
         return serialNumber;
     }
@@ -282,10 +284,12 @@ public class GnssAntennaLogItem implements EquipmentLogItem {
         this.notes = value;
     }
 
+    @Override
     public EffectiveDates getEffectiveDates() {
         return new EffectiveDates(getDateInstalled(), getDateRemoved());
     }
 
+    @Override
     public <T> T accept(LogItemVisitor<T> v) {
         return v.visit(this);
     }

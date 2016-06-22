@@ -15,6 +15,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
+import au.gov.ga.geodesy.domain.model.sitelog.LocalEpisodicEventLogItem;
 import au.gov.ga.geodesy.exception.GeodesyRuntimeException;
 import au.gov.ga.geodesy.igssitelog.domain.model.CollocationInformation;
 import au.gov.ga.geodesy.igssitelog.domain.model.FormInformation;
@@ -23,7 +24,6 @@ import au.gov.ga.geodesy.igssitelog.domain.model.GnssAntennaLogItem;
 import au.gov.ga.geodesy.igssitelog.domain.model.GnssReceiverLogItem;
 import au.gov.ga.geodesy.igssitelog.domain.model.HumiditySensorLogItem;
 import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLog;
-import au.gov.ga.geodesy.igssitelog.domain.model.LocalEpisodicEvent;
 import au.gov.ga.geodesy.igssitelog.domain.model.MoreInformation;
 import au.gov.ga.geodesy.igssitelog.domain.model.MultipathSource;
 import au.gov.ga.geodesy.igssitelog.domain.model.PressureSensorLogItem;
@@ -173,7 +173,7 @@ public class GeodesyMLSiteLogDozerTranslator implements GeodesyMLSiteLogTranslat
         siteLogType.setSignalObstructionsSet(signalObstructions);
 
         List<LocalEpisodicEventsPropertyType> localEpisodicEvents = buildSiteLogItem(
-                LocalEpisodicEventsPropertyType.class, LocalEpisodicEventsType.class, LocalEpisodicEvent.class,
+                LocalEpisodicEventsPropertyType.class, LocalEpisodicEventsType.class, LocalEpisodicEventLogItem.class,
                 sopacSiteLog.getLocalEpisodicEvents());
         siteLogType.setLocalEpisodicEventsSet(localEpisodicEvents);
 
@@ -211,7 +211,6 @@ public class GeodesyMLSiteLogDozerTranslator implements GeodesyMLSiteLogTranslat
      * @param childType
      * @param sopacSiteLogItems
      *            - list of input data from SopacXML
-     * @param mapper
      *            - to map from SopacXML to GeodesyMl
      * @return List of parentPropertyType's or null if the input source data is null or empty
      * @throws IllegalAccessException

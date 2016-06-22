@@ -1,10 +1,13 @@
 package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 
+import au.gov.ga.geodesy.domain.model.sitelog.CollocationInformation;
+import au.gov.ga.geodesy.domain.model.sitelog.FormInformation;
 import au.gov.ga.geodesy.domain.model.sitelog.GnssAntennaLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.GnssReceiverLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.HumiditySensorLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.LocalEpisodicEventLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.LogItem;
+import au.gov.ga.geodesy.domain.model.sitelog.MoreInformation;
 import au.gov.ga.geodesy.domain.model.sitelog.MultipathSourceLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.OtherInstrumentationLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.PressureSensorLogItem;
@@ -17,8 +20,10 @@ import au.gov.ga.geodesy.domain.model.sitelog.TemperatureSensorLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.WaterVaporSensorLogItem;
 import au.gov.ga.geodesy.support.gml.GMLPropertyType;
 import au.gov.ga.geodesy.support.java.util.Iso;
+import au.gov.xml.icsm.geodesyml.v_0_3.FormInformationType;
 import au.gov.xml.icsm.geodesyml.v_0_3.GnssAntennaPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_3.LocalEpisodicEventsPropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_3.MoreInformationType;
 import au.gov.xml.icsm.geodesyml.v_0_3.MultipathSourcesPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_3.RadioInterferencesPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_3.SignalObstructionsPropertyType;
@@ -62,8 +67,10 @@ public class SiteLogMapper implements Iso<SiteLogType, SiteLog> {
             .fieldMap("multipathSourcesSet", "multipathSourceLogItems").converter("multipathSourcesSet").add()
             .fieldMap("localEpisodicEventsSet", "localEpisodicEventLogItems").converter("localEpisodicEventsSet").add()
             .fieldMap("radioInterferencesSet", "radioInterferences").converter("radioInterferencesSet").add()
-            .fieldMap("gnssAntennas", "gnssAntennas").converter("gnssAntennas").add()
-            /* .byDefault() */
+            .fieldMap("moreInformation", "moreInformation").converter("moreInformation").add()
+            .fieldMap("formInformation", "formInformation").converter("formInformation").add()
+            .fieldMap("collocationInformations", "collocationInformation").converter("collocationInformations").add()
+                /* .byDefault() */
             .register();
 
         ConverterFactory converters = mapperFactory.getConverterFactory();
@@ -140,6 +147,18 @@ public class SiteLogMapper implements Iso<SiteLogType, SiteLog> {
                 }
         );
 
+        converters.registerConverter("moreInformation",
+                new IsoConverter<MoreInformationType, MoreInformation>(new MoreInformationMapper()) {});
+
+        converters.registerConverter("formInformation",
+                new IsoConverter<FormInformationType, FormInformation>(new FormInformationMapper()) {});
+
+        converters.registerConverter("collocationInformations",
+                new BidirectionalConverterWrapper<List<GMLPropertyType>, Set<CollocationInformation>>(
+                        infoCollectionConverter(new CollocationInformationMapper())
+                ) {}
+        );
+
         mapper = mapperFactory.getMapperFacade();
     }
 
@@ -178,6 +197,17 @@ public class SiteLogMapper implements Iso<SiteLogType, SiteLog> {
         return new IsoConverter<>(new ListToSet<>(elementIso));
     }
 
+    /**
+     * Given an equipment isomorphism (from DTO to domain model), return a
+     * bidirectional converter from a list of GML equipment property types to a
+     * set of domain model equipment log items.
+     */
+    private <P extends GMLPropertyType, T extends AbstractGMLType, L extends Object>
+    BidirectionalConverter<List<P>, Set<L>> infoCollectionConverter(Iso<T, L> equipmentIso) {
+        Iso<P, T> propertyIso = new GMLPropertyTypeMapper<>();
+        Iso<P, L> elementIso = propertyIso.compose(equipmentIso);
+        return new IsoConverter<>(new ListToSet<>(elementIso));
+    }
 
     /**
      * Given an isomorphism from A to B, return an isomorphism from a set of A

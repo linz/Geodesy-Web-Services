@@ -123,7 +123,7 @@ public class SiteLog {
     @Valid
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "SITE_ID", referencedColumnName = "ID")
-    protected Set<LocalEpisodicEvent> localEpisodicEvents;
+    protected Set<LocalEpisodicEventLogItem> localEpisodicEventLogItems;
 
     @Valid
     @Embedded
@@ -397,15 +397,15 @@ public class SiteLog {
     /**
      * Return local episodic events.
      */
-    public Set<LocalEpisodicEvent> getLocalEpisodicEvents() {
-        return this.localEpisodicEvents;
+    public Set<LocalEpisodicEventLogItem> getLocalEpisodicEventLogItems() {
+        return this.localEpisodicEventLogItems;
     }
 
     /**
      * Set local episodic events.
      */
-    public void setLocalEpisodicEvents(Set<LocalEpisodicEvent> es) {
-        localEpisodicEvents = es;
+    public void setLocalEpisodicEventLogItems(Set<LocalEpisodicEventLogItem> es) {
+        localEpisodicEventLogItems = es;
     }
 
     /**

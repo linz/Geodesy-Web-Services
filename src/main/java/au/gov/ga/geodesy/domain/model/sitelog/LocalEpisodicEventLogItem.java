@@ -1,11 +1,7 @@
 package au.gov.ga.geodesy.domain.model.sitelog;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.SequenceGenerator;
-import javax.persistence.Table;
+import javax.persistence.*;
+import javax.validation.Valid;
 import javax.validation.constraints.Size;
 
 /**
@@ -13,16 +9,16 @@ import javax.validation.constraints.Size;
  */
 @Entity
 @Table(name = "SITELOG_LOCALEPISODICEVENT")
-public class LocalEpisodicEvent {
+public class LocalEpisodicEventLogItem implements LogItem {
 
     @Id
     @GeneratedValue(generator = "surrogateKeyGenerator")
     @SequenceGenerator(name = "surrogateKeyGenerator", sequenceName = "SEQ_SITELOGLOCALEPISODICEVENT")
     private Integer id;
 
-    @Size(max = 256)
-    @Column(name = "EVENT_DATE", length = 256)
-    protected String date;
+    @Valid
+    @Embedded
+    protected EffectiveDates effectiveDates;
 
     @Size(max = 256)
     @Column(name = "EVENT", length = 256)
@@ -39,17 +35,17 @@ public class LocalEpisodicEvent {
     }
 
     /**
-     * Return date.
+     * Return effective dates.
      */
-    public String getDate() {
-        return date;
+    public EffectiveDates getEffectiveDates() {
+        return effectiveDates;
     }
 
     /**
-     * Set date.
+     * Set effective dates.
      */
-    public void setDate(String value) {
-        this.date = value;
+    public void setEffectiveDates(EffectiveDates value) {
+        this.effectiveDates = value;
     }
 
     /**
@@ -64,5 +60,9 @@ public class LocalEpisodicEvent {
      */
     public void setEvent(String value) {
         this.event = value;
+    }
+
+    public <T> T accept(LogItemVisitor<T> v) {
+        return v.visit(this);
     }
 }

@@ -4,24 +4,12 @@ import java.lang.reflect.InvocationTargetException;
 import java.time.Instant;
 import java.util.Optional;
 
+import au.gov.ga.geodesy.domain.model.sitelog.*;
 import org.apache.commons.lang3.tuple.Pair;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
-import au.gov.ga.geodesy.domain.model.sitelog.EffectiveDates;
-import au.gov.ga.geodesy.domain.model.sitelog.EquipmentLogItem;
-import au.gov.ga.geodesy.domain.model.sitelog.FrequencyStandardLogItem;
-import au.gov.ga.geodesy.domain.model.sitelog.GnssAntennaLogItem;
-import au.gov.ga.geodesy.domain.model.sitelog.GnssReceiverLogItem;
-import au.gov.ga.geodesy.domain.model.sitelog.HumiditySensorLogItem;
-import au.gov.ga.geodesy.domain.model.sitelog.LogItemVisitor;
-import au.gov.ga.geodesy.domain.model.sitelog.OtherInstrumentationLogItem;
-import au.gov.ga.geodesy.domain.model.sitelog.PossibleProblemSourceLogItem;
-import au.gov.ga.geodesy.domain.model.sitelog.PressureSensorLogItem;
-import au.gov.ga.geodesy.domain.model.sitelog.TemperatureSensorLogItem;
-import au.gov.ga.geodesy.domain.model.sitelog.WaterVaporSensorLogItem;
 
 @Component
 public class EquipmentFactory {
@@ -114,6 +102,10 @@ public class EquipmentFactory {
         }
 
         public Pair<Equipment, EquipmentConfiguration> visit(PossibleProblemSourceLogItem logItem) {
+            throw new UnsupportedOperationException();
+        }
+
+        public Pair<Equipment, EquipmentConfiguration> visit(LocalEpisodicEventLogItem logItem) {
             throw new UnsupportedOperationException();
         }
 

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+   <changeSet author="heya (custom)"
+              id="1466471561618-1"
+              objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+      <preConditions onFail="HALT">
+         <sqlCheck expectedResult="0">select count(*) from sitelog_localepisodicevent where event_date is not null</sqlCheck>
+      </preConditions>
+      <dropColumn tableName="sitelog_localepisodicevent">
+         <column name="event_date"/>
+      </dropColumn>
+   </changeSet>
+   <changeSet author="heya (generated)"
+              id="1466471561618-2"
+              objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+      <addColumn tableName="sitelog_localepisodicevent">
+         <column name="effective_from" type="timestamp(29, 6)"/>
+      </addColumn>
+   </changeSet>
+   <changeSet author="heya (generated)"
+              id="1466471561618-3"
+              objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+      <addColumn tableName="sitelog_localepisodicevent">
+         <column name="effective_to" type="timestamp(29, 6)"/>
+      </addColumn>
+   </changeSet>
+</databaseChangeLog>

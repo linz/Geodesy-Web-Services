@@ -1,6 +1,7 @@
 package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 
-import static org.testng.Assert.assertEquals;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.core.Is.is;
 
 import au.gov.ga.geodesy.domain.model.sitelog.FormInformation;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLMarshaller;
@@ -35,13 +36,13 @@ public class FormInformationMapperTest {
         FormInformationType formInfoTypeA = siteLog.getFormInformation();
 
         FormInformation formInfo = mapper.to(formInfoTypeA);
-        assertEquals(formInfo.getPreparedBy(), formInfoTypeA.getPreparedBy());
-        assertEquals(formInfo.getReportType(), formInfoTypeA.getReportType());
-        assertEquals(formInfo.getDatePrepared(), GMLDateUtils.stringToDateMultiParsers(formInfoTypeA.getDatePrepared().getValue().get(0)));
+        assertThat(formInfo.getPreparedBy(), is(formInfoTypeA.getPreparedBy()));
+        assertThat(formInfo.getReportType(), is(formInfoTypeA.getReportType()));
+        assertThat(formInfo.getDatePrepared(), is(GMLDateUtils.stringToDateMultiParsers(formInfoTypeA.getDatePrepared().getValue().get(0))));
 
         FormInformationType formInfoTypeB = mapper.from(formInfo);
-        assertEquals(formInfoTypeB.getPreparedBy(), formInfo.getPreparedBy());
-        assertEquals(formInfoTypeB.getReportType(), formInfo.getReportType());
-        assertEquals(GMLDateUtils.stringToDateMultiParsers(formInfoTypeB.getDatePrepared().getValue().get(0)), formInfo.getDatePrepared());
+        assertThat(formInfoTypeB.getPreparedBy(), is(formInfo.getPreparedBy()));
+        assertThat(formInfoTypeB.getReportType(), is(formInfo.getReportType()));
+        assertThat(GMLDateUtils.stringToDateMultiParsers(formInfoTypeB.getDatePrepared().getValue().get(0)), is(formInfo.getDatePrepared()));
     }
 }

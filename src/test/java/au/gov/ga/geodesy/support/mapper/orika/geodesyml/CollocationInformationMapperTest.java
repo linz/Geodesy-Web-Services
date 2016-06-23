@@ -1,6 +1,7 @@
 package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 
-import static org.testng.Assert.assertEquals;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.core.Is.is;
 
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
@@ -42,22 +43,22 @@ public class CollocationInformationMapperTest {
         CollocationInformationType collocationInfoTypeA = siteLog.getCollocationInformations().get(0).getCollocationInformation();
         CollocationInformation collocationInfo = mapper.to(collocationInfoTypeA);
 
-        assertEquals(collocationInfo.getInstrumentType(), collocationInfoTypeA.getInstrumentationType().getValue());
-        assertEquals(collocationInfo.getStatus(), String.valueOf(collocationInfoTypeA.getStatus().getValue()));
-        assertEquals(collocationInfo.getNotes(), collocationInfoTypeA.getNotes());
-        assertEquals(outputFormat.format(collocationInfo.getEffectiveDates().getFrom()),
-                GMLDateUtils.stringToDateToStringMultiParsers(
+        assertThat(collocationInfo.getInstrumentType(), is(collocationInfoTypeA.getInstrumentationType().getValue()));
+        assertThat(collocationInfo.getStatus(), is(String.valueOf(collocationInfoTypeA.getStatus().getValue())));
+        assertThat(collocationInfo.getNotes(), is(collocationInfoTypeA.getNotes()));
+        assertThat(outputFormat.format(collocationInfo.getEffectiveDates().getFrom()),
+                is(GMLDateUtils.stringToDateToStringMultiParsers(
                         ((TimePeriodType) collocationInfoTypeA.getValidTime().getAbstractTimePrimitive().getValue())
-                                .getBeginPosition().getValue().get(0)));
+                                .getBeginPosition().getValue().get(0))));
 
         CollocationInformationType collocationInfoTypeB = mapper.from(collocationInfo);
 
-        assertEquals(collocationInfoTypeB.getInstrumentationType().getValue(), collocationInfo.getInstrumentType());
-        assertEquals(collocationInfoTypeB.getStatus().getValue(), collocationInfo.getStatus());
-        assertEquals(collocationInfoTypeB.getNotes(), collocationInfo.getNotes());
-        assertEquals(GMLDateUtils.stringToDateToStringMultiParsers(
+        assertThat(collocationInfoTypeB.getInstrumentationType().getValue(), is(collocationInfo.getInstrumentType()));
+        assertThat(collocationInfoTypeB.getStatus().getValue(), is(collocationInfo.getStatus()));
+        assertThat(collocationInfoTypeB.getNotes(), is(collocationInfo.getNotes()));
+        assertThat(GMLDateUtils.stringToDateToStringMultiParsers(
                 ((TimePeriodType) collocationInfoTypeB.getValidTime().getAbstractTimePrimitive().getValue())
                     .getBeginPosition().getValue().get(0)),
-                outputFormat.format(collocationInfo.getEffectiveDates().getFrom()));
+                is(outputFormat.format(collocationInfo.getEffectiveDates().getFrom())));
     }
 }

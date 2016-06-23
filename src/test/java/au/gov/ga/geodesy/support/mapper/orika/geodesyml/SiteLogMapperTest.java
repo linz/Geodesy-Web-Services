@@ -350,7 +350,7 @@ public class SiteLogMapperTest {
     }
 
     /**
-     * Test mapping of CollocationInformation from SiteLogType to SiteLog and back
+     * Test the mapping of CollocationInformation from SiteLogType to SiteLog and back
      * to SiteLogType. Based on the AIRA-collocationInfo site with added sensors.
      **/
     @Test

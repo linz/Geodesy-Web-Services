@@ -8,9 +8,12 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.transaction.annotation.Transactional;
-import org.testng.Assert;
+
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.instanceOf;
 
 import au.gov.ga.geodesy.domain.model.MockEventPublisher;
 import au.gov.ga.geodesy.domain.model.event.Event;
@@ -19,7 +22,6 @@ import au.gov.ga.geodesy.domain.model.sitelog.SiteLogRepository;
 import au.gov.ga.geodesy.port.adapter.sopac.SopacSiteLogReader;
 import au.gov.ga.geodesy.support.TestResources;
 import au.gov.ga.geodesy.support.spring.UnitTestConfig;
-
 
 @Transactional("geodesyTransactionManager")
 public class UploadAllSiteLogsTest extends UnitTestConfig {
@@ -51,10 +53,10 @@ public class UploadAllSiteLogsTest extends UnitTestConfig {
     @Test(dependsOnMethods = {"upload"})
     public void check() throws Exception {
         List<Event> events = eventPublisher.getPublishedEvents();
-        Assert.assertEquals(events.size(), 34);
+        assertThat(events.size(), equalTo(34));
         for (Event e : events) {
-            Assert.assertTrue(e instanceof SiteLogReceived);
+            assertThat(e, instanceOf(SiteLogReceived.class));
         }
-        Assert.assertEquals(siteLogs.count(), 34);
+        assertThat(siteLogs.count(), equalTo(34L));
     }
 }

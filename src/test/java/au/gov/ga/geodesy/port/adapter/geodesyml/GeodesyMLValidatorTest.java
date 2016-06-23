@@ -1,12 +1,14 @@
 package au.gov.ga.geodesy.port.adapter.geodesyml;
 
-import static org.testng.Assert.assertEquals;
-
 import java.io.IOException;
 import java.util.List;
 
 import javax.xml.transform.stream.StreamSource;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+
+
+import static org.hamcrest.Matchers.equalTo;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.Resource;
 import org.springframework.util.ResourceUtils;
@@ -21,9 +23,8 @@ public class GeodesyMLValidatorTest  {
 
     @BeforeTest
     public void setup() {
-        ClassPathXmlApplicationContext context = null;
-        try {
-            context = new ClassPathXmlApplicationContext();
+        
+        try (ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext()) {
             Resource catalogResource = context.getResource("classpath:xsd/geodesyml-1.0.0-SNAPSHOT/catalog.xml");
             String catalogPath = catalogResource.getFile().getAbsolutePath();
             geodesyMLValidator = new GeodesyMLValidator(catalogPath);
@@ -54,6 +55,6 @@ public class GeodesyMLValidatorTest  {
         if (n != violations.size()) {
             violations.forEach(System.out::println);
         }
-        assertEquals(violations.size(), n);
+        assertThat(violations.size(), equalTo(n));
     }
 }

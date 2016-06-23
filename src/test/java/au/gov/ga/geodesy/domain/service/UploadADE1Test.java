@@ -1,14 +1,14 @@
 package au.gov.ga.geodesy.domain.service;
 
-import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertNotNull;
-
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.transaction.annotation.Transactional;
 import org.testng.annotations.Test;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.core.IsNull.notNullValue;
 
 import au.gov.ga.geodesy.domain.model.CorsSite;
 import au.gov.ga.geodesy.domain.model.CorsSiteRepository;
@@ -23,7 +23,6 @@ import au.gov.ga.geodesy.port.SiteLogReader;
 import au.gov.ga.geodesy.port.adapter.sopac.SopacSiteLogReader;
 import au.gov.ga.geodesy.support.TestResources;
 import au.gov.ga.geodesy.support.spring.IntegrationTestConfig;
-
 
 @Transactional("geodesyTransactionManager")
 public class UploadADE1Test extends IntegrationTestConfig {
@@ -57,16 +56,16 @@ public class UploadADE1Test extends IntegrationTestConfig {
     public void checkSite() throws Exception {
         SiteLog siteLog = siteLogs.findByFourCharacterId(fourCharId);
         CorsSite site = sites.findByFourCharacterId(fourCharId);
-        assertNotNull(site);
+        assertThat(site, notNullValue());
 
         SiteIdentification identification = siteLog.getSiteIdentification();
-        assertEquals(site.getName(), identification.getSiteName());
-        assertEquals(site.getDateInstalled(), identification.getDateInstalled());
+        assertThat(site.getName(), equalTo(identification.getSiteName()));
+        assertThat(site.getDateInstalled(), equalTo(identification.getDateInstalled()));
 
         List<Setup> setups = setupRepo.findBySiteId(site.getId());
-        assertEquals(setups.size(), 7);
+        assertThat(setups.size(), equalTo(7));
 
         List<Node> nodes = nodeRepo.findBySiteId(site.getId());
-        assertEquals(nodes.size(), 4);
+        assertThat(nodes.size(), equalTo(4));
     }
 }

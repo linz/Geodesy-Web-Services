@@ -23,7 +23,6 @@ import au.gov.ga.geodesy.port.adapter.sopac.SopacSiteLogReader;
 import au.gov.ga.geodesy.support.TestResources;
 import au.gov.ga.geodesy.support.spring.UnitTestConfig;
 
-
 @Transactional("geodesyTransactionManager")
 public class UploadAllSiteLogsTest extends UnitTestConfig {
 
@@ -56,9 +55,8 @@ public class UploadAllSiteLogsTest extends UnitTestConfig {
         List<Event> events = eventPublisher.getPublishedEvents();
         assertThat(events.size(), equalTo(34));
         for (Event e : events) {
-            assertThat( e, instanceOf( SiteLogReceived.class ));
+            assertThat(e, instanceOf(SiteLogReceived.class));
         }
         assertThat(siteLogs.count(), equalTo(34L));
-
     }
 }

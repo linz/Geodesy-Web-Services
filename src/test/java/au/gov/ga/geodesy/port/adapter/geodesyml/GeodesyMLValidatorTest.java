@@ -23,9 +23,8 @@ public class GeodesyMLValidatorTest  {
 
     @BeforeTest
     public void setup() {
-        ClassPathXmlApplicationContext context = null;
-        try {
-            context = new ClassPathXmlApplicationContext();
+        
+        try (ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext()) {
             Resource catalogResource = context.getResource("classpath:xsd/geodesyml-1.0.0-SNAPSHOT/catalog.xml");
             String catalogPath = catalogResource.getFile().getAbsolutePath();
             geodesyMLValidator = new GeodesyMLValidator(catalogPath);

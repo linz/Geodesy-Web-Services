@@ -24,7 +24,6 @@ import au.gov.ga.geodesy.port.adapter.sopac.SopacSiteLogReader;
 import au.gov.ga.geodesy.support.TestResources;
 import au.gov.ga.geodesy.support.spring.IntegrationTestConfig;
 
-
 @Transactional("geodesyTransactionManager")
 public class UploadADE1Test extends IntegrationTestConfig {
 
@@ -58,19 +57,15 @@ public class UploadADE1Test extends IntegrationTestConfig {
         SiteLog siteLog = siteLogs.findByFourCharacterId(fourCharId);
         CorsSite site = sites.findByFourCharacterId(fourCharId);
         assertThat(site, notNullValue());
-        
 
         SiteIdentification identification = siteLog.getSiteIdentification();
         assertThat(site.getName(), equalTo(identification.getSiteName()));
         assertThat(site.getDateInstalled(), equalTo(identification.getDateInstalled()));
 
-        
         List<Setup> setups = setupRepo.findBySiteId(site.getId());
         assertThat(setups.size(), equalTo(7));
-        
 
         List<Node> nodes = nodeRepo.findBySiteId(site.getId());
-        assertThat (nodes.size(), equalTo(4));
-        
+        assertThat(nodes.size(), equalTo(4));
     }
 }

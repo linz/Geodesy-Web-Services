@@ -1,9 +1,12 @@
 package au.gov.ga.geodesy.domain.model.sitelog;
 
-import java.time.Instant;
+import afu.org.apache.commons.lang3.builder.EqualsBuilder;
+import afu.org.apache.commons.lang3.builder.HashCodeBuilder;
+import afu.org.apache.commons.lang3.builder.ToStringBuilder;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
+import java.time.Instant;
 
 /**
  * http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004/baseEquipmentLib.xsd:baseSensorEquipmentType.effectiveDates Note: this is an attempt to
@@ -45,35 +48,32 @@ public class EffectiveDates implements Comparable {
         this.to = to;
     }
 
-    public boolean equals(Object x) {
-        if (x == null) {
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder().append(this.from).append(this.to).toHashCode();
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        if (!(object instanceof EffectiveDates)) {
             return false;
         }
-        if (x == this) {
+        if (this == object) {
             return true;
         }
-        if (x.getClass() != getClass()) {
-            return false;
-        }
-        EffectiveDates other = (EffectiveDates) x;
-        if (from == null && to == null) {
-            return other.getFrom() == null && other.getTo() == null;
-        }
-        if (from == null) {
-            return other.getFrom() == null && other.getTo().equals(to);
-        }
-        if (to == null) {
-            return other.getTo() == null && other.getFrom().equals(from);
-        }
-        return from.equals(other.getFrom()) && to.equals(other.getTo());
+        EffectiveDates other = (EffectiveDates) object;
+
+        return new EqualsBuilder().append(this.from, other.from).append(this.to, other.to).isEquals();
     }
 
     /**
      * Implement compareTo method so that collections of EffectiveDate objects can be sorted properly
      * Compares from and to dates, accounting for null values.
+     *
      * @param otherObject the EffectiveDate to compare with this one
      * @return int value of comparison
      */
+    @Override
     public int compareTo(Object otherObject) {
         int result = 0;
         if (otherObject == null) {
@@ -104,10 +104,8 @@ public class EffectiveDates implements Comparable {
         return result;
     }
 
-    @Override public String toString() {
-        return "EffectiveDates{" +
-                "from=" + from +
-                ", to=" + to +
-                '}';
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this).append("From", this.from).append("To", this.to).toString();
     }
 }

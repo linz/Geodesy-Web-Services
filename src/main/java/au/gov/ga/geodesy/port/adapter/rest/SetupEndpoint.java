@@ -1,5 +1,6 @@
 package au.gov.ga.geodesy.port.adapter.rest;
 
+import java.time.Instant;
 import java.util.ArrayList;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,8 +48,8 @@ public class SetupEndpoint {
 
     public ResponseEntity<PagedResources<Resource<Setup>>> findByFourCharacterId(
             @RequestParam("id") String fourCharId,
-            @RequestParam() String effectiveFrom,
-            @RequestParam() String effectiveTo,
+            @RequestParam(required = false) String effectiveFrom,
+            @RequestParam(required = false) String effectiveTo,
             @RequestParam(defaultValue = "uuuu-MM-dd") String timeFormat,
             Pageable pageRequest) {
 
@@ -56,16 +57,19 @@ public class SetupEndpoint {
         CorsSite site = sites.findByFourCharacterId(fourCharId);
 
         if (site != null) {
-            page = setups.findBySiteIdAndDateRange(
-                    site.getId(),
-                    GMLDateUtils.stringToDate(effectiveFrom, timeFormat),
-                    GMLDateUtils.stringToDate(effectiveTo, timeFormat),
-                    pageRequest);
+            page = setups.findBySiteIdAndPeriod(site.getId(),
+                parse(effectiveFrom, timeFormat),
+                parse(effectiveTo, timeFormat),
+                pageRequest);
         } else {
             page = new PageImpl<Setup>(new ArrayList<Setup>());
         }
         PagedResources<Resource<Setup>> paged = assembler.toResource(page);
         return new ResponseEntity<>(paged, new HttpHeaders(), HttpStatus.OK);
+    }
+
+    private Instant parse(String time, String pattern) {
+        return GMLDateUtils.stringToDate(time, pattern);
     }
 
     @RequestMapping(

@@ -139,7 +139,7 @@ public class GeodesyMLDecorators {
         private static <C> TimePositionType createTimePositionType(C childElement) throws ParseException {
             TimePositionType tpt = new TimePositionType();
             Method getter = null;
-            Instant useThisDate = Instant.now();
+            Instant useThisDate = null;
             try {
                 getter = childElement.getClass().getMethod("getDateInstalled");
                 try {
@@ -159,7 +159,7 @@ public class GeodesyMLDecorators {
                 logger.error("Trying to get method getDateInstalled() on element: "
                         + childElement.getClass().getSimpleName() + "; just use now() instead", e);
             }
-
+            useThisDate = useThisDate != null ? useThisDate :Instant.now();
             tpt.setValue(Stream.of(GEODESYML_DATE_FORMAT_TIME_SEC.format(useThisDate))
                     .collect(Collectors.toList()));
             return tpt;

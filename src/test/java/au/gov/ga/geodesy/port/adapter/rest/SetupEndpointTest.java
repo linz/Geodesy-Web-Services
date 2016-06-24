@@ -1,7 +1,9 @@
 package au.gov.ga.geodesy.port.adapter.rest;
 
+import static org.hamcrest.Matchers.nullValue;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.annotation.Rollback;
@@ -38,13 +40,19 @@ public class SetupEndpointTest extends RestTest {
     public void testFindByFourCharacterIdAndDate() throws Exception {
         mvc.perform(get("/setups/search/findByFourCharacterId?id=ALIC&effectiveFrom=2011-12-12&effectiveTo=2014-12-12&timeFormat=uuuu-MM-dd"))
             .andExpect(status().isOk())
-            .andExpect(jsonPath("$.page.totalElements").value(3));
+            .andExpect(jsonPath("$.page.totalElements").value(3))
+            .andExpect(jsonPath("$._embedded.setups[0].effectivePeriod.from").value("2011-07-20T00:00:00Z"))
+            .andExpect(jsonPath("$._embedded.setups[0].effectivePeriod.to").value("2013-03-08T00:00:00Z"));
     }
 
     @Test(dependsOnMethods = {"upload"})
-    public void testDateFormat() throws Exception {
-        mvc.perform(get("/setups/search/findByFourCharacterId?id=ALIC&effectiveFrom=2011-12-12&effectiveTo=2011-12-12&timeFormat=uuuu-MM-dd"))
-            .andExpect(jsonPath("$._embedded.setups[0].effectivePeriod.from").value("2011-07-20T00:00:00Z"))
-            .andExpect(jsonPath("$._embedded.setups[0].effectivePeriod.to").value("2013-03-08T00:00:00Z"));
+    @Rollback(false)
+    public void testFindByFourCharacterId() throws Exception {
+        int expectedTotalElements = 21;
+        mvc.perform(get("/setups/search/findByFourCharacterId?id=ALIC&size=" + expectedTotalElements))
+            .andExpect(status().isOk())
+            .andExpect(jsonPath("$.page.totalElements").value(expectedTotalElements))
+            .andExpect(jsonPath("$._embedded.setups[0].effectivePeriod.from").value("1994-05-15T00:00:00Z"))
+            .andExpect(jsonPath("$._embedded.setups[" + (expectedTotalElements - 1) + "].effectivePeriod.to").value(nullValue()));
     }
 }

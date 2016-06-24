@@ -1,6 +1,5 @@
 package au.gov.ga.geodesy.domain.model;
 
-import java.time.Instant;
 import java.util.List;
 
 import org.springframework.data.domain.Page;
@@ -24,31 +23,4 @@ public interface SetupRepository extends JpaRepository<Setup, Integer>, SetupRep
     @RestResource(exported = false)
     @Query("select s from Setup s where s.siteId = :siteId and s.invalidated = true")
     List<Setup> findInvalidatedBySiteId(@Param("siteId") Integer id);
-
-    @RestResource(exported = false)
-    @Query("select s from Setup s where "
-                + "s.siteId = :siteId and s.invalidated = false"
-                + " and ((s.effectivePeriod.from >= :effectiveFrom and s.effectivePeriod.to <= :effectiveTo)"
-                + " or (s.effectivePeriod.from <= :effectiveTo and (:effectiveTo <= s.effectivePeriod.to or s.effectivePeriod.to is null))"
-                + " or (s.effectivePeriod.from <= :effectiveFrom   and :effectiveFrom   <= s.effectivePeriod.to))")
-
-    Page<Setup> findBySiteIdAndDateRange(
-        @Param("siteId") Integer id,
-        @Param("effectiveFrom") Instant effectiveFrom,
-        @Param("effectiveTo") Instant effectiveTo,
-        Pageable pageRequest
-    );
-
-    @RestResource(exported = false)
-    @Query("select s from Setup s where "
-                + "s.siteId = :siteId and s.invalidated = false"
-                + " and ((s.effectivePeriod.from >= :effectiveFrom and s.effectivePeriod.to <= :effectiveTo)"
-                + " or (s.effectivePeriod.from <= :effectiveTo and (:effectiveTo <= s.effectivePeriod.to or s.effectivePeriod.to is null))"
-                + " or (s.effectivePeriod.from <= :effectiveFrom   and :effectiveFrom   <= s.effectivePeriod.to))")
-
-    List<Setup> findBySiteIdAndDateRange(
-        @Param("siteId") Integer id,
-        @Param("effectiveFrom") Instant effectiveFrom,
-        @Param("effectiveTo") Instant effectiveTo
-    );
 }

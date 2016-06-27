@@ -45,7 +45,7 @@ psql -d geodesy_baseline_db -c "CREATE EXTENSION postgis;"
 
 
 # create schemas and test
-psql -U geodesy  geodesydb   <<EOF
+PGPASSWORD=geodesypw psql -U geodesy  geodesydb   <<EOF
 
 create schema geodesy authorization geodesy;
 
@@ -76,7 +76,7 @@ EOF
 
 # and now repeat for the baseline database
 
-psql -U geodesy  geodesy_baseline_db   <<EOF
+PGPASSWORD=geodesypw psql -U geodesy  geodesy_baseline_db   <<EOF
 
 create schema geodesy authorization geodesy;
 

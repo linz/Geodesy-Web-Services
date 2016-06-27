@@ -489,7 +489,7 @@ public class SiteLogMapperTest {
                 }
                 return new InstantToTimePositionConverter().convertFrom(time, TypeFactory.valueOf(Instant.class), null);
             }
-            
+
         });
     }
 

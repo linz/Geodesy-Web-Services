@@ -5,6 +5,7 @@ import au.gov.ga.geodesy.domain.model.sitelog.GnssAntennaLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.GnssReceiverLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.HumiditySensorLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.LocalEpisodicEventLogItem;
+
 import au.gov.ga.geodesy.domain.model.sitelog.LogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.MultipathSourceLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.OtherInstrumentationLogItem;
@@ -61,10 +62,9 @@ import java.util.SortedSet;
 import java.util.TreeSet;
 
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.hasSize;
+import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsEqual.equalTo;
-
 
 public class SiteLogMapperTest {
 
@@ -324,7 +324,6 @@ public class SiteLogMapperTest {
                 .findFirst().get();
 
         SiteLog siteLog = mapper.to(siteLogType);
-
         assertThat(siteLog.getMoreInformation().getPrimaryDataCenter(), is(siteLogType.getMoreInformation().getDataCenter().get(0)));
         assertThat(siteLog.getMoreInformation().getNotes(), is(siteLogType.getMoreInformation().getNotes()));
         assertThat(siteLog.getMoreInformation().getDoi(), is(siteLogType.getMoreInformation().getDOI().getValue()));
@@ -345,7 +344,6 @@ public class SiteLogMapperTest {
                 .findFirst().get();
 
         SiteLog siteLog = mapper.to(siteLogType);
-
         assertThat(siteLog.getFormInformation().getReportType(), is(siteLogType.getFormInformation().getReportType()));
         assertThat(siteLog.getFormInformation().getPreparedBy(), is(siteLogType.getFormInformation().getPreparedBy()));
     }
@@ -510,4 +508,3 @@ public class SiteLogMapperTest {
         return sorted;
     }
 }
-

@@ -21,8 +21,11 @@ import au.gov.ga.geodesy.domain.model.sitelog.WaterVaporSensorLogItem;
 import au.gov.ga.geodesy.support.gml.GMLPropertyType;
 import au.gov.ga.geodesy.support.java.util.Iso;
 import au.gov.xml.icsm.geodesyml.v_0_3.FormInformationType;
+<<<<<<< 07279862a1f604c2327950de74ac4846b52fdee7
 import au.gov.xml.icsm.geodesyml.v_0_3.GnssAntennaPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_3.LocalEpisodicEventsPropertyType;
+=======
+>>>>>>> Fix conflicts after rebase
 import au.gov.xml.icsm.geodesyml.v_0_3.MoreInformationType;
 import au.gov.xml.icsm.geodesyml.v_0_3.MultipathSourcesPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_3.RadioInterferencesPropertyType;
@@ -199,12 +202,12 @@ public class SiteLogMapper implements Iso<SiteLogType, SiteLog> {
     /**
      * Given an equipment isomorphism (from DTO to domain model), return a
      * bidirectional converter from a list of GML equipment property types to a
-     * set of domain model equipment log items.
+     * set of domain model collocation information.
      */
     private <P extends GMLPropertyType, T extends AbstractGMLType, L extends Object>
-    BidirectionalConverter<List<P>, Set<L>> infoCollectionConverter(Iso<T, L> equipmentIso) {
+    BidirectionalConverter<List<P>, Set<L>> infoCollectionConverter(Iso<T, L> infoIso) {
         Iso<P, T> propertyIso = new GMLPropertyTypeMapper<>();
-        Iso<P, L> elementIso = propertyIso.compose(equipmentIso);
+        Iso<P, L> elementIso = propertyIso.compose(infoIso);
         return new IsoConverter<>(new ListToSet<>(elementIso));
     }
 

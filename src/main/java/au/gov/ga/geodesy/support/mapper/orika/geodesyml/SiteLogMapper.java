@@ -1,5 +1,6 @@
 package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 
+import au.gov.ga.geodesy.domain.model.sitelog.GnssAntennaLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.GnssReceiverLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.HumiditySensorLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.LocalEpisodicEventLogItem;
@@ -16,6 +17,7 @@ import au.gov.ga.geodesy.domain.model.sitelog.TemperatureSensorLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.WaterVaporSensorLogItem;
 import au.gov.ga.geodesy.support.gml.GMLPropertyType;
 import au.gov.ga.geodesy.support.java.util.Iso;
+import au.gov.xml.icsm.geodesyml.v_0_3.GnssAntennaPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_3.LocalEpisodicEventsPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_3.MultipathSourcesPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_3.RadioInterferencesPropertyType;
@@ -60,6 +62,7 @@ public class SiteLogMapper implements Iso<SiteLogType, SiteLog> {
             .fieldMap("multipathSourcesSet", "multipathSourceLogItems").converter("multipathSourcesSet").add()
             .fieldMap("localEpisodicEventsSet", "localEpisodicEventLogItems").converter("localEpisodicEventsSet").add()
             .fieldMap("radioInterferencesSet", "radioInterferences").converter("radioInterferencesSet").add()
+            .fieldMap("gnssAntennas", "gnssAntennas").converter("gnssAntennas").add()
             /* .byDefault() */
             .register();
 
@@ -129,6 +132,12 @@ public class SiteLogMapper implements Iso<SiteLogType, SiteLog> {
                 new BidirectionalConverterWrapper<List<RadioInterferencesPropertyType>, Set<RadioInterference>>(
                         logItemsConverter(new RadioInterferenceMapper())
                 ) {}
+        );
+        converters.registerConverter("gnssAntennas",
+                new BidirectionalConverterWrapper<List<GnssAntennaPropertyType>, Set<GnssAntennaLogItem>>(
+                        logItemsConverter(new GnssAntennaMapper())
+                ) {
+                }
         );
 
         mapper = mapperFactory.getMapperFacade();

@@ -14,10 +14,12 @@ public class StringToCodeTypeConverter extends BidirectionalConverter<String, Co
         this.codeSpace = codeSpace;
     }
 
+    @Override
     public String convertFrom(CodeType code, Type<String> targetType, MappingContext ctx) {
         return code.getValue();
     }
 
+    @Override
     public CodeType convertTo(String str, Type<CodeType> targetType, MappingContext ctx) {
         CodeType code = new CodeType();
         code.setValue(str);

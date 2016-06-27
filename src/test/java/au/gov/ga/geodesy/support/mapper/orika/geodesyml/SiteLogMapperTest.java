@@ -1,5 +1,6 @@
 package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 
+import au.gov.ga.geodesy.domain.model.sitelog.GnssAntennaLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.GnssReceiverLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.HumiditySensorLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.LocalEpisodicEventLogItem;
@@ -14,11 +15,14 @@ import au.gov.ga.geodesy.domain.model.sitelog.TemperatureSensorLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.WaterVaporSensorLogItem;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLMarshaller;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLUtils;
+import au.gov.ga.geodesy.port.adapter.geodesyml.MarshallingException;
 import au.gov.ga.geodesy.support.TestResources;
 import au.gov.ga.geodesy.support.gml.GMLPropertyType;
 import au.gov.ga.geodesy.support.marshalling.moxy.GeodesyMLMoxy;
 import au.gov.xml.icsm.geodesyml.v_0_3.BasePossibleProblemSourcesType;
 import au.gov.xml.icsm.geodesyml.v_0_3.GeodesyMLType;
+import au.gov.xml.icsm.geodesyml.v_0_3.GnssAntennaPropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_3.GnssAntennaType;
 import au.gov.xml.icsm.geodesyml.v_0_3.GnssReceiverPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_3.GnssReceiverType;
 import au.gov.xml.icsm.geodesyml.v_0_3.HumiditySensorPropertyType;
@@ -42,6 +46,7 @@ import net.opengis.gml.v_3_2_1.TimePositionType;
 import org.apache.commons.beanutils.PropertyUtils;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.time.Instant;
 import java.util.Collections;
@@ -318,6 +323,31 @@ public class SiteLogMapperTest {
         }
     }
 
+    @Test
+    public void testGnssAntennaMapping() throws IOException, MarshallingException {
+        GeodesyMLType mobs = marshaller.unmarshal(TestResources.geodesyMLSiteLogReader("MOBS"), GeodesyMLType.class)
+                .getValue();
+
+        SiteLogType siteLogType = GeodesyMLUtils.getElementFromJAXBElements(mobs.getElements(), SiteLogType.class)
+                .findFirst().get();
+
+        SiteLog siteLog = mapper.to(siteLogType);
+
+
+        List<GnssAntennaPropertyType> gnssAntennaPropertyTypes = siteLogType.getGnssAntennas();
+        sortGMLPropertyTypes(gnssAntennaPropertyTypes);
+        assertThat(siteLog.getGnssAntennas().size(), equalTo(1));
+        assertThat(gnssAntennaPropertyTypes.size(), equalTo(1));
+
+        {
+            int i = 0;
+            for (GnssAntennaLogItem antennaLogItem : sortLogItems(siteLog.getGnssAntennas())) {
+                GnssAntennaType antennaType = gnssAntennaPropertyTypes.get(i++).getGnssAntenna();
+                assertThat(antennaLogItem.getSerialNumber(), equalTo(antennaType.getSerialNumber()));
+            }
+        }
+    }
+
     /**
      * Sort set of log items by installation date.
      */
@@ -351,12 +381,12 @@ public class SiteLogMapperTest {
                 TimePositionType time = null;
 
                 try {
-                    time = (TimePositionType) PropertyUtils.getProperty(p.getTargetElement(),"dateInstalled");
+                    time = (TimePositionType) PropertyUtils.getProperty(p.getTargetElement(), "dateInstalled");
                     return new InstantToTimePositionConverter().convertFrom(time, TypeFactory.valueOf(Instant.class), null);
                 } catch (IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
                     // try a different version of the "installation date"
                     try {
-                        time = (TimePositionType)PropertyUtils.getProperty(p.getTargetElement(),
+                        time = (TimePositionType) PropertyUtils.getProperty(p.getTargetElement(),
                                 "validTime.abstractTimePrimitive.value.beginPosition");
                     } catch (IllegalAccessException | InvocationTargetException | NoSuchMethodException e2) {
                         throw new RuntimeException(e2);

@@ -1,9 +1,11 @@
 package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 
+import au.gov.ga.geodesy.domain.model.sitelog.CollocationInformation;
 import au.gov.ga.geodesy.domain.model.sitelog.GnssAntennaLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.GnssReceiverLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.HumiditySensorLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.LocalEpisodicEventLogItem;
+
 import au.gov.ga.geodesy.domain.model.sitelog.LogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.MultipathSourceLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.OtherInstrumentationLogItem;
@@ -18,8 +20,11 @@ import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLUtils;
 import au.gov.ga.geodesy.port.adapter.geodesyml.MarshallingException;
 import au.gov.ga.geodesy.support.TestResources;
 import au.gov.ga.geodesy.support.gml.GMLPropertyType;
+import au.gov.ga.geodesy.support.mapper.dozer.converter.TimePrimitivePropertyTypeUtils;
 import au.gov.ga.geodesy.support.marshalling.moxy.GeodesyMLMoxy;
 import au.gov.xml.icsm.geodesyml.v_0_3.BasePossibleProblemSourcesType;
+import au.gov.xml.icsm.geodesyml.v_0_3.CollocationInformationPropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_3.CollocationInformationType;
 import au.gov.xml.icsm.geodesyml.v_0_3.GeodesyMLType;
 import au.gov.xml.icsm.geodesyml.v_0_3.GnssAntennaPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_3.GnssAntennaType;
@@ -41,12 +46,12 @@ import au.gov.xml.icsm.geodesyml.v_0_3.TemperatureSensorPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_3.TemperatureSensorType;
 import au.gov.xml.icsm.geodesyml.v_0_3.WaterVaporSensorPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_3.WaterVaporSensorType;
+import java.io.IOException;
 import ma.glasnost.orika.metadata.TypeFactory;
 import net.opengis.gml.v_3_2_1.TimePositionType;
 import org.apache.commons.beanutils.PropertyUtils;
 import org.testng.annotations.Test;
 
-import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.time.Instant;
 import java.util.Collections;
@@ -57,6 +62,8 @@ import java.util.SortedSet;
 import java.util.TreeSet;
 
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.hasSize;
+import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsEqual.equalTo;
 
 public class SiteLogMapperTest {
@@ -193,8 +200,7 @@ public class SiteLogMapperTest {
     public void testSignalObstructionsMapping() throws Exception {
         GeodesyMLType mobs = marshaller
                 .unmarshal(TestResources.geodesyMLTestDataSiteLogReader("METZ-signalObstructionSet"),
-                        GeodesyMLType.class)
-                .getValue();
+                        GeodesyMLType.class).getValue();
 
         SiteLogType siteLogType = GeodesyMLUtils.getElementFromJAXBElements(mobs.getElements(), SiteLogType.class)
                 .findFirst().get();
@@ -301,6 +307,76 @@ public class SiteLogMapperTest {
             for (RadioInterference logItem : sortLogItems(siteLog.getRadioInterferences())) {
                 BasePossibleProblemSourcesType xmlType = radioInterferencesPropertyTypes.get(i++).getRadioInterferences();
                 assertThat(logItem.getPossibleProblemSource(), equalTo(xmlType.getPossibleProblemSources()));
+            }
+        }
+    }
+    /**
+     * Test the mapping of MoreInformation from SiteLogType to SiteLog and back
+     * to SiteLogType. Based on the MOBS-moreInfo site with added sensors.
+     **/
+    @Test
+    public void testMoreInformationMapping() throws Exception {
+        GeodesyMLType mobs = marshaller
+                .unmarshal(TestResources.geodesyMLTestDataSiteLogReader("MOBS-moreInfo"), GeodesyMLType.class)
+                .getValue();
+
+        SiteLogType siteLogType = GeodesyMLUtils.getElementFromJAXBElements(mobs.getElements(), SiteLogType.class)
+                .findFirst().get();
+
+        SiteLog siteLog = mapper.to(siteLogType);
+        assertThat(siteLog.getMoreInformation().getPrimaryDataCenter(), is(siteLogType.getMoreInformation().getDataCenter().get(0)));
+        assertThat(siteLog.getMoreInformation().getNotes(), is(siteLogType.getMoreInformation().getNotes()));
+        assertThat(siteLog.getMoreInformation().getDoi(), is(siteLogType.getMoreInformation().getDOI().getValue()));
+    }
+
+
+    /**
+     * Test the mapping of FormInformation from SiteLogType to SiteLog and back
+     * to SiteLogType. Based on the ALIC site with added sensors.
+     **/
+    @Test
+    public void testFormInformationMapping() throws Exception {
+        GeodesyMLType mobs = marshaller
+                .unmarshal(TestResources.geodesyMLSiteLogReader("ALIC"), GeodesyMLType.class)
+                .getValue();
+
+        SiteLogType siteLogType = GeodesyMLUtils.getElementFromJAXBElements(mobs.getElements(), SiteLogType.class)
+                .findFirst().get();
+
+        SiteLog siteLog = mapper.to(siteLogType);
+        assertThat(siteLog.getFormInformation().getReportType(), is(siteLogType.getFormInformation().getReportType()));
+        assertThat(siteLog.getFormInformation().getPreparedBy(), is(siteLogType.getFormInformation().getPreparedBy()));
+    }
+
+    /**
+     * Test the mapping of CollocationInformation from SiteLogType to SiteLog and back
+     * to SiteLogType. Based on the AIRA-collocationInfo site with added sensors.
+     **/
+    @Test
+    public void testCollocationInformationMapping() throws Exception {
+        GeodesyMLType mobs = marshaller
+                .unmarshal(TestResources.geodesyMLTestDataSiteLogReader("AIRA-collocationInfo"), GeodesyMLType.class)
+                .getValue();
+
+        SiteLogType siteLogType = GeodesyMLUtils.getElementFromJAXBElements(mobs.getElements(), SiteLogType.class)
+                .findFirst().get();
+
+        SiteLog siteLog = mapper.to(siteLogType);
+        List<CollocationInformationPropertyType> collocationInfoProperties = siteLogType.getCollocationInformations();
+        sortGMLPropertyTypes(collocationInfoProperties);
+
+        assertThat(siteLog.getCollocationInformation(), hasSize(1));
+        assertThat(collocationInfoProperties, hasSize(1));
+
+        {
+            int i = 0;
+            for (CollocationInformation collocationInfo : sortBy(siteLog.getCollocationInformation())) {
+                CollocationInformationType collocationInfoType = collocationInfoProperties.get(i++).getCollocationInformation();
+                assertThat(collocationInfo.getInstrumentType(), is(collocationInfoType.getInstrumentationType().getValue()));
+                String beginTime = TimePrimitivePropertyTypeUtils
+                        .getTheTimePeriodType(collocationInfoType.getValidTime()).getBeginPosition().getValue().get(0).toString();
+                assertThat(collocationInfo.getEffectiveDates().getFrom().toString(), is(beginTime));
+                assertThat(collocationInfo.getStatus(), is(collocationInfoType.getStatus().getValue()));
             }
         }
     }
@@ -413,10 +489,22 @@ public class SiteLogMapperTest {
                 }
                 return new InstantToTimePositionConverter().convertFrom(time, TypeFactory.valueOf(Instant.class), null);
             }
-            
+
         });
     }
 
-
+    /**
+     * Sort set of CollocationInformations by Effective Dates.
+     */
+    private <T extends CollocationInformation> SortedSet<T> sortBy(Set<T> info) {
+        SortedSet<T> sorted = new TreeSet<>(new Comparator<T>() {
+            public int compare(T e, T f) {
+                int c = e.getEffectiveDates().compareTo(f.getEffectiveDates());
+                // keep duplicates
+                return c != 0 ? c : 1;
+            }
+        });
+        sorted.addAll(info);
+        return sorted;
+    }
 }
-

@@ -1,6 +1,7 @@
 package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 
-import static org.testng.Assert.assertEquals;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.core.Is.is;
 
 import au.gov.ga.geodesy.domain.model.sitelog.MoreInformation;
 import au.gov.xml.icsm.geodesyml.v_0_3.MoreInformationType;
@@ -26,7 +27,7 @@ public class MoreInformationMapperTest {
      **/
     @Test
     public void testMapping() throws Exception {
-        GeodesyMLType mobs = marshaller.unmarshal(TestResources.geodesyMLSiteLogReader("MOBS-moreInfo"), GeodesyMLType.class)
+        GeodesyMLType mobs = marshaller.unmarshal(TestResources.geodesyMLTestDataSiteLogReader("MOBS-moreInfo"), GeodesyMLType.class)
                 .getValue();
 
         SiteLogType siteLogType = GeodesyMLUtils.getElementFromJAXBElements(mobs.getElements(), SiteLogType.class)
@@ -36,32 +37,32 @@ public class MoreInformationMapperTest {
 
         // Test the to mapping
         MoreInformation moreInfo = mapper.to(moreInfoTypeA);
-        assertEquals(moreInfo.getPrimaryDataCenter(), moreInfoTypeA.getDataCenter().get(0));
-        assertEquals(moreInfo.getSecondaryDataCenter(), moreInfoTypeA.getDataCenter().get(1));
-        assertEquals(moreInfo.getUrlForMoreInformation(), moreInfoTypeA.getUrlForMoreInformation());
-        assertEquals(moreInfo.getSiteDiagram(), moreInfoTypeA.getSiteDiagram());
-        assertEquals(moreInfo.getSiteMap(), moreInfoTypeA.getSiteMap());
-        assertEquals(moreInfo.getSitePictures(), moreInfoTypeA.getSitePictures());
-        assertEquals(moreInfo.getHorizonMask(), moreInfoTypeA.getHorizonMask());
-        assertEquals(moreInfo.getMonumentDescription(), moreInfoTypeA.getMonumentDescription());
-        assertEquals(moreInfo.getNotes(), moreInfoTypeA.getNotes());
-        assertEquals(moreInfo.getAntennaGraphicsWithDimensions(), moreInfoTypeA.getAntennaGraphicsWithDimensions());
-        assertEquals(moreInfo.getInsertTextGraphicFromAntenna(), moreInfoTypeA.getInsertTextGraphicFromAntenna());
-        assertEquals(moreInfo.getDoi(), moreInfoTypeA.getDOI().getValue());
+        assertThat(moreInfo.getPrimaryDataCenter(), is(moreInfoTypeA.getDataCenter().get(0)));
+        assertThat(moreInfo.getSecondaryDataCenter(), is(moreInfoTypeA.getDataCenter().get(1)));
+        assertThat(moreInfo.getUrlForMoreInformation(), is(moreInfoTypeA.getUrlForMoreInformation()));
+        assertThat(moreInfo.getSiteDiagram(), is(moreInfoTypeA.getSiteDiagram()));
+        assertThat(moreInfo.getSiteMap(), is(moreInfoTypeA.getSiteMap()));
+        assertThat(moreInfo.getSitePictures(), is(moreInfoTypeA.getSitePictures()));
+        assertThat(moreInfo.getHorizonMask(), is(moreInfoTypeA.getHorizonMask()));
+        assertThat(moreInfo.getMonumentDescription(), is(moreInfoTypeA.getMonumentDescription()));
+        assertThat(moreInfo.getNotes(), is(moreInfoTypeA.getNotes()));
+        assertThat(moreInfo.getAntennaGraphicsWithDimensions(), is(moreInfoTypeA.getAntennaGraphicsWithDimensions()));
+        assertThat(moreInfo.getInsertTextGraphicFromAntenna(), is(moreInfoTypeA.getInsertTextGraphicFromAntenna()));
+        assertThat(moreInfo.getDoi(), is(moreInfoTypeA.getDOI().getValue()));
 
         // Test the from mapping
         MoreInformationType moreInfoTypeB = mapper.from(moreInfo);
-        assertEquals(moreInfoTypeB.getDataCenter().get(0), moreInfo.getPrimaryDataCenter());
-        assertEquals(moreInfoTypeB.getDataCenter().get(1), moreInfo.getSecondaryDataCenter());
-        assertEquals(moreInfoTypeB.getUrlForMoreInformation(), moreInfo.getUrlForMoreInformation());
-        assertEquals(moreInfoTypeB.getSiteDiagram(), moreInfo.getSiteDiagram());
-        assertEquals(moreInfoTypeB.getSiteMap(), moreInfo.getSiteMap());
-        assertEquals(moreInfoTypeB.getSitePictures(), moreInfo.getSitePictures());
-        assertEquals(moreInfoTypeB.getHorizonMask(), moreInfo.getHorizonMask());
-        assertEquals(moreInfoTypeB.getMonumentDescription(), moreInfo.getMonumentDescription());
-        assertEquals(moreInfoTypeB.getNotes(), moreInfo.getNotes());
-        assertEquals(moreInfoTypeB.getAntennaGraphicsWithDimensions(), moreInfo.getAntennaGraphicsWithDimensions());
-        assertEquals(moreInfoTypeB.getInsertTextGraphicFromAntenna(), moreInfo.getInsertTextGraphicFromAntenna());
-        assertEquals(moreInfoTypeB.getDOI().getValue(), moreInfo.getDoi());
+        assertThat(moreInfoTypeB.getDataCenter().get(0), is(moreInfo.getPrimaryDataCenter()));
+        assertThat(moreInfoTypeB.getDataCenter().get(1), is(moreInfo.getSecondaryDataCenter()));
+        assertThat(moreInfoTypeB.getUrlForMoreInformation(), is(moreInfo.getUrlForMoreInformation()));
+        assertThat(moreInfoTypeB.getSiteDiagram(), is(moreInfo.getSiteDiagram()));
+        assertThat(moreInfoTypeB.getSiteMap(), is(moreInfo.getSiteMap()));
+        assertThat(moreInfoTypeB.getSitePictures(), is(moreInfo.getSitePictures()));
+        assertThat(moreInfoTypeB.getHorizonMask(), is(moreInfo.getHorizonMask()));
+        assertThat(moreInfoTypeB.getMonumentDescription(), is(moreInfo.getMonumentDescription()));
+        assertThat(moreInfoTypeB.getNotes(), is(moreInfo.getNotes()));
+        assertThat(moreInfoTypeB.getAntennaGraphicsWithDimensions(), is(moreInfo.getAntennaGraphicsWithDimensions()));
+        assertThat(moreInfoTypeB.getInsertTextGraphicFromAntenna(), is(moreInfo.getInsertTextGraphicFromAntenna()));
+        assertThat(moreInfoTypeB.getDOI().getValue(), is(moreInfo.getDoi()));
     }
 }

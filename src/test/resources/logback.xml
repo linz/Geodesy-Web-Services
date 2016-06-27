@@ -1,17 +1,17 @@
 <configuration>
-  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
-    <!-- encoders are assigned the type
-         ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
-    <encoder>
-      <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
-    </encoder>
-  </appender>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- encoders are assigned the type
+             ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
 
-  <!-- TODO: tidy up -->
-<!--   <logger name="au.gov.ga.geodesy" level="DEBUG"/> -->
-<!--   <logger name="org.dozer.MappingProcessor" level="INFO"/> -->
+    <!--<logger name="au.gov.ga.geodesy.support.utils" level="DEBUG"/>-->
+    <!--<logger name="org.dozer.MappingProcessor" level="INFO"/>-->
+    <!--<logger name="au.gov.ga.geodesy.support.mapper.dozer" level="TRACE"/>-->
 
-  <root level="info">
-    <appender-ref ref="STDOUT" />
-  </root>
+    <root level="info">
+        <appender-ref ref="STDOUT"/>
+    </root>
 </configuration>

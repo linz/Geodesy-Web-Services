@@ -633,10 +633,10 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
             au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
         GeodesyMLType geodesyML = testTranslate(TESTDATADIR, "CRO1");
 
-
         Assert.assertNotNull(geodesyML);
     }
 
+    // Tests for EffectiveDates - despite what is in the data (to and/or from dates) there should be both with one or the other being optionally empty
     @Test
     public void testZIMJ_RadioInterference_WithEffectiveDates() throws MarshallingException, IOException,
             au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
@@ -699,11 +699,12 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
 
         Assert.assertNotNull(begin);
         Assert.assertEquals(1, begin.getValue().size());
-        Assert.assertNull(end);
 
         Assert.assertEquals(
                 GMLDateUtils.stringToDateToStringMultiParsers(begin.getValue().get(0)),
                 "2012-01-15T00:00:00.000Z");
+
+        Assert.assertNull(end);
     }
 
     @Test
@@ -726,5 +727,4 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
 
         Assert.assertNotNull(geodesyML);
     }
-
 }

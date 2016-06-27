@@ -1,24 +1,58 @@
 package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.core.IsEqual.equalTo;
-
-import java.lang.reflect.InvocationTargetException;
-import java.time.Instant;
-import java.util.*;
-
-import org.apache.commons.beanutils.PropertyUtils;
-import org.testng.annotations.Test;
-
-import au.gov.ga.geodesy.domain.model.sitelog.*;
+import au.gov.ga.geodesy.domain.model.sitelog.GnssReceiverLogItem;
+import au.gov.ga.geodesy.domain.model.sitelog.HumiditySensorLogItem;
+import au.gov.ga.geodesy.domain.model.sitelog.LocalEpisodicEventLogItem;
+import au.gov.ga.geodesy.domain.model.sitelog.LogItem;
+import au.gov.ga.geodesy.domain.model.sitelog.MultipathSourceLogItem;
+import au.gov.ga.geodesy.domain.model.sitelog.OtherInstrumentationLogItem;
+import au.gov.ga.geodesy.domain.model.sitelog.PressureSensorLogItem;
+import au.gov.ga.geodesy.domain.model.sitelog.RadioInterference;
+import au.gov.ga.geodesy.domain.model.sitelog.SignalObstructionLogItem;
+import au.gov.ga.geodesy.domain.model.sitelog.SiteLog;
+import au.gov.ga.geodesy.domain.model.sitelog.TemperatureSensorLogItem;
+import au.gov.ga.geodesy.domain.model.sitelog.WaterVaporSensorLogItem;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLMarshaller;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLUtils;
 import au.gov.ga.geodesy.support.TestResources;
 import au.gov.ga.geodesy.support.gml.GMLPropertyType;
 import au.gov.ga.geodesy.support.marshalling.moxy.GeodesyMLMoxy;
-import au.gov.xml.icsm.geodesyml.v_0_3.*;
+import au.gov.xml.icsm.geodesyml.v_0_3.BasePossibleProblemSourcesType;
+import au.gov.xml.icsm.geodesyml.v_0_3.GeodesyMLType;
+import au.gov.xml.icsm.geodesyml.v_0_3.GnssReceiverPropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_3.GnssReceiverType;
+import au.gov.xml.icsm.geodesyml.v_0_3.HumiditySensorPropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_3.HumiditySensorType;
+import au.gov.xml.icsm.geodesyml.v_0_3.LocalEpisodicEventsPropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_3.LocalEpisodicEventsType;
+import au.gov.xml.icsm.geodesyml.v_0_3.MultipathSourcesPropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_3.OtherInstrumentationPropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_3.OtherInstrumentationType;
+import au.gov.xml.icsm.geodesyml.v_0_3.PressureSensorPropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_3.PressureSensorType;
+import au.gov.xml.icsm.geodesyml.v_0_3.RadioInterferencesPropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_3.SignalObstructionsPropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_3.SiteLogType;
+import au.gov.xml.icsm.geodesyml.v_0_3.TemperatureSensorPropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_3.TemperatureSensorType;
+import au.gov.xml.icsm.geodesyml.v_0_3.WaterVaporSensorPropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_3.WaterVaporSensorType;
 import ma.glasnost.orika.metadata.TypeFactory;
 import net.opengis.gml.v_3_2_1.TimePositionType;
+import org.apache.commons.beanutils.PropertyUtils;
+import org.testng.annotations.Test;
+
+import java.lang.reflect.InvocationTargetException;
+import java.time.Instant;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Set;
+import java.util.SortedSet;
+import java.util.TreeSet;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.core.IsEqual.equalTo;
 
 public class SiteLogMapperTest {
 
@@ -214,13 +248,9 @@ public class SiteLogMapperTest {
      **/
     @Test
     public void testLocalEpisodicEventsMapping() throws Exception {
-        GeodesyMLType mobs = marshaller
-            .unmarshal(TestResources.geodesyMLTestDataSiteLogReader("WGTN-localEpisodicEvents"),
-                GeodesyMLType.class)
-            .getValue();
+        GeodesyMLType mobs = marshaller.unmarshal(TestResources.geodesyMLTestDataSiteLogReader("WGTN-localEpisodicEvents"), GeodesyMLType.class).getValue();
 
-        SiteLogType siteLogType = GeodesyMLUtils.getElementFromJAXBElements(mobs.getElements(), SiteLogType.class)
-            .findFirst().get();
+        SiteLogType siteLogType = GeodesyMLUtils.getElementFromJAXBElements(mobs.getElements(), SiteLogType.class).findFirst().get();
 
         SiteLog siteLog = mapper.to(siteLogType);
 
@@ -235,6 +265,37 @@ public class SiteLogMapperTest {
             for (LocalEpisodicEventLogItem logItem : sortLogItems(siteLog.getLocalEpisodicEventLogItems())) {
                 LocalEpisodicEventsType xmlType = localEpisodicEventsPropertyTypes.get(i++).getLocalEpisodicEvents();
                 assertThat(logItem.getEvent(), equalTo(xmlType.getEvent()));
+            }
+        }
+    }
+
+    /**
+     * Test mapping from SiteLogType to SiteLog and back
+     * to SiteLogType. Based on the METZ site log for multipath sources that also has RadioInterference data.
+     **/
+    @Test
+    public void testRadioInterferenceMapping() throws Exception {
+        GeodesyMLType mobs = marshaller
+                .unmarshal(TestResources.geodesyMLTestDataSiteLogReader("METZ-multipathSources"),
+                        GeodesyMLType.class)
+                .getValue();
+
+        SiteLogType siteLogType = GeodesyMLUtils.getElementFromJAXBElements(mobs.getElements(), SiteLogType.class)
+                .findFirst().get();
+
+        SiteLog siteLog = mapper.to(siteLogType);
+
+        List<RadioInterferencesPropertyType> radioInterferencesPropertyTypes = siteLogType.getRadioInterferencesSet();
+        sortGMLPropertyTypes(radioInterferencesPropertyTypes);
+
+        assertThat(siteLogType.getRadioInterferencesSet().size(), equalTo(1));
+        assertThat(radioInterferencesPropertyTypes.size(), equalTo(1));
+
+        {
+            int i = 0;
+            for (RadioInterference logItem : sortLogItems(siteLog.getRadioInterferences())) {
+                BasePossibleProblemSourcesType xmlType = radioInterferencesPropertyTypes.get(i++).getRadioInterferences();
+                assertThat(logItem.getPossibleProblemSource(), equalTo(xmlType.getPossibleProblemSources()));
             }
         }
     }

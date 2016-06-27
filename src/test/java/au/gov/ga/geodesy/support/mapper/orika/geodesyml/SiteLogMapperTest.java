@@ -1,20 +1,19 @@
 package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 
-import au.gov.ga.geodesy.domain.model.sitelog.CollocationInformation;
-import au.gov.ga.geodesy.domain.model.sitelog.GnssAntennaLogItem;
-import au.gov.ga.geodesy.domain.model.sitelog.GnssReceiverLogItem;
-import au.gov.ga.geodesy.domain.model.sitelog.HumiditySensorLogItem;
-import au.gov.ga.geodesy.domain.model.sitelog.LocalEpisodicEventLogItem;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.hasSize;
+import static org.hamcrest.core.Is.is;
+import static org.hamcrest.core.IsEqual.equalTo;
 
-import au.gov.ga.geodesy.domain.model.sitelog.LogItem;
-import au.gov.ga.geodesy.domain.model.sitelog.MultipathSourceLogItem;
-import au.gov.ga.geodesy.domain.model.sitelog.OtherInstrumentationLogItem;
-import au.gov.ga.geodesy.domain.model.sitelog.PressureSensorLogItem;
-import au.gov.ga.geodesy.domain.model.sitelog.RadioInterference;
-import au.gov.ga.geodesy.domain.model.sitelog.SignalObstructionLogItem;
-import au.gov.ga.geodesy.domain.model.sitelog.SiteLog;
-import au.gov.ga.geodesy.domain.model.sitelog.TemperatureSensorLogItem;
-import au.gov.ga.geodesy.domain.model.sitelog.WaterVaporSensorLogItem;
+import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
+import java.time.Instant;
+import java.util.*;
+
+import org.apache.commons.beanutils.PropertyUtils;
+import org.testng.annotations.Test;
+
+import au.gov.ga.geodesy.domain.model.sitelog.*;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLMarshaller;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLUtils;
 import au.gov.ga.geodesy.port.adapter.geodesyml.MarshallingException;
@@ -22,49 +21,9 @@ import au.gov.ga.geodesy.support.TestResources;
 import au.gov.ga.geodesy.support.gml.GMLPropertyType;
 import au.gov.ga.geodesy.support.mapper.dozer.converter.TimePrimitivePropertyTypeUtils;
 import au.gov.ga.geodesy.support.marshalling.moxy.GeodesyMLMoxy;
-import au.gov.xml.icsm.geodesyml.v_0_3.BasePossibleProblemSourcesType;
-import au.gov.xml.icsm.geodesyml.v_0_3.CollocationInformationPropertyType;
-import au.gov.xml.icsm.geodesyml.v_0_3.CollocationInformationType;
-import au.gov.xml.icsm.geodesyml.v_0_3.GeodesyMLType;
-import au.gov.xml.icsm.geodesyml.v_0_3.GnssAntennaPropertyType;
-import au.gov.xml.icsm.geodesyml.v_0_3.GnssAntennaType;
-import au.gov.xml.icsm.geodesyml.v_0_3.GnssReceiverPropertyType;
-import au.gov.xml.icsm.geodesyml.v_0_3.GnssReceiverType;
-import au.gov.xml.icsm.geodesyml.v_0_3.HumiditySensorPropertyType;
-import au.gov.xml.icsm.geodesyml.v_0_3.HumiditySensorType;
-import au.gov.xml.icsm.geodesyml.v_0_3.LocalEpisodicEventsPropertyType;
-import au.gov.xml.icsm.geodesyml.v_0_3.LocalEpisodicEventsType;
-import au.gov.xml.icsm.geodesyml.v_0_3.MultipathSourcesPropertyType;
-import au.gov.xml.icsm.geodesyml.v_0_3.OtherInstrumentationPropertyType;
-import au.gov.xml.icsm.geodesyml.v_0_3.OtherInstrumentationType;
-import au.gov.xml.icsm.geodesyml.v_0_3.PressureSensorPropertyType;
-import au.gov.xml.icsm.geodesyml.v_0_3.PressureSensorType;
-import au.gov.xml.icsm.geodesyml.v_0_3.RadioInterferencesPropertyType;
-import au.gov.xml.icsm.geodesyml.v_0_3.SignalObstructionsPropertyType;
-import au.gov.xml.icsm.geodesyml.v_0_3.SiteLogType;
-import au.gov.xml.icsm.geodesyml.v_0_3.TemperatureSensorPropertyType;
-import au.gov.xml.icsm.geodesyml.v_0_3.TemperatureSensorType;
-import au.gov.xml.icsm.geodesyml.v_0_3.WaterVaporSensorPropertyType;
-import au.gov.xml.icsm.geodesyml.v_0_3.WaterVaporSensorType;
-import java.io.IOException;
+import au.gov.xml.icsm.geodesyml.v_0_3.*;
 import ma.glasnost.orika.metadata.TypeFactory;
 import net.opengis.gml.v_3_2_1.TimePositionType;
-import org.apache.commons.beanutils.PropertyUtils;
-import org.testng.annotations.Test;
-
-import java.lang.reflect.InvocationTargetException;
-import java.time.Instant;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Set;
-import java.util.SortedSet;
-import java.util.TreeSet;
-
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.hasSize;
-import static org.hamcrest.core.Is.is;
-import static org.hamcrest.core.IsEqual.equalTo;
 
 public class SiteLogMapperTest {
 

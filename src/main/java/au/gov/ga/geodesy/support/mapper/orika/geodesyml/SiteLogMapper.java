@@ -20,19 +20,8 @@ import au.gov.ga.geodesy.domain.model.sitelog.TemperatureSensorLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.WaterVaporSensorLogItem;
 import au.gov.ga.geodesy.support.gml.GMLPropertyType;
 import au.gov.ga.geodesy.support.java.util.Iso;
-import au.gov.xml.icsm.geodesyml.v_0_3.FormInformationType;
-<<<<<<< 07279862a1f604c2327950de74ac4846b52fdee7
-import au.gov.xml.icsm.geodesyml.v_0_3.GnssAntennaPropertyType;
-import au.gov.xml.icsm.geodesyml.v_0_3.LocalEpisodicEventsPropertyType;
-=======
->>>>>>> Fix conflicts after rebase
-import au.gov.xml.icsm.geodesyml.v_0_3.MoreInformationType;
-import au.gov.xml.icsm.geodesyml.v_0_3.MultipathSourcesPropertyType;
-import au.gov.xml.icsm.geodesyml.v_0_3.RadioInterferencesPropertyType;
-import au.gov.xml.icsm.geodesyml.v_0_3.SignalObstructionsPropertyType;
-import au.gov.xml.icsm.geodesyml.v_0_3.SiteIdentificationType;
-import au.gov.xml.icsm.geodesyml.v_0_3.SiteLocationType;
-import au.gov.xml.icsm.geodesyml.v_0_3.SiteLogType;
+import au.gov.xml.icsm.geodesyml.v_0_3.*;
+
 import ma.glasnost.orika.MapperFacade;
 import ma.glasnost.orika.MapperFactory;
 import ma.glasnost.orika.MappingContext;
@@ -61,6 +50,7 @@ public class SiteLogMapper implements Iso<SiteLogType, SiteLog> {
             .fieldMap("siteIdentification", "siteIdentification").converter("siteIdentification").add()
             .fieldMap("siteLocation", "siteLocation").converter("siteLocation").add()
             .fieldMap("gnssReceivers", "gnssReceivers").converter("gnssReceivers").add()
+            .fieldMap("gnssAntennas", "gnssAntennas").converter("gnssAntennas").add()
             .fieldMap("humiditySensors", "humiditySensors").converter("humiditySensors").add()
             .fieldMap("pressureSensors", "pressureSensors").converter("pressureSensors").add()
             .fieldMap("temperatureSensors", "temperatureSensors").converter("temperatureSensors").add()
@@ -68,11 +58,8 @@ public class SiteLogMapper implements Iso<SiteLogType, SiteLog> {
             .fieldMap("otherInstrumentations", "otherInstrumentationLogItem").converter("otherInstrumentations").add()
             .fieldMap("signalObstructionsSet", "signalObstructionLogItems").converter("signalObstructionsSet").add()
             .fieldMap("multipathSourcesSet", "multipathSourceLogItems").converter("multipathSourcesSet").add()
-<<<<<<< 241081a52c24fc078b80d13533c4bf62e965fb4f
             .fieldMap("localEpisodicEventsSet", "localEpisodicEventLogItems").converter("localEpisodicEventsSet").add()
             .fieldMap("radioInterferencesSet", "radioInterferences").converter("radioInterferencesSet").add()
-=======
->>>>>>> Fix conflicts after rebase
             .fieldMap("moreInformation", "moreInformation").converter("moreInformation").add()
             .fieldMap("formInformation", "formInformation").converter("formInformation").add()
             .fieldMap("collocationInformations", "collocationInformation").converter("collocationInformations").add()
@@ -135,7 +122,7 @@ public class SiteLogMapper implements Iso<SiteLogType, SiteLog> {
                 ) {}
         );
 
-<<<<<<< 241081a52c24fc078b80d13533c4bf62e965fb4f
+
         converters.registerConverter("localEpisodicEventsSet",
                 new BidirectionalConverterWrapper<List<LocalEpisodicEventsPropertyType>, Set<LocalEpisodicEventLogItem>>(
                         logItemsConverter(new LocalEpisodicEventMapper())
@@ -154,8 +141,6 @@ public class SiteLogMapper implements Iso<SiteLogType, SiteLog> {
                 }
         );
 
-=======
->>>>>>> Fix conflicts after rebase
         converters.registerConverter("moreInformation",
                 new IsoConverter<MoreInformationType, MoreInformation>(new MoreInformationMapper()) {});
 
@@ -191,10 +176,6 @@ public class SiteLogMapper implements Iso<SiteLogType, SiteLog> {
         }
     }
 
-<<<<<<< 241081a52c24fc078b80d13533c4bf62e965fb4f
-
-=======
->>>>>>> Fix conflicts after rebase
     /**
      * Given a GMLPropertyType isomorphism (from DTO to domain model), return a
      * bidirectional converter from a list of GML property types to a

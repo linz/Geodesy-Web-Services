@@ -16,6 +16,7 @@ import au.gov.ga.geodesy.domain.model.sitelog.SignalObstructionLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteIdentification;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLocation;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLog;
+import au.gov.ga.geodesy.domain.model.sitelog.SurveyedLocalTie;
 import au.gov.ga.geodesy.domain.model.sitelog.TemperatureSensorLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.WaterVaporSensorLogItem;
 import au.gov.ga.geodesy.support.gml.GMLPropertyType;
@@ -63,6 +64,7 @@ public class SiteLogMapper implements Iso<SiteLogType, SiteLog> {
             .fieldMap("moreInformation", "moreInformation").converter("moreInformation").add()
             .fieldMap("formInformation", "formInformation").converter("formInformation").add()
             .fieldMap("collocationInformations", "collocationInformation").converter("collocationInformations").add()
+            .fieldMap("surveyedLocalTies", "surveyedLocalTies").converter("surveyedLocalTies").add()
                 /* .byDefault() */
             .register();
 
@@ -150,6 +152,12 @@ public class SiteLogMapper implements Iso<SiteLogType, SiteLog> {
         converters.registerConverter("collocationInformations",
                 new BidirectionalConverterWrapper<List<GMLPropertyType>, Set<CollocationInformation>>(
                         infoCollectionConverter(new CollocationInformationMapper())
+                ) {}
+        );
+
+        converters.registerConverter("surveyedLocalTies",
+                new BidirectionalConverterWrapper<List<GMLPropertyType>, Set<SurveyedLocalTie>>(
+                        infoCollectionConverter(new SurveyedLocalTieMapper())
                 ) {}
         );
         mapper = mapperFactory.getMapperFacade();

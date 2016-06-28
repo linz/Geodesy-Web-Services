@@ -35,7 +35,6 @@ public class SurveyedLocalTieMapper implements Iso<SurveyedLocalTiesType, Survey
                 .register();
 
         ConverterFactory converters = mapperFactory.getConverterFactory();
-        //converters.registerConverter("differentialConverter", new DifferentialFromMarkerToDifferentialComponentsGNSSMarkerToTiedMonumentITRSConverter() {});
         converters.registerConverter(new InstantToTimePositionConverter());
 
         mapper = mapperFactory.getMapperFacade();

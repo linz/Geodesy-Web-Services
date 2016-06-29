@@ -5,12 +5,14 @@ import static org.hamcrest.Matchers.hasSize;
 import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsEqual.equalTo;
 
+import au.gov.ga.geodesy.support.utils.GMLDateUtils;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.time.Instant;
 import java.util.*;
 
 import org.apache.commons.beanutils.PropertyUtils;
+import org.hamcrest.Matchers;
 import org.testng.annotations.Test;
 
 import au.gov.ga.geodesy.domain.model.sitelog.*;
@@ -329,13 +331,51 @@ public class SiteLogMapperTest {
 
         {
             int i = 0;
-            for (CollocationInformation collocationInfo : sortBy(siteLog.getCollocationInformation())) {
+            for (CollocationInformation collocationInfo : sortCollocationInformations(siteLog.getCollocationInformation())) {
                 CollocationInformationType collocationInfoType = collocationInfoProperties.get(i++).getCollocationInformation();
                 assertThat(collocationInfo.getInstrumentType(), is(collocationInfoType.getInstrumentationType().getValue()));
                 String beginTime = TimePrimitivePropertyTypeUtils
                         .getTheTimePeriodType(collocationInfoType.getValidTime()).getBeginPosition().getValue().get(0).toString();
                 assertThat(collocationInfo.getEffectiveDates().getFrom().toString(), is(beginTime));
                 assertThat(collocationInfo.getStatus(), is(collocationInfoType.getStatus().getValue()));
+            }
+        }
+    }
+
+    /**
+     * Test the mapping of SurveyedLocalTie from SiteLogType to SiteLog and back to SiteLogType.
+     **/
+    @Test
+    public void testSurveyedLocalTieMapping() throws Exception {
+        GeodesyMLType mobs = marshaller
+                .unmarshal(TestResources.geodesyMLSiteLogReader("MOBS"), GeodesyMLType.class)
+                .getValue();
+
+        SiteLogType siteLogType = GeodesyMLUtils.getElementFromJAXBElements(mobs.getElements(), SiteLogType.class)
+                .findFirst().get();
+
+        SiteLog siteLog = mapper.to(siteLogType);
+        List<SurveyedLocalTiesPropertyType> surveyedLocalTiesProperties = siteLogType.getSurveyedLocalTies();
+        sortSurveyedLocalTiesPropertyTypes(surveyedLocalTiesProperties);
+
+        assertThat(siteLog.getSurveyedLocalTies(), hasSize(4));
+        assertThat(surveyedLocalTiesProperties, hasSize(4));
+
+        {
+            int i = 0;
+            for (SurveyedLocalTie surveyedLocalTie : sortSurveyedLocalTies(siteLog.getSurveyedLocalTies())) {
+                SurveyedLocalTiesType surveyedLocalTiesType = surveyedLocalTiesProperties.get(i++).getSurveyedLocalTies();
+                assertThat(surveyedLocalTie.getTiedMarkerName(), is(surveyedLocalTiesType.getTiedMarkerName()));
+                assertThat(surveyedLocalTie.getTiedMarkerUsage(), is(surveyedLocalTiesType.getTiedMarkerUsage()));
+                assertThat(surveyedLocalTie.getTiedMarkerCdpNumber(), Matchers.is(surveyedLocalTiesType.getTiedMarkerCDPNumber()));
+                assertThat(surveyedLocalTie.getTiedMarkerDomesNumber(), Matchers.is(surveyedLocalTiesType.getTiedMarkerDOMESNumber()));
+                assertThat(surveyedLocalTie.getDifferentialFromMarker().getDx().doubleValue(), Matchers.is(surveyedLocalTiesType.getDifferentialComponentsGNSSMarkerToTiedMonumentITRS().getDx()));
+                assertThat(surveyedLocalTie.getDifferentialFromMarker().getDy().doubleValue(), Matchers.is(surveyedLocalTiesType.getDifferentialComponentsGNSSMarkerToTiedMonumentITRS().getDy()));
+                assertThat(surveyedLocalTie.getDifferentialFromMarker().getDz().doubleValue(), Matchers.is(surveyedLocalTiesType.getDifferentialComponentsGNSSMarkerToTiedMonumentITRS().getDz()));
+                assertThat(Double.parseDouble(surveyedLocalTie.getLocalSiteTieAccuracy()), Matchers.is(surveyedLocalTiesType.getLocalSiteTiesAccuracy()));
+                assertThat(surveyedLocalTie.getSurveyMethod(), is(surveyedLocalTiesType.getSurveyMethod()));
+                assertThat(surveyedLocalTie.getDateMeasured(), Matchers.is(GMLDateUtils.stringToDateMultiParsers(surveyedLocalTiesType.getDateMeasured().getValue().get(0))));
+                assertThat(surveyedLocalTie.getNotes(), Matchers.is(surveyedLocalTiesType.getNotes()));
             }
         }
     }
@@ -453,12 +493,48 @@ public class SiteLogMapperTest {
     }
 
     /**
-     * Sort set of CollocationInformations by Effective Dates.
+     * Sort a set of CollocationInformations by effective dates.
      */
-    private <T extends CollocationInformation> SortedSet<T> sortBy(Set<T> info) {
+    private <T extends CollocationInformation> SortedSet<T> sortCollocationInformations(Set<T> info) {
         SortedSet<T> sorted = new TreeSet<>(new Comparator<T>() {
             public int compare(T e, T f) {
                 int c = e.getEffectiveDates().compareTo(f.getEffectiveDates());
+                // keep duplicates
+                return c != 0 ? c : 1;
+            }
+        });
+        sorted.addAll(info);
+        return sorted;
+    }
+
+    /**
+     * Sort a list of SurveyedLocalTiesPropertyType objects by tied marker names.
+     */
+    private <P extends SurveyedLocalTiesPropertyType> void sortSurveyedLocalTiesPropertyTypes(List<P> list) {
+        Collections.sort(list, new Comparator<P>() {
+            public int compare(P p, P q) {
+                return tiedMarkerName(p).compareTo(tiedMarkerName(q));
+            }
+
+            private String tiedMarkerName(P p) {
+                String name = null;
+                try {
+                    name = (String) PropertyUtils.getProperty(p.getTargetElement(), "tiedMarkerName");
+                } catch (IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
+                    throw new RuntimeException(e);
+                }
+                return name;
+            }
+        });
+    }
+
+    /**
+     * Sort a set of SurveyedLocalTies by tied marker names.
+     */
+    private <T extends SurveyedLocalTie> SortedSet<T> sortSurveyedLocalTies(Set<T> info) {
+        SortedSet<T> sorted = new TreeSet<>(new Comparator<T>() {
+            public int compare(T e, T f) {
+                int c = e.getTiedMarkerName().compareTo(f.getTiedMarkerName());
                 // keep duplicates
                 return c != 0 ? c : 1;
             }

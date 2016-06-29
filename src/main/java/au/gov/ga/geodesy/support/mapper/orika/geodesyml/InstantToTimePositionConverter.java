@@ -29,6 +29,7 @@ public class InstantToTimePositionConverter extends BidirectionalConverter<Insta
         "uuuu-MM-dd'T'HH:mm:ss.SSSZ",
         "uuuu-MM-dd'T'HH:mm:ssX",
         "uuuu-MM-ddX",
+        "uuuu-MM-dd"
     };
 
     private DateTimeFormatter dateFormat(String pattern) {

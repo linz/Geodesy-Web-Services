@@ -11,6 +11,9 @@ import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.SequenceGenerator;
 
+import org.checkerframework.checker.nullness.qual.MonotonicNonNull;
+import org.checkerframework.checker.nullness.qual.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
@@ -20,7 +23,7 @@ public abstract class EquipmentConfiguration {
     @Id
     @GeneratedValue(generator = "surrogateKeyGenerator", strategy = GenerationType.SEQUENCE)
     @SequenceGenerator(name = "surrogateKeyGenerator", sequenceName = "seq_surrogate_keys")
-    private Integer id;
+    private @MonotonicNonNull Integer id;
 
     @Column(name = "EQUIPMENT_ID", nullable = false)
     @JsonIgnore
@@ -28,9 +31,9 @@ public abstract class EquipmentConfiguration {
 
     @Column(name = "CONFIGURATION_TIME")
     @JsonIgnore
-    private Instant configurationTime;
+    private @MonotonicNonNull Instant configurationTime;
 
-    @SuppressWarnings("unused") // used by hibernate
+    @SuppressWarnings({"unused", "initialization.fields.uninitialized"}) // used by hibernate
     private EquipmentConfiguration() {
     }
 
@@ -39,7 +42,7 @@ public abstract class EquipmentConfiguration {
         this.configurationTime = configurationTime;
     }
 
-    public Integer getId() {
+    public @Nullable Integer getId() {
         return id;
     }
 
@@ -52,15 +55,7 @@ public abstract class EquipmentConfiguration {
         return equipmentId;
     }
 
-    public void setEquipmentId(Integer equipmentId) {
-        this.equipmentId = equipmentId;
-    }
-
-    public Instant getConfigurationTime() {
+    public @Nullable Instant getConfigurationTime() {
         return configurationTime;
-    }
-
-    public void setConfigurationTime(Instant configurationTime) {
-        this.configurationTime = configurationTime;
     }
 }

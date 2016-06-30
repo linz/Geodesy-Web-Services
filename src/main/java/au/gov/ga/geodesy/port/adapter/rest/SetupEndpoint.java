@@ -13,6 +13,7 @@ import org.springframework.data.rest.webmvc.RepositoryRestController;
 import org.springframework.data.web.PagedResourcesAssembler;
 import org.springframework.hateoas.PagedResources;
 import org.springframework.hateoas.Resource;
+import org.springframework.hateoas.ResourceAssembler;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -51,6 +52,7 @@ public class SetupEndpoint {
             @RequestParam(required = false) String effectiveFrom,
             @RequestParam(required = false) String effectiveTo,
             @RequestParam(defaultValue = "uuuu-MM-dd") String timeFormat,
+            PersistentEntityResourceAssembler entityAssembler,
             Pageable pageRequest) {
 
         Page<Setup> page = null;
@@ -64,7 +66,10 @@ public class SetupEndpoint {
         } else {
             page = new PageImpl<Setup>(new ArrayList<Setup>());
         }
-        PagedResources<Resource<Setup>> paged = assembler.toResource(page);
+        @SuppressWarnings({"unchecked", "rawtypes"})
+        PagedResources<Resource<Setup>> paged = assembler.toResource(page,
+            (ResourceAssembler) entityAssembler);
+
         return new ResponseEntity<>(paged, new HttpHeaders(), HttpStatus.OK);
     }
 

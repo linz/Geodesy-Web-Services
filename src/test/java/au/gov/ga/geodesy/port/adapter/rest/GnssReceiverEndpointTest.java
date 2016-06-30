@@ -37,6 +37,6 @@ public class GnssReceiverEndpointTest extends RestTest {
             .andExpect(status().isOk())
             .andDo(print)
             .andExpect(jsonPath("$.page.totalElements").value(1))
-            .andExpect(jsonPath("$._embedded.gnssReceivers[0].content.type").value("TRIMBLE NETRS"));
+            .andExpect(jsonPath("$._embedded.gnssReceivers[0].type").value("TRIMBLE NETRS"));
     }
 }

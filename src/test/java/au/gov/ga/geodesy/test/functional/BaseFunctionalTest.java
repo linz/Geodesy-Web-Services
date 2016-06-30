@@ -1,4 +1,4 @@
-package au.gov.ga.geodesy.test.integration.standalone;
+package au.gov.ga.geodesy.test.functional;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -8,26 +8,32 @@ import org.springframework.test.context.support.AnnotationConfigContextLoader;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.testng.annotations.BeforeClass;
 
+import au.gov.ga.geodesy.domain.model.sitelog.SiteLogRepository;
+import au.gov.ga.geodesy.support.spring.FunctionalTestConfig;
+import au.gov.ga.geodesy.support.spring.PersistenceJpaConfig;
 import io.restassured.RestAssured;
 import io.restassured.specification.ProxySpecification;
 
-import au.gov.ga.geodesy.support.spring.StandaloneIntegrationTestConfig;
-
 /**
- * Base class for standalone integration tests.
+ * Base class for functional tests.
+ * Configures the web endpoints and clears the database prior to running each test.
  */
 @ContextConfiguration(
     classes = {
-        StandaloneIntegrationTestConfig.class,
+        FunctionalTestConfig.class,
+        PersistenceJpaConfig.class
     },
     loader = AnnotationConfigContextLoader.class
 )
-public class StandaloneIntegrationTest extends AbstractTestNGSpringContextTests {
+public abstract class BaseFunctionalTest extends AbstractTestNGSpringContextTests {
 
     @Autowired
-    private StandaloneIntegrationTestConfig config;
+    private FunctionalTestConfig config;
 
-    private static final Logger log = LoggerFactory.getLogger(StandaloneIntegrationTest.class);
+    @Autowired
+    protected SiteLogRepository siteLogRepository;
+
+    private static final Logger log = LoggerFactory.getLogger(BaseFunctionalTest.class);
 
     @BeforeClass
     public void setup() {
@@ -42,9 +48,12 @@ public class StandaloneIntegrationTest extends AbstractTestNGSpringContextTests 
         } else {
             log.info("HTTP proxy is not configured");
         }
+
+        siteLogRepository.deleteAll();
+        siteLogRepository.flush();
     }
 
-    protected StandaloneIntegrationTestConfig getConfig() {
+    protected FunctionalTestConfig getConfig() {
         return config;
     }
 }

@@ -33,8 +33,8 @@ public class Equipment {
     @SequenceGenerator(name = "surrogateKeyGenerator", sequenceName = "seq_surrogate_keys")
     protected @MonotonicNonNull Integer id;
 
-    @Column(name = "TYPE", nullable = false)
-    private String type;
+    @Column(name = "TYPE")
+    private @MonotonicNonNull String type;
 
     @Column(name = "EQUIPMENT_TYPE", insertable = false, updatable = false)
     private @MonotonicNonNull String equipmentType;

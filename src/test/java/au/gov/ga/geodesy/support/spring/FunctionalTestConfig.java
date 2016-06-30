@@ -18,7 +18,7 @@ import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 @EnableSpringConfigured
 @EnableAspectJAutoProxy(proxyTargetClass = true)
 @PropertySource("classpath:/integration-test.properties")
-public class StandaloneIntegrationTestConfig {
+public class FunctionalTestConfig {
 
     @Value("${webServicesIntegrationTestUrl}")
     private String webServicesUrl;

@@ -86,9 +86,7 @@ public class GeodesyRepositoryRestMvcConfig extends RepositoryRestMvcConfigurati
 
             Class<?> beanClass = beanDesc.getBeanClass();
 
-            if (EquipmentInUse.class.isAssignableFrom(beanClass)
-                || Equipment.class.isAssignableFrom(beanClass)) {
-
+            if (EquipmentInUse.class.isAssignableFrom(beanClass)) {
                 return new CustomSerializer((BeanSerializerBase) ser);
             } else {
                 return ser;

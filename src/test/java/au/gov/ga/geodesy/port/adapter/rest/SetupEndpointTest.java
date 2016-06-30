@@ -32,7 +32,8 @@ public class SetupEndpointTest extends RestTest {
     @Rollback(false)
     public void testFindCurrentByFourCharacterId() throws Exception {
         mvc.perform(get("/setups/search/findCurrentByFourCharacterId?id=ALIC"))
-            .andExpect(status().isOk());
+            .andExpect(status().isOk())
+            .andExpect(jsonPath("$._links.self").isNotEmpty());
     }
 
     @Test(dependsOnMethods = {"upload"})
@@ -42,7 +43,8 @@ public class SetupEndpointTest extends RestTest {
             .andExpect(status().isOk())
             .andExpect(jsonPath("$.page.totalElements").value(3))
             .andExpect(jsonPath("$._embedded.setups[0].effectivePeriod.from").value("2011-07-20T00:00:00Z"))
-            .andExpect(jsonPath("$._embedded.setups[0].effectivePeriod.to").value("2013-03-08T00:00:00Z"));
+            .andExpect(jsonPath("$._embedded.setups[0].effectivePeriod.to").value("2013-03-08T00:00:00Z"))
+            .andExpect(jsonPath("$._embedded.setups[0]._links.self").isNotEmpty());
     }
 
     @Test(dependsOnMethods = {"upload"})
@@ -53,6 +55,7 @@ public class SetupEndpointTest extends RestTest {
             .andExpect(status().isOk())
             .andExpect(jsonPath("$.page.totalElements").value(expectedTotalElements))
             .andExpect(jsonPath("$._embedded.setups[0].effectivePeriod.from").value("1994-05-15T00:00:00Z"))
+            .andExpect(jsonPath("$._embedded.setups[0]._links.self").isNotEmpty())
             .andExpect(jsonPath("$._embedded.setups[" + (expectedTotalElements - 1) + "].effectivePeriod.to").value(nullValue()));
     }
 }

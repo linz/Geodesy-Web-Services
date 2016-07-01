@@ -51,7 +51,7 @@ public class UploadAliceGeodesyMLSiteLogRestTest extends RestTest {
             .statusCode(200)
             .log().body()
             .body("page.totalElements", is(5))
-            .body("_embedded.gnssReceivers[0].content.type", is("codeListValue"))
+            .body("_embedded.gnssReceivers[0].type", is("codeListValue"))
             ;
 
     }

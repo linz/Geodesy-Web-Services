@@ -24,9 +24,29 @@
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <querydsl.version>4.1.2</querydsl.version>
         <aspectj.version>1.8.6</aspectj.version>
+        <surefire.version>2.19.1</surefire.version>
+        <failsafe.version>2.19.1</failsafe.version>
         <annotatedJdk>${org.checkerframework:jdk8:jar}</annotatedJdk>
         <encoding>UTF-8</encoding>
-        <SONAR_LOGIN>Pass in with -D</SONAR_LOGIN>
+        <sonar.host.url>https://sonar.gadevs.ga/</sonar.host.url>
+        <sonar.projectKey>${project.artifactId}</sonar.projectKey>
+        <sonar.projectName>${project.artifactId}</sonar.projectName>
+        <sonar.projectVersion>${project.version}</sonar.projectVersion>
+        <sonar.language>java</sonar.language>
+        <sonar.sources>src/main/java</sonar.sources>
+        <sonar.test>target/test-classes</sonar.test>
+        <sonar.scm.provider>git</sonar.scm.provider>
+        <sonar.login>${SONAR_LOGIN}</sonar.login>
+        <jacoco.basedir>${project.build.directory}/code-coverage</jacoco.basedir>
+        <!-- Define location of Java CodeCoverage data from Unit Tests (run using SureFire) -->
+        <sonar.jacoco.reportPath>${jacoco.basedir}/jacoco-ut.exec</sonar.jacoco.reportPath>
+        <jacoco.ut.outputdir>${jacoco.basedir}/jacoco-ut-out</jacoco.ut.outputdir>
+        <!-- Define location of Java CodeCoverage data from Integration Tests (run using Failsafe) -->
+        <sonar.jacoco.itReportPath>>${jacoco.basedir}/jacoco-it.exec</sonar.jacoco.itReportPath>
+        <jacoco.it.outputdir>${jacoco.basedir}/jacoco-it-out</jacoco.it.outputdir>
+        <skip.integration.tests>false</skip.integration.tests>
+        <skip.unit.tests>false</skip.unit.tests>
+        <argLine>-Xmx2048m -Xms1024m</argLine>
     </properties>
     <repositories>
         <repository>
@@ -366,8 +386,15 @@
             <artifactId>spring-context-support</artifactId>
             <version>${spring.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.codehaus.sonar-plugins.java</groupId>
+            <artifactId>sonar-jacoco-listeners</artifactId>
+            <version>3.2</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
     <build>
+        <finalName>geodesy-domain-model</finalName>
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
@@ -399,33 +426,6 @@
                         <version>${querydsl.version}</version>
                     </dependency>
                 </dependencies>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.18.1</version>
-                <configuration>
-                    <excludes>
-                        <exclude>au/gov/ga/geodesy/ngcp/**/*</exclude>
-                        <!-- exclude the following 2 tests, they broke due to sinex files being exluded - see commit https://github.com/GeoscienceAustralia/geodesy-domain-model/commit/e05fd32883405b9f1901c038424012a780019eeb  -->
-                        <exclude>au/gov/ga/geodesy/port/adapter/rest/UploadSolutionRestTest.java</exclude>
-                        <exclude>au/gov/ga/geodesy/test/functional/*.java</exclude>
-                    </excludes>
-                    <forkCount>1</forkCount>
-                    <reuseForks>false</reuseForks>
-                    <properties>
-                        <property>
-                            <name>listener</name>
-                            <value>
-                                au.gov.ga.geodesy.support.testng.TestSuiteListener,
-                                au.gov.ga.geodesy.support.testng.TestListener,
-                                au.gov.ga.geodesy.support.testng.TestDependencyController
-                            </value>
-                        </property>
-                    </properties>
-                    <!-- prevent the annoying ForkedBooter process from stealing window focus on Mac OS -->
-                    <argLine>-Djava.awt.headless=true</argLine>
-                </configuration>
             </plugin>
             <plugin>
                 <!-- Unzip GeodesyML and dependent schemas -->
@@ -580,34 +580,57 @@
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.7.7.201606060606</version>
-                <configuration>
-                    <destFile>${sonar.jacoco.reportPath}</destFile>
-                    <append>true</append>
-                </configuration>
                 <executions>
                     <execution>
-                        <id>default-prepare-agent</id>
+                        <id>pre-unit-test</id>
                         <goals>
                             <goal>prepare-agent</goal>
                         </goals>
+                        <configuration>
+                            <!-- Sets the path to the file to write the execution data to. -->
+                            <destFile>${sonar.jacoco.reportPath}</destFile>
+                            <!-- Connection with SureFire plugin -->
+                            <propertyName>surefireArgLine</propertyName>
+                        </configuration>
                     </execution>
                     <execution>
-                        <id>default-prepare-agent-integration</id>
-                        <goals>
-                            <goal>prepare-agent-integration</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>default-report</id>
+                        <id>post-unit-test</id>
+                        <phase>test</phase>
                         <goals>
                             <goal>report</goal>
                         </goals>
+                        <configuration>
+                            <!-- Sets the path to where the execution data is located. -->
+                            <dataFile>${sonar.jacoco.reportPath}</dataFile>
+                            <!-- Sets the output directory for the code coverage report. -->
+                            <outputDirectory>${jacoco.ut.outputdir}</outputDirectory>
+                        </configuration>
                     </execution>
                     <execution>
-                        <id>default-report-integration</id>
+                        <id>pre-integration-test</id>
+                        <phase>pre-integration-test</phase>
+                        <goals>
+                            <goal>prepare-agent-integration</goal>
+                        </goals>
+                        <configuration>
+                            <!-- Sets the path to the file to write the execution data to. -->
+                            <destFile>${sonar.jacoco.itReportPath}</destFile>
+                            <!-- Connection with Failsafe plugin -->
+                            <propertyName>failsafeArgLine</propertyName>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>post-integration-test</id>
+                        <phase>post-integration-test</phase>
                         <goals>
                             <goal>report-integration</goal>
                         </goals>
+                        <configuration>
+                            <!-- Sets the path to where the execution data is located. -->
+                            <dataFile>${sonar.jacoco.itReportPath}</dataFile>
+                            <!-- Sets the output directory for the code coverage report. -->
+                            <outputDirectory>${jacoco.it.outputdir}</outputDirectory>
+                        </configuration>
                     </execution>
                     <execution>
                         <id>default-check</id>
@@ -615,6 +638,7 @@
                             <goal>check</goal>
                         </goals>
                         <configuration>
+                            <haltOnFailure>true</haltOnFailure>
                             <rules>
                                 <!--  implementation is needed only for Maven 2  -->
                                 <rule implementation="org.jacoco.maven.RuleConfiguration">
@@ -633,130 +657,91 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.18.1</version>
+                <configuration>
+                    <forkCount>1</forkCount>
+                    <reuseForks>false</reuseForks>
+                    <!-- surefireArgLine - sets the VM argument line used when unit tests are run. -->
+                    <!-- Headless - prevent the annoying ForkedBooter process from stealing window focus on Mac OS -->
+                    <argLine>${surefireArgLine} -Djava.awt.headless=true</argLine>
+                    <skipTests>${skip.unit.tests}</skipTests>
+                    <excludes>
+                        <!--Exclude these tests which attempt to connect to non-existant Oracle DB -->
+                        <exclude>au/gov/ga/geodesy/ngcp/**/*</exclude>
+                        <!-- exclude the following tests, they broke due to sinex files being exluded - see commit https://github.com/GeoscienceAustralia/geodesy-domain-model/commit/e05fd32883405b9f1901c038424012a780019eeb  -->
+                        <exclude>au/gov/ga/geodesy/port/adapter/rest/UploadSolutionRestTest.java</exclude>
+                        <!--Don't run the integration or functional tests-->
+                        <exclude>au/gov/ga/geodesy/test/integration/**/*.java</exclude>
+                        <exclude>au/gov/ga/geodesy/test/functional/**/*.java</exclude>
+                    </excludes>
+                    <includes>
+                        <include>au/gov/ga/geodesy/**/*.java</include>
+                    </includes>
+                    <properties>
+                        <property>
+                            <name>listener</name>
+                            <!--Tests NEED to be written in TestNG-->
+                            <value>org.sonar.java.jacoco.TestNGListener,
+                                au.gov.ga.geodesy.support.testng.TestSuiteListener,
+                                au.gov.ga.geodesy.support.testng.TestListener,
+                                au.gov.ga.geodesy.support.testng.TestDependencyController
+                            </value>
+                        </property>
+                    </properties>
+                    <systemPropertyVariables>
+                        <unitTestDatabaseType>EXTERNAL</unitTestDatabaseType>
+                    </systemPropertyVariables>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-failsafe-plugin</artifactId>
+                <version>${failsafe.version}</version>
+                <executions>
+                    <execution>
+                        <id>integration-tests</id>
+                        <goals>
+                            <goal>integration-test</goal>
+                            <goal>verify</goal>
+                        </goals>
+                        <configuration>
+                            <forkCount>1</forkCount>
+                            <reuseForks>false</reuseForks>
+                            <excludes>
+                                <exclude>au/gov/ga/geodesy/test/functional/**/*.java</exclude>
+                            </excludes>
+                            <includes>
+                                <include>au/gov/ga/geodesy/test/integration/**/*.java</include>
+                            </includes>
+                            <!-- failsafeArgLine - sets the VM argument line used when integration tests are run. -->
+                            <!-- Headless - prevent the annoying ForkedBooter process from stealing window focus on Mac OS -->
+                            <argLine>${failsafeArgLine} -Djava.awt.headless=true</argLine>
+                            <skipTests>${skip.integration.tests}</skipTests>
+                            <properties>
+                                <property>
+                                    <name>listener</name>
+                                    <!--Tests NEED to be written in TestNG-->
+                                    <value>org.sonar.java.jacoco.TestNGListener</value>
+                                </property>
+                            </properties>
+                            <systemPropertyVariables>
+                                <unitTestDatabaseType>EXTERNAL</unitTestDatabaseType>
+                            </systemPropertyVariables>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
     <profiles>
-        <profile>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <build>
-                <finalName>geodesy-domain-model</finalName>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-surefire-plugin</artifactId>
-                        <version>2.18.1</version>
-                        <configuration>
-                            <systemPropertyVariables>
-                                <!-- <unitTestDatabaseType>IN_MEMORY</unitTestDatabaseType> -->
-                                <unitTestDatabaseType>EXTERNAL</unitTestDatabaseType>
-                            </systemPropertyVariables>
-                            <!--test exclusions should be defined in the build section, otherwise profiles override them, at least in some cases. -->
-                            <!--                             <excludes> -->
-                            <!--                                 <exclude>au/gov/ga/geodesy/ngcp/**/*</exclude> -->
-                            <!--                             </excludes> -->
-                            <forkCount>1</forkCount>
-                            <reuseForks>false</reuseForks>
-                            <properties>
-                                <property>
-                                    <name>listener</name>
-                                    <value>
-                                        au.gov.ga.geodesy.support.testng.TestSuiteListener,
-                                        au.gov.ga.geodesy.support.testng.TestListener,
-                                        au.gov.ga.geodesy.support.testng.TestDependencyController
-                                    </value>
-                                </property>
-                            </properties>
-                            <!-- prevent the annoying ForkedBooter process from stealing window focus on Mac OS -->
-                            <argLine>-Djava.awt.headless=true</argLine>
-                        </configuration>
-                    </plugin>
-                    <!-- TODO <plugin> -->
-                    <!--     <groupId>org.apache.maven.plugins</groupId> -->
-                    <!--     <artifactId>maven-antrun-plugin</artifactId> -->
-                    <!--     <version>1.7</version> -->
-                    <!--     <executions> -->
-                    <!--         <execution> -->
-                    <!--             <id>fix permissions</id> -->
-                    <!--             <phase>process-test-resources</phase> -->
-                    <!--             <configuration> -->
-                    <!--                 <target> -->
-                    <!--                     <chmod -->
-                    <!--                         file="target/test-classes/solutions/final/weekly/15647-16157/extract.sh" -->
-                    <!--                         perm="755" /> -->
-                    <!--                 </target> -->
-                    <!--             </configuration> -->
-                    <!--             <goals> -->
-                    <!--                 <goal>run</goal> -->
-                    <!--             </goals> -->
-                    <!--         </execution> -->
-                    <!--     </executions> -->
-                    <!-- </plugin> -->
-                    <!-- <plugin> -->
-                    <!--    <groupId>org.codehaus.mojo</groupId> -->
-                    <!--    <artifactId>exec-maven-plugin</artifactId> -->
-                    <!--    <version>1.4.0</version> -->
-                    <!--    <executions> -->
-                    <!--        <execution> -->
-                    <!--            <id>extract-sinex-files</id> -->
-                    <!--            <phase>process-test-resources</phase> -->
-                    <!--            <configuration> -->
-                    <!--                <executable>./target/test-classes/solutions/final/weekly/15647-16157/extract.sh</executable> -->
-                    <!--            </configuration> -->
-                    <!--            <goals> -->
-                    <!--                <goal>exec</goal> -->
-                    <!--            </goals> -->
-                    <!--        </execution> -->
-                    <!--    </executions> -->
-                    <!-- </plugin> -->
-                </plugins>
-            </build>
-        </profile>
-        <profile>
-            <id>db-external</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-surefire-plugin</artifactId>
-                        <version>2.18.1</version>
-                        <configuration>
-                            <systemPropertyVariables>
-                                <unitTestDatabaseType>EXTERNAL</unitTestDatabaseType>
-                            </systemPropertyVariables>
-                            <forkCount>1</forkCount>
-                            <reuseForks>false</reuseForks>
-                            <properties>
-                                <property>
-                                    <name>listener</name>
-                                    <value>
-                                        au.gov.ga.geodesy.support.testng.TestSuiteListener,
-                                        au.gov.ga.geodesy.support.testng.TestListener,
-                                        au.gov.ga.geodesy.support.testng.TestDependencyController
-                                    </value>
-                                </property>
-                            </properties>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
         <profile>
               <id>db-diff</id>
               <build>
                   <defaultGoal>process-test-resources</defaultGoal>
                   <plugins>
-                      <plugin>
-                          <groupId>org.apache.maven.plugins</groupId>
-                          <artifactId>maven-surefire-plugin</artifactId>
-                          <version>2.18.1</version>
-                          <configuration>
-                              <systemPropertyVariables>
-                                  <unitTestDatabaseType>EXTERNAL</unitTestDatabaseType>
-                              </systemPropertyVariables>
-                          </configuration>
-                      </plugin>
                       <plugin>
                           <groupId>org.liquibase</groupId>
                           <artifactId>liquibase-maven-plugin</artifactId>
@@ -797,28 +782,6 @@
                  </plugins>
              </build>
          </profile>
-
-        <profile>
-            <id>integration</id>
-            <build>
-                <defaultGoal>test</defaultGoal>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-surefire-plugin</artifactId>
-                        <version>2.18.1</version>
-                        <configuration>
-                            <excludes>
-                                <exclude>none</exclude>
-                            </excludes>
-                            <includes>
-                                <include>au/gov/ga/geodesy/test/functional/*.java</include>
-                            </includes>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
         <profile>
             <id>checker</id>
             <build>
@@ -841,26 +804,6 @@
                     </plugin>
                 </plugins>
             </build>
-        </profile>
-        <profile>
-            <id>sonarprofile</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <properties>
-                <sonar.host.url>https://sonar.gadevs.ga/</sonar.host.url>
-                <sonar.projectKey>${project.artifactId}</sonar.projectKey>
-                <sonar.projectName>${project.artifactId}</sonar.projectName>
-                <sonar.projectVersion>${project.version}</sonar.projectVersion>
-                <sonar.language>java</sonar.language>
-                <sonar.sources>src/main/java</sonar.sources>
-                <sonar.test>target/test-classes</sonar.test>
-                <sonar.scm.provider>git</sonar.scm.provider>
-                <sonar.login>${SONAR_LOGIN}</sonar.login>
-                <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
-                <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
-                <sonar.jacoco.reportPath>${basedir}/target/coverage-reports/jacoco-unit.exec</sonar.jacoco.reportPath>
-            </properties>
         </profile>
     </profiles>
     <distributionManagement>

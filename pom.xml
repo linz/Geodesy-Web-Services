@@ -44,8 +44,9 @@
         <!-- Define location of Java CodeCoverage data from Integration Tests (run using Failsafe) -->
         <sonar.jacoco.itReportPath>>${jacoco.basedir}/jacoco-it.exec</sonar.jacoco.itReportPath>
         <jacoco.it.outputdir>${jacoco.basedir}/jacoco-it-out</jacoco.it.outputdir>
-        <skip.integration.tests>false</skip.integration.tests>
-        <skip.unit.tests>false</skip.unit.tests>
+        <skip.integration.tests>true</skip.integration.tests>
+        <skip.system.tests>true</skip.system.tests>
+        <skip.unit.tests>true</skip.unit.tests>
         <argLine>-Xmx2048m -Xms1024m</argLine>
     </properties>
     <repositories>
@@ -667,7 +668,7 @@
                     <!-- surefireArgLine - sets the VM argument line used when unit tests are run. -->
                     <!-- Headless - prevent the annoying ForkedBooter process from stealing window focus on Mac OS -->
                     <argLine>${surefireArgLine} -Djava.awt.headless=true</argLine>
-                    <skipTests>${skip.unit.tests}</skipTests>
+                    <skipTests>${skip.integration.tests}</skipTests>
                     <excludes>
                         <!--Exclude these tests which attempt to connect to non-existant Oracle DB -->
                         <exclude>au/gov/ga/geodesy/ngcp/**/*</exclude>
@@ -702,7 +703,7 @@
                 <version>${failsafe.version}</version>
                 <executions>
                     <execution>
-                        <id>integration-tests</id>
+                        <id>system-tests</id>
                         <goals>
                             <goal>integration-test</goal>
                             <goal>verify</goal>
@@ -711,15 +712,15 @@
                             <forkCount>1</forkCount>
                             <reuseForks>false</reuseForks>
                             <excludes>
-                                <exclude>au/gov/ga/geodesy/test/functional/**/*.java</exclude>
+                                <include>none</include>
                             </excludes>
                             <includes>
-                                <include>au/gov/ga/geodesy/test/integration/**/*.java</include>
+                                <exclude>au/gov/ga/geodesy/test/functional/**/*.java</exclude>
                             </includes>
                             <!-- failsafeArgLine - sets the VM argument line used when integration tests are run. -->
                             <!-- Headless - prevent the annoying ForkedBooter process from stealing window focus on Mac OS -->
                             <argLine>${failsafeArgLine} -Djava.awt.headless=true</argLine>
-                            <skipTests>${skip.integration.tests}</skipTests>
+                            <skipTests>${skip.system.tests}</skipTests>
                             <properties>
                                 <property>
                                     <name>listener</name>
@@ -782,6 +783,15 @@
                  </plugins>
              </build>
          </profile>
+        <profile>
+            <id>system-test</id>
+            <build>
+                <defaultGoal>integration-test</defaultGoal>
+            </build>
+            <properties>
+                <skip.system.tests>false</skip.system.tests>
+            </properties>
+        </profile>
         <profile>
             <id>checker</id>
             <build>

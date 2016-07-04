@@ -3,6 +3,9 @@ package au.gov.ga.geodesy.domain.model.sitelog;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
+import org.checkerframework.checker.nullness.qual.MonotonicNonNull;
+import org.checkerframework.checker.nullness.qual.Nullable;
+
 /**
  * http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2004/surveyedLocalTies.xsd:surveyedLocalTiesType.
  * differentialComponentsGNSSMarkerToTiedMonumebtsITRS
@@ -11,18 +14,18 @@ import javax.persistence.Embeddable;
 public class DifferentialFromMarker {
 
     @Column(name = "DX")
-    protected Double dx;
+    protected @MonotonicNonNull Double dx;
 
     @Column(name = "DY")
-    protected Double dy;
+    protected @MonotonicNonNull Double dy;
 
     @Column(name = "DZ")
-    protected Double dz;
+    protected @MonotonicNonNull Double dz;
 
     /**
      * Return differential component in x-direction.
      */
-    public Double getDx() {
+    public @Nullable Double getDx() {
         return dx;
     }
 
@@ -36,7 +39,7 @@ public class DifferentialFromMarker {
     /**
      * Return differential component in y-direction.
      */
-    public Double getDy() {
+    public @Nullable Double getDy() {
         return dy;
     }
 
@@ -51,7 +54,7 @@ public class DifferentialFromMarker {
     /**
      * Return differential component in z-direction.
      */
-    public Double getDz() {
+    public @Nullable Double getDz() {
         return dz;
     }
 

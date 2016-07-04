@@ -10,6 +10,9 @@ import javax.persistence.Table;
 import javax.validation.Valid;
 import javax.validation.constraints.Size;
 
+import org.checkerframework.checker.nullness.qual.MonotonicNonNull;
+import org.checkerframework.checker.nullness.qual.Nullable;
+
 /**
  * http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2564/collocationInformation.xsd:collocationInformationType
  */
@@ -20,26 +23,26 @@ public class CollocationInformation {
     @Id
     @GeneratedValue(generator = "surrogateKeyGenerator")
     @SequenceGenerator(name = "surrogateKeyGenerator", sequenceName = "SEQ_SITELOGCOLLOCATIONINFO")
-    private Integer id;
+    private @MonotonicNonNull Integer id;
 
     @Size(max = 256)
     @Column(name = "INSTRUMENT_TYPE", length = 256)
-    protected String instrumentType;
+    protected @MonotonicNonNull String instrumentType;
 
     @Size(max = 256)
     @Column(name = "STATUS", length = 256)
-    protected String status;
+    protected @MonotonicNonNull String status;
 
     @Valid
     @Embedded
-    protected EffectiveDates effectiveDates;
+    protected @MonotonicNonNull EffectiveDates effectiveDates;
 
     @Size(max = 256)
     @Column(name = "NOTES", length = 256)
-    protected String notes;
+    protected @MonotonicNonNull String notes;
 
     @SuppressWarnings("unused")
-    private Integer getId() {
+    private @Nullable Integer getId() {
         return id;
     }
 
@@ -51,7 +54,7 @@ public class CollocationInformation {
     /**
      * Return instrumentation type.
      */
-    public String getInstrumentType() {
+    public @Nullable String getInstrumentType() {
         return instrumentType;
     }
 
@@ -65,7 +68,7 @@ public class CollocationInformation {
     /**
      * Return status.
      */
-    public String getStatus() {
+    public @Nullable String getStatus() {
         return status;
     }
 
@@ -79,7 +82,7 @@ public class CollocationInformation {
     /**
      * Return effective dates.
      */
-    public EffectiveDates getEffectiveDates() {
+    public @Nullable EffectiveDates getEffectiveDates() {
         return effectiveDates;
     }
 
@@ -93,7 +96,7 @@ public class CollocationInformation {
     /**
      * Return notes.
      */
-    public String getNotes() {
+    public @Nullable String getNotes() {
         return notes;
     }
 

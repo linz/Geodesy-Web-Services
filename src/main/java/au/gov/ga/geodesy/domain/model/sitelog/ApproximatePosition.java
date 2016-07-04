@@ -5,6 +5,9 @@ import javax.persistence.Embeddable;
 import javax.persistence.Transient;
 import javax.validation.constraints.Size;
 
+import org.checkerframework.checker.nullness.qual.MonotonicNonNull;
+import org.checkerframework.checker.nullness.qual.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.vividsolutions.jts.geom.Point;
 
@@ -20,16 +23,16 @@ public class ApproximatePosition {
 
     @Size(max = 200)
     @Column(name = "ELEVATION_GRS80", length = 200)
-    private String elevationGrs80;
+    private @MonotonicNonNull String elevationGrs80;
 
     @Column(name = "ITRF_X")
-    private Double itrfX;
+    private @MonotonicNonNull Double itrfX;
 
     @Column(name = "ITRF_Y")
-    private Double itrfY;
+    private @MonotonicNonNull Double itrfY;
 
     @Column(name = "ITRF_Z")
-    private Double itrfZ;
+    private @MonotonicNonNull Double itrfZ;
 
     /**
      * Return approximate (latidue,longitude) on the GRS80 ellipsoid.
@@ -48,7 +51,7 @@ public class ApproximatePosition {
     /**
      * Return approximate elevation in metres from the GRS80 ellipsoid.
      */
-    public String getElevationGrs80() {
+    public @Nullable String getElevationGrs80() {
         return elevationGrs80;
     }
 
@@ -62,7 +65,7 @@ public class ApproximatePosition {
     /**
      * Return approximate ITRF x coordinate in meters.
      */
-    public Double getItrfX() {
+    public @Nullable Double getItrfX() {
         return itrfX;
     }
 
@@ -76,7 +79,7 @@ public class ApproximatePosition {
     /**
      * Return approximate ITRF y coordinate in meters.
      */
-    public Double getItrfY() {
+    public @Nullable Double getItrfY() {
         return itrfY;
     }
 
@@ -90,7 +93,7 @@ public class ApproximatePosition {
     /**
      * Return approximate ITRF z coordinate in meters.
      */
-    public Double getItrfZ() {
+    public @Nullable Double getItrfZ() {
         return itrfZ;
     }
 

@@ -6,6 +6,9 @@ import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import javax.validation.constraints.Past;
 
+import org.checkerframework.checker.nullness.qual.MonotonicNonNull;
+import org.checkerframework.checker.nullness.qual.Nullable;
+
 /**
  * http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004/formInformation.xsd:formInformationType
  */
@@ -13,19 +16,19 @@ import javax.validation.constraints.Past;
 public class FormInformation {
 
     @Column(name = "FORM_PREPARED_BY", length = 200)
-    protected String preparedBy;
+    protected @MonotonicNonNull String preparedBy;
 
     @Column(name = "FORM_DATE_PREPARED")
     @Past
-    protected Instant datePrepared;
+    protected @MonotonicNonNull Instant datePrepared;
 
     @Column(name = "FORM_REPORT_TYPE", length = 200)
-    protected String reportType;
+    protected @MonotonicNonNull String reportType;
 
     /**
      * Return prepered by.
      */
-    public String getPreparedBy() {
+    public @Nullable String getPreparedBy() {
         return preparedBy;
     }
 
@@ -39,7 +42,7 @@ public class FormInformation {
     /**
      * Return date prepared.
      */
-    public Instant getDatePrepared() {
+    public @Nullable Instant getDatePrepared() {
         return datePrepared;
     }
 
@@ -53,7 +56,7 @@ public class FormInformation {
     /**
      * Return report type.
      */
-    public String getReportType() {
+    public @Nullable String getReportType() {
         return reportType;
     }
 

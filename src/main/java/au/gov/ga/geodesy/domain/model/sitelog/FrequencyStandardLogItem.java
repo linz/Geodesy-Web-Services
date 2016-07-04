@@ -10,6 +10,9 @@ import javax.persistence.Table;
 import javax.validation.Valid;
 import javax.validation.constraints.Size;
 
+import org.checkerframework.checker.nullness.qual.MonotonicNonNull;
+import org.checkerframework.checker.nullness.qual.Nullable;
+
 /**
  * http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2564/frequencyStandard.xsd:frequenceStandardType
  */
@@ -20,26 +23,26 @@ public class FrequencyStandardLogItem implements EquipmentLogItem {
     @Id
     @GeneratedValue(generator = "surrogateKeyGenerator")
     @SequenceGenerator(name = "surrogateKeyGenerator", sequenceName = "SEQ_SITELOGFREQUENCYSTANDARD")
-    private Integer id;
+    private @MonotonicNonNull Integer id;
 
     @Size(max = 256)
     @Column(name = "TYPE", length = 256)
-    protected String type;
+    protected @MonotonicNonNull String type;
 
     @Size(max = 256)
     @Column(name = "INPUT_FREQUENCY", length = 256)
-    protected String inputFrequency;
+    protected @MonotonicNonNull String inputFrequency;
 
     @Valid
     @Embedded
-    protected EffectiveDates effectiveDates;
+    protected @MonotonicNonNull EffectiveDates effectiveDates;
 
     @Size(max = 4000)
     @Column(name = "NOTES", length = 4000)
-    protected String notes;
+    protected @MonotonicNonNull String notes;
 
     @SuppressWarnings("unused")
-    private Integer getId() {
+    private @Nullable Integer getId() {
         return id;
     }
 
@@ -51,7 +54,7 @@ public class FrequencyStandardLogItem implements EquipmentLogItem {
     /**
      * Return standard type.
      */
-    public String getType() {
+    public @Nullable String getType() {
         return type;
     }
 
@@ -65,7 +68,7 @@ public class FrequencyStandardLogItem implements EquipmentLogItem {
     /**
      * Return input frequency.
      */
-    public String getInputFrequency() {
+    public @Nullable String getInputFrequency() {
         return inputFrequency;
     }
 
@@ -79,7 +82,7 @@ public class FrequencyStandardLogItem implements EquipmentLogItem {
     /**
      * Return effective dates.
      */
-    public EffectiveDates getEffectiveDates() {
+    public @Nullable EffectiveDates getEffectiveDates() {
         return effectiveDates;
     }
 
@@ -93,7 +96,7 @@ public class FrequencyStandardLogItem implements EquipmentLogItem {
     /**
      * Return notes.
      */
-    public String getNotes() {
+    public @Nullable String getNotes() {
         return notes;
     }
 
@@ -104,7 +107,7 @@ public class FrequencyStandardLogItem implements EquipmentLogItem {
         this.notes = value;
     }
 
-    public String getSerialNumber() {
+    public @Nullable String getSerialNumber() {
         return null;
     }
 

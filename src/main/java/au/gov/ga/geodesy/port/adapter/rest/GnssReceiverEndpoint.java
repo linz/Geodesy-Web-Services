@@ -1,6 +1,7 @@
 package au.gov.ga.geodesy.port.adapter.rest;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.rest.webmvc.PersistentEntityResourceAssembler;
@@ -17,12 +18,8 @@ import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.querydsl.core.BooleanBuilder;
-import com.querydsl.core.types.Predicate;
-
 import au.gov.ga.geodesy.domain.model.equipment.GnssReceiver;
 import au.gov.ga.geodesy.domain.model.equipment.GnssReceiverRepository;
-import au.gov.ga.geodesy.domain.model.equipment.QGnssReceiver;
 
 /**
  * GnssReceiver HTTP endpoint.
@@ -54,17 +51,7 @@ public class GnssReceiverEndpoint {
             PersistentEntityResourceAssembler entityAssembler,
             Pageable pageRequest) {
 
-        BooleanBuilder builder = new BooleanBuilder();
-        QGnssReceiver qReceiver = QGnssReceiver.gnssReceiver;
-
-        // TODO: find out why we can't just say qReceiver.eq(receiver),
-        // or check all attributes individually
-
-        if (receiver.getType() != null) {
-            builder.and(qReceiver.type.eq(receiver.getType()));
-        }
-        Predicate receiverPredicate = builder.getValue();
-        Page<GnssReceiver> page = receivers.findAll(receiverPredicate, pageRequest);
+        Page<GnssReceiver> page = receivers.findAll(Example.of(receiver), pageRequest);
 
         @SuppressWarnings({"unchecked", "rawtypes"})
         PagedResources<Resource<GnssReceiver>> paged = assembler.toResource(page,

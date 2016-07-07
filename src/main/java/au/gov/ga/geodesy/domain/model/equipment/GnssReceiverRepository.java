@@ -2,11 +2,9 @@ package au.gov.ga.geodesy.domain.model.equipment;
 
 import java.util.List;
 
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.querydsl.QueryDslPredicateExecutor;
+import au.gov.ga.geodesy.support.spring.AggregateRepository;
 
-public interface GnssReceiverRepository extends JpaRepository<GnssReceiver, Integer>,
-    QueryDslPredicateExecutor<GnssReceiver> {
+public interface GnssReceiverRepository extends AggregateRepository<GnssReceiver> {
 
     @Override
     List<GnssReceiver> findAll();

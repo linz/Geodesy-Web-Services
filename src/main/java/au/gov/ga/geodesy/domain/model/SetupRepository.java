@@ -10,7 +10,9 @@ import org.springframework.data.querydsl.QueryDslPredicateExecutor;
 import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RestResource;
 
-public interface SetupRepository extends JpaRepository<Setup, Integer>, SetupRepositoryCustom, QueryDslPredicateExecutor<Setup> {
+import au.gov.ga.geodesy.support.spring.AggregateRepository;
+
+public interface SetupRepository extends AggregateRepository<Setup>, SetupRepositoryCustom, QueryDslPredicateExecutor<Setup> {
 
     // TODO: test
     @Query("select s from Setup s where s.siteId = :siteId and s.invalidated = false")

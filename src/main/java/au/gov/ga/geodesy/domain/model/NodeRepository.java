@@ -4,12 +4,13 @@ import java.util.List;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RestResource;
 
-public interface NodeRepository extends JpaRepository<Node, Integer> {
+import au.gov.ga.geodesy.support.spring.AggregateRepository;
+
+public interface NodeRepository extends AggregateRepository<Node> {
 
     @Query("select n from Node n where n.siteId = :siteId")
     public Page<Node> findBySiteId(@Param("siteId") Integer siteId, Pageable pageRequest);

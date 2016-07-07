@@ -30,9 +30,6 @@ public abstract class BaseFunctionalTest extends AbstractTestNGSpringContextTest
     @Autowired
     private FunctionalTestConfig config;
 
-    @Autowired
-    protected SiteLogRepository siteLogRepository;
-
     private static final Logger log = LoggerFactory.getLogger(BaseFunctionalTest.class);
 
     @BeforeClass
@@ -48,9 +45,6 @@ public abstract class BaseFunctionalTest extends AbstractTestNGSpringContextTest
         } else {
             log.info("HTTP proxy is not configured");
         }
-
-        siteLogRepository.deleteAll();
-        siteLogRepository.flush();
     }
 
     protected FunctionalTestConfig getConfig() {

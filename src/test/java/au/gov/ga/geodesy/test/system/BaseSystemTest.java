@@ -21,7 +21,6 @@ import io.restassured.specification.ProxySpecification;
 @ContextConfiguration(
     classes = {
         FunctionalTestConfig.class,
-        PersistenceJpaConfig.class
     },
     loader = AnnotationConfigContextLoader.class
 )

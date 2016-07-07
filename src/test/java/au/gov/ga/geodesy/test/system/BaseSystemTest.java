@@ -1,4 +1,4 @@
-package au.gov.ga.geodesy.test.functional;
+package au.gov.ga.geodesy.test.system;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,13 +9,13 @@ import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.testng.annotations.BeforeClass;
 
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLogRepository;
-import au.gov.ga.geodesy.support.spring.FunctionalTestConfig;
+import au.gov.ga.geodesy.support.spring.SystemTestConfig;
 import au.gov.ga.geodesy.support.spring.PersistenceJpaConfig;
 import io.restassured.RestAssured;
 import io.restassured.specification.ProxySpecification;
 
 /**
- * Base class for functional tests.
+ * Base class for system tests.
  * Configures the web endpoints and clears the database prior to running each test.
  */
 @ContextConfiguration(
@@ -25,12 +25,12 @@ import io.restassured.specification.ProxySpecification;
     },
     loader = AnnotationConfigContextLoader.class
 )
-public abstract class BaseFunctionalTest extends AbstractTestNGSpringContextTests {
+public abstract class BaseSystemTest extends AbstractTestNGSpringContextTests {
 
     @Autowired
-    private FunctionalTestConfig config;
+    private SystemTestConfig config;
 
-    private static final Logger log = LoggerFactory.getLogger(BaseFunctionalTest.class);
+    private static final Logger log = LoggerFactory.getLogger(BaseSystemTest.class);
 
     @BeforeClass
     public void setup() {
@@ -47,7 +47,7 @@ public abstract class BaseFunctionalTest extends AbstractTestNGSpringContextTest
         }
     }
 
-    protected FunctionalTestConfig getConfig() {
+    protected SystemTestConfig getConfig() {
         return config;
     }
 }

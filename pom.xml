@@ -571,9 +571,9 @@
                         <exclude>au/gov/ga/geodesy/ngcp/**/*</exclude>
                         <!-- exclude the following tests, they broke due to sinex files being exluded - see commit https://github.com/GeoscienceAustralia/geodesy-domain-model/commit/e05fd32883405b9f1901c038424012a780019eeb  -->
                         <exclude>au/gov/ga/geodesy/port/adapter/rest/UploadSolutionRestTest.java</exclude>
-                        <!--Don't run the integration or functional tests-->
+                        <!--Don't run the integration or system tests-->
                         <exclude>au/gov/ga/geodesy/test/integration/**/*.java</exclude>
-                        <exclude>au/gov/ga/geodesy/test/functional/**/*.java</exclude>
+                        <exclude>au/gov/ga/geodesy/test/system/**/*.java</exclude>
                     </excludes>
                     <!--Tests NEED to be written in TestNG-->
                     <value>
@@ -722,7 +722,7 @@
                                     <forkCount>1</forkCount>
                                     <reuseForks>false</reuseForks>
                                     <includes>
-                                        <include>au/gov/ga/geodesy/test/functional/**/*.java</include>
+                                        <include>au/gov/ga/geodesy/test/system/**/*.java</include>
                                     </includes>
                                     <!-- Headless - prevent the annoying ForkedBooter process from stealing window focus on Mac OS -->
                                     <argLine>-Djava.awt.headless=true</argLine>
@@ -774,9 +774,9 @@
                                 <exclude>au/gov/ga/geodesy/ngcp/**/*</exclude>
                                 <!-- exclude the following tests, they broke due to sinex files being exluded - see commit https://github.com/GeoscienceAustralia/geodesy-domain-model/commit/e05fd32883405b9f1901c038424012a780019eeb  -->
                                 <exclude>au/gov/ga/geodesy/port/adapter/rest/UploadSolutionRestTest.java</exclude>
-                                <!--Don't run the integration or functional tests-->
+                                <!--Don't run the integration or system tests-->
                                 <exclude>au/gov/ga/geodesy/test/integration/**/*.java</exclude>
-                                <exclude>au/gov/ga/geodesy/test/functional/**/*.java</exclude>
+                                <exclude>au/gov/ga/geodesy/test/system/**/*.java</exclude>
                             </excludes>
                             <systemPropertyVariables>
                                 <unitTestDatabaseType>EXTERNAL</unitTestDatabaseType>

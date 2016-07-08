@@ -10,17 +10,17 @@ import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 
 
 /**
- * Spring context configuration for standalone integration tests.
+ * Spring context configuration for system tests.
  *
- * @see {@code src/test/resources/integration-test.properties}
+ * @see {@code src/test/resources/system-test.properties}
  */
 @Configuration
 @EnableSpringConfigured
 @EnableAspectJAutoProxy(proxyTargetClass = true)
-@PropertySource("classpath:/integration-test.properties")
-public class FunctionalTestConfig {
+@PropertySource("classpath:/system-test.properties")
+public class SystemTestConfig {
 
-    @Value("${webServicesIntegrationTestUrl}")
+    @Value("${webServicesUrl}")
     private String webServicesUrl;
 
     @Value("${http.useProxy}")

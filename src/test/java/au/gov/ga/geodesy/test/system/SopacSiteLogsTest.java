@@ -1,4 +1,4 @@
-package au.gov.ga.geodesy.test.functional;
+package au.gov.ga.geodesy.test.system;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -17,9 +17,9 @@ import org.testng.annotations.Test;
 import au.gov.ga.geodesy.support.TestResources;
 
 /**
- * Functional tests for SOPAC site logs. Must be run against the external database.
+ * System tests for SOPAC site logs.
  */
-public class SopacSiteLogsTest extends BaseFunctionalTest {
+public class SopacSiteLogsTest extends BaseSystemTest {
 
     private static final Logger log = LoggerFactory.getLogger(SopacSiteLogsTest.class);
 

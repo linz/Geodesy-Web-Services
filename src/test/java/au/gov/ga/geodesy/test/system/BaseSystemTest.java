@@ -8,9 +8,8 @@ import org.springframework.test.context.support.AnnotationConfigContextLoader;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.testng.annotations.BeforeClass;
 
-import au.gov.ga.geodesy.domain.model.sitelog.SiteLogRepository;
 import au.gov.ga.geodesy.support.spring.SystemTestConfig;
-import au.gov.ga.geodesy.support.spring.PersistenceJpaConfig;
+
 import io.restassured.RestAssured;
 import io.restassured.specification.ProxySpecification;
 
@@ -20,7 +19,7 @@ import io.restassured.specification.ProxySpecification;
  */
 @ContextConfiguration(
     classes = {
-        FunctionalTestConfig.class,
+        SystemTestConfig.class,
     },
     loader = AnnotationConfigContextLoader.class
 )

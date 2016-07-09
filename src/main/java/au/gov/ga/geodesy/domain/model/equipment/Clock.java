@@ -4,6 +4,7 @@ import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Entity
 @DiscriminatorValue("clock")
@@ -18,6 +19,7 @@ public class Clock extends Equipment {
         super(type);
     }
 
+    @Override
     public boolean equals(Object x) {
         if (x == null) {
             return false;
@@ -30,7 +32,17 @@ public class Clock extends Equipment {
         }
         Clock other = (Clock) x;
         return new EqualsBuilder()
+        // TODO: would delegating to super be enough
         .append(getType(), other.getType())
             .isEquals();
     }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(21, 43)
+            .appendSuper(super.hashCode())
+            // TODO: would delegating to super be enough
+            .append(getType())
+            .toHashCode();
+   }
 }

@@ -9,6 +9,7 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -68,6 +69,7 @@ public class EquipmentInUse {
         this.period = period;
     }
 
+    @Override
     public boolean equals(Object x) {
         if (x == null) {
             return false;
@@ -85,4 +87,13 @@ public class EquipmentInUse {
             .append(period, other.getPeriod())
             .isEquals();
     }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).
+            append(equipmentId).
+            append(configurationId).
+            append(period).
+            toHashCode();
+   }
 }

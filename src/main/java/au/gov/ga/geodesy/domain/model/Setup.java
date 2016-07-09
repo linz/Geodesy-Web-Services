@@ -19,6 +19,7 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.checkerframework.checker.nullness.qual.MonotonicNonNull;
 import org.checkerframework.checker.nullness.qual.Nullable;
 
@@ -122,7 +123,7 @@ public class Setup {
             .append(getEffectivePeriod(), other.getEffectivePeriod())
             .isEquals()
             &&
-            equals(equipmentInUse, other.getEquipmentInUse());
+            areEqual(equipmentInUse, other.getEquipmentInUse());
     }
 
     /**
@@ -130,7 +131,7 @@ public class Setup {
      * wrong thing when called with ordinary Java collections. We disregard the
      * types of colletions and define equality element-wise.
      */
-    private boolean equals(Collection<EquipmentInUse> as, Collection<EquipmentInUse> bs) {
+    private boolean areEqual(Collection<EquipmentInUse> as, Collection<EquipmentInUse> bs) {
         if (as == bs) {
             return true;
         }
@@ -146,4 +147,14 @@ public class Setup {
         }
         return true;
     }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(19, 41).
+            append(siteId).
+            append(name).
+            append(effectivePeriod).
+            append(equipmentInUse).
+            toHashCode();
+   }
 }

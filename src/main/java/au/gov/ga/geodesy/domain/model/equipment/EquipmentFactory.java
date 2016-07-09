@@ -5,6 +5,8 @@ import java.time.Instant;
 import java.util.Optional;
 
 import au.gov.ga.geodesy.domain.model.sitelog.*;
+import au.gov.ga.geodesy.exception.GeodesyRuntimeException;
+
 import org.apache.commons.lang3.tuple.Pair;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -119,7 +121,7 @@ public class EquipmentFactory {
                     equipment.saveAndFlush(e);
                 } catch (IllegalAccessException | InstantiationException | NoSuchMethodException
                         | InvocationTargetException ex) {
-                    throw new RuntimeException(ex);
+                    throw new GeodesyRuntimeException(ex);
                 }
             }
             return e;
@@ -141,7 +143,7 @@ public class EquipmentFactory {
                     return configClass.getConstructor(Integer.class, Instant.class).newInstance(equipId, effectiveFrom);
                 } catch (IllegalAccessException | InstantiationException
                         | NoSuchMethodException | InvocationTargetException ex) {
-                    throw new RuntimeException(ex);
+                    throw new GeodesyRuntimeException(ex);
                 }
             }
             return c;

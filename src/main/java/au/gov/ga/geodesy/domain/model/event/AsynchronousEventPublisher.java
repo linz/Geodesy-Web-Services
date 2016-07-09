@@ -74,7 +74,8 @@ public class AsynchronousEventPublisher implements EventPublisher {
                         }
                     }
                 }
-            } catch (InterruptedException ok) {
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
             }
         }
 

@@ -10,6 +10,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import au.gov.ga.geodesy.exception.GeodesyRuntimeException;
+
 public class AsynchronousEventPublisher implements EventPublisher {
 
     private static final Logger log = LoggerFactory.getLogger(AsynchronousEventPublisher.class);
@@ -38,7 +40,7 @@ public class AsynchronousEventPublisher implements EventPublisher {
                         events.save(published);
                     }
                 } catch (CloneNotSupportedException ex) {
-                    throw new RuntimeException(ex);
+                    throw new GeodesyRuntimeException(ex);
                 }
             }
             log.info("Scheduling event " + e + " for asynchronous publishing");
@@ -72,7 +74,8 @@ public class AsynchronousEventPublisher implements EventPublisher {
                         }
                     }
                 }
-            } catch (InterruptedException ok) {
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
             }
         }
 

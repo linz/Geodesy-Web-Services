@@ -8,6 +8,7 @@ import javax.persistence.Converter;
 
 import org.opengis.metadata.citation.ResponsibleParty;
 
+import au.gov.ga.geodesy.exception.GeodesyRuntimeException;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLMarshaller;
 import au.gov.ga.geodesy.port.adapter.geodesyml.MarshallingException;
 import au.gov.ga.geodesy.support.mapper.orika.ResponsiblePartyOrikaMapper;
@@ -34,7 +35,7 @@ public class ResponsiblePartyJpaConverter implements AttributeConverter<Responsi
             return writer.toString();
         }
         catch (MarshallingException e) {
-            throw new RuntimeException(e);
+            throw new GeodesyRuntimeException(e);
         }
     }
 
@@ -43,7 +44,7 @@ public class ResponsiblePartyJpaConverter implements AttributeConverter<Responsi
             return marshaller.unmarshal(new StringReader(ml), CIResponsiblePartyType.class).getValue();
         }
         catch (MarshallingException e) {
-            throw new RuntimeException(e);
+            throw new GeodesyRuntimeException(e);
         }
     }
 

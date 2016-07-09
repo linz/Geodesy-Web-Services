@@ -27,6 +27,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLog;
 import au.gov.ga.geodesy.domain.service.CorsSiteLogService;
+import au.gov.ga.geodesy.exception.GeodesyRuntimeException;
 import au.gov.ga.geodesy.port.InvalidSiteLogException;
 import au.gov.ga.geodesy.port.SiteLogReader;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLSiteLogReader;
@@ -71,7 +72,7 @@ public class SiteLogEndpoint {
             return ResponseEntity.created(new URI(location)).body("");
         }
         catch (URISyntaxException e) {
-            throw new RuntimeException(e);
+            throw new GeodesyRuntimeException(e);
         }
     }
 
@@ -89,7 +90,7 @@ public class SiteLogEndpoint {
             return ResponseEntity.created(new URI(location)).body("");
         }
         catch (URISyntaxException e) {
-            throw new RuntimeException(e);
+            throw new GeodesyRuntimeException(e);
         }
     }
 

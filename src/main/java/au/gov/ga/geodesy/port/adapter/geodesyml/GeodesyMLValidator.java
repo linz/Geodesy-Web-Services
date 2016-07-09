@@ -10,6 +10,7 @@ import javax.xml.transform.stream.StreamSource;
 import org.springframework.util.ResourceUtils;
 import org.xml.sax.SAXException;
 
+import au.gov.ga.geodesy.exception.GeodesyRuntimeException;
 import au.gov.ga.xmlschemer.SchemaValidator;
 import au.gov.ga.xmlschemer.Violation;
 
@@ -32,7 +33,7 @@ public class GeodesyMLValidator {
             schemaValidator = new SchemaValidator(xsdSource, catalogPath);
         }
         catch (IOException | SAXException e) {
-            throw new RuntimeException("Failed to initialise GeodesyMLValidator", e);
+            throw new GeodesyRuntimeException("Failed to initialise GeodesyMLValidator", e);
         }
     }
 

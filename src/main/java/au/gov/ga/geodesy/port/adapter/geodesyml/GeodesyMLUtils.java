@@ -136,7 +136,7 @@ public class GeodesyMLUtils {
             element = (JAXBElement<T>) factoryMethod.invoke(factory, new Object[] { t });
             return element;
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            throw new GeodesyRuntimeException(e);
         }
     }
 }

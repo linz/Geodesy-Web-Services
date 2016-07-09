@@ -1,5 +1,6 @@
 package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 
+import au.gov.ga.geodesy.exception.GeodesyRuntimeException;
 import au.gov.ga.geodesy.support.gml.GMLPropertyType;
 import au.gov.ga.geodesy.support.java.util.Iso;
 
@@ -15,7 +16,7 @@ public class GMLPropertyTypeMapper<P extends GMLPropertyType, T extends Abstract
     }
 
     public P from(T t) {
-        throw new RuntimeException("TODO");
+        throw new GeodesyRuntimeException("TODO");
     }
 }
 

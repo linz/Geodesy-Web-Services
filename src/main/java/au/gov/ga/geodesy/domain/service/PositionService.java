@@ -9,6 +9,8 @@ import java.util.StringTokenizer;
 import javax.annotation.PostConstruct;
 
 import org.apache.commons.lang3.tuple.Pair;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
@@ -25,6 +27,8 @@ import au.gov.ga.geodesy.domain.model.event.WeeklySolutionAvailable;
 @Component
 @Transactional("geodesyTransactionManager")
 public class PositionService implements EventSubscriber<WeeklySolutionAvailable> {
+
+    private static final Logger log = LoggerFactory.getLogger(PositionService.class);
 
     @Autowired
     private WeeklySolutionRepository solutions;
@@ -70,7 +74,7 @@ public class PositionService implements EventSubscriber<WeeklySolutionAvailable>
                 positions.save(p);
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            log.error(e.getMessage(), e);
         }
         eventPublisher.handled(event);
     }

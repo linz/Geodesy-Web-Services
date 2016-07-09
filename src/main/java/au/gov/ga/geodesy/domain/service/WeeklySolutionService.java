@@ -9,6 +9,8 @@ import java.time.Instant;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
@@ -22,6 +24,8 @@ import au.gov.ga.geodesy.support.utils.GMLDateUtils;
 @Component
 @Transactional("geodesyTransactionManager")
 public class WeeklySolutionService {
+
+    private static final Logger log = LoggerFactory.getLogger(WeeklySolutionService.class);
 
     @Autowired
     private WeeklySolutionRepository solutions;
@@ -51,7 +55,7 @@ public class WeeklySolutionService {
             solutions.saveAndFlush(solution);
             eventPublisher.publish(new WeeklySolutionAvailable(solution.getId()));
         } catch (IOException | ParseException e) {
-            e.printStackTrace();
+            log.error(e.getMessage(), e);
         }
     }
 

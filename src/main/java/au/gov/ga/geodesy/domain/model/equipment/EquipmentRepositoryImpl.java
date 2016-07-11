@@ -11,6 +11,7 @@ public class EquipmentRepositoryImpl implements EquipmentRepositoryCustom {
     @PersistenceContext(unitName = "geodesy")
     private EntityManager entityManager;
 
+    @Override
     public <T extends Equipment> T findOne(Class<T> equipmentType, String type, String serialNumber) {
         String entityName = equipmentType.getName();
 
@@ -24,6 +25,7 @@ public class EquipmentRepositoryImpl implements EquipmentRepositoryCustom {
         return results.size() == 0 ? null : query.getResultList().get(0);
     }
 
+    @Override
     public <T extends Equipment> List<T> findByEquipmentType(Class<T> equipmentType) {
         String queryString = "select e from " + equipmentType.getName() + " e ";
         TypedQuery<T> query = entityManager.createQuery(queryString, equipmentType);

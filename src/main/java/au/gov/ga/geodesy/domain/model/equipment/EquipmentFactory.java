@@ -4,14 +4,26 @@ import java.lang.reflect.InvocationTargetException;
 import java.time.Instant;
 import java.util.Optional;
 
-import au.gov.ga.geodesy.domain.model.sitelog.*;
-import au.gov.ga.geodesy.exception.GeodesyRuntimeException;
-
 import org.apache.commons.lang3.tuple.Pair;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import au.gov.ga.geodesy.domain.model.sitelog.EffectiveDates;
+import au.gov.ga.geodesy.domain.model.sitelog.EquipmentLogItem;
+import au.gov.ga.geodesy.domain.model.sitelog.FrequencyStandardLogItem;
+import au.gov.ga.geodesy.domain.model.sitelog.GnssAntennaLogItem;
+import au.gov.ga.geodesy.domain.model.sitelog.GnssReceiverLogItem;
+import au.gov.ga.geodesy.domain.model.sitelog.HumiditySensorLogItem;
+import au.gov.ga.geodesy.domain.model.sitelog.LocalEpisodicEventLogItem;
+import au.gov.ga.geodesy.domain.model.sitelog.LogItemVisitor;
+import au.gov.ga.geodesy.domain.model.sitelog.OtherInstrumentationLogItem;
+import au.gov.ga.geodesy.domain.model.sitelog.PossibleProblemSourceLogItem;
+import au.gov.ga.geodesy.domain.model.sitelog.PressureSensorLogItem;
+import au.gov.ga.geodesy.domain.model.sitelog.TemperatureSensorLogItem;
+import au.gov.ga.geodesy.domain.model.sitelog.WaterVaporSensorLogItem;
+import au.gov.ga.geodesy.exception.GeodesyRuntimeException;
 
 @Component
 public class EquipmentFactory {
@@ -33,6 +45,7 @@ public class EquipmentFactory {
     private class EquipmentCreator
             implements LogItemVisitor<Pair<? extends Equipment, ? extends EquipmentConfiguration>> {
 
+        @Override
         public Pair<? extends Equipment, ? extends EquipmentConfiguration> visit(GnssReceiverLogItem logItem) {
             GnssReceiver receiver = getEquipment(GnssReceiver.class, logItem);
 
@@ -47,6 +60,7 @@ public class EquipmentFactory {
             return Pair.of(receiver, config);
         }
 
+        @Override
         public Pair<? extends Equipment, ? extends EquipmentConfiguration> visit(GnssAntennaLogItem logItem) {
             GnssAntenna antenna = getEquipment(GnssAntenna.class, logItem);
 
@@ -60,6 +74,7 @@ public class EquipmentFactory {
             return Pair.of(antenna, config);
         }
 
+        @Override
         public Pair<? extends Equipment, ? extends EquipmentConfiguration> visit(HumiditySensorLogItem logItem) {
             HumiditySensor sensor = getEquipment(HumiditySensor.class, logItem);
 
@@ -71,6 +86,7 @@ public class EquipmentFactory {
             return Pair.of(sensor, config);
         }
 
+        @Override
         public Pair<? extends Equipment, ? extends EquipmentConfiguration> visit(FrequencyStandardLogItem logItem) {
             final Clock newClock = new Clock(logItem.getType());
             Optional<Clock> existingClock = equipment.findByEquipmentType(Clock.class)
@@ -87,26 +103,32 @@ public class EquipmentFactory {
             return Pair.of(clock, config);
         }
 
+        @Override
         public Pair<Equipment, EquipmentConfiguration> visit(WaterVaporSensorLogItem logItem) {
             throw new UnsupportedOperationException();
         }
 
+        @Override
         public Pair<Equipment, EquipmentConfiguration> visit(TemperatureSensorLogItem logItem) {
             throw new UnsupportedOperationException();
         }
 
+        @Override
         public Pair<Equipment, EquipmentConfiguration> visit(PressureSensorLogItem logItem) {
             throw new UnsupportedOperationException();
         }
 
+        @Override
         public Pair<Equipment, EquipmentConfiguration> visit(OtherInstrumentationLogItem logItem) {
             throw new UnsupportedOperationException();
         }
 
+        @Override
         public Pair<Equipment, EquipmentConfiguration> visit(PossibleProblemSourceLogItem logItem) {
             throw new UnsupportedOperationException();
         }
 
+        @Override
         public Pair<Equipment, EquipmentConfiguration> visit(LocalEpisodicEventLogItem logItem) {
             throw new UnsupportedOperationException();
         }

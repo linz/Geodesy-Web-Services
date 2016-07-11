@@ -16,7 +16,7 @@ public class WeeklySolutionEndpoint {
     private WeeklySolutionService service;
 
     @RequestMapping(value = "/upload", method = RequestMethod.POST)
-    public void upload(@RequestParam("sinexFileName") String sinexFilename) throws Exception {
+    public void upload(@RequestParam("sinexFileName") String sinexFilename) {
         service.uploadSolution(sinexFilename);
     }
 }

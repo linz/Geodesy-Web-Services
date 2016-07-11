@@ -99,10 +99,10 @@ public class GeodesyRepositoryRestMvcConfig extends RepositoryRestMvcConfigurati
     public static class CustomSerializer extends BeanSerializerBase {
 
         @Autowired
-        private EquipmentRepository equipment;
+        private transient EquipmentRepository equipment;
 
         @Autowired
-        private EquipmentConfigurationRepository configurations;
+        private transient EquipmentConfigurationRepository configurations;
 
         public CustomSerializer(BeanSerializerBase source) {
             super(source);

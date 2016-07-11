@@ -19,17 +19,19 @@ public class AsynchronousEventPublisher implements EventPublisher {
     @Autowired
     private EventRepository events;
 
-    private List<EventSubscriber<?>> subscribers = new ArrayList<EventSubscriber<?>>();
+    private List<EventSubscriber<?>> subscribers = new ArrayList<>();
 
     @PostConstruct
     public void startEventLoop() {
         new EventLoop(events).start();
     }
 
+    @Override
     public void subscribe(EventSubscriber<?> s) {
         subscribers.add(s);
     }
 
+    @Override
     public void publish(Event... es) {
         for (Event e : es) {
             for (EventSubscriber<?> s : subscribers) {
@@ -86,7 +88,7 @@ public class AsynchronousEventPublisher implements EventPublisher {
                 ((EventSubscriber<Event>) s).handle(e);
             } catch (Exception ex) {
                 e.setError(ExceptionUtils.getStackTrace(ex));
-                ex.printStackTrace();
+                log.error(ex.getMessage(), ex);
             }
             // TODO: try this again at some stage, it deadlocks
             /* new Thread() { */

@@ -28,7 +28,7 @@ public class GeodesySupportConfig {
     }
 
 	@Bean
-    public IgsSiteLogXmlMarshaller siteLogMarshaller() throws Exception {
+    public IgsSiteLogXmlMarshaller siteLogMarshaller() throws au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException {
         return new IgsSiteLogMoxyMarshaller();
     }
 

@@ -12,6 +12,7 @@ public class EventRepositoryImpl implements EventRepositoryCustom {
     private EntityManager entityManager;
 
     // TODO: move out of custom
+    @Override
     public List<Event> getPendingEvents() {
 
         String queryString = "select e from Event e "

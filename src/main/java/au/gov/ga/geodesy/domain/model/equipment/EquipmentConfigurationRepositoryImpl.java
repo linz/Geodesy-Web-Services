@@ -22,7 +22,7 @@ public class EquipmentConfigurationRepositoryImpl implements EquipmentConfigurat
         query.setParameter("equipId", equipId);
         query.setParameter("configurationTime", configurationTime);
         List<T> results = query.getResultList();
-        return results.size() == 0 ? null : query.getResultList().get(0);
+        return results.isEmpty() ? null : query.getResultList().get(0);
     }
 }
 

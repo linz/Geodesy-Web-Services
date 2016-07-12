@@ -23,7 +23,7 @@ public class FrequencyStandardMapperTest {
     @Test
     public void testMapping() throws Exception {
 
-        GeodesyMLType mobs = marshaller.unmarshal(TestResources.geodesyMLSiteLogReader("MOBS"), GeodesyMLType.class)
+        GeodesyMLType mobs = marshaller.unmarshal(TestResources.customGeodesyMLSiteLogReader("MOBS"), GeodesyMLType.class)
             .getValue();
 
         SiteLogType siteLog =

@@ -28,7 +28,7 @@ public class LocalEpisodicEventMapperTest {
     @Test
     public void testMapping() throws Exception {
 
-        GeodesyMLType mobs = marshaller.unmarshal(TestResources.geodesyMLTestDataSiteLogReader("WGTN-localEpisodicEvents"), GeodesyMLType.class)
+        GeodesyMLType mobs = marshaller.unmarshal(TestResources.customGeodesyMLSiteLogReader("WGTN-localEpisodicEvents"), GeodesyMLType.class)
                 .getValue();
 
         SiteLogType siteLog = GeodesyMLUtils.getElementFromJAXBElements(mobs.getElements(), SiteLogType.class)

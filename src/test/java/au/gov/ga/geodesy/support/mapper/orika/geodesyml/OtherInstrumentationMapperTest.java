@@ -28,7 +28,7 @@ public class OtherInstrumentationMapperTest {
     @Test
     public void testMapping() throws Exception {
 
-        GeodesyMLType mobs = marshaller.unmarshal(TestResources.geodesyMLTestDataSiteLogReader("QIKI-otherInstrumentation"), GeodesyMLType.class)
+        GeodesyMLType mobs = marshaller.unmarshal(TestResources.customGeodesyMLSiteLogReader("QIKI-otherInstrumentation"), GeodesyMLType.class)
                 .getValue();
 
         SiteLogType siteLog = GeodesyMLUtils.getElementFromJAXBElements(mobs.getElements(), SiteLogType.class)

@@ -1,20 +1,19 @@
 package au.gov.ga.geodesy.port.adapter.geodesyml;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
+
 import java.io.IOException;
 import java.util.List;
 
 import javax.xml.transform.stream.StreamSource;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-
-
-import static org.hamcrest.Matchers.equalTo;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.Resource;
-import org.springframework.util.ResourceUtils;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import au.gov.ga.geodesy.support.TestResources;
 import au.gov.ga.xmlschemer.Violation;
 
 public class GeodesyMLValidatorTest  {
@@ -23,7 +22,7 @@ public class GeodesyMLValidatorTest  {
 
     @BeforeTest
     public void setup() {
-        
+
         try (ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext()) {
             Resource catalogResource = context.getResource("classpath:xsd/geodesyml-1.0.0-SNAPSHOT/catalog.xml");
             String catalogPath = catalogResource.getFile().getAbsolutePath();
@@ -35,14 +34,14 @@ public class GeodesyMLValidatorTest  {
 
     @Test
     public void testSchemaValidation() throws Exception {
-        StreamSource xml = new StreamSource(ResourceUtils.getFile("classpath:sitelog/geodesyml/MOBS.xml"));
+        StreamSource xml = new StreamSource(TestResources.customGeodesyMLSiteLogReader("MOBS"));
         List<Violation> violations = geodesyMLValidator.validate(xml);
         assertNoViolations(violations);
     }
 
     @Test
     public void testSchemaValidationFailure() throws Exception {
-        StreamSource xml = new StreamSource(ResourceUtils.getFile("classpath:sitelog/geodesyml/MOBS-invalid-schema.xml"));
+        StreamSource xml = new StreamSource(TestResources.customGeodesyMLSiteLogReader("MOBS-invalid-schema"));
         List<Violation> violations = geodesyMLValidator.validate(xml);
         assertViolations(violations, 2);
     }

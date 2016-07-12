@@ -27,7 +27,7 @@ public class FormInformationMapperTest {
     @Test
     public void testMapping() throws Exception {
 
-        GeodesyMLType mobs = marshaller.unmarshal(TestResources.geodesyMLSiteLogReader("ALIC"), GeodesyMLType.class)
+        GeodesyMLType mobs = marshaller.unmarshal(TestResources.customGeodesyMLSiteLogReader("ALIC"), GeodesyMLType.class)
                 .getValue();
 
         SiteLogType siteLog = GeodesyMLUtils.getElementFromJAXBElements(mobs.getElements(), SiteLogType.class)

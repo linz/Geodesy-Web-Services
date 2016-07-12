@@ -38,7 +38,7 @@ public class SiteLogMapperTest {
      **/
     @Test
     public void testMapping() throws Exception {
-        GeodesyMLType mobs = marshaller.unmarshal(TestResources.geodesyMLSiteLogReader("MOBS"), GeodesyMLType.class)
+        GeodesyMLType mobs = marshaller.unmarshal(TestResources.customGeodesyMLSiteLogReader("MOBS"), GeodesyMLType.class)
                 .getValue();
 
         SiteLogType siteLogType = GeodesyMLUtils.getElementFromJAXBElements(mobs.getElements(), SiteLogType.class)
@@ -59,7 +59,7 @@ public class SiteLogMapperTest {
      **/
     @Test
     public void testSensorsMapping() throws Exception {
-        GeodesyMLType mobs = marshaller.unmarshal(TestResources.geodesyMLSiteLogReader("MOBS-sensors"), GeodesyMLType.class)
+        GeodesyMLType mobs = marshaller.unmarshal(TestResources.customGeodesyMLSiteLogReader("MOBS-sensors"), GeodesyMLType.class)
                 .getValue();
 
         SiteLogType siteLogType = GeodesyMLUtils.getElementFromJAXBElements(mobs.getElements(), SiteLogType.class)
@@ -129,7 +129,7 @@ public class SiteLogMapperTest {
     @Test
     public void testOtherInstrumentationsMapping() throws Exception {
         GeodesyMLType mobs = marshaller
-                .unmarshal(TestResources.geodesyMLTestDataSiteLogReader("QIKI-otherInstrumentation"),
+                .unmarshal(TestResources.customGeodesyMLSiteLogReader("QIKI-otherInstrumentation"),
                         GeodesyMLType.class)
                 .getValue();
 
@@ -160,7 +160,7 @@ public class SiteLogMapperTest {
     @Test
     public void testSignalObstructionsMapping() throws Exception {
         GeodesyMLType mobs = marshaller
-                .unmarshal(TestResources.geodesyMLTestDataSiteLogReader("METZ-signalObstructionSet"),
+                .unmarshal(TestResources.customGeodesyMLSiteLogReader("METZ-signalObstructionSet"),
                         GeodesyMLType.class).getValue();
 
         SiteLogType siteLogType = GeodesyMLUtils.getElementFromJAXBElements(mobs.getElements(), SiteLogType.class)
@@ -190,7 +190,7 @@ public class SiteLogMapperTest {
     @Test
     public void testMultipathSourcesMapping() throws Exception {
         GeodesyMLType mobs = marshaller
-                .unmarshal(TestResources.geodesyMLTestDataSiteLogReader("METZ-multipathSources"),
+                .unmarshal(TestResources.customGeodesyMLSiteLogReader("METZ-multipathSources"),
                         GeodesyMLType.class)
                 .getValue();
 
@@ -220,7 +220,7 @@ public class SiteLogMapperTest {
      **/
     @Test
     public void testLocalEpisodicEventsMapping() throws Exception {
-        GeodesyMLType mobs = marshaller.unmarshal(TestResources.geodesyMLTestDataSiteLogReader("WGTN-localEpisodicEvents"), GeodesyMLType.class).getValue();
+        GeodesyMLType mobs = marshaller.unmarshal(TestResources.customGeodesyMLSiteLogReader("WGTN-localEpisodicEvents"), GeodesyMLType.class).getValue();
 
         SiteLogType siteLogType = GeodesyMLUtils.getElementFromJAXBElements(mobs.getElements(), SiteLogType.class).findFirst().get();
 
@@ -248,7 +248,7 @@ public class SiteLogMapperTest {
     @Test
     public void testRadioInterferenceMapping() throws Exception {
         GeodesyMLType mobs = marshaller
-                .unmarshal(TestResources.geodesyMLTestDataSiteLogReader("METZ-multipathSources"),
+                .unmarshal(TestResources.customGeodesyMLSiteLogReader("METZ-multipathSources"),
                         GeodesyMLType.class)
                 .getValue();
 
@@ -278,7 +278,7 @@ public class SiteLogMapperTest {
     @Test
     public void testMoreInformationMapping() throws Exception {
         GeodesyMLType mobs = marshaller
-                .unmarshal(TestResources.geodesyMLTestDataSiteLogReader("MOBS-moreInfo"), GeodesyMLType.class)
+                .unmarshal(TestResources.customGeodesyMLSiteLogReader("MOBS-moreInfo"), GeodesyMLType.class)
                 .getValue();
 
         SiteLogType siteLogType = GeodesyMLUtils.getElementFromJAXBElements(mobs.getElements(), SiteLogType.class)
@@ -298,7 +298,7 @@ public class SiteLogMapperTest {
     @Test
     public void testFormInformationMapping() throws Exception {
         GeodesyMLType mobs = marshaller
-                .unmarshal(TestResources.geodesyMLSiteLogReader("ALIC"), GeodesyMLType.class)
+                .unmarshal(TestResources.customGeodesyMLSiteLogReader("ALIC"), GeodesyMLType.class)
                 .getValue();
 
         SiteLogType siteLogType = GeodesyMLUtils.getElementFromJAXBElements(mobs.getElements(), SiteLogType.class)
@@ -316,7 +316,7 @@ public class SiteLogMapperTest {
     @Test
     public void testCollocationInformationMapping() throws Exception {
         GeodesyMLType mobs = marshaller
-                .unmarshal(TestResources.geodesyMLTestDataSiteLogReader("AIRA-collocationInfo"), GeodesyMLType.class)
+                .unmarshal(TestResources.customGeodesyMLSiteLogReader("AIRA-collocationInfo"), GeodesyMLType.class)
                 .getValue();
 
         SiteLogType siteLogType = GeodesyMLUtils.getElementFromJAXBElements(mobs.getElements(), SiteLogType.class)
@@ -348,7 +348,7 @@ public class SiteLogMapperTest {
     @Test
     public void testSurveyedLocalTieMapping() throws Exception {
         GeodesyMLType mobs = marshaller
-                .unmarshal(TestResources.geodesyMLSiteLogReader("MOBS"), GeodesyMLType.class)
+                .unmarshal(TestResources.customGeodesyMLSiteLogReader("MOBS"), GeodesyMLType.class)
                 .getValue();
 
         SiteLogType siteLogType = GeodesyMLUtils.getElementFromJAXBElements(mobs.getElements(), SiteLogType.class)
@@ -400,7 +400,7 @@ public class SiteLogMapperTest {
 
     @Test
     public void testGnssAntennaMapping() throws IOException, MarshallingException {
-        GeodesyMLType mobs = marshaller.unmarshal(TestResources.geodesyMLSiteLogReader("MOBS"), GeodesyMLType.class)
+        GeodesyMLType mobs = marshaller.unmarshal(TestResources.customGeodesyMLSiteLogReader("MOBS"), GeodesyMLType.class)
                 .getValue();
 
         SiteLogType siteLogType = GeodesyMLUtils.getElementFromJAXBElements(mobs.getElements(), SiteLogType.class)

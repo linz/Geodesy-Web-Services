@@ -2,15 +2,14 @@ package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 
 import static org.testng.Assert.assertEquals;
 
-import java.io.FileReader;
 import java.io.Reader;
 
-import org.springframework.util.ResourceUtils;
 import org.testng.annotations.Test;
 
 import au.gov.ga.geodesy.domain.model.sitelog.SiteIdentification;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLMarshaller;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLUtils;
+import au.gov.ga.geodesy.support.TestResources;
 import au.gov.ga.geodesy.support.marshalling.moxy.GeodesyMLMoxy;
 import au.gov.ga.geodesy.support.utils.GMLDateUtils;
 import au.gov.xml.icsm.geodesyml.v_0_3.GeodesyMLType;
@@ -28,7 +27,7 @@ public class SiteIdentificationMapperTest {
      **/
     @Test
     public void testMapping() throws Exception {
-        try (Reader mobs = new FileReader(ResourceUtils.getFile("classpath:sitelog/geodesyml/MOBS.xml"))) {
+        try (Reader mobs = TestResources.customGeodesyMLSiteLogReader("MOBS")) {
             GeodesyMLType geodesyML = marshaller.unmarshal(mobs, GeodesyMLType.class).getValue();
             SiteLogType siteLogType = GeodesyMLUtils.getElementFromJAXBElements(geodesyML.getElements(), SiteLogType.class)
                 .findFirst()

@@ -1,10 +1,11 @@
 package au.gov.ga.geodesy.support.mapper.dozer.converter;
 
-import org.junit.Assert;
-import org.junit.Test;
-
-import au.gov.ga.geodesy.support.mapper.dozer.converter.AntennaRadomeTypeConverter;
 import au.gov.xml.icsm.geodesyml.v_0_3.IgsRadomeModelCodeType;
+import org.testng.annotations.Test;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.core.Is.is;
+import static org.hamcrest.core.IsNull.notNullValue;
 
 public class AntennaRadomeTypeConverterTest {
     AntennaRadomeTypeConverter conv = new AntennaRadomeTypeConverter();
@@ -14,9 +15,9 @@ public class AntennaRadomeTypeConverterTest {
         String source = "AntennaRadomeValue";
         IgsRadomeModelCodeType dest = null;
         dest = (IgsRadomeModelCodeType) conv.convert(dest, source, IgsRadomeModelCodeType.class, String.class);
-        Assert.assertNotNull(dest);
-        Assert.assertEquals(source, dest.getValue());
-        Assert.assertEquals(AntennaRadomeTypeConverter.DEFAULT_CODESPACEATTR, dest.getCodeSpace());
+        assertThat(dest, notNullValue());
+        assertThat(dest.getValue(), is(source));
+        assertThat(dest.getCodeSpace(), is(AntennaRadomeTypeConverter.DEFAULT_CODESPACEATTR));
 
     }
 

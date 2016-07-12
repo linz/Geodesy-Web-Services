@@ -1,17 +1,17 @@
 package au.gov.ga.geodesy.support.mapper.dozer.converter;
 
-import org.junit.Assert;
-import org.junit.Test;
 
-import au.gov.ga.geodesy.support.mapper.dozer.converter.CodeListValueTypeConverter;
 import au.gov.xml.icsm.geodesyml.v_0_3.IgsReceiverModelCodeType;
 import net.opengis.iso19139.gco.v_20070417.CodeListValueType;
+import org.testng.annotations.Test;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.core.Is.is;
 
 /**
  * CodeListValueTypeConverter is handling the CodeListValueType super-type and these extensions (directly or indirectly via inheritance).
  * au.gov.xml.icsm.geodesyml.v_0_3.IgsReceiverModelCodeType
  * au.gov.xml.icsm.geodesyml.v_0_3.IgsAntennaModelCodeType
- *
  */
 public class CodeListValueTypeConverterTest {
     CodeListValueTypeConverter ctv = new CodeListValueTypeConverter();
@@ -20,10 +20,9 @@ public class CodeListValueTypeConverterTest {
     public void testStringSourceDestinationCodeListValueTypeNull() {
         CodeListValueType destination = null;
         String source = "banana";
-        CodeListValueType c = (CodeListValueType) ctv.convert(destination, source, CodeListValueType.class,
-                String.class);
+        CodeListValueType c = (CodeListValueType) ctv.convert(destination, source, CodeListValueType.class, String.class);
 
-        Assert.assertEquals(source, c.getValue());
+        assertThat(c.getValue(), is(source));
     }
 
     @Test
@@ -31,10 +30,9 @@ public class CodeListValueTypeConverterTest {
         CodeListValueType destination = new CodeListValueType();
         destination.setValue("Not a banana");
         String source = "banana";
-        CodeListValueType c = (CodeListValueType) ctv.convert(destination, source, CodeListValueType.class,
-                String.class);
+        CodeListValueType c = (CodeListValueType) ctv.convert(destination, source, CodeListValueType.class, String.class);
 
-        Assert.assertEquals(source, c.getValue());
+        assertThat(c.getValue(), is(source));
     }
 
     @Test
@@ -44,7 +42,7 @@ public class CodeListValueTypeConverterTest {
         source.setValue("banana");
         String c = (String) ctv.convert(destination, source, String.class, CodeListValueType.class);
 
-        Assert.assertEquals(source.getValue(), c);
+        assertThat(c, is(source.getValue()));
     }
 
     @Test
@@ -54,7 +52,7 @@ public class CodeListValueTypeConverterTest {
         source.setValue("banana");
         String c = (String) ctv.convert(destination, source, String.class, CodeListValueType.class);
 
-        Assert.assertEquals(source.getValue(), c);
+        assertThat(c, is(source.getValue()));
     }
 
     // ========================
@@ -63,20 +61,20 @@ public class CodeListValueTypeConverterTest {
     public void testStringSourceDestinationIgsReceiverModelCodeListValueTypeNull() {
         IgsReceiverModelCodeType destination = null;
         String source = "banana";
-        IgsReceiverModelCodeType c = (IgsReceiverModelCodeType) ctv.convert(destination, source,
-                IgsReceiverModelCodeType.class, String.class);
+        IgsReceiverModelCodeType c = (IgsReceiverModelCodeType) ctv.convert(destination, source, IgsReceiverModelCodeType.class, String
+            .class);
 
-        Assert.assertEquals(source, c.getValue());
+        assertThat(c.getValue(), is(source));
     }
 
     @Test
     public void testStringSourceDestinationIgsReceiverModelCodeListValueTypeNotNull() {
         IgsReceiverModelCodeType destination = new IgsReceiverModelCodeType();
         String source = "banana";
-        IgsReceiverModelCodeType c = (IgsReceiverModelCodeType) ctv.convert(destination, source,
-                IgsReceiverModelCodeType.class, String.class);
+        IgsReceiverModelCodeType c = (IgsReceiverModelCodeType) ctv.convert(destination, source, IgsReceiverModelCodeType.class, String
+            .class);
 
-        Assert.assertEquals(source, c.getValue());
+        assertThat(c.getValue(), is(source));
     }
 
     @Test
@@ -86,7 +84,7 @@ public class CodeListValueTypeConverterTest {
         source.setValue("banana");
         String c = (String) ctv.convert(destination, source, String.class, IgsReceiverModelCodeType.class);
 
-        Assert.assertEquals(source.getValue(), c);
+        assertThat(c, is(source.getValue()));
     }
 
     @Test
@@ -96,7 +94,7 @@ public class CodeListValueTypeConverterTest {
         source.setValue("banana");
         String c = (String) ctv.convert(destination, source, String.class, IgsReceiverModelCodeType.class);
 
-        Assert.assertEquals(source.getValue(), c);
+        assertThat(c, is(source.getValue()));
     }
 
 }

@@ -1,9 +1,9 @@
 package au.gov.ga.geodesy.support.mapper.dozer.converter;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.testng.annotations.Test;
 
-import au.gov.ga.geodesy.support.mapper.dozer.converter.StringDoubleConverter;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.number.IsCloseTo.closeTo;
 
 public class StringDoubleConverterTest {
     StringDoubleConverter conv = new StringDoubleConverter();
@@ -15,7 +15,7 @@ public class StringDoubleConverterTest {
 
         dest = (Double) conv.convert(dest, source, Double.class, String.class);
 
-        Assert.assertEquals(0.0, dest, 0.01);
+        assertThat(dest, closeTo(0.0, 0.01));
     }
 
     @Test
@@ -25,7 +25,7 @@ public class StringDoubleConverterTest {
 
         dest = (Double) conv.convert(dest, source, Double.class, String.class);
 
-        Assert.assertEquals(1.0, dest, 0.01);
+        assertThat(dest, closeTo(1.0, 0.01));
     }
 
     @Test
@@ -35,7 +35,7 @@ public class StringDoubleConverterTest {
 
         dest = (Double) conv.convert(dest, source, Double.class, String.class);
 
-        Assert.assertEquals(-1.0, dest, 0.01);
+        assertThat(dest, closeTo(-1.0, 0.01));
     }
 
     @Test
@@ -45,7 +45,7 @@ public class StringDoubleConverterTest {
 
         dest = (Double) conv.convert(dest, source, Double.class, String.class);
 
-        Assert.assertEquals(1.0, dest, 0.01);
+        assertThat(dest, closeTo(1.0, 0.01));
     }
 
     @Test
@@ -55,7 +55,7 @@ public class StringDoubleConverterTest {
 
         dest = (Double) conv.convert(dest, source, Double.class, String.class);
 
-        Assert.assertEquals(10.0, dest, 0.01);
+        assertThat(dest, closeTo(10.0, 0.01));
     }
 
     @Test
@@ -65,7 +65,7 @@ public class StringDoubleConverterTest {
 
         dest = (Double) conv.convert(dest, source, Double.class, String.class);
 
-        Assert.assertEquals(2.0, dest, 0.01);
+        assertThat(dest, closeTo(2.0, 0.01));
     }
 
     @Test
@@ -75,7 +75,7 @@ public class StringDoubleConverterTest {
 
         dest = (Double) conv.convert(dest, source, Double.class, String.class);
 
-        Assert.assertEquals(0.5, dest, 0.01);
+        assertThat(dest, closeTo(0.5, 0.01));
     }
 
     @Test
@@ -86,7 +86,7 @@ public class StringDoubleConverterTest {
 
         dest = (Double) conv.convert(dest, source, Double.class, String.class);
 
-        Assert.assertEquals(20050, dest, 0.01);
+        assertThat(dest, closeTo(20050, 0.01));
     }
 
     @Test
@@ -97,7 +97,7 @@ public class StringDoubleConverterTest {
 
         dest = (Double) conv.convert(dest, source, Double.class, String.class);
 
-        Assert.assertEquals(0.0, dest, 0.01);
+        assertThat(dest, closeTo(0.0, 0.01));
     }
 
     @Test
@@ -107,7 +107,7 @@ public class StringDoubleConverterTest {
 
         dest = (Double) conv.convert(dest, source, Double.class, String.class);
 
-        Assert.assertEquals(3.0, dest, 0.01);
+        assertThat(dest, closeTo(3.0, 0.01));
     }
 
     @Test
@@ -117,7 +117,7 @@ public class StringDoubleConverterTest {
 
         dest = (Double) conv.convert(dest, source, Double.class, String.class);
 
-        Assert.assertEquals(5.0, dest, 0.01);
+        assertThat(dest, closeTo(5.0, 0.01));
     }
 
     @Test
@@ -127,7 +127,7 @@ public class StringDoubleConverterTest {
 
         dest = (Double) conv.convert(dest, source, Double.class, String.class);
 
-        Assert.assertEquals(2.0, dest, 0.01);
+        assertThat(dest, closeTo(2.0, 0.01));
     }
 
     @Test
@@ -137,7 +137,7 @@ public class StringDoubleConverterTest {
 
         dest = (Double) conv.convert(dest, source, Double.class, String.class);
 
-        Assert.assertEquals(2.0, dest, 0.01);
+        assertThat(dest, closeTo(2.0, 0.01));
     }
 
     @Test
@@ -147,43 +147,47 @@ public class StringDoubleConverterTest {
 
         dest = (Double) conv.convert(dest, source, Double.class, String.class);
 
-        Assert.assertEquals(10.0, dest, 0.01);
+        assertThat(dest, closeTo(10., 0.01));
     }
+
     @Test
     public void test14() {
         Double dest = null;
         String source = "+/-1%(0...90%RH)";
-        
+
         dest = (Double) conv.convert(dest, source, Double.class, String.class);
-        
-        Assert.assertEquals(10.0, dest, 0.01);
+
+        assertThat(dest, closeTo(10.0, 0.01));
     }
+
     @Test
     public void test15() {
         Double dest = null;
         String source = "+/-0.1 @ 20.0C";
-        
+
         dest = (Double) conv.convert(dest, source, Double.class, String.class);
-        
-        Assert.assertEquals(0.120, dest, 0.01);
+
+        assertThat(dest, closeTo(0.120, 0.01));
     }
+
     @Test
     public void test16() {
         Double dest = null;
         String source = "32 m + 0.5";
-        
+
         dest = (Double) conv.convert(dest, source, Double.class, String.class);
-        
-        Assert.assertEquals(32.0, dest, 0.01);
+
+        assertThat(dest, closeTo(32.0, 0.01));
     }
+
     @Test
     public void test17() {
         Double dest = null;
         String source = "APPROX. 0.3 DEG C";
-        
+
         dest = (Double) conv.convert(dest, source, Double.class, String.class);
-        
-        Assert.assertEquals(0.3, dest, 0.01);
+
+        assertThat(dest, closeTo(0.3, 0.01));
     }
 
 }

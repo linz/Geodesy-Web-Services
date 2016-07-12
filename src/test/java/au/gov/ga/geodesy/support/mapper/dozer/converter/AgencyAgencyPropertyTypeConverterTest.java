@@ -1,57 +1,51 @@
 package au.gov.ga.geodesy.support.mapper.dozer.converter;
 
-import org.junit.Assert;
-import org.junit.Test;
-
 import au.gov.ga.geodesy.igssitelog.domain.model.Agency;
 import au.gov.ga.geodesy.igssitelog.domain.model.Contact;
-import au.gov.ga.geodesy.support.mapper.dozer.converter.AgencyAgencyPropertyTypeConverter;
 import au.gov.xml.icsm.geodesyml.v_0_3.AgencyPropertyType;
+import org.testng.annotations.Test;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.core.Is.is;
+import static org.hamcrest.core.IsNull.nullValue;
 
 /**
  * Test Convert: au.gov.ga.geodesy.igssitelog.domain.model.Agency <-->
  * au.gov.xml.icsm.geodesyml.v_0_3.AgencyPropertyType
- *
  */
 public class AgencyAgencyPropertyTypeConverterTest {
     private static final int YES_PRIMARY_SECONDARY = 0;
     private static final int NO_PRIMARY_SECONDARY = 1;
-    AgencyAgencyPropertyTypeConverter aaptc = new AgencyAgencyPropertyTypeConverter();
+    private static final AgencyAgencyPropertyTypeConverter AAPTC = new AgencyAgencyPropertyTypeConverter();
 
     @Test
     public void testPrimarySecondary() {
         AgencyPropertyType destination = null;
         Agency source = buildAgency();
-        AgencyPropertyType c = (AgencyPropertyType) aaptc.convert(destination, source, AgencyPropertyType.class,
-                Agency.class);
+        AgencyPropertyType c = (AgencyPropertyType) AAPTC.convert(destination, source, AgencyPropertyType.class, Agency.class);
 
-        Assert.assertEquals(source.getName(),
-                c.getCIResponsibleParty().getOrganisationName().getCharacterString().getValue());
-        Assert.assertEquals(source.getPrimaryContact().getName(),
-                c.getCIResponsibleParty().getIndividualName().getCharacterString().getValue());
-        Assert.assertEquals(source.getPrimaryContact().getEmail(),
-                c.getCIResponsibleParty().getContactInfo().getCIContact().getAddress().getCIAddress()
-                        .getElectronicMailAddress().get(0).getCharacterString().getValue());
-        Assert.assertEquals(source.getPrimaryContact().getTelephonePrimary(), c.getCIResponsibleParty().getContactInfo()
-                .getCIContact().getPhone().getCITelephone().getVoice().get(0).getCharacterString().getValue());
-        Assert.assertEquals(source.getPrimaryContact().getFax(), c.getCIResponsibleParty().getContactInfo()
-                .getCIContact().getPhone().getCITelephone().getFacsimile().get(0).getCharacterString().getValue());
+        assertThat(c.getCIResponsibleParty().getOrganisationName().getCharacterString().getValue(), is(source.getName()));
+        assertThat(c.getCIResponsibleParty().getIndividualName().getCharacterString().getValue(), is(source.getPrimaryContact().getName()));
+        assertThat(c.getCIResponsibleParty().getContactInfo().getCIContact().getAddress().getCIAddress().getElectronicMailAddress().get
+            (0).getCharacterString().getValue(), is(source.getPrimaryContact().getEmail()));
+        assertThat(c.getCIResponsibleParty().getContactInfo().getCIContact().getPhone().getCITelephone().getVoice().get(0)
+            .getCharacterString().getValue(), is(source.getPrimaryContact().getTelephonePrimary()));
+        assertThat(c.getCIResponsibleParty().getContactInfo().getCIContact().getPhone().getCITelephone().getFacsimile().get(0)
+            .getCharacterString().getValue(), is(source.getPrimaryContact().getFax()));
 
-        Assert.assertEquals(source.getMailingAddress(), c.getCIResponsibleParty().getContactInfo().getCIContact()
-                .getAddress().getCIAddress().getDeliveryPoint().get(0).getCharacterString().getValue());
+        assertThat(c.getCIResponsibleParty().getContactInfo().getCIContact().getAddress().getCIAddress().getDeliveryPoint().get(0)
+            .getCharacterString().getValue(), is(source.getMailingAddress()));
     }
 
     @Test
     public void testNoPrimarySecondary() {
         AgencyPropertyType destination = null;
         Agency source = buildAgency(NO_PRIMARY_SECONDARY);
-        AgencyPropertyType c = (AgencyPropertyType) aaptc.convert(destination, source, AgencyPropertyType.class,
-                Agency.class);
+        AgencyPropertyType c = (AgencyPropertyType) AAPTC.convert(destination, source, AgencyPropertyType.class, Agency.class);
 
-        Assert.assertEquals(source.getName(),
-                c.getCIResponsibleParty().getOrganisationName().getCharacterString().getValue());
-        Assert.assertEquals(null, c.getCIResponsibleParty().getIndividualName());
-        Assert.assertEquals(null, c.getCIResponsibleParty().getContactInfo().getCIContact().getPhone());
+        assertThat(c.getCIResponsibleParty().getOrganisationName().getCharacterString().getValue(), is(source.getName()));
+        assertThat(c.getCIResponsibleParty().getIndividualName(), nullValue());
+        assertThat(c.getCIResponsibleParty().getContactInfo().getCIContact().getPhone(), nullValue());
     }
 
     private Agency buildAgency() {
@@ -75,8 +69,7 @@ public class AgencyAgencyPropertyTypeConverterTest {
         return agency;
     }
 
-    private Contact buildContact(String name, String email, String telephonePrimary, String telephoneSecondary,
-            String fax) {
+    private Contact buildContact(String name, String email, String telephonePrimary, String telephoneSecondary, String fax) {
         Contact contact = new Contact();
         contact.setEmail(email);
         contact.setFax(fax);

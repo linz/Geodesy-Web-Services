@@ -1,11 +1,11 @@
 package au.gov.ga.geodesy.support.mapper.dozer.converter;
 
-import org.junit.Assert;
-import org.junit.Test;
-
-import au.gov.ga.geodesy.support.mapper.dozer.converter.CodeTypeConverter;
 import au.gov.xml.icsm.geodesyml.v_0_3.IgsRadomeModelCodeType;
 import net.opengis.gml.v_3_2_1.CodeType;
+import org.testng.annotations.Test;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.core.Is.is;
 
 /**
  * CodeTypeConverter is handling the CodeType super-type and these extensions (directly or indirectly via inheritance).
@@ -21,7 +21,7 @@ public class CodeTypeConverterTest {
         String source = "banana";
         CodeType c = (CodeType) ctv.convert(destination, source, CodeType.class, String.class);
 
-        Assert.assertEquals(source, c.getValue());
+        assertThat(c.getValue(), is(source));
     }
 
     @Test
@@ -31,7 +31,7 @@ public class CodeTypeConverterTest {
         String source = "banana";
         CodeType c = (CodeType) ctv.convert(destination, source, CodeType.class, String.class);
 
-        Assert.assertEquals(source, c.getValue());
+        assertThat(c.getValue(), is(source));
     }
 
     @Test
@@ -41,7 +41,7 @@ public class CodeTypeConverterTest {
         source.setValue("banana");
         String c = (String) ctv.convert(destination, source, String.class, CodeType.class);
 
-        Assert.assertEquals(source.getValue(), c);
+        assertThat(c, is(source.getValue()));
     }
 
     @Test
@@ -51,7 +51,7 @@ public class CodeTypeConverterTest {
         source.setValue("banana");
         String c = (String) ctv.convert(destination, source, String.class, CodeType.class);
 
-        Assert.assertEquals(source.getValue(), c);
+        assertThat(c, is(source.getValue()));
     }
 
     // ========================
@@ -60,20 +60,18 @@ public class CodeTypeConverterTest {
     public void testStringSourceDestinationIgsRadomeModelCodeTypeNull() {
         IgsRadomeModelCodeType destination = null;
         String source = "banana";
-        IgsRadomeModelCodeType c = (IgsRadomeModelCodeType) ctv.convert(destination, source,
-                IgsRadomeModelCodeType.class, String.class);
+        IgsRadomeModelCodeType c = (IgsRadomeModelCodeType) ctv.convert(destination, source, IgsRadomeModelCodeType.class, String.class);
 
-        Assert.assertEquals(source, c.getValue());
+        assertThat(c.getValue(), is(source));
     }
 
     @Test
     public void testStringSourceDestinationIgsRadomeModelCodeTypeNotNull() {
         IgsRadomeModelCodeType destination = new IgsRadomeModelCodeType();
         String source = "banana";
-        IgsRadomeModelCodeType c = (IgsRadomeModelCodeType) ctv.convert(destination, source,
-                IgsRadomeModelCodeType.class, String.class);
+        IgsRadomeModelCodeType c = (IgsRadomeModelCodeType) ctv.convert(destination, source, IgsRadomeModelCodeType.class, String.class);
 
-        Assert.assertEquals(source, c.getValue());
+        assertThat(c.getValue(), is(source));
     }
 
     @Test
@@ -83,7 +81,7 @@ public class CodeTypeConverterTest {
         source.setValue("banana");
         String c = (String) ctv.convert(destination, source, String.class, IgsRadomeModelCodeType.class);
 
-        Assert.assertEquals(source.getValue(), c);
+        assertThat(c, is(source.getValue()));
     }
 
     @Test
@@ -93,7 +91,7 @@ public class CodeTypeConverterTest {
         source.setValue("banana");
         String c = (String) ctv.convert(destination, source, String.class, IgsRadomeModelCodeType.class);
 
-        Assert.assertEquals(source.getValue(), c);
+        assertThat(c, is(source.getValue()));
     }
 
 }

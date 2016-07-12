@@ -6,8 +6,6 @@ import java.util.List;
 
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
-import org.junit.Assert;
-import org.junit.Test;
 
 import au.gov.ga.geodesy.support.mapper.dozer.converter.TimePrimitivePropertyTypeUtils;
 import au.gov.ga.geodesy.support.utils.GMLDateUtils;
@@ -16,6 +14,12 @@ import au.gov.xml.icsm.geodesyml.v_0_3.GeodesyMLType;
 import au.gov.xml.icsm.geodesyml.v_0_3.HumiditySensorPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_3.HumiditySensorType;
 import au.gov.xml.icsm.geodesyml.v_0_3.ObjectFactory;
+import org.testng.annotations.Test;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.core.Is.is;
+import static org.hamcrest.core.IsNull.notNullValue;
+import static org.hamcrest.core.IsNull.nullValue;
 
 public class IdDecoratorTest {
     private ObjectFactory geoFactory = new ObjectFactory();
@@ -26,21 +30,22 @@ public class IdDecoratorTest {
         GeodesyMLType element = new GeodesyMLType();
         // Test recursively applying Ids with this child field element
         element.setValidTime(TimePrimitivePropertyTypeUtils.buildTimePrimitivePropertyType(dateTime));
-        Assert.assertNotNull(element.getValidTime().getAbstractTimePrimitive().getValue());
-        Assert.assertNull(element.getId());
-        Assert.assertNull(element.getValidTime().getAbstractTimePrimitive().getValue().getId());
+        assertThat(element.getValidTime().getAbstractTimePrimitive().getValue(), notNullValue());
+        assertThat(element.getId(), nullValue());
+
+        assertThat(element.getValidTime().getAbstractTimePrimitive().getValue().getId(), nullValue());
 
         GeodesyMLType out = GeodesyMLDecorators.IdDecorator.addId(element);
-        Assert.assertNotNull(out.getId());
-        Assert.assertNotNull(element.getValidTime().getAbstractTimePrimitive().getValue().getId());
+        assertThat(out.getId(), notNullValue());
+        assertThat(element.getValidTime().getAbstractTimePrimitive().getValue().getId(), notNullValue());
 
         MatcherAssert.assertThat("the id", out.getId(), Matchers.startsWith("GeodesyMLType_"));
 
         GeodesyMLType out2 = GeodesyMLDecorators.IdDecorator.addId(element);
-        Assert.assertNotNull(out2.getId());
+        assertThat(out2.getId(), notNullValue());
         MatcherAssert.assertThat("the id", out.getId(), Matchers.startsWith("GeodesyMLType_"));
 
-        Assert.assertEquals(out.getId(), out2.getId());
+        assertThat(out2.getId(), is(out.getId()));
     }
 
     @Test
@@ -52,7 +57,7 @@ public class IdDecoratorTest {
         HumiditySensorType humidityChild = geoFactory.createHumiditySensorType();
         humidityParent.setHumiditySensor(humidityChild);
         humidityChild.setValidTime(TimePrimitivePropertyTypeUtils.buildTimePrimitivePropertyType(dateTime));
-        Assert.assertNotNull(humidityChild.getValidTime().getAbstractTimePrimitive().getValue());
+        assertThat(humidityChild.getValidTime().getAbstractTimePrimitive().getValue(), notNullValue());
         // Confirm the parent hasn't an id attribute
         boolean foundExpectedException = false;
         try {
@@ -60,14 +65,14 @@ public class IdDecoratorTest {
         } catch (NoSuchMethodException e) {
             foundExpectedException = true;
         }
-        Assert.assertTrue("Expect there NOT to be an IdGetter method", foundExpectedException);
-        Assert.assertNull(humidityChild.getId());
-        Assert.assertNull(humidityChild.getValidTime().getAbstractTimePrimitive().getValue().getId());
+        assertThat("Expect there NOT to be an IdGetter method", foundExpectedException, is(true));
+        assertThat(humidityChild.getId(), nullValue());
+        assertThat(humidityChild.getValidTime().getAbstractTimePrimitive().getValue().getId(), nullValue());
 
         humidityParent = GeodesyMLDecorators.IdDecorator.addId(humidityParent);
         
-        Assert.assertNotNull(humidityChild.getId());
-        Assert.assertNotNull(humidityChild.getValidTime().getAbstractTimePrimitive().getValue().getId());
+        assertThat(humidityChild.getId(), notNullValue());
+        assertThat(humidityChild.getValidTime().getAbstractTimePrimitive().getValue().getId(), notNullValue());
     }
 
     @Test
@@ -80,10 +85,10 @@ public class IdDecoratorTest {
         } catch (NoSuchMethodException e) {
             // expected to come in here
         }
-        Assert.assertNull(setId);
+        assertThat(setId, nullValue());
 
         GMLDateUtils out = GeodesyMLDecorators.IdDecorator.addId(gmlDateUtils);
-        Assert.assertEquals(gmlDateUtils, out);
+        assertThat(out, is(gmlDateUtils));
     }
 
     // Now do the same but run them as part of their enclosing class - GeodesyMLDecorators
@@ -91,16 +96,16 @@ public class IdDecoratorTest {
     @Test
     public void test01_2() {
         GeodesyMLType element = new GeodesyMLType();
-        Assert.assertNull(element.getId());
+        assertThat(element.getId(), nullValue());
 
         GeodesyMLType out = GeodesyMLDecorators.addDecorators(element, element);
-        Assert.assertNotNull(out.getId());
+        assertThat(out.getId(), notNullValue());
         MatcherAssert.assertThat("the id", out.getId(), Matchers.startsWith("GeodesyMLType_"));
 
         GeodesyMLType out2 = GeodesyMLDecorators.addDecorators(element, element);
-        Assert.assertNotNull(out2.getId());
+        assertThat(out2.getId(), notNullValue());
         MatcherAssert.assertThat("the id", out2.getId(), Matchers.startsWith("GeodesyMLType_"));
-        Assert.assertEquals(out.getId(), out2.getId());
+        assertThat(out2.getId(), is(out.getId()));
     }
 
     @Test
@@ -113,10 +118,10 @@ public class IdDecoratorTest {
         } catch (NoSuchMethodException e) {
             // expected to come in here
         }
-        Assert.assertNull(setId);
+        assertThat(setId, nullValue());
 
         GMLDateUtils out = GeodesyMLDecorators.addDecorators(gmlDateUtils, gmlDateUtils);
-        Assert.assertEquals(gmlDateUtils, out);
+        assertThat(out, is(gmlDateUtils));
     }
 
     @Test
@@ -124,7 +129,7 @@ public class IdDecoratorTest {
         GMLDateUtils element = new GMLDateUtils();
 
         List<Method> getterMethods = GMLReflectionUtils.getNonPrimitiveGetters(element);
-        Assert.assertEquals(0, getterMethods.size());
+        assertThat(getterMethods.size(), is(0));
     }
 
     @Test

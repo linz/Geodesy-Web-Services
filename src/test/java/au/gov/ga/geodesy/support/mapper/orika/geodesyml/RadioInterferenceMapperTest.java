@@ -39,7 +39,7 @@ public class RadioInterferenceMapperTest {
     @Test
     public void testMappingWithoutToDate() throws Exception {
 
-        GeodesyMLType mobs = marshaller.unmarshal(TestResources.geodesyMLTestDataSiteLogReader("IRKJ_RadioInterference_NoToDate"),
+        GeodesyMLType mobs = marshaller.unmarshal(TestResources.customGeodesyMLSiteLogReader("IRKJ_RadioInterference_NoToDate"),
             GeodesyMLType.class).getValue();
 
         SiteLogType logItem = GeodesyMLUtils.getElementFromJAXBElements(mobs.getElements(), SiteLogType.class).findFirst().get();
@@ -74,7 +74,7 @@ public class RadioInterferenceMapperTest {
     public void testMappingWithToDate() throws Exception {
         DateTimeFormatter format = dateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSXXX");
 
-        GeodesyMLType mobs = marshaller.unmarshal(TestResources.geodesyMLTestDataSiteLogReader("IRKJ_RadioInterference_WithToDate"),
+        GeodesyMLType mobs = marshaller.unmarshal(TestResources.customGeodesyMLSiteLogReader("IRKJ_RadioInterference_WithToDate"),
             GeodesyMLType.class).getValue();
 
         SiteLogType logItem = GeodesyMLUtils.getElementFromJAXBElements(mobs.getElements(), SiteLogType.class).findFirst().get();

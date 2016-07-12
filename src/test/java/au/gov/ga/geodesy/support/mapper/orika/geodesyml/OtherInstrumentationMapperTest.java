@@ -2,16 +2,6 @@ package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 
 import static org.testng.Assert.assertEquals;
 
-import java.text.ParseException;
-import java.time.ZoneId;
-import java.time.format.DateTimeFormatter;
-import java.util.Date;
-import java.util.TimeZone;
-
-import afu.net.fortuna.ical4j.model.DateTime;
-import au.gov.ga.geodesy.support.utils.GMLDateUtils;
-import net.opengis.gml.v_3_2_1.TimePeriodType;
-import org.apache.commons.lang3.time.FastDateFormat;
 import org.testng.annotations.Test;
 
 import au.gov.ga.geodesy.domain.model.sitelog.OtherInstrumentationLogItem;
@@ -19,9 +9,11 @@ import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLMarshaller;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLUtils;
 import au.gov.ga.geodesy.support.TestResources;
 import au.gov.ga.geodesy.support.marshalling.moxy.GeodesyMLMoxy;
+import au.gov.ga.geodesy.support.utils.GMLDateUtils;
 import au.gov.xml.icsm.geodesyml.v_0_3.GeodesyMLType;
 import au.gov.xml.icsm.geodesyml.v_0_3.OtherInstrumentationType;
 import au.gov.xml.icsm.geodesyml.v_0_3.SiteLogType;
+
 import net.opengis.gml.v_3_2_1.TimePeriodType;
 
 /**
@@ -36,7 +28,7 @@ public class OtherInstrumentationMapperTest {
     @Test
     public void testMapping() throws Exception {
 
-        GeodesyMLType mobs = marshaller.unmarshal(TestResources.geodesyMLTestDataSiteLogReader("QIKI-otherInstrumentation"), GeodesyMLType.class)
+        GeodesyMLType mobs = marshaller.unmarshal(TestResources.customGeodesyMLSiteLogReader("QIKI-otherInstrumentation"), GeodesyMLType.class)
                 .getValue();
 
         SiteLogType siteLog = GeodesyMLUtils.getElementFromJAXBElements(mobs.getElements(), SiteLogType.class)

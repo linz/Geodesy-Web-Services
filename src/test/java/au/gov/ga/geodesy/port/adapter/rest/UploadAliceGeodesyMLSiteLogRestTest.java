@@ -23,7 +23,7 @@ public class UploadAliceGeodesyMLSiteLogRestTest extends RestTest {
     @Test
     @Rollback(false)
     public void upload() throws Exception {
-        String geodesyML = IOUtils.toString(TestResources.geodesyMLSiteLogReader("ALIC"));
+        String geodesyML = IOUtils.toString(TestResources.customGeodesyMLSiteLogReader("ALIC"));
         given()
             .body(geodesyML).
         when()

@@ -52,7 +52,7 @@ public class TestResources {
      * GeodesyML site logs directory relative to classpath root.  Files that have been converted from production Sopac Sitelogs
      */
     private static String geodesyMLSopacConvertedSiteLogsDirectory() {
-        return "/sitelogtoGeodesyML/";
+        return "/sitelogToGeodesyML/";
     }
 
     /**

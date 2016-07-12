@@ -24,7 +24,7 @@ public class TestResources {
     }
 
     /**
-     * SOPAC site logs directory relative to classpath root.
+     * Original production SOPAC site logs directory relative to classpath root.
      */
     public static String originalSopacSiteLogsDirectory() {
         return "/sitelog/sopac/original/";
@@ -37,6 +37,9 @@ public class TestResources {
         return "/sitelog/geodesyml/";
     }
 
+    /**
+     * Custom SOPAC site logs directory relative to classpath root.
+     */
     public static String customSopacSiteLogsDirectory() {
         return "/sitelog/sopac/custom/";
     }
@@ -56,24 +59,24 @@ public class TestResources {
     }
 
     /**
-     * Given a site id, return a SOPAC site log test file.
+     * Given a site id, return an original SOPAC site log test file.
      */
-    public static File sopacSiteLog(String siteId) throws IOException {
-        return resourceAsFile(sopacSiteLogResourceName(siteId));
+    public static File originalSopacSiteLog(String siteId) throws IOException {
+        return resourceAsFile(originalSopacSiteLogResourceName(siteId));
     }
 
     /**
-     * Given a site id, return a SOPAC site log test file.
+     * Given a site id, return a custom SOPAC site log test file.
      */
     public static File customSopacSiteLog(String siteId) throws IOException {
         return resourceAsFile(customSiteLogResourceName(siteId));
     }
 
     /**
-     * Given a site id, return a SOPAC site log test file reader.
+     * Given a site id, return an original SOPAC site log test file reader.
      */
-    public static Reader sopacSiteLogReader(String siteId) throws IOException {
-        return new FileReader(resourceAsFile(sopacSiteLogResourceName(siteId)));
+    public static Reader originalSopacSiteLogReader(String siteId) throws IOException {
+        return new FileReader(resourceAsFile(originalSopacSiteLogResourceName(siteId)));
     }
 
     /**
@@ -98,16 +101,16 @@ public class TestResources {
     }
 
     /**
-     * Return all SOPAC site log test files.
+     * Return all original SOPAC site log test files.
      */
-    public static List<File> sopacSiteLogs() throws IOException {
-        return sopacSiteLogs("*");
+    public static List<File> originalSopacSiteLogs() throws IOException {
+        return originalSopacSiteLogs("*");
     }
 
     /**
-     * Given a site id pattern return all matching SOPAC site log test files.
+     * Given a site id pattern return all matching original SOPAC site log test files.
      */
-    public static List<File> sopacSiteLogs(String siteIdPattern) throws IOException {
+    public static List<File> originalSopacSiteLogs(String siteIdPattern) throws IOException {
         Resource[] resources = resourceResolver.getResources("classpath:" + originalSopacSiteLogsDirectory() + siteIdPattern + ".xml");
         List<File> files = new ArrayList<>(resources.length);
         for (Resource r : resources) {
@@ -117,9 +120,9 @@ public class TestResources {
     }
 
     /**
-     * SOPAC site log resource name relative to classpath root.
+     * Original production SOPAC site log resource name relative to classpath root.
      */
-    private static String sopacSiteLogResourceName(String id) {
+    private static String originalSopacSiteLogResourceName(String id) {
         return originalSopacSiteLogsDirectory() + id + ".xml";
     }
 

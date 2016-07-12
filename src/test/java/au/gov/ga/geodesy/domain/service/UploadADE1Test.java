@@ -47,7 +47,7 @@ public class UploadADE1Test extends IntegrationTestConfig {
     @Test
     @Rollback(false)
     public void saveSiteLog() throws Exception {
-        SiteLogReader input = new SopacSiteLogReader(TestResources.sopacSiteLogReader(fourCharId));
+        SiteLogReader input = new SopacSiteLogReader(TestResources.originalSopacSiteLogReader(fourCharId));
         siteLogService.upload(input.getSiteLog());
     }
 

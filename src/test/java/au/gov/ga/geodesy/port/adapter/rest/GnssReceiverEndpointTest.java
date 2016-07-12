@@ -26,7 +26,7 @@ public class GnssReceiverEndpointTest extends RestTest {
     @Test
     @Rollback(false)
     public void upload() throws Exception {
-        SiteLog zimmerwald = new SopacSiteLogReader(TestResources.sopacSiteLogReader("ZIMM")).getSiteLog();
+        SiteLog zimmerwald = new SopacSiteLogReader(TestResources.originalSopacSiteLogReader("ZIMM")).getSiteLog();
         siteLogService.upload(zimmerwald);
     }
 

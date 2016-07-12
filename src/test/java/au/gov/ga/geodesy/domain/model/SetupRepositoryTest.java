@@ -58,7 +58,7 @@ public class SetupRepositoryTest extends RepositoryTest {
     @Rollback(false)
     @EnsuresNonNull("siteId")
     public void upload() throws Exception {
-        SiteLog alice = new SopacSiteLogReader(TestResources.sopacSiteLogReader("ALIC")).getSiteLog();
+        SiteLog alice = new SopacSiteLogReader(TestResources.originalSopacSiteLogReader("ALIC")).getSiteLog();
         siteLogService.upload(alice);
         siteId = sites.findByFourCharacterId("ALIC").getId();
         assertThat(siteId, not(nullValue()));

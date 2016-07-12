@@ -26,7 +26,7 @@ public class SiteLogRepositoryTest extends RepositoryTest {
     @Test(groups = "first")
     @Rollback(false)
     public void saveALIC() throws Exception {
-        SiteLogReader input = new SopacSiteLogReader(TestResources.sopacSiteLogReader("ALIC"));
+        SiteLogReader input = new SopacSiteLogReader(TestResources.originalSopacSiteLogReader("ALIC"));
         igsSiteLogs.saveAndFlush(input.getSiteLog());
     }
 
@@ -36,7 +36,7 @@ public class SiteLogRepositoryTest extends RepositoryTest {
     @Test(groups = "first")
     @Rollback(false)
     public void saveBZGN() throws Exception {
-        SiteLogReader input = new SopacSiteLogReader(TestResources.sopacSiteLogReader("BZGN"));
+        SiteLogReader input = new SopacSiteLogReader(TestResources.originalSopacSiteLogReader("BZGN"));
         igsSiteLogs.saveAndFlush(input.getSiteLog());
     }
 
@@ -44,7 +44,7 @@ public class SiteLogRepositoryTest extends RepositoryTest {
     @Rollback(false)
     public void saveAllSiteLogs() throws Exception {
         igsSiteLogs.deleteAll();
-        for (File f : TestResources.sopacSiteLogs()) {
+        for (File f : TestResources.originalSopacSiteLogs()) {
             log.info("Saving " + f.getName());
             SiteLogReader input = new SopacSiteLogReader(new InputStreamReader(new FileInputStream(f)));
             SiteLog siteLog = input.getSiteLog();

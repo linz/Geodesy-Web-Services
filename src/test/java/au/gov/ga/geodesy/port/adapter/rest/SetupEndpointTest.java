@@ -22,8 +22,8 @@ public class SetupEndpointTest extends RestTest {
     @Test
     @Rollback(false)
     public void upload() throws Exception {
-        SiteLog alice = new SopacSiteLogReader(TestResources.sopacSiteLogReader("ALIC")).getSiteLog();
-        SiteLog zimmerwald = new SopacSiteLogReader(TestResources.sopacSiteLogReader("ZIMM")).getSiteLog();
+        SiteLog alice = new SopacSiteLogReader(TestResources.originalSopacSiteLogReader("ALIC")).getSiteLog();
+        SiteLog zimmerwald = new SopacSiteLogReader(TestResources.originalSopacSiteLogReader("ZIMM")).getSiteLog();
         siteLogService.upload(alice);
         siteLogService.upload(zimmerwald);
     }

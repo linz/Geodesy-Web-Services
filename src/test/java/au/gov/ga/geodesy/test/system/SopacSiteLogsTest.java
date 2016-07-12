@@ -38,7 +38,7 @@ public class SopacSiteLogsTest extends BaseSystemTest {
 
         int existingSitelogCount = getSiteLogCount();
 
-        List<File> siteLogs = TestResources.sopacSiteLogs();
+        List<File> siteLogs = TestResources.originalSopacSiteLogs();
         for (File siteLog : siteLogs) {
             uploadSopacSiteLog(siteLog);
         }
@@ -64,7 +64,7 @@ public class SopacSiteLogsTest extends BaseSystemTest {
     @Test
     public void validateValidSopacFile() throws Exception {
 
-        File siteLog = TestResources.sopacSiteLog("MOBS");
+        File siteLog = TestResources.originalSopacSiteLog("MOBS");
         given()
             .body(FileUtils.readFileToString(siteLog, "ISO-8859-1"))
             .when()

@@ -26,8 +26,8 @@ public class TestResources {
     /**
      * SOPAC site logs directory relative to classpath root.
      */
-    private static String sopacSiteLogsDirectory() {
-        return "/sitelog/sopac/";
+    public static String originalSopacSiteLogsDirectory() {
+        return "/sitelog/sopac/original/";
     }
 
     /**
@@ -37,8 +37,8 @@ public class TestResources {
         return "/sitelog/geodesyml/";
     }
 
-    private static String geodesyMLSiteLogsTestDataDirectory() {
-        return "/sitelog/testData/";
+    public static String customSopacSiteLogsDirectory() {
+        return "/sitelog/sopac/custom/";
     }
 
     /**
@@ -65,8 +65,8 @@ public class TestResources {
     /**
      * Given a site id, return a SOPAC site log test file.
      */
-    public static File sopacSiteLogTestData(String siteId) throws IOException {
-        return resourceAsFile(geodesyMLSiteLogTestDataResourceName(siteId));
+    public static File customSopacSiteLog(String siteId) throws IOException {
+        return resourceAsFile(customSiteLogResourceName(siteId));
     }
 
     /**
@@ -108,7 +108,7 @@ public class TestResources {
      * Given a site id pattern return all matching SOPAC site log test files.
      */
     public static List<File> sopacSiteLogs(String siteIdPattern) throws IOException {
-        Resource[] resources = resourceResolver.getResources("classpath:" + sopacSiteLogsDirectory() + siteIdPattern + ".xml");
+        Resource[] resources = resourceResolver.getResources("classpath:" + originalSopacSiteLogsDirectory() + siteIdPattern + ".xml");
         List<File> files = new ArrayList<>(resources.length);
         for (Resource r : resources) {
             files.add(r.getFile());
@@ -120,7 +120,7 @@ public class TestResources {
      * SOPAC site log resource name relative to classpath root.
      */
     private static String sopacSiteLogResourceName(String id) {
-        return sopacSiteLogsDirectory() + id + ".xml";
+        return originalSopacSiteLogsDirectory() + id + ".xml";
     }
 
     /**
@@ -130,8 +130,8 @@ public class TestResources {
         return geodesyMLSiteLogsDirectory() + id + ".xml";
     }
 
-    private static String geodesyMLSiteLogTestDataResourceName(String id) {
-        return geodesyMLSiteLogsTestDataDirectory() + id + ".xml";
+    private static String customSiteLogResourceName(String id) {
+        return customSopacSiteLogsDirectory() + id + ".xml";
     }
 
     /**

@@ -45,7 +45,7 @@ public class UploadZIMJGeodesyMLSiteLogRestTest extends RestTest {
      * @throws IOException
      */
     private String translateFile(String file) throws au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, MarshallingException, IOException {
-        return sopacFileTranslator.translateFileToTempDirectory(TestResources.sopacSiteLogTestData(file));
+        return sopacFileTranslator.translateFileToTempDirectory(TestResources.customSopacSiteLog(file));
     }
 
     private void uploadCheckFile(String file) throws Exception {

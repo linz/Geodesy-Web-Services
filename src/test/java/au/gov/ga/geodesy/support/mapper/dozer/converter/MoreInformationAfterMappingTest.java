@@ -1,10 +1,13 @@
 package au.gov.ga.geodesy.support.mapper.dozer.converter;
 
-import org.junit.Assert;
-import org.junit.Test;
-
 import au.gov.ga.geodesy.igssitelog.domain.model.MoreInformation;
 import au.gov.xml.icsm.geodesyml.v_0_3.MoreInformationType;
+import org.testng.annotations.Test;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.core.Is.is;
+import static org.hamcrest.core.IsNull.notNullValue;
+
 
 public class MoreInformationAfterMappingTest {
     @Test
@@ -13,15 +16,15 @@ public class MoreInformationAfterMappingTest {
         MoreInformationType moreInformationType = new MoreInformationType();
         MoreInformationAfterMapping.fixMoreInformation(moreInformation, moreInformationType);
 
-        Assert.assertNotNull(moreInformationType.getDataCenter());
-        Assert.assertEquals(1, moreInformationType.getDataCenter().size());
-        Assert.assertEquals("", moreInformationType.getDataCenter().get(0));
+        assertThat(moreInformationType.getDataCenter(), notNullValue());
+        assertThat(moreInformationType.getDataCenter().size(), is(1));
+        assertThat(moreInformationType.getDataCenter().get(0), is(""));
 
-        Assert.assertNotNull(moreInformationType.getUrlForMoreInformation());
-        Assert.assertNotNull(moreInformationType.getSiteMap());
-        Assert.assertNotNull(moreInformationType.getMonumentDescription());
-        Assert.assertNotNull(moreInformationType.getAntennaGraphicsWithDimensions());
-        Assert.assertNotNull(moreInformationType.getInsertTextGraphicFromAntenna());
+        assertThat(moreInformationType.getUrlForMoreInformation(), notNullValue());
+        assertThat(moreInformationType.getSiteMap(), notNullValue());
+        assertThat(moreInformationType.getMonumentDescription(), notNullValue());
+        assertThat(moreInformationType.getAntennaGraphicsWithDimensions(), notNullValue());
+        assertThat(moreInformationType.getInsertTextGraphicFromAntenna(), notNullValue());
     }
 
 }

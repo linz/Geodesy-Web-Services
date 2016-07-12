@@ -1,33 +1,37 @@
 package au.gov.ga.geodesy.support.mapper.dozer;
 
-import org.junit.Assert;
-import org.junit.Test;
-
 import au.gov.ga.geodesy.support.mapper.dozer.populator.SiteLocationTypePopulator;
+import org.testng.annotations.Test;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.core.Is.is;
 
 public class GeodesyMLDozerEventListener_SiteLocationTypeTest {
 
     @Test
     public void test01() {
-        Assert.assertEquals("AUS", SiteLocationTypePopulator.COUNTRY_CODES_ALPHA_3.lookupCode("australia"));
-        Assert.assertEquals("AUS", SiteLocationTypePopulator.COUNTRY_CODES_ALPHA_3.lookupCode("Australia"));
-        Assert.assertEquals("AUS", SiteLocationTypePopulator.COUNTRY_CODES_ALPHA_3.lookupCode("AUSTRALIA"));
+        assertThat(SiteLocationTypePopulator.COUNTRY_CODES_ALPHA_3.lookupCode("australia"), is("AUS"));
+        assertThat(SiteLocationTypePopulator.COUNTRY_CODES_ALPHA_3.lookupCode("Australia"), is("AUS"));
+        assertThat(SiteLocationTypePopulator.COUNTRY_CODES_ALPHA_3.lookupCode("AUSTRALIA"), is("AUS"));
     }
-    
+
     @Test
     public void test02() {
-        Assert.assertEquals("AUSTRALIA", SiteLocationTypePopulator.COUNTRY_CODES_ALPHA_3.lookupCountry("aus"));
-        Assert.assertEquals("AUSTRALIA", SiteLocationTypePopulator.COUNTRY_CODES_ALPHA_3.lookupCountry("Aus"));
-        Assert.assertEquals("AUSTRALIA", SiteLocationTypePopulator.COUNTRY_CODES_ALPHA_3.lookupCountry("AUS"));
+        assertThat(SiteLocationTypePopulator.COUNTRY_CODES_ALPHA_3.lookupCountry("aus"), is("AUSTRALIA"));
+        assertThat(SiteLocationTypePopulator.COUNTRY_CODES_ALPHA_3.lookupCountry("Aus"), is("AUSTRALIA"));
+        assertThat(SiteLocationTypePopulator.COUNTRY_CODES_ALPHA_3.lookupCountry("AUS"), is("AUSTRALIA"));
     }
+
     @Test
     public void test03() {
-        Assert.assertEquals("???", SiteLocationTypePopulator.COUNTRY_CODES_ALPHA_3.lookupCode(""));
-        Assert.assertEquals("???", SiteLocationTypePopulator.COUNTRY_CODES_ALPHA_3.lookupCode(null));
+        assertThat(SiteLocationTypePopulator.COUNTRY_CODES_ALPHA_3.lookupCode(""), is("???"));
+        assertThat(SiteLocationTypePopulator.COUNTRY_CODES_ALPHA_3.lookupCode(null), is("???"));
     }
+
     @Test
     public void test04() {
-        Assert.assertEquals("???", SiteLocationTypePopulator.COUNTRY_CODES_ALPHA_3.lookupCountry(""));
-        Assert.assertEquals("???", SiteLocationTypePopulator.COUNTRY_CODES_ALPHA_3.lookupCountry(null));
+        assertThat(SiteLocationTypePopulator.COUNTRY_CODES_ALPHA_3.lookupCountry(""), is("???"));
+        assertThat(SiteLocationTypePopulator.COUNTRY_CODES_ALPHA_3.lookupCountry(null), is("???"));
+        assertThat(SiteLocationTypePopulator.COUNTRY_CODES_ALPHA_3.lookupCountry(null), is("???"));
     }
 }

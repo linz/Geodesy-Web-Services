@@ -1,14 +1,14 @@
 package au.gov.ga.geodesy.support.mapper.dozer;
 
 import au.gov.ga.geodesy.domain.model.sitelog.GnssReceiverLogItem;
-import au.gov.ga.geodesy.support.mapper.decorator.GeodesyMLDecorators;
 import au.gov.xml.icsm.geodesyml.v_0_3.GnssReceiverType;
-import org.junit.Assert;
-import org.junit.Test;
+import org.testng.annotations.Test;
 
 import java.time.Instant;
 
-import static org.junit.Assert.*;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.core.Is.is;
+import static org.hamcrest.core.IsNull.notNullValue;
 
 public class DozerDelegateTest {
     @Test
@@ -20,9 +20,9 @@ public class DozerDelegateTest {
         gnssReceiverLogItem.setSerialNumber("1234");
         gnssReceiverLogItem.setDateInstalled(Instant.parse(testDate));
         GnssReceiverType out = DozerDelegate.mapWithGuardWithDecorators(gnssReceiverLogItem, GnssReceiverType.class);
-        Assert.assertNotNull(out);
-        Assert.assertNotNull(out.getDateInstalled());
-        Assert.assertEquals(testDate, out.getDateInstalled().getValue().get(0));
+        assertThat(out, notNullValue());
+        assertThat(out.getDateInstalled(), notNullValue());
+        assertThat(out.getDateInstalled().getValue().get(0), is(testDate));
     }
 
 }

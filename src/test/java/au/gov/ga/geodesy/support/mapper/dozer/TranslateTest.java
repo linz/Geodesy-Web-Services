@@ -36,9 +36,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-// @ContextConfiguration(classes = {GeodesyServiceTestConfig.class}, loader = AnnotationConfigContextLoader.class)
-// @Transactional("geodesyTransactionManager")
-public class TranslateTest { // extends AbstractTestNGSpringContextTests {
+public class TranslateTest {
     /**
      * Location of input test data - original location of files that haven't been modified
      */
@@ -48,13 +46,10 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
      */
     private final static String TESTDATADIR = "sitelog/testData";
 
-    // @Autowired
     private IgsSiteLogXmlMarshaller marshaller;
 
-    // @Autowired
     private GeodesyMLSiteLogDozerTranslator geodesyMLSiteLogTranslator;
 
-    // @Autowired
     private GeodesyMLMarshaller geodesyMLMarshaller;
 
     @BeforeClass

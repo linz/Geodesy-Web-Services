@@ -1,9 +1,11 @@
 package au.gov.ga.geodesy.support.mapper.dozer.populator;
 
-import org.junit.Assert;
-import org.junit.Test;
-
 import au.gov.xml.icsm.geodesyml.v_0_3.GnssReceiverType;
+import org.testng.annotations.Test;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.core.Is.is;
+import static org.hamcrest.core.IsNull.notNullValue;
 
 public class GnssReceiverTypePopulatorTest {
     private static final GnssReceiverTypePopulator gnssReceiverTypePopulator = new GnssReceiverTypePopulator();
@@ -21,10 +23,10 @@ public class GnssReceiverTypePopulatorTest {
 
         gnssReceiverTypePopulator.checkAllRequiredElementsPopulated(gnssReceiverType);
 
-        Assert.assertNotNull(gnssReceiverType.getSerialNumber());
-        Assert.assertNotNull(gnssReceiverType.getManufacturerSerialNumber());
-        Assert.assertEquals(SERIAL_NO, gnssReceiverType.getSerialNumber());
-        Assert.assertEquals(MAN_SERIAL_NO, gnssReceiverType.getManufacturerSerialNumber());
+        assertThat(gnssReceiverType.getSerialNumber(), notNullValue());
+        assertThat(gnssReceiverType.getManufacturerSerialNumber(), notNullValue());
+        assertThat(gnssReceiverType.getSerialNumber(), is(SERIAL_NO));
+        assertThat(gnssReceiverType.getManufacturerSerialNumber(), is(MAN_SERIAL_NO));
     }
 
     @Test
@@ -36,10 +38,10 @@ public class GnssReceiverTypePopulatorTest {
 
         gnssReceiverTypePopulator.checkAllRequiredElementsPopulated(gnssReceiverType);
 
-        Assert.assertNotNull(gnssReceiverType.getSerialNumber());
-        Assert.assertNotNull(gnssReceiverType.getManufacturerSerialNumber());
-        Assert.assertEquals(SERIAL_NO, gnssReceiverType.getSerialNumber());
-        Assert.assertEquals(SERIAL_NO, gnssReceiverType.getManufacturerSerialNumber());
+        assertThat(gnssReceiverType.getSerialNumber(), notNullValue());
+        assertThat(gnssReceiverType.getManufacturerSerialNumber(), notNullValue());
+        assertThat(gnssReceiverType.getSerialNumber(), is(SERIAL_NO));
+        assertThat(gnssReceiverType.getManufacturerSerialNumber(), is(SERIAL_NO));
     }
 
     @Test
@@ -51,10 +53,10 @@ public class GnssReceiverTypePopulatorTest {
 
         gnssReceiverTypePopulator.checkAllRequiredElementsPopulated(gnssReceiverType);
 
-        Assert.assertNotNull(gnssReceiverType.getSerialNumber());
-        Assert.assertNotNull(gnssReceiverType.getManufacturerSerialNumber());
-        Assert.assertEquals(MAN_SERIAL_NO, gnssReceiverType.getSerialNumber());
-        Assert.assertEquals(MAN_SERIAL_NO, gnssReceiverType.getManufacturerSerialNumber());
+        assertThat(gnssReceiverType.getSerialNumber(), notNullValue());
+        assertThat(gnssReceiverType.getManufacturerSerialNumber(), notNullValue());
+        assertThat(gnssReceiverType.getSerialNumber(), is(MAN_SERIAL_NO));
+        assertThat(gnssReceiverType.getManufacturerSerialNumber(), is(MAN_SERIAL_NO));
     }
 
     @Test
@@ -66,10 +68,10 @@ public class GnssReceiverTypePopulatorTest {
 
         gnssReceiverTypePopulator.checkAllRequiredElementsPopulated(gnssReceiverType);
 
-        Assert.assertNotNull(gnssReceiverType.getSerialNumber());
-        Assert.assertNotNull(gnssReceiverType.getManufacturerSerialNumber());
-        Assert.assertEquals(EMPTY, gnssReceiverType.getSerialNumber());
-        Assert.assertEquals(EMPTY, gnssReceiverType.getManufacturerSerialNumber());
+        assertThat(gnssReceiverType.getSerialNumber(), notNullValue());
+        assertThat(gnssReceiverType.getManufacturerSerialNumber(), notNullValue());
+        assertThat(gnssReceiverType.getSerialNumber(), is(EMPTY));
+        assertThat(gnssReceiverType.getManufacturerSerialNumber(), is(EMPTY));
     }
 
 }

@@ -1,14 +1,15 @@
 package au.gov.ga.geodesy.domain.model.utils;
 
-import java.lang.reflect.InvocationTargetException;
-
-import javax.xml.bind.JAXBElement;
-
-import org.junit.Assert;
-import org.junit.Test;
-
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLUtils;
 import au.gov.xml.icsm.geodesyml.v_0_3.SiteLogType;
+import org.testng.annotations.Test;
+
+import javax.xml.bind.JAXBElement;
+import java.lang.reflect.InvocationTargetException;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.core.Is.is;
+import static org.hamcrest.core.IsNull.notNullValue;
 
 public class GeodesyMLModelUtilsTest {
 
@@ -17,9 +18,9 @@ public class GeodesyMLModelUtilsTest {
         SiteLogType siteLogType = new SiteLogType();
         siteLogType.setId("999");
         JAXBElement<SiteLogType> jaxBEquiv = GeodesyMLUtils.buildJAXBElementEquivalent(siteLogType);
-        
-        Assert.assertNotNull(jaxBEquiv);
-        Assert.assertEquals("999", jaxBEquiv.getValue().getId());
+
+        assertThat(jaxBEquiv, notNullValue());
+        assertThat(jaxBEquiv.getValue().getId(), is("999"));
     }
 
 }

@@ -833,6 +833,71 @@
                 </plugins>
             </build>
         </profile>
+        <profile>
+            <id>site</id>
+            <build>
+                <defaultGoal>site:site</defaultGoal>
+                <plugins>
+                    <plugin>
+                        <groupId>us.fatehi</groupId>
+                        <artifactId>schemacrawler-maven-plugin</artifactId>
+                        <version>14.08.06</version>
+                        <dependencies>
+                            <!-- Define jdbc driver dependencies here, since report plugins cannot specify dependencies. -->
+                            <dependency>
+                                <groupId>org.postgresql</groupId>
+                                <artifactId>postgresql</artifactId>
+                                <version>9.4-1200-jdbc41</version>
+                            </dependency>
+                        </dependencies>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-site-plugin</artifactId>
+                        <version>3.5.1</version>
+                        <configuration>
+                            <reportPlugins>
+                                <plugin>
+                                    <artifactId>maven-project-info-reports-plugin</artifactId>
+                                    <version>2.9</version>
+                                    <reportSets>
+                                        <reportSet>
+                                            <reports>
+                                                <report>dependencies</report>
+                                                <report>license</report>
+                                            </reports>
+                                        </reportSet>
+                                    </reportSets>
+                                </plugin>
+                                <plugin>
+                                    <groupId>us.fatehi</groupId>
+                                    <artifactId>schemacrawler-maven-plugin</artifactId>
+                                    <version>14.08.06</version>
+                                    <configuration>
+                                        <!-- TODO: move db connection parameters into properties file -->
+                                        <driver>org.postgresql.Driver</driver>
+                                        <url>jdbc:postgresql://localhost/geodesydb</url>
+                                        <user>geodesy</user>
+                                        <password>geodesypw</password>
+                                        <command>graph</command>
+                                        <outputformat>png</outputformat>
+                                        <reportname>Database Schema Diagram</reportname>
+                                    </configuration>
+                                </plugin>
+                                <plugin>
+                                    <groupId>org.apache.maven.plugins</groupId>
+                                    <artifactId>maven-javadoc-plugin</artifactId>
+                                    <version>2.10.4</version>
+                                    <configuration>
+                                        <failOnError>false</failOnError>
+                                    </configuration>
+                                </plugin>
+                            </reportPlugins>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
     </profiles>
     <distributionManagement>
         <snapshotRepository>

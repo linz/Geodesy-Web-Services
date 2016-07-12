@@ -48,7 +48,7 @@ public class SopacSiteLogsTest extends BaseSystemTest {
 
     @Test
     public void uploadAAAA() throws Exception {
-        File siteLog = TestResources.sopacSiteLogTestData("ALIC-testUploadAAAA");
+        File siteLog = TestResources.customSopacSiteLog("ALIC-testUploadAAAA");
         int existingSitelogCount = getSiteLogCount();
         uploadSopacSiteLog(siteLog);
         log.info("Checking whether AAAA sitelog was successfully uploaded");

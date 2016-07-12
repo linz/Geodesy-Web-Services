@@ -7,15 +7,18 @@ import au.gov.ga.geodesy.igssitelog.support.marshalling.moxy.IgsSiteLogMoxyMarsh
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLMarshaller;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLUtils;
 import au.gov.ga.geodesy.port.adapter.geodesyml.MarshallingException;
+import au.gov.ga.geodesy.support.TestResources;
 import au.gov.ga.geodesy.support.mapper.dozer.converter.TimePrimitivePropertyTypeUtils;
 import au.gov.ga.geodesy.support.marshalling.moxy.GeodesyMLMoxy;
 import au.gov.ga.geodesy.support.utils.GMLDateUtils;
 import au.gov.xml.icsm.geodesyml.v_0_3.*;
+
 import net.opengis.gml.v_3_2_1.AbstractTimePrimitiveType;
 import net.opengis.gml.v_3_2_1.TimePeriodType;
 import net.opengis.gml.v_3_2_1.TimePositionType;
 import net.opengis.gml.v_3_2_1.TimePrimitivePropertyType;
 import net.opengis.iso19139.gmd.v_20070417.CIResponsiblePartyType;
+
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.testng.Assert;
@@ -23,6 +26,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import javax.xml.bind.JAXBElement;
+
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -36,15 +40,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class TranslateTest {
-    /**
-     * Location of input test data - original location of files that haven't been modified
-     */
-    private final static String SITEDATADIR = "sitelog/sopac";
-    /**
-     * Location of input test data - same as that in SITEDATADIR though modified in some way to improve or fix test
-     */
-    private final static String TESTDATADIR = "sitelog/testData";
+public class TranslateTest { // extends AbstractTestNGSpringContextTests {
 
     private IgsSiteLogXmlMarshaller marshaller;
 
@@ -96,7 +92,11 @@ public class TranslateTest {
      */
     public GeodesyMLType testTranslate(String inputResourceDir, String inputFile) throws MarshallingException,
             IOException, au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
-        String source = inputResourceDir + "/" + inputFile + ".xml";
+        String source = inputResourceDir.substring(1) + inputFile + ".xml";
+
+
+        System.out.println(source);
+
         String destTmpName = inputFile + ".out.xml";
 
         Reader input = new InputStreamReader(
@@ -131,7 +131,7 @@ public class TranslateTest {
     @Test
     public void testALIC() throws MarshallingException, IOException,
             au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
-        GeodesyMLType geodesyML = testTranslate(TESTDATADIR, "ALIC");
+        GeodesyMLType geodesyML = testTranslate(TestResources.customSopacSiteLogsDirectory(), "ALIC");
 
         SiteLogType siteLogType = getSiteLog(geodesyML);
 
@@ -362,7 +362,7 @@ public class TranslateTest {
     @Test
     public void testARTU() throws MarshallingException, IOException,
             au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
-        GeodesyMLType geodesyML = testTranslate(TESTDATADIR, "ARTU");
+        GeodesyMLType geodesyML = testTranslate(TestResources.customSopacSiteLogsDirectory(), "ARTU");
 
         Assert.assertNotNull(geodesyML);
     }
@@ -370,7 +370,7 @@ public class TranslateTest {
     @Test
     public void test00NA() throws MarshallingException, IOException,
             au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
-        GeodesyMLType geodesyML = testTranslate(SITEDATADIR, "00NA");
+        GeodesyMLType geodesyML = testTranslate(TestResources.originalSopacSiteLogsDirectory(), "00NA");
 
         Assert.assertNotNull(geodesyML);
     }
@@ -378,7 +378,7 @@ public class TranslateTest {
     @Test
     public void testMAT1() throws MarshallingException, IOException,
             au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
-        GeodesyMLType geodesyML = testTranslate(TESTDATADIR, "MAT1");
+        GeodesyMLType geodesyML = testTranslate(TestResources.customSopacSiteLogsDirectory(), "MAT1");
 
         Assert.assertNotNull(geodesyML);
 
@@ -442,7 +442,7 @@ public class TranslateTest {
     @Test
     public void testZIMJ() throws MarshallingException, IOException,
             au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
-        GeodesyMLType geodesyML = testTranslate(SITEDATADIR, "ZIMJ");
+        GeodesyMLType geodesyML = testTranslate(TestResources.originalSopacSiteLogsDirectory(), "ZIMJ");
 
         Assert.assertNotNull(geodesyML);
     }
@@ -450,7 +450,7 @@ public class TranslateTest {
     @Test
     public void testBHIL() throws MarshallingException, IOException,
             au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
-        GeodesyMLType geodesyML = testTranslate(SITEDATADIR, "BHIL");
+        GeodesyMLType geodesyML = testTranslate(TestResources.originalSopacSiteLogsDirectory(), "BHIL");
 
         Assert.assertNotNull(geodesyML);
     }
@@ -458,7 +458,7 @@ public class TranslateTest {
     @Test
     public void testALBH() throws MarshallingException, IOException,
             au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
-        GeodesyMLType geodesyML = testTranslate(SITEDATADIR, "ALBH");
+        GeodesyMLType geodesyML = testTranslate(TestResources.originalSopacSiteLogsDirectory(), "ALBH");
 
         Assert.assertNotNull(geodesyML);
     }
@@ -466,7 +466,7 @@ public class TranslateTest {
     @Test
     public void testALGO() throws MarshallingException, IOException,
             au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
-        GeodesyMLType geodesyML = testTranslate(SITEDATADIR, "ALGO");
+        GeodesyMLType geodesyML = testTranslate(TestResources.originalSopacSiteLogsDirectory(), "ALGO");
 
         Assert.assertNotNull(geodesyML);
     }
@@ -474,7 +474,7 @@ public class TranslateTest {
     @Test
     public void testAMC2() throws MarshallingException, IOException,
             au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
-        GeodesyMLType geodesyML = testTranslate(TESTDATADIR, "AMC2");
+        GeodesyMLType geodesyML = testTranslate(TestResources.customSopacSiteLogsDirectory(), "AMC2");
 
         Assert.assertNotNull(geodesyML);
     }
@@ -482,7 +482,7 @@ public class TranslateTest {
     @Test
     public void testCOOB() throws MarshallingException, IOException,
             au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
-        GeodesyMLType geodesyML = testTranslate(SITEDATADIR, "COOB");
+        GeodesyMLType geodesyML = testTranslate(TestResources.originalSopacSiteLogsDirectory(), "COOB");
 
         Assert.assertNotNull(geodesyML);
     }
@@ -490,7 +490,7 @@ public class TranslateTest {
     @Test
     public void testDEAR() throws MarshallingException, IOException,
             au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
-        GeodesyMLType geodesyML = testTranslate(SITEDATADIR, "DEAR");
+        GeodesyMLType geodesyML = testTranslate(TestResources.originalSopacSiteLogsDirectory(), "DEAR");
 
         Assert.assertNotNull(geodesyML);
     }
@@ -498,7 +498,7 @@ public class TranslateTest {
     @Test
     public void testZIMM() throws MarshallingException, IOException,
             au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
-        GeodesyMLType geodesyML = testTranslate(SITEDATADIR, "ZIMM");
+        GeodesyMLType geodesyML = testTranslate(TestResources.originalSopacSiteLogsDirectory(), "ZIMM");
 
         Assert.assertNotNull(geodesyML);
     }
@@ -506,7 +506,7 @@ public class TranslateTest {
     @Test
     public void testZHN1() throws MarshallingException, IOException,
             au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
-        GeodesyMLType geodesyML = testTranslate(SITEDATADIR, "ZHN1");
+        GeodesyMLType geodesyML = testTranslate(TestResources.originalSopacSiteLogsDirectory(), "ZHN1");
 
         Assert.assertNotNull(geodesyML);
     }
@@ -514,7 +514,7 @@ public class TranslateTest {
     @Test
     public void testZECK() throws MarshallingException, IOException,
             au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
-        GeodesyMLType geodesyML = testTranslate(SITEDATADIR, "ZECK");
+        GeodesyMLType geodesyML = testTranslate(TestResources.originalSopacSiteLogsDirectory(), "ZECK");
 
         Assert.assertNotNull(geodesyML);
     }
@@ -522,7 +522,7 @@ public class TranslateTest {
     @Test
     public void testZAMB() throws MarshallingException, IOException,
             au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
-        GeodesyMLType geodesyML = testTranslate(TESTDATADIR, "ZAMB");
+        GeodesyMLType geodesyML = testTranslate(TestResources.customSopacSiteLogsDirectory(), "ZAMB");
 
         Assert.assertNotNull(geodesyML);
     }
@@ -530,7 +530,7 @@ public class TranslateTest {
     @Test
     public void testBALL() throws MarshallingException, IOException,
             au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
-        GeodesyMLType geodesyML = testTranslate(SITEDATADIR, "BALL");
+        GeodesyMLType geodesyML = testTranslate(TestResources.originalSopacSiteLogsDirectory(), "BALL");
 
         Assert.assertNotNull(geodesyML);
     }
@@ -538,7 +538,7 @@ public class TranslateTest {
     @Test
     public void testZABL() throws MarshallingException, IOException,
             au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
-        GeodesyMLType geodesyML = testTranslate(SITEDATADIR, "ZABL");
+        GeodesyMLType geodesyML = testTranslate(TestResources.originalSopacSiteLogsDirectory(), "ZABL");
 
         Assert.assertNotNull(geodesyML);
     }
@@ -546,7 +546,7 @@ public class TranslateTest {
     @Test
     public void testYSSK() throws MarshallingException, IOException,
             au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
-        GeodesyMLType geodesyML = testTranslate(SITEDATADIR, "YSSK");
+        GeodesyMLType geodesyML = testTranslate(TestResources.originalSopacSiteLogsDirectory(), "YSSK");
 
         Assert.assertNotNull(geodesyML);
     }
@@ -554,7 +554,7 @@ public class TranslateTest {
     @Test
     public void testADE1() throws MarshallingException, IOException,
             au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
-        GeodesyMLType geodesyML = testTranslate(SITEDATADIR, "ADE1");
+        GeodesyMLType geodesyML = testTranslate(TestResources.originalSopacSiteLogsDirectory(), "ADE1");
 
         Assert.assertNotNull(geodesyML);
     }
@@ -562,7 +562,7 @@ public class TranslateTest {
     @Test
     public void testADE2() throws MarshallingException, IOException,
             au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
-        GeodesyMLType geodesyML = testTranslate(SITEDATADIR, "ADE2");
+        GeodesyMLType geodesyML = testTranslate(TestResources.originalSopacSiteLogsDirectory(), "ADE2");
 
         Assert.assertNotNull(geodesyML);
     }
@@ -570,7 +570,7 @@ public class TranslateTest {
     @Test
     public void testAUCK() throws MarshallingException, IOException,
             au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
-        GeodesyMLType geodesyML = testTranslate(SITEDATADIR, "AUCK");
+        GeodesyMLType geodesyML = testTranslate(TestResources.originalSopacSiteLogsDirectory(), "AUCK");
 
         Assert.assertNotNull(geodesyML);
     }
@@ -578,7 +578,7 @@ public class TranslateTest {
     @Test
     public void testBAKO() throws MarshallingException, IOException,
             au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
-        GeodesyMLType geodesyML = testTranslate(SITEDATADIR, "BAKO");
+        GeodesyMLType geodesyML = testTranslate(TestResources.originalSopacSiteLogsDirectory(), "BAKO");
 
         Assert.assertNotNull(geodesyML);
     }
@@ -586,7 +586,7 @@ public class TranslateTest {
     @Test
     public void testANTC() throws MarshallingException, IOException,
             au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
-        GeodesyMLType geodesyML = testTranslate(SITEDATADIR, "ANTC");
+        GeodesyMLType geodesyML = testTranslate(TestResources.originalSopacSiteLogsDirectory(), "ANTC");
 
         Assert.assertNotNull(geodesyML);
     }
@@ -594,7 +594,7 @@ public class TranslateTest {
     @Test
     public void testBUE2() throws MarshallingException, IOException,
             au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
-        GeodesyMLType geodesyML = testTranslate(SITEDATADIR, "BUE2");
+        GeodesyMLType geodesyML = testTranslate(TestResources.originalSopacSiteLogsDirectory(), "BUE2");
 
         Assert.assertNotNull(geodesyML);
     }
@@ -602,7 +602,7 @@ public class TranslateTest {
     @Test
     public void testSELE() throws MarshallingException, IOException,
             au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
-        GeodesyMLType geodesyML = testTranslate(SITEDATADIR, "SELE");
+        GeodesyMLType geodesyML = testTranslate(TestResources.originalSopacSiteLogsDirectory(), "SELE");
 
         Assert.assertNotNull(geodesyML);
     }
@@ -610,7 +610,7 @@ public class TranslateTest {
     @Test
     public void testWOOL() throws MarshallingException, IOException,
             au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
-        GeodesyMLType geodesyML = testTranslate(SITEDATADIR, "WOOL");
+        GeodesyMLType geodesyML = testTranslate(TestResources.originalSopacSiteLogsDirectory(), "WOOL");
 
         Assert.assertNotNull(geodesyML);
     }
@@ -618,7 +618,7 @@ public class TranslateTest {
     @Test
     public void testCRAO() throws MarshallingException, IOException,
             au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
-        GeodesyMLType geodesyML = testTranslate(TESTDATADIR, "CRAO");
+        GeodesyMLType geodesyML = testTranslate(TestResources.customSopacSiteLogsDirectory(), "CRAO");
 
         Assert.assertNotNull(geodesyML);
     }
@@ -626,7 +626,7 @@ public class TranslateTest {
     @Test
     public void testCRO1() throws MarshallingException, IOException,
             au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
-        GeodesyMLType geodesyML = testTranslate(TESTDATADIR, "CRO1");
+        GeodesyMLType geodesyML = testTranslate(TestResources.customSopacSiteLogsDirectory(), "CRO1");
 
         Assert.assertNotNull(geodesyML);
     }
@@ -635,7 +635,7 @@ public class TranslateTest {
     @Test
     public void testZIMJ_RadioInterference_WithEffectiveDates() throws MarshallingException, IOException,
             au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
-        GeodesyMLType geodesyML = testTranslate(TESTDATADIR, "ZIMJ-radioInterference-withEffectiveDates");
+        GeodesyMLType geodesyML = testTranslate(TestResources.customSopacSiteLogsDirectory(), "ZIMJ-radioInterference-withEffectiveDates");
 
         Assert.assertNotNull(geodesyML);
         SiteLogType siteLogType = getSiteLog(geodesyML);
@@ -660,7 +660,7 @@ public class TranslateTest {
     @Test
     public void testZIMJ_RadioInterference_WithNoEffectiveDates() throws MarshallingException, IOException,
             au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
-        GeodesyMLType geodesyML = testTranslate(TESTDATADIR, "ZIMJ-radioInterference-noEffectiveDates");
+        GeodesyMLType geodesyML = testTranslate(TestResources.customSopacSiteLogsDirectory(), "ZIMJ-radioInterference-noEffectiveDates");
 
         Assert.assertNotNull(geodesyML);
         SiteLogType siteLogType = getSiteLog(geodesyML);
@@ -704,13 +704,13 @@ public class TranslateTest {
 
     @Test
     public void testZIMJ_RadioInterference_WithEffectiveDates_NoToForm1() throws ParseException, au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, MarshallingException, IOException {
-        GeodesyMLType geodesyML = testTranslate(TESTDATADIR, "ZIMJ-radioInterference-withEffectiveDatesNoToForm1");
+        GeodesyMLType geodesyML = testTranslate(TestResources.customSopacSiteLogsDirectory(), "ZIMJ-radioInterference-withEffectiveDatesNoToForm1");
         testZIMJ_RadioInterference_WithEffectiveDates_NoToForms(geodesyML);
     }
 
     @Test
     public void testZIMJ_RadioInterference_WithEffectiveDates_NoToForm2() throws ParseException, au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, MarshallingException, IOException {
-        GeodesyMLType geodesyML = testTranslate(TESTDATADIR, "ZIMJ-radioInterference-withEffectiveDatesNoToForm2");
+        GeodesyMLType geodesyML = testTranslate(TestResources.customSopacSiteLogsDirectory(), "ZIMJ-radioInterference-withEffectiveDatesNoToForm2");
         testZIMJ_RadioInterference_WithEffectiveDates_NoToForms(geodesyML);
     }
 
@@ -718,7 +718,7 @@ public class TranslateTest {
     @Test(expectedExceptions = GeodesyRuntimeException.class)
     public void testBATH() throws MarshallingException, IOException,
             au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
-        GeodesyMLType geodesyML = testTranslate(SITEDATADIR, "BATH");
+        GeodesyMLType geodesyML = testTranslate(TestResources.originalSopacSiteLogsDirectory(), "BATH");
 
         Assert.assertNotNull(geodesyML);
     }

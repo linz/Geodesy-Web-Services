@@ -39,7 +39,7 @@ public class UploadAllSiteLogsTest extends UnitTestConfig {
 
     @BeforeClass
     private void setup() throws IOException {
-        siteLogFiles = TestResources.sopacSiteLogs("A*");
+        siteLogFiles = TestResources.originalSopacSiteLogs("A*");
     }
 
     @Test

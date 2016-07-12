@@ -57,7 +57,7 @@ public class KeepUnmodifiedNodesAndSetupsTest extends IntegrationTestConfig {
 
     private InTransaction uploadABRK = new InTransaction() {
         public void f() throws Exception {
-            SiteLogReader input = new SopacSiteLogReader(TestResources.sopacSiteLogReader(fourCharId));
+            SiteLogReader input = new SopacSiteLogReader(TestResources.originalSopacSiteLogReader(fourCharId));
             siteLogService.upload(input.getSiteLog());
         }
     };

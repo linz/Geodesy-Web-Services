@@ -829,13 +829,18 @@
         </profile>
         <profile>
             <id>site</id>
+            <properties>
+                <schemacrawler.plugin.version>14.07.04</schemacrawler.plugin.version>
+                <dependency.locations.enabled>false</dependency.locations.enabled>
+                <github.global.server>github</github.global.server>
+            </properties>
             <build>
                 <defaultGoal>site:site</defaultGoal>
                 <plugins>
                     <plugin>
                         <groupId>us.fatehi</groupId>
                         <artifactId>schemacrawler-maven-plugin</artifactId>
-                        <version>14.08.06</version>
+                        <version>${schemacrawler.plugin.version}</version>
                         <dependencies>
                             <!-- Define jdbc driver dependencies here, since report plugins cannot specify dependencies. -->
                             <dependency>
@@ -866,7 +871,7 @@
                                 <plugin>
                                     <groupId>us.fatehi</groupId>
                                     <artifactId>schemacrawler-maven-plugin</artifactId>
-                                    <version>14.08.06</version>
+                                    <version>${schemacrawler.plugin.version}</version>
                                     <configuration>
                                         <!-- TODO: move db connection parameters into properties file -->
                                         <driver>org.postgresql.Driver</driver>
@@ -878,16 +883,43 @@
                                         <reportname>Database Schema Diagram</reportname>
                                     </configuration>
                                 </plugin>
-                                <plugin>
-                                    <groupId>org.apache.maven.plugins</groupId>
-                                    <artifactId>maven-javadoc-plugin</artifactId>
-                                    <version>2.10.4</version>
-                                    <configuration>
-                                        <failOnError>false</failOnError>
-                                    </configuration>
-                                </plugin>
+                                <!-- TODO: disabled for now -->
+                                <!-- <plugin> -->
+                                <!--     <groupId>org.apache.maven.plugins</groupId> -->
+                                <!--     <artifactId>maven-javadoc-plugin</artifactId> -->
+                                <!--     <version>2.10.4</version> -->
+                                <!--     <configuration> -->
+                                <!--         <failOnError>false</failOnError> -->
+                                <!--     </configuration> -->
+                                <!-- </plugin> -->
                             </reportPlugins>
+                            <skipDeploy>true</skipDeploy>
                         </configuration>
+                    </plugin>
+                    <plugin>
+                        <groupId>com.github.github</groupId>
+                        <artifactId>site-maven-plugin</artifactId>
+                        <version>0.12</version>
+                        <dependencies>
+                            <dependency>
+                                <groupId>org.eclipse.mylyn.github</groupId>
+                                <artifactId>org.eclipse.egit.github.core</artifactId>
+                                <version>2.1.5</version>
+                            </dependency>
+                        </dependencies>
+                        <configuration>
+                            <message>Creating site for ${project.version}</message>
+                            <repositoryOwner>GeoscienceAustralia</repositoryOwner>
+                            <repositoryName>geodesy-domain-model</repositoryName>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>site</goal>
+                                </goals>
+                                <phase>site-deploy</phase>
+                            </execution>
+                        </executions>
                     </plugin>
                 </plugins>
             </build>
@@ -898,5 +930,10 @@
             <id>nexus.gadevs</id>
             <url>https://nexus.gadevs.ga./repository/maven-snapshots/</url>
         </snapshotRepository>
+        <site>
+            <id>github-pages-site</id>
+            <name>Deployment through GitHub's site deployment plugin</name>
+            <url>site/${project.version}</url>
+        </site>
     </distributionManagement>
 </project>

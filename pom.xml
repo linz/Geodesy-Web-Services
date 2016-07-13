@@ -832,6 +832,7 @@
             <properties>
                 <schemacrawler.plugin.version>14.07.04</schemacrawler.plugin.version>
                 <dependency.locations.enabled>false</dependency.locations.enabled>
+                <github.global.server>github</github.global.server>
             </properties>
             <build>
                 <defaultGoal>site:site</defaultGoal>
@@ -892,7 +893,33 @@
                                 <!--     </configuration> -->
                                 <!-- </plugin> -->
                             </reportPlugins>
+                            <skipDeploy>true</skipDeploy>
                         </configuration>
+                    </plugin>
+                    <plugin>
+                        <groupId>com.github.github</groupId>
+                        <artifactId>site-maven-plugin</artifactId>
+                        <version>0.12</version>
+                        <dependencies>
+                            <dependency>
+                                <groupId>org.eclipse.mylyn.github</groupId>
+                                <artifactId>org.eclipse.egit.github.core</artifactId>
+                                <version>2.1.5</version>
+                            </dependency>
+                        </dependencies>
+                        <configuration>
+                            <message>Creating site for ${project.version}</message>
+                            <repositoryOwner>GeoscienceAustralia</repositoryOwner>
+                            <repositoryName>geodesy-domain-model</repositoryName>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>site</goal>
+                                </goals>
+                                <phase>site-deploy</phase>
+                            </execution>
+                        </executions>
                     </plugin>
                 </plugins>
             </build>
@@ -903,5 +930,10 @@
             <id>nexus.gadevs</id>
             <url>https://nexus.gadevs.ga./repository/maven-snapshots/</url>
         </snapshotRepository>
+        <site>
+            <id>github-pages-site</id>
+            <name>Deployment through GitHub's site deployment plugin</name>
+            <url>site/${project.version}</url>
+        </site>
     </distributionManagement>
 </project>

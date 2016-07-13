@@ -829,13 +829,16 @@
         </profile>
         <profile>
             <id>site</id>
+            <properties>
+                <schemacrawler.plugin.version>14.07.04</schemacrawler.plugin.version>
+            </properties>
             <build>
                 <defaultGoal>site:site</defaultGoal>
                 <plugins>
                     <plugin>
                         <groupId>us.fatehi</groupId>
                         <artifactId>schemacrawler-maven-plugin</artifactId>
-                        <version>14.08.06</version>
+                        <version>${schemacrawler.plugin.version}</version>
                         <dependencies>
                             <!-- Define jdbc driver dependencies here, since report plugins cannot specify dependencies. -->
                             <dependency>
@@ -866,7 +869,7 @@
                                 <plugin>
                                     <groupId>us.fatehi</groupId>
                                     <artifactId>schemacrawler-maven-plugin</artifactId>
-                                    <version>14.08.06</version>
+                                    <version>${schemacrawler.plugin.version}</version>
                                     <configuration>
                                         <!-- TODO: move db connection parameters into properties file -->
                                         <driver>org.postgresql.Driver</driver>

@@ -40,7 +40,8 @@ public class GnssReceiverEndpointTest extends RestTest {
     @BeforeMethod
     public void setUp(Method method) {
         mvc = MockMvcBuilders.webAppContextSetup(super.webApplicationContext)
-            .apply(documentationConfiguration(restDocumentation))
+            .apply(documentationConfiguration(restDocumentation)
+                .uris().withHost("egeodesy.ga.gov.au").withPort(80))
             .build();
 
         restDocumentation.beforeTest(getClass(), method.getName());

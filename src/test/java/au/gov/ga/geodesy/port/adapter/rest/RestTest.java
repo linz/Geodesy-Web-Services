@@ -32,7 +32,7 @@ import au.gov.ga.geodesy.support.spring.IntegrationTestConfig;
 public class RestTest extends IntegrationTestConfig {
 
     @Autowired
-    private WebApplicationContext webApplicationContext;
+    protected WebApplicationContext webApplicationContext;
 
     protected static MockMvc mvc;
 

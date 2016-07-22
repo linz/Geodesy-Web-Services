@@ -577,11 +577,16 @@
                         <exclude>au/gov/ga/geodesy/test/system/**/*.java</exclude>
                     </excludes>
                     <!--Tests NEED to be written in TestNG-->
-                    <value>
-                        au.gov.ga.geodesy.support.testng.TestSuiteListener,
-                        au.gov.ga.geodesy.support.testng.TestListener,
-                        au.gov.ga.geodesy.support.testng.TestDependencyController
-                    </value>
+                   <properties>
+                       <property>
+                           <name>listener</name>
+                            <value>
+                                au.gov.ga.geodesy.support.testng.TestSuiteListener,
+                                au.gov.ga.geodesy.support.testng.TestListener,
+                                au.gov.ga.geodesy.support.testng.TestDependencyController
+                            </value>
+                        </property>
+                    </properties>
                     <systemPropertyVariables>
                         <unitTestDatabaseType>EXTERNAL</unitTestDatabaseType>
                     </systemPropertyVariables>

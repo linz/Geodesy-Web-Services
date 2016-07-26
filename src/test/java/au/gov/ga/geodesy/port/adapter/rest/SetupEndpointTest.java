@@ -1,6 +1,7 @@
 package au.gov.ga.geodesy.port.adapter.rest;
 
 import static org.hamcrest.Matchers.nullValue;
+import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.document;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -14,7 +15,7 @@ import au.gov.ga.geodesy.domain.service.CorsSiteLogService;
 import au.gov.ga.geodesy.port.adapter.sopac.SopacSiteLogReader;
 import au.gov.ga.geodesy.support.TestResources;
 
-public class SetupEndpointTest extends RestTest {
+public class SetupEndpointTest extends RestDocTest {
 
     @Autowired
     private CorsSiteLogService siteLogService;
@@ -33,7 +34,8 @@ public class SetupEndpointTest extends RestTest {
     public void testFindCurrentByFourCharacterId() throws Exception {
         mvc.perform(get("/setups/search/findCurrentByFourCharacterId?id=ALIC"))
             .andExpect(status().isOk())
-            .andExpect(jsonPath("$._links.self").isNotEmpty());
+            .andExpect(jsonPath("$._links.self").isNotEmpty())
+            .andDo(document("findCurrentByFourCharacterId"));
     }
 
     @Test(dependsOnMethods = {"upload"})

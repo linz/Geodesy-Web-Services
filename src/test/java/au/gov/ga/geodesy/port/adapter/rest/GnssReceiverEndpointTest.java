@@ -2,24 +2,18 @@ package au.gov.ga.geodesy.port.adapter.rest;
 
 import static au.gov.ga.geodesy.port.adapter.rest.ResultHandlers.print;
 
+import static org.springframework.restdocs.hypermedia.HypermediaDocumentation.halLinks;
+import static org.springframework.restdocs.hypermedia.HypermediaDocumentation.linkWithRel;
+import static org.springframework.restdocs.hypermedia.HypermediaDocumentation.links;
+import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.document;
+import static org.springframework.restdocs.payload.PayloadDocumentation.fieldWithPath;
+import static org.springframework.restdocs.payload.PayloadDocumentation.relaxedResponseFields;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-import static org.springframework.restdocs.payload.PayloadDocumentation.relaxedResponseFields;
-import static org.springframework.restdocs.payload.PayloadDocumentation.fieldWithPath;
-import java.lang.reflect.Method;
-import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.document;
-import static org.springframework.restdocs.hypermedia.HypermediaDocumentation.links;
-import static org.springframework.restdocs.hypermedia.HypermediaDocumentation.linkWithRel;
-import static org.springframework.restdocs.hypermedia.HypermediaDocumentation.halLinks;
-import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.documentationConfiguration;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.restdocs.ManualRestDocumentation;
 import org.springframework.test.annotation.Rollback;
-import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLog;
@@ -30,27 +24,10 @@ import au.gov.ga.geodesy.support.TestResources;
 /*
  * Tests for GnssReceiver HTTP endpoint.
  */
-public class GnssReceiverEndpointTest extends RestTest {
-
-    private final ManualRestDocumentation restDocumentation = new ManualRestDocumentation("target/generated-snippets");
+public class GnssReceiverEndpointTest extends RestDocTest {
 
     @Autowired
     private CorsSiteLogService siteLogService;
-
-    @BeforeMethod
-    public void setUp(Method method) {
-        mvc = MockMvcBuilders.webAppContextSetup(super.webApplicationContext)
-            .apply(documentationConfiguration(restDocumentation)
-                .uris().withHost("egeodesy.ga.gov.au").withPort(80))
-            .build();
-
-        restDocumentation.beforeTest(getClass(), method.getName());
-    }
-
-    @AfterMethod
-    public void tearDown() {
-        restDocumentation.afterTest();
-    }
 
     @Test
     @Rollback(false)

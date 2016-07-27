@@ -3,6 +3,7 @@ package au.gov.ga.geodesy.domain.model;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.ForeignKey;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
@@ -24,7 +25,7 @@ public class CorsSite extends Site {
     private @MonotonicNonNull String domesNumber;
 
     @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "MONUMENT_ID")
+    @JoinColumn(name = "MONUMENT_ID", foreignKey = @ForeignKey(name="FK_CORS_SITE_MONUMENT"))
     private @MonotonicNonNull Monument monument;
 
     @Column(name = "GEOLOGIC_CHARACTERISTIC")

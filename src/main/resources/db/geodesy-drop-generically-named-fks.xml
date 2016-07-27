@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+  <changeSet author="simon" id="drop generically named foreign keys">
+      <sql dbms="postgresql"  endDelimiter=";" >
+          alter table cors_site drop constraint fk25mip9h81ast4isagcbn5nnsk                                 ;
+          alter table sitelog_collocationinformation drop constraint fk7dvx9fjqujrwswcq5ai8yrbgd            ;
+          alter table sitelog_frequencystandard drop constraint fkdbdv2fxny6htdef63toxeouo4                 ;
+          alter table sitelog_gnssantenna drop constraint fk2kaqvog12n3c227vv9wmka8sk                       ;
+          alter table sitelog_gnssreceiver drop constraint fk9pk6uvtcik5nbfnxqbj57sl7a                      ;
+          alter table sitelog_humiditysensor drop constraint fkmlt0smj74de6jldjl24s27vj8                    ;
+          alter table sitelog_localepisodicevent drop constraint fkmx1d8uddptk7ey2qqemjblaqh                ;
+          alter table sitelog_mutlipathsource drop constraint fkkria59xm558w92kh5lqpd1f3x                   ;
+          alter table sitelog_otherinstrumentation drop constraint fkeuy2r6xamax3cuji4c48scctu              ;
+          alter table sitelog_pressuresensor drop constraint fkac6h7fcxwqdb02wmd9ioa9qxy                    ;
+          alter table sitelog_radiointerference drop constraint fkketnpsi74n9jy8h4ivigf0rm5                 ;
+          alter table sitelog_signalobstraction drop constraint fk1cs9mfi9h443h8b8fwp2g8o2j                 ;
+          alter table sitelog_site drop constraint fk6j824swpk9wrunv18oltj7r4h                              ;
+          alter table sitelog_site drop constraint fkfhimbva6rwtmx2jwvtimp1iau                              ;
+          alter table sitelog_surveyedlocaltie drop constraint fksve549v5ist4ri18uvf8sxjn3                  ;
+          alter table sitelog_temperaturesensor drop constraint fkqi6nwchgfbv76i7lbyommqfb5                 ;
+          alter table sitelog_watervaporsensor drop constraint fkgu7ol5xrkfrdcx68jg7y3yfnx                  ;
+      </sql>
+  </changeSet>
+</databaseChangeLog>
+

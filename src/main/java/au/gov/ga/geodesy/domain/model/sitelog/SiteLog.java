@@ -17,6 +17,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.persistence.ForeignKey;
 import javax.validation.Valid;
 
 import org.checkerframework.checker.nullness.qual.MonotonicNonNull;
@@ -57,72 +58,72 @@ public class SiteLog {
 
     @Valid
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID")
+    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID", foreignKey = @ForeignKey(name="FK_SITELOG_SITE_SITELOG_GNSS_RECEIVER"))
     protected Set<GnssReceiverLogItem> gnssReceivers = new HashSet<>();
 
     @Valid
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID")
+    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID", foreignKey = @ForeignKey(name="FK_SITELOG_SITE_SITELOG_GNSS_ANTENNA"))
     protected Set<GnssAntennaLogItem> gnssAntennas = new HashSet<>();
 
     @Valid
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID")
+    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID", foreignKey = @ForeignKey(name="FK_SITELOG_SITE_SITELOG_SURVEYEDLOCALTIE"))
     protected Set<SurveyedLocalTie> surveyedLocalTies = new HashSet<>();
 
     @Valid
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID")
+    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID", foreignKey = @ForeignKey(name="FK_SITELOG_SITE_SITELOGFREQUENCYSTANDARD"))
     protected Set<FrequencyStandardLogItem> frequencyStandards = new HashSet<>();
 
     @Valid
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID")
+    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID", foreignKey = @ForeignKey(name="FK_SITELOG_SITE_SITELOG_COLLOCATIONINFORMATION"))
     protected Set<CollocationInformation> collocationInformation = new HashSet<>();
 
     @Valid
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID")
+    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID", foreignKey = @ForeignKey(name="FK_SITELOG_SITE_SITELOG_HUMIDITYSENSOR"))
     protected Set<HumiditySensorLogItem> humiditySensors = new HashSet<>();
 
     @Valid
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID")
+    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID", foreignKey = @ForeignKey(name="FK_SITELOG_SITE_SITELOG_PRESSURESENSOR"))
     protected Set<PressureSensorLogItem> pressureSensors = new HashSet<>();
 
     @Valid
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID")
+    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID", foreignKey = @ForeignKey(name="FK_SITELOG_SITE_SITELOG_TEMPERATURESENSOR"))
     protected Set<TemperatureSensorLogItem> temperatureSensors = new HashSet<>();
 
     @Valid
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID")
+    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID", foreignKey = @ForeignKey(name="FK_SITELOG_SITE_SITELOG_WATERVAPORSENSOR"))
     protected Set<WaterVaporSensorLogItem> waterVaporSensors = new HashSet<>();
 
     @Valid
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID")
+    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID", foreignKey = @ForeignKey(name="FK_SITELOG_SITE_SITELOG_OTHERINSTRUMENTATION"))
     protected Set<OtherInstrumentationLogItem> otherInstrumentationLogItem = new HashSet<>();
 
     @Valid
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID")
+    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID", foreignKey = @ForeignKey(name="FK_SITELOG_SITE_SITELOG_RADIOINTERFERENCE"))
     protected Set<RadioInterference> radioInterferences = new HashSet<>();
 
     @Valid
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID")
+    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID", foreignKey = @ForeignKey(name="FK_SITELOG_SITE_SITELOG_MUTLIPATHSOURCE"))
     protected Set<MultipathSourceLogItem> multipathSourceLogItems = new HashSet<>();
 
     @Valid
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID")
+    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID", foreignKey = @ForeignKey(name="FK_SITELOG_SITE_SITELOG_SIGNALOBSTRACTION"))
     protected Set<SignalObstructionLogItem> signalObstructionLogItems = new HashSet<>();
 
     @Valid
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID")
+    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID", foreignKey = @ForeignKey(name="FK_SITELOG_SITE_SITELOG_LOCALEPISODICEVENT"))
     protected Set<LocalEpisodicEventLogItem> localEpisodicEventLogItems = new HashSet<>();
 
     @Valid
@@ -130,11 +131,11 @@ public class SiteLog {
     protected MoreInformation moreInformation = new MoreInformation();
 
     @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "SITE_CONTACT_ID")
+    @JoinColumn(name = "SITE_CONTACT_ID", foreignKey = @ForeignKey(name="FK_SITELOG_SITE_RESPONSIBLE_PARTY_CONTACT"))
     protected @Nullable SiteResponsibleParty siteContact;
 
     @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "SITE_METADATA_CUSTODIAN_ID")
+    @JoinColumn(name = "SITE_METADATA_CUSTODIAN_ID", foreignKey = @ForeignKey(name="FK_SITELOG_SITE_RESPONSIBLE_PARTY_CUSTODIAN"))
     protected @Nullable SiteResponsibleParty siteMetadataCustodian;
 
     public @Nullable Integer getId() {

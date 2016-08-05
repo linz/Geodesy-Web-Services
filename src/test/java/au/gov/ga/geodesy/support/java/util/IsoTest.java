@@ -1,12 +1,13 @@
 package au.gov.ga.geodesy.support.java.util;
 
+import au.gov.ga.geodesy.support.utils.GMLDateUtils;
+import org.testng.annotations.Test;
+
 import java.time.Instant;
 import java.time.format.DateTimeParseException;
 
-import org.testng.Assert;
-import org.testng.annotations.Test;
-
-import au.gov.ga.geodesy.support.utils.GMLDateUtils;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.core.IsEqual.equalTo;
 
 public class IsoTest {
 
@@ -34,6 +35,6 @@ public class IsoTest {
     @Test
     public void testComposition() {
         Iso<String, Long> stringToLong = new StringToDate().compose(new DateToLong());
-        Assert.assertTrue(stringToLong.to(stringToLong.from(1L)) == 1L);
+        assertThat(stringToLong.to(stringToLong.from(1L)), equalTo(1L));
     }
 }

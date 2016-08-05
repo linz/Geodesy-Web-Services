@@ -1,8 +1,5 @@
 package au.gov.ga.geodesy.domain.model.sitelog;
 
-import org.hamcrest.MatcherAssert;
-import org.hamcrest.core.IsEqual;
-import org.hamcrest.core.IsNot;
 import org.testng.annotations.Test;
 
 import java.time.Instant;
@@ -12,7 +9,9 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static org.testng.Assert.*;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.core.IsEqual.equalTo;
+import static org.hamcrest.core.IsNot.not;
 
 /**
  * Tests whether a collection of effective dates can be properly sorted
@@ -37,8 +36,8 @@ public class EffectiveDatesComparableTest {
         for (int index1 = 0; index1 < datesList.size(); index1++) {
             for (int j = 1; j < datesList.size(); j++) {
                 int index2 = (index1 + j) % datesList.size();
-                MatcherAssert.assertThat(datesList.get(index1), IsEqual.equalTo(datesList.get(index1)));
-                MatcherAssert.assertThat(datesList.get(index1), IsNot.not(IsEqual.equalTo(datesList.get(index2))));
+                assertThat(datesList.get(index1), equalTo(datesList.get(index1)));
+                assertThat(datesList.get(index1), not(equalTo(datesList.get(index2))));
             }
         }
     }
@@ -73,7 +72,7 @@ public class EffectiveDatesComparableTest {
 
         int i = 0;
         for (EffectiveDates date : datesList) {
-            assertEquals(dates[i++], date);
+            assertThat(dates[i++], equalTo(date));
         }
     }
 
@@ -107,7 +106,7 @@ public class EffectiveDatesComparableTest {
 
         int i = 0;
         for (EffectiveDates date : datesList) {
-            assertEquals(dates[i++], date);
+            assertThat(dates[i++], equalTo(date));
         }
     }
 

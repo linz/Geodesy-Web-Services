@@ -1,20 +1,21 @@
 package au.gov.ga.geodesy.domain.model.sitelog;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.InputStreamReader;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.annotation.Rollback;
-import org.testng.Assert;
-import org.testng.annotations.Test;
-
 import au.gov.ga.geodesy.port.SiteLogReader;
 import au.gov.ga.geodesy.port.adapter.sopac.SopacSiteLogReader;
 import au.gov.ga.geodesy.support.TestResources;
 import au.gov.ga.geodesy.support.spring.RepositoryTest;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.annotation.Rollback;
+import org.testng.annotations.Test;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStreamReader;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.core.IsEqual.equalTo;
 
 public class SiteLogRepositoryTest extends RepositoryTest {
 
@@ -55,7 +56,7 @@ public class SiteLogRepositoryTest extends RepositoryTest {
     @Test(dependsOnMethods = {"saveAllSiteLogs"})
     @Rollback(false)
     public void checkNumberOfSavedSiteLogs() throws Exception {
-        Assert.assertEquals(igsSiteLogs.count(), 681);
+        assertThat(igsSiteLogs.count(), equalTo(681L));
     }
 
     @Test(dependsOnMethods = {"saveAllSiteLogs"})
@@ -67,6 +68,6 @@ public class SiteLogRepositoryTest extends RepositoryTest {
     @Test(dependsOnMethods = {"deleteSavedLogs"})
     @Rollback(false)
     public void checkNumberOfDeleteSiteLogs() throws Exception {
-        Assert.assertEquals(igsSiteLogs.count(), 0);
+        assertThat(igsSiteLogs.count(), equalTo(0L));
     }
 }

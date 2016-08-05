@@ -1,11 +1,5 @@
 package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 
-import static org.testng.Assert.assertEquals;
-
-import java.io.Reader;
-
-import org.testng.annotations.Test;
-
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLocation;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLMarshaller;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLUtils;
@@ -14,6 +8,13 @@ import au.gov.ga.geodesy.support.marshalling.moxy.GeodesyMLMoxy;
 import au.gov.xml.icsm.geodesyml.v_0_3.GeodesyMLType;
 import au.gov.xml.icsm.geodesyml.v_0_3.SiteLocationType;
 import au.gov.xml.icsm.geodesyml.v_0_3.SiteLogType;
+import org.testng.annotations.Test;
+
+import java.io.Reader;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.closeTo;
+import static org.hamcrest.Matchers.equalTo;
 
 public class SiteLocationMapperTest {
 
@@ -35,28 +36,32 @@ public class SiteLocationMapperTest {
 
             SiteLocation siteLoc = mapper.to(siteLocTypeA);
 
-            assertEquals(siteLoc.getCity(), siteLocTypeA.getCity());
-            assertEquals(siteLoc.getState(), siteLocTypeA.getState());
-            assertEquals(siteLoc.getCountry(), siteLocTypeA.getCountryCodeISO());
-            assertEquals(siteLoc.getTectonicPlate(), siteLocTypeA.getTectonicPlate().getValue());
-            assertEquals(siteLoc.getApproximatePosition().getItrfX(), Double.valueOf(siteLocTypeA.getApproximatePositionITRF().getXCoordinateInMeters()));
-            assertEquals(siteLoc.getApproximatePosition().getItrfY(), Double.valueOf(siteLocTypeA.getApproximatePositionITRF().getYCoordinateInMeters()));
-            assertEquals(siteLoc.getApproximatePosition().getItrfZ(), Double.valueOf(siteLocTypeA.getApproximatePositionITRF().getZCoordinateInMeters()));
-            assertEquals(siteLoc.getApproximatePosition().getElevationGrs80(), siteLocTypeA.getApproximatePositionITRF().getElevationMEllips());
-            assertEquals(siteLoc.getNotes(), siteLocTypeA.getNotes());
+            assertThat(siteLoc.getCity(), equalTo(siteLocTypeA.getCity()));
+            assertThat(siteLoc.getState(), equalTo(siteLocTypeA.getState()));
+            assertThat(siteLoc.getCountry(), equalTo(siteLocTypeA.getCountryCodeISO()));
+            assertThat(siteLoc.getTectonicPlate(), equalTo(siteLocTypeA.getTectonicPlate().getValue()));
+            assertThat(siteLoc.getApproximatePosition().getItrfX(), closeTo(Double.valueOf(siteLocTypeA.getApproximatePositionITRF()
+                .getXCoordinateInMeters()), 0.1));
+            assertThat(siteLoc.getApproximatePosition().getItrfY(), closeTo(Double.valueOf(siteLocTypeA.getApproximatePositionITRF()
+                .getYCoordinateInMeters()), 0.1));
+            assertThat(siteLoc.getApproximatePosition().getItrfZ(), closeTo(Double.valueOf(siteLocTypeA.getApproximatePositionITRF()
+                .getZCoordinateInMeters()),0.1));
+            assertThat(siteLoc.getApproximatePosition().getElevationGrs80(), equalTo(siteLocTypeA.getApproximatePositionITRF()
+                .getElevationMEllips()));
+            assertThat(siteLoc.getNotes(), equalTo(siteLocTypeA.getNotes()));
 
             SiteLocationType siteLocTypeB = mapper.from(siteLoc);
 
-            assertEquals(siteLocTypeB.getCity(), siteLoc.getCity());
-            assertEquals(siteLocTypeB.getState(), siteLoc.getState());
-            assertEquals(siteLocTypeB.getCountryCodeISO(), siteLoc.getCountry());
-            assertEquals(siteLocTypeB.getTectonicPlate().getValue(), siteLoc.getTectonicPlate());
-            assertEquals(siteLocTypeB.getTectonicPlate().getCodeSpace(), "eGeodesy/tectonicPlate");
-            assertEquals(siteLocTypeB.getApproximatePositionITRF().getXCoordinateInMeters(), String.valueOf(siteLoc.getApproximatePosition().getItrfX()));
-            assertEquals(siteLocTypeB.getApproximatePositionITRF().getYCoordinateInMeters(), String.valueOf(siteLoc.getApproximatePosition().getItrfY()));
-            assertEquals(siteLocTypeB.getApproximatePositionITRF().getZCoordinateInMeters(), String.valueOf(siteLoc.getApproximatePosition().getItrfZ()));
-            assertEquals(siteLocTypeB.getApproximatePositionITRF().getElevationMEllips(), siteLoc.getApproximatePosition().getElevationGrs80());
-            assertEquals(siteLocTypeB.getNotes(), siteLoc.getNotes());
+            assertThat(siteLocTypeB.getCity(), equalTo(siteLoc.getCity()));
+            assertThat(siteLocTypeB.getState(), equalTo(siteLoc.getState()));
+            assertThat(siteLocTypeB.getCountryCodeISO(), equalTo(siteLoc.getCountry()));
+            assertThat(siteLocTypeB.getTectonicPlate().getValue(), equalTo(siteLoc.getTectonicPlate()));
+            assertThat(siteLocTypeB.getTectonicPlate().getCodeSpace(), equalTo("eGeodesy/tectonicPlate"));
+            assertThat(siteLocTypeB.getApproximatePositionITRF().getXCoordinateInMeters(), equalTo(String.valueOf(siteLoc.getApproximatePosition().getItrfX())));
+            assertThat(siteLocTypeB.getApproximatePositionITRF().getYCoordinateInMeters(), equalTo(String.valueOf(siteLoc.getApproximatePosition().getItrfY())));
+            assertThat(siteLocTypeB.getApproximatePositionITRF().getZCoordinateInMeters(), equalTo(String.valueOf(siteLoc.getApproximatePosition().getItrfZ())));
+            assertThat(siteLocTypeB.getApproximatePositionITRF().getElevationMEllips(), equalTo(siteLoc.getApproximatePosition().getElevationGrs80()));
+            assertThat(siteLocTypeB.getNotes(), equalTo(siteLoc.getNotes()));
         }
     }
 }

@@ -1,18 +1,18 @@
 package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.is;
-
 import au.gov.ga.geodesy.domain.model.sitelog.SurveyedLocalTie;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLMarshaller;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLUtils;
 import au.gov.ga.geodesy.support.TestResources;
 import au.gov.ga.geodesy.support.marshalling.moxy.GeodesyMLMoxy;
 import au.gov.ga.geodesy.support.utils.GMLDateUtils;
-import au.gov.xml.icsm.geodesyml.v_0_3.SurveyedLocalTiesType;
 import au.gov.xml.icsm.geodesyml.v_0_3.GeodesyMLType;
 import au.gov.xml.icsm.geodesyml.v_0_3.SiteLogType;
+import au.gov.xml.icsm.geodesyml.v_0_3.SurveyedLocalTiesType;
 import org.testng.annotations.Test;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.is;
 
 
 /**

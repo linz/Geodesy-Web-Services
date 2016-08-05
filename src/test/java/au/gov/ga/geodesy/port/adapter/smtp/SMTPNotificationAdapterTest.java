@@ -13,23 +13,23 @@ import au.gov.ga.geodesy.support.spring.TestAppConfig;
 import com.icegreen.greenmail.store.FolderException;
 import com.icegreen.greenmail.util.GreenMail;
 import com.icegreen.greenmail.util.ServerSetupTest;
-import org.hamcrest.MatcherAssert;
-import org.hamcrest.Matchers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.support.AnnotationConfigContextLoader;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
-import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 import javax.mail.Address;
 import javax.mail.Message;
 import javax.mail.MessagingException;
 import java.io.IOException;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.containsString;
+import static org.hamcrest.core.IsEqual.equalTo;
 
 @ContextConfiguration(
     classes = {TestAppConfig.class,
@@ -69,9 +69,9 @@ public class SMTPNotificationAdapterTest extends AbstractTestNGSpringContextTest
         MessagingException, IOException {
         for (Message message : messages) {
             Address from = message.getFrom()[0];
-            Assert.assertEquals(fromConfig, from.toString());
-            MatcherAssert.assertThat("the message content", (String) message.getContent(), Matchers.containsString(event.getMessage()));
-            MatcherAssert.assertThat("the message content", (String) message.getContent(), Matchers.containsString(content));
+            assertThat(fromConfig, equalTo(from.toString()));
+            assertThat("the message content", (String) message.getContent(), containsString(event.getMessage()));
+            assertThat("the message content", (String) message.getContent(), containsString(content));
 
             System.out.println("Message: " + message.getContent());
         }
@@ -88,7 +88,7 @@ public class SMTPNotificationAdapterTest extends AbstractTestNGSpringContextTest
         // Check emails
 
         Message[] messages = testSMTP.getReceivedMessages();
-        Assert.assertEquals(numberMsgEqualNumberTos, messages.length);
+        assertThat(numberMsgEqualNumberTos, equalTo(messages.length));
         assertMessageContentsAsExpected(content, event, fromConfig, messages);
     }
 
@@ -103,7 +103,7 @@ public class SMTPNotificationAdapterTest extends AbstractTestNGSpringContextTest
         // Check emails
 
         Message[] messages = testSMTP.getReceivedMessages();
-        Assert.assertEquals(numberMsgEqualNumberTos, messages.length);
+        assertThat(numberMsgEqualNumberTos, equalTo(messages.length));
         assertMessageContentsAsExpected(fourCharID, event, fromConfig, messages);
     }
 
@@ -118,7 +118,7 @@ public class SMTPNotificationAdapterTest extends AbstractTestNGSpringContextTest
         // Check emails
 
         Message[] messages = testSMTP.getReceivedMessages();
-        Assert.assertEquals(numberMsgEqualNumberTos, messages.length);
+        assertThat(numberMsgEqualNumberTos, equalTo(messages.length));
         assertMessageContentsAsExpected(fourCharID, event, fromConfig, messages);
     }
 
@@ -133,7 +133,7 @@ public class SMTPNotificationAdapterTest extends AbstractTestNGSpringContextTest
         // Check emails
 
         Message[] messages = testSMTP.getReceivedMessages();
-        Assert.assertEquals(numberMsgEqualNumberTos, messages.length);
+        assertThat(numberMsgEqualNumberTos, equalTo(messages.length));
         assertMessageContentsAsExpected(weeklySolutionId.toString(), event, fromConfig, messages);
     }
 

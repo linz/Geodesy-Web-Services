@@ -1,18 +1,15 @@
 package au.gov.ga.geodesy.port.adapter.geodesyml;
 
-import java.io.StringWriter;
-import java.util.ArrayList;
-import java.util.Arrays;
-
-import javax.xml.namespace.NamespaceContext;
-
+import au.gov.ga.geodesy.support.mapper.orika.ResponsiblePartyOrikaMapper;
+import au.gov.ga.geodesy.support.spring.GeodesySupportConfig;
+import com.jcabi.matchers.XhtmlMatchers;
+import com.jcabi.xml.XPathContext;
 import org.geotools.metadata.iso.citation.AddressImpl;
 import org.geotools.metadata.iso.citation.ContactImpl;
 import org.geotools.metadata.iso.citation.ResponsiblePartyImpl;
 import org.geotools.metadata.iso.citation.TelephoneImpl;
 import org.geotools.util.SimpleInternationalString;
 import org.hamcrest.Matcher;
-import org.hamcrest.MatcherAssert;
 import org.opengis.metadata.citation.Role;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
@@ -20,11 +17,13 @@ import org.springframework.test.context.support.AnnotationConfigContextLoader;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.testng.annotations.Test;
 
-import com.jcabi.matchers.XhtmlMatchers;
-import com.jcabi.xml.XPathContext;
+import javax.xml.namespace.NamespaceContext;
+import java.io.StringWriter;
+import java.util.ArrayList;
+import java.util.Arrays;
 
-import au.gov.ga.geodesy.support.mapper.orika.ResponsiblePartyOrikaMapper;
-import au.gov.ga.geodesy.support.spring.GeodesySupportConfig;
+import static org.hamcrest.MatcherAssert.assertThat;
+
 
 @ContextConfiguration(
         classes = {GeodesySupportConfig.class},
@@ -71,7 +70,7 @@ public class ResponsiblePartyMarshallingTest extends AbstractTestNGSpringContext
         System.out.println(xml.toString());
 
         // TODO: complete asserts
-        MatcherAssert.assertThat(
+        assertThat(
                 XhtmlMatchers.xhtml(xml),
                 hasElementWithText("//gmd:CI_ResponsibleParty/gmd:individualName/gco:CharacterString", "Lazar Bodor")
             );

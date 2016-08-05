@@ -1,8 +1,6 @@
 package au.gov.ga.geodesy.support.properties;
 
 import au.gov.ga.geodesy.support.spring.TestAppConfig;
-import org.hamcrest.Matchers;
-import org.junit.Assert;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.support.AnnotationConfigContextLoader;
@@ -12,6 +10,10 @@ import org.testng.annotations.Test;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.hasItems;
 
 @ContextConfiguration(
     classes = {TestAppConfig.class,
@@ -27,32 +29,32 @@ public class GeodesyNotificationsConfigTest extends AbstractTestNGSpringContextT
 
     @Test
     public void testGeodesyNotificationConfig01() {
-        Assert.assertEquals(2, config.getInvalidSiteLogReceivedEmailAddressees().size());
-        Assert.assertThat(config.getInvalidSiteLogReceivedEmailAddressees(),
-                Matchers.hasItems(buildEmailsArray("InvalidSiteLogReceived")));
+        assertThat(config.getInvalidSiteLogReceivedEmailAddressees().size(), equalTo(2));
+        assertThat(config.getInvalidSiteLogReceivedEmailAddressees(),
+                equalTo((buildEmailsArray("InvalidSiteLogReceived"))));
 
-        Assert.assertEquals(2, config.getSiteLogReceivedEmailAddressees().size());
-        Assert.assertThat(config.getSiteLogReceivedEmailAddressees(),
-                Matchers.hasItems(buildEmailsArray("SiteLogReceived")));
+        assertThat(config.getSiteLogReceivedEmailAddressees().size(),equalTo(2));
+        assertThat(config.getSiteLogReceivedEmailAddressees(),
+                hasItems(buildEmailsArray("SiteLogReceived").toArray(new String[0])));
 
-        Assert.assertEquals(2, config.getSiteUpdatedEmailAddressees().size());
-        Assert.assertThat(config.getSiteUpdatedEmailAddressees(), Matchers.hasItems(buildEmailsArray("SiteUpdated")));
+        assertThat(config.getSiteUpdatedEmailAddressees().size(),equalTo(2));
+        assertThat(config.getSiteUpdatedEmailAddressees(), hasItems(buildEmailsArray("SiteUpdated").toArray(new String[0])));
 
-        Assert.assertEquals(2, config.getWeeklySolutionAvailableEmailAddressees().size());
-        Assert.assertThat(config.getWeeklySolutionAvailableEmailAddressees(),
-                Matchers.hasItems(buildEmailsArray("WeeklySolutionAvailable")));
+        assertThat(config.getWeeklySolutionAvailableEmailAddressees().size(), equalTo(2));
+        assertThat(config.getWeeklySolutionAvailableEmailAddressees(),
+                hasItems(buildEmailsArray("WeeklySolutionAvailable").toArray(new String[0])));
 
-        Assert.assertEquals("lazar.bodor@ga.gov.au", config.getFromEmail());
+        assertThat(config.getFromEmail(),equalTo("lazar.bodor@ga.gov.au"));
     }
 
-    private String[] buildEmailsArray(String eventName) {
+    private List<String> buildEmailsArray(String eventName) {
         List<String> fixedEmails = new ArrayList<>();
 
         for (String base : baseEmails) {
             fixedEmails.add(base.replace("%", eventName));
         }
 
-        return fixedEmails.toArray(new String[0]);
+        return fixedEmails;//.toArray(new String[0]);
     }
 
 }

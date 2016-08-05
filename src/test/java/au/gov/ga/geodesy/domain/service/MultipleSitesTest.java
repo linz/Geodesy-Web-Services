@@ -1,20 +1,21 @@
 package au.gov.ga.geodesy.domain.service;
 
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
-
-import org.junit.Assert;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.annotation.Rollback;
-import org.springframework.transaction.annotation.Transactional;
-import org.testng.annotations.Test;
-
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLogRepository;
 import au.gov.ga.geodesy.port.InvalidSiteLogException;
 import au.gov.ga.geodesy.port.SiteLogReader;
 import au.gov.ga.geodesy.port.adapter.sopac.SopacSiteLogReader;
 import au.gov.ga.geodesy.support.spring.IntegrationTestConfig;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.annotation.Rollback;
+import org.springframework.transaction.annotation.Transactional;
+import org.testng.annotations.Test;
+
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.core.IsEqual.equalTo;
 
 @Transactional("geodesyTransactionManager")
 public class MultipleSitesTest extends IntegrationTestConfig {
@@ -49,8 +50,8 @@ public class MultipleSitesTest extends IntegrationTestConfig {
     @Test
     @Rollback(false)
     public void checkSetupId() throws Exception {
-        Assert.assertEquals(0, siteLogs.count());
+        assertThat(siteLogs.count(), equalTo(0L));
         executeSiteLogScenario(scenarioDirName);
-        Assert.assertEquals(numberOfSites, siteLogs.count());
+        assertThat(siteLogs.count(), equalTo(Integer.toUnsignedLong(numberOfSites)));
     }
 }

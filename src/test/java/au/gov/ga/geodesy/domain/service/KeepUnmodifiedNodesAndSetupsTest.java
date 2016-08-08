@@ -1,15 +1,5 @@
 package au.gov.ga.geodesy.domain.service;
 
-import static org.testng.Assert.assertEquals;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.annotation.Rollback;
-import org.springframework.transaction.PlatformTransactionManager;
-import org.springframework.transaction.TransactionStatus;
-import org.springframework.transaction.annotation.Transactional;
-import org.springframework.transaction.support.DefaultTransactionDefinition;
-import org.testng.annotations.Test;
-
 import au.gov.ga.geodesy.domain.model.CorsSiteRepository;
 import au.gov.ga.geodesy.domain.model.NodeRepository;
 import au.gov.ga.geodesy.domain.model.SetupRepository;
@@ -18,6 +8,16 @@ import au.gov.ga.geodesy.port.SiteLogReader;
 import au.gov.ga.geodesy.port.adapter.sopac.SopacSiteLogReader;
 import au.gov.ga.geodesy.support.TestResources;
 import au.gov.ga.geodesy.support.spring.IntegrationTestConfig;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.annotation.Rollback;
+import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.TransactionStatus;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.transaction.support.DefaultTransactionDefinition;
+import org.testng.annotations.Test;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.core.IsEqual.equalTo;
 
 @Transactional("geodesyTransactionManager")
 public class KeepUnmodifiedNodesAndSetupsTest extends IntegrationTestConfig {
@@ -81,9 +81,9 @@ public class KeepUnmodifiedNodesAndSetupsTest extends IntegrationTestConfig {
     @Test(dependsOnMethods = "execute")
     @Rollback(false)
     public void checkSetupId() throws Exception {
-        assertEquals(sites.count(), 1);
-        assertEquals(setups.count(), 1);
-        assertEquals(nodes.count(), 1);
-        assertEquals(equipment.count(), 3);
+        assertThat(sites.count(), equalTo(1L));
+        assertThat(setups.count(), equalTo(1L));
+        assertThat(nodes.count(), equalTo(1L));
+        assertThat(equipment.count(), equalTo(3L));
     }
 }

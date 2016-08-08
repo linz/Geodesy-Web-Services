@@ -1,12 +1,5 @@
 package au.gov.ga.geodesy.support.mapper.decorator;
 
-import java.lang.reflect.Method;
-import java.time.Instant;
-import java.util.List;
-
-import org.hamcrest.MatcherAssert;
-import org.hamcrest.Matchers;
-
 import au.gov.ga.geodesy.support.mapper.dozer.converter.TimePrimitivePropertyTypeUtils;
 import au.gov.ga.geodesy.support.utils.GMLDateUtils;
 import au.gov.ga.geodesy.support.utils.GMLReflectionUtils;
@@ -16,7 +9,13 @@ import au.gov.xml.icsm.geodesyml.v_0_3.HumiditySensorType;
 import au.gov.xml.icsm.geodesyml.v_0_3.ObjectFactory;
 import org.testng.annotations.Test;
 
+import java.lang.reflect.Method;
+import java.time.Instant;
+import java.util.List;
+
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.greaterThan;
+import static org.hamcrest.Matchers.startsWith;
 import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsNull.notNullValue;
 import static org.hamcrest.core.IsNull.nullValue;
@@ -39,11 +38,11 @@ public class IdDecoratorTest {
         assertThat(out.getId(), notNullValue());
         assertThat(element.getValidTime().getAbstractTimePrimitive().getValue().getId(), notNullValue());
 
-        MatcherAssert.assertThat("the id", out.getId(), Matchers.startsWith("GeodesyMLType_"));
+        assertThat("the id", out.getId(), startsWith("GeodesyMLType_"));
 
         GeodesyMLType out2 = GeodesyMLDecorators.IdDecorator.addId(element);
         assertThat(out2.getId(), notNullValue());
-        MatcherAssert.assertThat("the id", out.getId(), Matchers.startsWith("GeodesyMLType_"));
+        assertThat("the id", out.getId(), startsWith("GeodesyMLType_"));
 
         assertThat(out2.getId(), is(out.getId()));
     }
@@ -100,11 +99,11 @@ public class IdDecoratorTest {
 
         GeodesyMLType out = GeodesyMLDecorators.addDecorators(element, element);
         assertThat(out.getId(), notNullValue());
-        MatcherAssert.assertThat("the id", out.getId(), Matchers.startsWith("GeodesyMLType_"));
+        assertThat("the id", out.getId(), startsWith("GeodesyMLType_"));
 
         GeodesyMLType out2 = GeodesyMLDecorators.addDecorators(element, element);
         assertThat(out2.getId(), notNullValue());
-        MatcherAssert.assertThat("the id", out2.getId(), Matchers.startsWith("GeodesyMLType_"));
+        assertThat("the id", out2.getId(), startsWith("GeodesyMLType_"));
         assertThat(out2.getId(), is(out.getId()));
     }
 
@@ -137,7 +136,7 @@ public class IdDecoratorTest {
         GeodesyMLType element = new GeodesyMLType();
 
         List<Method> getterMethods = GMLReflectionUtils.getNonPrimitiveGetters(element);
-        MatcherAssert.assertThat("getters #", getterMethods.size(), Matchers.greaterThan(4));
+        assertThat("getters #", getterMethods.size(), greaterThan(4));
         System.out.println("Getters (#:" + getterMethods.size() + ") - " + getterMethods);
     }
 }

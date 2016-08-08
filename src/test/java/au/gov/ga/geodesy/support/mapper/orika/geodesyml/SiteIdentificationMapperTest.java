@@ -1,11 +1,5 @@
 package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 
-import static org.testng.Assert.assertEquals;
-
-import java.io.Reader;
-
-import org.testng.annotations.Test;
-
 import au.gov.ga.geodesy.domain.model.sitelog.SiteIdentification;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLMarshaller;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLUtils;
@@ -15,6 +9,12 @@ import au.gov.ga.geodesy.support.utils.GMLDateUtils;
 import au.gov.xml.icsm.geodesyml.v_0_3.GeodesyMLType;
 import au.gov.xml.icsm.geodesyml.v_0_3.SiteIdentificationType;
 import au.gov.xml.icsm.geodesyml.v_0_3.SiteLogType;
+import org.testng.annotations.Test;
+
+import java.io.Reader;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
 
 public class SiteIdentificationMapperTest {
 
@@ -36,48 +36,48 @@ public class SiteIdentificationMapperTest {
             SiteIdentificationType siteIdTypeA = siteLogType.getSiteIdentification();
             SiteIdentification siteId = mapper.to(siteIdTypeA);
 
-            assertEquals(siteId.getSiteName(), siteIdTypeA.getSiteName());
-            assertEquals(siteId.getFourCharacterId(), siteIdTypeA.getFourCharacterID());
-            assertEquals(siteId.getMonumentInscription(), siteIdTypeA.getMonumentInscription());
-            assertEquals(siteId.getIersDOMESNumber(), siteIdTypeA.getIersDOMESNumber());
-            assertEquals(siteId.getCdpNumber(), siteIdTypeA.getCdpNumber());
-            assertEquals(siteId.getMonumentDescription(), siteIdTypeA.getMonumentDescription().getValue());
-            assertEquals(siteId.getHeightOfMonument(), String.valueOf(siteIdTypeA.getHeightOfTheMonument()));
-            assertEquals(siteId.getMonumentFoundation(), siteIdTypeA.getMonumentFoundation());
-            assertEquals(siteId.getFoundationDepth(), String.valueOf(siteIdTypeA.getFoundationDepth()));
-            assertEquals(siteId.getMarkerDescription(), siteIdTypeA.getMarkerDescription());
-            assertEquals(siteId.getDateInstalled(), GMLDateUtils.stringToDateMultiParsers(siteIdTypeA.getDateInstalled().getValue().get(0)));
-            assertEquals(siteId.getGeologicCharacteristic(), siteIdTypeA.getGeologicCharacteristic().getValue());
-            assertEquals(siteId.getBedrockType(), siteIdTypeA.getBedrockType());
-            assertEquals(siteId.getBedrockCondition(), siteIdTypeA.getBedrockCondition());
-            assertEquals(siteId.getFractureSpacing(), siteIdTypeA.getFractureSpacing());
-            assertEquals(siteId.getFaultZonesNearby(), siteIdTypeA.getFaultZonesNearby().getValue());
-            assertEquals(siteId.getDistanceActivity(), siteIdTypeA.getDistanceActivity());
-            assertEquals(siteId.getNotes(), siteIdTypeA.getNotes());
+            assertThat(siteId.getSiteName(), equalTo(siteIdTypeA.getSiteName()));
+            assertThat(siteId.getFourCharacterId(), equalTo(siteIdTypeA.getFourCharacterID()));
+            assertThat(siteId.getMonumentInscription(), equalTo(siteIdTypeA.getMonumentInscription()));
+            assertThat(siteId.getIersDOMESNumber(), equalTo(siteIdTypeA.getIersDOMESNumber()));
+            assertThat(siteId.getCdpNumber(), equalTo(siteIdTypeA.getCdpNumber()));
+            assertThat(siteId.getMonumentDescription(), equalTo(siteIdTypeA.getMonumentDescription().getValue()));
+            assertThat(siteId.getHeightOfMonument(), equalTo(String.valueOf(siteIdTypeA.getHeightOfTheMonument())));
+            assertThat(siteId.getMonumentFoundation(), equalTo(siteIdTypeA.getMonumentFoundation()));
+            assertThat(siteId.getFoundationDepth(), equalTo(String.valueOf(siteIdTypeA.getFoundationDepth())));
+            assertThat(siteId.getMarkerDescription(), equalTo(siteIdTypeA.getMarkerDescription()));
+            assertThat(siteId.getDateInstalled(), equalTo(GMLDateUtils.stringToDateMultiParsers(siteIdTypeA.getDateInstalled().getValue().get(0))));
+            assertThat(siteId.getGeologicCharacteristic(), equalTo(siteIdTypeA.getGeologicCharacteristic().getValue()));
+            assertThat(siteId.getBedrockType(), equalTo(siteIdTypeA.getBedrockType()));
+            assertThat(siteId.getBedrockCondition(), equalTo(siteIdTypeA.getBedrockCondition()));
+            assertThat(siteId.getFractureSpacing(), equalTo(siteIdTypeA.getFractureSpacing()));
+            assertThat(siteId.getFaultZonesNearby(), equalTo(siteIdTypeA.getFaultZonesNearby().getValue()));
+            assertThat(siteId.getDistanceActivity(), equalTo(siteIdTypeA.getDistanceActivity()));
+            assertThat(siteId.getNotes(), equalTo(siteIdTypeA.getNotes()));
 
             SiteIdentificationType siteIdTypeB = mapper.from(siteId);
 
-            assertEquals(siteIdTypeB.getSiteName(), siteId.getSiteName());
-            assertEquals(siteIdTypeB.getFourCharacterID(), siteId.getFourCharacterId());
-            assertEquals(siteIdTypeB.getMonumentInscription(), siteId.getMonumentInscription());
-            assertEquals(siteIdTypeB.getIersDOMESNumber(), siteId.getIersDOMESNumber());
-            assertEquals(siteIdTypeB.getCdpNumber(), siteId.getCdpNumber());
-            assertEquals(siteIdTypeB.getMonumentDescription().getValue(), siteId.getMonumentDescription());
-            assertEquals(siteIdTypeB.getMonumentDescription().getCodeSpace(), "eGeodesy/monumentDescription");
-            assertEquals(String.valueOf(siteIdTypeB.getHeightOfTheMonument()), siteId.getHeightOfMonument());
-            assertEquals(siteIdTypeB.getMonumentFoundation(), siteId.getMonumentFoundation());
-            assertEquals(String.valueOf(siteIdTypeB.getFoundationDepth()), siteId.getFoundationDepth());
-            assertEquals(siteIdTypeB.getMarkerDescription(), siteId.getMarkerDescription());
-            assertEquals(GMLDateUtils.stringToDateMultiParsers(siteIdTypeB.getDateInstalled().getValue().get(0)), siteId.getDateInstalled());
-            assertEquals(siteIdTypeB.getGeologicCharacteristic().getValue(), siteId.getGeologicCharacteristic());
-            assertEquals(siteIdTypeB.getGeologicCharacteristic().getCodeSpace(), "eGeodesy/geologicCharacteristic");
-            assertEquals(siteIdTypeB.getBedrockType(), siteId.getBedrockType());
-            assertEquals(siteIdTypeB.getBedrockCondition(), siteId.getBedrockCondition());
-            assertEquals(siteIdTypeB.getFractureSpacing(), siteId.getFractureSpacing());
-            assertEquals(siteIdTypeB.getFaultZonesNearby().getValue(), siteId.getFaultZonesNearby());
-            assertEquals(siteIdTypeB.getFaultZonesNearby().getCodeSpace(), "eGeodesy/faultZonesNearby");
-            assertEquals(siteIdTypeB.getDistanceActivity(), siteId.getDistanceActivity());
-            assertEquals(siteIdTypeB.getNotes(), siteId.getNotes());
+            assertThat(siteIdTypeB.getSiteName(), equalTo(siteId.getSiteName()));
+            assertThat(siteIdTypeB.getFourCharacterID(),equalTo( siteId.getFourCharacterId()));
+            assertThat(siteIdTypeB.getMonumentInscription(), equalTo(siteId.getMonumentInscription()));
+            assertThat(siteIdTypeB.getIersDOMESNumber(), equalTo(siteId.getIersDOMESNumber()));
+            assertThat(siteIdTypeB.getCdpNumber(), equalTo(siteId.getCdpNumber()));
+            assertThat(siteIdTypeB.getMonumentDescription().getValue(), equalTo(siteId.getMonumentDescription()));
+            assertThat(siteIdTypeB.getMonumentDescription().getCodeSpace(), equalTo("eGeodesy/monumentDescription"));
+            assertThat(String.valueOf(siteIdTypeB.getHeightOfTheMonument()), equalTo(siteId.getHeightOfMonument()));
+            assertThat(siteIdTypeB.getMonumentFoundation(), equalTo(siteId.getMonumentFoundation()));
+            assertThat(String.valueOf(siteIdTypeB.getFoundationDepth()), equalTo(siteId.getFoundationDepth()));
+            assertThat(siteIdTypeB.getMarkerDescription(), equalTo(siteId.getMarkerDescription()));
+            assertThat(GMLDateUtils.stringToDateMultiParsers(siteIdTypeB.getDateInstalled().getValue().get(0)), equalTo(siteId.getDateInstalled()));
+            assertThat(siteIdTypeB.getGeologicCharacteristic().getValue(), equalTo(siteId.getGeologicCharacteristic()));
+            assertThat(siteIdTypeB.getGeologicCharacteristic().getCodeSpace(), equalTo("eGeodesy/geologicCharacteristic"));
+            assertThat(siteIdTypeB.getBedrockType(), equalTo(siteId.getBedrockType()));
+            assertThat(siteIdTypeB.getBedrockCondition(), equalTo(siteId.getBedrockCondition()));
+            assertThat(siteIdTypeB.getFractureSpacing(), equalTo(siteId.getFractureSpacing()));
+            assertThat(siteIdTypeB.getFaultZonesNearby().getValue(), equalTo(siteId.getFaultZonesNearby()));
+            assertThat(siteIdTypeB.getFaultZonesNearby().getCodeSpace(), equalTo("eGeodesy/faultZonesNearby"));
+            assertThat(siteIdTypeB.getDistanceActivity(), equalTo(siteId.getDistanceActivity()));
+            assertThat(siteIdTypeB.getNotes(), equalTo(siteId.getNotes()));
         }
     }
 }

@@ -1,9 +1,5 @@
 package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 
-import static org.testng.Assert.assertEquals;
-
-import org.testng.annotations.Test;
-
 import au.gov.ga.geodesy.domain.model.sitelog.FrequencyStandardLogItem;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLMarshaller;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLUtils;
@@ -14,6 +10,10 @@ import au.gov.xml.icsm.geodesyml.v_0_3.FrequencyStandardType;
 import au.gov.xml.icsm.geodesyml.v_0_3.GeodesyMLType;
 import au.gov.xml.icsm.geodesyml.v_0_3.SiteLogType;
 import net.opengis.gml.v_3_2_1.TimePeriodType;
+import org.testng.annotations.Test;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
 
 public class FrequencyStandardMapperTest {
 
@@ -34,24 +34,24 @@ public class FrequencyStandardMapperTest {
         FrequencyStandardType frequencyStandardTypeA = siteLog.getFrequencyStandards().get(0).getFrequencyStandard();
         FrequencyStandardLogItem logItem = mapper.to(frequencyStandardTypeA);
 
-        assertEquals(logItem.getType(), frequencyStandardTypeA.getStandardType().getValue());
-        assertEquals(logItem.getInputFrequency(), String.valueOf(frequencyStandardTypeA.getInputFrequency()));
-        assertEquals(logItem.getNotes(), frequencyStandardTypeA.getNotes());
+        assertThat(logItem.getType(), equalTo(frequencyStandardTypeA.getStandardType().getValue()));
+        assertThat(logItem.getInputFrequency(), equalTo(String.valueOf(frequencyStandardTypeA.getInputFrequency())));
+        assertThat(logItem.getNotes(), equalTo(frequencyStandardTypeA.getNotes()));
 
-        assertEquals(logItem.getEffectiveDates().getFrom(), GMLDateUtils.stringToDate(
+        assertThat(logItem.getEffectiveDates().getFrom(), equalTo(GMLDateUtils.stringToDate(
                 ((TimePeriodType) frequencyStandardTypeA.getValidTime().getAbstractTimePrimitive().getValue())
                 .getBeginPosition().getValue().get(0), "uuuu-MM-ddX")
-            );
+            ));
 
         FrequencyStandardType frequencyStandardTypeB = mapper.from(logItem);
 
-        assertEquals(frequencyStandardTypeB.getStandardType().getValue(), logItem.getType());
-        assertEquals(frequencyStandardTypeB.getStandardType().getCodeSpace(), "eGeodesy/frequencyStandardType");
-        assertEquals(frequencyStandardTypeB.getNotes(), logItem.getNotes());
+        assertThat(frequencyStandardTypeB.getStandardType().getValue(), equalTo(logItem.getType()));
+        assertThat(frequencyStandardTypeB.getStandardType().getCodeSpace(), equalTo("eGeodesy/frequencyStandardType"));
+        assertThat(frequencyStandardTypeB.getNotes(), equalTo(logItem.getNotes()));
 
-        assertEquals(GMLDateUtils.stringToDate(
+        assertThat(GMLDateUtils.stringToDate(
                 ((TimePeriodType) frequencyStandardTypeB.getValidTime().getAbstractTimePrimitive().getValue())
-                .getBeginPosition().getValue().get(0), "uuuu-MM-dd'T'HH:mm:ss.SSSX"), logItem.getEffectiveDates().getFrom());
+                .getBeginPosition().getValue().get(0), "uuuu-MM-dd'T'HH:mm:ss.SSSX"), equalTo(logItem.getEffectiveDates().getFrom()));
     }
 
 }

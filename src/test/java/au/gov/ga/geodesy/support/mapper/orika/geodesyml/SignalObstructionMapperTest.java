@@ -1,9 +1,5 @@
 package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 
-import static org.testng.Assert.assertEquals;
-
-import org.testng.annotations.Test;
-
 import au.gov.ga.geodesy.domain.model.sitelog.SignalObstructionLogItem;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLMarshaller;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLUtils;
@@ -14,6 +10,10 @@ import au.gov.xml.icsm.geodesyml.v_0_3.BasePossibleProblemSourcesType;
 import au.gov.xml.icsm.geodesyml.v_0_3.GeodesyMLType;
 import au.gov.xml.icsm.geodesyml.v_0_3.SiteLogType;
 import net.opengis.gml.v_3_2_1.TimePeriodType;
+import org.testng.annotations.Test;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
 
 /**
  * Tests the mapping of a GeodesyML SignalObstructionsPropertyType element
@@ -37,30 +37,30 @@ public class SignalObstructionMapperTest {
                 siteLog.getSignalObstructionsSet().get(0).getSignalObstructions();
 
         SignalObstructionLogItem logItem = mapper.to(signalObstructionTypeA);
-        assertEquals(logItem.getPossibleProblemSource(), signalObstructionTypeA.getPossibleProblemSources());
+        assertThat(logItem.getPossibleProblemSource(), equalTo(signalObstructionTypeA.getPossibleProblemSources()));
         String xmlEffectiveDateFrom = ((TimePeriodType) signalObstructionTypeA.getValidTime().getAbstractTimePrimitive().getValue())
                 .getBeginPosition().getValue().get(0);
-        assertEquals(GMLDateUtils.dateToString(logItem.getEffectiveDates().getFrom(), GMLDateUtils.GEODESYML_DATE_FORMAT_TIME_MILLISEC),
-                GMLDateUtils.stringToDateToStringMultiParsers(xmlEffectiveDateFrom));
+        assertThat(GMLDateUtils.dateToString(logItem.getEffectiveDates().getFrom(), GMLDateUtils.GEODESYML_DATE_FORMAT_TIME_MILLISEC),
+            equalTo(GMLDateUtils.stringToDateToStringMultiParsers(xmlEffectiveDateFrom)));
         String xmlEffectiveDateTo = ((TimePeriodType) signalObstructionTypeA.getValidTime().getAbstractTimePrimitive().getValue())
                 .getEndPosition().getValue().get(0);
-        assertEquals(GMLDateUtils.dateToString(logItem.getEffectiveDates().getTo(), GMLDateUtils.GEODESYML_DATE_FORMAT_TIME_MILLISEC),
-                GMLDateUtils.stringToDateToStringMultiParsers(xmlEffectiveDateTo));
-        assertEquals(logItem.getNotes(), signalObstructionTypeA.getNotes());
+        assertThat(GMLDateUtils.dateToString(logItem.getEffectiveDates().getTo(), GMLDateUtils.GEODESYML_DATE_FORMAT_TIME_MILLISEC),
+            equalTo(GMLDateUtils.stringToDateToStringMultiParsers(xmlEffectiveDateTo)));
+        assertThat(logItem.getNotes(), equalTo(signalObstructionTypeA.getNotes()));
 
         BasePossibleProblemSourcesType signalObstructionTypeB = mapper.from(logItem);
-        assertEquals(signalObstructionTypeB.getPossibleProblemSources(), logItem.getPossibleProblemSource());
+        assertThat(signalObstructionTypeB.getPossibleProblemSources(), equalTo(logItem.getPossibleProblemSource()));
         xmlEffectiveDateFrom = ((TimePeriodType) signalObstructionTypeB.getValidTime().getAbstractTimePrimitive().getValue())
                 .getBeginPosition().getValue().get(0);
-        assertEquals(
+        assertThat(
                 GMLDateUtils.stringToDateToStringMultiParsers(xmlEffectiveDateFrom),
-                GMLDateUtils.dateToString(logItem.getEffectiveDates().getFrom(), GMLDateUtils.GEODESYML_DATE_FORMAT_TIME_MILLISEC));
+            equalTo(GMLDateUtils.dateToString(logItem.getEffectiveDates().getFrom(), GMLDateUtils.GEODESYML_DATE_FORMAT_TIME_MILLISEC)));
         xmlEffectiveDateTo = ((TimePeriodType) signalObstructionTypeB.getValidTime().getAbstractTimePrimitive().getValue())
                 .getEndPosition().getValue().get(0);
-        assertEquals(
+        assertThat(
                 GMLDateUtils.stringToDateToStringMultiParsers(xmlEffectiveDateTo),
-                GMLDateUtils.dateToString(logItem.getEffectiveDates().getTo(), GMLDateUtils.GEODESYML_DATE_FORMAT_TIME_MILLISEC));
-        assertEquals(signalObstructionTypeB.getPossibleProblemSources(), logItem.getPossibleProblemSource());
+            equalTo(GMLDateUtils.dateToString(logItem.getEffectiveDates().getTo(), GMLDateUtils.GEODESYML_DATE_FORMAT_TIME_MILLISEC)));
+        assertThat(signalObstructionTypeB.getPossibleProblemSources(), equalTo(logItem.getPossibleProblemSource()));
 
     }
 

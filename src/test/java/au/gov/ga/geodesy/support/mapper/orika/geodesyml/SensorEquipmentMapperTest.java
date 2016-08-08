@@ -1,10 +1,5 @@
 package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 
-import static org.testng.Assert.assertEquals;
-
-import java.time.ZoneId;
-import java.time.format.DateTimeFormatter;
-
 import au.gov.ga.geodesy.domain.model.sitelog.SensorEquipmentLogItem;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLMarshaller;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLUtils;
@@ -16,6 +11,12 @@ import au.gov.xml.icsm.geodesyml.v_0_3.BaseSensorEquipmentType;
 import au.gov.xml.icsm.geodesyml.v_0_3.GeodesyMLType;
 import au.gov.xml.icsm.geodesyml.v_0_3.SiteLogType;
 import net.opengis.gml.v_3_2_1.TimePeriodType;
+
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
 
 /**
  * Common tests for mapping of sensor equipment XML types to domain objects
@@ -30,31 +31,31 @@ public class SensorEquipmentMapperTest {
 
         if (mappingDirection == MappingDirection.FROM_DTO_TO_ENTITY) {
 
-            assertEquals(logItem.getType(), sensorType.getType().getValue());
-            assertEquals(logItem.getManufacturer(), sensorType.getManufacturer());
-            assertEquals(logItem.getSerialNumber(), sensorType.getSerialNumber());
-            assertEquals(logItem.getHeightDiffToAntenna(), String.valueOf(sensorType.getHeightDiffToAntenna()));
-            assertEquals(outputFormat.format(logItem.getCalibrationDate()),
-                    GMLDateUtils.stringToDateToStringMultiParsers(sensorType.getCalibrationDate().getValue().get(0)));
+            assertThat(logItem.getType(), equalTo(sensorType.getType().getValue()));
+            assertThat(logItem.getManufacturer(), equalTo(sensorType.getManufacturer()));
+            assertThat(logItem.getSerialNumber(), equalTo(sensorType.getSerialNumber()));
+            assertThat(logItem.getHeightDiffToAntenna(), equalTo(String.valueOf(sensorType.getHeightDiffToAntenna())));
+            assertThat(outputFormat.format(logItem.getCalibrationDate()),
+                equalTo(GMLDateUtils.stringToDateToStringMultiParsers(sensorType.getCalibrationDate().getValue().get(0))));
 
             String xmlEffectiveDateFrom = ((TimePeriodType) sensorType.getValidTime().getAbstractTimePrimitive().getValue())
                     .getBeginPosition().getValue().get(0);
-            assertEquals(outputFormat.format(logItem.getEffectiveDates().getFrom()),
-                    GMLDateUtils.stringToDateToStringMultiParsers(xmlEffectiveDateFrom));
+            assertThat(outputFormat.format(logItem.getEffectiveDates().getFrom()),
+                equalTo(GMLDateUtils.stringToDateToStringMultiParsers(xmlEffectiveDateFrom)));
         } else {
 
 
-            assertEquals(sensorType.getType().getValue(), logItem.getType());
-            assertEquals(sensorType.getManufacturer(), logItem.getManufacturer());
-            assertEquals(sensorType.getSerialNumber(), logItem.getSerialNumber());
-            assertEquals(String.valueOf(sensorType.getHeightDiffToAntenna()), logItem.getHeightDiffToAntenna());
-            assertEquals(GMLDateUtils.stringToDateToStringMultiParsers(sensorType.getCalibrationDate().getValue().get(0)),
-                    outputFormat.format(logItem.getCalibrationDate()));
+            assertThat(sensorType.getType().getValue(), equalTo(logItem.getType()));
+            assertThat(sensorType.getManufacturer(), equalTo(logItem.getManufacturer()));
+            assertThat(sensorType.getSerialNumber(), equalTo(logItem.getSerialNumber()));
+            assertThat(String.valueOf(sensorType.getHeightDiffToAntenna()), equalTo(logItem.getHeightDiffToAntenna()));
+            assertThat(GMLDateUtils.stringToDateToStringMultiParsers(sensorType.getCalibrationDate().getValue().get(0)),
+                equalTo(outputFormat.format(logItem.getCalibrationDate())));
             String xmlEffectiveDateFrom = ((TimePeriodType) sensorType.getValidTime().getAbstractTimePrimitive().getValue())
                     .getBeginPosition().getValue().get(0);
-            assertEquals(
+            assertThat(
                     GMLDateUtils.stringToDateToStringMultiParsers(xmlEffectiveDateFrom),
-                    outputFormat.format(logItem.getEffectiveDates().getFrom()));
+                equalTo(outputFormat.format(logItem.getEffectiveDates().getFrom())));
         }
     }
 

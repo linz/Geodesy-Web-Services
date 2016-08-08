@@ -6,13 +6,14 @@ import au.gov.xml.icsm.geodesyml.v_0_3.IgsAntennaModelCodeType;
 import au.gov.xml.icsm.geodesyml.v_0_3.IgsRadomeModelCodeType;
 import net.opengis.gml.v_3_2_1.CodeType;
 import net.opengis.gml.v_3_2_1.TimePositionType;
-import org.hamcrest.MatcherAssert;
-import org.hamcrest.core.Is;
 import org.testng.annotations.Test;
 
 import java.time.Instant;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.core.Is.is;
 
 public class GnssAntennaMapperTest {
 
@@ -48,31 +49,31 @@ public class GnssAntennaMapperTest {
                 .withManufacturerSerialNumber(serialNumber);
 
         GnssAntennaLogItem logItem = mapper.to(antenna);
-        MatcherAssert.assertThat(logItem.getType(), Is.is(antenna.getAntennaType().getCodeListValue()));
-        MatcherAssert.assertThat(logItem.getAntennaReferencePoint(), Is.is(antenna.getAntennaReferencePoint().getValue()));
-        MatcherAssert.assertThat(logItem.getSerialNumber(), Is.is(antenna.getSerialNumber()));
-        MatcherAssert.assertThat(logItem.getMarkerArpEastEcc(), Is.is(antenna.getMarkerArpEastEcc()));
-        MatcherAssert.assertThat(logItem.getMarkerArpNorthEcc(), Is.is(antenna.getMarkerArpNorthEcc()));
-        MatcherAssert.assertThat(logItem.getMarkerArpUpEcc(), Is.is(antenna.getMarkerArpUpEcc()));
-        MatcherAssert.assertThat(logItem.getAlignmentFromTrueNorth(), Is.is(String.valueOf(antenna.getAlignmentFromTrueNorth())));
-        MatcherAssert.assertThat(logItem.getAntennaRadomeType(), Is.is(antenna.getAntennaRadomeType().getValue()));
-        MatcherAssert.assertThat(logItem.getAntennaCableLength(), Is.is(String.valueOf(antenna.getAntennaCableLength())));
-        MatcherAssert.assertThat(logItem.getAntennaCableType(), Is.is(String.valueOf(antenna.getAntennaCableType())));
+        assertThat(logItem.getType(), is(antenna.getAntennaType().getCodeListValue()));
+        assertThat(logItem.getAntennaReferencePoint(), is(antenna.getAntennaReferencePoint().getValue()));
+        assertThat(logItem.getSerialNumber(), is(antenna.getSerialNumber()));
+        assertThat(logItem.getMarkerArpEastEcc(), is(antenna.getMarkerArpEastEcc()));
+        assertThat(logItem.getMarkerArpNorthEcc(), is(antenna.getMarkerArpNorthEcc()));
+        assertThat(logItem.getMarkerArpUpEcc(), is(antenna.getMarkerArpUpEcc()));
+        assertThat(logItem.getAlignmentFromTrueNorth(), is(String.valueOf(antenna.getAlignmentFromTrueNorth())));
+        assertThat(logItem.getAntennaRadomeType(), is(antenna.getAntennaRadomeType().getValue()));
+        assertThat(logItem.getAntennaCableLength(), is(String.valueOf(antenna.getAntennaCableLength())));
+        assertThat(logItem.getAntennaCableType(), is(String.valueOf(antenna.getAntennaCableType())));
         Instant installed = logItem.getDateInstalled();
-        MatcherAssert.assertThat(outputFormat.format(installed), Is.is(dateInstalled));
-        MatcherAssert.assertThat(outputFormat.format(logItem.getDateRemoved()), Is.is(dateRemoved));
+        assertThat(outputFormat.format(installed), is(dateInstalled));
+        assertThat(outputFormat.format(logItem.getDateRemoved()), is(dateRemoved));
 
         GnssAntennaType antennaB = mapper.from(logItem);
-        MatcherAssert.assertThat(antennaB.getAntennaReferencePoint(), Is.is(antenna.getAntennaReferencePoint()));
-        MatcherAssert.assertThat(antennaB.getMarkerArpEastEcc(), Is.is(antenna.getMarkerArpEastEcc()));
-        MatcherAssert.assertThat(antennaB.getMarkerArpNorthEcc(), Is.is(antenna.getMarkerArpNorthEcc()));
-        MatcherAssert.assertThat(antennaB.getMarkerArpUpEcc(), Is.is(antenna.getMarkerArpUpEcc()));
-        MatcherAssert.assertThat(antennaB.getAlignmentFromTrueNorth(), Is.is(antenna.getAlignmentFromTrueNorth()));
-        MatcherAssert.assertThat(antennaB.getAntennaRadomeType(), Is.is(antenna.getAntennaRadomeType()));
-        MatcherAssert.assertThat(antennaB.getAntennaCableLength(), Is.is(antenna.getAntennaCableLength()));
-        MatcherAssert.assertThat(antennaB.getAntennaCableType(), Is.is(antenna.getAntennaCableType()));
-        MatcherAssert.assertThat(antennaB.getDateInstalled().getValue().get(0), Is.is(dateInstalled));
-        MatcherAssert.assertThat(antennaB.getDateRemoved().getValue().get(0), Is.is(dateRemoved));
+        assertThat(antennaB.getAntennaReferencePoint(), is(antenna.getAntennaReferencePoint()));
+        assertThat(antennaB.getMarkerArpEastEcc(), is(antenna.getMarkerArpEastEcc()));
+        assertThat(antennaB.getMarkerArpNorthEcc(), is(antenna.getMarkerArpNorthEcc()));
+        assertThat(antennaB.getMarkerArpUpEcc(), is(antenna.getMarkerArpUpEcc()));
+        assertThat(antennaB.getAlignmentFromTrueNorth(), is(antenna.getAlignmentFromTrueNorth()));
+        assertThat(antennaB.getAntennaRadomeType(), is(antenna.getAntennaRadomeType()));
+        assertThat(antennaB.getAntennaCableLength(), is(antenna.getAntennaCableLength()));
+        assertThat(antennaB.getAntennaCableType(), is(antenna.getAntennaCableType()));
+        assertThat(antennaB.getDateInstalled().getValue().get(0), is(dateInstalled));
+        assertThat(antennaB.getDateRemoved().getValue().get(0), is(dateRemoved));
     }
 
     private TimePositionType timePosition(String date) {

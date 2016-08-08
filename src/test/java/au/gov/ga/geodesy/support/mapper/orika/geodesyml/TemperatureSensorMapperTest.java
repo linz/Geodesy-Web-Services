@@ -1,12 +1,12 @@
 package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 
-import static org.junit.Assert.assertEquals;
-
-import org.testng.annotations.Test;
-
 import au.gov.ga.geodesy.domain.model.sitelog.TemperatureSensorLogItem;
 import au.gov.ga.geodesy.support.utils.MappingDirection;
 import au.gov.xml.icsm.geodesyml.v_0_3.TemperatureSensorType;
+import org.testng.annotations.Test;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
 
 /**
  * Tests the mapping of a GeodesyML temperatureSensor element
@@ -23,18 +23,18 @@ public class TemperatureSensorMapperTest extends SensorEquipmentMapperTest {
 
         TemperatureSensorLogItem logItem = mapper.to(temperatureSensorTypeA);
         super.testMapping(logItem, temperatureSensorTypeA, MappingDirection.FROM_DTO_TO_ENTITY);
-        assertEquals(logItem.getAccuracyDegreesCelcius(),
-                String.valueOf(temperatureSensorTypeA.getAccuracyDegreesCelcius()));
-        assertEquals(logItem.getAspiration(), temperatureSensorTypeA.getAspiration());
-        assertEquals(logItem.getDataSamplingInterval(), temperatureSensorTypeA.getDataSamplingInterval().toString());
-        assertEquals(logItem.getNotes(), temperatureSensorTypeA.getNotes());
+        assertThat(logItem.getAccuracyDegreesCelcius(),
+                equalTo(String.valueOf(temperatureSensorTypeA.getAccuracyDegreesCelcius())));
+        assertThat(logItem.getAspiration(), equalTo(temperatureSensorTypeA.getAspiration()));
+        assertThat(logItem.getDataSamplingInterval(), equalTo(temperatureSensorTypeA.getDataSamplingInterval().toString()));
+        assertThat(logItem.getNotes(), equalTo(temperatureSensorTypeA.getNotes()));
 
         TemperatureSensorType temperatureSensorTypeB = mapper.from(logItem);
         super.testMapping(logItem, temperatureSensorTypeB, MappingDirection.FROM_ENTITY_TO_DTO);
-        assertEquals(logItem.getAccuracyDegreesCelcius(),
-                String.valueOf(temperatureSensorTypeB.getAccuracyDegreesCelcius()));
-        assertEquals(logItem.getAspiration(), temperatureSensorTypeB.getAspiration());
-        assertEquals(logItem.getDataSamplingInterval(), temperatureSensorTypeB.getDataSamplingInterval().toString());
-        assertEquals(logItem.getNotes(), temperatureSensorTypeB.getNotes());
+        assertThat(logItem.getAccuracyDegreesCelcius(),
+            equalTo(String.valueOf(temperatureSensorTypeB.getAccuracyDegreesCelcius())));
+        assertThat(logItem.getAspiration(), equalTo(temperatureSensorTypeB.getAspiration()));
+        assertThat(logItem.getDataSamplingInterval(), equalTo(temperatureSensorTypeB.getDataSamplingInterval().toString()));
+        assertThat(logItem.getNotes(), equalTo(temperatureSensorTypeB.getNotes()));
     }
 }

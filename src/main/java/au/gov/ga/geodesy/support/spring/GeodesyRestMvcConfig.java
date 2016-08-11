@@ -38,10 +38,4 @@ public class GeodesyRestMvcConfig extends WebMvcConfigurerAdapter {
         super.configureMessageConverters(converters);
         converters.add(mappingJackson2HttpMessageConverter());
     }
-
-    @Override
-    public void addCorsMappings(CorsRegistry registry) {
-        // TODO - Consider if we should restrict the allowed Origins to GA and AWS
-        registry.addMapping("/**").allowedOrigins("*").allowedMethods("PUT", "DELETE", "POST", "GET");
-    }
 }

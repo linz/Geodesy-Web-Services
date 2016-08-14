@@ -36,10 +36,6 @@
     </properties>
     <repositories>
         <repository>
-            <id>lib</id>
-            <url>file://${basedir}/lib</url>
-        </repository>
-        <repository>
             <id>geotoolkit</id>
             <url>http://maven.geotoolkit.org/</url>
         </repository>
@@ -254,23 +250,6 @@
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
             <version>18.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.opengeo</groupId>
-            <artifactId>geodb</artifactId>
-            <version>0.8</version>
-            <scope>test</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>com.h2database</groupId>
-                    <artifactId>h2</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-            <version>1.4.187</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>

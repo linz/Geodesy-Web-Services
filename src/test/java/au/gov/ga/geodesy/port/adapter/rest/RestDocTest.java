@@ -20,7 +20,7 @@ public class RestDocTest extends RestTest {
     public void setUp(Method method) {
         mvc = MockMvcBuilders.webAppContextSetup(super.webApplicationContext)
             .apply(documentationConfiguration(restDocumentation)
-                .uris().withHost("egeodesy.ga.gov.au").withPort(80))
+                .uris().withScheme("https").withHost("test.geodesy.ga.gov.au").withPort(443))
             .build();
 
         restDocumentation.beforeTest(getClass(), method.getName());

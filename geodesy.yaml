@@ -1,0 +1,30 @@
+#
+# Test Stack User Yaml for Geodesy
+#
+stack_title: 'Geodesy'
+keypair: 'geodesy'
+code_deploy_service_role: 'arn:aws:iam::094928090547:role/CodeDeploy'
+stack_hosted_zone_name: 'geodesy.ga.gov.au.'
+iam_instance_profile_arn: 'arn:aws:iam::094928090547:instance-profile/GeodesyWebServicesD-WebServerRole'
+nat_alerting: false
+autoscaling_units:
+  -
+    unit_title: 'geodesyWebServices'
+    asg_config:
+      instance_type: 't2.nano'
+      iam_instance_profile_arn: 'arn:aws:iam::094928090547:instance-profile/GeodesyWebServicesD-WebServerRole'
+      sns_topic_arn: Null
+    dependencies:
+     - 'geodesyDb'
+  -
+    unit_title: 'geoServer'
+    asg_config:
+      instance_type: 't2.nano'
+      iam_instance_profile_arn: 'arn:aws:iam::094928090547:instance-profile/GeodesyWebServicesD-WebServerRole'
+      sns_topic_arn: Null
+    dependencies:
+     - 'geodesyDb'
+
+database_units:
+  -
+    unit_title: 'geodesyDb'

@@ -5,13 +5,13 @@ stack_title: 'Geodesy'
 keypair: 'geodesy'
 autoscaling_units:
   -
-    unit_title: 'geodesyWebServices'
+    unit_title: 'GeodesyWebServices'
     dependencies:
-     - 'geodesyDb'
+     - 'GeodesyDb'
   -
-    unit_title: 'geoServer'
+    unit_title: 'GeoServer'
     dependencies:
-     - 'geodesyDb'
+     - 'GeodesyDb'
 database_units:
   -
-    unit_title: 'geodesyDb'
+    unit_title: 'GeodesyDb'

@@ -14,8 +14,8 @@ stack: stack.template
     ParameterKey=GeodesyGeodesyDbRdsUsername,ParameterValue=geodesympw
 
 .PHONEY:
-restack: stack.json
-	AWS_PROFILE=geodesy aws cloudformation update-stack --stack-name GeodesyWebServices${ENV} --template-body file://stack.json
+restack: stack.template
+	AWS_PROFILE=geodesy aws cloudformation update-stack --stack-name ${ENV} --template-body file://stack.template
 
 .PHONEY:
 unstack:

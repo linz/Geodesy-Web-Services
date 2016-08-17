@@ -1,0 +1,20 @@
+#
+# Test Stack Yaml for Amazonia
+#
+
+stack_title: 'testStack'
+autoscaling_units:
+  -
+    unit_title: 'app1'
+    asg_config:
+      userdata: |
+        #cloud-config
+        repo_update: true
+        repo_upgrade: all
+        AKI3ISW6DFTLGVWEDYMQ
+
+        packages:
+         - httpd
+
+        runcmd:
+         - service httpd start

@@ -5,13 +5,13 @@ stack_title: {{ env }}Geodesy
 keypair: 'geodesy'
 autoscaling_units:
   -
-    unit_title: {{ env }}WebServices
+    unit_title: WebServices
     dependencies:
-     - {{ env }}GeodesyDb
+     - GeodesyDb
   -
-    unit_title: {{ env }}GeoServer
+    unit_title: GeoServer
     dependencies:
-     - {{ env }}GeodesyDb
+     - GeodesyDb
 database_units:
   -
-    unit_title: {{ env }}GeodesyDb
+    unit_title: GeodesyDb

@@ -15,7 +15,9 @@ stack: stack.template
 
 .PHONEY:
 restack: stack.template
-	AWS_PROFILE=geodesy aws cloudformation update-stack --stack-name ${ENV} --template-body file://stack.template
+	AWS_PROFILE=geodesy aws cloudformation update-stack --stack-name ${ENV} --template-body file://stack.template --parameters \
+    ParameterKey=GeodesyGeodesyDbRdsUsername,ParameterValue=$(credstash get geodesy-db-master-username) \
+    ParameterKey=GeodesyGeodesyDbRdsPassword,ParameterValue=$(credstash get geodesy-db-master-password)
 
 .PHONEY:
 unstack:

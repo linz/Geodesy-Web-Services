@@ -10,8 +10,8 @@ war-file:
 .PHONEY:
 stack: stack.template
 	AWS_PROFILE=geodesy aws cloudformation create-stack --stack-name ${ENV} --template-body file://stack.template --parameters \
-    ParameterKey=GeodesyGeodesyDbRdsPassword,ParameterValue=postgres \
-    ParameterKey=GeodesyGeodesyDbRdsUsername,ParameterValue=geodesympw
+    ParameterKey=GeodesyGeodesyDbRdsPassword,ParameterValue=$(credstash get geodesy-db-master-password) \
+    ParameterKey=GeodesyGeodesyDbRdsUsername,ParameterValue=$(credstash get geodesy-db-master-username)
 
 .PHONEY:
 restack: stack.template

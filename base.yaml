@@ -1,0 +1,17 @@
+#
+# Stack User Yaml for Geodesy
+#
+stack_title: {{ env }}Geodesy
+keypair: 'geodesy'
+autoscaling_units:
+  -
+    unit_title: {{ env }}WebServices
+    dependencies:
+     - {{ env }}GeodesyDb
+  -
+    unit_title: {{ env }}GeoServer
+    dependencies:
+     - {{ env }}GeodesyDb
+database_units:
+  -
+    unit_title: {{ env }}GeodesyDb

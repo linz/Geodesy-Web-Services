@@ -44,7 +44,6 @@ aws --profile ${AWS_PROFILE} cloudformation ${COMMAND}-stack --stack-name ${STAC
 if (( $? == 0 && ${COMMAND} == "create" )); then
     credstash -p ${AWS_PROFILE} put -a ${RDS_MASTER_USERNAME_KEY} ${RDS_MASTER_USERNAME}
     credstash -p ${AWS_PROFILE} put -a ${RDS_MASTER_PASSWORD_KEY} ${RDS_MASTER_PASSWORD}
-
     credstash -p ${AWS_PROFILE} put -a ${DB_USERNAME_KEY} ${DB_USERNAME}
     credstash -p ${AWS_PROFILE} put -a ${DB_PASSWORD_KEY} ${DB_PASSWORD}
 fi

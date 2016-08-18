@@ -2,4 +2,14 @@ version: 0.0
 os: linux 
 files:
   - source: geodesy-web-services.war
-    destination: /usr/share/tomcat8/webapps/
+    destination: /usr/share/tomcat8/webapps/ROOT.war
+hooks:
+  ApplciationStop:
+    - location: application-stop.sh
+  AfterInstall:
+    - location: after-install.sh
+    - location: cleanout-tables.sh
+  ApplicationStart:
+    - location: application-start.sh
+  ValidateService:
+    - location: validate-service.sh

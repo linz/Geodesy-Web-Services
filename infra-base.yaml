@@ -6,6 +6,24 @@ keypair: 'geodesy'
 autoscaling_units:
   -
     unit_title: WebServices
+    asg_config:
+      userdata: |
+        #!/usr/bin/env bash
+
+        yum -y remove java-1.7.0-openjdk
+        yum -y install java-1.8.0-openjdk
+
+        yum -y install tomcat8
+        yum -y install postgresql94-server
+
+        yum install -y ruby
+        yum install -y wget
+        cd /home/ec2-user
+        aws s3 cp s3://aws-codedeploy-ap-southeast-2/latest/install . --region ap-southeast-2
+        chmod +x ./install
+        ./install auto
+        service codedeploy-agent start
+        service codedeploy-agent status
     dependencies:
      - Db
   -

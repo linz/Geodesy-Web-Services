@@ -33,9 +33,7 @@ aws --profile ${AWS_PROFILE} cloudformation ${COMMAND}-stack --stack-name ${STAC
     ParameterKey=${RDS_MASTER_USERNAME_KEY},ParameterValue=${RDS_MASTER_PASSWORD}
 
 if (( $? == 0 && ${COMMAND} == "create" )); then
-    credstash -p ${AWS_PROFILE} delete ${RDS_MASTER_USERNAME_KEY}
-    credstash -p ${AWS_PROFILE} delete ${RDS_MASTER_PASSWORD_KEY}
-    credstash -p ${AWS_PROFILE} put ${RDS_MASTER_USERNAME_KEY} ${RDS_MASTER_USERNAME}
-    credstash -p ${AWS_PROFILE} put ${RDS_MASTER_PASSWORD_KEY} ${RDS_MASTER_PASSWORD}
+    credstash -p ${AWS_PROFILE} put -a ${RDS_MASTER_USERNAME_KEY} ${RDS_MASTER_USERNAME}
+    credstash -p ${AWS_PROFILE} put -a ${RDS_MASTER_PASSWORD_KEY} ${RDS_MASTER_PASSWORD}
 fi
 

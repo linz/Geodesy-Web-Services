@@ -24,3 +24,4 @@ DB_USERNAME=$(credstash get ${DB_USERNAME_KEY})
 DB_PASSWORD=$(credstash get ${DB_PASSWORD_KEY})
 sed -i 's/${geodesy-db-username}/'"${DB_USERNAME}/" /usr/share/tomcat8/webapps/ROOT/META-INF/context.xml
 sed -i 's/${geodesy-db-password}/'"${DB_PASSWORD}/" /usr/share/tomcat8/webapps/ROOT/META-INF/context.xml
+

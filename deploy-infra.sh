@@ -34,8 +34,8 @@ case ${COMMAND} in
     ;;
 esac
 
-python3 generate_amz_yaml.py -b infra-base.yaml -v ${ENV_FILE} -o infra.yaml
-python3 amazonia/amazonia/amz.py -y infra.yaml -d geodesy_ga_defaults.yaml -t infra.json
+python3 generate-infra-yaml.py -b infra-base.yaml -v ${ENV_FILE} -o infra.yaml
+python3 amazonia/amazonia/amz.py -y infra.yaml -d infra-defaults.yaml -t infra.json
 
 aws --profile ${AWS_PROFILE} cloudformation ${COMMAND}-stack --stack-name ${STACK_NAME} --template-body file://infra.json --parameters \
     ParameterKey=${RDS_MASTER_USERNAME_KEY},ParameterValue=${RDS_MASTER_USERNAME} \

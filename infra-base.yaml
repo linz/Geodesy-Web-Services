@@ -24,6 +24,8 @@ autoscaling_units:
         ./install auto
         service codedeploy-agent start
         service codedeploy-agent status
+
+        pip install credstash
     dependencies:
      - Db
   -

@@ -1,14 +1,6 @@
 #!/usr/bin/env bash
 
-# Obtain Env
-DEPLOYMENT_GROUP_NAME_CUT=$(echo "${DEPLOYMENT_GROUP_NAME}" | cut -c1-3)
-
-if [ "${DEPLOYMENT_GROUP_NAME_CUT,,}" == "dev" ]
-then
-    ENV="$DEPLOYMENT_GROUP_NAME_CUT"
-else
-    ENV=$(echo $DEPLOYMENT_GROUP_NAME | cut -c1-4)
-fi
+. ${BASH_SOURCE%/*}/env.sh
 
 # TODO: Why is the default region not Sydney? How do we pull in the correct region?
 CREDSTASH="/usr/local/bin/credstash -r ap-southeast-2"

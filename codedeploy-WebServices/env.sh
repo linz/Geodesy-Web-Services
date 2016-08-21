@@ -1,0 +1,11 @@
+# Obtain Env
+DEPLOYMENT_GROUP_NAME_CUT=$(echo "${DEPLOYMENT_GROUP_NAME}" | cut -c1-3)
+
+if [ "${DEPLOYMENT_GROUP_NAME_CUT,,}" == "dev" ]
+then
+    ENV=${DEPLOYMENT_GROUP_NAME_CUT}
+else
+    ENV=$(echo $DEPLOYMENT_GROUP_NAME | cut -c1-4)
+fi
+
+unset DEPLOYMENT_GROUP_NAME_CUT

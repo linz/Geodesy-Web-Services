@@ -24,7 +24,7 @@ unzip ROOT.war -d ROOT
 # RDS_ENDPOINT="${ENV^}"geodesyrds.geodesy.ga.gov.au
 # temporarily hard-coded to the dev database
 RDS_ENDPOINT=dd1iyix40zjic7t.cxm7lrsl3bbf.ap-southeast-2.rds.amazonaws.com
-sed -i 's/${geodesy-db-url}/jdbc:postgresql:\/\/'"${RDS_ENDPOINT}\/geodesy/" ROOT/META-INF/context.xml
+sed -i 's/${geodesy-db-url}/jdbc:postgresql:\/\/'"${RDS_ENDPOINT}\/GeodesyDb/" ROOT/META-INF/context.xml
 
 # set database login
 DB_USERNAME_KEY="${ENV^}"GeodesyDbUsername

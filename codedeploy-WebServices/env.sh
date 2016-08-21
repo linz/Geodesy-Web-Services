@@ -8,4 +8,13 @@ else
     ENV=$(echo $DEPLOYMENT_GROUP_NAME | cut -c1-4)
 fi
 
+# TODO: Why is the default region not Sydney? How do we pull in the correct region?
+CREDSTASH="/usr/local/bin/credstash -r ap-southeast-2"
+DB_USERNAME_KEY="${ENV^}"GeodesyDbUsername
+DB_PASSWORD_KEY="${ENV^}"GeodesyDbPassword
+DB_USERNAME=$(${CREDSTASH} get ${DB_USERNAME_KEY})
+DB_PASSWORD=$(${CREDSTASH} get ${DB_PASSWORD_KEY})
+
 unset DEPLOYMENT_GROUP_NAME_CUT
+unset CREDSTASH
+

@@ -83,12 +83,12 @@ key=${app}/${appenv}.${artefact_ext} && echo !! key=${key}
 
 
 ## Code Deploy Push Directory
-aws deploy push --application-name ${appenv} --s3-location s3://${s3_bucket}/${key} --source codedeploy-${unit} --description ${description_create_deployment}
+aws deploy push --application-name ${appenv} --s3-location s3://${s3_bucket}/${key} --source codedeploy-${unit} --description ${description_create_deployment} --profile ${app}
 echo !! Codedeploy push ${appenv} to s3://${s3_bucket}/${key}
 
 
 ## Code Deploy Application from output
-create_deployment="$(aws deploy create-deployment --application-name ${appenv} --deployment-config-name ${deployment_config_name} --deployment-group-name ${deployment_group_name} --description ${description_create_deployment} --s3-location bucket=${s3_bucket},bundleType=${artefact_ext},key=${key})"
+create_deployment="$(aws deploy create-deployment --application-name ${appenv} --deployment-config-name ${deployment_config_name} --deployment-group-name ${deployment_group_name} --description ${description_create_deployment} --s3-location bucket=${s3_bucket},bundleType=${artefact_ext},key=${key} --profile ${app})"
 echo !! create_deployment=${create_deployment}
 
 # TEST
@@ -107,7 +107,7 @@ print id['deploymentId']
 deploy_status="InProgress"
 
 while [ 1 ]; do
-    response=$(aws deploy get-deployment --deployment-id ${deployment_id} 2>&1)
+    response=$(aws deploy get-deployment --deployment-id ${deployment_id} --profile ${app} 2>&1)
     responseOrig="${response}"
     response=$(echo "${response}" | tr '\n' ' ' | tr -s " " | sed -e 's/^ *//' -e 's/ *$//')
 

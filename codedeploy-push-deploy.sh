@@ -13,7 +13,7 @@ do
         shift
         ;;
         -e|--env)
-        env=$2 && echo !! env=${env}
+        env=$2 && echo !! env=${env^}
         shift
         ;;
         -c|--deployment_config_name)

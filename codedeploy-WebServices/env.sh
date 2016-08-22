@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Obtain Env
 DEPLOYMENT_GROUP_NAME_CUT=$(echo "${DEPLOYMENT_GROUP_NAME}" | cut -c1-3)
 
@@ -13,8 +15,12 @@ fi
 # temporarily hard-coded to the dev database
 RDS_ENDPOINT=dd1iyix40zjic7t.cxm7lrsl3bbf.ap-southeast-2.rds.amazonaws.com
 
-# TODO: Why is the default region not Sydney? How do we pull in the correct region?
-CREDSTASH="/usr/local/bin/credstash -r ap-southeast-2"
+# Get RegionID
+EC2_AVAIL_ZONE=`curl -s http://169.254.169.254/latest/meta-data/placement/availability-zone`
+AWS_DEFAULT_REGION="`echo \"$EC2_AVAIL_ZONE\" | sed -e 's:\([0-9][0-9]*\)[a-z]*\$:\\1:'`"
+
+# Credstash
+CREDSTASH="/usr/local/bin/credstash -r ${AWS_DEFAULT_REGION}"
 DB_USERNAME_KEY="${ENV^}"GeodesyDbUsername
 DB_PASSWORD_KEY="${ENV^}"GeodesyDbPassword
 DB_USERNAME=$(${CREDSTASH} get ${DB_USERNAME_KEY})

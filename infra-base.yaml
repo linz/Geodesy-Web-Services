@@ -7,6 +7,7 @@ autoscaling_units:
   -
     unit_title: WebServices
     asg_config:
+      health_check_grace_period: '480'
       userdata: |
         #!/usr/bin/env bash
 
@@ -26,6 +27,15 @@ autoscaling_units:
         service codedeploy-agent status
 
         pip install credstash
+    elb_config:
+      unit_hosted_zone_name: 'geodesy.lan'
+      protocols:
+        - 'HTTP'
+      instanceports:
+        - '8080'
+      loadbalancerports:
+        - '8080'
+      path2ping: '/'
     dependencies:
      - Db
   -

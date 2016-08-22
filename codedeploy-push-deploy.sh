@@ -1,10 +1,7 @@
-#!/usr/bin/env bash
-
+#!/bin/sh
 #Small script designed to:
 # Push an local directory of the application repository to s3 as an tar.gz
 # Deploy a application artefact
-# sh ./$infra/configuration_code/scripts/app_deploy/codedeploy_push2s3_deploy.sh \
-# -a $app -e $env -c $deployment_config_name -b $s3_bucket
 
 ## Assign arguments to variables
 while [ $# -ge 1 ]
@@ -27,8 +24,8 @@ do
         s3_bucket=$2 && echo !! s3_bucket=${s3_bucket}
         shift
         ;;
-        -t|--bundle_type)
-        bundle_type=$2 && echo !! bundle_type=${bundle_type}
+        -u|--unit-title|--unit)
+        unit=$2 && echo !! unit=${unit}
         shift
         ;;
         -x|--artefact_ext)
@@ -37,7 +34,7 @@ do
         ;;
         *)
         echo "Unknown option ${1}"
-	echo "Usage: sh ./$infra/configuration_code/scripts/app_deploy/codedeploy_push2s3_deploy.sh -a \$app -e \$env -c \$deployment_config_name -b \$s3_bucket"
+	echo "Usage: sh codedeploy_deploy.sh -a \$app -e \$env -c \$deployment_config_name -b \$s3_bucket -u \${unit} -x \${artifact_ext}"
         exit 1
 	;;
     esac
@@ -47,51 +44,50 @@ done
 ## Check variables
 if [ -z ${app} ] ; then
     echo "Error: Application name has not been set"
-    echo "Usage: sh ./$infra/configuration_code/scripts/app_deploy/codedeploy_push2s3_deploy.sh -a \$app -e \$env -c \$deployment_config_name -b \$s3_bucket"
+	echo "Usage: sh codedeploy_deploy.sh -a \$app -e \$env -c \$deployment_config_name -b \$s3_bucket -u \${unit} -x \${artifact_ext}"
 fi
 
 if [ -z ${env} ] ; then
     echo "Error: Environment has not been set"
-    echo "Usage: sh ./$infra/configuration_code/scripts/app_deploy/codedeploy_push2s3_deploy.sh -a \$app -e \$env -c \$deployment_config_name -b \$s3_bucket"
+	echo "Usage: sh codedeploy_deploy.sh -a \$app -e \$env -c \$deployment_config_name -b \$s3_bucket -u \${unit} -x \${artifact_ext}"
 fi
 
 if [ -z ${deployment_config_name} ] ; then
     echo "Error: Deployment Config has not been set"
-    echo "Usage: sh ./$infra/configuration_code/scripts/app_deploy/codedeploy_push2s3_deploy.sh -a \$app -e \$env -c \$deployment_config_name -b \$s3_bucket"
+	echo "Usage: sh codedeploy_deploy.sh -a \$app -e \$env -c \$deployment_config_name -b \$s3_bucket -u \${unit} -x \${artifact_ext}"
 fi
 
 if [ -z ${s3_bucket} ] ; then
     echo "Error: S3 bucket name has not been set"
-    echo "Usage: sh ./$infra/configuration_code/scripts/app_deploy/codedeploy_push2s3_deploy.sh -a \$app -e \$env -c \$deployment_config_name -b \$s3_bucket"
+	echo "Usage: sh codedeploy_deploy.sh -a \$app -e \$env -c \$deployment_config_name -b \$s3_bucket -u \${unit} -x \${artifact_ext}"
 fi
 
-if [ -z ${bundle_type} ] ; then
-    echo "Error: Code Deploy bundle type has not been set"
-    echo "Usage: sh ./$infra/configuration_code/scripts/app_deploy/codedeploy_push2s3_deploy.sh -a \$app -e \$env -c \$deployment_config_name -b \$s3_bucket"
+if [ -z ${unit} ] ; then
+    echo "Error: Unit name type has not been set"
+	echo "Usage: sh codedeploy_deploy.sh -a \$app -e \$env -c \$deployment_config_name -b \$s3_bucket -u \${unit} -x \${artifact_ext}"
 fi
 
 if [ -z ${artefact_ext} ] ; then
     echo "Error: Artefact extension for key in deployment not found e.g. tar.gz"
-    echo "Usage: sh ./$infra/configuration_code/scripts/app_deploy/codedeploy_push2s3_deploy.sh -a \$app -e \$env -c \$deployment_config_name -b \$s3_bucket"
+	echo "Usage: sh codedeploy_deploy.sh -a \$app -e \$env -c \$deployment_config_name -b \$s3_bucket -u \${unit} -x \${artifact_ext}"
 fi
-
-
-# Push Application
-push \
---application-name ${env^}Geodesy \
---s3-location s3://${s3_bucket}/GeodesyCD/
-
 
 ## Declare variables
 date=$(date +%d_%m_%y) && echo !! date=${date}
 time=$(date +%H_%M_%S) && echo !! time=${time}
-deployment_group_name=${env} && echo !! deployment_group_name=${deployment_group_name}
+deployment_group_name=${env}${app}-${env}${app}${unit}AsgCdg && echo !! deployment_group_name=${deployment_group_name}
+appenv=${env}${app}-${env}${app}${unit}AsgCda && echo !! appenv=${appenv}
 description_create_deployment="${deployment_group_name}-${date}-${time}" && echo !! description_create_deployment=${description_create_deployment}
-key=${app}/${app}.${artefact_ext} && echo !! key=${key}
+key=${app}/${appenv}.${artefact_ext} && echo !! key=${key}
+
+
+## Code Deploy Push Directory
+aws deploy push --application-name ${appenv} --s3-location s3://${s3_bucket}/${key} --source codedeploy-${unit} --description ${description_create_deployment}
+echo !! Codedeploy push ${appenv} to s3://${s3_bucket}/${key}
+
 
 ## Code Deploy Application from output
-
-create_deployment="$(aws deploy create-deployment --application-name ${app} --deployment-config-name ${deployment_config_name} --deployment-group-name ${deployment_group_name} --description $description_create_deployment --s3-location bucket=${s3_bucket},bundleType=${bundle_type},key=${key})"
+create_deployment="$(aws deploy create-deployment --application-name ${appenv} --deployment-config-name ${deployment_config_name} --deployment-group-name ${deployment_group_name} --description ${description_create_deployment} --s3-location bucket=${s3_bucket},bundleType=${artefact_ext},key=${key})"
 echo !! create_deployment=${create_deployment}
 
 # TEST
@@ -137,4 +133,3 @@ while [ 1 ]; do
     # Sleep for 5 seconds, if stack creation in progress
     sleep 5
 done
-

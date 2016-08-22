@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 #Small script designed to:
 # Push an local directory of the application repository to s3 as an tar.gz
 # Deploy a application artefact
@@ -13,7 +13,7 @@ do
         shift
         ;;
         -e|--env)
-        env=$2 && echo !! env=${env^}
+        env="${2^}" && echo !! env=$env
         shift
         ;;
         -c|--deployment_config_name)
@@ -40,6 +40,7 @@ do
     esac
     shift
 done
+
 
 ## Check variables
 if [ -z ${app} ] ; then

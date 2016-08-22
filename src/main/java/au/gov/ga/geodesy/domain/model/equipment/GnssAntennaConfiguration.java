@@ -29,7 +29,7 @@ public class GnssAntennaConfiguration extends EquipmentConfiguration {
     private String radomeType;
 
     @Column(name = "RADOME_SERIAL_NUMBER")
-    private String radomSerialNumber;
+    private String radomeSerialNumber;
 
     @Column(name = "ANTENNA_CABLE_TYPE")
     private String antennaCableType;
@@ -97,12 +97,12 @@ public class GnssAntennaConfiguration extends EquipmentConfiguration {
         this.radomeType = radomeType;
     }
 
-    public String getRadomSerialNumber() {
-        return radomSerialNumber;
+    public String getRadomeSerialNumber() {
+        return radomeSerialNumber;
     }
 
-    public void setRadomSerialNumber(String radomSerialNumber) {
-        this.radomSerialNumber = radomSerialNumber;
+    public void setRadomeSerialNumber(String radomeSerialNumber) {
+        this.radomeSerialNumber = radomeSerialNumber;
     }
 
     public String getAntennaCableType() {

@@ -38,7 +38,7 @@ autoscaling_units:
       loadbalancer_port:
         - '443'
       ssl_certificate_id: 'arn:aws:acm:ap-southeast-2:094928090547:certificate/07496dcd-6975-4dd4-8986-533488587f0e'
-      elb_health_check: 'HTTP:80/'
+      elb_health_check: 'HTTP:8080/'
     dependencies:
      - Db
   -

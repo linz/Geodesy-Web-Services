@@ -59,9 +59,9 @@ elb_config:
     - 'HTTP'
   loadbalancer_protocol:
     - 'HTTP'
-  instanceports:
+  instance_ports:
     - '80'
-  loadbalancerports:
+  loadbalancer_ports:
     - '80'
   elb_health_check: 'HTTP:80/index.html'
   elb_log_bucket: 'geodesy-elb-bucket'

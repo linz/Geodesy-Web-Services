@@ -6,7 +6,6 @@
 
 . ${BASH_SOURCE%/*}/env.sh
 
-DB_NAME=GeodesyDb
 DB_SCHEMA=${DB_USERNAME}
 
 PSQL_AS_MASTER_USER="PGPASSWORD=${RDS_MASTER_PASSWORD} psql --host=${RDS_ENDPOINT} --port=5432 --username ${RDS_MASTER_USERNAME}  --dbname=${DB_NAME}"

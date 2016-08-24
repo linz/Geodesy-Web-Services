@@ -7,6 +7,7 @@ autoscaling_units:
   -
     unit_title: WebServices
     asg_config:
+      instance_type: 't2.small'
       health_check_grace_period: '480'
       userdata: |
         #!/usr/bin/env bash

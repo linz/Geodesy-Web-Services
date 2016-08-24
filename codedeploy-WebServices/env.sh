@@ -20,6 +20,12 @@ RDS_INSTANCE_ID=${ENV,,}geodesy${ENV,,}geodesydb
 RDS_ENDPOINT=$(${AWS} rds describe-db-instances --db-instance-identifier ${RDS_INSTANCE_ID} | grep Address | awk -F'"' {'print $4'})
 
 CREDSTASH="/usr/local/bin/credstash -r ${AWS_DEFAULT_REGION}"
+
+RDS_MASTER_USERNAME_KEY=${ENV^}GeodesyDbRdsUsername
+RDS_MASTER_PASSWORD_KEY=${ENV^}GeodesyDbRdsPassword
+RDS_MASTER_USERNAME=$(${CREDSTASH} get ${RDS_MASTER_USERNAME_KEY})
+RDS_MASTER_PASSWORD=$(${CREDSTASH} get ${RDS_MASTER_PASSWORD_KEY})
+
 DB_USERNAME_KEY="${ENV^}"GeodesyDbUsername
 DB_PASSWORD_KEY="${ENV^}"GeodesyDbPassword
 DB_USERNAME=$(${CREDSTASH} get ${DB_USERNAME_KEY})

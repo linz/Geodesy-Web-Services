@@ -8,6 +8,7 @@ hooks:
     - location: application-stop.sh
   AfterInstall:
     - location: after-install.sh
+    - location: create-database.sh
     - location: cleanout-tables.sh
   ApplicationStart:
     - location: application-start.sh

@@ -10,17 +10,23 @@ else
     ENV=$(echo $DEPLOYMENT_GROUP_NAME | cut -c1-4)
 fi
 
-# set database endpoint
-# RDS_ENDPOINT="${ENV^}"geodesyrds.geodesy.ga.gov.au
-# temporarily hard-coded to the dev database
-RDS_ENDPOINT=dd1iyix40zjic7t.cxm7lrsl3bbf.ap-southeast-2.rds.amazonaws.com
-
 # Get RegionID
 EC2_AVAIL_ZONE=`curl -s http://169.254.169.254/latest/meta-data/placement/availability-zone`
 AWS_DEFAULT_REGION="`echo \"$EC2_AVAIL_ZONE\" | sed -e 's:\([0-9][0-9]*\)[a-z]*\$:\\1:'`"
 
-# Credstash
+AWS="aws --region ${AWS_DEFAULT_REGION}"
+
+DB_NAME=GeodesyDb
+RDS_INSTANCE_ID=${ENV,,}geodesy${ENV,,}${DB_NAME,,}
+RDS_ENDPOINT=$(${AWS} rds describe-db-instances --db-instance-identifier ${RDS_INSTANCE_ID} | grep Address | awk -F'"' {'print $4'})
+
 CREDSTASH="/usr/local/bin/credstash -r ${AWS_DEFAULT_REGION}"
+
+RDS_MASTER_USERNAME_KEY=${ENV^}GeodesyDbRdsUsername
+RDS_MASTER_PASSWORD_KEY=${ENV^}GeodesyDbRdsPassword
+RDS_MASTER_USERNAME=$(${CREDSTASH} get ${RDS_MASTER_USERNAME_KEY})
+RDS_MASTER_PASSWORD=$(${CREDSTASH} get ${RDS_MASTER_PASSWORD_KEY})
+
 DB_USERNAME_KEY="${ENV^}"GeodesyDbUsername
 DB_PASSWORD_KEY="${ENV^}"GeodesyDbPassword
 DB_USERNAME=$(${CREDSTASH} get ${DB_USERNAME_KEY})
@@ -28,4 +34,3 @@ DB_PASSWORD=$(${CREDSTASH} get ${DB_PASSWORD_KEY})
 
 unset DEPLOYMENT_GROUP_NAME_CUT
 unset CREDSTASH
-

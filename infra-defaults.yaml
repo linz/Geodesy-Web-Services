@@ -55,7 +55,9 @@ database_config:
 # ELB default values
 elb_config:
   unit_hosted_zone_name:
-  protocols:
+  instance_protocol:
+    - 'HTTP'
+  loadbalancer_protocol:
     - 'HTTP'
   instanceports:
     - '80'

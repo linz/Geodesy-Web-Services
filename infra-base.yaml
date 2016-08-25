@@ -28,6 +28,8 @@ autoscaling_units:
         service codedeploy-agent status
 
         pip install credstash
+
+        service tomcat8 start
     elb_config:
       instance_protocol:
         - 'HTTP'

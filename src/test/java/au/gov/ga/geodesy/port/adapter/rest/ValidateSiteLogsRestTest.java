@@ -25,7 +25,7 @@ public class ValidateSiteLogsRestTest extends RestTest {
     @Rollback(false)
     public void validateMOBS() throws Exception {
         String siteLogText = readFile(TestResources.customGeodesyMLSiteLogReader("MOBS"));
-        mvc.perform(post("/siteLog/validate").contentType(MediaType.APPLICATION_XML).content(siteLogText))
+        mvc.perform(post("/siteLogs/validate").contentType(MediaType.APPLICATION_XML).content(siteLogText))
             .andExpect(status().isOk());
     }
 
@@ -33,7 +33,7 @@ public class ValidateSiteLogsRestTest extends RestTest {
     @Rollback(false)
     public void invalidateMOBS() throws Exception {
         String siteLogText = readFile(TestResources.customGeodesyMLSiteLogReader("MOBS-invalid-schema"));
-        mvc.perform(post("/siteLog/validate").contentType(MediaType.APPLICATION_XML).content(siteLogText))
+        mvc.perform(post("/siteLogs/validate").contentType(MediaType.APPLICATION_XML).content(siteLogText))
             .andExpect(status().isBadRequest())
             .andDo(ResultHandlers.print);
     }

@@ -28,7 +28,7 @@ public class SopacSiteLogsTest extends BaseSystemTest {
         given()
             .body(FileUtils.readFileToString(siteLog, "ISO-8859-1"))
             .when()
-            .post(getConfig().getWebServicesUrl() + "/siteLog/sopac/upload")
+            .post(getConfig().getWebServicesUrl() + "/siteLogs/sopac/upload")
             .then()
             .statusCode(HttpStatus.CREATED.value());
     }
@@ -68,7 +68,7 @@ public class SopacSiteLogsTest extends BaseSystemTest {
         given()
             .body(FileUtils.readFileToString(siteLog, "ISO-8859-1"))
             .when()
-            .post(getConfig().getWebServicesUrl() + "/siteLog/sopac/upload")
+            .post(getConfig().getWebServicesUrl() + "/siteLogs/sopac/upload")
             .then()
             .statusCode(HttpStatus.CREATED.value());
     }
@@ -77,7 +77,7 @@ public class SopacSiteLogsTest extends BaseSystemTest {
     public void validateInvalidSopacFile() throws Exception {
         given()
             .body("!!!INVALID XML BODY!!!")
-            .when().post(getConfig().getWebServicesUrl() + "/siteLog/sopac/upload")
+            .when().post(getConfig().getWebServicesUrl() + "/siteLogs/sopac/upload")
             .then().statusCode(HttpStatus.BAD_REQUEST.value());
     }
 

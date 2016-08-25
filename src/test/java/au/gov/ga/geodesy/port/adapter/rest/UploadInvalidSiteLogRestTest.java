@@ -10,7 +10,7 @@ public class UploadInvalidSiteLogRestTest extends RestTest {
 
     @Test
     public void uploadInvalidSopacSiteLog() throws Exception {
-        mvc.perform(post("/siteLog/sopac/upload").contentType(MediaType.APPLICATION_XML).content("Invalid site log content"))
+        mvc.perform(post("/siteLogs/sopac/upload").contentType(MediaType.APPLICATION_XML).content("Invalid site log content"))
             .andExpect(status().isBadRequest());
     }
 }

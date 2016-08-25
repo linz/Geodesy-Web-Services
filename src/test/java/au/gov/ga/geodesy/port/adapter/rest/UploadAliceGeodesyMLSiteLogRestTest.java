@@ -27,7 +27,7 @@ public class UploadAliceGeodesyMLSiteLogRestTest extends RestTest {
         given()
             .body(geodesyML).
         when()
-            .post("/siteLog/upload").
+            .post("/siteLogs/upload").
         then()
             .statusCode(201);
     }

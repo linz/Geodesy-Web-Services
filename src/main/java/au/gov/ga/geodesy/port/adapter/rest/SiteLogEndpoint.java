@@ -37,7 +37,7 @@ import au.gov.ga.xmlschemer.Violation;
 
 @Controller
 @EnableEntityLinks
-@RequestMapping("/siteLog")
+@RequestMapping("/siteLogs")
 public class SiteLogEndpoint {
 
     private static final Logger log = LoggerFactory.getLogger(SiteLogEndpoint.class);

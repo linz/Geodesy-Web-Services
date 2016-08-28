@@ -50,7 +50,7 @@ public class UploadZIMJGeodesyMLSiteLogRestTest extends RestTest {
 
     private void uploadCheckFile(String file) throws Exception {
         String content = IOUtils.toString(new FileReader(file));
-        mvc.perform(post("/siteLog/upload").contentType(MediaType.APPLICATION_XML).content(content))
+        mvc.perform(post("/siteLogs/upload").contentType(MediaType.APPLICATION_XML).content(content))
                 .andExpect(status().isCreated());
     }
 

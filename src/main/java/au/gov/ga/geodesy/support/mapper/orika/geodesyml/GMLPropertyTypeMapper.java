@@ -16,7 +16,16 @@ public class GMLPropertyTypeMapper<P extends GMLPropertyType, T extends Abstract
     }
 
     public P from(T t) {
-        throw new GeodesyRuntimeException("TODO");
+        try {
+            String elementTypeName = t.getClass().getName();
+            String propertyTypeName = elementTypeName.substring(0, elementTypeName.length() - 4) + "PropertyType";
+            @SuppressWarnings("unchecked")
+            P p = (P) Class.forName(propertyTypeName).newInstance();
+            p.setTargetElement(t);
+            return p;
+        } catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
+            throw new GeodesyRuntimeException("Failed to wrap " + t.getClass().getSimpleName() + " in GML property type", e);
+        }
     }
 }
 

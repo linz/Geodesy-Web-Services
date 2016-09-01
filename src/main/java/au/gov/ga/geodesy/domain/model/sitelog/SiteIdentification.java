@@ -22,6 +22,10 @@ public class SiteIdentification {
     @Size(min = 4, max = 4)
     @Column(name = "FOUR_CHARACTER_ID", length = 4)
     protected String fourCharacterId;
+    
+    @Size(min = 9, max = 9)
+    @Column(name = "NINE_CHARACTER_ID", length = 9)
+    protected String nineCharacterId;
 
     @Size(max = 256)
     @Column(name = "MONUMENT_INSCRIPTION", length = 256)
@@ -114,7 +118,21 @@ public class SiteIdentification {
     public void setFourCharacterId(String value) {
         this.fourCharacterId = value != null ? value.toUpperCase() : null;
     }
+    
+    /**
+     * Return nine character id.
+     */
+    public String getNineCharacterId() {
+        return nineCharacterId;
+    }
 
+    /**
+     * Set nine character id. Nine character IDs are converted and stored in upper case.
+     */
+    public void setNineCharacterId(String value) {
+        this.nineCharacterId = value != null ? value.toUpperCase() : null;
+    }   
+    
     /**
      * Return monument inscription.
      */

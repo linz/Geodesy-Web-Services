@@ -8,7 +8,6 @@
 #   Multi line strings: can be used by establishing a literal block '|'
 
 # Stack values
-stack_title: 'myStack'
 keypair: 'INSERT_YOUR_KEYPAIR_HERE'
 code_deploy_service_role:
 availability_zones:
@@ -69,17 +68,28 @@ elb_config:
   ssl_certificate_id:
 
 # Block device configs
-block_devices_config: &block_devices_config
-  -
-    device_name: '/dev/xvda'
-    ebs_volume_size: '8'
-    ebs_volume_type: 'standard'
-    ebs_encrypted: False
-    ebs_snapshot_id: ''
-    virtual_name: False
+block_devices_config:
+  device_name: '/dev/xvda'
+  ebs_volume_size: '8'
+  ebs_volume_type: 'standard'
+  ebs_encrypted: False
+  ebs_snapshot_id:
+  virtual_name: False
+
+# Simple scaling policy:
+simple_scaling_policy_config:
+  name: 'light load'
+  description: 'When under light CPU load for 6 consecutive periods of five minutes, remove one instance, wait 120 seconds'
+  metric_name: 'CPUUtilization'
+  comparison_operator: 'LessThanOrEqualToThreshold'
+  threshold: '15'
+  evaluation_periods: 6
+  period: 300
+  scaling_adjustment: -1
+  cooldown: 120
 
 # Asg default values
-asg_config:
+asg_config: &asg_config
   image_id: 'ami-dc361ebf'
   instance_type: 't2.micro'
   iam_instance_profile_arn:
@@ -87,7 +97,8 @@ asg_config:
   maxsize: '1'
   health_check_grace_period: '300'
   health_check_type: 'ELB'
-  block_devices_config: *block_devices_config
+  block_devices_config:
+  simple_scaling_policy_config:
   sns_topic_arn:
   sns_notification_types:
     - 'autoscaling:EC2_INSTANCE_LAUNCH'
@@ -113,4 +124,62 @@ asg_config:
     runcmd:
      - service httpd start
 
+blue_asg_config: *asg_config
+green_asg_config: *asg_config
 
+cf_distribution_units:
+
+cf_distribution_config:
+  aliases:
+  comment:
+  default_root_object: 'index.html'
+  enabled: True
+  price_class: 'PriceClass_All'
+  target_origin_id:
+  allowed_methods:
+   - 'GET'
+   - 'HEAD'
+  cached_methods:
+   - 'GET'
+   - 'HEAD'
+  trusted_signers:
+   - 'self'
+  viewer_protocol_policy: 'https-only'
+  min_ttl: 0
+  default_ttl: 0
+  max_ttl: 0
+  error_page_path: '404.html'
+  acm_cert_arn: ''
+  minimum_protocol_version: 'TLSv1'
+  ssl_support_method: 'sni-only'
+
+cf_origins_config:
+   domain_name:
+   origin_id:
+   origin_policy:
+     is_s3:
+     origin_access_identity:
+     origin_protocol_policy:
+     http_port: 80
+     https_port: 443
+     origin_ssl_protocols:
+      - 'TLSv1'
+      - 'TLSv1.1'
+      - 'TLSv1.2'
+
+cf_cache_behavior_config:
+   allowed_methods:
+    - 'GET'
+    - 'HEAD'
+   cached_methods:
+    - 'GET'
+    - 'HEAD'
+   target_origin_id:
+   forward_cookies: 'all'
+   viewer_protocol_policy: 'https-only'
+   min_ttl: 0
+   default_ttl: 0
+   max_ttl: 0
+   trusted_signers:
+    - 'self'
+   path_pattern:

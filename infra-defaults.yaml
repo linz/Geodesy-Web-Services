@@ -8,7 +8,6 @@
 #   Multi line strings: can be used by establishing a literal block '|'
 
 # Stack values
-stack_title: 'testStack'
 keypair: 'geodesy'
 code_deploy_service_role: 'arn:aws:iam::094928090547:role/CodeDeploy'
 availability_zones:
@@ -69,14 +68,13 @@ elb_config:
   ssl_certificate_id:
 
 # Block device configs
-block_devices_config: &block_devices_config
-  -
-    device_name: '/dev/xvda'
-    ebs_volume_size: '8'
-    ebs_volume_type: 'gp2'
-    ebs_encrypted: False
-    ebs_snapshot_id: ''
-    virtual_name: False
+block_devices_config:
+  device_name: '/dev/xvda'
+  ebs_volume_size: '8'
+  ebs_volume_type: 'standard'
+  ebs_encrypted: False
+  ebs_snapshot_id:
+  virtual_name: False
 
 # Asg default values
 asg_config:
@@ -87,7 +85,7 @@ asg_config:
   maxsize: '1'
   health_check_grace_period: '300'
   health_check_type: 'ELB'
-  block_devices_config: *block_devices_config
+  block_devices_config:
   sns_topic_arn: 'arn:aws:sns:ap-southeast-2:094928090547:egeodesy-domain-events'
   sns_notification_types:
     - 'autoscaling:EC2_INSTANCE_LAUNCH'

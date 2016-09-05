@@ -1,0 +1,112 @@
+#
+# GA's default values to be used for YAML ingestion and overwritten by user values
+#
+
+## YAML TIPS:
+#   Lists: are denoted by indented hypens
+#   Strings: do not need to be enclosed in quotes or double quotes
+#   Multi line strings: can be used by establishing a literal block '|'
+
+# Stack values
+keypair: 'geodesy'
+code_deploy_service_role: 'arn:aws:iam::094928090547:role/CodeDeploy'
+availability_zones:
+  - 'ap-southeast-2a'
+  - 'ap-southeast-2b'
+  - 'ap-southeast-2c'
+vpc_cidr: '10.0.0.0/16'
+public_cidr:
+  name: 'PublicIp'
+  cidr: '0.0.0.0/0'
+jump_image_id: 'ami-dc361ebf'
+jump_instance_type: 't2.nano'
+nat_image_id: 'ami-53371f30'
+nat_instance_type: 't2.nano'
+home_cidrs:
+  - name: 'GA'
+    cidr: '192.104.44.129/32'
+stack_hosted_zone_name: 'geodesy.ga.gov.au.'
+owner_emails:
+nat_alerting: false
+iam_instance_profile_arn: 'arn:aws:iam::094928090547:instance-profile/GeodesyWebServicesD-WebServerRole'
+zd_autoscaling_units:
+autoscaling_units:
+database_units:
+
+# Common unit default values
+unit_title: 'app1'
+dependencies:
+
+# Database unit default values
+database_config:
+  db_instance_type: 'db.t2.small'
+  db_engine: 'postgres'
+  db_port: '5432'
+  db_name: 'GeodesyDb'
+  db_hdd_size: 5
+  db_snapshot_id:
+  db_backup_window:
+  db_backup_retention:
+  db_maintenance_window:
+  db_storage_type:
+
+# Autoscaling unit default values
+# ELB default values
+elb_config:
+  unit_hosted_zone_name:
+  instance_protocol:
+    - 'HTTP'
+  loadbalancer_protocol:
+    - 'HTTP'
+  instance_port:
+    - '80'
+  loadbalancer_port:
+    - '80'
+  elb_health_check: 'HTTP:80/index.html'
+  elb_log_bucket: 'geodesy-elb-bucket'
+  public_unit: true
+  ssl_certificate_id:
+
+# Block device configs
+block_devices_config:
+  device_name: '/dev/xvda'
+  ebs_volume_size: '8'
+  ebs_volume_type: 'standard'
+  ebs_encrypted: False
+  ebs_snapshot_id:
+  virtual_name: False
+
+# Asg default values
+asg_config:
+  image_id: 'ami-dc361ebf'
+  instance_type: 't2.nano'
+  iam_instance_profile_arn: 'arn:aws:iam::094928090547:instance-profile/GeodesyWebServicesD-WebServerRole'
+  minsize: '1'
+  maxsize: '1'
+  health_check_grace_period: '300'
+  health_check_type: 'ELB'
+  block_devices_config:
+  sns_topic_arn: 'arn:aws:sns:ap-southeast-2:094928090547:egeodesy-domain-events'
+  sns_notification_types:
+    - 'autoscaling:EC2_INSTANCE_LAUNCH'
+    - 'autoscaling:EC2_INSTANCE_LAUNCH_ERROR'
+    - 'autoscaling:EC2_INSTANCE_TERMINATE'
+    - 'autoscaling:EC2_INSTANCE_TERMINATE_ERROR'
+  userdata: |
+    #cloud-config
+    repo_update: true
+    repo_upgrade: all
+    packages:
+     - httpd
+    write_files:
+     - content: |
+        <html>
+        <body>
+        <h1>Amazonia created this Geodesy stack!</h1>
+        </body>
+        </html>
+       path: /var/www/html/index.html
+       permissions: '0644'
+       owner: root:root
+    runcmd:
+     - service httpd start

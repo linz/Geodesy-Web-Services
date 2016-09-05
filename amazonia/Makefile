@@ -1,34 +1,23 @@
+#
+# This makefile installs the amazonia package and its dependencies
+#
+# To install Amazonia run "make install"
+# See the readme.md for more information.
+# Have fun!
+
+
 .PHONEY:
 build:
-	python setup.py build
-
-singleAZ.json: amazonia/__init__.py amazonia/cftemplates.py
-	python ./scripts/singleAZ > $@
-
-dualAZ.json: amazonia/__init__.py amazonia/cftemplates.py
-	python ./scripts/dualAZ_tests > $@
-
-cftemplate_tests.json: amazonia/__init__.py amazonia/cftemplates.py
-	source ./scripts/cftemplate_tests > $@
-
-default_vpc.json: amazonia/__init__.py amazonia/cftemplates.py
-	source ./scripts/viz > $@
-
-%.svg: %.json
-	cat $< | cfviz | dot -Tsvg -o$@
-
-.PHONEY:
-viz: default_vpc.svg
-	feh --magick-timeout 1 $< &
+	python3 setup.py build
 
 .PHONEY:
 install:
-	pip install -e . --user
+	pip3 install -e . --user --upgrade
 
 .PHONEY:
 uninstall:
-	yes | pip uninstall amazonia
+	yes | pip3 uninstall amazonia
 
 .PHONEY:
 clean:
-	rm -rf *.dot *.svg *.json build dist *.egg-info
+	rm -rf *.template *.json build dist *.egg-info

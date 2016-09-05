@@ -1,0 +1,51 @@
+#
+# Stack User Yaml for Geodesy
+#
+keypair: 'geodesy'
+autoscaling_units:
+  -
+    unit_title: WebServices
+    asg_config:
+      instance_type: 't2.small'
+      health_check_grace_period: '480'
+      userdata: |
+        #!/usr/bin/env bash
+
+        yum -y remove java-1.7.0-openjdk
+        yum -y install java-1.8.0-openjdk
+
+        yum -y install tomcat8
+        yum -y install postgresql94-server
+
+        yum install -y ruby
+        yum install -y wget
+        cd /home/ec2-user
+        aws s3 cp s3://aws-codedeploy-ap-southeast-2/latest/install . --region ap-southeast-2
+        chmod +x ./install
+        ./install auto
+        service codedeploy-agent start
+        service codedeploy-agent status
+
+        pip install credstash
+
+        service tomcat8 start
+    elb_config:
+      instance_protocol:
+        - 'HTTP'
+      instance_port:
+        - '8080'
+      loadbalancer_protocol:
+        - 'HTTPS'
+      loadbalancer_port:
+        - '443'
+      ssl_certificate_id: 'arn:aws:acm:ap-southeast-2:094928090547:certificate/07496dcd-6975-4dd4-8986-533488587f0e'
+      elb_health_check: 'HTTP:8080/'
+    dependencies:
+     - Db
+  -
+    unit_title: GeoServer
+    dependencies:
+     - Db
+database_units:
+  -
+    unit_title: Db

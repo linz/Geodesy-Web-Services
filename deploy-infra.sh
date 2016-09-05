@@ -7,8 +7,11 @@ AWS_PROFILE=geodesy
 ENV_FILE=infra-${ENV}.yaml
 STACK_NAME="${ENV^}"Geodesy
 
-RDS_MASTER_USERNAME_KEY=${STACK_NAME}DbRdsUsername
-RDS_MASTER_PASSWORD_KEY=${STACK_NAME}DbRdsPassword
+RDS_MASTER_USERNAME_PARAM_NAME=DbRdsMasterUsername
+RDS_MASTER_PASSWORD_PARAM_NAME=DbRdsMasterPassword
+
+RDS_MASTER_USERNAME_KEY=${STACK_NAME}${RDS_MASTER_USERNAME_PARAM_NAME}
+RDS_MASTER_PASSWORD_KEY=${STACK_NAME}${RDS_MASTER_PASSWORD_PARAM_NAME}
 
 DB_USERNAME_KEY=${STACK_NAME}DbUsername
 DB_PASSWORD_KEY=${STACK_NAME}DbPassword
@@ -38,8 +41,8 @@ python3 generate-infra-yaml.py -b infra-base.yaml -v ${ENV_FILE} -o infra.yaml
 python3 amazonia/amazonia/amz.py -y infra.yaml -d infra-defaults.yaml -t infra.json
 
 aws --profile ${AWS_PROFILE} cloudformation ${COMMAND}-stack --stack-name ${STACK_NAME} --template-body file://infra.json --parameters \
-    ParameterKey=${RDS_MASTER_USERNAME_KEY},ParameterValue=${RDS_MASTER_USERNAME} \
-    ParameterKey=${RDS_MASTER_PASSWORD_KEY},ParameterValue=${RDS_MASTER_PASSWORD}
+    ParameterKey=${RDS_MASTER_USERNAME_PARAM_NAME},ParameterValue=${RDS_MASTER_USERNAME} \
+    ParameterKey=${RDS_MASTER_PASSWORD_PARAM_NAME},ParameterValue=${RDS_MASTER_PASSWORD}
 
 if [[ $? == 0 && ${COMMAND} == "create" ]]; then
     credstash -p ${AWS_PROFILE} put -a ${RDS_MASTER_USERNAME_KEY} ${RDS_MASTER_USERNAME}

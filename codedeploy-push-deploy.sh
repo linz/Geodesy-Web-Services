@@ -76,19 +76,19 @@ fi
 ## Declare variables
 date=$(date +%d_%m_%y) && echo !! date=${date}
 time=$(date +%H_%M_%S) && echo !! time=${time}
-deployment_group_name=${env}${app}-${env}${app}${unit}AsgCdg && echo !! deployment_group_name=${deployment_group_name}
-appenv=${env}${app}-${env}${app}${unit}AsgCda && echo !! appenv=${appenv}
+deployment_group_name=${env}${app}-${unit}AsgCdg && echo !! deployment_group_name=${deployment_group_name}
+appenv=${env}${app}-${unit}AsgCda && echo !! appenv=${appenv}
 description_create_deployment="${deployment_group_name}-${date}-${time}" && echo !! description_create_deployment=${description_create_deployment}
 key=${app}/${appenv}.${artefact_ext} && echo !! key=${key}
-
+profile="${app,,}"
 
 ## Code Deploy Push Directory
-aws deploy push --application-name ${appenv} --s3-location s3://${s3_bucket}/${key} --source codedeploy-${unit} --description ${description_create_deployment} --profile ${app}
+aws deploy push --application-name ${appenv} --s3-location s3://${s3_bucket}/${key} --source codedeploy-${unit} --description ${description_create_deployment} --profile ${profile}
 echo !! Codedeploy push ${appenv} to s3://${s3_bucket}/${key}
 
 
 ## Code Deploy Application from output
-create_deployment="$(aws deploy create-deployment --application-name ${appenv} --deployment-config-name ${deployment_config_name} --deployment-group-name ${deployment_group_name} --description ${description_create_deployment} --s3-location bucket=${s3_bucket},bundleType=${artefact_ext},key=${key} --profile ${app})"
+create_deployment="$(aws deploy create-deployment --application-name ${appenv} --deployment-config-name ${deployment_config_name} --deployment-group-name ${deployment_group_name} --description ${description_create_deployment} --s3-location bucket=${s3_bucket},bundleType=${artefact_ext},key=${key} --profile ${profile})"
 echo !! create_deployment=${create_deployment}
 
 # TEST
@@ -107,7 +107,7 @@ print id['deploymentId']
 deploy_status="InProgress"
 
 while [ 1 ]; do
-    response=$(aws deploy get-deployment --deployment-id ${deployment_id} --profile ${app} 2>&1)
+    response=$(aws deploy get-deployment --deployment-id ${deployment_id} --profile ${profile} 2>&1)
     responseOrig="${response}"
     response=$(echo "${response}" | tr '\n' ' ' | tr -s " " | sed -e 's/^ *//' -e 's/ *$//')
 

@@ -14,7 +14,7 @@ class ZdAutoscalingUnit(object):
          'MyStackApi2' or 'MyStackDataprocessing'
         :param template: Troposphere template to append resources to
         :param dependencies: list of unit names this unit needs access to
-        :param network_config: network related paramters including subnet, nat, jump, etc
+        :param network_config: network related parameters including subnet, nat, jump, etc
         :param elb_config: shared elb configuration
         :param blue_asg_config: configuration specific to the blue asg
         :param green_asg_config: configuration specific to the green asg
@@ -76,9 +76,6 @@ class ZdAutoscalingUnit(object):
         # allow inbound traffic from the jumphost
         network_config.jump.add_flow(receiver=self.blue_asg, port='22')
         network_config.jump.add_flow(receiver=self.green_asg, port='22')
-
-        self.blue_asg.trop_asg.DependsOn = network_config.nat.single.title
-        self.green_asg.trop_asg.DependsOn = network_config.nat.single.title
 
     def get_dependencies(self):
         """

@@ -17,7 +17,7 @@ AWS_DEFAULT_REGION="`echo \"$EC2_AVAIL_ZONE\" | sed -e 's:\([0-9][0-9]*\)[a-z]*\
 AWS="aws --region ${AWS_DEFAULT_REGION}"
 
 DB_NAME=GeodesyDb
-RDS_INSTANCE_ID=${ENV,,}geodesy${ENV,,}${DB_NAME,,}
+RDS_INSTANCE_ID=${ENV,,}${DB_NAME,,}
 RDS_ENDPOINT=$(${AWS} rds describe-db-instances --db-instance-identifier ${RDS_INSTANCE_ID} | grep Address | awk -F'"' {'print $4'})
 
 CREDSTASH="/usr/local/bin/credstash -r ${AWS_DEFAULT_REGION}"

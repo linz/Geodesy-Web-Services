@@ -76,8 +76,8 @@ fi
 ## Declare variables
 date=$(date +%d_%m_%y) && echo !! date=${date}
 time=$(date +%H_%M_%S) && echo !! time=${time}
-deployment_group_name=${env}${app}-${env}${app}${unit}AsgCdg && echo !! deployment_group_name=${deployment_group_name}
-appenv=${env}${app}-${env}${app}${unit}AsgCda && echo !! appenv=${appenv}
+deployment_group_name=${env}${app}-${unit}AsgCdg && echo !! deployment_group_name=${deployment_group_name}
+appenv=${env}${app}-${unit}AsgCda && echo !! appenv=${appenv}
 description_create_deployment="${deployment_group_name}-${date}-${time}" && echo !! description_create_deployment=${description_create_deployment}
 key=${app}/${appenv}.${artefact_ext} && echo !! key=${key}
 

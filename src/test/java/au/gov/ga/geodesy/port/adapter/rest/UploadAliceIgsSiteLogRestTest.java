@@ -3,6 +3,7 @@ package au.gov.ga.geodesy.port.adapter.rest;
 import static au.gov.ga.geodesy.port.adapter.rest.ResultHandlers.print;
 
 import static org.hamcrest.Matchers.is;
+import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.document;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
@@ -18,7 +19,7 @@ import org.testng.annotations.Test;
 
 import au.gov.ga.geodesy.support.TestResources;
 
-public class UploadAliceIgsSiteLogRestTest extends RestTest {
+public class UploadAliceIgsSiteLogRestTest extends RestDocTest {
 
     @Test
     @Rollback(false)
@@ -26,6 +27,7 @@ public class UploadAliceIgsSiteLogRestTest extends RestTest {
         String content = FileUtils.readFileToString(TestResources.originalSopacSiteLog("ALIC"), Charset.defaultCharset());
         MvcResult result = mvc.perform(post("/siteLogs/sopac/upload").contentType(MediaType.APPLICATION_XML).content(content))
             .andExpect(status().isCreated())
+            .andDo(document("uploadSopacSiteLog"))
             .andReturn();
 
         String location = (String) result.getResponse().getHeaderValue("location");

@@ -23,13 +23,13 @@ import org.springframework.data.rest.webmvc.RepositoryRestController;
 import org.springframework.hateoas.EntityLinks;
 import org.springframework.hateoas.config.EnableEntityLinks;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.ResponseStatus;
 
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLog;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLogRepository;
@@ -148,13 +148,11 @@ public class SiteLogEndpoint {
         }
     }
 
-    @ResponseBody
-    @ResponseStatus(value = HttpStatus.BAD_REQUEST)
     @ExceptionHandler(InvalidSiteLogException.class)
-    public String invalidSiteLogHandler(InvalidSiteLogException e) throws IOException {
+    public ResponseEntity<String> invalidSiteLogHandler(InvalidSiteLogException e) throws IOException {
         log.error("Received invalid site log", e);
         StringWriter response = new StringWriter();
         e.printStackTrace(new PrintWriter(response));
-        return response.toString();
+        return ResponseEntity.badRequest().contentType(MediaType.TEXT_PLAIN).body(response.toString());
     }
 }

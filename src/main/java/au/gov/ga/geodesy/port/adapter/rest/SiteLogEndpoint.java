@@ -141,7 +141,7 @@ public class SiteLogEndpoint {
         service.upload(siteLog);
         try {
             String location = entityLinks.linkToSingleResource(SiteLog.class, siteLog.getId()).getHref();
-            return ResponseEntity.created(new URI(location)).body("");
+            return ResponseEntity.created(new URI(location)).body(null);
         }
         catch (URISyntaxException e) {
             throw new GeodesyRuntimeException(e);

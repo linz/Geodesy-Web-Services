@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+   <changeSet author="lbodor (generated)" id="1473286366418-1">
+      <modifyDataType columnName="accurace_degree_celcius"
+                      newDataType="text"
+                      tableName="sitelog_temperaturesensor"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-2">
+      <modifyDataType columnName="accuracy_hpa"
+                      newDataType="text"
+                      tableName="sitelog_pressuresensor"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-3">
+      <modifyDataType columnName="accuracy_percent_rel_humidity"
+                      newDataType="text"
+                      tableName="sitelog_humiditysensor"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-4">
+      <modifyDataType columnName="alignment_from_true_north"
+                      newDataType="text"
+                      tableName="gnss_antenna_configuration"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-5">
+      <modifyDataType columnName="alignment_from_true_north"
+                      newDataType="text"
+                      tableName="sitelog_gnssantenna"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-6">
+      <modifyDataType columnName="antenna_cable_length"
+                      newDataType="text"
+                      tableName="gnss_antenna_configuration"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-7">
+      <modifyDataType columnName="antenna_cable_length"
+                      newDataType="text"
+                      tableName="sitelog_gnssantenna"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-8">
+      <modifyDataType columnName="antenna_cable_type"
+                      newDataType="text"
+                      tableName="gnss_antenna_configuration"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-9">
+      <modifyDataType columnName="antenna_cable_type"
+                      newDataType="text"
+                      tableName="sitelog_gnssantenna"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-10">
+      <modifyDataType columnName="antenna_radome_type"
+                      newDataType="text"
+                      tableName="sitelog_gnssantenna"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-11">
+      <modifyDataType columnName="antenna_reference_point"
+                      newDataType="text"
+                      tableName="gnss_antenna_configuration"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-12">
+      <modifyDataType columnName="antenna_reference_point"
+                      newDataType="text"
+                      tableName="sitelog_gnssantenna"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-13">
+      <modifyDataType columnName="antenna_type"
+                      newDataType="text"
+                      tableName="sitelog_gnssantenna"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-14">
+      <modifyDataType columnName="aspiration"
+                      newDataType="text"
+                      tableName="humidity_sensor"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-15">
+      <modifyDataType columnName="aspiration"
+                      newDataType="text"
+                      tableName="sitelog_humiditysensor"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-16">
+      <modifyDataType columnName="aspiration"
+                      newDataType="text"
+                      tableName="sitelog_temperaturesensor"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-17">
+      <modifyDataType columnName="bedrock_condition"
+                      newDataType="text"
+                      tableName="cors_site"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-18">
+      <modifyDataType columnName="bedrock_condition"
+                      newDataType="text"
+                      tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-19">
+      <modifyDataType columnName="bedrock_type" newDataType="text" tableName="cors_site"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-20">
+      <modifyDataType columnName="bedrock_type"
+                      newDataType="text"
+                      tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-21">
+      <modifyDataType columnName="cdp_number" newDataType="text" tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-22">
+      <modifyDataType columnName="city" newDataType="text" tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-23">
+      <modifyDataType columnName="country" newDataType="text" tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-24">
+      <modifyDataType columnName="data_sampling_interval"
+                      newDataType="text"
+                      tableName="sitelog_humiditysensor"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-25">
+      <modifyDataType columnName="data_sampling_interval"
+                      newDataType="text"
+                      tableName="sitelog_pressuresensor"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-26">
+      <modifyDataType columnName="data_sampling_interval"
+                      newDataType="text"
+                      tableName="sitelog_temperaturesensor"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-27">
+      <modifyDataType columnName="description" newDataType="text" tableName="monument"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-28">
+      <modifyDataType columnName="description" newDataType="text" tableName="site"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-29">
+      <modifyDataType columnName="distance_activity"
+                      newDataType="text"
+                      tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-30">
+      <modifyDataType columnName="domes_number" newDataType="text" tableName="cors_site"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-31">
+      <modifyDataType columnName="elevation_cutoff_setting"
+                      newDataType="text"
+                      tableName="gnss_receiver_configuration"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-32">
+      <modifyDataType columnName="elevation_cutoff_setting"
+                      newDataType="text"
+                      tableName="sitelog_gnssreceiver"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-33">
+      <modifyDataType columnName="elevation_grs80"
+                      newDataType="text"
+                      tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-34">
+      <modifyDataType columnName="equipment_type"
+                      newDataType="text"
+                      tableName="equipment"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-35">
+      <modifyDataType columnName="error" newDataType="text" tableName="domain_event"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-36">
+      <modifyDataType columnName="event"
+                      newDataType="text"
+                      tableName="sitelog_localepisodicevent"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-37">
+      <modifyDataType columnName="event_name" newDataType="text" tableName="domain_event"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-38">
+      <modifyDataType columnName="fault_zones_nearby"
+                      newDataType="text"
+                      tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-39">
+      <modifyDataType columnName="firmware_version"
+                      newDataType="text"
+                      tableName="gnss_receiver_configuration"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-40">
+      <modifyDataType columnName="firmware_version"
+                      newDataType="text"
+                      tableName="sitelog_gnssreceiver"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-41">
+      <modifyDataType columnName="form_prepared_by"
+                      newDataType="text"
+                      tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-42">
+      <modifyDataType columnName="form_report_type"
+                      newDataType="text"
+                      tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-43">
+      <modifyDataType columnName="foundation" newDataType="text" tableName="monument"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-44">
+      <modifyDataType columnName="foundation_depth"
+                      newDataType="text"
+                      tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-45">
+      <modifyDataType columnName="four_char_id"
+                      newDataType="text"
+                      tableName="site_log_received"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-46">
+      <modifyDataType columnName="fracture_spacing"
+                      newDataType="text"
+                      tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-47">
+      <modifyDataType columnName="geologic_characteristic"
+                      newDataType="text"
+                      tableName="cors_site"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-48">
+      <modifyDataType columnName="geologic_characteristic"
+                      newDataType="text"
+                      tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-49">
+      <modifyDataType columnName="height" newDataType="text" tableName="monument"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-50">
+      <modifyDataType columnName="height_diff_to_antenna"
+                      newDataType="text"
+                      tableName="humidity_sensor_configuration"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-51">
+      <modifyDataType columnName="height_diff_to_antenna"
+                      newDataType="text"
+                      tableName="sitelog_humiditysensor"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-52">
+      <modifyDataType columnName="height_diff_to_antenna"
+                      newDataType="text"
+                      tableName="sitelog_pressuresensor"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-53">
+      <modifyDataType columnName="height_diff_to_antenna"
+                      newDataType="text"
+                      tableName="sitelog_temperaturesensor"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-54">
+      <modifyDataType columnName="height_diff_to_antenna"
+                      newDataType="text"
+                      tableName="sitelog_watervaporsensor"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-55">
+      <modifyDataType columnName="height_of_monument"
+                      newDataType="text"
+                      tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-56">
+      <modifyDataType columnName="iers_domes_number"
+                      newDataType="text"
+                      tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-57">
+      <modifyDataType columnName="input_frequency"
+                      newDataType="text"
+                      tableName="clock_configuration"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-58">
+      <modifyDataType columnName="input_frequency"
+                      newDataType="text"
+                      tableName="sitelog_frequencystandard"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-59">
+      <modifyDataType columnName="instrument_type"
+                      newDataType="text"
+                      tableName="sitelog_collocationinformation"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-60">
+      <modifyDataType columnName="instrumentation"
+                      newDataType="text"
+                      tableName="sitelog_otherinstrumentation"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-61">
+      <modifyDataType columnName="iso_19115"
+                      newDataType="text"
+                      tableName="responsible_party"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-62">
+      <modifyDataType columnName="local_site_tie_accuracy"
+                      newDataType="text"
+                      tableName="sitelog_surveyedlocaltie"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-63">
+      <modifyDataType columnName="location_notes"
+                      newDataType="text"
+                      tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-64">
+      <modifyDataType columnName="manufacturer" newDataType="text" tableName="equipment"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-65">
+      <modifyDataType columnName="manufacturer"
+                      newDataType="text"
+                      tableName="sitelog_humiditysensor"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-66">
+      <modifyDataType columnName="manufacturer"
+                      newDataType="text"
+                      tableName="sitelog_pressuresensor"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-67">
+      <modifyDataType columnName="manufacturer"
+                      newDataType="text"
+                      tableName="sitelog_temperaturesensor"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-68">
+      <modifyDataType columnName="manufacturer"
+                      newDataType="text"
+                      tableName="sitelog_watervaporsensor"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-69">
+      <modifyDataType columnName="marker_description"
+                      newDataType="text"
+                      tableName="monument"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-70">
+      <modifyDataType columnName="marker_description"
+                      newDataType="text"
+                      tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-71">
+      <modifyDataType columnName="mi_antenna_graphics"
+                      newDataType="text"
+                      tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-72">
+      <modifyDataType columnName="mi_doi" newDataType="text" tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-73">
+      <modifyDataType columnName="mi_hard_copy_on_file"
+                      newDataType="text"
+                      tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-74">
+      <modifyDataType columnName="mi_horizontal_mask"
+                      newDataType="text"
+                      tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-75">
+      <modifyDataType columnName="mi_monument_description"
+                      newDataType="text"
+                      tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-76">
+      <modifyDataType columnName="mi_notes" newDataType="text" tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-77">
+      <modifyDataType columnName="mi_primary_data_center"
+                      newDataType="text"
+                      tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-78">
+      <modifyDataType columnName="mi_secondary_data_center"
+                      newDataType="text"
+                      tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-79">
+      <modifyDataType columnName="mi_site_diagram"
+                      newDataType="text"
+                      tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-80">
+      <modifyDataType columnName="mi_site_map"
+                      newDataType="text"
+                      tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-81">
+      <modifyDataType columnName="mi_site_pictires"
+                      newDataType="text"
+                      tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-82">
+      <modifyDataType columnName="mi_text_graphics_from_antenna"
+                      newDataType="text"
+                      tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-83">
+      <modifyDataType columnName="mi_url_for_more_information"
+                      newDataType="text"
+                      tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-84">
+      <modifyDataType columnName="monument_description"
+                      newDataType="text"
+                      tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-85">
+      <modifyDataType columnName="monument_foundation"
+                      newDataType="text"
+                      tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-86">
+      <modifyDataType columnName="monument_inscription"
+                      newDataType="text"
+                      tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-87">
+      <modifyDataType columnName="name" newDataType="text" tableName="setup"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-88">
+      <modifyDataType columnName="name" newDataType="text" tableName="site"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-89">
+      <modifyDataType columnName="notes"
+                      newDataType="text"
+                      tableName="gnss_antenna_configuration"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-90">
+      <modifyDataType columnName="notes"
+                      newDataType="text"
+                      tableName="gnss_receiver_configuration"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-91">
+      <modifyDataType columnName="notes"
+                      newDataType="text"
+                      tableName="humidity_sensor_configuration"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-92">
+      <modifyDataType columnName="notes"
+                      newDataType="text"
+                      tableName="sitelog_collocationinformation"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-93">
+      <modifyDataType columnName="notes"
+                      newDataType="text"
+                      tableName="sitelog_frequencystandard"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-94">
+      <modifyDataType columnName="notes"
+                      newDataType="text"
+                      tableName="sitelog_gnssantenna"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-95">
+      <modifyDataType columnName="notes"
+                      newDataType="text"
+                      tableName="sitelog_gnssreceiver"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-96">
+      <modifyDataType columnName="notes"
+                      newDataType="text"
+                      tableName="sitelog_humiditysensor"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-97">
+      <modifyDataType columnName="notes"
+                      newDataType="text"
+                      tableName="sitelog_pressuresensor"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-98">
+      <modifyDataType columnName="notes" newDataType="text" tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-99">
+      <modifyDataType columnName="notes"
+                      newDataType="text"
+                      tableName="sitelog_surveyedlocaltie"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-100">
+      <modifyDataType columnName="notes"
+                      newDataType="text"
+                      tableName="sitelog_temperaturesensor"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-101">
+      <modifyDataType columnName="notes"
+                      newDataType="text"
+                      tableName="sitelog_watervaporsensor"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-102">
+      <modifyDataType columnName="observed_degradation"
+                      newDataType="text"
+                      tableName="sitelog_radiointerference"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-103">
+      <modifyDataType columnName="radome_serial_number"
+                      newDataType="text"
+                      tableName="gnss_antenna_configuration"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-104">
+      <modifyDataType columnName="radome_serial_number"
+                      newDataType="text"
+                      tableName="sitelog_gnssantenna"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-105">
+      <modifyDataType columnName="radome_type"
+                      newDataType="text"
+                      tableName="gnss_antenna_configuration"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-106">
+      <modifyDataType columnName="receiver_type"
+                      newDataType="text"
+                      tableName="sitelog_gnssreceiver"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-107">
+      <modifyDataType columnName="satellite_system"
+                      newDataType="text"
+                      tableName="gnss_receiver_configuration"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-108">
+      <modifyDataType columnName="satellite_system"
+                      newDataType="text"
+                      tableName="sitelog_gnssreceiver"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-109">
+      <modifyDataType columnName="serial_number" newDataType="text" tableName="equipment"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-110">
+      <modifyDataType columnName="serial_number"
+                      newDataType="text"
+                      tableName="sitelog_gnssantenna"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-111">
+      <modifyDataType columnName="serial_number"
+                      newDataType="text"
+                      tableName="sitelog_gnssreceiver"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-112">
+      <modifyDataType columnName="serial_number"
+                      newDataType="text"
+                      tableName="sitelog_humiditysensor"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-113">
+      <modifyDataType columnName="serial_number"
+                      newDataType="text"
+                      tableName="sitelog_pressuresensor"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-114">
+      <modifyDataType columnName="serial_number"
+                      newDataType="text"
+                      tableName="sitelog_temperaturesensor"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-115">
+      <modifyDataType columnName="serial_number"
+                      newDataType="text"
+                      tableName="sitelog_watervaporsensor"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-116">
+      <modifyDataType columnName="sinex_file_name"
+                      newDataType="text"
+                      tableName="weekly_solution"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-117">
+      <modifyDataType columnName="site_log_text"
+                      newDataType="text"
+                      tableName="invalid_site_log_received"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-118">
+      <modifyDataType columnName="site_log_text"
+                      newDataType="text"
+                      tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-119">
+      <modifyDataType columnName="site_name" newDataType="text" tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-120">
+      <modifyDataType columnName="state" newDataType="text" tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-121">
+      <modifyDataType columnName="status"
+                      newDataType="text"
+                      tableName="sitelog_collocationinformation"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-122">
+      <modifyDataType columnName="subscriber" newDataType="text" tableName="domain_event"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-123">
+      <modifyDataType columnName="survey_method"
+                      newDataType="text"
+                      tableName="sitelog_surveyedlocaltie"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-124">
+      <modifyDataType columnName="tectonic_plate"
+                      newDataType="text"
+                      tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-125">
+      <modifyDataType columnName="temperature_stabilization"
+                      newDataType="text"
+                      tableName="gnss_receiver_configuration"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-126">
+      <modifyDataType columnName="temperature_stabilization"
+                      newDataType="text"
+                      tableName="sitelog_gnssreceiver"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-127">
+      <modifyDataType columnName="tied_marker_cdp_number"
+                      newDataType="text"
+                      tableName="sitelog_surveyedlocaltie"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-128">
+      <modifyDataType columnName="tied_marker_domes_number"
+                      newDataType="text"
+                      tableName="sitelog_surveyedlocaltie"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-129">
+      <modifyDataType columnName="tied_marker_name"
+                      newDataType="text"
+                      tableName="sitelog_surveyedlocaltie"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-130">
+      <modifyDataType columnName="tied_marker_usage"
+                      newDataType="text"
+                      tableName="sitelog_surveyedlocaltie"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-131">
+      <modifyDataType columnName="type" newDataType="text" tableName="equipment"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-132">
+      <modifyDataType columnName="type"
+                      newDataType="text"
+                      tableName="sitelog_frequencystandard"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-133">
+      <modifyDataType columnName="type"
+                      newDataType="text"
+                      tableName="sitelog_humiditysensor"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-134">
+      <modifyDataType columnName="type"
+                      newDataType="text"
+                      tableName="sitelog_pressuresensor"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-135">
+      <modifyDataType columnName="type"
+                      newDataType="text"
+                      tableName="sitelog_temperaturesensor"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1473286366418-136">
+      <modifyDataType columnName="type"
+                      newDataType="text"
+                      tableName="sitelog_watervaporsensor"/>
+   </changeSet>
+</databaseChangeLog>

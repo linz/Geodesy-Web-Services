@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.io.StringReader;
+import java.io.StringWriter;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
@@ -147,9 +148,13 @@ public class SiteLogEndpoint {
         }
     }
 
+    @ResponseBody
     @ResponseStatus(value = HttpStatus.BAD_REQUEST)
     @ExceptionHandler(InvalidSiteLogException.class)
-    public void invalidSiteLogHandler(InvalidSiteLogException e) {
+    public String invalidSiteLogHandler(InvalidSiteLogException e) throws IOException {
         log.error("Received invalid site log", e);
+        StringWriter response = new StringWriter();
+        e.printStackTrace(new PrintWriter(response));
+        return response.toString();
     }
 }

@@ -74,6 +74,7 @@ public class AsynchronousEventPublisher implements EventPublisher {
                                 }
                             }
                         }
+                        events.saveAndFlush(e);
                     }
                 }
             } catch (InterruptedException e) {

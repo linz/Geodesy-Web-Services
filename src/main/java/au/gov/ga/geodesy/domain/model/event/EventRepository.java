@@ -10,6 +10,6 @@ public interface EventRepository extends AggregateRepository<Event>, EventReposi
     @Override
     List<Event> findAll();
 
-    @Query("select e from Event e where e.retries = " + Event.MAX_RETRIES)
+    @Query("select e from Event e where e.error is not null")
     List<Event> findFailed();
 }

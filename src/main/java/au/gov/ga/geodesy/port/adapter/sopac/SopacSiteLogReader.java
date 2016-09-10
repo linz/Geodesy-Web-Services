@@ -44,7 +44,7 @@ public class SopacSiteLogReader extends SiteLogReader {
             return siteLog;
         }
         catch (MarshallingException e) {
-            throw new InvalidSiteLogException(e);
+            throw new InvalidSiteLogException("Invalid site log", e);
         }
     }
 }

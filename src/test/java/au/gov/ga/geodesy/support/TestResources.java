@@ -31,6 +31,13 @@ public class TestResources {
     }
 
     /**
+     * Original production SOPAC site logs, with errors, directory relative to classpath root.
+     */
+    public static String originalBadSopacSiteLogsDirectory() {
+        return "/sitelog/sopac/original/bad/";
+    }
+
+    /**
      * Custom GeodesyML site logs directory relative to classpath root.
      */
     private static String customGeodesyMLSiteLogsDirectory() {

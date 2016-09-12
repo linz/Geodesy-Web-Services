@@ -150,9 +150,20 @@ public class SiteLogEndpoint {
 
     @ExceptionHandler(InvalidSiteLogException.class)
     public ResponseEntity<String> invalidSiteLogHandler(InvalidSiteLogException e) throws IOException {
-        log.error("Received invalid site log", e);
         StringWriter response = new StringWriter();
+
+        log.error("Received invalid site log", e);
         e.printStackTrace(new PrintWriter(response));
+
+        if (e.getCause() instanceof au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException) {
+            List<String> validationMessages =
+                ((au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException) e.getCause()).getValidationMessages();
+
+            for (String validationMsg : validationMessages) {
+                log.error(validationMsg);
+                response.append(validationMsg + System.lineSeparator());
+            }
+        }
         return ResponseEntity.badRequest().contentType(MediaType.TEXT_PLAIN).body(response.toString());
     }
 }

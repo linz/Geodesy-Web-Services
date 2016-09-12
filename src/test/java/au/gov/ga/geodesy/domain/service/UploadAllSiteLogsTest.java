@@ -53,10 +53,10 @@ public class UploadAllSiteLogsTest extends UnitTestConfig {
     @Test(dependsOnMethods = {"upload"})
     public void check() throws Exception {
         List<Event> events = eventPublisher.getPublishedEvents();
-        assertThat(events.size(), equalTo(34));
+        assertThat(events.size(), equalTo(33));
         for (Event e : events) {
             assertThat(e, instanceOf(SiteLogReceived.class));
         }
-        assertThat(siteLogs.count(), equalTo(34L));
+        assertThat(siteLogs.count(), equalTo(33L));
     }
 }

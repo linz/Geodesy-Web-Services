@@ -1,6 +1,5 @@
 package au.gov.ga.geodesy.support.mapper.dozer;
 
-import au.gov.ga.geodesy.exception.GeodesyRuntimeException;
 import au.gov.ga.geodesy.igssitelog.domain.model.IgsSiteLog;
 import au.gov.ga.geodesy.igssitelog.interfaces.xml.IgsSiteLogXmlMarshaller;
 import au.gov.ga.geodesy.igssitelog.support.marshalling.moxy.IgsSiteLogMoxyMarshaller;
@@ -746,10 +745,10 @@ public class TranslateTest { // extends AbstractTestNGSpringContextTests {
     }
 
     // Bad data - want it to fail
-    @Test(expectedExceptions = GeodesyRuntimeException.class)
+    @Test(expectedExceptions = au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException.class)
     public void testBATH() throws MarshallingException, IOException,
             au.gov.ga.geodesy.igssitelog.interfaces.xml.MarshallingException, ParseException {
-        GeodesyMLType geodesyML = testTranslate(TestResources.originalSopacSiteLogsDirectory(), "BATH");
+        GeodesyMLType geodesyML = testTranslate(TestResources.originalBadSopacSiteLogsDirectory(), "BATH");
 
         assertThat(geodesyML, notNullValue());
     }

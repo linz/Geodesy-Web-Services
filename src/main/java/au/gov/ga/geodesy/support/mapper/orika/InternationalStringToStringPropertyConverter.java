@@ -20,9 +20,12 @@ public class InternationalStringToStringPropertyConverter extends BidirectionalC
         return property;
     }
 
-    public InternationalString convertFrom(CharacterStringPropertyType stringP, Type<InternationalString> destType,
+    public InternationalString convertFrom(CharacterStringPropertyType property, Type<InternationalString> destType,
             MappingContext ctx) {
 
-        return new SimpleInternationalString((String) stringP.getCharacterString().getValue());
+        if (property == null || property.getCharacterString() == null) {
+            return null;
+        }
+        return new SimpleInternationalString((String) property.getCharacterString().getValue());
     }
 }

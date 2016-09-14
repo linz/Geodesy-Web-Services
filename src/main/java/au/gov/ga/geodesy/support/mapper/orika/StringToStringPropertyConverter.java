@@ -16,7 +16,9 @@ public class StringToStringPropertyConverter extends BidirectionalConverter<Stri
     }
 
     public String convertFrom(CharacterStringPropertyType stringProperty, Type<String> destType, MappingContext ctx) {
-        // TODO: robustness
+        if (stringProperty == null || stringProperty.getCharacterString() == null) {
+            return null;
+        }
         return (String) stringProperty.getCharacterString().getValue();
     }
 }

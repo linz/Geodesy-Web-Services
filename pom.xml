@@ -704,11 +704,11 @@
                                     <goal>integration-test</goal>
                                 </goals>
                                 <configuration>
-                                    <forkCount>1</forkCount>
+                                    <forkCount>0</forkCount>
                                     <reuseForks>false</reuseForks>
-                                    <includes>
-                                        <include>au/gov/ga/geodesy/test/system/**/*.java</include>
-                                    </includes>
+                                    <suiteXmlFiles>
+                                        <suiteXmlFile>src/test/resources/system-test-suite.xml</suiteXmlFile>
+                                    </suiteXmlFiles>
                                     <!-- Headless - prevent the annoying ForkedBooter process from stealing window focus on Mac OS -->
                                     <argLine>-Djava.awt.headless=true</argLine>
                                     <systemPropertyVariables>

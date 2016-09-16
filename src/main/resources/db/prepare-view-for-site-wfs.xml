@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+   <changeSet author="asedgmen (generated)"
+              id="1473998705916-1"
+              objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+      <addColumn tableName="site">
+         <column name="shape" type="geometry(Point, 4326)"/>
+      </addColumn>
+   </changeSet>
+   <changeSet author="asedgmen (generated)"
+              id="1473998705916-2"
+              objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+      <createView fullDefinition="false" viewName="v_cors_site"> SELECT s.id,
+    s.date_installed,
+    s.description,
+    s.name,
+    s.version,
+    s.shape,
+    cs.bedrock_condition,
+    cs.bedrock_type,
+    cs.domes_number,
+    cs.four_character_id,
+    cs.geologic_characteristic,
+    cs.monument_id
+   FROM site s,
+    cors_site cs
+  WHERE (s.id = cs.id);</createView>
+   </changeSet>
+</databaseChangeLog>

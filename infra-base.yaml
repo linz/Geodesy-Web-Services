@@ -44,6 +44,8 @@ autoscaling_units:
      - Db
   -
     unit_title: GeoServer
+    asg_config:
+       image_id: "ami-ff84b59c"
     dependencies:
      - Db
 database_units:

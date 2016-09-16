@@ -83,8 +83,8 @@ public class SiteLogEndpoint {
         } else {
             SiteLogMapper mapper = new SiteLogMapper();
             SiteLogType siteLogType = mapper.from(siteLog);
-            marshaller.marshal(siteLogType, new PrintWriter(rsp.getOutputStream()));
             rsp.setContentType("application/xml");
+            marshaller.marshal(siteLogType, new PrintWriter(rsp.getOutputStream()));
         }
     }
 

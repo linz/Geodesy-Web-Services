@@ -1,0 +1,26 @@
+{
+  "variables": {
+    "aws_access_key": "{{env `AWS_ACCESS_KEY`}}",
+    "aws_secret_key": "{{env `AWS_SECRET_KEY`}}"
+  },
+  "builders": [
+    {
+      "type": "amazon-ebs",
+      "access_key": "{{user `aws_access_key`}}",
+      "secret_key": "{{user `aws_secret_key`}}",
+      "region": "ap-southeast-2",
+      "source_ami": "ami-dc361ebf",
+      "instance_type": "t2.micro",
+      "ssh_username": "ec2-user",
+      "ami_name": "Geoserver 2.9.1 {{timestamp}}",
+      "associate_public_ip_address": true
+    }
+  ],
+
+  "provisioners": [
+    {
+      "type": "shell",
+      "script": "conf/bootstrap.sh"
+    }
+  ]
+}

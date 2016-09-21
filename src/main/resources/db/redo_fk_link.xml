@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+   <changeSet author="hong (generated)"
+              id="1474431280707-1"
+              objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+      <addForeignKeyConstraint baseColumnNames="id"
+                               baseTableName="clock_configuration"
+                               constraintName="fk_clock_configuration_id"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               onDelete="NO ACTION"
+                               onUpdate="NO ACTION"
+                               referencedColumnNames="equipment_configuration_id"
+                               referencedTableName="equipment_configuration"/>
+   </changeSet>
+   <changeSet author="hong (generated)"
+              id="1474431280707-2"
+              objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+      <addForeignKeyConstraint baseColumnNames="equipment_id"
+                               baseTableName="equipment_configuration"
+                               constraintName="fk_equipment_configuration_equipment_id"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               onDelete="NO ACTION"
+                               onUpdate="NO ACTION"
+                               referencedColumnNames="id"
+                               referencedTableName="equipment"/>
+   </changeSet>
+   <changeSet author="hong (generated)"
+              id="1474431280707-3"
+              objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+      <addForeignKeyConstraint baseColumnNames="equipment_configuration_id"
+                               baseTableName="equipment_in_use"
+                               constraintName="fk_equipment_in_use_equipment_configuration_id"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               onDelete="NO ACTION"
+                               onUpdate="NO ACTION"
+                               referencedColumnNames="equipment_configuration_id"
+                               referencedTableName="equipment_configuration"/>
+   </changeSet>
+   <changeSet author="hong (generated)"
+              id="1474431280707-4"
+              objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+      <addForeignKeyConstraint baseColumnNames="id"
+                               baseTableName="gnss_antenna_configuration"
+                               constraintName="fk_gnss_antenna_configuration_id"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               onDelete="NO ACTION"
+                               onUpdate="NO ACTION"
+                               referencedColumnNames="equipment_configuration_id"
+                               referencedTableName="equipment_configuration"/>
+   </changeSet>
+   <changeSet author="hong (generated)"
+              id="1474431280707-5"
+              objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+      <addForeignKeyConstraint baseColumnNames="id"
+                               baseTableName="gnss_receiver_configuration"
+                               constraintName="fk_gnss_receiver_configuration_id"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               onDelete="NO ACTION"
+                               onUpdate="NO ACTION"
+                               referencedColumnNames="equipment_configuration_id"
+                               referencedTableName="equipment_configuration"/>
+   </changeSet>
+   <changeSet author="hong (generated)"
+              id="1474431280707-6"
+              objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+      <addForeignKeyConstraint baseColumnNames="id"
+                               baseTableName="humidity_sensor_configuration"
+                               constraintName="fk_humidity_sensor_configuration_id"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               onDelete="NO ACTION"
+                               onUpdate="NO ACTION"
+                               referencedColumnNames="equipment_configuration_id"
+                               referencedTableName="equipment_configuration"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1474431280707-7">
+      <dropForeignKeyConstraint baseTableName="clock_configuration"
+                                constraintName="fk_clock_configuration_equipment"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1474431280707-8">
+      <dropForeignKeyConstraint baseTableName="gnss_antenna_configuration"
+                                constraintName="fk_gnss_antenna_configuration_equipment"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1474431280707-9">
+      <dropForeignKeyConstraint baseTableName="gnss_receiver_configuration"
+                                constraintName="fk_gnss_receiver_configuration_equipment"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1474431280707-10">
+      <dropForeignKeyConstraint baseTableName="humidity_sensor_configuration"
+                                constraintName="fk_humidity_sensor_configuration_equipment"/>
+   </changeSet>
+</databaseChangeLog>

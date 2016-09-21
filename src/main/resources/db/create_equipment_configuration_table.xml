@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+   <changeSet author="hong (generated)"
+              id="1474419465891-1"
+              objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+      <createTable tableName="equipment_configuration">
+         <column name="equipment_configuration_id" type="INT">
+            <constraints nullable="false"/>
+         </column>
+         <column name="equipment_id" type="INT">
+            <constraints nullable="false"/>
+         </column>
+         <column name="configuration_time" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+      </createTable>
+   </changeSet>
+   <changeSet author="hong (generated)"
+              id="1474419465891-2"
+              objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+      <addPrimaryKey columnNames="equipment_configuration_id"
+                     constraintName="equjipment_configuration_pkey"
+                     tableName="equipment_configuration"/>
+   </changeSet>
+</databaseChangeLog>

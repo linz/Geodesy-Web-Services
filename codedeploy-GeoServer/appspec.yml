@@ -1,0 +1,20 @@
+version: 0.0
+os: linux
+files:
+    - source: ./deploy-code/data
+      destination: /usr/share/tomcat8/webapps/geoserver/data
+    - source: ./deploy-code/geoserver.xml
+      destination: /usr/share/tomcat8/conf/Catalina/localhost
+hooks:
+  ApplicationStop:
+    - location: application-stop.sh
+  BeforeInstall:
+    - location: before-install.sh
+  AfterInstall:
+    - location: after-install.sh
+    - location: create-database.sh
+    - location: cleanout-tables.sh
+  ApplicationStart:
+    - location: application-start.sh
+  ValidateService:
+    - location: validate-service.sh

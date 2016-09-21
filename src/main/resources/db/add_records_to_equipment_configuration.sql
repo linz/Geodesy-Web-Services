@@ -1,5 +1,5 @@
 --liquibase formatted sql
---changeset Hong Jin:id 1474424364
+--changeset HongJin:1474424364
 
 
 insert into equipment_configuration(equipment_configuration_id,equipment_id,configuration_time)

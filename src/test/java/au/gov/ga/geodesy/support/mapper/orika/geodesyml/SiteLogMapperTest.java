@@ -90,10 +90,25 @@ public class SiteLogMapperTest {
         SiteLog siteLog = mapper.to(siteLogType);
         testMappingValues(siteLogType, siteLog);
 
-        // TODO: test the from mapping when it is implemented
-        // SiteLogType mappedSiteLogType = mapper.from(siteLog);
-        // testMappingValues(mappedSiteLogType, siteLog);
+        checkSiteOwner(siteLogType, siteLog);
 
+        // TODO: complete tests
+        siteLogType = mapper.from(siteLog);
+        checkSiteOwner(siteLog, siteLogType);
+    }
+
+    private void checkSiteOwner(SiteLogType siteLogType, SiteLog siteLog) {
+        assertThat(
+            siteLogType.getSiteContact().get(0).getCIResponsibleParty().getIndividualName().getCharacterString().getValue(),
+            is(siteLog.getSiteContact().getParty().getIndividualName())
+        );
+    }
+
+    private void checkSiteOwner(SiteLog siteLog, SiteLogType siteLogType) {
+        assertThat(
+            siteLog.getSiteContact().getParty().getIndividualName(),
+            is(siteLogType.getSiteContact().get(0).getCIResponsibleParty().getIndividualName().getCharacterString().getValue())
+        );
     }
 
     /**

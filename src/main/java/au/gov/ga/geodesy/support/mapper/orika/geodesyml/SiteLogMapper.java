@@ -31,10 +31,13 @@ import ma.glasnost.orika.converter.ConverterFactory;
 import ma.glasnost.orika.impl.DefaultMapperFactory;
 import ma.glasnost.orika.metadata.Type;
 import net.opengis.gml.v_3_2_1.AbstractGMLType;
+import net.opengis.iso19139.gmd.v_20070417.CIResponsiblePartyType;
 
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
+
+import org.opengis.metadata.citation.ResponsibleParty;
 
 /**
  * Reversible mapping between GeodesyML SiteLogType DTO and
@@ -65,6 +68,8 @@ public class SiteLogMapper implements Iso<SiteLogType, SiteLog> {
             .fieldMap("formInformation", "formInformation").converter("formInformation").add()
             .fieldMap("collocationInformations", "collocationInformation").converter("collocationInformations").add()
             .fieldMap("surveyedLocalTies", "surveyedLocalTies").converter("surveyedLocalTies").add()
+            .fieldMap("siteContact[0].CIResponsibleParty", "siteContact.party").converter("responsibleParty").add()
+            .fieldMap("siteMetadataCustodian.CIResponsibleParty", "siteMetadataCustodian.party").converter("responsibleParty").add()
                 /* .byDefault() */
             .register();
 
@@ -160,6 +165,9 @@ public class SiteLogMapper implements Iso<SiteLogType, SiteLog> {
                         infoCollectionConverter(new SurveyedLocalTieMapper())
                 ) {}
         );
+
+        converters.registerConverter("responsibleParty", new IsoConverter<CIResponsiblePartyType, ResponsibleParty>(new ResponsiblePartyMapper()) {});
+
         mapper = mapperFactory.getMapperFacade();
     }
 

@@ -11,3 +11,6 @@ sed -i 's/${geodesy-db-password}/'"${DB_PASSWORD}/" $CONTEXT_DESCRIPTOR
 
 # ensure all files in the GeoServer application are owned by tomcat
 chown -R tomcat:tomcat /usr/share/tomcat8/webapps/geoserver
+
+# Start tomcat
+service tomcat8 start

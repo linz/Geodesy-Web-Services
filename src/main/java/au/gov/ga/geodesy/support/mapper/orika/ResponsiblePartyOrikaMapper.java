@@ -1,10 +1,10 @@
 package au.gov.ga.geodesy.support.mapper.orika;
 
+import org.geotools.metadata.iso.citation.AddressImpl;
 import org.geotools.metadata.iso.citation.ContactImpl;
 import org.geotools.metadata.iso.citation.ResponsiblePartyImpl;
 import org.geotools.metadata.iso.citation.TelephoneImpl;
 import org.geotools.util.SimpleInternationalString;
-import org.opengis.metadata.citation.Address;
 import org.opengis.metadata.citation.ResponsibleParty;
 import org.opengis.util.InternationalString;
 
@@ -25,7 +25,7 @@ public class ResponsiblePartyOrikaMapper {
 
     public ResponsiblePartyOrikaMapper() {
 
-        mapperFactory.classMap(Address.class, CIAddressType.class)
+        mapperFactory.classMap(AddressImpl.class, CIAddressType.class)
             .field("deliveryPoints", "deliveryPoint")
             .field("electronicMailAddresses", "electronicMailAddress")
             .byDefault()

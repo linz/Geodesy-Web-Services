@@ -7,6 +7,7 @@ let
       python
       python3
       pythonPackages.credstash
+      packer
     ];
   };
 in

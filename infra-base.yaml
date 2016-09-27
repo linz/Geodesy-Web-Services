@@ -45,7 +45,21 @@ autoscaling_units:
   -
     unit_title: GeoServer
     asg_config:
-       image_id: "ami-ff84b59c"
+       image_id: "ami-773d0d14"
+       userdata: |
+         #cloud-config
+         runcmd:
+          - service tomcat8 start
+    elb_config:
+      instance_protocol:
+        - 'HTTP'
+      instance_port:
+        - '8080'
+      loadbalancer_protocol:
+        - 'HTTP'
+      loadbalancer_port:
+        - '80'
+      elb_health_check: 'HTTP:8080/geoserver/web/'
     dependencies:
      - Db
 database_units:

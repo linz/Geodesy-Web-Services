@@ -21,6 +21,12 @@ wget https://aws-codedeploy-ap-southeast-2.s3.amazonaws.com/latest/install
 sudo chmod +x ./install
 sudo ./install auto
 
+# Install postgresql client
+sudo yum install -y postgresql
+
+# Install credstash
+sudo pip install credstash
+
 # Download GeoServer from S3
 aws --no-sign-request s3 cp s3://geodesy-web-services/geoserver/geoserver-2.9.1-war.zip .
 aws --no-sign-request s3 cp s3://geodesy-web-services/geoserver/geoserver-2.9.1-app-schema-plugin.zip .

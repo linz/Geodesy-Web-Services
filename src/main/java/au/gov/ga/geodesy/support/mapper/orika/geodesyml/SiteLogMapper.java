@@ -167,7 +167,7 @@ public class SiteLogMapper implements Iso<SiteLogType, SiteLog> {
     // TODO: refactor and document (work-around for https://github.com/orika-mapper/orika/issues/99)
     public class BidirectionalConverterWrapper<A, B> extends BidirectionalConverter<A, B> {
 
-        private BidirectionalConverter<A ,B> delegate;
+        private BidirectionalConverter<A, B> delegate;
 
         public BidirectionalConverterWrapper(BidirectionalConverter<A, B> delegate) {
             this.delegate = delegate;

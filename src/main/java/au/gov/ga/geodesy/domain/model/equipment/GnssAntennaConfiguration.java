@@ -4,10 +4,12 @@ import java.time.Instant;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "GNSS_ANTENNA_CONFIGURATION")
+@PrimaryKeyJoinColumn(name = "ID")
 public class GnssAntennaConfiguration extends EquipmentConfiguration {
 
     @Column(name = "ANTENNA_REFERENCE_POINT")

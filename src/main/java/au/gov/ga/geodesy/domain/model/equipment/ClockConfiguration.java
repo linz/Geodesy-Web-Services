@@ -4,10 +4,12 @@ import java.time.Instant;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "CLOCK_CONFIGURATION")
+@PrimaryKeyJoinColumn(name = "ID")
 public class ClockConfiguration extends EquipmentConfiguration {
 
     @Column(name = "INPUT_FREQUENCY")

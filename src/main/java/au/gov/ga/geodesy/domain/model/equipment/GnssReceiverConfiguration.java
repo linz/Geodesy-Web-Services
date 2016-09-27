@@ -4,12 +4,14 @@ import java.time.Instant;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
 import org.springframework.data.rest.core.config.Projection;
 
 @Entity
 @Table(name = "GNSS_RECEIVER_CONFIGURATION")
+@PrimaryKeyJoinColumn(name = "ID")
 public class GnssReceiverConfiguration extends EquipmentConfiguration {
 
     @Column(name = "FIRMWARE_VERSION")

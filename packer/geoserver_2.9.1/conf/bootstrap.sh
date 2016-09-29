@@ -36,6 +36,10 @@ sudo unzip geoserver-2.9.1-war.zip geoserver.war -d /usr/share/tomcat8/webapps/.
 sudo unzip /usr/share/tomcat8/webapps/geoserver.war -d /usr/share/tomcat8/webapps/geoserver
 sudo unzip -o geoserver-2.9.1-app-schema-plugin.zip *.jar -d /usr/share/tomcat8/webapps/geoserver/WEB-INF/lib
 
+# Download the updated Tomcat8 web.xml file containing the CORS filter allowing global access
+aws --no-sign-request s3 cp s3://geodesy-web-services/geoserver/web.xml . 
+sudo cp web.xml /usr/share/tomcat8/conf/.
+
 # Set Permissions
 cd /usr/share
 sudo chown -hR tomcat:tomcat tomcat8/

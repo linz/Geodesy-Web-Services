@@ -46,6 +46,7 @@ autoscaling_units:
     unit_title: GeoServer
     asg_config:
        image_id: "ami-30586b53"
+       instance_type: 't2.small'
        userdata: |
          #cloud-config
          runcmd:

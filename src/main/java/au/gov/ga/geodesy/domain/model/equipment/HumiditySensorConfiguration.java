@@ -4,10 +4,12 @@ import java.time.Instant;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "HUMIDITY_SENSOR_CONFIGURATION")
+@PrimaryKeyJoinColumn(name = "ID")
 public class HumiditySensorConfiguration extends EquipmentConfiguration {
 
     @Column(name = "HEIGHT_DIFF_TO_ANTENNA")

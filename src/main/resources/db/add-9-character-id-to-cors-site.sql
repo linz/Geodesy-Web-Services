@@ -1,8 +1,8 @@
 --liquibase formatted sql
 --changeset HongJin:1476162775
 
-ALTER TABLE site DROP COLUMN nine_character_id;
-ALTER TABLE site DROP COLUMN site_status;
+--ALTER TABLE site DROP COLUMN nine_character_id;
+--ALTER TABLE site DROP COLUMN site_status;
 ALTER TABLE cors_site ADD COLUMN nine_character_id character varying(9) NOT NULL DEFAULT '_geodesy_';
 ALTER TABLE cors_site ADD COLUMN site_status character varying(20) NOT NULL DEFAULT 'PRIVATE';
 

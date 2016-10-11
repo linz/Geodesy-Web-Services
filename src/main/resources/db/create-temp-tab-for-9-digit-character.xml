@@ -11,24 +11,4 @@
          <column name="nine_character_id" type="VARCHAR(9)"/>
       </createTable>
    </changeSet>
-   <changeSet author="hong (generated)"
-              id="1475639382613-2"
-              objectQuotingStrategy="QUOTE_ALL_OBJECTS">
-      <addColumn tableName="site">
-         <column defaultValue="_geodesy_"
-                 name="nine_character_id"
-                 type="varchar(9 BYTE)">
-            <constraints nullable="false"/>
-         </column>
-      </addColumn>
-   </changeSet>
-   <changeSet author="hong (generated)"
-              id="1475639382613-3"
-              objectQuotingStrategy="QUOTE_ALL_OBJECTS">
-      <addColumn tableName="site">
-         <column defaultValue="_private_" name="site_status" type="varchar(20 BYTE)">
-            <constraints nullable="false"/>
-         </column>
-      </addColumn>
-   </changeSet>
 </databaseChangeLog>

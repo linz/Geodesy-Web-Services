@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+   <changeSet author="hong (generated)"
+              id="1476314353412-1"
+              objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+      <createTable tableName="temp_site_network">
+         <column name="four_character_id" type="VARCHAR(4)">
+            <constraints nullable="false"/>
+         </column>
+         <column name="site_status" type="VARCHAR(7)">
+            <constraints nullable="false"/>
+         </column>
+         <column name="network_1" type="VARCHAR(8)">
+            <constraints nullable="false"/>
+         </column>
+         <column name="network_2" type="VARCHAR(11)"/>
+         <column name="network_3" type="VARCHAR(9)"/>
+         <column name="network_4" type="VARCHAR(6)"/>
+      </createTable>
+   </changeSet>
+   <changeSet author="hong (generated)"
+              id="1476314353412-2"
+              objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+      <addPrimaryKey columnNames="four_character_id"
+                     constraintName="temp_site_network_pkey"
+                     tableName="temp_site_network"/>
+   </changeSet>
+</databaseChangeLog>

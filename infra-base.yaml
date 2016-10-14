@@ -57,9 +57,10 @@ autoscaling_units:
       instance_port:
         - '8080'
       loadbalancer_protocol:
-        - 'HTTP'
+        - 'HTTPS'
       loadbalancer_port:
-        - '80'
+        - '443'
+      ssl_certificate_id: 'arn:aws:acm:ap-southeast-2:094928090547:certificate/07496dcd-6975-4dd4-8986-533488587f0e'
       elb_health_check: 'HTTP:8080/geoserver/web/'
     dependencies:
      - Db

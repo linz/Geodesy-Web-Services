@@ -40,7 +40,10 @@ esac
 python3 generate-infra-yaml.py -b infra-base.yaml -v ${ENV_FILE} -o infra.yaml
 python3 amazonia/amazonia/amz.py -y infra.yaml -d infra-defaults.yaml -t infra.json
 
-aws --profile ${AWS_PROFILE} cloudformation ${COMMAND}-stack --stack-name ${STACK_NAME} --template-body file://infra.json --parameters \
+aws --profile ${AWS_PROFILE} s3 cp infra.json s3://geodesy-stack-template/infra-${ENV}.json
+
+aws --profile ${AWS_PROFILE} cloudformation ${COMMAND}-stack --stack-name ${STACK_NAME} \
+    --template-url https://s3-ap-southeast-2.amazonaws.com/geodesy-stack-template/infra-${ENV}.json --parameters \
     ParameterKey=${RDS_MASTER_USERNAME_PARAM_NAME},ParameterValue=${RDS_MASTER_USERNAME} \
     ParameterKey=${RDS_MASTER_PASSWORD_PARAM_NAME},ParameterValue=${RDS_MASTER_PASSWORD}
 

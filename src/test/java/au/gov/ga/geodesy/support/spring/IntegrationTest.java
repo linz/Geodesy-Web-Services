@@ -15,7 +15,7 @@ import au.gov.ga.geodesy.domain.model.Repositories;
                 PersistenceJpaConfig.class,
         },
         loader = AnnotationConfigContextLoader.class)
-public class IntegrationTestConfig extends AbstractTransactionalTestNGSpringContextTests {
+public class IntegrationTest extends AbstractTransactionalTestNGSpringContextTests {
 
     @AfterClass(alwaysRun = true)
     @Rollback(false)

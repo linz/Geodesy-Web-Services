@@ -7,7 +7,7 @@ import au.gov.ga.geodesy.domain.model.equipment.EquipmentRepository;
 import au.gov.ga.geodesy.port.SiteLogReader;
 import au.gov.ga.geodesy.port.adapter.sopac.SopacSiteLogReader;
 import au.gov.ga.geodesy.support.TestResources;
-import au.gov.ga.geodesy.support.spring.IntegrationTestConfig;
+import au.gov.ga.geodesy.support.spring.IntegrationTest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.transaction.PlatformTransactionManager;
@@ -20,7 +20,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.IsEqual.equalTo;
 
 @Transactional("geodesyTransactionManager")
-public class KeepUnmodifiedNodesAndSetupsTest extends IntegrationTestConfig {
+public class KeepUnmodifiedNodesAndSetupsTest extends IntegrationTest {
 
     private static final String fourCharId = "ABRK";
 

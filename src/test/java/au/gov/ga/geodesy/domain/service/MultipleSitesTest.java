@@ -4,7 +4,7 @@ import au.gov.ga.geodesy.domain.model.sitelog.SiteLogRepository;
 import au.gov.ga.geodesy.port.InvalidSiteLogException;
 import au.gov.ga.geodesy.port.SiteLogReader;
 import au.gov.ga.geodesy.port.adapter.sopac.SopacSiteLogReader;
-import au.gov.ga.geodesy.support.spring.IntegrationTestConfig;
+import au.gov.ga.geodesy.support.spring.IntegrationTest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.transaction.annotation.Transactional;
@@ -18,7 +18,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.IsEqual.equalTo;
 
 @Transactional("geodesyTransactionManager")
-public class MultipleSitesTest extends IntegrationTestConfig {
+public class MultipleSitesTest extends IntegrationTest {
 
     private static final String scenarioDirName = "src/test/resources/multiple-sites/";
 

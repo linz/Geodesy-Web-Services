@@ -5,6 +5,7 @@ import java.util.Properties;
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.DependsOn;
@@ -22,13 +23,15 @@ import liquibase.integration.spring.SpringLiquibase;
 
 @Configuration
 @EnableTransactionManagement
-
 @EnableJpaRepositories(
     value = {"au.gov.ga.geodesy.domain.model"},
     entityManagerFactoryRef = "geodesyEntityManagerFactory",
     transactionManagerRef = "geodesyTransactionManager"
 )
 public class PersistenceJpaConfig {
+
+    @Autowired
+    private IntegrationTestConfig testConfig;
 
     @Bean
     @Primary
@@ -53,10 +56,9 @@ public class PersistenceJpaConfig {
     @Bean
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        //dataSource.setUrl("jdbc:postgresql://localhost/geodesy_baseline_db");
-        dataSource.setUrl("jdbc:postgresql://localhost/geodesydb");
-        dataSource.setUsername("geodesy");
-        dataSource.setPassword("geodesypw");
+        dataSource.setUrl(testConfig.getDbUrl());
+        dataSource.setUsername(testConfig.getDbUsername());
+        dataSource.setPassword(testConfig.getDbPassword());
         return dataSource;
     }
 

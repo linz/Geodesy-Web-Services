@@ -12,7 +12,8 @@ import au.gov.ga.geodesy.domain.model.Repositories;
 @ContextConfiguration(
     classes = {
         GeodesySupportConfig.class,
-        PersistenceJpaConfig.class
+        IntegrationTestConfig.class,
+        PersistenceJpaConfig.class,
     },
     loader = AnnotationConfigContextLoader.class
 )

@@ -14,5 +14,7 @@
             password="${geodesy-db-password}"
             name="jdbc/GeodesyDB"
             maxActive="40"
-            maxWait="10000"/>
+            maxWait="10000"
+            testWhileIdle="true"
+            validationQuery="SELECT 1; COMMIT;"/>
 </Context>

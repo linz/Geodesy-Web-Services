@@ -1,25 +1,26 @@
-from amazonia.classes.asg_config import AsgConfig
-from amazonia.classes.block_devices_config import BlockDevicesConfig
-from amazonia.classes.cf_cache_behavior_config import CFCacheBehavior
-from amazonia.classes.cf_distribution_config import CFDistributionConfig
-from amazonia.classes.cf_origins_config import CFOriginsConfig
-from amazonia.classes.database_config import DatabaseConfig
-from amazonia.classes.elb_config import ElbConfig
-from amazonia.classes.simple_scaling_policy_config import SimpleScalingPolicyConfig
 from amazonia.classes.api_gateway_config import ApiGatewayMethodConfig
 from amazonia.classes.api_gateway_config import ApiGatewayRequestConfig, ApiGatewayResponseConfig
+from amazonia.classes.asg_config import AsgConfig
+from amazonia.classes.block_devices_config import BlockDevicesConfig
+from amazonia.classes.cf_distribution_config import CFDistributionConfig, CFCacheBehaviorConfig, CFOriginsConfig
+from amazonia.classes.database_config import DatabaseConfig
+from amazonia.classes.elb_config import ElbConfig, ElbListenersConfig
+from amazonia.classes.lambda_config import LambdaConfig
+from amazonia.classes.simple_scaling_policy_config import SimpleScalingPolicyConfig
 
 
 class ComplexObjectFieldMapping(object):
-    def __init__(self, constructor, is_list, key_list):
+    def __init__(self, constructor, is_list, is_defaulted, key_list):
         """
         Simple class to hold mapping information between input data and config classes
         :param constructor: config class definition
         :param is_list: is the field a list of config objects or a single config object?
+        :param is_defaulted: is the complex object settable wholly from defaults?
         :param key_list: expected config keys
         """
         self.constructor = constructor
         self.is_list = is_list
+        self.is_defaulted = is_defaulted
         self.key_list = key_list
 
 
@@ -27,21 +28,27 @@ class YamlFields(object):
     """Simple object to consolidate a number of key list constants"""
 
     # elb_config field list
-    elb_config_key_list = ['instance_protocol',
-                           'loadbalancer_protocol',
-                           'instance_port',
-                           'loadbalancer_port',
-                           'elb_health_check',
+    elb_config_key_list = ['elb_health_check',
+                           'elb_listeners_config',
                            'public_unit',
                            'elb_log_bucket',
-                           'unit_hosted_zone_name',
-                           'ssl_certificate_id'
+                           'ssl_certificate_id',
+                           'healthy_threshold',
+                           'unhealthy_threshold',
+                           'interval',
+                           'timeout'
                            ]
 
+    # elb_listeners_config field list
+    elb_listeners_config_key_list = ['instance_protocol',
+                                     'loadbalancer_protocol',
+                                     'instance_port',
+                                     'loadbalancer_port',
+                                     'sticky_app_cookie'
+                                     ]
+
     # asg_config field list
-    asg_config_key_list = ['sns_topic_arn',
-                           'sns_notification_types',
-                           'health_check_grace_period',
+    asg_config_key_list = ['health_check_grace_period',
                            'health_check_type',
                            'minsize',
                            'maxsize',
@@ -50,7 +57,8 @@ class YamlFields(object):
                            'userdata',
                            'iam_instance_profile_arn',
                            'block_devices_config',
-                           'simple_scaling_policy_config'
+                           'simple_scaling_policy_config',
+                           'ec2_scheduled_shutdown'
                            ]
 
     # simple_scaling_policy field list
@@ -80,16 +88,6 @@ class YamlFields(object):
         'default_root_object',
         'enabled',
         'price_class',
-        'target_origin_id',
-        'allowed_methods',
-        'cached_methods',
-        'trusted_signers',
-        'viewer_protocol_policy',
-        'forward_cookies',
-        'forwarded_headers',
-        'min_ttl',
-        'default_ttl',
-        'max_ttl',
         'error_page_path',
         'acm_cert_arn',
         'minimum_protocol_version',
@@ -99,7 +97,7 @@ class YamlFields(object):
     # api_method_config field list
     api_method_config = [
         'method_name',
-        'lambda_arn',
+        'lambda_unit',
         'httpmethod',
         'authorizationtype',
         'request_config',
@@ -125,11 +123,14 @@ class YamlFields(object):
     cf_origins_config_key_list = [
         'domain_name',
         'origin_id',
+        'origin_path',
+        'custom_headers',
         'origin_policy'
     ]
 
     # cloudfront cache behavior config key list
     cf_cache_behavior_config_key_list = [
+        'is_default',
         'path_pattern',
         'allowed_methods',
         'cached_methods',
@@ -140,7 +141,8 @@ class YamlFields(object):
         'min_ttl',
         'default_ttl',
         'max_ttl',
-        'trusted_signers'
+        'trusted_signers',
+        'query_string'
     ]
 
     # database_config field list
@@ -170,15 +172,17 @@ class YamlFields(object):
         'nat_instance_type',
         'nat_highly_available',
         'home_cidrs',
-        'stack_hosted_zone_name',
+        'public_hosted_zone_name',
+        'private_hosted_zone_name',
         'cf_distribution_units',
         'zd_autoscaling_units',
         'autoscaling_units',
         'api_gateway_units',
+        'lambda_units',
         'database_units',
         'iam_instance_profile_arn',
         'owner_emails',
-        'nat_alerting'
+        'ec2_scheduled_shutdown'
     ]
 
     # autoscaling unit parameter field list
@@ -215,45 +219,72 @@ class YamlFields(object):
     # api parameter field list
     api_gateway_unit_key_list = [
         'unit_title',
-        'method_config',
+        'method_config'
+    ]
+
+    # lambda unit parameter field list
+    lambda_unit_key_list = [
+        'unit_title',
+        'dependencies',
+        'lambda_config'
+    ]
+
+    # lambda config field list
+    lambda_config_key_list = [
+        'lambda_s3_bucket',
+        'lambda_s3_key',
+        'lambda_description',
+        'lambda_function_name',
+        'lambda_handler',
+        'lambda_memory_size',
+        'lambda_role_arn',
+        'lambda_runtime',
+        'lambda_timeout',
+        'lambda_schedule'
     ]
 
     # config classes
     complex_object_field_mapping = {
         'elb_config':
-            ComplexObjectFieldMapping(ElbConfig, False, elb_config_key_list),
+            ComplexObjectFieldMapping(ElbConfig, False, True, elb_config_key_list),
+        'elb_listeners_config':
+            ComplexObjectFieldMapping(ElbListenersConfig, True, True, elb_listeners_config_key_list),
         'asg_config':
-            ComplexObjectFieldMapping(AsgConfig, False, asg_config_key_list),
+            ComplexObjectFieldMapping(AsgConfig, False, True, asg_config_key_list),
         'blue_asg_config':
-            ComplexObjectFieldMapping(AsgConfig, False, asg_config_key_list),
+            ComplexObjectFieldMapping(AsgConfig, False, True, asg_config_key_list),
         'green_asg_config':
-            ComplexObjectFieldMapping(AsgConfig, False, asg_config_key_list),
+            ComplexObjectFieldMapping(AsgConfig, False, True, asg_config_key_list),
         'database_config':
-            ComplexObjectFieldMapping(DatabaseConfig, False, database_config_key_list),
+            ComplexObjectFieldMapping(DatabaseConfig, False, True, database_config_key_list),
         'block_devices_config':
-            ComplexObjectFieldMapping(BlockDevicesConfig, True, block_devices_config_key_list),
+            ComplexObjectFieldMapping(BlockDevicesConfig, True, False, block_devices_config_key_list),
         'simple_scaling_policy_config':
-            ComplexObjectFieldMapping(SimpleScalingPolicyConfig, True, simple_scaling_policy_config_key_list),
+            ComplexObjectFieldMapping(SimpleScalingPolicyConfig, True, False, simple_scaling_policy_config_key_list),
         'autoscaling_units':
-            ComplexObjectFieldMapping(dict, True, autoscaling_unit_key_list),
+            ComplexObjectFieldMapping(dict, True, False, autoscaling_unit_key_list),
         'zd_autoscaling_units':
-            ComplexObjectFieldMapping(dict, True, zd_autoscaling_unit_key_list),
+            ComplexObjectFieldMapping(dict, True, False, zd_autoscaling_unit_key_list),
         'database_units':
-            ComplexObjectFieldMapping(dict, True, database_unit_key_list),
+            ComplexObjectFieldMapping(dict, True, False, database_unit_key_list),
         'cf_distribution_units':
-            ComplexObjectFieldMapping(dict, True, cf_distribution_unit_key_list),
+            ComplexObjectFieldMapping(dict, True, False, cf_distribution_unit_key_list),
         'cf_cache_behavior_config':
-            ComplexObjectFieldMapping(CFCacheBehavior, True, cf_cache_behavior_config_key_list),
+            ComplexObjectFieldMapping(CFCacheBehaviorConfig, True, False, cf_cache_behavior_config_key_list),
         'cf_distribution_config':
-            ComplexObjectFieldMapping(CFDistributionConfig, False, cf_distribution_config_key_list),
+            ComplexObjectFieldMapping(CFDistributionConfig, False, True, cf_distribution_config_key_list),
         'cf_origins_config':
-            ComplexObjectFieldMapping(CFOriginsConfig, True, cf_origins_config_key_list),
+            ComplexObjectFieldMapping(CFOriginsConfig, True, False, cf_origins_config_key_list),
         'api_gateway_units':
-            ComplexObjectFieldMapping(dict, True, api_gateway_unit_key_list),
+            ComplexObjectFieldMapping(dict, True, False, api_gateway_unit_key_list),
         'method_config':
-            ComplexObjectFieldMapping(ApiGatewayMethodConfig, True, api_method_config),
+            ComplexObjectFieldMapping(ApiGatewayMethodConfig, True, False, api_method_config),
         'request_config':
-            ComplexObjectFieldMapping(ApiGatewayRequestConfig, False, api_request_config),
+            ComplexObjectFieldMapping(ApiGatewayRequestConfig, False, True, api_request_config),
         'response_config':
-            ComplexObjectFieldMapping(ApiGatewayResponseConfig, True, api_response_config)
+            ComplexObjectFieldMapping(ApiGatewayResponseConfig, True, False, api_response_config),
+        'lambda_units':
+            ComplexObjectFieldMapping(dict, True, False, lambda_unit_key_list),
+        'lambda_config':
+            ComplexObjectFieldMapping(LambdaConfig, False, True, lambda_config_key_list),
     }

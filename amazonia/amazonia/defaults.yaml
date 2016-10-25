@@ -8,35 +8,52 @@
 #   Multi line strings: can be used by establishing a literal block '|'
 
 # Stack values
+amz_version: 1.4.5
 keypair: 'INSERT_YOUR_KEYPAIR_HERE'
 code_deploy_service_role:
 availability_zones:
   - 'ap-southeast-2a'
   - 'ap-southeast-2b'
   - 'ap-southeast-2c'
-vpc_cidr: '10.0.0.0/16'
+vpc_cidr:
+  name: 'VPC'
+  cidr: '10.0.0.0/16'
 public_cidr:
   name: 'PublicIp'
   cidr: '0.0.0.0/0'
 jump_image_id: 'ami-dc361ebf'
-jump_instance_type: 't2.micro'
+jump_instance_type: 't2.nano'
 nat_highly_available: false
 nat_image_id: 'ami-53371f30'
-nat_instance_type: 't2.micro'
+nat_instance_type: 't2.nano'
 home_cidrs:
   - name: 'office'
     cidr: '123.45.12.34/16'
-stack_hosted_zone_name:
+public_hosted_zone_name:
+private_hosted_zone_name: 'private.lan.'
 owner_emails:
-nat_alerting: false
 iam_instance_profile_arn:
 zd_autoscaling_units:
 autoscaling_units:
 database_units:
+ec2_scheduled_shutdown:
 
 # Common unit default values
 unit_title: 'defaulttitle'
 dependencies:
+
+# Lambda unit default values
+lambda_config:
+  lambda_s3_bucket:
+  lambda_s3_key:
+  lambda_description:
+  lambda_function_name:
+  lambda_handler:
+  lambda_memory_size: 128
+  lambda_role_arn:
+  lambda_runtime: 'python2.7'
+  lambda_timeout: 1
+  lambda_schedule:
 
 # Database unit default values
 database_config:
@@ -52,21 +69,25 @@ database_config:
   db_storage_type:
 
 # (ZD) Autoscaling unit default values
+elb_listeners_config: &elb_listeners_config
+    loadbalancer_protocol: 'HTTP'
+    instance_protocol: 'HTTP'
+    instance_port: '80'
+    loadbalancer_port: '80'
+    sticky_app_cookie:
+
 # ELB default values
 elb_config:
-  unit_hosted_zone_name:
-  loadbalancer_protocol:
-    - 'HTTP'
-  instance_protocol:
-    - 'HTTP'
-  instance_port:
-    - '80'
-  loadbalancer_port:
-    - '80'
+  elb_listeners_config:
+    - *elb_listeners_config
   elb_health_check: 'HTTP:80/index.html'
   elb_log_bucket:
   public_unit: true
   ssl_certificate_id:
+  healthy_threshold: 10
+  unhealthy_threshold: 2
+  interval: 300
+  timeout: 30
 
 # Block device configs
 block_devices_config:
@@ -92,7 +113,7 @@ simple_scaling_policy_config:
 # Asg default values
 asg_config: &asg_config
   image_id: 'ami-dc361ebf'
-  instance_type: 't2.micro'
+  instance_type: 't2.nano'
   iam_instance_profile_arn:
   minsize: '1'
   maxsize: '1'
@@ -100,12 +121,7 @@ asg_config: &asg_config
   health_check_type: 'ELB'
   block_devices_config:
   simple_scaling_policy_config:
-  sns_topic_arn:
-  sns_notification_types:
-    - 'autoscaling:EC2_INSTANCE_LAUNCH'
-    - 'autoscaling:EC2_INSTANCE_LAUNCH_ERROR'
-    - 'autoscaling:EC2_INSTANCE_TERMINATE'
-    - 'autoscaling:EC2_INSTANCE_TERMINATE_ERROR'
+  ec2_scheduled_shutdown:
   userdata: |
     #cloud-config
     repo_update: true
@@ -136,29 +152,16 @@ cf_distribution_config:
   default_root_object: 'index.html'
   enabled: True
   price_class: 'PriceClass_All'
-  target_origin_id:
-  forward_cookies: 'all'
-  forwarded_headers:
-  allowed_methods:
-   - 'GET'
-   - 'HEAD'
-  cached_methods:
-   - 'GET'
-   - 'HEAD'
-  trusted_signers:
-   - 'self'
-  viewer_protocol_policy: 'https-only'
-  min_ttl: 0
-  default_ttl: 0
-  max_ttl: 0
   error_page_path: '404.html'
-  acm_cert_arn: ''
+  acm_cert_arn: 
   minimum_protocol_version: 'TLSv1'
   ssl_support_method: 'sni-only'
 
 cf_origins_config:
    domain_name:
    origin_id:
+   origin_path:
+   custom_headers:
    origin_policy:
      is_s3:
      origin_access_identity:
@@ -171,6 +174,7 @@ cf_origins_config:
       - 'TLSv1.2'
 
 cf_cache_behavior_config:
+   is_default: False
    allowed_methods:
     - 'GET'
     - 'HEAD'
@@ -185,8 +189,8 @@ cf_cache_behavior_config:
    default_ttl: 0
    max_ttl: 0
    trusted_signers:
-    - 'self'
    path_pattern:
+   query_string: False
 
 request_config: &request_config
   templates:
@@ -206,7 +210,7 @@ response_config: &response_config
 
 method_config:
   method_name: 'login'
-  lambda_arn: 'arn:aws:lambda:ap-southeast-2:1234567890:function:test'
+  lambda_unit: 'testlambda'
   httpmethod: 'POST'
   authorizationtype: 'NONE'
   request_config: *request_config
@@ -214,3 +218,5 @@ method_config:
     - *response_config
 
 api_gateway_units:
+
+lambda_units:

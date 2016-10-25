@@ -7,7 +7,6 @@ autoscaling_units:
     blah: 'should not be here'
     unit_title: 'app1'
     elb_config:
-      unit_hosted_zone_name: '.test.lan'
       loadbalancer_protocol:
        - 'HTTP'
       instance_protocol:
@@ -26,8 +25,6 @@ autoscaling_units:
       health_check_grace_period: '300'
       health_check_type: 'ELB'
       iam_instance_profile_arn: 'arn:aws:iam::1234567890124:role/InstanceProfile'
-      sns_topic_arn: 'sns_topic_arn'
-      sns_notification_types: 'sns_notification_types'
       userdata: |
         #cloud-config
         repo_update: true

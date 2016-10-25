@@ -2,6 +2,61 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.4.2] - 5/10/2016
+- Temporarily locked web front end to v1.3.13 due to troposphere 1.8.2 dependency not being in Pypi yet.
+
+## [1.4.1] - 29/09/2016
+- Adding unit tests for tree and leaf config
+- Setting default rds size to t2.micro
+- Setting default instance size to t2.nano
+
+## [1.3.14] - 27/09/2016
+- Created tree/leaf pattern based upon cloudformation cross stack references
+- Added permissions for API gateway to invoke Lambda
+- Rewrote unit flow method so that cross stack and integral stack references follow a similar pattern
+- Due to changes to how network dependencies are set, port numbers need to be specified as part of the dependency
+- Due to unit/leaf naming conventions, some cloud formation references will break and stacks will need to be recreated
+- Updated stack schema, yaml and tests to reflect new internal amazonia architecture
+- Rewrote creation of tests to make it faster and easier to extend amazonia
+- Update Cloudfront unit flow to refer to API Gateways and ELBs
+
+## [1.3.13] - 21/09/2016
+- Add support for ACM certificates to Cloudfront distributions
+
+## [1.3.12] - 20/09/2016
+- Adding sticky app cookie to test_yaml_complete_valid (mmm, sticky app cookie)
+
+## [1.3.10] - 16/09/2016
+- Implement Sticky Cookies for ELBs
+- Implement single, non-configurable SNS topic to use with all stack alerts
+
+## [1.3.9] - 14/09/2016
+- Add extra configuration for ELBs - healthy/unhealthy thresholds, interval, timeout
+- Refactor Cloudfront distributions
+- Added an Output for the endpoint of each deployment that is created for api gateway units. Storing these in an 'endpoints' list.
+- ELB listeners are now a defaultable list of complex objects rather than 4 different arrays (who were implicitly linked)
+- YAML loader now allows defaulting of lists of complex objects (elb listeners) and "None-ing" of single complex objects (no examples yet)
+
+## [1.3.8] - 8/09/2016
+- Replaced stack parameter stack_hosted_zone_name with public_hosted_zone_name
+- Stack now creates a discrete private hosted zone (configurable via private_hosted_zone_name, default 'private.lan.')
+- RDS creates R53 record in private hosted zone
+- Internal ELBs create R53 records in private hosted zone
+- Public ELBs now use stack public_hosted_zone_name, unit_hosted_zone_name removed
+- Updated Web App to handle all types of errors a little nicer.
+- Add support for OriginPath, forwarded QueryStrings, CustomHeaders to Cloudfront Distributions
+
+## [1.3.6] - 7/09/2016
+- Allow for Lambdas to have no dependencies, and for them to have Cloudwatch event triggers
+- Added add unit flow function to Api Gateway class to enable lambda unit integration.
+- Added deployments to Api Gateway class.
+
+## [1.3.5] - 6/09/2016
+- Introduced amz_version for tracking version used for users
+- Adding support for lambda units
+- Renamed CF resource for PubRT to PubRouteTable. Stacks will need to be recreated
+- Renamed CF resource for PriRT to PriRouteTable. Stacks will need to be recreated
+
 ## [1.3.4] - 6/09/2016
 - Add Forwarded Headers support to Cloudfront distributions
 - Added support for Api Gateway creation

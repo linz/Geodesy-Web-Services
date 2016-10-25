@@ -4,25 +4,11 @@ import troposphere.elasticloadbalancing as elb
 from amazonia.classes.asg import Asg
 from amazonia.classes.asg_config import AsgConfig
 from amazonia.classes.block_devices_config import BlockDevicesConfig
-from amazonia.classes.network_config import NetworkConfig
-from troposphere import ec2, Ref, Template
+from network_setup import get_network_config
 
 
 def main():
-    template = Template()
-
-    vpc = template.add_resource(ec2.VPC('MyVPC',
-                                        CidrBlock='10.0.0.0/16'))
-    subnets = [template.add_resource(ec2.Subnet('MySubnet',
-                                                AvailabilityZone='ap-southeast-2a',
-                                                VpcId=Ref(vpc),
-                                                CidrBlock='10.0.1.0/24'))]
-
-    internet_gateway = template.add_resource(ec2.InternetGateway('MyInternetGateway'))
-    template.add_resource(ec2.VPCGatewayAttachment('MyInternetGatewayAttachment',
-                                                   VpcId=Ref(vpc),
-                                                   InternetGatewayId=Ref(internet_gateway)
-                                                   ))
+    network_config, template = get_network_config()
 
     load_balancer = template.add_resource(elb.LoadBalancer('MyELB',
                                                            CrossZone=True,
@@ -37,25 +23,7 @@ def main():
                                                                                    InstancePort='80',
                                                                                    InstanceProtocol='HTTP')],
                                                            Scheme='internet-facing',
-                                                           Subnets=[Ref(subnet) for subnet in subnets]))
-
-    class Single(object):
-        def __init__(self):
-            self.single = ec2.Instance('title')
-
-    network_config = NetworkConfig(
-        vpc=vpc,
-        private_subnets=subnets,
-        public_subnets=None,
-        jump=None,
-        nat=Single(),
-        public_cidr=None,
-        stack_hosted_zone_name=None,
-        keypair='pipeline',
-        cd_service_role_arn='arn:aws:iam::12345678987654321:role/CodeDeployServiceRole',
-        nat_highly_available=False,
-        nat_gateways=[]
-    )
+                                                           Subnets=network_config.public_subnets))
 
     block_devices_config = [
         BlockDevicesConfig(device_name='/dev/xvda',
@@ -93,11 +61,6 @@ def main():
         health_check_grace_period=300,
         health_check_type='ELB',
         iam_instance_profile_arn='arn:aws:iam::12345678987654321:role/InstanceProfileRole',
-        sns_topic_arn='arn:aws:sns:ap-southeast-2:123456789:test_sns_arn',
-        sns_notification_types=['autoscaling:EC2_INSTANCE_LAUNCH',
-                                'autoscaling:EC2_INSTANCE_LAUNCH_ERROR',
-                                'autoscaling:EC2_INSTANCE_TERMINATE',
-                                'autoscaling:EC2_INSTANCE_TERMINATE_ERROR'],
         block_devices_config=block_devices_config,
         simple_scaling_policy_config=None
     )

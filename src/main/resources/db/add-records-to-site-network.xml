@@ -88,6 +88,7 @@ END LOOP;
 --commit;
 RAISE NOTICE 'Done update site_in_network and relation.';
 
+RETURN null;
 END;
              $total$ language plpgsql 
          </createProcedure> 

@@ -1,29 +1,22 @@
 #!/usr/bin/python3
 
-from troposphere import Output, Ref, Join, cloudwatch
+from troposphere import Ref, Join, cloudwatch
 from troposphere.sns import Topic, Subscription
 
 
 class SNS(object):
-    def __init__(self, unit_title, template, display_name):
+    def __init__(self, template):
         """
         AWS: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-topic.html
         Troposphere: https://github.com/cloudtools/troposphere/blob/master/troposphere/sns.py
-        :param unit_title: Title of the sns unit
         :param template: The troposphere template to add the Elastic Loadbalancer to.
-        :param display_name: The SNS display name
         """
-        title = unit_title + 'sns'
+        title = 'SnsTopic'
 
         self.template = template
-        self.sns_topic = self.template.add_resource(Topic(title, DisplayName=display_name))
-
-        self.template.add_output(Output(
-            title,
-            Value=Join('', ['SNS topic created with Amazonia as part of ', Ref('AWS::StackName')]),
-            Description=self.sns_topic.DisplayName
-        ))
-
+        self.trop_topic = self.template.add_resource(Topic(title,
+                                                           DisplayName=Join('', [Ref('AWS::StackName'),
+                                                                                 'Notifications'])))
         self.subscriptions = []
         self.alarms = []
 
@@ -36,13 +29,13 @@ class SNS(object):
         :param protocol: the protocol to use to send the notification (eg 'email')
         """
         sub = Subscription(
-            '{0}Subscription{1}'.format(self.sns_topic.title, str(len(self.subscriptions))),
+            '{0}Subscription{1}'.format(self.trop_topic.title, str(len(self.subscriptions))),
             Endpoint=endpoint,
             Protocol=protocol
         )
 
         self.subscriptions.append(sub)
-        self.sns_topic.Subscription = self.subscriptions
+        self.trop_topic.Subscription = self.subscriptions
 
     def add_alarm(self, description, metric, namespace, threshold, instance):
         """
@@ -56,10 +49,10 @@ class SNS(object):
         """
 
         alarm = cloudwatch.Alarm(
-                    '{0}Alarm{1}'.format(self.sns_topic.title, str(len(self.alarms))),
+                    '{0}Alarm{1}'.format(self.trop_topic.title, str(len(self.alarms))),
                     AlarmDescription=description,
-                    AlarmActions=[Ref(self.sns_topic.title)],
-                    OKActions=[Ref(self.sns_topic.title)],
+                    AlarmActions=[Ref(self.trop_topic.title)],
+                    OKActions=[Ref(self.trop_topic.title)],
                     MetricName=metric,
                     Namespace=namespace,
                     Threshold=threshold,
@@ -67,7 +60,7 @@ class SNS(object):
                     EvaluationPeriods='1',
                     Period='300',
                     Statistic='Sum',
-                    DependsOn=self.sns_topic.title,
+                    DependsOn=self.trop_topic.title,
                     Dimensions=[cloudwatch.MetricDimension(Name='InstanceId', Value=Ref(instance))]
                 )
 

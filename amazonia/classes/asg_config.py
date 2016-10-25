@@ -12,9 +12,10 @@ class InvalidAsgConfigError(Exception):
 
 
 class AsgConfig(object):
-    def __init__(self, sns_topic_arn, sns_notification_types, health_check_grace_period,
+    def __init__(self, health_check_grace_period,
                  health_check_type, minsize, maxsize, image_id, instance_type, userdata,
-                 iam_instance_profile_arn, block_devices_config, simple_scaling_policy_config):
+                 iam_instance_profile_arn, block_devices_config, simple_scaling_policy_config,
+                 ec2_scheduled_shutdown):
         """
         Simple config class to contain autoscaling group related parameters
         :param minsize: minimum size of autoscaling group
@@ -23,15 +24,12 @@ class AsgConfig(object):
         :param instance_type: Instance type to create instances of e.g. 't2.micro' or 't2.nano'
         :param userdata: Instance boot script
         :param iam_instance_profile_arn: Iam instance profile ARN to allow isntance access to services like S3
-        :param sns_topic_arn: ARN for sns topic to notify regarding autoscale events
-        :param sns_notification_types: list of SNS autoscale notification types
         :param health_check_grace_period: The amount of time to wait for an instance to start before checking health
         :param health_check_type: The type of health check. currently 'ELB' or 'EC2' are the only valid types.
         :param block_devices_config: List containing block device mappings
         :param simple_scaling_policy_config: List containing scaling policies
+        :param ec2_scheduled_shutdown: True/False for whether to schedule shutdown for EC2 instances outside work hours
         """
-        self.sns_topic_arn = sns_topic_arn
-        self.sns_notification_types = sns_notification_types
         self.health_check_grace_period = health_check_grace_period
         self.health_check_type = health_check_type
         self.minsize = minsize
@@ -42,6 +40,7 @@ class AsgConfig(object):
         self.iam_instance_profile_arn = iam_instance_profile_arn
         self.block_devices_config = block_devices_config
         self.simple_scaling_policy_config = simple_scaling_policy_config
+        self.ec2_scheduled_shutdown = ec2_scheduled_shutdown
 
         # check for insecure variables
         if self.userdata is not None:

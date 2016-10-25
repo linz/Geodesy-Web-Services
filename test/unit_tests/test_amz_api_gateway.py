@@ -1,28 +1,32 @@
-from amazonia.classes.api_gateway_config import ApiGatewayResponseConfig, ApiGatewayRequestConfig
+from amazonia.classes.amz_api_gateway import ApiGatewayLeaf
+from amazonia.classes.amz_api_gateway import ApiGatewayUnit
+from amazonia.classes.amz_lambda import LambdaUnit
 from amazonia.classes.api_gateway_config import ApiGatewayMethodConfig
-from amazonia.classes.api_gateway_unit import ApiGatewayUnit
-from troposphere import Template, Ref, Join
+from amazonia.classes.api_gateway_config import ApiGatewayResponseConfig, ApiGatewayRequestConfig
+from amazonia.classes.lambda_config import LambdaConfig
+from network_setup import get_network_config
 from nose.tools import *
+from troposphere import Ref, Join
 
-
-template = apiname = methodname = lambda_arn = httpmethod = authorizationtype = request_template = request_parameters =\
-    response_template = response_parameters = response_models = selection_pattern = statuscode = None
+template = apiname = methodname = httpmethod = authorizationtype = request_template = request_parameters = \
+    response_template = response_parameters = response_models = selection_pattern = statuscode = lambda_title = \
+    network_config = tree_name = None
 
 
 def setup_resources():
     """
     Initialise resources before each test
     """
-    global template, apiname, methodname, lambda_arn, httpmethod, authorizationtype, request_template,\
-        request_parameters, response_template, response_parameters, response_models, selection_pattern, statuscode
-
-    template = Template()
+    global template, network_config, apiname, methodname, httpmethod, authorizationtype, request_template, \
+        lambda_title, request_parameters, response_template, response_parameters, response_models, selection_pattern, \
+        statuscode, tree_name
+    tree_name = 'testtree'
+    network_config, template = get_network_config()
     apiname = 'test0'
     methodname = 'login0'
-    lambda_arn = 'arn:aws:lambda:ap-southeast-2:123456789:function:test'
     httpmethod = 'POST'
     authorizationtype = 'NONE'
-
+    lambda_title = 'lambdatest1'
     request_template = {'application/json': """{ "username": $input.json('$.username')}"""}
     request_parameters = {'method.request.header.Origin': "$input.params('Origin')"}
     response_template = {'application/json': ''}
@@ -32,7 +36,7 @@ def setup_resources():
     selection_pattern = ''
 
 
-@with_setup(setup_resources())
+@with_setup(setup_resources)
 def test_request_config():
     """
     Tests the creation of a request config
@@ -43,7 +47,7 @@ def test_request_config():
     assert_equals(request.parameters, request_parameters)
 
 
-@with_setup(setup_resources())
+@with_setup(setup_resources)
 def test_response_config():
     """
     Tests the creation of a response config
@@ -57,51 +61,66 @@ def test_response_config():
     assert_equals(response.models, response_models)
 
 
-@with_setup(setup_resources())
+@with_setup(setup_resources)
 def test_method_config():
     """
     Tests the creation of a method config
     """
     request = create_request_config()
     response = create_response_config()
-
     method = create_method_config(request, [response])
 
     assert_equals(method.method_name, methodname)
-    assert_equals(method.lambda_arn, lambda_arn)
+    assert_equals(method.lambda_unit, lambda_title)
     assert_equals(method.request, request)
     assert_equals(method.responses, [response])
     assert_equals(method.httpmethod, httpmethod)
     assert_equals(method.authorizationtype, authorizationtype)
 
 
-@with_setup(setup_resources())
-def test_creation_of_api():
+@with_setup(setup_resources)
+def test_creation_of_api_leaf():
     """
-    Tests the creation of an api
+    Tests the creation of an api unit and api leaf
     """
     request = create_request_config()
     response = create_response_config()
     method = create_method_config(request, [response])
-    api = create_api(method)
+    api_leaf = create_api_leaf(method)
 
-    assert_equals(api.title, apiname)
-    assert_equals(api.api.title, '{0}API'.format(apiname))
-    assert_equals(api.api.Name, apiname)
+    assert_equals(api_leaf.title, apiname)
+    assert_equals(api_leaf.api.title, apiname)
+    assert_equals(api_leaf.tree_name, tree_name)
 
 
-@with_setup(setup_resources())
+@with_setup(setup_resources)
+def test_creation_of_api_unit():
+    """
+    Tests the creation of an api unit and api leaf
+    """
+    request = create_request_config()
+    response = create_response_config()
+    method = create_method_config(request, [response])
+    api_unit = create_api_unit(method)
+
+    assert_equals(api_unit.title, apiname)
+    assert_equals(api_unit.api.title, apiname)
+
+
+@with_setup(setup_resources)
 def test_creation_of_method():
     """
     Tests the creation of a method
     """
-    global apiname, methodname
+    global apiname, methodname, lambda_title
     apiname = 'test1'
     methodname = 'login1'
+    lambda_title += '1'
     request = create_request_config()
     response = create_response_config()
     method = create_method_config(request, [response])
-    api = create_api(method)
+    api = create_api_unit(method)
+    add_lambda('1')
 
     assert_equals(len(api.methods), 1)
     assert_equals(api.methods[0].title, '{0}Method'.format(methodname))
@@ -120,22 +139,24 @@ def test_creation_of_method():
     assert_equals(method_response.ResponseParameters, response_parameters)
 
 
-@with_setup(setup_resources())
+@with_setup(setup_resources)
 def test_creation_of_integration():
     """
     Tests the creation of an integration
     """
-    global apiname, methodname
+    global apiname, methodname, lambda_title
     apiname = 'test2'
     methodname = 'login2'
+    lambda_title += '2'
     request = create_request_config()
     response = create_response_config()
     method = create_method_config(request, [response])
-    api = create_api(method)
+    api = create_api_unit(method)
+    add_lambda('2')
+
     integration = api.methods[0].Integration
 
     assert_equals(integration.title, '{0}Integration'.format(methodname))
-    assert_equals(integration.Credentials, '')
     assert_equals(integration.Type, 'AWS')
     assert_equals(integration.IntegrationHttpMethod, httpmethod)
     assert_equals(len(integration.IntegrationResponses), 1)
@@ -149,7 +170,6 @@ def test_creation_of_integration():
     assert_equals(integration_response.ResponseTemplates, response_template)
 
 
-@with_setup(setup_resources)
 def create_request_config():
     """
     Create a request config
@@ -160,7 +180,6 @@ def create_request_config():
                                    parameters=request_parameters)
 
 
-@with_setup(setup_resources)
 def create_response_config():
     """
     Create a response config
@@ -174,7 +193,6 @@ def create_response_config():
                                     models=response_models)
 
 
-@with_setup(setup_resources)
 def create_method_config(request, responses):
     """
     Creates a method config object, stitching together the request and reponses that are passed in
@@ -184,19 +202,50 @@ def create_method_config(request, responses):
     """
 
     return ApiGatewayMethodConfig(method_name=methodname,
-                                  lambda_arn=lambda_arn,
+                                  lambda_unit=lambda_title,
                                   request_config=request,
                                   response_config=responses,
                                   httpmethod=httpmethod,
                                   authorizationtype=authorizationtype)
 
 
-@with_setup(setup_resources)
-def create_api(method_config):
+def create_api_unit(method_config):
     """
     Creates an API object using a method_config object
     :param method_config: a method config
     :return: an Api gateway object
     """
+    return ApiGatewayUnit(apiname, template, [method_config], network_config)
 
-    return ApiGatewayUnit(apiname, template, [method_config], None)
+
+def create_api_leaf(method_config):
+    return ApiGatewayLeaf(tree_name, apiname, template, [method_config])
+
+
+def add_lambda(num):
+    """
+    Creates a lambda function to use with the api gateway
+    :param num: adds a num to the end of resource titles to avoid duplicates.
+    :return: a LambdaUnit object
+    """
+
+    lambda_config = LambdaConfig(
+        lambda_s3_bucket='bucket_name',
+        lambda_s3_key='key_name',
+        lambda_description='blah',
+        lambda_function_name='my_function',
+        lambda_handler='main',
+        lambda_memory_size=128,
+        lambda_role_arn='test_arn',
+        lambda_runtime='python2.7',
+        lambda_timeout=1,
+        lambda_schedule='cron(0/5 * * * ? *)'
+    )
+
+    return LambdaUnit(
+        unit_title=lambda_title + num,
+        template=template,
+        dependencies=None,
+        stack_config=network_config,
+        lambda_config=lambda_config
+    )

@@ -7,21 +7,23 @@ availability_zones:
   - 'ap-southeast-2a'
   - 'ap-southeast-2b'
   - 'ap-southeast-2c'
-vpc_cidr: '10.0.0.0/16'
+vpc_cidr:
+  name: 'VPC'
+  cidr: '10.0.0.0/16'
 public_cidr:
   name: 'PublicIp'
   cidr: '0.0.0.0/0'
 jump_image_id: 'ami-dc361ebf'
-jump_instance_type: 't2.micro'
+jump_instance_type: 't2.nano'
 nat_image_id: 'ami-53371f30'
-nat_instance_type: 't2.micro'
+nat_instance_type: 't2.nano'
 nat_highly_available: true
 home_cidrs:
   - name: 'office'
     cidr: '123.45.12.34/16'
-stack_hosted_zone_name: 'test.org.'
+public_hosted_zone_name: 'test.org.'
+private_hosted_zone_name: 'private.lan.'
 owner_emails:
-nat_alerting: false
 iam_instance_profile_arn: 'arn:aws:iam::1234567890124:role/InstanceProfile'
 
 zd_autoscaling_units:
@@ -29,18 +31,12 @@ zd_autoscaling_units:
     unit_title: 'zdapp1'
     blue_asg_config:
       image_id: 'ami-dc361ebf'
-      instance_type: 't2.micro'
+      instance_type: 't2.nano'
       iam_instance_profile_arn: 'arn:aws:iam::1234567890124:role/InstanceProfile'
       minsize: '1'
       maxsize: '1'
       health_check_grace_period: '300'
       health_check_type: 'ELB'
-      sns_topic_arn: 'sns_topic_arn'
-      sns_notification_types:
-        - 'autoscaling:EC2_INSTANCE_LAUNCH'
-        - 'autoscaling:EC2_INSTANCE_LAUNCH_ERROR'
-        - 'autoscaling:EC2_INSTANCE_TERMINATE'
-        - 'autoscaling:EC2_INSTANCE_TERMINATE_ERROR'
       userdata: |
         #cloud-config
         repo_update: true
@@ -61,18 +57,12 @@ zd_autoscaling_units:
          - service httpd start
     green_asg_config:
       image_id: 'ami-dc361ebf'
-      instance_type: 't2.micro'
+      instance_type: 't2.nano'
       iam_instance_profile_arn: 'arn:aws:iam::1234567890124:role/InstanceProfile'
       minsize: '1'
       maxsize: '1'
       health_check_grace_period: '300'
       health_check_type: 'ELB'
-      sns_topic_arn: 'sns_topic_arn'
-      sns_notification_types:
-        - 'autoscaling:EC2_INSTANCE_LAUNCH'
-        - 'autoscaling:EC2_INSTANCE_LAUNCH_ERROR'
-        - 'autoscaling:EC2_INSTANCE_TERMINATE'
-        - 'autoscaling:EC2_INSTANCE_TERMINATE_ERROR'
       simple_scaling_policy_config:
         -
           name: 'heavy load'
@@ -113,14 +103,13 @@ zd_autoscaling_units:
         runcmd:
          - service httpd start
     elb_config:
-      loadbalancer_protocol:
-       - 'HTTP'
-      instance_protocol:
-       - 'HTTP'
-      loadbalancer_port:
-       - '80'
-      instance_port:
-       - '80'
+      elb_listeners_config:
+        -
+          loadbalancer_protocol: 'HTTP'
+          instance_protocol: 'HTTP'
+          instance_port: '80'
+          loadbalancer_port: '80'
+          sticky_app_cookie: 'JSESSION'
       elb_health_check: 'HTTP:80/index.html'
       elb_log_bucket: 'elb_log_bucket'
       public_unit: true
@@ -133,18 +122,12 @@ autoscaling_units:
     unit_title: 'app1'
     asg_config:
       image_id: 'ami-dc361ebf'
-      instance_type: 't2.micro'
+      instance_type: 't2.nano'
       iam_instance_profile_arn: 'arn:aws:iam::1234567890124:role/InstanceProfile'
       minsize: '1'
       maxsize: '1'
       health_check_grace_period: '300'
       health_check_type: 'ELB'
-      sns_topic_arn: 'sns_topic_arn'
-      sns_notification_types:
-        - 'autoscaling:EC2_INSTANCE_LAUNCH'
-        - 'autoscaling:EC2_INSTANCE_LAUNCH_ERROR'
-        - 'autoscaling:EC2_INSTANCE_TERMINATE'
-        - 'autoscaling:EC2_INSTANCE_TERMINATE_ERROR'
       userdata: |
         #cloud-config
         repo_update: true
@@ -164,14 +147,12 @@ autoscaling_units:
         runcmd:
          - service httpd start
     elb_config:
-      loadbalancer_protocol:
-       - 'HTTP'
-      instance_protocol:
-       - 'HTTP'
-      loadbalancer_port:
-       - '80'
-      instance_port:
-       - '80'
+      elb_listeners_config:
+        -
+          loadbalancer_protocol: 'HTTP'
+          instance_protocol: 'HTTP'
+          instance_port: '80'
+          loadbalancer_port: '80'
       elb_health_check: 'HTTP:80/index.html'
       elb_log_bucket: 'elb_log_bucket'
       public_unit: true
@@ -182,18 +163,12 @@ autoscaling_units:
     unit_title: 'app2'
     asg_config:
       image_id: 'ami-dc361ebf'
-      instance_type: 't2.micro'
+      instance_type: 't2.nano'
       iam_instance_profile_arn: 'arn:aws:iam::1234567890124:role/InstanceProfile'
       minsize: '1'
       maxsize: '1'
       health_check_grace_period: '300'
       health_check_type: 'ELB'
-      sns_topic_arn: 'sns_topic_arn'
-      sns_notification_types:
-        - 'autoscaling:EC2_INSTANCE_LAUNCH'
-        - 'autoscaling:EC2_INSTANCE_LAUNCH_ERROR'
-        - 'autoscaling:EC2_INSTANCE_TERMINATE'
-        - 'autoscaling:EC2_INSTANCE_TERMINATE_ERROR'
       simple_scaling_policy_config:
         -
           name: 'heavy - load'
@@ -249,15 +224,12 @@ autoscaling_units:
         runcmd:
          - service httpd start
     elb_config:
-      unit_hosted_zone_name: 'test.lan.'
-      loadbalancer_protocol:
-       - 'HTTP'
-      instance_protocol:
-       - 'HTTP'
-      loadbalancer_port:
-       - '80'
-      instance_port:
-       - '80'
+      elb_listeners_config:
+        -
+          loadbalancer_protocol: 'HTTP'
+          instance_protocol: 'HTTP'
+          instance_port: '80'
+          loadbalancer_port: '80'
       elb_health_check: 'HTTP:80/index.html'
       elb_log_bucket: 'elb_log_bucket'
       public_unit: false
@@ -266,7 +238,7 @@ database_units:
   -
     unit_title: 'db1'
     database_config:
-      db_instance_type: 'db.m1.small'
+      db_instance_type: 'db.t2.micro'
       db_engine: 'postgres'
       db_port: '5432'
       db_name: 'myDb'
@@ -278,12 +250,14 @@ cf_distribution_units:
       -
         domain_name: 's3bucket.s3.amazonaws.com'
         origin_id: 'S3-s3bucket'
+        origin_path: '/'
         origin_policy:
           is_s3 : True
           origin_access_identity: 'origin-access-identity/cloudfront/ABCD1234ABCD1234'
       -
-        domain_name: 'elbname-ABCD1234.ap-southeast-2.elb.amazonaws.com'
-        origin_id: 'ELB-elbname-ABCD1234'
+        domain_name: 'completeValidYamlApiGw'
+        origin_id: 'apigw'
+        origin_path: '/path'
         origin_policy:
           is_s3 : False
           origin_protocol_policy: 'https-only'
@@ -301,31 +275,13 @@ cf_distribution_units:
       default_root_object: 'index.html'
       enabled: True
       price_class: 'PriceClass_All'
-      target_origin_id: 'ELB-elbname-ABCD1234'
-      allowed_methods:
-       - 'GET'
-       - 'POST'
-       - 'HEAD'
-       - 'DELETE'
-       - 'OPTIONS'
-       - 'PUT'
-       - 'PATCH'
-      cached_methods:
-       - 'GET'
-       - 'HEAD'
-      trusted_signers:
-       - 'self'
-      min_ttl: 0
-      default_ttl: 0
-      max_ttl: 0
-      trusted_signers:
-       - 'self'
       error_page_path: '404.html'
       acm_cert_arn: ''
       minimum_protocol_version: 'TLSv1'
       ssl_support_method: 'sni-only'
     cf_cache_behavior_config:
       -
+        is_default: True
         allowed_methods:
          - 'GET'
          - 'POST'
@@ -346,18 +302,24 @@ cf_distribution_units:
         trusted_signers:
           - 'self'
         path_pattern: '/login'
+        query_string: True
   -
     unit_title: 'distribution2'
     cf_origins_config:
       -
         domain_name: 's3bucket.s3.amazonaws.com'
         origin_id: 'S3-s3bucket'
+        origin_path:
+        custom_headers:
+          'origin': 'http://www.domain.com'
+          'accept': 'True'
         origin_policy:
           is_s3 : True
           origin_access_identity: 'origin-access-identity/cloudfront/ABCD1234ABCD1234'
       -
-        domain_name: 'elbname-ABCD1234.ap-southeast-2.elb.amazonaws.com'
-        origin_id: 'ELB-elbname-ABCD1234'
+        domain_name: 'app1'
+        origin_id: 'app1-elb'
+        origin_path:
         origin_policy:
           is_s3 : False
           origin_protocol_policy: 'https-only'
@@ -375,31 +337,13 @@ cf_distribution_units:
       default_root_object: 'index.html'
       enabled: True
       price_class: 'PriceClass_All'
-      target_origin_id: 'ELB-elbname-ABCD1234'
-      allowed_methods:
-       - 'GET'
-       - 'POST'
-       - 'HEAD'
-       - 'DELETE'
-       - 'OPTIONS'
-       - 'PUT'
-       - 'PATCH'
-      cached_methods:
-       - 'GET'
-       - 'HEAD'
-      trusted_signers:
-       - 'self'
-      min_ttl: 0
-      default_ttl: 0
-      max_ttl: 0
-      trusted_signers:
-       - 'self'
       error_page_path: '404.html'
       acm_cert_arn: ''
       minimum_protocol_version: 'TLSv1'
       ssl_support_method: 'sni-only'
     cf_cache_behavior_config:
       -
+        is_default: True
         allowed_methods:
          - 'GET'
          - 'POST'
@@ -411,7 +355,7 @@ cf_distribution_units:
         cached_methods:
          - 'GET'
          - 'HEAD'
-        target_origin_id: 'S3-s3bucket'
+        target_origin_id: 'app1-elb'
         forward_cookies: 'all'
         viewer_protocol_policy: 'allow-all'
         min_ttl: 0
@@ -419,15 +363,16 @@ cf_distribution_units:
         max_ttl: 84600
         trusted_signers:
           - 'self'
+        query_string: True
         path_pattern: '/login'
 
 api_gateway_units:
   -
-    unit_title: 'test'
+    unit_title: 'completeValidYamlApiGw'
     method_config:
       -
         method_name: 'login'
-        lambda_arn: 'arn:aws:lambda:ap-southeast-2:123456789:function:test'
+        lambda_unit: 'completeValidYamlLambda'
         httpmethod: 'POST'
         authorizationtype: 'NONE'
         request_config:
@@ -455,3 +400,19 @@ api_gateway_units:
             statuscode: '403'
             models:
               application/json: 'Empty'
+
+lambda_units:
+ -
+  unit_title: 'completeValidYamlLambda'
+  lambda_config:
+    lambda_s3_bucket: 'bucket_name'
+    lambda_s3_key: 'key_name'
+    lambda_description: 'blah'
+    lambda_function_name: 'my_function'
+    lambda_handler: 'main'
+    lambda_memory_size: 128
+    lambda_role_arn: 'test_arn'
+    lambda_runtime: 'python2.7'
+    lambda_timeout: 1
+  dependencies:
+     - 'db1'

@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 
-from troposphere import ec2, Ref, Template
-
 from amazonia.classes.single_instance import SingleInstance
 from amazonia.classes.single_instance_config import SingleInstanceConfig
+from amazonia.classes.sns import SNS
+from troposphere import ec2, Ref, Template
 
 
 def main():
@@ -14,18 +14,19 @@ def main():
                         VpcId=Ref(vpc),
                         CidrBlock='10.0.1.0/24')
     template = Template()
+    sns_topic = SNS(template)
     single_instance_config = SingleInstanceConfig(
-        keypair='pipeline',
+        keypair='INSERT_YOUR_KEYPAIR_HERE',
         si_image_id='ami-53371f30',
         si_instance_type='t2.micro',
-        vpc=vpc,
-        subnet=subnet,
+        vpc=Ref(vpc),
+        subnet=Ref(subnet),
         is_nat=True,
         instance_dependencies=vpc.title,
-        hosted_zone_name=None,
-        alert=False,
-        alert_emails=[],
-        iam_instance_profile_arn=None
+        public_hosted_zone_name=None,
+        iam_instance_profile_arn=None,
+        sns_topic=sns_topic,
+        availability_zone='ap-southeast-2a'
     )
     SingleInstance(title='nat1',
                    template=template,

@@ -4,21 +4,20 @@
 import re
 
 from amazonia.classes.elb import Elb
-from amazonia.classes.elb_config import ElbConfig
-from amazonia.classes.network_config import NetworkConfig
-from amazonia.classes.single_instance import SingleInstance
-from amazonia.classes.single_instance_config import SingleInstanceConfig
+from amazonia.classes.elb_config import ElbConfig, ElbListenersConfig
+from network_setup import get_network_config
 from nose.tools import *
-from troposphere import ec2, Ref, Template
+from troposphere import Ref
 
 
-def create_elb(instanceport='80', loadbalancerport='80', loadbalancer_protocol='HTTP', instance_protocol='HTTP',
-               hosted_zone_name=None, elb_health_check='HTTP:80/index.html',
-               elb_log_bucket=None, public_unit=True, ssl_certificate_id=None):
+def create_elb(instance_port='80', loadbalancer_port='80', loadbalancer_protocol='HTTP', instance_protocol='HTTP',
+               hosted_zone_name=None, elb_health_check='HTTP:80/index.html', elb_log_bucket=None, public_unit=True,
+               ssl_certificate_id=None, healthy_threshold=10, unhealthy_threshold=2, interval=300, timeout=30,
+               sticky_app_cookie='SESSIONTOKEN'):
     """
     Helper function to create Elb Troposhpere object to interate through.
-    :param instanceport - port for traffic to instances from the load balancer
-    :param loadbalancerport - port for traffic to the load balancer from public
+    :param instance_port - port for traffic to instances from the load balancer
+    :param loadbalancer_port - port for traffic to the load balancer from public
     :param loadbalancer_protocol: protocol for traffic into ELB from World
     :param instance_protocol: protocol for traffic into ASG from ELB
     :param elb_health_check: path to test page
@@ -26,62 +25,34 @@ def create_elb(instanceport='80', loadbalancerport='80', loadbalancer_protocol='
     :param hosted_zone_name: Route53 hosted zone ID
     :param public_unit: Boolean to determine if the elb scheme will be internet-facing or private
     :param ssl_certificate_id: SSL Certificate to attach to elb for https using AWS Certificate Manager
+    :param sticky_app_cookie: Name of application cookie used for stickiness
     :return: Troposphere object for Elb
     """
-    template = Template()
-    vpc = ec2.VPC('MyVPC',
-                  CidrBlock='10.0.0.0/16')
-    private_subnets = [ec2.Subnet('MySubnet',
-                                  AvailabilityZone='ap-southeast-2a',
-                                  VpcId=Ref(vpc),
-                                  CidrBlock='10.0.1.0/24')]
-    public_subnets = [ec2.Subnet('MySubnet2',
-                                 AvailabilityZone='ap-southeast-2a',
-                                 VpcId=Ref(vpc),
-                                 CidrBlock='10.0.2.0/24')]
-    single_instance_config = SingleInstanceConfig(
-        keypair='pipeline',
-        si_image_id='ami-53371f30',
-        si_instance_type='t2.nano',
-        vpc=vpc,
-        subnet=public_subnets[0],
-        instance_dependencies=vpc.title,
-        is_nat=True,
-        alert=None,
-        alert_emails=None,
-        hosted_zone_name=None,
-        iam_instance_profile_arn=None
-    )
-    nat = SingleInstance(title='Nat',
-                         template=template,
-                         single_instance_config=single_instance_config)
-    network_config = NetworkConfig(
-        vpc=vpc,
-        public_subnets=public_subnets,
-        jump=None,
-        nat=nat,
-        private_subnets=private_subnets,
-        public_cidr=None,
-        stack_hosted_zone_name=None,
-        cd_service_role_arn=None,
-        keypair=None,
-        nat_highly_available=False,
-        nat_gateways=None
-    )
+    network_config, template = get_network_config()
+    network_config.public_hosted_zone_name = hosted_zone_name
+    elb_listeners_config = [
+        ElbListenersConfig(
+            instance_port=instance_port,
+            loadbalancer_port=loadbalancer_port,
+            loadbalancer_protocol=loadbalancer_protocol,
+            instance_protocol=instance_protocol,
+            sticky_app_cookie=sticky_app_cookie
+        )
+    ]
     elb_config = ElbConfig(
-        instance_port=[instanceport],
-        loadbalancer_port=[loadbalancerport],
-        loadbalancer_protocol=[loadbalancer_protocol],
-        instance_protocol=[instance_protocol],
+        elb_listeners_config=elb_listeners_config,
         elb_health_check=elb_health_check,
         elb_log_bucket=elb_log_bucket,
         public_unit=public_unit,
-        unit_hosted_zone_name=hosted_zone_name,
-        ssl_certificate_id=ssl_certificate_id
+        ssl_certificate_id=ssl_certificate_id,
+        healthy_threshold=healthy_threshold,
+        unhealthy_threshold=unhealthy_threshold,
+        interval=interval,
+        timeout=timeout
     )
 
     elb = Elb(title='elb',
-              template=Template(),
+              template=template,
               network_config=network_config,
               elb_config=elb_config)
     return elb
@@ -127,7 +98,7 @@ def test_target():
     """
     helper_elb = create_elb(instance_protocol='HTTPS',
                             loadbalancer_protocol='HTTPS',
-                            instanceport='443',
+                            instance_port='443',
                             elb_health_check='HTTPS:443/test/index.html')
     assert_equals('HTTPS:443/test/index.html', helper_elb.trop_elb.HealthCheck.Target)
 
@@ -141,7 +112,7 @@ def test_instance_port():
     ports = ['8080', '80', '443', '5678', '-1', '99', '65535']
 
     for port in ports:
-        helper_elb = create_elb(instanceport=port)
+        helper_elb = create_elb(instance_port=port)
         for listener in helper_elb.trop_elb.Listeners:
             assert_equal(port, listener.InstancePort)
 
@@ -154,7 +125,7 @@ def test_loadbalancer_port():
     ports = ['8080', '80', '443', '5678', '-1', '99', '65535']
 
     for port in ports:
-        helper_elb = create_elb(loadbalancerport=port)
+        helper_elb = create_elb(loadbalancer_port=port)
         for listener in helper_elb.trop_elb.Listeners:
             assert_equal(port, listener.LoadBalancerPort)
 
@@ -217,7 +188,7 @@ def test_public_unit():
 @AttributeError
 def test_ssl_none():
     """
-    # Test to determine that the ssl certificate is being passed into the elb listners
+    # Test to determine that the ssl certificate is being passed into the elb listeners
     """
     helper_elb = create_elb(ssl_certificate_id=None)
     for listener in helper_elb.trop_elb.Listeners:
@@ -226,8 +197,58 @@ def test_ssl_none():
 
 def test_ssl_certificate():
     """
-    # Test to determine that the ssl certificate is being passed into the elb listners
+    # Test to determine that the ssl certificate is being passed into the elb listeners
     """
     helper_elb = create_elb(ssl_certificate_id='arn:aws:acm::tester', loadbalancer_protocol='HTTPS')
     for listener in helper_elb.trop_elb.Listeners:
         assert_equals(listener.SSLCertificateId, 'arn:aws:acm::tester')
+
+
+def test_thresholds():
+    """
+    Tests to validate that the healthy and unhealthy thresholds are being passed to the ELB HealthCheck
+    """
+    thresholds = [2, 10]
+
+    for threshold in thresholds:
+        helper_elb = create_elb(healthy_threshold=threshold)
+        assert_equal(threshold, helper_elb.trop_elb.HealthCheck.HealthyThreshold)
+        helper_elb = create_elb(unhealthy_threshold=threshold)
+        assert_equal(threshold, helper_elb.trop_elb.HealthCheck.UnhealthyThreshold)
+
+
+def test_interval():
+    """
+    Test to determine that elb scheme is private if public_unit is set to False
+    """
+    interval = 300
+    timeout = 30
+
+    helper_elb = create_elb(interval=interval, timeout=timeout)
+    assert_equals(interval, helper_elb.trop_elb.HealthCheck.Interval)
+    assert_equals(timeout, helper_elb.trop_elb.HealthCheck.Timeout)
+
+
+def test_sticky_app_cookies():
+    """
+    Test to determine that sticky app cookies are set correctly
+    """
+    sticky_app_cookie = 'JSESSION'
+
+    helper_elb = create_elb(sticky_app_cookie=sticky_app_cookie)
+
+    elb_policy_name = helper_elb.trop_elb.AppCookieStickinessPolicy[0].PolicyName
+    elb_cookie_name = helper_elb.trop_elb.AppCookieStickinessPolicy[0].CookieName
+    listener_policy_name = helper_elb.trop_elb.Listeners[0].PolicyNames[0]
+
+    # elb.AppCookieStickinessPolicy has the expected cookie name
+    assert_equals(elb_cookie_name, sticky_app_cookie)
+
+    # elb.listener should have a policy name which equals the policy name in the elb AppCookieStickinessPolicy
+    assert_equals(listener_policy_name, elb_policy_name)
+
+    # make sure it doesn't create empty policies
+    empty_app_cookie = ''
+    elb_with_no_sticky_cookies = create_elb(sticky_app_cookie=empty_app_cookie)
+    with assert_raises(AttributeError) as context:
+        elb_with_no_sticky_cookies.trop_elb.AppCookieStickinessPolicy

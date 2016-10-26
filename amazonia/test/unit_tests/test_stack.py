@@ -1,22 +1,22 @@
-from amazonia.classes.asg_config import AsgConfig
-from amazonia.classes.block_devices_config import BlockDevicesConfig
-from amazonia.classes.cf_cache_behavior_config import CFCacheBehavior
-from amazonia.classes.cf_distribution_config import CFDistributionConfig
-from amazonia.classes.cf_origins_config import CFOriginsConfig
-from amazonia.classes.database_config import DatabaseConfig
-from amazonia.classes.elb_config import ElbConfig
-from amazonia.classes.stack import Stack, DuplicateUnitNameError
 from amazonia.classes.api_gateway_config import ApiGatewayMethodConfig
 from amazonia.classes.api_gateway_config import ApiGatewayResponseConfig, ApiGatewayRequestConfig
+from amazonia.classes.asg_config import AsgConfig
+from amazonia.classes.block_devices_config import BlockDevicesConfig
+from amazonia.classes.cf_distribution_config import CFDistributionConfig, CFOriginsConfig, CFCacheBehaviorConfig
+from amazonia.classes.database_config import DatabaseConfig
+from amazonia.classes.elb_config import ElbConfig, ElbListenersConfig
+from amazonia.classes.lambda_config import LambdaConfig
+from amazonia.classes.stack import Stack, DuplicateUnitNameError
 from amazonia.classes.util import get_cf_friendly_name
-
 from nose.tools import *
 from troposphere import Tags, Ref
 
 userdata = keypair = instance_type = code_deploy_service_role = vpc_cidr = public_cidr = \
     minsize = maxsize = elb_health_check = nat_image_id = jump_image_id = unit_image_id = health_check_grace_period = \
-    health_check_type = db_instance_type = db_engine = db_port = db_hdd_size = owner_emails = nat_alerting = \
-    db_backup_window = db_backup_retention = db_maintenance_window = db_storage_type = block_devices_config = None
+    health_check_type = db_instance_type = db_engine = db_port = db_hdd_size = owner_emails = \
+    db_backup_window = db_backup_retention = db_maintenance_window = db_storage_type = block_devices_config = \
+    elb_listeners_config = healthy_threshold = unhealthy_threshold = interval = timeout = sticky_app_cookies = None
+
 availability_zones = []
 home_cidrs = []
 instance_port = []
@@ -29,8 +29,9 @@ def setup_resources():
     global userdata, availability_zones, keypair, instance_type, code_deploy_service_role, vpc_cidr, \
         public_cidr, instance_port, loadbalancer_port, instance_protocol, loadbalancer_protocol, minsize, maxsize, \
         elb_health_check, home_cidrs, nat_image_id, jump_image_id, health_check_grace_period, health_check_type, \
-        unit_image_id, db_instance_type, db_engine, db_port, db_hdd_size, owner_emails, nat_alerting, \
-        db_backup_window, db_backup_retention, db_maintenance_window, db_storage_type, block_devices_config
+        unit_image_id, db_instance_type, db_engine, db_port, db_hdd_size, owner_emails, \
+        db_backup_window, db_backup_retention, db_maintenance_window, db_storage_type, block_devices_config, \
+        elb_listeners_config, healthy_threshold, unhealthy_threshold, interval, timeout
     userdata = """#cloud-config
 repo_update: true
 repo_upgrade: all
@@ -42,13 +43,13 @@ runcmd:
  - service httpd start
 """
     availability_zones = ['ap-southeast-2a', 'ap-southeast-2b', 'ap-southeast-2c']
-    keypair = 'pipeline'
+    keypair = 'INSERT_YOUR_KEYPAIR_HERE'
     nat_image_id = 'ami-53371f30'
     jump_image_id = 'ami-dc361ebf'
     unit_image_id = 'ami-dc361ebf'
     instance_type = 't2.nano'
     code_deploy_service_role = 'arn:aws:iam::1234567890124 :role/CodeDeployServiceRole'
-    vpc_cidr = '10.0.0.0/16'
+    vpc_cidr = {'name': 'VPC', 'cidr': '10.0.0.0/16'}
     home_cidrs = [{'name': 'GA', 'cidr': '123.123.12.34/32'}, {'name': 'home', 'cidr': '192.168.0.1/16'}]
     instance_port = ['80']
     loadbalancer_port = ['80']
@@ -57,11 +58,15 @@ runcmd:
     minsize = 1
     maxsize = 1
     elb_health_check = 'HTTP:80/index.html'
+    healthy_threshold = 10
+    unhealthy_threshold = 2
+    interval = 300
+    timeout = 30
+    sticky_app_cookie = 'JSESSION'
     public_cidr = {'name': 'PublicIp', 'cidr': '0.0.0.0/0'}
     health_check_grace_period = 300
     health_check_type = 'ELB'
     owner_emails = ['some@email.com']
-    nat_alerting = False
 
     db_instance_type = 'db.m1.small'
     db_engine = 'postgres'
@@ -87,6 +92,15 @@ runcmd:
         virtual_name=True
     )]
 
+    elb_listeners_config = [
+        ElbListenersConfig(
+            instance_port='80',
+            loadbalancer_port='80',
+            loadbalancer_protocol='HTTP',
+            instance_protocol='HTTP',
+            sticky_app_cookie=sticky_app_cookie
+        )]
+
 
 @with_setup(setup_resources)
 def test_stack():
@@ -100,10 +114,6 @@ def test_stack():
     [assert_equals(stack.home_cidrs[num], home_cidrs[num]) for num in range(len(home_cidrs))]
     assert_equals(stack.public_cidr, {'name': 'PublicIp', 'cidr': '0.0.0.0/0'})
 
-    assert_equals(stack.vpc.title, 'Vpc')
-    assert_equals(stack.vpc.CidrBlock, vpc_cidr)
-    assert_is(type(stack.vpc.Tags), Tags)
-
     assert_equals(stack.internet_gateway.title, 'Ig')
     assert_is(type(stack.internet_gateway.Tags), Tags)
 
@@ -111,12 +121,12 @@ def test_stack():
     assert_is(type(stack.gateway_attachment.VpcId), Ref)
     assert_is(type(stack.gateway_attachment.InternetGatewayId), Ref)
 
-    assert_equals(stack.public_route_table.title, 'PubRt')
+    assert_equals(stack.public_route_table.title, 'PubRouteTable')
     assert_is(type(stack.public_route_table.VpcId), Ref)
     assert_is(type(stack.public_route_table.Tags), Tags)
 
     for az in availability_zones:
-        assert_equals(stack.private_route_tables[az].title, get_cf_friendly_name(az) + 'PriRt')
+        assert_equals(stack.private_route_tables[az].title, get_cf_friendly_name(az) + 'PriRouteTable')
         assert_is(type(stack.private_route_tables[az].VpcId), Ref)
         assert_is(type(stack.private_route_tables[az].Tags), Tags)
 
@@ -132,39 +142,14 @@ def test_stack():
         private_subnet = stack.private_subnets[num]
         assert_equals(private_subnet.CidrBlock, ''.join(['10.0.', str(num + 100), '.0/24']))
 
-    assert_equals(len(stack.units), 6)
+    assert_equals(len(stack.units), 7)
 
 
+@with_setup(setup_resources)
 def test_highly_available_nat_stack():
     """ Test for nat gateway configuration"""
-    global userdata, availability_zones, keypair, instance_type, code_deploy_service_role, vpc_cidr, \
-        public_cidr, instance_port, loadbalancer_port, instance_protocol, loadbalancer_protocol, minsize, maxsize, \
-        elb_health_check, home_cidrs, nat_image_id, jump_image_id, health_check_grace_period, health_check_type, \
-        unit_image_id, db_instance_type, db_engine, db_port, owner_emails, nat_alerting, db_backup_window, \
-        db_backup_retention, db_maintenance_window, db_storage_type, block_devices_config
 
-    stack = Stack(
-        code_deploy_service_role=code_deploy_service_role,
-        keypair=keypair,
-        availability_zones=availability_zones,
-        vpc_cidr=vpc_cidr,
-        public_cidr=public_cidr,
-        home_cidrs=home_cidrs,
-        jump_image_id=jump_image_id,
-        jump_instance_type=instance_type,
-        nat_image_id=nat_image_id,
-        nat_instance_type=instance_type,
-        stack_hosted_zone_name=None,
-        iam_instance_profile_arn=None,
-        owner_emails=owner_emails,
-        nat_alerting=nat_alerting,
-        nat_highly_available=True,
-        zd_autoscaling_units=[],
-        autoscaling_units=[],
-        database_units=[],
-        cf_distribution_units=[],
-        api_gateway_units=[]
-    )
+    stack = create_stack(nat_highly_available=True)
 
     assert_equals(stack.code_deploy_service_role, code_deploy_service_role)
     assert_equals(stack.keypair, keypair)
@@ -173,10 +158,6 @@ def test_highly_available_nat_stack():
     [assert_equals(stack.home_cidrs[num], home_cidrs[num]) for num in range(len(home_cidrs))]
     assert_equals(stack.public_cidr, {'name': 'PublicIp', 'cidr': '0.0.0.0/0'})
 
-    assert_equals(stack.vpc.title, 'Vpc')
-    assert_equals(stack.vpc.CidrBlock, vpc_cidr)
-    assert_is(type(stack.vpc.Tags), Tags)
-
     assert_equals(stack.internet_gateway.title, 'Ig')
     assert_is(type(stack.internet_gateway.Tags), Tags)
 
@@ -184,12 +165,12 @@ def test_highly_available_nat_stack():
     assert_is(type(stack.gateway_attachment.VpcId), Ref)
     assert_is(type(stack.gateway_attachment.InternetGatewayId), Ref)
 
-    assert_equals(stack.public_route_table.title, 'PubRt')
+    assert_equals(stack.public_route_table.title, 'PubRouteTable')
     assert_is(type(stack.public_route_table.VpcId), Ref)
     assert_is(type(stack.public_route_table.Tags), Tags)
 
     for az in availability_zones:
-        assert_equals(stack.private_route_tables[az].title, get_cf_friendly_name(az) + 'PriRt')
+        assert_equals(stack.private_route_tables[az].title, get_cf_friendly_name(az) + 'PriRouteTable')
         assert_is(type(stack.private_route_tables[az].VpcId), Ref)
         assert_is(type(stack.private_route_tables[az].Tags), Tags)
 
@@ -205,7 +186,7 @@ def test_highly_available_nat_stack():
         private_subnet = stack.private_subnets[num]
         assert_equals(private_subnet.CidrBlock, ''.join(['10.0.', str(num + 100), '.0/24']))
 
-    assert_equals(len(stack.units), 0)
+    assert_equals(len(stack.units), 7)
 
 
 def test_duplicate_unit_names():
@@ -223,11 +204,12 @@ def test_duplicate_unit_names():
         'jump_instance_type': instance_type,
         'nat_image_id': nat_image_id,
         'nat_instance_type': instance_type,
-        'stack_hosted_zone_name': None,
+        'public_hosted_zone_name': None,
+        'private_hosted_zone_name': 'private.lan.',
         'iam_instance_profile_arn': None,
         'owner_emails': owner_emails,
-        'nat_alerting': nat_alerting,
         'nat_highly_available': False,
+        'ec2_scheduled_shutdown': False,
         'autoscaling_units': [{'unit_title': 'app1',
                                'asg_config': AsgConfig(
                                    minsize=minsize,
@@ -238,35 +220,34 @@ def test_duplicate_unit_names():
                                    health_check_type=health_check_type,
                                    userdata=userdata,
                                    iam_instance_profile_arn=None,
-                                   sns_topic_arn=None,
-                                   sns_notification_types=None,
                                    block_devices_config=block_devices_config,
-                                   simple_scaling_policy_config=None
+                                   simple_scaling_policy_config=None,
+                                   ec2_scheduled_shutdown=None
                                ),
                                'elb_config': ElbConfig(
-                                   loadbalancer_protocol=loadbalancer_protocol,
-                                   instance_protocol=instance_protocol,
-                                   instance_port=instance_port,
-                                   loadbalancer_port=loadbalancer_port,
+                                   elb_listeners_config=elb_listeners_config,
                                    elb_health_check=elb_health_check,
                                    elb_log_bucket=None,
                                    public_unit=True,
-                                   unit_hosted_zone_name=None,
-                                   ssl_certificate_id=None
+                                   ssl_certificate_id=None,
+                                   healthy_threshold=healthy_threshold,
+                                   unhealthy_threshold=unhealthy_threshold,
+                                   interval=interval,
+                                   timeout=timeout
                                ),
                                'dependencies': [],
                                },
                               {'unit_title': 'app1',
                                'elb_config': ElbConfig(
-                                   loadbalancer_protocol=loadbalancer_protocol,
-                                   instance_protocol=instance_protocol,
-                                   instance_port=instance_port,
-                                   loadbalancer_port=loadbalancer_port,
+                                   elb_listeners_config=elb_listeners_config,
                                    elb_health_check=elb_health_check,
                                    elb_log_bucket=None,
                                    public_unit=True,
-                                   unit_hosted_zone_name=None,
-                                   ssl_certificate_id=None
+                                   ssl_certificate_id=None,
+                                   healthy_threshold=healthy_threshold,
+                                   unhealthy_threshold=unhealthy_threshold,
+                                   interval=interval,
+                                   timeout=timeout
                                ),
                                'asg_config': AsgConfig(
                                    minsize=minsize,
@@ -277,21 +258,21 @@ def test_duplicate_unit_names():
                                    health_check_type=health_check_type,
                                    userdata=userdata,
                                    iam_instance_profile_arn=None,
-                                   sns_topic_arn=None,
-                                   sns_notification_types=None,
                                    block_devices_config=None,
-                                   simple_scaling_policy_config=None
+                                   simple_scaling_policy_config=None,
+                                   ec2_scheduled_shutdown=None
                                ),
                                'dependencies': [],
                                }],
         'database_units': [],
         'zd_autoscaling_units': [],
         'cf_distribution_units': [],
-        'api_gateway_units': []
+        'api_gateway_units': [],
+        'lambda_units': []
     })
 
 
-def create_stack():
+def create_stack(nat_highly_available=False):
     """
     Helper function to create a stack with default values
     :return new stack
@@ -299,8 +280,9 @@ def create_stack():
     global userdata, availability_zones, keypair, instance_type, code_deploy_service_role, vpc_cidr, \
         public_cidr, instance_port, loadbalancer_port, instance_protocol, loadbalancer_protocol, minsize, maxsize, \
         elb_health_check, home_cidrs, nat_image_id, jump_image_id, health_check_grace_period, health_check_type, \
-        unit_image_id, db_instance_type, db_engine, db_port, owner_emails, nat_alerting, db_backup_window, \
-        db_backup_retention, db_maintenance_window, db_storage_type, block_devices_config
+        unit_image_id, db_instance_type, db_engine, db_port, owner_emails, db_backup_window, \
+        db_backup_retention, db_maintenance_window, db_storage_type, block_devices_config, healthy_threshold, \
+        unhealthy_threshold, interval, timeout, elb_listeners_config, sticky_app_cookies
 
     stack = Stack(
         code_deploy_service_role=code_deploy_service_role,
@@ -313,22 +295,23 @@ def create_stack():
         jump_instance_type=instance_type,
         nat_image_id=nat_image_id,
         nat_instance_type=instance_type,
-        stack_hosted_zone_name=None,
+        public_hosted_zone_name=None,
+        private_hosted_zone_name='priavte.lan.',
         iam_instance_profile_arn=None,
         owner_emails=owner_emails,
-        nat_alerting=nat_alerting,
-        nat_highly_available=False,
+        nat_highly_available=nat_highly_available,
+        ec2_scheduled_shutdown=False,
         zd_autoscaling_units=[{'unit_title': 'zdapp1',
                                'elb_config': ElbConfig(
-                                   loadbalancer_protocol=loadbalancer_protocol,
-                                   instance_protocol=instance_protocol,
-                                   instance_port=instance_port,
-                                   loadbalancer_port=loadbalancer_port,
+                                   elb_listeners_config=elb_listeners_config,
                                    elb_health_check=elb_health_check,
-                                   unit_hosted_zone_name=None,
                                    elb_log_bucket=None,
                                    public_unit=True,
-                                   ssl_certificate_id=None
+                                   ssl_certificate_id=None,
+                                   healthy_threshold=healthy_threshold,
+                                   unhealthy_threshold=unhealthy_threshold,
+                                   interval=interval,
+                                   timeout=timeout
                                ),
                                'blue_asg_config': AsgConfig(
                                    minsize=minsize,
@@ -339,10 +322,9 @@ def create_stack():
                                    health_check_type=health_check_type,
                                    userdata=userdata,
                                    iam_instance_profile_arn=None,
-                                   sns_topic_arn=None,
-                                   sns_notification_types=None,
                                    block_devices_config=block_devices_config,
-                                   simple_scaling_policy_config=None
+                                   simple_scaling_policy_config=None,
+                                   ec2_scheduled_shutdown=None
                                ),
                                'green_asg_config': AsgConfig(
                                    minsize=minsize,
@@ -353,24 +335,23 @@ def create_stack():
                                    health_check_type=health_check_type,
                                    userdata=userdata,
                                    iam_instance_profile_arn=None,
-                                   sns_topic_arn=None,
-                                   sns_notification_types=None,
                                    block_devices_config=block_devices_config,
-                                   simple_scaling_policy_config=None
+                                   simple_scaling_policy_config=None,
+                                   ec2_scheduled_shutdown=None
                                ),
-                               'dependencies': ['app2', 'db1'],
+                               'dependencies': ['app2:5432', 'db1:80'],
                                }],
         autoscaling_units=[{'unit_title': 'app1',
                             'elb_config': ElbConfig(
-                                loadbalancer_protocol=loadbalancer_protocol,
-                                instance_protocol=instance_protocol,
-                                instance_port=instance_port,
-                                loadbalancer_port=loadbalancer_port,
+                                elb_listeners_config=elb_listeners_config,
                                 elb_health_check=elb_health_check,
-                                unit_hosted_zone_name=None,
                                 elb_log_bucket=None,
                                 public_unit=True,
-                                ssl_certificate_id=None
+                                ssl_certificate_id=None,
+                                healthy_threshold=healthy_threshold,
+                                unhealthy_threshold=unhealthy_threshold,
+                                interval=interval,
+                                timeout=timeout
                             ),
                             'asg_config': AsgConfig(
                                 minsize=minsize,
@@ -381,24 +362,23 @@ def create_stack():
                                 health_check_type=health_check_type,
                                 userdata=userdata,
                                 iam_instance_profile_arn=None,
-                                sns_topic_arn=None,
-                                sns_notification_types=None,
                                 block_devices_config=block_devices_config,
-                                simple_scaling_policy_config=None
+                                simple_scaling_policy_config=None,
+                                ec2_scheduled_shutdown=None
                             ),
-                            'dependencies': ['app2', 'db1'],
+                            'dependencies': ['app2:80', 'db1:5432'],
                             },
                            {'unit_title': 'app2',
                             'elb_config': ElbConfig(
-                                loadbalancer_protocol=loadbalancer_protocol,
-                                instance_protocol=instance_protocol,
-                                instance_port=instance_port,
-                                loadbalancer_port=loadbalancer_port,
+                                elb_listeners_config=elb_listeners_config,
                                 elb_health_check=elb_health_check,
-                                unit_hosted_zone_name=None,
                                 elb_log_bucket=None,
                                 public_unit=True,
-                                ssl_certificate_id=None
+                                ssl_certificate_id=None,
+                                healthy_threshold=healthy_threshold,
+                                unhealthy_threshold=unhealthy_threshold,
+                                interval=interval,
+                                timeout=timeout
                             ),
                             'asg_config': AsgConfig(
                                 minsize=minsize,
@@ -409,10 +389,9 @@ def create_stack():
                                 health_check_type=health_check_type,
                                 userdata=userdata,
                                 iam_instance_profile_arn=None,
-                                sns_topic_arn=None,
-                                sns_notification_types=None,
                                 block_devices_config=block_devices_config,
-                                simple_scaling_policy_config=None
+                                simple_scaling_policy_config=None,
+                                ec2_scheduled_shutdown=None
                             ),
                             'dependencies': []
                             }],
@@ -432,18 +411,38 @@ def create_stack():
                          }
                         ],
         cf_distribution_units=[{'unit_title': 'cfdist1',
-                                'cf_origins_config': [CFOriginsConfig(
-                                    domain_name='amazonia-elb-bucket.s3.amazonaws.com',
-                                    origin_id='S3-amazonia-elb-bucket',
-                                    origin_policy={
-                                        'is_s3': True,
-                                        'origin_access_identity': 'originaccessid1'
-                                    }
-                                ),
+                                'cf_origins_config': [
                                     CFOriginsConfig(
-                                        domain_name=
-                                        'amazonia-myStackap-LXYP1MFWT9UC-145363293.ap-southeast-2.elb.amazonaws.com',
-                                        origin_id='ELB-amazonia-myStackap-LXYP1MFWT9UC-145363293',
+                                        domain_name='amazonia-elb-bucket.s3.amazonaws.com',
+                                        origin_id='S3-amazonia-elb-bucket',
+                                        origin_path='',
+                                        custom_headers={
+                                            'Origin': 'http://www.domain.com',
+                                            'Accept': 'True'
+                                        },
+                                        origin_policy={
+                                            'is_s3': True,
+                                            'origin_access_identity': 'originaccessid1'
+                                        }
+                                    ),
+                                    CFOriginsConfig(
+                                        domain_name='app1',
+                                        origin_id='www-elb',
+                                        origin_path='/path',
+                                        custom_headers={},
+                                        origin_policy={
+                                            'is_s3': False,
+                                            'origin_protocol_policy': 'https-only',
+                                            'http_port': 80,
+                                            'https_port': 443,
+                                            'origin_ssl_protocols': ['TLSv1', 'TLSv1.1', 'TLSv1.2'],
+                                        }
+                                    ),
+                                    CFOriginsConfig(
+                                        domain_name='validYamlTestAPIGW',
+                                        origin_id='www-elb2',
+                                        origin_path='/path',
+                                        custom_headers={},
                                         origin_policy={
                                             'is_s3': False,
                                             'origin_protocol_policy': 'https-only',
@@ -459,35 +458,29 @@ def create_stack():
                                     default_root_object='index.html',
                                     enabled=True,
                                     price_class='PriceClass_All',
-                                    target_origin_id='originId',
-                                    allowed_methods=['GET', 'HEAD'],
-                                    cached_methods=['GET', 'HEAD'],
-                                    trusted_signers=['self'],
-                                    forward_cookies='all',
-                                    forwarded_headers=['Accept', 'Set-Cookie'],
-                                    viewer_protocol_policy='https-only',
-                                    min_ttl=0,
-                                    default_ttl=0,
-                                    max_ttl=0,
                                     error_page_path='index.html',
                                     acm_cert_arn='arn.acm.certificate',
                                     minimum_protocol_version='TLSv1',
                                     ssl_support_method='sni-only'
                                 ),
-                                'cf_cache_behavior_config': [CFCacheBehavior(
-                                    path_pattern='/index.html',
-                                    allowed_methods=['GET', 'HEAD'],
-                                    cached_methods=['GET', 'HEAD'],
-                                    target_origin_id='S3-bucket-id',
-                                    forward_cookies='all',
-                                    forwarded_headers=['Accept', 'Set-Cookie'],
-                                    viewer_protocol_policy='allow-all',
-                                    min_ttl=0,
-                                    default_ttl=0,
-                                    max_ttl=0,
-                                    trusted_signers=['self']
-                                ),
-                                    CFCacheBehavior(
+                                'cf_cache_behavior_config': [
+                                    CFCacheBehaviorConfig(
+                                        is_default=True,
+                                        path_pattern='/index.html',
+                                        allowed_methods=['GET', 'HEAD'],
+                                        cached_methods=['GET', 'HEAD'],
+                                        target_origin_id='S3-bucket-id',
+                                        forward_cookies='all',
+                                        forwarded_headers=['Accept', 'Set-Cookie'],
+                                        viewer_protocol_policy='allow-all',
+                                        min_ttl=0,
+                                        default_ttl=0,
+                                        max_ttl=0,
+                                        trusted_signers=['self'],
+                                        query_string='False'
+                                    ),
+                                    CFCacheBehaviorConfig(
+                                        is_default=False,
                                         path_pattern='/login.js',
                                         allowed_methods=['GET', 'POST', 'HEAD', 'DELETE', 'OPTIONS', 'PATCH', 'PUT'],
                                         cached_methods=['GET', 'HEAD'],
@@ -498,30 +491,48 @@ def create_stack():
                                         min_ttl=0,
                                         default_ttl=0,
                                         max_ttl=0,
-                                        trusted_signers=['self']
+                                        trusted_signers=['self'],
+                                        query_string='True'
                                     )
                                 ]
                                 }],
-        api_gateway_units=[{'unit_title': 'test',
+        api_gateway_units=[{'unit_title': 'validYamlTestAPIGW',
                             'method_config': [
                                 ApiGatewayMethodConfig(
                                     method_name='login',
-                                    lambda_arn='arn:aws:123456789',
+                                    lambda_unit='validYamlTestLambda',
                                     httpmethod='POST',
                                     authorizationtype='NONE',
                                     request_config=ApiGatewayRequestConfig(
                                         templates={'application/json': ''},
                                         parameters={'somemapping': 'somefield'}
                                     ),
-                                    response_config=[ApiGatewayResponseConfig(
-                                        templates={'application/json': ''},
-                                        parameters={'somemapping': 'somefield'},
-                                        statuscode='200',
-                                        models={'application/json': 'Empty'},
-                                        selectionpattern=''
-                                    )]
+                                    response_config=[
+                                        ApiGatewayResponseConfig(
+                                            templates={'application/json': ''},
+                                            parameters={'somemapping': 'somefield'},
+                                            statuscode='200',
+                                            models={'application/json': 'Empty'},
+                                            selectionpattern=''
+                                        )]
                                 )
                             ]
-                            }]
+                            }],
+        lambda_units=[{'unit_title': 'validYamlTestLambda',
+                       'dependencies': ['db1:5432'],
+                       'lambda_config': LambdaConfig(
+                           lambda_s3_bucket='bucket_name',
+                           lambda_s3_key='key_name',
+                           lambda_description='blah',
+                           lambda_function_name='my_function',
+                           lambda_handler='main',
+                           lambda_memory_size=128,
+                           lambda_role_arn='test_arn',
+                           lambda_runtime='python2.7',
+                           lambda_timeout=1,
+                           lambda_schedule='cron(0/5 * * * ? *)'
+                       )
+                       }
+                      ]
     )
     return stack

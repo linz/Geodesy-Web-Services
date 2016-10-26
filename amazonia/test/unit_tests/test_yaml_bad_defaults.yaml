@@ -14,7 +14,9 @@ availability_zones:
   - 'ap-southeast-2a'
   - 'ap-southeast-2b'
   - 'ap-southeast-2c'
-vpc_cidr: '10.0.0.0/16'
+vpc_cidr:
+  name: 'VPC'
+  cidr: '10.0.0.0/16'
 public_cidr:
   name: 'PublicIp'
   cidr: '0.0.0.0/0'
@@ -26,9 +28,9 @@ nat_instance_type: 't2.micro'
 home_cidrs:
   - name: 'office'
     cidr: '123.45.12.34/16'
-stack_hosted_zone_name:
+public_hosted_zone_name:
+private_hosted_zone_name: 'private.lan.'
 owner_emails:
-nat_alerting: false
 iam_instance_profile_arn:
 zd_autoscaling_units:
 autoscaling_units:
@@ -54,15 +56,12 @@ database_config:
 # (ZD) Autoscaling unit default values
 # ELB default values
 elb_config:
-  unit_hosted_zone_name:
-  loadbalancer_protocol:
-    - 'HTTP'
-  instance_protocol:
-    - 'HTTP'
-  instance_port:
-    - '80'
-  loadbalancer_port:
-    - '80'
+  elb_listeners_config:
+    -
+      loadbalancer_protocol: 'HTTP'
+      instance_protocol: 'HTTP'
+      instance_port: '80'
+      loadbalancer_port: '80'
   elb_health_check: 'HTTP:80/index.html'
   elb_log_bucket:
   public_unit: true
@@ -100,12 +99,6 @@ asg_config: &asg_config
   health_check_type: 'ELB'
   block_devices_config:
   simple_scaling_policy_config:
-  sns_topic_arn:
-  sns_notification_types:
-    - 'autoscaling:EC2_INSTANCE_LAUNCH'
-    - 'autoscaling:EC2_INSTANCE_LAUNCH_ERROR'
-    - 'autoscaling:EC2_INSTANCE_TERMINATE'
-    - 'autoscaling:EC2_INSTANCE_TERMINATE_ERROR'
   userdata: |
     #cloud-config
     repo_update: true
@@ -136,19 +129,6 @@ cf_distribution_config:
   default_root_object: 'index.html'
   enabled: True
   price_class: 'PriceClass_All'
-  target_origin_id:
-  allowed_methods:
-   - 'GET'
-   - 'HEAD'
-  cached_methods:
-   - 'GET'
-   - 'HEAD'
-  trusted_signers:
-   - 'self'
-  viewer_protocol_policy: 'https-only'
-  min_ttl: 0
-  default_ttl: 0
-  max_ttl: 0
   error_page_path: '404.html'
   acm_cert_arn: ''
   minimum_protocol_version: 'TLSv1'

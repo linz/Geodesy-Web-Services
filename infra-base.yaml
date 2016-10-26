@@ -30,18 +30,16 @@ autoscaling_units:
 
         service tomcat8 start
     elb_config:
-      instance_protocol:
-        - 'HTTP'
-      instance_port:
-        - '8080'
-      loadbalancer_protocol:
-        - 'HTTPS'
-      loadbalancer_port:
-        - '443'
+      elb_listeners_config:
+        -
+          instance_protocol: 'HTTP'
+          instance_port: '8080'
+          loadbalancer_protocol: 'HTTPS'
+          loadbalancer_port: '443'
       ssl_certificate_id: 'arn:aws:acm:ap-southeast-2:094928090547:certificate/07496dcd-6975-4dd4-8986-533488587f0e'
       elb_health_check: 'HTTP:8080/'
     dependencies:
-     - Db
+     - 'Db:5432'
   -
     unit_title: GeoServer
     asg_config:
@@ -52,18 +50,16 @@ autoscaling_units:
          runcmd:
           - service tomcat8 start
     elb_config:
-      instance_protocol:
-        - 'HTTP'
-      instance_port:
-        - '8080'
-      loadbalancer_protocol:
-        - 'HTTPS'
-      loadbalancer_port:
-        - '443'
+      elb_listeners_config:
+        -
+          instance_protocol: 'HTTP'
+          instance_port: '8080'
+          loadbalancer_protocol: 'HTTPS'
+          loadbalancer_port: '443'
       ssl_certificate_id: 'arn:aws:acm:ap-southeast-2:094928090547:certificate/07496dcd-6975-4dd4-8986-533488587f0e'
       elb_health_check: 'HTTP:8080/geoserver/web/'
     dependencies:
-     - Db
+     - 'Db:5432'
 database_units:
   -
     unit_title: Db

@@ -1,16 +1,15 @@
 #!/usr/bin/python3
 
 from amazonia.classes.block_devices import Bdm
-from amazonia.classes.security_enabled_object import SecurityEnabledObject
+from amazonia.classes.security_enabled_object import LocalSecurityEnabledObject
 from amazonia.classes.util import get_cf_friendly_name
 from troposphere import Base64, codedeploy, Ref, Join, Output
 from troposphere.autoscaling import AutoScalingGroup, LaunchConfiguration, Tag, NotificationConfigurations
-from troposphere.autoscaling import ScalingPolicy
+from troposphere.autoscaling import ScalingPolicy, ScheduledAction
 from troposphere.cloudwatch import MetricDimension, Alarm
 from troposphere.policies import UpdatePolicy, AutoScalingRollingUpdate
 
-
-class Asg(SecurityEnabledObject):
+class Asg(LocalSecurityEnabledObject):
     def __init__(self, title, template, network_config, load_balancers, asg_config):
         """
         Creates an autoscaling group and codedeploy definition
@@ -20,10 +19,10 @@ class Asg(SecurityEnabledObject):
         :param asg_config: object containing asg related config
         :param load_balancers: list of load balancers to associate autoscaling group with
         """
-        super(Asg, self).__init__(vpc=network_config.vpc, title=title, template=template)
-
-        self.template = template
         self.title = title + 'Asg'
+        super(Asg, self).__init__(vpc=network_config.vpc, title=self.title, template=template)
+        self.template = template
+        self.network_config = network_config
         self.trop_asg = None
         self.lc = None
         self.cd_app = None
@@ -54,19 +53,20 @@ class Asg(SecurityEnabledObject):
         :param network_config: object containing network related variables
         """
 
-        availability_zones = [subnet.AvailabilityZone for subnet in network_config.private_subnets]
+        availability_zones = network_config.availability_zones
         self.trop_asg = self.template.add_resource(AutoScalingGroup(
             title,
             MinSize=asg_config.minsize,
             MaxSize=asg_config.maxsize,
-            VPCZoneIdentifier=[Ref(subnet.title) for subnet in network_config.private_subnets],
+            VPCZoneIdentifier=network_config.private_subnets,
             AvailabilityZones=availability_zones,
             LoadBalancerNames=[Ref(load_balancer) for load_balancer in load_balancers],
             HealthCheckGracePeriod=asg_config.health_check_grace_period,
             HealthCheckType=asg_config.health_check_type,
             Tags=[Tag('Name', Join('', [Ref('AWS::StackName'), '-', title]), True)],
-            DependsOn=network_config.get_depends_on()
         ))
+        if network_config.get_depends_on():
+            self.trop_asg.DependsOn = network_config.get_depends_on()
 
         # Set cloud formation update policy to update
         self.trop_asg.resource['UpdatePolicy'] = UpdatePolicy(
@@ -75,14 +75,12 @@ class Asg(SecurityEnabledObject):
             )
         )
 
-        # Set up SNS topic for autoscaling events if an SNS topic arn is supplied
-        if asg_config.sns_topic_arn is not None:
-            if asg_config.sns_notification_types is not None and isinstance(asg_config.sns_notification_types, list):
-                self.trop_asg.NotificationConfigurations = [
-                    NotificationConfigurations(TopicARN=asg_config.sns_topic_arn,
-                                               NotificationTypes=asg_config.sns_notification_types)]
-            else:
-                raise MalformedSNSError('Error: sns_notification_types must be a non null list.')
+        self.trop_asg.NotificationConfigurations = [
+            NotificationConfigurations(TopicARN=network_config.sns_topic,
+                                       NotificationTypes=['autoscaling:EC2_INSTANCE_LAUNCH',
+                                                          'autoscaling:EC2_INSTANCE_LAUNCH_ERROR',
+                                                          'autoscaling:EC2_INSTANCE_TERMINATE',
+                                                          'autoscaling:EC2_INSTANCE_TERMINATE_ERROR'])]
 
         # if there are any scaling policies specified, create and associated with ASG
         if asg_config.simple_scaling_policy_config is not None:
@@ -94,6 +92,27 @@ class Asg(SecurityEnabledObject):
             asg_config=asg_config,
             network_config=network_config
         ))
+
+        # scale down auto scaling group outside work hours with Scheduled Actions
+        if asg_config.ec2_scheduled_shutdown:
+            # Recurrence tag uses Cron syntax: https://en.wikipedia.org/wiki/Cron
+
+            # scheduled action for turning off instances (max=0)
+            self.template.add_resource(ScheduledAction(
+                title=title + 'SchedActOFF',
+                AutoScalingGroupName=Ref(self.trop_asg),
+                MaxSize=0,
+                MinSize=0,
+                Recurrence="0 09 * * *"  # 0900 UTC = 2000 AEDT
+            ))
+            # scheduled action for turning on instances (max=maxsize)
+            self.template.add_resource(ScheduledAction(
+                title=title + 'SchedActON',
+                AutoScalingGroupName=Ref(self.trop_asg),
+                MaxSize=asg_config.maxsize,
+                MinSize=asg_config.minsize,
+                Recurrence="0 19 * * 0,1,2,3,4"  # 1900 UTC (previous day) = 0600 AEDT
+            ))
 
     def create_launch_config(self, title, asg_config, network_config):
         """
@@ -118,7 +137,7 @@ class Asg(SecurityEnabledObject):
             InstanceMonitoring=False,
             InstanceType=asg_config.instance_type,
             KeyName=network_config.keypair,
-            SecurityGroups=[Ref(self.security_group.name)],
+            SecurityGroups=[self.security_group],
         ))
 
         if asg_config.iam_instance_profile_arn is not None:
@@ -132,7 +151,7 @@ class Asg(SecurityEnabledObject):
 
         # If block devices have been configured
         if asg_config.block_devices_config is not None:
-            self.lc.BlockDeviceMappings = Bdm(launch_config_title, asg_config.block_devices_config)\
+            self.lc.BlockDeviceMappings = Bdm(launch_config_title, asg_config.block_devices_config) \
                 .block_device_mappings
 
         return launch_config_title
@@ -172,7 +191,7 @@ class Asg(SecurityEnabledObject):
 
         self.cw_alarms.append(self.template.add_resource(Alarm(
             title=cf_name + 'Cwa',
-            AlarmActions=[Ref(scaling_policy)],
+            AlarmActions=[Ref(scaling_policy), self.network_config.sns_topic],
             AlarmDescription=scaling_policy_config.description,
             AlarmName=cf_name,
             ComparisonOperator=scaling_policy_config.comparison_operator,
@@ -185,7 +204,8 @@ class Asg(SecurityEnabledObject):
             Namespace='AWS/EC2',
             Period=scaling_policy_config.period,
             Statistic='Average',
-            Threshold=scaling_policy_config.threshold
+            Threshold=scaling_policy_config.threshold,
+            OKActions=[self.network_config.sns_topic]
         )))
 
     def create_cd_deploygroup(self, title, cd_service_role_arn):
@@ -235,8 +255,3 @@ class Asg(SecurityEnabledObject):
             ))
 
         return cd_app_title, cd_deploygroup_title
-
-
-class MalformedSNSError(Exception):
-    def __init__(self, value):
-        self.value = value

@@ -14,7 +14,9 @@ availability_zones:
   - 'ap-southeast-2a'
   - 'ap-southeast-2b'
   - 'ap-southeast-2c'
-vpc_cidr: '10.0.0.0/16'
+vpc_cidr:
+  name: 'VPC'
+  cidr: '10.0.0.0/16'
 public_cidr:
   name: 'PublicIp'
   cidr: '0.0.0.0/0'
@@ -25,14 +27,15 @@ nat_instance_type: 't2.nano'
 home_cidrs:
   - name: 'GA'
     cidr: '192.104.44.129/32'
-stack_hosted_zone_name: 'geodesy.ga.gov.au.'
+public_hosted_zone_name: 'geodesy.ga.gov.au.'
+private_hosted_zone_name: 'private.lan'
 owner_emails:
-nat_alerting: false
 nat_highly_available: false
 iam_instance_profile_arn: 'arn:aws:iam::094928090547:instance-profile/GeodesyWebServicesD-WebServerRole'
 zd_autoscaling_units:
 autoscaling_units:
 database_units:
+ec2_scheduled_shutdown:
 
 # Common unit default values
 unit_title: 'app1'
@@ -51,22 +54,28 @@ database_config:
   db_maintenance_window:
   db_storage_type:
 
+elb_listeners_config: &elb_listeners_config
+  instance_protocol: 'HTTP'
+  instance_port: '80'
+  loadbalancer_protocol: 'HTTP'
+  loadbalancer_port: '80'
+  sticky_app_cookie:
+
 # Autoscaling unit default values
 # ELB default values
 elb_config:
-  unit_hosted_zone_name: 'geodesy.ga.gov.au.'
-  instance_protocol:
-    - 'HTTP'
-  loadbalancer_protocol:
-    - 'HTTP'
-  instance_port:
-    - '80'
-  loadbalancer_port:
-    - '80'
+  elb_listeners_config:
+    - *elb_listeners_config
   elb_health_check: 'HTTP:80/index.html'
   elb_log_bucket: 'geodesy-elb-bucket'
   public_unit: true
   ssl_certificate_id:
+  public_unit: true
+  ssl_certificate_id:
+  healthy_threshold: 10
+  unhealthy_threshold: 2
+  interval: 300
+  timeout: 60
 
 # Block device configs
 block_devices_config:
@@ -87,12 +96,6 @@ asg_config:
   health_check_grace_period: '300'
   health_check_type: 'ELB'
   block_devices_config:
-  sns_topic_arn: 'arn:aws:sns:ap-southeast-2:094928090547:egeodesy-domain-events'
-  sns_notification_types:
-    - 'autoscaling:EC2_INSTANCE_LAUNCH'
-    - 'autoscaling:EC2_INSTANCE_LAUNCH_ERROR'
-    - 'autoscaling:EC2_INSTANCE_TERMINATE'
-    - 'autoscaling:EC2_INSTANCE_TERMINATE_ERROR'
   userdata: |
     #cloud-config
     repo_update: true

@@ -1,25 +1,48 @@
 package au.gov.ga.geodesy.support.spring;
 
-import org.springframework.test.annotation.Rollback;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.support.AnnotationConfigContextLoader;
-import org.springframework.test.context.testng.AbstractTransactionalTestNGSpringContextTests;
-import org.testng.annotations.AfterClass;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.aspectj.EnableSpringConfigured;
+import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 
-import au.gov.ga.geodesy.domain.model.Repositories;
 
-@ContextConfiguration(
-        classes = {
-                GeodesySupportConfig.class,
-                GeodesyServiceTestConfig.class,
-                PersistenceJpaConfig.class,
-        },
-        loader = AnnotationConfigContextLoader.class)
-public class IntegrationTestConfig extends AbstractTransactionalTestNGSpringContextTests {
+/**
+ * Spring context configuration for integration tests.
+ *
+ * @see {@code src/test/resources/integration-test.properties}
+ */
+@Configuration
+@EnableSpringConfigured
+@EnableAspectJAutoProxy(proxyTargetClass = true)
+@PropertySource("classpath:/integration-test.properties")
+public class IntegrationTestConfig {
 
-    @AfterClass(alwaysRun = true)
-    @Rollback(false)
-    protected void deleteData() {
-        new Repositories().deleteAll();
+    @Value("${dbUrl}")
+    private String dbUrl;
+
+    @Value("${dbUsername}")
+    private String dbUsername;
+
+    @Value("${dbPassword}")
+    private String dbPassword;
+
+    @Bean
+    public static PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer() {
+        return new PropertySourcesPlaceholderConfigurer();
+    }
+
+    public String getDbUrl() {
+        return dbUrl;
+    }
+
+    public String getDbUsername() {
+        return dbUsername;
+    }
+
+    public String getDbPassword() {
+        return dbPassword;
     }
 }

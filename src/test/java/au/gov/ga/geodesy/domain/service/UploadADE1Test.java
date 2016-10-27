@@ -22,10 +22,10 @@ import au.gov.ga.geodesy.domain.model.sitelog.SiteLogRepository;
 import au.gov.ga.geodesy.port.SiteLogReader;
 import au.gov.ga.geodesy.port.adapter.sopac.SopacSiteLogReader;
 import au.gov.ga.geodesy.support.TestResources;
-import au.gov.ga.geodesy.support.spring.IntegrationTestConfig;
+import au.gov.ga.geodesy.support.spring.IntegrationTest;
 
 @Transactional("geodesyTransactionManager")
-public class UploadADE1Test extends IntegrationTestConfig {
+public class UploadADE1Test extends IntegrationTest {
 
     private static final String fourCharId = "ADE1";
 

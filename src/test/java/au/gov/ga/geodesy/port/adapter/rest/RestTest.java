@@ -21,7 +21,7 @@ import org.testng.annotations.BeforeClass;
 
 import au.gov.ga.geodesy.support.spring.GeodesyRepositoryRestMvcConfig;
 import au.gov.ga.geodesy.support.spring.GeodesyRestMvcConfig;
-import au.gov.ga.geodesy.support.spring.IntegrationTestConfig;
+import au.gov.ga.geodesy.support.spring.IntegrationTest;
 
 @ContextConfiguration(
         classes = {GeodesyRepositoryRestMvcConfig.class, GeodesyRestMvcConfig.class},
@@ -29,7 +29,7 @@ import au.gov.ga.geodesy.support.spring.IntegrationTestConfig;
 
 @WebAppConfiguration
 @Transactional("geodesyTransactionManager")
-public class RestTest extends IntegrationTestConfig {
+public class RestTest extends IntegrationTest {
 
     @Autowired
     protected WebApplicationContext webApplicationContext;

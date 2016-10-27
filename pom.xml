@@ -571,6 +571,26 @@
                     </systemPropertyVariables>
                 </configuration>
             </plugin>
+            <plugin>
+              <groupId>io.fabric8</groupId>
+              <artifactId>docker-maven-plugin</artifactId>
+              <version>0.16.9</version>
+              <configuration>
+                 <images>
+                    <image>
+                        <name>geodesy-domain-model/dev-database</name>
+                        <build>
+                            <dockerFileDir>${project.basedir}/src/test/docker/database</dockerFileDir>
+                        </build>
+                        <run>
+                            <ports>
+                                <port>5433:5432</port>
+                            </ports>
+                        </run>
+                    </image>
+                 </images>
+              </configuration>
+            </plugin>
         </plugins>
     </build>
     <profiles>

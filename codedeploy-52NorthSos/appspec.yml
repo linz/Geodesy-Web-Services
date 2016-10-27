@@ -1,0 +1,13 @@
+version: 0.0
+os: linux
+files:
+    - source: ./deploy-code
+      destination: /usr/share/tomcat8/webapps/52n-sos-webapp##4.3.7
+hooks:
+  BeforeInstall:
+    - location: before-install.sh
+  AfterInstall:
+    - location: after-install.sh
+    - location: create-database.sh
+  ValidateService:
+    - location: validate-service.sh

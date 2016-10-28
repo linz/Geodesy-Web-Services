@@ -43,7 +43,12 @@ create schema ${DB_SCHEMA} authorization ${DB_USERNAME};
 EOF
 
 # Populate the schema with 52 North SOS database objects
-PGPASSWORD=${DB_PASSWORD} psql --host=${RDS_ENDPOINT} --port=5432 --username ${DB_USERNAME}  --dbname=${DB_NAME} << EOF
-\set schema '${DB_SCHEMA}'
-\i ${BASH_SOURCE%/*}/PG_series_script_create.sql
-EOF
+
+psql -U geodesy geodesydb < sos.dmp
+
+PGPASSWORD=${DB_PASSWORD} psql --host=${RDS_ENDPOINT} --port=5432 --username ${DB_USERNAME}  --dbname=${DB_NAME} < ${BASH_SOURCE%/*}/PG_series_dump.dmp
+
+# PGPASSWORD=${DB_PASSWORD} psql --host=${RDS_ENDPOINT} --port=5432 --username ${DB_USERNAME}  --dbname=${DB_NAME} << EOF
+# \set schema '${DB_SCHEMA}'
+# \i ${BASH_SOURCE%/*}/PG_series_script_create.sql
+# EOF

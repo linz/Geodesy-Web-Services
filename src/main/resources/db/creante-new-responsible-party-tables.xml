@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+   <changeSet author="hong (generated)" id="1478057658650-1">
+      <createTable tableName="sitelog_responsible_party">
+         <column name="id" type="INT">
+            <constraints nullable="false"/>
+         </column>
+         <column name="site_id" type="INT">
+            <constraints nullable="false"/>
+         </column>
+         <column name="responsible_party" type="TEXT">
+            <constraints nullable="false"/>
+         </column>
+         <column name="responsible_role" type="INT">
+            <constraints nullable="false"/>
+         </column>
+      </createTable>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1478057658650-2">
+      <createTable tableName="sitelog_responsible_party_role">
+         <column name="id" type="INT">
+            <constraints nullable="false"/>
+         </column>
+         <column name="responsible_role_name" type="TEXT">
+            <constraints nullable="false"/>
+         </column>
+         <column name="responsible_role_xmltag" type="TEXT"/>
+      </createTable>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1478057658650-3">
+      <addPrimaryKey columnNames="id"
+                     constraintName="pk_sitelog_responsible_party_id"
+                     tableName="sitelog_responsible_party"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1478057658650-4">
+      <addPrimaryKey columnNames="id"
+                     constraintName="pk_sitelog_responsible_party_role_id"
+                     tableName="sitelog_responsible_party_role"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1478057658650-5">
+      <addForeignKeyConstraint baseColumnNames="responsible_role"
+                               baseTableName="sitelog_responsible_party"
+                               constraintName="fk_sitelog_responsible_party_responsiblerole"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               onDelete="NO ACTION"
+                               onUpdate="NO ACTION"
+                               referencedColumnNames="id"
+                               referencedTableName="sitelog_responsible_party_role"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1478057658650-6">
+      <addForeignKeyConstraint baseColumnNames="site_id"
+                               baseTableName="sitelog_responsible_party"
+                               constraintName="fk_sitelog_responsible_party_siteid"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               onDelete="NO ACTION"
+                               onUpdate="NO ACTION"
+                               referencedColumnNames="id"
+                               referencedTableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1478057658650-7">
+      <dropForeignKeyConstraint baseTableName="sitelog_site"
+                                constraintName="fk_sitelog_site_site_contactid"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1478057658650-8">
+      <dropForeignKeyConstraint baseTableName="sitelog_site"
+                                constraintName="fk_sitelog_site_site_metadata_custodianid"/>
+   </changeSet>
+</databaseChangeLog>

@@ -38,7 +38,7 @@ public class CorsSite extends Site {
     private @MonotonicNonNull String bedrockCondition;
 
     @Column(name = "SITE_STATUS")
-    private String siteStatus = "public";
+    private String siteStatus = "PUBLIC";
 
     @SuppressWarnings({"unused", "initialization.fields.uninitialized"}) // hibernate needs the default constructor
     private CorsSite() {

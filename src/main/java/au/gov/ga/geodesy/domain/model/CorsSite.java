@@ -37,6 +37,9 @@ public class CorsSite extends Site {
     @Column(name = "BEDROCK_CONDITION")
     private @MonotonicNonNull String bedrockCondition;
 
+    @Column(name = "SITE_STATUS")
+    private String siteStatus = "public";
+
     @SuppressWarnings({"unused", "initialization.fields.uninitialized"}) // hibernate needs the default constructor
     private CorsSite() {
     }
@@ -79,5 +82,13 @@ public class CorsSite extends Site {
 
     public void setBedrockType(String bedrockType) {
         this.bedrockType = bedrockType;
+    }
+
+    public String getSiteStatus() {
+        return siteStatus;
+    }
+
+    public void setSiteStatus(String siteStatus) {
+        this.siteStatus = siteStatus;
     }
 }

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+   <changeSet author="hong (generated)" id="1478060335489-1">
+      <setTableRemarks remarks="The table contains information of responsible party that associated with a sitelog site. Currently the responsible party information is stored as xml text, but in the future it should be coverted into columns in the table, such as name, organisation, address etc to facilitate serach."
+                       tableName="sitelog_responsible_party"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1478060335489-2">
+      <setTableRemarks remarks="The table contains information about all roles within the responsible party."
+                       tableName="sitelog_responsible_party_role"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1478060335489-3">
+      <setColumnRemarks columnName="id"
+                        remarks="unique identifier of the record, primary key"
+                        tableName="sitelog_responsible_party"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1478060335489-4">
+      <setColumnRemarks columnName="id"
+                        remarks="unique identifier of the record, primary key."
+                        tableName="sitelog_responsible_party_role"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1478060335489-5">
+      <setColumnRemarks columnName="responsible_party"
+                        remarks="information about the responsible party that associated with the responsible role. currently in xml text"
+                        tableName="sitelog_responsible_party"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1478060335489-6">
+      <setColumnRemarks columnName="responsible_role"
+                        remarks="a responsible role that associated with the responsible party record, foreign key to pk of sitelog_responsible_party_role"
+                        tableName="sitelog_responsible_party"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1478060335489-7">
+      <setColumnRemarks columnName="responsible_role_name"
+                        remarks="the name of a responsible role in responsible party defined by OGC/gml schemas."
+                        tableName="sitelog_responsible_party_role"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1478060335489-8">
+      <setColumnRemarks columnName="responsible_role_xmltag"
+                        remarks="the tag name used by responsible role in responsible party defined by OGC/gml schemas."
+                        tableName="sitelog_responsible_party_role"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1478060335489-9">
+      <setColumnRemarks columnName="site_id"
+                        remarks="foreign key to pk of sitelog_site table"
+                        tableName="sitelog_responsible_party"/>
+   </changeSet>
+</databaseChangeLog>

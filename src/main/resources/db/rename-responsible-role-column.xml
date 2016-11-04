@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+   <changeSet author="hong (generated)" id="1478228572024-1">
+      <addColumn tableName="sitelog_responsible_party">
+         <column name="responsible_role_id"
+                 remarks="a responsible role that associated with the responsible party record, foreign key to pk of sitelog_responsible_party_role"
+                 type="int4">
+            <constraints nullable="false"/>
+         </column>
+      </addColumn>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1478228572024-2">
+      <addForeignKeyConstraint baseColumnNames="responsible_role_id"
+                               baseTableName="sitelog_responsible_party"
+                               constraintName="fk_sitelog_responsible_party_responsible_roleid"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               onDelete="NO ACTION"
+                               onUpdate="NO ACTION"
+                               referencedColumnNames="id"
+                               referencedTableName="sitelog_responsible_party_role"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1478228572024-3">
+      <dropForeignKeyConstraint baseTableName="sitelog_responsible_party"
+                                constraintName="fk_sitelog_responsible_party_responsiblerole"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1478228572024-4">
+      <dropColumn columnName="responsible_role" tableName="sitelog_responsible_party"/>
+   </changeSet>
+</databaseChangeLog>

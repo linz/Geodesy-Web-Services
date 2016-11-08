@@ -37,6 +37,5 @@
 <include file="db/creante-new-responsible-party-tables.xml"/>
 <include file="db/migrate-site-responsible-party-data-to-new-table.sql"/>
 <include file="db/add-comments-to-new-responsible-party-tables.xml"/>
-<!-- TODO (LB): non-null violation, re-implement using renameColumn? -->
-<!-- <include file="db/rename&#45;responsible&#45;role&#45;column.xml"/> -->
+<include file="db/rename-responsible-party-column-name.sql"/>
 </databaseChangeLog>

@@ -2,6 +2,7 @@ package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 
 import au.gov.ga.geodesy.domain.model.sitelog.CollocationInformation;
 import au.gov.ga.geodesy.domain.model.sitelog.FormInformation;
+import au.gov.ga.geodesy.domain.model.sitelog.FrequencyStandardLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.GnssAntennaLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.GnssReceiverLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.HumiditySensorLogItem;
@@ -30,6 +31,7 @@ import ma.glasnost.orika.converter.BidirectionalConverter;
 import ma.glasnost.orika.converter.ConverterFactory;
 import ma.glasnost.orika.impl.DefaultMapperFactory;
 import ma.glasnost.orika.metadata.Type;
+
 import net.opengis.gml.v_3_2_1.AbstractGMLType;
 import net.opengis.iso19139.gmd.v_20070417.CIResponsiblePartyType;
 
@@ -55,6 +57,7 @@ public class SiteLogMapper implements Iso<SiteLogType, SiteLog> {
             .fieldMap("siteLocation", "siteLocation").converter("siteLocation").add()
             .fieldMap("gnssReceivers", "gnssReceivers").converter("gnssReceivers").add()
             .fieldMap("gnssAntennas", "gnssAntennas").converter("gnssAntennas").add()
+            .fieldMap("frequencyStandards", "frequencyStandards").converter("frequencyStandards").add()
             .fieldMap("humiditySensors", "humiditySensors").converter("humiditySensors").add()
             .fieldMap("pressureSensors", "pressureSensors").converter("pressureSensors").add()
             .fieldMap("temperatureSensors", "temperatureSensors").converter("temperatureSensors").add()
@@ -84,6 +87,12 @@ public class SiteLogMapper implements Iso<SiteLogType, SiteLog> {
         converters.registerConverter("gnssReceivers",
                 new BidirectionalConverterWrapper<List<GMLPropertyType>, Set<GnssReceiverLogItem>>(
                         logItemsConverter(new GnssReceiverMapper())
+                ) {}
+        );
+
+        converters.registerConverter("frequencyStandards",
+                new BidirectionalConverterWrapper<List<GMLPropertyType>, Set<FrequencyStandardLogItem>>(
+                        logItemsConverter(new FrequencyStandardMapper())
                 ) {}
         );
 

@@ -1,6 +1,7 @@
 package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 
 import au.gov.ga.geodesy.domain.model.sitelog.CollocationInformation;
+import au.gov.ga.geodesy.domain.model.sitelog.FrequencyStandardLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.GnssAntennaLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.GnssReceiverLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.HumiditySensorLogItem;
@@ -26,6 +27,8 @@ import au.gov.ga.geodesy.support.utils.GMLDateUtils;
 import au.gov.xml.icsm.geodesyml.v_0_3.BasePossibleProblemSourcesType;
 import au.gov.xml.icsm.geodesyml.v_0_3.CollocationInformationPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_3.CollocationInformationType;
+import au.gov.xml.icsm.geodesyml.v_0_3.FrequencyStandardPropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_3.FrequencyStandardType;
 import au.gov.xml.icsm.geodesyml.v_0_3.GeodesyMLType;
 import au.gov.xml.icsm.geodesyml.v_0_3.GnssAntennaPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_3.GnssAntennaType;
@@ -49,8 +52,11 @@ import au.gov.xml.icsm.geodesyml.v_0_3.TemperatureSensorPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_3.TemperatureSensorType;
 import au.gov.xml.icsm.geodesyml.v_0_3.WaterVaporSensorPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_3.WaterVaporSensorType;
+
 import ma.glasnost.orika.metadata.TypeFactory;
+
 import net.opengis.gml.v_3_2_1.TimePositionType;
+
 import org.apache.commons.beanutils.PropertyUtils;
 import org.hamcrest.Matchers;
 import org.testng.annotations.Test;
@@ -478,6 +484,28 @@ public class SiteLogMapperTest {
                 GnssAntennaType antennaType = gnssAntennaPropertyTypes.get(i++).getGnssAntenna();
                 assertThat(antennaLogItem.getSerialNumber(), equalTo(antennaType.getSerialNumber()));
             }
+        }
+    }
+
+    @Test
+    public void testFrequencyMapping() throws IOException, MarshallingException {
+        GeodesyMLType mobs = marshaller.unmarshal(TestResources.customGeodesyMLSiteLogReader("MOBS"), GeodesyMLType.class)
+                .getValue();
+
+        SiteLogType siteLogType = GeodesyMLUtils.getElementFromJAXBElements(mobs.getElements(), SiteLogType.class)
+                .findFirst().get();
+
+        SiteLog siteLog = mapper.to(siteLogType);
+
+        List<FrequencyStandardPropertyType> frequencyStandardPropertyTypes = siteLogType.getFrequencyStandards();
+        sortGMLPropertyTypes(frequencyStandardPropertyTypes);
+        assertThat(siteLog.getFrequencyStandards().size(), equalTo(1));
+        assertThat(frequencyStandardPropertyTypes.size(), equalTo(1));
+
+        int i = 0;
+        for (FrequencyStandardLogItem frequencyStandardLogItem : sortLogItems(siteLog.getFrequencyStandards())) {
+            FrequencyStandardType frequencyStandardType = frequencyStandardPropertyTypes.get(i++).getFrequencyStandard();
+            assertThat(frequencyStandardLogItem.getType(), equalTo(frequencyStandardType.getStandardType().getValue()));
         }
     }
 

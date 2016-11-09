@@ -63,7 +63,7 @@ public class UploadADE1Test extends IntegrationTest {
         assertThat(site.getDateInstalled(), equalTo(identification.getDateInstalled()));
 
         List<Setup> setups = setupRepo.findBySiteId(site.getId());
-        assertThat(setups.size(), equalTo(7));
+        assertThat(setups.size(), equalTo(6));
 
         List<Node> nodes = nodeRepo.findBySiteId(site.getId());
         assertThat(nodes.size(), equalTo(4));

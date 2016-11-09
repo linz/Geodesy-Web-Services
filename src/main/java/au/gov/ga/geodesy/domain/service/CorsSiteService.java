@@ -134,10 +134,10 @@ public class CorsSiteService implements EventSubscriber<SiteLogReceived> {
 
         for (EquipmentLogItem logItem : siteLog.getEquipmentLogItems()) {
             EffectiveDates dates = logItem.getEffectiveDates();
-            if (dates == null) {
-                datesOfChange.add(null);
-            } else {
-                datesOfChange.add(dates.getFrom());
+            if (dates != null) {
+                if (dates.getFrom() != null) {
+                    datesOfChange.add(dates.getFrom());
+                }
                 if (dates.getTo() != null) {
                     datesOfChange.add(dates.getTo());
                 }
@@ -187,6 +187,10 @@ public class CorsSiteService implements EventSubscriber<SiteLogReceived> {
             equipmentTo = period.getTo();
             if (equipmentFrom != null && equipmentFrom.equals(equipmentTo)) {
                 // equipment log entries with empty periods are corrections
+                return;
+            }
+            if (equipmentFrom == null && equipmentTo == null) {
+                setups.forEach(s -> addEquipment(logItem, s));
                 return;
             }
             // TODO: why is this commented out?

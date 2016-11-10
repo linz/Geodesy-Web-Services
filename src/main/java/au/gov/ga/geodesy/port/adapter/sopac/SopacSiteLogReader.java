@@ -36,7 +36,7 @@ public class SopacSiteLogReader extends SiteLogReader {
     /**
      * {@inheritDoc}
      */
-    public SiteLog getSiteLog(String siteLogText) throws InvalidSiteLogException {
+    protected SiteLog getSiteLog(String siteLogText) throws InvalidSiteLogException {
         try {
             if (siteLog == null) {
                 siteLog = mapper.fromDTO(marshaller.unmarshal(new StringReader(siteLogText)));

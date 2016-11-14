@@ -1,5 +1,25 @@
 package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.hasSize;
+import static org.hamcrest.core.Is.is;
+import static org.hamcrest.core.IsEqual.equalTo;
+
+import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
+import java.time.Instant;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Set;
+import java.util.SortedSet;
+import java.util.TreeSet;
+
+import org.apache.commons.beanutils.PropertyUtils;
+import org.hamcrest.Matchers;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
 import au.gov.ga.geodesy.domain.model.sitelog.CollocationInformation;
 import au.gov.ga.geodesy.domain.model.sitelog.FrequencyStandardLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.GnssAntennaLogItem;
@@ -23,6 +43,7 @@ import au.gov.ga.geodesy.support.TestResources;
 import au.gov.ga.geodesy.support.gml.GMLPropertyType;
 import au.gov.ga.geodesy.support.mapper.dozer.converter.TimePrimitivePropertyTypeUtils;
 import au.gov.ga.geodesy.support.marshalling.moxy.GeodesyMLMoxy;
+import au.gov.ga.geodesy.support.spring.IntegrationTest;
 import au.gov.ga.geodesy.support.utils.GMLDateUtils;
 import au.gov.xml.icsm.geodesyml.v_0_3.BasePossibleProblemSourcesType;
 import au.gov.xml.icsm.geodesyml.v_0_3.CollocationInformationPropertyType;
@@ -57,29 +78,16 @@ import ma.glasnost.orika.metadata.TypeFactory;
 
 import net.opengis.gml.v_3_2_1.TimePositionType;
 
-import org.apache.commons.beanutils.PropertyUtils;
-import org.hamcrest.Matchers;
-import org.testng.annotations.Test;
+public class SiteLogMapperTest extends IntegrationTest {
 
-import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
-import java.time.Instant;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Set;
-import java.util.SortedSet;
-import java.util.TreeSet;
+    private SiteLogMapper mapper;
+    private GeodesyMLMarshaller marshaller;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.hasSize;
-import static org.hamcrest.core.Is.is;
-import static org.hamcrest.core.IsEqual.equalTo;
-
-public class SiteLogMapperTest {
-
-    private SiteLogMapper mapper = new SiteLogMapper();
-    private GeodesyMLMarshaller marshaller = new GeodesyMLMoxy();
+    @BeforeClass
+    private void init() {
+        mapper = new SiteLogMapper();
+        marshaller = new GeodesyMLMoxy();
+    }
 
     /**
      * Test mapping from SiteLogType to SiteLog and back
@@ -96,23 +104,23 @@ public class SiteLogMapperTest {
         SiteLog siteLog = mapper.to(siteLogType);
         testMappingValues(siteLogType, siteLog);
 
-        checkSiteOwner(siteLogType, siteLog);
+        checkSiteContacts(siteLogType, siteLog);
 
         // TODO: complete tests
         siteLogType = mapper.from(siteLog);
-        checkSiteOwner(siteLog, siteLogType);
+        checkSiteContacts(siteLog, siteLogType);
     }
 
-    private void checkSiteOwner(SiteLogType siteLogType, SiteLog siteLog) {
+    private void checkSiteContacts(SiteLogType siteLogType, SiteLog siteLog) {
         assertThat(
             siteLogType.getSiteContact().get(0).getCIResponsibleParty().getIndividualName().getCharacterString().getValue(),
-            is(siteLog.getSiteContact().getParty().getIndividualName())
+            is(siteLog.getSiteContacts().get(0).getParty().getIndividualName())
         );
     }
 
-    private void checkSiteOwner(SiteLog siteLog, SiteLogType siteLogType) {
+    private void checkSiteContacts(SiteLog siteLog, SiteLogType siteLogType) {
         assertThat(
-            siteLog.getSiteContact().getParty().getIndividualName(),
+            siteLog.getSiteContacts().get(0).getParty().getIndividualName(),
             is(siteLogType.getSiteContact().get(0).getCIResponsibleParty().getIndividualName().getCharacterString().getValue())
         );
     }

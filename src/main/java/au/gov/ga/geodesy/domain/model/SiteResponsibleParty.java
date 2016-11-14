@@ -12,8 +12,13 @@ import org.opengis.metadata.citation.ResponsibleParty;
 
 import au.gov.ga.geodesy.support.persistence.jpa.ResponsiblePartyJpaConverter;
 
+/**
+ * Combination of GMD responsible party and contact type (site owner, metadata custodian, etc).
+ *
+ * @see ContactType
+ */
 @Entity
-@Table(name = "RESPONSIBLE_PARTY")
+@Table(name = "SITELOG_RESPONSIBLE_PARTY")
 public class SiteResponsibleParty {
 
     @Id
@@ -22,9 +27,29 @@ public class SiteResponsibleParty {
     @SequenceGenerator(name = "surrogateKeyGenerator", sequenceName = "seq_surrogate_keys")
     private Integer id;
 
+    @Column(name = "RESPONSIBLE_ROLE_ID", nullable = false)
+    private Integer contactTypeId;
+
     @Convert(converter = ResponsiblePartyJpaConverter.class)
-    @Column(name = "ISO_19115", length=4096)
+    @Column(name = "RESPONSIBLE_PARTY")
     private ResponsibleParty party;
+
+    @SuppressWarnings("unused") // used by hibernate
+    private SiteResponsibleParty() {
+    }
+
+    public SiteResponsibleParty(Integer contactTypeId, ResponsibleParty party) {
+        this.contactTypeId = contactTypeId;
+        this.party = party;
+    }
+
+    public Integer getContactTypeId() {
+        return contactTypeId;
+    }
+
+    public void setContactTypeId(Integer contactTypeId) {
+        this.contactTypeId = contactTypeId;
+    }
 
     public ResponsibleParty getParty() {
         return party;

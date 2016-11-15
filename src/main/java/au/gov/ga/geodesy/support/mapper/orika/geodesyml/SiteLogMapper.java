@@ -1,5 +1,11 @@
 package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 
+import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
+
+import org.opengis.metadata.citation.ResponsibleParty;
+
 import au.gov.ga.geodesy.domain.model.sitelog.CollocationInformation;
 import au.gov.ga.geodesy.domain.model.sitelog.FormInformation;
 import au.gov.ga.geodesy.domain.model.sitelog.FrequencyStandardLogItem;
@@ -22,7 +28,16 @@ import au.gov.ga.geodesy.domain.model.sitelog.TemperatureSensorLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.WaterVaporSensorLogItem;
 import au.gov.ga.geodesy.support.gml.GMLPropertyType;
 import au.gov.ga.geodesy.support.java.util.Iso;
-import au.gov.xml.icsm.geodesyml.v_0_3.*;
+import au.gov.xml.icsm.geodesyml.v_0_3.FormInformationType;
+import au.gov.xml.icsm.geodesyml.v_0_3.GnssAntennaPropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_3.LocalEpisodicEventsPropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_3.MoreInformationType;
+import au.gov.xml.icsm.geodesyml.v_0_3.MultipathSourcesPropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_3.RadioInterferencesPropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_3.SignalObstructionsPropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_3.SiteIdentificationType;
+import au.gov.xml.icsm.geodesyml.v_0_3.SiteLocationType;
+import au.gov.xml.icsm.geodesyml.v_0_3.SiteLogType;
 
 import ma.glasnost.orika.MapperFacade;
 import ma.glasnost.orika.MapperFactory;
@@ -34,12 +49,6 @@ import ma.glasnost.orika.metadata.Type;
 
 import net.opengis.gml.v_3_2_1.AbstractGMLType;
 import net.opengis.iso19139.gmd.v_20070417.CIResponsiblePartyType;
-
-import java.util.List;
-import java.util.Set;
-import java.util.stream.Collectors;
-
-import org.opengis.metadata.citation.ResponsibleParty;
 
 /**
  * Reversible mapping between GeodesyML SiteLogType DTO and
@@ -71,9 +80,7 @@ public class SiteLogMapper implements Iso<SiteLogType, SiteLog> {
             .fieldMap("formInformation", "formInformation").converter("formInformation").add()
             .fieldMap("collocationInformations", "collocationInformation").converter("collocationInformations").add()
             .fieldMap("surveyedLocalTies", "surveyedLocalTies").converter("surveyedLocalTies").add()
-            .fieldMap("siteContact[0].CIResponsibleParty", "siteContact.party").converter("responsibleParty").add()
-            .fieldMap("siteMetadataCustodian.CIResponsibleParty", "siteMetadataCustodian.party").converter("responsibleParty").add()
-                /* .byDefault() */
+            .customize(new ResponsiblePartiesMapper())
             .register();
 
         ConverterFactory converters = mapperFactory.getConverterFactory();

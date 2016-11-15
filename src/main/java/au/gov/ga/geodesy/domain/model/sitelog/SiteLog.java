@@ -5,26 +5,30 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.ForeignKey;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
-import javax.persistence.ForeignKey;
+import javax.persistence.Transient;
 import javax.validation.Valid;
 
 import org.checkerframework.checker.nullness.qual.MonotonicNonNull;
 import org.checkerframework.checker.nullness.qual.Nullable;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
 
+import au.gov.ga.geodesy.domain.model.ContactType;
+import au.gov.ga.geodesy.domain.model.ContactTypeRepository;
 import au.gov.ga.geodesy.domain.model.SiteResponsibleParty;
 
 /**
@@ -34,6 +38,11 @@ import au.gov.ga.geodesy.domain.model.SiteResponsibleParty;
 @Entity
 @Table(name = "SITELOG_SITE")
 public class SiteLog {
+
+    @Autowired
+    @Transient
+    private ContactTypeRepository contactTypes;
+
     @Id
     @GeneratedValue(generator = "surrogateKeyGenerator")
     @SequenceGenerator(name = "surrogateKeyGenerator", sequenceName = "SEQ_SITELOGSITE")
@@ -131,13 +140,9 @@ public class SiteLog {
     @Embedded
     protected MoreInformation moreInformation = new MoreInformation();
 
-    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "SITE_CONTACT_ID", foreignKey = @ForeignKey(name="FK_SITELOG_SITE_RESPONSIBLE_PARTY_CONTACT"))
-    protected @Nullable SiteResponsibleParty siteContact;
-
-    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "SITE_METADATA_CUSTODIAN_ID", foreignKey = @ForeignKey(name="FK_SITELOG_SITE_RESPONSIBLE_PARTY_CUSTODIAN"))
-    protected @Nullable SiteResponsibleParty siteMetadataCustodian;
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID")
+    protected @Nullable List<SiteResponsibleParty> responsibleParties = new ArrayList<>();
 
     public @Nullable Integer getId() {
         return id;
@@ -424,31 +429,30 @@ public class SiteLog {
     }
 
     /**
-     * @return the siteContact
+     * Return responsible parties associated with this site.
      */
-    public @Nullable SiteResponsibleParty getSiteContact() {
-        return siteContact;
+    public List<SiteResponsibleParty> getResponsibleParties() {
+        return responsibleParties;
     }
 
     /**
-     * @param siteContact the siteContact to set
+     * Return site contacts.
      */
-    public void setSiteContact(SiteResponsibleParty siteContact) {
-        this.siteContact = siteContact;
+    public List<SiteResponsibleParty> getSiteContacts() {
+        return getSiteContactsByType(contactTypes.siteContact());
     }
 
     /**
-     * @return the siteMetadataCustodian
+     * Return site metadata custodians.
      */
-    public @Nullable SiteResponsibleParty getSiteMetadataCustodian() {
-        return siteMetadataCustodian;
+    public List<SiteResponsibleParty> getSiteMetadataCustodians() {
+        return getSiteContactsByType(contactTypes.siteMetadataCustodian());
     }
 
-    /**
-     * @param siteMetadataCustodian the siteMetadataCustodian to set
-     */
-    public void setSiteMetadataCustodian(SiteResponsibleParty siteMetadataCustodian) {
-        this.siteMetadataCustodian = siteMetadataCustodian;
+    private List<SiteResponsibleParty> getSiteContactsByType(ContactType contactType) {
+        return responsibleParties.stream().filter(p ->
+            p.getContactTypeId() == contactType.getId()
+        ).collect(Collectors.toList());
     }
 
     public List<EquipmentLogItem> getEquipmentLogItems() {

@@ -18,7 +18,7 @@ public class StringToCodeListValueConverter<T extends CodeListValueType> extends
 
     @Override
     public String convertFrom(T code, Type<String> targetType, MappingContext ctx) {
-        return code.getCodeListValue();
+        return code.getValue();
     }
 
     @SuppressWarnings("unchecked")

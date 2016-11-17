@@ -9,6 +9,11 @@
             <username>${env.TRAVIS_NEXUS_USERNAME}</username>
             <password>${env.TRAVIS_NEXUS_PASSWORD}</password>
         </server>
+        <server>
+            <id>github</id>
+            <username>${env.TRAVIS_GITHUB_USERNAME}</username>
+            <password>${env.TRAVIS_GITHUB_PASSWORD}</password>
+        </server>
     </servers>
     <mirrors>
         <mirror>

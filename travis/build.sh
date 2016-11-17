@@ -1,10 +1,14 @@
-#!/usr/bin/env bash
+#!/usr/bin/env nix-shell
+#!nix-shell ../shell.nix -i bash
 
+# A local installation of maven prefers to run the global installation, if available.
+sudo rm /etc/mavenrc
 
-nix-shell --command "mvn --settings ./travis/maven-settings.xml docker:build docker:run"
+mvn --settings ./travis/maven-settings.xml docker:build docker:run
 
-if [ ${TRAVIS_PULL_REQUEST} = 'false' ]; then
-    nix-shell --command "mvn --settings ./travis/maven-settings.xml deploy"
+if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then
+    mvn --settings ./travis/maven-settings.xml deploy
+    mvn --settings ./travis/maven-settings.xml -Psite site-deploy
 else
-    nix-shell --command "mvn --settings ./travis/maven-settings.xml test"
+    mvn --settings ./travis/maven-settings.xml test
 fi

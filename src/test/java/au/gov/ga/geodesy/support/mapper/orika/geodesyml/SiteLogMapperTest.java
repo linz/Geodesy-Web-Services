@@ -41,7 +41,6 @@ import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLUtils;
 import au.gov.ga.geodesy.port.adapter.geodesyml.MarshallingException;
 import au.gov.ga.geodesy.support.TestResources;
 import au.gov.ga.geodesy.support.gml.GMLPropertyType;
-import au.gov.ga.geodesy.support.mapper.dozer.converter.TimePrimitivePropertyTypeUtils;
 import au.gov.ga.geodesy.support.marshalling.moxy.GeodesyMLMoxy;
 import au.gov.ga.geodesy.support.spring.IntegrationTest;
 import au.gov.ga.geodesy.support.utils.GMLDateUtils;
@@ -76,6 +75,7 @@ import au.gov.xml.icsm.geodesyml.v_0_3.WaterVaporSensorType;
 
 import ma.glasnost.orika.metadata.TypeFactory;
 
+import net.opengis.gml.v_3_2_1.TimePeriodType;
 import net.opengis.gml.v_3_2_1.TimePositionType;
 
 public class SiteLogMapperTest extends IntegrationTest {
@@ -406,8 +406,10 @@ public class SiteLogMapperTest extends IntegrationTest {
             for (CollocationInformation collocationInfo : sortCollocationInformations(siteLog.getCollocationInformation())) {
                 CollocationInformationType collocationInfoType = collocationInfoProperties.get(i++).getCollocationInformation();
                 assertThat(collocationInfo.getInstrumentType(), is(collocationInfoType.getInstrumentationType().getValue()));
-                String beginTime = TimePrimitivePropertyTypeUtils
-                        .getTheTimePeriodType(collocationInfoType.getValidTime()).getBeginPosition().getValue().get(0).toString();
+
+                TimePeriodType timePeriodType = (TimePeriodType) collocationInfoType.getValidTime().getAbstractTimePrimitive().getValue();
+                String beginTime = timePeriodType.getBeginPosition().getValue().get(0).toString();
+
                 assertThat(collocationInfo.getEffectiveDates().getFrom().toString(), is(beginTime));
                 assertThat(collocationInfo.getStatus(), is(collocationInfoType.getStatus().getValue()));
             }

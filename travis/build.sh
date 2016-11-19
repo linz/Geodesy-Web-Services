@@ -4,8 +4,6 @@
 # A local installation of maven prefers to run the global installation, if available.
 sudo rm /etc/mavenrc
 
-mvn --settings ./travis/maven-settings.xml docker:build docker:run
-
 if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then
     mvn --settings ./travis/maven-settings.xml deploy
     mvn --settings ./travis/maven-settings.xml -Psite site-deploy

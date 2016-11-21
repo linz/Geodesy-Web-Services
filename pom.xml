@@ -34,6 +34,7 @@
         <encoding>UTF-8</encoding>
         <skip.system.tests>true</skip.system.tests>
         <snippetsDirectory>${project.build.directory}/generated-snippets</snippetsDirectory>
+        <skip.createDb>false</skip.createDb>
     </properties>
     <repositories>
         <repository>
@@ -576,10 +577,28 @@
                             <ports>
                                 <port>5433:5432</port>
                             </ports>
+                            <wait>
+                                <!-- TODO: implementing polling -->
+                                <time>10000</time>
+                            </wait>
                         </run>
                     </image>
                  </images>
               </configuration>
+              <executions>
+                  <execution>
+                      <id>start-db</id>
+                      <phase>process-test-resources</phase>
+                      <goals>
+                          <goal>stop</goal>
+                          <goal>build</goal>
+                          <goal>start</goal>
+                      </goals>
+                      <configuration>
+                          <skip>${skip.createDb}</skip>
+                      </configuration>
+                  </execution>
+              </executions>
             </plugin>
         </plugins>
     </build>

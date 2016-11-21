@@ -21,6 +21,7 @@ let
       graphviz
       openjdk8
       travis
+      postgresql
     ];
   };
 in

@@ -1,6 +1,6 @@
 ### Geodesy Domain Model
 
-[![Build Status](https://travis-ci.org/GeoscienceAustralia/geodesy-domain-model.svg?branch=master)](https://travis-ci.org/GeoscienceAustralia/geodesy-domain-model)
+[![Build Status](https://travis-ci.org/GeoscienceAustralia/Geodesy-Domain-Model.svg?branch=master)](https://travis-ci.org/GeoscienceAustralia/Geodesy-Domain-Model)
 
 ### Documentation
 

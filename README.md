@@ -4,7 +4,7 @@
 
 ### Documentation
 
-http://geoscienceaustralia.github.io/geodesy-domain-model/intro.html
+http://geoscienceaustralia.github.io/Geodesy-Domain-Model.github.io/intro.html
 
 ### History
 

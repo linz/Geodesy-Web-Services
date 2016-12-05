@@ -8,5 +8,5 @@ if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then
     mvn --settings ./travis/maven-settings.xml deploy
     mvn --settings ./travis/maven-settings.xml -pl gws-core -Psite site-deploy
 else
-    mvn --settings ./travis/maven-settings.xml test
+    mvn --settings ./travis/maven-settings.xml install
 fi

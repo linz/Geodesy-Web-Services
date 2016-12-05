@@ -1,0 +1,57 @@
+<web-app>
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+    <!-- Configure ContextLoaderListener to use JavaConfigWebApplicationContext
+         instead of the default XmlWebApplicationContext -->
+    <context-param>
+        <param-name>contextClass</param-name>
+        <param-value>org.springframework.web.context.support.AnnotationConfigWebApplicationContext</param-value>
+    </context-param>
+    <!-- Configuration locations must consist of one or more comma- or space-delimited
+         fully-qualified @Configuration classes -->
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>au.gov.ga.geodesy.support.spring.WebAppConfig</param-value>
+    </context-param>
+
+    <servlet>
+        <servlet-name>geodesy-web-services</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <!-- Configure DispatcherServlet to use JavaConfigWebApplicationContext
+             instead of the default XmlWebApplicationContext -->
+        <init-param>
+            <param-name>contextClass</param-name>
+            <param-value>org.springframework.web.context.support.AnnotationConfigWebApplicationContext</param-value>
+        </init-param>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>
+                au.gov.ga.geodesy.support.spring.GeodesySupportConfig,
+                au.gov.ga.geodesy.support.spring.GeodesyServiceConfig,
+                au.gov.ga.geodesy.support.spring.GeodesyRepositoryRestMvcConfig,
+                au.gov.ga.geodesy.support.spring.GeodesyRestMvcConfig,
+                au.gov.ga.geodesy.support.spring.PersistenceJpaConfig
+            </param-value>
+        </init-param>
+        <load-on-startup>0</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>geodesy-web-services</servlet-name>
+        <url-pattern>/*</url-pattern>
+    </servlet-mapping>
+
+    <filter>
+        <filter-name>CorsFilter</filter-name>
+        <filter-class>org.apache.catalina.filters.CorsFilter</filter-class>
+        <init-param>
+            <param-name>cors.allowed.origins</param-name>
+            <param-value>*</param-value>
+        </init-param>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>CorsFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+</web-app>

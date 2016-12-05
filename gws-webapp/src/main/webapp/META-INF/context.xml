@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Context>
+    <Resource
+            auth="Container"
+            type="javax.sql.DataSource"
+            driverClassName="org.postgresql.Driver"
+            factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+            url="${geodesy-db-url}"
+            description="Distribution Datasource"
+            username="${geodesy-db-username}"
+            password="${geodesy-db-password}"
+            name="jdbc/GeodesyDB"
+            maxActive="40"
+            maxWait="10000"/>
+</Context>

@@ -1,0 +1,205 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>au.gov.ga.geodesy.gws</groupId>
+    <artifactId>gws-parent</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>Geodesy Web Services Parent</name>
+    <issueManagement>
+        <system>GitHub Issues</system>
+        <url>https://gaautobots.atlassian.net/secure/Dashboard.jspa</url>
+    </issueManagement>
+    <scm>
+        <connection>scm:git:git@github.com:GeoscienceAustralia/geodesy-domain-model.git</connection>
+        <developerConnection>scm:git:git@github.com:GeoscienceAustralia/geodesy-domain-model.git</developerConnection>
+        <url>http://github.com/GeocienceAustralia/geodesy-domain-model/gws-parent</url>
+    </scm>
+    <properties>
+        <spring.version>4.3.0.RELEASE</spring.version>
+        <java.version>1.8</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <surefire.version>2.19.1</surefire.version>
+        <failsafe.version>2.19.1</failsafe.version>
+        <!-- Sonar static analysis / Jacoco code coverage -->
+        <sonar.host.url>https://sonar.gadevs.ga/</sonar.host.url>
+        <sonar.projectKey>${project.artifactId}</sonar.projectKey>
+        <sonar.projectName>${project.artifactId}</sonar.projectName>
+        <sonar.projectVersion>${project.version}</sonar.projectVersion>
+        <sonar.language>java</sonar.language>
+        <sonar.sources>src/main/java</sonar.sources>
+        <sonar.test>target/test-classes</sonar.test>
+        <sonar.scm.provider>git</sonar.scm.provider>
+        <sonar.login>${SONAR_LOGIN}</sonar.login>
+        <jacoco.basedir>${project.build.directory}/code-coverage</jacoco.basedir>
+        <!-- Define location of Java CodeCoverage data from Unit Tests (run using SureFire) -->
+        <sonar.jacoco.reportPath>${jacoco.basedir}/jacoco-ut.exec</sonar.jacoco.reportPath>
+        <jacoco.ut.outputdir>${jacoco.basedir}/jacoco-ut-out</jacoco.ut.outputdir>
+        <!-- Define location of Java CodeCoverage data from Integration Tests (run using Failsafe) -->
+        <sonar.jacoco.itReportPath>${jacoco.basedir}/jacoco-it.exec</sonar.jacoco.itReportPath>
+        <jacoco.it.outputdir>${jacoco.basedir}/jacoco-it-out</jacoco.it.outputdir>
+        <!-- Combined report file -->
+        <sonar.jacoco.itutCombinedReportPath>${jacoco.basedir}/jacoco-itut-combined.exec</sonar.jacoco.itutCombinedReportPath>
+        <!-- Testing -->
+        <skip.integration.tests>true</skip.integration.tests>
+        <skip.unit.tests>false</skip.unit.tests>
+        <skip.system.tests>true</skip.system.tests>
+        <!-- System settings -->
+        <argLine>-Xmx2048m -Xms1024m</argLine>
+        <encoding>UTF-8</encoding>
+    </properties>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.codehaus.sonar-plugins.java</groupId>
+                <artifactId>sonar-jacoco-listeners</artifactId>
+                <version>3.2</version>
+                <scope>test</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+    <build>
+        <defaultGoal>install</defaultGoal>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>sonar-maven-plugin</artifactId>
+                    <version>2.7.1</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.jacoco</groupId>
+                    <artifactId>jacoco-maven-plugin</artifactId>
+                    <version>0.7.7.201606060606</version>
+                    <executions>
+                        <execution>
+                            <id>pre-unit-test</id>
+                            <!--<phase>test</phase>-->
+                            <goals>
+                                <goal>prepare-agent</goal>
+                            </goals>
+                            <configuration>
+                                <!-- Sets the path to the file to write the execution data to. -->
+                                <destFile>${sonar.jacoco.reportPath}</destFile>
+                                <!-- Connection with SureFire plugin -->
+                                <propertyName>sonarUnitTestArgLine</propertyName>
+                            </configuration>
+                        </execution>
+                        <execution>
+                            <id>post-unit-test</id>
+                            <phase>test</phase>
+                            <goals>
+                                <goal>report</goal>
+                            </goals>
+                            <configuration>
+                                <!-- Sets the path to where the execution data is located. -->
+                                <dataFile>${sonar.jacoco.reportPath}</dataFile>
+                                <!-- Sets the output directory for the code coverage report. -->
+                                <outputDirectory>${jacoco.ut.outputdir}</outputDirectory>
+                            </configuration>
+                        </execution>
+                        <execution>
+                            <id>pre-integration-test</id>
+                            <phase>pre-integration-test</phase>
+                            <goals>
+                                <goal>prepare-agent-integration</goal>
+                            </goals>
+                            <configuration>
+                                <!-- Sets the path to the file to write the execution data to. -->
+                                <destFile>${sonar.jacoco.itReportPath}</destFile>
+                                <!-- Connection with Failsafe plugin -->
+                                <propertyName>sonarIntegrationTestArgLine</propertyName>
+                            </configuration>
+                        </execution>
+                        <execution>
+                            <id>post-integration-test</id>
+                            <phase>post-integration-test</phase>
+                            <goals>
+                                <goal>report-integration</goal>
+                            </goals>
+                            <configuration>
+                                <!-- Sets the path to where the execution data is located. -->
+                                <dataFile>${sonar.jacoco.itReportPath}</dataFile>
+                                <!-- Sets the output directory for the code coverage report. -->
+                                <outputDirectory>${jacoco.it.outputdir}</outputDirectory>
+                            </configuration>
+                        </execution>
+                        <execution>
+                            <id>default-check</id>
+                            <goals>
+                                <goal>check</goal>
+                            </goals>
+                            <configuration>
+                                <dataFile>${sonar.jacoco.itutCombinedReportPath}</dataFile>
+                                <haltOnFailure>true</haltOnFailure>
+                                <rules>
+                                    <!--  implementation is needed only for Maven 2  -->
+                                    <rule implementation="org.jacoco.maven.RuleConfiguration">
+                                        <element>BUNDLE</element>
+                                        <limits>
+                                            <!--  Bump this up.  Currently a very low 0.01 -->
+                                            <limit implementation="org.jacoco.report.check.Limit">
+                                                <counter>COMPLEXITY</counter>
+                                                <value>COVEREDRATIO</value>
+                                                <minimum>0.01</minimum>
+                                            </limit>
+                                        </limits>
+                                    </rule>
+                                </rules>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>${surefire.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-failsafe-plugin</artifactId>
+                    <version>${failsafe.version}</version>
+                </plugin>
+                <plugin>
+                    <!--The JaCoCo report files need to be combined into one for the code coverage check-->
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-antrun-plugin</artifactId>
+                    <version>1.8</version>
+                    <executions>
+                        <execution>
+                            <phase>post-integration-test</phase>
+                            <configuration>
+                                <target>
+                                    <!--<copy file="${sonar.jacoco.reportPath}" tofile="${sonar.jacoco.itutCombinedReportPath}"/>-->
+                                    <concat destfile="${sonar.jacoco.itutCombinedReportPath}" append="true" binary="yes">
+                                        <filelist files="${sonar.jacoco.reportPath},${sonar.jacoco.itReportPath}"/>
+                                    </concat>
+                                </target>
+                            </configuration>
+                            <goals>
+                                <goal>run</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+    <distributionManagement>
+        <repository>
+            <id>nexus.gadevs</id>
+            <url>https://nexus.gadevs.ga/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus.gadevs</id>
+            <url>https://nexus.gadevs.ga/repository/maven-snapshots/</url>
+        </snapshotRepository>
+        <site>
+            <id>github-pages-site</id>
+            <name>Deployment through GitHub's site deployment plugin</name>
+            <url>site/${project.version}</url>
+        </site>
+    </distributionManagement>
+</project>

@@ -8,9 +8,9 @@
     <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
     <scm>
-        <connection>scm:git:git@github.com:GeoscienceAustralia/geodesy-domain-model.git</connection>
-        <developerConnection>scm:git:git@github.com:GeoscienceAustralia/geodesy-domain-model.git</developerConnection>
-        <url>http://github.com/GeocienceAustralia/geodesy-domain-model/gws-core</url>
+        <connection>scm:git:git@github.com:GeoscienceAustralia/geodesy-web-services.git</connection>
+        <developerConnection>scm:git:git@github.com:GeoscienceAustralia/geodesy-web-services.git</developerConnection>
+        <url>http://github.com/GeocienceAustralia/geodesy-web-services/gws-core</url>
     </scm>
     <parent>
         <groupId>au.gov.ga.geodesy.gws</groupId>
@@ -349,7 +349,7 @@
         </dependency>
     </dependencies>
     <build>
-        <finalName>geodesy-domain-model</finalName>
+        <finalName>gws-core</finalName>
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
@@ -570,7 +570,7 @@
               <configuration>
                  <images>
                     <image>
-                        <name>geodesy-domain-model/dev-database</name>
+                        <name>gws/dev-database</name>
                         <build>
                             <dockerFileDir>${project.basedir}/src/test/docker/database</dockerFileDir>
                         </build>
@@ -1007,7 +1007,7 @@
                         <configuration>
                             <message>Creating site for ${project.version}</message>
                             <repositoryOwner>GeoscienceAustralia</repositoryOwner>
-                            <repositoryName>geodesy-domain-model.github.io</repositoryName>
+                            <repositoryName>geodesy-web-services.github.io</repositoryName>
                         </configuration>
                         <executions>
                             <execution>

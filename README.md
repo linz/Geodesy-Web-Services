@@ -1,10 +1,10 @@
-### Geodesy Domain Model
+### Geodesy Web Services
 
-[![Build Status](https://travis-ci.org/GeoscienceAustralia/Geodesy-Domain-Model.svg?branch=master)](https://travis-ci.org/GeoscienceAustralia/Geodesy-Domain-Model)
+[![Build Status](https://travis-ci.org/GeoscienceAustralia/Geodesy-Web-Services.svg?branch=master)](https://travis-ci.org/GeoscienceAustralia/Geodesy-Web-Services)
 
 ### Documentation
 
-http://geoscienceaustralia.github.io/Geodesy-Domain-Model.github.io/intro.html
+http://geoscienceaustralia.github.io/Geodesy-Web-Services.github.io/intro.html
 
 ### History
 

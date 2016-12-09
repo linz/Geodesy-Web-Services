@@ -1,7 +1,5 @@
 package au.gov.ga.geodesy.domain.model.sitelog;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.annotation.Rollback;
 import org.testng.annotations.Test;
@@ -9,9 +7,9 @@ import org.testng.annotations.Test;
 import au.gov.ga.geodesy.port.SiteLogReader;
 import au.gov.ga.geodesy.port.adapter.sopac.SopacSiteLogReader;
 import au.gov.ga.geodesy.support.TestResources;
-import au.gov.ga.geodesy.support.spring.RepositoryTest;
+import au.gov.ga.geodesy.support.spring.IntegrationTest;
 
-public class SiteLogRepositoryTest extends RepositoryTest {
+public class SiteLogRepositoryTest extends IntegrationTest {
 
     @Autowired
     private SiteLogRepository igsSiteLogs;

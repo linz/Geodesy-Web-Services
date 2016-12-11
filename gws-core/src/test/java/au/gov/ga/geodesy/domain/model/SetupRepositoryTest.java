@@ -28,14 +28,14 @@ import au.gov.ga.geodesy.domain.service.CorsSiteLogService;
 import au.gov.ga.geodesy.port.adapter.sopac.SopacSiteLogReader;
 import au.gov.ga.geodesy.support.TestResources;
 import au.gov.ga.geodesy.support.spring.GeodesyServiceTestConfig;
-import au.gov.ga.geodesy.support.spring.RepositoryTest;
+import au.gov.ga.geodesy.support.spring.IntegrationTest;
 import au.gov.ga.geodesy.support.utils.GMLDateUtils;
 
 @ContextConfiguration(
         classes = {GeodesyServiceTestConfig.class},
         loader = AnnotationConfigContextLoader.class)
 
-public class SetupRepositoryTest extends RepositoryTest {
+public class SetupRepositoryTest extends IntegrationTest {
 
     @SuppressWarnings("unused")
     private static final Logger log = LoggerFactory.getLogger(SetupRepositoryTest.class);

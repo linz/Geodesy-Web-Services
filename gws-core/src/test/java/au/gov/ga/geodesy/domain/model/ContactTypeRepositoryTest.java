@@ -5,9 +5,9 @@ import static org.hamcrest.core.Is.is;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.annotations.Test;
 
-import au.gov.ga.geodesy.support.spring.RepositoryTest;
+import au.gov.ga.geodesy.support.spring.IntegrationTest;
 
-public class ContactTypeRepositoryTest extends RepositoryTest {
+public class ContactTypeRepositoryTest extends IntegrationTest {
 
     @Autowired
     private ContactTypeRepository contactTypes;

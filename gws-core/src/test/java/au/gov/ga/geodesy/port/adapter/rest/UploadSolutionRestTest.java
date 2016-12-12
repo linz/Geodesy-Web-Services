@@ -31,8 +31,8 @@ public class UploadSolutionRestTest extends RestTest {
     @Rollback(false)
     public void uploadALIC() throws Exception {
         String content = FileUtils.readFileToString(TestResources.originalSopacSiteLog("ALIC"), Charset.defaultCharset());
-        mvc.perform(post("/siteLog/sopac/upload").contentType(MediaType.APPLICATION_XML).content(content))
-            .andExpect(status().isOk());
+        mvc.perform(post("/siteLogs/sopac/upload").contentType(MediaType.APPLICATION_XML).content(content))
+            .andExpect(status().isCreated());
     }
 
     @Test(dependsOnMethods = "uploadALIC")

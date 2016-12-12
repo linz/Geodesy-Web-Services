@@ -25,7 +25,7 @@ import au.gov.ga.geodesy.support.TestResources;
 import au.gov.ga.geodesy.support.spring.IntegrationTest;
 
 @Transactional("geodesyTransactionManager")
-public class UploadADE1Test extends IntegrationTest {
+public class UploadADE1ITest extends IntegrationTest {
 
     private static final String fourCharId = "ADE1";
 

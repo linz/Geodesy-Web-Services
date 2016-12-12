@@ -20,7 +20,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.IsEqual.equalTo;
 
 @Transactional("geodesyTransactionManager")
-public class KeepUnmodifiedNodesAndSetupsTest extends IntegrationTest {
+public class KeepUnmodifiedNodesAndSetupsITest extends IntegrationTest {
 
     private static final String fourCharId = "ABRK";
 

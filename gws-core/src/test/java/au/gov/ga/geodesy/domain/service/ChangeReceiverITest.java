@@ -19,7 +19,7 @@ import static org.hamcrest.core.IsEqual.equalTo;
 
 
 @Transactional("geodesyTransactionManager")
-public class ChangeReceiverAtABRKTest extends IntegrationTest {
+public class ChangeReceiverITest extends IntegrationTest {
 
     private static final String scenarioDirName = "src/test/resources/change-receiver-at-abrk/";
 

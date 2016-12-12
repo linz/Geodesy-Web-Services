@@ -9,7 +9,7 @@ import au.gov.ga.geodesy.port.adapter.sopac.SopacSiteLogReader;
 import au.gov.ga.geodesy.support.TestResources;
 import au.gov.ga.geodesy.support.spring.IntegrationTest;
 
-public class SiteLogRepositoryTest extends IntegrationTest {
+public class SiteLogRepositoryITest extends IntegrationTest {
 
     @Autowired
     private SiteLogRepository igsSiteLogs;

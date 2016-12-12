@@ -35,10 +35,10 @@ import au.gov.ga.geodesy.support.utils.GMLDateUtils;
         classes = {GeodesyServiceTestConfig.class},
         loader = AnnotationConfigContextLoader.class)
 
-public class SetupRepositoryTest extends IntegrationTest {
+public class SetupRepositoryITest extends IntegrationTest {
 
     @SuppressWarnings("unused")
-    private static final Logger log = LoggerFactory.getLogger(SetupRepositoryTest.class);
+    private static final Logger log = LoggerFactory.getLogger(SetupRepositoryITest.class);
 
     private static final String DATE_FORMAT = "uuuu-MM-dd";
     private static final PageRequest maximumPageRequest = new PageRequest(0, Integer.MAX_VALUE);

@@ -20,9 +20,9 @@ import org.testng.annotations.Test;
 import au.gov.ga.geodesy.domain.model.PositionRepository;
 import au.gov.ga.geodesy.support.TestResources;
 
-public class UploadSolutionRestTest extends RestTest {
+public class UploadSolutionRestITest extends RestTest {
 
-    private static final Logger log = LoggerFactory.getLogger(UploadSolutionRestTest.class);
+    private static final Logger log = LoggerFactory.getLogger(UploadSolutionRestITest.class);
 
     @Autowired
     private PositionRepository positions;

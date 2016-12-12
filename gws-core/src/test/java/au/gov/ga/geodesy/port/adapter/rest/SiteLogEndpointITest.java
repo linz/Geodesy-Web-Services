@@ -15,7 +15,7 @@ import au.gov.ga.geodesy.support.TestResources;
 
 import io.restassured.module.mockmvc.RestAssuredMockMvc;
 
-public class SiteLogEndpointTest extends RestDocTest {
+public class SiteLogEndpointITest extends RestDocTest {
 
     @BeforeClass
     public void setup() {

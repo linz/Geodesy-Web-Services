@@ -542,7 +542,7 @@
                         <!--Exclude these tests which attempt to connect to non-existant Oracle DB -->
                         <exclude>au/gov/ga/geodesy/ngcp/**/*</exclude>
                         <!-- exclude the following tests, they broke due to sinex files being exluded - see commit https://github.com/GeoscienceAustralia/geodesy-domain-model/commit/e05fd32883405b9f1901c038424012a780019eeb  -->
-                        <exclude>au/gov/ga/geodesy/port/adapter/rest/UploadSolutionRestTest.java</exclude>
+                        <exclude>au/gov/ga/geodesy/port/adapter/rest/UploadSolutionRestITest.java</exclude>
                         <!--Don't run the integration or system tests-->
                         <exclude>au/gov/ga/geodesy/test/integration/**/*.java</exclude>
                         <exclude>au/gov/ga/geodesy/test/system/**/*.java</exclude>

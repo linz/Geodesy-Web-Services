@@ -24,7 +24,7 @@ import au.gov.ga.geodesy.support.TestResources;
 /*
  * Tests for GnssReceiver HTTP endpoint.
  */
-public class GnssReceiverEndpointTest extends RestDocTest {
+public class GnssReceiverEndpointITest extends RestDocTest {
 
     @Autowired
     private CorsSiteLogService siteLogService;

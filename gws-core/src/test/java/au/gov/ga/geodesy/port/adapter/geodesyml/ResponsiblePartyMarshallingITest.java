@@ -25,7 +25,7 @@ import au.gov.ga.geodesy.support.mapper.orika.ResponsiblePartyOrikaMapper;
 import au.gov.ga.geodesy.support.spring.IntegrationTest;
 
 
-public class ResponsiblePartyMarshallingTest extends IntegrationTest {
+public class ResponsiblePartyMarshallingITest extends IntegrationTest {
 
     @Autowired
     private GeodesyMLMarshaller marshaller;

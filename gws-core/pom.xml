@@ -7,6 +7,7 @@
     <artifactId>gws-core</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
+
     <scm>
         <connection>scm:git:git@github.com:GeoscienceAustralia/geodesy-web-services.git</connection>
         <developerConnection>scm:git:git@github.com:GeoscienceAustralia/geodesy-web-services.git</developerConnection>
@@ -35,7 +36,7 @@
         <encoding>UTF-8</encoding>
         <skip.system.tests>true</skip.system.tests>
         <snippetsDirectory>${project.build.directory}/generated-snippets</snippetsDirectory>
-        <skip.createDb>false</skip.createDb>
+        <skipCreateDb>false</skipCreateDb>
     </properties>
     <repositories>
         <repository>
@@ -531,23 +532,14 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <configuration>
-                    <forkCount>1</forkCount>
-                    <reuseForks>false</reuseForks>
+                    <skipTests>${skipUnitTests}</skipTests>
                     <!-- Headless - prevent the annoying ForkedBooter process from stealing window focus on Mac OS -->
                     <argLine>-Djava.awt.headless=true</argLine>
-                    <includes>
-                        <!--<include>au/gov/ga/geodesy/**/*.java</include>-->
-                    </includes>
                     <excludes>
-                        <!--Exclude these tests which attempt to connect to non-existant Oracle DB -->
                         <exclude>au/gov/ga/geodesy/ngcp/**/*</exclude>
-                        <!-- exclude the following tests, they broke due to sinex files being exluded - see commit https://github.com/GeoscienceAustralia/geodesy-domain-model/commit/e05fd32883405b9f1901c038424012a780019eeb  -->
-                        <exclude>au/gov/ga/geodesy/port/adapter/rest/UploadSolutionRestTest.java</exclude>
-                        <!--Don't run the integration or system tests-->
-                        <exclude>au/gov/ga/geodesy/test/integration/**/*.java</exclude>
+                        <exclude>**/*ITest.java</exclude>
                         <exclude>au/gov/ga/geodesy/test/system/**/*.java</exclude>
                     </excludes>
-                    <!--Tests NEED to be written in TestNG-->
                    <properties>
                        <property>
                            <name>listener</name>
@@ -558,16 +550,50 @@
                             </value>
                         </property>
                     </properties>
-                    <systemPropertyVariables>
-                        <unitTestDatabaseType>EXTERNAL</unitTestDatabaseType>
-                    </systemPropertyVariables>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-failsafe-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>run-integration-tests</id>
+                        <goals>
+                            <goal>integration-test</goal>
+                        </goals>
+                        <configuration>
+                            <skipTests>${skipIntegrationTests}</skipTests>
+                            <defaultGoal>integration-test</defaultGoal>
+                            <forkCount>1</forkCount>
+                            <reuseForks>false</reuseForks>
+                            <includes>
+                                <include>**/*ITest.java</include>
+                            </includes>
+                            <excludes>
+                                <exclude>**/UpdateSolutionRestITest</exclude>
+                            </excludes>
+                            <!-- Headless - prevent the annoying ForkedBooter process from stealing window focus on Mac OS -->
+                            <argLine>-Djava.awt.headless=true</argLine>
+                            <properties>
+                                <property>
+                                    <name>listener</name>
+                                    <value>
+                                        au.gov.ga.geodesy.support.testng.TestSuiteListener,
+                                        au.gov.ga.geodesy.support.testng.TestListener,
+                                        au.gov.ga.geodesy.support.testng.TestDependencyController
+                                    </value>
+                                </property>
+                            </properties>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
             <plugin>
               <groupId>io.fabric8</groupId>
               <artifactId>docker-maven-plugin</artifactId>
               <version>0.16.9</version>
               <configuration>
+                 <skip>${skipCreateDb}</skip>
                  <images>
                     <image>
                         <name>gws/dev-database</name>
@@ -589,21 +615,96 @@
               <executions>
                   <execution>
                       <id>start-db</id>
-                      <phase>process-test-resources</phase>
+                      <phase>pre-integration-test</phase>
                       <goals>
-                          <goal>stop</goal>
                           <goal>build</goal>
                           <goal>start</goal>
                       </goals>
-                      <configuration>
-                          <skip>${skip.createDb}</skip>
-                      </configuration>
+                  </execution>
+                  <execution>
+                      <id>stop-db</id>
+                      <phase>post-integration-test</phase>
+                      <goals>
+                          <goal>stop</goal>
+                      </goals>
                   </execution>
               </executions>
             </plugin>
         </plugins>
     </build>
     <profiles>
+        <profile>
+            <id>skip-create-db</id>
+            <activation>
+                <property>
+                    <name>skipTests</name>
+                </property>
+            </activation>
+            <properties>
+                <skipCreateDb>true</skipCreateDb>
+                <skipUnitTests>true</skipUnitTests>
+                <skipIntegrationTests>true</skipIntegrationTests>
+            </properties>
+        </profile>
+        <profile>
+            <id>dev</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <skipUnitTests>false</skipUnitTests>
+                <skipIntegrationTests>false</skipIntegrationTests>
+            </properties>
+        </profile>
+        <profile>
+            <id>integration-test</id>
+            <properties>
+                <skipUnitTests>true</skipUnitTests>
+                <skipIntegrationTests>false</skipIntegrationTests>
+            </properties>
+        </profile>
+        <profile>
+            <id>system-test</id>
+            <build>
+                <defaultGoal>verify</defaultGoal>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-failsafe-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>system-test-execution</id>
+                                <goals>
+                                    <goal>integration-test</goal>
+                                </goals>
+                                <configuration>
+                                    <forkCount>0</forkCount>
+                                    <reuseForks>false</reuseForks>
+                                    <suiteXmlFiles>
+                                        <suiteXmlFile>src/test/resources/system-test-suite.xml</suiteXmlFile>
+                                    </suiteXmlFiles>
+                                    <!-- Headless - prevent the annoying ForkedBooter process from stealing window focus on Mac OS -->
+                                    <argLine>-Djava.awt.headless=true</argLine>
+                                    <systemPropertyVariables>
+                                        <unitTestDatabaseType>EXTERNAL</unitTestDatabaseType>
+                                    </systemPropertyVariables>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <!-- Mask Surefire in build to prevent unit tests running -->
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <configuration>
+                            <excludes>
+                                <exclude>**/*</exclude>
+                            </excludes>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
         <profile>
             <id>liquibase</id>
             <build>
@@ -682,80 +783,6 @@
                             <compilerArgs>
                                 <arg>-Xbootclasspath/p:${annotatedJdk}</arg>
                             </compilerArgs>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-        <profile>
-            <id>integration-test</id>
-            <build>
-                <defaultGoal>verify</defaultGoal>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-failsafe-plugin</artifactId>
-                        <executions>
-                            <execution>
-                                <id>integration-test-sonar</id>
-                                <goals>
-                                    <goal>integration-test</goal>
-                                </goals>
-                                <configuration>
-                                    <forkCount>1</forkCount>
-                                    <reuseForks>false</reuseForks>
-                                    <includes>
-                                        <include>au/gov/ga/geodesy/test/integration/**/*.java</include>
-                                    </includes>
-                                    <!-- Headless - prevent the annoying ForkedBooter process from stealing window focus on Mac OS -->
-                                    <argLine>-Djava.awt.headless=true</argLine>
-                                    <systemPropertyVariables>
-                                        <unitTestDatabaseType>EXTERNAL</unitTestDatabaseType>
-                                    </systemPropertyVariables>
-                                </configuration>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-        <profile>
-            <id>system-test</id>
-            <build>
-                <defaultGoal>verify</defaultGoal>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-failsafe-plugin</artifactId>
-                        <executions>
-                            <execution>
-                                <id>system-test-execution</id>
-                                <goals>
-                                    <goal>integration-test</goal>
-                                </goals>
-                                <configuration>
-                                    <forkCount>0</forkCount>
-                                    <reuseForks>false</reuseForks>
-                                    <suiteXmlFiles>
-                                        <suiteXmlFile>src/test/resources/system-test-suite.xml</suiteXmlFile>
-                                    </suiteXmlFiles>
-                                    <!-- Headless - prevent the annoying ForkedBooter process from stealing window focus on Mac OS -->
-                                    <argLine>-Djava.awt.headless=true</argLine>
-                                    <systemPropertyVariables>
-                                        <unitTestDatabaseType>EXTERNAL</unitTestDatabaseType>
-                                    </systemPropertyVariables>
-                                </configuration>
-                            </execution>
-                        </executions>
-                    </plugin>
-                    <plugin>
-                        <!-- Mask Surefire in build to prevent unit tests running -->
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-surefire-plugin</artifactId>
-                        <configuration>
-                            <excludes>
-                                <exclude>**/*</exclude>
-                            </excludes>
                         </configuration>
                     </plugin>
                 </plugins>

@@ -8,7 +8,7 @@ import org.hamcrest.Matchers;
 import org.springframework.http.MediaType;
 import org.testng.annotations.Test;
 
-public class UploadInvalidSiteLogRestTest extends RestTest {
+public class UploadInvalidSiteLogRestITest extends RestTest {
 
     @Test
     public void uploadInvalidSopacSiteLog() throws Exception {

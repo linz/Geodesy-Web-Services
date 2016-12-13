@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 import au.gov.ga.geodesy.port.InvalidSiteLogException;
 import au.gov.ga.geodesy.support.spring.IntegrationTest;
 
-public class SopacSiteLogReaderTest extends IntegrationTest {
+public class SopacSiteLogReaderITest extends IntegrationTest {
 
     @Test(expectedExceptions = {InvalidSiteLogException.class})
     public void invalidSiteLog() throws InvalidSiteLogException {

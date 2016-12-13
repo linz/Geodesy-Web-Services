@@ -20,9 +20,9 @@ import org.testng.annotations.Test;
 import au.gov.ga.geodesy.domain.model.PositionRepository;
 import au.gov.ga.geodesy.support.TestResources;
 
-public class UploadSolutionRestTest extends RestTest {
+public class UploadSolutionRestITest extends RestTest {
 
-    private static final Logger log = LoggerFactory.getLogger(UploadSolutionRestTest.class);
+    private static final Logger log = LoggerFactory.getLogger(UploadSolutionRestITest.class);
 
     @Autowired
     private PositionRepository positions;
@@ -31,8 +31,8 @@ public class UploadSolutionRestTest extends RestTest {
     @Rollback(false)
     public void uploadALIC() throws Exception {
         String content = FileUtils.readFileToString(TestResources.originalSopacSiteLog("ALIC"), Charset.defaultCharset());
-        mvc.perform(post("/siteLog/sopac/upload").contentType(MediaType.APPLICATION_XML).content(content))
-            .andExpect(status().isOk());
+        mvc.perform(post("/siteLogs/sopac/upload").contentType(MediaType.APPLICATION_XML).content(content))
+            .andExpect(status().isCreated());
     }
 
     @Test(dependsOnMethods = "uploadALIC")

@@ -13,7 +13,7 @@ import au.gov.ga.geodesy.support.TestResources;
 
 import io.restassured.module.mockmvc.RestAssuredMockMvc;
 
-public class UploadAliceGeodesyMLSiteLogRestTest extends RestTest {
+public class UploadAliceGeodesyMLSiteLogRestITest extends RestTest {
 
     @BeforeClass
     public void setup() {

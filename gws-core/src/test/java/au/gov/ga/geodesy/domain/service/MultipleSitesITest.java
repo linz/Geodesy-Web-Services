@@ -18,7 +18,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.IsEqual.equalTo;
 
 @Transactional("geodesyTransactionManager")
-public class MultipleSitesTest extends IntegrationTest {
+public class MultipleSitesITest extends IntegrationTest {
 
     private static final String scenarioDirName = "src/test/resources/multiple-sites/";
 

@@ -78,7 +78,7 @@ import ma.glasnost.orika.metadata.TypeFactory;
 import net.opengis.gml.v_3_2_1.TimePeriodType;
 import net.opengis.gml.v_3_2_1.TimePositionType;
 
-public class SiteLogMapperTest extends IntegrationTest {
+public class SiteLogMapperITest extends IntegrationTest {
 
     private SiteLogMapper mapper;
     private GeodesyMLMarshaller marshaller;

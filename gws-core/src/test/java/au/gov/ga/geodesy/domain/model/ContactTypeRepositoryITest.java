@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 import au.gov.ga.geodesy.support.spring.IntegrationTest;
 
-public class ContactTypeRepositoryTest extends IntegrationTest {
+public class ContactTypeRepositoryITest extends IntegrationTest {
 
     @Autowired
     private ContactTypeRepository contactTypes;

@@ -19,7 +19,7 @@ import org.testng.annotations.Test;
 
 import au.gov.ga.geodesy.support.TestResources;
 
-public class UploadAliceIgsSiteLogRestTest extends RestDocTest {
+public class UploadAliceIgsSiteLogRestITest extends RestDocTest {
 
     @Test
     @Rollback(false)

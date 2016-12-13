@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 
 import au.gov.ga.geodesy.support.TestResources;
 
-public class ValidateSiteLogsRestTest extends RestTest {
+public class ValidateSiteLogsRestITest extends RestTest {
 
     private String readFile(Reader reader) throws FileNotFoundException, IOException {
         return IOUtils.toString(reader);

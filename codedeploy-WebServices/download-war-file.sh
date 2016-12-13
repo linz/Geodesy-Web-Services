@@ -3,5 +3,5 @@
 mvn="mvn -Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true"
 
 ${mvn} package
-mv geodesy-web-services-*.war geodesy-web-services.war
+mv gws-webapp-*.war geodesy-web-services.war
 

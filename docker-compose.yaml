@@ -1,0 +1,17 @@
+version: "2"
+
+services:
+    db:
+        build: ./gws-core/src/test/docker/database
+        image: gws/db
+        ports:
+            - "5433:5432"
+    web:
+        build:
+            context: ./gws-webapp/
+            dockerfile: ./src/main/docker/webserver/Dockerfile
+        image: gws/webserver
+        depends_on:
+            - db
+        ports:
+            - "8081:8080"

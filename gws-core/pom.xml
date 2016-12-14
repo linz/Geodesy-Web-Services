@@ -624,8 +624,23 @@
                       </goals>
                   </execution>
                   <execution>
+                      <id>start-site-db</id>
+                      <phase>pre-site</phase>
+                      <goals>
+                          <goal>build</goal>
+                          <goal>start</goal>
+                      </goals>
+                  </execution>
+                  <execution>
                       <id>stop-db</id>
                       <phase>post-integration-test</phase>
+                      <goals>
+                          <goal>stop</goal>
+                      </goals>
+                  </execution>
+                  <execution>
+                      <id>stop-site-db</id>
+                      <phase>post-site</phase>
                       <goals>
                           <goal>stop</goal>
                       </goals>

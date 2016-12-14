@@ -8,7 +8,7 @@ sudo rm /etc/mavenrc
 
 if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then
     mvn --settings ./travis/maven-settings.xml deploy
-    mvn --settings ./travis/maven-settings.xml -pl gws-core -Psite site-deploy
+    mvn --settings ./travis/maven-settings.xml site-deploy -DskipUnitTests -pl gws-core
 else
     mvn --settings ./travis/maven-settings.xml verify
 fi

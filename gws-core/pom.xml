@@ -37,6 +37,9 @@
         <skip.system.tests>true</skip.system.tests>
         <snippetsDirectory>${project.build.directory}/generated-snippets</snippetsDirectory>
         <skipCreateDb>false</skipCreateDb>
+        <schemacrawler.plugin.version>14.07.04</schemacrawler.plugin.version>
+        <dependency.locations.enabled>false</dependency.locations.enabled>
+        <github.global.server>github</github.global.server>
     </properties>
     <repositories>
         <repository>
@@ -647,6 +650,165 @@
                   </execution>
               </executions>
             </plugin>
+            <plugin>
+                <groupId>us.fatehi</groupId>
+                <artifactId>schemacrawler-maven-plugin</artifactId>
+                <version>${schemacrawler.plugin.version}</version>
+                <dependencies>
+                    <!-- Define jdbc driver dependencies here, since report plugins cannot specify dependencies. -->
+                    <dependency>
+                        <groupId>org.postgresql</groupId>
+                        <artifactId>postgresql</artifactId>
+                        <version>9.4-1200-jdbc41</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+            <plugin>
+                <artifactId>exec-maven-plugin</artifactId>
+                <groupId>org.codehaus.mojo</groupId>
+                <executions>
+                    <execution>
+                        <id>generate-create-db-script</id>
+                        <phase>site</phase>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <configuration>
+                            <executable>src/site/dump-db.sh</executable>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.5.1</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.asciidoctor</groupId>
+                        <artifactId>asciidoctor-maven-plugin</artifactId>
+                        <version>1.5.3</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.apache.maven.doxia</groupId>
+                        <artifactId>doxia-core</artifactId>
+                        <version>1.7</version>
+                    </dependency>
+                </dependencies>
+                <configuration>
+                    <asciidoc>
+                        <backend>html</backend>
+                        <doctype>book</doctype>
+                        <attributes>
+                            <snippets>${snippetsDirectory}</snippets>
+                        </attributes>
+                        <attributes>
+                            <source-highlighter>coderay</source-highlighter>
+                            <coderay-css>style</coderay-css>
+                        </attributes>
+                    </asciidoc>
+                    <reportPlugins>
+                        <plugin>
+                            <artifactId>maven-project-info-reports-plugin</artifactId>
+                            <version>2.9</version>
+                            <reportSets>
+                                <reportSet>
+                                    <reports>
+                                        <report>dependencies</report>
+                                        <report>license</report>
+                                    </reports>
+                                </reportSet>
+                            </reportSets>
+                        </plugin>
+                        <plugin>
+                            <groupId>us.fatehi</groupId>
+                            <artifactId>schemacrawler-maven-plugin</artifactId>
+                            <version>${schemacrawler.plugin.version}</version>
+                            <configuration>
+                                <driver>org.postgresql.Driver</driver>
+                                <url>jdbc:postgresql://localhost:5433/geodesydb</url>
+                                <user>geodesy</user>
+                                <password>geodesypw</password>
+                                <command>graph</command>
+                                <outputformat>png</outputformat>
+                                <reportname>Database Schema Diagram</reportname>
+                            </configuration>
+                        </plugin>
+                        <!-- TODO: disabled for now -->
+                        <!-- <plugin> -->
+                        <!--     <groupId>com.soebes.maven.plugins</groupId> -->
+                        <!--     <artifactId>doxygen-maven-plugin</artifactId> -->
+                        <!--     <version>1.1.0</version> -->
+                        <!--     <configuration> -->
+                        <!--         <quiet>false</quiet> -->
+                        <!--         <alwaysDetailedSec>true</alwaysDetailedSec> -->
+                        <!--         <javadocAutobrief>true</javadocAutobrief> -->
+                        <!--         <tabSize>4</tabSize> -->
+                        <!--         <optimizeOutputJava>true</optimizeOutputJava> -->
+                        <!--         <extractAll>true</extractAll> -->
+                        <!--         <extractPrivate>true</extractPrivate> -->
+                        <!--         <extractStatic>true</extractStatic> -->
+                        <!--         <extractAnonNspaces>true</extractAnonNspaces> -->
+                        <!--         <internalDocs>true</internalDocs> -->
+                        <!--         <sortBriefDocs>true</sortBriefDocs> -->
+                        <!--         <sortGroupNames>true</sortGroupNames> -->
+                        <!--         <recursive>true</recursive> -->
+                        <!--         <exclude>.git</exclude> -->
+                        <!--         <inlineSources>true</inlineSources> -->
+                        <!--         <referencedByRelation>true</referencedByRelation> -->
+                        <!--         <referencesRelation>true</referencesRelation> -->
+                        <!--         <generateTreeview>true</generateTreeview> -->
+                        <!--         <macroExpansion>true</macroExpansion> -->
+                        <!--         <allexternals>true</allexternals> -->
+                        <!--         <perlPath></perlPath> -->
+                        <!--         <umlLook>true</umlLook> -->
+                        <!--         <templateRelations>true</templateRelations> -->
+                        <!--         <callGraph>true</callGraph> -->
+                        <!--         <callerGraph>true</callerGraph> -->
+                        <!--         <dotPath></dotPath> -->
+                        <!--         <useHtags>true</useHtags> -->
+                        <!--         <maxInitializerLines>100</maxInitializerLines> -->
+                        <!--         <builtinStlSupport>false</builtinStlSupport> -->
+                        <!--     </configuration> -->
+                        <!-- </plugin> -->
+                        <!-- TODO: disabled for now -->
+                        <!-- <plugin> -->
+                        <!--     <groupId>org.apache.maven.plugins</groupId> -->
+                        <!--     <artifactId>maven-javadoc-plugin</artifactId> -->
+                        <!--     <version>2.10.4</version> -->
+                        <!--     <configuration> -->
+                        <!--         <failOnError>false</failOnError> -->
+                        <!--     </configuration> -->
+                        <!-- </plugin> -->
+                    </reportPlugins>
+                    <skipDeploy>true</skipDeploy>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>com.github.github</groupId>
+                <artifactId>site-maven-plugin</artifactId>
+                <version>0.12</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.eclipse.mylyn.github</groupId>
+                        <artifactId>org.eclipse.egit.github.core</artifactId>
+                        <version>2.1.5</version>
+                    </dependency>
+                </dependencies>
+                <configuration>
+                    <message>Creating site for ${project.version}</message>
+                    <repositoryOwner>GeoscienceAustralia</repositoryOwner>
+                    <repositoryName>geodesy-web-services.github.io</repositoryName>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>site</goal>
+                        </goals>
+                        <phase>site-deploy</phase>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
     <profiles>
@@ -893,179 +1055,6 @@
                         <!--The JaCoCo report files need to be combined into one for the code coverage check.  See eGeodesy-parent pom -->
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-antrun-plugin</artifactId>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-        <profile>
-            <id>site</id>
-            <properties>
-                <schemacrawler.plugin.version>14.07.04</schemacrawler.plugin.version>
-                <dependency.locations.enabled>false</dependency.locations.enabled>
-                <github.global.server>github</github.global.server>
-            </properties>
-            <build>
-                <defaultGoal>site:site</defaultGoal>
-                <plugins>
-                    <plugin>
-                        <groupId>us.fatehi</groupId>
-                        <artifactId>schemacrawler-maven-plugin</artifactId>
-                        <version>${schemacrawler.plugin.version}</version>
-                        <dependencies>
-                            <!-- Define jdbc driver dependencies here, since report plugins cannot specify dependencies. -->
-                            <dependency>
-                                <groupId>org.postgresql</groupId>
-                                <artifactId>postgresql</artifactId>
-                                <version>9.4-1200-jdbc41</version>
-                            </dependency>
-                        </dependencies>
-                    </plugin>
-                    <plugin>
-                        <artifactId>exec-maven-plugin</artifactId>
-                        <groupId>org.codehaus.mojo</groupId>
-                        <executions>
-                            <execution>
-                                <id>generate-create-db-script</id>
-                                <phase>site</phase>
-                                <goals>
-                                    <goal>exec</goal>
-                                </goals>
-                                <configuration>
-                                    <executable>src/site/dump-db.sh</executable>
-                                </configuration>
-                            </execution>
-                        </executions>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-site-plugin</artifactId>
-                        <version>3.5.1</version>
-                        <dependencies>
-                            <dependency>
-                                <groupId>org.asciidoctor</groupId>
-                                <artifactId>asciidoctor-maven-plugin</artifactId>
-                                <version>1.5.3</version>
-                            </dependency>
-                            <dependency>
-                                <groupId>org.apache.maven.doxia</groupId>
-                                <artifactId>doxia-core</artifactId>
-                                <version>1.7</version>
-                            </dependency>
-                        </dependencies>
-                        <configuration>
-                            <asciidoc>
-                                <backend>html</backend>
-                                <doctype>book</doctype>
-                                <attributes>
-                                    <snippets>${snippetsDirectory}</snippets>
-                                </attributes>
-                                <attributes>
-                                    <source-highlighter>coderay</source-highlighter>
-                                    <coderay-css>style</coderay-css>
-                                </attributes>
-                            </asciidoc>
-                            <reportPlugins>
-                                <plugin>
-                                    <artifactId>maven-project-info-reports-plugin</artifactId>
-                                    <version>2.9</version>
-                                    <reportSets>
-                                        <reportSet>
-                                            <reports>
-                                                <report>dependencies</report>
-                                                <report>license</report>
-                                            </reports>
-                                        </reportSet>
-                                    </reportSets>
-                                </plugin>
-                                <plugin>
-                                    <groupId>us.fatehi</groupId>
-                                    <artifactId>schemacrawler-maven-plugin</artifactId>
-                                    <version>${schemacrawler.plugin.version}</version>
-                                    <configuration>
-                                        <!-- TODO: move db connection parameters into properties file -->
-                                        <driver>org.postgresql.Driver</driver>
-                                        <url>jdbc:postgresql://localhost:5433/geodesydb</url>
-                                        <user>geodesy</user>
-                                        <password>geodesypw</password>
-                                        <command>graph</command>
-                                        <outputformat>png</outputformat>
-                                        <reportname>Database Schema Diagram</reportname>
-                                    </configuration>
-                                </plugin>
-                                <!-- TODO: disabled for now -->
-                                <!-- <plugin> -->
-                                <!--     <groupId>com.soebes.maven.plugins</groupId> -->
-                                <!--     <artifactId>doxygen-maven-plugin</artifactId> -->
-                                <!--     <version>1.1.0</version> -->
-                                <!--     <configuration> -->
-                                <!--         <quiet>false</quiet> -->
-                                <!--         <alwaysDetailedSec>true</alwaysDetailedSec> -->
-                                <!--         <javadocAutobrief>true</javadocAutobrief> -->
-                                <!--         <tabSize>4</tabSize> -->
-                                <!--         <optimizeOutputJava>true</optimizeOutputJava> -->
-                                <!--         <extractAll>true</extractAll> -->
-                                <!--         <extractPrivate>true</extractPrivate> -->
-                                <!--         <extractStatic>true</extractStatic> -->
-                                <!--         <extractAnonNspaces>true</extractAnonNspaces> -->
-                                <!--         <internalDocs>true</internalDocs> -->
-                                <!--         <sortBriefDocs>true</sortBriefDocs> -->
-                                <!--         <sortGroupNames>true</sortGroupNames> -->
-                                <!--         <recursive>true</recursive> -->
-                                <!--         <exclude>.git</exclude> -->
-                                <!--         <inlineSources>true</inlineSources> -->
-                                <!--         <referencedByRelation>true</referencedByRelation> -->
-                                <!--         <referencesRelation>true</referencesRelation> -->
-                                <!--         <generateTreeview>true</generateTreeview> -->
-                                <!--         <macroExpansion>true</macroExpansion> -->
-                                <!--         <allexternals>true</allexternals> -->
-                                <!--         <perlPath></perlPath> -->
-                                <!--         <umlLook>true</umlLook> -->
-                                <!--         <templateRelations>true</templateRelations> -->
-                                <!--         <callGraph>true</callGraph> -->
-                                <!--         <callerGraph>true</callerGraph> -->
-                                <!--         <dotPath></dotPath> -->
-                                <!--         <useHtags>true</useHtags> -->
-                                <!--         <maxInitializerLines>100</maxInitializerLines> -->
-                                <!--         <builtinStlSupport>false</builtinStlSupport> -->
-                                <!--     </configuration> -->
-                                <!-- </plugin> -->
-                                <!-- TODO: disabled for now -->
-                                <!-- <plugin> -->
-                                <!--     <groupId>org.apache.maven.plugins</groupId> -->
-                                <!--     <artifactId>maven-javadoc-plugin</artifactId> -->
-                                <!--     <version>2.10.4</version> -->
-                                <!--     <configuration> -->
-                                <!--         <failOnError>false</failOnError> -->
-                                <!--     </configuration> -->
-                                <!-- </plugin> -->
-                            </reportPlugins>
-                            <skipDeploy>true</skipDeploy>
-                        </configuration>
-                    </plugin>
-                    <plugin>
-                        <groupId>com.github.github</groupId>
-                        <artifactId>site-maven-plugin</artifactId>
-                        <version>0.12</version>
-                        <dependencies>
-                            <dependency>
-                                <groupId>org.eclipse.mylyn.github</groupId>
-                                <artifactId>org.eclipse.egit.github.core</artifactId>
-                                <version>2.1.5</version>
-                            </dependency>
-                        </dependencies>
-                        <configuration>
-                            <message>Creating site for ${project.version}</message>
-                            <repositoryOwner>GeoscienceAustralia</repositoryOwner>
-                            <repositoryName>geodesy-web-services.github.io</repositoryName>
-                        </configuration>
-                        <executions>
-                            <execution>
-                                <goals>
-                                    <goal>site</goal>
-                                </goals>
-                                <phase>site-deploy</phase>
-                            </execution>
-                        </executions>
                     </plugin>
                 </plugins>
             </build>

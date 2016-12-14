@@ -10,6 +10,8 @@ services:
         build:
             context: ./gws-webapp/
             dockerfile: ./src/main/docker/webserver/Dockerfile
+            args:
+                - https_proxy
         image: gws/webserver
         depends_on:
             - db

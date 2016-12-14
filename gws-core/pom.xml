@@ -605,8 +605,10 @@
                                 <port>5433:5432</port>
                             </ports>
                             <wait>
-                                <!-- TODO: implementing polling -->
-                                <time>10000</time>
+                                <tcp>
+                                    <ports>5432</ports>
+                                </tcp>
+                                <time>20000</time>
                             </wait>
                         </run>
                     </image>

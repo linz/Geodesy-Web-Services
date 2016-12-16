@@ -60,6 +60,26 @@ autoscaling_units:
       elb_health_check: 'HTTP:8080/geoserver/web/'
     dependencies:
      - 'Db:5432'
+#  -
+#    unit_title: 52NorthSos
+#    asg_config:
+#       image_id: "ami-90fec3f3"
+#       instance_type: 't2.small'
+#       userdata: |
+#         #cloud-config
+#         runcmd:
+#          - service tomcat8 start
+#    elb_config:
+#      elb_listeners_config:
+#        -
+#          instance_protocol: 'HTTP'
+#          instance_port: '8080'
+#          loadbalancer_protocol: 'HTTPS'
+#          loadbalancer_port: '443'
+#      ssl_certificate_id: 'arn:aws:acm:ap-southeast-2:094928090547:certificate/07496dcd-6975-4dd4-8986-533488587f0e'
+#      elb_health_check: 'HTTP:8080/52n-sos-webapp/'
+#    dependencies:
+#     - 'Db:5432'
 database_units:
   -
     unit_title: Db

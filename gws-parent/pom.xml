@@ -53,13 +53,79 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>1.7.22</version>
+            </dependency>
+            <dependency>
                 <groupId>org.codehaus.sonar-plugins.java</groupId>
                 <artifactId>sonar-jacoco-listeners</artifactId>
                 <version>3.2</version>
                 <scope>test</scope>
             </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-core</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context-support</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-aspects</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-web</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-test</artifactId>
+                <version>${spring.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>2.4</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aspects</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+        </dependency>
+    </dependencies>
     <build>
         <defaultGoal>install</defaultGoal>
         <pluginManagement>
@@ -187,6 +253,35 @@
             </plugins>
         </pluginManagement>
     </build>
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <skipUnitTests>false</skipUnitTests>
+                <skipIntegrationTests>false</skipIntegrationTests>
+                <skipSystemTests>false</skipSystemTests>
+            </properties>
+        </profile>
+        <profile>
+            <id>integration-test</id>
+            <properties>
+                <skipUnitTests>true</skipUnitTests>
+                <skipIntegrationTests>false</skipIntegrationTests>
+                <skipSystemTests>true</skipSystemTests>
+            </properties>
+        </profile>
+        <profile>
+            <id>system-test</id>
+            <properties>
+                <skipUnitTests>true</skipUnitTests>
+                <skipIntegrationTests>true</skipIntegrationTests>
+                <skipSystemTests>false</skipSystemTests>
+            </properties>
+        </profile>
+    </profiles>
     <distributionManagement>
         <repository>
             <id>nexus.gadevs</id>

@@ -7,7 +7,10 @@ services:
         ports:
             - "5433:5432"
     tomcat:
-        build: ./gws-tomcat
+        build:
+            context: ./gws-tomcat
+            args:
+                - https_proxy
         image: gws/tomcat
     web:
         build:

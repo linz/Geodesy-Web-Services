@@ -622,6 +622,7 @@
                       <id>start-db</id>
                       <phase>pre-integration-test</phase>
                       <goals>
+                          <goal>stop</goal>
                           <goal>build</goal>
                           <goal>start</goal>
                       </goals>
@@ -630,6 +631,7 @@
                       <id>start-site-db</id>
                       <phase>pre-site</phase>
                       <goals>
+                          <goal>stop</goal>
                           <goal>build</goal>
                           <goal>start</goal>
                       </goals>

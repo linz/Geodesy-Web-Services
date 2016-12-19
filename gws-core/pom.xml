@@ -573,7 +573,7 @@
                                 <include>**/*ITest.java</include>
                             </includes>
                             <excludes>
-                                <exclude>**/UpdateSolutionRestITest</exclude>
+                                <exclude>**/UploadSolutionRestITest</exclude>
                             </excludes>
                             <!-- Headless - prevent the annoying ForkedBooter process from stealing window focus on Mac OS -->
                             <argLine>-Djava.awt.headless=true</argLine>
@@ -588,6 +588,13 @@
                                 </property>
                             </properties>
                         </configuration>
+                    </execution>
+                    <execution>
+                        <id>verify-integration-tests</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>verify</goal>
+                        </goals>
                     </execution>
                 </executions>
             </plugin>

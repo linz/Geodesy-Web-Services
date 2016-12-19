@@ -255,6 +255,19 @@
     </build>
     <profiles>
         <profile>
+            <id>skip-tests</id>
+            <activation>
+                <property>
+                    <name>skipTests</name>
+                </property>
+            </activation>
+            <properties>
+                <skipUnitTests>true</skipUnitTests>
+                <skipIntegrationTests>true</skipIntegrationTests>
+                <skipSystemTests>true</skipSystemTests>
+            </properties>
+        </profile>
+        <profile>
             <id>dev</id>
             <activation>
                 <activeByDefault>true</activeByDefault>

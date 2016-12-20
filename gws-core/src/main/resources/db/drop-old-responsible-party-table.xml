@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+   <changeSet author="hong (generated)" id="1482119825334-1">
+      <dropTable tableName="responsible_party"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1482119825334-2">
+      <dropColumn columnName="site_contact_id" tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1482119825334-3">
+      <dropColumn columnName="site_metadata_custodian_id" tableName="sitelog_site"/>
+   </changeSet>
+</databaseChangeLog>

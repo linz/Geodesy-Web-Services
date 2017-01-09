@@ -1,0 +1,750 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+   <changeSet author="hong (generated)" id="1483935176618-1">
+      <setTableRemarks remarks="the table contains information of all clock configurations."
+                       tableName="clock_configuration"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-2">
+      <setTableRemarks remarks="table that contains information about all goedesy cors site"
+                       tableName="cors_site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-3">
+      <setTableRemarks remarks="the table contains information about all domain events"
+                       tableName="domain_event"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-4">
+      <setTableRemarks remarks="the table that contains information about all equipments"
+                       tableName="equipment"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-5">
+      <setTableRemarks remarks="the table contains information of all equipment configurations, it is the parent table to all individual configuration tables"
+                       tableName="equipment_configuration"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-6">
+      <setTableRemarks remarks="table contains configuration information of gnss antenna"
+                       tableName="gnss_antenna_configuration"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-7">
+      <setTableRemarks remarks="the table contains configuration information of gnss receiver configuration"
+                       tableName="gnss_receiver_configuration"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-8">
+      <setTableRemarks remarks="the table contains information of all humidity sensors, the table is a child table of equipment table"
+                       tableName="humidity_sensor"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-9">
+      <setTableRemarks remarks="the table contains information of all humidity sensors, the table is a child table of equipment table"
+                       tableName="humidity_sensor_configuration"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-10">
+      <setTableRemarks remarks="the table contains information about the monuments"
+                       tableName="monument"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-11">
+      <setTableRemarks remarks="the table contains information of all setups for geodesy sites"
+                       tableName="setup"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-12">
+      <setTableRemarks remarks="the table contains all information about geodesy sites"
+                       tableName="site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-13">
+      <setTableRemarks remarks="the table contains information that shows which site log are received."
+                       tableName="site_log_received"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-14">
+      <setTableRemarks remarks="the table contains information about site updated"
+                       tableName="site_updated"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-15">
+      <setTableRemarks remarks="table contains information about frequency standards of site log"
+                       tableName="sitelog_frequencystandard"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-16">
+      <setTableRemarks remarks="table contains information about frequency standards of site log"
+                       tableName="sitelog_humiditysensor"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-17">
+      <setTableRemarks remarks="table contains information about sites that generate IGS site logs"
+                       tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-18">
+      <setTableRemarks remarks="the table contains information about available solution to a domain event"
+                       tableName="weekly_solution_available"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-19">
+      <setColumnRemarks columnName="accuracy_percent_rel_humidity"
+                        remarks="accurate relative humidity (RH) in percentage"
+                        tableName="sitelog_humiditysensor"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-20">
+      <setColumnRemarks columnName="alignment_from_true_north"
+                        remarks="antenna alignment from true north (in degree)"
+                        tableName="gnss_antenna_configuration"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-21">
+      <setColumnRemarks columnName="antenna_cable_length"
+                        remarks="the length of antenna cable"
+                        tableName="gnss_antenna_configuration"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-22">
+      <setColumnRemarks columnName="antenna_cable_type"
+                        remarks="the type of antenna cable"
+                        tableName="gnss_antenna_configuration"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-23">
+      <setColumnRemarks columnName="antenna_reference_point"
+                        remarks="the point where an antenna is reference to"
+                        tableName="gnss_antenna_configuration"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-24">
+      <setColumnRemarks columnName="aspiration"
+                        remarks="aspiration of the humidity sensor"
+                        tableName="humidity_sensor"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-25">
+      <setColumnRemarks columnName="aspiration"
+                        remarks="aspiration used"
+                        tableName="sitelog_humiditysensor"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-26">
+      <setColumnRemarks columnName="bedrock_condition"
+                        remarks="bedrock condition"
+                        tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-27">
+      <setColumnRemarks columnName="bedrock_type"
+                        remarks="the type of bed rock of the site"
+                        tableName="cors_site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-28">
+      <setColumnRemarks columnName="bedrock_type"
+                        remarks="the type of bedrock"
+                        tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-29">
+      <setColumnRemarks columnName="callibration_date"
+                        remarks="calibration date, timestamp without time zone"
+                        tableName="sitelog_humiditysensor"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-30">
+      <setColumnRemarks columnName="cdp_number"
+                        remarks="cdp number"
+                        tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-31">
+      <setColumnRemarks columnName="city"
+                        remarks="site city location"
+                        tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-32">
+      <setColumnRemarks columnName="configuration_time"
+                        remarks="time stamp(UTC) when the equipment configuration is made"
+                        tableName="equipment_configuration"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-33">
+      <setColumnRemarks columnName="data_sampling_interval"
+                        remarks="the interval between data sampling collection"
+                        tableName="sitelog_humiditysensor"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-34">
+      <setColumnRemarks columnName="date_installed"
+                        remarks="time stamp(UTC) when the site is installed"
+                        tableName="site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-35">
+      <setColumnRemarks columnName="date_installed"
+                        remarks="the date the site was installed, timestamp without time zone"
+                        tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-36">
+      <setColumnRemarks columnName="description"
+                        remarks="description of a monument"
+                        tableName="monument"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-37">
+      <setColumnRemarks columnName="description"
+                        remarks="description about the site"
+                        tableName="site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-38">
+      <setColumnRemarks columnName="distance_activity"
+                        remarks="distance activity"
+                        tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-39">
+      <setColumnRemarks columnName="domes_number"
+                        remarks="domes number assigned by IERS ITRS Product center"
+                        tableName="cors_site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-40">
+      <setColumnRemarks columnName="effective_from"
+                        remarks="time stamp(UTC) when the setup starts to be used"
+                        tableName="setup"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-41">
+      <setColumnRemarks columnName="effective_from"
+                        remarks="time stamp(UTC) when a frequency standard was made"
+                        tableName="sitelog_frequencystandard"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-42">
+      <setColumnRemarks columnName="effective_from"
+                        remarks="time stamp(UTC) when a humidity sensor was used"
+                        tableName="sitelog_humiditysensor"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-43">
+      <setColumnRemarks columnName="effective_to"
+                        remarks="time stamp(UTC) when the setup ends to be used"
+                        tableName="setup"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-44">
+      <setColumnRemarks columnName="effective_to"
+                        remarks="time stamp(UTC) when a frequency standard ceased"
+                        tableName="sitelog_frequencystandard"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-45">
+      <setColumnRemarks columnName="effective_to"
+                        remarks="time stamp(UTC) when a humidity sensor ceased to use"
+                        tableName="sitelog_humiditysensor"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-46">
+      <setColumnRemarks columnName="elevation_cutoff_setting"
+                        remarks="elevation cutoff setting measured in degree"
+                        tableName="gnss_receiver_configuration"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-47">
+      <setColumnRemarks columnName="elevation_grs80"
+                        remarks="elevation data in Geodetic Reference System of 1980"
+                        tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-48">
+      <setColumnRemarks columnName="entrydate"
+                        remarks="the date the site log was created, timestamp without time zone"
+                        tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-49">
+      <setColumnRemarks columnName="equipment_configuration_id"
+                        remarks="unique identifier of a equipment configuration, primary key"
+                        tableName="equipment_configuration"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-50">
+      <setColumnRemarks columnName="equipment_id"
+                        remarks="unique identifier of a equipment used in the configuration, foreign key to id of equipment table"
+                        tableName="equipment_configuration"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-51">
+      <setColumnRemarks columnName="equipment_type"
+                        remarks="type of equipment"
+                        tableName="equipment"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-52">
+      <setColumnRemarks columnName="error"
+                        remarks="error occurred in a domain event"
+                        tableName="domain_event"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-53">
+      <setColumnRemarks columnName="event_name"
+                        remarks="the name of a sitelog event"
+                        tableName="domain_event"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-54">
+      <setColumnRemarks columnName="fault_zones_nearby"
+                        remarks="fault zone nearby (YES or NO)"
+                        tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-55">
+      <setColumnRemarks columnName="firmware_version"
+                        remarks="firmware for laser system version"
+                        tableName="gnss_receiver_configuration"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-56">
+      <setColumnRemarks columnName="form_date_prepared"
+                        remarks="the data the site log form is prepared, timestamp without time zone"
+                        tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-57">
+      <setColumnRemarks columnName="form_prepared_by"
+                        remarks="the person who prepared the sitelog form"
+                        tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-58">
+      <setColumnRemarks columnName="form_report_type"
+                        remarks="site log report type"
+                        tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-59">
+      <setColumnRemarks columnName="foundation"
+                        remarks="foundation of a monument"
+                        tableName="monument"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-60">
+      <setColumnRemarks columnName="foundation_depth"
+                        remarks="depth of foundation"
+                        tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-61">
+      <setColumnRemarks columnName="four_char_id"
+                        remarks="the four character id of the site"
+                        tableName="site_log_received"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-62">
+      <setColumnRemarks columnName="four_character_id"
+                        remarks="4-digit station identifier and the unique identifier of the site"
+                        tableName="cors_site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-63">
+      <setColumnRemarks columnName="four_character_id"
+                        remarks="the four character unique identifier of a site"
+                        tableName="site_updated"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-64">
+      <setColumnRemarks columnName="four_character_id"
+                        remarks="four character unique identifier of a gnss site"
+                        tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-65">
+      <setColumnRemarks columnName="fracture_spacing"
+                        remarks="the spacing of opening -mode fractures in layered materials"
+                        tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-66">
+      <setColumnRemarks columnName="geologic_characteristic"
+                        remarks="features of the earth that were formed by geological processes"
+                        tableName="cors_site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-67">
+      <setColumnRemarks columnName="geologic_characteristic"
+                        remarks="features of the earth that were formed by goelogical processes"
+                        tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-68">
+      <setColumnRemarks columnName="height"
+                        remarks="the height of a monument"
+                        tableName="monument"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-69">
+      <setColumnRemarks columnName="height_diff_to_antenna"
+                        remarks="the height difference between antenna and humidity sensor"
+                        tableName="humidity_sensor_configuration"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-70">
+      <setColumnRemarks columnName="height_diff_to_antenna"
+                        remarks="hight difference between humidity sensor and antenna"
+                        tableName="sitelog_humiditysensor"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-71">
+      <setColumnRemarks columnName="height_of_monument"
+                        remarks="the height of mounument"
+                        tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-72">
+      <setColumnRemarks columnName="id"
+                        remarks="unique identifier of a clock configuration record, primary key and foreign key to id in cofiguration table"
+                        tableName="clock_configuration"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-73">
+      <setColumnRemarks columnName="id"
+                        remarks="unique identifier, primary key"
+                        tableName="cors_site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-74">
+      <setColumnRemarks columnName="id"
+                        remarks="the unique identifier of a record in the table, primary key"
+                        tableName="domain_event"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-75">
+      <setColumnRemarks columnName="id"
+                        remarks="unique identifier of an equipment, primary key"
+                        tableName="equipment"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-76">
+      <setColumnRemarks columnName="id"
+                        remarks="unique identifier of gnss antenna configuration record, primary key and foreign key to id in configuration table"
+                        tableName="gnss_antenna_configuration"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-77">
+      <setColumnRemarks columnName="id"
+                        remarks="unique identifier of a gnss receiver configuration record, primary key and foreign key to id in configuration table"
+                        tableName="gnss_receiver_configuration"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-78">
+      <setColumnRemarks columnName="id"
+                        remarks="unique identifier of a humidity sensor, primary key and foreign key to id in equipment table"
+                        tableName="humidity_sensor"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-79">
+      <setColumnRemarks columnName="id"
+                        remarks="ununique identifier of a humidity sensor configuration, primary key and foreign key to id in configuration table"
+                        tableName="humidity_sensor_configuration"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-80">
+      <setColumnRemarks columnName="id"
+                        remarks="unique identifier of a monument, primary key"
+                        tableName="monument"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-81">
+      <setColumnRemarks columnName="id"
+                        remarks="unique identifier of a setup, primary key"
+                        tableName="setup"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-82">
+      <setColumnRemarks columnName="id"
+                        remarks="unique identifier of a geodesy site, primary key"
+                        tableName="site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-83">
+      <setColumnRemarks columnName="id"
+                        remarks="the unique identifier of a record in the table, primary key"
+                        tableName="site_log_received"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-84">
+      <setColumnRemarks columnName="id"
+                        remarks="the unique identifier of a record in the table, primary key"
+                        tableName="site_updated"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-85">
+      <setColumnRemarks columnName="id"
+                        remarks="the unique identifier of a record in the table, primary key"
+                        tableName="sitelog_frequencystandard"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-86">
+      <setColumnRemarks columnName="id"
+                        remarks="the unique identifier of a record in the table, primary key"
+                        tableName="sitelog_humiditysensor"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-87">
+      <setColumnRemarks columnName="id"
+                        remarks="the unique identifier of a record in the table, primary key"
+                        tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-88">
+      <setColumnRemarks columnName="id"
+                        remarks="the unique identifier of a record in the table, primary key"
+                        tableName="weekly_solution_available"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-89">
+      <setColumnRemarks columnName="iers_domes_number"
+                        remarks="IERS DOMES number"
+                        tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-90">
+      <setColumnRemarks columnName="input_frequency"
+                        remarks="input frequency used in clock configuration"
+                        tableName="clock_configuration"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-91">
+      <setColumnRemarks columnName="input_frequency"
+                        remarks="input frequency"
+                        tableName="sitelog_frequencystandard"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-92">
+      <setColumnRemarks columnName="invalidated"
+                        remarks="the flag indicates whether the setup is still validate"
+                        tableName="setup"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-93">
+      <setColumnRemarks columnName="itrf_x"
+                        remarks="x origin expressed in the ITRF frame"
+                        tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-94">
+      <setColumnRemarks columnName="itrf_y"
+                        remarks="y origin expressed in the ITRF frame"
+                        tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-95">
+      <setColumnRemarks columnName="itrf_z"
+                        remarks="z origin expressed in the ITRF frame"
+                        tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-96">
+      <setColumnRemarks columnName="location_notes"
+                        remarks="description or notes on location"
+                        tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-97">
+      <setColumnRemarks columnName="manufacturer"
+                        remarks="name of manufacturer of the equipment"
+                        tableName="equipment"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-98">
+      <setColumnRemarks columnName="manufacturer"
+                        remarks="manufacturer of a humidity sensor"
+                        tableName="sitelog_humiditysensor"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-99">
+      <setColumnRemarks columnName="marker_arp_east_eccentricity"
+                        remarks="the position of Antenna Reference Point (ARP) relative to the monument marker (MM) or the site eccentricity vector in east, measured by degree"
+                        tableName="gnss_antenna_configuration"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-100">
+      <setColumnRemarks columnName="marker_arp_north_eccentricity"
+                        remarks="the position of Antenna Reference Point (ARP) relative to the monument marker (MM) or the site eccentricity vector in north, measured by degree"
+                        tableName="gnss_antenna_configuration"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-101">
+      <setColumnRemarks columnName="marker_arp_up_eccentricity"
+                        remarks="the position of Antenna Reference Point (ARP) relative to the monument marker (MM) or the site eccentricity vector in up, measured by degree"
+                        tableName="gnss_antenna_configuration"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-102">
+      <setColumnRemarks columnName="marker_description"
+                        remarks="marker description of a monument"
+                        tableName="monument"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-103">
+      <setColumnRemarks columnName="marker_description"
+                        remarks="Definition of marker"
+                        tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-104">
+      <setColumnRemarks columnName="mi_antenna_graphics"
+                        remarks="graphics of mi antenna"
+                        tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-105">
+      <setColumnRemarks columnName="mi_doi" remarks="doi of mi" tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-106">
+      <setColumnRemarks columnName="mi_hard_copy_on_file"
+                        remarks="indication whether a hard copy is kept in file"
+                        tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-107">
+      <setColumnRemarks columnName="mi_horizontal_mask"
+                        remarks="the mask for mi horizontal"
+                        tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-108">
+      <setColumnRemarks columnName="mi_monument_description"
+                        remarks="description of mi monument"
+                        tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-109">
+      <setColumnRemarks columnName="mi_notes"
+                        remarks="description or notes about mi"
+                        tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-110">
+      <setColumnRemarks columnName="mi_primary_data_center"
+                        remarks="mi primary data center"
+                        tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-111">
+      <setColumnRemarks columnName="mi_secondary_data_center"
+                        remarks="mi second data center"
+                        tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-112">
+      <setColumnRemarks columnName="mi_site_diagram"
+                        remarks="mi site diagram"
+                        tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-113">
+      <setColumnRemarks columnName="mi_site_map"
+                        remarks="mi site map"
+                        tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-114">
+      <setColumnRemarks columnName="mi_site_pictires"
+                        remarks="mi site pictires"
+                        tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-115">
+      <setColumnRemarks columnName="mi_text_graphics_from_antenna"
+                        remarks="text graphics from antenna"
+                        tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-116">
+      <setColumnRemarks columnName="mi_url_for_more_information"
+                        remarks="mi url for query more information"
+                        tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-117">
+      <setColumnRemarks columnName="monument_description"
+                        remarks="description of monument"
+                        tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-118">
+      <setColumnRemarks columnName="monument_foundation"
+                        remarks="foundataion of mounment"
+                        tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-119">
+      <setColumnRemarks columnName="monument_id"
+                        remarks="identifier of monument, the cors site is sitt on, foreign key to monument table"
+                        tableName="cors_site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-120">
+      <setColumnRemarks columnName="monument_inscription"
+                        remarks="inscription of monument"
+                        tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-121">
+      <setColumnRemarks columnName="name" remarks="the name of a setup" tableName="setup"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-122">
+      <setColumnRemarks columnName="name" remarks="the name of the site" tableName="site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-123">
+      <setColumnRemarks columnName="nine_character_id"
+                        remarks="the nine character unique identifier of a site"
+                        tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-124">
+      <setColumnRemarks columnName="notes"
+                        remarks="the notes or further information about this antenna"
+                        tableName="gnss_antenna_configuration"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-125">
+      <setColumnRemarks columnName="notes"
+                        remarks="description or further note about the configuration"
+                        tableName="gnss_receiver_configuration"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-126">
+      <setColumnRemarks columnName="notes"
+                        remarks="the notes or further information about the configuration"
+                        tableName="humidity_sensor_configuration"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-127">
+      <setColumnRemarks columnName="notes"
+                        remarks="further description of a frequency standard record"
+                        tableName="sitelog_frequencystandard"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-128">
+      <setColumnRemarks columnName="notes"
+                        remarks="further description of a humidity sensor record"
+                        tableName="sitelog_humiditysensor"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-129">
+      <setColumnRemarks columnName="notes"
+                        remarks="description or notes about site"
+                        tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-130">
+      <setColumnRemarks columnName="radome_serial_number"
+                        remarks="the factory serial number of the radome"
+                        tableName="gnss_antenna_configuration"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-131">
+      <setColumnRemarks columnName="radome_type"
+                        remarks="the type of the radome"
+                        tableName="gnss_antenna_configuration"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-132">
+      <setColumnRemarks columnName="retries"
+                        remarks="flag indicate whether retries had been done for a errored domain event"
+                        tableName="domain_event"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-133">
+      <setColumnRemarks columnName="satellite_system"
+                        remarks="satelite system the receiver receives data from"
+                        tableName="gnss_receiver_configuration"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-134">
+      <setColumnRemarks columnName="serial_number"
+                        remarks="the serial number of the equipment"
+                        tableName="equipment"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-135">
+      <setColumnRemarks columnName="serial_number"
+                        remarks="serial number assigned to a humidity sensor"
+                        tableName="sitelog_humiditysensor"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-136">
+      <setColumnRemarks columnName="shape" remarks="shape of a site" tableName="site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-137">
+      <setColumnRemarks columnName="site_id"
+                        remarks="the quique identifier of a site where the setup is used, foreign key to id of geodesy site table"
+                        tableName="setup"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-138">
+      <setColumnRemarks columnName="site_id"
+                        remarks="unique identifier of a site, foreign key to id in sitelog_site table"
+                        tableName="sitelog_frequencystandard"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-139">
+      <setColumnRemarks columnName="site_id"
+                        remarks="unique identifier of a site, foreign key to id of sitelog_site table"
+                        tableName="sitelog_humiditysensor"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-140">
+      <setColumnRemarks columnName="site_log_text"
+                        remarks="the contents of the site log"
+                        tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-141">
+      <setColumnRemarks columnName="site_name"
+                        remarks="the name of the site"
+                        tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-142">
+      <setColumnRemarks columnName="state"
+                        remarks="site state location"
+                        tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-143">
+      <setColumnRemarks columnName="subscriber"
+                        remarks="the subscriber of a domain event"
+                        tableName="domain_event"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-144">
+      <setColumnRemarks columnName="tectonic_plate"
+                        remarks="tectonic plate the site is sitting on"
+                        tableName="sitelog_site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-145">
+      <setColumnRemarks columnName="temperature_stabilization"
+                        remarks="indication whether the receiver is temperature stabilized"
+                        tableName="gnss_receiver_configuration"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-146">
+      <setColumnRemarks columnName="time_handled"
+                        remarks="time(UTC) when a domain event is handled"
+                        tableName="domain_event"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-147">
+      <setColumnRemarks columnName="time_published"
+                        remarks="time(UTC) when a domain event is published"
+                        tableName="domain_event"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-148">
+      <setColumnRemarks columnName="time_raised"
+                        remarks="time(UTC) when a domain event error is raised"
+                        tableName="domain_event"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-149">
+      <setColumnRemarks columnName="type"
+                        remarks="a specific product type of giving equipment type (such as gnss receiver or gnss antenna)"
+                        tableName="equipment"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-150">
+      <setColumnRemarks columnName="type"
+                        remarks="type of a frequency standard"
+                        tableName="sitelog_frequencystandard"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-151">
+      <setColumnRemarks columnName="type"
+                        remarks="type of a humidity sensor"
+                        tableName="sitelog_humiditysensor"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-152">
+      <setColumnRemarks columnName="version"
+                        remarks="version of the data when it is populated through application layer"
+                        tableName="equipment"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-153">
+      <setColumnRemarks columnName="version"
+                        remarks="version of the data when it is populated through application layer"
+                        tableName="site"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1483935176618-154">
+      <setColumnRemarks columnName="weekly_solution_id"
+                        remarks="foreign key to id in domain event table"
+                        tableName="weekly_solution_available"/>
+   </changeSet>
+</databaseChangeLog>

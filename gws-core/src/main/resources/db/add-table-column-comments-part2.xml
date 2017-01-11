@@ -1,0 +1,664 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+   <changeSet author="hong (generated)" id="1484110610909-1">
+      <setTableRemarks remarks="the table contains information of cors sites that are part of cors site networks"
+                       tableName="cors_site_in_network"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-2">
+      <setTableRemarks remarks="the table contains information of all in_used equipments"
+                       tableName="equipment_in_use"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-3">
+      <setTableRemarks remarks="table contains information about invalid site log received"
+                       tableName="invalid_site_log_received"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-4">
+      <setTableRemarks remarks="table contains about information about collocated instruments in site log"
+                       tableName="sitelog_collocationinformation"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-5">
+      <setTableRemarks remarks="table contains information about frequency standards used in site log"
+                       tableName="sitelog_frequencystandard"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-6">
+      <setTableRemarks remarks="table contains information about gnss antenna in site log"
+                       tableName="sitelog_gnssantenna"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-7">
+      <setTableRemarks remarks="table contains information about gnss receiver in site log"
+                       tableName="sitelog_gnssreceiver"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-8">
+      <setTableRemarks remarks="table contains information about episodic event in site log"
+                       tableName="sitelog_localepisodicevent"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-9">
+      <setTableRemarks remarks="table contains information about multiple path sources in site log"
+                       tableName="sitelog_mutlipathsource"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-10">
+      <setTableRemarks remarks="table contains information about other instrumentation that is used in site log"
+                       tableName="sitelog_otherinstrumentation"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-11">
+      <setTableRemarks remarks="table contains information about pressure sensors of site log"
+                       tableName="sitelog_pressuresensor"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-12">
+      <setTableRemarks remarks="table contains information about radio interference in site log"
+                       tableName="sitelog_radiointerference"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-13">
+      <setTableRemarks remarks="table contains information about signal obstraction in site log"
+                       tableName="sitelog_signalobstraction"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-14">
+      <setTableRemarks remarks="table contains information about surveyed local ties in site log"
+                       tableName="sitelog_surveyedlocaltie"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-15">
+      <setTableRemarks remarks="table contains information about temperature sensor used in site log"
+                       tableName="sitelog_temperaturesensor"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-16">
+      <setTableRemarks remarks="table contains information about water vaport sensor used in site log"
+                       tableName="sitelog_watervaporsensor"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-17">
+      <setTableRemarks remarks="table contains information about weekly solutions"
+                       tableName="weekly_solution"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-18">
+      <setColumnRemarks columnName="accurace_degree_celcius"
+                        remarks="measurement accuracy in celcius degree"
+                        tableName="sitelog_temperaturesensor"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-19">
+      <setColumnRemarks columnName="accuracy_hpa"
+                        remarks="measurement accuracy of the pressure sensor in hpa"
+                        tableName="sitelog_pressuresensor"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-20">
+      <setColumnRemarks columnName="alignment_from_true_north"
+                        remarks="alignment of antenna from true north"
+                        tableName="sitelog_gnssantenna"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-21">
+      <setColumnRemarks columnName="antenna_cable_length"
+                        remarks="the length of cable that connects to antenna"
+                        tableName="sitelog_gnssantenna"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-22">
+      <setColumnRemarks columnName="antenna_cable_type"
+                        remarks="the type of cable that connects to antenna"
+                        tableName="sitelog_gnssantenna"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-23">
+      <setColumnRemarks columnName="antenna_radome_type"
+                        remarks="the type of antenna radome"
+                        tableName="sitelog_gnssantenna"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-24">
+      <setColumnRemarks columnName="antenna_reference_point"
+                        remarks="reference point used by the antenna"
+                        tableName="sitelog_gnssantenna"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-25">
+      <setColumnRemarks columnName="antenna_type"
+                        remarks="the type of the gnss antenna"
+                        tableName="sitelog_gnssantenna"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-26">
+      <setColumnRemarks columnName="aspiration"
+                        remarks="aspiration of temperature sensor"
+                        tableName="sitelog_temperaturesensor"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-27">
+      <setColumnRemarks columnName="callibration_date"
+                        remarks="the calibration date in pressure sensor, timestamp without time zone"
+                        tableName="sitelog_pressuresensor"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-28">
+      <setColumnRemarks columnName="callibration_date"
+                        remarks="the calibration date in temperature sensor, timestamp without time zone"
+                        tableName="sitelog_temperaturesensor"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-29">
+      <setColumnRemarks columnName="callibration_date"
+                        remarks="the calibration date in water vaport sensor, timestamp without time zone"
+                        tableName="sitelog_watervaporsensor"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-30">
+      <setColumnRemarks columnName="cors_site_id"
+                        remarks="unique identifier of a cors site, foreign key to id in cors_site table"
+                        tableName="cors_site_in_network"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-31">
+      <setColumnRemarks columnName="cors_site_network_id"
+                        remarks="unique identifier of a cors site network"
+                        tableName="cors_site_in_network"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-32">
+      <setColumnRemarks columnName="data_sampling_interval"
+                        remarks="the time interval between data sampling in using pressure sensor"
+                        tableName="sitelog_pressuresensor"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-33">
+      <setColumnRemarks columnName="data_sampling_interval"
+                        remarks="the time interval between data sampling in using temperature sensor"
+                        tableName="sitelog_temperaturesensor"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-34">
+      <setColumnRemarks columnName="date_installed"
+                        remarks="the date the anntenna was installed, timestamp without time zone"
+                        tableName="sitelog_gnssantenna"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-35">
+      <setColumnRemarks columnName="date_installed"
+                        remarks="the date the receiver was installed, timestamp without time zone"
+                        tableName="sitelog_gnssreceiver"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-36">
+      <setColumnRemarks columnName="date_measured"
+                        remarks="the date when a survey is made in the local ties, timestamp without time zone"
+                        tableName="sitelog_surveyedlocaltie"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-37">
+      <setColumnRemarks columnName="date_removed"
+                        remarks="the date the anntenna was removed, timestamp without time zone"
+                        tableName="sitelog_gnssantenna"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-38">
+      <setColumnRemarks columnName="date_removed"
+                        remarks="the date the receiver was removed, timestamp without time zone"
+                        tableName="sitelog_gnssreceiver"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-39">
+      <setColumnRemarks columnName="distance_to_antenna"
+                        remarks="the distance between water vapor sensor and antenna"
+                        tableName="sitelog_watervaporsensor"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-40">
+      <setColumnRemarks columnName="dx"
+                        remarks="x origin expressed in the local ties surveyed"
+                        tableName="sitelog_surveyedlocaltie"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-41">
+      <setColumnRemarks columnName="dy"
+                        remarks="y origin expressed in the local ties surveyed"
+                        tableName="sitelog_surveyedlocaltie"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-42">
+      <setColumnRemarks columnName="dz"
+                        remarks="z origin expressed in the local ties surveyed"
+                        tableName="sitelog_surveyedlocaltie"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-43">
+      <setColumnRemarks columnName="effective_from"
+                        remarks="time stamp(UTC) when current record starts to use"
+                        tableName="cors_site_in_network"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-44">
+      <setColumnRemarks columnName="effective_from"
+                        remarks="the time stamp(UTC) when the equipment starts to use"
+                        tableName="equipment_in_use"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-45">
+      <setColumnRemarks columnName="effective_from"
+                        remarks="time stamp(UTC) when a collocated instrument starts to use"
+                        tableName="sitelog_collocationinformation"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-46">
+      <setColumnRemarks columnName="effective_from"
+                        remarks="time stamp(UTC) when a frequency standard starts to use"
+                        tableName="sitelog_frequencystandard"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-47">
+      <setColumnRemarks columnName="effective_from"
+                        remarks="time stamp(UTC) when a episodic event measurement occur"
+                        tableName="sitelog_localepisodicevent"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-48">
+      <setColumnRemarks columnName="effective_from"
+                        remarks="time stamp(UTC) when an instrumentation starts to use"
+                        tableName="sitelog_otherinstrumentation"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-49">
+      <setColumnRemarks columnName="effective_from"
+                        remarks="time stamp(UTC) when a pressure sensor starts to be used"
+                        tableName="sitelog_pressuresensor"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-50">
+      <setColumnRemarks columnName="effective_from"
+                        remarks="time stamp(UTC) when a temperature sensor starts to use"
+                        tableName="sitelog_temperaturesensor"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-51">
+      <setColumnRemarks columnName="effective_from"
+                        remarks="time stamp(UTC) when a water vapor sensor starts to use"
+                        tableName="sitelog_watervaporsensor"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-52">
+      <setColumnRemarks columnName="effective_to"
+                        remarks="time stamp(UTC) when current record ceased to use"
+                        tableName="cors_site_in_network"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-53">
+      <setColumnRemarks columnName="effective_to"
+                        remarks="the time stamp(UTC) when the equipment ends to use"
+                        tableName="equipment_in_use"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-54">
+      <setColumnRemarks columnName="effective_to"
+                        remarks="time stamp(UTC) when a collocated instrument ceased to use"
+                        tableName="sitelog_collocationinformation"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-55">
+      <setColumnRemarks columnName="effective_to"
+                        remarks="time stamp(UTC) when a frequency standard ceased to use"
+                        tableName="sitelog_frequencystandard"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-56">
+      <setColumnRemarks columnName="effective_to"
+                        remarks="time stamp(UTC) when a episodic event ceased to be measured"
+                        tableName="sitelog_localepisodicevent"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-57">
+      <setColumnRemarks columnName="effective_to"
+                        remarks="time stamp(UTC) when an instrumentation ceased to use"
+                        tableName="sitelog_otherinstrumentation"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-58">
+      <setColumnRemarks columnName="effective_to"
+                        remarks="time stamp(UTC) when a pressure sensor ceased to use"
+                        tableName="sitelog_pressuresensor"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-59">
+      <setColumnRemarks columnName="effective_to"
+                        remarks="time stamp(UTC) when a temperature sensor ceased to use"
+                        tableName="sitelog_temperaturesensor"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-60">
+      <setColumnRemarks columnName="effective_to"
+                        remarks="time stamp(UTC) when a water vapor sensor ceased to use"
+                        tableName="sitelog_watervaporsensor"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-61">
+      <setColumnRemarks columnName="elevation_cutoff_setting"
+                        remarks="elevation cutoff setting measured in degree"
+                        tableName="sitelog_gnssreceiver"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-62">
+      <setColumnRemarks columnName="equipment_configuration_id"
+                        remarks="unique identifier of a configuration record for the equipment in use, foreign key to id in equipment_configuration table"
+                        tableName="equipment_in_use"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-63">
+      <setColumnRemarks columnName="equipment_id"
+                        remarks="unique identifier of an equipment in use, foreign key to id in equipment table"
+                        tableName="equipment_in_use"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-64">
+      <setColumnRemarks columnName="event"
+                        remarks="a episodic event in site log"
+                        tableName="sitelog_localepisodicevent"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-65">
+      <setColumnRemarks columnName="firmware_version"
+                        remarks="the version of firmware used by the receiver"
+                        tableName="sitelog_gnssreceiver"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-66">
+      <setColumnRemarks columnName="height_diff_to_antenna"
+                        remarks="the height difference between pressure sensor and antenna"
+                        tableName="sitelog_pressuresensor"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-67">
+      <setColumnRemarks columnName="height_diff_to_antenna"
+                        remarks="height difference between temperature sensor and antenna"
+                        tableName="sitelog_temperaturesensor"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-68">
+      <setColumnRemarks columnName="height_diff_to_antenna"
+                        remarks="the height difference between water vapor sensor and antenna"
+                        tableName="sitelog_watervaporsensor"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-69">
+      <setColumnRemarks columnName="id"
+                        remarks="unique identifier of record in the table, primary key"
+                        tableName="cors_site_in_network"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-70">
+      <setColumnRemarks columnName="id"
+                        remarks="unique identifier of a equipment-in-use record, primary key"
+                        tableName="equipment_in_use"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-71">
+      <setColumnRemarks columnName="id"
+                        remarks="the unique identifier of a record in the table, primary key"
+                        tableName="invalid_site_log_received"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-72">
+      <setColumnRemarks columnName="id"
+                        remarks="the unique identifier of a record in the table, primary key"
+                        tableName="sitelog_collocationinformation"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-73">
+      <setColumnRemarks columnName="id"
+                        remarks="the unique identifier of a gnss antenna, primary key"
+                        tableName="sitelog_gnssantenna"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-74">
+      <setColumnRemarks columnName="id"
+                        remarks="the unique identifier of a gnss receiver, primary key"
+                        tableName="sitelog_gnssreceiver"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-75">
+      <setColumnRemarks columnName="id"
+                        remarks="the unique identifier of a record in the table, primary key"
+                        tableName="sitelog_localepisodicevent"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-76">
+      <setColumnRemarks columnName="id"
+                        remarks="the unique identifier of a multiple path source, primary key"
+                        tableName="sitelog_mutlipathsource"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-77">
+      <setColumnRemarks columnName="id"
+                        remarks="the unique identifier of a record in the table, primary key"
+                        tableName="sitelog_otherinstrumentation"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-78">
+      <setColumnRemarks columnName="id"
+                        remarks="the unique identifier of a record in the table, primary key"
+                        tableName="sitelog_pressuresensor"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-79">
+      <setColumnRemarks columnName="id"
+                        remarks="the unique identifier of a record in the table, primary key"
+                        tableName="sitelog_radiointerference"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-80">
+      <setColumnRemarks columnName="id"
+                        remarks="the unique identifier of a record in the table, primary key"
+                        tableName="sitelog_signalobstraction"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-81">
+      <setColumnRemarks columnName="id"
+                        remarks="the unique identifier of a record in the table, primary key"
+                        tableName="sitelog_surveyedlocaltie"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-82">
+      <setColumnRemarks columnName="id"
+                        remarks="the unique identifier of a record in the table, primary key"
+                        tableName="sitelog_temperaturesensor"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-83">
+      <setColumnRemarks columnName="id"
+                        remarks="the unique identifier of a record in the table, primary key"
+                        tableName="sitelog_watervaporsensor"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-84">
+      <setColumnRemarks columnName="input_frequency"
+                        remarks="input frequency used in site log"
+                        tableName="sitelog_frequencystandard"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-85">
+      <setColumnRemarks columnName="instrument_type"
+                        remarks="type of collocated instrument used"
+                        tableName="sitelog_collocationinformation"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-86">
+      <setColumnRemarks columnName="instrumentation"
+                        remarks="time stamp(UTC) when an instrumentation ceased to use"
+                        tableName="sitelog_otherinstrumentation"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-87">
+      <setColumnRemarks columnName="local_site_tie_accuracy"
+                        remarks="accuracy for surveyed local ties in site log"
+                        tableName="sitelog_surveyedlocaltie"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-88">
+      <setColumnRemarks columnName="manufacturer"
+                        remarks="the manufacturer of the pressure sensor"
+                        tableName="sitelog_pressuresensor"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-89">
+      <setColumnRemarks columnName="manufacturer"
+                        remarks="the manufacturer of the temperature sensor"
+                        tableName="sitelog_temperaturesensor"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-90">
+      <setColumnRemarks columnName="manufacturer"
+                        remarks="the manufacturer of the water vapor sensor"
+                        tableName="sitelog_watervaporsensor"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-91">
+      <setColumnRemarks columnName="marker_arp_east_ecc"
+                        remarks="the position of Antenna Reference Point (ARP) relative to the monument marker (MM) or the site eccentricity vector in east, measured by degree"
+                        tableName="sitelog_gnssantenna"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-92">
+      <setColumnRemarks columnName="marker_arp_north_ecc"
+                        remarks="the position of Antenna Reference Point (ARP) relative to the monument marker (MM) or the site eccentricity vector in north, measured by degree"
+                        tableName="sitelog_gnssantenna"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-93">
+      <setColumnRemarks columnName="marker_arp_up_ecc"
+                        remarks="the position of Antenna Reference Point (ARP) relative to the monument marker (MM) or the site eccentricity vector in up, measured by degree"
+                        tableName="sitelog_gnssantenna"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-94">
+      <setColumnRemarks columnName="notes"
+                        remarks="description or notes about collocated instrument"
+                        tableName="sitelog_collocationinformation"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-95">
+      <setColumnRemarks columnName="notes"
+                        remarks="description and notes about the frequency standard"
+                        tableName="sitelog_frequencystandard"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-96">
+      <setColumnRemarks columnName="notes"
+                        remarks="description or notes about the gnss antenna"
+                        tableName="sitelog_gnssantenna"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-97">
+      <setColumnRemarks columnName="notes"
+                        remarks="description and notes about the gnss receiver"
+                        tableName="sitelog_gnssreceiver"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-98">
+      <setColumnRemarks columnName="notes"
+                        remarks="description or notes about pressure sensor"
+                        tableName="sitelog_pressuresensor"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-99">
+      <setColumnRemarks columnName="notes"
+                        remarks="description or notes about local ties surveyed"
+                        tableName="sitelog_surveyedlocaltie"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-100">
+      <setColumnRemarks columnName="notes"
+                        remarks="description or notes about temperature sensor"
+                        tableName="sitelog_temperaturesensor"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-101">
+      <setColumnRemarks columnName="notes"
+                        remarks="description or notes about water vapor sensor"
+                        tableName="sitelog_watervaporsensor"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-102">
+      <setColumnRemarks columnName="observed_degradation"
+                        remarks="observed degradtion due to radio interference in site log"
+                        tableName="sitelog_radiointerference"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-103">
+      <setColumnRemarks columnName="radome_serial_number"
+                        remarks="the factory serial number of the radome"
+                        tableName="sitelog_gnssantenna"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-104">
+      <setColumnRemarks columnName="receiver_type"
+                        remarks="the type of gnss receiver"
+                        tableName="sitelog_gnssreceiver"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-105">
+      <setColumnRemarks columnName="satellite_system"
+                        remarks="satelite system the receiver receives data from"
+                        tableName="sitelog_gnssreceiver"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-106">
+      <setColumnRemarks columnName="serial_number"
+                        remarks="the factory serial number of the antenna"
+                        tableName="sitelog_gnssantenna"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-107">
+      <setColumnRemarks columnName="serial_number"
+                        remarks="the factory serial number of the gnss receiver"
+                        tableName="sitelog_gnssreceiver"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-108">
+      <setColumnRemarks columnName="serial_number"
+                        remarks="the serial number of the pressure sensor"
+                        tableName="sitelog_pressuresensor"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-109">
+      <setColumnRemarks columnName="serial_number"
+                        remarks="the serial number of the temperature sensor"
+                        tableName="sitelog_temperaturesensor"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-110">
+      <setColumnRemarks columnName="serial_number"
+                        remarks="the serial number of the water vapor sensor"
+                        tableName="sitelog_watervaporsensor"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-111">
+      <setColumnRemarks columnName="setup_id"
+                        remarks="unique identifier of a setup record used, foreign key to id in setup table"
+                        tableName="equipment_in_use"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-112">
+      <setColumnRemarks columnName="site_id"
+                        remarks="unique identifier of a site, foreign key to id in sitelog_site table"
+                        tableName="sitelog_collocationinformation"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-113">
+      <setColumnRemarks columnName="site_id"
+                        remarks="unique identifier of a site, foreign key to id in sitelog_site table"
+                        tableName="sitelog_gnssantenna"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-114">
+      <setColumnRemarks columnName="site_id"
+                        remarks="unique identifier of a site, foreign key to id in sitelog_site table"
+                        tableName="sitelog_gnssreceiver"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-115">
+      <setColumnRemarks columnName="site_id"
+                        remarks="unique identifier of site log site, foreign key to the id in sitelog_site table"
+                        tableName="sitelog_localepisodicevent"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-116">
+      <setColumnRemarks columnName="site_id"
+                        remarks="unique identifier of a site, foreign key to id in sitelog_site table"
+                        tableName="sitelog_mutlipathsource"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-117">
+      <setColumnRemarks columnName="site_id"
+                        remarks="unique identifier of a site, foreign key to id in sitelog_site table"
+                        tableName="sitelog_otherinstrumentation"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-118">
+      <setColumnRemarks columnName="site_id"
+                        remarks="unique identifier of a site, foreign key to id in sitelog_site table"
+                        tableName="sitelog_pressuresensor"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-119">
+      <setColumnRemarks columnName="site_id"
+                        remarks="unique identifier of a site, foreign key to id in sitelog_site table"
+                        tableName="sitelog_radiointerference"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-120">
+      <setColumnRemarks columnName="site_id"
+                        remarks="unique identifier of a site, foreign key to id in sitelog_site table"
+                        tableName="sitelog_signalobstraction"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-121">
+      <setColumnRemarks columnName="site_id"
+                        remarks="unique identifier of a site in site log, foreign key to id in sitelog_site table"
+                        tableName="sitelog_surveyedlocaltie"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-122">
+      <setColumnRemarks columnName="site_id"
+                        remarks="unique identifier of a site, foreign key to id in sitelog_site table"
+                        tableName="sitelog_temperaturesensor"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-123">
+      <setColumnRemarks columnName="site_id"
+                        remarks="unique identifier of a site, foreign key to id in sitelog_site table"
+                        tableName="sitelog_watervaporsensor"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-124">
+      <setColumnRemarks columnName="site_log_text"
+                        remarks="the log text of an invalid site log received"
+                        tableName="invalid_site_log_received"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-125">
+      <setColumnRemarks columnName="status"
+                        remarks="status of collocated instrument"
+                        tableName="sitelog_collocationinformation"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-126">
+      <setColumnRemarks columnName="survey_method"
+                        remarks="method used to survey local ties"
+                        tableName="sitelog_surveyedlocaltie"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-127">
+      <setColumnRemarks columnName="temperature_stabilization"
+                        remarks="indication whether the receiver is temperature stabilized"
+                        tableName="sitelog_gnssreceiver"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-128">
+      <setColumnRemarks columnName="tied_marker_cdp_number"
+                        remarks="CDP number of tied marker for surveyed local ties"
+                        tableName="sitelog_surveyedlocaltie"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-129">
+      <setColumnRemarks columnName="tied_marker_domes_number"
+                        remarks="DOMES number of tied marker for surveyed local ties"
+                        tableName="sitelog_surveyedlocaltie"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-130">
+      <setColumnRemarks columnName="tied_marker_name"
+                        remarks="the name of tied marker for surveyed local ties"
+                        tableName="sitelog_surveyedlocaltie"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-131">
+      <setColumnRemarks columnName="tied_marker_usage"
+                        remarks="usage of tied marker for surveyed local ties"
+                        tableName="sitelog_surveyedlocaltie"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-132">
+      <setColumnRemarks columnName="type"
+                        remarks="type of frequency standard"
+                        tableName="sitelog_frequencystandard"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-133">
+      <setColumnRemarks columnName="type"
+                        remarks="the type of the pressure sensor, such as MET4 or PTB202A"
+                        tableName="sitelog_pressuresensor"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-134">
+      <setColumnRemarks columnName="type"
+                        remarks="the type of the temperature sensor"
+                        tableName="sitelog_temperaturesensor"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484110610909-135">
+      <setColumnRemarks columnName="type"
+                        remarks="the type of the water vapor sensor"
+                        tableName="sitelog_watervaporsensor"/>
+   </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+   <changeSet author="hong (generated)" id="1484527847082-1">
+      <setTableRemarks remarks="the table contains information of cors site networks"
+                       tableName="cors_site_network"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484527847082-2">
+      <setTableRemarks remarks="the table contains information of nodes that associated with a site"
+                       tableName="node"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484527847082-3">
+      <setTableRemarks remarks="the table contains information of positions that associated with a node"
+                       tableName="position"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484527847082-4">
+      <setColumnRemarks columnName="as_at"
+                        remarks="the time stamp(UTC) when the positions are recorded"
+                        tableName="position"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484527847082-5">
+      <setColumnRemarks columnName="cors_site_network_id"
+                        remarks="unique identifier of a cors site network, foreigh key to id in cors_site_network table"
+                        tableName="cors_site_in_network"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484527847082-6">
+      <setColumnRemarks columnName="datum_epsg_code"
+                        remarks="datum EPSG code"
+                        tableName="position"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484527847082-7">
+      <setColumnRemarks columnName="description"
+                        remarks="description or notes of cors site network"
+                        tableName="cors_site_network"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484527847082-8">
+      <setColumnRemarks columnName="effective_from"
+                        remarks="the time stamp(UTC) when the node starts to use"
+                        tableName="node"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484527847082-9">
+      <setColumnRemarks columnName="effective_to"
+                        remarks="the time stamp(UTC) when the node ceased to use"
+                        tableName="node"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484527847082-10">
+      <setColumnRemarks columnName="epoch" remarks="datum Epoch" tableName="position"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484527847082-11">
+      <setColumnRemarks columnName="four_character_id"
+                        remarks="four character id of a site"
+                        tableName="position"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484527847082-12">
+      <setColumnRemarks columnName="id"
+                        remarks="unique identifier of cors site network, primary key"
+                        tableName="cors_site_network"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484527847082-13">
+      <setColumnRemarks columnName="id"
+                        remarks="unique identifier of a node, primary key"
+                        tableName="node"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484527847082-14">
+      <setColumnRemarks columnName="id"
+                        remarks="unique identifier of record in the table, primary key"
+                        tableName="position"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484527847082-15">
+      <setColumnRemarks columnName="invalidated"
+                        remarks="a flag indicates whether the node is invalidated"
+                        tableName="node"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484527847082-16">
+      <setColumnRemarks columnName="name"
+                        remarks="name of cors site network"
+                        tableName="cors_site_network"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484527847082-17">
+      <setColumnRemarks columnName="node_id"
+                        remarks="unique identifier of a node, foreign key to id in node table"
+                        tableName="position"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484527847082-18">
+      <setColumnRemarks columnName="position_source_id"
+                        remarks="position source id"
+                        tableName="position"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484527847082-19">
+      <setColumnRemarks columnName="setup_id"
+                        remarks="unique identifier of a setup, foreign key to id in setup table"
+                        tableName="node"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484527847082-20">
+      <setColumnRemarks columnName="site_id"
+                        remarks="unique identifier of a site, foreign key to id in site table"
+                        tableName="node"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484527847082-21">
+      <setColumnRemarks columnName="version"
+                        remarks="version of the data when it is populated through application layer"
+                        tableName="node"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484527847082-22">
+      <setColumnRemarks columnName="x"
+                        remarks="x origin expressed for node position"
+                        tableName="position"/>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1484527847082-23">
+      <setColumnRemarks columnName="y"
+                        remarks="y origin expressed for node position"
+                        tableName="position"/>
+   </changeSet>
+</databaseChangeLog>

@@ -23,7 +23,7 @@ import static org.hamcrest.Matchers.equalTo;
  */
 public class SensorEquipmentMapperTest {
 
-    private GeodesyMLMarshaller marshaller = new GeodesyMLMoxy();
+    protected GeodesyMLMarshaller marshaller = new GeodesyMLMoxy();
 
     public void testMapping(SensorEquipmentLogItem logItem, BaseSensorEquipmentType sensorType, MappingDirection mappingDirection) {
 

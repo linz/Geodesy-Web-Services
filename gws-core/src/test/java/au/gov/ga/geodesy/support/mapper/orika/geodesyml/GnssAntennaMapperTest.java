@@ -40,7 +40,7 @@ public class GnssAntennaMapperTest {
                 .withMarkerArpUpEcc(0.0)
                 .withMarkerArpNorthEcc(0.0)
                 .withMarkerArpEastEcc(0.0)
-                .withAlignmentFromTrueNorth(0)
+                .withAlignmentFromTrueNorth(0.0)
                 .withAntennaRadomeType(igsRadomeModelCodeType)
                 .withAntennaCableLength(12.0)
                 .withAntennaCableType("Twine")

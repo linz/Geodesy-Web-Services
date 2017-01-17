@@ -34,7 +34,7 @@ public class GnssReceiverMapperTest {
             ))
             .withFirmwareVersion("1.2")
             .withManufacturerSerialNumber("123")
-            .withElevationCutoffSetting(4)
+            .withElevationCutoffSetting(4.0)
             .withDateInstalled(timePosition(dateInstalled));
 
         GnssReceiverLogItem logItem = mapper.to(receiver);

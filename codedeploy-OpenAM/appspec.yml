@@ -1,0 +1,12 @@
+version: 0.0
+os: linux
+files:
+    - source: ./deploy-code/config.file
+      destination: /opt/openam/tools/config
+hooks:
+  BeforeInstall:
+    - location: before-install.sh
+  AfterInstall:
+    - location: after-install.sh
+  ValidateService:
+    - location: validate-service.sh

@@ -37,7 +37,7 @@
 ### license.
 ###
 #############################################################################
-SERVER_URL=https://${OPENAM_SERVER_URL}
+SERVER_URL=http://${OPENAM_SERVER_URL}
 DEPLOYMENT_URI=/openam
 BASE_DIR=/usr/share/tomcat8/openam
 locale=en_US
@@ -88,7 +88,7 @@ ACCEPT_LICENSES=true
 #############################################################################
 DATA_STORE=embedded
 DIRECTORY_SSL=SIMPLE
-DIRECTORY_SERVER=localhost
+DIRECTORY_SERVER=${OPENAM_SERVER_URL}
 DIRECTORY_PORT=50389
 DIRECTORY_ADMIN_PORT=4444
 DIRECTORY_JMX_PORT=1689

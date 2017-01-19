@@ -36,3 +36,14 @@ services:
             - tomcat
         ports:
             - "8082:8080"
+    open-am:
+        build:
+            context: ./gws-open-am/
+            dockerfile: ./Dockerfile
+            args:
+                - https_proxy
+        image: gws/open-am
+        depends_on:
+            - tomcat
+        ports:
+            - "8083:8080"

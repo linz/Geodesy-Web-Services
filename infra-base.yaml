@@ -26,7 +26,7 @@ autoscaling_units:
         service codedeploy-agent start
         service codedeploy-agent status
 
-        pip install credstash
+        pip install credstash==1.12.0
 
         service tomcat8 start
     elb_config:

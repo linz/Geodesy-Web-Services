@@ -36,7 +36,6 @@
         <encoding>UTF-8</encoding>
         <skip.system.tests>true</skip.system.tests>
         <snippetsDirectory>${project.build.directory}/generated-snippets</snippetsDirectory>
-        <skipCreateDb>false</skipCreateDb>
         <schemacrawler.plugin.version>14.07.04</schemacrawler.plugin.version>
         <dependency.locations.enabled>false</dependency.locations.enabled>
         <github.global.server>github</github.global.server>
@@ -603,7 +602,7 @@
               <artifactId>docker-maven-plugin</artifactId>
               <version>0.18.1</version>
               <configuration>
-                 <skip>${skipCreateDb}</skip>
+                 <skip>${skipIntegrationTests}</skip>
                  <images>
                     <image>
                         <name>gws/dev-database</name>

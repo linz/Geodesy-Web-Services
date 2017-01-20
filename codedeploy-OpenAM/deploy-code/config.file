@@ -37,7 +37,7 @@
 ### license.
 ###
 #############################################################################
-SERVER_URL=http://${OPENAM_SERVER_URL}
+SERVER_URL=http://${OPENAM_SERVER_FQDN}
 DEPLOYMENT_URI=/openam
 BASE_DIR=/usr/share/tomcat8/openam
 locale=en_US
@@ -45,7 +45,7 @@ PLATFORM_LOCALE=en_US
 AM_ENC_KEY=
 ADMIN_PWD=${OPENAM_ADMIN_PWD}
 AMLDAPUSERPASSWD=${OPENAM_AMLDAPUSERPASSWD}
-COOKIE_DOMAIN=${OPENAM_SERVER_URL}
+COOKIE_DOMAIN=${OPENAM_SERVER_FQDN}
 ACCEPT_LICENSES=true
 
 ##############################################################################
@@ -88,7 +88,7 @@ ACCEPT_LICENSES=true
 #############################################################################
 DATA_STORE=embedded
 DIRECTORY_SSL=SIMPLE
-DIRECTORY_SERVER=${OPENAM_SERVER_URL}
+DIRECTORY_SERVER=${OPENAM_SERVER_FQDN}
 DIRECTORY_PORT=50389
 DIRECTORY_ADMIN_PORT=4444
 DIRECTORY_JMX_PORT=1689

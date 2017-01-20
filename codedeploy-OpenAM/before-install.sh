@@ -14,9 +14,3 @@ until [ "`curl --silent --connect-timeout 1 -I http://localhost:8080 | grep 'Coy
 do
   sleep 10
 done
-
-# remove OpenAM config file if it exists
-file="/opt/openam/tools/config/config.file"
-if [ -f $file ] ; then
-    rm $file
-fi

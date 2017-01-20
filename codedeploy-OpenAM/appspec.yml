@@ -3,6 +3,14 @@ os: linux
 files:
     - source: ./deploy-code/config.file
       destination: /opt/openam/tools/config
+    - source: ./deploy-code/scripts
+      destination: /opt/openam/tools/admin/scripts
+permissions:
+  - object: /opt/openam/tools/admin/scripts
+    pattern: "*.sh"
+    mode: 700
+    type:
+      - file
 hooks:
   BeforeInstall:
     - location: before-install.sh

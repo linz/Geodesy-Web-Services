@@ -19,9 +19,7 @@ DB_PASSWORD_KEY=${STACK_NAME}DbPassword
 
 # OpenAM Credentials
 OPENAM_ADMIN_PWD_KEY=${STACK_NAME}OpenAmAdminPassword
-
 OPENAM_AMLDAPUSERPASSWD_KEY=${STACK_NAME}OpenAmLdapUserPassword
-
 OPENAM_DS_DIRMGRPASSWD_KEY=${STACK_NAME}OpenAmDsDirMgrPassword
 
 case ${COMMAND} in
@@ -41,12 +39,6 @@ case ${COMMAND} in
     RDS_MASTER_USERNAME=$(credstash -p ${AWS_PROFILE} get ${RDS_MASTER_USERNAME_KEY})
     RDS_MASTER_PASSWORD=$(credstash -p ${AWS_PROFILE} get ${RDS_MASTER_PASSWORD_KEY})
 
-    DB_USERNAME=$(credstash -p ${AWS_PROFILE} get ${DB_USERNAME_KEY})
-    DB_PASSWORD=$(credstash -p ${AWS_PROFILE} get ${DB_PASSWORD_KEY})
-
-    OPENAM_ADMIN_PWD_KEY=$(credstash -p ${AWS_PROFILE} get ${OPENAM_ADMIN_PWD_KEY})
-    OPENAM_AMLDAPUSERPASSWD_KEY=$(credstash -p ${AWS_PROFILE} get ${OPENAM_AMLDAPUSERPASSWD_KEY})
-    OPENAM_DS_DIRMGRPASSWD_KEY=$(credstash -p ${AWS_PROFILE} get ${OPENAM_DS_DIRMGRPASSWD_KEY})
     ;;
 *)
     echo "Usage: deploy-dev.sh (create|update) (dev|test|prod)"
@@ -71,7 +63,19 @@ if [[ $? == 0 && ${COMMAND} == "create" ]]; then
 #    credstash -p ${AWS_PROFILE} put -a ${DB_USERNAME_KEY} ${DB_USERNAME}
 #    credstash -p ${AWS_PROFILE} put -a ${DB_PASSWORD_KEY} ${DB_PASSWORD}
 
-    credstash -p ${AWS_PROFILE} put -a ${OPENAM_ADMIN_PWD_KEY} ${OPENAM_ADMIN_PWD}
-    credstash -p ${AWS_PROFILE} put -a ${OPENAM_AMLDAPUSERPASSWD_KEY} ${OPENAM_AMLDAPUSERPASSWD}
-    credstash -p ${AWS_PROFILE} put -a ${OPENAM_DS_DIRMGRPASSWD_KEY} ${OPENAM_DS_DIRMGRPASSWD}
+    # Only store OpenAm passwords if not already in credstash (recreating the passwords will
+    # break an OpenAM installation when built using a previously exported configuration).
+    credstash -p ${AWS_PROFILE} get ${OPENAM_ADMIN_PWD_KEY} &>/dev/null
+    if [ ! $? -eq 0 ]; then
+         credstash -p ${AWS_PROFILE} put -a ${OPENAM_ADMIN_PWD_KEY} ${OPENAM_ADMIN_PWD}
+    fi
+    credstash -p ${AWS_PROFILE} get ${OPENAM_AMLDAPUSERPASSWD_KEY} &>/dev/null
+    if [ ! $? -eq 0 ]; then
+         credstash -p ${AWS_PROFILE} put -a ${OPENAM_AMLDAPUSERPASSWD_KEY} ${OPENAM_AMLDAPUSERPASSWD}
+    fi
+    credstash -p ${AWS_PROFILE} get ${OPENAM_DS_DIRMGRPASSWD_KEY} &>/dev/null
+    if [ ! $? -eq 0 ]; then
+         credstash -p ${AWS_PROFILE} put -a ${OPENAM_DS_DIRMGRPASSWD_KEY} ${OPENAM_DS_DIRMGRPASSWD}
+    fi
+
 fi

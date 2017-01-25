@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+   <changeSet author="hong (generated)" id="1485225822117-1">
+      <addColumn tableName="sitelog_mutlipathsource">
+         <column name="delete_reason"
+                 remarks="a short statement why the record is deleted"
+                 type="text"/>
+      </addColumn>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1485225822117-2">
+      <addColumn tableName="sitelog_signalobstraction">
+         <column name="delete_reason"
+                 remarks="a short statement why the record is deleted"
+                 type="text"/>
+      </addColumn>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1485225822117-3">
+      <addColumn tableName="sitelog_radiointerference">
+         <column name="delete_reason"
+                 remarks="a short statement why the record is deleted"
+                 type="text"/>
+      </addColumn>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1485225822117-4">
+      <addColumn tableName="sitelog_mutlipathsource">
+         <column name="delete_time"
+                 remarks="time stamp(UTC) when a sitelog_mutlipathsource record is deleted"
+                 type="timestamp(29, 6)"/>
+      </addColumn>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1485225822117-5">
+      <addColumn tableName="sitelog_signalobstraction">
+         <column name="delete_time"
+                 remarks="time stamp(UTC) when a sitelog_signalobstraction record is deleted"
+                 type="timestamp(29, 6)"/>
+      </addColumn>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1485225822117-6">
+      <addColumn tableName="sitelog_radiointerference">
+         <column name="delete_time"
+                 remarks="time stamp(UTC) when a sitelog_radiointerference record is deleted"
+                 type="timestamp(29, 6)"/>
+      </addColumn>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1485225822117-7">
+      <addColumn tableName="sitelog_localepisodicevent">
+         <column name="delete_reason"
+                 remarks="a short statement why the record is deleted"
+                 type="text"/>
+      </addColumn>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1485225822117-8">
+      <addColumn tableName="sitelog_otherinstrumentation">
+         <column name="delete_reason"
+                 remarks="a short statement why the record is deleted"
+                 type="text"/>
+      </addColumn>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1485225822117-9">
+      <addColumn tableName="sitelog_localepisodicevent">
+         <column name="delete_time"
+                 remarks="time stamp(UTC) when a sitelog_localepisodicevent record is deleted"
+                 type="timestamp(29, 6)"/>
+      </addColumn>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1485225822117-10">
+      <addColumn tableName="sitelog_otherinstrumentation">
+         <column name="delete_time"
+                 remarks="time stamp(UTC) when a sitelog_otherinstrumentation record is deleted"
+                 type="timestamp(29, 6)"/>
+      </addColumn>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1485225822117-11">
+      <addColumn tableName="sitelog_collocationinformation">
+         <column name="delete_reason"
+                 remarks="a short statement why the record is deleted"
+                 type="text"/>
+      </addColumn>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1485225822117-12">
+      <addColumn tableName="sitelog_frequencystandard">
+         <column name="delete_reason"
+                 remarks="a short statement why the record is deleted"
+                 type="text"/>
+      </addColumn>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1485225822117-13">
+      <addColumn tableName="sitelog_collocationinformation">
+         <column name="delete_time"
+                 remarks="time stamp(UTC) when a sitelog_collocationinformation record is deleted"
+                 type="timestamp(29, 6)"/>
+      </addColumn>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1485225822117-14">
+      <addColumn tableName="sitelog_frequencystandard">
+         <column name="delete_time"
+                 remarks="time stamp(UTC) when a sitelog_frequencystandard record is deleted"
+                 type="timestamp(29, 6)"/>
+      </addColumn>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1485225822117-15">
+      <addColumn tableName="sitelog_gnssreceiver">
+         <column name="delete_reason"
+                 remarks="a short statement why the record is deleted"
+                 type="text"/>
+      </addColumn>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1485225822117-16">
+      <addColumn tableName="sitelog_watervaporsensor">
+         <column name="delete_reason"
+                 remarks="a short statement why the record is deleted"
+                 type="text"/>
+      </addColumn>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1485225822117-17">
+      <addColumn tableName="sitelog_pressuresensor">
+         <column name="delete_reason"
+                 remarks="a short statement why the record is deleted"
+                 type="text"/>
+      </addColumn>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1485225822117-18">
+      <addColumn tableName="sitelog_gnssreceiver">
+         <column name="delete_time"
+                 remarks="time stamp(UTC) when a sitelog_gnssreceiver record is deleted"
+                 type="timestamp(29, 6)"/>
+      </addColumn>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1485225822117-19">
+      <addColumn tableName="sitelog_watervaporsensor">
+         <column name="delete_time"
+                 remarks="time stamp(UTC) when a sitelog_watervaporsensor record is deleted"
+                 type="timestamp(29, 6)"/>
+      </addColumn>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1485225822117-20">
+      <addColumn tableName="sitelog_humiditysensor">
+         <column name="delete_reason"
+                 remarks="a short statement why the record is deleted"
+                 type="text"/>
+      </addColumn>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1485225822117-21">
+      <addColumn tableName="sitelog_surveyedlocaltie">
+         <column name="delete_reason"
+                 remarks="a short statement why the record is deleted"
+                 type="text"/>
+      </addColumn>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1485225822117-22">
+      <addColumn tableName="sitelog_temperaturesensor">
+         <column name="delete_reason"
+                 remarks="a short statement why the record is deleted"
+                 type="text"/>
+      </addColumn>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1485225822117-23">
+      <addColumn tableName="sitelog_pressuresensor">
+         <column name="delete_time"
+                 remarks="time stamp(UTC) when a sitelog_pressuresensor record is deleted"
+                 type="timestamp(29, 6)"/>
+      </addColumn>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1485225822117-24">
+      <addColumn tableName="sitelog_humiditysensor">
+         <column name="delete_time"
+                 remarks="time stamp(UTC) when a sitelog_humiditysensor record is deleted"
+                 type="timestamp(29, 6)"/>
+      </addColumn>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1485225822117-25">
+      <addColumn tableName="sitelog_surveyedlocaltie">
+         <column name="delete_time"
+                 remarks="time stamp(UTC) when a sitelog_surveyedlocaltie record is deleted"
+                 type="timestamp(29, 6)"/>
+      </addColumn>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1485225822117-26">
+      <addColumn tableName="sitelog_temperaturesensor">
+         <column name="delete_time"
+                 remarks="time stamp(UTC) when a sitelog_temperaturesensor record is deleted"
+                 type="timestamp(29, 6)"/>
+      </addColumn>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1485225822117-27">
+      <addColumn tableName="sitelog_gnssantenna">
+         <column name="delete_reason"
+                 remarks="a short statement why the record is deleted"
+                 type="text"/>
+      </addColumn>
+   </changeSet>
+   <changeSet author="hong (generated)" id="1485225822117-28">
+      <addColumn tableName="sitelog_gnssantenna">
+         <column name="delete_time"
+                 remarks="time stamp(UTC) when a sitelog_gnssantenna record is deleted"
+                 type="timestamp(29, 6)"/>
+      </addColumn>
+   </changeSet>
+</databaseChangeLog>

@@ -36,7 +36,6 @@ public class TemperatureSensorMapper implements Iso<TemperatureSensorType, Tempe
         ConverterFactory converters = mapperFactory.getConverterFactory();
         converters.registerConverter("typeConverter", new StringToCodeTypeConverter("eGeodesy/type") {});
         converters.registerConverter(new InstantToTimePositionConverter());
-        converters.registerConverter(new BigDecimalToStringConverter());
         converters.registerConverter("jaxbElementConverter", new JAXBElementConverter<TimePeriodType, EffectiveDates>() {});
         mapper = mapperFactory.getMapperFacade();
     }

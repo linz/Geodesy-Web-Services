@@ -4,7 +4,7 @@
 set -e
 
 # A local installation of maven prefers to run the global installation, if available.
-sudo rm /etc/mavenrc
+sudo rm -f /etc/mavenrc
 
 if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then
     mvn --settings ./travis/maven-settings.xml deploy -pl '!gws-system-test'

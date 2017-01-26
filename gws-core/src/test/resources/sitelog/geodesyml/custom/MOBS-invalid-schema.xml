@@ -176,7 +176,6 @@
             </geo:Document>
         </geo:associatedDocument>
         <geo:FourCharID>MOBS</geo:FourCharID>
-        <geo:Location>The station is located at the old Melbourne Observatory in the Royal Melbourne Botanical Gardens.</geo:Location>
         <geo:MarkDescription>Antenna is attached on top of a stainless steel pillar which has been secured intot the top of a bluestone pillar set in bedrock.</geo:MarkDescription>
         <geo:GNSSReceiver xlink:href="#GNSS_REC_3"/>
         <geo:GNSSAntenna xlink:href="#GNSS_ANT_1"/>
@@ -585,7 +584,7 @@
                 </gmd:role>
             </gmd:CI_ResponsibleParty>
         </geo:siteMetadataCustodian>
-        <geo:siteDataCenters gml:id="SDC_1">
+        <geo:siteDataCenter gml:id="SDC_1">
             <gmd:CI_ResponsibleParty>
                 <gmd:individualName>
                     <gco:CharacterString>Ryan Ruddick</gco:CharacterString>
@@ -633,8 +632,8 @@
                     <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="pointOfContact"/>
                 </gmd:role>
             </gmd:CI_ResponsibleParty>
-        </geo:siteDataCenters>
-        <geo:siteDataCenters gml:id="SDC_2">
+        </geo:siteDataCenter>
+        <geo:siteDataCenter gml:id="SDC_2">
             <gmd:CI_ResponsibleParty>
                 <gmd:individualName>
                     <gco:CharacterString>Bob Twilley</gco:CharacterString>
@@ -685,7 +684,7 @@
                     <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="pointOfContact"/>
                 </gmd:role>
             </gmd:CI_ResponsibleParty>
-        </geo:siteDataCenters>
+        </geo:siteDataCenter>
         <geo:siteDataSource gml:id="SDS_1">
             <gmd:CI_ResponsibleParty>
                 <gmd:individualName>
@@ -891,72 +890,4 @@
                 <geo:statusCode codeSpace="">Authoritative</geo:statusCode>
             </geo:currentStatus>
         </geo:Status>
-        <geo:history>
-            <geo:PositionTimeSlice gml:id="ID_7">
-                <geo:coordinates uomLabels="m" axisLabels="X Y Z">-.413063656951996E+07
-                    0.289495312583357E+07 -.389053047150543E+07</geo:coordinates>
-                <gml:validTime xlink:href="#PS_1_ET"/>
-                <geo:hasVelocity>
-                    <geo:velocity uomLabels="mPyr" axisLabels="dX dY dZ">0.0 0.0 0.0</geo:velocity>
-                    <geo:VCV3D codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v20_velocity-uncertainty"
-                        uomLabels="m">0.01 0 0 0.01 0 0.01</geo:VCV3D>
-                </geo:hasVelocity>
-                <geo:VCV3D codeSpace="urn:ga-gov-au:egeodesy:vcv3d" uomLabels="m"
-                    axisLabels="sXX sXY sXZ sYY sYZ sZZ" confidence="1 sigma">2.04E-07 0 0 1.34E-07
-                    0 1.77E-07</geo:VCV3D>
-                <geo:NumericSingleQuality
-                    codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v20_positional-uncertainty"
-                    uomLabels="m">0.002154006</geo:NumericSingleQuality>
-                <geo:source xlink:href="#ID_PS_1"/>
-            </geo:PositionTimeSlice>
-            <geo:PositionTimeSlice gml:id="ID_8">
-                <geo:coordinates uomLabels="m" axisLabels="X Y Z">-.413063657063766E+07
-                    0.289495312799760E+07 -.389053047181324E+07</geo:coordinates>
-                <gml:validTime xlink:href="#PS_2_ET"/>
-                <geo:hasVelocity>
-                    <geo:velocity uomLabels="mPyr" axisLabels="dX dY dZ">0.0 0.0 0.0</geo:velocity>
-                    <geo:VCV3D codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v20_velocity-uncertainty"
-                        uomLabels="m">0.01 0 0 0.01 0 0.01</geo:VCV3D>
-                </geo:hasVelocity>
-                <geo:VCV3D codeSpace="urn:ga-gov-au:egeodesy:vcv3d" uomLabels="m"
-                    axisLabels="sXX sXY sXZ sYY sYZ sZZ" confidence="1 sigma">4.87E-08 0 0 3.81E-08
-                    0 4.44E-08</geo:VCV3D>
-                <geo:NumericSingleQuality
-                    codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v20_positional-uncertainty"
-                    uomLabels="m">0.00108692</geo:NumericSingleQuality>
-            </geo:PositionTimeSlice>
-            <geo:PositionTimeSlice gml:id="ID_9">
-                <geo:coordinates uomLabels="m" axisLabels="X Y Z">-.413063656959656E+07
-                    0.289495312557582E+07 -.389053046799322E+07</geo:coordinates>
-                <gml:validTime xlink:href="#PS_3_ET"/>
-                <geo:hasVelocity>
-                    <geo:velocity uomLabels="mPyr" axisLabels="dX dY dZ">0.0 0.0 0.0</geo:velocity>
-                    <geo:VCV3D codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v20_velocity-uncertainty"
-                        uomLabels="m">0.01 0 0 0.01 0 0.01</geo:VCV3D>
-                </geo:hasVelocity>
-                <geo:VCV3D codeSpace="urn:ga-gov-au:egeodesy:vcv3d" uomLabels="m"
-                    axisLabels="sXX sXY sXZ sYY sYZ sZZ" confidence="1 sigma">2.20E-07 0 0 1.44E-07
-                    0 1.84E-07</geo:VCV3D>
-                <geo:NumericSingleQuality
-                    codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v20_positional-uncertainty"
-                    uomLabels="m">2.2E-03</geo:NumericSingleQuality>
-            </geo:PositionTimeSlice>
-            <geo:PositionTimeSlice gml:id="ID_10">
-                <geo:coordinates uomLabels="m" axisLabels="X Y Z">-.413063657442620E+07
-                    0.289495312786955E+07 -.389053047117374E+07</geo:coordinates>
-                <gml:validTime xlink:href="#PS_4_ET"/>
-                <geo:hasVelocity>
-                    <geo:velocity uomLabels="mPyr" axisLabels="dX dY dZ">0.0 0.0 0.0</geo:velocity>
-                    <geo:VCV3D codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v20_velocity-uncertainty"
-                        uomLabels="m">0.01 0 0 0.01 0 0.01</geo:VCV3D>
-                </geo:hasVelocity>
-                <geo:VCV3D codeSpace="urn:ga-gov-au:egeodesy:vcv3d" uomLabels="m"
-                    axisLabels="sXX sXY sXZ sYY sYZ sZZ" confidence="1 sigma">2.99E-07 0 0 1.95E-07
-                    0 2.62E-07</geo:VCV3D>
-                <geo:NumericSingleQuality
-                    codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v20_positional-uncertainty"
-                    uomLabels="m">0.00260872</geo:NumericSingleQuality>
-            </geo:PositionTimeSlice>
-        </geo:history>
-    </geo:PositionTimeSeries>
 </geo:GeodesyML>

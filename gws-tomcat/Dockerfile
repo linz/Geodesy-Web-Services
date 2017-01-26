@@ -7,7 +7,8 @@ RUN nix-env -iA \
   nixpkgs.busybox \
   nixpkgs.jre8 \
   nixpkgs.rsync \
-  nixpkgs.tomcat8
+  nixpkgs.curl \
+  nixpkgs.tomcat8 
 
 ADD env.sh /
 ADD entrypoint.sh /

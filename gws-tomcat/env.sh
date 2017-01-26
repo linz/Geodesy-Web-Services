@@ -14,3 +14,10 @@ tomcat_bin=$(dirname "${catalina}")
 TOMCAT_HOME=$(dirname "${tomcat_bin}")
 export TOMCAT_HOME
 
+# Wait until Tomcat startup has finished
+function wait_for_tomcat {
+    until [ "`curl --silent --connect-timeout 1 -I http://localhost:8080 | grep 'Coyote'`" != "" ];
+    do
+        sleep 10
+    done
+}

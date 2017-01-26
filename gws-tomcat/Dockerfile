@@ -9,6 +9,7 @@ RUN nix-env -iA \
   nixpkgs.rsync \
   nixpkgs.tomcat8
 
+ADD env.sh /
 ADD entrypoint.sh /
 
 ENTRYPOINT ["/entrypoint.sh"]

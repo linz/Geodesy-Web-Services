@@ -32,6 +32,7 @@ services:
                 - https_proxy
         image: gws/geoserver
         depends_on:
+            - web
             - db
             - tomcat
         ports:

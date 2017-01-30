@@ -2,9 +2,9 @@ package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 
 import au.gov.ga.geodesy.domain.model.sitelog.GnssAntennaLogItem;
 import au.gov.ga.geodesy.support.java.util.Iso;
-import au.gov.xml.icsm.geodesyml.v_0_3.GnssAntennaType;
-import au.gov.xml.icsm.geodesyml.v_0_3.IgsAntennaModelCodeType;
-import au.gov.xml.icsm.geodesyml.v_0_3.IgsRadomeModelCodeType;
+import au.gov.xml.icsm.geodesyml.v_0_4.GnssAntennaType;
+import au.gov.xml.icsm.geodesyml.v_0_4.IgsAntennaModelCodeType;
+import au.gov.xml.icsm.geodesyml.v_0_4.IgsRadomeModelCodeType;
 import ma.glasnost.orika.MapperFacade;
 import ma.glasnost.orika.MapperFactory;
 import ma.glasnost.orika.converter.ConverterFactory;

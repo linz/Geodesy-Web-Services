@@ -1,9 +1,9 @@
 package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 
 import au.gov.ga.geodesy.domain.model.sitelog.GnssAntennaLogItem;
-import au.gov.xml.icsm.geodesyml.v_0_3.GnssAntennaType;
-import au.gov.xml.icsm.geodesyml.v_0_3.IgsAntennaModelCodeType;
-import au.gov.xml.icsm.geodesyml.v_0_3.IgsRadomeModelCodeType;
+import au.gov.xml.icsm.geodesyml.v_0_4.GnssAntennaType;
+import au.gov.xml.icsm.geodesyml.v_0_4.IgsAntennaModelCodeType;
+import au.gov.xml.icsm.geodesyml.v_0_4.IgsRadomeModelCodeType;
 import net.opengis.gml.v_3_2_1.CodeType;
 import net.opengis.gml.v_3_2_1.TimePositionType;
 import org.testng.annotations.Test;

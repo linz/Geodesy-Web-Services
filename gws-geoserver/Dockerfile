@@ -20,4 +20,6 @@ RUN sed -i 's/${geodesy-db-password}/geodesypw/' /tmp/ROOT/META-INF/context.xml
 
 RUN mkdir /webapps && mv /tmp/ROOT /webapps/ROOT
 
-CMD ["catalina.sh", "run"]
+ADD ./run.sh /
+
+CMD ["/run.sh"]

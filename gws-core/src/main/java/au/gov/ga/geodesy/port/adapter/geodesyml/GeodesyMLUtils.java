@@ -15,7 +15,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import au.gov.ga.geodesy.exception.GeodesyRuntimeException;
-import au.gov.xml.icsm.geodesyml.v_0_3.ObjectFactory;
+import au.gov.xml.icsm.geodesyml.v_0_4.ObjectFactory;
 
 public class GeodesyMLUtils {
     private static Logger logger = LoggerFactory.getLogger(GeodesyMLUtils.class);

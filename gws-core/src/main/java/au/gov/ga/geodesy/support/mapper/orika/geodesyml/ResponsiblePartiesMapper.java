@@ -9,8 +9,8 @@ import au.gov.ga.geodesy.domain.model.ContactTypeRepository;
 import au.gov.ga.geodesy.domain.model.SiteResponsibleParty;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLog;
 import au.gov.ga.geodesy.support.mapper.orika.ResponsiblePartyOrikaMapper;
-import au.gov.xml.icsm.geodesyml.v_0_3.AgencyPropertyType;
-import au.gov.xml.icsm.geodesyml.v_0_3.SiteLogType;
+import au.gov.xml.icsm.geodesyml.v_0_4.AgencyPropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_4.SiteLogType;
 
 import ma.glasnost.orika.CustomMapper;
 import ma.glasnost.orika.MappingContext;

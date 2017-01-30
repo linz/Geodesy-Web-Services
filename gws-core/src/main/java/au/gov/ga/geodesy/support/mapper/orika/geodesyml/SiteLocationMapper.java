@@ -3,7 +3,7 @@ package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 import au.gov.ga.geodesy.domain.model.sitelog.ApproximatePosition;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLocation;
 import au.gov.ga.geodesy.support.java.util.Iso;
-import au.gov.xml.icsm.geodesyml.v_0_3.SiteLocationType;
+import au.gov.xml.icsm.geodesyml.v_0_4.SiteLocationType;
 
 import ma.glasnost.orika.MapperFacade;
 import ma.glasnost.orika.MapperFactory;
@@ -22,7 +22,7 @@ public class SiteLocationMapper implements Iso<SiteLocationType, SiteLocation> {
 
     public SiteLocationMapper() {
         mapperFactory.classMap(SiteLocationType.class, SiteLocation.class)
-            .fieldMap("countryCodeISO", "country").add()
+            .fieldMap("countryCodeISO", "country").converter("country").add()
             .fieldMap("tectonicPlate", "tectonicPlate").converter("tectonicPlate").add()
             .fieldMap("approximatePositionITRF", "approximatePosition").add()
             .byDefault()
@@ -38,6 +38,7 @@ public class SiteLocationMapper implements Iso<SiteLocationType, SiteLocation> {
 
         ConverterFactory converters = mapperFactory.getConverterFactory();
         converters.registerConverter("tectonicPlate", new StringToCodeTypeConverter("eGeodesy/tectonicPlate"));
+        converters.registerConverter("country", new StringToCountryCodeTypeConverter("country"));
         mapper = mapperFactory.getMapperFacade();
     }
 

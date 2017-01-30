@@ -4,9 +4,9 @@ import au.gov.ga.geodesy.domain.model.sitelog.HumiditySensorLogItem;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLUtils;
 import au.gov.ga.geodesy.support.TestResources;
 import au.gov.ga.geodesy.support.utils.MappingDirection;
-import au.gov.xml.icsm.geodesyml.v_0_3.GeodesyMLType;
-import au.gov.xml.icsm.geodesyml.v_0_3.SiteLogType;
-import au.gov.xml.icsm.geodesyml.v_0_3.HumiditySensorType;
+import au.gov.xml.icsm.geodesyml.v_0_4.GeodesyMLType;
+import au.gov.xml.icsm.geodesyml.v_0_4.SiteLogType;
+import au.gov.xml.icsm.geodesyml.v_0_4.HumiditySensorType;
 import org.testng.annotations.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;

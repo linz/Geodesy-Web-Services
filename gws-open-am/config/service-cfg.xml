@@ -8141,6 +8141,9 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
                 </SubSchema>
             </Global>
         </Schema><Configuration><GlobalConfiguration group="default"><SubConfiguration name="com-sun-identity-sites" id="com-sun-identity-sites"></SubConfiguration><SubConfiguration name="com-sun-identity-servers" id="com-sun-identity-servers"><SubConfiguration name="server-default" id="server"><AttributeValuePair>
+    <Attribute name="serverconfigxml"/>
+</AttributeValuePair>
+<AttributeValuePair>
     <Attribute name="serverid"/>
     <Value>00</Value>
 </AttributeValuePair>
@@ -8235,6 +8238,7 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
     <Value>com.iplanet.am.sdk.cache.maxSize=10000</Value>
     <Value>org.forgerock.services.umaaudit.store.password=</Value>
     <Value>org.forgerock.services.cts.store.ssl.enabled=</Value>
+    <Value>com.iplanet.am.sdk.caching.enabled=false</Value>
     <Value>org.forgerock.services.uma.labels.store.root.suffix=</Value>
     <Value>org.forgerock.services.uma.pendingrequests.store.max.connections=10</Value>
     <Value>com.sun.am.session.enableHostLookUp=false</Value>
@@ -8346,7 +8350,7 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
     <Value>openam.retained.http.headers=X-DSAMEVersion</Value>
 </AttributeValuePair>
 <AttributeValuePair>
-    <Attribute name="serverconfigxml"/>
+    <Attribute name="parentsiteid"/>
 </AttributeValuePair>
 </SubConfiguration><SubConfiguration name="http:&#47;&#47;localhost:8080&#47;openam" id="server"><AttributeValuePair>
     <Attribute name="serverconfigxml"/>

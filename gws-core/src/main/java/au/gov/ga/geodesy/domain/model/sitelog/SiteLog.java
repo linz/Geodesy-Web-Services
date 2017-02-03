@@ -133,8 +133,8 @@ public class SiteLog {
 
     @Valid
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID", foreignKey = @ForeignKey(name="FK_SITELOG_SITE_SITELOG_LOCALEPISODICEVENT"))
-    protected Set<LocalEpisodicEventLogItem> localEpisodicEventLogItems = new HashSet<>();
+    @JoinColumn(name = "SITE_ID", referencedColumnName = "ID", foreignKey = @ForeignKey(name="FK_SITELOG_SITE_SITELOG_LOCALEPISODICEFFECT"))
+    protected Set<LocalEpisodicEffectLogItem> localEpisodicEffectLogItems = new HashSet<>();
 
     @Valid
     @Embedded
@@ -403,15 +403,15 @@ public class SiteLog {
     /**
      * Return local episodic events.
      */
-    public Set<LocalEpisodicEventLogItem> getLocalEpisodicEventLogItems() {
-        return this.localEpisodicEventLogItems;
+    public Set<LocalEpisodicEffectLogItem> getLocalEpisodicEffectLogItems() {
+        return this.localEpisodicEffectLogItems;
     }
 
     /**
      * Set local episodic events.
      */
-    public void setLocalEpisodicEventLogItems(Set<LocalEpisodicEventLogItem> es) {
-        localEpisodicEventLogItems = es;
+    public void setLocalEpisodicEffectLogItems(Set<LocalEpisodicEffectLogItem> es) {
+    	localEpisodicEffectLogItems = es;
     }
 
     /**

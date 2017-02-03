@@ -25,7 +25,7 @@ import au.gov.ga.geodesy.domain.model.sitelog.FrequencyStandardLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.GnssAntennaLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.GnssReceiverLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.HumiditySensorLogItem;
-import au.gov.ga.geodesy.domain.model.sitelog.LocalEpisodicEventLogItem;
+import au.gov.ga.geodesy.domain.model.sitelog.LocalEpisodicEffectLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.LogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.MultipathSourceLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.OtherInstrumentationLogItem;
@@ -306,7 +306,7 @@ public class SiteLogMapperITest extends IntegrationTest {
 
         {
             int i = 0;
-            for (LocalEpisodicEventLogItem logItem : sortLogItems(siteLog.getLocalEpisodicEventLogItems())) {
+            for (LocalEpisodicEffectLogItem logItem : sortLogItems(siteLog.getLocalEpisodicEffectLogItems())) {
                 LocalEpisodicEffectType xmlType = localEpisodicEffectPropertyTypes.get(i++).getLocalEpisodicEffect();
                 assertThat(logItem.getEvent(), equalTo(xmlType.getEvent()));
             }

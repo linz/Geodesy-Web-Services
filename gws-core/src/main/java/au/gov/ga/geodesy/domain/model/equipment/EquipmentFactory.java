@@ -16,7 +16,7 @@ import au.gov.ga.geodesy.domain.model.sitelog.FrequencyStandardLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.GnssAntennaLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.GnssReceiverLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.HumiditySensorLogItem;
-import au.gov.ga.geodesy.domain.model.sitelog.LocalEpisodicEventLogItem;
+import au.gov.ga.geodesy.domain.model.sitelog.LocalEpisodicEffectLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.LogItemVisitor;
 import au.gov.ga.geodesy.domain.model.sitelog.OtherInstrumentationLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.PossibleProblemSourceLogItem;
@@ -129,7 +129,7 @@ public class EquipmentFactory {
         }
 
         @Override
-        public Pair<Equipment, EquipmentConfiguration> visit(LocalEpisodicEventLogItem logItem) {
+        public Pair<Equipment, EquipmentConfiguration> visit(LocalEpisodicEffectLogItem logItem) {
             throw new UnsupportedOperationException();
         }
 

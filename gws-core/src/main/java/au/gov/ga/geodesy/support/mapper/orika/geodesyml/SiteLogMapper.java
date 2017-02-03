@@ -12,7 +12,7 @@ import au.gov.ga.geodesy.domain.model.sitelog.FrequencyStandardLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.GnssAntennaLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.GnssReceiverLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.HumiditySensorLogItem;
-import au.gov.ga.geodesy.domain.model.sitelog.LocalEpisodicEventLogItem;
+import au.gov.ga.geodesy.domain.model.sitelog.LocalEpisodicEffectLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.LogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.MoreInformation;
 import au.gov.ga.geodesy.domain.model.sitelog.MultipathSourceLogItem;
@@ -72,7 +72,7 @@ public class SiteLogMapper implements Iso<SiteLogType, SiteLog> {
             .fieldMap("otherInstrumentations", "otherInstrumentationLogItem").converter("otherInstrumentations").add()
             .fieldMap("signalObstructionsSet", "signalObstructionLogItems").converter("signalObstructionsSet").add()
             .fieldMap("multipathSourcesSet", "multipathSourceLogItems").converter("multipathSourcesSet").add()
-            .fieldMap("localEpisodicEffects", "localEpisodicEventLogItems").converter("localEpisodicEffects").add()
+            .fieldMap("localEpisodicEffects", "localEpisodicEffectLogItems").converter("localEpisodicEffects").add()
             .fieldMap("radioInterferencesSet", "radioInterferences").converter("radioInterferencesSet").add()
             .fieldMap("moreInformation", "moreInformation").converter("moreInformation").add()
             .fieldMap("formInformation", "formInformation").converter("formInformation").add()
@@ -145,7 +145,7 @@ public class SiteLogMapper implements Iso<SiteLogType, SiteLog> {
 
 
         converters.registerConverter("localEpisodicEffects",
-                new BidirectionalConverterWrapper<List<LocalEpisodicEffectPropertyType>, Set<LocalEpisodicEventLogItem>>(
+                new BidirectionalConverterWrapper<List<LocalEpisodicEffectPropertyType>, Set<LocalEpisodicEffectLogItem>>(
                         logItemsConverter(new LocalEpisodicEffectMapper())
                 ) {}
         );

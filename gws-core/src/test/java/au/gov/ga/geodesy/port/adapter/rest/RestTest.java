@@ -23,6 +23,8 @@ import au.gov.ga.geodesy.support.spring.GeodesyRepositoryRestMvcConfig;
 import au.gov.ga.geodesy.support.spring.GeodesyRestMvcConfig;
 import au.gov.ga.geodesy.support.spring.IntegrationTest;
 
+import static org.springframework.security.test.web.servlet.setup.SecurityMockMvcConfigurers.*;
+
 @ContextConfiguration(
         classes = {GeodesyRepositoryRestMvcConfig.class, GeodesyRestMvcConfig.class},
         loader = AnnotationConfigWebContextLoader.class)
@@ -38,7 +40,10 @@ public class RestTest extends IntegrationTest {
 
     @BeforeClass
     public void setUp() throws Exception {
-        mvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
+        mvc = MockMvcBuilders
+            .webAppContextSetup(webApplicationContext)
+            .apply(springSecurity())
+            .build();
     }
 
     protected String weeklyFinalSolutionsDir() {

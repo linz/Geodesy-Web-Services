@@ -2,9 +2,8 @@ package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 
 import au.gov.ga.geodesy.domain.model.sitelog.EffectiveDates;
 import au.gov.ga.geodesy.domain.model.sitelog.LocalEpisodicEventLogItem;
-
 import au.gov.ga.geodesy.support.java.util.Iso;
-import au.gov.xml.icsm.geodesyml.v_0_4.LocalEpisodicEventsType;
+import au.gov.xml.icsm.geodesyml.v_0_4.LocalEpisodicEffectType;
 import ma.glasnost.orika.MapperFacade;
 import ma.glasnost.orika.MapperFactory;
 import ma.glasnost.orika.converter.ConverterFactory;
@@ -13,16 +12,16 @@ import net.opengis.gml.v_3_2_1.TimeInstantType;
 import net.opengis.gml.v_3_2_1.TimePeriodType;
 
 /**
- * Reversible mapping between GeodesyML LocalEpisodicEventsType DTO and
+ * Reversible mapping between GeodesyML LocalEpisodicEffectType DTO and
  * LocalEpisodicEventLogItem entity.
  */
-public class LocalEpisodicEventMapper implements Iso<LocalEpisodicEventsType, LocalEpisodicEventLogItem> {
+public class LocalEpisodicEffectMapper implements Iso<LocalEpisodicEffectType, LocalEpisodicEventLogItem> {
 
     private MapperFactory mapperFactory = new DefaultMapperFactory.Builder().build();
     private MapperFacade mapper;
 
-    public LocalEpisodicEventMapper() {
-        mapperFactory.classMap(LocalEpisodicEventsType.class, LocalEpisodicEventLogItem.class)
+    public LocalEpisodicEffectMapper() {
+        mapperFactory.classMap(LocalEpisodicEffectType.class, LocalEpisodicEventLogItem.class)
                 .fieldMap("validTime.abstractTimePrimitive", "effectiveDates").converter("effectiveDatesConverter").add()
                 .byDefault()
                 .register();
@@ -41,14 +40,14 @@ public class LocalEpisodicEventMapper implements Iso<LocalEpisodicEventsType, Lo
     /**
      * {@inheritDoc}
      */
-    public LocalEpisodicEventLogItem to(LocalEpisodicEventsType localEpisodicEventsType) {
-        return mapper.map(localEpisodicEventsType, LocalEpisodicEventLogItem.class);
+    public LocalEpisodicEventLogItem to(LocalEpisodicEffectType localEpisodicEffectType) {
+        return mapper.map(localEpisodicEffectType, LocalEpisodicEventLogItem.class);
     }
 
     /**
      * {@inheritDoc}
      */
-    public LocalEpisodicEventsType from(LocalEpisodicEventLogItem localEpisodicEventLogItem) {
-        return mapper.map(localEpisodicEventLogItem, LocalEpisodicEventsType.class);
+    public LocalEpisodicEffectType from(LocalEpisodicEventLogItem localEpisodicEventLogItem) {
+        return mapper.map(localEpisodicEventLogItem, LocalEpisodicEffectType.class);
     }
 }

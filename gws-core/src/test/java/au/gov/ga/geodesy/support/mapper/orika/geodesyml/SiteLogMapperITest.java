@@ -56,8 +56,8 @@ import au.gov.xml.icsm.geodesyml.v_0_4.GnssReceiverPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_4.GnssReceiverType;
 import au.gov.xml.icsm.geodesyml.v_0_4.HumiditySensorPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_4.HumiditySensorType;
-import au.gov.xml.icsm.geodesyml.v_0_4.LocalEpisodicEventsPropertyType;
-import au.gov.xml.icsm.geodesyml.v_0_4.LocalEpisodicEventsType;
+import au.gov.xml.icsm.geodesyml.v_0_4.LocalEpisodicEffectPropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_4.LocalEpisodicEffectType;
 import au.gov.xml.icsm.geodesyml.v_0_4.MultipathSourcesPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_4.OtherInstrumentationPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_4.OtherInstrumentationType;
@@ -288,26 +288,26 @@ public class SiteLogMapperITest extends IntegrationTest {
 
     /**
      * Test mapping from SiteLogType to SiteLog and back
-     * to SiteLogType. Based on the WGTN site log with added local episodic events.
+     * to SiteLogType. Based on the WGTN site log with added local episodic effects.
      **/
     @Test
-    public void testLocalEpisodicEventsMapping() throws Exception {
-        GeodesyMLType mobs = marshaller.unmarshal(TestResources.customGeodesyMLSiteLogReader("WGTN-localEpisodicEvents"), GeodesyMLType.class).getValue();
+    public void testLocalEpisodicEffectsMapping() throws Exception {
+        GeodesyMLType mobs = marshaller.unmarshal(TestResources.customGeodesyMLSiteLogReader("WGTN-localEpisodicEffects"), GeodesyMLType.class).getValue();
 
         SiteLogType siteLogType = GeodesyMLUtils.getElementFromJAXBElements(mobs.getElements(), SiteLogType.class).findFirst().get();
 
         SiteLog siteLog = mapper.to(siteLogType);
 
-        List<LocalEpisodicEventsPropertyType> localEpisodicEventsPropertyTypes = siteLogType.getLocalEpisodicEventsSet();
-        sortGMLPropertyTypes(localEpisodicEventsPropertyTypes);
+        List<LocalEpisodicEffectPropertyType> localEpisodicEffectPropertyTypes = siteLogType.getLocalEpisodicEffects();
+        sortGMLPropertyTypes(localEpisodicEffectPropertyTypes);
 
-        assertThat(siteLogType.getLocalEpisodicEventsSet().size(), equalTo(4));
-        assertThat(localEpisodicEventsPropertyTypes.size(), equalTo(4));
+        assertThat(siteLogType.getLocalEpisodicEffects().size(), equalTo(4));
+        assertThat(localEpisodicEffectPropertyTypes.size(), equalTo(4));
 
         {
             int i = 0;
             for (LocalEpisodicEventLogItem logItem : sortLogItems(siteLog.getLocalEpisodicEventLogItems())) {
-                LocalEpisodicEventsType xmlType = localEpisodicEventsPropertyTypes.get(i++).getLocalEpisodicEvents();
+                LocalEpisodicEffectType xmlType = localEpisodicEffectPropertyTypes.get(i++).getLocalEpisodicEffect();
                 assertThat(logItem.getEvent(), equalTo(xmlType.getEvent()));
             }
         }

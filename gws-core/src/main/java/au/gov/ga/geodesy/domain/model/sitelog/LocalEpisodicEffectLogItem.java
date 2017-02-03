@@ -8,12 +8,12 @@ import javax.validation.constraints.Size;
  * http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2564/localEvents.xsd:localEpisodicEventsType
  */
 @Entity
-@Table(name = "SITELOG_LOCALEPISODICEVENT")
-public class LocalEpisodicEventLogItem implements LogItem {
+@Table(name = "SITELOG_LOCALEPISODICEFFECT")
+public class LocalEpisodicEffectLogItem implements LogItem {
 
     @Id
     @GeneratedValue(generator = "surrogateKeyGenerator")
-    @SequenceGenerator(name = "surrogateKeyGenerator", sequenceName = "SEQ_SITELOGLOCALEPISODICEVENT")
+    @SequenceGenerator(name = "surrogateKeyGenerator", sequenceName = "SEQ_SITELOGLOCALEPISODICEFFECT")
     private Integer id;
 
     @Valid

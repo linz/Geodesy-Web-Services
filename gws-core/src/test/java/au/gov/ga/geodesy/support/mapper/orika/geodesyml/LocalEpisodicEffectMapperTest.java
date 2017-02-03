@@ -1,6 +1,6 @@
 package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 
-import au.gov.ga.geodesy.domain.model.sitelog.LocalEpisodicEventLogItem;
+import au.gov.ga.geodesy.domain.model.sitelog.LocalEpisodicEffectLogItem;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLMarshaller;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLUtils;
 import au.gov.ga.geodesy.support.TestResources;
@@ -17,7 +17,7 @@ import static org.hamcrest.core.IsEqual.equalTo;
 
 /**
  * Tests the mapping of a GeodesyML LocalEpisodicEventsPropertyType element to
- * and from an LocalEpisodicEventLogItem domain object.
+ * and from an LocalEpisodicEffectLogItem domain object.
  */
 public class LocalEpisodicEffectMapperTest {
 
@@ -37,7 +37,7 @@ public class LocalEpisodicEffectMapperTest {
 		LocalEpisodicEffectType localEpisodicEffectTypeA = siteLog.getLocalEpisodicEffects().get(0)
 				.getLocalEpisodicEffect();
 
-		LocalEpisodicEventLogItem logItem = mapper.to(localEpisodicEffectTypeA);
+		LocalEpisodicEffectLogItem logItem = mapper.to(localEpisodicEffectTypeA);
 		assertThat(logItem.getEvent(), equalTo(localEpisodicEffectTypeA.getEvent()));
 		String xmlEffectiveDateFrom = ((TimePeriodType) localEpisodicEffectTypeA.getValidTime()
 				.getAbstractTimePrimitive().getValue()).getBeginPosition().getValue().get(0);

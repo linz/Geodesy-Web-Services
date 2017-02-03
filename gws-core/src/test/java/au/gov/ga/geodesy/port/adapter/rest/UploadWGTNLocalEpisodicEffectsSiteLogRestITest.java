@@ -32,7 +32,7 @@ public class UploadWGTNLocalEpisodicEffectsSiteLogRestITest extends RestTest {
             .statusCode(201);
     }
 
-    // test the GeodesyML response, expecting 4 localEpisodicEvents nodes
+    // test the GeodesyML response, expecting 4 localEpisodicEffects nodes
     @Test(dependsOnMethods = "upload")
     public void checkLocalEpisodicEffectsGeodesyML() throws Exception {
         given()

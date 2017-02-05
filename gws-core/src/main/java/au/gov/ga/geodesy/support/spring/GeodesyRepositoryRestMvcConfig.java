@@ -9,9 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
-import org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration;
+import org.springframework.data.rest.webmvc.config.RepositoryRestConfigurerAdapter;
+import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.core.JsonGenerationException;
@@ -39,8 +39,8 @@ import au.gov.ga.geodesy.domain.model.equipment.EquipmentConfigurationRepository
 import au.gov.ga.geodesy.domain.model.equipment.EquipmentRepository;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLog;
 
-@Configuration
-public class GeodesyRepositoryRestMvcConfig extends RepositoryRestMvcConfiguration {
+@Component
+public class GeodesyRepositoryRestMvcConfig extends RepositoryRestConfigurerAdapter {
 
     @Bean
     public RootResourceProcessor getRootResourceProcessor() {
@@ -48,7 +48,7 @@ public class GeodesyRepositoryRestMvcConfig extends RepositoryRestMvcConfigurati
     }
 
     @Override
-    protected void configureRepositoryRestConfiguration(RepositoryRestConfiguration config) {
+    public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config) {
         config.exposeIdsFor(SiteLog.class, CorsSite.class, Setup.class);
     }
 
@@ -67,7 +67,7 @@ public class GeodesyRepositoryRestMvcConfig extends RepositoryRestMvcConfigurati
 
     @SuppressWarnings("serial")
     @Override
-    protected void configureJacksonObjectMapper(ObjectMapper mapper) {
+    public void configureJacksonObjectMapper(ObjectMapper mapper) {
         SimpleDateFormat format = new SimpleDateFormat("uuuu-MM-dd HH:mm:ss"); // ISO 8601
         format.setTimeZone(TimeZone.getTimeZone("UTC"));
         mapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);

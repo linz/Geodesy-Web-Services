@@ -38,7 +38,7 @@ public class SiteLocationMapperTest {
 
             assertThat(siteLoc.getCity(), equalTo(siteLocTypeA.getCity()));
             assertThat(siteLoc.getState(), equalTo(siteLocTypeA.getState()));
-            assertThat(siteLoc.getCountry(), equalTo(siteLocTypeA.getCountryCodeISO()));
+            assertThat(siteLoc.getCountry(), equalTo(siteLocTypeA.getCountryCodeISO().getValue()));
             assertThat(siteLoc.getTectonicPlate(), equalTo(siteLocTypeA.getTectonicPlate().getValue()));
             assertThat(siteLoc.getApproximatePosition().getItrfX(), closeTo(Double.valueOf(siteLocTypeA.getApproximatePositionITRF()
                 .getXCoordinateInMeters()), 0.1));
@@ -54,7 +54,7 @@ public class SiteLocationMapperTest {
 
             assertThat(siteLocTypeB.getCity(), equalTo(siteLoc.getCity()));
             assertThat(siteLocTypeB.getState(), equalTo(siteLoc.getState()));
-            assertThat(siteLocTypeB.getCountryCodeISO(), equalTo(siteLoc.getCountry()));
+            assertThat(siteLocTypeB.getCountryCodeISO().getValue(), equalTo(siteLoc.getCountry()));
             assertThat(siteLocTypeB.getTectonicPlate().getValue(), equalTo(siteLoc.getTectonicPlate()));
             assertThat(siteLocTypeB.getTectonicPlate().getCodeSpace(), equalTo("eGeodesy/tectonicPlate"));
             assertThat(siteLocTypeB.getApproximatePositionITRF().getXCoordinateInMeters(), equalTo(String.valueOf(siteLoc.getApproximatePosition().getItrfX())));

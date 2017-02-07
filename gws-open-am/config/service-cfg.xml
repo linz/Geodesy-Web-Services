@@ -17891,7 +17891,7 @@ collectGeolocationInfo(function(geolocationInfo) {
 </AttributeValuePair>
 </SubConfiguration><SubConfiguration name="36863ffb-40ec-48b9-94b1-9a99f71cc3b5" id="globalScript"><AttributeValuePair>
     <Attribute name="lastModifiedDate"/>
-    <Value>1485843332252</Value>
+    <Value>1486436178897</Value>
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="createdBy"/>
@@ -17996,7 +17996,7 @@ claimAttributes = [
         &quot;family_name&quot;: attributeRetriever.curry(&quot;sn&quot;),
         &quot;locale&quot;: attributeRetriever.curry(&quot;preferredlocale&quot;),
         &quot;name&quot;: attributeRetriever.curry(&quot;cn&quot;),
-        &quot;groups&quot;: attributeRetriever.curry(&quot;isMemberOf&quot;)
+        &quot;authorities&quot;: attributeRetriever.curry(&quot;isMemberOf&quot;)
 ]
 
 &#47;&#47; {scope}: [ {claim}, ... ]
@@ -18004,7 +18004,7 @@ scopeClaimsMap = [
         &quot;email&quot;: [ &quot;email&quot; ],
         &quot;address&quot;: [ &quot;address&quot; ],
         &quot;phone&quot;: [ &quot;phone_number&quot; ],
-        &quot;profile&quot;: [ &quot;given_name&quot;, &quot;zoneinfo&quot;, &quot;family_name&quot;, &quot;locale&quot;, &quot;name&quot;, &quot;groups&quot; ]
+        &quot;profile&quot;: [ &quot;given_name&quot;, &quot;zoneinfo&quot;, &quot;family_name&quot;, &quot;locale&quot;, &quot;name&quot;, &quot;authorities&quot; ]
 ]
 
 if (logger.messageEnabled()) {

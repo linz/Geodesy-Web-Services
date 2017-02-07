@@ -34,7 +34,7 @@ public class SystemTestResources {
     }
 
     /**
-     * Return all site log GeodesyML documents whose file name matches the given pattern, excluding the ".xml" extenstion.
+     * Return all site log GeodesyML documents whose file name matches the given pattern, excluding the ".xml" extension.
      */
     public static List<File> siteLogs(String fileNamePattern) throws IOException {
         Resource[] resources = resourceResolver.getResources("classpath:" + siteLogsDirectory + fileNamePattern + ".xml");
@@ -43,5 +43,17 @@ public class SystemTestResources {
             files.add(r.getFile());
         }
         return files;
+    }
+
+    /**
+     * Return a single site log GeodesyML document whost file name matches the given pattern, excluding the ".xml" extension.
+     */
+    public static File siteLog(String fileNamePattern) throws IOException {
+        List<File> siteLogs = siteLogs(fileNamePattern);
+        if (siteLogs.size() != 1) {
+            throw new IllegalArgumentException("Supplied file name pattern matched " + siteLogs.size() +
+                    " files, but a single match was expected.");
+        }
+        return siteLogs.get(0);
     }
 }

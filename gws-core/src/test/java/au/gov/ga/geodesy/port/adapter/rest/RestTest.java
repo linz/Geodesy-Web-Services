@@ -23,7 +23,7 @@ import au.gov.ga.geodesy.support.spring.GeodesyRepositoryRestMvcConfig;
 import au.gov.ga.geodesy.support.spring.GeodesyRestMvcConfig;
 import au.gov.ga.geodesy.support.spring.IntegrationTest;
 
-import static org.springframework.security.test.web.servlet.setup.SecurityMockMvcConfigurers.*;
+import static org.springframework.security.test.web.servlet.setup.SecurityMockMvcConfigurers.springSecurity;
 
 @ContextConfiguration(
         classes = {GeodesyRepositoryRestMvcConfig.class, GeodesyRestMvcConfig.class},

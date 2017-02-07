@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 import org.springframework.hateoas.config.EnableEntityLinks;
 import org.springframework.util.ResourceUtils;
 
@@ -20,6 +21,14 @@ import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLValidator;
 @EnableEntityLinks
 @ComponentScan(basePackages = {
         "au.gov.ga.geodesy.java.util.service",
+})
+@Import({
+    GeodesySupportConfig.class,
+    GeodesyServiceConfig.class,
+    GeodesyRestMvcConfig.class,
+    PersistenceJpaConfig.class,
+    SecurityConfig.class,
+    ResourceServerConfig.class,
 })
 public class WebAppConfig {
 

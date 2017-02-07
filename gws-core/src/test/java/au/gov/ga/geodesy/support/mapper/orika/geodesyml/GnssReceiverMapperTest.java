@@ -22,7 +22,7 @@ public class GnssReceiverMapperTest {
         String dateInstalled = "2012-03-24T02:03:23.000Z";
 
         GnssReceiverType receiver = new GnssReceiverType()
-            .withReceiverType((IgsReceiverModelCodeType) new IgsReceiverModelCodeType()
+            .withIgsModelCode((IgsReceiverModelCodeType) new IgsReceiverModelCodeType()
                 .withCodeSpace("https://igscb.jpl.nasa.gov/igscb/station/general/rcvr_ant.tab")
                 .withCodeList("http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode")
                 .withCodeListValue("LEICA GRX1200GGPRO")
@@ -38,7 +38,7 @@ public class GnssReceiverMapperTest {
             .withDateInstalled(timePosition(dateInstalled));
 
         GnssReceiverLogItem logItem = mapper.to(receiver);
-        assertThat(logItem.getType(), equalTo(receiver.getReceiverType().getCodeListValue()));
+        assertThat(logItem.getType(), equalTo(receiver.getIgsModelCode().getCodeListValue()));
         assertThat(logItem.getFirmwareVersion(), equalTo(receiver.getFirmwareVersion()));
         assertThat(logItem.getSerialNumber(), equalTo(receiver.getManufacturerSerialNumber()));
         assertThat(logItem.getElevationCutoffSetting(), equalTo(String.valueOf(receiver.getElevationCutoffSetting())));
@@ -49,11 +49,11 @@ public class GnssReceiverMapperTest {
             .getValue().get(0))));
 
         GnssReceiverType receiverB = mapper.from(logItem);
-        assertThat(receiverB.getReceiverType().getCodeSpace(), equalTo("https://igscb.jpl.nasa.gov/igscb/station/general/rcvr_ant.tab"));
-        assertThat(receiverB.getReceiverType().getCodeList(), equalTo("http://xml.gov" +
+        assertThat(receiverB.getIgsModelCode().getCodeSpace(), equalTo("https://igscb.jpl.nasa.gov/igscb/station/general/rcvr_ant.tab"));
+        assertThat(receiverB.getIgsModelCode().getCodeList(), equalTo("http://xml.gov" +
             ".au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode"));
-        assertThat(receiverB.getReceiverType().getCodeListValue(), equalTo("LEICA GRX1200GGPRO"));
-        assertThat(receiverB.getReceiverType().getValue(), equalTo("LEICA GRX1200GGPRO"));
+        assertThat(receiverB.getIgsModelCode().getCodeListValue(), equalTo("LEICA GRX1200GGPRO"));
+        assertThat(receiverB.getIgsModelCode().getValue(), equalTo("LEICA GRX1200GGPRO"));
         assertThat(receiverB.getFirmwareVersion(), equalTo(logItem.getFirmwareVersion()));
         assertThat(receiverB.getManufacturerSerialNumber(), equalTo(logItem.getSerialNumber()));
         assertThat(receiverB.getElevationCutoffSetting(), equalTo(Double.parseDouble(logItem.getElevationCutoffSetting())));

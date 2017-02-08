@@ -24,7 +24,7 @@ public class GnssReceiverMapper implements Iso<GnssReceiverType, GnssReceiverLog
 
     public GnssReceiverMapper() {
         mapperFactory.classMap(GnssReceiverLogItem.class, GnssReceiverType.class)
-            .fieldMap("type", "receiverType").converter("typeConverter").add()
+            .fieldMap("type", "igsModelCode").converter("typeConverter").add()
             .field("serialNumber", "manufacturerSerialNumber")
             .fieldMap("satelliteSystem", "satelliteSystem").converter("satelliteSystemConverter").add()
             .byDefault()

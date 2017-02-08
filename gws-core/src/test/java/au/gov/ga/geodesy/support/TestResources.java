@@ -52,13 +52,6 @@ public class TestResources {
     }
 
     /**
-     * GeodesyML site logs directory relative to classpath root.  Files that have been converted from production Sopac Sitelogs
-     */
-    private static String geodesyMLSopacConvertedSiteLogsDirectory() {
-        return "/sitelogToGeodesyML/";
-    }
-
-    /**
      * Given a site id, return an original SOPAC site log test file.
      */
     public static File originalSopacSiteLog(String siteId) throws IOException {
@@ -84,13 +77,6 @@ public class TestResources {
      */
     public static Reader customGeodesyMLSiteLogReader(String siteId) throws IOException {
         return new FileReader(resourceAsFile(customGeodesyMLSiteLogResourceName(siteId)));
-    }
-
-    /**
-     * Given a site id, return a sopac converted to GeodesyML site log test file reader.  File from resources:/sitelogtoGeodesyML
-     */
-    public static Reader geodesyMLSopacConvertedSiteLogReader(String siteId) throws IOException {
-        return new FileReader(resourceAsFile(geodesyMLSopacConvertedSiteLogResourceName(siteId)));
     }
 
     /**
@@ -128,13 +114,6 @@ public class TestResources {
 
     private static String customSiteLogResourceName(String id) {
         return customSopacSiteLogsDirectory() + id + ".xml";
-    }
-
-    /**
-     * GeodesyML site log resource name relative to classpath root.
-     */
-    private static String geodesyMLSopacConvertedSiteLogResourceName(String id) {
-        return geodesyMLSopacConvertedSiteLogsDirectory() + id + ".xml";
     }
 
     /**

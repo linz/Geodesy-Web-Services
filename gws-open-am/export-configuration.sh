@@ -8,6 +8,9 @@ rm -rf "$CONFIG_DIR"
 mkdir "$CONFIG_DIR"
 mkdir "$KEYS_DIR"
 
+# Save OpenAM webapp descriptor
+cp "$TOMCAT_HOME/webapps/openam/WEB-INF/web.xml" "$CONFIG_DIR"
+
 # Export OpenAM Service Configuration
 $SSOADM export-svc-cfg -e geodenc -u amadmin -f "$ADMIN_TOOLS_DIR/admin/passwdfile" -o "$SERVICE_CFG_FILE"
 

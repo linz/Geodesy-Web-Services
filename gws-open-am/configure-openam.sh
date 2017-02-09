@@ -41,3 +41,5 @@ $IMPORT_LDIF\
  --noPropertiesFile
 
 shutdown.sh
+
+cp "$CONFIG_DIR/web.xml" "$TOMCAT_HOME/webapps/openam/WEB-INF/"

@@ -12139,12 +12139,13 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
     <Value>[0]=</Value>
 </AttributeValuePair>
 <AttributeValuePair>
-    <Attribute name="com.forgerock.openam.oauth2provider.redirectionURIs"/>
-    <Value>[0]=</Value>
-</AttributeValuePair>
-<AttributeValuePair>
     <Attribute name="com.forgerock.openam.oauth2provider.idTokenSignedResponseAlg"/>
     <Value>HS256</Value>
+</AttributeValuePair>
+<AttributeValuePair>
+    <Attribute name="com.forgerock.openam.oauth2provider.redirectionURIs"/>
+    <Value>[0]=http:&#47;&#47;localhost:5555&#47;login</Value>
+    <Value>[1]=http:&#47;&#47;localhost:5555</Value>
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="idTokenEncryptionEnabled"/>
@@ -13174,6 +13175,14 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
     <Value>f4f1cb52-ea3c-4592-8a35-c9a79576a0ce</Value>
 </AttributeValuePair>
 </SubConfiguration></SubConfiguration><SubConfiguration name="subjectAttributesCollectors" id="subjectAttributesCollectors"><SubConfiguration name="OpenSSO" id="OpenSSOSubjectAttributesCollector"><AttributeValuePair>
+    <Attribute name="groupMembershipSearchIndexEnabled"/>
+    <Value>false</Value>
+</AttributeValuePair>
+<AttributeValuePair>
+    <Attribute name="class"/>
+    <Value>com.sun.identity.entitlement.opensso.OpenSSOSubjectAttributesCollector</Value>
+</AttributeValuePair>
+</SubConfiguration></SubConfiguration></OrganizationConfiguration><OrganizationConfiguration group="default" name="/sunamhiddenrealmdelegationservicepermissions"><SubConfiguration name="subjectAttributesCollectors" id="subjectAttributesCollectors"><SubConfiguration name="OpenSSO" id="OpenSSOSubjectAttributesCollector"><AttributeValuePair>
     <Attribute name="groupMembershipSearchIndexEnabled"/>
     <Value>false</Value>
 </AttributeValuePair>

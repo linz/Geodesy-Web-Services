@@ -6286,12 +6286,12 @@ sunKeyValue: com.forgerock.openam.oauth2provider.responseTypes=[3]=code token
 sunKeyValue: com.forgerock.openam.oauth2provider.sectorIdentifierURI=
 sunKeyValue: com.forgerock.openam.oauth2provider.jwksURI=http://localhost:8080/openam/oauth2/connect/jwk_uri
 sunKeyValue: com.forgerock.openam.oauth2provider.tokenEndPointAuthMethod=client_secret_basic
-sunKeyValue: com.forgerock.openam.oauth2provider.redirectionURIs=[0]=
 sunKeyValue: com.forgerock.openam.oauth2provider.responseTypes=[6]=code token id_token
 sunKeyValue: com.forgerock.openam.oauth2provider.publicKeyLocation=jwks_uri
 sunKeyValue: com.forgerock.openam.oauth2provider.idTokenSignedResponseAlg=HS256
 sunKeyValue: isConsentImplied=false
 sunKeyValue: com.forgerock.openam.oauth2provider.contacts=[0]=
+sunKeyValue: com.forgerock.openam.oauth2provider.redirectionURIs=[0]=http://localhost:5555/login
 sunKeyValue: com.forgerock.openam.oauth2provider.jwtTokenLifeTime=0
 sunKeyValue: com.forgerock.openam.oauth2provider.clientName=[0]=
 sunKeyValue: agentgroup=
@@ -6305,6 +6305,7 @@ sunKeyValue: com.forgerock.openam.oauth2provider.scopes=[0]=openid
 sunKeyValue: idTokenPublicEncryptionKey=
 sunKeyValue: userpassword=AQICz7HhrRhO2nORraBckm/Q1Y9/5DQLsUcp
 sunKeyValue: com.forgerock.openam.oauth2provider.responseTypes=[1]=token
+sunKeyValue: com.forgerock.openam.oauth2provider.redirectionURIs=[1]=http://localhost:5555
 sunKeyValue: com.forgerock.openam.oauth2provider.postLogoutRedirectURI=[0]=
 sunKeyValue: com.forgerock.openam.oauth2provider.clientType=Confidential
 sunKeyValue: com.forgerock.openam.oauth2provider.refreshTokenLifeTime=0
@@ -6313,843 +6314,132 @@ sunKeyValue: com.forgerock.openam.oauth2provider.claims=[0]=
 sunsmspriority: 0
 sunserviceID: OAuth2Client
 ou: gnssSiteManager
+createTimestamp: 20170131061430Z
 creatorsName: cn=Internal Client,cn=Root DNs,cn=config
-modifyTimestamp: 20170131061445Z
+modifyTimestamp: 20170209030448Z
 modifiersName: cn=Internal Client,cn=Root DNs,cn=config
 entryUUID: aea32700-b3c8-4c9b-9e7f-3618829879de
-createTimestamp: 20170131061430Z
-
-dn: coreTokenId=29b149d8-a309-472e-b2c8-51aff2c38590,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"redirectURI":[],"parent":[],"clientID":["gnssSiteManager"],"auditTrackingId":["79c9d370-8e19-4f13-8166-985f6cd0055f-553"],"tokenName":["access_token"],"userName":["user2"],"nonce":[],"expireTime":["1486443835821"],"grant_type":["password"],"scope":["openid","profile"],"realm":["/"],"id":["29b149d8-a309-472e-b2c8-51aff2c38590"],"tokenType":["Bearer"]}
-coreTokenString12: password
-coreTokenString01: openid,profile
-coreTokenString10: access_token
-coreTokenString03: user2
-coreTokenString08: /
-coreTokenExpirationDate: 20170207050355.821Z
-coreTokenString09: gnssSiteManager
-coreTokenId: 29b149d8-a309-472e-b2c8-51aff2c38590
-coreTokenType: OAUTH
-coreTokenString07: Bearer
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: 41eae87b-fe6d-4e73-86d6-dc13c9bd98b7
-createTimestamp: 20170207040355Z
-
-dn: coreTokenId=c3ec5a61-a2d1-4566-b958-225b26f4e66f,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"id":["c3ec5a61-a2d1-4566-b958-225b26f4e66f"],"ops":[null],"expireTime":["1486443835837"]}
-coreTokenExpirationDate: 20170207050355.837Z
-coreTokenId: c3ec5a61-a2d1-4566-b958-225b26f4e66f
-coreTokenType: OAUTH
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: 566ab4a8-d07b-4c4b-9c7c-0de2309f5269
-createTimestamp: 20170207040355Z
-
-dn: coreTokenId=fa76792a-a211-4dec-88bc-b75c32569d3c,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"redirectURI":[],"parent":[],"clientID":["gnssSiteManager"],"auditTrackingId":["79c9d370-8e19-4f13-8166-985f6cd0055f-578"],"tokenName":["access_token"],"userName":["user2"],"nonce":[],"expireTime":["1486443851146"],"grant_type":["password"],"scope":["openid","profile"],"realm":["/"],"id":["fa76792a-a211-4dec-88bc-b75c32569d3c"],"tokenType":["Bearer"]}
-coreTokenString12: password
-coreTokenString01: openid,profile
-coreTokenString10: access_token
-coreTokenString03: user2
-coreTokenString08: /
-coreTokenExpirationDate: 20170207050411.146Z
-coreTokenString09: gnssSiteManager
-coreTokenId: fa76792a-a211-4dec-88bc-b75c32569d3c
-coreTokenType: OAUTH
-coreTokenString07: Bearer
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: d99f0840-4cc9-4bf8-b663-3a2578ff123f
-createTimestamp: 20170207040411Z
-
-dn: coreTokenId=782f4f11-3ae8-479d-8a88-703beb0273e8,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"id":["782f4f11-3ae8-479d-8a88-703beb0273e8"],"ops":[null],"expireTime":["1486443851160"]}
-coreTokenExpirationDate: 20170207050411.160Z
-coreTokenId: 782f4f11-3ae8-479d-8a88-703beb0273e8
-coreTokenType: OAUTH
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: 828e35a8-878c-4431-84a8-19b86b248ba7
-createTimestamp: 20170207040411Z
-
-dn: coreTokenId=ec6b6edc-442a-42cd-bc57-ce464d8f787a,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"redirectURI":[],"parent":[],"clientID":["gnssSiteManager"],"auditTrackingId":["79c9d370-8e19-4f13-8166-985f6cd0055f-613"],"tokenName":["access_token"],"userName":["user1"],"nonce":[],"expireTime":["1486443881435"],"grant_type":["password"],"scope":["openid","profile"],"realm":["/"],"id":["ec6b6edc-442a-42cd-bc57-ce464d8f787a"],"tokenType":["Bearer"]}
-coreTokenString12: password
-coreTokenString01: openid,profile
-coreTokenString10: access_token
-coreTokenString03: user1
-coreTokenString08: /
-coreTokenExpirationDate: 20170207050441.435Z
-coreTokenString09: gnssSiteManager
-coreTokenId: ec6b6edc-442a-42cd-bc57-ce464d8f787a
-coreTokenType: OAUTH
-coreTokenString07: Bearer
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: 829f4426-342d-41e7-980d-73b326bbb522
-createTimestamp: 20170207040441Z
-
-dn: coreTokenId=a85b93d8-89a6-4980-97ed-f458ad231719,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"id":["a85b93d8-89a6-4980-97ed-f458ad231719"],"ops":[null],"expireTime":["1486443881451"]}
-coreTokenExpirationDate: 20170207050441.451Z
-coreTokenId: a85b93d8-89a6-4980-97ed-f458ad231719
-coreTokenType: OAUTH
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: ab488668-1a71-487e-a101-906108e23217
-createTimestamp: 20170207040441Z
-
-dn: coreTokenId=0b0bcf6f-ab9d-4258-9e29-dca05f0e2835,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"redirectURI":[],"parent":[],"clientID":["gnssSiteManager"],"auditTrackingId":["79c9d370-8e19-4f13-8166-985f6cd0055f-638"],"tokenName":["access_token"],"userName":["user1"],"nonce":[],"expireTime":["1486443951706"],"grant_type":["password"],"scope":["openid","profile"],"realm":["/"],"id":["0b0bcf6f-ab9d-4258-9e29-dca05f0e2835"],"tokenType":["Bearer"]}
-coreTokenString12: password
-coreTokenString01: openid,profile
-coreTokenString10: access_token
-coreTokenString03: user1
-coreTokenString08: /
-coreTokenExpirationDate: 20170207050551.706Z
-coreTokenString09: gnssSiteManager
-coreTokenId: 0b0bcf6f-ab9d-4258-9e29-dca05f0e2835
-coreTokenType: OAUTH
-coreTokenString07: Bearer
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: 583d16e3-9843-4128-bcb5-63f9fe6359ac
-createTimestamp: 20170207040551Z
-
-dn: coreTokenId=aaa58d01-9cb2-4be0-84a2-538988d131d2,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"id":["aaa58d01-9cb2-4be0-84a2-538988d131d2"],"ops":[null],"expireTime":["1486443951722"]}
-coreTokenExpirationDate: 20170207050551.722Z
-coreTokenId: aaa58d01-9cb2-4be0-84a2-538988d131d2
-coreTokenType: OAUTH
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: ac1beaa9-55de-4728-bf35-68d2f8825982
-createTimestamp: 20170207040551Z
-
-dn: coreTokenId=fa6197ac-3a4c-4df8-8d0c-48181ba514f8,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"redirectURI":[],"parent":[],"clientID":["gnssSiteManager"],"auditTrackingId":["79c9d370-8e19-4f13-8166-985f6cd0055f-673"],"tokenName":["access_token"],"userName":["user1"],"nonce":[],"expireTime":["1486444111585"],"grant_type":["password"],"scope":["openid","profile"],"realm":["/"],"id":["fa6197ac-3a4c-4df8-8d0c-48181ba514f8"],"tokenType":["Bearer"]}
-coreTokenString12: password
-coreTokenString01: openid,profile
-coreTokenString10: access_token
-coreTokenString03: user1
-coreTokenString08: /
-coreTokenExpirationDate: 20170207050831.585Z
-coreTokenString09: gnssSiteManager
-coreTokenId: fa6197ac-3a4c-4df8-8d0c-48181ba514f8
-coreTokenType: OAUTH
-coreTokenString07: Bearer
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: 27c32851-1cd4-4951-81de-b1f197c6e9f4
-createTimestamp: 20170207040831Z
-
-dn: coreTokenId=9d24cd79-28be-4275-a533-fa8722ecf07a,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"id":["9d24cd79-28be-4275-a533-fa8722ecf07a"],"ops":[null],"expireTime":["1486444111606"]}
-coreTokenExpirationDate: 20170207050831.606Z
-coreTokenId: 9d24cd79-28be-4275-a533-fa8722ecf07a
-coreTokenType: OAUTH
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: 6ad817eb-c47d-469a-bdaf-c8d861768fd7
-createTimestamp: 20170207040831Z
-
-dn: coreTokenId=0ac38bb4-83a1-44bf-9a3c-222834c2954c,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"redirectURI":[],"parent":[],"clientID":["gnssSiteManager"],"auditTrackingId":["79c9d370-8e19-4f13-8166-985f6cd0055f-698"],"tokenName":["access_token"],"userName":["user1"],"nonce":[],"expireTime":["1486444133831"],"grant_type":["password"],"scope":["openid","profile"],"realm":["/"],"id":["0ac38bb4-83a1-44bf-9a3c-222834c2954c"],"tokenType":["Bearer"]}
-coreTokenString12: password
-coreTokenString01: openid,profile
-coreTokenString10: access_token
-coreTokenString03: user1
-coreTokenString08: /
-coreTokenExpirationDate: 20170207050853.831Z
-coreTokenString09: gnssSiteManager
-coreTokenId: 0ac38bb4-83a1-44bf-9a3c-222834c2954c
-coreTokenType: OAUTH
-coreTokenString07: Bearer
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: 4909be58-d872-4193-a3f8-0ba06f48842f
-createTimestamp: 20170207040853Z
-
-dn: coreTokenId=a2dc1410-b068-4605-b537-1a37b24f87fa,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"id":["a2dc1410-b068-4605-b537-1a37b24f87fa"],"ops":[null],"expireTime":["1486444133850"]}
-coreTokenExpirationDate: 20170207050853.850Z
-coreTokenId: a2dc1410-b068-4605-b537-1a37b24f87fa
-coreTokenType: OAUTH
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: 8b070d8f-8f23-48cc-96e6-0fb3624fe3c8
-createTimestamp: 20170207040853Z
-
-dn: coreTokenId=668cf2a5-3679-4d48-bf46-58f5cecf085a,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"redirectURI":[],"parent":[],"clientID":["gnssSiteManager"],"auditTrackingId":["79c9d370-8e19-4f13-8166-985f6cd0055f-723"],"tokenName":["access_token"],"userName":["user1"],"nonce":[],"expireTime":["1486444171433"],"grant_type":["password"],"scope":["openid","profile"],"realm":["/"],"id":["668cf2a5-3679-4d48-bf46-58f5cecf085a"],"tokenType":["Bearer"]}
-coreTokenString12: password
-coreTokenString01: openid,profile
-coreTokenString10: access_token
-coreTokenString03: user1
-coreTokenString08: /
-coreTokenExpirationDate: 20170207050931.433Z
-coreTokenString09: gnssSiteManager
-coreTokenId: 668cf2a5-3679-4d48-bf46-58f5cecf085a
-coreTokenType: OAUTH
-coreTokenString07: Bearer
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: 494fa9a2-a886-4dc3-bd67-837f108631b9
-createTimestamp: 20170207040931Z
-
-dn: coreTokenId=0a0e04c3-0a16-4eca-bff6-07c87fae780d,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"id":["0a0e04c3-0a16-4eca-bff6-07c87fae780d"],"ops":[null],"expireTime":["1486444171448"]}
-coreTokenExpirationDate: 20170207050931.448Z
-coreTokenId: 0a0e04c3-0a16-4eca-bff6-07c87fae780d
-coreTokenType: OAUTH
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: bedcb830-f0d2-4224-940d-ff295af11637
-createTimestamp: 20170207040931Z
-
-dn: coreTokenId=d10d0360-7830-492c-b54b-55ef5038fb1d,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"redirectURI":[],"parent":[],"clientID":["gnssSiteManager"],"auditTrackingId":["79c9d370-8e19-4f13-8166-985f6cd0055f-748"],"tokenName":["access_token"],"userName":["user1"],"nonce":[],"expireTime":["1486444193297"],"grant_type":["password"],"scope":["openid","profile"],"realm":["/"],"id":["d10d0360-7830-492c-b54b-55ef5038fb1d"],"tokenType":["Bearer"]}
-coreTokenString12: password
-coreTokenString01: openid,profile
-coreTokenString10: access_token
-coreTokenString03: user1
-coreTokenString08: /
-coreTokenExpirationDate: 20170207050953.297Z
-coreTokenString09: gnssSiteManager
-coreTokenId: d10d0360-7830-492c-b54b-55ef5038fb1d
-coreTokenType: OAUTH
-coreTokenString07: Bearer
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: 90f3480d-401e-4615-9f83-bf129396d3bb
-createTimestamp: 20170207040953Z
-
-dn: coreTokenId=d9e41297-617a-4ebf-86a4-dc056d4e1c71,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"id":["d9e41297-617a-4ebf-86a4-dc056d4e1c71"],"ops":[null],"expireTime":["1486444193313"]}
-coreTokenExpirationDate: 20170207050953.313Z
-coreTokenId: d9e41297-617a-4ebf-86a4-dc056d4e1c71
-coreTokenType: OAUTH
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: 820a0649-46f2-4fb8-8ea2-d31b05d361d8
-createTimestamp: 20170207040953Z
-
-dn: coreTokenId=ab3340df-92c0-4643-892a-2fad9e4903ee,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"redirectURI":[],"parent":[],"clientID":["gnssSiteManager"],"auditTrackingId":["79c9d370-8e19-4f13-8166-985f6cd0055f-773"],"tokenName":["access_token"],"userName":["user1"],"nonce":[],"expireTime":["1486444259768"],"grant_type":["password"],"scope":["openid","profile"],"realm":["/"],"id":["ab3340df-92c0-4643-892a-2fad9e4903ee"],"tokenType":["Bearer"]}
-coreTokenString12: password
-coreTokenString01: openid,profile
-coreTokenString10: access_token
-coreTokenString03: user1
-coreTokenString08: /
-coreTokenExpirationDate: 20170207051059.768Z
-coreTokenString09: gnssSiteManager
-coreTokenId: ab3340df-92c0-4643-892a-2fad9e4903ee
-coreTokenType: OAUTH
-coreTokenString07: Bearer
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: 000cac78-8f87-4911-a788-babd35724ef8
-createTimestamp: 20170207041059Z
-
-dn: coreTokenId=f5d21b1a-0d47-479a-a435-f66ef335332c,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"id":["f5d21b1a-0d47-479a-a435-f66ef335332c"],"ops":[null],"expireTime":["1486444259789"]}
-coreTokenExpirationDate: 20170207051059.789Z
-coreTokenId: f5d21b1a-0d47-479a-a435-f66ef335332c
-coreTokenType: OAUTH
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: 96b9091b-4b5f-443a-943e-aac57e519ae3
-createTimestamp: 20170207041059Z
-
-dn: coreTokenId=9c4cf270-b861-41df-8c89-02acb8c559ba,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"redirectURI":[],"parent":[],"clientID":["gnssSiteManager"],"auditTrackingId":["79c9d370-8e19-4f13-8166-985f6cd0055f-798"],"tokenName":["access_token"],"userName":["user1"],"nonce":[],"expireTime":["1486444291223"],"grant_type":["password"],"scope":["openid","profile"],"realm":["/"],"id":["9c4cf270-b861-41df-8c89-02acb8c559ba"],"tokenType":["Bearer"]}
-coreTokenString12: password
-coreTokenString01: openid,profile
-coreTokenString10: access_token
-coreTokenString03: user1
-coreTokenString08: /
-coreTokenExpirationDate: 20170207051131.223Z
-coreTokenString09: gnssSiteManager
-coreTokenId: 9c4cf270-b861-41df-8c89-02acb8c559ba
-coreTokenType: OAUTH
-coreTokenString07: Bearer
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: 8de413d4-c196-42e4-88ac-6f004ed0c05f
-createTimestamp: 20170207041131Z
-
-dn: coreTokenId=90713e6d-6a3c-4794-892b-58731b920b6d,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"id":["90713e6d-6a3c-4794-892b-58731b920b6d"],"ops":[null],"expireTime":["1486444291238"]}
-coreTokenExpirationDate: 20170207051131.238Z
-coreTokenId: 90713e6d-6a3c-4794-892b-58731b920b6d
-coreTokenType: OAUTH
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: 8270db26-8faa-4a49-8600-98a12c757e6b
-createTimestamp: 20170207041131Z
-
-dn: coreTokenId=50f13933-5a58-4842-9c8e-b5762f1af81d,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"redirectURI":[],"parent":[],"clientID":["gnssSiteManager"],"auditTrackingId":["79c9d370-8e19-4f13-8166-985f6cd0055f-823"],"tokenName":["access_token"],"userName":["user1"],"nonce":[],"expireTime":["1486444311582"],"grant_type":["password"],"scope":["openid","profile"],"realm":["/"],"id":["50f13933-5a58-4842-9c8e-b5762f1af81d"],"tokenType":["Bearer"]}
-coreTokenString12: password
-coreTokenString01: openid,profile
-coreTokenString10: access_token
-coreTokenString03: user1
-coreTokenString08: /
-coreTokenExpirationDate: 20170207051151.582Z
-coreTokenString09: gnssSiteManager
-coreTokenId: 50f13933-5a58-4842-9c8e-b5762f1af81d
-coreTokenType: OAUTH
-coreTokenString07: Bearer
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: e92731bf-b4fc-4a94-915b-3ad81e53d209
-createTimestamp: 20170207041151Z
-
-dn: coreTokenId=c5e3102b-ab95-487b-8229-a65d33b68183,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"id":["c5e3102b-ab95-487b-8229-a65d33b68183"],"ops":[null],"expireTime":["1486444311597"]}
-coreTokenExpirationDate: 20170207051151.597Z
-coreTokenId: c5e3102b-ab95-487b-8229-a65d33b68183
-coreTokenType: OAUTH
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: c5ee6b76-7fda-47fc-87ac-eb1c6c95202d
-createTimestamp: 20170207041151Z
-
-dn: coreTokenId=5faba698-ecdd-48ee-8a41-c814129b6a4e,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"redirectURI":[],"parent":[],"clientID":["gnssSiteManager"],"auditTrackingId":["79c9d370-8e19-4f13-8166-985f6cd0055f-848"],"tokenName":["access_token"],"userName":["user1"],"nonce":[],"expireTime":["1486444333074"],"grant_type":["password"],"scope":["openid","profile"],"realm":["/"],"id":["5faba698-ecdd-48ee-8a41-c814129b6a4e"],"tokenType":["Bearer"]}
-coreTokenString12: password
-coreTokenString01: openid,profile
-coreTokenString10: access_token
-coreTokenString03: user1
-coreTokenString08: /
-coreTokenExpirationDate: 20170207051213.074Z
-coreTokenString09: gnssSiteManager
-coreTokenId: 5faba698-ecdd-48ee-8a41-c814129b6a4e
-coreTokenType: OAUTH
-coreTokenString07: Bearer
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: 7197646d-b3db-4417-92d6-15098b81a95a
-createTimestamp: 20170207041212Z
-
-dn: coreTokenId=03f3c750-3870-4a7e-a511-eecc2103c28b,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"id":["03f3c750-3870-4a7e-a511-eecc2103c28b"],"ops":[null],"expireTime":["1486444333090"]}
-coreTokenExpirationDate: 20170207051213.090Z
-coreTokenId: 03f3c750-3870-4a7e-a511-eecc2103c28b
-coreTokenType: OAUTH
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: 11134250-da5e-4e4e-a056-74848d61adb8
-createTimestamp: 20170207041213Z
-
-dn: coreTokenId=81637043-22af-4fa2-be0e-392d62d035f9,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"redirectURI":[],"parent":[],"clientID":["gnssSiteManager"],"auditTrackingId":["79c9d370-8e19-4f13-8166-985f6cd0055f-861"],"tokenName":["access_token"],"userName":["user1"],"nonce":[],"expireTime":["1486444372817"],"grant_type":["password"],"scope":["openid","profile"],"realm":["/"],"id":["81637043-22af-4fa2-be0e-392d62d035f9"],"tokenType":["Bearer"]}
-coreTokenString12: password
-coreTokenString01: openid,profile
-coreTokenString10: access_token
-coreTokenString03: user1
-coreTokenString08: /
-coreTokenExpirationDate: 20170207051252.817Z
-coreTokenString09: gnssSiteManager
-coreTokenId: 81637043-22af-4fa2-be0e-392d62d035f9
-coreTokenType: OAUTH
-coreTokenString07: Bearer
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: 8f717a4b-7663-4c80-b6ef-469fa8a04561
-createTimestamp: 20170207041252Z
-
-dn: coreTokenId=55e34aef-abed-4a6f-acb1-8f281f8f6641,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"id":["55e34aef-abed-4a6f-acb1-8f281f8f6641"],"ops":[null],"expireTime":["1486444372833"]}
-coreTokenExpirationDate: 20170207051252.833Z
-coreTokenId: 55e34aef-abed-4a6f-acb1-8f281f8f6641
-coreTokenType: OAUTH
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: 0a198cc1-0fe4-4b5c-971e-994d71a835ec
-createTimestamp: 20170207041252Z
-
-dn: coreTokenId=ebb0f43e-d253-4101-a27e-b170d855d56c,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"redirectURI":[],"parent":[],"clientID":["gnssSiteManager"],"auditTrackingId":["79c9d370-8e19-4f13-8166-985f6cd0055f-874"],"tokenName":["access_token"],"userName":["user2"],"nonce":[],"expireTime":["1486444381732"],"grant_type":["password"],"scope":["openid","profile"],"realm":["/"],"id":["ebb0f43e-d253-4101-a27e-b170d855d56c"],"tokenType":["Bearer"]}
-coreTokenString12: password
-coreTokenString01: openid,profile
-coreTokenString10: access_token
-coreTokenString03: user2
-coreTokenString08: /
-coreTokenExpirationDate: 20170207051301.732Z
-coreTokenString09: gnssSiteManager
-coreTokenId: ebb0f43e-d253-4101-a27e-b170d855d56c
-coreTokenType: OAUTH
-coreTokenString07: Bearer
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: 1943ba28-c0d8-40fa-b509-38553945fe4c
-createTimestamp: 20170207041301Z
-
-dn: coreTokenId=d8406d61-0aab-400f-a778-7c53346efa56,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"id":["d8406d61-0aab-400f-a778-7c53346efa56"],"ops":[null],"expireTime":["1486444381746"]}
-coreTokenExpirationDate: 20170207051301.746Z
-coreTokenId: d8406d61-0aab-400f-a778-7c53346efa56
-coreTokenType: OAUTH
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: 69037953-e635-40c1-b0f6-b1bca5901111
-createTimestamp: 20170207041301Z
-
-dn: coreTokenId=9913c5b5-bc71-473d-a395-af173264ece8,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"redirectURI":[],"parent":[],"clientID":["gnssSiteManager"],"auditTrackingId":["79c9d370-8e19-4f13-8166-985f6cd0055f-899"],"tokenName":["access_token"],"userName":["user2"],"nonce":[],"expireTime":["1486444400092"],"grant_type":["password"],"scope":["openid","profile"],"realm":["/"],"id":["9913c5b5-bc71-473d-a395-af173264ece8"],"tokenType":["Bearer"]}
-coreTokenString12: password
-coreTokenString01: openid,profile
-coreTokenString10: access_token
-coreTokenString03: user2
-coreTokenString08: /
-coreTokenExpirationDate: 20170207051320.092Z
-coreTokenString09: gnssSiteManager
-coreTokenId: 9913c5b5-bc71-473d-a395-af173264ece8
-coreTokenType: OAUTH
-coreTokenString07: Bearer
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: ee6e9af9-33b7-4bc7-a7d4-6b84522f15fd
-createTimestamp: 20170207041320Z
-
-dn: coreTokenId=0ce020aa-2031-4b97-b9e0-7ee8283c1b9e,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"id":["0ce020aa-2031-4b97-b9e0-7ee8283c1b9e"],"ops":[null],"expireTime":["1486444400108"]}
-coreTokenExpirationDate: 20170207051320.108Z
-coreTokenId: 0ce020aa-2031-4b97-b9e0-7ee8283c1b9e
-coreTokenType: OAUTH
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: e24886e9-1e7c-459a-8342-83823e2eb3ed
-createTimestamp: 20170207041320Z
-
-dn: coreTokenId=6a299cab-aaa2-4159-85cf-3b64388f51d6,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"redirectURI":[],"parent":[],"clientID":["gnssSiteManager"],"auditTrackingId":["79c9d370-8e19-4f13-8166-985f6cd0055f-912"],"tokenName":["access_token"],"userName":["user1"],"nonce":[],"expireTime":["1486444415154"],"grant_type":["password"],"scope":["openid","profile"],"realm":["/"],"id":["6a299cab-aaa2-4159-85cf-3b64388f51d6"],"tokenType":["Bearer"]}
-coreTokenString12: password
-coreTokenString01: openid,profile
-coreTokenString10: access_token
-coreTokenString03: user1
-coreTokenString08: /
-coreTokenExpirationDate: 20170207051335.154Z
-coreTokenString09: gnssSiteManager
-coreTokenId: 6a299cab-aaa2-4159-85cf-3b64388f51d6
-coreTokenType: OAUTH
-coreTokenString07: Bearer
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: bef19c71-ffe2-47d7-8684-8ea6ea40ccfd
-createTimestamp: 20170207041335Z
-
-dn: coreTokenId=5b9e4d7c-fd83-4810-b388-f51d9cadcc63,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"id":["5b9e4d7c-fd83-4810-b388-f51d9cadcc63"],"ops":[null],"expireTime":["1486444415169"]}
-coreTokenExpirationDate: 20170207051335.169Z
-coreTokenId: 5b9e4d7c-fd83-4810-b388-f51d9cadcc63
-coreTokenType: OAUTH
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: 7b24edb1-4c95-4859-800c-350ec736ebc4
-createTimestamp: 20170207041335Z
-
-dn: coreTokenId=3b334fe3-2254-4708-8076-89e62087795d,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"redirectURI":[],"parent":[],"clientID":["gnssSiteManager"],"auditTrackingId":["79c9d370-8e19-4f13-8166-985f6cd0055f-937"],"tokenName":["access_token"],"userName":["user1"],"nonce":[],"expireTime":["1486444479804"],"grant_type":["password"],"scope":["openid","profile"],"realm":["/"],"id":["3b334fe3-2254-4708-8076-89e62087795d"],"tokenType":["Bearer"]}
-coreTokenString12: password
-coreTokenString01: openid,profile
-coreTokenString10: access_token
-coreTokenString03: user1
-coreTokenString08: /
-coreTokenExpirationDate: 20170207051439.804Z
-coreTokenString09: gnssSiteManager
-coreTokenId: 3b334fe3-2254-4708-8076-89e62087795d
-coreTokenType: OAUTH
-coreTokenString07: Bearer
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: 6ab67de6-b16a-43c6-9d22-5262930e2446
-createTimestamp: 20170207041439Z
-
-dn: coreTokenId=508be29f-1d45-4d4f-a02d-321d8df4894b,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"id":["508be29f-1d45-4d4f-a02d-321d8df4894b"],"ops":[null],"expireTime":["1486444479819"]}
-coreTokenExpirationDate: 20170207051439.819Z
-coreTokenId: 508be29f-1d45-4d4f-a02d-321d8df4894b
-coreTokenType: OAUTH
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: 29b862a8-862e-42e5-b51f-e60a151c816e
-createTimestamp: 20170207041439Z
-
-dn: coreTokenId=c1cad79e-3332-43e7-9ce8-c1e7c29a8a0f,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"redirectURI":[],"parent":[],"clientID":["gnssSiteManager"],"auditTrackingId":["79c9d370-8e19-4f13-8166-985f6cd0055f-962"],"tokenName":["access_token"],"userName":["user1"],"nonce":[],"expireTime":["1486444526011"],"grant_type":["password"],"scope":["openid","profile"],"realm":["/"],"id":["c1cad79e-3332-43e7-9ce8-c1e7c29a8a0f"],"tokenType":["Bearer"]}
-coreTokenString12: password
-coreTokenString01: openid,profile
-coreTokenString10: access_token
-coreTokenString03: user1
-coreTokenString08: /
-coreTokenExpirationDate: 20170207051526.011Z
-coreTokenString09: gnssSiteManager
-coreTokenId: c1cad79e-3332-43e7-9ce8-c1e7c29a8a0f
-coreTokenType: OAUTH
-coreTokenString07: Bearer
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: b6999afd-1595-4ad6-b5c0-6c47fb45a5af
-createTimestamp: 20170207041526Z
-
-dn: coreTokenId=1dcec0b5-b0d4-405b-82ae-c60d30ab279b,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"id":["1dcec0b5-b0d4-405b-82ae-c60d30ab279b"],"ops":[null],"expireTime":["1486444526025"]}
-coreTokenExpirationDate: 20170207051526.025Z
-coreTokenId: 1dcec0b5-b0d4-405b-82ae-c60d30ab279b
-coreTokenType: OAUTH
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: b2e1f4f6-84be-4406-b11b-d516a72df0cb
-createTimestamp: 20170207041526Z
-
-dn: coreTokenId=abc41ce8-8020-4f62-83ef-f68bdd5be12e,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"redirectURI":[],"parent":[],"clientID":["gnssSiteManager"],"auditTrackingId":["79c9d370-8e19-4f13-8166-985f6cd0055f-975"],"tokenName":["access_token"],"userName":["user2"],"nonce":[],"expireTime":["1486444534410"],"grant_type":["password"],"scope":["openid","profile"],"realm":["/"],"id":["abc41ce8-8020-4f62-83ef-f68bdd5be12e"],"tokenType":["Bearer"]}
-coreTokenString12: password
-coreTokenString01: openid,profile
-coreTokenString10: access_token
-coreTokenString03: user2
-coreTokenString08: /
-coreTokenExpirationDate: 20170207051534.410Z
-coreTokenString09: gnssSiteManager
-coreTokenId: abc41ce8-8020-4f62-83ef-f68bdd5be12e
-coreTokenType: OAUTH
-coreTokenString07: Bearer
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: de35c839-29a3-41bc-84e0-7b3899445b3e
-createTimestamp: 20170207041534Z
-
-dn: coreTokenId=aea16ccd-2140-49ea-ac73-e8c3cf31730e,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"id":["aea16ccd-2140-49ea-ac73-e8c3cf31730e"],"ops":[null],"expireTime":["1486444534424"]}
-coreTokenExpirationDate: 20170207051534.424Z
-coreTokenId: aea16ccd-2140-49ea-ac73-e8c3cf31730e
-coreTokenType: OAUTH
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: db6d363e-2c81-497d-8001-e1b73c9c9a87
-createTimestamp: 20170207041534Z
-
-dn: coreTokenId=ad13ca93-1878-485c-9ff6-c7431342a368,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"redirectURI":[],"parent":[],"clientID":["gnssSiteManager"],"auditTrackingId":["aec3d2be-6210-4952-a478-24a6cdd123e6-42"],"tokenName":["access_token"],"userName":["user2"],"nonce":[],"expireTime":["1486446078248"],"grant_type":["password"],"scope":["openid","profile"],"realm":["/"],"id":["ad13ca93-1878-485c-9ff6-c7431342a368"],"tokenType":["Bearer"]}
-coreTokenString01: openid,profile
-coreTokenString12: password
-coreTokenString10: access_token
-coreTokenString03: user2
-coreTokenExpirationDate: 20170207054118.248Z
-coreTokenString08: /
-coreTokenString09: gnssSiteManager
-coreTokenId: ad13ca93-1878-485c-9ff6-c7431342a368
-coreTokenType: OAUTH
-coreTokenString07: Bearer
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: d07dabbb-06cc-44f1-a5d5-e81138a6d8d2
-createTimestamp: 20170207044118Z
-
-dn: coreTokenId=c9e35d53-ebc4-4916-a460-4493e363f225,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"id":["c9e35d53-ebc4-4916-a460-4493e363f225"],"ops":[null],"expireTime":["1486446078368"]}
-coreTokenExpirationDate: 20170207054118.368Z
-coreTokenId: c9e35d53-ebc4-4916-a460-4493e363f225
-coreTokenType: OAUTH
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: 63a0f466-31b1-4f87-8be9-827238aa5248
-createTimestamp: 20170207044118Z
-
-dn: coreTokenId=00246887-dd7a-4105-8f14-7f04900f3421,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"redirectURI":[],"parent":[],"clientID":["gnssSiteManager"],"auditTrackingId":["aec3d2be-6210-4952-a478-24a6cdd123e6-212"],"tokenName":["access_token"],"userName":["user2"],"nonce":[],"expireTime":["1486446184125"],"grant_type":["password"],"scope":["openid","profile"],"realm":["/"],"id":["00246887-dd7a-4105-8f14-7f04900f3421"],"tokenType":["Bearer"]}
-coreTokenString01: openid,profile
-coreTokenString12: password
-coreTokenString10: access_token
-coreTokenString03: user2
-coreTokenExpirationDate: 20170207054304.125Z
-coreTokenString08: /
-coreTokenString09: gnssSiteManager
-coreTokenId: 00246887-dd7a-4105-8f14-7f04900f3421
-coreTokenType: OAUTH
-coreTokenString07: Bearer
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: 9fd83333-fa95-4084-9ba7-1918d8620521
-createTimestamp: 20170207044303Z
-
-dn: coreTokenId=8988bf3d-ce32-4fe6-af5d-cb0d58e815b6,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"id":["8988bf3d-ce32-4fe6-af5d-cb0d58e815b6"],"ops":[null],"expireTime":["1486446184165"]}
-coreTokenExpirationDate: 20170207054304.165Z
-coreTokenId: 8988bf3d-ce32-4fe6-af5d-cb0d58e815b6
-coreTokenType: OAUTH
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: 3c2408ad-d0a2-4ec7-be9c-a38b278203d2
-createTimestamp: 20170207044303Z
-
-dn: coreTokenId=268bcb12-fafb-489b-ab66-a533b939e966,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"redirectURI":[],"parent":[],"clientID":["gnssSiteManager"],"auditTrackingId":["aec3d2be-6210-4952-a478-24a6cdd123e6-238"],"tokenName":["access_token"],"userName":["user2"],"nonce":[],"expireTime":["1486446210827"],"grant_type":["password"],"scope":["openid","profile"],"realm":["/"],"id":["268bcb12-fafb-489b-ab66-a533b939e966"],"tokenType":["Bearer"]}
-coreTokenString01: openid,profile
-coreTokenString12: password
-coreTokenString10: access_token
-coreTokenString03: user2
-coreTokenExpirationDate: 20170207054330.827Z
-coreTokenString08: /
-coreTokenString09: gnssSiteManager
-coreTokenId: 268bcb12-fafb-489b-ab66-a533b939e966
-coreTokenType: OAUTH
-coreTokenString07: Bearer
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: 41b4f0fa-f0d7-4bf2-9736-d7b8e60cbf3f
-createTimestamp: 20170207044330Z
-
-dn: coreTokenId=0ec57298-397e-42ac-b4c6-365af9969d91,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"id":["0ec57298-397e-42ac-b4c6-365af9969d91"],"ops":[null],"expireTime":["1486446210847"]}
-coreTokenExpirationDate: 20170207054330.847Z
-coreTokenId: 0ec57298-397e-42ac-b4c6-365af9969d91
-coreTokenType: OAUTH
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: 68cadd13-e77f-493a-920e-8a5d3be942c8
-createTimestamp: 20170207044330Z
-
-dn: coreTokenId=4812e1b2-4227-4aa6-8968-e3541306284d,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"redirectURI":[],"parent":[],"clientID":["gnssSiteManager"],"auditTrackingId":["aec3d2be-6210-4952-a478-24a6cdd123e6-264"],"tokenName":["access_token"],"userName":["user2"],"nonce":[],"expireTime":["1486446233737"],"grant_type":["password"],"scope":["openid","profile"],"realm":["/"],"id":["4812e1b2-4227-4aa6-8968-e3541306284d"],"tokenType":["Bearer"]}
-coreTokenString01: openid,profile
-coreTokenString12: password
-coreTokenString10: access_token
-coreTokenString03: user2
-coreTokenExpirationDate: 20170207054353.737Z
-coreTokenString08: /
-coreTokenString09: gnssSiteManager
-coreTokenId: 4812e1b2-4227-4aa6-8968-e3541306284d
-coreTokenType: OAUTH
-coreTokenString07: Bearer
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: 93c59c78-a632-4701-a7cb-273f31e20580
-createTimestamp: 20170207044353Z
-
-dn: coreTokenId=3380fbae-d090-4f5a-9c50-726a00b53d25,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"id":["3380fbae-d090-4f5a-9c50-726a00b53d25"],"ops":[null],"expireTime":["1486446233767"]}
-coreTokenExpirationDate: 20170207054353.767Z
-coreTokenId: 3380fbae-d090-4f5a-9c50-726a00b53d25
-coreTokenType: OAUTH
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: 96351212-576f-4f79-8267-bf457cd9c818
-createTimestamp: 20170207044353Z
-
-dn: coreTokenId=b1f5a6bc-e9d9-4264-9c66-2ba164949a54,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"redirectURI":[],"parent":[],"clientID":["gnssSiteManager"],"auditTrackingId":["aec3d2be-6210-4952-a478-24a6cdd123e6-290"],"tokenName":["access_token"],"userName":["user2"],"nonce":[],"expireTime":["1486446256561"],"grant_type":["password"],"scope":["openid","profile"],"realm":["/"],"id":["b1f5a6bc-e9d9-4264-9c66-2ba164949a54"],"tokenType":["Bearer"]}
-coreTokenString01: openid,profile
-coreTokenString12: password
-coreTokenString10: access_token
-coreTokenString03: user2
-coreTokenExpirationDate: 20170207054416.561Z
-coreTokenString08: /
-coreTokenString09: gnssSiteManager
-coreTokenId: b1f5a6bc-e9d9-4264-9c66-2ba164949a54
-coreTokenType: OAUTH
-coreTokenString07: Bearer
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: 974bf797-286e-4d38-8476-87c093cd6e68
-createTimestamp: 20170207044416Z
-
-dn: coreTokenId=00691dd0-7ea2-4dfc-8428-5ce0abec2981,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"id":["00691dd0-7ea2-4dfc-8428-5ce0abec2981"],"ops":[null],"expireTime":["1486446256581"]}
-coreTokenExpirationDate: 20170207054416.581Z
-coreTokenId: 00691dd0-7ea2-4dfc-8428-5ce0abec2981
-coreTokenType: OAUTH
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: 28234fb4-277d-4a90-8c32-5db1e2ee1e74
-createTimestamp: 20170207044416Z
-
-dn: coreTokenId=b0d26249-4d61-4ed4-9f6f-6f79cdcc6f8f,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"redirectURI":[],"parent":[],"clientID":["gnssSiteManager"],"auditTrackingId":["aec3d2be-6210-4952-a478-24a6cdd123e6-316"],"tokenName":["access_token"],"userName":["user2"],"nonce":[],"expireTime":["1486446357878"],"grant_type":["password"],"scope":["openid","profile"],"realm":["/"],"id":["b0d26249-4d61-4ed4-9f6f-6f79cdcc6f8f"],"tokenType":["Bearer"]}
-coreTokenString01: openid,profile
-coreTokenString12: password
-coreTokenString10: access_token
-coreTokenString03: user2
-coreTokenExpirationDate: 20170207054557.878Z
-coreTokenString08: /
-coreTokenString09: gnssSiteManager
-coreTokenId: b0d26249-4d61-4ed4-9f6f-6f79cdcc6f8f
-coreTokenType: OAUTH
-coreTokenString07: Bearer
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: cde56e43-a233-41c7-9374-ca52a57d8106
-createTimestamp: 20170207044557Z
-
-dn: coreTokenId=b7b50098-d379-48b0-b4c7-13e0b6de8a9b,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"id":["b7b50098-d379-48b0-b4c7-13e0b6de8a9b"],"ops":[null],"expireTime":["1486446357901"]}
-coreTokenExpirationDate: 20170207054557.901Z
-coreTokenId: b7b50098-d379-48b0-b4c7-13e0b6de8a9b
-coreTokenType: OAUTH
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: 0295a9bf-cb63-49a9-a14b-287441528475
-createTimestamp: 20170207044557Z
-
-dn: coreTokenId=05bd3aa2-d8d0-4938-aa19-c6ed47995e20,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"redirectURI":[],"parent":[],"clientID":["gnssSiteManager"],"auditTrackingId":["aec3d2be-6210-4952-a478-24a6cdd123e6-330"],"tokenName":["access_token"],"userName":["user1"],"nonce":[],"expireTime":["1486446371324"],"grant_type":["password"],"scope":["openid","profile"],"realm":["/"],"id":["05bd3aa2-d8d0-4938-aa19-c6ed47995e20"],"tokenType":["Bearer"]}
-coreTokenString01: openid,profile
-coreTokenString12: password
-coreTokenString10: access_token
-coreTokenString03: user1
-coreTokenExpirationDate: 20170207054611.324Z
-coreTokenString08: /
-coreTokenString09: gnssSiteManager
-coreTokenId: 05bd3aa2-d8d0-4938-aa19-c6ed47995e20
-coreTokenType: OAUTH
-coreTokenString07: Bearer
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: 9bb929e7-ed8d-43ba-9c20-7559c58d56e4
-createTimestamp: 20170207044611Z
-
-dn: coreTokenId=6316e2a0-9353-4be8-9fe7-3ae053fc5672,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"id":["6316e2a0-9353-4be8-9fe7-3ae053fc5672"],"ops":[null],"expireTime":["1486446371342"]}
-coreTokenExpirationDate: 20170207054611.342Z
-coreTokenId: 6316e2a0-9353-4be8-9fe7-3ae053fc5672
-coreTokenType: OAUTH
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: 8547803c-8b16-4a13-9db7-05587017305d
-createTimestamp: 20170207044611Z
-
-dn: coreTokenId=47a0cf53-57c7-42b1-a7ef-3ba3f2c7a18b,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"redirectURI":[],"parent":[],"clientID":["gnssSiteManager"],"auditTrackingId":["5fa116f7-d615-43b7-8669-c45b908556f4-59"],"tokenName":["access_token"],"userName":["user1"],"nonce":[],"expireTime":["1486447300128"],"grant_type":["password"],"scope":["openid","profile"],"realm":["/"],"id":["47a0cf53-57c7-42b1-a7ef-3ba3f2c7a18b"],"tokenType":["Bearer"]}
-coreTokenString12: password
-coreTokenString01: openid,profile
-coreTokenString10: access_token
-coreTokenString03: user1
-coreTokenString08: /
-coreTokenExpirationDate: 20170207060140.128Z
-coreTokenString09: gnssSiteManager
-coreTokenId: 47a0cf53-57c7-42b1-a7ef-3ba3f2c7a18b
-coreTokenString07: Bearer
-coreTokenType: OAUTH
-createTimestamp: 20170207050140Z
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: 081f9131-14d5-4e3c-bb3e-6408695aef2a
-
-dn: coreTokenId=46ba0f69-b856-44dc-9c7d-e2f07ac9971b,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"id":["46ba0f69-b856-44dc-9c7d-e2f07ac9971b"],"ops":[null],"expireTime":["1486447300196"]}
-coreTokenExpirationDate: 20170207060140.196Z
-coreTokenId: 46ba0f69-b856-44dc-9c7d-e2f07ac9971b
-coreTokenType: OAUTH
-createTimestamp: 20170207050140Z
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: 9acdfb98-9261-432e-afdf-37b51514f8e3
 
 dn: cn=edit-ade1,ou=groups,dc=openam,dc=forgerock,dc=org
 objectClass: top
 objectClass: groupofuniquenames
 uniqueMember: uid=user1,ou=people,dc=openam,dc=forgerock,dc=org
 cn: edit-ade1
-createTimestamp: 20170207050208Z
 creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
 modifyTimestamp: 20170207050216Z
 modifiersName: cn=Directory Manager,cn=Root DNs,cn=config
 entryUUID: 02b2e9a1-562f-4c0f-80cf-1c7b3fed34fd
+createTimestamp: 20170207050208Z
 
 dn: cn=edit-ade2,ou=groups,dc=openam,dc=forgerock,dc=org
 objectClass: top
 objectClass: groupofuniquenames
 uniqueMember: uid=user2,ou=people,dc=openam,dc=forgerock,dc=org
 cn: edit-ade2
-createTimestamp: 20170207050226Z
 creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
 modifyTimestamp: 20170207050233Z
 modifiersName: cn=Directory Manager,cn=Root DNs,cn=config
 entryUUID: fe8331af-1447-4452-8762-3fff4f5a2951
+createTimestamp: 20170207050226Z
 
-dn: coreTokenId=53a4f3d1-b980-480f-9d99-14ea79323cbc,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
+dn: coreTokenId=5e2c138f-ce44-4da2-89c2-ca08fb6daa77,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
 objectClass: top
 objectClass: frCoreToken
-coreTokenObject: {"redirectURI":[],"parent":[],"clientID":["gnssSiteManager"],"auditTrackingId":["5fa116f7-d615-43b7-8669-c45b908556f4-238"],"tokenName":["access_token"],"userName":["user1"],"nonce":[],"expireTime":["1486447367512"],"grant_type":["password"],"scope":["openid","profile"],"realm":["/"],"id":["53a4f3d1-b980-480f-9d99-14ea79323cbc"],"tokenType":["Bearer"]}
-coreTokenString12: password
-coreTokenString01: openid,profile
-coreTokenString10: access_token
-coreTokenString03: user1
-coreTokenString08: /
-coreTokenExpirationDate: 20170207060247.512Z
-coreTokenString09: gnssSiteManager
-coreTokenId: 53a4f3d1-b980-480f-9d99-14ea79323cbc
-coreTokenString07: Bearer
+coreTokenObject: {"id":["5e2c138f-ce44-4da2-89c2-ca08fb6daa77"],"ops":["AQIC5wM2LY4SfcyRBzGRa-b7IkQPmUP6GFb8nkJxg1J-1NM.*AAJTSQACMDEAAlNLABQtNjQxNzM3MTA4NDMxNjM5Njc2MAACUzEAAA..*"],"expireTime":["1486612724154"]}
+coreTokenExpirationDate: 20170209035844.154Z
+coreTokenId: 5e2c138f-ce44-4da2-89c2-ca08fb6daa77
 coreTokenType: OAUTH
-createTimestamp: 20170207050247Z
+createTimestamp: 20170209025844Z
 creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: 5b8ca7b5-086e-4bdc-9e1c-d2dbc06a98d5
+entryUUID: 3c2dbe26-3f59-4a1e-bab8-8983dc3786e7
 
-dn: coreTokenId=dcfbef15-a5fc-46a6-9bb5-33d2e778a084,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
+dn: coreTokenId=da7e8f20-3afe-4998-a390-2a5fe49119ba,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
 objectClass: top
 objectClass: frCoreToken
-coreTokenObject: {"id":["dcfbef15-a5fc-46a6-9bb5-33d2e778a084"],"ops":[null],"expireTime":["1486447367537"]}
-coreTokenExpirationDate: 20170207060247.537Z
-coreTokenId: dcfbef15-a5fc-46a6-9bb5-33d2e778a084
+coreTokenObject: {"id":["da7e8f20-3afe-4998-a390-2a5fe49119ba"],"ops":["AQIC5wM2LY4SfcyRBzGRa-b7IkQPmUP6GFb8nkJxg1J-1NM.*AAJTSQACMDEAAlNLABQtNjQxNzM3MTA4NDMxNjM5Njc2MAACUzEAAA..*"],"expireTime":["1486612948967"]}
+coreTokenExpirationDate: 20170209040228.967Z
+coreTokenId: da7e8f20-3afe-4998-a390-2a5fe49119ba
 coreTokenType: OAUTH
-createTimestamp: 20170207050247Z
+createTimestamp: 20170209030228Z
 creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: 95fee81e-97cd-481f-93b6-57bc356a30a0
+entryUUID: db070e3c-2690-40de-9cfd-194d46aa48d8
+
+dn: ou=sunEntitlementService,ou=services,o=sunamhiddenrealmdelegationservicepermissions,ou=services,dc=openam,dc=forgerock,dc=org
+objectClass: sunService
+objectClass: top
+ou: sunEntitlementService
+createTimestamp: 20170209030306Z
+creatorsName: cn=Internal Client,cn=Root DNs,cn=config
+entryUUID: b87b4760-62e9-4052-acb8-cd92cf0f20ee
+
+dn: ou=1.0,ou=sunEntitlementService,ou=services,o=sunamhiddenrealmdelegationservicepermissions,ou=services,dc=openam,dc=forgerock,dc=org
+objectClass: sunService
+objectClass: top
+ou: 1.0
+createTimestamp: 20170209030306Z
+creatorsName: cn=Internal Client,cn=Root DNs,cn=config
+entryUUID: 8a403a66-3b9c-45b1-89ec-666c11231400
+
+dn: ou=OrganizationConfig,ou=1.0,ou=sunEntitlementService,ou=services,o=sunamhiddenrealmdelegationservicepermissions,ou=services,dc=openam,dc=forgerock,dc=org
+objectClass: top
+objectClass: organizationalunit
+ou: OrganizationConfig
+createTimestamp: 20170209030306Z
+creatorsName: cn=Internal Client,cn=Root DNs,cn=config
+entryUUID: 3e055f97-37aa-4817-9084-f508bb1d1f35
+
+dn: ou=default,ou=OrganizationConfig,ou=1.0,ou=sunEntitlementService,ou=services,o=sunamhiddenrealmdelegationservicepermissions,ou=services,dc=openam,dc=forgerock,dc=org
+objectClass: sunServiceComponent
+objectClass: top
+objectClass: organizationalUnit
+ou: default
+createTimestamp: 20170209030306Z
+creatorsName: cn=Internal Client,cn=Root DNs,cn=config
+entryUUID: 701b2b4c-cb80-4bda-8509-12995ba451db
+
+dn: ou=subjectAttributesCollectors,ou=default,ou=OrganizationConfig,ou=1.0,ou=sunEntitlementService,ou=services,o=sunamhiddenrealmdelegationservicepermissions,ou=services,dc=openam,dc=forgerock,dc=org
+objectClass: sunServiceComponent
+objectClass: top
+objectClass: organizationalUnit
+sunserviceID: subjectAttributesCollectors
+ou: subjectAttributesCollectors
+sunsmspriority: 0
+createTimestamp: 20170209030306Z
+creatorsName: cn=Internal Client,cn=Root DNs,cn=config
+entryUUID: 2df1b17c-1fe1-47ab-a089-767d0d027a64
+
+dn: ou=OpenSSO,ou=subjectAttributesCollectors,ou=default,ou=OrganizationConfig,ou=1.0,ou=sunEntitlementService,ou=services,o=sunamhiddenrealmdelegationservicepermissions,ou=services,dc=openam,dc=forgerock,dc=org
+objectClass: sunServiceComponent
+objectClass: top
+objectClass: organizationalUnit
+sunserviceID: OpenSSOSubjectAttributesCollector
+ou: OpenSSO
+sunKeyValue: groupMembershipSearchIndexEnabled=false
+sunKeyValue: class=com.sun.identity.entitlement.opensso.OpenSSOSubjectAttributesCollector
+sunsmspriority: 0
+createTimestamp: 20170209030306Z
+creatorsName: cn=Internal Client,cn=Root DNs,cn=config
+entryUUID: 8e8dfd11-b8c1-44da-9e60-bd2cd201e0e4
+
+dn: coreTokenId=444d0f11-7a4b-4b53-894b-97428849cdb0,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
+objectClass: top
+objectClass: frCoreToken
+coreTokenObject: {"id":["444d0f11-7a4b-4b53-894b-97428849cdb0"],"ops":["AQIC5wM2LY4SfczgGQaSUvsnx5bueVO9BiQyaumJHWaZYWI.*AAJTSQACMDEAAlNLABQtMzMxNzgwNzUwNzIyMDUyOTc1OQACUzEAAA..*"],"expireTime":["1486612989552"]}
+coreTokenExpirationDate: 20170209040309.552Z
+coreTokenId: 444d0f11-7a4b-4b53-894b-97428849cdb0
+coreTokenType: OAUTH
+createTimestamp: 20170209030309Z
+creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
+entryUUID: a0ef17b6-8c6b-4ed9-a2f8-896ab843c296
+
+dn: coreTokenId=93ca3dab-f0c5-49fb-aba2-36aeee76606d,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
+objectClass: top
+objectClass: frCoreToken
+coreTokenObject: {"id":["93ca3dab-f0c5-49fb-aba2-36aeee76606d"],"ops":["AQIC5wM2LY4SfczgGQaSUvsnx5bueVO9BiQyaumJHWaZYWI.*AAJTSQACMDEAAlNLABQtMzMxNzgwNzUwNzIyMDUyOTc1OQACUzEAAA..*"],"expireTime":["1486613044641"]}
+coreTokenExpirationDate: 20170209040404.641Z
+coreTokenId: 93ca3dab-f0c5-49fb-aba2-36aeee76606d
+coreTokenType: OAUTH
+createTimestamp: 20170209030404Z
+creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
+entryUUID: 6730b116-a232-456d-9f1b-7e18afb889ee
 

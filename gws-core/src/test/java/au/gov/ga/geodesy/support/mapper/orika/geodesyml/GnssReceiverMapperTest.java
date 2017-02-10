@@ -28,6 +28,7 @@ public class GnssReceiverMapperTest {
                 .withCodeListValue("LEICA GRX1200GGPRO")
                 .withValue("LEICA GRX1200GGPRO")
             )
+            .withNotes("test notes")
             .withSatelliteSystem(Arrays.asList(
                 new CodeType().withValue("GPS").withCodeSpace("eGeodesy/satelliteSystem"),
                 new CodeType().withValue("Galileo").withCodeSpace("eGeodesy/satelliteSystem")
@@ -47,7 +48,8 @@ public class GnssReceiverMapperTest {
             (0))));
         assertThat(logItem.getEffectiveDates().getFrom(),equalTo( GMLDateUtils.stringToDateMultiParsers(receiver.getDateInstalled()
             .getValue().get(0))));
-
+        assertThat(logItem.getNotes(), equalTo(receiver.getNotes()));
+        
         GnssReceiverType receiverB = mapper.from(logItem);
         assertThat(receiverB.getIgsModelCode().getCodeSpace(), equalTo("https://igscb.jpl.nasa.gov/igscb/station/general/rcvr_ant.tab"));
         assertThat(receiverB.getIgsModelCode().getCodeList(), equalTo("http://xml.gov" +
@@ -62,7 +64,7 @@ public class GnssReceiverMapperTest {
             .getDateInstalled()));
         assertThat(logItem.getEffectiveDates().getFrom(), equalTo(GMLDateUtils.stringToDateMultiParsers(receiverB.getDateInstalled()
             .getValue().get(0))));
-
+        assertThat(receiverB.getNotes(), equalTo(logItem.getNotes()));
     }
 
     private TimePositionType timePosition(String date) {

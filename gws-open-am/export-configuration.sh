@@ -27,6 +27,5 @@ $SSOADM export-svc-cfg -e geodenc -u amadmin -f "$ADMIN_TOOLS_DIR/admin/passwdfi
  --noPropertiesFile
 
 cp "$OPENAM_BASE_DIR/openam/.keypass" "$KEYS_DIR/."
-cp "$OPENAM_BASE_DIR/openam/keystore.jceks" "$KEYS_DIR/."
 cp "$OPENAM_BASE_DIR/openam/keystore.jks" "$KEYS_DIR/."
 cp "$OPENAM_BASE_DIR/openam/.storepass" "$KEYS_DIR/."

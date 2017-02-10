@@ -23,6 +23,9 @@ public class SystemTestConfig {
     @Value("${webServicesUrl}")
     private String webServicesUrl;
 
+    @Value("${oauthProviderUrl}")
+    private String oauthProviderUrl;
+
     @Value("${http.useProxy}")
     private Boolean useProxy;
 
@@ -45,6 +48,10 @@ public class SystemTestConfig {
 
     public String getWebServicesUrl() {
         return webServicesUrl;
+    }
+
+    public String getOauthProviderUrl() {
+        return oauthProviderUrl;
     }
 
     public Boolean getUseProxy() {

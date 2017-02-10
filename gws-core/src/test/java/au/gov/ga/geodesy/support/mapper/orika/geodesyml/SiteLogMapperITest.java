@@ -468,6 +468,7 @@ public class SiteLogMapperITest extends IntegrationTest {
             for (GnssReceiverLogItem receiverLogItem : sortLogItems(siteLog.getGnssReceivers())) {
                 GnssReceiverType receiverType = receiverProperties.get(i++).getGnssReceiver();
                 assertThat(receiverLogItem.getFirmwareVersion(), equalTo(receiverType.getFirmwareVersion()));
+                assertThat(receiverLogItem.getNotes(), equalTo(receiverType.getNotes()));
             }
         }
     }

@@ -32,9 +32,9 @@ import au.gov.xml.icsm.geodesyml.v_0_4.FormInformationType;
 import au.gov.xml.icsm.geodesyml.v_0_4.GnssAntennaPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_4.LocalEpisodicEffectPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_4.MoreInformationType;
-import au.gov.xml.icsm.geodesyml.v_0_4.MultipathSourcesPropertyType;
-import au.gov.xml.icsm.geodesyml.v_0_4.RadioInterferencesPropertyType;
-import au.gov.xml.icsm.geodesyml.v_0_4.SignalObstructionsPropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_4.MultipathSourcePropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_4.RadioInterferencePropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_4.SignalObstructionPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_4.SiteIdentificationType;
 import au.gov.xml.icsm.geodesyml.v_0_4.SiteLocationType;
 import au.gov.xml.icsm.geodesyml.v_0_4.SiteLogType;
@@ -70,10 +70,10 @@ public class SiteLogMapper implements Iso<SiteLogType, SiteLog> {
             .fieldMap("temperatureSensors", "temperatureSensors").converter("temperatureSensors").add()
             .fieldMap("waterVaporSensors", "waterVaporSensors").converter("waterVaporSensors").add()
             .fieldMap("otherInstrumentations", "otherInstrumentationLogItem").converter("otherInstrumentations").add()
-            .fieldMap("signalObstructionsSet", "signalObstructionLogItems").converter("signalObstructionsSet").add()
-            .fieldMap("multipathSourcesSet", "multipathSourceLogItems").converter("multipathSourcesSet").add()
+            .fieldMap("signalObstructions", "signalObstructionLogItems").converter("signalObstructions").add()
+            .fieldMap("multipathSources", "multipathSourceLogItems").converter("multipathSources").add()
             .fieldMap("localEpisodicEffects", "localEpisodicEffectLogItems").converter("localEpisodicEffects").add()
-            .fieldMap("radioInterferencesSet", "radioInterferences").converter("radioInterferencesSet").add()
+            .fieldMap("radioInterferences", "radioInterferences").converter("radioInterferences").add()
             .fieldMap("moreInformation", "moreInformation").converter("moreInformation").add()
             .fieldMap("formInformation", "formInformation").converter("formInformation").add()
             .fieldMap("collocationInformations", "collocationInformation").converter("collocationInformations").add()
@@ -131,15 +131,15 @@ public class SiteLogMapper implements Iso<SiteLogType, SiteLog> {
                 ) {}
         );
 
-        converters.registerConverter("signalObstructionsSet",
-                new BidirectionalConverterWrapper<List<SignalObstructionsPropertyType>, Set<SignalObstructionLogItem>>(
+        converters.registerConverter("signalObstructions",
+                new BidirectionalConverterWrapper<List<SignalObstructionPropertyType>, Set<SignalObstructionLogItem>>(
                         logItemsConverter(new SignalObstructionMapper())
                 ) {}
         );
 
-        converters.registerConverter("multipathSourcesSet",
-                new BidirectionalConverterWrapper<List<MultipathSourcesPropertyType>, Set<MultipathSourceLogItem>>(
-                        logItemsConverter(new MultipathSourcesMapper())
+        converters.registerConverter("multipathSources",
+                new BidirectionalConverterWrapper<List<MultipathSourcePropertyType>, Set<MultipathSourceLogItem>>(
+                        logItemsConverter(new MultipathSourceMapper())
                 ) {}
         );
 
@@ -150,8 +150,8 @@ public class SiteLogMapper implements Iso<SiteLogType, SiteLog> {
                 ) {}
         );
 
-        converters.registerConverter("radioInterferencesSet",
-                new BidirectionalConverterWrapper<List<RadioInterferencesPropertyType>, Set<RadioInterference>>(
+        converters.registerConverter("radioInterferences",
+                new BidirectionalConverterWrapper<List<RadioInterferencePropertyType>, Set<RadioInterference>>(
                         logItemsConverter(new RadioInterferenceMapper())
                 ) {}
         );

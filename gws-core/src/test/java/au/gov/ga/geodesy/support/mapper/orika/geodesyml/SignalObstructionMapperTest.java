@@ -6,7 +6,7 @@ import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLUtils;
 import au.gov.ga.geodesy.support.TestResources;
 import au.gov.ga.geodesy.support.marshalling.moxy.GeodesyMLMoxy;
 import au.gov.ga.geodesy.support.utils.GMLDateUtils;
-import au.gov.xml.icsm.geodesyml.v_0_4.BasePossibleProblemSourcesType;
+import au.gov.xml.icsm.geodesyml.v_0_4.BasePossibleProblemSourceType;
 import au.gov.xml.icsm.geodesyml.v_0_4.GeodesyMLType;
 import au.gov.xml.icsm.geodesyml.v_0_4.SiteLogType;
 import net.opengis.gml.v_3_2_1.TimePeriodType;
@@ -33,11 +33,11 @@ public class SignalObstructionMapperTest {
         SiteLogType siteLog = GeodesyMLUtils.getElementFromJAXBElements(mobs.getElements(), SiteLogType.class)
                 .findFirst().get();
 
-        BasePossibleProblemSourcesType signalObstructionTypeA =
-                siteLog.getSignalObstructionsSet().get(0).getSignalObstructions();
+        BasePossibleProblemSourceType signalObstructionTypeA =
+                siteLog.getSignalObstructions().get(0).getSignalObstruction();
 
         SignalObstructionLogItem logItem = mapper.to(signalObstructionTypeA);
-        assertThat(logItem.getPossibleProblemSource(), equalTo(signalObstructionTypeA.getPossibleProblemSources()));
+        assertThat(logItem.getPossibleProblemSource(), equalTo(signalObstructionTypeA.getPossibleProblemSource()));
         String xmlEffectiveDateFrom = ((TimePeriodType) signalObstructionTypeA.getValidTime().getAbstractTimePrimitive().getValue())
                 .getBeginPosition().getValue().get(0);
         assertThat(GMLDateUtils.dateToString(logItem.getEffectiveDates().getFrom(), GMLDateUtils.GEODESYML_DATE_FORMAT_TIME_MILLISEC),
@@ -48,8 +48,8 @@ public class SignalObstructionMapperTest {
             equalTo(GMLDateUtils.stringToDateToStringMultiParsers(xmlEffectiveDateTo)));
         assertThat(logItem.getNotes(), equalTo(signalObstructionTypeA.getNotes()));
 
-        BasePossibleProblemSourcesType signalObstructionTypeB = mapper.from(logItem);
-        assertThat(signalObstructionTypeB.getPossibleProblemSources(), equalTo(logItem.getPossibleProblemSource()));
+        BasePossibleProblemSourceType signalObstructionTypeB = mapper.from(logItem);
+        assertThat(signalObstructionTypeB.getPossibleProblemSource(), equalTo(logItem.getPossibleProblemSource()));
         xmlEffectiveDateFrom = ((TimePeriodType) signalObstructionTypeB.getValidTime().getAbstractTimePrimitive().getValue())
                 .getBeginPosition().getValue().get(0);
         assertThat(
@@ -60,7 +60,7 @@ public class SignalObstructionMapperTest {
         assertThat(
                 GMLDateUtils.stringToDateToStringMultiParsers(xmlEffectiveDateTo),
             equalTo(GMLDateUtils.dateToString(logItem.getEffectiveDates().getTo(), GMLDateUtils.GEODESYML_DATE_FORMAT_TIME_MILLISEC)));
-        assertThat(signalObstructionTypeB.getPossibleProblemSources(), equalTo(logItem.getPossibleProblemSource()));
+        assertThat(signalObstructionTypeB.getPossibleProblemSource(), equalTo(logItem.getPossibleProblemSource()));
 
     }
 

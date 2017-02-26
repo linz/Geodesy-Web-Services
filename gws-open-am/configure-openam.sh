@@ -24,10 +24,19 @@ echo "$ADMIN_PWD" > $ADMIN_TOOLS_DIR/admin/passwdfile
 echo "y" | $SSOADM import-svc-cfg -e geodenc -u amadmin -f $ADMIN_TOOLS_DIR/admin/passwdfile -X $SERVICE_CFG_FILE
 
 # Replace keystore files
-cp -f $KEYS_DIR/keystore.jceks $OPENAM_BASE_DIR/openam/.
 cp -f $KEYS_DIR/keystore.jks $OPENAM_BASE_DIR/openam/.
+rm $OPENAM_BASE_DIR/openam/keystore.jceks
 cp -f $KEYS_DIR/.keypass $OPENAM_BASE_DIR/openam/.
 cp -f $KEYS_DIR/.storepass $OPENAM_BASE_DIR/openam/.
+
+# Export self-signed signing key public certificate
+keytool -exportcert -alias signingKey -file idfSelfSignedCert.crt \
+    -keystore "$KEYS_DIR"/keystore.jks -storepass G2dioga1
+
+# Import self-signed signing key public certificate into the JVM keystore
+keytool -importcert -noprompt -alias signingKey -file idfSelfSignedCert.crt -trustcacerts \
+    -keystore "$JAVA_HOME"/lib/security/cacerts \
+    -storepass changeit
 
 # Import directory data file into LDAP directory
 $IMPORT_LDIF\

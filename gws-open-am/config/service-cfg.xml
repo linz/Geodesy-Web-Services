@@ -8435,11 +8435,11 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="serverconfig"/>
-    <Value>com.iplanet.services.debug.level=error</Value>
     <Value>com.sun.identity.urlconnection.useCache=false</Value>
     <Value>com.iplanet.am.server.port=8080</Value>
     <Value>com.sun.identity.overrideAMC=true</Value>
     <Value>am.encryption.pwd=1zNW7&#47;IlmAYUl5s9tpMfrKG0E29HP2+f</Value>
+    <Value>com.iplanet.services.debug.level=message</Value>
     <Value>com.iplanet.am.server.host=localhost</Value>
     <Value>bootstrap.file=&#47;root&#47;.openamcfg&#47;AMConfig_nix_store_cyvxffqjs2y5b4my57rgwlkfwxm6wij5-apache-tomcat-8.0.37_webapps_openam_</Value>
     <Value>com.iplanet.am.serverMode=true</Value>
@@ -8448,14 +8448,17 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
     <Value>com.iplanet.am.ldap.connection.ldap.error.codes.retries=80,81,91</Value>
     <Value>com.iplanet.security.SSLSocketFactoryImpl=com.sun.identity.shared.ldap.factory.JSSESocketFactory</Value>
     <Value>com.iplanet.am.locale=en_US</Value>
+    <Value>com.sun.identity.saml.xmlsig.keystore=%BASE_DIR%&#47;%SERVER_URI%&#47;keystore.jks</Value>
     <Value>com.sun.identity.sm.sms_object_class_name=com.sun.identity.sm.ldap.SMSEmbeddedLdapObject</Value>
     <Value>com.sun.am.event.connection.disable.list=aci,um</Value>
     <Value>com.iplanet.am.service.secret=AQICz7HhrRhO2nOWiWgfytftBuUkzVK5P8rN</Value>
+    <Value>com.sun.identity.saml.xmlsig.certalias=signingKey</Value>
     <Value>com.forgerock.openam.dj.backendType=je</Value>
     <Value>org.forgerock.embedded.dsadminport=4444</Value>
     <Value>com.sun.identity.common.systemtimerpool.size=3</Value>
     <Value>com.iplanet.services.configpath=&#47;opt&#47;openam</Value>
     <Value>com.sun.identity.sm.enableDataStoreNotification=true</Value>
+    <Value>com.sun.identity.saml.xmlsig.storetype=JKS</Value>
     <Value>com.iplanet.am.server.protocol=http</Value>
     <Value>com.sun.services.debug.mergeall=off</Value>
     <Value>com.iplanet.am.lbcookie.value=01</Value>
@@ -12139,13 +12142,13 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
     <Value>[0]=</Value>
 </AttributeValuePair>
 <AttributeValuePair>
-    <Attribute name="com.forgerock.openam.oauth2provider.idTokenSignedResponseAlg"/>
-    <Value>HS256</Value>
-</AttributeValuePair>
-<AttributeValuePair>
     <Attribute name="com.forgerock.openam.oauth2provider.redirectionURIs"/>
     <Value>[0]=http:&#47;&#47;localhost:5555&#47;login</Value>
     <Value>[1]=http:&#47;&#47;localhost:5555</Value>
+</AttributeValuePair>
+<AttributeValuePair>
+    <Attribute name="com.forgerock.openam.oauth2provider.idTokenSignedResponseAlg"/>
+    <Value>RS256</Value>
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="idTokenEncryptionEnabled"/>
@@ -14993,7 +14996,7 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="tokenSigningAlgorithm"/>
-    <Value>HS256</Value>
+    <Value>RS256</Value>
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="forgerock-oauth2-provider-authentication-attributes"/>
@@ -15025,12 +15028,12 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
     <Value>cn</Value>
 </AttributeValuePair>
 <AttributeValuePair>
-    <Attribute name="forgerock-oauth2-provider-keypair-name"/>
-    <Value>test</Value>
-</AttributeValuePair>
-<AttributeValuePair>
     <Attribute name="alwaysAddClaimsToToken"/>
     <Value>true</Value>
+</AttributeValuePair>
+<AttributeValuePair>
+    <Attribute name="forgerock-oauth2-provider-keypair-name"/>
+    <Value>signingKey</Value>
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="supportedIDTokenEncryptionAlgorithms"/>

@@ -17,6 +17,7 @@ import org.testng.annotations.Test;
 
 import au.gov.ga.geodesy.support.TestResources;
 import au.gov.ga.geodesy.support.spring.ResourceServerConfig;
+import au.gov.ga.geodesy.support.spring.ResourceServerTestConfig;
 
 import io.restassured.module.mockmvc.RestAssuredMockMvc;
 
@@ -43,7 +44,8 @@ public class AuthorizationRestITest extends RestTest {
 
         String claims = "{\"sub\": \"user\", \"authorities\": [\"" + authority + "\"]}";
 
-        Jwt token = JwtHelper.encode(claims, ResourceServerConfig.signer, header);
+
+        Jwt token = JwtHelper.encode(claims, ResourceServerTestConfig.macSigner, header);
         return token.getEncoded();
     }
 

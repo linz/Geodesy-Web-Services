@@ -5923,11 +5923,11 @@ sunKeyValue: parentsiteid=
 sunsmspriority: 0
 sunserviceID: server
 ou: http://localhost:8080/openam
-createTimestamp: 20170131060637Z
 creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
 modifyTimestamp: 20170210204715Z
 modifiersName: cn=Internal Client,cn=Root DNs,cn=config
 entryUUID: 52f25e0c-e077-4718-b347-65878ac95c9e
+createTimestamp: 20170131060637Z
 
 dn: uid=demo,ou=people,dc=openam,dc=forgerock,dc=org
 objectClass: inetuser
@@ -6168,11 +6168,11 @@ sunKeyValue: forgerock-oauth2-provider-default-scopes=profile
 sunKeyValue: forgerock-oauth2-provider-code-verifier-enforced=false
 sunKeyValue: forgerock-oauth2-provider-keypair-name=signingKey
 ou: default
-createTimestamp: 20170131061403Z
 creatorsName: cn=Internal Client,cn=Root DNs,cn=config
 modifyTimestamp: 20170210204845Z
 modifiersName: cn=Internal Client,cn=Root DNs,cn=config
 entryUUID: b78a4b27-4eb1-469b-9ab5-31b7c2abd398
+createTimestamp: 20170131061403Z
 
 dn: ou=f4f1cb52-ea3c-4592-8a35-c9a79576a0ce,ou=registeredResourceTypes,ou=default,ou=OrganizationConfig,ou=1.0,ou=sunEntitlementService,ou=services,dc=openam,dc=forgerock,dc=org
 objectClass: sunServiceComponent
@@ -6272,6 +6272,7 @@ objectClass: sunServiceComponent
 objectClass: top
 objectClass: organizationalUnit
 sunKeyValue: com.forgerock.openam.oauth2provider.clientSessionURI=
+sunKeyValue: com.forgerock.openam.oauth2provider.postLogoutRedirectURI=[0]=http://localhost:5555
 sunKeyValue: com.forgerock.openam.oauth2provider.defaultMaxAgeEnabled=false
 sunKeyValue: com.forgerock.openam.oauth2provider.responseTypes=[2]=id_token
 sunKeyValue: idTokenEncryptionAlgorithm=RSA1_5
@@ -6309,8 +6310,8 @@ sunKeyValue: idTokenPublicEncryptionKey=
 sunKeyValue: userpassword=AQICz7HhrRhO2nORraBckm/Q1Y9/5DQLsUcp
 sunKeyValue: com.forgerock.openam.oauth2provider.responseTypes=[1]=token
 sunKeyValue: com.forgerock.openam.oauth2provider.redirectionURIs=[1]=http://localhost:5555
-sunKeyValue: com.forgerock.openam.oauth2provider.postLogoutRedirectURI=[0]=
 sunKeyValue: com.forgerock.openam.oauth2provider.clientType=Confidential
+sunKeyValue: com.forgerock.openam.oauth2provider.redirectionURIs=[2]=http://localhost:5555/auth.html
 sunKeyValue: com.forgerock.openam.oauth2provider.refreshTokenLifeTime=0
 sunKeyValue: com.forgerock.openam.oauth2provider.name=[0]=
 sunKeyValue: com.forgerock.openam.oauth2provider.claims=[0]=
@@ -6319,7 +6320,7 @@ sunserviceID: OAuth2Client
 ou: gnssSiteManager
 createTimestamp: 20170131061430Z
 creatorsName: cn=Internal Client,cn=Root DNs,cn=config
-modifyTimestamp: 20170210204928Z
+modifyTimestamp: 20170227025148Z
 modifiersName: cn=Internal Client,cn=Root DNs,cn=config
 entryUUID: aea32700-b3c8-4c9b-9e7f-3618829879de
 
@@ -6401,62 +6402,4 @@ ou: OpenSSO
 creatorsName: cn=Internal Client,cn=Root DNs,cn=config
 entryUUID: 8e8dfd11-b8c1-44da-9e60-bd2cd201e0e4
 createTimestamp: 20170209030306Z
-
-dn: coreTokenId=6e6f7b96-0978-4d1c-8cc3-3b22e263a377,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"redirectURI":[],"parent":[],"clientID":["gnssSiteManager"],"auditTrackingId":["ffc297fd-2e65-430f-9042-0710184d184d-431"],"tokenName":["access_token"],"userName":["user1"],"nonce":[],"expireTime":["1486763402573"],"grant_type":["password"],"scope":["openid","profile"],"realm":["/"],"id":["6e6f7b96-0978-4d1c-8cc3-3b22e263a377"],"tokenType":["Bearer"]}
-coreTokenString12: password
-coreTokenString01: openid,profile
-coreTokenString10: access_token
-coreTokenString03: user1
-coreTokenExpirationDate: 20170210215002.573Z
-coreTokenString08: /
-coreTokenString09: gnssSiteManager
-coreTokenId: 6e6f7b96-0978-4d1c-8cc3-3b22e263a377
-coreTokenType: OAUTH
-coreTokenString07: Bearer
-createTimestamp: 20170210205002Z
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: 1468aa48-6106-4994-820b-eb30ac4fdef5
-
-dn: coreTokenId=40a17e13-0378-4348-a2b0-cc5886a350ed,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"id":["40a17e13-0378-4348-a2b0-cc5886a350ed"],"ops":[null],"expireTime":["1486763402751"]}
-coreTokenExpirationDate: 20170210215002.751Z
-coreTokenId: 40a17e13-0378-4348-a2b0-cc5886a350ed
-coreTokenType: OAUTH
-createTimestamp: 20170210205002Z
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: 2390cc6c-2f23-438c-a340-f7976a9f0f3d
-
-dn: coreTokenId=1df4f453-304a-43dc-bb6f-90ab17feb370,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"redirectURI":[],"parent":[],"clientID":["gnssSiteManager"],"auditTrackingId":["ffc297fd-2e65-430f-9042-0710184d184d-445"],"tokenName":["access_token"],"userName":["user1"],"nonce":[],"expireTime":["1486763407088"],"grant_type":["password"],"scope":["openid","profile"],"realm":["/"],"id":["1df4f453-304a-43dc-bb6f-90ab17feb370"],"tokenType":["Bearer"]}
-coreTokenString12: password
-coreTokenString01: openid,profile
-coreTokenString10: access_token
-coreTokenString03: user1
-coreTokenExpirationDate: 20170210215007.088Z
-coreTokenString08: /
-coreTokenString09: gnssSiteManager
-coreTokenId: 1df4f453-304a-43dc-bb6f-90ab17feb370
-coreTokenType: OAUTH
-coreTokenString07: Bearer
-createTimestamp: 20170210205006Z
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: bb7847a0-10a4-4ce8-97e3-38327a99ab39
-
-dn: coreTokenId=6af5dabe-c083-4f17-a540-1558e3b39623,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"id":["6af5dabe-c083-4f17-a540-1558e3b39623"],"ops":[null],"expireTime":["1486763407177"]}
-coreTokenExpirationDate: 20170210215007.177Z
-coreTokenId: 6af5dabe-c083-4f17-a540-1558e3b39623
-coreTokenType: OAUTH
-createTimestamp: 20170210205007Z
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: 017c1b42-fa3c-4c76-b737-402e2b6ef77a
 

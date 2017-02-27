@@ -12127,7 +12127,7 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="com.forgerock.openam.oauth2provider.postLogoutRedirectURI"/>
-    <Value>[0]=</Value>
+    <Value>[0]=http:&#47;&#47;localhost:5555</Value>
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="com.forgerock.openam.oauth2provider.refreshTokenLifeTime"/>
@@ -12145,6 +12145,7 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
     <Attribute name="com.forgerock.openam.oauth2provider.redirectionURIs"/>
     <Value>[0]=http:&#47;&#47;localhost:5555&#47;login</Value>
     <Value>[1]=http:&#47;&#47;localhost:5555</Value>
+    <Value>[2]=http:&#47;&#47;localhost:5555&#47;auth.html</Value>
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="com.forgerock.openam.oauth2provider.idTokenSignedResponseAlg"/>

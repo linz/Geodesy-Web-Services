@@ -5,7 +5,7 @@ ENV=$2
 
 AWS_PROFILE=geodesy
 ENV_FILE=infra-${ENV}.yaml
-STACK_NAME="${ENV^}"Geodesy
+STACK_NAME="${ENV^}"OpenAM
 
 # RDS Database credentials
 RDS_MASTER_USERNAME_PARAM_NAME=DbMasterUsername

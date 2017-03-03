@@ -25,11 +25,14 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
     protected SignatureVerifier getSignatureVerifier() {
         // TODO: Move public key into environment-specific configuration files.
         return new RsaVerifier(
-            "-----BEGIN PUBLIC KEY-----"+
-            "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCKDE67O/PN0Uj2d3JDP/MNwff3"+
-            "5hPqkspsVilOwiY/yeUrvu5ghj5c8wk+ufToHx1XqmPDVUce2+FQFlnn2dnw3Nfz"+
-            "Qq3xU8pGdTH/LA6WnVbha9LPTPm94Wt5lzfIv5OPRAk1AmuW5y4a7VBNd1EhLKru"+
-            "Mxvqc0fH6Fnl1GJwdwIDAQAB"+
+            "-----BEGIN PUBLIC KEY-----" +
+            "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAo1uXz14/oHyRkBM1I97f" +
+            "45nd6wvHfWGNf51qQe0/BcIBoIqokXCPAp3HJG492xUb7wNuTc8aGTbpomtIT3cS" +
+            "nF6qZCrE08x4P43T/ymOS5VhbA8hD+2zaJOJY5WfvDOUTgBJ++6mo5HmmO5gxY2j" +
+            "+l3gvtA2NQIqgC30fXUczKI/7quij8RiBfgAfs4CF9QydxiyilaGRb/N73PzBNdz" +
+            "wEASAOa3zMUJ7PUK2okH8yVIFQYOCTygdgOwcqbHTltoFo4FDwtEY/lJQtJtG27f" +
+            "h4sWii0EifQW9RlKfBOJKltocdGBasw5WbTuhItYG47eH9uPfzMG66qpWwArxi7K" +
+            "gQIDAQAB" +
             "-----END PUBLIC KEY-----"
         );
     }

@@ -27,11 +27,11 @@ public class AuthorizationTest extends BaseSystemTest {
      */
     public String authenticate() {
        return given()
-            .auth().preemptive().basic("gnssSiteManager", "gumby123")
+            .auth().preemptive().basic("GnssSiteManager", "gumby123")
             .contentType(ContentType.URLENC)
             .formParam("grant_type", "password")
-            .formParam("username", "user1")
-            .formParam("password", "gumby123")
+            .formParam("username", "user.a")
+            .formParam("password", "gumby123A")
             .formParam("scope", "openid profile")
             .param("realm", "/")
             .when()

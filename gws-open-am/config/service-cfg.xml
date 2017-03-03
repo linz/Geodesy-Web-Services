@@ -3847,7 +3847,7 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
                 </AttributeSchema>
                 <AttributeSchema cosQualifier="default"  i18nKey="a160"  isSearchable="no"  listOrder="natural"  name="iplanet-am-auth-hmac-signing-shared-secret"  resourceName="sharedSecret"  syntax="password"  type="single"  validator="RequiredValueValidator" >
                     <DefaultValues>
-                        <Value>AQICS4Tl+grLT6kyXRqR6HAVeVyDAl7QWeky5SP6FBoCC+G+4q2+k+8TFKLuQDl4PgIb4MROT8GvPOg=</Value>
+                        <Value>AQICS4Tl+grLT6lqPvJRziyEsVOxDboeMtdmyXv9XUG3PJybzGQSXyEEsbJRxCJAZGveIcUxLlQEOvk=</Value>
                     </DefaultValues>
                 </AttributeSchema>
                 <AttributeSchema cosQualifier="default"  i18nKey="a105"  isSearchable="no"  listOrder="natural"  name="iplanet-am-auth-default-role"  resourceName="defaultRole"  syntax="string"  type="list" >
@@ -5293,7 +5293,7 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
                 </AttributeSchema>
                 <AttributeSchema cosQualifier="default"  i18nKey="a006"  isSearchable="no"  listOrder="natural"  name="openam-auth-persistent-cookie-hmac-key"  resourceName="hmacKey"  syntax="password"  type="single" >
                     <DefaultValues>
-                        <Value>AQICS4Tl+grLT6lBt8sMrb&#47;yDsu3uLEW1aUw5C8jqIE&#47;mMpQYMpfWTuh9P6b5WhGIa5Xqz&#47;7gRSXqCU=</Value>
+                        <Value>AQICS4Tl+grLT6ltxPGItlqba15zhvWyM9EhgkGcDuuNteebeyvnsdNyMRZm2+m+UJ3pE&#47;MD4R90rHQ=</Value>
                     </DefaultValues>
                 </AttributeSchema>
                 <SubSchema hideConfigUI="no"  inheritance="multiple"  maintainPriority="no"  name="serverconfig"  realmCloneable="yes"  resourceName="USE-PARENT"  supportsApplicableOrganization="no"  validate="yes" >
@@ -5336,7 +5336,7 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
                     </AttributeSchema>
                     <AttributeSchema cosQualifier="default"  i18nKey="a006"  isSearchable="no"  listOrder="natural"  name="openam-auth-persistent-cookie-hmac-key"  resourceName="hmacKey"  syntax="password"  type="single" >
                         <DefaultValues>
-                            <Value>AQICS4Tl+grLT6lBt8sMrb&#47;yDsu3uLEW1aUw5C8jqIE&#47;mMpQYMpfWTuh9P6b5WhGIa5Xqz&#47;7gRSXqCU=</Value>
+                            <Value>AQICS4Tl+grLT6ltxPGItlqba15zhvWyM9EhgkGcDuuNteebeyvnsdNyMRZm2+m+UJ3pE&#47;MD4R90rHQ=</Value>
                         </DefaultValues>
                     </AttributeSchema>
                 </SubSchema>
@@ -8141,9 +8141,6 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
                 </SubSchema>
             </Global>
         </Schema><Configuration><GlobalConfiguration group="default"><SubConfiguration name="com-sun-identity-sites" id="com-sun-identity-sites"></SubConfiguration><SubConfiguration name="com-sun-identity-servers" id="com-sun-identity-servers"><SubConfiguration name="server-default" id="server"><AttributeValuePair>
-    <Attribute name="serverconfigxml"/>
-</AttributeValuePair>
-<AttributeValuePair>
     <Attribute name="serverid"/>
     <Value>00</Value>
 </AttributeValuePair>
@@ -8238,7 +8235,6 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
     <Value>com.iplanet.am.sdk.cache.maxSize=10000</Value>
     <Value>org.forgerock.services.umaaudit.store.password=</Value>
     <Value>org.forgerock.services.cts.store.ssl.enabled=</Value>
-    <Value>com.iplanet.am.sdk.caching.enabled=false</Value>
     <Value>org.forgerock.services.uma.labels.store.root.suffix=</Value>
     <Value>org.forgerock.services.uma.pendingrequests.store.max.connections=10</Value>
     <Value>com.sun.am.session.enableHostLookUp=false</Value>
@@ -8350,7 +8346,7 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
     <Value>openam.retained.http.headers=X-DSAMEVersion</Value>
 </AttributeValuePair>
 <AttributeValuePair>
-    <Attribute name="parentsiteid"/>
+    <Attribute name="serverconfigxml"/>
 </AttributeValuePair>
 </SubConfiguration><SubConfiguration name="http:&#47;&#47;localhost:8080&#47;openam" id="server"><AttributeValuePair>
     <Attribute name="serverconfigxml"/>
@@ -8394,7 +8390,7 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
                 cn=puser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org
             &lt;&#47;DirDN&gt;
             &lt;DirPassword&gt;
-                AQICz7HhrRhO2nOWiWgfytftBtO3doPv59nV
+                AQICfTTFQ&#47;TYcDa57rNitdQcD0T4woEOU&#47;i3
             &lt;&#47;DirPassword&gt;
         &lt;&#47;User&gt;
         &lt;User name=&quot;User2&quot; type=&quot;admin&quot;&gt;
@@ -8402,7 +8398,7 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
                 cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org
             &lt;&#47;DirDN&gt;
             &lt;DirPassword&gt;
-                AQICz7HhrRhO2nOWiWgfytftBtO3doPv59nV
+                AQICfTTFQ&#47;TYcDa57rNitdQcD0T4woEOU&#47;i3
             &lt;&#47;DirPassword&gt;
         &lt;&#47;User&gt;
         &lt;BaseDN&gt;
@@ -8421,7 +8417,7 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
              type=&quot;SIMPLE&quot; &#47;&gt;
              &lt;User name=&quot;User2&quot; type=&quot;admin&quot;&gt;
                 &lt;DirDN&gt;cn=Directory Manager&lt;&#47;DirDN&gt;
-                &lt;DirPassword&gt;AQICz7HhrRhO2nOWiWgfytftBqMzZBoTBx6m&lt;&#47;DirPassword&gt;
+                &lt;DirPassword&gt;AQICfTTFQ&#47;TYcDa57rNitdQcD2trMJAWeJaB&lt;&#47;DirPassword&gt;
              &lt;&#47;User&gt;
              &lt;BaseDN&gt;dc=openam,dc=forgerock,dc=org&lt;&#47;BaseDN&gt;
     &lt;&#47;ServerGroup&gt;
@@ -8435,11 +8431,10 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="serverconfig"/>
+    <Value>com.iplanet.services.debug.level=error</Value>
     <Value>com.sun.identity.urlconnection.useCache=false</Value>
     <Value>com.iplanet.am.server.port=8080</Value>
     <Value>com.sun.identity.overrideAMC=true</Value>
-    <Value>am.encryption.pwd=1zNW7&#47;IlmAYUl5s9tpMfrKG0E29HP2+f</Value>
-    <Value>com.iplanet.services.debug.level=message</Value>
     <Value>com.iplanet.am.server.host=localhost</Value>
     <Value>bootstrap.file=&#47;root&#47;.openamcfg&#47;AMConfig_nix_store_cyvxffqjs2y5b4my57rgwlkfwxm6wij5-apache-tomcat-8.0.37_webapps_openam_</Value>
     <Value>com.iplanet.am.serverMode=true</Value>
@@ -8448,17 +8443,16 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
     <Value>com.iplanet.am.ldap.connection.ldap.error.codes.retries=80,81,91</Value>
     <Value>com.iplanet.security.SSLSocketFactoryImpl=com.sun.identity.shared.ldap.factory.JSSESocketFactory</Value>
     <Value>com.iplanet.am.locale=en_US</Value>
-    <Value>com.sun.identity.saml.xmlsig.keystore=%BASE_DIR%&#47;%SERVER_URI%&#47;keystore.jks</Value>
+    <Value>com.iplanet.am.sdk.caching.enabled=false</Value>
     <Value>com.sun.identity.sm.sms_object_class_name=com.sun.identity.sm.ldap.SMSEmbeddedLdapObject</Value>
     <Value>com.sun.am.event.connection.disable.list=aci,um</Value>
-    <Value>com.iplanet.am.service.secret=AQICz7HhrRhO2nOWiWgfytftBuUkzVK5P8rN</Value>
-    <Value>com.sun.identity.saml.xmlsig.certalias=signingKey</Value>
     <Value>com.forgerock.openam.dj.backendType=je</Value>
+    <Value>com.iplanet.am.service.secret=AQICfTTFQ&#47;TYcDa57rNitdQcD+Sm7fVKFQtM</Value>
+    <Value>am.encryption.pwd=VtgBQZ6y8YgKvBzUImzgv8O5oPMuXA0w</Value>
     <Value>org.forgerock.embedded.dsadminport=4444</Value>
     <Value>com.sun.identity.common.systemtimerpool.size=3</Value>
     <Value>com.iplanet.services.configpath=&#47;opt&#47;openam</Value>
     <Value>com.sun.identity.sm.enableDataStoreNotification=true</Value>
-    <Value>com.sun.identity.saml.xmlsig.storetype=JKS</Value>
     <Value>com.iplanet.am.server.protocol=http</Value>
     <Value>com.sun.services.debug.mergeall=off</Value>
     <Value>com.iplanet.am.lbcookie.value=01</Value>
@@ -8499,7 +8493,7 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
         </Schema><PluginSchema className="com.sun.identity.policy.plugins.AuthRoleCondition"  i18nFileName="amPolicy"  i18nKey="iplanet-authrole-condition-name"  interfaceName="Condition"  name="AuthRoleCondition" ></PluginSchema><PluginSchema className="com.sun.identity.policy.plugins.AuthLevelCondition"  i18nFileName="amPolicy"  i18nKey="iplanet-authlevel-condition-name"  interfaceName="Condition"  name="AuthLevelCondition"  propertiesViewBeanURL="../policy/PMDefaultAuthLevelCondition" ></PluginSchema><PluginSchema className="com.sun.identity.policy.plugins.LEAuthLevelCondition"  i18nFileName="amPolicy"  i18nKey="iplanet-leauthlevel-condition-name"  interfaceName="Condition"  name="LEAuthLevelCondition"  propertiesViewBeanURL="../policy/PMDefaultAuthLevelCondition" ></PluginSchema><PluginSchema className="com.sun.identity.policy.plugins.AuthSchemeCondition"  i18nFileName="amPolicy"  i18nKey="iplanet-authscheme-condition-name"  interfaceName="Condition"  name="AuthSchemeCondition"  propertiesViewBeanURL="../policy/PMDefaultAuthSchemeCondition" ></PluginSchema><PluginSchema className="com.sun.identity.policy.plugins.IPCondition"  i18nFileName="amPolicy"  i18nKey="iplanet-ip-condition-name"  interfaceName="Condition"  name="IPCondition"  propertiesViewBeanURL="../policy/PMDefaultIPCondition" ></PluginSchema><PluginSchema className="com.sun.identity.policy.plugins.SimpleTimeCondition"  i18nFileName="amPolicy"  i18nKey="iplanet-time-condition-name"  interfaceName="Condition"  name="SimpleTimeCondition"  propertiesViewBeanURL="../policy/PMDefaultTimeCondition" ></PluginSchema><PluginSchema className="com.sun.identity.policy.plugins.SessionCondition"  i18nFileName="amPolicy"  i18nKey="iplanet-session-condition-name"  interfaceName="Condition"  name="SessionCondition"  propertiesViewBeanURL="../policy/PMDefaultSessionCondition" ></PluginSchema><PluginSchema className="com.sun.identity.policy.plugins.UserSelfCheckCondition"  i18nFileName="amPolicy"  i18nKey="iplanet-userselfcheck-condition-name"  interfaceName="Condition"  name="UserSelfCheckCondition" ></PluginSchema><PluginSchema className="com.sun.identity.policy.plugins.AuthenticatedSharedAgentsCondition"  i18nFileName="amPolicy"  i18nKey="iplanet-sharedagents-condition-name"  interfaceName="Condition"  name="AuthenticatedSharedAgentsCondition" ></PluginSchema><PluginSchema className="com.sun.identity.policy.plugins.SessionPropertyCondition"  i18nFileName="amPolicy"  i18nKey="sun-sessionproperty-condition-name"  interfaceName="Condition"  name="SessionPropertyCondition"  propertiesViewBeanURL="../policy/SessionPropertyCondition" ></PluginSchema><PluginSchema className="com.sun.identity.policy.plugins.AuthenticateToRealmCondition"  i18nFileName="amPolicy"  i18nKey="sun-authenticatetorealm-condition-name"  interfaceName="Condition"  name="AuthenticateToRealmCondition"  propertiesViewBeanURL="../policy/AuthToRealm" ></PluginSchema><PluginSchema className="com.sun.identity.policy.plugins.AuthenticateToServiceCondition"  i18nFileName="amPolicy"  i18nKey="sun-authenticatetoservice-condition-name"  interfaceName="Condition"  name="AuthenticateToServiceCondition"  propertiesViewBeanURL="../policy/AuthToService" ></PluginSchema><PluginSchema className="com.sun.identity.policy.plugins.LDAPFilterCondition"  i18nFileName="amPolicy"  i18nKey="sun-ldapfilter-condition-name"  interfaceName="Condition"  name="LDAPFilterCondition" ></PluginSchema><PluginSchema className="com.sun.identity.policy.plugins.PrivilegeCondition"  i18nFileName="amPolicy"  i18nKey="sun-privilege-condition-name"  interfaceName="Condition"  name="PrivilegeCondition" ></PluginSchema><PluginSchema className="com.sun.identity.policy.plugins.AMIdentityMembershipCondition"  i18nFileName="amPolicy"  i18nKey="sun-amidentitymembership-condition-name"  interfaceName="Condition"  name="AMIdentityMembershipCondition"  propertiesViewBeanURL="../policy/IdentityMembershipCondition" ></PluginSchema><PluginSchema className="com.sun.identity.policy.plugins.ResourceEnvIPCondition"  i18nFileName="amPolicy"  i18nKey="sun-resourceenvip-condition-name"  interfaceName="Condition"  name="ResourceEnvIPCondition" ></PluginSchema><PluginSchema className="com.sun.identity.policy.plugins.PeerOrgReferral"  i18nKey="iplanet-peerorg-referral"  interfaceName="Referral"  name="PeerOrgReferral" ></PluginSchema><PluginSchema className="com.sun.identity.policy.plugins.SubOrgReferral"  i18nKey="iplanet-suborg-referral"  interfaceName="Referral"  name="SubOrgReferral" ></PluginSchema><PluginSchema className="com.sun.identity.policy.plugins.IDRepoResponseProvider"  i18nFileName="amPolicy"  i18nKey="iplanet-idrepo-responseprovider-name"  interfaceName="ResponseProvider"  name="IDRepoResponseProvider"  propertiesViewBeanURL="../policy/IDRepoResponseProvider" ></PluginSchema><PluginSchema className="com.sun.identity.policy.plugins.Organization"  i18nFileName="amPolicy"  i18nKey="iplanet-subject-Org-name"  interfaceName="Subject"  name="Organization"  propertiesViewBeanURL="../policy/PMLDAPOrgSubject" ></PluginSchema><PluginSchema className="com.sun.identity.policy.plugins.DSAMERole"  i18nFileName="amPolicy"  i18nKey="iplanet-subject-IdentityServerRoles-name"  interfaceName="Subject"  name="IdentityServerRoles"  propertiesViewBeanURL="../policy/PMDSAMERoleSubject" ></PluginSchema><PluginSchema className="com.sun.identity.policy.plugins.LDAPGroups"  i18nFileName="amPolicy"  i18nKey="iplanet-subject-LDAPGroups-name"  interfaceName="Subject"  name="LDAPGroups"  propertiesViewBeanURL="../policy/PMLDAPGroupSubject" ></PluginSchema><PluginSchema className="com.sun.identity.policy.plugins.LDAPRoles"  i18nFileName="amPolicy"  i18nKey="iplanet-subject-LDAPRoles-name"  interfaceName="Subject"  name="LDAPRoles"  propertiesViewBeanURL="../policy/PMLDAPRoleSubject" ></PluginSchema><PluginSchema className="com.sun.identity.policy.plugins.LDAPUsers"  i18nFileName="amPolicy"  i18nKey="iplanet-subject-LDAPUsers-name"  interfaceName="Subject"  name="LDAPUsers"  propertiesViewBeanURL="../policy/PMLDAPUserSubject" ></PluginSchema><PluginSchema className="com.sun.identity.policy.plugins.AuthenticatedUsers"  i18nFileName="amPolicy"  i18nKey="SunIdentityServer-subject-AuthenticatedUsers-name"  interfaceName="Subject"  name="AuthenticatedUsers"  propertiesViewBeanURL="../policy/PMAuthenticatedUsersSubject" ></PluginSchema><PluginSchema className="com.sun.identity.policy.plugins.AMIdentitySubject"  i18nFileName="amPolicy"  i18nKey="SunIdentityServer-subject-AMIdentitySubject-name"  interfaceName="Subject"  name="AMIdentitySubject"  propertiesViewBeanURL="../policy/IdentitySubject" ></PluginSchema><PluginSchema className="com.sun.identity.policy.plugins.PrivilegeSubject"  i18nFileName="amPolicy"  i18nKey="SunIdentityServer-subject-PrivilegeSubject-name"  interfaceName="Subject"  name="PrivilegeSubject" ></PluginSchema><PluginSchema className="com.sun.identity.policy.plugins.AuthenticatedAgents"  i18nFileName="amPolicy"  interfaceName="Subject"  name="AuthenticatedAgents" ></PluginSchema><PluginSchema className="com.sun.identity.policy.plugins.AuthenticatedSharedAgents"  i18nFileName="amPolicy"  i18nKey="SunIdentityServer-subject-AuthenticatedSharedAgents-name"  interfaceName="Subject"  name="AuthenticatedSharedAgents"  propertiesViewBeanURL="../policy/PMAuthenticatedSharedAgentsSubject" ></PluginSchema><PluginSchema className="com.sun.identity.policy.plugins.WebServicesClients"  i18nFileName="amPolicy"  i18nKey="SunIdentityServer-subject-WebServicesClients-name"  interfaceName="Subject"  name="WebServicesClients" ></PluginSchema><Configuration><OrganizationConfiguration group="default" name="/sunamhiddenrealmdelegationservicepermissions"><SubConfiguration name="Policies" id="Policies"><SubConfiguration name="AllUserReadableServices1" id="NamedPolicy"><AttributeValuePair>
     <Attribute name="xmlpolicy"/>
     <Value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;Policy name=&quot;AllUserReadableServices1&quot; createdby=&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot; lastmodifiedby=&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot; creationdate=&quot;1485842797711&quot; lastmodifieddate=&quot;1485842797711&quot; referralPolicy=&quot;false&quot; active=&quot;true&quot; &gt;
+&lt;Policy name=&quot;AllUserReadableServices1&quot; createdby=&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot; lastmodifiedby=&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot; creationdate=&quot;1488504579494&quot; lastmodifieddate=&quot;1488504579494&quot; referralPolicy=&quot;false&quot; active=&quot;true&quot; &gt;
 &lt;Rule name=&quot;delegation-rule1&quot;&gt;
 &lt;ServiceName name=&quot;sunAMDelegationService&quot; &#47;&gt;
 &lt;ResourceName name=&quot;sms:&#47;&#47;dc=openam,dc=forgerock,dc=org&#47;sunIdentityRepositoryService&#47;1.0&#47;globalConfig&#47;*&quot; &#47;&gt;
@@ -8521,7 +8515,7 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
 </SubConfiguration><SubConfiguration name="SelfReadAttributes" id="NamedPolicy"><AttributeValuePair>
     <Attribute name="xmlpolicy"/>
     <Value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;Policy name=&quot;SelfReadAttributes&quot; createdby=&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot; lastmodifiedby=&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot; creationdate=&quot;1485842797877&quot; lastmodifieddate=&quot;1485842797877&quot; referralPolicy=&quot;false&quot; active=&quot;true&quot; &gt;
+&lt;Policy name=&quot;SelfReadAttributes&quot; createdby=&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot; lastmodifiedby=&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot; creationdate=&quot;1488504579695&quot; lastmodifieddate=&quot;1488504579695&quot; referralPolicy=&quot;false&quot; active=&quot;true&quot; &gt;
 &lt;Rule name=&quot;user-read-rule&quot;&gt;
 &lt;ServiceName name=&quot;sunAMDelegationService&quot; &#47;&gt;
 &lt;ResourceName name=&quot;sms:&#47;&#47;*dc=openam,dc=forgerock,dc=org&#47;sunIdentityRepositoryService&#47;1.0&#47;application&#47;*&quot; &#47;&gt;
@@ -8545,7 +8539,7 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
 </SubConfiguration><SubConfiguration name="SelfWriteAttributes" id="NamedPolicy"><AttributeValuePair>
     <Attribute name="xmlpolicy"/>
     <Value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;Policy name=&quot;SelfWriteAttributes&quot; createdby=&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot; lastmodifiedby=&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot; creationdate=&quot;1485842797900&quot; lastmodifieddate=&quot;1485842797900&quot; referralPolicy=&quot;false&quot; active=&quot;true&quot; &gt;
+&lt;Policy name=&quot;SelfWriteAttributes&quot; createdby=&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot; lastmodifiedby=&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot; creationdate=&quot;1488504579720&quot; lastmodifieddate=&quot;1488504579720&quot; referralPolicy=&quot;false&quot; active=&quot;true&quot; &gt;
 &lt;Rule name=&quot;user-read-rule&quot;&gt;
 &lt;ServiceName name=&quot;sunAMDelegationService&quot; &#47;&gt;
 &lt;ResourceName name=&quot;sms:&#47;&#47;*dc=openam,dc=forgerock,dc=org&#47;sunIdentityRepositoryService&#47;1.0&#47;application&#47;*&quot; &#47;&gt;
@@ -8569,7 +8563,7 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
 </SubConfiguration><SubConfiguration name="SharedAgentReadOnlyPermission" id="NamedPolicy"><AttributeValuePair>
     <Attribute name="xmlpolicy"/>
     <Value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;Policy name=&quot;SharedAgentReadOnlyPermission&quot; createdby=&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot; lastmodifiedby=&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot; creationdate=&quot;1485842797919&quot; lastmodifieddate=&quot;1485842797919&quot; referralPolicy=&quot;false&quot; active=&quot;true&quot; &gt;
+&lt;Policy name=&quot;SharedAgentReadOnlyPermission&quot; createdby=&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot; lastmodifiedby=&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot; creationdate=&quot;1488504579741&quot; lastmodifieddate=&quot;1488504579741&quot; referralPolicy=&quot;false&quot; active=&quot;true&quot; &gt;
 &lt;Rule name=&quot;sharedagent-idrepo-read-rule&quot;&gt;
 &lt;ServiceName name=&quot;sunAMDelegationService&quot; &#47;&gt;
 &lt;ResourceName name=&quot;sms:&#47;&#47;*dc=openam,dc=forgerock,dc=org&#47;sunIdentityRepositoryService&#47;1.0&#47;application&#47;agent*&quot; &#47;&gt;
@@ -8591,7 +8585,7 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
 </SubConfiguration><SubConfiguration name="AgentRealmPermission" id="NamedPolicy"><AttributeValuePair>
     <Attribute name="xmlpolicy"/>
     <Value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;Policy name=&quot;AgentRealmPermission&quot; createdby=&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot; lastmodifiedby=&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot; creationdate=&quot;1485842797931&quot; lastmodifieddate=&quot;1485842797931&quot; referralPolicy=&quot;false&quot; active=&quot;true&quot; &gt;
+&lt;Policy name=&quot;AgentRealmPermission&quot; createdby=&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot; lastmodifiedby=&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot; creationdate=&quot;1488504579767&quot; lastmodifieddate=&quot;1488504579767&quot; referralPolicy=&quot;false&quot; active=&quot;true&quot; &gt;
 &lt;Rule name=&quot;agent-realm-read-rule&quot;&gt;
 &lt;ServiceName name=&quot;sunAMDelegationService&quot; &#47;&gt;
 &lt;ResourceName name=&quot;sms:&#47;&#47;*dc=openam,dc=forgerock,dc=org&#47;sunAMRealmService&#47;*&quot; &#47;&gt;
@@ -8609,7 +8603,7 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
 </SubConfiguration><SubConfiguration name="dc=openam^dc=forgerock^dc=org^^AgentLogging" id="NamedPolicy"><AttributeValuePair>
     <Attribute name="xmlpolicy"/>
     <Value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;Policy name=&quot;dc=openam^dc=forgerock^dc=org^^AgentLogging&quot; createdby=&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot; lastmodifiedby=&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot; creationdate=&quot;1485842797943&quot; lastmodifieddate=&quot;1485842797943&quot; referralPolicy=&quot;false&quot; active=&quot;true&quot; &gt;
+&lt;Policy name=&quot;dc=openam^dc=forgerock^dc=org^^AgentLogging&quot; createdby=&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot; lastmodifiedby=&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot; creationdate=&quot;1488504579781&quot; lastmodifieddate=&quot;1488504579781&quot; referralPolicy=&quot;false&quot; active=&quot;true&quot; &gt;
 &lt;Rule name=&quot;delegation-rule1&quot;&gt;
 &lt;ServiceName name=&quot;sunAMDelegationService&quot; &#47;&gt;
 &lt;ResourceName name=&quot;sms:&#47;&#47;*dc=openam,dc=forgerock,dc=org&#47;iPlanetAMLoggingService&#47;1.0&#47;application&#47;*&quot; &#47;&gt;
@@ -8627,7 +8621,7 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
 </SubConfiguration><SubConfiguration name="dc=openam^dc=forgerock^dc=org^^EntitlementEval" id="NamedPolicy"><AttributeValuePair>
     <Attribute name="xmlpolicy"/>
     <Value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;Policy name=&quot;dc=openam^dc=forgerock^dc=org^^EntitlementEval&quot; createdby=&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot; lastmodifiedby=&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot; creationdate=&quot;1485842797955&quot; lastmodifieddate=&quot;1485842797955&quot; referralPolicy=&quot;false&quot; active=&quot;true&quot; &gt;
+&lt;Policy name=&quot;dc=openam^dc=forgerock^dc=org^^EntitlementEval&quot; createdby=&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot; lastmodifiedby=&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot; creationdate=&quot;1488504579797&quot; lastmodifieddate=&quot;1488504579797&quot; referralPolicy=&quot;false&quot; active=&quot;true&quot; &gt;
 &lt;Rule name=&quot;delegation-rule5&quot;&gt;
 &lt;ServiceName name=&quot;sunAMDelegationService&quot; &#47;&gt;
 &lt;ResourceName name=&quot;sms:&#47;&#47;dc=openam,dc=forgerock,dc=org&#47;sunEntitlementService&#47;1.0&#47;application&#47;ws&#47;1&#47;entitlement&#47;listener*&quot; &#47;&gt;
@@ -8677,7 +8671,7 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
 </SubConfiguration><SubConfiguration name="AgentAccessToValidationService" id="NamedPolicy"><AttributeValuePair>
     <Attribute name="xmlpolicy"/>
     <Value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;Policy name=&quot;AgentAccessToValidationService&quot; createdby=&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot; lastmodifiedby=&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot; creationdate=&quot;1485842798008&quot; lastmodifieddate=&quot;1485842798008&quot; referralPolicy=&quot;false&quot; active=&quot;true&quot; &gt;
+&lt;Policy name=&quot;AgentAccessToValidationService&quot; createdby=&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot; lastmodifiedby=&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot; creationdate=&quot;1488504579851&quot; lastmodifieddate=&quot;1488504579851&quot; referralPolicy=&quot;false&quot; active=&quot;true&quot; &gt;
 &lt;Rule name=&quot;agent-read-access-to-validation-service&quot;&gt;
 &lt;ServiceName name=&quot;sunAMDelegationService&quot; &#47;&gt;
 &lt;ResourceName name=&quot;sms:&#47;&#47;*dc=openam,dc=forgerock,dc=org&#47;validationService&#47;1.0&#47;OrganizationConfig&#47;*&quot; &#47;&gt;
@@ -8695,7 +8689,7 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
 </SubConfiguration><SubConfiguration name="AgentAccessToEvaluatePolicies" id="NamedPolicy"><AttributeValuePair>
     <Attribute name="xmlpolicy"/>
     <Value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;Policy name=&quot;AgentAccessToEvaluatePolicies&quot; createdby=&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot; lastmodifiedby=&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot; creationdate=&quot;1485842798024&quot; lastmodifieddate=&quot;1485842798024&quot; referralPolicy=&quot;false&quot; active=&quot;true&quot; &gt;
+&lt;Policy name=&quot;AgentAccessToEvaluatePolicies&quot; createdby=&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot; lastmodifiedby=&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot; creationdate=&quot;1488504579865&quot; lastmodifieddate=&quot;1488504579865&quot; referralPolicy=&quot;false&quot; active=&quot;true&quot; &gt;
 &lt;Rule name=&quot;agent-read-access-to-evaluate-policies&quot;&gt;
 &lt;ServiceName name=&quot;sunAMDelegationService&quot; &#47;&gt;
 &lt;ResourceName name=&quot;sms:&#47;&#47;*dc=openam,dc=forgerock,dc=org&#47;rest&#47;1.0&#47;policies&#47;evaluate&quot; &#47;&gt;
@@ -9115,7 +9109,7 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
                 </AttributeSchema>
                 <AttributeSchema cosQualifier="default"  i18nKey="a125"  isSearchable="no"  listOrder="natural"  name="openam-session-stateless-signing-hmac-shared-secret"  resourceName="statelessSigningHmacSecret"  syntax="string"  type="single" >
                     <DefaultValues>
-                        <Value>nCtAkZPyIWH4pOelgPyPQQ==</Value>
+                        <Value>4pEVbK3+9AwS2Ioj4AscNA==</Value>
                     </DefaultValues>
                 </AttributeSchema>
                 <AttributeSchema cosQualifier="default"  i18nKey="a126"  isSearchable="no"  listOrder="natural"  name="openam-session-stateless-signing-rsa-certificate-alias"  resourceName="statelessSigningRsaCertAlias"  syntax="string"  type="single" >
@@ -12043,7 +12037,7 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
                     </AttributeSchema>
                 </SubSchema>
             </Organization>
-        </Schema><Configuration><OrganizationConfiguration group="default" name="/"><SubConfiguration name="gnssSiteManager" id="OAuth2Client"><AttributeValuePair>
+        </Schema><Configuration><OrganizationConfiguration group="default" name="/"><SubConfiguration name="GnssSiteManager" id="OAuth2Client"><AttributeValuePair>
     <Attribute name="idTokenEncryptionMethod"/>
     <Value>A128CBC-HS256</Value>
 </AttributeValuePair>
@@ -12142,18 +12136,16 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
     <Value>[0]=</Value>
 </AttributeValuePair>
 <AttributeValuePair>
-    <Attribute name="com.forgerock.openam.oauth2provider.redirectionURIs"/>
-    <Value>[0]=http:&#47;&#47;localhost:5555&#47;login</Value>
-    <Value>[1]=http:&#47;&#47;localhost:5555</Value>
-    <Value>[2]=http:&#47;&#47;localhost:5555&#47;auth.html</Value>
-</AttributeValuePair>
-<AttributeValuePair>
     <Attribute name="com.forgerock.openam.oauth2provider.idTokenSignedResponseAlg"/>
     <Value>RS256</Value>
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="idTokenEncryptionEnabled"/>
     <Value>false</Value>
+</AttributeValuePair>
+<AttributeValuePair>
+    <Attribute name="com.forgerock.openam.oauth2provider.redirectionURIs"/>
+    <Value>[0]=http:&#47;&#47;localhost:5555&#47;auth.html</Value>
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="com.forgerock.openam.oauth2provider.clientName"/>
@@ -12214,7 +12206,7 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
 </AttributeValuePair>
 <SubConfiguration name="default" id="type"><SubConfiguration name="OAuth2ProviderPolicy" id="indexes"><AttributeValuePair>
     <Attribute name="resourceTypeUuid"/>
-    <Value>f4f1cb52-ea3c-4592-8a35-c9a79576a0ce</Value>
+    <Value>6a600220-da7b-4893-8c8a-4cba1346e7aa</Value>
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="hostindex"/>
@@ -12230,7 +12222,7 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="serializable"/>
-    <Value>{&quot;resourceTypeUuid&quot;:&quot;f4f1cb52-ea3c-4592-8a35-c9a79576a0ce&quot;,&quot;createdBy&quot;:&quot;id=dsameuser,ou=user,dc=openam,dc=forgerock,dc=org&quot;,&quot;lastModifiedDate&quot;:1485843243642,&quot;lastModifiedBy&quot;:&quot;id=dsameuser,ou=user,dc=openam,dc=forgerock,dc=org&quot;,&quot;name&quot;:&quot;OAuth2ProviderPolicy&quot;,&quot;active&quot;:&quot;true&quot;,&quot;entitlement&quot;:{&quot;resourceNames&quot;:[&quot;http:&#47;&#47;localhost:8083&#47;openam&#47;oauth2&#47;authorize?*&quot;],&quot;actionsValues&quot;:{&quot;POST&quot;:true,&quot;GET&quot;:true},&quot;applicationName&quot;:&quot;OAuth2&quot;},&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.OpenSSOPrivilege&quot;,&quot;creationDate&quot;:1485843243642,&quot;eSubject&quot;:{&quot;className&quot;:&quot;org.forgerock.openam.entitlement.conditions.subject.AuthenticatedUsers&quot;,&quot;state&quot;:&quot;{}&quot;}}</Value>
+    <Value>{&quot;resourceTypeUuid&quot;:&quot;6a600220-da7b-4893-8c8a-4cba1346e7aa&quot;,&quot;createdBy&quot;:&quot;id=dsameuser,ou=user,dc=openam,dc=forgerock,dc=org&quot;,&quot;lastModifiedDate&quot;:1488504839948,&quot;lastModifiedBy&quot;:&quot;id=dsameuser,ou=user,dc=openam,dc=forgerock,dc=org&quot;,&quot;name&quot;:&quot;OAuth2ProviderPolicy&quot;,&quot;active&quot;:&quot;true&quot;,&quot;entitlement&quot;:{&quot;resourceNames&quot;:[&quot;http:&#47;&#47;localhost:8083&#47;openam&#47;oauth2&#47;authorize?*&quot;],&quot;actionsValues&quot;:{&quot;POST&quot;:true,&quot;GET&quot;:true},&quot;applicationName&quot;:&quot;OAuth2&quot;},&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.OpenSSOPrivilege&quot;,&quot;creationDate&quot;:1488504839948,&quot;eSubject&quot;:{&quot;className&quot;:&quot;org.forgerock.openam.entitlement.conditions.subject.AuthenticatedUsers&quot;,&quot;state&quot;:&quot;{}&quot;}}</Value>
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="pathparentindex"/>
@@ -12271,7 +12263,7 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="serializable"/>
-    <Value>{&quot;createdBy&quot;:&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot;,&quot;lastModifiedDate&quot;:1485842797711,&quot;policyName&quot;:&quot;AllUserReadableServices1&quot;,&quot;lastModifiedBy&quot;:&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot;,&quot;name&quot;:&quot;AllUserReadableServices1&quot;,&quot;active&quot;:&quot;true&quot;,&quot;entitlement&quot;:{&quot;resourceNames&quot;:[&quot;sms:&#47;&#47;dc=openam,dc=forgerock,dc=org&#47;sunIdentityRepositoryService&#47;1.0&#47;globalConfig&#47;*&quot;,&quot;sms:&#47;&#47;dc=openam,dc=forgerock,dc=org&#47;iPlanetAMAdminConsoleService&#47;1.0&#47;globalConfig&#47;*&quot;,&quot;sms:&#47;&#47;dc=openam,dc=forgerock,dc=org&#47;sunFMCOTConfigService&#47;1.0&#47;OrganizationConfig&#47;*&quot;,&quot;sms:&#47;&#47;dc=openam,dc=forgerock,dc=org&#47;sunFMSAML2MetadataService&#47;1.0&#47;OrganizationConfig&#47;*&quot;,&quot;sms:&#47;&#47;dc=openam,dc=forgerock,dc=org&#47;DAI&#47;1.0&#47;globalConfig&#47;*&quot;],&quot;actionsValues&quot;:{&quot;READ&quot;:true},&quot;name&quot;:&quot;delegation-rule1&quot;,&quot;applicationName&quot;:&quot;sunAMDelegationService&quot;},&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.OpenSSOPrivilege&quot;,&quot;creationDate&quot;:1485842797711,&quot;eSubject&quot;:{&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.PolicySubject&quot;,&quot;state&quot;:&quot;{\n  \&quot;className\&quot;: \&quot;com.sun.identity.policy.plugins.AuthenticatedUsers\&quot;,\n  \&quot;exclusive\&quot;: false,\n  \&quot;name\&quot;: \&quot;delegation-subject\&quot;,\n  \&quot;values\&quot;: []\n}&quot;}}</Value>
+    <Value>{&quot;createdBy&quot;:&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot;,&quot;lastModifiedDate&quot;:1488504579494,&quot;policyName&quot;:&quot;AllUserReadableServices1&quot;,&quot;lastModifiedBy&quot;:&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot;,&quot;name&quot;:&quot;AllUserReadableServices1&quot;,&quot;active&quot;:&quot;true&quot;,&quot;entitlement&quot;:{&quot;resourceNames&quot;:[&quot;sms:&#47;&#47;dc=openam,dc=forgerock,dc=org&#47;sunIdentityRepositoryService&#47;1.0&#47;globalConfig&#47;*&quot;,&quot;sms:&#47;&#47;dc=openam,dc=forgerock,dc=org&#47;iPlanetAMAdminConsoleService&#47;1.0&#47;globalConfig&#47;*&quot;,&quot;sms:&#47;&#47;dc=openam,dc=forgerock,dc=org&#47;sunFMCOTConfigService&#47;1.0&#47;OrganizationConfig&#47;*&quot;,&quot;sms:&#47;&#47;dc=openam,dc=forgerock,dc=org&#47;sunFMSAML2MetadataService&#47;1.0&#47;OrganizationConfig&#47;*&quot;,&quot;sms:&#47;&#47;dc=openam,dc=forgerock,dc=org&#47;DAI&#47;1.0&#47;globalConfig&#47;*&quot;],&quot;actionsValues&quot;:{&quot;READ&quot;:true},&quot;name&quot;:&quot;delegation-rule1&quot;,&quot;applicationName&quot;:&quot;sunAMDelegationService&quot;},&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.OpenSSOPrivilege&quot;,&quot;creationDate&quot;:1488504579494,&quot;eSubject&quot;:{&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.PolicySubject&quot;,&quot;state&quot;:&quot;{\n  \&quot;className\&quot;: \&quot;com.sun.identity.policy.plugins.AuthenticatedUsers\&quot;,\n  \&quot;exclusive\&quot;: false,\n  \&quot;name\&quot;: \&quot;delegation-subject\&quot;,\n  \&quot;values\&quot;: []\n}&quot;}}</Value>
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="pathparentindex"/>
@@ -12310,7 +12302,7 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="serializable"/>
-    <Value>{&quot;eCondition&quot;:{&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.PolicyCondition&quot;,&quot;state&quot;:&quot;{\n  \&quot;className\&quot;: \&quot;com.sun.identity.policy.plugins.UserSelfCheckCondition\&quot;,\n  \&quot;name\&quot;: \&quot;condition\&quot;,\n  \&quot;properties\&quot;: {\&quot;attributes\&quot;: [\&quot;*\&quot;]}\n}&quot;},&quot;createdBy&quot;:&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot;,&quot;lastModifiedDate&quot;:1485842797877,&quot;policyName&quot;:&quot;SelfReadAttributes&quot;,&quot;lastModifiedBy&quot;:&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot;,&quot;name&quot;:&quot;SelfReadAttributes&quot;,&quot;active&quot;:&quot;true&quot;,&quot;entitlement&quot;:{&quot;resourceNames&quot;:[&quot;sms:&#47;&#47;*dc=openam,dc=forgerock,dc=org&#47;sunIdentityRepositoryService&#47;1.0&#47;application&#47;*&quot;],&quot;actionsValues&quot;:{&quot;READ&quot;:true},&quot;name&quot;:&quot;user-read-rule&quot;,&quot;applicationName&quot;:&quot;sunAMDelegationService&quot;},&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.OpenSSOPrivilege&quot;,&quot;creationDate&quot;:1485842797877,&quot;eSubject&quot;:{&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.PolicySubject&quot;,&quot;state&quot;:&quot;{\n  \&quot;className\&quot;: \&quot;com.sun.identity.policy.plugins.AuthenticatedUsers\&quot;,\n  \&quot;exclusive\&quot;: false,\n  \&quot;name\&quot;: \&quot;delegation-subject\&quot;,\n  \&quot;values\&quot;: []\n}&quot;}}</Value>
+    <Value>{&quot;eCondition&quot;:{&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.PolicyCondition&quot;,&quot;state&quot;:&quot;{\n  \&quot;className\&quot;: \&quot;com.sun.identity.policy.plugins.UserSelfCheckCondition\&quot;,\n  \&quot;name\&quot;: \&quot;condition\&quot;,\n  \&quot;properties\&quot;: {\&quot;attributes\&quot;: [\&quot;*\&quot;]}\n}&quot;},&quot;createdBy&quot;:&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot;,&quot;lastModifiedDate&quot;:1488504579695,&quot;policyName&quot;:&quot;SelfReadAttributes&quot;,&quot;lastModifiedBy&quot;:&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot;,&quot;name&quot;:&quot;SelfReadAttributes&quot;,&quot;active&quot;:&quot;true&quot;,&quot;entitlement&quot;:{&quot;resourceNames&quot;:[&quot;sms:&#47;&#47;*dc=openam,dc=forgerock,dc=org&#47;sunIdentityRepositoryService&#47;1.0&#47;application&#47;*&quot;],&quot;actionsValues&quot;:{&quot;READ&quot;:true},&quot;name&quot;:&quot;user-read-rule&quot;,&quot;applicationName&quot;:&quot;sunAMDelegationService&quot;},&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.OpenSSOPrivilege&quot;,&quot;creationDate&quot;:1488504579695,&quot;eSubject&quot;:{&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.PolicySubject&quot;,&quot;state&quot;:&quot;{\n  \&quot;className\&quot;: \&quot;com.sun.identity.policy.plugins.AuthenticatedUsers\&quot;,\n  \&quot;exclusive\&quot;: false,\n  \&quot;name\&quot;: \&quot;delegation-subject\&quot;,\n  \&quot;values\&quot;: []\n}&quot;}}</Value>
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="pathparentindex"/>
@@ -12337,7 +12329,7 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="serializable"/>
-    <Value>{&quot;eCondition&quot;:{&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.PolicyCondition&quot;,&quot;state&quot;:&quot;{\n  \&quot;className\&quot;: \&quot;com.sun.identity.policy.plugins.UserSelfCheckCondition\&quot;,\n  \&quot;name\&quot;: \&quot;condition\&quot;,\n  \&quot;properties\&quot;: {\&quot;attributes\&quot;: [\n    \&quot;givenname\&quot;,\n    \&quot;sn\&quot;,\n    \&quot;cn\&quot;,\n    \&quot;userpassword\&quot;,\n    \&quot;mail\&quot;,\n    \&quot;telephonenumber\&quot;,\n    \&quot;postaladdress\&quot;,\n    \&quot;preferredlocale\&quot;,\n    \&quot;iplanet-am-user-password-reset-options\&quot;,\n    \&quot;iplanet-am-user-password-reset-question-answer\&quot;,\n    \&quot;description\&quot;,\n    \&quot;oath2faEnabled\&quot;,\n    \&quot;sunIdentityServerDeviceKeyValue\&quot;,\n    \&quot;sunIdentityServerDeviceStatus\&quot;\n  ]}\n}&quot;},&quot;createdBy&quot;:&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot;,&quot;lastModifiedDate&quot;:1485842797900,&quot;policyName&quot;:&quot;SelfWriteAttributes&quot;,&quot;lastModifiedBy&quot;:&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot;,&quot;name&quot;:&quot;SelfWriteAttributes&quot;,&quot;active&quot;:&quot;true&quot;,&quot;entitlement&quot;:{&quot;resourceNames&quot;:[&quot;sms:&#47;&#47;*dc=openam,dc=forgerock,dc=org&#47;sunIdentityRepositoryService&#47;1.0&#47;application&#47;*&quot;],&quot;actionsValues&quot;:{&quot;MODIFY&quot;:true},&quot;name&quot;:&quot;user-read-rule&quot;,&quot;applicationName&quot;:&quot;sunAMDelegationService&quot;},&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.OpenSSOPrivilege&quot;,&quot;creationDate&quot;:1485842797900,&quot;eSubject&quot;:{&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.PolicySubject&quot;,&quot;state&quot;:&quot;{\n  \&quot;className\&quot;: \&quot;com.sun.identity.policy.plugins.AuthenticatedUsers\&quot;,\n  \&quot;exclusive\&quot;: false,\n  \&quot;name\&quot;: \&quot;delegation-subject\&quot;,\n  \&quot;values\&quot;: []\n}&quot;}}</Value>
+    <Value>{&quot;eCondition&quot;:{&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.PolicyCondition&quot;,&quot;state&quot;:&quot;{\n  \&quot;className\&quot;: \&quot;com.sun.identity.policy.plugins.UserSelfCheckCondition\&quot;,\n  \&quot;name\&quot;: \&quot;condition\&quot;,\n  \&quot;properties\&quot;: {\&quot;attributes\&quot;: [\n    \&quot;givenname\&quot;,\n    \&quot;sn\&quot;,\n    \&quot;cn\&quot;,\n    \&quot;userpassword\&quot;,\n    \&quot;mail\&quot;,\n    \&quot;telephonenumber\&quot;,\n    \&quot;postaladdress\&quot;,\n    \&quot;preferredlocale\&quot;,\n    \&quot;iplanet-am-user-password-reset-options\&quot;,\n    \&quot;iplanet-am-user-password-reset-question-answer\&quot;,\n    \&quot;description\&quot;,\n    \&quot;oath2faEnabled\&quot;,\n    \&quot;sunIdentityServerDeviceKeyValue\&quot;,\n    \&quot;sunIdentityServerDeviceStatus\&quot;\n  ]}\n}&quot;},&quot;createdBy&quot;:&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot;,&quot;lastModifiedDate&quot;:1488504579720,&quot;policyName&quot;:&quot;SelfWriteAttributes&quot;,&quot;lastModifiedBy&quot;:&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot;,&quot;name&quot;:&quot;SelfWriteAttributes&quot;,&quot;active&quot;:&quot;true&quot;,&quot;entitlement&quot;:{&quot;resourceNames&quot;:[&quot;sms:&#47;&#47;*dc=openam,dc=forgerock,dc=org&#47;sunIdentityRepositoryService&#47;1.0&#47;application&#47;*&quot;],&quot;actionsValues&quot;:{&quot;MODIFY&quot;:true},&quot;name&quot;:&quot;user-read-rule&quot;,&quot;applicationName&quot;:&quot;sunAMDelegationService&quot;},&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.OpenSSOPrivilege&quot;,&quot;creationDate&quot;:1488504579720,&quot;eSubject&quot;:{&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.PolicySubject&quot;,&quot;state&quot;:&quot;{\n  \&quot;className\&quot;: \&quot;com.sun.identity.policy.plugins.AuthenticatedUsers\&quot;,\n  \&quot;exclusive\&quot;: false,\n  \&quot;name\&quot;: \&quot;delegation-subject\&quot;,\n  \&quot;values\&quot;: []\n}&quot;}}</Value>
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="pathparentindex"/>
@@ -12364,7 +12356,7 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="serializable"/>
-    <Value>{&quot;eCondition&quot;:{&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.PolicyCondition&quot;,&quot;state&quot;:&quot;{\n  \&quot;className\&quot;: \&quot;com.sun.identity.policy.plugins.AuthenticatedSharedAgentsCondition\&quot;,\n  \&quot;name\&quot;: \&quot;condition\&quot;,\n  \&quot;properties\&quot;: {}\n}&quot;},&quot;createdBy&quot;:&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot;,&quot;lastModifiedDate&quot;:1485842797919,&quot;policyName&quot;:&quot;SharedAgentReadOnlyPermission&quot;,&quot;lastModifiedBy&quot;:&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot;,&quot;name&quot;:&quot;SharedAgentReadOnlyPermission&quot;,&quot;active&quot;:&quot;true&quot;,&quot;entitlement&quot;:{&quot;resourceNames&quot;:[&quot;sms:&#47;&#47;*dc=openam,dc=forgerock,dc=org&#47;sunIdentityRepositoryService&#47;1.0&#47;application&#47;agent*&quot;],&quot;actionsValues&quot;:{&quot;READ&quot;:true},&quot;name&quot;:&quot;sharedagent-idrepo-read-rule&quot;,&quot;applicationName&quot;:&quot;sunAMDelegationService&quot;},&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.OpenSSOPrivilege&quot;,&quot;creationDate&quot;:1485842797919,&quot;eSubject&quot;:{&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.PolicySubject&quot;,&quot;state&quot;:&quot;{\n  \&quot;className\&quot;: \&quot;com.sun.identity.policy.plugins.AuthenticatedSharedAgents\&quot;,\n  \&quot;exclusive\&quot;: false,\n  \&quot;name\&quot;: \&quot;AuthenticatedSharedAgents\&quot;,\n  \&quot;values\&quot;: []\n}&quot;}}</Value>
+    <Value>{&quot;eCondition&quot;:{&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.PolicyCondition&quot;,&quot;state&quot;:&quot;{\n  \&quot;className\&quot;: \&quot;com.sun.identity.policy.plugins.AuthenticatedSharedAgentsCondition\&quot;,\n  \&quot;name\&quot;: \&quot;condition\&quot;,\n  \&quot;properties\&quot;: {}\n}&quot;},&quot;createdBy&quot;:&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot;,&quot;lastModifiedDate&quot;:1488504579741,&quot;policyName&quot;:&quot;SharedAgentReadOnlyPermission&quot;,&quot;lastModifiedBy&quot;:&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot;,&quot;name&quot;:&quot;SharedAgentReadOnlyPermission&quot;,&quot;active&quot;:&quot;true&quot;,&quot;entitlement&quot;:{&quot;resourceNames&quot;:[&quot;sms:&#47;&#47;*dc=openam,dc=forgerock,dc=org&#47;sunIdentityRepositoryService&#47;1.0&#47;application&#47;agent*&quot;],&quot;actionsValues&quot;:{&quot;READ&quot;:true},&quot;name&quot;:&quot;sharedagent-idrepo-read-rule&quot;,&quot;applicationName&quot;:&quot;sunAMDelegationService&quot;},&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.OpenSSOPrivilege&quot;,&quot;creationDate&quot;:1488504579741,&quot;eSubject&quot;:{&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.PolicySubject&quot;,&quot;state&quot;:&quot;{\n  \&quot;className\&quot;: \&quot;com.sun.identity.policy.plugins.AuthenticatedSharedAgents\&quot;,\n  \&quot;exclusive\&quot;: false,\n  \&quot;name\&quot;: \&quot;AuthenticatedSharedAgents\&quot;,\n  \&quot;values\&quot;: []\n}&quot;}}</Value>
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="pathparentindex"/>
@@ -12391,7 +12383,7 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="serializable"/>
-    <Value>{&quot;createdBy&quot;:&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot;,&quot;lastModifiedDate&quot;:1485842797931,&quot;policyName&quot;:&quot;AgentRealmPermission&quot;,&quot;lastModifiedBy&quot;:&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot;,&quot;name&quot;:&quot;AgentRealmPermission&quot;,&quot;active&quot;:&quot;true&quot;,&quot;entitlement&quot;:{&quot;resourceNames&quot;:[&quot;sms:&#47;&#47;*dc=openam,dc=forgerock,dc=org&#47;sunAMRealmService&#47;*&quot;],&quot;actionsValues&quot;:{&quot;READ&quot;:true},&quot;name&quot;:&quot;agent-realm-read-rule&quot;,&quot;applicationName&quot;:&quot;sunAMDelegationService&quot;},&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.OpenSSOPrivilege&quot;,&quot;creationDate&quot;:1485842797931,&quot;eSubject&quot;:{&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.PolicySubject&quot;,&quot;state&quot;:&quot;{\n  \&quot;className\&quot;: \&quot;com.sun.identity.policy.plugins.AuthenticatedAgents\&quot;,\n  \&quot;exclusive\&quot;: false,\n  \&quot;name\&quot;: \&quot;AuthenticatedAgents\&quot;,\n  \&quot;values\&quot;: []\n}&quot;}}</Value>
+    <Value>{&quot;createdBy&quot;:&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot;,&quot;lastModifiedDate&quot;:1488504579767,&quot;policyName&quot;:&quot;AgentRealmPermission&quot;,&quot;lastModifiedBy&quot;:&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot;,&quot;name&quot;:&quot;AgentRealmPermission&quot;,&quot;active&quot;:&quot;true&quot;,&quot;entitlement&quot;:{&quot;resourceNames&quot;:[&quot;sms:&#47;&#47;*dc=openam,dc=forgerock,dc=org&#47;sunAMRealmService&#47;*&quot;],&quot;actionsValues&quot;:{&quot;READ&quot;:true},&quot;name&quot;:&quot;agent-realm-read-rule&quot;,&quot;applicationName&quot;:&quot;sunAMDelegationService&quot;},&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.OpenSSOPrivilege&quot;,&quot;creationDate&quot;:1488504579767,&quot;eSubject&quot;:{&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.PolicySubject&quot;,&quot;state&quot;:&quot;{\n  \&quot;className\&quot;: \&quot;com.sun.identity.policy.plugins.AuthenticatedAgents\&quot;,\n  \&quot;exclusive\&quot;: false,\n  \&quot;name\&quot;: \&quot;AuthenticatedAgents\&quot;,\n  \&quot;values\&quot;: []\n}&quot;}}</Value>
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="pathparentindex"/>
@@ -12416,7 +12408,7 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="serializable"/>
-    <Value>{&quot;createdBy&quot;:&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot;,&quot;lastModifiedDate&quot;:1485842797943,&quot;policyName&quot;:&quot;dc=openam^dc=forgerock^dc=org^^AgentLogging&quot;,&quot;lastModifiedBy&quot;:&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot;,&quot;name&quot;:&quot;dc=openam^dc=forgerock^dc=org^^AgentLogging&quot;,&quot;active&quot;:&quot;true&quot;,&quot;entitlement&quot;:{&quot;resourceNames&quot;:[&quot;sms:&#47;&#47;*dc=openam,dc=forgerock,dc=org&#47;iPlanetAMLoggingService&#47;1.0&#47;application&#47;*&quot;],&quot;actionsValues&quot;:{&quot;MODIFY&quot;:true},&quot;name&quot;:&quot;delegation-rule1&quot;,&quot;applicationName&quot;:&quot;sunAMDelegationService&quot;},&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.OpenSSOPrivilege&quot;,&quot;creationDate&quot;:1485842797943,&quot;eSubject&quot;:{&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.PolicySubject&quot;,&quot;state&quot;:&quot;{\n  \&quot;className\&quot;: \&quot;com.sun.identity.policy.plugins.AuthenticatedAgents\&quot;,\n  \&quot;exclusive\&quot;: false,\n  \&quot;name\&quot;: \&quot;AuthenticatedAgents\&quot;,\n  \&quot;values\&quot;: []\n}&quot;}}</Value>
+    <Value>{&quot;createdBy&quot;:&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot;,&quot;lastModifiedDate&quot;:1488504579781,&quot;policyName&quot;:&quot;dc=openam^dc=forgerock^dc=org^^AgentLogging&quot;,&quot;lastModifiedBy&quot;:&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot;,&quot;name&quot;:&quot;dc=openam^dc=forgerock^dc=org^^AgentLogging&quot;,&quot;active&quot;:&quot;true&quot;,&quot;entitlement&quot;:{&quot;resourceNames&quot;:[&quot;sms:&#47;&#47;*dc=openam,dc=forgerock,dc=org&#47;iPlanetAMLoggingService&#47;1.0&#47;application&#47;*&quot;],&quot;actionsValues&quot;:{&quot;MODIFY&quot;:true},&quot;name&quot;:&quot;delegation-rule1&quot;,&quot;applicationName&quot;:&quot;sunAMDelegationService&quot;},&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.OpenSSOPrivilege&quot;,&quot;creationDate&quot;:1488504579781,&quot;eSubject&quot;:{&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.PolicySubject&quot;,&quot;state&quot;:&quot;{\n  \&quot;className\&quot;: \&quot;com.sun.identity.policy.plugins.AuthenticatedAgents\&quot;,\n  \&quot;exclusive\&quot;: false,\n  \&quot;name\&quot;: \&quot;AuthenticatedAgents\&quot;,\n  \&quot;values\&quot;: []\n}&quot;}}</Value>
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="pathparentindex"/>
@@ -12443,7 +12435,7 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="serializable"/>
-    <Value>{&quot;createdBy&quot;:&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot;,&quot;lastModifiedDate&quot;:1485842797955,&quot;policyName&quot;:&quot;dc=openam^dc=forgerock^dc=org^^EntitlementEval&quot;,&quot;lastModifiedBy&quot;:&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot;,&quot;name&quot;:&quot;dc=openam^dc=forgerock^dc=org^^EntitlementEval_delegation-rule5&quot;,&quot;active&quot;:&quot;true&quot;,&quot;entitlement&quot;:{&quot;resourceNames&quot;:[&quot;sms:&#47;&#47;dc=openam,dc=forgerock,dc=org&#47;sunEntitlementService&#47;1.0&#47;application&#47;ws&#47;1&#47;entitlement&#47;listener*&quot;],&quot;actionsValues&quot;:{&quot;MODIFY&quot;:true},&quot;name&quot;:&quot;delegation-rule5&quot;,&quot;applicationName&quot;:&quot;sunAMDelegationService&quot;},&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.OpenSSOPrivilege&quot;,&quot;creationDate&quot;:1485842797955,&quot;eSubject&quot;:{&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.PolicySubject&quot;,&quot;state&quot;:&quot;{\n  \&quot;className\&quot;: \&quot;com.sun.identity.policy.plugins.AuthenticatedAgents\&quot;,\n  \&quot;exclusive\&quot;: false,\n  \&quot;name\&quot;: \&quot;AuthenticatedAgents\&quot;,\n  \&quot;values\&quot;: []\n}&quot;}}</Value>
+    <Value>{&quot;createdBy&quot;:&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot;,&quot;lastModifiedDate&quot;:1488504579797,&quot;policyName&quot;:&quot;dc=openam^dc=forgerock^dc=org^^EntitlementEval&quot;,&quot;lastModifiedBy&quot;:&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot;,&quot;name&quot;:&quot;dc=openam^dc=forgerock^dc=org^^EntitlementEval_delegation-rule5&quot;,&quot;active&quot;:&quot;true&quot;,&quot;entitlement&quot;:{&quot;resourceNames&quot;:[&quot;sms:&#47;&#47;dc=openam,dc=forgerock,dc=org&#47;sunEntitlementService&#47;1.0&#47;application&#47;ws&#47;1&#47;entitlement&#47;listener*&quot;],&quot;actionsValues&quot;:{&quot;MODIFY&quot;:true},&quot;name&quot;:&quot;delegation-rule5&quot;,&quot;applicationName&quot;:&quot;sunAMDelegationService&quot;},&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.OpenSSOPrivilege&quot;,&quot;creationDate&quot;:1488504579797,&quot;eSubject&quot;:{&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.PolicySubject&quot;,&quot;state&quot;:&quot;{\n  \&quot;className\&quot;: \&quot;com.sun.identity.policy.plugins.AuthenticatedAgents\&quot;,\n  \&quot;exclusive\&quot;: false,\n  \&quot;name\&quot;: \&quot;AuthenticatedAgents\&quot;,\n  \&quot;values\&quot;: []\n}&quot;}}</Value>
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="pathparentindex"/>
@@ -12452,37 +12444,6 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
     <Value>&#47;sunentitlementservice</Value>
     <Value>&#47;sunentitlementservice&#47;1.0&#47;application&#47;ws&#47;1</Value>
     <Value>&#47;sunentitlementservice&#47;1.0&#47;application&#47;ws&#47;1&#47;entitlement</Value>
-    <Value>&#47;</Value>
-    <Value>&#47;sunentitlementservice&#47;1.0&#47;application&#47;ws</Value>
-</AttributeValuePair>
-</SubConfiguration><SubConfiguration name="dc=openam^dc=forgerock^dc=org^^EntitlementEval_delegation-rule2" id="indexes"><AttributeValuePair>
-    <Attribute name="resourceTypeUuid"/>
-    <Value>null</Value>
-</AttributeValuePair>
-<AttributeValuePair>
-    <Attribute name="hostindex"/>
-    <Value>:&#47;&#47;dc=openam,dc=forgerock,dc=org</Value>
-</AttributeValuePair>
-<AttributeValuePair>
-    <Attribute name="pathindex"/>
-    <Value>&#47;sunentitlementservice&#47;1.0&#47;application&#47;ws&#47;1&#47;entitlement&#47;decisions</Value>
-</AttributeValuePair>
-<AttributeValuePair>
-    <Attribute name="subjectindex"/>
-    <Value>identity:=all</Value>
-</AttributeValuePair>
-<AttributeValuePair>
-    <Attribute name="serializable"/>
-    <Value>{&quot;createdBy&quot;:&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot;,&quot;lastModifiedDate&quot;:1485842797955,&quot;policyName&quot;:&quot;dc=openam^dc=forgerock^dc=org^^EntitlementEval&quot;,&quot;lastModifiedBy&quot;:&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot;,&quot;name&quot;:&quot;dc=openam^dc=forgerock^dc=org^^EntitlementEval_delegation-rule2&quot;,&quot;active&quot;:&quot;true&quot;,&quot;entitlement&quot;:{&quot;resourceNames&quot;:[&quot;sms:&#47;&#47;dc=openam,dc=forgerock,dc=org&#47;sunEntitlementService&#47;1.0&#47;application&#47;ws&#47;1&#47;entitlement&#47;decisions&quot;],&quot;actionsValues&quot;:{&quot;READ&quot;:true},&quot;name&quot;:&quot;delegation-rule2&quot;,&quot;applicationName&quot;:&quot;sunAMDelegationService&quot;},&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.OpenSSOPrivilege&quot;,&quot;creationDate&quot;:1485842797955,&quot;eSubject&quot;:{&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.PolicySubject&quot;,&quot;state&quot;:&quot;{\n  \&quot;className\&quot;: \&quot;com.sun.identity.policy.plugins.AuthenticatedAgents\&quot;,\n  \&quot;exclusive\&quot;: false,\n  \&quot;name\&quot;: \&quot;AuthenticatedAgents\&quot;,\n  \&quot;values\&quot;: []\n}&quot;}}</Value>
-</AttributeValuePair>
-<AttributeValuePair>
-    <Attribute name="pathparentindex"/>
-    <Value>&#47;sunentitlementservice&#47;1.0</Value>
-    <Value>&#47;sunentitlementservice&#47;1.0&#47;application</Value>
-    <Value>&#47;sunentitlementservice</Value>
-    <Value>&#47;sunentitlementservice&#47;1.0&#47;application&#47;ws&#47;1</Value>
-    <Value>&#47;sunentitlementservice&#47;1.0&#47;application&#47;ws&#47;1&#47;entitlement</Value>
-    <Value>&#47;sunentitlementservice&#47;1.0&#47;application&#47;ws&#47;1&#47;entitlement&#47;decisions</Value>
     <Value>&#47;</Value>
     <Value>&#47;sunentitlementservice&#47;1.0&#47;application&#47;ws</Value>
 </AttributeValuePair>
@@ -12504,7 +12465,7 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="serializable"/>
-    <Value>{&quot;createdBy&quot;:&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot;,&quot;lastModifiedDate&quot;:1485842797955,&quot;policyName&quot;:&quot;dc=openam^dc=forgerock^dc=org^^EntitlementEval&quot;,&quot;lastModifiedBy&quot;:&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot;,&quot;name&quot;:&quot;dc=openam^dc=forgerock^dc=org^^EntitlementEval_delegation-rule4&quot;,&quot;active&quot;:&quot;true&quot;,&quot;entitlement&quot;:{&quot;resourceNames&quot;:[&quot;sms:&#47;&#47;dc=openam,dc=forgerock,dc=org&#47;sunEntitlementService&#47;1.0&#47;application&#47;ws&#47;1&#47;entitlement&#47;entitlements&quot;],&quot;actionsValues&quot;:{&quot;READ&quot;:true},&quot;name&quot;:&quot;delegation-rule4&quot;,&quot;applicationName&quot;:&quot;sunAMDelegationService&quot;},&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.OpenSSOPrivilege&quot;,&quot;creationDate&quot;:1485842797955,&quot;eSubject&quot;:{&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.PolicySubject&quot;,&quot;state&quot;:&quot;{\n  \&quot;className\&quot;: \&quot;com.sun.identity.policy.plugins.AuthenticatedAgents\&quot;,\n  \&quot;exclusive\&quot;: false,\n  \&quot;name\&quot;: \&quot;AuthenticatedAgents\&quot;,\n  \&quot;values\&quot;: []\n}&quot;}}</Value>
+    <Value>{&quot;createdBy&quot;:&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot;,&quot;lastModifiedDate&quot;:1488504579797,&quot;policyName&quot;:&quot;dc=openam^dc=forgerock^dc=org^^EntitlementEval&quot;,&quot;lastModifiedBy&quot;:&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot;,&quot;name&quot;:&quot;dc=openam^dc=forgerock^dc=org^^EntitlementEval_delegation-rule4&quot;,&quot;active&quot;:&quot;true&quot;,&quot;entitlement&quot;:{&quot;resourceNames&quot;:[&quot;sms:&#47;&#47;dc=openam,dc=forgerock,dc=org&#47;sunEntitlementService&#47;1.0&#47;application&#47;ws&#47;1&#47;entitlement&#47;entitlements&quot;],&quot;actionsValues&quot;:{&quot;READ&quot;:true},&quot;name&quot;:&quot;delegation-rule4&quot;,&quot;applicationName&quot;:&quot;sunAMDelegationService&quot;},&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.OpenSSOPrivilege&quot;,&quot;creationDate&quot;:1488504579797,&quot;eSubject&quot;:{&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.PolicySubject&quot;,&quot;state&quot;:&quot;{\n  \&quot;className\&quot;: \&quot;com.sun.identity.policy.plugins.AuthenticatedAgents\&quot;,\n  \&quot;exclusive\&quot;: false,\n  \&quot;name\&quot;: \&quot;AuthenticatedAgents\&quot;,\n  \&quot;values\&quot;: []\n}&quot;}}</Value>
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="pathparentindex"/>
@@ -12535,7 +12496,7 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="serializable"/>
-    <Value>{&quot;createdBy&quot;:&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot;,&quot;lastModifiedDate&quot;:1485842797955,&quot;policyName&quot;:&quot;dc=openam^dc=forgerock^dc=org^^EntitlementEval&quot;,&quot;lastModifiedBy&quot;:&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot;,&quot;name&quot;:&quot;dc=openam^dc=forgerock^dc=org^^EntitlementEval_delegation-rule3&quot;,&quot;active&quot;:&quot;true&quot;,&quot;entitlement&quot;:{&quot;resourceNames&quot;:[&quot;sms:&#47;&#47;dc=openam,dc=forgerock,dc=org&#47;sunEntitlementService&#47;1.0&#47;application&#47;ws&#47;1&#47;entitlement&#47;entitlement&quot;],&quot;actionsValues&quot;:{&quot;READ&quot;:true},&quot;name&quot;:&quot;delegation-rule3&quot;,&quot;applicationName&quot;:&quot;sunAMDelegationService&quot;},&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.OpenSSOPrivilege&quot;,&quot;creationDate&quot;:1485842797955,&quot;eSubject&quot;:{&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.PolicySubject&quot;,&quot;state&quot;:&quot;{\n  \&quot;className\&quot;: \&quot;com.sun.identity.policy.plugins.AuthenticatedAgents\&quot;,\n  \&quot;exclusive\&quot;: false,\n  \&quot;name\&quot;: \&quot;AuthenticatedAgents\&quot;,\n  \&quot;values\&quot;: []\n}&quot;}}</Value>
+    <Value>{&quot;createdBy&quot;:&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot;,&quot;lastModifiedDate&quot;:1488504579797,&quot;policyName&quot;:&quot;dc=openam^dc=forgerock^dc=org^^EntitlementEval&quot;,&quot;lastModifiedBy&quot;:&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot;,&quot;name&quot;:&quot;dc=openam^dc=forgerock^dc=org^^EntitlementEval_delegation-rule3&quot;,&quot;active&quot;:&quot;true&quot;,&quot;entitlement&quot;:{&quot;resourceNames&quot;:[&quot;sms:&#47;&#47;dc=openam,dc=forgerock,dc=org&#47;sunEntitlementService&#47;1.0&#47;application&#47;ws&#47;1&#47;entitlement&#47;entitlement&quot;],&quot;actionsValues&quot;:{&quot;READ&quot;:true},&quot;name&quot;:&quot;delegation-rule3&quot;,&quot;applicationName&quot;:&quot;sunAMDelegationService&quot;},&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.OpenSSOPrivilege&quot;,&quot;creationDate&quot;:1488504579797,&quot;eSubject&quot;:{&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.PolicySubject&quot;,&quot;state&quot;:&quot;{\n  \&quot;className\&quot;: \&quot;com.sun.identity.policy.plugins.AuthenticatedAgents\&quot;,\n  \&quot;exclusive\&quot;: false,\n  \&quot;name\&quot;: \&quot;AuthenticatedAgents\&quot;,\n  \&quot;values\&quot;: []\n}&quot;}}</Value>
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="pathparentindex"/>
@@ -12566,7 +12527,7 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="serializable"/>
-    <Value>{&quot;createdBy&quot;:&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot;,&quot;lastModifiedDate&quot;:1485842797955,&quot;policyName&quot;:&quot;dc=openam^dc=forgerock^dc=org^^EntitlementEval&quot;,&quot;lastModifiedBy&quot;:&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot;,&quot;name&quot;:&quot;dc=openam^dc=forgerock^dc=org^^EntitlementEval_delegation-rule1&quot;,&quot;active&quot;:&quot;true&quot;,&quot;entitlement&quot;:{&quot;resourceNames&quot;:[&quot;sms:&#47;&#47;dc=openam,dc=forgerock,dc=org&#47;sunEntitlementService&#47;1.0&#47;application&#47;ws&#47;1&#47;entitlement&#47;decision&quot;],&quot;actionsValues&quot;:{&quot;READ&quot;:true},&quot;name&quot;:&quot;delegation-rule1&quot;,&quot;applicationName&quot;:&quot;sunAMDelegationService&quot;},&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.OpenSSOPrivilege&quot;,&quot;creationDate&quot;:1485842797955,&quot;eSubject&quot;:{&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.PolicySubject&quot;,&quot;state&quot;:&quot;{\n  \&quot;className\&quot;: \&quot;com.sun.identity.policy.plugins.AuthenticatedAgents\&quot;,\n  \&quot;exclusive\&quot;: false,\n  \&quot;name\&quot;: \&quot;AuthenticatedAgents\&quot;,\n  \&quot;values\&quot;: []\n}&quot;}}</Value>
+    <Value>{&quot;createdBy&quot;:&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot;,&quot;lastModifiedDate&quot;:1488504579797,&quot;policyName&quot;:&quot;dc=openam^dc=forgerock^dc=org^^EntitlementEval&quot;,&quot;lastModifiedBy&quot;:&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot;,&quot;name&quot;:&quot;dc=openam^dc=forgerock^dc=org^^EntitlementEval_delegation-rule1&quot;,&quot;active&quot;:&quot;true&quot;,&quot;entitlement&quot;:{&quot;resourceNames&quot;:[&quot;sms:&#47;&#47;dc=openam,dc=forgerock,dc=org&#47;sunEntitlementService&#47;1.0&#47;application&#47;ws&#47;1&#47;entitlement&#47;decision&quot;],&quot;actionsValues&quot;:{&quot;READ&quot;:true},&quot;name&quot;:&quot;delegation-rule1&quot;,&quot;applicationName&quot;:&quot;sunAMDelegationService&quot;},&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.OpenSSOPrivilege&quot;,&quot;creationDate&quot;:1488504579797,&quot;eSubject&quot;:{&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.PolicySubject&quot;,&quot;state&quot;:&quot;{\n  \&quot;className\&quot;: \&quot;com.sun.identity.policy.plugins.AuthenticatedAgents\&quot;,\n  \&quot;exclusive\&quot;: false,\n  \&quot;name\&quot;: \&quot;AuthenticatedAgents\&quot;,\n  \&quot;values\&quot;: []\n}&quot;}}</Value>
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="pathparentindex"/>
@@ -12576,6 +12537,37 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
     <Value>&#47;sunentitlementservice&#47;1.0&#47;application&#47;ws&#47;1</Value>
     <Value>&#47;sunentitlementservice&#47;1.0&#47;application&#47;ws&#47;1&#47;entitlement&#47;decision</Value>
     <Value>&#47;sunentitlementservice&#47;1.0&#47;application&#47;ws&#47;1&#47;entitlement</Value>
+    <Value>&#47;</Value>
+    <Value>&#47;sunentitlementservice&#47;1.0&#47;application&#47;ws</Value>
+</AttributeValuePair>
+</SubConfiguration><SubConfiguration name="dc=openam^dc=forgerock^dc=org^^EntitlementEval_delegation-rule2" id="indexes"><AttributeValuePair>
+    <Attribute name="resourceTypeUuid"/>
+    <Value>null</Value>
+</AttributeValuePair>
+<AttributeValuePair>
+    <Attribute name="hostindex"/>
+    <Value>:&#47;&#47;dc=openam,dc=forgerock,dc=org</Value>
+</AttributeValuePair>
+<AttributeValuePair>
+    <Attribute name="pathindex"/>
+    <Value>&#47;sunentitlementservice&#47;1.0&#47;application&#47;ws&#47;1&#47;entitlement&#47;decisions</Value>
+</AttributeValuePair>
+<AttributeValuePair>
+    <Attribute name="subjectindex"/>
+    <Value>identity:=all</Value>
+</AttributeValuePair>
+<AttributeValuePair>
+    <Attribute name="serializable"/>
+    <Value>{&quot;createdBy&quot;:&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot;,&quot;lastModifiedDate&quot;:1488504579797,&quot;policyName&quot;:&quot;dc=openam^dc=forgerock^dc=org^^EntitlementEval&quot;,&quot;lastModifiedBy&quot;:&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot;,&quot;name&quot;:&quot;dc=openam^dc=forgerock^dc=org^^EntitlementEval_delegation-rule2&quot;,&quot;active&quot;:&quot;true&quot;,&quot;entitlement&quot;:{&quot;resourceNames&quot;:[&quot;sms:&#47;&#47;dc=openam,dc=forgerock,dc=org&#47;sunEntitlementService&#47;1.0&#47;application&#47;ws&#47;1&#47;entitlement&#47;decisions&quot;],&quot;actionsValues&quot;:{&quot;READ&quot;:true},&quot;name&quot;:&quot;delegation-rule2&quot;,&quot;applicationName&quot;:&quot;sunAMDelegationService&quot;},&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.OpenSSOPrivilege&quot;,&quot;creationDate&quot;:1488504579797,&quot;eSubject&quot;:{&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.PolicySubject&quot;,&quot;state&quot;:&quot;{\n  \&quot;className\&quot;: \&quot;com.sun.identity.policy.plugins.AuthenticatedAgents\&quot;,\n  \&quot;exclusive\&quot;: false,\n  \&quot;name\&quot;: \&quot;AuthenticatedAgents\&quot;,\n  \&quot;values\&quot;: []\n}&quot;}}</Value>
+</AttributeValuePair>
+<AttributeValuePair>
+    <Attribute name="pathparentindex"/>
+    <Value>&#47;sunentitlementservice&#47;1.0</Value>
+    <Value>&#47;sunentitlementservice&#47;1.0&#47;application</Value>
+    <Value>&#47;sunentitlementservice</Value>
+    <Value>&#47;sunentitlementservice&#47;1.0&#47;application&#47;ws&#47;1</Value>
+    <Value>&#47;sunentitlementservice&#47;1.0&#47;application&#47;ws&#47;1&#47;entitlement</Value>
+    <Value>&#47;sunentitlementservice&#47;1.0&#47;application&#47;ws&#47;1&#47;entitlement&#47;decisions</Value>
     <Value>&#47;</Value>
     <Value>&#47;sunentitlementservice&#47;1.0&#47;application&#47;ws</Value>
 </AttributeValuePair>
@@ -12597,7 +12589,7 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="serializable"/>
-    <Value>{&quot;createdBy&quot;:&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot;,&quot;lastModifiedDate&quot;:1485842798008,&quot;policyName&quot;:&quot;AgentAccessToValidationService&quot;,&quot;lastModifiedBy&quot;:&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot;,&quot;name&quot;:&quot;AgentAccessToValidationService&quot;,&quot;active&quot;:&quot;true&quot;,&quot;entitlement&quot;:{&quot;resourceNames&quot;:[&quot;sms:&#47;&#47;*dc=openam,dc=forgerock,dc=org&#47;validationService&#47;1.0&#47;OrganizationConfig&#47;*&quot;],&quot;actionsValues&quot;:{&quot;READ&quot;:true},&quot;name&quot;:&quot;agent-read-access-to-validation-service&quot;,&quot;applicationName&quot;:&quot;sunAMDelegationService&quot;},&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.OpenSSOPrivilege&quot;,&quot;creationDate&quot;:1485842798008,&quot;eSubject&quot;:{&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.PolicySubject&quot;,&quot;state&quot;:&quot;{\n  \&quot;className\&quot;: \&quot;com.sun.identity.policy.plugins.AuthenticatedAgents\&quot;,\n  \&quot;exclusive\&quot;: false,\n  \&quot;name\&quot;: \&quot;AuthenticatedAgents\&quot;,\n  \&quot;values\&quot;: []\n}&quot;}}</Value>
+    <Value>{&quot;createdBy&quot;:&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot;,&quot;lastModifiedDate&quot;:1488504579851,&quot;policyName&quot;:&quot;AgentAccessToValidationService&quot;,&quot;lastModifiedBy&quot;:&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot;,&quot;name&quot;:&quot;AgentAccessToValidationService&quot;,&quot;active&quot;:&quot;true&quot;,&quot;entitlement&quot;:{&quot;resourceNames&quot;:[&quot;sms:&#47;&#47;*dc=openam,dc=forgerock,dc=org&#47;validationService&#47;1.0&#47;OrganizationConfig&#47;*&quot;],&quot;actionsValues&quot;:{&quot;READ&quot;:true},&quot;name&quot;:&quot;agent-read-access-to-validation-service&quot;,&quot;applicationName&quot;:&quot;sunAMDelegationService&quot;},&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.OpenSSOPrivilege&quot;,&quot;creationDate&quot;:1488504579851,&quot;eSubject&quot;:{&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.PolicySubject&quot;,&quot;state&quot;:&quot;{\n  \&quot;className\&quot;: \&quot;com.sun.identity.policy.plugins.AuthenticatedAgents\&quot;,\n  \&quot;exclusive\&quot;: false,\n  \&quot;name\&quot;: \&quot;AuthenticatedAgents\&quot;,\n  \&quot;values\&quot;: []\n}&quot;}}</Value>
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="pathparentindex"/>
@@ -12624,7 +12616,7 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="serializable"/>
-    <Value>{&quot;createdBy&quot;:&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot;,&quot;lastModifiedDate&quot;:1485842798024,&quot;policyName&quot;:&quot;AgentAccessToEvaluatePolicies&quot;,&quot;lastModifiedBy&quot;:&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot;,&quot;name&quot;:&quot;AgentAccessToEvaluatePolicies&quot;,&quot;active&quot;:&quot;true&quot;,&quot;entitlement&quot;:{&quot;resourceNames&quot;:[&quot;sms:&#47;&#47;*dc=openam,dc=forgerock,dc=org&#47;rest&#47;1.0&#47;policies&#47;evaluate&quot;],&quot;actionsValues&quot;:{&quot;READ&quot;:true},&quot;name&quot;:&quot;agent-read-access-to-evaluate-policies&quot;,&quot;applicationName&quot;:&quot;sunAMDelegationService&quot;},&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.OpenSSOPrivilege&quot;,&quot;creationDate&quot;:1485842798024,&quot;eSubject&quot;:{&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.PolicySubject&quot;,&quot;state&quot;:&quot;{\n  \&quot;className\&quot;: \&quot;com.sun.identity.policy.plugins.AuthenticatedAgents\&quot;,\n  \&quot;exclusive\&quot;: false,\n  \&quot;name\&quot;: \&quot;AuthenticatedAgents\&quot;,\n  \&quot;values\&quot;: []\n}&quot;}}</Value>
+    <Value>{&quot;createdBy&quot;:&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot;,&quot;lastModifiedDate&quot;:1488504579865,&quot;policyName&quot;:&quot;AgentAccessToEvaluatePolicies&quot;,&quot;lastModifiedBy&quot;:&quot;cn=dsameuser,ou=DSAME Users,dc=openam,dc=forgerock,dc=org&quot;,&quot;name&quot;:&quot;AgentAccessToEvaluatePolicies&quot;,&quot;active&quot;:&quot;true&quot;,&quot;entitlement&quot;:{&quot;resourceNames&quot;:[&quot;sms:&#47;&#47;*dc=openam,dc=forgerock,dc=org&#47;rest&#47;1.0&#47;policies&#47;evaluate&quot;],&quot;actionsValues&quot;:{&quot;READ&quot;:true},&quot;name&quot;:&quot;agent-read-access-to-evaluate-policies&quot;,&quot;applicationName&quot;:&quot;sunAMDelegationService&quot;},&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.OpenSSOPrivilege&quot;,&quot;creationDate&quot;:1488504579865,&quot;eSubject&quot;:{&quot;className&quot;:&quot;com.sun.identity.entitlement.opensso.PolicySubject&quot;,&quot;state&quot;:&quot;{\n  \&quot;className\&quot;: \&quot;com.sun.identity.policy.plugins.AuthenticatedAgents\&quot;,\n  \&quot;exclusive\&quot;: false,\n  \&quot;name\&quot;: \&quot;AuthenticatedAgents\&quot;,\n  \&quot;values\&quot;: []\n}&quot;}}</Value>
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="pathparentindex"/>
@@ -12984,9 +12976,9 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
     <Value>READ=true</Value>
     <Value>MODIFY=true</Value>
 </AttributeValuePair>
-</SubConfiguration><SubConfiguration name="f4f1cb52-ea3c-4592-8a35-c9a79576a0ce" id="resourceType"><AttributeValuePair>
+</SubConfiguration><SubConfiguration name="6a600220-da7b-4893-8c8a-4cba1346e7aa" id="resourceType"><AttributeValuePair>
     <Attribute name="lastModifiedDate"/>
-    <Value>1485843243588</Value>
+    <Value>1488504839855</Value>
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="createdBy"/>
@@ -13009,7 +13001,7 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="creationDate"/>
-    <Value>1485843243588</Value>
+    <Value>1488504839855</Value>
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="actions"/>
@@ -13023,9 +13015,9 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
 <AttributeValuePair>
     <Attribute name="meta"/>
     <Value>lastmodifiedby=id=dsameuser,ou=user,dc=openam,dc=forgerock,dc=org</Value>
-    <Value>lastmodifieddate=1485842799467</Value>
     <Value>createdby=id=dsameuser,ou=user,dc=openam,dc=forgerock,dc=org</Value>
-    <Value>creationdate=1485842799467</Value>
+    <Value>creationdate=1488504581406</Value>
+    <Value>lastmodifieddate=1488504581406</Value>
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="subjectAttributeNames"/>
@@ -13088,9 +13080,9 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
 <AttributeValuePair>
     <Attribute name="meta"/>
     <Value>lastmodifiedby=id=dsameuser,ou=user,dc=openam,dc=forgerock,dc=org</Value>
-    <Value>lastmodifieddate=1485842799478</Value>
+    <Value>lastmodifieddate=1488504581397</Value>
+    <Value>creationdate=1488504581397</Value>
     <Value>createdby=id=dsameuser,ou=user,dc=openam,dc=forgerock,dc=org</Value>
-    <Value>creationdate=1485842799478</Value>
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="subjectAttributeNames"/>
@@ -13123,10 +13115,10 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="meta"/>
+    <Value>lastmodifieddate=1488504839908</Value>
     <Value>lastmodifiedby=id=dsameuser,ou=user,dc=openam,dc=forgerock,dc=org</Value>
-    <Value>creationdate=1485843243612</Value>
+    <Value>creationdate=1488504839908</Value>
     <Value>createdby=id=dsameuser,ou=user,dc=openam,dc=forgerock,dc=org</Value>
-    <Value>lastmodifieddate=1485843243612</Value>
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="subjectAttributeNames"/>
@@ -13176,7 +13168,7 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="resourceTypeUuids"/>
-    <Value>f4f1cb52-ea3c-4592-8a35-c9a79576a0ce</Value>
+    <Value>6a600220-da7b-4893-8c8a-4cba1346e7aa</Value>
 </AttributeValuePair>
 </SubConfiguration></SubConfiguration><SubConfiguration name="subjectAttributesCollectors" id="subjectAttributesCollectors"><SubConfiguration name="OpenSSO" id="OpenSSOSubjectAttributesCollector"><AttributeValuePair>
     <Attribute name="groupMembershipSearchIndexEnabled"/>
@@ -14744,7 +14736,7 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
                 </AttributeSchema>
                 <AttributeSchema cosQualifier="default"  i18nKey="a113b"  isSearchable="no"  listOrder="natural"  name="tokenSigningHmacSharedSecret"  order="230"  syntax="string"  type="single" >
                     <DefaultValues>
-                        <Value>&#47;Z1b8bm9BUNeJqSUnyTtmuBr5SF5jxCmAoDQEeBAYoY=</Value>
+                        <Value>099LlFFXf5FFLMbLVOIFv10MNmKRtPwQNVbpwOYT1a0=</Value>
                     </DefaultValues>
                 </AttributeSchema>
                 <AttributeSchema cosQualifier="default"  i18nKey="a114"  isSearchable="no"  listOrder="natural"  name="forgerock-oauth2-provider-keypair-name"  order="240"  resourceName="keypairName"  syntax="string"  type="single"  validator="RequiredValueValidator" >
@@ -14985,7 +14977,7 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="tokenSigningHmacSharedSecret"/>
-    <Value>&#47;Z1b8bm9BUNeJqSUnyTtmuBr5SF5jxCmAoDQEeBAYoY=</Value>
+    <Value>099LlFFXf5FFLMbLVOIFv10MNmKRtPwQNVbpwOYT1a0=</Value>
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="forgerock-oauth2-provider-code-verifier-enforced"/>
@@ -15029,12 +15021,12 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
     <Value>cn</Value>
 </AttributeValuePair>
 <AttributeValuePair>
-    <Attribute name="alwaysAddClaimsToToken"/>
-    <Value>true</Value>
+    <Attribute name="forgerock-oauth2-provider-keypair-name"/>
+    <Value>test</Value>
 </AttributeValuePair>
 <AttributeValuePair>
-    <Attribute name="forgerock-oauth2-provider-keypair-name"/>
-    <Value>signingKey</Value>
+    <Attribute name="alwaysAddClaimsToToken"/>
+    <Value>true</Value>
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="supportedIDTokenEncryptionAlgorithms"/>
@@ -17904,7 +17896,7 @@ collectGeolocationInfo(function(geolocationInfo) {
 </AttributeValuePair>
 </SubConfiguration><SubConfiguration name="36863ffb-40ec-48b9-94b1-9a99f71cc3b5" id="globalScript"><AttributeValuePair>
     <Attribute name="lastModifiedDate"/>
-    <Value>1486442784587</Value>
+    <Value>1488505027952</Value>
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="createdBy"/>
@@ -17912,7 +17904,7 @@ collectGeolocationInfo(function(geolocationInfo) {
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="lastModifiedBy"/>
-    <Value>id=amAdmin,ou=user,dc=openam,dc=forgerock,dc=org</Value>
+    <Value>id=amadmin,ou=user,dc=openam,dc=forgerock,dc=org</Value>
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="name"/>

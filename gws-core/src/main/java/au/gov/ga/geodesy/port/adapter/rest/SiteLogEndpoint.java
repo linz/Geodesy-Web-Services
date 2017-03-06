@@ -119,21 +119,6 @@ public class SiteLogEndpoint {
         }
     }
 
-    // TODO: Replace with /secureUpload
-    @RequestMapping(value = "/upload", method = RequestMethod.POST)
-    public ResponseEntity<String> uploadGeodesyMLSiteLog(HttpServletRequest req, HttpServletResponse rsp) throws IOException, InvalidSiteLogException {
-        SiteLogReader reader = new GeodesyMLSiteLogReader(new InputStreamReader(req.getInputStream()));
-        SiteLog siteLog = reader.getSiteLog();
-        service.upload(siteLog);
-        try {
-            String location = entityLinks.linkToSingleResource(SiteLog.class, siteLog.getId()).getHref();
-            return ResponseEntity.created(new URI(location)).body("");
-        }
-        catch (URISyntaxException e) {
-            throw new GeodesyRuntimeException(e);
-        }
-    }
-
     /**
      * Return true if the currently authenticated user has the given authority, false otherwise.
      */
@@ -149,8 +134,8 @@ public class SiteLogEndpoint {
      */
     private boolean hasAuthorityToEditSiteLog(SiteLog siteLog) {
         String fourCharId = siteLog.getSiteIdentification().getFourCharacterId();
-        String requiredAuthority = "edit-" + fourCharId.toLowerCase();
-        return hasAuthority(requiredAuthority);
+        String siteEditAuthority = "edit-" + fourCharId.toLowerCase();
+        return hasAuthority(siteEditAuthority) || hasAuthority("superuser");
     }
 
     /**
@@ -163,7 +148,7 @@ public class SiteLogEndpoint {
     }
 
     @PreAuthorize("isAuthenticated()")
-    @RequestMapping(value = "/secureUpload", method = RequestMethod.POST)
+    @RequestMapping(value = "/upload", method = RequestMethod.POST)
     public ResponseEntity<String> secureUploadGeodesyMLSiteLog(HttpServletRequest req, HttpServletResponse rsp) throws IOException, InvalidSiteLogException {
         SiteLogReader reader = new GeodesyMLSiteLogReader(new InputStreamReader(req.getInputStream()));
         SiteLog siteLog = reader.getSiteLog();

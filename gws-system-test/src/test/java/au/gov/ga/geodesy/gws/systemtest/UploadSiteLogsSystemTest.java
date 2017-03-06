@@ -20,6 +20,7 @@ public class UploadSiteLogsSystemTest extends BaseSystemTest {
     private void upload(File siteLog) throws Exception {
         log.info("Uploading " + siteLog.getName() + " to " + getConfig().getWebServicesUrl());
         given()
+            .header("Authorization", "Bearer " + super.superuserToken())
             .body(FileUtils.readFileToString(siteLog, "ISO-8859-1"))
             .when()
             .post(getConfig().getWebServicesUrl() + "/siteLogs/upload")

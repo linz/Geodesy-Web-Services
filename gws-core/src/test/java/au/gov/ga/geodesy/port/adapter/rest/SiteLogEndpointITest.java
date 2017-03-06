@@ -27,6 +27,7 @@ public class SiteLogEndpointITest extends RestDocTest {
     public void upload() throws Exception {
         String geodesyML = IOUtils.toString(TestResources.customGeodesyMLSiteLogReader("ALIC"));
         given()
+            .auth().with(super.superuserToken())
             .body(geodesyML).
         when()
             .post("/siteLogs/upload").

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+   <!-- Drop the old columns -->
+   <changeSet author="heya"
+              id="1488326723446-1"
+              objectQuotingStrategy="QUOTE_ALL_OBJECTS">     
+        <preConditions onFail="MARK_RAN">
+            <columnExists 
+                schemaName="geodesey" 
+                tableName="sitelog_site"
+                columnName="itrf_x"/>
+            <columnExists 
+                schemaName="geodesey" 
+                tableName="sitelog_site"
+                columnName="itrf_y"/>
+            <columnExists 
+                schemaName="geodesey" 
+                tableName="sitelog_site"
+                columnName="itrf_z"/>
+            <columnExists 
+                schemaName="geodesey" 
+                tableName="sitelog_site"
+                columnName="elevation_grs80"/>
+        </preConditions>
+        
+        <dropColumn columnName="itrf_x" tableName="sitelog_site"/>
+        <dropColumn columnName="itrf_y" tableName="sitelog_site"/>
+        <dropColumn columnName="itrf_z" tableName="sitelog_site"/>
+        <dropColumn columnName="elevation_grs80" tableName="sitelog_site"/>
+   </changeSet>
+   
+   <!-- Add column for cartesianPosition -->
+   <changeSet author="heya"
+              id="1488326723446-2"
+              objectQuotingStrategy="QUOTE_ALL_OBJECTS"> 
+        <preConditions onFail="MARK_RAN">   
+	        <not>
+	            <columnExists 
+	                schemaName="geodesey" 
+	                tableName="sitelog_site"
+	                columnName="cartesian_position"/>
+	        </not>   
+	    </preConditions>   
+        <addColumn tableName="sitelog_site">
+            <column name="cartesian_position" type="geometry"/>
+        </addColumn>          
+        <setColumnRemarks columnName="cartesian_position"
+                  remarks="Position in EPSG:7789 reference system - x,y,z"
+                  tableName="sitelog_site"/>
+    </changeSet>                 
+   <!-- Add column for geodeticPosition -->
+   <changeSet author="heya"
+              id="1488326723446-3"
+              objectQuotingStrategy="QUOTE_ALL_OBJECTS"> 
+        <preConditions onFail="MARK_RAN">   
+            <not>
+                <columnExists 
+                    schemaName="geodesey" 
+                    tableName="sitelog_site"
+                    columnName="geodetic_position"/>
+            </not>   
+        </preConditions>           
+        <addColumn tableName="sitelog_site">
+            <column name="geodetic_position" type="geometry"/>
+        </addColumn>   
+        <setColumnRemarks columnName="geodetic_position"
+                  remarks="Position in EPSG:7912 reference system - lat,long,elevation"
+                  tableName="sitelog_site"/>
+    </changeSet>     
+</databaseChangeLog>

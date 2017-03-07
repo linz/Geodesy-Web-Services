@@ -20,6 +20,8 @@ import org.hamcrest.Matchers;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import com.vividsolutions.jts.geom.Point;
+
 import au.gov.ga.geodesy.domain.model.sitelog.CollocationInformation;
 import au.gov.ga.geodesy.domain.model.sitelog.FrequencyStandardLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.GnssAntennaLogItem;
@@ -72,9 +74,7 @@ import au.gov.xml.icsm.geodesyml.v_0_4.TemperatureSensorPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_4.TemperatureSensorType;
 import au.gov.xml.icsm.geodesyml.v_0_4.WaterVaporSensorPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_4.WaterVaporSensorType;
-
 import ma.glasnost.orika.metadata.TypeFactory;
-
 import net.opengis.gml.v_3_2_1.TimePeriodType;
 import net.opengis.gml.v_3_2_1.TimePositionType;
 
@@ -125,6 +125,33 @@ public class SiteLogMapperITest extends IntegrationTest {
         );
     }
 
+    /**
+     * Test mapping from SiteLogType to SiteLog and back
+     * to SiteLogType. Based on the QIKI site with added otherInstrumentations.
+     **/
+    @Test
+    public void testApproximatePositionMapping() throws Exception {
+        GeodesyMLType mobs = marshaller
+                .unmarshal(TestResources.customGeodesyMLSiteLogReader("MOBS-itrf-points"),
+                        GeodesyMLType.class)
+                .getValue();
+
+        SiteLogType siteLogType = GeodesyMLUtils.getElementFromJAXBElements(mobs.getElements(), SiteLogType.class)
+                .findFirst().get();
+
+        SiteLog siteLog = mapper.to(siteLogType);
+
+        Point cartesianPosition = siteLog.getSiteLocation().getApproximatePosition().getCartesianPosition();
+        assertThat(cartesianPosition.getSRID(), 
+        		equalTo(Integer.parseInt(siteLogType.getSiteLocation().getApproximatePositionITRF()
+        				.getCartesianPosition().getPoint().getSrsName().replaceAll("EPSG:", ""))));
+        
+        Point geodeticPosition = siteLog.getSiteLocation().getApproximatePosition().getGeodeticPosition();
+        assertThat(geodeticPosition.getSRID(), 
+        		equalTo(Integer.parseInt(siteLogType.getSiteLocation().getApproximatePositionITRF()
+        				.getGeodeticPosition().getPoint().getSrsName().replaceAll("EPSG:", ""))));
+    }
+    
     /**
      * Test mapping from SiteLogType to SiteLog and back
      * to SiteLogType. Based on the MOBS site with added sensors.

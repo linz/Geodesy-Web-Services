@@ -19,13 +19,24 @@
             <geo:countryCodeISO>NZL</geo:countryCodeISO>
             <geo:tectonicPlate codeSpace=""></geo:tectonicPlate>
             <geo:approximatePositionITRF>
-                <geo:xCoordinateInMeters>-4777269.5982</geo:xCoordinateInMeters>
-                <geo:yCoordinateInMeters>434270.3488</geo:yCoordinateInMeters>
-                <geo:zCoordinateInMeters>-4189484.2972</geo:zCoordinateInMeters>
-                <geo:latitude-North>-41.3234527777777742585385567508637905120849609375</geo:latitude-North>
-                <geo:longitude-East>174.805891666666667561003123410046100616455078125</geo:longitude-East>
-                <geo:elevation-m_ellips.>26.1</geo:elevation-m_ellips.>
-            </geo:approximatePositionITRF>
+                <geo:cartesianPosition>
+                    <gml:Point 
+                        gml:id="XYZ" 
+                        srsName="EPSG:7789" 
+                        srsDimension="3" 
+                        axisLabels="x y z" 
+                        uomLabels="m">
+                        <gml:pos>-4777269.5982 434270.3488 -4189484.2972</gml:pos>
+                    </gml:Point>
+                </geo:cartesianPosition>
+                <geo:geodeticPosition>
+                    <gml:Point 
+                        gml:id="LAT_LONG_ELEVATION" 
+                        srsName="EPSG:7912"> 
+                        <gml:pos>-41.3234527777777742585385567508637905120849609375 174.805891666666667561003123410046100616455078125 26.1</gml:pos>
+                    </gml:Point>
+                </geo:geodeticPosition>         
+            </geo:approximatePositionITRF> 
         </geo:siteLocation>
         <geo:gnssReceivers>
             <geo:gnssReceiver gml:id="GnssReceiverType_2850">

@@ -1,5 +1,7 @@
 package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 
+import static au.gov.ga.geodesy.support.mapper.orika.geodesyml.SiteLocationMapper.GEODETIC_COORDINATES;
+
 import java.util.List;
 
 import com.vividsolutions.jts.geom.Coordinate;
@@ -13,10 +15,10 @@ import ma.glasnost.orika.metadata.Type;
 import net.opengis.gml.v_3_2_1.DirectPositionType;
 import net.opengis.gml.v_3_2_1.PointType;
 
-public class PointTypeToPointConverter extends BidirectionalConverter<Point, PointType> {
-
-	public PointTypeToPointConverter() {
-		super();
+public class GeodeticPointTypeToPointConverter extends BidirectionalConverter<Point, PointType> {
+	
+	public GeodeticPointTypeToPointConverter() {
+		
 	}
 	
     @Override
@@ -29,15 +31,17 @@ public class PointTypeToPointConverter extends BidirectionalConverter<Point, Poi
             positionValues.get(1).doubleValue(), 
             positionValues.get(2).doubleValue()
     	);
-    	
+
+    	Point point = new GeometryFactory(
+    			new PrecisionModel(PrecisionModel.FLOATING), GEODETIC_COORDINATES).createPoint(coordinate);
+    
+    	/* TODO 
     	// figure out the srid of the point, in the xml we allow strings like "EPSG:7789"
     	String srsNameNumbersOnly = pointType.getSrsName().replaceAll("[^0-9]+", "");
     	int srID = Integer.parseInt(srsNameNumbersOnly);
+    	*/
+    	point.setSRID(GEODETIC_COORDINATES);
     	
-    	Point point = new GeometryFactory(new PrecisionModel(PrecisionModel.FLOATING), srID).createPoint(coordinate);
-    	
-    	point.setSRID(srID);
-
     	return point;
     }
 
@@ -46,16 +50,18 @@ public class PointTypeToPointConverter extends BidirectionalConverter<Point, Poi
     	PointType pointType = new PointType();
     	
     	// for converting back to xml, prepend the String EPSG:" to the sr id
-    	String epsgCode = "EPSG:" + point.getSRID();
+    	// TODO int srID = point.getSRID();
+    	
+    	String epsgCode = "EPSG:" + GEODETIC_COORDINATES;
     	
     	Double [] values = {
             point.getCoordinate().getOrdinate(0),
-	        point.getCoordinate().getOrdinate(1),
-	        point.getCoordinate().getOrdinate(2)
+            point.getCoordinate().getOrdinate(1),
+            point.getCoordinate().getOrdinate(2)
     	};
     	    	
-        pointType.setPos(new DirectPositionType().withSrsName(epsgCode).withValue(values));
-        
+        pointType.setPos(new DirectPositionType().withValue(values));
+        pointType.setSrsName(epsgCode);
     	return pointType;
         
     }

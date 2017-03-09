@@ -14,8 +14,11 @@ import ma.glasnost.orika.impl.DefaultMapperFactory;
  * SiteLocation site log entity.
  */
 public class SiteLocationMapper implements Iso<SiteLocationType, SiteLocation> {
+	
+    public static final int CARTESIAN_COORDINATES = 7789;
+    public static final int GEODETIC_COORDINATES = 7912;
 
-    private MapperFactory mapperFactory = new DefaultMapperFactory.Builder().build();
+	private MapperFactory mapperFactory = new DefaultMapperFactory.Builder().build();
 
     private MapperFacade mapper;
 
@@ -28,15 +31,17 @@ public class SiteLocationMapper implements Iso<SiteLocationType, SiteLocation> {
             .register();
 
         mapperFactory.classMap(SiteLocationType.ApproximatePositionITRF.class, ApproximatePosition.class)
-            .fieldMap("cartesianPosition.point", "cartesianPosition").add()
-            .fieldMap("geodeticPosition.point", "geodeticPosition").add()
+        	.fieldMap("cartesianPosition.point", "cartesianPosition").converter("cartesianPosition").add()
+        	.fieldMap("geodeticPosition.point", "geodeticPosition").converter("geodeticPosition").add()
             .byDefault()
             .register();
 
         ConverterFactory converters = mapperFactory.getConverterFactory();
         converters.registerConverter("tectonicPlate", new StringToCodeTypeConverter("eGeodesy/tectonicPlate"));
         converters.registerConverter("country", new StringToCountryCodeTypeConverter("country"));
-        converters.registerConverter(new PointTypeToPointConverter());
+        converters.registerConverter("cartesianPosition", new CartesianPointTypeToPointConverter());
+        converters.registerConverter("geodeticPosition", new GeodeticPointTypeToPointConverter());
+
         mapper = mapperFactory.getMapperFacade();
     }
 

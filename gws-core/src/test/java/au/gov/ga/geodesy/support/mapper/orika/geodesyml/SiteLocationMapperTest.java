@@ -53,7 +53,8 @@ public class SiteLocationMapperTest {
             		equalTo(cartesianPointType.getPos().getValue().get(1)));
             assertThat(cartesianPosition.getCoordinate().getOrdinate(2), 
             		equalTo(cartesianPointType.getPos().getValue().get(2)));  
-            
+            assertThat(cartesianPosition.getSRID(), equalTo(SiteLocationMapper.CARTESIAN_COORDINATES));
+
             Point geodeticPosition = siteLoc.getApproximatePosition().getGeodeticPosition();
             PointType geodeticPointType = siteLocTypeA.getApproximatePositionITRF().getGeodeticPosition().getPoint();
             assertThat(geodeticPosition.getCoordinate().getOrdinate(0), 
@@ -62,7 +63,8 @@ public class SiteLocationMapperTest {
             		equalTo(geodeticPointType.getPos().getValue().get(1)));
             assertThat(geodeticPosition.getCoordinate().getOrdinate(2), 
             		equalTo(geodeticPointType.getPos().getValue().get(2)));  
-            
+            assertThat(geodeticPosition.getSRID(), equalTo(SiteLocationMapper.GEODETIC_COORDINATES));
+      
             assertThat(siteLoc.getNotes(), equalTo(siteLocTypeA.getNotes()));
 
             SiteLocationType siteLocTypeB = mapper.from(siteLoc);
@@ -80,6 +82,8 @@ public class SiteLocationMapperTest {
             		equalTo(cartesianPosition.getCoordinate().getOrdinate(1)));
             assertThat(cartesianPointTypeB.getPos().getValue().get(2), 
             		equalTo(cartesianPosition.getCoordinate().getOrdinate(2)));
+
+            assertThat(cartesianPointTypeB.getSrsName(), equalTo("EPSG:" + SiteLocationMapper.CARTESIAN_COORDINATES));
             
             PointType geodeticPointTypeB = siteLocTypeB.getApproximatePositionITRF().getGeodeticPosition().getPoint();
             assertThat(geodeticPointTypeB.getPos().getValue().get(0), 
@@ -88,6 +92,8 @@ public class SiteLocationMapperTest {
             		equalTo(geodeticPosition.getCoordinate().getOrdinate(1)));
             assertThat(geodeticPointTypeB.getPos().getValue().get(2), 
             		equalTo(geodeticPosition.getCoordinate().getOrdinate(2)));
+
+            assertThat(geodeticPointTypeB.getSrsName(), equalTo("EPSG:" + SiteLocationMapper.GEODETIC_COORDINATES));
             
             assertThat(siteLocTypeB.getNotes(), equalTo(siteLoc.getNotes()));
         }

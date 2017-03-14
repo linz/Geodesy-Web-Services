@@ -68,8 +68,8 @@ import au.gov.xml.icsm.geodesyml.v_0_4.PressureSensorType;
 import au.gov.xml.icsm.geodesyml.v_0_4.RadioInterferencePropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_4.SignalObstructionPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_4.SiteLogType;
-import au.gov.xml.icsm.geodesyml.v_0_4.SurveyedLocalTiesPropertyType;
-import au.gov.xml.icsm.geodesyml.v_0_4.SurveyedLocalTiesType;
+import au.gov.xml.icsm.geodesyml.v_0_4.SurveyedLocalTiePropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_4.SurveyedLocalTieType;
 import au.gov.xml.icsm.geodesyml.v_0_4.TemperatureSensorPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_4.TemperatureSensorType;
 import au.gov.xml.icsm.geodesyml.v_0_4.WaterVaporSensorPropertyType;
@@ -113,7 +113,7 @@ public class SiteLogMapperITest extends IntegrationTest {
 
     private void checkSiteContacts(SiteLogType siteLogType, SiteLog siteLog) {
         assertThat(
-            siteLogType.getSiteContact().get(0).getCIResponsibleParty().getIndividualName().getCharacterString().getValue(),
+            siteLogType.getSiteContacts().get(0).getCIResponsibleParty().getIndividualName().getCharacterString().getValue(),
             is(siteLog.getSiteContacts().get(0).getParty().getIndividualName())
         );
     }
@@ -121,7 +121,7 @@ public class SiteLogMapperITest extends IntegrationTest {
     private void checkSiteContacts(SiteLog siteLog, SiteLogType siteLogType) {
         assertThat(
             siteLog.getSiteContacts().get(0).getParty().getIndividualName(),
-            is(siteLogType.getSiteContact().get(0).getCIResponsibleParty().getIndividualName().getCharacterString().getValue())
+            is(siteLogType.getSiteContacts().get(0).getCIResponsibleParty().getIndividualName().getCharacterString().getValue())
         );
     }
 
@@ -456,16 +456,16 @@ public class SiteLogMapperITest extends IntegrationTest {
                 .findFirst().get();
 
         SiteLog siteLog = mapper.to(siteLogType);
-        List<SurveyedLocalTiesPropertyType> surveyedLocalTiesProperties = siteLogType.getSurveyedLocalTies();
-        sortSurveyedLocalTiesPropertyTypes(surveyedLocalTiesProperties);
+        List<SurveyedLocalTiePropertyType> surveyedLocalTies = siteLogType.getSurveyedLocalTies();
+        sortSurveyedLocalTiePropertyTypes(surveyedLocalTies);
 
         assertThat(siteLog.getSurveyedLocalTies(), hasSize(4));
-        assertThat(surveyedLocalTiesProperties, hasSize(4));
+        assertThat(surveyedLocalTies, hasSize(4));
 
         {
             int i = 0;
             for (SurveyedLocalTie surveyedLocalTie : sortSurveyedLocalTies(siteLog.getSurveyedLocalTies())) {
-                SurveyedLocalTiesType surveyedLocalTiesType = surveyedLocalTiesProperties.get(i++).getSurveyedLocalTies();
+                SurveyedLocalTieType surveyedLocalTiesType = surveyedLocalTies.get(i++).getSurveyedLocalTie();
                 assertThat(surveyedLocalTie.getTiedMarkerName(), is(surveyedLocalTiesType.getTiedMarkerName()));
                 assertThat(surveyedLocalTie.getTiedMarkerUsage(), is(surveyedLocalTiesType.getTiedMarkerUsage()));
                 assertThat(surveyedLocalTie.getTiedMarkerCdpNumber(), Matchers.is(surveyedLocalTiesType.getTiedMarkerCDPNumber()));
@@ -634,7 +634,7 @@ public class SiteLogMapperITest extends IntegrationTest {
     /**
      * Sort a list of SurveyedLocalTiesPropertyType objects by tied marker names.
      */
-    private <P extends SurveyedLocalTiesPropertyType> void sortSurveyedLocalTiesPropertyTypes(List<P> list) {
+    private <P extends SurveyedLocalTiePropertyType> void sortSurveyedLocalTiePropertyTypes(List<P> list) {
         Collections.sort(list, new Comparator<P>() {
             public int compare(P p, P q) {
                 return tiedMarkerName(p).compareTo(tiedMarkerName(q));

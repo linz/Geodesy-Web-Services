@@ -40,8 +40,8 @@
             <geo:elevation-m_ellips.>502.1</geo:elevation-m_ellips.>
          </geo:approximatePositionITRF>
       </geo:siteLocation>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver gml:id="GnssReceiverType_1198">
+      <geo:gnssReceiver>
+         <geo:GnssReceiver gml:id="GnssReceiverType_1198">
             <geo:manufacturerSerialNumber>00517 Rev.3</geo:manufacturerSerialNumber>
             <geo:igsModelCode codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">JPS LEGACY</geo:igsModelCode>
             <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
@@ -50,11 +50,11 @@
             <geo:dateInstalled>2001-07-24T00:00:00Z</geo:dateInstalled>
             <geo:dateRemoved></geo:dateRemoved>
             <geo:temperatureStabilization>5.0</geo:temperatureStabilization>
-         </geo:gnssReceiver>
+         </geo:GnssReceiver>
          <geo:dateInserted>2001-07-24T00:00:00Z</geo:dateInserted>
-      </geo:gnssReceivers>
-      <geo:gnssReceivers>
-         <geo:gnssReceiver gml:id="GnssReceiverType_1199">
+      </geo:gnssReceiver>
+      <geo:gnssReceiver>
+         <geo:GnssReceiver gml:id="GnssReceiverType_1199">
             <geo:manufacturerSerialNumber>00517 Rev.3</geo:manufacturerSerialNumber>
             <geo:igsModelCode codeList="codelist" codeListValue="codeListValue" codeSpace="DummyCodeSpace">JPS LEGACY</geo:igsModelCode>
             <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
@@ -63,11 +63,11 @@
             <geo:dateInstalled>2001-07-24T00:00:00Z</geo:dateInstalled>
             <geo:dateRemoved></geo:dateRemoved>
             <geo:temperatureStabilization>5.0</geo:temperatureStabilization>
-         </geo:gnssReceiver>
+         </geo:GnssReceiver>
          <geo:dateInserted>2001-07-24T00:00:00Z</geo:dateInserted>
-      </geo:gnssReceivers>
-      <geo:gnssAntennas>
-         <geo:gnssAntenna gml:id="GnssAntennaType_549">
+      </geo:gnssReceiver>
+      <geo:gnssAntenna>
+         <geo:GnssAntenna gml:id="GnssAntennaType_549">
             <geo:manufacturerSerialNumber>RA0225</geo:manufacturerSerialNumber>
             <geo:antennaType codeList="codelist" codeListValue="codeListValue" codeSpace="codespace">JPSREGANT_SD_E  NONE</geo:antennaType>
             <geo:serialNumber>RA0225</geo:serialNumber>
@@ -83,11 +83,11 @@
             <geo:dateInstalled>2001-07-24T00:00:00Z</geo:dateInstalled>
             <geo:dateRemoved></geo:dateRemoved>
             <geo:notes>Antenna is installed at the same position as antenna of receiver Trimble 4000SGL (IRKG station) during IGEX-98(1996-10-25/1999-11-21). We apply forced centering system for the antennas installation.</geo:notes>
-         </geo:gnssAntenna>
+         </geo:GnssAntenna>
          <geo:dateInserted>2001-07-24T00:00:00Z</geo:dateInserted>
-      </geo:gnssAntennas>
-      <geo:surveyedLocalTies>
-         <geo:surveyedLocalTies gml:id="SurveyedLocalTiesType_134">
+      </geo:gnssAntenna>
+      <geo:surveyedLocalTie>
+         <geo:SurveyedLocalTie gml:id="SurveyedLocalTieType_134">
             <geo:tiedMarkerName>IRKT</geo:tiedMarkerName>
             <geo:tiedMarkerUsage>GPS</geo:tiedMarkerUsage>
             <geo:tiedMarkerCDPNumber></geo:tiedMarkerCDPNumber>
@@ -100,11 +100,11 @@
             <geo:localSiteTiesAccuracy>5.0</geo:localSiteTiesAccuracy>
             <geo:surveyMethod>GPS CAMPAIGN</geo:surveyMethod>
             <geo:dateMeasured>1996-09-25T14:00:00Z</geo:dateMeasured>
-         </geo:surveyedLocalTies>
+         </geo:SurveyedLocalTie>
          <geo:dateInserted>2016-04-14T00:03:09Z</geo:dateInserted>
-      </geo:surveyedLocalTies>
-      <geo:frequencyStandards>
-         <geo:frequencyStandard gml:id="FrequencyStandardType_430">
+      </geo:surveyedLocalTie>
+      <geo:frequencyStandard>
+         <geo:FrequencyStandard gml:id="FrequencyStandardType_430">
             <geo:standardType codeSpace="">EXTERNAL H-MASER</geo:standardType>
             <geo:inputFrequency>5.0</geo:inputFrequency>
             <gml:validTime nilReason="">
@@ -114,11 +114,11 @@
                </gml:TimePeriod>
             </gml:validTime>
             <geo:notes>H-MASER CH-1-80 #216, produced by</geo:notes>
-         </geo:frequencyStandard>
+         </geo:FrequencyStandard>
          <geo:dateInserted>2016-04-14T00:03:09Z</geo:dateInserted>
-      </geo:frequencyStandards>
-      <geo:collocationInformations>
-         <geo:collocationInformation gml:id="CollocationInformationType_67">
+      </geo:frequencyStandard>
+      <geo:collocationInformation>
+         <geo:CollocationInformation gml:id="CollocationInformationType_67">
             <geo:instrumentationType codeSpace=""></geo:instrumentationType>
             <geo:status codeSpace="">PERMANENT</geo:status>
             <gml:validTime>
@@ -127,11 +127,11 @@
                </gml:TimeInstant>
             </gml:validTime>
             <geo:notes>IGS global network station IRKT working on a</geo:notes>
-         </geo:collocationInformation>
+         </geo:CollocationInformation>
          <geo:dateInserted>2016-04-14T00:03:09Z</geo:dateInserted>
-      </geo:collocationInformations>
-      <geo:humiditySensors>
-         <geo:humiditySensor gml:id="HumiditySensorType_95">
+      </geo:collocationInformation>
+      <geo:humiditySensor>
+         <geo:HumiditySensor gml:id="HumiditySensorType_95">
             <geo:type codeSpace="">Weather Station WM-918</geo:type>
             <geo:manufacturer>Conrad (Germany)</geo:manufacturer>
             <geo:serialNumber></geo:serialNumber>
@@ -146,11 +146,11 @@
             <geo:dataSamplingInterval>0.0</geo:dataSamplingInterval>
             <geo:accuracy-percentRelativeHumidity>0.0</geo:accuracy-percentRelativeHumidity>
             <geo:aspiration></geo:aspiration>
-         </geo:humiditySensor>
+         </geo:HumiditySensor>
          <geo:dateInserted>2016-04-14T00:03:09Z</geo:dateInserted>
-      </geo:humiditySensors>
-      <geo:pressureSensors>
-         <geo:pressureSensor gml:id="PressureSensorType_97">
+      </geo:humiditySensor>
+      <geo:pressureSensor>
+         <geo:PressureSensor gml:id="PressureSensorType_97">
             <geo:type codeSpace="">Weather Station WM-918</geo:type>
             <geo:manufacturer>Conrad (Germany)</geo:manufacturer>
             <geo:serialNumber></geo:serialNumber>
@@ -164,11 +164,11 @@
             </gml:validTime>
             <geo:dataSamplingInterval>0.0</geo:dataSamplingInterval>
             <geo:accuracy-hPa>0.0</geo:accuracy-hPa>
-         </geo:pressureSensor>
+         </geo:PressureSensor>
          <geo:dateInserted>2016-04-14T00:03:09Z</geo:dateInserted>
-      </geo:pressureSensors>
-      <geo:temperatureSensors>
-         <geo:temperatureSensor gml:id="TemperatureSensorType_95">
+      </geo:pressureSensor>
+      <geo:temperatureSensor>
+         <geo:TemperatureSensor gml:id="TemperatureSensorType_95">
             <geo:type codeSpace="">Weather Station WM-918</geo:type>
             <geo:manufacturer>Conrad (Germany)</geo:manufacturer>
             <geo:serialNumber></geo:serialNumber>
@@ -183,11 +183,11 @@
             <geo:dataSamplingInterval>0</geo:dataSamplingInterval>
             <geo:accuracy-degreesCelcius>0</geo:accuracy-degreesCelcius>
             <geo:aspiration></geo:aspiration>
-         </geo:temperatureSensor>
+         </geo:TemperatureSensor>
          <geo:dateInserted>2016-04-14T00:03:09Z</geo:dateInserted>
-      </geo:temperatureSensors>
-      <geo:waterVaporSensors>
-         <geo:waterVaporSensor gml:id="WaterVaporSensorType_12">
+      </geo:temperatureSensor>
+      <geo:waterVaporSensor>
+         <geo:WaterVaporSensor gml:id="WaterVaporSensorType_12">
             <geo:type codeSpace="">Weather Station WM-918</geo:type>
             <geo:manufacturer>Conrad (Germany)</geo:manufacturer>
             <geo:serialNumber></geo:serialNumber>
@@ -200,22 +200,22 @@
                </gml:TimePeriod>
             </gml:validTime>
             <geo:distanceToAntenna>0.0</geo:distanceToAntenna>
-         </geo:waterVaporSensor>
+         </geo:WaterVaporSensor>
          <geo:dateInserted>2016-04-14T00:03:09Z</geo:dateInserted>
-      </geo:waterVaporSensors>
-      <geo:otherInstrumentations>
-         <geo:otherInstrumentation gml:id="OtherInstrumentationType_67">
+      </geo:waterVaporSensor>
+      <geo:otherInstrumentation>
+         <geo:OtherInstrumentation gml:id="OtherInstrumentationType_67">
             <geo:instrumentation></geo:instrumentation>
             <gml:validTime>
                <gml:TimeInstant gml:id="TimeInstantType_336">
                   <gml:timePosition>1970-01-22T13:00:00Z</gml:timePosition>
                </gml:TimeInstant>
             </gml:validTime>
-         </geo:otherInstrumentation>
+         </geo:OtherInstrumentation>
          <geo:dateInserted>2016-04-14T00:03:09Z</geo:dateInserted>
-      </geo:otherInstrumentations>
-       <geo:radioInterferences>
-           <geo:radioInterference gml:id="RadioInterferenceType_4">
+      </geo:otherInstrumentation>
+       <geo:radioInterference>
+           <geo:RadioInterference gml:id="RadioInterferenceType_4">
                <geo:possibleProblemSource>CELL PHONE BASE STATION</geo:possibleProblemSource>
                <gml:validTime>
                    <gml:TimePeriod gml:id="TimePeriodType_412">
@@ -228,9 +228,9 @@
                    starting from January 1998 (after special testing before cellular phone base station installation).
                </geo:notes>
                <geo:observedDegradations></geo:observedDegradations>
-           </geo:radioInterference>
+           </geo:RadioInterference>
            <geo:dateInserted>2016-04-14T00:03:09Z</geo:dateInserted>
-       </geo:radioInterferences>
+       </geo:radioInterference>
        <geo:siteContact gml:id="AgencyPropertyType_536">
          <gmd:MD_SecurityConstraints id="MDSecurityConstraintsType_536">
             <gmd:classification>

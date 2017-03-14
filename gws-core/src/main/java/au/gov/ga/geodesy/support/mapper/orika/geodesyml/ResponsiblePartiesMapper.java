@@ -30,7 +30,7 @@ public class ResponsiblePartiesMapper extends CustomMapper<SiteLogType, SiteLog>
 
     @Override
     public void mapAtoB(SiteLogType siteLogType, SiteLog siteLog, MappingContext ctx) {
-        for (AgencyPropertyType agencyProperty : siteLogType.getSiteContact()) {
+        for (AgencyPropertyType agencyProperty : siteLogType.getSiteContacts()) {
             ResponsibleParty party = this.partyMapper.mapFromDto(agencyProperty.getCIResponsibleParty());
             SiteResponsibleParty siteParty = new SiteResponsibleParty(
                 contactTypes.siteContact().getId(),
@@ -54,7 +54,7 @@ public class ResponsiblePartiesMapper extends CustomMapper<SiteLogType, SiteLog>
 
             switch (contactTypes.findOne(siteParty.getContactTypeId()).getCode()) {
                 case ContactType.SITE_CONTACT:
-                    siteLogType.getSiteContact().add(agencyProperty);
+                    siteLogType.getSiteContacts().add(agencyProperty);
                     break;
                 case ContactType.SITE_METADATA_CUSTODIAN:
                     siteLogType.setSiteMetadataCustodian(agencyProperty);

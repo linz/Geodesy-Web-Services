@@ -113,7 +113,7 @@ public class SiteLogMapperITest extends IntegrationTest {
 
     private void checkSiteContacts(SiteLogType siteLogType, SiteLog siteLog) {
         assertThat(
-            siteLogType.getSiteContact().get(0).getCIResponsibleParty().getIndividualName().getCharacterString().getValue(),
+            siteLogType.getSiteContacts().get(0).getCIResponsibleParty().getIndividualName().getCharacterString().getValue(),
             is(siteLog.getSiteContacts().get(0).getParty().getIndividualName())
         );
     }
@@ -121,7 +121,7 @@ public class SiteLogMapperITest extends IntegrationTest {
     private void checkSiteContacts(SiteLog siteLog, SiteLogType siteLogType) {
         assertThat(
             siteLog.getSiteContacts().get(0).getParty().getIndividualName(),
-            is(siteLogType.getSiteContact().get(0).getCIResponsibleParty().getIndividualName().getCharacterString().getValue())
+            is(siteLogType.getSiteContacts().get(0).getCIResponsibleParty().getIndividualName().getCharacterString().getValue())
         );
     }
 

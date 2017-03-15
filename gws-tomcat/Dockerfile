@@ -3,16 +3,16 @@ FROM lnl7/nix:1.11.4
 RUN nix-instantiate --eval -E 'fetchTarball https://github.com/NixOS/nixpkgs/archive/354fd37.tar.gz' \
  && ln -s /nix/store/zygr4nwg01dzs9pj1mx3z2qbfaw15zb5-354fd37.tar.gz /root/.nix-defexpr/nixpkgs
 
-RUN nix-env -iA \
-  nixpkgs.coreutils \
-  nixpkgs.unzip \
-  nixpkgs.gnused \
-  nixpkgs.which \
-  nixpkgs.gnugrep \
-  nixpkgs.rsync \
-  nixpkgs.curl \
-  nixpkgs.jre8 \
-  nixpkgs.tomcat8 
+RUN nix-env -iA  nixpkgs.coreutils
+RUN nix-env -iA  nixpkgs.unzip
+RUN nix-env -iA  nixpkgs.gnused
+RUN nix-env -iA  nixpkgs.which
+RUN nix-env -iA  nixpkgs.gnugrep
+RUN nix-env -iA  nixpkgs.rsync
+RUN nix-env -iA  nixpkgs.curl
+RUN nix-env -iA  nixpkgs.jre8
+RUN nix-env -iA  nixpkgs.tomcat8 
+RUN nix-env -iA  nixpkgs.vim
 
 ADD env.sh /
 ADD entrypoint.sh /

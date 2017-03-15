@@ -3,7 +3,7 @@
 License: CC By 4.0 (http://creativecommons.org/licenses/by/4.0/legalcode)
 Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Government (Geoscience Australia) 2016
 -->
-<schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="urn:xml-gov-au:icsm:egeodesy:0.3" version="0.3" xml:lang="en" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2">
+<schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="urn:xml-gov-au:icsm:egeodesy:0.4" version="0.4"  xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.4" xml:lang="en" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2">
     <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
     <annotation>
         <documentation>
@@ -110,7 +110,7 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
             <element maxOccurs="unbounded" minOccurs="0" name="dataStream" type="geo:baseDataStreamType"/>
         </sequence>
     </complexType>
-    <complexType name="dataStreamsType">
+    <complexType name="dataStreamType">
         <sequence>
             <element minOccurs="0" name="siteStream" type="geo:siteStreamType"/>
             <element minOccurs="0" name="publishedStream" type="geo:publishedStreamType"/>
@@ -118,11 +118,11 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
         </sequence>
     </complexType>
     <!--  Global dataStreams element -->
-    <element name="dataStreams" type="geo:dataStreamsType"/>
+    <element name="dataStream" type="geo:dataStreamType"/>
     <!-- Property type -->
-    <complexType name="dataStreamsPropertyType">
+    <complexType name="dataStreamPropertyType">
         <sequence minOccurs="0">
-            <element ref="geo:dataStreams"/>
+            <element ref="geo:dataStream"/>
         </sequence>
         <attributeGroup ref="gml:AssociationAttributeGroup"/>
     </complexType>

@@ -519,6 +519,72 @@
                 </configuration>
             </plugin>
             <plugin>
+              <groupId>io.fabric8</groupId>
+              <artifactId>docker-maven-plugin</artifactId>
+              <version>0.18.1</version>
+              <configuration>
+                 <images>
+                    <image>
+                        <name>gws/dev-database</name>
+                        <build>
+                            <dockerFileDir>${project.basedir}/src/test/docker/database</dockerFileDir>
+                        </build>
+                        <run>
+                            <ports>
+                                <port>5434:5432</port>
+                            </ports>
+                            <wait>
+                                <tcp>
+                                    <ports>5432</ports>
+                                </tcp>
+                                <time>20000</time>
+                            </wait>
+                        </run>
+                    </image>
+                 </images>
+              </configuration>
+              <executions>
+                  <execution>
+                      <id>start-db</id>
+                      <phase>pre-integration-test</phase>
+                      <goals>
+                          <goal>stop</goal>
+                          <goal>build</goal>
+                          <goal>start</goal>
+                      </goals>
+                      <configuration>
+                         <skip>${skipIntegrationTests}</skip>
+                      </configuration>
+                  </execution>
+                  <execution>
+                      <id>start-site-db</id>
+                      <phase>pre-site</phase>
+                      <goals>
+                          <goal>stop</goal>
+                          <goal>build</goal>
+                          <goal>start</goal>
+                      </goals>
+                  </execution>
+                  <execution>
+                      <id>stop-db</id>
+                      <phase>post-integration-test</phase>
+                      <goals>
+                          <goal>stop</goal>
+                      </goals>
+                      <configuration>
+                         <skip>${skipIntegrationTests}</skip>
+                      </configuration>
+                  </execution>
+                  <execution>
+                      <id>stop-site-db</id>
+                      <phase>post-site</phase>
+                      <goals>
+                          <goal>stop</goal>
+                      </goals>
+                  </execution>
+              </executions>
+            </plugin>
+            <plugin>
                 <groupId>org.liquibase</groupId>
                 <artifactId>liquibase-maven-plugin</artifactId>
                 <version>${liquibase.version}</version>
@@ -528,7 +594,16 @@
                     <changelogSchemaName>geodesy</changelogSchemaName>
                     <changelogCatalogName>geodesy</changelogCatalogName>
                     <logging>info</logging>
+                    <propertyFile>src/main/resources/liquibase-postgres-reference.properties</propertyFile>
                 </configuration>
+                <executions>
+                    <execution>
+                        <phase>pre-site</phase>
+                        <goals>
+                            <goal>update</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
@@ -610,67 +685,6 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
-            <plugin>
-              <groupId>io.fabric8</groupId>
-              <artifactId>docker-maven-plugin</artifactId>
-              <version>0.18.1</version>
-              <configuration>
-                 <skip>${skipIntegrationTests}</skip>
-                 <images>
-                    <image>
-                        <name>gws/dev-database</name>
-                        <build>
-                            <dockerFileDir>${project.basedir}/src/test/docker/database</dockerFileDir>
-                        </build>
-                        <run>
-                            <ports>
-                                <port>5434:5432</port>
-                            </ports>
-                            <wait>
-                                <tcp>
-                                    <ports>5432</ports>
-                                </tcp>
-                                <time>20000</time>
-                            </wait>
-                        </run>
-                    </image>
-                 </images>
-              </configuration>
-              <executions>
-                  <execution>
-                      <id>start-db</id>
-                      <phase>pre-integration-test</phase>
-                      <goals>
-                          <goal>stop</goal>
-                          <goal>build</goal>
-                          <goal>start</goal>
-                      </goals>
-                  </execution>
-                  <execution>
-                      <id>start-site-db</id>
-                      <phase>pre-site</phase>
-                      <goals>
-                          <goal>stop</goal>
-                          <goal>build</goal>
-                          <goal>start</goal>
-                      </goals>
-                  </execution>
-                  <execution>
-                      <id>stop-db</id>
-                      <phase>post-integration-test</phase>
-                      <goals>
-                          <goal>stop</goal>
-                      </goals>
-                  </execution>
-                  <execution>
-                      <id>stop-site-db</id>
-                      <phase>post-site</phase>
-                      <goals>
-                          <goal>stop</goal>
-                      </goals>
-                  </execution>
-              </executions>
             </plugin>
             <plugin>
                 <groupId>us.fatehi</groupId>

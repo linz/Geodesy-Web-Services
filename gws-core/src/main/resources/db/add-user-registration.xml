@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+   <changeSet author="lbodor (generated)" id="1490566826524-1">
+      <createTable tableName="user_registration">
+         <column name="id" type="INT">
+            <constraints nullable="false"/>
+         </column>
+         <column name="email" type="TEXT">
+            <constraints nullable="false"/>
+         </column>
+         <column name="first_name" type="TEXT">
+            <constraints nullable="false"/>
+         </column>
+         <column name="last_name" type="TEXT">
+            <constraints nullable="false"/>
+         </column>
+         <column name="organisation" type="TEXT">
+            <constraints nullable="false"/>
+         </column>
+         <column name="phone" type="TEXT">
+            <constraints nullable="false"/>
+         </column>
+         <column name="position" type="TEXT">
+            <constraints nullable="false"/>
+         </column>
+      </createTable>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1490566826524-2">
+      <createTable tableName="user_registration_received">
+         <column name="user_registration_id" type="INT">
+            <constraints nullable="false"/>
+         </column>
+         <column name="id" type="INT">
+            <constraints nullable="false"/>
+         </column>
+      </createTable>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1490566826524-3">
+      <addPrimaryKey columnNames="id"
+                     constraintName="user_registration_pkey"
+                     tableName="user_registration"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1490566826524-4">
+      <addPrimaryKey columnNames="id"
+                     constraintName="user_registration_received_pkey"
+                     tableName="user_registration_received"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1490566826524-5">
+      <addForeignKeyConstraint baseColumnNames="id"
+                               baseTableName="user_registration_received"
+                               constraintName="fk_user_registration_received_id"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               onDelete="NO ACTION"
+                               onUpdate="NO ACTION"
+                               referencedColumnNames="id"
+                               referencedTableName="domain_event"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1490566826524-6">
+      <addForeignKeyConstraint baseColumnNames="user_registration_id"
+                               baseTableName="user_registration_received"
+                               constraintName="fk_user_registration_id"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               onDelete="NO ACTION"
+                               onUpdate="NO ACTION"
+                               referencedColumnNames="id"
+                               referencedTableName="user_registration"/>
+   </changeSet>
+</databaseChangeLog>

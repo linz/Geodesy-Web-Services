@@ -12,6 +12,7 @@ import au.gov.ga.geodesy.domain.model.event.SiteLogReceived;
 import au.gov.ga.geodesy.domain.model.event.SiteUpdated;
 import au.gov.ga.geodesy.domain.model.event.WeeklySolutionAvailable;
 import au.gov.ga.geodesy.exception.GeodesyRuntimeException;
+import au.gov.ga.geodesy.port.Notification;
 import au.gov.ga.geodesy.port.NotificationPort;
 import au.gov.ga.geodesy.support.email.GeodesyMailMessage;
 import au.gov.ga.geodesy.support.properties.GeodesyNotificationsConfig;
@@ -25,6 +26,11 @@ public class SMTPNotificationAdapter implements NotificationPort {
 
     @Autowired
     private GeodesyNotificationsConfig mailNotifications;
+
+    @Override
+    public void sendNotification(Notification n) {
+        throw new UnsupportedOperationException();
+    }
 
     @Override
     public void sendNotification(Event e) {

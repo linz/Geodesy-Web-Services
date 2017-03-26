@@ -8,7 +8,9 @@ import org.springframework.util.ResourceUtils;
 
 import au.gov.ga.geodesy.domain.model.SynchronousEventPublisher;
 import au.gov.ga.geodesy.domain.model.event.EventPublisher;
+import au.gov.ga.geodesy.port.NotificationPort;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLValidator;
+import au.gov.ga.geodesy.port.adapter.mock.InMemoryNotificationAdapter;
 
 @Configuration
 public class GeodesyServiceTestConfig extends GeodesyServiceConfig {
@@ -23,5 +25,10 @@ public class GeodesyServiceTestConfig extends GeodesyServiceConfig {
     public GeodesyMLValidator getGeodesyMLValidator() throws FileNotFoundException {
         String catalog = ResourceUtils.getFile("file:target/generated-resources/xsd/geodesyml-1.0.0-SNAPSHOT/catalog.xml").getAbsolutePath();
         return new GeodesyMLValidator(catalog);
+    }
+
+    @Bean
+    public NotificationPort notificationPort() {
+        return new InMemoryNotificationAdapter();
     }
 }

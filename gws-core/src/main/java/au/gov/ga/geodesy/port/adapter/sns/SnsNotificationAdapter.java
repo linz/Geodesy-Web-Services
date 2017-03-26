@@ -5,7 +5,6 @@ import java.util.stream.Stream;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.hateoas.config.EnableEntityLinks;
-import org.springframework.stereotype.Component;
 
 import com.amazonaws.auth.AWSCredentialsProviderChain;
 import com.amazonaws.auth.InstanceProfileCredentialsProvider;
@@ -19,7 +18,6 @@ import au.gov.ga.geodesy.domain.model.event.Event;
 import au.gov.ga.geodesy.port.Notification;
 import au.gov.ga.geodesy.port.NotificationPort;
 
-@Component
 @EnableEntityLinks
 public class SnsNotificationAdapter implements NotificationPort {
 

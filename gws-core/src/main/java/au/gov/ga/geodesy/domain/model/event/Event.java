@@ -124,4 +124,8 @@ public abstract class Event implements Cloneable {
     public Object clone() throws CloneNotSupportedException {
         return super.clone();
     }
+
+    public String getName() {
+        return getClass().getSimpleName();
+    }
 }

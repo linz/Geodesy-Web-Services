@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.hateoas.config.EnableEntityLinks;
 
 import com.amazonaws.auth.AWSCredentialsProviderChain;
+import com.amazonaws.auth.EnvironmentVariableCredentialsProvider;
 import com.amazonaws.auth.InstanceProfileCredentialsProvider;
 import com.amazonaws.auth.profile.ProfileCredentialsProvider;
 import com.amazonaws.regions.Regions;
@@ -30,7 +31,8 @@ public class SnsNotificationAdapter implements NotificationPort {
             .withRegion(Regions.AP_SOUTHEAST_2)
             .withCredentials(new AWSCredentialsProviderChain(
                     new InstanceProfileCredentialsProvider(false),
-                    new ProfileCredentialsProvider("geodesy")))
+                    new ProfileCredentialsProvider("geodesy"),
+                    new EnvironmentVariableCredentialsProvider()))
             .build();
     }
 

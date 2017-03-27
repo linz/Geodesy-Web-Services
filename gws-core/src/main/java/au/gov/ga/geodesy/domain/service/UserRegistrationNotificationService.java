@@ -5,8 +5,6 @@ import javax.annotation.PostConstruct;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.hateoas.EntityLinks;
-import org.springframework.hateoas.config.EnableEntityLinks;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -25,7 +23,6 @@ import au.gov.ga.geodesy.port.NotificationPort;
 
 @Component
 @Transactional("geodesyTransactionManager")
-@EnableEntityLinks
 public class UserRegistrationNotificationService implements EventSubscriber<UserRegistrationReceived> {
 
     private static final Logger log = LoggerFactory.getLogger(UserRegistrationNotificationService.class);
@@ -35,9 +32,6 @@ public class UserRegistrationNotificationService implements EventSubscriber<User
 
     @Autowired
     private UserRegistrationRepository userRegistrations;
-
-    @Autowired
-    private EntityLinks entityLinks;
 
     @Autowired
     private NotificationPort notification;
@@ -67,15 +61,15 @@ public class UserRegistrationNotificationService implements EventSubscriber<User
             }
 
             public String getBody() {
-                String location = entityLinks.linkToSingleResource(UserRegistration.class, id).getHref();
                 try {
                     StringBuilder body = new StringBuilder();
                     body.append("We have received a new user registration request.\n\n");
-                    body.append(location + "\n");
                     body.append(json.writeValueAsString(registration));
                     return body.toString();
                 } catch (JsonProcessingException e) {
-                    return location;
+                    String errorMessage = "Failed to serialise user registration object with id " + id;
+                    log.error(errorMessage, e);
+                    return errorMessage;
                 }
             }
         });

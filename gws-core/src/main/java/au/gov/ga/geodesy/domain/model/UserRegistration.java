@@ -36,6 +36,10 @@ public class UserRegistration {
     @Column(name = "PHONE", nullable = false)
     private String phone;
 
+    @SuppressWarnings("unused") // used by hibernate
+    private UserRegistration() {
+    }
+
     public UserRegistration(
         @JsonProperty("firstName") String firstName,
         @JsonProperty("lastName") String lastName,

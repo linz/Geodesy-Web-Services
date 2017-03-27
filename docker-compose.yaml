@@ -19,6 +19,9 @@ services:
             args:
                 - https_proxy
         image: gws/webserver
+        environment:
+            - AWS_ACCESS_KEY_ID
+            - AWS_SECRET_ACCESS_KEY
         depends_on:
             - db
             - tomcat

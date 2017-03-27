@@ -13,6 +13,11 @@ public class UserRegistrationReceived extends Event {
     @Column(name = "USER_REGISTRATION_ID", nullable = false)
     private Integer userRegistrationId;
 
+
+    @SuppressWarnings("unused") // used by hibernate
+    private UserRegistrationReceived() {
+    }
+
     public UserRegistrationReceived(Integer userRegistrationId) {
         this.userRegistrationId = userRegistrationId;
     }

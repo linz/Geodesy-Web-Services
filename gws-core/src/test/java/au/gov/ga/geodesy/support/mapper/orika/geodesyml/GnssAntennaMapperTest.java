@@ -30,12 +30,12 @@ public class GnssAntennaMapperTest {
         igsRadomeModelCodeType.withValue("SomeAntennaRadomeType").withCodeSpace("eGeodesy/antennaRadomeType");
 
         GnssAntennaType antenna = new GnssAntennaType()
-                .withAntennaType((IgsAntennaModelCodeType) new IgsAntennaModelCodeType()
+                .withIgsModelCode((IgsAntennaModelCodeType) new IgsAntennaModelCodeType()
                         .withCodeSpace("https://igscb.jpl.nasa.gov/igscb/station/general/rcvr_ant.tab")
                         .withCodeList("http://xml.gov.au/icsm/geodesyml/codelists/antenna-Antenna-codelists.xml#GeodesyML_GNSSAntennaTypeCode")
                         .withCodeListValue("LEICA GRX1200GGPRO")
                         .withValue("LEICA GRX1200GGPRO"))
-                .withSerialNumber(serialNumber)
+                .withManufacturerSerialNumber(serialNumber)
                 .withAntennaReferencePoint(new CodeType().withValue("BPA").withCodeSpace("eGeodesy/antennaRadomeType"))
                 .withMarkerArpUpEcc(0.0)
                 .withMarkerArpNorthEcc(0.0)
@@ -45,13 +45,12 @@ public class GnssAntennaMapperTest {
                 .withAntennaCableLength(12.0)
                 .withAntennaCableType("Twine")
                 .withDateInstalled(timePosition(dateInstalled))
-                .withDateRemoved(timePosition(dateRemoved))
-                .withManufacturerSerialNumber(serialNumber);
+                .withDateRemoved(timePosition(dateRemoved));
 
         GnssAntennaLogItem logItem = mapper.to(antenna);
-        assertThat(logItem.getType(), is(antenna.getAntennaType().getCodeListValue()));
+        assertThat(logItem.getType(), is(antenna.getIgsModelCode().getCodeListValue()));
         assertThat(logItem.getAntennaReferencePoint(), is(antenna.getAntennaReferencePoint().getValue()));
-        assertThat(logItem.getSerialNumber(), is(antenna.getSerialNumber()));
+        assertThat(logItem.getSerialNumber(), is(antenna.getManufacturerSerialNumber()));
         assertThat(logItem.getMarkerArpEastEcc(), is(antenna.getMarkerArpEastEcc()));
         assertThat(logItem.getMarkerArpNorthEcc(), is(antenna.getMarkerArpNorthEcc()));
         assertThat(logItem.getMarkerArpUpEcc(), is(antenna.getMarkerArpUpEcc()));
@@ -64,6 +63,8 @@ public class GnssAntennaMapperTest {
         assertThat(outputFormat.format(logItem.getDateRemoved()), is(dateRemoved));
 
         GnssAntennaType antennaB = mapper.from(logItem);
+        assertThat(antennaB.getIgsModelCode().getCodeListValue(), is(antenna.getIgsModelCode().getCodeListValue()));
+        assertThat(antennaB.getManufacturerSerialNumber(), is(antenna.getManufacturerSerialNumber()));
         assertThat(antennaB.getAntennaReferencePoint(), is(antenna.getAntennaReferencePoint()));
         assertThat(antennaB.getMarkerArpEastEcc(), is(antenna.getMarkerArpEastEcc()));
         assertThat(antennaB.getMarkerArpNorthEcc(), is(antenna.getMarkerArpNorthEcc()));

@@ -21,7 +21,8 @@ public class GnssAntennaMapper implements Iso<GnssAntennaType, GnssAntennaLogIte
     public GnssAntennaMapper() {
 
         mapperFactory.classMap(GnssAntennaLogItem.class, GnssAntennaType.class)
-                .fieldMap("type", "antennaType").converter("codeListValueTypeConverter").add()
+                .fieldMap("type", "igsModelCode").converter("codeListValueTypeConverter").add()
+                .field("serialNumber", "manufacturerSerialNumber")
                 .fieldMap("antennaRadomeType", "antennaRadomeType").converter("codeWithAuthorityTypeConverter").add()
                 .byDefault()
                 .register();

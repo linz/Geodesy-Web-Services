@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<geo:GeodesyML gml:id="KELY00GRL" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.4" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <geo:siteLog gml:id="kely_20130131.log">
+        <geo:formInformation>
+            <geo:preparedBy>David Maggert</geo:preparedBy>
+            <geo:datePrepared>2013-01-31</geo:datePrepared>
+            <geo:reportType>UPDATE</geo:reportType>
+        </geo:formInformation>
+        <geo:siteIdentification>
+            <geo:siteName>Kellyville (Kangerlussuaq)</geo:siteName>
+            <geo:fourCharacterID>KELY</geo:fourCharacterID>
+            <geo:monumentInscription>KELLYVILLE 1995</geo:monumentInscription>
+            <geo:iersDOMESNumber>43005M002</geo:iersDOMESNumber>
+            <geo:cdpNumber>(A4)</geo:cdpNumber>
+            <geo:monumentDescription codeSpace="urn:ga-gov-au:monument-description-type">CONCRETE PILLAR</geo:monumentDescription>
+            <geo:heightOfTheMonument>1.5</geo:heightOfTheMonument>
+            <geo:monumentFoundation>EXPOSED BEDROCK</geo:monumentFoundation>
+            <geo:foundationDepth>0.0</geo:foundationDepth>
+            <geo:markerDescription>Dimple in 5/8' bolt set in pillar</geo:markerDescription>
+            <geo:dateInstalled>1995-07-23</geo:dateInstalled>
+            <geo:geologicCharacteristic codeSpace="urn:ga-gov-au:geologic-characteristic-type">(BEDROCK/CLAY/CONGLOMERATE/GRAVEL/SAND/etc)</geo:geologicCharacteristic>
+            <geo:bedrockType>(IGNEOUS/METAMORPHIC/SEDIMENTARY)</geo:bedrockType>
+            <geo:bedrockCondition>(FRESH/JOINTED/WEATHERED)</geo:bedrockCondition>
+            <geo:fractureSpacing>(0 cm/1-10 cm/11-50 cm/51-200 cm/over 200 cm)</geo:fractureSpacing>
+            <geo:faultZonesNearby codeSpace="urn:ga-gov-au:fault-zones-type">(YES/NO/Name of the zone)</geo:faultZonesNearby>
+            <geo:notes>UNAVCO antenna leveling mount used on
+(mark) bolt.</geo:notes>
+        </geo:siteIdentification>
+        <geo:siteLocation>
+            <geo:city>Kangerlussuaq</geo:city>
+            <geo:state></geo:state>
+            <geo:countryCodeISO codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_CountryTypeCode" codeListValue="Greenland" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">Greenland</geo:countryCodeISO>
+            <geo:tectonicPlate codeSpace="urn:ga-gov-au:plate-type">NORTH AMERICAN</geo:tectonicPlate>
+            <geo:approximatePositionITRF>
+                <geo:cartesianPosition>
+                    <gml:Point gml:id="itrf_cartesian" srsName="EPSG:7789">
+                        <gml:pos>1575559.29 -1941828.01 5848076.39</gml:pos>
+                    </gml:Point>
+                </geo:cartesianPosition>
+                <geo:geodeticPosition>
+                    <gml:Point gml:id="itrf_geodetic" srsName="EPSG:7912">
+                        <gml:pos>66.9874166667 -50.9448361111 229.8</gml:pos>
+                    </gml:Point>
+                </geo:geodeticPosition>
+            </geo:approximatePositionITRF>
+            <geo:notes>The GPS site is located on the Sondrestrom
+fjord, at the Sondrestrom Incoherent Scatter
+Radar facility.  This facility is known as
+as Kellyville.  A 3 megawatt radar operates
+approximately 10% of the month.
+This radar operates at 1290 MHz.  Because
+of safety concerns, we are not currently
+collecting data through the radar runs.  The
+The nearest town is Kangerlussuaq.  We have
+named this site KELY so as to not confuse
+this site with a temporary GPS marker named
+KANG.</geo:notes>
+        </geo:siteLocation>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-1">
+                <geo:manufacturerSerialNumber>T295</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="ROGUE SNR-8000" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">ROGUE SNR-8000</geo:igsModelCode>
+                <geo:satelliteSystem>GPS</geo:satelliteSystem>
+                <geo:firmwareVersion>3.2</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>4.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>1995-07-23T00:00:00Z</geo:dateInstalled>
+                <geo:dateRemoved>1995-07-27T23:59:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization xsi:nil="true"></geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>1995-07-23T00:00:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-2">
+                <geo:manufacturerSerialNumber>T314</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="ROGUE SNR-8000" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">ROGUE SNR-8000</geo:igsModelCode>
+                <geo:satelliteSystem>GPS</geo:satelliteSystem>
+                <geo:firmwareVersion>3.2</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>4.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>1995-07-28T01:41:00Z</geo:dateInstalled>
+                <geo:dateRemoved>1996-02-03T07:34:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization xsi:nil="true"></geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>1995-07-28T01:41:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-3">
+                <geo:manufacturerSerialNumber>T295</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="ROGUE SNR-8000" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">ROGUE SNR-8000</geo:igsModelCode>
+                <geo:satelliteSystem>GPS</geo:satelliteSystem>
+                <geo:firmwareVersion>3.2.32.1</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>4.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>1996-02-09T11:09:00Z</geo:dateInstalled>
+                <geo:dateRemoved>1999-05-26T23:59:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization xsi:nil="true"></geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>1996-02-09T11:09:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-4">
+                <geo:notes>Firmware Upgrade</geo:notes>
+                <geo:manufacturerSerialNumber>T295</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="ROGUE SNR-8000" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">ROGUE SNR-8000</geo:igsModelCode>
+                <geo:satelliteSystem>GPS</geo:satelliteSystem>
+                <geo:firmwareVersion>3.2.32.8</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>4.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>1999-05-27T11:03:00Z</geo:dateInstalled>
+                <geo:dateRemoved>1999-08-27T11:40:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization xsi:nil="true"></geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>1999-05-27T11:03:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-5">
+                <geo:notes>Firmware Upgrade</geo:notes>
+                <geo:manufacturerSerialNumber>T295</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="ROGUE SNR-8000" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">ROGUE SNR-8000</geo:igsModelCode>
+                <geo:satelliteSystem>GPS</geo:satelliteSystem>
+                <geo:firmwareVersion>3.2.32.9</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>4.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>1999-08-27T11:52:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2000-10-16T11:16:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization xsi:nil="true"></geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>1999-08-27T11:52:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-6">
+                <geo:manufacturerSerialNumber>T295</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="ROGUE SNR-8000" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">ROGUE SNR-8000</geo:igsModelCode>
+                <geo:satelliteSystem>GPS</geo:satelliteSystem>
+                <geo:firmwareVersion>3.2.32.11</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>4.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>2000-10-16T11:16:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2001-09-14T17:18:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization xsi:nil="true"></geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2000-10-16T11:16:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-7">
+                <geo:manufacturerSerialNumber>LP020003804</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="ASHTECH Z-XII3" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">ASHTECH Z-XII3</geo:igsModelCode>
+                <geo:satelliteSystem>GPS</geo:satelliteSystem>
+                <geo:firmwareVersion>CD00-1D02 1s soc2rnx</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>4.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>2001-09-14T17:18:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2010-06-08T13:20:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization xsi:nil="true"></geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2001-09-14T17:18:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-8">
+                <geo:notes>UNAVCO # 16196
+DOWNLOAD COMPUTER REPLACED</geo:notes>
+                <geo:manufacturerSerialNumber>ZR520021809</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="ASHTECH UZ-12" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">ASHTECH UZ-12</geo:igsModelCode>
+                <geo:satelliteSystem>GPS</geo:satelliteSystem>
+                <geo:firmwareVersion>CQ00</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>4.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>2010-06-08T13:30:00Z</geo:dateInstalled>
+                <geo:dateRemoved></geo:dateRemoved>
+                <geo:temperatureStabilization xsi:nil="true"></geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2010-06-08T13:30:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssAntenna>
+            <geo:GnssAntenna gml:id="gnss-antenna-1">
+                <geo:notes>radome was conical fiberglass unit
+of indeterminate origin.</geo:notes>
+                <geo:manufacturerSerialNumber>394</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSAntennaTypeCode" codeListValue="AOAD/M_T DOME" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">AOAD/M_T        DOME</geo:igsModelCode>
+                <geo:antennaReferencePoint codeSpace="urn:ga-gov-au:antenna-reference-point-type">BPA</geo:antennaReferencePoint>
+                <geo:marker-arpUpEcc.>0.0</geo:marker-arpUpEcc.>
+                <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+                <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+                <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+                <geo:antennaRadomeType codeSpace="urn:igs-org:gnss-radome-model-code">DOME</geo:antennaRadomeType>
+                <geo:radomeSerialNumber></geo:radomeSerialNumber>
+                <geo:antennaCableType>(vendor &amp; type number)</geo:antennaCableType>
+                <geo:antennaCableLength xsi:nil="true"></geo:antennaCableLength>
+                <geo:dateInstalled>1995-07-23T00:00:00Z</geo:dateInstalled>
+                <geo:dateRemoved>1996-04-04T18:22:00Z</geo:dateRemoved>
+            </geo:GnssAntenna>
+            <geo:dateInserted>1995-07-23T00:00:00Z</geo:dateInserted>
+        </geo:gnssAntenna>
+        <geo:gnssAntenna>
+            <geo:GnssAntenna gml:id="gnss-antenna-2">
+                <geo:notes>radome was conical fiberglass unit
+of indeterminate origin.
+As requested by EUREF, the antenna
+reference point was changed to BPA
+on 2001-04-12.</geo:notes>
+                <geo:manufacturerSerialNumber>230</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSAntennaTypeCode" codeListValue="AOAD/M_T DOME" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">AOAD/M_T        DOME</geo:igsModelCode>
+                <geo:antennaReferencePoint codeSpace="urn:ga-gov-au:antenna-reference-point-type">BPA</geo:antennaReferencePoint>
+                <geo:marker-arpUpEcc.>0.0</geo:marker-arpUpEcc.>
+                <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+                <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+                <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+                <geo:antennaRadomeType codeSpace="urn:igs-org:gnss-radome-model-code">DOME</geo:antennaRadomeType>
+                <geo:radomeSerialNumber></geo:radomeSerialNumber>
+                <geo:antennaCableType>(vendor &amp; type number)</geo:antennaCableType>
+                <geo:antennaCableLength xsi:nil="true"></geo:antennaCableLength>
+                <geo:dateInstalled>1996-04-05T05:58:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2001-09-14T17:18:00Z</geo:dateRemoved>
+            </geo:GnssAntenna>
+            <geo:dateInserted>1996-04-05T05:58:00Z</geo:dateInserted>
+        </geo:gnssAntenna>
+        <geo:gnssAntenna>
+            <geo:GnssAntenna gml:id="gnss-antenna-3">
+                <geo:notes>antenna height of 7.62cm measured at
+site (previously reported as 0.00).
+UNAVCO levelling mount used over
+monument. Cone fiberglass dome removed
+along with old antenna. SCIGN-type dome
+to be added at a later date.</geo:notes>
+                <geo:manufacturerSerialNumber>CR620010504</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSAntennaTypeCode" codeListValue="ASH701945C_M NONE" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">ASH701945C_M    NONE</geo:igsModelCode>
+                <geo:antennaReferencePoint codeSpace="urn:ga-gov-au:antenna-reference-point-type">BPA</geo:antennaReferencePoint>
+                <geo:marker-arpUpEcc.>0.0762</geo:marker-arpUpEcc.>
+                <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+                <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+                <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+                <geo:antennaRadomeType codeSpace="urn:igs-org:gnss-radome-model-code">NONE</geo:antennaRadomeType>
+                <geo:radomeSerialNumber></geo:radomeSerialNumber>
+                <geo:antennaCableType>(vendor &amp; type number)</geo:antennaCableType>
+                <geo:antennaCableLength xsi:nil="true"></geo:antennaCableLength>
+                <geo:dateInstalled>2001-09-14T17:18:00Z</geo:dateInstalled>
+                <geo:dateRemoved></geo:dateRemoved>
+            </geo:GnssAntenna>
+            <geo:dateInserted>2001-09-14T17:18:00Z</geo:dateInserted>
+        </geo:gnssAntenna>
+        <geo:frequencyStandard>
+            <geo:FrequencyStandard gml:id="frequency-standard-1">
+                <geo:standardType codeSpace="urn:ga-gov-au:frequency-standard-type">INTERNAL</geo:standardType>
+                <geo:inputFrequency>0.0</geo:inputFrequency>
+                <gml:validTime>
+                    <gml:TimePeriod gml:id="frequency-standard-1--time-period-1">
+                        <gml:beginPosition>1995-07-23</gml:beginPosition>
+                        <gml:endPosition></gml:endPosition>
+                    </gml:TimePeriod>
+                </gml:validTime>
+                <geo:notes></geo:notes>
+            </geo:FrequencyStandard>
+            <geo:dateInserted>1995-07-23</geo:dateInserted>
+        </geo:frequencyStandard>
+        <geo:localEpisodicEffect>
+            <geo:LocalEpisodicEffect gml:id="episodic-effect-1">
+                <gml:validTime>
+                    <gml:TimePeriod gml:id="time-period-2">
+                        <gml:beginPosition>2012-02-07</gml:beginPosition>
+                        <gml:endPosition>2012-02-07</gml:endPosition>
+                    </gml:TimePeriod>
+                </gml:validTime>
+                <geo:event>Transitioned from .soc to .ash data types.  For</geo:event>
+            </geo:LocalEpisodicEffect>
+            <geo:dateInserted>2012-02-07</geo:dateInserted>
+        </geo:localEpisodicEffect>
+        <geo:siteContact gml:id="agency-1">
+            <gmd:MD_SecurityConstraints>
+                <gmd:classification gco:nilReason="missing"/>
+            </gmd:MD_SecurityConstraints>
+            <gmd:CI_ResponsibleParty>
+                <gmd:individualName>
+                    <gco:CharacterString>John Jorgensen</gco:CharacterString>
+                </gmd:individualName>
+                <gmd:organisationName>
+                    <gco:CharacterString>SRI International</gco:CharacterString>
+                </gmd:organisationName>
+                <gmd:contactInfo>
+                    <gmd:CI_Contact>
+                        <gmd:phone>
+                            <gmd:CI_Telephone>
+                                <gmd:voice>
+                                    <gco:CharacterString>+299 841260</gco:CharacterString>
+                                </gmd:voice>
+                                <gmd:facsimile>
+                                    <gco:CharacterString>+299 841120</gco:CharacterString>
+                                </gmd:facsimile>
+                            </gmd:CI_Telephone>
+                        </gmd:phone>
+                        <gmd:address>
+                            <gmd:CI_Address>
+                                <gmd:deliveryPoint>
+                                    <gco:CharacterString>Box 108
+DK-3910 Kangerlussuaq
+Greenland
+Attn. John Jorgensen</gco:CharacterString>
+                                </gmd:deliveryPoint>
+                                <gmd:city>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:city>
+                                <gmd:postalCode>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:postalCode>
+                                <gmd:country>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:country>
+                                <gmd:electronicMailAddress>
+                                    <gco:CharacterString>john.joergensen@pc.dk</gco:CharacterString>
+                                </gmd:electronicMailAddress>
+                            </gmd:CI_Address>
+                        </gmd:address>
+                    </gmd:CI_Contact>
+                </gmd:contactInfo>
+                <gmd:role>
+                    <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="pointOfContact"></gmd:CI_RoleCode>
+                </gmd:role>
+            </gmd:CI_ResponsibleParty>
+        </geo:siteContact>
+        <geo:siteMetadataCustodian gml:id="agency-2">
+            <gmd:MD_SecurityConstraints>
+                <gmd:classification gco:nilReason="missing"/>
+            </gmd:MD_SecurityConstraints>
+            <gmd:CI_ResponsibleParty>
+                <gmd:individualName>
+                    <gco:CharacterString>UNAVCO Network Engineer</gco:CharacterString>
+                </gmd:individualName>
+                <gmd:organisationName>
+                    <gco:CharacterString>Jet Propulsion Laboratory</gco:CharacterString>
+                </gmd:organisationName>
+                <gmd:contactInfo>
+                    <gmd:CI_Contact>
+                        <gmd:phone>
+                            <gmd:CI_Telephone>
+                                <gmd:voice>
+                                    <gco:CharacterString>303-381-7500</gco:CharacterString>
+                                </gmd:voice>
+                                <gmd:facsimile>
+                                    <gco:CharacterString>303-381-7451</gco:CharacterString>
+                                </gmd:facsimile>
+                            </gmd:CI_Telephone>
+                        </gmd:phone>
+                        <gmd:address>
+                            <gmd:CI_Address>
+                                <gmd:deliveryPoint>
+                                    <gco:CharacterString>4800 Oak Grove Drive
+Pasadena, CA 91109
+USA</gco:CharacterString>
+                                </gmd:deliveryPoint>
+                                <gmd:city>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:city>
+                                <gmd:postalCode>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:postalCode>
+                                <gmd:country>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:country>
+                                <gmd:electronicMailAddress>
+                                    <gco:CharacterString>ggn-ops@ls.unavco.org</gco:CharacterString>
+                                </gmd:electronicMailAddress>
+                            </gmd:CI_Address>
+                        </gmd:address>
+                    </gmd:CI_Contact>
+                </gmd:contactInfo>
+                <gmd:role>
+                    <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="pointOfContact"></gmd:CI_RoleCode>
+                </gmd:role>
+            </gmd:CI_ResponsibleParty>
+        </geo:siteMetadataCustodian>
+        <geo:moreInformation>
+            <geo:dataCenter>JPL</geo:dataCenter>
+            <geo:dataCenter>CDDIS</geo:dataCenter>
+            <geo:urlForMoreInformation></geo:urlForMoreInformation>
+            <geo:siteMap>(Y or URL)</geo:siteMap>
+            <geo:siteDiagram>(Y or URL)</geo:siteDiagram>
+            <geo:horizonMask>(Y or URL)</geo:horizonMask>
+            <geo:monumentDescription>(Y or URL)</geo:monumentDescription>
+            <geo:sitePictures>(Y or URL)</geo:sitePictures>
+            <geo:notes></geo:notes>
+            <geo:antennaGraphicsWithDimensions></geo:antennaGraphicsWithDimensions>
+            <geo:insertTextGraphicFromAntenna></geo:insertTextGraphicFromAntenna>
+            <geo:DOI codeSpace="urn:ga-gov-au:self.moreInformation-type">TODO</geo:DOI>
+        </geo:moreInformation>
+    </geo:siteLog>
+</geo:GeodesyML>

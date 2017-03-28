@@ -1,4 +1,4 @@
-q<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <geo:GeodesyML gml:id="GEO_1" xmlns:gml="http://www.opengis.net/gml/3.2"
     xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.4"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -243,22 +243,15 @@ q<?xml version="1.0" encoding="UTF-8"?>
             <geo:tectonicPlate>Indian/Australian</geo:tectonicPlate>
             <geo:approximatePositionITRF>
                 <geo:cartesianPosition>
-                    <gml:Point 
-                        gml:id="XYZ" 
-                        srsName="EPSG:7789" 
-                        srsDimension="3" 
-                        axisLabels="x y z" 
-                        uomLabels="m">
-                        <gml:pos>-4130636.106 2894953.089 -3890531.051</gml:pos>
+                    <gml:Point gml:id="itrf_cartesian" srsName="EPSG:7789">
+                        <gml:pos>-4130636.589 2894953.121 -3890530.442</gml:pos>
                     </gml:Point>
                 </geo:cartesianPosition>
                 <geo:geodeticPosition>
-                    <gml:Point 
-                        gml:id="LAT_LONG_ELEVATION" 
-                        srsName="EPSG:7912"> 
-                        <gml:pos>-37.82941634 144.9753351 40.674</gml:pos>
+                    <gml:Point gml:id="itrf_geodetic" srsName="EPSG:7912">
+                        <gml:pos>-37.8294054083 144.975340194 40.578</gml:pos>
                     </gml:Point>
-                </geo:geodeticPosition>         
+                </geo:geodeticPosition>
             </geo:approximatePositionITRF>
             <geo:notes>The GPS is located at the old Melbourne Observatory, located in the Royal Melbourne Botanical Gardens</geo:notes>
         </geo:siteLocation>

@@ -31,7 +31,7 @@ public class SiteLocationMapperTest {
      **/
     @Test
     public void testMappingCartesianAndGeodeticPosition() throws Exception {
-        try (Reader mobs = TestResources.customGeodesyMLSiteLogReader("MOBS-itrf-points")) {
+        try (Reader mobs = TestResources.customGeodesyMLSiteLogReader("MOBS")) {
             GeodesyMLType geodesyML = marshaller.unmarshal(mobs, GeodesyMLType.class).getValue();
             SiteLogType siteLogType = GeodesyMLUtils.getElementFromJAXBElements(geodesyML.getElements(), SiteLogType.class)
                 .findFirst()

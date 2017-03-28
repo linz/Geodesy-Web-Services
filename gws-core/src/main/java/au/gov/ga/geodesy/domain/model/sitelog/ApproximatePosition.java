@@ -3,6 +3,7 @@ package au.gov.ga.geodesy.domain.model.sitelog;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.vividsolutions.jts.geom.Point;
 
 /**
@@ -14,12 +15,14 @@ public class ApproximatePosition {
 	/**
 	 * Position in EPSG:7789 reference system - x,y,z
 	 */
+    @JsonIgnore
     @Column(name = "CARTESIAN_POSITION", columnDefinition = "geometry")
     private Point cartesianPosition;
 
 	/**
 	 * Position in EPSG:7912 reference system - lat, long, elevation 
 	 */
+    @JsonIgnore
     @Column(name = "GEODETIC_POSITION", columnDefinition = "geometry")
     private Point geodeticPosition;
 

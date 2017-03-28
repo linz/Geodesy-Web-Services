@@ -43,6 +43,6 @@ public class UploadWGTNLocalEpisodicEffectsSiteLogRestITest extends RestTest {
                 .statusCode(HttpStatus.OK.value())
                 .contentType("application/xml")
                 .log().body()
-                .body("geo:siteLog.geo:localEpisodicEffects.size()", equalTo(4));
+                .body("geo:siteLog.geo:localEpisodicEffect.size()", equalTo(4));
     }
 }

@@ -37,10 +37,10 @@ public class FrequencyStandardMapperTest {
         assertThat(logItem.getType(), equalTo(frequencyStandardTypeA.getStandardType().getValue()));
         assertThat(logItem.getInputFrequency(), equalTo(String.valueOf(frequencyStandardTypeA.getInputFrequency())));
         assertThat(logItem.getNotes(), equalTo(frequencyStandardTypeA.getNotes()));
-
-        assertThat(logItem.getEffectiveDates().getFrom(), equalTo(GMLDateUtils.stringToDate(
+        
+        assertThat(logItem.getEffectiveDates().getFrom(), equalTo(GMLDateUtils.stringToDateMultiParsers(
                 ((TimePeriodType) frequencyStandardTypeA.getValidTime().getAbstractTimePrimitive().getValue())
-                .getBeginPosition().getValue().get(0), "uuuu-MM-ddX")
+                .getBeginPosition().getValue().get(0))
             ));
 
         FrequencyStandardType frequencyStandardTypeB = mapper.from(logItem);
@@ -49,9 +49,9 @@ public class FrequencyStandardMapperTest {
         assertThat(frequencyStandardTypeB.getStandardType().getCodeSpace(), equalTo("eGeodesy/frequencyStandardType"));
         assertThat(frequencyStandardTypeB.getNotes(), equalTo(logItem.getNotes()));
 
-        assertThat(GMLDateUtils.stringToDate(
+        assertThat(GMLDateUtils.stringToDateMultiParsers(
                 ((TimePeriodType) frequencyStandardTypeB.getValidTime().getAbstractTimePrimitive().getValue())
-                .getBeginPosition().getValue().get(0), "uuuu-MM-dd'T'HH:mm:ss.SSSX"), equalTo(logItem.getEffectiveDates().getFrom()));
+                .getBeginPosition().getValue().get(0)), equalTo(logItem.getEffectiveDates().getFrom()));
     }
 
 }

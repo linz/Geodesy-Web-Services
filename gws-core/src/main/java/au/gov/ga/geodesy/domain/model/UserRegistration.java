@@ -36,6 +36,9 @@ public class UserRegistration {
     @Column(name = "PHONE", nullable = false)
     private String phone;
 
+    @Column(name = "REMARKS", nullable = false)
+    private String remarks;
+
     @SuppressWarnings("unused") // used by hibernate
     private UserRegistration() {
     }
@@ -46,7 +49,8 @@ public class UserRegistration {
         @JsonProperty("organisation") String organisation,
         @JsonProperty("position") String position,
         @JsonProperty("email") String email,
-        @JsonProperty("phone") String phone) {
+        @JsonProperty("phone") String phone,
+        @JsonProperty("remarks") String remarks) {
 
         this.firstName = firstName;
         this.lastName = lastName;
@@ -54,6 +58,7 @@ public class UserRegistration {
         this.position = position;
         this.email = email;
         this.phone = phone;
+        this.remarks = remarks;
     }
 
     Integer getId() {
@@ -82,5 +87,9 @@ public class UserRegistration {
 
     public String getPhone() {
         return phone;
+    }
+
+    public String getRemarks() {
+        return remarks;
     }
 }

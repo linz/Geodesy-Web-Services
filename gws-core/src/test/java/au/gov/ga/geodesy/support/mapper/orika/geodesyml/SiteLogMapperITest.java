@@ -8,6 +8,8 @@ import static org.hamcrest.core.IsEqual.equalTo;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.time.Instant;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -132,7 +134,7 @@ public class SiteLogMapperITest extends IntegrationTest {
     @Test
     public void testApproximatePositionMapping() throws Exception {
         GeodesyMLType mobs = marshaller
-                .unmarshal(TestResources.customGeodesyMLSiteLogReader("MOBS-itrf-points"),
+                .unmarshal(TestResources.customGeodesyMLSiteLogReader("MOBS"),
                         GeodesyMLType.class)
                 .getValue();
 
@@ -140,7 +142,7 @@ public class SiteLogMapperITest extends IntegrationTest {
                 .findFirst().get();
 
         SiteLog siteLog = mapper.to(siteLogType);
-
+        
         Point cartesianPosition = siteLog.getSiteLocation().getApproximatePosition().getCartesianPosition();
         assertThat(cartesianPosition.getSRID(), 
         		equalTo(Integer.parseInt(siteLogType.getSiteLocation().getApproximatePositionITRF()
@@ -414,6 +416,8 @@ public class SiteLogMapperITest extends IntegrationTest {
      **/
     @Test
     public void testCollocationInformationMapping() throws Exception {
+        DateTimeFormatter outputFormat = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSSXXX").withZone(ZoneId.of("UTC"));
+
         GeodesyMLType mobs = marshaller
                 .unmarshal(TestResources.customGeodesyMLSiteLogReader("AIRA-collocationInfo"), GeodesyMLType.class)
                 .getValue();
@@ -435,9 +439,9 @@ public class SiteLogMapperITest extends IntegrationTest {
                 assertThat(collocationInfo.getInstrumentType(), is(collocationInfoType.getInstrumentationType().getValue()));
 
                 TimePeriodType timePeriodType = (TimePeriodType) collocationInfoType.getValidTime().getAbstractTimePrimitive().getValue();
-                String beginTime = timePeriodType.getBeginPosition().getValue().get(0).toString();
-
-                assertThat(collocationInfo.getEffectiveDates().getFrom().toString(), is(beginTime));
+                String beginTime = GMLDateUtils.stringToDateToStringMultiParsers(timePeriodType.getBeginPosition().getValue().get(0));
+                
+                assertThat(GMLDateUtils.dateToString(collocationInfo.getEffectiveDates().getFrom(), GMLDateUtils.GEODESYML_DATE_FORMAT_TIME_MILLISEC), is(beginTime));
                 assertThat(collocationInfo.getStatus(), is(collocationInfoType.getStatus().getValue()));
             }
         }
@@ -456,11 +460,13 @@ public class SiteLogMapperITest extends IntegrationTest {
                 .findFirst().get();
 
         SiteLog siteLog = mapper.to(siteLogType);
+
         List<SurveyedLocalTiePropertyType> surveyedLocalTies = siteLogType.getSurveyedLocalTies();
         sortSurveyedLocalTiePropertyTypes(surveyedLocalTies);
 
         assertThat(siteLog.getSurveyedLocalTies(), hasSize(4));
         assertThat(surveyedLocalTies, hasSize(4));
+
 
         {
             int i = 0;
@@ -487,8 +493,8 @@ public class SiteLogMapperITest extends IntegrationTest {
 
         List<GnssReceiverPropertyType> receiverProperties = siteLogType.getGnssReceivers();
         sortGMLPropertyTypes(receiverProperties);
-        assertThat(siteLog.getGnssReceivers().size(), equalTo(9));
-        assertThat(receiverProperties.size(), equalTo(9));
+        assertThat(siteLog.getGnssReceivers().size(), equalTo(15));
+        assertThat(receiverProperties.size(), equalTo(15));
 
         {
             int i = 0;

@@ -16,7 +16,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.IsEqual.equalTo;
 
 /**
- * Tests the mapping of a GeodesyML LocalEpisodicEventsPropertyType element to
+ * Tests the mapping of a GeodesyML LocalEpisodicEffectPropertyType element to
  * and from an LocalEpisodicEffectLogItem domain object.
  */
 public class LocalEpisodicEffectMapperTest {

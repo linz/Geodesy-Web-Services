@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="utf-8"?>
+<geo:GeodesyML gml:id="TLSE00FRA" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.4" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2">
+    <geo:siteLog gml:id="tlse_20161212.log">
+        <geo:formInformation>
+            <geo:preparedBy>Jean-Paul CARDALIAGUET</geo:preparedBy>
+            <geo:datePrepared>2016-12-12</geo:datePrepared>
+            <geo:reportType>UPDATE</geo:reportType>
+        </geo:formInformation>
+        <geo:siteIdentification>
+            <geo:siteName>Toulouse</geo:siteName>
+            <geo:fourCharacterID>TLSE</geo:fourCharacterID>
+            <geo:monumentInscription>None</geo:monumentInscription>
+            <geo:iersDOMESNumber>10003M009</geo:iersDOMESNumber>
+            <geo:cdpNumber></geo:cdpNumber>
+            <geo:monumentDescription codeSpace="urn:ga-gov-au:monument-description-type">STEEL MAST</geo:monumentDescription>
+            <geo:heightOfTheMonument>1.0</geo:heightOfTheMonument>
+            <geo:monumentFoundation>ROOF</geo:monumentFoundation>
+            <geo:markerDescription>BRASS NAIL</geo:markerDescription>
+            <geo:dateInstalled>2001-01-04T00:00:00Z</geo:dateInstalled>
+            <geo:geologicCharacteristic codeSpace="urn:ga-gov-au:geologic-characteristic-type"></geo:geologicCharacteristic>
+            <geo:bedrockType>SEDIMENTARY</geo:bedrockType>
+            <geo:bedrockCondition>FRESH</geo:bedrockCondition>
+            <geo:fractureSpacing>0 cm</geo:fractureSpacing>
+            <geo:faultZonesNearby codeSpace="urn:ga-gov-au:fault-zones-type"></geo:faultZonesNearby>
+            <geo:notes></geo:notes>
+        </geo:siteIdentification>
+        <geo:siteLocation>
+            <geo:city>Toulouse</geo:city>
+            <geo:state>Haute-Garonne</geo:state>
+            <geo:countryCodeISO codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_CountryTypeCode" codeListValue="France" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">France</geo:countryCodeISO>
+            <geo:tectonicPlate codeSpace="urn:ga-gov-au:plate-type">EURASIAN</geo:tectonicPlate>
+            <geo:approximatePositionITRF>
+                <geo:cartesianPosition>
+                    <gml:Point gml:id="itrf_cartesian" srsName="EPSG:7789">
+                        <gml:pos>4627851.8992 119638.5464 4372993.5372</gml:pos>
+                    </gml:Point>
+                </geo:cartesianPosition>
+                <geo:geodeticPosition>
+                    <gml:Point gml:id="itrf_geodetic" srsName="EPSG:7912">
+                        <gml:pos>43.5606944444 1.48087222222 207.2</gml:pos>
+                    </gml:Point>
+                </geo:geodeticPosition>
+            </geo:approximatePositionITRF>
+            <geo:notes>coordinates IGS2008 EPOCH 2012.0
+Station located in the premises of CNES.</geo:notes>
+        </geo:siteLocation>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-1">
+                <geo:manufacturerSerialNumber>244</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="ROGUE SNR-12 RM" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">ROGUE SNR-12 RM</geo:igsModelCode>
+                <geo:satelliteSystem>GPS</geo:satelliteSystem>
+                <geo:firmwareVersion>3.2.32.9</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>4.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>2001-01-04T00:00:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2002-05-02T00:00:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization>18.0</geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2001-01-04T00:00:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-2">
+                <geo:notes>Installation of firmware version</geo:notes>
+                <geo:manufacturerSerialNumber>244</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="ROGUE SNR-12 RM" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">ROGUE SNR-12 RM</geo:igsModelCode>
+                <geo:satelliteSystem>GPS</geo:satelliteSystem>
+                <geo:firmwareVersion>3.2.32.11</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>4.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>2002-05-02T00:00:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2003-09-15T07:30:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization>18.0</geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2002-05-02T00:00:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-3">
+                <geo:notes>Receiver exchange</geo:notes>
+                <geo:manufacturerSerialNumber>23243</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="TRIMBLE 4000SSI" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">TRIMBLE 4000SSI</geo:igsModelCode>
+                <geo:satelliteSystem>GPS</geo:satelliteSystem>
+                <geo:firmwareVersion>7.19A</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>4.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>2003-09-15T12:00:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2003-12-11T09:00:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization>18.0</geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2003-09-15T12:00:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-4">
+                <geo:notes>Receiver exchange</geo:notes>
+                <geo:manufacturerSerialNumber>30708</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="TRIMBLE 4000SSI" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">TRIMBLE 4000SSI</geo:igsModelCode>
+                <geo:satelliteSystem>GPS</geo:satelliteSystem>
+                <geo:firmwareVersion>7.19A</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>4.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>2003-12-11T09:00:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2005-01-20T12:30:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization>18.0</geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2003-12-11T09:00:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-5">
+                <geo:notes>Firmware update</geo:notes>
+                <geo:manufacturerSerialNumber>30708</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="TRIMBLE 4000SSI" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">TRIMBLE 4000SSI</geo:igsModelCode>
+                <geo:satelliteSystem>GPS</geo:satelliteSystem>
+                <geo:firmwareVersion>7.32</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>4.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>2005-01-20T13:00:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2007-09-05T13:00:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization>18.0</geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2005-01-20T13:00:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-6">
+                <geo:manufacturerSerialNumber>30708</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="TRIMBLE 4000SSI" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">TRIMBLE 4000SSI</geo:igsModelCode>
+                <geo:satelliteSystem>GPS</geo:satelliteSystem>
+                <geo:firmwareVersion>7.32</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>3.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>2007-09-05T13:00:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2009-12-10T15:00:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization>19.0</geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2007-09-05T13:00:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-7">
+                <geo:notes>receiver change</geo:notes>
+                <geo:manufacturerSerialNumber>55790</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="TRIMBLE NETR5" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">TRIMBLE NETR5</geo:igsModelCode>
+                <geo:satelliteSystem>GPS</geo:satelliteSystem>
+                <geo:firmwareVersion>4.03</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>3.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>2009-12-10T16:00:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2010-03-23T14:00:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization>18.0</geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2009-12-10T16:00:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-8">
+                <geo:notes>GPS + GLONASS data (Glonass navigation file
+missing)</geo:notes>
+                <geo:manufacturerSerialNumber>55790</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="TRIMBLE NETR5" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">TRIMBLE NETR5</geo:igsModelCode>
+                <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
+                <geo:firmwareVersion>4.03</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>3.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>2010-03-23T14:00:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2010-10-12T14:00:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization>18.0</geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2010-03-23T14:00:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-9">
+                <geo:manufacturerSerialNumber>55790</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="TRIMBLE NETR5" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">TRIMBLE NETR5</geo:igsModelCode>
+                <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
+                <geo:firmwareVersion>4.17</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>3.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>2010-10-12T14:19:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2011-04-18T13:00:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization>20.0</geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2010-10-12T14:19:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-10">
+                <geo:manufacturerSerialNumber>70405</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="TRIMBLE NETR9" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">TRIMBLE NETR9</geo:igsModelCode>
+                <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
+                <geo:firmwareVersion>4.22</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>3.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>2011-04-18T13:00:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2011-10-05T09:00:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization>20.0</geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2011-04-18T13:00:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-11">
+                <geo:notes>Update firmware on receiver</geo:notes>
+                <geo:manufacturerSerialNumber>70405</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="TRIMBLE NETR9" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">TRIMBLE NETR9</geo:igsModelCode>
+                <geo:satelliteSystem>GPS+GLO</geo:satelliteSystem>
+                <geo:firmwareVersion>4.42</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>3.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>2011-10-05T12:00:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2012-06-08T14:45:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization>20.0</geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2011-10-05T12:00:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-12">
+                <geo:manufacturerSerialNumber>70405</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="TRIMBLE NETR9" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">TRIMBLE NETR9</geo:igsModelCode>
+                <geo:satelliteSystem>GPS+GLO+GAL+SBAS</geo:satelliteSystem>
+                <geo:firmwareVersion>4.60</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>3.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>2012-06-08T14:45:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2014-06-06T08:52:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization>20.0</geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2012-06-08T14:45:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-13">
+                <geo:manufacturerSerialNumber>5037K70405</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="TRIMBLE NETR9" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">TRIMBLE NETR9</geo:igsModelCode>
+                <geo:satelliteSystem>GPS+GLO+GAL+SBAS</geo:satelliteSystem>
+                <geo:firmwareVersion>4.85</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>3.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>2014-06-06T08:52:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2015-06-19T11:51:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization>20.0</geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2014-06-06T08:52:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-14">
+                <geo:manufacturerSerialNumber>5037K70405</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="TRIMBLE NETR9" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">TRIMBLE NETR9</geo:igsModelCode>
+                <geo:satelliteSystem>GPS+GLO+GAL+BDS+SBAS</geo:satelliteSystem>
+                <geo:firmwareVersion>5.01</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>3.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>2015-06-19T12:02:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2015-10-07T13:13:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization>20.0</geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2015-06-19T12:02:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-15">
+                <geo:manufacturerSerialNumber>5037K70405</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="TRIMBLE NETR9" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">TRIMBLE NETR9</geo:igsModelCode>
+                <geo:satelliteSystem>GPS+GLO+GAL+BDS+SBAS</geo:satelliteSystem>
+                <geo:firmwareVersion>5.01</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>2015-10-07T13:15:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2016-08-11T12:08:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization>20.0</geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2015-10-07T13:15:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-16">
+                <geo:manufacturerSerialNumber>5037K70405</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="TRIMBLE NETR9" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">TRIMBLE NETR9</geo:igsModelCode>
+                <geo:satelliteSystem>GPS+GLO+GAL+BDS+SBAS</geo:satelliteSystem>
+                <geo:firmwareVersion>5.14</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>2016-08-11T12:15:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2016-12-12T16:17:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization>20.0</geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2016-08-11T12:15:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-17">
+                <geo:manufacturerSerialNumber>5037K70405</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="TRIMBLE NETR9" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">TRIMBLE NETR9</geo:igsModelCode>
+                <geo:satelliteSystem>GPS+GLO+GAL+BDS+SBAS</geo:satelliteSystem>
+                <geo:firmwareVersion>5.15</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>2016-12-12T16:20:00Z</geo:dateInstalled>
+                <geo:dateRemoved></geo:dateRemoved>
+                <geo:temperatureStabilization>20.0</geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2016-12-12T16:20:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssAntenna>
+            <geo:GnssAntenna gml:id="gnss-antenna-1">
+                <geo:notes>The antenna is set on a small metallic tower
+allowing precise centering above the mark in
+a small concrete pad.</geo:notes>
+                <geo:manufacturerSerialNumber>199</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSAntennaTypeCode" codeListValue="AOAD/M_T NONE" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">AOAD/M_T        NONE</geo:igsModelCode>
+                <geo:antennaReferencePoint codeSpace="urn:ga-gov-au:antenna-reference-point-type">BPA</geo:antennaReferencePoint>
+                <geo:marker-arpUpEcc.>1.053</geo:marker-arpUpEcc.>
+                <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+                <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+                <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+                <geo:antennaRadomeType codeSpace="urn:igs-org:gnss-radome-model-code">NONE</geo:antennaRadomeType>
+                <geo:radomeSerialNumber></geo:radomeSerialNumber>
+                <geo:antennaCableType>not reference</geo:antennaCableType>
+                <geo:antennaCableLength>60.0</geo:antennaCableLength>
+                <geo:dateInstalled>2001-01-04T00:00:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2003-09-15T00:00:00Z</geo:dateRemoved>
+            </geo:GnssAntenna>
+            <geo:dateInserted>2001-01-04T00:00:00Z</geo:dateInserted>
+        </geo:gnssAntenna>
+        <geo:gnssAntenna>
+            <geo:GnssAntenna gml:id="gnss-antenna-2">
+                <geo:notes>Cable exchange.
+Cable 2x30 m with in-line amplifier.</geo:notes>
+                <geo:manufacturerSerialNumber>00199</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSAntennaTypeCode" codeListValue="AOAD/M_T NONE" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">AOAD/M_T        NONE</geo:igsModelCode>
+                <geo:antennaReferencePoint codeSpace="urn:ga-gov-au:antenna-reference-point-type">BPA</geo:antennaReferencePoint>
+                <geo:marker-arpUpEcc.>1.053</geo:marker-arpUpEcc.>
+                <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+                <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+                <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+                <geo:antennaRadomeType codeSpace="urn:igs-org:gnss-radome-model-code">NONE</geo:antennaRadomeType>
+                <geo:radomeSerialNumber></geo:radomeSerialNumber>
+                <geo:antennaCableType>TRIMBLE RG-213</geo:antennaCableType>
+                <geo:antennaCableLength>60.0</geo:antennaCableLength>
+                <geo:dateInstalled>2003-09-15T00:00:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2003-12-01T13:00:00Z</geo:dateRemoved>
+            </geo:GnssAntenna>
+            <geo:dateInserted>2003-09-15T00:00:00Z</geo:dateInserted>
+        </geo:gnssAntenna>
+        <geo:gnssAntenna>
+            <geo:GnssAntenna gml:id="gnss-antenna-3">
+                <geo:notes>Antenna exchange.</geo:notes>
+                <geo:manufacturerSerialNumber>227554</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSAntennaTypeCode" codeListValue="TRM29659.00 NONE" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">TRM29659.00     NONE</geo:igsModelCode>
+                <geo:antennaReferencePoint codeSpace="urn:ga-gov-au:antenna-reference-point-type">BPA</geo:antennaReferencePoint>
+                <geo:marker-arpUpEcc.>1.053</geo:marker-arpUpEcc.>
+                <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+                <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+                <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+                <geo:antennaRadomeType codeSpace="urn:igs-org:gnss-radome-model-code">NONE</geo:antennaRadomeType>
+                <geo:radomeSerialNumber></geo:radomeSerialNumber>
+                <geo:antennaCableType>TRIMBLE RG-213</geo:antennaCableType>
+                <geo:antennaCableLength>60.0</geo:antennaCableLength>
+                <geo:dateInstalled>2003-12-01T13:00:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2009-12-10T15:00:00Z</geo:dateRemoved>
+            </geo:GnssAntenna>
+            <geo:dateInserted>2003-12-01T13:00:00Z</geo:dateInserted>
+        </geo:gnssAntenna>
+        <geo:gnssAntenna>
+            <geo:GnssAntenna gml:id="gnss-antenna-4">
+                <geo:notes>Trimble RG-213 cable (30m)
++ amplifier
++ trimble LM0-400 cable (30m)</geo:notes>
+                <geo:manufacturerSerialNumber>227554</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSAntennaTypeCode" codeListValue="TRM29659.00 NONE" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">TRM29659.00     NONE</geo:igsModelCode>
+                <geo:antennaReferencePoint codeSpace="urn:ga-gov-au:antenna-reference-point-type">BPA</geo:antennaReferencePoint>
+                <geo:marker-arpUpEcc.>1.053</geo:marker-arpUpEcc.>
+                <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+                <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+                <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+                <geo:antennaRadomeType codeSpace="urn:igs-org:gnss-radome-model-code">NONE</geo:antennaRadomeType>
+                <geo:radomeSerialNumber></geo:radomeSerialNumber>
+                <geo:antennaCableType>TRIMBLE</geo:antennaCableType>
+                <geo:antennaCableLength>60.0</geo:antennaCableLength>
+                <geo:dateInstalled>2009-12-10T16:00:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2010-02-24T14:15:00Z</geo:dateRemoved>
+            </geo:GnssAntenna>
+            <geo:dateInserted>2009-12-10T16:00:00Z</geo:dateInserted>
+        </geo:gnssAntenna>
+        <geo:gnssAntenna>
+            <geo:GnssAntenna gml:id="gnss-antenna-5">
+                <geo:notes>Trimble RG-213 cable (30m)
++ amplifier S/N 0220256439
++ trimble LM0-400 cable (30m)</geo:notes>
+                <geo:manufacturerSerialNumber>47086</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSAntennaTypeCode" codeListValue="TRM59800.00 NONE" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">TRM59800.00     NONE</geo:igsModelCode>
+                <geo:antennaReferencePoint codeSpace="urn:ga-gov-au:antenna-reference-point-type">BPA</geo:antennaReferencePoint>
+                <geo:marker-arpUpEcc.>1.053</geo:marker-arpUpEcc.>
+                <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+                <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+                <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+                <geo:antennaRadomeType codeSpace="urn:igs-org:gnss-radome-model-code">NONE</geo:antennaRadomeType>
+                <geo:radomeSerialNumber></geo:radomeSerialNumber>
+                <geo:antennaCableType>TRIMBLE</geo:antennaCableType>
+                <geo:antennaCableLength>60.0</geo:antennaCableLength>
+                <geo:dateInstalled>2010-02-24T14:25:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2012-09-04T09:50:00Z</geo:dateRemoved>
+            </geo:GnssAntenna>
+            <geo:dateInserted>2010-02-24T14:25:00Z</geo:dateInserted>
+        </geo:gnssAntenna>
+        <geo:gnssAntenna>
+            <geo:GnssAntenna gml:id="gnss-antenna-6">
+                <geo:notes>Trimble RG-213 cable (30m)
++ amplifier S/N 0220189301
++ trimble LM0-400 cable (30m)</geo:notes>
+                <geo:manufacturerSerialNumber>54398</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSAntennaTypeCode" codeListValue="TRM59800.00 NONE" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">TRM59800.00     NONE</geo:igsModelCode>
+                <geo:antennaReferencePoint codeSpace="urn:ga-gov-au:antenna-reference-point-type">BPA</geo:antennaReferencePoint>
+                <geo:marker-arpUpEcc.>1.053</geo:marker-arpUpEcc.>
+                <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+                <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+                <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+                <geo:antennaRadomeType codeSpace="urn:igs-org:gnss-radome-model-code">NONE</geo:antennaRadomeType>
+                <geo:radomeSerialNumber></geo:radomeSerialNumber>
+                <geo:antennaCableType>TRIMBLE</geo:antennaCableType>
+                <geo:antennaCableLength>60.0</geo:antennaCableLength>
+                <geo:dateInstalled>2012-09-04T09:55:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2013-02-14T11:30:00Z</geo:dateRemoved>
+            </geo:GnssAntenna>
+            <geo:dateInserted>2012-09-04T09:55:00Z</geo:dateInserted>
+        </geo:gnssAntenna>
+        <geo:gnssAntenna>
+            <geo:GnssAntenna gml:id="gnss-antenna-7">
+                <geo:notes>Leica cable number 664813 GEV134</geo:notes>
+                <geo:manufacturerSerialNumber>5208354398</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSAntennaTypeCode" codeListValue="TRM59800.00 NONE" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">TRM59800.00     NONE</geo:igsModelCode>
+                <geo:antennaReferencePoint codeSpace="urn:ga-gov-au:antenna-reference-point-type">BPA</geo:antennaReferencePoint>
+                <geo:marker-arpUpEcc.>1.053</geo:marker-arpUpEcc.>
+                <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+                <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+                <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+                <geo:antennaRadomeType codeSpace="urn:igs-org:gnss-radome-model-code">NONE</geo:antennaRadomeType>
+                <geo:radomeSerialNumber></geo:radomeSerialNumber>
+                <geo:antennaCableType>Leica</geo:antennaCableType>
+                <geo:antennaCableLength>50.0</geo:antennaCableLength>
+                <geo:dateInstalled>2013-02-14T11:35:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2016-03-11T09:00:00Z</geo:dateRemoved>
+            </geo:GnssAntenna>
+            <geo:dateInserted>2013-02-14T11:35:00Z</geo:dateInserted>
+        </geo:gnssAntenna>
+        <geo:gnssAntenna>
+            <geo:GnssAntenna gml:id="gnss-antenna-8">
+                <geo:notes>Leica cable number 664813 GEV134</geo:notes>
+                <geo:manufacturerSerialNumber>5129354206</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSAntennaTypeCode" codeListValue="TRM59800.00 NONE" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">TRM59800.00     NONE</geo:igsModelCode>
+                <geo:antennaReferencePoint codeSpace="urn:ga-gov-au:antenna-reference-point-type">BPA</geo:antennaReferencePoint>
+                <geo:marker-arpUpEcc.>1.053</geo:marker-arpUpEcc.>
+                <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+                <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+                <geo:alignmentFromTrueNorth>-140.0</geo:alignmentFromTrueNorth>
+                <geo:antennaRadomeType codeSpace="urn:igs-org:gnss-radome-model-code">NONE</geo:antennaRadomeType>
+                <geo:radomeSerialNumber></geo:radomeSerialNumber>
+                <geo:antennaCableType>LEICA</geo:antennaCableType>
+                <geo:antennaCableLength>50.0</geo:antennaCableLength>
+                <geo:dateInstalled>2016-03-11T09:30:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2016-03-21T09:30:00Z</geo:dateRemoved>
+            </geo:GnssAntenna>
+            <geo:dateInserted>2016-03-11T09:30:00Z</geo:dateInserted>
+        </geo:gnssAntenna>
+        <geo:gnssAntenna>
+            <geo:GnssAntenna gml:id="gnss-antenna-9">
+                <geo:notes>Leica cable number 664813 GEV134</geo:notes>
+                <geo:manufacturerSerialNumber>5129354206</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSAntennaTypeCode" codeListValue="TRM59800.00 NONE" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">TRM59800.00     NONE</geo:igsModelCode>
+                <geo:antennaReferencePoint codeSpace="urn:ga-gov-au:antenna-reference-point-type">BPA</geo:antennaReferencePoint>
+                <geo:marker-arpUpEcc.>1.053</geo:marker-arpUpEcc.>
+                <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+                <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+                <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+                <geo:antennaRadomeType codeSpace="urn:igs-org:gnss-radome-model-code">NONE</geo:antennaRadomeType>
+                <geo:radomeSerialNumber></geo:radomeSerialNumber>
+                <geo:antennaCableType>LEICA</geo:antennaCableType>
+                <geo:antennaCableLength>50.0</geo:antennaCableLength>
+                <geo:dateInstalled>2016-03-21T11:00:00Z</geo:dateInstalled>
+                <geo:dateRemoved></geo:dateRemoved>
+            </geo:GnssAntenna>
+            <geo:dateInserted>2016-03-21T11:00:00Z</geo:dateInserted>
+        </geo:gnssAntenna>
+        <geo:frequencyStandard>
+            <geo:FrequencyStandard gml:id="frequency-standard-1">
+                <geo:standardType codeSpace="urn:ga-gov-au:frequency-standard-type">EXTERNAL CESIUM</geo:standardType>
+                <geo:inputFrequency>5.0</geo:inputFrequency>
+                <gml:validTime>
+                    <gml:TimePeriod gml:id="frequency-standard-1--time-period-1">
+                        <gml:beginPosition>2001-01-04</gml:beginPosition>
+                        <gml:endPosition>2009-10-23</gml:endPosition>
+                    </gml:TimePeriod>
+                </gml:validTime>
+                <geo:notes></geo:notes>
+            </geo:FrequencyStandard>
+            <geo:dateInserted>2001-01-04</geo:dateInserted>
+        </geo:frequencyStandard>
+        <geo:frequencyStandard>
+            <geo:FrequencyStandard gml:id="frequency-standard-2">
+                <geo:standardType codeSpace="urn:ga-gov-au:frequency-standard-type">INTERNAL</geo:standardType>
+                <geo:inputFrequency>0.0</geo:inputFrequency>
+                <gml:validTime>
+                    <gml:TimePeriod gml:id="frequency-standard-2--time-period-2">
+                        <gml:beginPosition>2009-10-23</gml:beginPosition>
+                        <gml:endPosition></gml:endPosition>
+                    </gml:TimePeriod>
+                </gml:validTime>
+                <geo:notes></geo:notes>
+            </geo:FrequencyStandard>
+            <geo:dateInserted>2009-10-23</geo:dateInserted>
+        </geo:frequencyStandard>
+        <geo:siteContact gml:id="agency-1">
+            <gmd:MD_SecurityConstraints>
+                <gmd:classification gco:nilReason="missing"/>
+            </gmd:MD_SecurityConstraints>
+            <gmd:CI_ResponsibleParty>
+                <gmd:individualName>
+                    <gco:CharacterString>Jean-Paul Cardaliaguet</gco:CharacterString>
+                </gmd:individualName>
+                <gmd:organisationName>
+                    <gco:CharacterString>Centre National d'Etudes Spatiales</gco:CharacterString>
+                </gmd:organisationName>
+                <gmd:contactInfo>
+                    <gmd:CI_Contact>
+                        <gmd:phone>
+                            <gmd:CI_Telephone>
+                                <gmd:voice>
+                                    <gco:CharacterString>(33) 5.61.27.31.98</gco:CharacterString>
+                                </gmd:voice>
+                                <gmd:facsimile>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:facsimile>
+                            </gmd:CI_Telephone>
+                        </gmd:phone>
+                        <gmd:address>
+                            <gmd:CI_Address>
+                                <gmd:deliveryPoint>
+                                    <gco:CharacterString>CNES DCT/ME/CD - 18, avenue Edouard Belin
+31401 Toulouse cedex 09 - France</gco:CharacterString>
+                                </gmd:deliveryPoint>
+                                <gmd:city>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:city>
+                                <gmd:postalCode>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:postalCode>
+                                <gmd:country>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:country>
+                                <gmd:electronicMailAddress>
+                                    <gco:CharacterString>jean-paul.cardaliaguet@cnes.fr</gco:CharacterString>
+                                </gmd:electronicMailAddress>
+                            </gmd:CI_Address>
+                        </gmd:address>
+                    </gmd:CI_Contact>
+                </gmd:contactInfo>
+                <gmd:role>
+                    <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="pointOfContact"></gmd:CI_RoleCode>
+                </gmd:role>
+            </gmd:CI_ResponsibleParty>
+        </geo:siteContact>
+        <geo:siteMetadataCustodian gml:id="agency-2">
+            <gmd:MD_SecurityConstraints>
+                <gmd:classification gco:nilReason="missing"/>
+            </gmd:MD_SecurityConstraints>
+            <gmd:CI_ResponsibleParty>
+                <gmd:individualName>
+                    <gco:CharacterString></gco:CharacterString>
+                </gmd:individualName>
+                <gmd:organisationName>
+                    <gco:CharacterString>Centre National d'Etudes Spatiales</gco:CharacterString>
+                </gmd:organisationName>
+                <gmd:contactInfo>
+                    <gmd:CI_Contact>
+                        <gmd:phone>
+                            <gmd:CI_Telephone>
+                                <gmd:voice>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:voice>
+                                <gmd:facsimile>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:facsimile>
+                            </gmd:CI_Telephone>
+                        </gmd:phone>
+                        <gmd:address>
+                            <gmd:CI_Address>
+                                <gmd:deliveryPoint>
+                                    <gco:CharacterString>CNES DCT/ME/CD - 18, avenue Edouard Belin
+31401 Toulouse cedex 09 - France</gco:CharacterString>
+                                </gmd:deliveryPoint>
+                                <gmd:city>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:city>
+                                <gmd:postalCode>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:postalCode>
+                                <gmd:country>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:country>
+                                <gmd:electronicMailAddress>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:electronicMailAddress>
+                            </gmd:CI_Address>
+                        </gmd:address>
+                    </gmd:CI_Contact>
+                </gmd:contactInfo>
+                <gmd:role>
+                    <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="pointOfContact"></gmd:CI_RoleCode>
+                </gmd:role>
+            </gmd:CI_ResponsibleParty>
+        </geo:siteMetadataCustodian>
+        <geo:moreInformation>
+            <geo:dataCenter>IGN</geo:dataCenter>
+            <geo:dataCenter>BKG</geo:dataCenter>
+            <geo:urlForMoreInformation></geo:urlForMoreInformation>
+            <geo:siteMap></geo:siteMap>
+            <geo:siteDiagram></geo:siteDiagram>
+            <geo:horizonMask></geo:horizonMask>
+            <geo:monumentDescription></geo:monumentDescription>
+            <geo:sitePictures></geo:sitePictures>
+            <geo:notes>Real time RTCM
+send to IGN CASTER ON Mount Point TLSE1</geo:notes>
+            <geo:antennaGraphicsWithDimensions></geo:antennaGraphicsWithDimensions>
+            <geo:insertTextGraphicFromAntenna></geo:insertTextGraphicFromAntenna>
+            <geo:DOI codeSpace="urn:ga-gov-au:self.moreInformation-type">TODO</geo:DOI>
+        </geo:moreInformation>
+    </geo:siteLog>
+</geo:GeodesyML>

@@ -36,7 +36,7 @@ public class GnssAntennaMapperTest {
                         .withCodeListValue("LEICA GRX1200GGPRO")
                         .withValue("LEICA GRX1200GGPRO"))
                 .withManufacturerSerialNumber(serialNumber)
-                .withAntennaReferencePoint(new CodeType().withValue("BPA").withCodeSpace("eGeodesy/antennaRadomeType"))
+                .withAntennaReferencePoint(new CodeType().withValue("NONE").withCodeSpace("eGeodesy/antennaReferencePoint"))
                 .withMarkerArpUpEcc(0.0)
                 .withMarkerArpNorthEcc(0.0)
                 .withMarkerArpEastEcc(0.0)

@@ -259,7 +259,7 @@ public class SiteLogMapperITest extends IntegrationTest {
     @Test
     public void testSignalObstructionsMapping() throws Exception {
         GeodesyMLType mobs = marshaller
-                .unmarshal(TestResources.customGeodesyMLSiteLogReader("METZ-signalObstructionSet"),
+                .unmarshal(TestResources.customGeodesyMLSiteLogReader("METZ-signalObstructions"),
                         GeodesyMLType.class).getValue();
 
         SiteLogType siteLogType = GeodesyMLUtils.getElementFromJAXBElements(mobs.getElements(), SiteLogType.class)
@@ -520,7 +520,7 @@ public class SiteLogMapperITest extends IntegrationTest {
             int i = 0;
             for (GnssAntennaLogItem antennaLogItem : sortLogItems(siteLog.getGnssAntennas())) {
                 GnssAntennaType antennaType = gnssAntennaPropertyTypes.get(i++).getGnssAntenna();
-                assertThat(antennaLogItem.getSerialNumber(), equalTo(antennaType.getSerialNumber()));
+                assertThat(antennaLogItem.getSerialNumber(), equalTo(antennaType.getManufacturerSerialNumber()));
             }
         }
     }

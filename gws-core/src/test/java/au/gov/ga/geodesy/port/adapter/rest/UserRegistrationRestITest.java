@@ -43,7 +43,8 @@ public class UserRegistrationRestITest extends RestTest {
                 "Geoscience Australia",
                 "Software developer",
                 "lazar.bodor@ga.gov.au",
-                "0451061798")))
+                "0451061798",
+                "Could you please grant me write access for sites ADE1 and ADE2?")))
 
             .when()
             .post("/userRegistrations")

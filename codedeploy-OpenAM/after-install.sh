@@ -91,7 +91,7 @@ if [ $SERVICE_CFG_FILE_COUNT -eq 1 ] && [ $DIRECTORY_DATA_FILE_COUNT -eq 1 ] && 
 
   # Import directory data file into LDAP directory
   $OPENAM_BASE_DIR/opends/bin/import-ldif\
-     --ldifFile /tmp/$DIRECTORY_DATA_FILE\
+     --ldifFile $IMPORT_DIR/$DIRECTORY_DATA_FILE\
      --backendID userRoot\
      --hostName ${OPENAM_SERVER_FQDN}\
      --port 4444\

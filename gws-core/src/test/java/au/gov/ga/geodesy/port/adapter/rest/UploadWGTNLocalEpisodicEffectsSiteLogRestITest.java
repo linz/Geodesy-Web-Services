@@ -25,6 +25,7 @@ public class UploadWGTNLocalEpisodicEffectsSiteLogRestITest extends RestTest {
     public void upload() throws Exception {
         String geodesyML = IOUtils.toString(TestResources.customGeodesyMLSiteLogReader("WGTN-localEpisodicEffects"));
         given()
+            .auth().with(bearerToken(jwtToken("edit-wgtn", 60)))
             .body(geodesyML).
         when()
             .post("/siteLogs/upload").

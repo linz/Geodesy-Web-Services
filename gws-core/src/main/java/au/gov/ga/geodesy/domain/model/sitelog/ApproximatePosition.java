@@ -12,16 +12,16 @@ import com.vividsolutions.jts.geom.Point;
 @Embeddable
 public class ApproximatePosition {
 
-	/**
-	 * Position in EPSG:7789 reference system - x,y,z
-	 */
+    /**
+     * Position in EPSG:7789 reference system - x,y,z
+     */
     @JsonIgnore
     @Column(name = "CARTESIAN_POSITION", columnDefinition = "geometry")
     private Point cartesianPosition;
 
-	/**
-	 * Position in EPSG:7912 reference system - lat, long, elevation 
-	 */
+    /**
+     * Position in EPSG:7912 reference system - lat, long, elevation 
+    */
     @JsonIgnore
     @Column(name = "GEODETIC_POSITION", columnDefinition = "geometry")
     private Point geodeticPosition;

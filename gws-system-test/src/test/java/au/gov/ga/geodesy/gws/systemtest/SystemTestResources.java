@@ -18,7 +18,7 @@ public class SystemTestResources {
     /**
      * Production sitelogs GeodesyML files.
      */
-    private static String siteLogsDirectory = "/sitelogs/2016-12-18/geodesyml/";
+    private static String siteLogsDirectory = "/sitelogs/2017-03-30/geodesyml/";
 
     /**
      * Don't instantiate, use the static methods.

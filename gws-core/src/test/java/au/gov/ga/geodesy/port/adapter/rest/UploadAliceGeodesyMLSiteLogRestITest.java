@@ -51,7 +51,7 @@ public class UploadAliceGeodesyMLSiteLogRestITest extends RestTest {
         then()
             .statusCode(200)
             .log().body()
-            .body("page.totalElements", is(5))
+            .body("page.totalElements", is(6))
             ;
 
     }

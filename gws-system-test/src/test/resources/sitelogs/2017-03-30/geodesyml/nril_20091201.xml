@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<geo:GeodesyML gml:id="NRIL00RUS" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.4" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <geo:siteLog gml:id="nril_20091201.log">
+        <geo:formInformation>
+            <geo:preparedBy>Grigory M. Steblov</geo:preparedBy>
+            <geo:datePrepared>2009-10-30</geo:datePrepared>
+            <geo:reportType>UPDATE</geo:reportType>
+        </geo:formInformation>
+        <geo:siteIdentification>
+            <geo:siteName>Complex Magnetic-Ionospheric Station (CMIS)</geo:siteName>
+            <geo:fourCharacterID>NRIL</geo:fourCharacterID>
+            <geo:monumentInscription></geo:monumentInscription>
+            <geo:iersDOMESNumber>12364M001</geo:iersDOMESNumber>
+            <geo:cdpNumber>(A4)</geo:cdpNumber>
+            <geo:monumentDescription codeSpace="urn:ga-gov-au:monument-description-type">Roof of Seismology Building</geo:monumentDescription>
+            <geo:heightOfTheMonument>2.6</geo:heightOfTheMonument>
+            <geo:monumentFoundation>STAINLESS STEEL ROD</geo:monumentFoundation>
+            <geo:foundationDepth>0.0</geo:foundationDepth>
+            <geo:markerDescription>(CHISELLED CROSS/DIVOT/BRASS NAIL/etc)</geo:markerDescription>
+            <geo:dateInstalled>2000-09-17</geo:dateInstalled>
+            <geo:geologicCharacteristic codeSpace="urn:ga-gov-au:geologic-characteristic-type">Northern margin of Siberian platform.</geo:geologicCharacteristic>
+            <geo:bedrockType>Flood basalts</geo:bedrockType>
+            <geo:bedrockCondition>NA</geo:bedrockCondition>
+            <geo:fractureSpacing>NA</geo:fractureSpacing>
+            <geo:faultZonesNearby codeSpace="urn:ga-gov-au:fault-zones-type">(YES/NO/Name of the zone)</geo:faultZonesNearby>
+            <geo:notes>Basement outcrop
+This station is part of NEDA
+Deformation Array. NEDA operational control
+is provided by RDAAC
+Acquisition/Analysis Center (Moscow, Russia).
+RDAAC is also IGS Operational Center for NEDA.
+*******************************************
+The GPS reference mark consists of
+5/8-11&quot; diameter, vertical stainless steel rod.
+It is glued into the concrete parapet
+at the roof of Seismology Building
+at the campus of Complex Magnetic-Ionospheri
+Station (CMIS).
+This is a single-storey brick building 8x4 m
+in the map view, 2.6 meters high.
+The basement of the building is made up of
+reinforced concrete pylons. The walls are
+0.5 meter thick. The roof is the prefabricated
+reinforced concrete slab.
+The rod is driven into the parapet to a depth
+of 165 mm; its top end is 38 mm above
+the surface of the parapet.
+Vertical datum
+of the rod. Antenna is attached to the rod
+with the UNAVCO compact leveling mount.
+The antenna and choke ring assembly are
+protected with the SCIGN hemispherical dome.</geo:notes>
+        </geo:siteIdentification>
+        <geo:siteLocation>
+            <geo:city>Norilsk</geo:city>
+            <geo:state>Krasnoyarsk Region</geo:state>
+            <geo:countryCodeISO codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_CountryTypeCode" codeListValue="Russian Federation" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">Russian Federation</geo:countryCodeISO>
+            <geo:tectonicPlate codeSpace="urn:ga-gov-au:plate-type">Eurasian</geo:tectonicPlate>
+            <geo:approximatePositionITRF>
+                <geo:cartesianPosition>
+                    <gml:Point gml:id="itrf_cartesian" srsName="EPSG:7789">
+                        <gml:pos>64537.2912 2253782.8543 5946363.4808</gml:pos>
+                    </gml:Point>
+                </geo:cartesianPosition>
+                <geo:geodeticPosition>
+                    <gml:Point gml:id="itrf_geodetic" srsName="EPSG:7912">
+                        <gml:pos>69.3618333333 88.3597777778 47.8937</gml:pos>
+                    </gml:Point>
+                </geo:geodeticPosition>
+            </geo:approximatePositionITRF>
+            <geo:notes>Cartesian and geodetic coordinates (ITRF96)
+from GAMIT/GLOBK solution in ITRF96 based on
+6 days</geo:notes>
+        </geo:siteLocation>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-1">
+                <geo:notes>Model 700845-10G (Z-12 CGRS).</geo:notes>
+                <geo:manufacturerSerialNumber>LP020002502</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="ASHTECH Z-XII3" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">ASHTECH Z-XII3</geo:igsModelCode>
+                <geo:satelliteSystem>(GPS+GLO+GAL+BDS+QZSS+SBAS)</geo:satelliteSystem>
+                <geo:firmwareVersion>NAV CD00  CH 1D02</geo:firmwareVersion>
+                <geo:elevationCutoffSetting xsi:nil="true"></geo:elevationCutoffSetting>
+                <geo:dateInstalled>2000-09-17T00:00:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2005-11-10T07:20:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization xsi:nil="true"></geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2000-09-17T00:00:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-2">
+                <geo:notes>P/N 800960-32A (MicroZ)</geo:notes>
+                <geo:manufacturerSerialNumber>UC120031614</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="ASHTECH UZ-12" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">ASHTECH UZ-12</geo:igsModelCode>
+                <geo:satelliteSystem>GPS</geo:satelliteSystem>
+                <geo:firmwareVersion>CN00</geo:firmwareVersion>
+                <geo:elevationCutoffSetting xsi:nil="true"></geo:elevationCutoffSetting>
+                <geo:dateInstalled>2005-11-10T07:21:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2009-10-29T12:20:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization xsi:nil="true"></geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2005-11-10T07:21:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-3">
+                <geo:manufacturerSerialNumber>UC120031611</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="ASHTECH UZ-12" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">ASHTECH UZ-12</geo:igsModelCode>
+                <geo:satelliteSystem>GPS</geo:satelliteSystem>
+                <geo:firmwareVersion>CQ00</geo:firmwareVersion>
+                <geo:elevationCutoffSetting xsi:nil="true"></geo:elevationCutoffSetting>
+                <geo:dateInstalled>2009-10-29T12:20:00Z</geo:dateInstalled>
+                <geo:dateRemoved></geo:dateRemoved>
+                <geo:temperatureStabilization xsi:nil="true"></geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2009-10-29T12:20:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssAntenna>
+            <geo:GnssAntenna gml:id="gnss-antenna-1">
+                <geo:notes>Hemispherical dome
+Type DSP-001</geo:notes>
+                <geo:manufacturerSerialNumber>CR620002607</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSAntennaTypeCode" codeListValue="ASH701945B_M SCIT" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">ASH701945B_M    SCIT</geo:igsModelCode>
+                <geo:antennaReferencePoint codeSpace="urn:ga-gov-au:antenna-reference-point-type">BPA</geo:antennaReferencePoint>
+                <geo:marker-arpUpEcc.>0.0795</geo:marker-arpUpEcc.>
+                <geo:marker-arpNorthEcc. xsi:nil="true"></geo:marker-arpNorthEcc.>
+                <geo:marker-arpEastEcc. xsi:nil="true"></geo:marker-arpEastEcc.>
+                <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+                <geo:antennaRadomeType codeSpace="urn:igs-org:gnss-radome-model-code">SCIT</geo:antennaRadomeType>
+                <geo:radomeSerialNumber></geo:radomeSerialNumber>
+                <geo:antennaCableType>(vendor &amp; type number)</geo:antennaCableType>
+                <geo:antennaCableLength xsi:nil="true"></geo:antennaCableLength>
+                <geo:dateInstalled>2000-09-17T00:00:00Z</geo:dateInstalled>
+                <geo:dateRemoved></geo:dateRemoved>
+            </geo:GnssAntenna>
+            <geo:dateInserted>2000-09-17T00:00:00Z</geo:dateInserted>
+        </geo:gnssAntenna>
+        <geo:surveyedLocalTie>
+            <geo:SurveyedLocalTie gml:id="local-tie-1">
+                <geo:tiedMarkerName>AGP0</geo:tiedMarkerName>
+                <geo:tiedMarkerUsage>(SLR/VLBI/LOCAL CONTROL/FOOTPRINT/etc)</geo:tiedMarkerUsage>
+                <geo:tiedMarkerCDPNumber></geo:tiedMarkerCDPNumber>
+                <geo:tiedMarkerDOMESNumber></geo:tiedMarkerDOMESNumber>
+                <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+                    <geo:dx>0.0</geo:dx>
+                    <geo:dy>0.0</geo:dy>
+                    <geo:dz>0.0</geo:dz>
+                </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+                <geo:localSiteTiesAccuracy>0.8</geo:localSiteTiesAccuracy>
+                <geo:surveyMethod>(GPS CAMPAIGN/TRILATERATION/TRIANGULATION/etc)</geo:surveyMethod>
+                <geo:dateMeasured>2000-06-17</geo:dateMeasured>
+                <geo:notes></geo:notes>
+            </geo:SurveyedLocalTie>
+            <geo:dateInserted>2000-06-17</geo:dateInserted>
+        </geo:surveyedLocalTie>
+        <geo:frequencyStandard>
+            <geo:FrequencyStandard gml:id="frequency-standard-1">
+                <geo:standardType codeSpace="urn:ga-gov-au:frequency-standard-type">INTERNAL</geo:standardType>
+                <geo:inputFrequency>0.0</geo:inputFrequency>
+                <gml:validTime>
+                    <gml:TimePeriod gml:id="frequency-standard-1--time-period-1">
+                        <gml:beginPosition></gml:beginPosition>
+                        <gml:endPosition></gml:endPosition>
+                    </gml:TimePeriod>
+                </gml:validTime>
+                <geo:notes></geo:notes>
+            </geo:FrequencyStandard>
+            <geo:dateInserted></geo:dateInserted>
+        </geo:frequencyStandard>
+        <geo:humiditySensor>
+            <geo:HumiditySensor gml:id="humidity-sensor-1">
+                <geo:type codeSpace="urn:ga-gov-au:humidity-sensor-type">MET3</geo:type>
+                <geo:notes>(multiple lines)</geo:notes>
+                <geo:manufacturer>Paroscientific</geo:manufacturer>
+                <geo:serialNumber></geo:serialNumber>
+                <geo:heightDiffToAntenna>0.0</geo:heightDiffToAntenna>
+                <geo:calibrationDate></geo:calibrationDate>
+                <gml:validTime>
+                    <gml:TimePeriod gml:id="humidity-sensor-1--time-period-1">
+                        <gml:beginPosition></gml:beginPosition>
+                        <gml:endPosition></gml:endPosition>
+                    </gml:TimePeriod>
+                </gml:validTime>
+                <geo:dataSamplingInterval>5.0</geo:dataSamplingInterval>
+                <geo:accuracy-percentRelativeHumidity>0.0</geo:accuracy-percentRelativeHumidity>
+                <geo:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</geo:aspiration>
+            </geo:HumiditySensor>
+            <geo:dateInserted></geo:dateInserted>
+        </geo:humiditySensor>
+        <geo:pressureSensor>
+            <geo:PressureSensor gml:id="pressure-sensor-1">
+                <geo:type codeSpace="urn:ga-gov-au:pressure-sensor-type">MET3</geo:type>
+                <geo:manufacturer>Paroscientific</geo:manufacturer>
+                <geo:serialNumber></geo:serialNumber>
+                <geo:heightDiffToAntenna>0.0</geo:heightDiffToAntenna>
+                <geo:calibrationDate></geo:calibrationDate>
+                <gml:validTime>
+                    <gml:TimePeriod gml:id="pressure-sensor-1--time-period-2">
+                        <gml:beginPosition></gml:beginPosition>
+                        <gml:endPosition></gml:endPosition>
+                    </gml:TimePeriod>
+                </gml:validTime>
+                <geo:dataSamplingInterval>5.0</geo:dataSamplingInterval>
+                <geo:accuracy-hPa>0.1</geo:accuracy-hPa>
+            </geo:PressureSensor>
+            <geo:dateInserted></geo:dateInserted>
+        </geo:pressureSensor>
+        <geo:temperatureSensor>
+            <geo:TemperatureSensor gml:id="temperature-sensor-1">
+                <geo:type codeSpace="urn:ga-gov-au:temperature-sensor-type">MET3</geo:type>
+                <geo:manufacturer>Paroscientific</geo:manufacturer>
+                <geo:serialNumber></geo:serialNumber>
+                <geo:heightDiffToAntenna>0.0</geo:heightDiffToAntenna>
+                <geo:calibrationDate></geo:calibrationDate>
+                <gml:validTime>
+                    <gml:TimePeriod gml:id="temperature-sensor-1--time-period-3">
+                        <gml:beginPosition></gml:beginPosition>
+                        <gml:endPosition></gml:endPosition>
+                    </gml:TimePeriod>
+                </gml:validTime>
+                <geo:dataSamplingInterval>5.0</geo:dataSamplingInterval>
+                <geo:accuracy-degreesCelcius>0.0</geo:accuracy-degreesCelcius>
+                <geo:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</geo:aspiration>
+            </geo:TemperatureSensor>
+            <geo:dateInserted></geo:dateInserted>
+        </geo:temperatureSensor>
+        <geo:siteContact gml:id="agency-1">
+            <gmd:MD_SecurityConstraints>
+                <gmd:classification gco:nilReason="missing"/>
+            </gmd:MD_SecurityConstraints>
+            <gmd:CI_ResponsibleParty>
+                <gmd:individualName>
+                    <gco:CharacterString></gco:CharacterString>
+                </gmd:individualName>
+                <gmd:organisationName>
+                    <gco:CharacterString></gco:CharacterString>
+                </gmd:organisationName>
+                <gmd:contactInfo>
+                    <gmd:CI_Contact>
+                        <gmd:phone>
+                            <gmd:CI_Telephone>
+                                <gmd:voice>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:voice>
+                                <gmd:facsimile>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:facsimile>
+                            </gmd:CI_Telephone>
+                        </gmd:phone>
+                        <gmd:address>
+                            <gmd:CI_Address>
+                                <gmd:deliveryPoint>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:deliveryPoint>
+                                <gmd:city>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:city>
+                                <gmd:postalCode>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:postalCode>
+                                <gmd:country>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:country>
+                                <gmd:electronicMailAddress>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:electronicMailAddress>
+                            </gmd:CI_Address>
+                        </gmd:address>
+                    </gmd:CI_Contact>
+                </gmd:contactInfo>
+                <gmd:role>
+                    <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="pointOfContact"></gmd:CI_RoleCode>
+                </gmd:role>
+            </gmd:CI_ResponsibleParty>
+        </geo:siteContact>
+        <geo:siteMetadataCustodian gml:id="agency-2">
+            <gmd:MD_SecurityConstraints>
+                <gmd:classification gco:nilReason="missing"/>
+            </gmd:MD_SecurityConstraints>
+            <gmd:CI_ResponsibleParty>
+                <gmd:individualName>
+                    <gco:CharacterString>David A. Stowers/JPL</gco:CharacterString>
+                </gmd:individualName>
+                <gmd:organisationName>
+                    <gco:CharacterString>RDAAC,GS RAS,JPL,IRIS</gco:CharacterString>
+                </gmd:organisationName>
+                <gmd:contactInfo>
+                    <gmd:CI_Contact>
+                        <gmd:phone>
+                            <gmd:CI_Telephone>
+                                <gmd:voice>
+                                    <gco:CharacterString>818-354-7055</gco:CharacterString>
+                                </gmd:voice>
+                                <gmd:facsimile>
+                                    <gco:CharacterString>818-393-4965</gco:CharacterString>
+                                </gmd:facsimile>
+                            </gmd:CI_Telephone>
+                        </gmd:phone>
+                        <gmd:address>
+                            <gmd:CI_Address>
+                                <gmd:deliveryPoint>
+                                    <gco:CharacterString>189 Lenina Street
+Obninsk 249030, Kaluga Region, RUSSIA</gco:CharacterString>
+                                </gmd:deliveryPoint>
+                                <gmd:city>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:city>
+                                <gmd:postalCode>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:postalCode>
+                                <gmd:country>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:country>
+                                <gmd:electronicMailAddress>
+                                    <gco:CharacterString>dstowers@jpl.nasa.gov</gco:CharacterString>
+                                </gmd:electronicMailAddress>
+                            </gmd:CI_Address>
+                        </gmd:address>
+                    </gmd:CI_Contact>
+                </gmd:contactInfo>
+                <gmd:role>
+                    <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="pointOfContact"></gmd:CI_RoleCode>
+                </gmd:role>
+            </gmd:CI_ResponsibleParty>
+        </geo:siteMetadataCustodian>
+        <geo:moreInformation>
+            <geo:dataCenter></geo:dataCenter>
+            <geo:dataCenter></geo:dataCenter>
+            <geo:urlForMoreInformation></geo:urlForMoreInformation>
+            <geo:siteMap>(Y or URL)</geo:siteMap>
+            <geo:siteDiagram>(Y)</geo:siteDiagram>
+            <geo:horizonMask>(Y)</geo:horizonMask>
+            <geo:monumentDescription>(Y)</geo:monumentDescription>
+            <geo:sitePictures>(Y)</geo:sitePictures>
+            <geo:notes>Hardcopy Information available from www.site
+or from Responsible Agency</geo:notes>
+            <geo:antennaGraphicsWithDimensions></geo:antennaGraphicsWithDimensions>
+            <geo:insertTextGraphicFromAntenna></geo:insertTextGraphicFromAntenna>
+            <geo:DOI codeSpace="urn:ga-gov-au:self.moreInformation-type">TODO</geo:DOI>
+        </geo:moreInformation>
+    </geo:siteLog>
+</geo:GeodesyML>

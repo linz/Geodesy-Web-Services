@@ -5,8 +5,8 @@ import java.time.Instant;
 import au.gov.ga.geodesy.domain.model.sitelog.EffectiveDates;
 import au.gov.ga.geodesy.domain.model.sitelog.GnssReceiverLogItem;
 import au.gov.ga.geodesy.support.java.util.Iso;
-import au.gov.xml.icsm.geodesyml.v_0_3.GnssReceiverType;
-import au.gov.xml.icsm.geodesyml.v_0_3.IgsReceiverModelCodeType;
+import au.gov.xml.icsm.geodesyml.v_0_4.GnssReceiverType;
+import au.gov.xml.icsm.geodesyml.v_0_4.IgsReceiverModelCodeType;
 import ma.glasnost.orika.MapperFacade;
 import ma.glasnost.orika.MapperFactory;
 import ma.glasnost.orika.converter.ConverterFactory;
@@ -24,7 +24,7 @@ public class GnssReceiverMapper implements Iso<GnssReceiverType, GnssReceiverLog
 
     public GnssReceiverMapper() {
         mapperFactory.classMap(GnssReceiverLogItem.class, GnssReceiverType.class)
-            .fieldMap("type", "receiverType").converter("typeConverter").add()
+            .fieldMap("type", "igsModelCode").converter("typeConverter").add()
             .field("serialNumber", "manufacturerSerialNumber")
             .fieldMap("satelliteSystem", "satelliteSystem").converter("satelliteSystemConverter").add()
             .byDefault()

@@ -2,7 +2,7 @@ package au.gov.ga.geodesy.support.utils;
 
 import java.math.BigDecimal;
 
-import au.gov.xml.icsm.geodesyml.v_0_3.SiteLocationType;
+import au.gov.xml.icsm.geodesyml.v_0_4.SiteLocationType;
 
 public class GMLGeoTools {
 
@@ -38,20 +38,4 @@ public class GMLGeoTools {
         decimal = positiveSign ? decimal : -(decimal);
         return decimal;
     }
-
-    public static SiteLocationType.ApproximatePositionITRF buildZeroApproximatePositionITRF() {
-        SiteLocationType.ApproximatePositionITRF approximatePositionITRF = new SiteLocationType.ApproximatePositionITRF();
-
-        approximatePositionITRF.setElevationMEllips("0");
-
-        approximatePositionITRF.setXCoordinateInMeters("0");
-        approximatePositionITRF.setYCoordinateInMeters("0");
-        approximatePositionITRF.setZCoordinateInMeters("0");
-
-        approximatePositionITRF.setLatitudeNorth(new BigDecimal(0));
-        approximatePositionITRF.setLongitudeEast(new BigDecimal(0));
-
-        return approximatePositionITRF;
-    }
-
 }

@@ -2,7 +2,7 @@ package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 
 import au.gov.ga.geodesy.domain.model.sitelog.FormInformation;
 import au.gov.ga.geodesy.support.java.util.Iso;
-import au.gov.xml.icsm.geodesyml.v_0_3.FormInformationType;
+import au.gov.xml.icsm.geodesyml.v_0_4.FormInformationType;
 import ma.glasnost.orika.MapperFacade;
 import ma.glasnost.orika.MapperFactory;
 import ma.glasnost.orika.converter.ConverterFactory;

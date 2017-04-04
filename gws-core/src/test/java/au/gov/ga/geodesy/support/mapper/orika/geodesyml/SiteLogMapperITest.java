@@ -8,6 +8,8 @@ import static org.hamcrest.core.IsEqual.equalTo;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.time.Instant;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -20,12 +22,14 @@ import org.hamcrest.Matchers;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import com.vividsolutions.jts.geom.Point;
+
 import au.gov.ga.geodesy.domain.model.sitelog.CollocationInformation;
 import au.gov.ga.geodesy.domain.model.sitelog.FrequencyStandardLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.GnssAntennaLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.GnssReceiverLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.HumiditySensorLogItem;
-import au.gov.ga.geodesy.domain.model.sitelog.LocalEpisodicEventLogItem;
+import au.gov.ga.geodesy.domain.model.sitelog.LocalEpisodicEffectLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.LogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.MultipathSourceLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.OtherInstrumentationLogItem;
@@ -44,37 +48,35 @@ import au.gov.ga.geodesy.support.gml.GMLPropertyType;
 import au.gov.ga.geodesy.support.marshalling.moxy.GeodesyMLMoxy;
 import au.gov.ga.geodesy.support.spring.IntegrationTest;
 import au.gov.ga.geodesy.support.utils.GMLDateUtils;
-import au.gov.xml.icsm.geodesyml.v_0_3.BasePossibleProblemSourcesType;
-import au.gov.xml.icsm.geodesyml.v_0_3.CollocationInformationPropertyType;
-import au.gov.xml.icsm.geodesyml.v_0_3.CollocationInformationType;
-import au.gov.xml.icsm.geodesyml.v_0_3.FrequencyStandardPropertyType;
-import au.gov.xml.icsm.geodesyml.v_0_3.FrequencyStandardType;
-import au.gov.xml.icsm.geodesyml.v_0_3.GeodesyMLType;
-import au.gov.xml.icsm.geodesyml.v_0_3.GnssAntennaPropertyType;
-import au.gov.xml.icsm.geodesyml.v_0_3.GnssAntennaType;
-import au.gov.xml.icsm.geodesyml.v_0_3.GnssReceiverPropertyType;
-import au.gov.xml.icsm.geodesyml.v_0_3.GnssReceiverType;
-import au.gov.xml.icsm.geodesyml.v_0_3.HumiditySensorPropertyType;
-import au.gov.xml.icsm.geodesyml.v_0_3.HumiditySensorType;
-import au.gov.xml.icsm.geodesyml.v_0_3.LocalEpisodicEventsPropertyType;
-import au.gov.xml.icsm.geodesyml.v_0_3.LocalEpisodicEventsType;
-import au.gov.xml.icsm.geodesyml.v_0_3.MultipathSourcesPropertyType;
-import au.gov.xml.icsm.geodesyml.v_0_3.OtherInstrumentationPropertyType;
-import au.gov.xml.icsm.geodesyml.v_0_3.OtherInstrumentationType;
-import au.gov.xml.icsm.geodesyml.v_0_3.PressureSensorPropertyType;
-import au.gov.xml.icsm.geodesyml.v_0_3.PressureSensorType;
-import au.gov.xml.icsm.geodesyml.v_0_3.RadioInterferencesPropertyType;
-import au.gov.xml.icsm.geodesyml.v_0_3.SignalObstructionsPropertyType;
-import au.gov.xml.icsm.geodesyml.v_0_3.SiteLogType;
-import au.gov.xml.icsm.geodesyml.v_0_3.SurveyedLocalTiesPropertyType;
-import au.gov.xml.icsm.geodesyml.v_0_3.SurveyedLocalTiesType;
-import au.gov.xml.icsm.geodesyml.v_0_3.TemperatureSensorPropertyType;
-import au.gov.xml.icsm.geodesyml.v_0_3.TemperatureSensorType;
-import au.gov.xml.icsm.geodesyml.v_0_3.WaterVaporSensorPropertyType;
-import au.gov.xml.icsm.geodesyml.v_0_3.WaterVaporSensorType;
-
+import au.gov.xml.icsm.geodesyml.v_0_4.BasePossibleProblemSourceType;
+import au.gov.xml.icsm.geodesyml.v_0_4.CollocationInformationPropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_4.CollocationInformationType;
+import au.gov.xml.icsm.geodesyml.v_0_4.FrequencyStandardPropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_4.FrequencyStandardType;
+import au.gov.xml.icsm.geodesyml.v_0_4.GeodesyMLType;
+import au.gov.xml.icsm.geodesyml.v_0_4.GnssAntennaPropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_4.GnssAntennaType;
+import au.gov.xml.icsm.geodesyml.v_0_4.GnssReceiverPropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_4.GnssReceiverType;
+import au.gov.xml.icsm.geodesyml.v_0_4.HumiditySensorPropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_4.HumiditySensorType;
+import au.gov.xml.icsm.geodesyml.v_0_4.LocalEpisodicEffectPropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_4.LocalEpisodicEffectType;
+import au.gov.xml.icsm.geodesyml.v_0_4.MultipathSourcePropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_4.OtherInstrumentationPropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_4.OtherInstrumentationType;
+import au.gov.xml.icsm.geodesyml.v_0_4.PressureSensorPropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_4.PressureSensorType;
+import au.gov.xml.icsm.geodesyml.v_0_4.RadioInterferencePropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_4.SignalObstructionPropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_4.SiteLogType;
+import au.gov.xml.icsm.geodesyml.v_0_4.SurveyedLocalTiePropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_4.SurveyedLocalTieType;
+import au.gov.xml.icsm.geodesyml.v_0_4.TemperatureSensorPropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_4.TemperatureSensorType;
+import au.gov.xml.icsm.geodesyml.v_0_4.WaterVaporSensorPropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_4.WaterVaporSensorType;
 import ma.glasnost.orika.metadata.TypeFactory;
-
 import net.opengis.gml.v_3_2_1.TimePeriodType;
 import net.opengis.gml.v_3_2_1.TimePositionType;
 
@@ -113,7 +115,7 @@ public class SiteLogMapperITest extends IntegrationTest {
 
     private void checkSiteContacts(SiteLogType siteLogType, SiteLog siteLog) {
         assertThat(
-            siteLogType.getSiteContact().get(0).getCIResponsibleParty().getIndividualName().getCharacterString().getValue(),
+            siteLogType.getSiteContacts().get(0).getCIResponsibleParty().getIndividualName().getCharacterString().getValue(),
             is(siteLog.getSiteContacts().get(0).getParty().getIndividualName())
         );
     }
@@ -121,10 +123,37 @@ public class SiteLogMapperITest extends IntegrationTest {
     private void checkSiteContacts(SiteLog siteLog, SiteLogType siteLogType) {
         assertThat(
             siteLog.getSiteContacts().get(0).getParty().getIndividualName(),
-            is(siteLogType.getSiteContact().get(0).getCIResponsibleParty().getIndividualName().getCharacterString().getValue())
+            is(siteLogType.getSiteContacts().get(0).getCIResponsibleParty().getIndividualName().getCharacterString().getValue())
         );
     }
 
+    /**
+     * Test mapping from SiteLogType to SiteLog and back
+     * to SiteLogType. Based on the QIKI site with added otherInstrumentations.
+     **/
+    @Test
+    public void testApproximatePositionMapping() throws Exception {
+        GeodesyMLType mobs = marshaller
+                .unmarshal(TestResources.customGeodesyMLSiteLogReader("MOBS"),
+                        GeodesyMLType.class)
+                .getValue();
+
+        SiteLogType siteLogType = GeodesyMLUtils.getElementFromJAXBElements(mobs.getElements(), SiteLogType.class)
+                .findFirst().get();
+
+        SiteLog siteLog = mapper.to(siteLogType);
+        
+        Point cartesianPosition = siteLog.getSiteLocation().getApproximatePosition().getCartesianPosition();
+        assertThat(cartesianPosition.getSRID(), 
+        		equalTo(Integer.parseInt(siteLogType.getSiteLocation().getApproximatePositionITRF()
+        				.getCartesianPosition().getPoint().getSrsName().replaceAll("EPSG:", ""))));
+        
+        Point geodeticPosition = siteLog.getSiteLocation().getApproximatePosition().getGeodeticPosition();
+        assertThat(geodeticPosition.getSRID(), 
+        		equalTo(Integer.parseInt(siteLogType.getSiteLocation().getApproximatePositionITRF()
+        				.getGeodeticPosition().getPoint().getSrsName().replaceAll("EPSG:", ""))));
+    }
+    
     /**
      * Test mapping from SiteLogType to SiteLog and back
      * to SiteLogType. Based on the MOBS site with added sensors.
@@ -232,7 +261,7 @@ public class SiteLogMapperITest extends IntegrationTest {
     @Test
     public void testSignalObstructionsMapping() throws Exception {
         GeodesyMLType mobs = marshaller
-                .unmarshal(TestResources.customGeodesyMLSiteLogReader("METZ-signalObstructionSet"),
+                .unmarshal(TestResources.customGeodesyMLSiteLogReader("METZ-signalObstructions"),
                         GeodesyMLType.class).getValue();
 
         SiteLogType siteLogType = GeodesyMLUtils.getElementFromJAXBElements(mobs.getElements(), SiteLogType.class)
@@ -240,17 +269,17 @@ public class SiteLogMapperITest extends IntegrationTest {
 
         SiteLog siteLog = mapper.to(siteLogType);
 
-        List<SignalObstructionsPropertyType> signalObstructionsPropertyTypes = siteLogType.getSignalObstructionsSet();
+        List<SignalObstructionPropertyType> signalObstructionsPropertyTypes = siteLogType.getSignalObstructions();
         sortGMLPropertyTypes(signalObstructionsPropertyTypes);
 
-        assertThat(siteLogType.getSignalObstructionsSet().size(), equalTo(2));
+        assertThat(siteLogType.getSignalObstructions().size(), equalTo(2));
         assertThat(signalObstructionsPropertyTypes.size(), equalTo(2));
 
         {
             int i = 0;
             for (SignalObstructionLogItem logItem : sortLogItems(siteLog.getSignalObstructionLogItems())) {
-                BasePossibleProblemSourcesType xmlType = signalObstructionsPropertyTypes.get(i++).getSignalObstructions();
-                assertThat(logItem.getPossibleProblemSource(), equalTo(xmlType.getPossibleProblemSources()));
+                BasePossibleProblemSourceType xmlType = signalObstructionsPropertyTypes.get(i++).getSignalObstruction();
+                assertThat(logItem.getPossibleProblemSource(), equalTo(xmlType.getPossibleProblemSource()));
             }
         }
     }
@@ -271,43 +300,43 @@ public class SiteLogMapperITest extends IntegrationTest {
 
         SiteLog siteLog = mapper.to(siteLogType);
 
-        List<MultipathSourcesPropertyType> multipathSourcesPropertyTypes = siteLogType.getMultipathSourcesSet();
+        List<MultipathSourcePropertyType> multipathSourcesPropertyTypes = siteLogType.getMultipathSources();
         sortGMLPropertyTypes(multipathSourcesPropertyTypes);
 
-        assertThat(siteLogType.getMultipathSourcesSet().size(), equalTo(2));
+        assertThat(siteLogType.getMultipathSources().size(), equalTo(2));
         assertThat(multipathSourcesPropertyTypes.size(), equalTo(2));
 
         {
             int i = 0;
             for (MultipathSourceLogItem logItem : sortLogItems(siteLog.getMultipathSourceLogItems())) {
-                BasePossibleProblemSourcesType xmlType = multipathSourcesPropertyTypes.get(i++).getMultipathSources();
-                assertThat(logItem.getPossibleProblemSource(), equalTo(xmlType.getPossibleProblemSources()));
+                BasePossibleProblemSourceType xmlType = multipathSourcesPropertyTypes.get(i++).getMultipathSource();
+                assertThat(logItem.getPossibleProblemSource(), equalTo(xmlType.getPossibleProblemSource()));
             }
         }
     }
 
     /**
      * Test mapping from SiteLogType to SiteLog and back
-     * to SiteLogType. Based on the WGTN site log with added local episodic events.
+     * to SiteLogType. Based on the WGTN site log with added local episodic effects.
      **/
     @Test
-    public void testLocalEpisodicEventsMapping() throws Exception {
-        GeodesyMLType mobs = marshaller.unmarshal(TestResources.customGeodesyMLSiteLogReader("WGTN-localEpisodicEvents"), GeodesyMLType.class).getValue();
+    public void testLocalEpisodicEffectsMapping() throws Exception {
+        GeodesyMLType mobs = marshaller.unmarshal(TestResources.customGeodesyMLSiteLogReader("WGTN-localEpisodicEffects"), GeodesyMLType.class).getValue();
 
         SiteLogType siteLogType = GeodesyMLUtils.getElementFromJAXBElements(mobs.getElements(), SiteLogType.class).findFirst().get();
 
         SiteLog siteLog = mapper.to(siteLogType);
 
-        List<LocalEpisodicEventsPropertyType> localEpisodicEventsPropertyTypes = siteLogType.getLocalEpisodicEventsSet();
-        sortGMLPropertyTypes(localEpisodicEventsPropertyTypes);
+        List<LocalEpisodicEffectPropertyType> localEpisodicEffectPropertyTypes = siteLogType.getLocalEpisodicEffects();
+        sortGMLPropertyTypes(localEpisodicEffectPropertyTypes);
 
-        assertThat(siteLogType.getLocalEpisodicEventsSet().size(), equalTo(4));
-        assertThat(localEpisodicEventsPropertyTypes.size(), equalTo(4));
+        assertThat(siteLogType.getLocalEpisodicEffects().size(), equalTo(4));
+        assertThat(localEpisodicEffectPropertyTypes.size(), equalTo(4));
 
         {
             int i = 0;
-            for (LocalEpisodicEventLogItem logItem : sortLogItems(siteLog.getLocalEpisodicEventLogItems())) {
-                LocalEpisodicEventsType xmlType = localEpisodicEventsPropertyTypes.get(i++).getLocalEpisodicEvents();
+            for (LocalEpisodicEffectLogItem logItem : sortLogItems(siteLog.getLocalEpisodicEffectLogItems())) {
+                LocalEpisodicEffectType xmlType = localEpisodicEffectPropertyTypes.get(i++).getLocalEpisodicEffect();
                 assertThat(logItem.getEvent(), equalTo(xmlType.getEvent()));
             }
         }
@@ -329,17 +358,17 @@ public class SiteLogMapperITest extends IntegrationTest {
 
         SiteLog siteLog = mapper.to(siteLogType);
 
-        List<RadioInterferencesPropertyType> radioInterferencesPropertyTypes = siteLogType.getRadioInterferencesSet();
-        sortGMLPropertyTypes(radioInterferencesPropertyTypes);
+        List<RadioInterferencePropertyType> radioInterferencePropertyTypes = siteLogType.getRadioInterferences();
+        sortGMLPropertyTypes(radioInterferencePropertyTypes);
 
-        assertThat(siteLogType.getRadioInterferencesSet().size(), equalTo(1));
-        assertThat(radioInterferencesPropertyTypes.size(), equalTo(1));
+        assertThat(siteLogType.getRadioInterferences().size(), equalTo(1));
+        assertThat(radioInterferencePropertyTypes.size(), equalTo(1));
 
         {
             int i = 0;
             for (RadioInterference logItem : sortLogItems(siteLog.getRadioInterferences())) {
-                BasePossibleProblemSourcesType xmlType = radioInterferencesPropertyTypes.get(i++).getRadioInterferences();
-                assertThat(logItem.getPossibleProblemSource(), equalTo(xmlType.getPossibleProblemSources()));
+                BasePossibleProblemSourceType xmlType = radioInterferencePropertyTypes.get(i++).getRadioInterference();
+                assertThat(logItem.getPossibleProblemSource(), equalTo(xmlType.getPossibleProblemSource()));
             }
         }
     }
@@ -387,6 +416,8 @@ public class SiteLogMapperITest extends IntegrationTest {
      **/
     @Test
     public void testCollocationInformationMapping() throws Exception {
+        DateTimeFormatter outputFormat = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSSXXX").withZone(ZoneId.of("UTC"));
+
         GeodesyMLType mobs = marshaller
                 .unmarshal(TestResources.customGeodesyMLSiteLogReader("AIRA-collocationInfo"), GeodesyMLType.class)
                 .getValue();
@@ -408,9 +439,9 @@ public class SiteLogMapperITest extends IntegrationTest {
                 assertThat(collocationInfo.getInstrumentType(), is(collocationInfoType.getInstrumentationType().getValue()));
 
                 TimePeriodType timePeriodType = (TimePeriodType) collocationInfoType.getValidTime().getAbstractTimePrimitive().getValue();
-                String beginTime = timePeriodType.getBeginPosition().getValue().get(0).toString();
-
-                assertThat(collocationInfo.getEffectiveDates().getFrom().toString(), is(beginTime));
+                String beginTime = GMLDateUtils.stringToDateToStringMultiParsers(timePeriodType.getBeginPosition().getValue().get(0));
+                
+                assertThat(GMLDateUtils.dateToString(collocationInfo.getEffectiveDates().getFrom(), GMLDateUtils.GEODESYML_DATE_FORMAT_TIME_MILLISEC), is(beginTime));
                 assertThat(collocationInfo.getStatus(), is(collocationInfoType.getStatus().getValue()));
             }
         }
@@ -429,16 +460,18 @@ public class SiteLogMapperITest extends IntegrationTest {
                 .findFirst().get();
 
         SiteLog siteLog = mapper.to(siteLogType);
-        List<SurveyedLocalTiesPropertyType> surveyedLocalTiesProperties = siteLogType.getSurveyedLocalTies();
-        sortSurveyedLocalTiesPropertyTypes(surveyedLocalTiesProperties);
+
+        List<SurveyedLocalTiePropertyType> surveyedLocalTies = siteLogType.getSurveyedLocalTies();
+        sortSurveyedLocalTiePropertyTypes(surveyedLocalTies);
 
         assertThat(siteLog.getSurveyedLocalTies(), hasSize(4));
-        assertThat(surveyedLocalTiesProperties, hasSize(4));
+        assertThat(surveyedLocalTies, hasSize(4));
+
 
         {
             int i = 0;
             for (SurveyedLocalTie surveyedLocalTie : sortSurveyedLocalTies(siteLog.getSurveyedLocalTies())) {
-                SurveyedLocalTiesType surveyedLocalTiesType = surveyedLocalTiesProperties.get(i++).getSurveyedLocalTies();
+                SurveyedLocalTieType surveyedLocalTiesType = surveyedLocalTies.get(i++).getSurveyedLocalTie();
                 assertThat(surveyedLocalTie.getTiedMarkerName(), is(surveyedLocalTiesType.getTiedMarkerName()));
                 assertThat(surveyedLocalTie.getTiedMarkerUsage(), is(surveyedLocalTiesType.getTiedMarkerUsage()));
                 assertThat(surveyedLocalTie.getTiedMarkerCdpNumber(), Matchers.is(surveyedLocalTiesType.getTiedMarkerCDPNumber()));
@@ -460,14 +493,15 @@ public class SiteLogMapperITest extends IntegrationTest {
 
         List<GnssReceiverPropertyType> receiverProperties = siteLogType.getGnssReceivers();
         sortGMLPropertyTypes(receiverProperties);
-        assertThat(siteLog.getGnssReceivers().size(), equalTo(9));
-        assertThat(receiverProperties.size(), equalTo(9));
+        assertThat(siteLog.getGnssReceivers().size(), equalTo(15));
+        assertThat(receiverProperties.size(), equalTo(15));
 
         {
             int i = 0;
             for (GnssReceiverLogItem receiverLogItem : sortLogItems(siteLog.getGnssReceivers())) {
                 GnssReceiverType receiverType = receiverProperties.get(i++).getGnssReceiver();
                 assertThat(receiverLogItem.getFirmwareVersion(), equalTo(receiverType.getFirmwareVersion()));
+                assertThat(receiverLogItem.getNotes(), equalTo(receiverType.getNotes()));
             }
         }
     }
@@ -492,7 +526,7 @@ public class SiteLogMapperITest extends IntegrationTest {
             int i = 0;
             for (GnssAntennaLogItem antennaLogItem : sortLogItems(siteLog.getGnssAntennas())) {
                 GnssAntennaType antennaType = gnssAntennaPropertyTypes.get(i++).getGnssAntenna();
-                assertThat(antennaLogItem.getSerialNumber(), equalTo(antennaType.getSerialNumber()));
+                assertThat(antennaLogItem.getSerialNumber(), equalTo(antennaType.getManufacturerSerialNumber()));
             }
         }
     }
@@ -606,7 +640,7 @@ public class SiteLogMapperITest extends IntegrationTest {
     /**
      * Sort a list of SurveyedLocalTiesPropertyType objects by tied marker names.
      */
-    private <P extends SurveyedLocalTiesPropertyType> void sortSurveyedLocalTiesPropertyTypes(List<P> list) {
+    private <P extends SurveyedLocalTiePropertyType> void sortSurveyedLocalTiePropertyTypes(List<P> list) {
         Collections.sort(list, new Comparator<P>() {
             public int compare(P p, P q) {
                 return tiedMarkerName(p).compareTo(tiedMarkerName(q));

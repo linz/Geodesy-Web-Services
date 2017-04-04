@@ -47,7 +47,7 @@ import au.gov.ga.geodesy.port.adapter.geodesyml.MarshallingException;
 import au.gov.ga.geodesy.port.adapter.sopac.SopacSiteLogReader;
 import au.gov.ga.geodesy.support.mapper.orika.geodesyml.SiteLogMapper;
 import au.gov.ga.xmlschemer.Violation;
-import au.gov.xml.icsm.geodesyml.v_0_3.SiteLogType;
+import au.gov.xml.icsm.geodesyml.v_0_4.SiteLogType;
 
 @RepositoryRestController
 @EnableEntityLinks

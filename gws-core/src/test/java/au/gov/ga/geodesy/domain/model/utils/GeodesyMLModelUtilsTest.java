@@ -1,7 +1,7 @@
 package au.gov.ga.geodesy.domain.model.utils;
 
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLUtils;
-import au.gov.xml.icsm.geodesyml.v_0_3.SiteLogType;
+import au.gov.xml.icsm.geodesyml.v_0_4.SiteLogType;
 import org.testng.annotations.Test;
 
 import javax.xml.bind.JAXBElement;

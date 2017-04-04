@@ -3,7 +3,7 @@ package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 import au.gov.ga.geodesy.domain.model.sitelog.EffectiveDates;
 import au.gov.ga.geodesy.domain.model.sitelog.SignalObstructionLogItem;
 import au.gov.ga.geodesy.support.java.util.Iso;
-import au.gov.xml.icsm.geodesyml.v_0_3.BasePossibleProblemSourcesType;
+import au.gov.xml.icsm.geodesyml.v_0_4.BasePossibleProblemSourceType;
 import ma.glasnost.orika.MapperFacade;
 import ma.glasnost.orika.MapperFactory;
 import ma.glasnost.orika.converter.ConverterFactory;
@@ -15,15 +15,14 @@ import net.opengis.gml.v_3_2_1.TimePeriodType;
  * Reversible mapping between GeodesyML BasePossibleProblemSourcesType DTO and
  * SignalObstructionLogItem entity.
  */
-public class SignalObstructionMapper implements Iso<BasePossibleProblemSourcesType, SignalObstructionLogItem> {
+public class SignalObstructionMapper implements Iso<BasePossibleProblemSourceType, SignalObstructionLogItem> {
 
     private MapperFactory mapperFactory = new DefaultMapperFactory.Builder().build();
     private MapperFacade mapper;
 
     public SignalObstructionMapper() {
-        mapperFactory.classMap(BasePossibleProblemSourcesType.class, SignalObstructionLogItem.class)
+        mapperFactory.classMap(BasePossibleProblemSourceType.class, SignalObstructionLogItem.class)
                 .fieldMap("validTime.abstractTimePrimitive", "effectiveDates").converter("effectiveDatesConverter").add()
-                .field("possibleProblemSources", "possibleProblemSource")
                 .byDefault()
                 .register();
 
@@ -41,14 +40,14 @@ public class SignalObstructionMapper implements Iso<BasePossibleProblemSourcesTy
     /**
      * {@inheritDoc}
      */
-    public SignalObstructionLogItem to(BasePossibleProblemSourcesType signalObstructionsPropertyType) {
-        return mapper.map(signalObstructionsPropertyType, SignalObstructionLogItem.class);
+    public SignalObstructionLogItem to(BasePossibleProblemSourceType signalObstructionPropertyType) {
+        return mapper.map(signalObstructionPropertyType, SignalObstructionLogItem.class);
     }
 
     /**
      * {@inheritDoc}
      */
-    public BasePossibleProblemSourcesType from(SignalObstructionLogItem signalObstructionLogItem) {
-        return mapper.map(signalObstructionLogItem, BasePossibleProblemSourcesType.class);
+    public BasePossibleProblemSourceType from(SignalObstructionLogItem signalObstructionLogItem) {
+        return mapper.map(signalObstructionLogItem, BasePossibleProblemSourceType.class);
     }
 }

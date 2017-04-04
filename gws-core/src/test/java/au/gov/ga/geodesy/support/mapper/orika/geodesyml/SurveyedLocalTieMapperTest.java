@@ -6,9 +6,9 @@ import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLUtils;
 import au.gov.ga.geodesy.support.TestResources;
 import au.gov.ga.geodesy.support.marshalling.moxy.GeodesyMLMoxy;
 import au.gov.ga.geodesy.support.utils.GMLDateUtils;
-import au.gov.xml.icsm.geodesyml.v_0_3.GeodesyMLType;
-import au.gov.xml.icsm.geodesyml.v_0_3.SiteLogType;
-import au.gov.xml.icsm.geodesyml.v_0_3.SurveyedLocalTiesType;
+import au.gov.xml.icsm.geodesyml.v_0_4.GeodesyMLType;
+import au.gov.xml.icsm.geodesyml.v_0_4.SiteLogType;
+import au.gov.xml.icsm.geodesyml.v_0_4.SurveyedLocalTieType;
 import org.testng.annotations.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -16,7 +16,7 @@ import static org.hamcrest.Matchers.is;
 
 
 /**
- * Tests the mapping of a GeodesyML SurveyedLocalTiesType element
+ * Tests the mapping of a GeodesyML SurveyedLocalTieType element
  * to and from a SurveyedLocalTie domain object.
  */
 public class SurveyedLocalTieMapperTest {
@@ -33,7 +33,7 @@ public class SurveyedLocalTieMapperTest {
         SiteLogType siteLogType = GeodesyMLUtils.getElementFromJAXBElements(mobs.getElements(), SiteLogType.class)
                 .findFirst().get();
 
-        SurveyedLocalTiesType surveyedLocalTiesA = siteLogType.getSurveyedLocalTies().get(0).getSurveyedLocalTies();
+        SurveyedLocalTieType surveyedLocalTiesA = siteLogType.getSurveyedLocalTies().get(0).getSurveyedLocalTie();
         SurveyedLocalTie surveyedLocalTie = mapper.to(surveyedLocalTiesA);
         assertThat(surveyedLocalTie.getTiedMarkerName(), is(surveyedLocalTiesA.getTiedMarkerName()));
         assertThat(surveyedLocalTie.getTiedMarkerUsage(), is(surveyedLocalTiesA.getTiedMarkerUsage()));
@@ -47,7 +47,7 @@ public class SurveyedLocalTieMapperTest {
         assertThat(surveyedLocalTie.getDateMeasured(), is(GMLDateUtils.stringToDateMultiParsers(surveyedLocalTiesA.getDateMeasured().getValue().get(0))));
         assertThat(surveyedLocalTie.getNotes(), is(surveyedLocalTiesA.getNotes()));
 
-        SurveyedLocalTiesType surveyedLocalTiesB = mapper.from(surveyedLocalTie);
+        SurveyedLocalTieType surveyedLocalTiesB = mapper.from(surveyedLocalTie);
         assertThat(surveyedLocalTiesB.getTiedMarkerName(), is(surveyedLocalTie.getTiedMarkerName()));
         assertThat(surveyedLocalTiesB.getTiedMarkerUsage(), is(surveyedLocalTie.getTiedMarkerUsage()));
         assertThat(surveyedLocalTiesB.getTiedMarkerCDPNumber(), is(surveyedLocalTie.getTiedMarkerCdpNumber()));

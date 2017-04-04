@@ -2,8 +2,6 @@ package au.gov.ga.geodesy.domain.model.sitelog;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
-import javax.persistence.Transient;
-import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.vividsolutions.jts.geom.Point;
@@ -14,90 +12,33 @@ import com.vividsolutions.jts.geom.Point;
 @Embeddable
 public class ApproximatePosition {
 
-    /* @Column(name = "GEOM") */
-    /* @Transient */
-    /* private Point grs80; */
-
-    @Size(max = 200)
-    @Column(name = "ELEVATION_GRS80", length = 200)
-    private String elevationGrs80;
-
-    @Column(name = "ITRF_X")
-    private Double itrfX;
-
-    @Column(name = "ITRF_Y")
-    private Double itrfY;
-
-    @Column(name = "ITRF_Z")
-    private Double itrfZ;
+    /**
+     * Position in EPSG:7789 reference system - x,y,z
+     */
+    @JsonIgnore
+    @Column(name = "CARTESIAN_POSITION", columnDefinition = "geometry")
+    private Point cartesianPosition;
 
     /**
-     * Return approximate (latidue,longitude) on the GRS80 ellipsoid.
-     */
-    /* public Point getGrs80() { */
-    /*     return grs80; */
-    /* } */
+     * Position in EPSG:7912 reference system - lat, long, elevation 
+    */
+    @JsonIgnore
+    @Column(name = "GEODETIC_POSITION", columnDefinition = "geometry")
+    private Point geodeticPosition;
 
-    /**
-     * Set approximate (latitude,longitude) on the GRS80 ellipsoid.
-     */
-    /* public void setGrs80(Point p) { */
-    /*     grs80 = p; */
-    /* } */
+	public Point getCartesianPosition() {
+		return cartesianPosition;
+	}
 
-    /**
-     * Return approximate elevation in metres from the GRS80 ellipsoid.
-     */
-    public String getElevationGrs80() {
-        return elevationGrs80;
-    }
+	public void setCartesianPosition(Point cartesianPosition) {
+		this.cartesianPosition = cartesianPosition;
+	}
 
-    /**
-     * Set approximate elevation in meters from the GRS80 ellipsoid.
-     */
-    public void setElevationGrs80(String x) {
-        elevationGrs80 = x;
-    }
+	public Point getGeodeticPosition() {
+		return geodeticPosition;
+	}
 
-    /**
-     * Return approximate ITRF x coordinate in meters.
-     */
-    public Double getItrfX() {
-        return itrfX;
-    }
-
-    /**
-     * Set approximate ITRF x coordinate in meters.
-     */
-    public void setItrfX(Double x) {
-        itrfX = x;
-    }
-
-    /**
-     * Return approximate ITRF y coordinate in meters.
-     */
-    public Double getItrfY() {
-        return itrfY;
-    }
-
-    /**
-     * Set approximate ITRF y coordinate in meters.
-     */
-    public void setItrfY(Double y) {
-        itrfY = y;
-    }
-
-    /**
-     * Return approximate ITRF z coordinate in meters.
-     */
-    public Double getItrfZ() {
-        return itrfZ;
-    }
-
-    /**
-     * Set approximate ITRF z coordinate in meters.
-     */
-    public void setItrfZ(Double z) {
-        itrfZ = z;
-    }
+	public void setGeodeticPosition(Point geodeticPosition) {
+		this.geodeticPosition = geodeticPosition;
+	}
 }

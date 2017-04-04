@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<geo:GeodesyML gml:id="VALP00CHL" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.4" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <geo:siteLog gml:id="valp_20150318.log">
+        <geo:formInformation>
+            <geo:preparedBy>Eric C. Kendrick</geo:preparedBy>
+            <geo:datePrepared>2015-03-18</geo:datePrepared>
+            <geo:reportType>UPDATE</geo:reportType>
+        </geo:formInformation>
+        <geo:siteIdentification>
+            <geo:siteName>Valparaiso Tide Gauge</geo:siteName>
+            <geo:fourCharacterID>VALP</geo:fourCharacterID>
+            <geo:monumentInscription>none</geo:monumentInscription>
+            <geo:iersDOMESNumber>41712S001</geo:iersDOMESNumber>
+            <geo:cdpNumber></geo:cdpNumber>
+            <geo:monumentDescription codeSpace="urn:ga-gov-au:monument-description-type">ALUMINUM TOWER</geo:monumentDescription>
+            <geo:monumentFoundation></geo:monumentFoundation>
+            <geo:markerDescription></geo:markerDescription>
+            <geo:dateInstalled>1998-11-25T00:01:00Z</geo:dateInstalled>
+            <geo:geologicCharacteristic codeSpace="urn:ga-gov-au:geologic-characteristic-type"></geo:geologicCharacteristic>
+            <geo:bedrockType></geo:bedrockType>
+            <geo:bedrockCondition></geo:bedrockCondition>
+            <geo:fractureSpacing></geo:fractureSpacing>
+            <geo:faultZonesNearby codeSpace="urn:ga-gov-au:fault-zones-type"></geo:faultZonesNearby>
+            <geo:notes>Antenna is fixed to a coupler which is
+in turn attached to an aluminum frame tower
+approximately 3 m high.
+Tower is bolted to a concrete dock.
+Geodetic reference point is top-center of
+coupler on top of aluminum frame tower.</geo:notes>
+        </geo:siteIdentification>
+        <geo:siteLocation>
+            <geo:city>Valparaiso</geo:city>
+            <geo:state>Region V</geo:state>
+            <geo:countryCodeISO codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_CountryTypeCode" codeListValue="Chile" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">Chile</geo:countryCodeISO>
+            <geo:tectonicPlate codeSpace="urn:ga-gov-au:plate-type">SOUTH AMERICAN</geo:tectonicPlate>
+            <geo:approximatePositionITRF>
+                <geo:cartesianPosition>
+                    <gml:Point gml:id="itrf_cartesian" srsName="EPSG:7789">
+                        <gml:pos>1687310.0 -5079965.0 -3456509.0</gml:pos>
+                    </gml:Point>
+                </geo:cartesianPosition>
+                <geo:geodeticPosition>
+                    <gml:Point gml:id="itrf_geodetic" srsName="EPSG:7912">
+                        <gml:pos>-33.0272 -71.6261 31.2</gml:pos>
+                    </gml:Point>
+                </geo:geodeticPosition>
+            </geo:approximatePositionITRF>
+            <geo:notes></geo:notes>
+        </geo:siteLocation>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-1">
+                <geo:manufacturerSerialNumber>LP03308</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="ASHTECH Z-XII3" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">ASHTECH Z-XII3</geo:igsModelCode>
+                <geo:satelliteSystem>GPS</geo:satelliteSystem>
+                <geo:firmwareVersion>1F50</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>10.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>1998-11-25T00:01:00Z</geo:dateInstalled>
+                <geo:dateRemoved>1999-08-20T14:45:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization xsi:nil="true"></geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>1998-11-25T00:01:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-2">
+                <geo:manufacturerSerialNumber>LP03308</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="ASHTECH Z-XII3" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">ASHTECH Z-XII3</geo:igsModelCode>
+                <geo:satelliteSystem>GPS</geo:satelliteSystem>
+                <geo:firmwareVersion>CD00</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>10.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>1999-08-21T00:01:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2000-08-11T13:27:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization xsi:nil="true"></geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>1999-08-21T00:01:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-3">
+                <geo:notes>receiver LP00189 removed because of
+memory problem</geo:notes>
+                <geo:manufacturerSerialNumber>LP00189</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="ASHTECH Z-XII3" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">ASHTECH Z-XII3</geo:igsModelCode>
+                <geo:satelliteSystem>GPS</geo:satelliteSystem>
+                <geo:firmwareVersion>CD00</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>10.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>2000-08-18T00:01:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2002-07-15T13:32:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization xsi:nil="true"></geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2000-08-18T00:01:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-4">
+                <geo:notes>The actual removal date is unknown. The old
+RX was missing when the new NetRS RX was
+installed.</geo:notes>
+                <geo:manufacturerSerialNumber>01185</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="ASHTECH Z-XII3" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">ASHTECH Z-XII3</geo:igsModelCode>
+                <geo:satelliteSystem>GPS</geo:satelliteSystem>
+                <geo:firmwareVersion>CD00</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>10.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>2002-07-17T14:03:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2008-08-05T00:00:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization xsi:nil="true"></geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2002-07-17T14:03:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-5">
+                <geo:notes>firmware changed to 1.15</geo:notes>
+                <geo:manufacturerSerialNumber>4420233971</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="TRIMBLE NETRS" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">TRIMBLE NETRS</geo:igsModelCode>
+                <geo:satelliteSystem>GPS</geo:satelliteSystem>
+                <geo:firmwareVersion>1.25</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>7.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>2008-08-05T21:29:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2008-08-06T19:54:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization xsi:nil="true"></geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2008-08-05T21:29:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-6">
+                <geo:notes>last data available are from 2011-05-22</geo:notes>
+                <geo:manufacturerSerialNumber>4420233971</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="TRIMBLE NETRS" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">TRIMBLE NETRS</geo:igsModelCode>
+                <geo:satelliteSystem>GPS</geo:satelliteSystem>
+                <geo:firmwareVersion>1.15</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>7.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>2008-08-06T21:00:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2011-07-08T15:50:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization xsi:nil="true"></geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2008-08-06T21:00:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-7">
+                <geo:notes>RX change and firmware upgrade 2011-07-08</geo:notes>
+                <geo:manufacturerSerialNumber>4752143440</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="TRIMBLE NETRS" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">TRIMBLE NETRS</geo:igsModelCode>
+                <geo:satelliteSystem>GPS</geo:satelliteSystem>
+                <geo:firmwareVersion>1.20</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>10.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>2011-07-08T15:56:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2012-08-09T16:30:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization xsi:nil="true"></geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2011-07-08T15:56:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-8">
+                <geo:notes>broken NETRS receiver replaced by a NETR9 on
+2014-09-16</geo:notes>
+                <geo:manufacturerSerialNumber>4752143440</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="TRIMBLE NETRS" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">TRIMBLE NETRS</geo:igsModelCode>
+                <geo:satelliteSystem>GPS</geo:satelliteSystem>
+                <geo:firmwareVersion>1.31</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>10.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>2012-08-09T16:30:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2014-09-16T14:00:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization xsi:nil="true"></geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2012-08-09T16:30:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-9">
+                <geo:manufacturerSerialNumber>5133K77713</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="TRIMBLE NETR9" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">TRIMBLE NETR9</geo:igsModelCode>
+                <geo:satelliteSystem>GPS</geo:satelliteSystem>
+                <geo:firmwareVersion>4.42</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>10.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>2014-09-16T14:13:00Z</geo:dateInstalled>
+                <geo:dateRemoved></geo:dateRemoved>
+                <geo:temperatureStabilization xsi:nil="true"></geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2014-09-16T14:13:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssAntenna>
+            <geo:GnssAntenna gml:id="gnss-antenna-1">
+                <geo:manufacturerSerialNumber>CR14321</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSAntennaTypeCode" codeListValue="ASH700936D_M SNOW" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">ASH700936D_M    SNOW</geo:igsModelCode>
+                <geo:antennaReferencePoint codeSpace="urn:ga-gov-au:antenna-reference-point-type">BPA</geo:antennaReferencePoint>
+                <geo:marker-arpUpEcc.>0.0</geo:marker-arpUpEcc.>
+                <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+                <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+                <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+                <geo:antennaRadomeType codeSpace="urn:igs-org:gnss-radome-model-code">SNOW</geo:antennaRadomeType>
+                <geo:radomeSerialNumber></geo:radomeSerialNumber>
+                <geo:antennaCableType></geo:antennaCableType>
+                <geo:antennaCableLength xsi:nil="true"></geo:antennaCableLength>
+                <geo:dateInstalled>1998-11-25T00:01:00Z</geo:dateInstalled>
+                <geo:dateRemoved></geo:dateRemoved>
+            </geo:GnssAntenna>
+            <geo:dateInserted>1998-11-25T00:01:00Z</geo:dateInserted>
+        </geo:gnssAntenna>
+        <geo:surveyedLocalTie>
+            <geo:SurveyedLocalTie gml:id="local-tie-1">
+                <geo:tiedMarkerName>VALPARAISO</geo:tiedMarkerName>
+                <geo:tiedMarkerUsage></geo:tiedMarkerUsage>
+                <geo:tiedMarkerCDPNumber></geo:tiedMarkerCDPNumber>
+                <geo:tiedMarkerDOMESNumber></geo:tiedMarkerDOMESNumber>
+                <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+                    <geo:dx>0.0</geo:dx>
+                    <geo:dy>0.0</geo:dy>
+                    <geo:dz>0.0</geo:dz>
+                </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+                <geo:localSiteTiesAccuracy>500.0</geo:localSiteTiesAccuracy>
+                <geo:surveyMethod>GPS CAMPAIGN</geo:surveyMethod>
+                <geo:dateMeasured>2000-05-09T21:09:00Z</geo:dateMeasured>
+                <geo:notes>measured with a TRIMBLE 4000SSI as part
+of SIRGAS 2000 on days 130-140 in 2000 .
+500mm accuracy reflects uncertain antenna ht.</geo:notes>
+            </geo:SurveyedLocalTie>
+            <geo:dateInserted>2000-05-09T21:09:00Z</geo:dateInserted>
+        </geo:surveyedLocalTie>
+        <geo:frequencyStandard>
+            <geo:FrequencyStandard gml:id="frequency-standard-1">
+                <geo:standardType codeSpace="urn:ga-gov-au:frequency-standard-type">INTERNAL</geo:standardType>
+                <geo:inputFrequency>0.0</geo:inputFrequency>
+                <gml:validTime>
+                    <gml:TimePeriod gml:id="frequency-standard-1--time-period-1">
+                        <gml:beginPosition>1998-11-25</gml:beginPosition>
+                        <gml:endPosition></gml:endPosition>
+                    </gml:TimePeriod>
+                </gml:validTime>
+                <geo:notes></geo:notes>
+            </geo:FrequencyStandard>
+            <geo:dateInserted>1998-11-25</geo:dateInserted>
+        </geo:frequencyStandard>
+        <geo:humiditySensor>
+            <geo:HumiditySensor gml:id="humidity-sensor-1">
+                <geo:type codeSpace="urn:ga-gov-au:humidity-sensor-type">MET-3</geo:type>
+                <geo:notes>Original sensor S/N 69841 was replaced
+by same model on 16-APR-2001</geo:notes>
+                <geo:manufacturer>Paroscientific</geo:manufacturer>
+                <geo:serialNumber></geo:serialNumber>
+                <geo:heightDiffToAntenna>0.0</geo:heightDiffToAntenna>
+                <geo:calibrationDate></geo:calibrationDate>
+                <gml:validTime>
+                    <gml:TimePeriod gml:id="humidity-sensor-1--time-period-1">
+                        <gml:beginPosition>1998-11-25</gml:beginPosition>
+                        <gml:endPosition>2001-04-16</gml:endPosition>
+                    </gml:TimePeriod>
+                </gml:validTime>
+                <geo:dataSamplingInterval>600.0</geo:dataSamplingInterval>
+                <geo:accuracy-percentRelativeHumidity>2.0</geo:accuracy-percentRelativeHumidity>
+                <geo:aspiration></geo:aspiration>
+            </geo:HumiditySensor>
+            <geo:dateInserted>1998-11-25</geo:dateInserted>
+        </geo:humiditySensor>
+        <geo:pressureSensor>
+            <geo:PressureSensor gml:id="pressure-sensor-1">
+                <geo:type codeSpace="urn:ga-gov-au:pressure-sensor-type">MET-3</geo:type>
+                <geo:notes>Original sensor S/N 69841 was replaced
+by same model on 16-APR-2001</geo:notes>
+                <geo:manufacturer>Paroscientific</geo:manufacturer>
+                <geo:serialNumber></geo:serialNumber>
+                <geo:heightDiffToAntenna>0.0</geo:heightDiffToAntenna>
+                <geo:calibrationDate></geo:calibrationDate>
+                <gml:validTime>
+                    <gml:TimePeriod gml:id="pressure-sensor-1--time-period-2">
+                        <gml:beginPosition>1998-11-25</gml:beginPosition>
+                        <gml:endPosition>2001-04-16</gml:endPosition>
+                    </gml:TimePeriod>
+                </gml:validTime>
+                <geo:dataSamplingInterval>600.0</geo:dataSamplingInterval>
+                <geo:accuracy-hPa>0.1</geo:accuracy-hPa>
+            </geo:PressureSensor>
+            <geo:dateInserted>1998-11-25</geo:dateInserted>
+        </geo:pressureSensor>
+        <geo:temperatureSensor>
+            <geo:TemperatureSensor gml:id="temperature-sensor-1">
+                <geo:type codeSpace="urn:ga-gov-au:temperature-sensor-type">MET-3</geo:type>
+                <geo:notes>Original sensor S/N 69841 was replaced
+by same model on 16-APR-2001</geo:notes>
+                <geo:manufacturer>Paroscientific</geo:manufacturer>
+                <geo:serialNumber></geo:serialNumber>
+                <geo:heightDiffToAntenna>0.0</geo:heightDiffToAntenna>
+                <geo:calibrationDate></geo:calibrationDate>
+                <gml:validTime>
+                    <gml:TimePeriod gml:id="temperature-sensor-1--time-period-3">
+                        <gml:beginPosition>1998-11-25</gml:beginPosition>
+                        <gml:endPosition>2001-04-16</gml:endPosition>
+                    </gml:TimePeriod>
+                </gml:validTime>
+                <geo:dataSamplingInterval>600.0</geo:dataSamplingInterval>
+                <geo:accuracy-degreesCelcius>0.5</geo:accuracy-degreesCelcius>
+                <geo:aspiration></geo:aspiration>
+            </geo:TemperatureSensor>
+            <geo:dateInserted>1998-11-25</geo:dateInserted>
+        </geo:temperatureSensor>
+        <geo:siteContact gml:id="agency-1">
+            <gmd:MD_SecurityConstraints>
+                <gmd:classification gco:nilReason="missing"/>
+            </gmd:MD_SecurityConstraints>
+            <gmd:CI_ResponsibleParty>
+                <gmd:individualName>
+                    <gco:CharacterString></gco:CharacterString>
+                </gmd:individualName>
+                <gmd:organisationName>
+                    <gco:CharacterString></gco:CharacterString>
+                </gmd:organisationName>
+                <gmd:contactInfo>
+                    <gmd:CI_Contact>
+                        <gmd:phone>
+                            <gmd:CI_Telephone>
+                                <gmd:voice>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:voice>
+                                <gmd:facsimile>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:facsimile>
+                            </gmd:CI_Telephone>
+                        </gmd:phone>
+                        <gmd:address>
+                            <gmd:CI_Address>
+                                <gmd:deliveryPoint>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:deliveryPoint>
+                                <gmd:city>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:city>
+                                <gmd:postalCode>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:postalCode>
+                                <gmd:country>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:country>
+                                <gmd:electronicMailAddress>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:electronicMailAddress>
+                            </gmd:CI_Address>
+                        </gmd:address>
+                    </gmd:CI_Contact>
+                </gmd:contactInfo>
+                <gmd:role>
+                    <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="pointOfContact"></gmd:CI_RoleCode>
+                </gmd:role>
+            </gmd:CI_ResponsibleParty>
+        </geo:siteContact>
+        <geo:siteMetadataCustodian gml:id="agency-2">
+            <gmd:MD_SecurityConstraints>
+                <gmd:classification gco:nilReason="missing"/>
+            </gmd:MD_SecurityConstraints>
+            <gmd:CI_ResponsibleParty>
+                <gmd:individualName>
+                    <gco:CharacterString></gco:CharacterString>
+                </gmd:individualName>
+                <gmd:organisationName>
+                    <gco:CharacterString></gco:CharacterString>
+                </gmd:organisationName>
+                <gmd:contactInfo>
+                    <gmd:CI_Contact>
+                        <gmd:phone>
+                            <gmd:CI_Telephone>
+                                <gmd:voice>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:voice>
+                                <gmd:facsimile>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:facsimile>
+                            </gmd:CI_Telephone>
+                        </gmd:phone>
+                        <gmd:address>
+                            <gmd:CI_Address>
+                                <gmd:deliveryPoint>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:deliveryPoint>
+                                <gmd:city>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:city>
+                                <gmd:postalCode>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:postalCode>
+                                <gmd:country>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:country>
+                                <gmd:electronicMailAddress>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:electronicMailAddress>
+                            </gmd:CI_Address>
+                        </gmd:address>
+                    </gmd:CI_Contact>
+                </gmd:contactInfo>
+                <gmd:role>
+                    <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="pointOfContact"></gmd:CI_RoleCode>
+                </gmd:role>
+            </gmd:CI_ResponsibleParty>
+        </geo:siteMetadataCustodian>
+        <geo:moreInformation>
+            <geo:dataCenter>SIO</geo:dataCenter>
+            <geo:dataCenter>CDDIS</geo:dataCenter>
+            <geo:urlForMoreInformation></geo:urlForMoreInformation>
+            <geo:siteMap></geo:siteMap>
+            <geo:siteDiagram></geo:siteDiagram>
+            <geo:horizonMask></geo:horizonMask>
+            <geo:monumentDescription></geo:monumentDescription>
+            <geo:sitePictures></geo:sitePictures>
+            <geo:notes></geo:notes>
+            <geo:antennaGraphicsWithDimensions></geo:antennaGraphicsWithDimensions>
+            <geo:insertTextGraphicFromAntenna></geo:insertTextGraphicFromAntenna>
+            <geo:DOI codeSpace="urn:ga-gov-au:self.moreInformation-type">TODO</geo:DOI>
+        </geo:moreInformation>
+    </geo:siteLog>
+</geo:GeodesyML>

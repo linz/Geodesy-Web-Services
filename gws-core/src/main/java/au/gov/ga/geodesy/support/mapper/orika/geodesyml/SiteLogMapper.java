@@ -12,7 +12,7 @@ import au.gov.ga.geodesy.domain.model.sitelog.FrequencyStandardLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.GnssAntennaLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.GnssReceiverLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.HumiditySensorLogItem;
-import au.gov.ga.geodesy.domain.model.sitelog.LocalEpisodicEventLogItem;
+import au.gov.ga.geodesy.domain.model.sitelog.LocalEpisodicEffectLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.LogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.MoreInformation;
 import au.gov.ga.geodesy.domain.model.sitelog.MultipathSourceLogItem;
@@ -28,17 +28,16 @@ import au.gov.ga.geodesy.domain.model.sitelog.TemperatureSensorLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.WaterVaporSensorLogItem;
 import au.gov.ga.geodesy.support.gml.GMLPropertyType;
 import au.gov.ga.geodesy.support.java.util.Iso;
-import au.gov.xml.icsm.geodesyml.v_0_3.FormInformationType;
-import au.gov.xml.icsm.geodesyml.v_0_3.GnssAntennaPropertyType;
-import au.gov.xml.icsm.geodesyml.v_0_3.LocalEpisodicEventsPropertyType;
-import au.gov.xml.icsm.geodesyml.v_0_3.MoreInformationType;
-import au.gov.xml.icsm.geodesyml.v_0_3.MultipathSourcesPropertyType;
-import au.gov.xml.icsm.geodesyml.v_0_3.RadioInterferencesPropertyType;
-import au.gov.xml.icsm.geodesyml.v_0_3.SignalObstructionsPropertyType;
-import au.gov.xml.icsm.geodesyml.v_0_3.SiteIdentificationType;
-import au.gov.xml.icsm.geodesyml.v_0_3.SiteLocationType;
-import au.gov.xml.icsm.geodesyml.v_0_3.SiteLogType;
-
+import au.gov.xml.icsm.geodesyml.v_0_4.FormInformationType;
+import au.gov.xml.icsm.geodesyml.v_0_4.GnssAntennaPropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_4.LocalEpisodicEffectPropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_4.MoreInformationType;
+import au.gov.xml.icsm.geodesyml.v_0_4.MultipathSourcePropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_4.RadioInterferencePropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_4.SignalObstructionPropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_4.SiteIdentificationType;
+import au.gov.xml.icsm.geodesyml.v_0_4.SiteLocationType;
+import au.gov.xml.icsm.geodesyml.v_0_4.SiteLogType;
 import ma.glasnost.orika.MapperFacade;
 import ma.glasnost.orika.MapperFactory;
 import ma.glasnost.orika.MappingContext;
@@ -46,7 +45,6 @@ import ma.glasnost.orika.converter.BidirectionalConverter;
 import ma.glasnost.orika.converter.ConverterFactory;
 import ma.glasnost.orika.impl.DefaultMapperFactory;
 import ma.glasnost.orika.metadata.Type;
-
 import net.opengis.gml.v_3_2_1.AbstractGMLType;
 import net.opengis.iso19139.gmd.v_20070417.CIResponsiblePartyType;
 
@@ -72,10 +70,10 @@ public class SiteLogMapper implements Iso<SiteLogType, SiteLog> {
             .fieldMap("temperatureSensors", "temperatureSensors").converter("temperatureSensors").add()
             .fieldMap("waterVaporSensors", "waterVaporSensors").converter("waterVaporSensors").add()
             .fieldMap("otherInstrumentations", "otherInstrumentationLogItem").converter("otherInstrumentations").add()
-            .fieldMap("signalObstructionsSet", "signalObstructionLogItems").converter("signalObstructionsSet").add()
-            .fieldMap("multipathSourcesSet", "multipathSourceLogItems").converter("multipathSourcesSet").add()
-            .fieldMap("localEpisodicEventsSet", "localEpisodicEventLogItems").converter("localEpisodicEventsSet").add()
-            .fieldMap("radioInterferencesSet", "radioInterferences").converter("radioInterferencesSet").add()
+            .fieldMap("signalObstructions", "signalObstructionLogItems").converter("signalObstructions").add()
+            .fieldMap("multipathSources", "multipathSourceLogItems").converter("multipathSources").add()
+            .fieldMap("localEpisodicEffects", "localEpisodicEffectLogItems").converter("localEpisodicEffects").add()
+            .fieldMap("radioInterferences", "radioInterferences").converter("radioInterferences").add()
             .fieldMap("moreInformation", "moreInformation").converter("moreInformation").add()
             .fieldMap("formInformation", "formInformation").converter("formInformation").add()
             .fieldMap("collocationInformations", "collocationInformation").converter("collocationInformations").add()
@@ -133,27 +131,27 @@ public class SiteLogMapper implements Iso<SiteLogType, SiteLog> {
                 ) {}
         );
 
-        converters.registerConverter("signalObstructionsSet",
-                new BidirectionalConverterWrapper<List<SignalObstructionsPropertyType>, Set<SignalObstructionLogItem>>(
+        converters.registerConverter("signalObstructions",
+                new BidirectionalConverterWrapper<List<SignalObstructionPropertyType>, Set<SignalObstructionLogItem>>(
                         logItemsConverter(new SignalObstructionMapper())
                 ) {}
         );
 
-        converters.registerConverter("multipathSourcesSet",
-                new BidirectionalConverterWrapper<List<MultipathSourcesPropertyType>, Set<MultipathSourceLogItem>>(
-                        logItemsConverter(new MultipathSourcesMapper())
+        converters.registerConverter("multipathSources",
+                new BidirectionalConverterWrapper<List<MultipathSourcePropertyType>, Set<MultipathSourceLogItem>>(
+                        logItemsConverter(new MultipathSourceMapper())
                 ) {}
         );
 
 
-        converters.registerConverter("localEpisodicEventsSet",
-                new BidirectionalConverterWrapper<List<LocalEpisodicEventsPropertyType>, Set<LocalEpisodicEventLogItem>>(
-                        logItemsConverter(new LocalEpisodicEventMapper())
+        converters.registerConverter("localEpisodicEffects",
+                new BidirectionalConverterWrapper<List<LocalEpisodicEffectPropertyType>, Set<LocalEpisodicEffectLogItem>>(
+                        logItemsConverter(new LocalEpisodicEffectMapper())
                 ) {}
         );
 
-        converters.registerConverter("radioInterferencesSet",
-                new BidirectionalConverterWrapper<List<RadioInterferencesPropertyType>, Set<RadioInterference>>(
+        converters.registerConverter("radioInterferences",
+                new BidirectionalConverterWrapper<List<RadioInterferencePropertyType>, Set<RadioInterference>>(
                         logItemsConverter(new RadioInterferenceMapper())
                 ) {}
         );

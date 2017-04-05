@@ -4,7 +4,7 @@
     <namespaces>
         <Namespace>
             <prefix>geo</prefix>
-            <uri>urn:xml-gov-au:icsm:egeodesy:0.3</uri>
+            <uri>urn:xml-gov-au:icsm:egeodesy:0.4</uri>
         </Namespace>
         <Namespace>
             <prefix>gml</prefix>
@@ -79,7 +79,7 @@
     </sourceDataStores>
     <targetTypes>
         <FeatureType>
-            <schemaUri>http://schemas.ga.gov.au/geodesyml/0.3/geodesyML.xsd</schemaUri>
+            <schemaUri>http://schemas.ga.gov.au/geodesyml/0.4/geodesyML.xsd</schemaUri>
         </FeatureType>
     </targetTypes>
     <typeMappings>
@@ -105,7 +105,7 @@
                     </sourceExpression>
                     <ClientProperty>
                         <name>codeSpace</name>
-                        <value>'urn:xml-gov-au:icsm:egeodesy:0.3:SiteIdentifier'</value>
+                        <value>'urn:xml-gov-au:icsm:egeodesy:0.4:SiteIdentifier'</value>
                     </ClientProperty>
                 </AttributeMapping>
                 <AttributeMapping>
@@ -117,7 +117,7 @@
                     </sourceExpression>
                     <ClientProperty>
                         <name>codeSpace</name>
-                        <value>'urn:xml-gov-au:icsm:egeodesy:0.3:SiteName'</value>
+                        <value>'urn:xml-gov-au:icsm:egeodesy:0.4:SiteName'</value>
                     </ClientProperty>
                 </AttributeMapping>
                 <AttributeMapping>
@@ -129,7 +129,7 @@
                     </sourceExpression>
                     <ClientProperty>
                         <name>codeSpace</name>
-                        <value>'urn:xml-gov-au:icsm:egeodesy:0.3:SiteType'</value>
+                        <value>'urn:xml-gov-au:icsm:egeodesy:0.4:SiteType'</value>
                     </ClientProperty>
                 </AttributeMapping>
             </attributeMappings>

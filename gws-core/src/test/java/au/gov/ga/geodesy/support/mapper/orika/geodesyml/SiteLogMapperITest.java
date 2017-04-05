@@ -48,7 +48,6 @@ import au.gov.ga.geodesy.support.gml.GMLPropertyType;
 import au.gov.ga.geodesy.support.marshalling.moxy.GeodesyMLMoxy;
 import au.gov.ga.geodesy.support.spring.IntegrationTest;
 import au.gov.ga.geodesy.support.utils.GMLDateUtils;
-import au.gov.xml.icsm.geodesyml.v_0_4.BasePossibleProblemSourceType;
 import au.gov.xml.icsm.geodesyml.v_0_4.CollocationInformationPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_4.CollocationInformationType;
 import au.gov.xml.icsm.geodesyml.v_0_4.FrequencyStandardPropertyType;
@@ -63,12 +62,15 @@ import au.gov.xml.icsm.geodesyml.v_0_4.HumiditySensorType;
 import au.gov.xml.icsm.geodesyml.v_0_4.LocalEpisodicEffectPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_4.LocalEpisodicEffectType;
 import au.gov.xml.icsm.geodesyml.v_0_4.MultipathSourcePropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_4.MultipathSourceType;
 import au.gov.xml.icsm.geodesyml.v_0_4.OtherInstrumentationPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_4.OtherInstrumentationType;
 import au.gov.xml.icsm.geodesyml.v_0_4.PressureSensorPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_4.PressureSensorType;
 import au.gov.xml.icsm.geodesyml.v_0_4.RadioInterferencePropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_4.RadioInterferenceType;
 import au.gov.xml.icsm.geodesyml.v_0_4.SignalObstructionPropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_4.SignalObstructionType;
 import au.gov.xml.icsm.geodesyml.v_0_4.SiteLogType;
 import au.gov.xml.icsm.geodesyml.v_0_4.SurveyedLocalTiePropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_4.SurveyedLocalTieType;
@@ -278,7 +280,7 @@ public class SiteLogMapperITest extends IntegrationTest {
         {
             int i = 0;
             for (SignalObstructionLogItem logItem : sortLogItems(siteLog.getSignalObstructionLogItems())) {
-                BasePossibleProblemSourceType xmlType = signalObstructionsPropertyTypes.get(i++).getSignalObstruction();
+                SignalObstructionType xmlType = signalObstructionsPropertyTypes.get(i++).getSignalObstruction();
                 assertThat(logItem.getPossibleProblemSource(), equalTo(xmlType.getPossibleProblemSource()));
             }
         }
@@ -309,7 +311,7 @@ public class SiteLogMapperITest extends IntegrationTest {
         {
             int i = 0;
             for (MultipathSourceLogItem logItem : sortLogItems(siteLog.getMultipathSourceLogItems())) {
-                BasePossibleProblemSourceType xmlType = multipathSourcesPropertyTypes.get(i++).getMultipathSource();
+                MultipathSourceType xmlType = multipathSourcesPropertyTypes.get(i++).getMultipathSource();
                 assertThat(logItem.getPossibleProblemSource(), equalTo(xmlType.getPossibleProblemSource()));
             }
         }
@@ -367,7 +369,7 @@ public class SiteLogMapperITest extends IntegrationTest {
         {
             int i = 0;
             for (RadioInterference logItem : sortLogItems(siteLog.getRadioInterferences())) {
-                BasePossibleProblemSourceType xmlType = radioInterferencePropertyTypes.get(i++).getRadioInterference();
+                RadioInterferenceType xmlType = radioInterferencePropertyTypes.get(i++).getRadioInterference();
                 assertThat(logItem.getPossibleProblemSource(), equalTo(xmlType.getPossibleProblemSource()));
             }
         }

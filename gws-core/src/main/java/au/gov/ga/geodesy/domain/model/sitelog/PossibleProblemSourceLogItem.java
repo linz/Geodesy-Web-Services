@@ -2,13 +2,15 @@ package au.gov.ga.geodesy.domain.model.sitelog;
 
 import javax.persistence.Column;
 import javax.persistence.Embedded;
+import javax.persistence.MappedSuperclass;
 import javax.validation.Valid;
 import javax.validation.constraints.Size;
 
 /**
  * http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004/baseLocalInterferencesLib.xsd:basePossibleProblemSourcesType
  */
-public class PossibleProblemSourceLogItem implements LogItem {
+@MappedSuperclass
+public abstract class PossibleProblemSourceLogItem implements LogItem {
 
     @Size(max = 4000)
     @Column(name = "POSSIBLE_PROBLEM_SOURCE", length = 4000)

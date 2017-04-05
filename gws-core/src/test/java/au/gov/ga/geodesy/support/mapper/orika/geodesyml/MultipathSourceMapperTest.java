@@ -11,16 +11,16 @@ import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLUtils;
 import au.gov.ga.geodesy.support.TestResources;
 import au.gov.ga.geodesy.support.marshalling.moxy.GeodesyMLMoxy;
 import au.gov.ga.geodesy.support.utils.GMLDateUtils;
-import au.gov.xml.icsm.geodesyml.v_0_4.BasePossibleProblemSourceType;
 import au.gov.xml.icsm.geodesyml.v_0_4.GeodesyMLType;
+import au.gov.xml.icsm.geodesyml.v_0_4.MultipathSourceType;
 import au.gov.xml.icsm.geodesyml.v_0_4.SiteLogType;
 import net.opengis.gml.v_3_2_1.TimePeriodType;
 
 /**
- * Tests the mapping of a GeodesyML MultipathSourcessPropertyType element
+ * Tests the mapping of a GeodesyML MultipathSourcesType element
  * to and from an MultipathSourceLogItem domain object.
  */
-public class MultipathSourcesMapperTest {
+public class MultipathSourceMapperTest {
 
     private MultipathSourceMapper mapper = new MultipathSourceMapper();
     private GeodesyMLMarshaller marshaller = new GeodesyMLMoxy();
@@ -34,7 +34,7 @@ public class MultipathSourcesMapperTest {
         SiteLogType siteLog = GeodesyMLUtils.getElementFromJAXBElements(mobs.getElements(), SiteLogType.class)
                 .findFirst().get();
 
-        BasePossibleProblemSourceType multipathSourceTypeA =
+        MultipathSourceType multipathSourceTypeA =
                 siteLog.getMultipathSources().get(0).getMultipathSource();
 
         MultipathSourceLogItem logItem = mapper.to(multipathSourceTypeA);
@@ -50,7 +50,7 @@ public class MultipathSourcesMapperTest {
                 equalTo(GMLDateUtils.stringToDateToStringMultiParsers(xmlEffectiveDateTo)));
         assertThat(logItem.getNotes(), equalTo(multipathSourceTypeA.getNotes()));
 
-        BasePossibleProblemSourceType multipathSourceTypeB = mapper.from(logItem);
+        MultipathSourceType multipathSourceTypeB = mapper.from(logItem);
         assertThat(multipathSourceTypeB.getPossibleProblemSource(), equalTo(logItem.getPossibleProblemSource()));
         xmlEffectiveDateFrom = ((TimePeriodType) multipathSourceTypeB.getValidTime().getAbstractTimePrimitive().getValue())
                 .getBeginPosition().getValue().get(0);

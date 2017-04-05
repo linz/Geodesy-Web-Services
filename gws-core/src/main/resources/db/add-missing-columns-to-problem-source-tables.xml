@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <changeSet author="heya"
+              id="1490933518333-1"
+              objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+      <addColumn tableName="sitelog_mutlipathsource">       
+         <column name="possible_problem_source" remarks="the source of the problem" type="TEXT"/>   
+      </addColumn>       
+      <addColumn tableName="sitelog_mutlipathsource">          
+         <column name="effective_from" remarks="date when the problem first occurred" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+      </addColumn>
+      <addColumn tableName="sitelog_mutlipathsource">   
+         <column name="effective_to" remarks="date when the problem was resolved" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+      </addColumn>
+      <addColumn tableName="sitelog_mutlipathsource">   
+         <column name="notes" remarks="any extra comments about the problem" type="TEXT"/>
+      </addColumn>
+   </changeSet>
+   
+   <changeSet author="heya"
+              id="1490933518333-2"
+              objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+      <addColumn tableName="sitelog_signalobstraction">       
+         <column name="possible_problem_source" remarks="the source of the problem" type="TEXT"/>   
+      </addColumn>       
+      <addColumn tableName="sitelog_signalobstraction">          
+         <column name="effective_from" remarks="date when the problem first occurred" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+      </addColumn>
+      <addColumn tableName="sitelog_signalobstraction">   
+         <column name="effective_to" remarks="date when the problem was resolved" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+      </addColumn>
+      <addColumn tableName="sitelog_signalobstraction">   
+         <column name="notes" remarks="any extra comments about the problem" type="TEXT"/>
+      </addColumn>
+      
+   </changeSet>
+   <changeSet author="heya"
+              id="1490933518333-3"
+              objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+      <addColumn tableName="sitelog_radiointerference">       
+         <column name="possible_problem_source" remarks="the source of the problem" type="TEXT"/>   
+      </addColumn>       
+      <addColumn tableName="sitelog_radiointerference">          
+         <column name="effective_from" remarks="date when the problem first occurred" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+      </addColumn>
+      <addColumn tableName="sitelog_radiointerference">   
+         <column name="effective_to" remarks="date when the problem was resolved" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+      </addColumn>
+      <addColumn tableName="sitelog_radiointerference">   
+         <column name="notes" remarks="any extra comments about the problem" type="TEXT"/>
+      </addColumn>
+      
+   </changeSet>
+</databaseChangeLog>

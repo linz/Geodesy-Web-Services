@@ -52,12 +52,12 @@ concrete pillar.</geo:notes>
             <geo:approximatePositionITRF>
                 <geo:cartesianPosition>
                     <gml:Point gml:id="itrf_cartesian" srsName="EPSG:7789">
-                        <gml:pos>-4130636.589 2894953.121 -3890530.442</gml:pos>
+                        <gml:pos>-4777269.46 434270.155 -4189484.491</gml:pos>
                     </gml:Point>
                 </geo:cartesianPosition>
                 <geo:geodeticPosition>
                     <gml:Point gml:id="itrf_geodetic" srsName="EPSG:7912">
-                        <gml:pos>-37.8294054083 144.975340194 40.578</gml:pos>
+                        <gml:pos>-41.3234563889 174.805893056 26.06</gml:pos>
                     </gml:Point>
                 </geo:geodeticPosition>
             </geo:approximatePositionITRF>
@@ -289,6 +289,17 @@ caused by the exchange.</geo:notes>
         <geo:humiditySensor>
             <geo:HumiditySensor gml:id="humidity-sensor-1">
                 <geo:type codeSpace="urn:ga-gov-au:humidity-sensor-type">HMP155A Heated</geo:type>
+                <geo:notes>Details are referred to a NZ MetService weather
+station located at Wellington Airport (not
+connected to the GNSS receiver). A full record
+of the history of met sensors co-located with
+the GPS is unknown, and details of the latest
+installation only are available. For further
+info please contact NZ MetService.
+Sensor was Installed brand new, so it has a
+factory calibration.
+This is a combined Humidity and Air Temperature
+sensor.</geo:notes>
                 <geo:manufacturer>VAISALA</geo:manufacturer>
                 <geo:serialNumber>J2610004</geo:serialNumber>
                 <geo:heightDiffToAntenna>-8.6</geo:heightDiffToAntenna>
@@ -308,6 +319,13 @@ caused by the exchange.</geo:notes>
         <geo:pressureSensor>
             <geo:PressureSensor gml:id="pressure-sensor-1">
                 <geo:type codeSpace="urn:ga-gov-au:pressure-sensor-type">PTB330</geo:type>
+                <geo:notes>Details are referred to a NZ MetService weather
+station located at Wellington Airport (not
+connected to the GNSS receiver). A full record
+of the history of met sensors co-located with
+the GPS is unknown, and details of the latest
+installation only are available. For further
+info please contact NZ MetService.</geo:notes>
                 <geo:manufacturer>VAISALA</geo:manufacturer>
                 <geo:serialNumber>J2620003-3</geo:serialNumber>
                 <geo:heightDiffToAntenna>-8.6</geo:heightDiffToAntenna>
@@ -326,6 +344,13 @@ caused by the exchange.</geo:notes>
         <geo:temperatureSensor>
             <geo:TemperatureSensor gml:id="temperature-sensor-1">
                 <geo:type codeSpace="urn:ga-gov-au:temperature-sensor-type">HMP155A Heated</geo:type>
+                <geo:notes>Combined Humidity and Air Temperature sensor.
+See also 8.1.1 notes.
+Accuracy varies depending on temperature range:
+-80 to +20 &amp;#176;C : &amp;#177;(0.226- 0.0028 x
+temperature) &amp;#176;C
++20 to +60 &amp;#176;C : &amp;#177;(0.055- 0.0057 x
+temperature) &amp;#176;C</geo:notes>
                 <geo:manufacturer>VAISALA</geo:manufacturer>
                 <geo:serialNumber>J2610004</geo:serialNumber>
                 <geo:heightDiffToAntenna>-8.6</geo:heightDiffToAntenna>
@@ -342,8 +367,7 @@ caused by the exchange.</geo:notes>
             </geo:TemperatureSensor>
             <geo:dateInserted>2013-08-14</geo:dateInserted>
         </geo:temperatureSensor>
-        
-        <geo:localEpisodicEffect>
+                <geo:localEpisodicEffect>
             <geo:LocalEpisodicEffect gml:id="LocalEpisodicEffectType_237">
                 <gml:validTime nilReason="">
                     <gml:TimePeriod gml:id="TimePeriodType_1668">
@@ -391,7 +415,6 @@ caused by the exchange.</geo:notes>
             </geo:LocalEpisodicEffect>
             <geo:dateInserted>2016-04-04T00:03:13Z</geo:dateInserted>
         </geo:localEpisodicEffect>
-        
         
         <geo:siteContact gml:id="agency-1">
             <gmd:MD_SecurityConstraints>

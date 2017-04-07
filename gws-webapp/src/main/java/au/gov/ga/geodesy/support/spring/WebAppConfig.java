@@ -26,6 +26,7 @@ import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLValidator;
     GeodesySupportConfig.class,
     GeodesyServiceConfig.class,
     GeodesyRestMvcConfig.class,
+    GeodesyRepositoryRestMvcConfig.class,
     PersistenceJpaConfig.class,
     SecurityConfig.class,
     ResourceServerConfig.class,

@@ -13,9 +13,9 @@ import org.testng.annotations.Test;
 /**
  * System tests for secure upload of GeodesyML site log documents.
  */
-public class AuthorizationTest extends BaseSystemTest {
+public class AuthorizationSystemTest extends BaseSystemTest {
 
-    private static final Logger log = LoggerFactory.getLogger(AuthorizationTest.class);
+    private static final Logger log = LoggerFactory.getLogger(AuthorizationSystemTest.class);
 
     @Test
     public void uploadUnauthenticated() throws Exception {

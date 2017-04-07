@@ -102,9 +102,9 @@
                         <configuration>
                             <skipTests>${skipSystemTests}</skipTests>
                             <defaultGoal>integration-test</defaultGoal>
-                            <includes>
-                                <include>**/*SystemTest.java</include>
-                            </includes>
+                            <suiteXmlFiles>
+                                <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
+                            </suiteXmlFiles>
                             <!-- Headless - prevent the annoying ForkedBooter process from stealing window focus on Mac OS -->
                             <argLine>-Djava.awt.headless=true</argLine>
                         </configuration>

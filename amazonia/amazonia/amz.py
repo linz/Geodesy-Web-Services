@@ -6,6 +6,7 @@ Ingest User YAML and defaults YAML and send to yaml class to return as one unifi
 """
 import os
 import argparse
+import importlib.util
 import sys
 from amazonia.classes.yaml import Yaml
 from amazonia.classes.stack import Stack
@@ -24,7 +25,7 @@ def create_stack(united_data):
     return stack
 
 
-def generate_template(yaml_data, default_data):
+def generate_template(yaml_data, default_data, customise_script):
     """
     Generate troposhere template from given yaml data
     :param yaml_data: User yaml data
@@ -35,8 +36,14 @@ def generate_template(yaml_data, default_data):
     stack_input = yaml_return.united_data
 
     # Create stack and create stack template file
-    template_trop = create_stack(stack_input)
-    template_data = template_trop.template.to_json(indent=2, separators=(',', ': '))
+    stack = create_stack(stack_input)
+
+    spec = importlib.util.spec_from_file_location("module.name", customise_script)
+    script = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(script)
+    template = script.customise_stack_template(stack.template)
+
+    template_data = template.to_json(indent=2, separators=(',', ': '))
     return template_data
 
 
@@ -59,6 +66,8 @@ def main():
     parser.add_argument('-d', '--default',
                         default=os.path.join(__location__, './defaults.yaml'),
                         help='Path to the environmental defaults yaml file')
+    parser.add_argument('-c', '--customise',
+                        help='Path to the python script to customize the generated troposphere template')
     parser.add_argument('-t', '--template',
                         default='stack.template',
                         help='Path for amazonia to place template file')
@@ -75,7 +84,7 @@ def main():
     template_file_path = args.template
     send_to_output = args.out
 
-    template_data = generate_template(user_stack_data, default_data)
+    template_data = generate_template(user_stack_data, default_data, args.customise)
 
     if send_to_output is True:
         sys.stdout.write(template_data)

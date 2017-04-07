@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 import io.restassured.response.Response;
 
-public class SetupTest extends BaseSystemTest {
+public class SetupSystemTest extends BaseSystemTest {
 
     @Test
     public void findSetupsByIdAndDate() throws Exception {

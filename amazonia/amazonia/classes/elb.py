@@ -70,7 +70,7 @@ class Elb(LocalSecurityEnabledObject):
 
         # Create SSL for Listeners
         for listener in self.trop_elb.Listeners:
-            if elb_config.ssl_certificate_id and listener.Protocol == 'HTTPS':
+            if elb_config.ssl_certificate_id:
                 listener.SSLCertificateId = elb_config.ssl_certificate_id
 
         # Create ELB Log Bucket

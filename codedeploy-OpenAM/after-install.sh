@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 . ${BASH_SOURCE%/*}/env.sh
 
 # Apply subsititions to config file
@@ -9,12 +11,10 @@ sed -i 's/${OPENAM_ADMIN_PWD}/'"${OPENAM_ADMIN_PWD}/" $OPENAM_CONFIG_FILE
 sed -i 's/${OPENAM_AMLDAPUSERPASSWD}/'"${OPENAM_AMLDAPUSERPASSWD}/" $OPENAM_CONFIG_FILE
 sed -i 's/${OPENAM_DS_DIRMGRPASSWD}/'"${OPENAM_DS_DIRMGRPASSWD}/" $OPENAM_CONFIG_FILE
 
-
 # Apply subsititions to scripts
 EXPORT_OPENAM_SCRIPT=/opt/openam/tools/admin/scripts/export_openam.sh
 sed -i 's/${OPENAM_SERVER_FQDN}/'"${OPENAM_SERVER_FQDN}/" $EXPORT_OPENAM_SCRIPT
 sed -i 's/${OPENAM_DS_DIRMGRPASSWD}/'"${OPENAM_DS_DIRMGRPASSWD}/" $EXPORT_OPENAM_SCRIPT
-
 
 # Wait if load balancer is failing health check (Configuration process requires http access to the
 # OpenAM application via the load balancer)
@@ -29,7 +29,6 @@ sed -i 's/${OPENAM_DS_DIRMGRPASSWD}/'"${OPENAM_DS_DIRMGRPASSWD}/" $EXPORT_OPENAM
 #    exit 1
 #  fi
 #done
-
 
 # Ensure the hosts file resolves the FQDN to 127.0.0.1 and hostname of the server is set to the FQDN
 if ! grep -q "$OPENAM_SERVER_FQDN" "/etc/hosts"; then
@@ -48,7 +47,6 @@ cd /opt/openam/tools/admin
 ./setup -p /usr/share/tomcat8/openam -d /opt/openam/tools/admin/debug -l /opt/openam/tools/admin/log --acceptLicense
 echo ${OPENAM_ADMIN_PWD} > passwdfile
 chmod 400 passwdfile
-
 
 # Import OpenAM configuration and data
 S3_DIR=s3://geodesy-openam/exports/${OPENAM_SERVER_FQDN}

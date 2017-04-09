@@ -22,7 +22,7 @@ sudo chmod +x ./install
 sudo ./install auto
 
 # Install credstash
-sudo pip install credstash
+sudo pip install credstash==1.12.0
 
 # Download OpenAM from S3
 sudo aws --no-sign-request s3 cp s3://geodesy-web-services/OpenAM/OpenAM-13.5.0.zip /tmp/.

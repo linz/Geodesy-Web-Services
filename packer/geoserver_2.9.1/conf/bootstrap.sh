@@ -25,7 +25,7 @@ sudo ./install auto
 sudo yum install -y postgresql
 
 # Install credstash
-sudo pip install credstash
+sudo pip install credstash==1.12.0
 
 # Download GeoServer from S3
 aws --no-sign-request s3 cp s3://geodesy-web-services/geoserver/geoserver-2.9.1-war.zip .

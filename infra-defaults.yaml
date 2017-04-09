@@ -72,10 +72,10 @@ elb_config:
   ssl_certificate_id:
   public_unit: true
   ssl_certificate_id:
-  healthy_threshold: 10
+  healthy_threshold: 2
   unhealthy_threshold: 2
-  interval: 300
-  timeout: 60
+  interval: 60
+  timeout: 30
 
 # Block device configs
 block_devices_config:

@@ -20,6 +20,16 @@
 
   "provisioners": [
     {
+      "type": "file",
+      "source": "server.xml",
+      "destination": "/tmp/server.xml"
+    },
+    {
+      "type": "file",
+      "source": "web.xml",
+      "destination": "/tmp/web.xml"
+    },
+    {
       "type": "shell",
       "script": "conf/bootstrap.sh"
     }

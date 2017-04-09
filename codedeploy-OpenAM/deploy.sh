@@ -5,7 +5,7 @@ ENV=$1
 cd ${BASH_SOURCE%/*}
 
 (cd ..; ./codedeploy-push-deploy.sh \
-    --application OpenAM \
+    --application Geodesy \
     --env ${ENV} \
     --deployment_config_name CodeDeployDefault.OneAtATime \
     --s3_bucket geodesy-codedeploy \

@@ -18,13 +18,13 @@ CREDSTASH="/usr/local/bin/credstash -r ${AWS_DEFAULT_REGION}"
 
 # TODO: factor out stack name from credstash keys
 
-OPENAM_ADMIN_PWD_KEY=${ENV^}OpenAMOpenAmAdminPassword
+OPENAM_ADMIN_PWD_KEY=${ENV^}GeodesyOpenAMAdminPassword
 OPENAM_ADMIN_PWD=$(${CREDSTASH} get ${OPENAM_ADMIN_PWD_KEY})
-OPENAM_AMLDAPUSERPASSWD_KEY=${ENV^}OpenAMOpenAmLdapUserPassword
+OPENAM_AMLDAPUSERPASSWD_KEY=${ENV^}GeodesyOpenAMLdapUserPassword
 OPENAM_AMLDAPUSERPASSWD=$(${CREDSTASH} get ${OPENAM_AMLDAPUSERPASSWD_KEY})
-OPENAM_DS_DIRMGRPASSWD_KEY=${ENV^}OpenAMOpenAmDsDirMgrPassword
+OPENAM_DS_DIRMGRPASSWD_KEY=${ENV^}GeodesyOpenAMDsDirMgrPassword
 OPENAM_DS_DIRMGRPASSWD=$(${CREDSTASH} get ${OPENAM_DS_DIRMGRPASSWD_KEY})
 
-OPENAM_SERVER_FQDN=${ENV,,}openam-openam.geodesy.ga.gov.au
+OPENAM_SERVER_FQDN=${ENV,,}geodesy-openam.geodesy.ga.gov.au
 
 unset CREDSTASH

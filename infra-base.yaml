@@ -29,6 +29,7 @@ autoscaling_units:
         pip install credstash==1.12.0
 
         service tomcat8 start
+      health_check_type: 'EC2' # TODO: revert to ELB
     elb_config:
       elb_listeners_config:
         -

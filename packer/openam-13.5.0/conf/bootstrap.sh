@@ -33,6 +33,15 @@ sudo unzip /tmp/OpenAM-13.5.0.zip -d /tmp
 sudo cp /tmp/openam/OpenAM-13.5.0.war /usr/share/tomcat8/webapps/openam.war
 sudo unzip /usr/share/tomcat8/webapps/openam.war -d /usr/share/tomcat8/webapps/openam
 
+sudo cp /tmp/server.xml /usr/share/tomcat8/conf/
+sudo cp /tmp/web.xml /usr/share/tomcat8/webapps/openam/WEB-INF/
+
+# TODO: duplicated hostname, see codedeploy-OpenAM/env.sh
+sudo keytool -genkey -noprompt -alias tomcat-tls -dname "CN=devgeodesy-openam.geodesy.ga.gov.au, OU=[unknown], O=[unknown], L=[unknown], S=[unknown], C=[unknown]" -keystore /usr/share/tomcat8/conf/keystore.jks -storepass changeit -keypass changeit
+
+sudo keytool -exportcert -alias tomcat-tls -keystore /usr/share/tomcat8/conf/keystore.jks -storepass changeit -keypass changeit -rfc -file /usr/share/tomcat8/conf/tomcat-tls.crt
+
+sudo keytool -noprompt -importcert -keystore /etc/alternatives/jre_openjdk/lib/security/cacerts -storepass changeit -file /usr/share/tomcat8/conf/tomcat-tls.crt -alias tomcat-tls
 
 # Set the Tomcat JVM memory required by OpenAM
 echo 'JAVA_OPTS="$JAVA_OPTS -Xmx1g -XX:MetaspaceSize=256m -XX:MaxMetaspaceSize=256m"' | sudo tee --append /usr/share/tomcat8/conf/tomcat8.conf

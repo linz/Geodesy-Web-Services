@@ -65,6 +65,34 @@ autoscaling_units:
       elb_health_check: 'HTTP:8080/geoserver/web/'
     dependencies:
      - 'Db:5432'
+  -
+    unit_title: OpenAM
+    asg_config:
+       image_id: "ami-0bc3cd68"
+       instance_type: 't2.small'
+       userdata: |
+         #!/usr/bin/env bash
+
+         # Set up iptables restricted access and redirection of port 80 to port 8080
+         yum install -y iptables-services
+         service iptables start
+         iptables -I INPUT -p tcp --dport 443 -j ACCEPT
+         iptables -t nat -A PREROUTING -p tcp --dport 443 -j REDIRECT --to-port 8443
+         iptables -t nat -A OUTPUT -o lo -p tcp --dport 443 -j REDIRECT --to-port 8443
+         service iptables save
+
+         service tomcat8 start
+
+    elb_config:
+      elb_listeners_config:
+        -
+          instance_protocol: 'SSL'
+          instance_port: '8443'
+          loadbalancer_protocol: 'SSL'
+          loadbalancer_port: '443'
+      ssl_certificate_id: 'arn:aws:acm:ap-southeast-2:094928090547:certificate/07496dcd-6975-4dd4-8986-533488587f0e'
+      elb_health_check: 'SSL:8443'
+
 #  -
 #    unit_title: 52NorthSos
 #    asg_config:

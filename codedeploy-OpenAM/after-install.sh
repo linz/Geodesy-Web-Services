@@ -104,7 +104,7 @@ fi
 
 
 # Ensure a cronjob for exporting the OpenAM backup files exists
-CRONTAB=$(crontab -l)
+CRONTAB=$(crontab -l || :) # crontab -l returns non-zero when crontab is empty
 CRONJOB="$(cat <<EOF
 #  Export the OpenAM service config
 0 1 * * * /opt/openam/tools/admin/scripts/export_openam.sh

@@ -74,8 +74,10 @@ if [ $SERVICE_CFG_FILE_COUNT -eq 1 ] && [ $DIRECTORY_DATA_FILE_COUNT -eq 1 ] && 
   aws s3 cp $S3_DIR/$KEYS_DIRECTORY $IMPORT_DIR/$KEYS_DIRECTORY/. --recursive
 
   # Replace keystore files
-  cp -f $IMPORT_DIR/$KEYS_DIRECTORY/* $OPENAM_BASE_DIR/openam/.
-  cp -f $IMPORT_DIR/$KEYS_DIRECTORY/.* $OPENAM_BASE_DIR/openam/.
+  cp -f $IMPORT_DIR/$KEYS_DIRECTORY/.keypass $OPENAM_BASE_DIR/openam/.
+  cp -f $IMPORT_DIR/$KEYS_DIRECTORY/.storepass $OPENAM_BASE_DIR/openam/.
+  cp -f $IMPORT_DIR/$KEYS_DIRECTORY/keystore.jks $OPENAM_BASE_DIR/openam/.
+  cp -f $IMPORT_DIR/$KEYS_DIRECTORY/keystore.jceks $OPENAM_BASE_DIR/openam/.
 
   # Import service config file into OpenAM
   echo "y" | $ADMIN_TOOLS_BASE_DIR/openam/bin/ssoadm import-svc-cfg -e geodenc -u amadmin -f $ADMIN_TOOLS_BASE_DIR/passwdfile -X $IMPORT_DIR/$SERVICE_CFG_FILE

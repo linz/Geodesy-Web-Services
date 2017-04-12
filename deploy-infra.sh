@@ -29,10 +29,6 @@ case ${COMMAND} in
 
     DB_USERNAME=geodesy
     DB_PASSWORD=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 13)
-
-    OPENAM_ADMIN_PWD=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 13)
-    OPENAM_AMLDAPUSERPASSWD=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 13)
-    OPENAM_DS_DIRMGRPASSWD=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 13)
     ;;
 "update")
     RDS_MASTER_USERNAME=$(credstash -p ${AWS_PROFILE} get ${RDS_MASTER_USERNAME_KEY})
@@ -62,19 +58,22 @@ if [[ $? == 0 && ${COMMAND} == "create" ]]; then
     credstash -p ${AWS_PROFILE} put -a ${RDS_MASTER_PASSWORD_KEY} ${RDS_MASTER_PASSWORD}
     credstash -p ${AWS_PROFILE} put -a ${DB_USERNAME_KEY} ${DB_USERNAME}
     credstash -p ${AWS_PROFILE} put -a ${DB_PASSWORD_KEY} ${DB_PASSWORD}
+fi
 
-    # Only store OpenAM passwords if not already in credstash (recreating the passwords will
-    # break an OpenAM installation when built using a previously exported configuration).
-    credstash -p ${AWS_PROFILE} get ${OPENAM_ADMIN_PWD_KEY} &>/dev/null
-    if [ ! $? -eq 0 ]; then
-         credstash -p ${AWS_PROFILE} put -a ${OPENAM_ADMIN_PWD_KEY} ${OPENAM_ADMIN_PWD}
-    fi
-    credstash -p ${AWS_PROFILE} get ${OPENAM_AMLDAPUSERPASSWD_KEY} &>/dev/null
-    if [ ! $? -eq 0 ]; then
-         credstash -p ${AWS_PROFILE} put -a ${OPENAM_AMLDAPUSERPASSWD_KEY} ${OPENAM_AMLDAPUSERPASSWD}
-    fi
-    credstash -p ${AWS_PROFILE} get ${OPENAM_DS_DIRMGRPASSWD_KEY} &>/dev/null
-    if [ ! $? -eq 0 ]; then
-         credstash -p ${AWS_PROFILE} put -a ${OPENAM_DS_DIRMGRPASSWD_KEY} ${OPENAM_DS_DIRMGRPASSWD}
-    fi
+# Only store OpenAM passwords if not already in credstash (recreating the passwords will
+# break an OpenAM installation when built using a previously exported configuration).
+credstash -p ${AWS_PROFILE} get ${OPENAM_ADMIN_PWD_KEY} &>/dev/null
+if [ ! $? -eq 0 ]; then
+    OPENAM_ADMIN_PWD=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 13)
+    credstash -p ${AWS_PROFILE} put -a ${OPENAM_ADMIN_PWD_KEY} ${OPENAM_ADMIN_PWD}
+fi
+credstash -p ${AWS_PROFILE} get ${OPENAM_AMLDAPUSERPASSWD_KEY} &>/dev/null
+if [ ! $? -eq 0 ]; then
+    OPENAM_AMLDAPUSERPASSWD=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 13)
+    credstash -p ${AWS_PROFILE} put -a ${OPENAM_AMLDAPUSERPASSWD_KEY} ${OPENAM_AMLDAPUSERPASSWD}
+fi
+credstash -p ${AWS_PROFILE} get ${OPENAM_DS_DIRMGRPASSWD_KEY} &>/dev/null
+if [ ! $? -eq 0 ]; then
+    OPENAM_DS_DIRMGRPASSWD=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 13)
+    credstash -p ${AWS_PROFILE} put -a ${OPENAM_DS_DIRMGRPASSWD_KEY} ${OPENAM_DS_DIRMGRPASSWD}
 fi

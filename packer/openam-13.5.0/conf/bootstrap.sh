@@ -36,12 +36,34 @@ sudo unzip /usr/share/tomcat8/webapps/openam.war -d /usr/share/tomcat8/webapps/o
 sudo cp /tmp/server.xml /usr/share/tomcat8/conf/
 sudo cp /tmp/web.xml /usr/share/tomcat8/webapps/openam/WEB-INF/
 
-# TODO: duplicated hostname, see codedeploy-OpenAM/env.sh
-sudo keytool -genkey -noprompt -alias tomcat-tls -dname "CN=devgeodesy-openam.geodesy.ga.gov.au, OU=[unknown], O=[unknown], L=[unknown], S=[unknown], C=[unknown]" -keystore /usr/share/tomcat8/conf/keystore.jks -storepass changeit -keypass changeit
+function setupTomcatSelfSignedCertificate {
+    hostname=$1
+    tomcatHome=/usr/share/tomcat8
+    tomcatKeystore=${tomcatHome}/conf/keystore.jks
+    javaKeystore=/etc/alternatives/jre_openjdk/lib/security/cacerts
+    alias=tomcat
+    certificate=/usr/share/tomcat8/conf/${alias}.crt
 
-sudo keytool -exportcert -alias tomcat-tls -keystore /usr/share/tomcat8/conf/keystore.jks -storepass changeit -keypass changeit -rfc -file /usr/share/tomcat8/conf/tomcat-tls.crt
+    sudo keytool -noprompt -genkey \
+        -alias "${alias}" \
+        -keystore "${tomcatKeystore}" \
+        -dname "CN=${hostname}, OU=[unknown], O=[unknown], L=[unknown], S=[unknown], C=[unknown]" \
+        -storepass changeit -keypass changeit
 
-sudo keytool -noprompt -importcert -keystore /etc/alternatives/jre_openjdk/lib/security/cacerts -storepass changeit -file /usr/share/tomcat8/conf/tomcat-tls.crt -alias tomcat-tls
+    sudo keytool -noprompt -exportcert \
+        -alias "${alias}" \
+        -keystore "${tomcatKeystore}" \
+        -rfc -file "${certificate}" \
+        -storepass changeit
+
+    sudo keytool -noprompt -importcert \
+        -alias "${alias}" \
+        -keystore "${javaKeystore}" \
+        -file "${certificate}" \
+        -storepass changeit
+}
+
+setupTomcatSelfSignedCertificate "*.geodesy.ga.gov.au"
 
 # Set the Tomcat JVM memory required by OpenAM
 echo 'JAVA_OPTS="$JAVA_OPTS -Xmx1g -XX:MetaspaceSize=256m -XX:MaxMetaspaceSize=256m"' | sudo tee --append /usr/share/tomcat8/conf/tomcat8.conf

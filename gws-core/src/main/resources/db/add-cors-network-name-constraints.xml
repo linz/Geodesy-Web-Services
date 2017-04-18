@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+   <changeSet author="lbodor (generated)" id="1492478430133-1">
+      <addUniqueConstraint columnNames="name"
+                           constraintName="uc_cors_network_name"
+                           tableName="cors_site_network"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1492478430133-2">
+      <addNotNullConstraint columnDataType="text"
+                            columnName="name"
+                            tableName="cors_site_network"/>
+   </changeSet>
+</databaseChangeLog>

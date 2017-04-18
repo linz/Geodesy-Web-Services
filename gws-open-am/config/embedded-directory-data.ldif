@@ -6044,22 +6044,22 @@ objectClass: top
 objectClass: groupofuniquenames
 uniqueMember: uid=user.a,ou=people,dc=openam,dc=forgerock,dc=org
 cn: edit-ade1
-createTimestamp: 20170303013222Z
 creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
 modifyTimestamp: 20170418223903Z
 modifiersName: cn=Directory Manager,cn=Root DNs,cn=config
 entryUUID: 177d1470-7c61-47c9-a291-e22b7f73c0c6
+createTimestamp: 20170303013222Z
 
 dn: cn=edit-ade2,ou=groups,dc=openam,dc=forgerock,dc=org
 objectClass: top
 objectClass: groupofuniquenames
 uniqueMember: uid=user.b,ou=people,dc=openam,dc=forgerock,dc=org
 cn: edit-ade2
-createTimestamp: 20170303013232Z
 creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
 modifyTimestamp: 20170418223903Z
 modifiersName: cn=Directory Manager,cn=Root DNs,cn=config
 entryUUID: 2b9105c3-2ed0-45c9-bde4-6f1791741442
+createTimestamp: 20170303013232Z
 
 dn: cn=superuser,ou=groups,dc=openam,dc=forgerock,dc=org
 objectClass: top
@@ -6128,6 +6128,7 @@ sunKeyValue: supportedIDTokenEncryptionAlgorithms=RSA1_5
 sunKeyValue: forgerock-oauth2-provider-issue-refresh-token=false
 sunKeyValue: supportedIDTokenEncryptionMethods=A256CBC-HS512
 sunKeyValue: forgerock-oauth2-provider-access-token-lifetime=3600
+sunKeyValue: clientsCanSkipConsent=true
 sunKeyValue: forgerock-oauth2-provider-id-token-signing-algorithms-supported=RS256
 sunKeyValue: verificationUrl=
 sunKeyValue: statelessTokensEnabled=false
@@ -6154,7 +6155,6 @@ sunKeyValue: forgerock-oauth2-provider-supported-claims=profile|Your personal in
 sunKeyValue: forgerock-oauth2-provider-issue-refresh-token-on-refreshing-token=false
 sunKeyValue: displayNameAttribute=cn
 sunKeyValue: supportedIDTokenEncryptionMethods=A128CBC-HS256
-sunKeyValue: clientsCanSkipConsent=false
 sunKeyValue: forgerock-oauth2-provider-supported-claims=phone_number|Phone number
 sunKeyValue: forgerock-oauth2-provider-authentication-attributes=uid
 sunKeyValue: storeOpsTokens=true
@@ -6181,11 +6181,11 @@ sunKeyValue: devicePollInterval=5
 sunKeyValue: forgerock-oauth2-provider-default-scopes=profile
 sunKeyValue: forgerock-oauth2-provider-code-verifier-enforced=false
 ou: default
+createTimestamp: 20170303013359Z
 creatorsName: cn=Internal Client,cn=Root DNs,cn=config
-modifyTimestamp: 20170303013415Z
+modifyTimestamp: 20170418231121Z
 modifiersName: cn=Internal Client,cn=Root DNs,cn=config
 entryUUID: 3e56a485-5b62-4230-88c6-f146b80940da
-createTimestamp: 20170303013359Z
 
 dn: ou=6a600220-da7b-4893-8c8a-4cba1346e7aa,ou=registeredResourceTypes,ou=default,ou=OrganizationConfig,ou=1.0,ou=sunEntitlementService,ou=services,dc=openam,dc=forgerock,dc=org
 objectClass: sunServiceComponent
@@ -6306,13 +6306,13 @@ sunKeyValue: userpassword=AQICfTTFQ/TYcDbsTlUtZqPgBJSX9Tnn7Af+
 sunKeyValue: com.forgerock.openam.oauth2provider.tokenEndPointAuthMethod=client_secret_basic
 sunKeyValue: com.forgerock.openam.oauth2provider.responseTypes=[6]=code token id_token
 sunKeyValue: com.forgerock.openam.oauth2provider.publicKeyLocation=jwks_uri
-sunKeyValue: isConsentImplied=false
 sunKeyValue: com.forgerock.openam.oauth2provider.contacts=[0]=
 sunKeyValue: com.forgerock.openam.oauth2provider.jwtTokenLifeTime=0
 sunKeyValue: com.forgerock.openam.oauth2provider.clientName=[0]=
 sunKeyValue: agentgroup=
 sunKeyValue: com.forgerock.openam.oauth2provider.responseTypes=[0]=code
 sunKeyValue: com.forgerock.openam.oauth2provider.idTokenSignedResponseAlg=RS256
+sunKeyValue: isConsentImplied=true
 sunKeyValue: com.forgerock.openam.oauth2provider.authorizationCodeLifeTime=0
 sunKeyValue: com.forgerock.openam.oauth2provider.accessToken=
 sunKeyValue: idTokenEncryptionEnabled=false
@@ -6329,11 +6329,11 @@ sunKeyValue: com.forgerock.openam.oauth2provider.claims=[0]=
 sunsmspriority: 0
 sunserviceID: OAuth2Client
 ou: GnssSiteManager
+createTimestamp: 20170303013433Z
 creatorsName: cn=Internal Client,cn=Root DNs,cn=config
-modifyTimestamp: 20170303013531Z
+modifyTimestamp: 20170418231141Z
 modifiersName: cn=Internal Client,cn=Root DNs,cn=config
 entryUUID: 0134919e-5487-4c87-8fdd-85e427b03a74
-createTimestamp: 20170303013433Z
 
 dn: ou=sunEntitlementService,ou=services,o=sunamhiddenrealmdelegationservicepermissions,ou=services,dc=openam,dc=forgerock,dc=org
 objectClass: sunService
@@ -6391,4 +6391,15 @@ ou: OpenSSO
 creatorsName: cn=Internal Client,cn=Root DNs,cn=config
 entryUUID: a62726ac-d749-464c-83c1-5e5be58a07fc
 createTimestamp: 20170303013818Z
+
+dn: coreTokenId=46d8d1d0-910a-4122-a32a-3b3e73119801,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
+objectClass: top
+objectClass: frCoreToken
+coreTokenObject: {"id":["46d8d1d0-910a-4122-a32a-3b3e73119801"],"ops":["AQIC5wM2LY4Sfcx2mxOmEyldW6tWJEfm0Qdr6Y-ADyrLkO8.*AAJTSQACMDEAAlNLABQtMjg2MTkyMTAzMTgwMjA0MzE1MAACUzEAAA..*"],"expireTime":["1492560722649"]}
+coreTokenExpirationDate: 20170419001202.649Z
+coreTokenId: 46d8d1d0-910a-4122-a32a-3b3e73119801
+coreTokenType: OAUTH
+createTimestamp: 20170418231202Z
+creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
+entryUUID: 2b2c0064-33fc-4b76-b3bc-10bd9c1b554f
 

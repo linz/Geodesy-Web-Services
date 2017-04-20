@@ -53,6 +53,18 @@ public class AuthorizationRestITest extends RestTest {
 
     @Test
     @Rollback(false)
+    public void uploadExpired() throws Exception {
+        given()
+            .auth().with(bearerToken(expiredJwtToken("edit-alic")))
+            .body(alicSiteLog()).
+        when()
+            .post("/siteLogs/upload").
+        then()
+            .statusCode(HttpStatus.UNAUTHORIZED.value());
+    }
+
+    @Test
+    @Rollback(false)
     public void uploadAuthorized() throws Exception {
         given()
             .auth().with(bearerToken(jwtToken("edit-alic", 60)))

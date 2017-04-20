@@ -8,6 +8,7 @@ import java.nio.file.DirectoryStream;
 import java.nio.file.FileSystems;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
@@ -73,19 +74,26 @@ public class RestTest extends IntegrationTest {
         return files;
     }
 
+    protected String jwtToken(String authority) {
+        return jwtToken(authority, 60);
+    }
+
+    protected String expiredJwtToken(String authority) {
+        return jwtToken(authority, -1);
+    }
+
     /**
      * Return base64-encoded JWT token with given authority and expiry period.
      */
-    protected String jwtToken(String authority, int period) {
+    protected String jwtToken(String authority, int secondsToLive) {
         String signatureAlgorithm = "HS256";
 
         HashMap<String, String> header = new HashMap<>();
         header.put("typ", "JWT");
         header.put("alg", signatureAlgorithm);
-        header.put("exp", String.valueOf(new Date().getTime() + period));
 
-        String claims = "{\"sub\": \"user\", \"authorities\": [\"" + authority + "\"]}";
-
+        String exp = String.valueOf(Instant.now().getEpochSecond() + secondsToLive);
+        String claims = "{\"exp\": " + exp + ", \"sub\": \"user\", \"authorities\": [\"" + authority + "\"]}";
 
         Jwt token = JwtHelper.encode(claims, ResourceServerTestConfig.macSigner, header);
         return token.getEncoded();

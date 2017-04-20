@@ -99,7 +99,7 @@ deployment_id="$(echo ${create_deployment} | python -c "
 import sys
 import json
 id = json.loads(''.join(sys.stdin.readlines()))
-print id['deploymentId']
+print(id['deploymentId'])
 "
 )"
 

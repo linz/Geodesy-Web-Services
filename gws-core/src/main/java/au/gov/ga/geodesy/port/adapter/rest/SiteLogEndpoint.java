@@ -25,9 +25,7 @@ import org.springframework.hateoas.config.EnableEntityLinks;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -119,41 +117,13 @@ public class SiteLogEndpoint {
         }
     }
 
-    /**
-     * Return true if the currently authenticated user has the given authority, false otherwise.
-     */
-    private boolean hasAuthority(String authority) {
-        return SecurityContextHolder.getContext().getAuthentication().getAuthorities()
-            .stream()
-            .anyMatch(grantedAuthority -> grantedAuthority.getAuthority().equals(authority));
-    }
-
-    /**
-     * Return true if the currently authenticated user has the authority to edit the given site log,
-     * false otherwise.
-     */
-    private boolean hasAuthorityToEditSiteLog(SiteLog siteLog) {
-        String fourCharId = siteLog.getSiteIdentification().getFourCharacterId();
-        String siteEditAuthority = "edit-" + fourCharId.toLowerCase();
-        return hasAuthority(siteEditAuthority) || hasAuthority("superuser");
-    }
-
-    /**
-      * Throw an exception if the currently authenticated user does not have the authority to edit the given site log.
-      */
-    private void assertAuthorityToEditSiteLog(SiteLog siteLog) throws AccessDeniedException {
-        if (!hasAuthorityToEditSiteLog(siteLog)) {
-            throw new AccessDeniedException("Cannot edit site " + siteLog.getSiteIdentification().getFourCharacterId());
-        }
-    }
-
     @PreAuthorize("isAuthenticated()")
     @RequestMapping(value = "/upload", method = RequestMethod.POST)
     public ResponseEntity<String> secureUploadGeodesyMLSiteLog(HttpServletRequest req, HttpServletResponse rsp) throws IOException, InvalidSiteLogException {
         SiteLogReader reader = new GeodesyMLSiteLogReader(new InputStreamReader(req.getInputStream()));
         SiteLog siteLog = reader.getSiteLog();
 
-        assertAuthorityToEditSiteLog(siteLog);
+        EndpointSecurity.assertAuthorityToEditSiteLog(siteLog);
 
         service.upload(siteLog);
         try {

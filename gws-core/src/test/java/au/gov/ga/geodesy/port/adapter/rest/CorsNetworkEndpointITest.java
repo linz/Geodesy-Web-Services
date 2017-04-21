@@ -11,24 +11,30 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.test.annotation.Rollback;
+import org.springframework.test.web.servlet.request.RequestPostProcessor;
 import org.testng.annotations.Test;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import au.gov.ga.geodesy.domain.model.CorsNetwork;
+import au.gov.ga.geodesy.support.spring.IntegrationTest;
 
-public class CorsNetworkEndpointITest extends RestDocTest {
+public class CorsNetworkEndpointITest extends IntegrationTest {
 
     @Autowired
     @Qualifier("_halObjectMapper")
     private ObjectMapper mapper;
+
+    private RequestPostProcessor superuserToken  = super.superuserToken();
 
     @Test
     public void createEmptyCorsNetwork() throws Exception {
         String expectedErrorMessage =
             "not-null property references a null or transient value : au.gov.ga.geodesy.domain.model.CorsNetwork.name";
 
-        mvc.perform(post("/corsNetworks").content("{}"))
+        mvc.perform(post("/corsNetworks")
+            .with(superuserToken)
+            .content("{}"))
             .andDo(ResultHandlers.print)
             .andExpect(status().isConflict())
             .andExpect(jsonPath("$.cause.message").value(expectedErrorMessage));
@@ -37,7 +43,9 @@ public class CorsNetworkEndpointITest extends RestDocTest {
     @Test
     @Rollback(false)
     public void createCorsNetwork() throws Exception {
-        mvc.perform(post("/corsNetworks").content("{\"name\": \"NSW\", \"description\": \"New South Wales CORS Network\"}"))
+        mvc.perform(post("/corsNetworks")
+            .with(superuserToken)
+            .content("{\"name\": \"NSW\", \"description\": \"New South Wales CORS Network\"}"))
             .andDo(document("createCorsNetwork"))
             .andExpect(status().isCreated());
     }

@@ -13,12 +13,12 @@ import org.springframework.test.annotation.Rollback;
 import org.testng.annotations.Test;
 
 import au.gov.ga.geodesy.support.TestResources;
+import au.gov.ga.geodesy.support.spring.IntegrationTest;
 
-public class ValidateSiteLogsRestITest extends RestTest {
+public class ValidateSiteLogsRestITest extends IntegrationTest {
 
     private String readFile(Reader reader) throws FileNotFoundException, IOException {
         return IOUtils.toString(reader);
-        /* return IOUtils.toString(new FileInputStream(ResourceUtils.getFile(resourceName))); */
     }
 
     @Test

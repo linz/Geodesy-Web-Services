@@ -4,9 +4,11 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
+import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.annotation.aspectj.EnableSpringConfigured;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
+import org.springframework.transaction.annotation.Transactional;
 
 
 /**
@@ -15,6 +17,15 @@ import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
  * @see {@code src/test/resources/integration-test.properties}
  */
 @Configuration
+@Import({
+        GeodesySupportConfig.class,
+        GeodesyRepositoryRestMvcConfig.class,
+        GeodesyRestMvcConfig.class,
+        GeodesyServiceTestConfig.class,
+        PersistenceJpaConfig.class,
+        SecurityConfig.class,
+        ResourceServerTestConfig.class,
+    })
 @EnableSpringConfigured
 @EnableAspectJAutoProxy(proxyTargetClass = true)
 @PropertySource("classpath:/integration-test.properties")

@@ -19,8 +19,9 @@ import org.testng.annotations.Test;
 
 import au.gov.ga.geodesy.domain.model.PositionRepository;
 import au.gov.ga.geodesy.support.TestResources;
+import au.gov.ga.geodesy.support.spring.IntegrationTest;
 
-public class UploadSolutionRestITest extends RestTest {
+public class UploadSolutionRestITest extends IntegrationTest {
 
     private static final Logger log = LoggerFactory.getLogger(UploadSolutionRestITest.class);
 

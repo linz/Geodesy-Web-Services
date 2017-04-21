@@ -14,8 +14,9 @@ import au.gov.ga.geodesy.domain.model.sitelog.SiteLog;
 import au.gov.ga.geodesy.domain.service.CorsSiteLogService;
 import au.gov.ga.geodesy.port.adapter.sopac.SopacSiteLogReader;
 import au.gov.ga.geodesy.support.TestResources;
+import au.gov.ga.geodesy.support.spring.IntegrationTest;
 
-public class SetupEndpointITest extends RestDocTest {
+public class SetupEndpointITest extends IntegrationTest {
 
     @Autowired
     private CorsSiteLogService siteLogService;

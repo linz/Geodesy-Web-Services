@@ -14,11 +14,12 @@ import au.gov.ga.geodesy.domain.model.sitelog.SiteLog;
 import au.gov.ga.geodesy.domain.service.CorsSiteLogService;
 import au.gov.ga.geodesy.port.adapter.sopac.SopacSiteLogReader;
 import au.gov.ga.geodesy.support.TestResources;
+import au.gov.ga.geodesy.support.spring.IntegrationTest;
 
 /*
  * Tests for GnssAntenna HTTP endpoint.
  */
-public class GnssAntennaEndpointITest extends RestTest {
+public class GnssAntennaEndpointITest extends IntegrationTest {
 
     @Autowired
     private CorsSiteLogService siteLogService;

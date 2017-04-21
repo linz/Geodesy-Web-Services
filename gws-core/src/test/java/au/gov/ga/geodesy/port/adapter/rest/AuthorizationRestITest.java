@@ -7,22 +7,15 @@ import java.io.IOException;
 import org.apache.commons.io.IOUtils;
 import org.springframework.http.HttpStatus;
 import org.springframework.test.annotation.Rollback;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import au.gov.ga.geodesy.support.TestResources;
-
-import io.restassured.module.mockmvc.RestAssuredMockMvc;
+import au.gov.ga.geodesy.support.spring.IntegrationTest;
 
 /**
  * Test secure uploading of site logs.
  */
-public class AuthorizationRestITest extends RestTest {
-
-    @BeforeClass
-    public void setup() {
-        RestAssuredMockMvc.mockMvc(RestTest.mvc);
-    }
+public class AuthorizationRestITest extends IntegrationTest {
 
     private String alicSiteLog() throws IOException {
         return IOUtils.toString(TestResources.customGeodesyMLSiteLogReader("ALIC"));

@@ -16,8 +16,9 @@ import org.testng.annotations.Test;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import au.gov.ga.geodesy.domain.model.CorsNetwork;
+import au.gov.ga.geodesy.support.spring.IntegrationTest;
 
-public class CorsNetworkEndpointITest extends RestDocTest {
+public class CorsNetworkEndpointITest extends IntegrationTest {
 
     @Autowired
     @Qualifier("_halObjectMapper")

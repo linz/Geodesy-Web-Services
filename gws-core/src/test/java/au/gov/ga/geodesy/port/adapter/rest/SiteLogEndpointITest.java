@@ -1,26 +1,21 @@
 package au.gov.ga.geodesy.port.adapter.rest;
 
-import static io.restassured.module.mockmvc.RestAssuredMockMvc.given;
 import static io.restassured.config.XmlConfig.xmlConfig;
+import static io.restassured.module.mockmvc.RestAssuredMockMvc.given;
 
 import static org.hamcrest.Matchers.equalTo;
 
 import org.apache.commons.io.IOUtils;
 import org.springframework.http.HttpStatus;
 import org.springframework.test.annotation.Rollback;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import au.gov.ga.geodesy.support.TestResources;
+import au.gov.ga.geodesy.support.spring.IntegrationTest;
 
 import io.restassured.module.mockmvc.RestAssuredMockMvc;
 
-public class SiteLogEndpointITest extends RestDocTest {
-
-    @BeforeClass
-    public void setup() {
-        RestAssuredMockMvc.mockMvc(RestTest.mvc);
-    }
+public class SiteLogEndpointITest extends IntegrationTest {
 
     @Test
     @Rollback(false)

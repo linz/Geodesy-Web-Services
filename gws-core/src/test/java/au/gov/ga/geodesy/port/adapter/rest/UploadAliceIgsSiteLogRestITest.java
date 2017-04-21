@@ -18,8 +18,9 @@ import org.springframework.test.web.servlet.MvcResult;
 import org.testng.annotations.Test;
 
 import au.gov.ga.geodesy.support.TestResources;
+import au.gov.ga.geodesy.support.spring.IntegrationTest;
 
-public class UploadAliceIgsSiteLogRestITest extends RestDocTest {
+public class UploadAliceIgsSiteLogRestITest extends IntegrationTest {
 
     @Test
     @Rollback(false)

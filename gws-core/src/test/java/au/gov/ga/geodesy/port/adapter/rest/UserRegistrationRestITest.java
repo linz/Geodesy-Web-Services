@@ -2,33 +2,26 @@ package au.gov.ga.geodesy.port.adapter.rest;
 
 import static io.restassured.module.mockmvc.RestAssuredMockMvc.given;
 
-import static org.hamcrest.Matchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.is;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.test.annotation.Rollback;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import au.gov.ga.geodesy.domain.model.UserRegistration;
 import au.gov.ga.geodesy.port.adapter.mock.InMemoryNotificationAdapter;
+import au.gov.ga.geodesy.support.spring.IntegrationTest;
 
-import io.restassured.module.mockmvc.RestAssuredMockMvc;
-
-public class UserRegistrationRestITest extends RestTest {
+public class UserRegistrationRestITest extends IntegrationTest {
 
     private ObjectMapper mapper = new ObjectMapper();
 
     @Autowired
     private InMemoryNotificationAdapter notificationAdapter;
-
-    @BeforeClass
-    public void setup() {
-        RestAssuredMockMvc.mockMvc(RestTest.mvc);
-    }
 
     @Test
     @Rollback(false)

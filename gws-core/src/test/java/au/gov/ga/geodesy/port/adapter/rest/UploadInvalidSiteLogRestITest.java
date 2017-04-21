@@ -8,7 +8,9 @@ import org.hamcrest.Matchers;
 import org.springframework.http.MediaType;
 import org.testng.annotations.Test;
 
-public class UploadInvalidSiteLogRestITest extends RestTest {
+import au.gov.ga.geodesy.support.spring.IntegrationTest;
+
+public class UploadInvalidSiteLogRestITest extends IntegrationTest {
 
     @Test
     public void uploadInvalidSopacSiteLog() throws Exception {

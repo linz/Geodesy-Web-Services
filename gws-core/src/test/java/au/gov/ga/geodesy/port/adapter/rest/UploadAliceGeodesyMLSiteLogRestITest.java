@@ -6,19 +6,12 @@ import static org.hamcrest.Matchers.is;
 
 import org.apache.commons.io.IOUtils;
 import org.springframework.test.annotation.Rollback;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import au.gov.ga.geodesy.support.TestResources;
+import au.gov.ga.geodesy.support.spring.IntegrationTest;
 
-import io.restassured.module.mockmvc.RestAssuredMockMvc;
-
-public class UploadAliceGeodesyMLSiteLogRestITest extends RestTest {
-
-    @BeforeClass
-    public void setup() {
-        RestAssuredMockMvc.mockMvc(RestTest.mvc);
-    }
+public class UploadAliceGeodesyMLSiteLogRestITest extends IntegrationTest {
 
     @Test
     @Rollback(false)

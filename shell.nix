@@ -17,7 +17,6 @@ let
     name = "devEnv";
     paths = [
       awscli
-      python
       python3
       pythonPackages.credstash
       packer

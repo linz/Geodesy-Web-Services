@@ -68,20 +68,8 @@ autoscaling_units:
   -
     unit_title: OpenAM
     asg_config:
-       image_id: "ami-88aca2eb"
+       image_id: "ami-0a4f4469"
        instance_type: 't2.small'
-       userdata: |
-         #!/usr/bin/env bash
-
-         # Set up iptables restricted access and redirection of port 80 to port 8080
-         yum install -y iptables-services
-         service iptables start
-         iptables -I INPUT -p tcp --dport 443 -j ACCEPT
-         iptables -t nat -A PREROUTING -p tcp --dport 443 -j REDIRECT --to-port 8443
-         iptables -t nat -A OUTPUT -o lo -p tcp --dport 443 -j REDIRECT --to-port 8443
-         service iptables save
-
-         service tomcat8 start
 
     elb_config:
       elb_listeners_config:

@@ -5,6 +5,14 @@ sudo yum update -y
 sudo yum install -y java-1.8.0-openjdk-devel tomcat8 perl-Switch perl-DateTime perl-Sys-Syslog \
      perl-LWP-Protocol-https ruby wget postgresql-libs
 
+# Set up iptables restricted access and redirection of port 443 to port 8443
+sudo service iptables start
+sudo chkconfig --level 345 iptables on
+sudo iptables -I INPUT -p tcp --dport 443 -j ACCEPT
+sudo iptables -t nat -A PREROUTING -p tcp --dport 443 -j REDIRECT --to-port 8443
+sudo iptables -t nat -A OUTPUT -o lo -p tcp --dport 443 -j REDIRECT --to-port 8443
+sudo service iptables save
+
 # cloudwatch monitoring scripts
 curl -so /tmp/CloudWatchMonitoringScripts-1.2.1.zip http://aws-cloudwatch.s3.amazonaws.com/downloads/CloudWatchMonitoringScripts-1.2.1.zip
 sudo unzip -o -d /opt /tmp/CloudWatchMonitoringScripts-1.2.1.zip
@@ -87,3 +95,6 @@ sudo unzip /tmp/openam/SSOAdminTools-13.5.0.zip
 # Cleanup
 sudo rm -rf /tmp/openam
 sudo rm -rf /tmp/OpenAM-13.5.0.zip
+
+sudo service tomcat8 start
+sudo chkconfig --level 345 tomcat8 on

@@ -1,7 +1,8 @@
 FROM lnl7/nix:1.11.4
 
-RUN nix-instantiate --eval -E 'fetchTarball https://github.com/NixOS/nixpkgs/archive/354fd37.tar.gz' \
- && ln -s /nix/store/zygr4nwg01dzs9pj1mx3z2qbfaw15zb5-354fd37.tar.gz /root/.nix-defexpr/nixpkgs
+RUN nix-instantiate --eval -E 'fetchTarball https://github.com/NixOS/nixpkgs-channels/archive/f0fac3b.tar.gz'
+RUN rm /root/.nix-defexpr/nixpkgs
+RUN ln -s /nix/store/jf0qvw9sns1yjmdsfsl629j0yqdrc5vi-f0fac3b.tar.gz /root/.nix-defexpr/nixpkgs
 
 RUN nix-env -iA  nixpkgs.coreutils
 RUN nix-env -iA  nixpkgs.unzip

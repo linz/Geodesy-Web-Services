@@ -2,11 +2,9 @@ package au.gov.ga.geodesy.gws.systemtest;
 
 import static io.restassured.RestAssured.given;
 
-import java.io.File;
-
-import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.core.io.Resource;
 import org.springframework.http.HttpStatus;
 import org.testng.annotations.Test;
 
@@ -19,10 +17,10 @@ public class AuthorizationSystemTest extends BaseSystemTest {
 
     @Test
     public void uploadUnauthenticated() throws Exception {
-        File alic = SystemTestResources.siteLog("alic*");
-        log.info("Uploading " + alic.getName() + " to " + getConfig().getWebServicesUrl());
+        Resource alic = SystemTestResources.siteLog("alic*");
+        log.info("Uploading " + alic.getURL() + " to " + getConfig().getWebServicesUrl());
         given()
-            .body(FileUtils.readFileToString(alic, "ISO-8859-1"))
+            .body(readResource(alic))
             .when()
             .post(getConfig().getWebServicesUrl() + "/siteLogs/upload")
             .then()
@@ -31,11 +29,11 @@ public class AuthorizationSystemTest extends BaseSystemTest {
 
     @Test
     public void uploadUnauthorized() throws Exception {
-        File alic = SystemTestResources.siteLog("alic*");
-        log.info("Uploading " + alic.getName() + " to " + getConfig().getWebServicesUrl());
+        Resource alic = SystemTestResources.siteLog("alic*");
+        log.info("Uploading " + alic.getURL() + " to " + getConfig().getWebServicesUrl());
         given()
             .header("Authorization", "Bearer " + super.userAToken())
-            .body(FileUtils.readFileToString(alic, "ISO-8859-1"))
+            .body(readResource(alic))
             .when()
             .post(getConfig().getWebServicesUrl() + "/siteLogs/upload")
             .then()
@@ -44,11 +42,11 @@ public class AuthorizationSystemTest extends BaseSystemTest {
 
     @Test
     public void uploadAuthorized() throws Exception {
-        File ade1 = SystemTestResources.siteLog("ade1*");
-        log.info("Uploading " + ade1.getName() + " to " + getConfig().getWebServicesUrl());
+        Resource ade1 = SystemTestResources.siteLog("ade1*");
+        log.info("Uploading " + ade1.getURL() + " to " + getConfig().getWebServicesUrl());
         given()
             .header("Authorization", "Bearer " + super.userAToken())
-            .body(FileUtils.readFileToString(ade1, "ISO-8859-1"))
+            .body(readResource(ade1))
             .when()
             .post(getConfig().getWebServicesUrl() + "/siteLogs/upload")
             .then()

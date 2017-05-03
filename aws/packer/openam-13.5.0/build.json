@@ -1,0 +1,37 @@
+{
+  "variables": {
+    "aws_access_key": "{{env `AWS_ACCESS_KEY`}}",
+    "aws_secret_key": "{{env `AWS_SECRET_KEY`}}"
+  },
+  "builders": [
+    {
+      "type": "amazon-ebs",
+      "access_key": "{{user `aws_access_key`}}",
+      "secret_key": "{{user `aws_secret_key`}}",
+      "region": "ap-southeast-2",
+      "source_ami": "ami-db704cb8",
+      "instance_type": "t2.micro",
+      "ssh_username": "ec2-user",
+      "ami_name": "OpenAM 13.5.0 {{timestamp}}",
+      "ami_description": "An AMI based on Amazon Linux, with Java8, Tomcat8 and OpenAM 13.5.0.",
+      "associate_public_ip_address": true
+    }
+  ],
+
+  "provisioners": [
+    {
+      "type": "file",
+      "source": "server.xml",
+      "destination": "/tmp/server.xml"
+    },
+    {
+      "type": "file",
+      "source": "web.xml",
+      "destination": "/tmp/web.xml"
+    },
+    {
+      "type": "shell",
+      "script": "conf/bootstrap.sh"
+    }
+  ]
+}

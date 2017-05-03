@@ -1,0 +1,18 @@
+#
+# Test Stack Yaml for Amazonia
+#
+
+autoscaling_units:
+  -
+    unit_title: 'app1'
+    asg_config:
+      userdata: |
+        #cloud-config
+        repo_update: true
+        repo_upgrade: all
+        packages:
+         - httpd
+
+        runcmd:
+         - service httpd start
+         - echo "AKI3ISW6DFTLGVWEDYMQ" > naughty.file

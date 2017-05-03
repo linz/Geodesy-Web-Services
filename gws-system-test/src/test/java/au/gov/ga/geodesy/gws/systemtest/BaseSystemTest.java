@@ -2,14 +2,18 @@ package au.gov.ga.geodesy.gws.systemtest;
 
 import static io.restassured.RestAssured.given;
 
+import java.io.IOException;
+import java.nio.charset.Charset;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.Resource;
 import org.springframework.http.HttpStatus;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.support.AnnotationConfigContextLoader;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
-import org.springframework.test.web.servlet.request.RequestPostProcessor;
+import org.springframework.util.StreamUtils;
 import org.testng.annotations.BeforeClass;
 
 import au.gov.ga.geodesy.gws.support.spring.SystemTestConfig;
@@ -82,4 +86,9 @@ public abstract class BaseSystemTest extends AbstractTestNGSpringContextTests {
     protected SystemTestConfig getConfig() {
         return config;
     }
+
+    protected String readResource(Resource r) throws IOException {
+        return StreamUtils.copyToString(r.getInputStream(), Charset.forName("ISO-8859-1"));
+    }
+
 }

@@ -2,15 +2,14 @@
 
 ENV=$1
 
-cd ${BASH_SOURCE%/*}
+cd ${BASH_SOURCE%/*}/..
 
-./download-war-file.sh
+cp ../gws-webapp/target/geodesy-web-services.war codedeploy-WebServices/
 
-(cd ..; ./codedeploy-push-deploy.sh \
+./codedeploy-push-deploy.sh \
     --application Geodesy \
     --env ${ENV} \
     --deployment_config_name CodeDeployDefault.OneAtATime \
     --s3_bucket geodesy-codedeploy \
     --artefact_ext zip \
     --unit WebServices
-)

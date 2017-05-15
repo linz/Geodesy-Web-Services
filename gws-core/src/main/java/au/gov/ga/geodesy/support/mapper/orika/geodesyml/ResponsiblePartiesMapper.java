@@ -1,5 +1,7 @@
 package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 
+import java.util.List;
+
 import org.opengis.metadata.citation.ResponsibleParty;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
@@ -28,21 +30,29 @@ public class ResponsiblePartiesMapper extends CustomMapper<SiteLogType, SiteLog>
 
     private ResponsiblePartyOrikaMapper partyMapper = new ResponsiblePartyOrikaMapper();
 
+    private void addSiteResponsibleParty(List<SiteResponsibleParty> siteResponsibleParties, AgencyPropertyType agencyProperty, ContactType contactType) {
+        if (agencyProperty == null) {
+            return;
+        } else {
+            ResponsibleParty responsibleParty = this.partyMapper.mapFromDto(agencyProperty.getCIResponsibleParty());
+            siteResponsibleParties.add(new SiteResponsibleParty(contactType.getId(), responsibleParty));
+        }
+    }
+
     @Override
     public void mapAtoB(SiteLogType siteLogType, SiteLog siteLog, MappingContext ctx) {
-        for (AgencyPropertyType agencyProperty : siteLogType.getSiteContacts()) {
-            ResponsibleParty party = this.partyMapper.mapFromDto(agencyProperty.getCIResponsibleParty());
-            SiteResponsibleParty siteParty = new SiteResponsibleParty(
-                contactTypes.siteContact().getId(),
-                party);
-            siteLog.getResponsibleParties().add(siteParty);
-        }
+        List<SiteResponsibleParty> siteResponsibleParties = siteLog.getResponsibleParties();
 
-        ResponsibleParty party = this.partyMapper.mapFromDto(siteLogType.getSiteMetadataCustodian().getCIResponsibleParty());
-        SiteResponsibleParty siteParty = new SiteResponsibleParty(
-            contactTypes.siteMetadataCustodian().getId(),
-            party);
-        siteLog.getResponsibleParties().add(siteParty);
+        addSiteResponsibleParty(siteResponsibleParties, siteLogType.getSiteOwner(), contactTypes.siteOwner());
+        addSiteResponsibleParty(siteResponsibleParties, siteLogType.getSiteMetadataCustodian(), contactTypes.siteMetadataCustodian());
+        addSiteResponsibleParty(siteResponsibleParties, siteLogType.getSiteDataSource(), contactTypes.siteDataSource());
+
+        for (AgencyPropertyType agencyProperty : siteLogType.getSiteContacts()) {
+            addSiteResponsibleParty(siteResponsibleParties, agencyProperty, contactTypes.siteContact());
+        }
+        for (AgencyPropertyType agencyProperty : siteLogType.getSiteDataCenters()) {
+            addSiteResponsibleParty(siteResponsibleParties, agencyProperty, contactTypes.siteDataCenter());
+        }
     }
 
     @Override
@@ -53,11 +63,20 @@ public class ResponsiblePartiesMapper extends CustomMapper<SiteLogType, SiteLog>
             agencyProperty.setCIResponsibleParty(partyType);
 
             switch (contactTypes.findOne(siteParty.getContactTypeId()).getCode()) {
+                case ContactType.SITE_OWNER:
+                    siteLogType.setSiteOwner(agencyProperty);
+                    break;
                 case ContactType.SITE_CONTACT:
                     siteLogType.getSiteContacts().add(agencyProperty);
                     break;
                 case ContactType.SITE_METADATA_CUSTODIAN:
                     siteLogType.setSiteMetadataCustodian(agencyProperty);
+                    break;
+                case ContactType.SITE_DATA_CENTER:
+                    siteLogType.getSiteDataCenters().add(agencyProperty);
+                    break;
+                case ContactType.SITE_DATA_SOURCE:
+                    siteLogType.setSiteDataSource(agencyProperty);
                     break;
             }
         }

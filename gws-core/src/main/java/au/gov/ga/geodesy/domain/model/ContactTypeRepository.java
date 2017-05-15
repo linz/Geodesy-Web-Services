@@ -12,10 +12,18 @@ public interface ContactTypeRepository extends JpaRepository<ContactType, Intege
 
     ContactType findByCode(String code);
 
+    @Query("select c from ContactType c where c.code = '" + ContactType.SITE_OWNER + "'")
+    ContactType siteOwner();
+
     @Query("select c from ContactType c where c.code = '" + ContactType.SITE_CONTACT + "'")
     ContactType siteContact();
 
     @Query("select c from ContactType c where c.code = '" + ContactType.SITE_METADATA_CUSTODIAN + "'")
     ContactType siteMetadataCustodian();
-}
 
+    @Query("select c from ContactType c where c.code = '" + ContactType.SITE_DATA_SOURCE + "'")
+    ContactType siteDataSource();
+
+    @Query("select c from ContactType c where c.code = '" + ContactType.SITE_DATA_CENTER + "'")
+    ContactType siteDataCenter();
+}

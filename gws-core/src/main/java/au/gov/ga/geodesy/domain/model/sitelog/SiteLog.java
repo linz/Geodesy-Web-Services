@@ -411,7 +411,7 @@ public class SiteLog {
      * Set local episodic events.
      */
     public void setLocalEpisodicEffectLogItems(Set<LocalEpisodicEffectLogItem> es) {
-    	localEpisodicEffectLogItems = es;
+        localEpisodicEffectLogItems = es;
     }
 
     /**
@@ -439,19 +439,19 @@ public class SiteLog {
      * Return site contacts.
      */
     public List<SiteResponsibleParty> getSiteContacts() {
-        return getSiteContactsByType(contactTypes.siteContact());
+        return getResponsiblePartiesByType(contactTypes.siteContact());
     }
 
     /**
      * Return site metadata custodians.
      */
     public List<SiteResponsibleParty> getSiteMetadataCustodians() {
-        return getSiteContactsByType(contactTypes.siteMetadataCustodian());
+        return getResponsiblePartiesByType(contactTypes.siteMetadataCustodian());
     }
 
-    private List<SiteResponsibleParty> getSiteContactsByType(ContactType contactType) {
+    public List<SiteResponsibleParty> getResponsiblePartiesByType(ContactType contactType) {
         return responsibleParties.stream().filter(p ->
-            p.getContactTypeId() == contactType.getId()
+            p.getContactTypeId().equals(contactType.getId())
         ).collect(Collectors.toList());
     }
 

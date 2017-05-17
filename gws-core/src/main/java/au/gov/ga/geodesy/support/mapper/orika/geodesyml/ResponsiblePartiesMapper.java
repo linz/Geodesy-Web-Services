@@ -44,15 +44,17 @@ public class ResponsiblePartiesMapper extends CustomMapper<SiteLogType, SiteLog>
         List<SiteResponsibleParty> siteResponsibleParties = siteLog.getResponsibleParties();
 
         addSiteResponsibleParty(siteResponsibleParties, siteLogType.getSiteOwner(), contactTypes.siteOwner());
-        addSiteResponsibleParty(siteResponsibleParties, siteLogType.getSiteMetadataCustodian(), contactTypes.siteMetadataCustodian());
-        addSiteResponsibleParty(siteResponsibleParties, siteLogType.getSiteDataSource(), contactTypes.siteDataSource());
 
         for (AgencyPropertyType agencyProperty : siteLogType.getSiteContacts()) {
             addSiteResponsibleParty(siteResponsibleParties, agencyProperty, contactTypes.siteContact());
+
         }
+        addSiteResponsibleParty(siteResponsibleParties, siteLogType.getSiteMetadataCustodian(), contactTypes.siteMetadataCustodian());
+
         for (AgencyPropertyType agencyProperty : siteLogType.getSiteDataCenters()) {
             addSiteResponsibleParty(siteResponsibleParties, agencyProperty, contactTypes.siteDataCenter());
         }
+        addSiteResponsibleParty(siteResponsibleParties, siteLogType.getSiteDataSource(), contactTypes.siteDataSource());
     }
 
     @Override

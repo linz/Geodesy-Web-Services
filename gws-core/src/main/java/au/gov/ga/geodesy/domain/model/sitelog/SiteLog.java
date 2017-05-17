@@ -17,6 +17,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderColumn;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Transient;
@@ -142,6 +143,7 @@ public class SiteLog {
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     @JoinColumn(name = "SITE_ID", referencedColumnName = "ID")
+    @OrderColumn(name = "INDEX")
     protected @Nullable List<SiteResponsibleParty> responsibleParties = new ArrayList<>();
 
     public @Nullable Integer getId() {

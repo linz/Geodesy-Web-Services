@@ -22,6 +22,7 @@ let
       openjdk8
       travis
       postgresql
+      awscli
       pythonPackages.docker_compose
     ];
   };

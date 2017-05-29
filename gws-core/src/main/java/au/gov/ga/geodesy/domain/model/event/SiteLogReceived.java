@@ -6,7 +6,6 @@ import javax.persistence.Entity;
 import javax.persistence.ForeignKey;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
-import javax.persistence.Transient;
 
 @Entity
 @Table(name = "SITE_LOG_RECEIVED")
@@ -27,17 +26,6 @@ public class SiteLogReceived extends Event {
 
     public String getFourCharacterId() {
         return fourCharacterId;
-    }
-
-    /**
-     * Return a Human digestable message about this event. Used in email for example.
-     *
-     * @return the message
-     */
-    @Transient
-    public String getMessage() {
-        String message = super.getMessage() + ", FOUR_CHAR_ID: " + getFourCharacterId();
-        return message;
     }
 }
 

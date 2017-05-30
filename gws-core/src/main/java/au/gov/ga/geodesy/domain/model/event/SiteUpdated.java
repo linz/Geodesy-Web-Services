@@ -4,7 +4,6 @@ import javax.persistence.Column;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.Table;
-import javax.persistence.Transient;
 
 @Entity
 @Table(name = "SITE_UPDATED")
@@ -24,16 +23,5 @@ public class SiteUpdated extends Event {
 
     public String getFourCharacterId() {
         return fourCharacterId;
-    }
-
-    @Transient
-    /**
-     * Return a Human digestable message about this event. Used in email for example.
-     * 
-     * @return the message
-     */
-    public String getMessage() {
-        String message = super.getMessage() + ", FOUR_CHAR_ID: " + getFourCharacterId();
-        return message;
     }
 }

@@ -30,7 +30,7 @@ public class NewSiteRequestRestITest extends IntegrationTest {
 
         assertThat(notificationAdapter.getNotifications().size(), is(0));
 
-        String geodesyML = IOUtils.toString(TestResources.customGeodesyMLSiteLogReader("newSite/new_site_ZZZZ"));
+        String geodesyML = IOUtils.toString(TestResources.customGeodesyMLSiteLogReader("new_site_ZZZZ"));
         
         given()
             .body(mapper.writeValueAsString(new NewSiteRequest(

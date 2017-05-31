@@ -9,6 +9,7 @@ sudo rm -f /etc/mavenrc
 mvn -U --settings ./travis/maven-settings.xml compile
 
 if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then
+    mvn --settings ./travis/maven-settings.xml package -pl gws-system-test -DskipTests
     mvn --settings ./travis/maven-settings.xml deploy -pl '!gws-system-test'
     mvn --settings ./travis/maven-settings.xml site-deploy -DskipTests -pl gws-core
     aws configure set aws_access_key_id "${TRAVIS_AWS_ACCESS_KEY_ID}" --profile geodesy

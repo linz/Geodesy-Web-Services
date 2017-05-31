@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 ENV=$1
 
 cd ${BASH_SOURCE%/*}/..

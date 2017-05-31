@@ -17,14 +17,19 @@ public class Aws {
         .withCredentials(new InstanceProfileCredentialsProvider(false)).build();
 
     public static final boolean inAmazon() {
-        return EC2MetadataUtils.getInstanceId() != null;
+        return getInstanceId() != null;
+    }
+
+    public static final String getInstanceId() {
+        return EC2MetadataUtils.getInstanceId();
     }
 
     public static Optional<String> getStackName() {
+        String instanceId = getInstanceId();
         if (inAmazon()) {
             DescribeTagsResult tags = ec2.describeTags();
             return tags.getTags().stream()
-                .filter(t -> t.getKey().equals("aws:cloudformation:stack-name"))
+                .filter(t -> instanceId.equals(t.getResourceId()) && "aws:cloudformation:stack-name".equals(t.getKey()))
                 .findFirst()
                 .map(TagDescription::getValue);
         } else {

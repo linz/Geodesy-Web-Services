@@ -23,6 +23,6 @@ if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then
         ;;
     esac
 else
-    mvn -q --settings ./travis/maven-settings.xml verify -pl '!gws-system-test'
+    mvn -q --settings ./travis/maven-settings.xml install -pl '!gws-system-test'
     mvn -q --settings ./travis/maven-settings.xml compile -pl 'gws-system-test'
 fi

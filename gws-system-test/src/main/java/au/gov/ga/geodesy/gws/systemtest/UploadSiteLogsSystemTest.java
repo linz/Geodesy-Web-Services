@@ -28,7 +28,7 @@ public class UploadSiteLogsSystemTest extends BaseSystemTest {
 
     @Test
     public void uploadAllSiteLogs() throws Exception {
-        for (Resource siteLog : SystemTestResources.siteLogs()) {
+        for (Resource siteLog : SystemTestResources.siteLogs(100)) {
             upload(siteLog);
         }
     }

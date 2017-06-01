@@ -1,6 +1,9 @@
 package au.gov.ga.geodesy.gws.systemtest;
 
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
@@ -24,10 +27,19 @@ public class SystemTestResources {
     }
 
     /**
-     * Production sitelogs GeodesyML files.
+     * Return a snapshot of production site log GeodesyML files.
      */
     public static Resource[] siteLogs() throws IOException {
         return siteLogs("*");
+    }
+
+    /**
+     * Return n random production site log GeodesyML files.
+     */
+    public static Resource[] siteLogs(int n) throws IOException {
+        List<Resource> list = Arrays.asList(siteLogs());
+        Collections.shuffle(list);
+        return list.subList(0, n).toArray(new Resource[0]);
     }
 
     /**

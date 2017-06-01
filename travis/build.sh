@@ -6,8 +6,6 @@ set -e
 # A local installation of maven prefers to run the global installation, if available.
 sudo rm -f /etc/mavenrc
 
-mvn -U --settings ./travis/maven-settings.xml compile
-
 if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then
     mvn -q --settings ./travis/maven-settings.xml package -pl gws-system-test -DskipTests
     mvn -q --settings ./travis/maven-settings.xml deploy -pl '!gws-system-test'
@@ -26,4 +24,5 @@ if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then
     esac
 else
     mvn -q --settings ./travis/maven-settings.xml verify -pl '!gws-system-test'
+    mvn -q --settings ./travis/maven-settings.xml compile -pl 'gws-system-test'
 fi

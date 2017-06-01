@@ -12,12 +12,12 @@ import org.testng.annotations.Test;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import au.gov.ga.geodesy.domain.model.NewSiteRequest;
+import au.gov.ga.geodesy.domain.model.NewCorsSiteRequest;
 import au.gov.ga.geodesy.port.adapter.mock.InMemoryNotificationAdapter;
 import au.gov.ga.geodesy.support.TestResources;
 import au.gov.ga.geodesy.support.spring.IntegrationTest;
 
-public class NewSiteRequestRestITest extends IntegrationTest {
+public class NewCorsSiteRequestRestITest extends IntegrationTest {
 
     private ObjectMapper mapper = new ObjectMapper();
 
@@ -26,14 +26,14 @@ public class NewSiteRequestRestITest extends IntegrationTest {
 
     @Test
     @Rollback(false)
-    public void createNewSiteRequest() throws Exception {
+    public void createNewCorsSiteRequest() throws Exception {
 
         assertThat(notificationAdapter.getNotifications().size(), is(0));
 
         String geodesyML = IOUtils.toString(TestResources.customGeodesyMLSiteLogReader("new_site_ZZZZ"));
         
         given()
-            .body(mapper.writeValueAsString(new NewSiteRequest(
+            .body(mapper.writeValueAsString(new NewCorsSiteRequest(
                 "Lazar",
                 "Bodor",
                 "Geoscience Australia",
@@ -43,11 +43,11 @@ public class NewSiteRequestRestITest extends IntegrationTest {
                 geodesyML)))
 
             .when()
-            .post("/newSiteRequests")
+            .post("/newCorsSiteRequests")
             .then()
             .statusCode(HttpStatus.CREATED.value());
 
         assertThat(notificationAdapter.getNotifications().size(), is(1));
-        assertThat(notificationAdapter.getNotifications().get(0).getSubject(), is("NewSiteRequestReceived"));
+        assertThat(notificationAdapter.getNotifications().get(0).getSubject(), is("NewCorsSiteRequestReceived"));
     }
 }

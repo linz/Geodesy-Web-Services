@@ -11,19 +11,19 @@ import org.testng.annotations.Test;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import au.gov.ga.geodesy.domain.model.NewSiteRequest;
+import au.gov.ga.geodesy.domain.model.NewCorsSiteRequest;
 import io.restassured.http.ContentType;
 
-public class NewSiteRequestSystemTest extends BaseSystemTest {
+public class NewCorsSiteRequestSystemTest extends BaseSystemTest {
 
-    private static final Logger log = LoggerFactory.getLogger(NewSiteRequestSystemTest.class);
+    private static final Logger log = LoggerFactory.getLogger(NewCorsSiteRequestSystemTest.class);
 
     private ObjectMapper mapper = new ObjectMapper();
 
     @Test
     @Rollback(false)
-    public void createNewSiteRequest() throws Exception {
-    	NewSiteRequest newSiteRequest = new NewSiteRequest(
+    public void createNewCorsSiteRequest() throws Exception {
+    	NewCorsSiteRequest newCorsSiteRequest = new NewCorsSiteRequest(
             "Lazar",
             "Bodor",
             "Geoscience Australia",
@@ -32,12 +32,13 @@ public class NewSiteRequestSystemTest extends BaseSystemTest {
             "0451061798",
             getSiteLogContents());
 
-        log.info("Creating new site request for " + newSiteRequest.getFirstName() + " " + newSiteRequest.getLastName());
+        log.info("Creating new site request for " + newCorsSiteRequest.getFirstName() + " " + 
+        		newCorsSiteRequest.getLastName());
         given()
             .contentType(ContentType.JSON)
-            .body(mapper.writeValueAsString(newSiteRequest))
+            .body(mapper.writeValueAsString(newCorsSiteRequest))
             .when()
-            .post(getConfig().getWebServicesUrl() + "/newSiteRequests")
+            .post(getConfig().getWebServicesUrl() + "/newCorsSiteRequests")
             .then()
             .statusCode(HttpStatus.CREATED.value());
 

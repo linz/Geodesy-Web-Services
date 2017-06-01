@@ -10,8 +10,8 @@ import javax.persistence.Table;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 @Entity
-@Table(name = "NEW_SITE_REQUEST")
-public class NewSiteRequest {
+@Table(name = "NEW_CORS_SITE_REQUEST")
+public class NewCorsSiteRequest {
 
     @Id
     @GeneratedValue(generator = "surrogateKeyGenerator")
@@ -40,10 +40,10 @@ public class NewSiteRequest {
     private String siteLogData;
 
     @SuppressWarnings("unused") // used by hibernate
-    private NewSiteRequest() {
+    private NewCorsSiteRequest() {
     }
 
-    public NewSiteRequest(
+    public NewCorsSiteRequest(
         @JsonProperty("firstName") String firstName,
         @JsonProperty("lastName") String lastName,
         @JsonProperty("organisation") String organisation,

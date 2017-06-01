@@ -12,12 +12,12 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 
-import au.gov.ga.geodesy.domain.model.NewSiteRequest;
-import au.gov.ga.geodesy.domain.model.NewSiteRequestRepository;
+import au.gov.ga.geodesy.domain.model.NewCorsSiteRequest;
+import au.gov.ga.geodesy.domain.model.NewCorsSiteRequestRepository;
 import au.gov.ga.geodesy.domain.model.event.Event;
 import au.gov.ga.geodesy.domain.model.event.EventPublisher;
 import au.gov.ga.geodesy.domain.model.event.EventSubscriber;
-import au.gov.ga.geodesy.domain.model.event.NewSiteRequestReceived;
+import au.gov.ga.geodesy.domain.model.event.NewCorsSiteRequestReceived;
 import au.gov.ga.geodesy.port.Notification;
 import au.gov.ga.geodesy.port.NotificationPort;
 
@@ -27,22 +27,22 @@ import au.gov.ga.geodesy.port.NotificationPort;
  */
 @Component
 @Transactional("geodesyTransactionManager")
-public class NewSiteRequestNotificationService implements EventSubscriber<NewSiteRequestReceived> {
+public class NewCorsSiteRequestNotificationService implements EventSubscriber<NewCorsSiteRequestReceived> {
 
-    private static final Logger log = LoggerFactory.getLogger(NewSiteRequestNotificationService.class);
+    private static final Logger log = LoggerFactory.getLogger(NewCorsSiteRequestNotificationService.class);
 
     @Autowired
     private EventPublisher eventPublisher;
 
     @Autowired
-    private NewSiteRequestRepository newSiteRequestsRepository;
+    private NewCorsSiteRequestRepository newCorsSiteRequestsRepository;
 
     @Autowired
     private NotificationPort notification;
 
     private ObjectMapper json = new ObjectMapper();
 
-    public NewSiteRequestNotificationService() {
+    public NewCorsSiteRequestNotificationService() {
         json = new ObjectMapper();
         json.enable(SerializationFeature.INDENT_OUTPUT);
     }
@@ -53,12 +53,12 @@ public class NewSiteRequestNotificationService implements EventSubscriber<NewSit
     }
 
     public boolean canHandle(Event e) {
-        return e != null && (e instanceof NewSiteRequestReceived);
+        return e != null && (e instanceof NewCorsSiteRequestReceived);
     }
 
-    public void handle(NewSiteRequestReceived event) {
-        Integer id = event.getNewSiteRequestId();
-        NewSiteRequest newSiteRequest = newSiteRequestsRepository.findOne(id);
+    public void handle(NewCorsSiteRequestReceived event) {
+        Integer id = event.getNewCorsSiteRequestId();
+        NewCorsSiteRequest newCorsSiteRequest = newCorsSiteRequestsRepository.findOne(id);
         notification.sendNotification(new Notification() {
             public String getSubject() {
                 return event.getName();
@@ -68,7 +68,7 @@ public class NewSiteRequestNotificationService implements EventSubscriber<NewSit
                 try {
                     StringBuilder body = new StringBuilder();
                     body.append("We have received a new site creation request.\n\n");
-                    body.append(json.writeValueAsString(newSiteRequest));
+                    body.append(json.writeValueAsString(newCorsSiteRequest));
                     return body.toString();
                 } catch (JsonProcessingException e) {
                     String errorMessage = "Failed to serialise new site request object with id " + id;

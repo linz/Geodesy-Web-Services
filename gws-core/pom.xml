@@ -39,6 +39,7 @@
         <dependency.locations.enabled>false</dependency.locations.enabled>
         <github.global.server>github</github.global.server>
         <aws-java-sdk.version>1.11.105</aws-java-sdk.version>
+        <redirectTestOutputToFile>false</redirectTestOutputToFile>
     </properties>
     <repositories>
         <repository>
@@ -657,6 +658,7 @@
                             </value>
                         </property>
                     </properties>
+                    <redirectTestOutputToFile>${redirectTestOutputToFile}</redirectTestOutputToFile>
                 </configuration>
             </plugin>
             <plugin>
@@ -691,6 +693,7 @@
                                     </value>
                                 </property>
                             </properties>
+                            <redirectTestOutputToFile>${redirectTestOutputToFile}</redirectTestOutputToFile>
                         </configuration>
                     </execution>
                     <execution>

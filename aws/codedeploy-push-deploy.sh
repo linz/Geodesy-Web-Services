@@ -3,6 +3,8 @@
 # Push an local directory of the application repository to s3 as an tar.gz
 # Deploy a application artefact
 
+set -e
+
 ## Assign arguments to variables
 while [ $# -ge 1 ]
 do

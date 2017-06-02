@@ -38,6 +38,8 @@
         <schemacrawler.plugin.version>14.07.04</schemacrawler.plugin.version>
         <dependency.locations.enabled>false</dependency.locations.enabled>
         <github.global.server>github</github.global.server>
+        <aws-java-sdk.version>1.11.105</aws-java-sdk.version>
+        <redirectTestOutputToFile>false</redirectTestOutputToFile>
     </properties>
     <repositories>
         <repository>
@@ -71,7 +73,12 @@
         <dependency>
             <groupId>com.amazonaws</groupId>
             <artifactId>aws-java-sdk-sns</artifactId>
-            <version>1.11.105</version>
+            <version>${aws-java-sdk.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>aws-java-sdk-ec2</artifactId>
+            <version>${aws-java-sdk.version}</version>
         </dependency>
         <dependency>
             <groupId>net.minidev</groupId>
@@ -651,6 +658,7 @@
                             </value>
                         </property>
                     </properties>
+                    <redirectTestOutputToFile>${redirectTestOutputToFile}</redirectTestOutputToFile>
                 </configuration>
             </plugin>
             <plugin>
@@ -685,6 +693,7 @@
                                     </value>
                                 </property>
                             </properties>
+                            <redirectTestOutputToFile>${redirectTestOutputToFile}</redirectTestOutputToFile>
                         </configuration>
                     </execution>
                     <execution>

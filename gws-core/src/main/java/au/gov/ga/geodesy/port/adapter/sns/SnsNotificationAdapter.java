@@ -18,6 +18,7 @@ import com.amazonaws.services.sns.model.Topic;
 import au.gov.ga.geodesy.domain.model.event.Event;
 import au.gov.ga.geodesy.port.Notification;
 import au.gov.ga.geodesy.port.NotificationPort;
+import au.gov.ga.geodesy.support.aws.Aws;
 
 @EnableEntityLinks
 public class SnsNotificationAdapter implements NotificationPort {
@@ -40,7 +41,12 @@ public class SnsNotificationAdapter implements NotificationPort {
         // An SNS topic ARN looks like this: arn:aws:sns:ap-southeast-2:094928090547:DevGeodesy-UserRegistrationReceived-K3F2UQVHG58F
         return sns.listTopics().getTopics().stream()
             .filter(topic -> {
-                return notification.getSubject().equals(topic.getTopicArn().split(":")[5].split("-")[1]);
+                String[] tmp = topic.getTopicArn().split(":")[5].split("-"); // { "DevGeodesy", "UserRegistrationReceived", "K3F2UQVHG58F }
+                String stackName = tmp[0];
+                String eventName = tmp[1];
+
+                return Aws.getStackName().map(s -> s.equals(stackName)).orElse(false)
+                    && notification.getSubject().equals(eventName);
             })
             .map(Topic::getTopicArn);
     }

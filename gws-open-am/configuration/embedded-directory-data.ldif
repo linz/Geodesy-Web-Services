@@ -5971,15 +5971,19 @@ objectClass: organizationalperson
 objectClass: person
 objectClass: iplanet-am-user-service
 objectClass: oathDeviceProfilesContainer
+mail: user.a@gmail.com
 sn: A
 cn: User A
+telephoneNumber: 01 1234 5678
 userPassword: {SSHA}MrJcLcu/OBUVeN34jVkWLszo76I/6cHKG99NWQ==
 inetUserStatus: Active
 uid: user.a
 creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-pwdChangedTime: 20170303013132.070Z
+modifyTimestamp: 20170605015218Z
+modifiersName: cn=Directory Manager,cn=Root DNs,cn=config
 entryUUID: b715347a-2492-4457-ba3b-f8c189ad3dba
 createTimestamp: 20170303013132Z
+pwdChangedTime: 20170303013132.070Z
 
 dn: uid=user.b,ou=people,dc=openam,dc=forgerock,dc=org
 objectClass: inetuser
@@ -6000,15 +6004,19 @@ objectClass: organizationalperson
 objectClass: person
 objectClass: iplanet-am-user-service
 objectClass: oathDeviceProfilesContainer
+mail: user.b@gmail.com
 sn: B
 cn: User B
+telephoneNumber: 02 1234 5678
 userPassword: {SSHA}kye5TpKuzuuDkah4uxBEymYMsPoGvDk16EcnKQ==
 inetUserStatus: Active
 uid: user.b
+createTimestamp: 20170303013153Z
 creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
 pwdChangedTime: 20170303013153.515Z
+modifyTimestamp: 20170605015304Z
+modifiersName: cn=Directory Manager,cn=Root DNs,cn=config
 entryUUID: 7d85ab64-6e7b-4ec1-89bd-22d47695df39
-createTimestamp: 20170303013153Z
 
 dn: uid=user.x,ou=people,dc=openam,dc=forgerock,dc=org
 objectClass: inetuser
@@ -6029,15 +6037,19 @@ objectClass: organizationalperson
 objectClass: person
 objectClass: iplanet-am-user-service
 objectClass: oathDeviceProfilesContainer
+mail: user.x@gmail.com
 sn: X
 cn: User X
+telephoneNumber: 09 1234 5678
 userPassword: {SSHA}Czz/zGwLH3JeCFQ0PK2IsD5H6oxkiLLNMEkAQQ==
 inetUserStatus: Active
 uid: user.x
+createTimestamp: 20170303013208Z
 creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
 pwdChangedTime: 20170303013208.946Z
+modifyTimestamp: 20170605015327Z
+modifiersName: cn=Directory Manager,cn=Root DNs,cn=config
 entryUUID: 10377657-b04a-4ab4-aede-e2648ba4a37b
-createTimestamp: 20170303013208Z
 
 dn: cn=edit-ade1,ou=groups,dc=openam,dc=forgerock,dc=org
 objectClass: top
@@ -6181,11 +6193,11 @@ sunKeyValue: devicePollInterval=5
 sunKeyValue: forgerock-oauth2-provider-default-scopes=profile
 sunKeyValue: forgerock-oauth2-provider-code-verifier-enforced=false
 ou: default
-createTimestamp: 20170303013359Z
 creatorsName: cn=Internal Client,cn=Root DNs,cn=config
 modifyTimestamp: 20170418231121Z
 modifiersName: cn=Internal Client,cn=Root DNs,cn=config
 entryUUID: 3e56a485-5b62-4230-88c6-f146b80940da
+createTimestamp: 20170303013359Z
 
 dn: ou=6a600220-da7b-4893-8c8a-4cba1346e7aa,ou=registeredResourceTypes,ou=default,ou=OrganizationConfig,ou=1.0,ou=sunEntitlementService,ou=services,dc=openam,dc=forgerock,dc=org
 objectClass: sunServiceComponent
@@ -6329,11 +6341,11 @@ sunKeyValue: com.forgerock.openam.oauth2provider.claims=[0]=
 sunsmspriority: 0
 sunserviceID: OAuth2Client
 ou: GnssSiteManager
-createTimestamp: 20170303013433Z
 creatorsName: cn=Internal Client,cn=Root DNs,cn=config
 modifyTimestamp: 20170418231141Z
 modifiersName: cn=Internal Client,cn=Root DNs,cn=config
 entryUUID: 0134919e-5487-4c87-8fdd-85e427b03a74
+createTimestamp: 20170303013433Z
 
 dn: ou=sunEntitlementService,ou=services,o=sunamhiddenrealmdelegationservicepermissions,ou=services,dc=openam,dc=forgerock,dc=org
 objectClass: sunService
@@ -6391,15 +6403,4 @@ ou: OpenSSO
 creatorsName: cn=Internal Client,cn=Root DNs,cn=config
 entryUUID: a62726ac-d749-464c-83c1-5e5be58a07fc
 createTimestamp: 20170303013818Z
-
-dn: coreTokenId=46d8d1d0-910a-4122-a32a-3b3e73119801,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenObject: {"id":["46d8d1d0-910a-4122-a32a-3b3e73119801"],"ops":["AQIC5wM2LY4Sfcx2mxOmEyldW6tWJEfm0Qdr6Y-ADyrLkO8.*AAJTSQACMDEAAlNLABQtMjg2MTkyMTAzMTgwMjA0MzE1MAACUzEAAA..*"],"expireTime":["1492560722649"]}
-coreTokenExpirationDate: 20170419001202.649Z
-coreTokenId: 46d8d1d0-910a-4122-a32a-3b3e73119801
-coreTokenType: OAUTH
-createTimestamp: 20170418231202Z
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: 2b2c0064-33fc-4b76-b3bc-10bd9c1b554f
 

@@ -13,7 +13,7 @@ export EXPORT_LDIF=$OPENAM_BASE_DIR/opends/bin/export-ldif
 export IMPORT_LDIF=$OPENAM_BASE_DIR/opends/bin/import-ldif
 
 # Configuration files
-export CONFIG_DIR=$TMP_DIR/config
+export CONFIG_DIR=$TMP_DIR/configuration
 export OPENAM_CFG_FILE=$CONFIG_DIR/openam-config
 export SERVICE_CFG_FILE=$CONFIG_DIR/service-cfg.xml
 export DIRECTORY_DATA_FILE=$CONFIG_DIR/embedded-directory-data.ldif

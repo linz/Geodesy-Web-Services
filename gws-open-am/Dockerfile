@@ -20,8 +20,8 @@ RUN (cd /opt/openam/tools/admin && unzip /tmp/openam/SSOAdminTools-13.5.0.zip)
 ADD ./config /tmp/openam/config
 
 ADD ./export-configuration.sh /tmp/openam/
-ADD ./configure-openam.sh /tmp/openam/
+ADD ./import-configuration.sh /tmp/openam/
 
-RUN /tmp/openam/configure-openam.sh
+RUN /tmp/openam/import-configuration.sh
 
 CMD ["catalina.sh", "run"]

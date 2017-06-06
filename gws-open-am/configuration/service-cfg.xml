@@ -12136,16 +12136,17 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
     <Value>[0]=</Value>
 </AttributeValuePair>
 <AttributeValuePair>
+    <Attribute name="com.forgerock.openam.oauth2provider.redirectionURIs"/>
+    <Value>[1]=http:&#47;&#47;localhost:5555&#47;auth.html?silent</Value>
+    <Value>[0]=http:&#47;&#47;localhost:5555&#47;auth.html</Value>
+</AttributeValuePair>
+<AttributeValuePair>
     <Attribute name="com.forgerock.openam.oauth2provider.idTokenSignedResponseAlg"/>
     <Value>RS256</Value>
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="idTokenEncryptionEnabled"/>
     <Value>false</Value>
-</AttributeValuePair>
-<AttributeValuePair>
-    <Attribute name="com.forgerock.openam.oauth2provider.redirectionURIs"/>
-    <Value>[0]=http:&#47;&#47;localhost:5555&#47;auth.html</Value>
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="com.forgerock.openam.oauth2provider.clientName"/>

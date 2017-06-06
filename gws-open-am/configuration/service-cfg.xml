@@ -12136,16 +12136,17 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
     <Value>[0]=</Value>
 </AttributeValuePair>
 <AttributeValuePair>
+    <Attribute name="com.forgerock.openam.oauth2provider.redirectionURIs"/>
+    <Value>[1]=http:&#47;&#47;localhost:5555&#47;auth.html?silent</Value>
+    <Value>[0]=http:&#47;&#47;localhost:5555&#47;auth.html</Value>
+</AttributeValuePair>
+<AttributeValuePair>
     <Attribute name="com.forgerock.openam.oauth2provider.idTokenSignedResponseAlg"/>
     <Value>RS256</Value>
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="idTokenEncryptionEnabled"/>
     <Value>false</Value>
-</AttributeValuePair>
-<AttributeValuePair>
-    <Attribute name="com.forgerock.openam.oauth2provider.redirectionURIs"/>
-    <Value>[0]=http:&#47;&#47;localhost:5555&#47;auth.html</Value>
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="com.forgerock.openam.oauth2provider.clientName"/>
@@ -17895,12 +17896,12 @@ collectGeolocationInfo(function(geolocationInfo) {
 });</Value>
 </AttributeValuePair>
 </SubConfiguration><SubConfiguration name="36863ffb-40ec-48b9-94b1-9a99f71cc3b5" id="globalScript"><AttributeValuePair>
-    <Attribute name="lastModifiedDate"/>
-    <Value>1488505027952</Value>
-</AttributeValuePair>
-<AttributeValuePair>
     <Attribute name="createdBy"/>
     <Value>id=dsameuser,ou=user,dc=openam,dc=forgerock,dc=org</Value>
+</AttributeValuePair>
+<AttributeValuePair>
+    <Attribute name="lastModifiedDate"/>
+    <Value>1496628399504</Value>
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="lastModifiedBy"/>
@@ -18011,7 +18012,7 @@ scopeClaimsMap = [
         &quot;email&quot;: [ &quot;email&quot; ],
         &quot;address&quot;: [ &quot;address&quot; ],
         &quot;phone&quot;: [ &quot;phone_number&quot; ],
-        &quot;profile&quot;: [ &quot;given_name&quot;, &quot;zoneinfo&quot;, &quot;family_name&quot;, &quot;locale&quot;, &quot;name&quot;, &quot;authorities&quot; ]
+        &quot;profile&quot;: [ &quot;given_name&quot;, &quot;zoneinfo&quot;, &quot;family_name&quot;, &quot;locale&quot;, &quot;name&quot;, &quot;email&quot;, &quot;phone_number&quot;, &quot;authorities&quot; ]
 ]
 
 if (logger.messageEnabled()) {

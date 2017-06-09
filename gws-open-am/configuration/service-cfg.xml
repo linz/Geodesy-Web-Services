@@ -3586,6 +3586,7 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
     <Value>sunIdentityServerPPCommonNamePT</Value>
     <Value>distinguishedName</Value>
     <Value>iplanet-am-session-destroy-sessions</Value>
+    <Value>title</Value>
     <Value>modifyTimestamp</Value>
     <Value>uid</Value>
     <Value>iplanet-am-user-success-url</Value>
@@ -8141,6 +8142,9 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
                 </SubSchema>
             </Global>
         </Schema><Configuration><GlobalConfiguration group="default"><SubConfiguration name="com-sun-identity-sites" id="com-sun-identity-sites"></SubConfiguration><SubConfiguration name="com-sun-identity-servers" id="com-sun-identity-servers"><SubConfiguration name="server-default" id="server"><AttributeValuePair>
+    <Attribute name="serverconfigxml"/>
+</AttributeValuePair>
+<AttributeValuePair>
     <Attribute name="serverid"/>
     <Value>00</Value>
 </AttributeValuePair>
@@ -8248,7 +8252,6 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
     <Value>com.iplanet.am.event.connection.delay.between.retries=3000</Value>
     <Value>com.sun.am.event.connection.idle.timeout=0</Value>
     <Value>com.sun.identity.appendSessionCookieInURL=true</Value>
-    <Value>com.iplanet.services.debug.level=error</Value>
     <Value>com.sun.identity.crl.cache.directory.searchattr=</Value>
     <Value>org.forgerock.openam.audit.access.attempt.enabled=false</Value>
     <Value>org.forgerock.services.cts.store.directory.name=</Value>
@@ -8270,6 +8273,7 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
     <Value>org.forgerock.openam.idm.attribute.names.lower.case=false</Value>
     <Value>com.sun.identity.authentication.special.users=cn=dsameuser,ou=DSAME Users,%ROOT_SUFFIX%|cn=amService-UrlAccessAgent,ou=DSAME Users,%ROOT_SUFFIX%</Value>
     <Value>com.iplanet.am.session.purgedelay=0</Value>
+    <Value>com.iplanet.services.debug.level=message</Value>
     <Value>com.sun.identity.plugin.configuration.class=@CONFIGURATION_PROVIDER_CLASS@</Value>
     <Value>org.forgerock.openam.console.autocomplete.enabled=true</Value>
     <Value>org.forgerock.services.uma.pendingrequests.store.location=default</Value>
@@ -8346,7 +8350,7 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
     <Value>openam.retained.http.headers=X-DSAMEVersion</Value>
 </AttributeValuePair>
 <AttributeValuePair>
-    <Attribute name="serverconfigxml"/>
+    <Attribute name="parentsiteid"/>
 </AttributeValuePair>
 </SubConfiguration><SubConfiguration name="http:&#47;&#47;localhost:8080&#47;openam" id="server"><AttributeValuePair>
     <Attribute name="serverconfigxml"/>
@@ -9423,128 +9427,6 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
                     </BooleanValues>
                 </AttributeSchema>
             </Policy>
-        </Schema><Configuration></Configuration></Service>
-<Service name="iPlanetAMUserService"  version="1.0" ><Schema i18nFileName="amUser"  i18nKey="iplanet-am-user-service-description"  resourceName="user"  revisionNumber="50"  serviceHierarchy="/DSAMEConfig/iPlanetAMUserService" >
-	    <Global validate="yes" >
-                <AttributeSchema cosQualifier="default"  i18nKey=""  isSearchable="no"  listOrder="natural"  name="serviceObjectClasses"  syntax="string"  type="list" >
-		    <DefaultValues>
-                        <Value>iplanet-am-user-service</Value>
-		    </DefaultValues>
-		</AttributeSchema>
-	    </Global>
-
-            <Dynamic>
-	        <AttributeSchema any="display"  cosQualifier="default"  i18nKey=""  isSearchable="no"  listOrder="natural"  name="preferredlanguage"  syntax="string"  type="single" >
-		</AttributeSchema>
-	        <AttributeSchema any="display"  cosQualifier="default"  i18nKey="d102"  isSearchable="no"  listOrder="natural"  name="preferredtimezone"  resourceName="preferredTimezone"  syntax="string"  type="single" >
-		</AttributeSchema>
-	        <AttributeSchema any="display"  cosQualifier="default"  i18nKey=""  isSearchable="no"  listOrder="natural"  name="preferredlocale"  syntax="string"  type="single_choice" >
-		    <ChoiceValues>
-			<ChoiceValuesClassName className="com.sun.identity.common.admin.PossibleLocales" ></ChoiceValuesClassName>
-		    </ChoiceValues>
-		</AttributeSchema>
-	        <AttributeSchema any="display"  cosQualifier="default"  i18nKey="d104"  isSearchable="no"  listOrder="natural"  name="iplanet-am-user-admin-start-dn"  resourceName="adminDNStartingView"  syntax="dn"  type="single" >
-				<IsOptional></IsOptional>
-		</AttributeSchema>
-                <AttributeSchema any="display"  cosQualifier="default"  i18nKey="d105"  isSearchable="no"  listOrder="natural"  name="iplanet-am-user-login-status"  resourceName="defaultUserStatus"  syntax="string"  type="single_choice" >
-                    <ChoiceValues>
-                        <ChoiceValue i18nKey="u200" >Active</ChoiceValue>
-                        <ChoiceValue i18nKey="u201" >Inactive</ChoiceValue>
-                    </ChoiceValues>
-                    <DefaultValues>
-                        <Value>Active</Value>
-                    </DefaultValues>
-                </AttributeSchema>
-            </Dynamic>
-
-            <User>
-                <AttributeSchema any="required|filter"  cosQualifier="default"  i18nKey="u101"  isSearchable="no"  listOrder="natural"  name="uid"  syntax="string"  type="single"  validator="RequiredValueValidator" >
-		    <DefaultValues>
-			<Value>&#x00A0;</Value>
-		    </DefaultValues>
-		</AttributeSchema>
-                <AttributeSchema any="optional|filter|display"  cosQualifier="default"  i18nKey="u102"  isSearchable="no"  listOrder="natural"  name="givenname"  syntax="string"  type="single" >
-		</AttributeSchema>
-	        <AttributeSchema any="required|filter|display"  cosQualifier="default"  i18nKey="u103"  isSearchable="no"  listOrder="natural"  name="sn"  syntax="string"  type="single"  validator="RequiredValueValidator" >
-		    <DefaultValues>
-			<Value>&#x00A0;</Value>
-		    </DefaultValues>
-		</AttributeSchema>
-	        <AttributeSchema any="required|filter|display"  cosQualifier="default"  i18nKey="u104"  isSearchable="no"  listOrder="natural"  name="cn"  syntax="string"  type="single"  validator="RequiredValueValidator" >
-		    <DefaultValues>
-			<Value>&#x00A0;</Value>
-		    </DefaultValues>
-		</AttributeSchema>
-                <AttributeSchema any="required"  cosQualifier="default"  i18nKey="u105"  isSearchable="no"  listOrder="natural"  name="userpassword"  syntax="password"  type="single"  validator="RequiredValueValidator" >
-		    <DefaultValues>
-			<Value>AQICS4Tl+grLT6k&#47;Fvq5ikVwy8VmOIM&#47;IfKm</Value>
-		    </DefaultValues>
-                </AttributeSchema>
-                <AttributeSchema any="display"  cosQualifier="default"  i18nKey="u1051"  isSearchable="no"  listOrder="natural"  name="ChangePassword"  propertiesViewBeanURL="../user/UMChangeUserPassword"  syntax="string"  type="single"  uitype="link" >
-                </AttributeSchema>  
-	        <AttributeSchema any="display"  cosQualifier="default"  i18nKey="u106"  isSearchable="no"  listOrder="natural"  name="mail"  syntax="email"  type="single" >
-		</AttributeSchema>
-	        <AttributeSchema any="adminDisplay"  cosQualifier="default"  i18nKey="u107"  isSearchable="no"  listOrder="natural"  name="employeenumber"  syntax="number"  type="single" >
-		</AttributeSchema>
-                <AttributeSchema any="display"  cosQualifier="default"  i18nKey="u108"  isSearchable="no"  listOrder="natural"  name="telephonenumber"  syntax="string"  type="single" >
-		</AttributeSchema>
-	        <AttributeSchema cosQualifier="default"  i18nKey="u109"  isSearchable="no"  listOrder="natural"  name="manager"  syntax="string"  type="single" >
-		</AttributeSchema>
-                <AttributeSchema any="display"  cosQualifier="default"  i18nKey="u110"  isSearchable="no"  listOrder="natural"  name="postaladdress"  syntax="string"  type="single" >
-		</AttributeSchema>
-                <AttributeSchema any="required|filter|adminDisplay"  cosQualifier="default"  i18nKey="u111"  isSearchable="no"  listOrder="natural"  name="inetuserstatus"  syntax="string"  type="single_choice"  validator="RequiredValueValidator" >
-                    <ChoiceValues>
-                        <ChoiceValue i18nKey="u200" >Active</ChoiceValue>
-                        <ChoiceValue i18nKey="u201" >Inactive</ChoiceValue>
-                    </ChoiceValues>
-		    <DefaultValues>
-                        <Value>Active</Value>
-		    </DefaultValues>
-	        </AttributeSchema>
-                <AttributeSchema any="adminDisplay"  cosQualifier="default"  i18nKey="u112"  isSearchable="no"  listOrder="natural"  name="iplanet-am-user-account-life"  syntax="date"  type="single" >
-                </AttributeSchema>
-                <AttributeSchema any="adminDisplay"  cosQualifier="default"  i18nKey="u113"  isSearchable="no"  listOrder="natural"  name="iplanet-am-user-auth-config"  syntax="string"  type="single_choice" >
-	     	    <ChoiceValues>
-			<ChoiceValuesClassName className="com.sun.identity.authentication.service.ConfiguredAuthServices" ></ChoiceValuesClassName>
-                    </ChoiceValues>
-                    <DefaultValues>
-                        <Value>[Empty]</Value>
-                    </DefaultValues>
-                </AttributeSchema>
-                <AttributeSchema any="adminDisplay"  cosQualifier="default"  i18nKey="u114"  isSearchable="no"  listOrder="natural"  name="iplanet-am-user-alias-list"  syntax="string"  type="list" >
-                    <DefaultValues>
-                        <Value></Value>
-                    </DefaultValues>
-                </AttributeSchema>
-                <AttributeSchema any="display"  cosQualifier="default"  i18nKey=""  isSearchable="no"  listOrder="natural"  name="preferredlocale"  syntax="string"  type="single_choice" >
-		    <ChoiceValues>
-			<ChoiceValuesClassName className="com.sun.identity.common.admin.PossibleLocales" ></ChoiceValuesClassName>
-		    </ChoiceValues>
-                </AttributeSchema>
-                <AttributeSchema any="adminDisplay"  cosQualifier="default"  i18nKey="u116"  isSearchable="no"  listOrder="natural"  name="iplanet-am-user-success-url"  syntax="string"  type="list" >
-                </AttributeSchema>
-		<AttributeSchema any="adminDisplay"  cosQualifier="default"  i18nKey="u117"  isSearchable="no"  listOrder="natural"  name="iplanet-am-user-failure-url"  syntax="string"  type="list" >
-                </AttributeSchema>
-                <AttributeSchema any="display"  cosQualifier="default"  i18nKey="u120"  isSearchable="no"  listOrder="natural"  name="iplanet-am-user-password-reset-options"  propertiesViewBeanURL="../user/UMUserPasswordResetOptions"  syntax="xml"  type="single"  uitype="link" >
-                    <DefaultValues>
-                        <Value></Value>
-                    </DefaultValues>
-                </AttributeSchema>
-                <AttributeSchema any="display"  cosQualifier="default"  i18nKey=""  isSearchable="no"  listOrder="natural"  name="iplanet-am-user-password-reset-question-answer"  syntax="string"  type="list" >
-                </AttributeSchema>
-                <AttributeSchema any="display"  cosQualifier="default"  i18nKey=""  isSearchable="no"  listOrder="natural"  name="iplanet-am-user-password-reset-force-reset"  syntax="boolean"  type="single" >
-                    <DefaultValues>
-                        <Value>false</Value>
-                    </DefaultValues>
-                </AttributeSchema>
-		<AttributeSchema any="adminDisplay"  cosQualifier="default"  i18nKey="u122"  isSearchable="no"  listOrder="natural"  name="sunIdentityMSISDNNumber"  syntax="string"  type="list" >
-		</AttributeSchema>
-                <AttributeSchema cosQualifier="default"  isSearchable="no"  listOrder="natural"  name="RequiredValueValidator"  syntax="string"  type="validator" >
-                    <DefaultValues>
-                        <Value>com.sun.identity.sm.RequiredValueValidator</Value>
-                    </DefaultValues>
-                </AttributeSchema>
-            </User>
         </Schema><Configuration></Configuration></Service>
 <Service name="sunIdentityLocaleService"  version="1.0" ><Schema revisionNumber="20" >
             <Global validate="no" >
@@ -17896,12 +17778,12 @@ collectGeolocationInfo(function(geolocationInfo) {
 });</Value>
 </AttributeValuePair>
 </SubConfiguration><SubConfiguration name="36863ffb-40ec-48b9-94b1-9a99f71cc3b5" id="globalScript"><AttributeValuePair>
-    <Attribute name="createdBy"/>
-    <Value>id=dsameuser,ou=user,dc=openam,dc=forgerock,dc=org</Value>
+    <Attribute name="lastModifiedDate"/>
+    <Value>1496973501046</Value>
 </AttributeValuePair>
 <AttributeValuePair>
-    <Attribute name="lastModifiedDate"/>
-    <Value>1496628399504</Value>
+    <Attribute name="createdBy"/>
+    <Value>id=dsameuser,ou=user,dc=openam,dc=forgerock,dc=org</Value>
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="lastModifiedBy"/>
@@ -18004,6 +17886,8 @@ claimAttributes = [
         &quot;family_name&quot;: attributeRetriever.curry(&quot;sn&quot;),
         &quot;locale&quot;: attributeRetriever.curry(&quot;preferredlocale&quot;),
         &quot;name&quot;: attributeRetriever.curry(&quot;cn&quot;),
+        &quot;organisation&quot;: attributeRetriever.curry(&quot;sunIdentityServerPPEmploymentIdentityOrg&quot;),
+        &quot;position&quot;: attributeRetriever.curry(&quot;sunIdentityServerPPEmploymentIdentityJobTitle&quot;),
         &quot;authorities&quot;: attributeRetriever.curry(&quot;isMemberOf&quot;)
 ]
 
@@ -18012,7 +17896,7 @@ scopeClaimsMap = [
         &quot;email&quot;: [ &quot;email&quot; ],
         &quot;address&quot;: [ &quot;address&quot; ],
         &quot;phone&quot;: [ &quot;phone_number&quot; ],
-        &quot;profile&quot;: [ &quot;given_name&quot;, &quot;zoneinfo&quot;, &quot;family_name&quot;, &quot;locale&quot;, &quot;name&quot;, &quot;email&quot;, &quot;phone_number&quot;, &quot;authorities&quot; ]
+        &quot;profile&quot;: [ &quot;given_name&quot;, &quot;zoneinfo&quot;, &quot;family_name&quot;, &quot;locale&quot;, &quot;name&quot;, &quot;email&quot;, &quot;phone_number&quot;, &quot;organisation&quot;, &quot;position&quot;, &quot;authorities&quot; ]
 ]
 
 if (logger.messageEnabled()) {
@@ -20297,6 +20181,132 @@ return new UserInfoClaims((Map)computedClaims, (Map)compositeScopes)</Value>
                     </AttributeSchema>
                 </SubSchema>
             </Organization>
+        </Schema><Configuration></Configuration></Service>
+<Service name="iPlanetAMUserService"  version="1.0" ><Schema i18nFileName="amUser"  i18nKey="iplanet-am-user-service-description"  resourceName="user"  revisionNumber="50"  serviceHierarchy="/DSAMEConfig/iPlanetAMUserService" >
+	    <Global validate="yes" >
+                <AttributeSchema cosQualifier="default"  i18nKey=""  isSearchable="no"  listOrder="natural"  name="serviceObjectClasses"  syntax="string"  type="list" >
+		    <DefaultValues>
+                        <Value>iplanet-am-user-service</Value>
+		    </DefaultValues>
+		</AttributeSchema>
+	    </Global>
+
+            <Dynamic>
+	        <AttributeSchema any="display"  cosQualifier="default"  i18nKey=""  isSearchable="no"  listOrder="natural"  name="preferredlanguage"  syntax="string"  type="single" >
+		</AttributeSchema>
+	        <AttributeSchema any="display"  cosQualifier="default"  i18nKey="d102"  isSearchable="no"  listOrder="natural"  name="preferredtimezone"  resourceName="preferredTimezone"  syntax="string"  type="single" >
+		</AttributeSchema>
+	        <AttributeSchema any="display"  cosQualifier="default"  i18nKey=""  isSearchable="no"  listOrder="natural"  name="preferredlocale"  syntax="string"  type="single_choice" >
+		    <ChoiceValues>
+			<ChoiceValuesClassName className="com.sun.identity.common.admin.PossibleLocales" ></ChoiceValuesClassName>
+		    </ChoiceValues>
+		</AttributeSchema>
+	        <AttributeSchema any="display"  cosQualifier="default"  i18nKey="d104"  isSearchable="no"  listOrder="natural"  name="iplanet-am-user-admin-start-dn"  resourceName="adminDNStartingView"  syntax="dn"  type="single" >
+				<IsOptional></IsOptional>
+		</AttributeSchema>
+                <AttributeSchema any="display"  cosQualifier="default"  i18nKey="d105"  isSearchable="no"  listOrder="natural"  name="iplanet-am-user-login-status"  resourceName="defaultUserStatus"  syntax="string"  type="single_choice" >
+                    <ChoiceValues>
+                        <ChoiceValue i18nKey="u200" >Active</ChoiceValue>
+                        <ChoiceValue i18nKey="u201" >Inactive</ChoiceValue>
+                    </ChoiceValues>
+                    <DefaultValues>
+                        <Value>Active</Value>
+                    </DefaultValues>
+                </AttributeSchema>
+            </Dynamic>
+
+            <User>
+                <AttributeSchema any="required|filter"  cosQualifier="default"  i18nKey="u101"  isSearchable="no"  listOrder="natural"  name="uid"  syntax="string"  type="single"  validator="RequiredValueValidator" >
+		    <DefaultValues>
+			<Value>&#x00A0;</Value>
+		    </DefaultValues>
+		</AttributeSchema>
+                <AttributeSchema any="optional|filter|display"  cosQualifier="default"  i18nKey="u102"  isSearchable="no"  listOrder="natural"  name="givenname"  syntax="string"  type="single" >
+		</AttributeSchema>
+	        <AttributeSchema any="required|filter|display"  cosQualifier="default"  i18nKey="u103"  isSearchable="no"  listOrder="natural"  name="sn"  syntax="string"  type="single"  validator="RequiredValueValidator" >
+		    <DefaultValues>
+			<Value>&#x00A0;</Value>
+		    </DefaultValues>
+		</AttributeSchema>
+	        <AttributeSchema any="required|filter|display"  cosQualifier="default"  i18nKey="u104"  isSearchable="no"  listOrder="natural"  name="cn"  syntax="string"  type="single"  validator="RequiredValueValidator" >
+		    <DefaultValues>
+			<Value>&#x00A0;</Value>
+		    </DefaultValues>
+		</AttributeSchema>
+                <AttributeSchema any="required"  cosQualifier="default"  i18nKey="u105"  isSearchable="no"  listOrder="natural"  name="userpassword"  syntax="password"  type="single"  validator="RequiredValueValidator" >
+		    <DefaultValues>
+			<Value>AQICS4Tl+grLT6k&#47;Fvq5ikVwy8VmOIM&#47;IfKm</Value>
+		    </DefaultValues>
+                </AttributeSchema>
+                <AttributeSchema any="display"  cosQualifier="default"  i18nKey="u1051"  isSearchable="no"  listOrder="natural"  name="ChangePassword"  propertiesViewBeanURL="../user/UMChangeUserPassword"  syntax="string"  type="single"  uitype="link" >
+                </AttributeSchema>  
+	        <AttributeSchema any="display"  cosQualifier="default"  i18nKey="u106"  isSearchable="no"  listOrder="natural"  name="mail"  syntax="email"  type="single" >
+		</AttributeSchema>
+	        <AttributeSchema any="adminDisplay"  cosQualifier="default"  i18nKey="u107"  isSearchable="no"  listOrder="natural"  name="employeenumber"  syntax="number"  type="single" >
+		</AttributeSchema>
+                <AttributeSchema any="display"  cosQualifier="default"  i18nKey="u108"  isSearchable="no"  listOrder="natural"  name="telephonenumber"  syntax="string"  type="single" >
+		</AttributeSchema>
+	        <AttributeSchema any="display"  cosQualifier="default"  i18nKey="Organisation"  isSearchable="no"  listOrder="natural"  name="sunIdentityServerPPEmploymentIdentityOrg"  syntax="string"  type="single" >
+                </AttributeSchema>
+	        <AttributeSchema any="display"  cosQualifier="default"  i18nKey="Position"  isSearchable="no"  listOrder="natural"  name="sunIdentityServerPPEmploymentIdentityJobTitle"  syntax="string"  type="single" >
+                </AttributeSchema>
+		<AttributeSchema cosQualifier="default"  i18nKey="u109"  isSearchable="no"  listOrder="natural"  name="manager"  syntax="string"  type="single" >
+		</AttributeSchema>
+                <AttributeSchema any="display"  cosQualifier="default"  i18nKey="u110"  isSearchable="no"  listOrder="natural"  name="postaladdress"  syntax="string"  type="single" >
+		</AttributeSchema>
+                <AttributeSchema any="required|filter|adminDisplay"  cosQualifier="default"  i18nKey="u111"  isSearchable="no"  listOrder="natural"  name="inetuserstatus"  syntax="string"  type="single_choice"  validator="RequiredValueValidator" >
+                    <ChoiceValues>
+                        <ChoiceValue i18nKey="u200" >Active</ChoiceValue>
+                        <ChoiceValue i18nKey="u201" >Inactive</ChoiceValue>
+                    </ChoiceValues>
+		    <DefaultValues>
+                        <Value>Active</Value>
+		    </DefaultValues>
+	        </AttributeSchema>
+                <AttributeSchema any="adminDisplay"  cosQualifier="default"  i18nKey="u112"  isSearchable="no"  listOrder="natural"  name="iplanet-am-user-account-life"  syntax="date"  type="single" >
+                </AttributeSchema>
+                <AttributeSchema any="adminDisplay"  cosQualifier="default"  i18nKey="u113"  isSearchable="no"  listOrder="natural"  name="iplanet-am-user-auth-config"  syntax="string"  type="single_choice" >
+	     	    <ChoiceValues>
+			<ChoiceValuesClassName className="com.sun.identity.authentication.service.ConfiguredAuthServices" ></ChoiceValuesClassName>
+                    </ChoiceValues>
+                    <DefaultValues>
+                        <Value>[Empty]</Value>
+                    </DefaultValues>
+                </AttributeSchema>
+                <AttributeSchema any="adminDisplay"  cosQualifier="default"  i18nKey="u114"  isSearchable="no"  listOrder="natural"  name="iplanet-am-user-alias-list"  syntax="string"  type="list" >
+                    <DefaultValues>
+                        <Value></Value>
+                    </DefaultValues>
+                </AttributeSchema>
+                <AttributeSchema any="display"  cosQualifier="default"  i18nKey=""  isSearchable="no"  listOrder="natural"  name="preferredlocale"  syntax="string"  type="single_choice" >
+		    <ChoiceValues>
+			<ChoiceValuesClassName className="com.sun.identity.common.admin.PossibleLocales" ></ChoiceValuesClassName>
+		    </ChoiceValues>
+                </AttributeSchema>
+                <AttributeSchema any="adminDisplay"  cosQualifier="default"  i18nKey="u116"  isSearchable="no"  listOrder="natural"  name="iplanet-am-user-success-url"  syntax="string"  type="list" >
+                </AttributeSchema>
+		<AttributeSchema any="adminDisplay"  cosQualifier="default"  i18nKey="u117"  isSearchable="no"  listOrder="natural"  name="iplanet-am-user-failure-url"  syntax="string"  type="list" >
+                </AttributeSchema>
+                <AttributeSchema any="display"  cosQualifier="default"  i18nKey="u120"  isSearchable="no"  listOrder="natural"  name="iplanet-am-user-password-reset-options"  propertiesViewBeanURL="../user/UMUserPasswordResetOptions"  syntax="xml"  type="single"  uitype="link" >
+                    <DefaultValues>
+                        <Value></Value>
+                    </DefaultValues>
+                </AttributeSchema>
+                <AttributeSchema any="display"  cosQualifier="default"  i18nKey=""  isSearchable="no"  listOrder="natural"  name="iplanet-am-user-password-reset-question-answer"  syntax="string"  type="list" >
+                </AttributeSchema>
+                <AttributeSchema any="display"  cosQualifier="default"  i18nKey=""  isSearchable="no"  listOrder="natural"  name="iplanet-am-user-password-reset-force-reset"  syntax="boolean"  type="single" >
+                    <DefaultValues>
+                        <Value>false</Value>
+                    </DefaultValues>
+                </AttributeSchema>
+		<AttributeSchema any="adminDisplay"  cosQualifier="default"  i18nKey="u122"  isSearchable="no"  listOrder="natural"  name="sunIdentityMSISDNNumber"  syntax="string"  type="list" >
+		</AttributeSchema>
+                <AttributeSchema cosQualifier="default"  isSearchable="no"  listOrder="natural"  name="RequiredValueValidator"  syntax="string"  type="validator" >
+                    <DefaultValues>
+                        <Value>com.sun.identity.sm.RequiredValueValidator</Value>
+                    </DefaultValues>
+                </AttributeSchema>
+            </User>
         </Schema><Configuration></Configuration></Service>
 </ServicesConfiguration>
 <!-- j1+sy36nbhFJm8kr4tY7rAPmy+c= -->

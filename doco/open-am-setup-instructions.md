@@ -1,7 +1,6 @@
 1) Login into admin console
-
-username is `amadmin`
-password is given by `credstash --profile geodesy -r ap-southeast-2 get DevGeodesyOpenAMAdminPassword`
+  * username is `amadmin`
+  * password is given by `credstash --profile geodesy -r ap-southeast-2 get DevGeodesyOpenAMAdminPassword`
 
 ## Add `isMemberOf` LDAP user attribute
 
@@ -23,14 +22,14 @@ password is given by `credstash --profile geodesy -r ap-southeast-2 get DevGeode
 
 1) Create 3 new users
 
-*) ID: user.a, user.b, user.x
-*) Last Name: A, B, X
-*) Full Name: User A, User B, User X
-*) Password: gumby123A, gumby123B, gumby123X
+  * ID: user.a, user.b, user.x
+  * Last Name: A, B, X
+  * Full Name: User A, User B, User X
+  * Password: gumby123A, gumby123B, gumby123X
 
 1) Create 3 new groups
 
-*) ID: edit-alic1, edit-alic2, superuser
+ * ID: edit-alic1, edit-alic2, superuser
 
 1) Assign user.a to edit-alic1, user.b to edit-alic3, user.x to superuser
 
@@ -48,9 +47,9 @@ password is given by `credstash --profile geodesy -r ap-southeast-2 get DevGeode
 
 6) Choose `OAuth2 Provider`
 
-> 7) Set `OAuth2 Token Signing Algorithm` to `RS256`
+7) Set `OAuth2 Token Signing Algorithm` to `RS256`
 
-> 8) Set `Token Signing RSA public/private key pair to `tokenSigningKeypair`
+8) Set `Token Signing RSA public/private key pair to `tokenSigningKeypair`
 
 9) Turn on `Always return claims in ID Tokens`
 
@@ -66,8 +65,8 @@ password is given by `credstash --profile geodesy -r ap-southeast-2 get DevGeode
 
 1) In panel `Agent`, click `New...`
 
-*) Name: GnssSiteManager
-*) Password: gumby123
+  * Name: GnssSiteManager
+  * Password: gumby123
 
 1) Click `Create`
 
@@ -90,12 +89,16 @@ password is given by `credstash --profile geodesy -r ap-southeast-2 get DevGeode
 ## Add extra fields to user (Organisation and Position)
 
 1) Terminal into the OpenAM directory, eg 
-    [if running inside docker] docker-compose exec -it geodesywebservices_open-am_1 bash
+    ```
+    [if running inside docker] docker-compose exec -it open-am bash
     # cd /opt/openam
+    ```
     
 2)  edit the amUsers.xml file to add new atttributes
-    # vim config/xml/amUser.xml
-      
+   `# vim config/xml/amUser.xml`
+   
+   ```xml  
+    
    <AttributeSchema name="sunIdentityServerPPEmploymentIdentityOrg"
       type="single"
       syntax="string"
@@ -109,9 +112,10 @@ password is given by `credstash --profile geodesy -r ap-southeast-2 get DevGeode
       any="display"
       i18nKey="Position">
     </AttributeSchema>
-
+   ```
 3) delete and recreate the iPlanetAMUserService so that the above attributes get added
 
+    ```
     # ./tools/admin/openam/bin/ssoadm \
         delete-svc \
         --adminid amadmin \
@@ -127,14 +131,14 @@ password is given by `credstash --profile geodesy -r ap-southeast-2 get DevGeode
         --xmlfile config/xml/amUser.xml
     
     Service was created.
-
+   
     # exit        
-
+    ```
 4) rebuild the docker container
-    
+   ``` 
    $ docker-compose build open-am
    $ docker-compose up -d open-am
-
+   ```
 5) The Organisation and Position fields will now appear in the Subject screen in the OpenAM UI and will be stored in the LDAP attributes sunIdentityServerPPEmploymentIdentityOrg and sunIdentityServerPPEmploymentIdentityJobTitle respectively
 
 
@@ -147,16 +151,6 @@ password is given by `credstash --profile geodesy -r ap-southeast-2 get DevGeode
 1) Choose script `OIDC Claims Script`
 
 1) Patch the groovy script with `oidc-claims-script.groovy.patch`
-
-   what this does is modify the file as follows but you can do it manually directly in OpenAM if you want to 
-   
-   # associate the organisation and position fields with their LDAP counterparts 
-   "organisation": attributeRetriever.curry("sunIdentityServerPPEmploymentIdentityOrg"),
-   "position": attributeRetriever.curry("sunIdentityServerPPEmploymentIdentityJobTitle"),
-   
-   # add them to the profile in scopeClaimsMap
-   "profile": [ "given_name", "zoneinfo", "family_name", "locale", "name", "organisation", "position", "authorities" ]
-
 
 ## Disable SDK caching
 

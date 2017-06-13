@@ -87,6 +87,57 @@ password is given by `credstash --profile geodesy -r ap-southeast-2 get DevGeode
 
 1) Click `Save`, `Back to Main Page`, and `Back to Access Control`
 
+## Add extra fields to user (Organisation and Position)
+
+1) Terminal into the OpenAM directory, eg 
+    [if running inside docker] docker-compose exec -it geodesywebservices_open-am_1 bash
+    # cd /opt/openam
+    
+2)  edit the amUsers.xml file to add new atttributes
+    # vim config/xml/amUser.xml
+      
+   <AttributeSchema name="sunIdentityServerPPEmploymentIdentityOrg"
+      type="single"
+      syntax="string"
+      any="display"
+      i18nKey="Organisation">
+    </AttributeSchema>
+
+   <AttributeSchema name="sunIdentityServerPPEmploymentIdentityJobTitle"
+      type="single"
+      syntax="string"
+      any="display"
+      i18nKey="Position">
+    </AttributeSchema>
+
+3) delete and recreate the iPlanetAMUserService so that the above attributes get added
+
+    # ./tools/admin/openam/bin/ssoadm \
+        delete-svc \
+        --adminid amadmin \
+        --password-file tools/admin/passwdfile \
+        --servicename iPlanetAMUserService 
+        
+    Service was deleted.
+        
+    # ./tools/admin/openam/bin/ssoadm \
+        create-svc \
+        --adminid amadmin \
+        --password-file tools/admin/passwdfile \
+        --xmlfile config/xml/amUser.xml
+    
+    Service was created.
+
+    # exit        
+
+4) rebuild the docker container
+    
+   $ docker-compose build open-am
+   $ docker-compose up -d open-am
+
+5) The Organisation and Position fields will now appear in the Subject screen in the OpenAM UI and will be stored in the LDAP attributes sunIdentityServerPPEmploymentIdentityOrg and sunIdentityServerPPEmploymentIdentityJobTitle respectively
+
+
 ## Configure OIDC claims script
 
 1) Choose `Top Level Realm`
@@ -96,6 +147,16 @@ password is given by `credstash --profile geodesy -r ap-southeast-2 get DevGeode
 1) Choose script `OIDC Claims Script`
 
 1) Patch the groovy script with `oidc-claims-script.groovy.patch`
+
+   what this does is modify the file as follows but you can do it manually directly in OpenAM if you want to 
+   
+   # associate the organisation and position fields with their LDAP counterparts 
+   "organisation": attributeRetriever.curry("sunIdentityServerPPEmploymentIdentityOrg"),
+   "position": attributeRetriever.curry("sunIdentityServerPPEmploymentIdentityJobTitle"),
+   
+   # add them to the profile in scopeClaimsMap
+   "profile": [ "given_name", "zoneinfo", "family_name", "locale", "name", "organisation", "position", "authorities" ]
+
 
 ## Disable SDK caching
 

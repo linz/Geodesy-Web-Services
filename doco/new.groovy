@@ -73,6 +73,8 @@ claimAttributes = [
         "family_name": attributeRetriever.curry("sn"),
         "locale": attributeRetriever.curry("preferredlocale"),
         "name": attributeRetriever.curry("cn"),
+        "organisation": attributeRetriever.curry("sunIdentityServerPPEmploymentIdentityOrg"),
+        "position": attributeRetriever.curry("sunIdentityServerPPEmploymentIdentityJobTitle"),
         "authorities": attributeRetriever.curry("isMemberOf")
 ]
 
@@ -81,7 +83,7 @@ scopeClaimsMap = [
         "email": [ "email" ],
         "address": [ "address" ],
         "phone": [ "phone_number" ],
-        "profile": [ "given_name", "zoneinfo", "family_name", "locale", "name", "authorities" ]
+        "profile": [ "given_name", "zoneinfo", "family_name", "locale", "name", "organisation", "position", "authorities" ]
 ]
 
 if (logger.messageEnabled()) {

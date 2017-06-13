@@ -1,15 +1,17 @@
 19a20,21
 > import java.util.HashSet
 > 
-73c75,76
+73c75,78
 <         "name": attributeRetriever.curry("cn")
 ---
 >         "name": attributeRetriever.curry("cn"),
+>         "organisation": attributeRetriever.curry("sunIdentityServerPPEmploymentIdentityOrg"),
+>         "position": attributeRetriever.curry("sunIdentityServerPPEmploymentIdentityJobTitle"),
 >         "authorities": attributeRetriever.curry("isMemberOf")
 81c84
 <         "profile": [ "given_name", "zoneinfo", "family_name", "locale", "name" ]
 ---
->         "profile": [ "given_name", "zoneinfo", "family_name", "locale", "name", "authorities" ]
+>         "profile": [ "given_name", "zoneinfo", "family_name", "locale", "name", "organisation", "position", "authorities" ]
 92c95,114
 <         [ claim, claimAttributes.get(claim)(claim, identity, requestedValues) ]
 ---

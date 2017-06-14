@@ -106,7 +106,7 @@ public class SiteLogEndpoint {
         }
     }
 
-    @RequestMapping(value = "/validate", method = RequestMethod.POST)
+    @RequestMapping(value = "/validate", method = RequestMethod.POST, consumes = "application/xml")
     public ResponseEntity<List<Violation>> validateGeodesyMLSiteLog(HttpServletRequest req, HttpServletResponse rsp) throws IOException {
         StreamSource source = new StreamSource(req.getInputStream(), "data:");
         List<Violation> violations = geodesyMLValidator.validate(source);

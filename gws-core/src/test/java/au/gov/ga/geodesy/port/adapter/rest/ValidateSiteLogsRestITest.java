@@ -37,4 +37,12 @@ public class ValidateSiteLogsRestITest extends IntegrationTest {
             .andExpect(status().isBadRequest())
             .andDo(ResultHandlers.print);
     }
+
+    @Test
+    @Rollback(false)
+    public void testBadContentType() throws Exception {
+        String siteLogText = readFile(TestResources.customGeodesyMLSiteLogReader("MOBS"));
+        mvc.perform(post("/siteLogs/validate").contentType(MediaType.APPLICATION_JSON).content(siteLogText))
+            .andExpect(status().isUnsupportedMediaType());
+    }
 }

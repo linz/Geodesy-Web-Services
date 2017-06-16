@@ -6,6 +6,9 @@ from troposphere.sns import Topic, Subscription
 def user_registration_topic(emails):
     return topic("UserRegistrationReceived", emails)
 
+def new_cors_site_request_received_topic(emails):
+    return topic("NewCorsSiteRequestReceived", emails)
+
 def topic(topic_title, emails):
     topic = Topic(topic_title,
             DisplayName=Join("", [Ref("AWS::StackName"), "-", topic_title]))
@@ -21,4 +24,5 @@ def topic(topic_title, emails):
 
 def customise_stack_template(template):
     template.add_resource(user_registration_topic([]))
+    template.add_resource(new_cors_site_request_received_topic([]))
     return template

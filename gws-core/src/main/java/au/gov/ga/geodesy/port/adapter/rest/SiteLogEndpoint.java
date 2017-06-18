@@ -45,6 +45,8 @@ import au.gov.ga.geodesy.port.adapter.geodesyml.MarshallingException;
 import au.gov.ga.geodesy.port.adapter.sopac.SopacSiteLogReader;
 import au.gov.ga.geodesy.support.mapper.orika.geodesyml.SiteLogMapper;
 import au.gov.ga.xmlschemer.Violation;
+import au.gov.xml.icsm.geodesyml.v_0_4.GeodesyMLType;
+import au.gov.xml.icsm.geodesyml.v_0_4.ObjectFactory;
 import au.gov.xml.icsm.geodesyml.v_0_4.SiteLogType;
 
 @RepositoryRestController
@@ -53,6 +55,8 @@ import au.gov.xml.icsm.geodesyml.v_0_4.SiteLogType;
 public class SiteLogEndpoint {
 
     private static final Logger log = LoggerFactory.getLogger(SiteLogEndpoint.class);
+
+    private static ObjectFactory geodesyMLFactory = new ObjectFactory();
 
     @Autowired
     private CorsSiteLogService service;
@@ -84,8 +88,12 @@ public class SiteLogEndpoint {
         } else {
             SiteLogMapper mapper = new SiteLogMapper();
             SiteLogType siteLogType = mapper.from(siteLog);
+
+            GeodesyMLType document = geodesyMLFactory.createGeodesyMLType()
+                .withElements(geodesyMLFactory.createSiteLog(siteLogType));
+
             rsp.setContentType("application/xml");
-            marshaller.marshal(siteLogType, new PrintWriter(rsp.getOutputStream()));
+            marshaller.marshal(document, new PrintWriter(rsp.getOutputStream()));
         }
     }
 

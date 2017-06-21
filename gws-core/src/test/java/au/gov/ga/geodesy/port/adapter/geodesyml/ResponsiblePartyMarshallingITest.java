@@ -1,19 +1,25 @@
 package au.gov.ga.geodesy.port.adapter.geodesyml;
 
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.core.Is.is;
+
 
 import java.io.StringWriter;
+import java.net.URI;
 import java.util.ArrayList;
 import java.util.Arrays;
 
 import javax.xml.namespace.NamespaceContext;
+import javax.xml.transform.Source;
 
 import org.geotools.metadata.iso.citation.AddressImpl;
 import org.geotools.metadata.iso.citation.ContactImpl;
+import org.geotools.metadata.iso.citation.OnLineResourceImpl;
 import org.geotools.metadata.iso.citation.ResponsiblePartyImpl;
 import org.geotools.metadata.iso.citation.TelephoneImpl;
 import org.geotools.util.SimpleInternationalString;
 import org.hamcrest.Matcher;
+import org.opengis.metadata.citation.ResponsibleParty;
 import org.opengis.metadata.citation.Role;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.annotations.Test;
@@ -23,6 +29,8 @@ import com.jcabi.xml.XPathContext;
 
 import au.gov.ga.geodesy.support.mapper.orika.ResponsiblePartyOrikaMapper;
 import au.gov.ga.geodesy.support.spring.IntegrationTest;
+
+import net.opengis.iso19139.gmd.v_20070417.CIResponsiblePartyType;
 
 
 public class ResponsiblePartyMarshallingITest extends IntegrationTest {
@@ -61,19 +69,33 @@ public class ResponsiblePartyMarshallingITest extends IntegrationTest {
         address.setElectronicMailAddresses(Arrays.asList("a@gmail.com", "b@gmail.com"));
         contact.setAddress(address);
 
-        StringWriter xml = new StringWriter();
-        marshaller.marshal(mapper.mapToDto(party), xml);
+        OnLineResourceImpl onlineResource = new OnLineResourceImpl();
+        onlineResource.setLinkage(new URI("http://google.com"));
+        contact.setOnLineResource(onlineResource);
 
-        System.out.println(xml.toString());
+        StringWriter buffer = new StringWriter();
+        CIResponsiblePartyType partyDto = mapper.mapToDto(party);
+        marshaller.marshal(partyDto, buffer);
+        Source xml = XhtmlMatchers.xhtml(buffer);
 
         // TODO: complete asserts
-        assertThat(
-                XhtmlMatchers.xhtml(xml),
-                hasElementWithText("//gmd:CI_ResponsibleParty/gmd:individualName/gco:CharacterString", "Lazar Bodor")
-            );
+
+        assertThat(xml, hasElementWithText("//gmd:CI_ResponsibleParty/gmd:individualName/gco:CharacterString", "Lazar Bodor"));
+
+        assertThat(xml, hasContactElementWithText("gmd:onlineResource/gmd:CI_OnlineResource/gmd:linkage/gmd:URL", "http://google.com"));
+        assertThat(xml, hasContactElementWithText("gmd:onlineResource/gmd:CI_OnlineResource/gmd:protocol/gco:CharacterString", "http"));
+
+        ResponsibleParty p = mapper.mapFromDto(partyDto);
+        assertThat(p.getContactInfo().getOnLineResource().getLinkage().toURL().toExternalForm(), is("http://google.com"));
+        assertThat(p.getContactInfo().getOnLineResource().getProtocol(), is("http"));
     }
 
     private <T> Matcher<T> hasElementWithText(String elementXPath, String elementValue) {
         return XhtmlMatchers.hasXPath(elementXPath + "[text()='" + elementValue + "']", namespaces);
+    }
+
+    private <T> Matcher<T> hasContactElementWithText(String contactElementXPath, String elementValue) {
+        String elementXPath = "//gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/" + contactElementXPath;
+        return hasElementWithText(elementXPath, elementValue);
     }
 }

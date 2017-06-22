@@ -2,6 +2,8 @@ package au.gov.ga.geodesy.gws.systemtest;
 
 import static io.restassured.RestAssured.given;
 
+import java.io.IOException;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.io.Resource;
@@ -41,12 +43,21 @@ public class AuthorizationSystemTest extends BaseSystemTest {
     }
 
     @Test
-    public void uploadAuthorized() throws Exception {
-        Resource ade1 = SystemTestResources.siteLog("ade1*");
-        log.info("Uploading " + ade1.getURL() + " to " + getConfig().getWebServicesUrl());
+    public void uploadAde1() throws Exception {
+        upload("ade1", super.userAToken());
+    }
+
+    @Test
+    public void uploadAde2() throws Exception {
+        upload("ade2", super.userBToken());
+    }
+
+    private void upload(String siteId, String jwt) throws IOException {
+        Resource siteLog = SystemTestResources.siteLog(siteId + "*");
+        log.info("Uploading " + siteLog.getURL() + " to " + getConfig().getWebServicesUrl());
         given()
-            .header("Authorization", "Bearer " + super.userAToken())
-            .body(readResource(ade1))
+            .header("Authorization", "Bearer " + jwt)
+            .body(readResource(siteLog))
             .when()
             .post(getConfig().getWebServicesUrl() + "/siteLogs/upload")
             .then()

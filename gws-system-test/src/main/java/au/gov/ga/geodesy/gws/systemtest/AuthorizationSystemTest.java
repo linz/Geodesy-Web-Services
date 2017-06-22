@@ -47,6 +47,11 @@ public class AuthorizationSystemTest extends BaseSystemTest {
         upload("ade1", super.userAToken());
     }
 
+    @Test
+    public void uploadAde2() throws Exception {
+        upload("ade2", super.userBToken());
+    }
+
     private void upload(String siteId, String jwt) throws IOException {
         Resource siteLog = SystemTestResources.siteLog(siteId + "*");
         log.info("Uploading " + siteLog.getURL() + " to " + getConfig().getWebServicesUrl());

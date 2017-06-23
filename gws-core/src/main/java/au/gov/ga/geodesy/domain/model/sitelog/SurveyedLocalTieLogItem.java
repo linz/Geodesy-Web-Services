@@ -18,7 +18,7 @@ import javax.validation.constraints.Size;
  */
 @Entity
 @Table(name = "SITELOG_SURVEYEDLOCALTIE")
-public class SurveyedLocalTieLogItem implements LogItem {
+public class SurveyedLocalTieLogItem extends LogItem {
 
     @Id
     @GeneratedValue(generator = "surrogateKeyGenerator")

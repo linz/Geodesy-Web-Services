@@ -220,18 +220,6 @@ public class SiteLogMapper implements Iso<SiteLogType, SiteLog> {
     }
 
     /**
-     * Given an equipment isomorphism (from DTO to domain model), return a
-     * bidirectional converter from a list of GML equipment property types to a
-     * set of domain model collocation information.
-     */
-    private <P extends GMLPropertyType, T extends AbstractGMLType, L extends Object>
-    BidirectionalConverter<List<P>, Set<L>> infoCollectionConverter(Iso<T, L> infoIso) {
-        Iso<P, T> propertyIso = new GMLPropertyTypeMapper<>();
-        Iso<P, L> elementIso = propertyIso.compose(infoIso);
-        return new IsoConverter<>(new ListToSet<>(elementIso));
-    }
-
-    /**
      * Given an isomorphism from A to B, return an isomorphism from a set of A
      * to a set B.
      */

@@ -23,7 +23,7 @@ import au.gov.ga.geodesy.domain.model.sitelog.SignalObstructionLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteIdentification;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLocation;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLog;
-import au.gov.ga.geodesy.domain.model.sitelog.SurveyedLocalTie;
+import au.gov.ga.geodesy.domain.model.sitelog.SurveyedLocalTieLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.TemperatureSensorLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.WaterVaporSensorLogItem;
 import au.gov.ga.geodesy.support.gml.GMLPropertyType;
@@ -175,7 +175,7 @@ public class SiteLogMapper implements Iso<SiteLogType, SiteLog> {
         );
 
         converters.registerConverter("surveyedLocalTies",
-                new BidirectionalConverterWrapper<List<GMLPropertyType>, Set<SurveyedLocalTie>>(
+                new BidirectionalConverterWrapper<List<GMLPropertyType>, Set<SurveyedLocalTieLogItem>>(
                         logItemsConverter(new SurveyedLocalTieMapper())
                 ) {}
         );

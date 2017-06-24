@@ -170,7 +170,7 @@ public class SiteLogMapper implements Iso<SiteLogType, SiteLog> {
 
         converters.registerConverter("collocationInformations",
                 new BidirectionalConverterWrapper<List<GMLPropertyType>, Set<CollocationInformation>>(
-                        infoCollectionConverter(new CollocationInformationMapper())
+                        logItemsConverter(new CollocationInformationMapper())
                 ) {}
         );
 

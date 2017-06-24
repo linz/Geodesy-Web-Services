@@ -24,7 +24,7 @@ import org.testng.annotations.Test;
 
 import com.vividsolutions.jts.geom.Point;
 
-import au.gov.ga.geodesy.domain.model.sitelog.CollocationInformation;
+import au.gov.ga.geodesy.domain.model.sitelog.CollocationInformationLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.FrequencyStandardLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.GnssAntennaLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.GnssReceiverLogItem;
@@ -436,7 +436,7 @@ public class SiteLogMapperITest extends IntegrationTest {
 
         {
             int i = 0;
-            for (CollocationInformation collocationInfo : sortCollocationInformations(siteLog.getCollocationInformation())) {
+            for (CollocationInformationLogItem collocationInfo : sortCollocationInformations(siteLog.getCollocationInformation())) {
                 CollocationInformationType collocationInfoType = collocationInfoProperties.get(i++).getCollocationInformation();
                 assertThat(collocationInfo.getInstrumentType(), is(collocationInfoType.getInstrumentationType().getValue()));
 
@@ -627,7 +627,7 @@ public class SiteLogMapperITest extends IntegrationTest {
     /**
      * Sort a set of CollocationInformations by effective dates.
      */
-    private <T extends CollocationInformation> SortedSet<T> sortCollocationInformations(Set<T> info) {
+    private <T extends CollocationInformationLogItem> SortedSet<T> sortCollocationInformations(Set<T> info) {
         SortedSet<T> sorted = new TreeSet<>(new Comparator<T>() {
             public int compare(T e, T f) {
                 int c = e.getEffectiveDates().compareTo(f.getEffectiveDates());

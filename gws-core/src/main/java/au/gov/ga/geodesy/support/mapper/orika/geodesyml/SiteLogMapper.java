@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 
 import org.opengis.metadata.citation.ResponsibleParty;
 
-import au.gov.ga.geodesy.domain.model.sitelog.CollocationInformation;
+import au.gov.ga.geodesy.domain.model.sitelog.CollocationInformationLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.FormInformation;
 import au.gov.ga.geodesy.domain.model.sitelog.FrequencyStandardLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.GnssAntennaLogItem;
@@ -169,7 +169,7 @@ public class SiteLogMapper implements Iso<SiteLogType, SiteLog> {
                 new IsoConverter<FormInformationType, FormInformation>(new FormInformationMapper()) {});
 
         converters.registerConverter("collocationInformations",
-                new BidirectionalConverterWrapper<List<GMLPropertyType>, Set<CollocationInformation>>(
+                new BidirectionalConverterWrapper<List<GMLPropertyType>, Set<CollocationInformationLogItem>>(
                         logItemsConverter(new CollocationInformationMapper())
                 ) {}
         );

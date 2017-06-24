@@ -1,6 +1,6 @@
 package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 
-import au.gov.ga.geodesy.domain.model.sitelog.CollocationInformation;
+import au.gov.ga.geodesy.domain.model.sitelog.CollocationInformationLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.EffectiveDates;
 import au.gov.ga.geodesy.support.java.util.Iso;
 import au.gov.xml.icsm.geodesyml.v_0_4.CollocationInformationType;
@@ -14,13 +14,13 @@ import net.opengis.gml.v_3_2_1.TimePeriodType;
  * Reversible mapping between GeodesyML CollocationInformationType DTO and
  * CollocationInformation site log entity.
  */
-public class CollocationInformationMapper implements Iso<CollocationInformationType, CollocationInformation> {
+public class CollocationInformationMapper implements Iso<CollocationInformationType, CollocationInformationLogItem> {
 
     private MapperFactory mapperFactory = new DefaultMapperFactory.Builder().build();
     private MapperFacade mapper;
 
     public CollocationInformationMapper() {
-        mapperFactory.classMap(CollocationInformationType.class, CollocationInformation.class)
+        mapperFactory.classMap(CollocationInformationType.class, CollocationInformationLogItem.class)
                 .fieldMap("instrumentationType", "instrumentType").converter("instrumentTypeConverter").add()
                 .fieldMap("status", "status").converter("statusTypeConverter").add()
                 .fieldMap("validTime.abstractTimePrimitive", "effectiveDates").converter("jaxbElemConverter").add()
@@ -44,14 +44,14 @@ public class CollocationInformationMapper implements Iso<CollocationInformationT
     /**
      * {@inheritDoc}
      */
-    public CollocationInformation to(CollocationInformationType collocationInformationType) {
-        return mapper.map(collocationInformationType, CollocationInformation.class);
+    public CollocationInformationLogItem to(CollocationInformationType collocationInformationType) {
+        return mapper.map(collocationInformationType, CollocationInformationLogItem.class);
     }
 
     /**
      * {@inheritDoc}
      */
-    public CollocationInformationType from(CollocationInformation collocationInformation) {
+    public CollocationInformationType from(CollocationInformationLogItem collocationInformation) {
         return mapper.map(collocationInformation, CollocationInformationType.class);
     }
 }

@@ -90,7 +90,7 @@ public class SiteLog {
     @Valid
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     @JoinColumn(name = "SITE_ID", referencedColumnName = "ID", foreignKey = @ForeignKey(name="FK_SITELOG_SITE_SITELOG_COLLOCATIONINFORMATION"))
-    protected Set<CollocationInformation> collocationInformation = new HashSet<>();
+    protected Set<CollocationInformationLogItem> collocationInformation = new HashSet<>();
 
     @Valid
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
@@ -278,14 +278,14 @@ public class SiteLog {
     /**
      * Return collocation information.
      */
-    public Set<CollocationInformation> getCollocationInformation() {
+    public Set<CollocationInformationLogItem> getCollocationInformation() {
         return collocationInformation;
     }
 
     /**
      * Set collocation information.
      */
-    public void setCollocationInformation(Set<CollocationInformation> c) {
+    public void setCollocationInformation(Set<CollocationInformationLogItem> c) {
         collocationInformation = c;
     }
 

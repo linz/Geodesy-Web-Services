@@ -176,7 +176,7 @@ public class SiteLogMapper implements Iso<SiteLogType, SiteLog> {
 
         converters.registerConverter("surveyedLocalTies",
                 new BidirectionalConverterWrapper<List<GMLPropertyType>, Set<SurveyedLocalTie>>(
-                        infoCollectionConverter(new SurveyedLocalTieMapper())
+                        logItemsConverter(new SurveyedLocalTieMapper())
                 ) {}
         );
 

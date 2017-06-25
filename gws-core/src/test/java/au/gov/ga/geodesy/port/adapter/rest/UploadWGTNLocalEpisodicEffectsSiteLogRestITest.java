@@ -41,6 +41,6 @@ public class UploadWGTNLocalEpisodicEffectsSiteLogRestITest extends IntegrationT
                 .statusCode(HttpStatus.OK.value())
                 .contentType("application/xml")
                 .log().body()
-                .body("geo:siteLog.geo:localEpisodicEffect.size()", equalTo(4));
+                .body("geo:GeodesyML.geo:siteLog.geo:localEpisodicEffect.size()", equalTo(4));
     }
 }

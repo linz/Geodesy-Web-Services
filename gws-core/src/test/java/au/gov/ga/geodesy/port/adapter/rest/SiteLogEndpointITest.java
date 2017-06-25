@@ -38,10 +38,10 @@ public class SiteLogEndpointITest extends IntegrationTest {
             .when()
             .get("/siteLogs/search/findByFourCharacterId?id=ALIC&format=geodesyml")
             .then()
+                .log().body()
                 .statusCode(HttpStatus.OK.value())
                 .contentType("application/xml")
-                .body("geo:siteLog.geo:siteIdentification.geo:siteName.text()", equalTo("Alice Springs AU012"))
-                .log().body();
+                .body("geo:GeodesyML.geo:siteLog.geo:siteIdentification.geo:siteName.text()", equalTo("Alice Springs AU012"));
     }
 
     @Test(dependsOnMethods = "upload")
@@ -51,10 +51,10 @@ public class SiteLogEndpointITest extends IntegrationTest {
             .when()
             .get("/siteLogs/search/findByFourCharacterId?id=ALIC&format=json")
             .then()
+                .log().body()
                 .statusCode(HttpStatus.OK.value())
                 .contentType("application/json")
-                .body("siteIdentification.siteName", equalTo("Alice Springs AU012"))
-                .log().body();
+                .body("siteIdentification.siteName", equalTo("Alice Springs AU012"));
     }
 
     @Test

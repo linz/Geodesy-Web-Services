@@ -79,6 +79,10 @@ public abstract class BaseSystemTest extends AbstractTestNGSpringContextTests {
         return authenticate("user.a", "gumby123A");
     }
 
+    protected String userBToken() {
+        return authenticate("user.b", "gumby123B");
+    }
+
     protected String superuserToken() {
         return authenticate("user.x", "gumby123X");
     }

@@ -47,6 +47,7 @@ import au.gov.ga.geodesy.support.TestResources;
 import au.gov.ga.geodesy.support.gml.GMLPropertyType;
 import au.gov.ga.geodesy.support.marshalling.moxy.GeodesyMLMoxy;
 import au.gov.ga.geodesy.support.spring.IntegrationTest;
+import au.gov.ga.geodesy.support.utils.DateTimeFormatDecorator;
 import au.gov.ga.geodesy.support.utils.GMLDateUtils;
 import au.gov.xml.icsm.geodesyml.v_0_4.CollocationInformationPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_4.CollocationInformationType;
@@ -78,10 +79,13 @@ import au.gov.xml.icsm.geodesyml.v_0_4.TemperatureSensorPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_4.TemperatureSensorType;
 import au.gov.xml.icsm.geodesyml.v_0_4.WaterVaporSensorPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_4.WaterVaporSensorType;
+
 import ma.glasnost.orika.metadata.TypeFactory;
+
 import net.opengis.gml.v_3_2_1.TimePeriodType;
 import net.opengis.gml.v_3_2_1.TimePositionType;
 
+// TODO: Rewrite
 public class SiteLogMapperITest extends IntegrationTest {
 
     private SiteLogMapper mapper;
@@ -109,6 +113,7 @@ public class SiteLogMapperITest extends IntegrationTest {
         testMappingValues(siteLogType, siteLog);
 
         checkSiteContacts(siteLogType, siteLog);
+        checkReceivers(siteLogType.getGnssReceivers(), siteLog.getGnssReceivers());
 
         // TODO: complete tests
         siteLogType = mapper.from(siteLog);
@@ -127,6 +132,19 @@ public class SiteLogMapperITest extends IntegrationTest {
             siteLog.getSiteContacts().get(0).getParty().getIndividualName(),
             is(siteLogType.getSiteContacts().get(0).getCIResponsibleParty().getIndividualName().getCharacterString().getValue())
         );
+    }
+
+    private void checkReceivers(List<GnssReceiverPropertyType> receiverProperties, Set<GnssReceiverLogItem> receiverLogItems) {
+        assertThat(receiverProperties.size(), is(equalTo(receiverLogItems.size())));
+        int i = 0;
+        for (GnssReceiverLogItem receiverLogItem : sortLogItems(receiverLogItems)) {
+            checkReceiver(receiverProperties.get(i++), receiverLogItem);
+        }
+    }
+
+    private void checkReceiver(GnssReceiverPropertyType receiverProperty, GnssReceiverLogItem receiverLogItem) {
+        assertThat(receiverProperty.getDateInserted(), is(equalTo(timePosition(receiverLogItem.getDateInserted()))));
+        assertThat(receiverProperty.getGnssReceiver().getFirmwareVersion(), is(equalTo(receiverLogItem.getFirmwareVersion())));
     }
 
     /**
@@ -673,5 +691,11 @@ public class SiteLogMapperITest extends IntegrationTest {
         });
         sorted.addAll(info);
         return sorted;
+    }
+
+    private TimePositionType timePosition(Instant date) {
+        TimePositionType timePosition = new TimePositionType();
+        timePosition.getValue().add(GMLDateUtils.dateToString(date, DateTimeFormatDecorator.ofPattern("uuuu-MM-dd'T'HH:mm:ssX")));
+        return timePosition;
     }
 }

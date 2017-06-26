@@ -1,6 +1,6 @@
 package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 
-import au.gov.ga.geodesy.domain.model.sitelog.SurveyedLocalTie;
+import au.gov.ga.geodesy.domain.model.sitelog.SurveyedLocalTieLogItem;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLMarshaller;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLUtils;
 import au.gov.ga.geodesy.support.TestResources;
@@ -34,7 +34,7 @@ public class SurveyedLocalTieMapperTest {
                 .findFirst().get();
 
         SurveyedLocalTieType surveyedLocalTiesA = siteLogType.getSurveyedLocalTies().get(0).getSurveyedLocalTie();
-        SurveyedLocalTie surveyedLocalTie = mapper.to(surveyedLocalTiesA);
+        SurveyedLocalTieLogItem surveyedLocalTie = mapper.to(surveyedLocalTiesA);
         assertThat(surveyedLocalTie.getTiedMarkerName(), is(surveyedLocalTiesA.getTiedMarkerName()));
         assertThat(surveyedLocalTie.getTiedMarkerUsage(), is(surveyedLocalTiesA.getTiedMarkerUsage()));
         assertThat(surveyedLocalTie.getTiedMarkerCdpNumber(), is(surveyedLocalTiesA.getTiedMarkerCDPNumber()));

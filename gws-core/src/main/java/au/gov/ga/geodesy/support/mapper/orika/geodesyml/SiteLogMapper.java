@@ -23,7 +23,7 @@ import au.gov.ga.geodesy.domain.model.sitelog.SignalObstructionLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteIdentification;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLocation;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLog;
-import au.gov.ga.geodesy.domain.model.sitelog.SurveyedLocalTie;
+import au.gov.ga.geodesy.domain.model.sitelog.SurveyedLocalTieLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.TemperatureSensorLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.WaterVaporSensorLogItem;
 import au.gov.ga.geodesy.support.gml.GMLPropertyType;
@@ -175,8 +175,8 @@ public class SiteLogMapper implements Iso<SiteLogType, SiteLog> {
         );
 
         converters.registerConverter("surveyedLocalTies",
-                new BidirectionalConverterWrapper<List<GMLPropertyType>, Set<SurveyedLocalTie>>(
-                        infoCollectionConverter(new SurveyedLocalTieMapper())
+                new BidirectionalConverterWrapper<List<GMLPropertyType>, Set<SurveyedLocalTieLogItem>>(
+                        logItemsConverter(new SurveyedLocalTieMapper())
                 ) {}
         );
 
@@ -216,18 +216,6 @@ public class SiteLogMapper implements Iso<SiteLogType, SiteLog> {
 
         Iso<P, T> propertyIso = new GMLPropertyTypeMapper<>();
         Iso<P, L> elementIso = propertyIso.compose(logItemsIso);
-        return new IsoConverter<>(new ListToSet<>(elementIso));
-    }
-
-    /**
-     * Given an equipment isomorphism (from DTO to domain model), return a
-     * bidirectional converter from a list of GML equipment property types to a
-     * set of domain model collocation information.
-     */
-    private <P extends GMLPropertyType, T extends AbstractGMLType, L extends Object>
-    BidirectionalConverter<List<P>, Set<L>> infoCollectionConverter(Iso<T, L> infoIso) {
-        Iso<P, T> propertyIso = new GMLPropertyTypeMapper<>();
-        Iso<P, L> elementIso = propertyIso.compose(infoIso);
         return new IsoConverter<>(new ListToSet<>(elementIso));
     }
 

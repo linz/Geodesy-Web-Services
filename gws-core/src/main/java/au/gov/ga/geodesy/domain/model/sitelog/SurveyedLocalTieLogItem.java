@@ -18,7 +18,7 @@ import javax.validation.constraints.Size;
  */
 @Entity
 @Table(name = "SITELOG_SURVEYEDLOCALTIE")
-public class SurveyedLocalTie {
+public class SurveyedLocalTieLogItem implements LogItem {
 
     @Id
     @GeneratedValue(generator = "surrogateKeyGenerator")
@@ -195,5 +195,13 @@ public class SurveyedLocalTie {
      */
     public void setNotes(String value) {
         this.notes = value;
+    }
+
+    public EffectiveDates getEffectiveDates() {
+        return new EffectiveDates(this.getDateMeasured(), this.getDateMeasured());
+    }
+
+    public <T> T accept(LogItemVisitor<T> v) {
+        return v.visit(this);
     }
 }

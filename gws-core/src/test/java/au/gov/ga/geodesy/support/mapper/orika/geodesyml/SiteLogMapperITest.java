@@ -37,7 +37,7 @@ import au.gov.ga.geodesy.domain.model.sitelog.PressureSensorLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.RadioInterference;
 import au.gov.ga.geodesy.domain.model.sitelog.SignalObstructionLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLog;
-import au.gov.ga.geodesy.domain.model.sitelog.SurveyedLocalTie;
+import au.gov.ga.geodesy.domain.model.sitelog.SurveyedLocalTieLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.TemperatureSensorLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.WaterVaporSensorLogItem;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLMarshaller;
@@ -472,7 +472,7 @@ public class SiteLogMapperITest extends IntegrationTest {
 
         {
             int i = 0;
-            for (SurveyedLocalTie surveyedLocalTie : sortSurveyedLocalTies(siteLog.getSurveyedLocalTies())) {
+            for (SurveyedLocalTieLogItem surveyedLocalTie : sortSurveyedLocalTies(siteLog.getSurveyedLocalTies())) {
                 SurveyedLocalTieType surveyedLocalTiesType = surveyedLocalTies.get(i++).getSurveyedLocalTie();
                 assertThat(surveyedLocalTie.getTiedMarkerName(), is(surveyedLocalTiesType.getTiedMarkerName()));
                 assertThat(surveyedLocalTie.getTiedMarkerUsage(), is(surveyedLocalTiesType.getTiedMarkerUsage()));
@@ -663,7 +663,7 @@ public class SiteLogMapperITest extends IntegrationTest {
     /**
      * Sort a set of SurveyedLocalTies by tied marker names.
      */
-    private <T extends SurveyedLocalTie> SortedSet<T> sortSurveyedLocalTies(Set<T> info) {
+    private <T extends SurveyedLocalTieLogItem> SortedSet<T> sortSurveyedLocalTies(Set<T> info) {
         SortedSet<T> sorted = new TreeSet<>(new Comparator<T>() {
             public int compare(T e, T f) {
                 int c = e.getTiedMarkerName().compareTo(f.getTiedMarkerName());

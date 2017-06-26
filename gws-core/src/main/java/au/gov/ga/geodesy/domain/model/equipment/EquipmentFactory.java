@@ -22,6 +22,7 @@ import au.gov.ga.geodesy.domain.model.sitelog.LogItemVisitor;
 import au.gov.ga.geodesy.domain.model.sitelog.OtherInstrumentationLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.PossibleProblemSourceLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.PressureSensorLogItem;
+import au.gov.ga.geodesy.domain.model.sitelog.SurveyedLocalTieLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.TemperatureSensorLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.WaterVaporSensorLogItem;
 import au.gov.ga.geodesy.exception.GeodesyRuntimeException;
@@ -136,6 +137,11 @@ public class EquipmentFactory {
 
         @Override
         public Pair<Equipment, EquipmentConfiguration> visit(CollocationInformationLogItem logItem) {
+            throw new UnsupportedOperationException();
+        }
+
+        @Override
+        public Pair<Equipment, EquipmentConfiguration> visit(SurveyedLocalTieLogItem logItem) {
             throw new UnsupportedOperationException();
         }
 

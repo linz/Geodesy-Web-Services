@@ -50,9 +50,7 @@ public class ResponsiblePartyJpaConverter implements AttributeConverter<Responsi
 
     @Override
     public String convertToDatabaseColumn(ResponsibleParty party) {
-        String s = marshal(mapper.mapToDto(party));
-        /* System.out.println(s); */
-        return s;
+       return marshal(mapper.mapToDto(party));
     }
 
     @Override

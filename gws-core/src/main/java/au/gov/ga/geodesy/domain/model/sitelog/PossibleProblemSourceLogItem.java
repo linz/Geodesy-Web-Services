@@ -10,7 +10,7 @@ import javax.validation.constraints.Size;
  * http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004/baseLocalInterferencesLib.xsd:basePossibleProblemSourcesType
  */
 @MappedSuperclass
-public abstract class PossibleProblemSourceLogItem implements LogItem {
+public abstract class PossibleProblemSourceLogItem extends LogItem {
 
     @Size(max = 4000)
     @Column(name = "POSSIBLE_PROBLEM_SOURCE", length = 4000)

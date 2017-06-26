@@ -15,7 +15,7 @@ import javax.validation.constraints.Size;
  */
 @Entity
 @Table(name = "SITELOG_COLLOCATIONINFORMATION")
-public class CollocationInformation {
+public class CollocationInformationLogItem implements LogItem {
 
     @Id
     @GeneratedValue(generator = "surrogateKeyGenerator")
@@ -102,5 +102,9 @@ public class CollocationInformation {
      */
     public void setNotes(String value) {
         this.notes = value;
+    }
+
+    public <T> T accept(LogItemVisitor<T> v) {
+        return v.visit(this);
     }
 }

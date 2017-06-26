@@ -6,7 +6,7 @@ import static org.hamcrest.core.Is.is;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 
-import au.gov.ga.geodesy.domain.model.sitelog.CollocationInformation;
+import au.gov.ga.geodesy.domain.model.sitelog.CollocationInformationLogItem;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLMarshaller;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLUtils;
 import au.gov.ga.geodesy.support.TestResources;
@@ -41,7 +41,7 @@ public class CollocationInformationMapperTest {
             .findFirst().get();
 
         CollocationInformationType collocationInfoTypeA = siteLog.getCollocationInformations().get(0).getCollocationInformation();
-        CollocationInformation collocationInfo = mapper.to(collocationInfoTypeA);
+        CollocationInformationLogItem collocationInfo = mapper.to(collocationInfoTypeA);
 
         assertThat(collocationInfo.getInstrumentType(), is(collocationInfoTypeA.getInstrumentationType().getValue()));
         assertThat(collocationInfo.getStatus(), is(String.valueOf(collocationInfoTypeA.getStatus().getValue())));

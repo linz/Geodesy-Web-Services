@@ -31,7 +31,7 @@ public class ResponsiblePartiesMapper extends CustomMapper<SiteLogType, SiteLog>
     private ResponsiblePartyOrikaMapper partyMapper = new ResponsiblePartyOrikaMapper();
 
     private void addSiteResponsibleParty(List<SiteResponsibleParty> siteResponsibleParties, AgencyPropertyType agencyProperty, ContactType contactType) {
-        if (agencyProperty == null) {
+        if (agencyProperty == null || agencyProperty.getCIResponsibleParty() == null) {
             return;
         } else {
             ResponsibleParty responsibleParty = this.partyMapper.mapFromDto(agencyProperty.getCIResponsibleParty());

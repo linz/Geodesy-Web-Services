@@ -1,0 +1,30 @@
+<featureType>
+    <id>geo_siteLog_featuretype</id>
+    <name>siteLog</name>
+    <nativeName>siteLog</nativeName>
+    <namespace>
+        <id>geo_namespace</id>
+    </namespace>
+    <title>GeodesyML 0.4 SiteLog</title>
+    <abstract>GeodesyML 0.4 SiteLog feature type</abstract>
+    <srs>EPSG:4326</srs>
+    <latLonBoundingBox>
+        <minx>-180</minx>
+        <maxx>180</maxx>
+        <miny>-90</miny>
+        <maxy>90</maxy>
+        <crs>EPSG:4326</crs>
+    </latLonBoundingBox>
+    <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+    <enabled>true</enabled>
+    <metadata>
+        <entry key="kml.regionateFeatureLimit">10</entry>
+        <entry key="indexingEnabled">false</entry>
+        <entry key="cachingEnabled">false</entry>
+    </metadata>
+    <store class="dataStore">
+        <id>geo_siteLog_datastore</id>
+    </store>
+    <maxFeatures>0</maxFeatures>
+    <numDecimals>0</numDecimals>
+</featureType>

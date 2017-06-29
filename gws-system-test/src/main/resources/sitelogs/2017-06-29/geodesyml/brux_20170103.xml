@@ -1,0 +1,760 @@
+<?xml version="1.0" encoding="utf-8"?>
+<geo:GeodesyML gml:id="BRUX00BEL" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.4" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <geo:siteLog gml:id="brux_20170103.log">
+        <geo:formInformation>
+            <geo:preparedBy>Carine Bruyninx</geo:preparedBy>
+            <geo:datePrepared>2017-01-03</geo:datePrepared>
+            <geo:reportType>UPDATE</geo:reportType>
+        </geo:formInformation>
+        <geo:siteIdentification>
+            <geo:siteName>Brussels</geo:siteName>
+            <geo:fourCharacterID>BRUX</geo:fourCharacterID>
+            <geo:monumentInscription></geo:monumentInscription>
+            <geo:iersDOMESNumber>13101M010</geo:iersDOMESNumber>
+            <geo:cdpNumber></geo:cdpNumber>
+            <geo:monumentDescription codeSpace="urn:ga-gov-au:monument-description-type">STEEL MAST</geo:monumentDescription>
+            <geo:heightOfTheMonument>8.0</geo:heightOfTheMonument>
+            <geo:monumentFoundation>CONCRETE BLOCK</geo:monumentFoundation>
+            <geo:foundationDepth>3.0</geo:foundationDepth>
+            <geo:markerDescription>CENTER OF HOLE IN STEEL PLATE</geo:markerDescription>
+            <geo:dateInstalled>2006-07-07T00:00:00Z</geo:dateInstalled>
+            <geo:geologicCharacteristic codeSpace="urn:ga-gov-au:geologic-characteristic-type">SAND</geo:geologicCharacteristic>
+            <geo:bedrockType>SEDIMENTARY</geo:bedrockType>
+            <geo:bedrockCondition>FRESH</geo:bedrockCondition>
+            <geo:fractureSpacing>0 cm</geo:fractureSpacing>
+            <geo:faultZonesNearby codeSpace="urn:ga-gov-au:fault-zones-type">NO</geo:faultZonesNearby>
+            <geo:notes></geo:notes>
+        </geo:siteIdentification>
+        <geo:siteLocation>
+            <geo:city>Brussels</geo:city>
+            <geo:state>Brabant</geo:state>
+            <geo:countryCodeISO codeList="http://xml.gov.au/icsm/geodesyml/codelists/country-codes-codelist.xml#GeodesyML_CountryCode" codeListValue="Belgium" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">BEL</geo:countryCodeISO>
+            <geo:tectonicPlate codeSpace="urn:ga-gov-au:plate-type">EURASIAN</geo:tectonicPlate>
+            <geo:approximatePositionITRF>
+                <geo:cartesianPosition>
+                    <gml:Point gml:id="itrf_cartesian" srsName="EPSG:7789">
+                        <gml:pos>4027881.6287 306998.5366 4919498.9839</gml:pos>
+                    </gml:Point>
+                </geo:cartesianPosition>
+                <geo:geodeticPosition>
+                    <gml:Point gml:id="itrf_geodetic" srsName="EPSG:7912">
+                        <gml:pos>50.7980611111 4.35856111111 158.3</gml:pos>
+                    </gml:Point>
+                </geo:geodeticPosition>
+            </geo:approximatePositionITRF>
+            <geo:notes></geo:notes>
+        </geo:siteLocation>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-1">
+                <geo:notes>hardware replacement of receiver with SN 1128, same receiver, but different serial number (now 1436)</geo:notes>
+                <geo:manufacturerSerialNumber>1436</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="SEPT POLARX2" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">SEPT POLARX2</geo:igsModelCode>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GPS</geo:satelliteSystem>
+                <geo:firmwareVersion>2.6.2</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>2006-07-07T00:00:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2008-02-14T09:00:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization>0.1</geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2006-07-07T00:00:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-2">
+                <geo:manufacturerSerialNumber>RT820015201</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="ASHTECH Z-XII3T" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">ASHTECH Z-XII3T</geo:igsModelCode>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GPS</geo:satelliteSystem>
+                <geo:firmwareVersion>1L01-1D04</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>2008-02-15T08:00:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2010-06-28T13:55:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization>0.1</geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2008-02-15T08:00:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-3">
+                <geo:manufacturerSerialNumber>2001060</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="SEPT POLARX3ETR" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">SEPT POLARX3ETR</geo:igsModelCode>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GPS</geo:satelliteSystem>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GLO</geo:satelliteSystem>
+                <geo:firmwareVersion>1.4.0</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>2010-06-28T13:55:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2012-01-31T13:00:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization>18.0</geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2010-06-28T13:55:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-4">
+                <geo:notes>The receiver delay 1PPS in to 1PPS out was measured to be 145 ns.</geo:notes>
+                <geo:manufacturerSerialNumber>3001376</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="SEPT POLARX4TR" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">SEPT POLARX4TR</geo:igsModelCode>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GPS</geo:satelliteSystem>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GLO</geo:satelliteSystem>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GAL</geo:satelliteSystem>
+                <geo:firmwareVersion>2.3.3</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>2012-01-31T14:00:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2012-03-05T14:00:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization>18.0</geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2012-01-31T14:00:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-5">
+                <geo:notes>The receiver delay 1PPS in to 1PPS out was measured to be 142.8 ns.</geo:notes>
+                <geo:manufacturerSerialNumber>3001376</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="SEPT POLARX4TR" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">SEPT POLARX4TR</geo:igsModelCode>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GPS</geo:satelliteSystem>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GLO</geo:satelliteSystem>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GAL</geo:satelliteSystem>
+                <geo:firmwareVersion>2.3-tst120216r34012</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>2012-03-05T16:00:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2012-09-24T11:00:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization>18.0</geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2012-03-05T16:00:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-6">
+                <geo:notes>The receiver delay 1PPS in to 1PPS out was measured to be 142.8 ns.</geo:notes>
+                <geo:manufacturerSerialNumber>3001376</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="SEPT POLARX4TR" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">SEPT POLARX4TR</geo:igsModelCode>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GPS</geo:satelliteSystem>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GLO</geo:satelliteSystem>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GAL</geo:satelliteSystem>
+                <geo:firmwareVersion>2.3.4</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>2012-09-24T11:45:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2013-02-04T12:40:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization>18.0</geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2012-09-24T11:45:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-7">
+                <geo:notes>The receiver delay 1PPS in to 1PPS out is supposed to be unchanged (142.8 ns).</geo:notes>
+                <geo:manufacturerSerialNumber>3001376</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="SEPT POLARX4TR" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">SEPT POLARX4TR</geo:igsModelCode>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GPS</geo:satelliteSystem>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GLO</geo:satelliteSystem>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GAL</geo:satelliteSystem>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">BDS</geo:satelliteSystem>
+                <geo:firmwareVersion>2.3.4</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>2013-02-04T13:55:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2014-03-17T10:10:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization>18.0</geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2013-02-04T13:55:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-8">
+                <geo:notes>The receiver delay 1PPS in to 1PPS out was remeasured and found to be unchanged (142.8 ns).</geo:notes>
+                <geo:manufacturerSerialNumber>3001376</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="SEPT POLARX4TR" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">SEPT POLARX4TR</geo:igsModelCode>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GPS</geo:satelliteSystem>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GLO</geo:satelliteSystem>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GAL</geo:satelliteSystem>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">BDS</geo:satelliteSystem>
+                <geo:firmwareVersion>2.5.2</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>2014-03-17T10:40:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2015-09-07T14:45:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization>18.0</geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2014-03-17T10:40:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-9">
+                <geo:manufacturerSerialNumber>3001376</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="SEPT POLARX4TR" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">SEPT POLARX4TR</geo:igsModelCode>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GPS</geo:satelliteSystem>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GLO</geo:satelliteSystem>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GAL</geo:satelliteSystem>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">BDS</geo:satelliteSystem>
+                <geo:firmwareVersion>2.9.0</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>2015-09-07T14:50:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2016-10-24T09:00:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization>18.0</geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2015-09-07T14:50:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-10">
+                <geo:manufacturerSerialNumber>3001376</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="SEPT POLARX4TR" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">SEPT POLARX4TR</geo:igsModelCode>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GPS</geo:satelliteSystem>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GLO</geo:satelliteSystem>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GAL</geo:satelliteSystem>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">BDS</geo:satelliteSystem>
+                <geo:firmwareVersion>2.9.5</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>2016-10-24T09:00:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2017-01-03T12:15:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization>18.0</geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2016-10-24T09:00:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-11">
+                <geo:manufacturerSerialNumber>3001376</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="SEPT POLARX4TR" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">SEPT POLARX4TR</geo:igsModelCode>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GPS</geo:satelliteSystem>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GLO</geo:satelliteSystem>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GAL</geo:satelliteSystem>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">BDS</geo:satelliteSystem>
+                <geo:firmwareVersion>2.9.6</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>2017-01-03T12:15:00Z</geo:dateInstalled>
+                <geo:dateRemoved></geo:dateRemoved>
+                <geo:temperatureStabilization>18.0</geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2017-01-03T12:15:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssAntenna>
+            <geo:GnssAntenna gml:id="gnss-antenna-1">
+                <geo:manufacturerSerialNumber>CR620023301</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSAntennaTypeCode" codeListValue="ASH701945E_M NONE" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">ASH701945E_M    NONE</geo:igsModelCode>
+                <geo:antennaReferencePoint codeSpace="urn:ga-gov-au:antenna-reference-point-type">BPA</geo:antennaReferencePoint>
+                <geo:marker-arpUpEcc.>0.1266</geo:marker-arpUpEcc.>
+                <geo:marker-arpNorthEcc.>0.001</geo:marker-arpNorthEcc.>
+                <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+                <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+                <geo:antennaRadomeType codeSpace="urn:igs-org:gnss-radome-model-code">NONE</geo:antennaRadomeType>
+                <geo:radomeSerialNumber></geo:radomeSerialNumber>
+                <geo:antennaCableType>ANDREW heliax LDF2-50A</geo:antennaCableType>
+                <geo:antennaCableLength>60.0</geo:antennaCableLength>
+                <geo:dateInstalled>2006-07-07T00:00:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2008-03-19T08:45:00Z</geo:dateRemoved>
+            </geo:GnssAntenna>
+            <geo:dateInserted>2006-07-07T00:00:00Z</geo:dateInserted>
+        </geo:gnssAntenna>
+        <geo:gnssAntenna>
+            <geo:GnssAntenna gml:id="gnss-antenna-2">
+                <geo:manufacturerSerialNumber>CR620002301</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSAntennaTypeCode" codeListValue="ASH701945C_M NONE" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">ASH701945C_M    NONE</geo:igsModelCode>
+                <geo:antennaReferencePoint codeSpace="urn:ga-gov-au:antenna-reference-point-type">BPA</geo:antennaReferencePoint>
+                <geo:marker-arpUpEcc.>0.1266</geo:marker-arpUpEcc.>
+                <geo:marker-arpNorthEcc.>0.001</geo:marker-arpNorthEcc.>
+                <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+                <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+                <geo:antennaRadomeType codeSpace="urn:igs-org:gnss-radome-model-code">NONE</geo:antennaRadomeType>
+                <geo:radomeSerialNumber></geo:radomeSerialNumber>
+                <geo:antennaCableType>ANDREW heliax LDF2-50A</geo:antennaCableType>
+                <geo:antennaCableLength>60.0</geo:antennaCableLength>
+                <geo:dateInstalled>2008-03-19T09:00:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2008-06-17T09:00:00Z</geo:dateRemoved>
+            </geo:GnssAntenna>
+            <geo:dateInserted>2008-03-19T09:00:00Z</geo:dateInserted>
+        </geo:gnssAntenna>
+        <geo:gnssAntenna>
+            <geo:GnssAntenna gml:id="gnss-antenna-3">
+                <geo:notes>Testing of ECCOSORB ANW-79 around antenna in order to obtain low reflectivity. Adaptation antenna height by + 2 mm due to a mounting plate which holds the ECCOSORB material under the antenna.</geo:notes>
+                <geo:manufacturerSerialNumber>CR620002301</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSAntennaTypeCode" codeListValue="ASH701945C_M NONE" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">ASH701945C_M    NONE</geo:igsModelCode>
+                <geo:antennaReferencePoint codeSpace="urn:ga-gov-au:antenna-reference-point-type">BPA</geo:antennaReferencePoint>
+                <geo:marker-arpUpEcc.>0.1286</geo:marker-arpUpEcc.>
+                <geo:marker-arpNorthEcc.>0.001</geo:marker-arpNorthEcc.>
+                <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+                <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+                <geo:antennaRadomeType codeSpace="urn:igs-org:gnss-radome-model-code">NONE</geo:antennaRadomeType>
+                <geo:radomeSerialNumber></geo:radomeSerialNumber>
+                <geo:antennaCableType>ANDREW heliax LDF2-50A</geo:antennaCableType>
+                <geo:antennaCableLength>60.0</geo:antennaCableLength>
+                <geo:dateInstalled>2008-06-17T09:00:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2008-09-02T13:00:00Z</geo:dateRemoved>
+            </geo:GnssAntenna>
+            <geo:dateInserted>2008-06-17T09:00:00Z</geo:dateInserted>
+        </geo:gnssAntenna>
+        <geo:gnssAntenna>
+            <geo:GnssAntenna gml:id="gnss-antenna-4">
+                <geo:notes>Testing without plate and ECOSORB</geo:notes>
+                <geo:manufacturerSerialNumber>CR620002301</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSAntennaTypeCode" codeListValue="ASH701945C_M NONE" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">ASH701945C_M    NONE</geo:igsModelCode>
+                <geo:antennaReferencePoint codeSpace="urn:ga-gov-au:antenna-reference-point-type">BPA</geo:antennaReferencePoint>
+                <geo:marker-arpUpEcc.>0.1266</geo:marker-arpUpEcc.>
+                <geo:marker-arpNorthEcc.>0.001</geo:marker-arpNorthEcc.>
+                <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+                <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+                <geo:antennaRadomeType codeSpace="urn:igs-org:gnss-radome-model-code">NONE</geo:antennaRadomeType>
+                <geo:radomeSerialNumber></geo:radomeSerialNumber>
+                <geo:antennaCableType>ANDREW heliax LDF2-50A</geo:antennaCableType>
+                <geo:antennaCableLength>60.0</geo:antennaCableLength>
+                <geo:dateInstalled>2008-09-02T13:00:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2008-09-22T09:00:00Z</geo:dateRemoved>
+            </geo:GnssAntenna>
+            <geo:dateInserted>2008-09-02T13:00:00Z</geo:dateInserted>
+        </geo:gnssAntenna>
+        <geo:gnssAntenna>
+            <geo:GnssAntenna gml:id="gnss-antenna-5">
+                <geo:notes>Testing new antenna (Antartica)</geo:notes>
+                <geo:manufacturerSerialNumber>30765568</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSAntennaTypeCode" codeListValue="TRM55971.00 NONE" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">TRM55971.00     NONE</geo:igsModelCode>
+                <geo:antennaReferencePoint codeSpace="urn:ga-gov-au:antenna-reference-point-type">BAM</geo:antennaReferencePoint>
+                <geo:marker-arpUpEcc.>0.1266</geo:marker-arpUpEcc.>
+                <geo:marker-arpNorthEcc.>0.001</geo:marker-arpNorthEcc.>
+                <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+                <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+                <geo:antennaRadomeType codeSpace="urn:igs-org:gnss-radome-model-code">NONE</geo:antennaRadomeType>
+                <geo:radomeSerialNumber></geo:radomeSerialNumber>
+                <geo:antennaCableType>ANDREW heliax LDF2-50A</geo:antennaCableType>
+                <geo:antennaCableLength>60.0</geo:antennaCableLength>
+                <geo:dateInstalled>2008-09-22T09:00:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2008-10-02T09:30:00Z</geo:dateRemoved>
+            </geo:GnssAntenna>
+            <geo:dateInserted>2008-09-22T09:00:00Z</geo:dateInserted>
+        </geo:gnssAntenna>
+        <geo:gnssAntenna>
+            <geo:GnssAntenna gml:id="gnss-antenna-6">
+                <geo:notes>Testing new antenna (Antartica)</geo:notes>
+                <geo:manufacturerSerialNumber>30765568</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSAntennaTypeCode" codeListValue="TRM55971.00 TZGD" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">TRM55971.00     TZGD</geo:igsModelCode>
+                <geo:antennaReferencePoint codeSpace="urn:ga-gov-au:antenna-reference-point-type">BAM</geo:antennaReferencePoint>
+                <geo:marker-arpUpEcc.>0.1266</geo:marker-arpUpEcc.>
+                <geo:marker-arpNorthEcc.>0.001</geo:marker-arpNorthEcc.>
+                <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+                <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+                <geo:antennaRadomeType codeSpace="urn:igs-org:gnss-radome-model-code">TZGD</geo:antennaRadomeType>
+                <geo:radomeSerialNumber></geo:radomeSerialNumber>
+                <geo:antennaCableType>ANDREW heliax LDF2-50A</geo:antennaCableType>
+                <geo:antennaCableLength>60.0</geo:antennaCableLength>
+                <geo:dateInstalled>2008-10-02T09:30:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2008-10-20T06:30:00Z</geo:dateRemoved>
+            </geo:GnssAntenna>
+            <geo:dateInserted>2008-10-02T09:30:00Z</geo:dateInserted>
+        </geo:gnssAntenna>
+        <geo:gnssAntenna>
+            <geo:GnssAntenna gml:id="gnss-antenna-7">
+                <geo:manufacturerSerialNumber>CR620002301</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSAntennaTypeCode" codeListValue="ASH701945C_M NONE" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">ASH701945C_M    NONE</geo:igsModelCode>
+                <geo:antennaReferencePoint codeSpace="urn:ga-gov-au:antenna-reference-point-type">BPA</geo:antennaReferencePoint>
+                <geo:marker-arpUpEcc.>0.1266</geo:marker-arpUpEcc.>
+                <geo:marker-arpNorthEcc.>0.001</geo:marker-arpNorthEcc.>
+                <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+                <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+                <geo:antennaRadomeType codeSpace="urn:igs-org:gnss-radome-model-code">NONE</geo:antennaRadomeType>
+                <geo:radomeSerialNumber></geo:radomeSerialNumber>
+                <geo:antennaCableType>ANDREW heliax LDF2-50A</geo:antennaCableType>
+                <geo:antennaCableLength>60.0</geo:antennaCableLength>
+                <geo:dateInstalled>2008-10-20T06:30:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2011-03-07T08:30:00Z</geo:dateRemoved>
+            </geo:GnssAntenna>
+            <geo:dateInserted>2008-10-20T06:30:00Z</geo:dateInserted>
+        </geo:gnssAntenna>
+        <geo:gnssAntenna>
+            <geo:GnssAntenna gml:id="gnss-antenna-8">
+                <geo:notes>To shield the antenna from reflections on the dome below it, a 0.8x0.8 m^2 metal shield was installed with Eccosorb ANW-77 on top. The spacing between the ARP and the top of the Eccosorb ANW-77 is 17.8 cm. On 2015-12-09, the Eccosorb was replaced by a new more resistant version.</geo:notes>
+                <geo:manufacturerSerialNumber>00464</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSAntennaTypeCode" codeListValue="JAVRINGANT_DM NONE" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">JAVRINGANT_DM   NONE</geo:igsModelCode>
+                <geo:antennaReferencePoint codeSpace="urn:ga-gov-au:antenna-reference-point-type">BPA</geo:antennaReferencePoint>
+                <geo:marker-arpUpEcc.>0.4689</geo:marker-arpUpEcc.>
+                <geo:marker-arpNorthEcc.>0.001</geo:marker-arpNorthEcc.>
+                <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+                <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+                <geo:antennaRadomeType codeSpace="urn:igs-org:gnss-radome-model-code">NONE</geo:antennaRadomeType>
+                <geo:radomeSerialNumber></geo:radomeSerialNumber>
+                <geo:antennaCableType>ANDREW heliax LDF2-50A</geo:antennaCableType>
+                <geo:antennaCableLength>60.0</geo:antennaCableLength>
+                <geo:dateInstalled>2011-03-07T12:00:00Z</geo:dateInstalled>
+                <geo:dateRemoved></geo:dateRemoved>
+            </geo:GnssAntenna>
+            <geo:dateInserted>2011-03-07T12:00:00Z</geo:dateInserted>
+        </geo:gnssAntenna>
+        <geo:surveyedLocalTie>
+            <geo:SurveyedLocalTie gml:id="local-tie-1">
+                <geo:tiedMarkerName>BRUS</geo:tiedMarkerName>
+                <geo:tiedMarkerUsage>IGS and EPN station</geo:tiedMarkerUsage>
+                <geo:tiedMarkerCDPNumber></geo:tiedMarkerCDPNumber>
+                <geo:tiedMarkerDOMESNumber>13101M004</geo:tiedMarkerDOMESNumber>
+                <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+                    <geo:dx>12.164</geo:dx>
+                    <geo:dy>47.324</geo:dy>
+                    <geo:dz>-23.739</geo:dz>
+                </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+                <geo:localSiteTiesAccuracy>3.0</geo:localSiteTiesAccuracy>
+                <geo:surveyMethod>TRIANGULATION</geo:surveyMethod>
+                <geo:dateMeasured>2012-03-23T00:00:00Z</geo:dateMeasured>
+                <geo:notes>accuracy = 1 sigma</geo:notes>
+            </geo:SurveyedLocalTie>
+            <geo:dateInserted>2012-03-23T00:00:00Z</geo:dateInserted>
+        </geo:surveyedLocalTie>
+        <geo:surveyedLocalTie>
+            <geo:SurveyedLocalTie gml:id="local-tie-2">
+                <geo:tiedMarkerName>BRUS</geo:tiedMarkerName>
+                <geo:tiedMarkerUsage>IGS and EPN station</geo:tiedMarkerUsage>
+                <geo:tiedMarkerCDPNumber></geo:tiedMarkerCDPNumber>
+                <geo:tiedMarkerDOMESNumber>13101M004</geo:tiedMarkerDOMESNumber>
+                <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+                    <geo:dx>12.161</geo:dx>
+                    <geo:dy>47.33</geo:dy>
+                    <geo:dz>-23.744</geo:dz>
+                </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+                <geo:localSiteTiesAccuracy>1.0</geo:localSiteTiesAccuracy>
+                <geo:surveyMethod>GPS CAMPAIGN</geo:surveyMethod>
+                <geo:dateMeasured>2011-07-07T00:00:00Z</geo:dateMeasured>
+                <geo:notes>L1 analysis covering period 2011-05-16 to 2011-07-22. An L3 analysis over the same period provides (12.161;47.329;-23.745). GPS data analysis was done using igs08.atx calibrations for BRUS and indiv.calib. for BRUX (from University of Bonn and TU Darmstadt).</geo:notes>
+            </geo:SurveyedLocalTie>
+            <geo:dateInserted>2011-07-07T00:00:00Z</geo:dateInserted>
+        </geo:surveyedLocalTie>
+        <geo:surveyedLocalTie>
+            <geo:SurveyedLocalTie gml:id="local-tie-3">
+                <geo:tiedMarkerName>BRUS</geo:tiedMarkerName>
+                <geo:tiedMarkerUsage>IGS and EPN station</geo:tiedMarkerUsage>
+                <geo:tiedMarkerCDPNumber></geo:tiedMarkerCDPNumber>
+                <geo:tiedMarkerDOMESNumber>13101M004</geo:tiedMarkerDOMESNumber>
+                <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+                    <geo:dx>12.162</geo:dx>
+                    <geo:dy>47.331</geo:dy>
+                    <geo:dz>-23.745</geo:dz>
+                </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+                <geo:localSiteTiesAccuracy>1.0</geo:localSiteTiesAccuracy>
+                <geo:surveyMethod>GPS CAMPAIGN</geo:surveyMethod>
+                <geo:dateMeasured>2011-11-02T00:00:00Z</geo:dateMeasured>
+                <geo:notes>L1 analysis covering period 2011-007-23 to 2012-02-12. An L3 analysis over the same period provides (12.166;47.334;-23.748). Differences between 5.2 and 5.3 are caused by an unexplained coordinate jump at BRUS at 2011-07-22. GPS data analysis was done using igs08.atx calibrations for BRUS and indiv.calib. for BRUX (from University of Bonn and TU Darmstadt).</geo:notes>
+            </geo:SurveyedLocalTie>
+            <geo:dateInserted>2011-11-02T00:00:00Z</geo:dateInserted>
+        </geo:surveyedLocalTie>
+        <geo:frequencyStandard>
+            <geo:FrequencyStandard gml:id="frequency-standard-1">
+                <geo:standardType codeSpace="urn:ga-gov-au:frequency-standard-type">EXTERNAL H-MASER</geo:standardType>
+                <geo:inputFrequency>10.0</geo:inputFrequency>
+                <gml:validTime>
+                    <gml:TimePeriod gml:id="frequency-standard-1--time-period-1">
+                        <gml:beginPosition>2006-07-07</gml:beginPosition>
+                        <gml:endPosition>2010-12-21</gml:endPosition>
+                    </gml:TimePeriod>
+                </gml:validTime>
+                <geo:notes></geo:notes>
+            </geo:FrequencyStandard>
+            <geo:dateInserted>2006-07-07</geo:dateInserted>
+        </geo:frequencyStandard>
+        <geo:frequencyStandard>
+            <geo:FrequencyStandard gml:id="frequency-standard-2">
+                <geo:standardType codeSpace="urn:ga-gov-au:frequency-standard-type">INTERNAL</geo:standardType>
+                <geo:inputFrequency xsi:nil="true"></geo:inputFrequency>
+                <gml:validTime>
+                    <gml:TimePeriod gml:id="frequency-standard-2--time-period-2">
+                        <gml:beginPosition>2010-12-22</gml:beginPosition>
+                        <gml:endPosition>2011-03-23</gml:endPosition>
+                    </gml:TimePeriod>
+                </gml:validTime>
+                <geo:notes></geo:notes>
+            </geo:FrequencyStandard>
+            <geo:dateInserted>2010-12-22</geo:dateInserted>
+        </geo:frequencyStandard>
+        <geo:frequencyStandard>
+            <geo:FrequencyStandard gml:id="frequency-standard-3">
+                <geo:standardType codeSpace="urn:ga-gov-au:frequency-standard-type">EXTERNAL CESIUM</geo:standardType>
+                <geo:inputFrequency>10.0</geo:inputFrequency>
+                <gml:validTime>
+                    <gml:TimePeriod gml:id="frequency-standard-3--time-period-3">
+                        <gml:beginPosition>2011-03-23</gml:beginPosition>
+                        <gml:endPosition>2011-12-19</gml:endPosition>
+                    </gml:TimePeriod>
+                </gml:validTime>
+                <geo:notes>At 12h UTC, 13h local time, on 2011-03-23 the receiver was stopped, recabeled with an external reference (namely UTC(ROB), derived from a HP5071A), and restarted.</geo:notes>
+            </geo:FrequencyStandard>
+            <geo:dateInserted>2011-03-23</geo:dateInserted>
+        </geo:frequencyStandard>
+        <geo:frequencyStandard>
+            <geo:FrequencyStandard gml:id="frequency-standard-4">
+                <geo:standardType codeSpace="urn:ga-gov-au:frequency-standard-type">EXTERNAL CH1-75A MASER</geo:standardType>
+                <geo:inputFrequency>10.0</geo:inputFrequency>
+                <gml:validTime>
+                    <gml:TimePeriod gml:id="frequency-standard-4--time-period-4">
+                        <gml:beginPosition>2011-12-19</gml:beginPosition>
+                        <gml:endPosition>2012-02-27</gml:endPosition>
+                    </gml:TimePeriod>
+                </gml:validTime>
+                <geo:notes>The 5MHz output of the CH1-75A (maser3) passes a Minicircuits FD-2+ frequency doubler and then is used as input to a SpectraTime femtoStepper. The output of this phase stepper (equal to UTC(ORB)) is used as an input to the receiver.</geo:notes>
+            </geo:FrequencyStandard>
+            <geo:dateInserted>2011-12-19</geo:dateInserted>
+        </geo:frequencyStandard>
+        <geo:frequencyStandard>
+            <geo:FrequencyStandard gml:id="frequency-standard-5">
+                <geo:standardType codeSpace="urn:ga-gov-au:frequency-standard-type">EXTERNAL CESIUM</geo:standardType>
+                <geo:inputFrequency>10.0</geo:inputFrequency>
+                <gml:validTime>
+                    <gml:TimePeriod gml:id="frequency-standard-5--time-period-5">
+                        <gml:beginPosition>2012-02-27</gml:beginPosition>
+                        <gml:endPosition>2012-03-01</gml:endPosition>
+                    </gml:TimePeriod>
+                </gml:validTime>
+                <geo:notes>The 10MHz output of the Symmetricom 5071A (ces1) is used as input to a SpectraTime femtoStepper. The output of this phase stepper (equal to UTC(ORB)) is used as an input to the receiver.</geo:notes>
+            </geo:FrequencyStandard>
+            <geo:dateInserted>2012-02-27</geo:dateInserted>
+        </geo:frequencyStandard>
+        <geo:frequencyStandard>
+            <geo:FrequencyStandard gml:id="frequency-standard-6">
+                <geo:standardType codeSpace="urn:ga-gov-au:frequency-standard-type">EXTERNAL CH1-75A MASER</geo:standardType>
+                <geo:inputFrequency>10.0</geo:inputFrequency>
+                <gml:validTime>
+                    <gml:TimePeriod gml:id="frequency-standard-6--time-period-6">
+                        <gml:beginPosition>2012-03-01</gml:beginPosition>
+                        <gml:endPosition>2013-07-09</gml:endPosition>
+                    </gml:TimePeriod>
+                </gml:validTime>
+                <geo:notes>The 5MHz output of the CH1-75A (maser3) passes a Minicircuits FD-2+ frequency doubler and then is used as input to a SpectraTime femtoStepper. The output of this phase stepper (equal to UTC(ORB)) is used as an input to the receiver.</geo:notes>
+            </geo:FrequencyStandard>
+            <geo:dateInserted>2012-03-01</geo:dateInserted>
+        </geo:frequencyStandard>
+        <geo:frequencyStandard>
+            <geo:FrequencyStandard gml:id="frequency-standard-7">
+                <geo:standardType codeSpace="urn:ga-gov-au:frequency-standard-type">EXTERNAL 5071A CESIUM</geo:standardType>
+                <geo:inputFrequency>10.0</geo:inputFrequency>
+                <gml:validTime>
+                    <gml:TimePeriod gml:id="frequency-standard-7--time-period-7">
+                        <gml:beginPosition>2013-07-09</gml:beginPosition>
+                        <gml:endPosition>2015-06-03</gml:endPosition>
+                    </gml:TimePeriod>
+                </gml:validTime>
+                <geo:notes>The 10MHz of the Symmetricom 5071A (cesium2) is used as input to a SpectraTime femtoStepper. The output of this phase stepper (equal to UTC(ORB)) is used as an input to the receiver.</geo:notes>
+            </geo:FrequencyStandard>
+            <geo:dateInserted>2013-07-09</geo:dateInserted>
+        </geo:frequencyStandard>
+        <geo:frequencyStandard>
+            <geo:FrequencyStandard gml:id="frequency-standard-8">
+                <geo:standardType codeSpace="urn:ga-gov-au:frequency-standard-type">EXTERNAL CH1-75A MASER</geo:standardType>
+                <geo:inputFrequency>10.0</geo:inputFrequency>
+                <gml:validTime>
+                    <gml:TimePeriod gml:id="frequency-standard-8--time-period-8">
+                        <gml:beginPosition>2015-06-03</gml:beginPosition>
+                        <gml:endPosition>2016-11-07</gml:endPosition>
+                    </gml:TimePeriod>
+                </gml:validTime>
+                <geo:notes>The 5MHz output of the CH1-75A (maser3) passes an amplifier HP5087A and then is used as input to a SpectraTime femtoStepper. The output of this phase stepper (equal to UTC(ORB)) is used as an input to the receiver.</geo:notes>
+            </geo:FrequencyStandard>
+            <geo:dateInserted>2015-06-03</geo:dateInserted>
+        </geo:frequencyStandard>
+        <geo:frequencyStandard>
+            <geo:FrequencyStandard gml:id="frequency-standard-9">
+                <geo:standardType codeSpace="urn:ga-gov-au:frequency-standard-type">EXTERNAL 5071A CESIUM</geo:standardType>
+                <geo:inputFrequency>10.0</geo:inputFrequency>
+                <gml:validTime>
+                    <gml:TimePeriod gml:id="frequency-standard-9--time-period-9">
+                        <gml:beginPosition>2016-11-07</gml:beginPosition>
+                        <gml:endPosition>2016-11-17</gml:endPosition>
+                    </gml:TimePeriod>
+                </gml:validTime>
+                <geo:notes>The 5MHz output of the CESIUM 5071A (ces3) passes an amplifier HP5087A and then is used as input  to a SpectraTime femtoStepper. The output of this phase stepper (equal to UTC(ORB)) is used as an input to the receiver.</geo:notes>
+            </geo:FrequencyStandard>
+            <geo:dateInserted>2016-11-07</geo:dateInserted>
+        </geo:frequencyStandard>
+        <geo:frequencyStandard>
+            <geo:FrequencyStandard gml:id="frequency-standard-10">
+                <geo:standardType codeSpace="urn:ga-gov-au:frequency-standard-type">EXTERNAL CH1-75A MASER</geo:standardType>
+                <geo:inputFrequency>10.0</geo:inputFrequency>
+                <gml:validTime>
+                    <gml:TimePeriod gml:id="frequency-standard-10--time-period-10">
+                        <gml:beginPosition>2016-11-17</gml:beginPosition>
+                        <gml:endPosition></gml:endPosition>
+                    </gml:TimePeriod>
+                </gml:validTime>
+                <geo:notes>The 5MHz output of the CH1-75A (maser3) passes an amplifier HP5087A and then is used as input to a SpectraTime femtoStepper. The output of this phase stepper (equal to UTC(ORB)) is used as an input to the receiver.</geo:notes>
+            </geo:FrequencyStandard>
+            <geo:dateInserted>2016-11-17</geo:dateInserted>
+        </geo:frequencyStandard>
+        <geo:collocationInformation>
+            <geo:CollocationInformation gml:id="instrumentation-type-1">
+                <geo:instrumentationType codeSpace="urn:ga-gov-au:instrumentation-type">Cryogenic gravimeter</geo:instrumentationType>
+                <geo:status codeSpace="urn:ga-gov-au:status-type">PERMANENT</geo:status>
+                <gml:validTime>
+                    <gml:TimePeriod gml:id="instrumentation-type-1--time-period-11">
+                        <gml:beginPosition>1993-10-20</gml:beginPosition>
+                        <gml:endPosition>2000-08-21</gml:endPosition>
+                    </gml:TimePeriod>
+                </gml:validTime>
+                <geo:notes></geo:notes>
+            </geo:CollocationInformation>
+            <geo:dateInserted>1993-10-20</geo:dateInserted>
+        </geo:collocationInformation>
+        <geo:collocationInformation>
+            <geo:CollocationInformation gml:id="instrumentation-type-2">
+                <geo:instrumentationType codeSpace="urn:ga-gov-au:instrumentation-type">Seismometer</geo:instrumentationType>
+                <geo:status codeSpace="urn:ga-gov-au:status-type">PERMANENT</geo:status>
+                <gml:validTime>
+                    <gml:TimePeriod gml:id="instrumentation-type-2--time-period-12">
+                        <gml:beginPosition>1993-10-20</gml:beginPosition>
+                        <gml:endPosition></gml:endPosition>
+                    </gml:TimePeriod>
+                </gml:validTime>
+                <geo:notes></geo:notes>
+            </geo:CollocationInformation>
+            <geo:dateInserted>1993-10-20</geo:dateInserted>
+        </geo:collocationInformation>
+        <geo:siteContact gml:id="agency-1">
+            <gmd:MD_SecurityConstraints>
+                <gmd:classification gco:nilReason="missing"/>
+            </gmd:MD_SecurityConstraints>
+            <gmd:CI_ResponsibleParty>
+                <gmd:individualName>
+                    <gco:CharacterString>Carine Bruyninx</gco:CharacterString>
+                </gmd:individualName>
+                <gmd:organisationName>
+                    <gco:CharacterString>Royal Observatory of Belgium</gco:CharacterString>
+                </gmd:organisationName>
+                <gmd:contactInfo>
+                    <gmd:CI_Contact>
+                        <gmd:phone>
+                            <gmd:CI_Telephone>
+                                <gmd:voice>
+                                    <gco:CharacterString>32-2-373-02-92</gco:CharacterString>
+                                </gmd:voice>
+                                <gmd:voice>
+                                    <gco:CharacterString>32-2-373-02-11</gco:CharacterString>
+                                </gmd:voice>
+                                <gmd:facsimile>
+                                    <gco:CharacterString>32-2-374-98-22</gco:CharacterString>
+                                </gmd:facsimile>
+                            </gmd:CI_Telephone>
+                        </gmd:phone>
+                        <gmd:address>
+                            <gmd:CI_Address>
+                                <gmd:deliveryPoint>
+                                    <gco:CharacterString>Av. Circulaire No 3 B-1180 Brussels</gco:CharacterString>
+                                </gmd:deliveryPoint>
+                                <gmd:city>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:city>
+                                <gmd:postalCode>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:postalCode>
+                                <gmd:country>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:country>
+                                <gmd:electronicMailAddress>
+                                    <gco:CharacterString>c.bruyninx@oma.be</gco:CharacterString>
+                                </gmd:electronicMailAddress>
+                            </gmd:CI_Address>
+                        </gmd:address>
+                    </gmd:CI_Contact>
+                </gmd:contactInfo>
+                <gmd:role>
+                    <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="pointOfContact"></gmd:CI_RoleCode>
+                </gmd:role>
+            </gmd:CI_ResponsibleParty>
+        </geo:siteContact>
+        <geo:siteContact gml:id="agency-2">
+            <gmd:MD_SecurityConstraints>
+                <gmd:classification gco:nilReason="missing"/>
+            </gmd:MD_SecurityConstraints>
+            <gmd:CI_ResponsibleParty>
+                <gmd:individualName>
+                    <gco:CharacterString>Ann Moyaert</gco:CharacterString>
+                </gmd:individualName>
+                <gmd:organisationName>
+                    <gco:CharacterString>Royal Observatory of Belgium</gco:CharacterString>
+                </gmd:organisationName>
+                <gmd:contactInfo>
+                    <gmd:CI_Contact>
+                        <gmd:phone>
+                            <gmd:CI_Telephone>
+                                <gmd:voice>
+                                    <gco:CharacterString>32-2-373-02-01</gco:CharacterString>
+                                </gmd:voice>
+                                <gmd:voice>
+                                    <gco:CharacterString>32-2-373-02-11</gco:CharacterString>
+                                </gmd:voice>
+                                <gmd:facsimile>
+                                    <gco:CharacterString>32-2-374-98-22</gco:CharacterString>
+                                </gmd:facsimile>
+                            </gmd:CI_Telephone>
+                        </gmd:phone>
+                        <gmd:address>
+                            <gmd:CI_Address>
+                                <gmd:deliveryPoint>
+                                    <gco:CharacterString>Av. Circulaire No 3 B-1180 Brussels</gco:CharacterString>
+                                </gmd:deliveryPoint>
+                                <gmd:city>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:city>
+                                <gmd:postalCode>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:postalCode>
+                                <gmd:country>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:country>
+                                <gmd:electronicMailAddress>
+                                    <gco:CharacterString>a.moyaert@oma.be</gco:CharacterString>
+                                </gmd:electronicMailAddress>
+                            </gmd:CI_Address>
+                        </gmd:address>
+                    </gmd:CI_Contact>
+                </gmd:contactInfo>
+                <gmd:role>
+                    <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="pointOfContact"></gmd:CI_RoleCode>
+                </gmd:role>
+            </gmd:CI_ResponsibleParty>
+        </geo:siteContact>
+        <geo:siteMetadataCustodian gml:id="agency-3">
+            <gmd:MD_SecurityConstraints>
+                <gmd:classification gco:nilReason="missing"/>
+            </gmd:MD_SecurityConstraints>
+            <gmd:CI_ResponsibleParty>
+                <gmd:individualName>
+                    <gco:CharacterString></gco:CharacterString>
+                </gmd:individualName>
+                <gmd:organisationName>
+                    <gco:CharacterString></gco:CharacterString>
+                </gmd:organisationName>
+                <gmd:contactInfo>
+                    <gmd:CI_Contact>
+                        <gmd:phone>
+                            <gmd:CI_Telephone>
+                                <gmd:voice>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:voice>
+                                <gmd:voice>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:voice>
+                                <gmd:facsimile>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:facsimile>
+                            </gmd:CI_Telephone>
+                        </gmd:phone>
+                        <gmd:address>
+                            <gmd:CI_Address>
+                                <gmd:deliveryPoint>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:deliveryPoint>
+                                <gmd:city>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:city>
+                                <gmd:postalCode>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:postalCode>
+                                <gmd:country>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:country>
+                                <gmd:electronicMailAddress>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:electronicMailAddress>
+                            </gmd:CI_Address>
+                        </gmd:address>
+                    </gmd:CI_Contact>
+                </gmd:contactInfo>
+                <gmd:role>
+                    <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="pointOfContact"></gmd:CI_RoleCode>
+                </gmd:role>
+            </gmd:CI_ResponsibleParty>
+        </geo:siteMetadataCustodian>
+        <geo:moreInformation>
+            <geo:dataCenter>ROB</geo:dataCenter>
+            <geo:dataCenter>BKG</geo:dataCenter>
+            <geo:urlForMoreInformation></geo:urlForMoreInformation>
+            <geo:siteMap></geo:siteMap>
+            <geo:siteDiagram></geo:siteDiagram>
+            <geo:horizonMask></geo:horizonMask>
+            <geo:monumentDescription></geo:monumentDescription>
+            <geo:sitePictures></geo:sitePictures>
+            <geo:notes></geo:notes>
+            <geo:antennaGraphicsWithDimensions></geo:antennaGraphicsWithDimensions>
+            <geo:insertTextGraphicFromAntenna></geo:insertTextGraphicFromAntenna>
+            <geo:DOI codeSpace="urn:ga-gov-au:self.moreInformation-type">TODO</geo:DOI>
+        </geo:moreInformation>
+    </geo:siteLog>
+</geo:GeodesyML>

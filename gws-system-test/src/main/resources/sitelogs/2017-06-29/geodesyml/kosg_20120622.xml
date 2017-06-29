@@ -1,0 +1,733 @@
+<?xml version="1.0" encoding="utf-8"?>
+<geo:GeodesyML gml:id="KOSG00NLD" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.4" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <geo:siteLog gml:id="kosg_20120622.log">
+        <geo:formInformation>
+            <geo:preparedBy>Hans van der Marel</geo:preparedBy>
+            <geo:datePrepared>2012-06-22</geo:datePrepared>
+            <geo:reportType>UPDATE</geo:reportType>
+        </geo:formInformation>
+        <geo:siteIdentification>
+            <geo:siteName>Kootwijk Observatory for Satellite Geodesy</geo:siteName>
+            <geo:fourCharacterID>KOSG</geo:fourCharacterID>
+            <geo:monumentInscription>KOSG-25</geo:monumentInscription>
+            <geo:iersDOMESNumber>13504M003</geo:iersDOMESNumber>
+            <geo:cdpNumber>(A4)</geo:cdpNumber>
+            <geo:monumentDescription codeSpace="urn:ga-gov-au:monument-description-type">STEEL MAST</geo:monumentDescription>
+            <geo:heightOfTheMonument>12.0</geo:heightOfTheMonument>
+            <geo:monumentFoundation>CONCRETE BLOCK</geo:monumentFoundation>
+            <geo:foundationDepth>0.0</geo:foundationDepth>
+            <geo:markerDescription>BRASS NAIL</geo:markerDescription>
+            <geo:dateInstalled>1991-01-01</geo:dateInstalled>
+            <geo:geologicCharacteristic codeSpace="urn:ga-gov-au:geologic-characteristic-type">SAND, GLACIAL DEPOSIT</geo:geologicCharacteristic>
+            <geo:bedrockType>(IGNEOUS/METAMORPHIC/SEDIMENTARY)</geo:bedrockType>
+            <geo:bedrockCondition>(FRESH/JOINTED/WEATHERED)</geo:bedrockCondition>
+            <geo:fractureSpacing>(0 cm/1-10 cm/11-50 cm/51-200 cm/over 200 cm)</geo:fractureSpacing>
+            <geo:faultZonesNearby codeSpace="urn:ga-gov-au:fault-zones-type">NO</geo:faultZonesNearby>
+            <geo:notes>The GPS receiver is located at the site of the former Kootwijk Observatory for Satellite Geodesy (KOSG). The buildings at the site were vacated and pulled down in 2005, with the exception of the GPS mast. Since 28 August 2008 the receiver is running under solar power. The receiver is operating under responsibility of the Department of Earth Observation (DEOS) of the Delft University of Technology. The steel GPS mast has been in place since January 1991 (exact date unknown).</geo:notes>
+        </geo:siteIdentification>
+        <geo:siteLocation>
+            <geo:city>Kootwijk</geo:city>
+            <geo:state>Gelderland</geo:state>
+            <geo:countryCodeISO codeList="http://xml.gov.au/icsm/geodesyml/codelists/country-codes-codelist.xml#GeodesyML_CountryCode" codeListValue="Netherlands" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">NLD</geo:countryCodeISO>
+            <geo:tectonicPlate codeSpace="urn:ga-gov-au:plate-type">EURASIAN</geo:tectonicPlate>
+            <geo:approximatePositionITRF>
+                <geo:cartesianPosition>
+                    <gml:Point gml:id="itrf_cartesian" srsName="EPSG:7789">
+                        <gml:pos>3899225.273 396731.801 5015078.332</gml:pos>
+                    </gml:Point>
+                </geo:cartesianPosition>
+                <geo:geodeticPosition>
+                    <gml:Point gml:id="itrf_geodetic" srsName="EPSG:7912">
+                        <gml:pos>52.1784 5.8096 97.9</gml:pos>
+                    </gml:Point>
+                </geo:geodeticPosition>
+            </geo:approximatePositionITRF>
+            <geo:notes>Near Apeldoorn</geo:notes>
+        </geo:siteLocation>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-1">
+                <geo:manufacturerSerialNumber>R117</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="ROGUE SNR-8" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">ROGUE SNR-8</geo:igsModelCode>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GPS</geo:satelliteSystem>
+                <geo:firmwareVersion>Meenix 7.8</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>5.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>1994-06-13</geo:dateInstalled>
+                <geo:dateRemoved>1994-08-23</geo:dateRemoved>
+                <geo:temperatureStabilization>2.0</geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>1994-06-13</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-2">
+                <geo:manufacturerSerialNumber>T175</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="ROGUE SNR-8000" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">ROGUE SNR-8000</geo:igsModelCode>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GPS</geo:satelliteSystem>
+                <geo:firmwareVersion>2.8</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>5.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>1994-08-24</geo:dateInstalled>
+                <geo:dateRemoved>1994-11-22</geo:dateRemoved>
+                <geo:temperatureStabilization>2.0</geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>1994-08-24</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-3">
+                <geo:manufacturerSerialNumber>R117</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="ROGUE SNR-8" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">ROGUE SNR-8</geo:igsModelCode>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GPS</geo:satelliteSystem>
+                <geo:firmwareVersion>Meenix 7.8</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>1994-11-23</geo:dateInstalled>
+                <geo:dateRemoved>1996-01-25</geo:dateRemoved>
+                <geo:temperatureStabilization>2.0</geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>1994-11-23</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-4">
+                <geo:manufacturerSerialNumber>T209</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="ROGUE SNR-12 RM" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">ROGUE SNR-12 RM</geo:igsModelCode>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GPS</geo:satelliteSystem>
+                <geo:firmwareVersion>3.2.32.1</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>1996-01-26</geo:dateInstalled>
+                <geo:dateRemoved>1996-04-23</geo:dateRemoved>
+                <geo:temperatureStabilization>2.0</geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>1996-01-26</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-5">
+                <geo:manufacturerSerialNumber>T229</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="ROGUE SNR-12 RM" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">ROGUE SNR-12 RM</geo:igsModelCode>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GPS</geo:satelliteSystem>
+                <geo:firmwareVersion>3.2.32.1</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>1996-04-24</geo:dateInstalled>
+                <geo:dateRemoved>1999-02-28</geo:dateRemoved>
+                <geo:temperatureStabilization>2.0</geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>1996-04-24</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-6">
+                <geo:manufacturerSerialNumber>T222</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="ROGUE SNR-12 RM" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">ROGUE SNR-12 RM</geo:igsModelCode>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GPS</geo:satelliteSystem>
+                <geo:firmwareVersion>3.2.32.1</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>1999-03-01</geo:dateInstalled>
+                <geo:dateRemoved>1999-07-14T07:00:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization>2.0</geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>1999-03-01</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-7">
+                <geo:manufacturerSerialNumber>T222</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="ROGUE SNR-12 RM" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">ROGUE SNR-12 RM</geo:igsModelCode>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GPS</geo:satelliteSystem>
+                <geo:firmwareVersion>3.2.32.9</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>1999-07-14T07:10:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2000-11-23T00:00:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization>2.0</geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>1999-07-14T07:10:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-8">
+                <geo:manufacturerSerialNumber>224</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="AOA SNR-12 ACT" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">AOA SNR-12 ACT</geo:igsModelCode>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GPS</geo:satelliteSystem>
+                <geo:firmwareVersion>3.3.32.4</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>2000-11-24T17:34:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2000-11-26T00:00:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization>2.0</geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2000-11-24T17:34:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-9">
+                <geo:manufacturerSerialNumber>229</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="AOA SNR-12 ACT" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">AOA SNR-12 ACT</geo:igsModelCode>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GPS</geo:satelliteSystem>
+                <geo:firmwareVersion>3.3.32.4</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>2000-11-27T15:16:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2008-08-28T08:00:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization>5.0</geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2000-11-27T15:16:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-10">
+                <geo:notes>The receiver has actually been installed on 2008-07-31T08:00Z and has been collecting data in parallel to KOSG as KOS2 until 2008-08-28, at which time it became the official receiver for this site. Data for this parallel period is available from the LDC at http://gnss1.lr.tudelft.nl</geo:notes>
+                <geo:manufacturerSerialNumber>356091</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="LEICA GRX1200GGPRO" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">LEICA GRX1200GGPRO</geo:igsModelCode>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GPS</geo:satelliteSystem>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GLO</geo:satelliteSystem>
+                <geo:firmwareVersion>6.00/3.14</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>2008-08-28T13:00:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2009-04-17T14:45:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization>99.9</geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2008-08-28T13:00:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-11">
+                <geo:notes>Firmware update</geo:notes>
+                <geo:manufacturerSerialNumber>356091</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="LEICA GRX1200GGPRO" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">LEICA GRX1200GGPRO</geo:igsModelCode>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GPS</geo:satelliteSystem>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GLO</geo:satelliteSystem>
+                <geo:firmwareVersion>6.00/3.017</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>2009-04-17T15:04:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2009-05-19T09:15:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization>99.9</geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2009-04-17T15:04:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-12">
+                <geo:notes>Firmware update</geo:notes>
+                <geo:manufacturerSerialNumber>356091</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="LEICA GRX1200GGPRO" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">LEICA GRX1200GGPRO</geo:igsModelCode>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GPS</geo:satelliteSystem>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GLO</geo:satelliteSystem>
+                <geo:firmwareVersion>7.50/3.017</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>2009-05-19T09:15:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2010-03-20T14:30:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization xsi:nil="true"></geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2009-05-19T09:15:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-13">
+                <geo:notes>Firmware update</geo:notes>
+                <geo:manufacturerSerialNumber>356091</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="LEICA GRX1200GGPRO" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">LEICA GRX1200GGPRO</geo:igsModelCode>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GPS</geo:satelliteSystem>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GLO</geo:satelliteSystem>
+                <geo:firmwareVersion>7.80/3.018</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>2010-03-20T14:30:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2010-04-30T21:10:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization>99.9</geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2010-03-20T14:30:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-14">
+                <geo:notes>Firmware update</geo:notes>
+                <geo:manufacturerSerialNumber>356091</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="LEICA GRX1200GGPRO" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">LEICA GRX1200GGPRO</geo:igsModelCode>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GPS</geo:satelliteSystem>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GLO</geo:satelliteSystem>
+                <geo:firmwareVersion>7.80/3.019</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>2010-04-30T21:10:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2011-05-20T16:15:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization>99.9</geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2010-04-30T21:10:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-15">
+                <geo:notes>Receiver removed for off-site testing</geo:notes>
+                <geo:manufacturerSerialNumber>356091</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="LEICA GRX1200GGPRO" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">LEICA GRX1200GGPRO</geo:igsModelCode>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GPS</geo:satelliteSystem>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GLO</geo:satelliteSystem>
+                <geo:firmwareVersion>8.20/3.019</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>2011-05-20T16:15:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2011-11-28T14:02:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization>99.9</geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2011-05-20T16:15:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-16">
+                <geo:notes>Receiver reinstalled</geo:notes>
+                <geo:manufacturerSerialNumber>356091</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="LEICA GRX1200GGPRO" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">LEICA GRX1200GGPRO</geo:igsModelCode>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GPS</geo:satelliteSystem>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GLO</geo:satelliteSystem>
+                <geo:firmwareVersion>8.20/3.019</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>2012-04-23T14:00:00Z</geo:dateInstalled>
+                <geo:dateRemoved></geo:dateRemoved>
+                <geo:temperatureStabilization>99.9</geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2012-04-23T14:00:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssAntenna>
+            <geo:GnssAntenna gml:id="gnss-antenna-1">
+                <geo:notes>Model C146-6-1 DUT design (polyester cone) Power and Signal cable separated, power submitted by original GPS-receiver ROGUE SNR-8, and later batteries</geo:notes>
+                <geo:manufacturerSerialNumber>119</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSAntennaTypeCode" codeListValue="AOAD/M_B DUTD" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">AOAD/M_B        DUTD</geo:igsModelCode>
+                <geo:antennaReferencePoint codeSpace="urn:ga-gov-au:antenna-reference-point-type">BCR</geo:antennaReferencePoint>
+                <geo:marker-arpUpEcc.>0.105</geo:marker-arpUpEcc.>
+                <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+                <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+                <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+                <geo:antennaRadomeType codeSpace="urn:igs-org:gnss-radome-model-code">DUTD</geo:antennaRadomeType>
+                <geo:radomeSerialNumber></geo:radomeSerialNumber>
+                <geo:antennaCableType>(vendor &amp; type number)</geo:antennaCableType>
+                <geo:antennaCableLength>30.0</geo:antennaCableLength>
+                <geo:dateInstalled>1991-01-01</geo:dateInstalled>
+                <geo:dateRemoved>2011-07-20T00:00:00Z</geo:dateRemoved>
+            </geo:GnssAntenna>
+            <geo:dateInserted>1991-01-01</geo:dateInserted>
+        </geo:gnssAntenna>
+        <geo:gnssAntenna>
+            <geo:GnssAntenna gml:id="gnss-antenna-2">
+                <geo:notes>On 18 Sep 2011 it was discovered that the radome has fallen off the station. The exact date and time that the Radome fell off is unknown, but from the inspection of the timeseries we believe it fell off on 12 Sep 2011. However, there may have been a prolonged period when the dome was only loosely connected resulting in rather unstable coordinate time series. We believe this started on June 20 2011, although there is also some increased scatter in the period leading up to this date (starting end of March).</geo:notes>
+                <geo:manufacturerSerialNumber>119</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSAntennaTypeCode" codeListValue="AOAD/M_B UNKN" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">AOAD/M_B        UNKN</geo:igsModelCode>
+                <geo:antennaReferencePoint codeSpace="urn:ga-gov-au:antenna-reference-point-type">BCR</geo:antennaReferencePoint>
+                <geo:marker-arpUpEcc.>0.105</geo:marker-arpUpEcc.>
+                <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+                <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+                <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+                <geo:antennaRadomeType codeSpace="urn:igs-org:gnss-radome-model-code">UNKN</geo:antennaRadomeType>
+                <geo:radomeSerialNumber></geo:radomeSerialNumber>
+                <geo:antennaCableType>(vendor &amp; type number)</geo:antennaCableType>
+                <geo:antennaCableLength>30.0</geo:antennaCableLength>
+                <geo:dateInstalled>2011-07-20T00:00:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2011-09-13T00:00:00Z</geo:dateRemoved>
+            </geo:GnssAntenna>
+            <geo:dateInserted>2011-07-20T00:00:00Z</geo:dateInserted>
+        </geo:gnssAntenna>
+        <geo:gnssAntenna>
+            <geo:GnssAntenna gml:id="gnss-antenna-3">
+                <geo:notes>Model C146-6-1 Power and Signal cable separated, power submitted by batteries The antenna itself remains unaltered since 1991</geo:notes>
+                <geo:manufacturerSerialNumber>119</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSAntennaTypeCode" codeListValue="AOAD/M_B NONE" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">AOAD/M_B        NONE</geo:igsModelCode>
+                <geo:antennaReferencePoint codeSpace="urn:ga-gov-au:antenna-reference-point-type">BCR</geo:antennaReferencePoint>
+                <geo:marker-arpUpEcc.>0.105</geo:marker-arpUpEcc.>
+                <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+                <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+                <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+                <geo:antennaRadomeType codeSpace="urn:igs-org:gnss-radome-model-code">NONE</geo:antennaRadomeType>
+                <geo:radomeSerialNumber></geo:radomeSerialNumber>
+                <geo:antennaCableType>(vendor &amp; type number)</geo:antennaCableType>
+                <geo:antennaCableLength>30.0</geo:antennaCableLength>
+                <geo:dateInstalled>2011-09-13T00:00:00Z</geo:dateInstalled>
+                <geo:dateRemoved></geo:dateRemoved>
+            </geo:GnssAntenna>
+            <geo:dateInserted>2011-09-13T00:00:00Z</geo:dateInserted>
+        </geo:gnssAntenna>
+        <geo:surveyedLocalTie>
+            <geo:SurveyedLocalTie gml:id="local-tie-1">
+                <geo:tiedMarkerName>KOSG-23(SLR)</geo:tiedMarkerName>
+                <geo:tiedMarkerUsage>SLR/LOCAL CONTROL/FOOTPRINT</geo:tiedMarkerUsage>
+                <geo:tiedMarkerCDPNumber>8833</geo:tiedMarkerCDPNumber>
+                <geo:tiedMarkerDOMESNumber>13504M002</geo:tiedMarkerDOMESNumber>
+                <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+                    <geo:dx>12.458</geo:dx>
+                    <geo:dy>37.501</geo:dy>
+                    <geo:dz>-23.025</geo:dz>
+                </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+                <geo:localSiteTiesAccuracy>3.0</geo:localSiteTiesAccuracy>
+                <geo:surveyMethod>GPS CAMPAIGN/TRILATERATION/TRIANGULATION</geo:surveyMethod>
+                <geo:dateMeasured>1993-04-14</geo:dateMeasured>
+                <geo:notes>KOSG-23  Mobile SLR Reference Point</geo:notes>
+            </geo:SurveyedLocalTie>
+            <geo:dateInserted>1993-04-14</geo:dateInserted>
+        </geo:surveyedLocalTie>
+        <geo:surveyedLocalTie>
+            <geo:SurveyedLocalTie gml:id="local-tie-2">
+                <geo:tiedMarkerName>KOSG-28</geo:tiedMarkerName>
+                <geo:tiedMarkerUsage>LOCAL CONTROL/FOOTPRINT/GPS</geo:tiedMarkerUsage>
+                <geo:tiedMarkerCDPNumber>8833</geo:tiedMarkerCDPNumber>
+                <geo:tiedMarkerDOMESNumber>13504M002</geo:tiedMarkerDOMESNumber>
+                <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+                    <geo:dx>-17.115</geo:dx>
+                    <geo:dy>32.379</geo:dy>
+                    <geo:dz>1.144</geo:dz>
+                </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+                <geo:localSiteTiesAccuracy>3.0</geo:localSiteTiesAccuracy>
+                <geo:surveyMethod>GPS CAMPAIGN/TRILATERATION/TRIANGULATION</geo:surveyMethod>
+                <geo:dateMeasured>1993-04-14</geo:dateMeasured>
+                <geo:notes>KOSG-28  Mobile GPS Reference Point, also EUREF reference marker</geo:notes>
+            </geo:SurveyedLocalTie>
+            <geo:dateInserted>1993-04-14</geo:dateInserted>
+        </geo:surveyedLocalTie>
+        <geo:frequencyStandard>
+            <geo:FrequencyStandard gml:id="frequency-standard-1">
+                <geo:standardType codeSpace="urn:ga-gov-au:frequency-standard-type">EXTERNAL RUBIDIUM</geo:standardType>
+                <geo:inputFrequency>5.0</geo:inputFrequency>
+                <gml:validTime>
+                    <gml:TimePeriod gml:id="frequency-standard-1--time-period-1">
+                        <gml:beginPosition>1991-01-01</gml:beginPosition>
+                        <gml:endPosition>1996-01-26</gml:endPosition>
+                    </gml:TimePeriod>
+                </gml:validTime>
+                <geo:notes>5065A Rubidium Vapor Frequency Standard</geo:notes>
+            </geo:FrequencyStandard>
+            <geo:dateInserted>1991-01-01</geo:dateInserted>
+        </geo:frequencyStandard>
+        <geo:frequencyStandard>
+            <geo:FrequencyStandard gml:id="frequency-standard-2">
+                <geo:standardType codeSpace="urn:ga-gov-au:frequency-standard-type">EXTERNAL QUARTZ</geo:standardType>
+                <geo:inputFrequency>5.0</geo:inputFrequency>
+                <gml:validTime>
+                    <gml:TimePeriod gml:id="frequency-standard-2--time-period-2">
+                        <gml:beginPosition>1996-01-27</gml:beginPosition>
+                        <gml:endPosition>1996-02-14</gml:endPosition>
+                    </gml:TimePeriod>
+                </gml:validTime>
+                <geo:notes>Frequency Crystal Oscillator</geo:notes>
+            </geo:FrequencyStandard>
+            <geo:dateInserted>1996-01-27</geo:dateInserted>
+        </geo:frequencyStandard>
+        <geo:frequencyStandard>
+            <geo:FrequencyStandard gml:id="frequency-standard-3">
+                <geo:standardType codeSpace="urn:ga-gov-au:frequency-standard-type">EXTERNAL RUBIDIUM</geo:standardType>
+                <geo:inputFrequency>5.0</geo:inputFrequency>
+                <gml:validTime>
+                    <gml:TimePeriod gml:id="frequency-standard-3--time-period-3">
+                        <gml:beginPosition>1996-02-14</gml:beginPosition>
+                        <gml:endPosition>2000-11-23</gml:endPosition>
+                    </gml:TimePeriod>
+                </gml:validTime>
+                <geo:notes>5065A Rubidium Vapor Frequency Standard</geo:notes>
+            </geo:FrequencyStandard>
+            <geo:dateInserted>1996-02-14</geo:dateInserted>
+        </geo:frequencyStandard>
+        <geo:frequencyStandard>
+            <geo:FrequencyStandard gml:id="frequency-standard-4">
+                <geo:standardType codeSpace="urn:ga-gov-au:frequency-standard-type">INTERNAL</geo:standardType>
+                <geo:inputFrequency xsi:nil="true"></geo:inputFrequency>
+                <gml:validTime>
+                    <gml:TimePeriod gml:id="frequency-standard-4--time-period-4">
+                        <gml:beginPosition>2000-11-24</gml:beginPosition>
+                        <gml:endPosition>2000-11-27</gml:endPosition>
+                    </gml:TimePeriod>
+                </gml:validTime>
+                <geo:notes></geo:notes>
+            </geo:FrequencyStandard>
+            <geo:dateInserted>2000-11-24</geo:dateInserted>
+        </geo:frequencyStandard>
+        <geo:frequencyStandard>
+            <geo:FrequencyStandard gml:id="frequency-standard-5">
+                <geo:standardType codeSpace="urn:ga-gov-au:frequency-standard-type">EXTERNAL QUARTZ</geo:standardType>
+                <geo:inputFrequency>5.0</geo:inputFrequency>
+                <gml:validTime>
+                    <gml:TimePeriod gml:id="frequency-standard-5--time-period-5">
+                        <gml:beginPosition>2000-11-27</gml:beginPosition>
+                        <gml:endPosition>2008-08-27</gml:endPosition>
+                    </gml:TimePeriod>
+                </gml:validTime>
+                <geo:notes>OSCILLOQUARTZ Oven Controlled Crystal Oscillator OCXO 8600</geo:notes>
+            </geo:FrequencyStandard>
+            <geo:dateInserted>2000-11-27</geo:dateInserted>
+        </geo:frequencyStandard>
+        <geo:frequencyStandard>
+            <geo:FrequencyStandard gml:id="frequency-standard-6">
+                <geo:standardType codeSpace="urn:ga-gov-au:frequency-standard-type">INTERNAL</geo:standardType>
+                <geo:inputFrequency xsi:nil="true"></geo:inputFrequency>
+                <gml:validTime>
+                    <gml:TimePeriod gml:id="frequency-standard-6--time-period-6">
+                        <gml:beginPosition>2008-08-28</gml:beginPosition>
+                        <gml:endPosition></gml:endPosition>
+                    </gml:TimePeriod>
+                </gml:validTime>
+                <geo:notes></geo:notes>
+            </geo:FrequencyStandard>
+            <geo:dateInserted>2008-08-28</geo:dateInserted>
+        </geo:frequencyStandard>
+        <geo:collocationInformation>
+            <geo:CollocationInformation gml:id="instrumentation-type-1">
+                <geo:instrumentationType codeSpace="urn:ga-gov-au:instrumentation-type">SLR</geo:instrumentationType>
+                <geo:status codeSpace="urn:ga-gov-au:status-type">MOBILE</geo:status>
+                <gml:validTime>
+                    <gml:TimePeriod gml:id="instrumentation-type-1--time-period-7">
+                        <gml:beginPosition>1984-01-01</gml:beginPosition>
+                        <gml:endPosition>1996-12-31</gml:endPosition>
+                    </gml:TimePeriod>
+                </gml:validTime>
+                <geo:notes>Regular occupations by MTLRS-2</geo:notes>
+            </geo:CollocationInformation>
+            <geo:dateInserted>1984-01-01</geo:dateInserted>
+        </geo:collocationInformation>
+        <geo:collocationInformation>
+            <geo:CollocationInformation gml:id="instrumentation-type-2">
+                <geo:instrumentationType codeSpace="urn:ga-gov-au:instrumentation-type">Absolute gravimeters</geo:instrumentationType>
+                <geo:status codeSpace="urn:ga-gov-au:status-type">MOBILE</geo:status>
+                <gml:validTime>
+                    <gml:TimePeriod gml:id="instrumentation-type-2--time-period-8">
+                        <gml:beginPosition>1973-01-01</gml:beginPosition>
+                        <gml:endPosition></gml:endPosition>
+                    </gml:TimePeriod>
+                </gml:validTime>
+                <geo:notes></geo:notes>
+            </geo:CollocationInformation>
+            <geo:dateInserted>1973-01-01</geo:dateInserted>
+        </geo:collocationInformation>
+        <geo:collocationInformation>
+            <geo:CollocationInformation gml:id="instrumentation-type-3">
+                <geo:instrumentationType codeSpace="urn:ga-gov-au:instrumentation-type">Relative gravimeters</geo:instrumentationType>
+                <geo:status codeSpace="urn:ga-gov-au:status-type">MOBILE</geo:status>
+                <gml:validTime>
+                    <gml:TimePeriod gml:id="instrumentation-type-3--time-period-9">
+                        <gml:beginPosition>1973-01-01</gml:beginPosition>
+                        <gml:endPosition></gml:endPosition>
+                    </gml:TimePeriod>
+                </gml:validTime>
+                <geo:notes></geo:notes>
+            </geo:CollocationInformation>
+            <geo:dateInserted>1973-01-01</geo:dateInserted>
+        </geo:collocationInformation>
+        <geo:collocationInformation>
+            <geo:CollocationInformation gml:id="instrumentation-type-4">
+                <geo:instrumentationType codeSpace="urn:ga-gov-au:instrumentation-type">Seismometer</geo:instrumentationType>
+                <geo:status codeSpace="urn:ga-gov-au:status-type">PERMANENT</geo:status>
+                <gml:validTime>
+                    <gml:TimePeriod gml:id="instrumentation-type-4--time-period-10">
+                        <gml:beginPosition>1973-01-01</gml:beginPosition>
+                        <gml:endPosition>1995-12-31</gml:endPosition>
+                    </gml:TimePeriod>
+                </gml:validTime>
+                <geo:notes></geo:notes>
+            </geo:CollocationInformation>
+            <geo:dateInserted>1973-01-01</geo:dateInserted>
+        </geo:collocationInformation>
+        <geo:localEpisodicEffect>
+            <geo:LocalEpisodicEffect gml:id="episodic-effect-1">
+                <gml:validTime>
+                    <gml:TimePeriod gml:id="time-period-11">
+                        <gml:beginPosition>2003-03-17</gml:beginPosition>
+                        <gml:endPosition>2003-03-17</gml:endPosition>
+                    </gml:TimePeriod>
+                </gml:validTime>
+                <geo:event>On March 17, 2003, about 8:00 UTC, a guy wire steadying the antenna mast was hit by a JCB, resulting in a shift of the antenna position. Two different analysis of the GPS data show the following shifts: -0.0082 in N and -0.0021 in E (EPN timeseries by Ambrus Keyneres), respectively -0.0083 in N and -0.0033 in E JPL timeseries). Local measurements indicate a shift of 5 mm to the South</geo:event>
+            </geo:LocalEpisodicEffect>
+            <geo:dateInserted>2003-03-17</geo:dateInserted>
+        </geo:localEpisodicEffect>
+        <geo:localEpisodicEffect>
+            <geo:LocalEpisodicEffect gml:id="episodic-effect-2">
+                <gml:validTime>
+                    <gml:TimePeriod gml:id="time-period-12">
+                        <gml:beginPosition>2008-07-17</gml:beginPosition>
+                        <gml:endPosition>2008-07-17</gml:endPosition>
+                    </gml:TimePeriod>
+                </gml:validTime>
+                <geo:event>MINOR CONSTRUCTION (FOUNDATION FOR SOLAR PANELS)</geo:event>
+            </geo:LocalEpisodicEffect>
+            <geo:dateInserted>2008-07-17</geo:dateInserted>
+        </geo:localEpisodicEffect>
+        <geo:localEpisodicEffect>
+            <geo:LocalEpisodicEffect gml:id="episodic-effect-3">
+                <gml:validTime>
+                    <gml:TimePeriod gml:id="time-period-13">
+                        <gml:beginPosition>2010-04-01</gml:beginPosition>
+                        <gml:endPosition>2011-11-28</gml:endPosition>
+                    </gml:TimePeriod>
+                </gml:validTime>
+                <geo:event>The receiver has been experiencing increasing loss-of-locks in a very regular repeating pattern. The problems started already in early 2010 but were for the first time noted in Feb. 2011 after which the situation gradually worsened. The loss-of-locks occur in a very systematic pattern whereby the number of loss-of-locks is steadily increasing over time. A plot of this phenomena is available on request. The cause of this problem remains a mystery. The problem disappeared at the end of 2011 after the receiver was moved to Delft for testing.</geo:event>
+            </geo:LocalEpisodicEffect>
+            <geo:dateInserted>2010-04-01</geo:dateInserted>
+        </geo:localEpisodicEffect>
+        <geo:localEpisodicEffect>
+            <geo:LocalEpisodicEffect gml:id="episodic-effect-4">
+                <gml:validTime>
+                    <gml:TimePeriod gml:id="time-period-14">
+                        <gml:beginPosition>2011-07-20</gml:beginPosition>
+                        <gml:endPosition>2011-11-28</gml:endPosition>
+                    </gml:TimePeriod>
+                </gml:validTime>
+                <geo:event>Data started to deteriorate, frequent loss-of-lock, bad station repeatability, possibly related to badly connected radome, antenna damage or faulty receiver. Use this data only with extreme caution.</geo:event>
+            </geo:LocalEpisodicEffect>
+            <geo:dateInserted>2011-07-20</geo:dateInserted>
+        </geo:localEpisodicEffect>
+        <geo:localEpisodicEffect>
+            <geo:LocalEpisodicEffect gml:id="episodic-effect-5">
+                <gml:validTime>
+                    <gml:TimePeriod gml:id="time-period-15">
+                        <gml:beginPosition>2011-11-28</gml:beginPosition>
+                        <gml:endPosition>2012-04-23</gml:endPosition>
+                    </gml:TimePeriod>
+                </gml:validTime>
+                <geo:event>Observations were stopped because of power problems and bad data quality, observations were resumed on 2012-04-23 late afternoon.</geo:event>
+            </geo:LocalEpisodicEffect>
+            <geo:dateInserted>2011-11-28</geo:dateInserted>
+        </geo:localEpisodicEffect>
+        <geo:siteContact gml:id="agency-1">
+            <gmd:MD_SecurityConstraints>
+                <gmd:classification gco:nilReason="missing"/>
+            </gmd:MD_SecurityConstraints>
+            <gmd:CI_ResponsibleParty>
+                <gmd:individualName>
+                    <gco:CharacterString>Hans van der Marel</gco:CharacterString>
+                </gmd:individualName>
+                <gmd:organisationName>
+                    <gco:CharacterString>Delft University of Technology</gco:CharacterString>
+                </gmd:organisationName>
+                <gmd:contactInfo>
+                    <gmd:CI_Contact>
+                        <gmd:phone>
+                            <gmd:CI_Telephone>
+                                <gmd:voice>
+                                    <gco:CharacterString>+31 15 2784907</gco:CharacterString>
+                                </gmd:voice>
+                                <gmd:voice>
+                                    <gco:CharacterString>+31 15 2783546</gco:CharacterString>
+                                </gmd:voice>
+                                <gmd:facsimile>
+                                    <gco:CharacterString>+31 15 2783711</gco:CharacterString>
+                                </gmd:facsimile>
+                            </gmd:CI_Telephone>
+                        </gmd:phone>
+                        <gmd:address>
+                            <gmd:CI_Address>
+                                <gmd:deliveryPoint>
+                                    <gco:CharacterString>Faculty of Aerospace Engineering TU Delft Earth Observation and Space Systems (DEOS) Kluyverweg 1, NL-2629 HS Delft</gco:CharacterString>
+                                </gmd:deliveryPoint>
+                                <gmd:city>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:city>
+                                <gmd:postalCode>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:postalCode>
+                                <gmd:country>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:country>
+                                <gmd:electronicMailAddress>
+                                    <gco:CharacterString>H.vanderMarel@tudelft.nl</gco:CharacterString>
+                                </gmd:electronicMailAddress>
+                            </gmd:CI_Address>
+                        </gmd:address>
+                    </gmd:CI_Contact>
+                </gmd:contactInfo>
+                <gmd:role>
+                    <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="pointOfContact"></gmd:CI_RoleCode>
+                </gmd:role>
+            </gmd:CI_ResponsibleParty>
+        </geo:siteContact>
+        <geo:siteContact gml:id="agency-2">
+            <gmd:MD_SecurityConstraints>
+                <gmd:classification gco:nilReason="missing"/>
+            </gmd:MD_SecurityConstraints>
+            <gmd:CI_ResponsibleParty>
+                <gmd:individualName>
+                    <gco:CharacterString></gco:CharacterString>
+                </gmd:individualName>
+                <gmd:organisationName>
+                    <gco:CharacterString>Delft University of Technology</gco:CharacterString>
+                </gmd:organisationName>
+                <gmd:contactInfo>
+                    <gmd:CI_Contact>
+                        <gmd:phone>
+                            <gmd:CI_Telephone>
+                                <gmd:voice>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:voice>
+                                <gmd:voice>
+                                    <gco:CharacterString>+31 15 2783546</gco:CharacterString>
+                                </gmd:voice>
+                                <gmd:facsimile>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:facsimile>
+                            </gmd:CI_Telephone>
+                        </gmd:phone>
+                        <gmd:address>
+                            <gmd:CI_Address>
+                                <gmd:deliveryPoint>
+                                    <gco:CharacterString>Faculty of Aerospace Engineering TU Delft Earth Observation and Space Systems (DEOS) Kluyverweg 1, NL-2629 HS Delft</gco:CharacterString>
+                                </gmd:deliveryPoint>
+                                <gmd:city>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:city>
+                                <gmd:postalCode>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:postalCode>
+                                <gmd:country>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:country>
+                                <gmd:electronicMailAddress>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:electronicMailAddress>
+                            </gmd:CI_Address>
+                        </gmd:address>
+                    </gmd:CI_Contact>
+                </gmd:contactInfo>
+                <gmd:role>
+                    <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="pointOfContact"></gmd:CI_RoleCode>
+                </gmd:role>
+            </gmd:CI_ResponsibleParty>
+        </geo:siteContact>
+        <geo:siteMetadataCustodian gml:id="agency-3">
+            <gmd:MD_SecurityConstraints>
+                <gmd:classification gco:nilReason="missing"/>
+            </gmd:MD_SecurityConstraints>
+            <gmd:CI_ResponsibleParty>
+                <gmd:individualName>
+                    <gco:CharacterString></gco:CharacterString>
+                </gmd:individualName>
+                <gmd:organisationName>
+                    <gco:CharacterString>(multiple lines)</gco:CharacterString>
+                </gmd:organisationName>
+                <gmd:contactInfo>
+                    <gmd:CI_Contact>
+                        <gmd:phone>
+                            <gmd:CI_Telephone>
+                                <gmd:voice>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:voice>
+                                <gmd:voice>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:voice>
+                                <gmd:facsimile>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:facsimile>
+                            </gmd:CI_Telephone>
+                        </gmd:phone>
+                        <gmd:address>
+                            <gmd:CI_Address>
+                                <gmd:deliveryPoint>
+                                    <gco:CharacterString>(multiple lines)</gco:CharacterString>
+                                </gmd:deliveryPoint>
+                                <gmd:city>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:city>
+                                <gmd:postalCode>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:postalCode>
+                                <gmd:country>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:country>
+                                <gmd:electronicMailAddress>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:electronicMailAddress>
+                            </gmd:CI_Address>
+                        </gmd:address>
+                    </gmd:CI_Contact>
+                </gmd:contactInfo>
+                <gmd:role>
+                    <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="pointOfContact"></gmd:CI_RoleCode>
+                </gmd:role>
+            </gmd:CI_ResponsibleParty>
+        </geo:siteMetadataCustodian>
+        <geo:moreInformation>
+            <geo:dataCenter>BKGI</geo:dataCenter>
+            <geo:dataCenter>IGNI</geo:dataCenter>
+            <geo:urlForMoreInformation>http://gnss1.tudelft.nl/dpga/</geo:urlForMoreInformation>
+            <geo:siteMap>./dpga/station/Kootwijk.html</geo:siteMap>
+            <geo:siteDiagram>X</geo:siteDiagram>
+            <geo:horizonMask>X</geo:horizonMask>
+            <geo:monumentDescription>X</geo:monumentDescription>
+            <geo:sitePictures>./dpga/station/Kootwijk.html</geo:sitePictures>
+            <geo:notes></geo:notes>
+            <geo:antennaGraphicsWithDimensions></geo:antennaGraphicsWithDimensions>
+            <geo:insertTextGraphicFromAntenna></geo:insertTextGraphicFromAntenna>
+            <geo:DOI codeSpace="urn:ga-gov-au:self.moreInformation-type">TODO</geo:DOI>
+        </geo:moreInformation>
+    </geo:siteLog>
+</geo:GeodesyML>

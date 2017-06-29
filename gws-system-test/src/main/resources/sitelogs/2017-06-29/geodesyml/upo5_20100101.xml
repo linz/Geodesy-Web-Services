@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<geo:GeodesyML gml:id="UPO500USA" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.4" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <geo:siteLog gml:id="upo5_20100101.log">
+        <geo:formInformation>
+            <geo:preparedBy>Toni Hollingsworth</geo:preparedBy>
+            <geo:datePrepared>2009-04-17</geo:datePrepared>
+            <geo:reportType>UPDATE</geo:reportType>
+        </geo:formInformation>
+        <geo:siteIdentification>
+            <geo:siteName>Upolu Point 5</geo:siteName>
+            <geo:fourCharacterID>UPO5</geo:fourCharacterID>
+            <geo:monumentInscription></geo:monumentInscription>
+            <geo:iersDOMESNumber>USM000085</geo:iersDOMESNumber>
+            <geo:cdpNumber>(A4)</geo:cdpNumber>
+            <geo:monumentDescription codeSpace="urn:ga-gov-au:monument-description-type">(PILLAR/BRASS PLATE/STEEL MAST/etc)</geo:monumentDescription>
+            <geo:heightOfTheMonument>0.0</geo:heightOfTheMonument>
+            <geo:monumentFoundation>(STEEL RODS, CONCRETE BLOCK, ROOF, etc)</geo:monumentFoundation>
+            <geo:foundationDepth>0.0</geo:foundationDepth>
+            <geo:markerDescription>(CHISELLED CROSS/DIVOT/BRASS NAIL/etc)</geo:markerDescription>
+            <geo:dateInstalled>1996-02-01</geo:dateInstalled>
+            <geo:geologicCharacteristic codeSpace="urn:ga-gov-au:geologic-characteristic-type">(BEDROCK/CLAY/CONGLOMERATE/GRAVEL/SAND/etc)</geo:geologicCharacteristic>
+            <geo:bedrockType>(IGNEOUS/METAMORPHIC/SEDIMENTARY)</geo:bedrockType>
+            <geo:bedrockCondition>(FRESH/JOINTED/WEATHERED)</geo:bedrockCondition>
+            <geo:fractureSpacing>(1-10 cm/11-50 cm/51-200 cm/over 200 cm)</geo:fractureSpacing>
+            <geo:faultZonesNearby codeSpace="urn:ga-gov-au:fault-zones-type">(YES/NO/Name of the zone)</geo:faultZonesNearby>
+            <geo:notes>UPO5 replaced UPO1 (49895S001) with the addition of a new antenna, mount, and radome on 01-16-2008.</geo:notes>
+        </geo:siteIdentification>
+        <geo:siteLocation>
+            <geo:city>Upolu Point</geo:city>
+            <geo:state>Hawaii</geo:state>
+            <geo:countryCodeISO codeList="http://xml.gov.au/icsm/geodesyml/codelists/country-codes-codelist.xml#GeodesyML_CountryCode" codeListValue="USA" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">USA</geo:countryCodeISO>
+            <geo:tectonicPlate codeSpace="urn:ga-gov-au:plate-type">Pacific</geo:tectonicPlate>
+            <geo:approximatePositionITRF>
+                <geo:cartesianPosition>
+                    <gml:Point gml:id="itrf_cartesian" srsName="EPSG:7789">
+                        <gml:pos>-5464031.861 -2446032.707 2193283.074</gml:pos>
+                    </gml:Point>
+                </geo:cartesianPosition>
+                <geo:geodeticPosition>
+                    <gml:Point gml:id="itrf_geodetic" srsName="EPSG:7912">
+                        <gml:pos>20.2458845861 -155.883810025 78.323</gml:pos>
+                    </gml:Point>
+                </geo:geodeticPosition>
+            </geo:approximatePositionITRF>
+            <geo:notes>ARP  ITRF00 POSITION (EPOCH 1997.0) Computed in Mar. 2008 using 40 days of data.</geo:notes>
+        </geo:siteLocation>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-1">
+                <geo:notes>Reciever upgrade.</geo:notes>
+                <geo:manufacturerSerialNumber>04950</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="ASHTECH Z-XII3" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">ASHTECH Z-XII3</geo:igsModelCode>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GPS</geo:satelliteSystem>
+                <geo:firmwareVersion>RE00-1C19</geo:firmwareVersion>
+                <geo:elevationCutoffSetting xsi:nil="true"></geo:elevationCutoffSetting>
+                <geo:dateInstalled>2007-04-19</geo:dateInstalled>
+                <geo:dateRemoved>2009-04-16</geo:dateRemoved>
+                <geo:temperatureStabilization xsi:nil="true"></geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2007-04-19</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-2">
+                <geo:notes>Reciever upgrade.</geo:notes>
+                <geo:manufacturerSerialNumber>4729135847</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="TRIMBLE NETRS" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">TRIMBLE NETRS</geo:igsModelCode>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GPS</geo:satelliteSystem>
+                <geo:firmwareVersion>1.2-5</geo:firmwareVersion>
+                <geo:elevationCutoffSetting xsi:nil="true"></geo:elevationCutoffSetting>
+                <geo:dateInstalled>2009-04-16</geo:dateInstalled>
+                <geo:dateRemoved></geo:dateRemoved>
+                <geo:temperatureStabilization xsi:nil="true"></geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2009-04-16</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssAntenna>
+            <geo:GnssAntenna gml:id="gnss-antenna-1">
+                <geo:manufacturerSerialNumber>60073510</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSAntennaTypeCode" codeListValue="TRM41249USCG" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">TRM41249USCG</geo:igsModelCode>
+                <geo:antennaReferencePoint codeSpace="urn:ga-gov-au:antenna-reference-point-type">BPA</geo:antennaReferencePoint>
+                <geo:marker-arpUpEcc.>0.0</geo:marker-arpUpEcc.>
+                <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+                <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+                <geo:alignmentFromTrueNorth xsi:nil="true"></geo:alignmentFromTrueNorth>
+                <geo:antennaRadomeType codeSpace="urn:igs-org:gnss-radome-model-code">SCIT</geo:antennaRadomeType>
+                <geo:radomeSerialNumber>(A4 from rcvr_ant.tab; see instructions)</geo:radomeSerialNumber>
+                <geo:antennaCableType>(vendor &amp; type number)</geo:antennaCableType>
+                <geo:antennaCableLength xsi:nil="true"></geo:antennaCableLength>
+                <geo:dateInstalled>2008-01-16</geo:dateInstalled>
+                <geo:dateRemoved></geo:dateRemoved>
+            </geo:GnssAntenna>
+            <geo:dateInserted>2008-01-16</geo:dateInserted>
+        </geo:gnssAntenna>
+        <geo:frequencyStandard>
+            <geo:FrequencyStandard gml:id="frequency-standard-1">
+                <geo:standardType codeSpace="urn:ga-gov-au:frequency-standard-type">INTERNAL</geo:standardType>
+                <geo:inputFrequency xsi:nil="true"></geo:inputFrequency>
+                <gml:validTime>
+                    <gml:TimePeriod gml:id="frequency-standard-1--time-period-1">
+                        <gml:beginPosition></gml:beginPosition>
+                        <gml:endPosition></gml:endPosition>
+                    </gml:TimePeriod>
+                </gml:validTime>
+                <geo:notes></geo:notes>
+            </geo:FrequencyStandard>
+            <geo:dateInserted></geo:dateInserted>
+        </geo:frequencyStandard>
+        <geo:siteContact gml:id="agency-1">
+            <gmd:MD_SecurityConstraints>
+                <gmd:classification gco:nilReason="missing"/>
+            </gmd:MD_SecurityConstraints>
+            <gmd:CI_ResponsibleParty>
+                <gmd:individualName>
+                    <gco:CharacterString>Samuel W. Coker</gco:CharacterString>
+                </gmd:individualName>
+                <gmd:organisationName>
+                    <gco:CharacterString>U.S. Coast Guard</gco:CharacterString>
+                </gmd:organisationName>
+                <gmd:contactInfo>
+                    <gmd:CI_Contact>
+                        <gmd:phone>
+                            <gmd:CI_Telephone>
+                                <gmd:voice>
+                                    <gco:CharacterString>703-313-5822</gco:CharacterString>
+                                </gmd:voice>
+                                <gmd:voice>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:voice>
+                                <gmd:facsimile>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:facsimile>
+                            </gmd:CI_Telephone>
+                        </gmd:phone>
+                        <gmd:address>
+                            <gmd:CI_Address>
+                                <gmd:deliveryPoint>
+                                    <gco:CharacterString>Nationwide DGPS Planning &amp; Mgmt 7323 Telegraph Road Alexandria, VA 22315-3998</gco:CharacterString>
+                                </gmd:deliveryPoint>
+                                <gmd:city>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:city>
+                                <gmd:postalCode>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:postalCode>
+                                <gmd:country>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:country>
+                                <gmd:electronicMailAddress>
+                                    <gco:CharacterString>samuel.w.coker@uscg.mil</gco:CharacterString>
+                                </gmd:electronicMailAddress>
+                            </gmd:CI_Address>
+                        </gmd:address>
+                    </gmd:CI_Contact>
+                </gmd:contactInfo>
+                <gmd:role>
+                    <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="pointOfContact"></gmd:CI_RoleCode>
+                </gmd:role>
+            </gmd:CI_ResponsibleParty>
+        </geo:siteContact>
+        <geo:siteContact gml:id="agency-2">
+            <gmd:MD_SecurityConstraints>
+                <gmd:classification gco:nilReason="missing"/>
+            </gmd:MD_SecurityConstraints>
+            <gmd:CI_ResponsibleParty>
+                <gmd:individualName>
+                    <gco:CharacterString>Bion Holbrook</gco:CharacterString>
+                </gmd:individualName>
+                <gmd:organisationName>
+                    <gco:CharacterString>U.S. Coast Guard</gco:CharacterString>
+                </gmd:organisationName>
+                <gmd:contactInfo>
+                    <gmd:CI_Contact>
+                        <gmd:phone>
+                            <gmd:CI_Telephone>
+                                <gmd:voice>
+                                    <gco:CharacterString>703-313-5939</gco:CharacterString>
+                                </gmd:voice>
+                                <gmd:voice>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:voice>
+                                <gmd:facsimile>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:facsimile>
+                            </gmd:CI_Telephone>
+                        </gmd:phone>
+                        <gmd:address>
+                            <gmd:CI_Address>
+                                <gmd:deliveryPoint>
+                                    <gco:CharacterString>Nationwide DGPS Planning &amp; Mgmt 7323 Telegraph Road Alexandria, VA 22315-3998</gco:CharacterString>
+                                </gmd:deliveryPoint>
+                                <gmd:city>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:city>
+                                <gmd:postalCode>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:postalCode>
+                                <gmd:country>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:country>
+                                <gmd:electronicMailAddress>
+                                    <gco:CharacterString>bion.j.holbrook@uscg.mil</gco:CharacterString>
+                                </gmd:electronicMailAddress>
+                            </gmd:CI_Address>
+                        </gmd:address>
+                    </gmd:CI_Contact>
+                </gmd:contactInfo>
+                <gmd:role>
+                    <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="pointOfContact"></gmd:CI_RoleCode>
+                </gmd:role>
+            </gmd:CI_ResponsibleParty>
+        </geo:siteContact>
+        <geo:siteMetadataCustodian gml:id="agency-3">
+            <gmd:MD_SecurityConstraints>
+                <gmd:classification gco:nilReason="missing"/>
+            </gmd:MD_SecurityConstraints>
+            <gmd:CI_ResponsibleParty>
+                <gmd:individualName>
+                    <gco:CharacterString></gco:CharacterString>
+                </gmd:individualName>
+                <gmd:organisationName>
+                    <gco:CharacterString>(multiple lines)</gco:CharacterString>
+                </gmd:organisationName>
+                <gmd:contactInfo>
+                    <gmd:CI_Contact>
+                        <gmd:phone>
+                            <gmd:CI_Telephone>
+                                <gmd:voice>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:voice>
+                                <gmd:voice>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:voice>
+                                <gmd:facsimile>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:facsimile>
+                            </gmd:CI_Telephone>
+                        </gmd:phone>
+                        <gmd:address>
+                            <gmd:CI_Address>
+                                <gmd:deliveryPoint>
+                                    <gco:CharacterString>(multiple lines)</gco:CharacterString>
+                                </gmd:deliveryPoint>
+                                <gmd:city>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:city>
+                                <gmd:postalCode>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:postalCode>
+                                <gmd:country>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:country>
+                                <gmd:electronicMailAddress>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:electronicMailAddress>
+                            </gmd:CI_Address>
+                        </gmd:address>
+                    </gmd:CI_Contact>
+                </gmd:contactInfo>
+                <gmd:role>
+                    <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="pointOfContact"></gmd:CI_RoleCode>
+                </gmd:role>
+            </gmd:CI_ResponsibleParty>
+        </geo:siteMetadataCustodian>
+        <geo:moreInformation>
+            <geo:dataCenter></geo:dataCenter>
+            <geo:dataCenter></geo:dataCenter>
+            <geo:urlForMoreInformation></geo:urlForMoreInformation>
+            <geo:siteMap>(Y or URL)</geo:siteMap>
+            <geo:siteDiagram>(Y or URL)</geo:siteDiagram>
+            <geo:horizonMask>(Y or URL)</geo:horizonMask>
+            <geo:monumentDescription>(Y or URL)</geo:monumentDescription>
+            <geo:sitePictures>(Y or URL)</geo:sitePictures>
+            <geo:notes></geo:notes>
+            <geo:antennaGraphicsWithDimensions></geo:antennaGraphicsWithDimensions>
+            <geo:insertTextGraphicFromAntenna></geo:insertTextGraphicFromAntenna>
+            <geo:DOI codeSpace="urn:ga-gov-au:self.moreInformation-type">TODO</geo:DOI>
+        </geo:moreInformation>
+    </geo:siteLog>
+</geo:GeodesyML>

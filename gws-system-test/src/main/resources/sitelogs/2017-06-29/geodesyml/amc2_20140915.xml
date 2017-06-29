@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<geo:GeodesyML gml:id="AMC200USA" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.4" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <geo:siteLog gml:id="amc2_20140915.log">
+        <geo:formInformation>
+            <geo:preparedBy>Tatevik Shakhbandaryan</geo:preparedBy>
+            <geo:datePrepared>2014-09-15</geo:datePrepared>
+            <geo:reportType>UPDATE</geo:reportType>
+        </geo:formInformation>
+        <geo:siteIdentification>
+            <geo:siteName>Alternate Master Clock (UTC calibrated)</geo:siteName>
+            <geo:fourCharacterID>AMC2</geo:fourCharacterID>
+            <geo:monumentInscription>no monument, GPS antenna ARP</geo:monumentInscription>
+            <geo:iersDOMESNumber>40472S004</geo:iersDOMESNumber>
+            <geo:cdpNumber>none</geo:cdpNumber>
+            <geo:monumentDescription codeSpace="urn:ga-gov-au:monument-description-type">unknown</geo:monumentDescription>
+            <geo:monumentFoundation></geo:monumentFoundation>
+            <geo:markerDescription></geo:markerDescription>
+            <geo:dateInstalled>1998-10-15</geo:dateInstalled>
+            <geo:geologicCharacteristic codeSpace="urn:ga-gov-au:geologic-characteristic-type"></geo:geologicCharacteristic>
+            <geo:bedrockType></geo:bedrockType>
+            <geo:bedrockCondition></geo:bedrockCondition>
+            <geo:fractureSpacing></geo:fractureSpacing>
+            <geo:faultZonesNearby codeSpace="urn:ga-gov-au:fault-zones-type"></geo:faultZonesNearby>
+            <geo:notes>The antenna is mounted on top of the roof (flat) of Building 400 (5 stories) at Schriever Air Force Base, outside of Colorado Springs, Colorado.  There are no nearby geodetic markers or control points.</geo:notes>
+        </geo:siteIdentification>
+        <geo:siteLocation>
+            <geo:city>Colorado Springs</geo:city>
+            <geo:state>Colorado</geo:state>
+            <geo:countryCodeISO codeList="http://xml.gov.au/icsm/geodesyml/codelists/country-codes-codelist.xml#GeodesyML_CountryCode" codeListValue="United States" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">USA</geo:countryCodeISO>
+            <geo:tectonicPlate codeSpace="urn:ga-gov-au:plate-type">NORTH AMERICAN</geo:tectonicPlate>
+            <geo:approximatePositionITRF>
+                <geo:cartesianPosition>
+                    <gml:Point gml:id="itrf_cartesian" srsName="EPSG:7789">
+                        <gml:pos>-1248596.252 -4819428.284 3976506.034</gml:pos>
+                    </gml:Point>
+                </geo:cartesianPosition>
+                <geo:geodeticPosition>
+                    <gml:Point gml:id="itrf_geodetic" srsName="EPSG:7912">
+                        <gml:pos>38.803125 -104.524594444 1912.4898</gml:pos>
+                    </gml:Point>
+                </geo:geodeticPosition>
+            </geo:approximatePositionITRF>
+            <geo:notes>Schriever Air Force Base</geo:notes>
+        </geo:siteLocation>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-1">
+                <geo:manufacturerSerialNumber>T247</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="ROGUE SNR-12 RM" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">ROGUE SNR-12 RM</geo:igsModelCode>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GPS</geo:satelliteSystem>
+                <geo:firmwareVersion>3.2.32.4</geo:firmwareVersion>
+                <geo:elevationCutoffSetting xsi:nil="true"></geo:elevationCutoffSetting>
+                <geo:dateInstalled>1998-03-24</geo:dateInstalled>
+                <geo:dateRemoved>1998-10-15T22:01:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization xsi:nil="true"></geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>1998-03-24</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-2">
+                <geo:manufacturerSerialNumber>T245</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="ROGUE SNR-12 RM" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">ROGUE SNR-12 RM</geo:igsModelCode>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GPS</geo:satelliteSystem>
+                <geo:firmwareVersion>3.2.32.4</geo:firmwareVersion>
+                <geo:elevationCutoffSetting xsi:nil="true"></geo:elevationCutoffSetting>
+                <geo:dateInstalled>1998-10-15T22:01:00Z</geo:dateInstalled>
+                <geo:dateRemoved>1999-03-08T18:54:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization xsi:nil="true"></geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>1998-10-15T22:01:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-3">
+                <geo:manufacturerSerialNumber>247-U</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="AOA SNR-12 ACT" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">AOA SNR-12 ACT</geo:igsModelCode>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GPS</geo:satelliteSystem>
+                <geo:firmwareVersion>3.3.32.2</geo:firmwareVersion>
+                <geo:elevationCutoffSetting xsi:nil="true"></geo:elevationCutoffSetting>
+                <geo:dateInstalled>1999-03-09T00:00:00Z</geo:dateInstalled>
+                <geo:dateRemoved>1999-05-10T17:48:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization xsi:nil="true"></geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>1999-03-09T00:00:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-4">
+                <geo:manufacturerSerialNumber>245-U</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="AOA SNR-12 ACT" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">AOA SNR-12 ACT</geo:igsModelCode>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GPS</geo:satelliteSystem>
+                <geo:firmwareVersion>3.3.32.2</geo:firmwareVersion>
+                <geo:elevationCutoffSetting xsi:nil="true"></geo:elevationCutoffSetting>
+                <geo:dateInstalled>1999-05-11T00:00:00Z</geo:dateInstalled>
+                <geo:dateRemoved>1999-09-01T15:09:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization xsi:nil="true"></geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>1999-05-11T00:00:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-5">
+                <geo:manufacturerSerialNumber>247-U</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="AOA SNR-12 ACT" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">AOA SNR-12 ACT</geo:igsModelCode>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GPS</geo:satelliteSystem>
+                <geo:firmwareVersion>3.3.32.3</geo:firmwareVersion>
+                <geo:elevationCutoffSetting xsi:nil="true"></geo:elevationCutoffSetting>
+                <geo:dateInstalled>1999-09-01T15:43:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2000-07-10T20:39:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization xsi:nil="true"></geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>1999-09-01T15:43:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-6">
+                <geo:notes>firmware update only; no other change</geo:notes>
+                <geo:manufacturerSerialNumber>247-U</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="AOA SNR-12 ACT" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">AOA SNR-12 ACT</geo:igsModelCode>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GPS</geo:satelliteSystem>
+                <geo:firmwareVersion>3.3.32.4</geo:firmwareVersion>
+                <geo:elevationCutoffSetting xsi:nil="true"></geo:elevationCutoffSetting>
+                <geo:dateInstalled>2000-07-10T20:50:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2002-06-21T00:00:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization xsi:nil="true"></geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2000-07-10T20:50:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-7">
+                <geo:notes>All pseudo-range data produced are calibrated to UTC(USNO) via the USNO Alternate Master Clock (AMC) which is typically maintained to 1 nanosecond (1 sigma) of the Primary USNO Master Clock in Washington DC.  No additional calibration corrections need to be applied to the RAW data set.</geo:notes>
+                <geo:manufacturerSerialNumber>RT920013101</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="ASHTECH Z-XII3T" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">ASHTECH Z-XII3T</geo:igsModelCode>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GPS</geo:satelliteSystem>
+                <geo:firmwareVersion>IL01-1D04-MCF-12MX</geo:firmwareVersion>
+                <geo:elevationCutoffSetting xsi:nil="true"></geo:elevationCutoffSetting>
+                <geo:dateInstalled>2002-07-03T17:21:00Z</geo:dateInstalled>
+                <geo:dateRemoved></geo:dateRemoved>
+                <geo:temperatureStabilization xsi:nil="true"></geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2002-07-03T17:21:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssAntenna>
+            <geo:GnssAntenna gml:id="gnss-antenna-1">
+                <geo:notes>This antenna is located 28.5 inches nearly directly north of the antenna for a TTR-4P timing receiver.  NIMA surveyed the TTR-4P antenna location in August 1996 with the following results - 38 Degrees 48.2 N  ( 38.803107222 N) 255 Degrees 28.5 W  (255.475404583 E) 1911.087 m Ellipsoid Height with a stated accuracy of +/- 30 cm (1 sigma) in each component.  The TurboRogue antenna is mounted on a tripod platform. Antenna cable 25-AUG-1999 to present - Andrew FSJ1-50A (35422-33 phase stabilized) 1/4 inch Superflexible Foam Dielectric Heliax -- physical length 120 feet (36.57 m), mostly run in ceiling and floor of Bldg 400; measured electrical length is 146.9 ns +/- 30 ps specifications - Velocity factor 0.84 DC resistance 2 to 3 ohms per 1000 foot Capacitance, 24.2 pF/foot Inductance, .061 uH/foot Loss at 1250 MHz   6.77 dB/100 foot Loss at 1500 MHz   7.47 dB/100 foot Electrical Length Change verses Temperature - 400 PPM over (-40 to 30 C) or 5.7 PPM/C =&gt; 0.02 ps/m/C</geo:notes>
+                <geo:manufacturerSerialNumber>308</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSAntennaTypeCode" codeListValue="AOAD/M_T NONE" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">AOAD/M_T        NONE</geo:igsModelCode>
+                <geo:antennaReferencePoint codeSpace="urn:ga-gov-au:antenna-reference-point-type">BPA</geo:antennaReferencePoint>
+                <geo:marker-arpUpEcc.>0.0</geo:marker-arpUpEcc.>
+                <geo:marker-arpNorthEcc. xsi:nil="true"></geo:marker-arpNorthEcc.>
+                <geo:marker-arpEastEcc. xsi:nil="true"></geo:marker-arpEastEcc.>
+                <geo:alignmentFromTrueNorth xsi:nil="true"></geo:alignmentFromTrueNorth>
+                <geo:antennaRadomeType codeSpace="urn:igs-org:gnss-radome-model-code">NONE</geo:antennaRadomeType>
+                <geo:radomeSerialNumber></geo:radomeSerialNumber>
+                <geo:antennaCableType></geo:antennaCableType>
+                <geo:antennaCableLength xsi:nil="true"></geo:antennaCableLength>
+                <geo:dateInstalled>1998-03-24</geo:dateInstalled>
+                <geo:dateRemoved>2002-06-14T16:50:00Z</geo:dateRemoved>
+            </geo:GnssAntenna>
+            <geo:dateInserted>1998-03-24</geo:dateInserted>
+        </geo:gnssAntenna>
+        <geo:gnssAntenna>
+            <geo:GnssAntenna gml:id="gnss-antenna-2">
+                <geo:notes>This antenna is located 28.5 inches nearly directly north of the antenna for a TTR-4P timing receiver.  NIMA surveyed the TTR-4P antenna location in August 1996 with the following results - 38 Degrees 48.2 N  ( 38.803107222 N) 255 Degrees 28.5 W  (255.475404583 E) 1911.087 m Ellipsoid Height with a stated accuracy of +/- 30 cm (1 sigma) in each component.  The TurboRogue antenna is mounted on a tripod platform. This antenna is a standard AOAD/M_T using a special LNA designed to have a flat group delay response at both L1 and L2.  Because of this flat group delay response the thermal sensitivity of this antenna should be much improved over the what is typically found in this antenna type. Antenna Group Delay at L1 = 23.47 NS Antenna Group Delay at L2 = 24.92 NS Antenna cable 25-AUG-1999 to present - Andrew FSJ1-50A (35422-33 phase stabilized) 1/4 inch Superflexible Foam Dielectric Heliax -- physical length 120 feet (36.57 m), mostly run in ceiling and floor of Bldg 400; specifications - Velocity factor 0.84 DC resistance 2 to 3 ohms per 1000 foot Capacitance, 24.2 pF/foot Inductance, .061 uH/foot Loss at 1250 MHz   6.77 dB/100 foot Loss at 1500 MHz   7.47 dB/100 foot Electrical Length Change versus Temperature - 400 PPM over (-40 to 30 C) or 5.7 PPM/C =&gt; 0.02 ps/m/C Antenna splitter - USNO specially designed antenna splitter that has &gt; 80 db port to port isolation and flat group delay response. Antenna splitter cable - from splitter to receiver. The Antenna splitter cable is attached to a DC block and 20db PAD at the receiver input to improve impedance matching.  The measured delays through each component of the system are summarized in the table below - L1(ns)         L2(ns) ---------      --------- antenna            23.47          24.92 antenna cable     146.9  146.9 antenna splitter    6.21           6.5 cable to receiver   7.58           7.58 DC block and 20db PAD                 0.50           0.50 receiver w/ a +27.0 ns delay between on-time signal and 20MHZ.          267.4  278.6 Note - These delay have already been added to RAW psudorange data and they should not be added to any solutions.</geo:notes>
+                <geo:manufacturerSerialNumber>KW-5-0001</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSAntennaTypeCode" codeListValue="AOAD/M_T NONE" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">AOAD/M_T        NONE</geo:igsModelCode>
+                <geo:antennaReferencePoint codeSpace="urn:ga-gov-au:antenna-reference-point-type">BPA</geo:antennaReferencePoint>
+                <geo:marker-arpUpEcc.>0.0</geo:marker-arpUpEcc.>
+                <geo:marker-arpNorthEcc. xsi:nil="true"></geo:marker-arpNorthEcc.>
+                <geo:marker-arpEastEcc. xsi:nil="true"></geo:marker-arpEastEcc.>
+                <geo:alignmentFromTrueNorth xsi:nil="true"></geo:alignmentFromTrueNorth>
+                <geo:antennaRadomeType codeSpace="urn:igs-org:gnss-radome-model-code">NONE</geo:antennaRadomeType>
+                <geo:radomeSerialNumber></geo:radomeSerialNumber>
+                <geo:antennaCableType>Andrew FSJ1-50A (35422-33 phase stabilized)</geo:antennaCableType>
+                <geo:antennaCableLength>36.57</geo:antennaCableLength>
+                <geo:dateInstalled>2002-06-14T16:51:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2007-10-01T18:00:00Z</geo:dateRemoved>
+            </geo:GnssAntenna>
+            <geo:dateInserted>2002-06-14T16:51:00Z</geo:dateInserted>
+        </geo:gnssAntenna>
+        <geo:gnssAntenna>
+            <geo:GnssAntenna gml:id="gnss-antenna-3">
+                <geo:notes>This antenna is located 28.5 inches nearly directly north of the antenna for a TTR-4P timing receiver.  NIMA surveyed the TTR-4P antenna location in August 1996 with the following results - 38 Degrees 48.2 N  ( 38.803107222 N) 255 Degrees 28.5 W  (255.475404583 E) 1911.087 m Ellipsoid Height with a stated accuracy of +/- 30 cm (1 sigma) in each component.  The TurboRogue antenna is mounted on a tripod platform. This antenna is a standard AOAD/M_T using a special LNA designed to have a flat group delay response at both L1 and L2.  Because of this flat group delay response the thermal sensitivity of this antenna should be much improved over the what is typically found in this antenna type. Antenna Group Delay at L1 = 25.13 NS Antenna Group Delay at L2 = 25.45 NS Antenna cable 25-AUG-1999 to present - Andrew FSJ1-50A (35422-33 phase stabilized) 1/4 inch Superflexible Foam Dielectric Heliax -- physical length 120 feet (36.57 m), mostly run in ceiling and floor of Bldg 400; specifications - Velocity factor 0.84 DC resistance 2 to 3 ohms per 1000 foot Capacitance, 24.2 pF/foot Inductance, .061 uH/foot Loss at 1250 MHz   6.77 dB/100 foot Loss at 1500 MHz   7.47 dB/100 foot Electrical Length Change versus Temperature - 400 PPM over (-40 to 30 C) or 5.7 PPM/C =&gt; 0.02 ps/m/C Antenna splitter - USNO specially designed antenna splitter that has &gt; 80 db port to port isolation and flat group delay response. While troubleshooting, the splitter was replaced on 9/26/07T21:35, but no improvment was noticed. Antenna splitter cable - from splitter to receiver. The Antenna splitter cable is attached to a DC block and 20db PAD at the receiver input to improve impedance matching.  The measured delays through each component of the system are summarized in the table below - L1(ns)         L2(ns) ---------      --------- antenna            25.13          25.45 antenna cable     146.9  146.9 antenna splitter    7.83           7.96 cable to receiver   7.58           7.58 DC block and 20db PAD                 0.50           0.50 receiver w/ a +27.0 ns delay between on-time signal and 20MHZ.          267.4  278.6 Note - These delays have already been added to RAW psudorange data and they should not be added to any solutions.</geo:notes>
+                <geo:manufacturerSerialNumber>KW5-0201</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSAntennaTypeCode" codeListValue="AOAD/M_T NONE" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">AOAD/M_T        NONE</geo:igsModelCode>
+                <geo:antennaReferencePoint codeSpace="urn:ga-gov-au:antenna-reference-point-type">BPA</geo:antennaReferencePoint>
+                <geo:marker-arpUpEcc.>0.0</geo:marker-arpUpEcc.>
+                <geo:marker-arpNorthEcc. xsi:nil="true"></geo:marker-arpNorthEcc.>
+                <geo:marker-arpEastEcc. xsi:nil="true"></geo:marker-arpEastEcc.>
+                <geo:alignmentFromTrueNorth xsi:nil="true"></geo:alignmentFromTrueNorth>
+                <geo:antennaRadomeType codeSpace="urn:igs-org:gnss-radome-model-code">NONE</geo:antennaRadomeType>
+                <geo:radomeSerialNumber></geo:radomeSerialNumber>
+                <geo:antennaCableType>Andrew FSJ1-50A (35422-33 phase stabilized)</geo:antennaCableType>
+                <geo:antennaCableLength>36.57</geo:antennaCableLength>
+                <geo:dateInstalled>2007-10-01T18:35:00Z</geo:dateInstalled>
+                <geo:dateRemoved></geo:dateRemoved>
+            </geo:GnssAntenna>
+            <geo:dateInserted>2007-10-01T18:35:00Z</geo:dateInserted>
+        </geo:gnssAntenna>
+        <geo:frequencyStandard>
+            <geo:FrequencyStandard gml:id="frequency-standard-1">
+                <geo:standardType codeSpace="urn:ga-gov-au:frequency-standard-type">EXTERNAL H-MASER</geo:standardType>
+                <geo:inputFrequency>5.0</geo:inputFrequency>
+                <gml:validTime>
+                    <gml:TimePeriod gml:id="frequency-standard-1--time-period-1">
+                        <gml:beginPosition>1998-03-24</gml:beginPosition>
+                        <gml:endPosition></gml:endPosition>
+                    </gml:TimePeriod>
+                </gml:validTime>
+                <geo:notes>reference signal from USNO Alternate Master Clock #1, the back-up realization of UTC(USNO) via two-way satellite time transfer; All calibration delays have already been accounted for in the RAW pseudorange data produced by AMC2.</geo:notes>
+            </geo:FrequencyStandard>
+            <geo:dateInserted>1998-03-24</geo:dateInserted>
+        </geo:frequencyStandard>
+        <geo:humiditySensor>
+            <geo:HumiditySensor gml:id="humidity-sensor-1">
+                <geo:type codeSpace="urn:ga-gov-au:humidity-sensor-type">HUMICA H-sensor (pn 16663)</geo:type>
+                <geo:notes>NOAA GSOS # 064 Horizontal offset from GPS 527 Vertical offset from GPS ~29</geo:notes>
+                <geo:manufacturer>Vaisala</geo:manufacturer>
+                <geo:serialNumber></geo:serialNumber>
+                <geo:heightDiffToAntenna>0.0</geo:heightDiffToAntenna>
+                <geo:calibrationDate></geo:calibrationDate>
+                <gml:validTime>
+                    <gml:TimePeriod gml:id="humidity-sensor-1--time-period-1">
+                        <gml:beginPosition>2002-02-28</gml:beginPosition>
+                        <gml:endPosition></gml:endPosition>
+                    </gml:TimePeriod>
+                </gml:validTime>
+                <geo:dataSamplingInterval>15.0</geo:dataSamplingInterval>
+                <geo:accuracy-percentRelativeHumidity>1.0</geo:accuracy-percentRelativeHumidity>
+                <geo:aspiration></geo:aspiration>
+            </geo:HumiditySensor>
+            <geo:dateInserted>2002-02-28</geo:dateInserted>
+        </geo:humiditySensor>
+        <geo:pressureSensor>
+            <geo:PressureSensor gml:id="pressure-sensor-1">
+                <geo:type codeSpace="urn:ga-gov-au:pressure-sensor-type">PTB220</geo:type>
+                <geo:notes>NOAA GSOS # 064 Horizontal offset from GPS ~527 Vertical offset from GPS ~29</geo:notes>
+                <geo:manufacturer>Vaisala</geo:manufacturer>
+                <geo:serialNumber></geo:serialNumber>
+                <geo:heightDiffToAntenna>0.0</geo:heightDiffToAntenna>
+                <geo:calibrationDate></geo:calibrationDate>
+                <gml:validTime>
+                    <gml:TimePeriod gml:id="pressure-sensor-1--time-period-2">
+                        <gml:beginPosition>2002-02-28</gml:beginPosition>
+                        <gml:endPosition></gml:endPosition>
+                    </gml:TimePeriod>
+                </gml:validTime>
+                <geo:dataSamplingInterval>15.0</geo:dataSamplingInterval>
+                <geo:accuracy-hPa>0.1</geo:accuracy-hPa>
+            </geo:PressureSensor>
+            <geo:dateInserted>2002-02-28</geo:dateInserted>
+        </geo:pressureSensor>
+        <geo:temperatureSensor>
+            <geo:TemperatureSensor gml:id="temperature-sensor-1">
+                <geo:type codeSpace="urn:ga-gov-au:temperature-sensor-type">PT100 RTD 1/s DIN 43760B</geo:type>
+                <geo:notes>NOAA GSOS # 064 Horizontal offset from GPS ~527 Vertical offset from GPS ~29</geo:notes>
+                <geo:manufacturer>Vaisala</geo:manufacturer>
+                <geo:serialNumber></geo:serialNumber>
+                <geo:heightDiffToAntenna>0.0</geo:heightDiffToAntenna>
+                <geo:calibrationDate></geo:calibrationDate>
+                <gml:validTime>
+                    <gml:TimePeriod gml:id="temperature-sensor-1--time-period-3">
+                        <gml:beginPosition>2002-02-28</gml:beginPosition>
+                        <gml:endPosition></gml:endPosition>
+                    </gml:TimePeriod>
+                </gml:validTime>
+                <geo:dataSamplingInterval>15.0</geo:dataSamplingInterval>
+                <geo:accuracy-degreesCelcius>0.1</geo:accuracy-degreesCelcius>
+                <geo:aspiration></geo:aspiration>
+            </geo:TemperatureSensor>
+            <geo:dateInserted>2002-02-28</geo:dateInserted>
+        </geo:temperatureSensor>
+        <geo:otherInstrumentation>
+            <geo:OtherInstrumentation gml:id="other-instrumentation-1">
+                <geo:instrumentation>The USNO Alternate Master Clock is located in the same building as this GPS receiver.  The differential time offset between the Alternate Master Clock and the GPS antenna will be monitored and may be used to calibrate the receiver clock time directly to UTC(AMC).</geo:instrumentation>
+                <gml:validTime nilReason="not applicable"/>
+            </geo:OtherInstrumentation>
+            <geo:dateInserted></geo:dateInserted>
+        </geo:otherInstrumentation>
+        <geo:localEpisodicEffect>
+            <geo:LocalEpisodicEffect gml:id="episodic-effect-1">
+                <gml:validTime>
+                    <gml:TimePeriod gml:id="time-period-2">
+                        <gml:beginPosition>2013-03-11</gml:beginPosition>
+                        <gml:endPosition>2013-03-11</gml:endPosition>
+                    </gml:TimePeriod>
+                </gml:validTime>
+                <geo:event>Computer replaced. There was a data outage from 16:45 - 23:59.</geo:event>
+            </geo:LocalEpisodicEffect>
+            <geo:dateInserted>2013-03-11</geo:dateInserted>
+        </geo:localEpisodicEffect>
+        <geo:localEpisodicEffect>
+            <geo:LocalEpisodicEffect gml:id="episodic-effect-2">
+                <gml:validTime>
+                    <gml:TimePeriod gml:id="time-period-3">
+                        <gml:beginPosition>2014-09-10</gml:beginPosition>
+                        <gml:endPosition>2014-09-10</gml:endPosition>
+                    </gml:TimePeriod>
+                </gml:validTime>
+                <geo:event>Transitioned from .soc to .ash data types.  For soc data types used soc2rnx to do the conversion to RINEX data.  For ash data types using teqc directly to do the conversion to RINEX. Also applying clock calibration to .ash derived RINEX data.</geo:event>
+            </geo:LocalEpisodicEffect>
+            <geo:dateInserted>2014-09-10</geo:dateInserted>
+        </geo:localEpisodicEffect>
+        <geo:siteContact gml:id="agency-1">
+            <gmd:MD_SecurityConstraints>
+                <gmd:classification gco:nilReason="missing"/>
+            </gmd:MD_SecurityConstraints>
+            <gmd:CI_ResponsibleParty>
+                <gmd:individualName>
+                    <gco:CharacterString>Bill Bollwerk</gco:CharacterString>
+                </gmd:individualName>
+                <gmd:organisationName>
+                    <gco:CharacterString>U.S. Naval Observatory, Alternate Master Clock</gco:CharacterString>
+                </gmd:organisationName>
+                <gmd:contactInfo>
+                    <gmd:CI_Contact>
+                        <gmd:phone>
+                            <gmd:CI_Telephone>
+                                <gmd:voice>
+                                    <gco:CharacterString>719-567-6740</gco:CharacterString>
+                                </gmd:voice>
+                                <gmd:voice>
+                                    <gco:CharacterString>202-359-6011</gco:CharacterString>
+                                </gmd:voice>
+                                <gmd:facsimile>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:facsimile>
+                            </gmd:CI_Telephone>
+                        </gmd:phone>
+                        <gmd:address>
+                            <gmd:CI_Address>
+                                <gmd:deliveryPoint>
+                                    <gco:CharacterString>USNO/AMC 400 O'Malley Ave, Suite 44 Schriever AFB, CO 80912-4044</gco:CharacterString>
+                                </gmd:deliveryPoint>
+                                <gmd:city>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:city>
+                                <gmd:postalCode>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:postalCode>
+                                <gmd:country>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:country>
+                                <gmd:electronicMailAddress>
+                                    <gco:CharacterString>bill.bollwerk@usno.navy.mil</gco:CharacterString>
+                                </gmd:electronicMailAddress>
+                            </gmd:CI_Address>
+                        </gmd:address>
+                    </gmd:CI_Contact>
+                </gmd:contactInfo>
+                <gmd:role>
+                    <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="pointOfContact"></gmd:CI_RoleCode>
+                </gmd:role>
+            </gmd:CI_ResponsibleParty>
+        </geo:siteContact>
+        <geo:siteContact gml:id="agency-2">
+            <gmd:MD_SecurityConstraints>
+                <gmd:classification gco:nilReason="missing"/>
+            </gmd:MD_SecurityConstraints>
+            <gmd:CI_ResponsibleParty>
+                <gmd:individualName>
+                    <gco:CharacterString>Ed Powers (USNO)</gco:CharacterString>
+                </gmd:individualName>
+                <gmd:organisationName>
+                    <gco:CharacterString>U.S. Naval Observatory, Alternate Master Clock</gco:CharacterString>
+                </gmd:organisationName>
+                <gmd:contactInfo>
+                    <gmd:CI_Contact>
+                        <gmd:phone>
+                            <gmd:CI_Telephone>
+                                <gmd:voice>
+                                    <gco:CharacterString>202-762-1451</gco:CharacterString>
+                                </gmd:voice>
+                                <gmd:voice>
+                                    <gco:CharacterString>202-359-6011</gco:CharacterString>
+                                </gmd:voice>
+                                <gmd:facsimile>
+                                    <gco:CharacterString>202-762-1511</gco:CharacterString>
+                                </gmd:facsimile>
+                            </gmd:CI_Telephone>
+                        </gmd:phone>
+                        <gmd:address>
+                            <gmd:CI_Address>
+                                <gmd:deliveryPoint>
+                                    <gco:CharacterString>USNO/AMC 400 O'Malley Ave, Suite 44 Schriever AFB, CO 80912-4044</gco:CharacterString>
+                                </gmd:deliveryPoint>
+                                <gmd:city>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:city>
+                                <gmd:postalCode>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:postalCode>
+                                <gmd:country>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:country>
+                                <gmd:electronicMailAddress>
+                                    <gco:CharacterString>edward.powers@usno.navy.mil</gco:CharacterString>
+                                </gmd:electronicMailAddress>
+                            </gmd:CI_Address>
+                        </gmd:address>
+                    </gmd:CI_Contact>
+                </gmd:contactInfo>
+                <gmd:role>
+                    <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="pointOfContact"></gmd:CI_RoleCode>
+                </gmd:role>
+            </gmd:CI_ResponsibleParty>
+        </geo:siteContact>
+        <geo:siteMetadataCustodian gml:id="agency-3">
+            <gmd:MD_SecurityConstraints>
+                <gmd:classification gco:nilReason="missing"/>
+            </gmd:MD_SecurityConstraints>
+            <gmd:CI_ResponsibleParty>
+                <gmd:individualName>
+                    <gco:CharacterString>Ed Powers (USNO)</gco:CharacterString>
+                </gmd:individualName>
+                <gmd:organisationName>
+                    <gco:CharacterString>U.S. Naval Observatory</gco:CharacterString>
+                </gmd:organisationName>
+                <gmd:contactInfo>
+                    <gmd:CI_Contact>
+                        <gmd:phone>
+                            <gmd:CI_Telephone>
+                                <gmd:voice>
+                                    <gco:CharacterString>202-762-1451</gco:CharacterString>
+                                </gmd:voice>
+                                <gmd:voice>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:voice>
+                                <gmd:facsimile>
+                                    <gco:CharacterString>202-762-1511</gco:CharacterString>
+                                </gmd:facsimile>
+                            </gmd:CI_Telephone>
+                        </gmd:phone>
+                        <gmd:address>
+                            <gmd:CI_Address>
+                                <gmd:deliveryPoint>
+                                    <gco:CharacterString>Time Service Department 3450 Massachusetts Ave., NW Wasington, D.C. 20392-5420</gco:CharacterString>
+                                </gmd:deliveryPoint>
+                                <gmd:city>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:city>
+                                <gmd:postalCode>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:postalCode>
+                                <gmd:country>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:country>
+                                <gmd:electronicMailAddress>
+                                    <gco:CharacterString>edward.powers@usno.navy.mil</gco:CharacterString>
+                                </gmd:electronicMailAddress>
+                            </gmd:CI_Address>
+                        </gmd:address>
+                    </gmd:CI_Contact>
+                </gmd:contactInfo>
+                <gmd:role>
+                    <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="pointOfContact"></gmd:CI_RoleCode>
+                </gmd:role>
+            </gmd:CI_ResponsibleParty>
+        </geo:siteMetadataCustodian>
+        <geo:moreInformation>
+            <geo:dataCenter>JPL</geo:dataCenter>
+            <geo:dataCenter>CDDIS</geo:dataCenter>
+            <geo:urlForMoreInformation></geo:urlForMoreInformation>
+            <geo:siteMap>N</geo:siteMap>
+            <geo:siteDiagram>N</geo:siteDiagram>
+            <geo:horizonMask>N</geo:horizonMask>
+            <geo:monumentDescription>no monument</geo:monumentDescription>
+            <geo:sitePictures>N</geo:sitePictures>
+            <geo:notes></geo:notes>
+            <geo:antennaGraphicsWithDimensions></geo:antennaGraphicsWithDimensions>
+            <geo:insertTextGraphicFromAntenna></geo:insertTextGraphicFromAntenna>
+            <geo:DOI codeSpace="urn:ga-gov-au:self.moreInformation-type">TODO</geo:DOI>
+        </geo:moreInformation>
+    </geo:siteLog>
+</geo:GeodesyML>

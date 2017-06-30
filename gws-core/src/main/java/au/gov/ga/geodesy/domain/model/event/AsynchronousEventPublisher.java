@@ -63,7 +63,7 @@ public class AsynchronousEventPublisher implements EventPublisher {
                 while(true) {
                     Thread.sleep(3000);
                     List<Event> es = events.getPendingEvents();
-                    log.info("Processing " + es.size() + " pending event(s)");
+                    log.debug("Processing " + es.size() + " pending event(s)");
                     for (Event e : events.getPendingEvents()) {
                         e.published();
                         events.saveAndFlush(e);

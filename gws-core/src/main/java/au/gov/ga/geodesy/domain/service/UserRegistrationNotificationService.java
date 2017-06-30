@@ -49,7 +49,7 @@ public class UserRegistrationNotificationService implements EventSubscriber<User
     }
 
     public boolean canHandle(Event e) {
-        return e != null && (e instanceof UserRegistrationReceived);
+        return e instanceof UserRegistrationReceived;
     }
 
     public void handle(UserRegistrationReceived event) {

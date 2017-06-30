@@ -76,7 +76,7 @@ public class CorsSiteService implements EventSubscriber<SiteLogReceived> {
     }
 
     public boolean canHandle(Event e) {
-        return e != null && (e instanceof SiteLogReceived);
+        return e instanceof SiteLogReceived;
     }
 
     public void handle(SiteLogReceived siteLogReceived) {

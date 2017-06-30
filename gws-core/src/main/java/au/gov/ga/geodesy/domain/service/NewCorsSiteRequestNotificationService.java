@@ -53,7 +53,7 @@ public class NewCorsSiteRequestNotificationService implements EventSubscriber<Ne
     }
 
     public boolean canHandle(Event e) {
-        return e != null && (e instanceof NewCorsSiteRequestReceived);
+        return e instanceof NewCorsSiteRequestReceived;
     }
 
     public void handle(NewCorsSiteRequestReceived event) {

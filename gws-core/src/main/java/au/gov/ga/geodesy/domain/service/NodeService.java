@@ -77,7 +77,7 @@ public class NodeService implements EventSubscriber<SiteUpdated> {
     }
 
     public boolean canHandle(Event e) {
-        return e != null && (e instanceof SiteUpdated);
+        return e instanceof SiteUpdated;
     }
 
     public void handle(SiteUpdated siteUpdated) {

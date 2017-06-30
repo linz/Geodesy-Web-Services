@@ -57,9 +57,6 @@ public class NodeService implements EventSubscriber<SiteUpdated> {
     private EventPublisher eventPublisher;
 
     @Autowired
-    private EventRepository events;
-
-    @Autowired
     private CorsSiteRepository gnssCorsSites;
 
     @Autowired
@@ -77,7 +74,7 @@ public class NodeService implements EventSubscriber<SiteUpdated> {
     }
 
     public boolean canHandle(Event e) {
-        return e != null && (e instanceof SiteUpdated);
+        return e instanceof SiteUpdated;
     }
 
     public void handle(SiteUpdated siteUpdated) {

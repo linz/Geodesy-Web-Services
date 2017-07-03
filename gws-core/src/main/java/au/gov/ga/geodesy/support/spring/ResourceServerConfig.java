@@ -45,7 +45,23 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
             .antMatchers(HttpMethod.PUT, "/corsNetworks/**").hasAuthority("superuser")
             .antMatchers(HttpMethod.PATCH, "/corsNetworks/**").hasAuthority("superuser")
             .antMatchers(HttpMethod.DELETE, "/corsNetworks/**").hasAuthority("superuser")
-            .anyRequest().permitAll();
+
+            .antMatchers(HttpMethod.PATCH, "/corsSites/**").hasAuthority("superuser")
+
+            .antMatchers(HttpMethod.POST, "/newCorsSiteRequests").authenticated()
+            .antMatchers(HttpMethod.POST, "/siteLogs/upload").authenticated()
+
+            .antMatchers(HttpMethod.POST, "/siteLogs/validate").permitAll()
+            .antMatchers(HttpMethod.POST, "/userRegistrations").permitAll()
+            .antMatchers(HttpMethod.GET, "/**").permitAll()
+
+            .antMatchers(HttpMethod.POST, "/**").denyAll()
+            .antMatchers(HttpMethod.PUT, "/**").denyAll()
+            .antMatchers(HttpMethod.PATCH, "/**").denyAll()
+            .antMatchers(HttpMethod.DELETE, "/**").denyAll()
+
+            .anyRequest().denyAll()
+        ;
     }
 
     @Override

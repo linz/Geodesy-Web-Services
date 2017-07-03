@@ -56,7 +56,9 @@ public class CorsSiteEndpointITest extends IntegrationTest {
     @Test(dependsOnMethods = {"testFindByFourCharacterId"})
     @Rollback(false)
     public void testPatchSiteStatus() throws Exception {
-        mvc.perform(patch("/corsSites/" + alice.getId()).content("{\"siteStatus\": \"PRIVATE\"}"))
+        mvc.perform(patch("/corsSites/" + alice.getId())
+            .with(super.superuserToken())
+            .content("{\"siteStatus\": \"PRIVATE\"}"))
             .andDo(document("patchCorsSite"))
             .andExpect(status().isNoContent());
     }

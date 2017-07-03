@@ -33,6 +33,7 @@ public class NewCorsSiteRequestRestITest extends IntegrationTest {
         String geodesyML = IOUtils.toString(TestResources.customGeodesyMLSiteLogReader("new_site_ZZZZ"));
         
         given()
+            .auth().with(super.bareUserToken())
             .body(mapper.writeValueAsString(new NewCorsSiteRequest(
                 "Lazar",
                 "Bodor",

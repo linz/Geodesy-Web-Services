@@ -54,6 +54,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
             .antMatchers(HttpMethod.POST, "/siteLogs/validate").permitAll()
             .antMatchers(HttpMethod.POST, "/userRegistrations").permitAll()
             .antMatchers(HttpMethod.GET, "/**").permitAll()
+            .antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
 
             .antMatchers(HttpMethod.POST, "/**").denyAll()
             .antMatchers(HttpMethod.PUT, "/**").denyAll()

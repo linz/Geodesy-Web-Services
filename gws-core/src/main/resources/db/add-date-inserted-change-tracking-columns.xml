@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <changeSet author="lbodor" id="1498218194-1">
+        <addColumn
+            tableName="sitelog_mutlipathsource">
+            <column
+                name="date_inserted"
+                remarks="datetime the record was inserted into the log"
+                type="timestamp"/>
+        </addColumn>
+    </changeSet>
+
+    <changeSet author="lbodor" id="1498218194-2">
+        <addColumn
+            tableName="sitelog_signalobstraction">
+            <column
+                name="date_inserted"
+                remarks="datetime the record was inserted into the log"
+                type="timestamp"/>
+        </addColumn>
+    </changeSet>
+
+    <changeSet author="lbodor" id="1498218194-3">
+        <addColumn
+            tableName="sitelog_radiointerference">
+            <column name="date_inserted"
+                remarks="datetime the record was inserted into the log"
+                type="timestamp"/>
+        </addColumn>
+    </changeSet>
+
+    <changeSet author="lbodor" id="1498218194-4">
+        <addColumn
+            tableName="sitelog_localepisodiceffect">
+            <column name="date_inserted"
+                remarks="datetime the record was inserted into the log"
+                type="timestamp"/>
+        </addColumn>
+    </changeSet>
+
+    <changeSet author="lbodor" id="1498218194-5">
+        <addColumn
+            tableName="sitelog_otherinstrumentation">
+            <column name="date_inserted"
+                remarks="datetime the record was inserted into the log"
+                type="timestamp"/>
+        </addColumn>
+    </changeSet>
+
+    <changeSet author="lbodor" id="1498218194-6">
+        <addColumn
+            tableName="sitelog_collocationinformation">
+            <column name="date_inserted"
+                remarks="datetime the record was inserted into the log"
+                type="timestamp"/>
+        </addColumn>
+    </changeSet>
+
+    <changeSet author="lbodor" id="1498218194-7">
+        <addColumn
+            tableName="sitelog_frequencystandard">
+            <column name="date_inserted"
+                remarks="datetime the record was inserted into the log"
+                type="timestamp"/>
+        </addColumn>
+    </changeSet>
+
+    <changeSet author="lbodor" id="1498218194-8">
+        <addColumn
+            tableName="sitelog_gnssreceiver">
+            <column name="date_inserted"
+                remarks="datetime the record was inserted into the log"
+                type="timestamp"/>
+        </addColumn>
+    </changeSet>
+
+    <changeSet author="lbodor" id="1498218194-9">
+        <addColumn
+            tableName="sitelog_watervaporsensor">
+            <column name="date_inserted"
+                remarks="datetime the record was inserted into the log"
+                type="timestamp"/>
+        </addColumn>
+    </changeSet>
+
+    <changeSet author="lbodor" id="1498218194-10">
+        <addColumn
+            tableName="sitelog_pressuresensor">
+            <column name="date_inserted"
+                remarks="datetime the record was inserted into the log"
+                type="timestamp"/>
+        </addColumn>
+    </changeSet>
+
+    <changeSet author="lbodor" id="1498218194-11">
+        <addColumn
+            tableName="sitelog_humiditysensor">
+            <column name="date_inserted"
+                remarks="datetime the record was inserted into the log"
+                type="timestamp"/>
+        </addColumn>
+    </changeSet>
+
+    <changeSet author="lbodor" id="1498218194-12">
+        <addColumn
+            tableName="sitelog_surveyedlocaltie">
+            <column name="date_inserted"
+                remarks="datetime the record was inserted into the log"
+                type="timestamp"/>
+        </addColumn>
+    </changeSet>
+
+    <changeSet author="lbodor" id="1498218194-13">
+        <addColumn
+            tableName="sitelog_temperaturesensor">
+            <column name="date_inserted"
+                remarks="datetime the record was inserted into the log"
+                type="timestamp"/>
+        </addColumn>
+    </changeSet>
+
+    <changeSet author="lbodor" id="1498218194-14">
+        <addColumn
+            tableName="sitelog_gnssantenna">
+            <column name="date_inserted"
+                remarks="datetime the record was inserted into the log"
+                type="timestamp"/>
+        </addColumn>
+    </changeSet>
+</databaseChangeLog>

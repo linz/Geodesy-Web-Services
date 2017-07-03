@@ -11,5 +11,7 @@ public interface LogItemVisitor<T> {
     T visit(OtherInstrumentationLogItem logItem);
     T visit(PossibleProblemSourceLogItem logItem);
     T visit(LocalEpisodicEffectLogItem logItem);
+    T visit(CollocationInformationLogItem logItem);
+    T visit(SurveyedLocalTieLogItem logItem);
 }
 

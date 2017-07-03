@@ -8,11 +8,11 @@ public class SystemTestResourcesTest {
 
     @Test
     public void checkNumberOfSiteLogs() throws Exception {
-        MatcherAssert.assertThat(SystemTestResources.siteLogs().length, is(956));
+        MatcherAssert.assertThat(SystemTestResources.siteLogs().length, is(942));
     }
 
     @Test
     public void checkNumberOfSiteLogsSubset() throws Exception {
-        MatcherAssert.assertThat(SystemTestResources.siteLogs("a*").length, is(47));
+        MatcherAssert.assertThat(SystemTestResources.siteLogs("a*").length, is(46));
     }
 }

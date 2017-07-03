@@ -50,6 +50,10 @@ public abstract class Event implements Cloneable {
     @Column(name = "ERROR")
     private @MonotonicNonNull String error;
 
+    public Integer getId() {
+        return id;
+    }
+
     /**
      * Return a Human digestable message about this event. Used in email for example.
      *

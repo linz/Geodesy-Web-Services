@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="utf-8"?>
+<geo:GeodesyML gml:id="THU300GRL" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.4" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <geo:siteLog gml:id="thu3_20090515.log">
+        <geo:formInformation>
+            <geo:preparedBy>FINN BO MADSEN</geo:preparedBy>
+            <geo:datePrepared>2009-05-15</geo:datePrepared>
+            <geo:reportType>UPDATE</geo:reportType>
+        </geo:formInformation>
+        <geo:siteIdentification>
+            <geo:siteName>THULE</geo:siteName>
+            <geo:fourCharacterID>THU3</geo:fourCharacterID>
+            <geo:monumentInscription></geo:monumentInscription>
+            <geo:iersDOMESNumber>43001M002</geo:iersDOMESNumber>
+            <geo:cdpNumber>(A4)</geo:cdpNumber>
+            <geo:monumentDescription codeSpace="urn:ga-gov-au:monument-description-type">Bolt in 1.5 meter concrete pillar</geo:monumentDescription>
+            <geo:heightOfTheMonument>0.0</geo:heightOfTheMonument>
+            <geo:monumentFoundation>Steel rods</geo:monumentFoundation>
+            <geo:foundationDepth>0.0</geo:foundationDepth>
+            <geo:markerDescription>(CHISELLED CROSS/DIVOT/BRASS NAIL/etc)</geo:markerDescription>
+            <geo:dateInstalled>2001-09-01</geo:dateInstalled>
+            <geo:geologicCharacteristic codeSpace="urn:ga-gov-au:geologic-characteristic-type">BEDROCK</geo:geologicCharacteristic>
+            <geo:bedrockType>METAMORPHIC</geo:bedrockType>
+            <geo:bedrockCondition>JOINTED</geo:bedrockCondition>
+            <geo:fractureSpacing>over 200</geo:fractureSpacing>
+            <geo:faultZonesNearby codeSpace="urn:ga-gov-au:fault-zones-type">(YES/NO/Name of the zone)</geo:faultZonesNearby>
+            <geo:notes>(multiple lines) MONUMENT+ANTENNA SHARED WITH IGLOS STATION THU2 2002-08-20 Format issues, antenna eccentricity, elevation cutoff setting and datacenter information has been corrected/added.</geo:notes>
+        </geo:siteIdentification>
+        <geo:siteLocation>
+            <geo:city>Thule Airbase</geo:city>
+            <geo:state>GREENLAND</geo:state>
+            <geo:countryCodeISO codeList="http://xml.gov.au/icsm/geodesyml/codelists/country-codes-codelist.xml#GeodesyML_CountryCode" codeListValue="Greenland" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">GRL</geo:countryCodeISO>
+            <geo:tectonicPlate codeSpace="urn:ga-gov-au:plate-type">NORTH AMERICAN</geo:tectonicPlate>
+            <geo:approximatePositionITRF>
+                <geo:cartesianPosition>
+                    <gml:Point gml:id="itrf_cartesian" srsName="EPSG:7789">
+                        <gml:pos>538093.7 -1389088.0 6180979.3</gml:pos>
+                    </gml:Point>
+                </geo:cartesianPosition>
+                <geo:geodeticPosition>
+                    <gml:Point gml:id="itrf_geodetic" srsName="EPSG:7912">
+                        <gml:pos>76.537 -68.825 36.1</gml:pos>
+                    </gml:Point>
+                </geo:geodeticPosition>
+            </geo:approximatePositionITRF>
+            <geo:notes>00018.9</geo:notes>
+        </geo:siteLocation>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-1">
+                <geo:manufacturerSerialNumber>ZR20011104</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="ASHTECH UZ-12" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">ASHTECH UZ-12</geo:igsModelCode>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GPS</geo:satelliteSystem>
+                <geo:firmwareVersion>CJ00</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>5.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>2001-09-01T00:00:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2003-11-13</geo:dateRemoved>
+                <geo:temperatureStabilization xsi:nil="true"></geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2001-09-01T00:00:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-2">
+                <geo:manufacturerSerialNumber>11104</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="ASHTECH UZ-12" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">ASHTECH UZ-12</geo:igsModelCode>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GPS</geo:satelliteSystem>
+                <geo:firmwareVersion>CJ00</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>5.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>2003-11-13</geo:dateInstalled>
+                <geo:dateRemoved>2006-08-29T00:00:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization xsi:nil="true"></geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2003-11-13</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-3">
+                <geo:manufacturerSerialNumber>11104</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="ASHTECH UZ-12" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">ASHTECH UZ-12</geo:igsModelCode>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GPS</geo:satelliteSystem>
+                <geo:firmwareVersion>CJ00</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>2006-08-29T00:00:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2008-02-15T14:06:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization xsi:nil="true"></geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2006-08-29T00:00:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-4">
+                <geo:manufacturerSerialNumber>02259</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="ASHTECH Z-XII3" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">ASHTECH Z-XII3</geo:igsModelCode>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GPS</geo:satelliteSystem>
+                <geo:firmwareVersion>1L00</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>2008-02-15T14:07:00Z</geo:dateInstalled>
+                <geo:dateRemoved>2009-04-30T19:11:00Z</geo:dateRemoved>
+                <geo:temperatureStabilization xsi:nil="true"></geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2008-02-15T14:07:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssReceiver>
+            <geo:GnssReceiver gml:id="gnss-receiver-5">
+                <geo:manufacturerSerialNumber>11104</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="ASHTECH UZ-12" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">ASHTECH UZ-12</geo:igsModelCode>
+                <geo:satelliteSystem codeSpace="urn:ga-gov-au:satellite-system-type">GPS</geo:satelliteSystem>
+                <geo:firmwareVersion>CK00</geo:firmwareVersion>
+                <geo:elevationCutoffSetting>0.0</geo:elevationCutoffSetting>
+                <geo:dateInstalled>2009-04-30T19:11:00Z</geo:dateInstalled>
+                <geo:dateRemoved></geo:dateRemoved>
+                <geo:temperatureStabilization xsi:nil="true"></geo:temperatureStabilization>
+            </geo:GnssReceiver>
+            <geo:dateInserted>2009-04-30T19:11:00Z</geo:dateInserted>
+        </geo:gnssReceiver>
+        <geo:gnssAntenna>
+            <geo:GnssAntenna gml:id="gnss-antenna-1">
+                <geo:manufacturerSerialNumber>CRG0111</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSAntennaTypeCode" codeListValue="ASH701073.1 SCIS" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">ASH701073.1     SCIS</geo:igsModelCode>
+                <geo:antennaReferencePoint codeSpace="urn:ga-gov-au:antenna-reference-point-type">BPA</geo:antennaReferencePoint>
+                <geo:marker-arpUpEcc.>0.1002</geo:marker-arpUpEcc.>
+                <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+                <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+                <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+                <geo:antennaRadomeType codeSpace="urn:igs-org:gnss-radome-model-code">SCIS</geo:antennaRadomeType>
+                <geo:radomeSerialNumber></geo:radomeSerialNumber>
+                <geo:antennaCableType>Andrew LDF4-50A</geo:antennaCableType>
+                <geo:antennaCableLength>70.0</geo:antennaCableLength>
+                <geo:dateInstalled>2000-11-17</geo:dateInstalled>
+                <geo:dateRemoved>2003-11-13</geo:dateRemoved>
+            </geo:GnssAntenna>
+            <geo:dateInserted>2000-11-17</geo:dateInserted>
+        </geo:gnssAntenna>
+        <geo:gnssAntenna>
+            <geo:GnssAntenna gml:id="gnss-antenna-2">
+                <geo:notes>Serial Number changed in order to conform with SINEX</geo:notes>
+                <geo:manufacturerSerialNumber>G0111</geo:manufacturerSerialNumber>
+                <geo:igsModelCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSAntennaTypeCode" codeListValue="ASH701073.1 SCIS" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">ASH701073.1     SCIS</geo:igsModelCode>
+                <geo:antennaReferencePoint codeSpace="urn:ga-gov-au:antenna-reference-point-type">BPA</geo:antennaReferencePoint>
+                <geo:marker-arpUpEcc.>0.1002</geo:marker-arpUpEcc.>
+                <geo:marker-arpNorthEcc.>0.0</geo:marker-arpNorthEcc.>
+                <geo:marker-arpEastEcc.>0.0</geo:marker-arpEastEcc.>
+                <geo:alignmentFromTrueNorth>0.0</geo:alignmentFromTrueNorth>
+                <geo:antennaRadomeType codeSpace="urn:igs-org:gnss-radome-model-code">SCIS</geo:antennaRadomeType>
+                <geo:radomeSerialNumber></geo:radomeSerialNumber>
+                <geo:antennaCableType>Andrew LDF4-50A</geo:antennaCableType>
+                <geo:antennaCableLength>70.0</geo:antennaCableLength>
+                <geo:dateInstalled>2003-11-13</geo:dateInstalled>
+                <geo:dateRemoved></geo:dateRemoved>
+            </geo:GnssAntenna>
+            <geo:dateInserted>2003-11-13</geo:dateInserted>
+        </geo:gnssAntenna>
+        <geo:surveyedLocalTie>
+            <geo:SurveyedLocalTie gml:id="local-tie-1">
+                <geo:tiedMarkerName>THU1</geo:tiedMarkerName>
+                <geo:tiedMarkerUsage>(SLR/VLBI/LOCAL CONTROL/FOOTPRINT/etc)</geo:tiedMarkerUsage>
+                <geo:tiedMarkerCDPNumber></geo:tiedMarkerCDPNumber>
+                <geo:tiedMarkerDOMESNumber>43001M001</geo:tiedMarkerDOMESNumber>
+                <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+                    <geo:dx>887.6907</geo:dx>
+                    <geo:dy>373.24</geo:dy>
+                    <geo:dz>25.8404</geo:dz>
+                </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+                <geo:localSiteTiesAccuracy>0.0</geo:localSiteTiesAccuracy>
+                <geo:surveyMethod>GPS CAMPAIGN</geo:surveyMethod>
+                <geo:dateMeasured></geo:dateMeasured>
+                <geo:notes>ONE YEAR OF DAILY FILES</geo:notes>
+            </geo:SurveyedLocalTie>
+            <geo:dateInserted></geo:dateInserted>
+        </geo:surveyedLocalTie>
+        <geo:surveyedLocalTie>
+            <geo:SurveyedLocalTie gml:id="local-tie-2">
+                <geo:tiedMarkerName>THU2</geo:tiedMarkerName>
+                <geo:tiedMarkerUsage>(SLR/VLBI/LOCAL CONTROL/FOOTPRINT/etc)</geo:tiedMarkerUsage>
+                <geo:tiedMarkerCDPNumber></geo:tiedMarkerCDPNumber>
+                <geo:tiedMarkerDOMESNumber>43001M002</geo:tiedMarkerDOMESNumber>
+                <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+                    <geo:dx>0.0</geo:dx>
+                    <geo:dy>0.0</geo:dy>
+                    <geo:dz>0.0</geo:dz>
+                </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+                <geo:localSiteTiesAccuracy>0.0</geo:localSiteTiesAccuracy>
+                <geo:surveyMethod>(GPS CAMPAIGN/TRILATERATION/TRIANGULATION/etc)</geo:surveyMethod>
+                <geo:dateMeasured></geo:dateMeasured>
+                <geo:notes></geo:notes>
+            </geo:SurveyedLocalTie>
+            <geo:dateInserted></geo:dateInserted>
+        </geo:surveyedLocalTie>
+        <geo:surveyedLocalTie>
+            <geo:SurveyedLocalTie gml:id="local-tie-3">
+                <geo:tiedMarkerName>THU1</geo:tiedMarkerName>
+                <geo:tiedMarkerUsage>IGS global station</geo:tiedMarkerUsage>
+                <geo:tiedMarkerCDPNumber>(A4)</geo:tiedMarkerCDPNumber>
+                <geo:tiedMarkerDOMESNumber>43001M001</geo:tiedMarkerDOMESNumber>
+                <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+                    <geo:dx>887.6995</geo:dx>
+                    <geo:dy>373.219</geo:dy>
+                    <geo:dz>25.9373</geo:dz>
+                </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+                <geo:localSiteTiesAccuracy>0.5</geo:localSiteTiesAccuracy>
+                <geo:surveyMethod>GPS CAMPAIGN</geo:surveyMethod>
+                <geo:dateMeasured></geo:dateMeasured>
+                <geo:notes>Differential components in section 5.1 have been found erroneous. Two years of daily files have been processed.</geo:notes>
+            </geo:SurveyedLocalTie>
+            <geo:dateInserted></geo:dateInserted>
+        </geo:surveyedLocalTie>
+        <geo:surveyedLocalTie>
+            <geo:SurveyedLocalTie gml:id="local-tie-4">
+                <geo:tiedMarkerName>THUB</geo:tiedMarkerName>
+                <geo:tiedMarkerUsage>DORIS station</geo:tiedMarkerUsage>
+                <geo:tiedMarkerCDPNumber>(A4)</geo:tiedMarkerCDPNumber>
+                <geo:tiedMarkerDOMESNumber>43001S005</geo:tiedMarkerDOMESNumber>
+                <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+                    <geo:dx>16.9462</geo:dx>
+                    <geo:dy>56.6699</geo:dy>
+                    <geo:dz>15.2827</geo:dz>
+                </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+                <geo:localSiteTiesAccuracy>1.0</geo:localSiteTiesAccuracy>
+                <geo:surveyMethod>GPS</geo:surveyMethod>
+                <geo:dateMeasured>2002-09-28</geo:dateMeasured>
+                <geo:notes>20 hours of GPS observations</geo:notes>
+            </geo:SurveyedLocalTie>
+            <geo:dateInserted>2002-09-28</geo:dateInserted>
+        </geo:surveyedLocalTie>
+        <geo:surveyedLocalTie>
+            <geo:SurveyedLocalTie gml:id="local-tie-5">
+                <geo:tiedMarkerName>THUB</geo:tiedMarkerName>
+                <geo:tiedMarkerUsage>DORIS station</geo:tiedMarkerUsage>
+                <geo:tiedMarkerCDPNumber>(A4)</geo:tiedMarkerCDPNumber>
+                <geo:tiedMarkerDOMESNumber>43001S005</geo:tiedMarkerDOMESNumber>
+                <geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+                    <geo:dx>16.9538</geo:dx>
+                    <geo:dy>56.6854</geo:dy>
+                    <geo:dz>15.2703</geo:dz>
+                </geo:differentialComponentsGNSSMarkerToTiedMonumentITRS>
+                <geo:localSiteTiesAccuracy>1.0</geo:localSiteTiesAccuracy>
+                <geo:surveyMethod>GPS, directions and distances, levelling</geo:surveyMethod>
+                <geo:dateMeasured>2008-08-01</geo:dateMeasured>
+                <geo:notes>First re-measurement since monument was damaged and rebuilt 2002-10-14</geo:notes>
+            </geo:SurveyedLocalTie>
+            <geo:dateInserted>2008-08-01</geo:dateInserted>
+        </geo:surveyedLocalTie>
+        <geo:frequencyStandard>
+            <geo:FrequencyStandard gml:id="frequency-standard-1">
+                <geo:standardType codeSpace="urn:ga-gov-au:frequency-standard-type">INTERNAL</geo:standardType>
+                <geo:inputFrequency xsi:nil="true"></geo:inputFrequency>
+                <gml:validTime>
+                    <gml:TimePeriod gml:id="frequency-standard-1--time-period-1">
+                        <gml:beginPosition>2001-09-01</gml:beginPosition>
+                        <gml:endPosition>2002-09-24</gml:endPosition>
+                    </gml:TimePeriod>
+                </gml:validTime>
+                <geo:notes></geo:notes>
+            </geo:FrequencyStandard>
+            <geo:dateInserted>2001-09-01</geo:dateInserted>
+        </geo:frequencyStandard>
+        <geo:frequencyStandard>
+            <geo:FrequencyStandard gml:id="frequency-standard-2">
+                <geo:standardType codeSpace="urn:ga-gov-au:frequency-standard-type">EXTERNAL RUBIDIUM</geo:standardType>
+                <geo:inputFrequency>5.0</geo:inputFrequency>
+                <gml:validTime>
+                    <gml:TimePeriod gml:id="frequency-standard-2--time-period-2">
+                        <gml:beginPosition>2002-09-25</gml:beginPosition>
+                        <gml:endPosition></gml:endPosition>
+                    </gml:TimePeriod>
+                </gml:validTime>
+                <geo:notes>DATUM FRK-LLN P/N: 80104736 S/N: 19087</geo:notes>
+            </geo:FrequencyStandard>
+            <geo:dateInserted>2002-09-25</geo:dateInserted>
+        </geo:frequencyStandard>
+        <geo:humiditySensor>
+            <geo:HumiditySensor gml:id="humidity-sensor-1">
+                <geo:type codeSpace="urn:ga-gov-au:humidity-sensor-type">HMP45D</geo:type>
+                <geo:notes>Serial U5020003</geo:notes>
+                <geo:manufacturer>VAISALA</geo:manufacturer>
+                <geo:serialNumber></geo:serialNumber>
+                <geo:heightDiffToAntenna>0.0</geo:heightDiffToAntenna>
+                <geo:calibrationDate></geo:calibrationDate>
+                <gml:validTime>
+                    <gml:TimePeriod gml:id="humidity-sensor-1--time-period-1">
+                        <gml:beginPosition>2001-09-01</gml:beginPosition>
+                        <gml:endPosition>2005-09-15T20:25:00Z</gml:endPosition>
+                    </gml:TimePeriod>
+                </gml:validTime>
+                <geo:dataSamplingInterval>300.0</geo:dataSamplingInterval>
+                <geo:accuracy-percentRelativeHumidity>2.0</geo:accuracy-percentRelativeHumidity>
+                <geo:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</geo:aspiration>
+            </geo:HumiditySensor>
+            <geo:dateInserted>2001-09-01</geo:dateInserted>
+        </geo:humiditySensor>
+        <geo:humiditySensor>
+            <geo:HumiditySensor gml:id="humidity-sensor-2">
+                <geo:type codeSpace="urn:ga-gov-au:humidity-sensor-type">HMP45DSP</geo:type>
+                <geo:notes>Serial A3310004</geo:notes>
+                <geo:manufacturer>VAISALA</geo:manufacturer>
+                <geo:serialNumber></geo:serialNumber>
+                <geo:heightDiffToAntenna>0.0</geo:heightDiffToAntenna>
+                <geo:calibrationDate>2005-08-15</geo:calibrationDate>
+                <gml:validTime>
+                    <gml:TimePeriod gml:id="humidity-sensor-2--time-period-2">
+                        <gml:beginPosition>2005-09-15T20:25:00Z</gml:beginPosition>
+                        <gml:endPosition></gml:endPosition>
+                    </gml:TimePeriod>
+                </gml:validTime>
+                <geo:dataSamplingInterval>300.0</geo:dataSamplingInterval>
+                <geo:accuracy-percentRelativeHumidity>2.0</geo:accuracy-percentRelativeHumidity>
+                <geo:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</geo:aspiration>
+            </geo:HumiditySensor>
+            <geo:dateInserted>2005-09-15T20:25:00Z</geo:dateInserted>
+        </geo:humiditySensor>
+        <geo:pressureSensor>
+            <geo:PressureSensor gml:id="pressure-sensor-1">
+                <geo:type codeSpace="urn:ga-gov-au:pressure-sensor-type">PTU200 Class A</geo:type>
+                <geo:notes>Serial U5120003</geo:notes>
+                <geo:manufacturer>VAISALA</geo:manufacturer>
+                <geo:serialNumber></geo:serialNumber>
+                <geo:heightDiffToAntenna>5.1</geo:heightDiffToAntenna>
+                <geo:calibrationDate></geo:calibrationDate>
+                <gml:validTime>
+                    <gml:TimePeriod gml:id="pressure-sensor-1--time-period-3">
+                        <gml:beginPosition>2001-09-01</gml:beginPosition>
+                        <gml:endPosition></gml:endPosition>
+                    </gml:TimePeriod>
+                </gml:validTime>
+                <geo:dataSamplingInterval>0.0</geo:dataSamplingInterval>
+                <geo:accuracy-hPa>0.15</geo:accuracy-hPa>
+            </geo:PressureSensor>
+            <geo:dateInserted>2001-09-01</geo:dateInserted>
+        </geo:pressureSensor>
+        <geo:temperatureSensor>
+            <geo:TemperatureSensor gml:id="temperature-sensor-1">
+                <geo:type codeSpace="urn:ga-gov-au:temperature-sensor-type">PTU200</geo:type>
+                <geo:notes>Serial U5120003</geo:notes>
+                <geo:manufacturer>VAISALA</geo:manufacturer>
+                <geo:serialNumber></geo:serialNumber>
+                <geo:heightDiffToAntenna>0.0</geo:heightDiffToAntenna>
+                <geo:calibrationDate></geo:calibrationDate>
+                <gml:validTime>
+                    <gml:TimePeriod gml:id="temperature-sensor-1--time-period-4">
+                        <gml:beginPosition>2001-09-01</gml:beginPosition>
+                        <gml:endPosition>2005-09-15T20:25:00Z</gml:endPosition>
+                    </gml:TimePeriod>
+                </gml:validTime>
+                <geo:dataSamplingInterval>300.0</geo:dataSamplingInterval>
+                <geo:accuracy-degreesCelcius>0.2</geo:accuracy-degreesCelcius>
+                <geo:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</geo:aspiration>
+            </geo:TemperatureSensor>
+            <geo:dateInserted>2001-09-01</geo:dateInserted>
+        </geo:temperatureSensor>
+        <geo:temperatureSensor>
+            <geo:TemperatureSensor gml:id="temperature-sensor-2">
+                <geo:type codeSpace="urn:ga-gov-au:temperature-sensor-type">HMP45DSP</geo:type>
+                <geo:notes>Serial A3310004</geo:notes>
+                <geo:manufacturer>VAISALA</geo:manufacturer>
+                <geo:serialNumber></geo:serialNumber>
+                <geo:heightDiffToAntenna>0.0</geo:heightDiffToAntenna>
+                <geo:calibrationDate>2005-08-15</geo:calibrationDate>
+                <gml:validTime>
+                    <gml:TimePeriod gml:id="temperature-sensor-2--time-period-5">
+                        <gml:beginPosition>2005-09-15T20:25:00Z</gml:beginPosition>
+                        <gml:endPosition></gml:endPosition>
+                    </gml:TimePeriod>
+                </gml:validTime>
+                <geo:dataSamplingInterval>300.0</geo:dataSamplingInterval>
+                <geo:accuracy-degreesCelcius>0.2</geo:accuracy-degreesCelcius>
+                <geo:aspiration>(UNASPIRATED/NATURAL/FAN/etc)</geo:aspiration>
+            </geo:TemperatureSensor>
+            <geo:dateInserted>2005-09-15T20:25:00Z</geo:dateInserted>
+        </geo:temperatureSensor>
+        <geo:siteContact gml:id="agency-1">
+            <gmd:MD_SecurityConstraints>
+                <gmd:classification gco:nilReason="missing"/>
+            </gmd:MD_SecurityConstraints>
+            <gmd:CI_ResponsibleParty>
+                <gmd:individualName>
+                    <gco:CharacterString>Finn Bo Madsen</gco:CharacterString>
+                </gmd:individualName>
+                <gmd:organisationName>
+                    <gco:CharacterString>Danish National Space Center</gco:CharacterString>
+                </gmd:organisationName>
+                <gmd:contactInfo>
+                    <gmd:CI_Contact>
+                        <gmd:phone>
+                            <gmd:CI_Telephone>
+                                <gmd:voice>
+                                    <gco:CharacterString>+45 3532 5700 (switch)</gco:CharacterString>
+                                </gmd:voice>
+                                <gmd:voice>
+                                    <gco:CharacterString>+45 3532 5784 (direct)</gco:CharacterString>
+                                </gmd:voice>
+                                <gmd:facsimile>
+                                    <gco:CharacterString>+45 3536 2475</gco:CharacterString>
+                                </gmd:facsimile>
+                            </gmd:CI_Telephone>
+                        </gmd:phone>
+                        <gmd:address>
+                            <gmd:CI_Address>
+                                <gmd:deliveryPoint>
+                                    <gco:CharacterString>Juliane Maries Vej 30, DK-2100 Copenhagen E</gco:CharacterString>
+                                </gmd:deliveryPoint>
+                                <gmd:city>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:city>
+                                <gmd:postalCode>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:postalCode>
+                                <gmd:country>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:country>
+                                <gmd:electronicMailAddress>
+                                    <gco:CharacterString>bm@spacecenter.dk</gco:CharacterString>
+                                </gmd:electronicMailAddress>
+                            </gmd:CI_Address>
+                        </gmd:address>
+                    </gmd:CI_Contact>
+                </gmd:contactInfo>
+                <gmd:role>
+                    <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="pointOfContact"></gmd:CI_RoleCode>
+                </gmd:role>
+            </gmd:CI_ResponsibleParty>
+        </geo:siteContact>
+        <geo:siteContact gml:id="agency-2">
+            <gmd:MD_SecurityConstraints>
+                <gmd:classification gco:nilReason="missing"/>
+            </gmd:MD_SecurityConstraints>
+            <gmd:CI_ResponsibleParty>
+                <gmd:individualName>
+                    <gco:CharacterString>Ole Bjerregaard Hansen</gco:CharacterString>
+                </gmd:individualName>
+                <gmd:organisationName>
+                    <gco:CharacterString>Danish National Space Center</gco:CharacterString>
+                </gmd:organisationName>
+                <gmd:contactInfo>
+                    <gmd:CI_Contact>
+                        <gmd:phone>
+                            <gmd:CI_Telephone>
+                                <gmd:voice>
+                                    <gco:CharacterString>+45 3532 5700(switch)</gco:CharacterString>
+                                </gmd:voice>
+                                <gmd:voice>
+                                    <gco:CharacterString>+45 3532 5784 (direct)</gco:CharacterString>
+                                </gmd:voice>
+                                <gmd:facsimile>
+                                    <gco:CharacterString>+45 3536 2475</gco:CharacterString>
+                                </gmd:facsimile>
+                            </gmd:CI_Telephone>
+                        </gmd:phone>
+                        <gmd:address>
+                            <gmd:CI_Address>
+                                <gmd:deliveryPoint>
+                                    <gco:CharacterString>Juliane Maries Vej 30, DK-2100 Copenhagen E</gco:CharacterString>
+                                </gmd:deliveryPoint>
+                                <gmd:city>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:city>
+                                <gmd:postalCode>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:postalCode>
+                                <gmd:country>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:country>
+                                <gmd:electronicMailAddress>
+                                    <gco:CharacterString>olh@spacecenter.dk</gco:CharacterString>
+                                </gmd:electronicMailAddress>
+                            </gmd:CI_Address>
+                        </gmd:address>
+                    </gmd:CI_Contact>
+                </gmd:contactInfo>
+                <gmd:role>
+                    <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="pointOfContact"></gmd:CI_RoleCode>
+                </gmd:role>
+            </gmd:CI_ResponsibleParty>
+        </geo:siteContact>
+        <geo:siteMetadataCustodian gml:id="agency-3">
+            <gmd:MD_SecurityConstraints>
+                <gmd:classification gco:nilReason="missing"/>
+            </gmd:MD_SecurityConstraints>
+            <gmd:CI_ResponsibleParty>
+                <gmd:individualName>
+                    <gco:CharacterString></gco:CharacterString>
+                </gmd:individualName>
+                <gmd:organisationName>
+                    <gco:CharacterString>(multiple lines)</gco:CharacterString>
+                </gmd:organisationName>
+                <gmd:contactInfo>
+                    <gmd:CI_Contact>
+                        <gmd:phone>
+                            <gmd:CI_Telephone>
+                                <gmd:voice>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:voice>
+                                <gmd:voice>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:voice>
+                                <gmd:facsimile>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:facsimile>
+                            </gmd:CI_Telephone>
+                        </gmd:phone>
+                        <gmd:address>
+                            <gmd:CI_Address>
+                                <gmd:deliveryPoint>
+                                    <gco:CharacterString>(multiple lines)</gco:CharacterString>
+                                </gmd:deliveryPoint>
+                                <gmd:city>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:city>
+                                <gmd:postalCode>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:postalCode>
+                                <gmd:country>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:country>
+                                <gmd:electronicMailAddress>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:electronicMailAddress>
+                            </gmd:CI_Address>
+                        </gmd:address>
+                    </gmd:CI_Contact>
+                </gmd:contactInfo>
+                <gmd:role>
+                    <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="pointOfContact"></gmd:CI_RoleCode>
+                </gmd:role>
+            </gmd:CI_ResponsibleParty>
+        </geo:siteMetadataCustodian>
+        <geo:moreInformation>
+            <geo:dataCenter>CDDIS</geo:dataCenter>
+            <geo:dataCenter>BKGI</geo:dataCenter>
+            <geo:urlForMoreInformation>geodesy.spacecenter.dk/~geod/REFSTA/ref.html</geo:urlForMoreInformation>
+            <geo:siteMap>(Y or URL)</geo:siteMap>
+            <geo:siteDiagram>(Y)</geo:siteDiagram>
+            <geo:horizonMask>(Y)</geo:horizonMask>
+            <geo:monumentDescription>(Y)</geo:monumentDescription>
+            <geo:sitePictures>(Y)</geo:sitePictures>
+            <geo:notes></geo:notes>
+            <geo:antennaGraphicsWithDimensions></geo:antennaGraphicsWithDimensions>
+            <geo:insertTextGraphicFromAntenna></geo:insertTextGraphicFromAntenna>
+            <geo:DOI codeSpace="urn:ga-gov-au:self.moreInformation-type">TODO</geo:DOI>
+        </geo:moreInformation>
+    </geo:siteLog>
+</geo:GeodesyML>

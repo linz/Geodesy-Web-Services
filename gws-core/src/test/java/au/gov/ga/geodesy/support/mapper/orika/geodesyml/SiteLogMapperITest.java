@@ -24,7 +24,7 @@ import org.testng.annotations.Test;
 
 import com.vividsolutions.jts.geom.Point;
 
-import au.gov.ga.geodesy.domain.model.sitelog.CollocationInformation;
+import au.gov.ga.geodesy.domain.model.sitelog.CollocationInformationLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.FrequencyStandardLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.GnssAntennaLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.GnssReceiverLogItem;
@@ -37,7 +37,7 @@ import au.gov.ga.geodesy.domain.model.sitelog.PressureSensorLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.RadioInterference;
 import au.gov.ga.geodesy.domain.model.sitelog.SignalObstructionLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLog;
-import au.gov.ga.geodesy.domain.model.sitelog.SurveyedLocalTie;
+import au.gov.ga.geodesy.domain.model.sitelog.SurveyedLocalTieLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.TemperatureSensorLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.WaterVaporSensorLogItem;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLMarshaller;
@@ -47,6 +47,7 @@ import au.gov.ga.geodesy.support.TestResources;
 import au.gov.ga.geodesy.support.gml.GMLPropertyType;
 import au.gov.ga.geodesy.support.marshalling.moxy.GeodesyMLMoxy;
 import au.gov.ga.geodesy.support.spring.IntegrationTest;
+import au.gov.ga.geodesy.support.utils.DateTimeFormatDecorator;
 import au.gov.ga.geodesy.support.utils.GMLDateUtils;
 import au.gov.xml.icsm.geodesyml.v_0_4.CollocationInformationPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_4.CollocationInformationType;
@@ -78,10 +79,13 @@ import au.gov.xml.icsm.geodesyml.v_0_4.TemperatureSensorPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_4.TemperatureSensorType;
 import au.gov.xml.icsm.geodesyml.v_0_4.WaterVaporSensorPropertyType;
 import au.gov.xml.icsm.geodesyml.v_0_4.WaterVaporSensorType;
+
 import ma.glasnost.orika.metadata.TypeFactory;
+
 import net.opengis.gml.v_3_2_1.TimePeriodType;
 import net.opengis.gml.v_3_2_1.TimePositionType;
 
+// TODO: Rewrite
 public class SiteLogMapperITest extends IntegrationTest {
 
     private SiteLogMapper mapper;
@@ -109,6 +113,7 @@ public class SiteLogMapperITest extends IntegrationTest {
         testMappingValues(siteLogType, siteLog);
 
         checkSiteContacts(siteLogType, siteLog);
+        checkReceivers(siteLogType.getGnssReceivers(), siteLog.getGnssReceivers());
 
         // TODO: complete tests
         siteLogType = mapper.from(siteLog);
@@ -127,6 +132,19 @@ public class SiteLogMapperITest extends IntegrationTest {
             siteLog.getSiteContacts().get(0).getParty().getIndividualName(),
             is(siteLogType.getSiteContacts().get(0).getCIResponsibleParty().getIndividualName().getCharacterString().getValue())
         );
+    }
+
+    private void checkReceivers(List<GnssReceiverPropertyType> receiverProperties, Set<GnssReceiverLogItem> receiverLogItems) {
+        assertThat(receiverProperties.size(), is(equalTo(receiverLogItems.size())));
+        int i = 0;
+        for (GnssReceiverLogItem receiverLogItem : sortLogItems(receiverLogItems)) {
+            checkReceiver(receiverProperties.get(i++), receiverLogItem);
+        }
+    }
+
+    private void checkReceiver(GnssReceiverPropertyType receiverProperty, GnssReceiverLogItem receiverLogItem) {
+        assertThat(receiverProperty.getDateInserted(), is(equalTo(timePosition(receiverLogItem.getDateInserted()))));
+        assertThat(receiverProperty.getGnssReceiver().getFirmwareVersion(), is(equalTo(receiverLogItem.getFirmwareVersion())));
     }
 
     /**
@@ -436,7 +454,7 @@ public class SiteLogMapperITest extends IntegrationTest {
 
         {
             int i = 0;
-            for (CollocationInformation collocationInfo : sortCollocationInformations(siteLog.getCollocationInformation())) {
+            for (CollocationInformationLogItem collocationInfo : sortCollocationInformations(siteLog.getCollocationInformation())) {
                 CollocationInformationType collocationInfoType = collocationInfoProperties.get(i++).getCollocationInformation();
                 assertThat(collocationInfo.getInstrumentType(), is(collocationInfoType.getInstrumentationType().getValue()));
 
@@ -472,7 +490,7 @@ public class SiteLogMapperITest extends IntegrationTest {
 
         {
             int i = 0;
-            for (SurveyedLocalTie surveyedLocalTie : sortSurveyedLocalTies(siteLog.getSurveyedLocalTies())) {
+            for (SurveyedLocalTieLogItem surveyedLocalTie : sortSurveyedLocalTies(siteLog.getSurveyedLocalTies())) {
                 SurveyedLocalTieType surveyedLocalTiesType = surveyedLocalTies.get(i++).getSurveyedLocalTie();
                 assertThat(surveyedLocalTie.getTiedMarkerName(), is(surveyedLocalTiesType.getTiedMarkerName()));
                 assertThat(surveyedLocalTie.getTiedMarkerUsage(), is(surveyedLocalTiesType.getTiedMarkerUsage()));
@@ -627,7 +645,7 @@ public class SiteLogMapperITest extends IntegrationTest {
     /**
      * Sort a set of CollocationInformations by effective dates.
      */
-    private <T extends CollocationInformation> SortedSet<T> sortCollocationInformations(Set<T> info) {
+    private <T extends CollocationInformationLogItem> SortedSet<T> sortCollocationInformations(Set<T> info) {
         SortedSet<T> sorted = new TreeSet<>(new Comparator<T>() {
             public int compare(T e, T f) {
                 int c = e.getEffectiveDates().compareTo(f.getEffectiveDates());
@@ -663,7 +681,7 @@ public class SiteLogMapperITest extends IntegrationTest {
     /**
      * Sort a set of SurveyedLocalTies by tied marker names.
      */
-    private <T extends SurveyedLocalTie> SortedSet<T> sortSurveyedLocalTies(Set<T> info) {
+    private <T extends SurveyedLocalTieLogItem> SortedSet<T> sortSurveyedLocalTies(Set<T> info) {
         SortedSet<T> sorted = new TreeSet<>(new Comparator<T>() {
             public int compare(T e, T f) {
                 int c = e.getTiedMarkerName().compareTo(f.getTiedMarkerName());
@@ -673,5 +691,11 @@ public class SiteLogMapperITest extends IntegrationTest {
         });
         sorted.addAll(info);
         return sorted;
+    }
+
+    private TimePositionType timePosition(Instant date) {
+        TimePositionType timePosition = new TimePositionType();
+        timePosition.getValue().add(GMLDateUtils.dateToString(date, DateTimeFormatDecorator.ofPattern("uuuu-MM-dd'T'HH:mm:ssX")));
+        return timePosition;
     }
 }

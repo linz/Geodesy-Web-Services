@@ -7,6 +7,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.SortedSet;
 import java.util.TreeSet;
+import java.util.stream.Collectors;
 
 import javax.annotation.PostConstruct;
 
@@ -75,7 +76,7 @@ public class CorsSiteService implements EventSubscriber<SiteLogReceived> {
     }
 
     public boolean canHandle(Event e) {
-        return e != null && (e instanceof SiteLogReceived);
+        return e instanceof SiteLogReceived;
     }
 
     public void handle(SiteLogReceived siteLogReceived) {
@@ -132,7 +133,12 @@ public class CorsSiteService implements EventSubscriber<SiteLogReceived> {
         Comparator<Instant> fromC = ComparatorUtils.nullLowComparator(ComparatorUtils.NATURAL_COMPARATOR);
         SortedSet<Instant> datesOfChange = new TreeSet<>(fromC);
 
-        for (EquipmentLogItem logItem : siteLog.getEquipmentLogItems()) {
+        List<EquipmentLogItem> equipmentLogItems = siteLog.getEquipmentLogItems()
+            .stream()
+            .filter(logItem -> logItem.getDateDeleted() == null)
+            .collect(Collectors.toList());
+
+        for (EquipmentLogItem logItem : equipmentLogItems) {
             EffectiveDates dates = logItem.getEffectiveDates();
             if (dates != null) {
                 if (dates.getFrom() != null) {
@@ -168,7 +174,7 @@ public class CorsSiteService implements EventSubscriber<SiteLogReceived> {
                 }
             }
         }
-        for (EquipmentLogItem logItem : siteLog.getEquipmentLogItems()) {
+        for (EquipmentLogItem logItem : equipmentLogItems) {
             addEquipment(logItem, setups);
         }
         return setups;

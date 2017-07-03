@@ -28,6 +28,6 @@ public class CorsSiteLogService {
         siteLogs.save(siteLog);
         String id = siteLog.getSiteIdentification().getFourCharacterId();
         log.info("Saving site log: " + id);
-        eventPublisher.publish(new SiteLogReceived(id));
+        eventPublisher.publish(new SiteLogReceived(id, siteLog.getSiteLogText()));
     }
 }

@@ -140,4 +140,8 @@ public class IntegrationTest extends AbstractTransactionalTestNGSpringContextTes
     protected RequestPostProcessor superuserToken() {
         return bearerToken(jwtToken("superuser", 60));
     }
+
+    protected RequestPostProcessor bareUserToken() {
+        return bearerToken(jwtToken("none", 60));
+    }
 }

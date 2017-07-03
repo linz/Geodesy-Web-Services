@@ -9,7 +9,7 @@ import javax.validation.constraints.Size;
  */
 @Entity
 @Table(name = "SITELOG_LOCALEPISODICEFFECT")
-public class LocalEpisodicEffectLogItem implements LogItem {
+public class LocalEpisodicEffectLogItem extends LogItem {
 
     @Id
     @GeneratedValue(generator = "surrogateKeyGenerator")

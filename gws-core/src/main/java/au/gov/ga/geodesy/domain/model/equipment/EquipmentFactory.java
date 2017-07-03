@@ -10,6 +10,7 @@ import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import au.gov.ga.geodesy.domain.model.sitelog.CollocationInformationLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.EffectiveDates;
 import au.gov.ga.geodesy.domain.model.sitelog.EquipmentLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.FrequencyStandardLogItem;
@@ -21,6 +22,7 @@ import au.gov.ga.geodesy.domain.model.sitelog.LogItemVisitor;
 import au.gov.ga.geodesy.domain.model.sitelog.OtherInstrumentationLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.PossibleProblemSourceLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.PressureSensorLogItem;
+import au.gov.ga.geodesy.domain.model.sitelog.SurveyedLocalTieLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.TemperatureSensorLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.WaterVaporSensorLogItem;
 import au.gov.ga.geodesy.exception.GeodesyRuntimeException;
@@ -130,6 +132,16 @@ public class EquipmentFactory {
 
         @Override
         public Pair<Equipment, EquipmentConfiguration> visit(LocalEpisodicEffectLogItem logItem) {
+            throw new UnsupportedOperationException();
+        }
+
+        @Override
+        public Pair<Equipment, EquipmentConfiguration> visit(CollocationInformationLogItem logItem) {
+            throw new UnsupportedOperationException();
+        }
+
+        @Override
+        public Pair<Equipment, EquipmentConfiguration> visit(SurveyedLocalTieLogItem logItem) {
             throw new UnsupportedOperationException();
         }
 

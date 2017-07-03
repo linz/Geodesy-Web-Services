@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <changeSet author="lbodor" id="1498217709-1">
+        <renameColumn
+            tableName="sitelog_mutlipathsource"
+            oldColumnName="delete_reason"
+            newColumnName="deleted_reason"/>
+    </changeSet>
+    <changeSet author="lbodor" id="1498217709-2">
+        <renameColumn
+            tableName="sitelog_mutlipathsource"
+            oldColumnName="delete_time"
+            newColumnName="date_deleted"/>
+    </changeSet>
+
+    <changeSet author="lbodor" id="1498217709-3">
+        <renameColumn
+            tableName="sitelog_signalobstraction"
+            oldColumnName="delete_reason"
+            newColumnName="deleted_reason"/>
+    </changeSet>
+    <changeSet author="lbodor" id="1498217709-4">
+        <renameColumn
+            tableName="sitelog_signalobstraction"
+            oldColumnName="delete_time"
+            newColumnName="date_deleted"/>
+    </changeSet>
+
+    <changeSet author="lbodor" id="1498217709-5">
+        <renameColumn
+            tableName="sitelog_radiointerference"
+            oldColumnName="delete_reason"
+            newColumnName="deleted_reason"/>
+    </changeSet>
+    <changeSet author="lbodor" id="1498217709-6">
+        <renameColumn
+            tableName="sitelog_radiointerference"
+            oldColumnName="delete_time"
+            newColumnName="date_deleted"/>
+    </changeSet>
+
+    <changeSet author="lbodor" id="1498217709-7">
+        <renameColumn
+            tableName="sitelog_localepisodiceffect"
+            oldColumnName="delete_reason"
+            newColumnName="deleted_reason"/>
+    </changeSet>
+    <changeSet author="lbodor" id="1498217709-8">
+        <renameColumn
+            tableName="sitelog_localepisodiceffect"
+            oldColumnName="delete_time"
+            newColumnName="date_deleted"/>
+    </changeSet>
+
+    <changeSet author="lbodor" id="1498217709-9">
+        <renameColumn
+            tableName="sitelog_otherinstrumentation"
+            oldColumnName="delete_reason"
+            newColumnName="deleted_reason"/>
+    </changeSet>
+    <changeSet author="lbodor" id="1498217709-10">
+        <renameColumn
+            tableName="sitelog_otherinstrumentation"
+            oldColumnName="delete_time"
+            newColumnName="date_deleted"/>
+    </changeSet>
+
+    <changeSet author="lbodor" id="1498217709-11">
+        <renameColumn
+            tableName="sitelog_collocationinformation"
+            oldColumnName="delete_reason"
+            newColumnName="deleted_reason"/>
+    </changeSet>
+    <changeSet author="lbodor" id="1498217709-12">
+        <renameColumn
+            tableName="sitelog_collocationinformation"
+            oldColumnName="delete_time"
+            newColumnName="date_deleted"/>
+    </changeSet>
+
+    <changeSet author="lbodor" id="1498217709-13">
+        <renameColumn
+            tableName="sitelog_frequencystandard"
+            oldColumnName="delete_reason"
+            newColumnName="deleted_reason"/>
+    </changeSet>
+    <changeSet author="lbodor" id="1498217709-14">
+        <renameColumn
+            tableName="sitelog_frequencystandard"
+            oldColumnName="delete_time"
+            newColumnName="date_deleted"/>
+    </changeSet>
+
+    <changeSet author="lbodor" id="1498217709-15">
+        <renameColumn
+            tableName="sitelog_gnssreceiver"
+            oldColumnName="delete_reason"
+            newColumnName="deleted_reason"/>
+    </changeSet>
+    <changeSet author="lbodor" id="1498217709-16">
+        <renameColumn tableName="sitelog_gnssreceiver"
+            oldColumnName="delete_time"
+            newColumnName="date_deleted"/>
+    </changeSet>
+
+    <changeSet author="lbodor" id="1498217709-17">
+        <renameColumn
+            tableName="sitelog_watervaporsensor"
+            oldColumnName="delete_reason"
+            newColumnName="deleted_reason"/>
+    </changeSet>
+    <changeSet author="lbodor" id="1498217709-18">
+        <renameColumn
+            tableName="sitelog_watervaporsensor"
+            oldColumnName="delete_time"
+            newColumnName="date_deleted"/>
+    </changeSet>
+
+    <changeSet author="lbodor" id="1498217709-19">
+        <renameColumn
+            tableName="sitelog_pressuresensor"
+            oldColumnName="delete_reason"
+            newColumnName="deleted_reason"/>
+    </changeSet>
+    <changeSet author="lbodor" id="1498217709-20">
+        <renameColumn
+            tableName="sitelog_pressuresensor"
+            oldColumnName="delete_time"
+            newColumnName="date_deleted"/>
+    </changeSet>
+
+    <changeSet author="lbodor" id="1498217709-21">
+        <renameColumn
+            tableName="sitelog_humiditysensor"
+            oldColumnName="delete_reason"
+            newColumnName="deleted_reason"/>
+    </changeSet>
+    <changeSet author="lbodor" id="1498217709-22">
+        <renameColumn
+            tableName="sitelog_humiditysensor"
+            oldColumnName="delete_time"
+            newColumnName="date_deleted"/>
+    </changeSet>
+
+    <changeSet author="lbodor" id="1498217709-23">
+        <renameColumn
+            tableName="sitelog_surveyedlocaltie"
+            oldColumnName="delete_reason"
+            newColumnName="deleted_reason"/>
+    </changeSet>
+    <changeSet author="lbodor" id="1498217709-24">
+        <renameColumn
+            tableName="sitelog_surveyedlocaltie"
+            oldColumnName="delete_time"
+            newColumnName="date_deleted"/>
+    </changeSet>
+
+    <changeSet author="lbodor" id="1498217709-25">
+        <renameColumn
+            tableName="sitelog_temperaturesensor"
+            oldColumnName="delete_reason"
+            newColumnName="deleted_reason"/>
+    </changeSet>
+    <changeSet author="lbodor" id="1498217709-26">
+        <renameColumn
+            tableName="sitelog_temperaturesensor"
+            oldColumnName="delete_time"
+            newColumnName="date_deleted"/>
+    </changeSet>
+
+    <changeSet author="lbodor" id="1498217709-27">
+        <renameColumn
+            tableName="sitelog_gnssantenna"
+            oldColumnName="delete_reason"
+            newColumnName="deleted_reason"/>
+    </changeSet>
+    <changeSet author="lbodor" id="1498217709-28">
+        <renameColumn
+            tableName="sitelog_gnssantenna"
+            oldColumnName="delete_time"
+            newColumnName="date_deleted"/>
+    </changeSet>
+</databaseChangeLog>

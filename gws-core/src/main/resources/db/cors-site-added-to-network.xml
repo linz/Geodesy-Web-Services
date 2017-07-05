@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+   <changeSet author="lbodor (generated)" id="1499220892902-1">
+      <createTable tableName="cors_site_added_to_network">
+         <column name="network_id" type="INT">
+            <constraints nullable="false"/>
+         </column>
+         <column name="effective_from" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+         <column name="effective_to" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+         <column name="site_id" type="INT">
+            <constraints nullable="false"/>
+         </column>
+         <column name="id" type="INT">
+            <constraints nullable="false"/>
+         </column>
+      </createTable>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1499220892902-2">
+      <addPrimaryKey columnNames="id"
+                     constraintName="cors_site_added_to_network_pkey"
+                     tableName="cors_site_added_to_network"/>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1499220892902-3">
+      <addForeignKeyConstraint baseColumnNames="id"
+                               baseTableName="cors_site_added_to_network"
+                               constraintName="fk222urqk2qjbhph3rrxbtc7hsn"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               onDelete="NO ACTION"
+                               onUpdate="NO ACTION"
+                               referencedColumnNames="id"
+                               referencedTableName="domain_event"/>
+   </changeSet>
+</databaseChangeLog>

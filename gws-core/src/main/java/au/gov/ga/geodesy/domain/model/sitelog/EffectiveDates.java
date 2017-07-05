@@ -30,23 +30,15 @@ public class EffectiveDates implements Comparable {
     }
 
     public EffectiveDates(Instant from, Instant to) {
-        setFrom(from);
-        setTo(to);
+        this.from = from;
+        this.to = to;
     }
 
     public Instant getFrom() {
         return from;
     }
 
-    public void setFrom(Instant from) {
-        this.from = from;
-    }
-
     public Instant getTo() { return to; }
-
-    public void setTo(Instant to) {
-        this.to = to;
-    }
 
     @Override
     public int hashCode() {

@@ -51,6 +51,7 @@ public class CorsSiteEndpoint {
             parse(effectiveTo, timeFormat)
         );
         site.handle(new AddCorsSiteToNetwork(networkId, period)).forEach(eventPublisher::publish);
+        sites.save(site);
         return new ResponseEntity<String>(HttpStatus.OK);
     }
 

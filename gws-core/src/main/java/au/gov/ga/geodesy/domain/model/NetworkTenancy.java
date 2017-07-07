@@ -1,5 +1,7 @@
 package au.gov.ga.geodesy.domain.model;
 
+import java.time.Instant;
+
 import javax.persistence.Column;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
@@ -7,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
@@ -73,5 +76,10 @@ public class NetworkTenancy {
 
     public EffectiveDates getPeriod() {
         return period;
+    }
+
+    @Transient
+    public boolean inEffect() {
+        return getPeriod() == null || getPeriod().inRange(Instant.now());
     }
 }

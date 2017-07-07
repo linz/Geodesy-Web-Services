@@ -96,6 +96,14 @@ public class EffectiveDates implements Comparable {
         return result;
     }
 
+    public boolean inRange(Instant time) {
+        if (time == null) {
+            return false;
+        }
+        return (this.getFrom() == null || this.getFrom().compareTo(time) <= 0)
+            && (this.getTo() == null || this.getTo().compareTo(time) >= 0);
+    }
+
     @Override
     public String toString() {
         return new ToStringBuilder(this).append("From", this.from).append("To", this.to).toString();

@@ -129,12 +129,20 @@ public class SiteLogEndpoint {
     }
 
     @PreAuthorize("isAuthenticated()")
+    @RequestMapping(value = "/isAuthorisedToUpload", method = RequestMethod.GET)
+    public ResponseEntity<String> isPermittedToUpload(@RequestParam("fourCharacterId") String fourCharId) {
+        return endpointSecurity.hasAuthorityToEditSiteLog(fourCharId)
+            ? ResponseEntity.ok().build()
+            : ResponseEntity.status(HttpStatus.FORBIDDEN).build();
+    }
+
+    @PreAuthorize("isAuthenticated()")
     @RequestMapping(value = "/upload", method = RequestMethod.POST)
     public ResponseEntity<String> secureUploadGeodesyMLSiteLog(HttpServletRequest req, HttpServletResponse rsp) throws IOException, InvalidSiteLogException {
         SiteLogReader reader = new GeodesyMLSiteLogReader(new InputStreamReader(req.getInputStream()));
         SiteLog siteLog = reader.getSiteLog();
 
-        endpointSecurity.assertAuthorityToEditSiteLog(siteLog);
+        endpointSecurity.assertAuthorityToEditSiteLog(siteLog.getSiteIdentification().getFourCharacterId());
 
         service.upload(siteLog);
         try {

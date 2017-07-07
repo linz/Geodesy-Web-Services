@@ -51,6 +51,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 
             .antMatchers(HttpMethod.POST, "/newCorsSiteRequests").authenticated()
             .antMatchers(HttpMethod.POST, "/siteLogs/upload").authenticated()
+            .antMatchers(HttpMethod.GET, "/siteLogs/isAuthorisedToUpload").authenticated()
 
             .antMatchers(HttpMethod.POST, "/siteLogs/validate").permitAll()
             .antMatchers(HttpMethod.POST, "/userRegistrations").permitAll()

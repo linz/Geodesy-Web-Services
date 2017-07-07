@@ -44,8 +44,7 @@ public class EndpointSecurity {
      * Return true if the currently authenticated user has the authority to edit the given site log,
      * false otherwise.
      */
-    public static boolean hasAuthorityToEditSiteLog(SiteLog siteLog) {
-        String fourCharId = siteLog.getSiteIdentification().getFourCharacterId();
+    public boolean hasAuthorityToEditSiteLog(String fourCharId) {
         if (hasAuthority("superuser")) {
             return true;
         }
@@ -69,9 +68,9 @@ public class EndpointSecurity {
     /**
       * Throw an exception if the currently authenticated user does not have the authority to edit the given site log.
       */
-    public static void assertAuthorityToEditSiteLog(SiteLog siteLog) throws AccessDeniedException {
-        if (!hasAuthorityToEditSiteLog(siteLog)) {
-            throw new AccessDeniedException("Cannot edit site " + siteLog.getSiteIdentification().getFourCharacterId());
+    public void assertAuthorityToEditSiteLog(String fourCharId) throws AccessDeniedException {
+        if (!hasAuthorityToEditSiteLog(fourCharId)) {
+            throw new AccessDeniedException("Cannot edit site " + fourCharId);
         }
     }
 }

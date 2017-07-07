@@ -73,6 +73,9 @@ public class SiteLogEndpoint {
     @Autowired
     private GeodesyMLMarshaller marshaller;
 
+    @Autowired
+    private EndpointSecurity endpointSecurity;
+
     @RequestMapping(
         value = "/search/findByFourCharacterId",
         method = RequestMethod.GET,
@@ -131,7 +134,7 @@ public class SiteLogEndpoint {
         SiteLogReader reader = new GeodesyMLSiteLogReader(new InputStreamReader(req.getInputStream()));
         SiteLog siteLog = reader.getSiteLog();
 
-        EndpointSecurity.assertAuthorityToEditSiteLog(siteLog);
+        endpointSecurity.assertAuthorityToEditSiteLog(siteLog);
 
         service.upload(siteLog);
         try {

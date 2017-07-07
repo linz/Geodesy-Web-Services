@@ -1,19 +1,43 @@
 package au.gov.ga.geodesy.port.adapter.rest;
 
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.stereotype.Component;
 
+import au.gov.ga.geodesy.domain.model.CorsNetwork;
+import au.gov.ga.geodesy.domain.model.CorsNetworkRepository;
+import au.gov.ga.geodesy.domain.model.CorsSiteRepository;
+import au.gov.ga.geodesy.domain.model.NetworkTenancy;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLog;
 
+@Component
 public class EndpointSecurity {
+
+    @Autowired
+    private CorsSiteRepository sites;
+
+    @Autowired
+    private CorsNetworkRepository networks;
 
     /**
      * Return true if the currently authenticated user has the given authority, false otherwise.
      */
-    public static boolean hasAuthority(String authority) {
+    public boolean hasAuthority(String authority) {
+        return hasAnyAuthority(Collections.singletonList(authority));
+    }
+
+    /**
+     * Return true if the currently authenticated user has any of the given authorities, false otherwise.
+     */
+    public boolean hasAnyAuthority(List<String> authorities) {
         return SecurityContextHolder.getContext().getAuthentication().getAuthorities()
             .stream()
-            .anyMatch(grantedAuthority -> grantedAuthority.getAuthority().equals(authority));
+            .anyMatch(grantedAuthority -> authorities.contains(grantedAuthority.getAuthority()));
     }
 
     /**
@@ -22,8 +46,24 @@ public class EndpointSecurity {
      */
     public static boolean hasAuthorityToEditSiteLog(SiteLog siteLog) {
         String fourCharId = siteLog.getSiteIdentification().getFourCharacterId();
+        if (hasAuthority("superuser")) {
+            return true;
+        }
         String siteEditAuthority = "edit-" + fourCharId.toLowerCase();
-        return hasAuthority(siteEditAuthority) || hasAuthority("superuser");
+        if (hasAuthority(siteEditAuthority)) {
+            return true;
+        }
+        List<String> networkEditAuthorities = sites.findByFourCharacterId(fourCharId).getNetworkTenancies().stream()
+            .filter(NetworkTenancy::inEffect)
+            .map(networkTenancy -> networks.findOne(networkTenancy.getCorsNetworkId()))
+            .map(CorsNetwork::getName)
+            .map(networkName -> "edit-network:" + networkName.toLowerCase())
+            .collect(Collectors.toList());
+
+        if (hasAnyAuthority(networkEditAuthorities)) {
+            return true;
+        }
+        return false;
     }
 
     /**

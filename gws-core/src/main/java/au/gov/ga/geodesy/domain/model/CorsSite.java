@@ -112,7 +112,12 @@ public class CorsSite extends Site {
     }
 
     public Stream<Event> handle(AddCorsSiteToNetwork command) {
-        this.networkTenancies.add(new NetworkTenancy(command.getNetworkId(), command.getPeriod()));
-        return Stream.of(new CorsSiteAddedToNetwork(this.getId(), command.getNetworkId(), command.getPeriod()));
+        NetworkTenancy tenancy = new NetworkTenancy(command.getNetworkId(), command.getPeriod());
+        if (!this.networkTenancies.contains(tenancy)) {
+            this.networkTenancies.add(new NetworkTenancy(command.getNetworkId(), command.getPeriod()));
+            return Stream.of(new CorsSiteAddedToNetwork(this.getId(), command.getNetworkId(), command.getPeriod()));
+        } else {
+            return Stream.empty();
+        }
     }
 }

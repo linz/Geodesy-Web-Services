@@ -29,7 +29,7 @@ public class NetworkTenancy {
     private Integer corsNetworkId;
 
     @Embedded
-    private EffectiveDates period;
+    private EffectiveDates period = new EffectiveDates();
 
     @SuppressWarnings("unused") // used by hibernate
     private NetworkTenancy() {

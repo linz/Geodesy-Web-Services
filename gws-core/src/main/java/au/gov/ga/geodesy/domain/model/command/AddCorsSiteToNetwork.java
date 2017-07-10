@@ -5,7 +5,7 @@ import au.gov.ga.geodesy.domain.model.sitelog.EffectiveDates;
 public class AddCorsSiteToNetwork {
 
     private Integer networkId;
-    private EffectiveDates period;
+    private EffectiveDates period = new EffectiveDates();
 
     public AddCorsSiteToNetwork(Integer networkId, EffectiveDates period) {
         this.networkId = networkId;

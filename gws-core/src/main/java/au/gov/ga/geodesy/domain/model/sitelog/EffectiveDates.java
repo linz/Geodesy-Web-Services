@@ -30,23 +30,15 @@ public class EffectiveDates implements Comparable {
     }
 
     public EffectiveDates(Instant from, Instant to) {
-        setFrom(from);
-        setTo(to);
+        this.from = from;
+        this.to = to;
     }
 
     public Instant getFrom() {
         return from;
     }
 
-    public void setFrom(Instant from) {
-        this.from = from;
-    }
-
     public Instant getTo() { return to; }
-
-    public void setTo(Instant to) {
-        this.to = to;
-    }
 
     @Override
     public int hashCode() {
@@ -102,6 +94,14 @@ public class EffectiveDates implements Comparable {
             }
         }
         return result;
+    }
+
+    public boolean inRange(Instant time) {
+        if (time == null) {
+            return false;
+        }
+        return (this.getFrom() == null || this.getFrom().compareTo(time) <= 0)
+            && (this.getTo() == null || this.getTo().compareTo(time) >= 0);
     }
 
     @Override

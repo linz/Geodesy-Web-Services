@@ -1,21 +1,23 @@
 package au.gov.ga.geodesy.port.adapter.rest;
 
+import static io.restassured.module.mockmvc.RestAssuredMockMvc.given;
+
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.is;
-import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.document;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.patch;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
+import java.net.URL;
+import java.time.Instant;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.http.HttpStatus;
 import org.springframework.test.annotation.Rollback;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-
-import au.gov.ga.geodesy.domain.model.CorsSite;
+import au.gov.ga.geodesy.domain.model.CorsNetworkRepository;
+import au.gov.ga.geodesy.domain.model.NetworkTenancy;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLog;
 import au.gov.ga.geodesy.domain.service.CorsSiteLogService;
 import au.gov.ga.geodesy.port.adapter.sopac.SopacSiteLogReader;
@@ -28,10 +30,14 @@ public class CorsSiteEndpointITest extends IntegrationTest {
     private CorsSiteLogService siteLogService;
 
     @Autowired
-    @Qualifier("_halObjectMapper")
-    private ObjectMapper mapper;
+    private CorsNetworkRepository networks;
 
-    private CorsSite alice;
+    private Integer gpsNetworkId;
+
+    @BeforeClass
+    public void setup() {
+        this.gpsNetworkId = networks.findByName("GPSNET").getId();
+    }
 
     @Test
     @Rollback(false)
@@ -42,34 +48,39 @@ public class CorsSiteEndpointITest extends IntegrationTest {
 
     @Test(dependsOnMethods = {"upload"})
     @Rollback(false)
-    public void testFindByFourCharacterId() throws Exception {
-        String response = mvc.perform(get("/corsSites/search/findByFourCharacterId?id=ALIC"))
-            .andExpect(status().isOk())
-            .andExpect(jsonPath("$._links.self").isNotEmpty())
-            .andDo(document("findByFourCharacterId"))
-            .andReturn().getResponse().getContentAsString();
+    public void addSiteToNetwork() throws Exception {
+        String addToNetworkHref = given()
+            .when()
+            .get("/corsSites/search/findByFourCharacterId?id=ALIC")
+            .then()
+            .statusCode(HttpStatus.OK.value())
+            .extract().jsonPath().getString("_links.addToNetwork.href");
 
-        alice = mapper.readValue(response, CorsSite.class);
-        assertThat(alice.getSiteStatus(), is("PUBLIC"));
+        String addToNetworkPath = new URL(addToNetworkHref).getPath();
+
+        given()
+            .auth().with(super.superuserToken())
+            .queryParam("networkId", gpsNetworkId)
+            .queryParam("effectiveFrom", "2011-12-12")
+            .queryParam("timeFormat", "uuuu-MM-dd")
+            .when()
+            .put(addToNetworkPath)
+            .then()
+            .statusCode(HttpStatus.OK.value());
     }
 
-    @Test(dependsOnMethods = {"testFindByFourCharacterId"})
+    @Test(dependsOnMethods = {"addSiteToNetwork"})
     @Rollback(false)
-    public void testPatchSiteStatus() throws Exception {
-        mvc.perform(patch("/corsSites/" + alice.getId())
-            .with(super.superuserToken())
-            .content("{\"siteStatus\": \"PRIVATE\"}"))
-            .andDo(document("patchCorsSite"))
-            .andExpect(status().isNoContent());
-    }
+    public void checkNetworkTenancy() throws Exception {
+        List<NetworkTenancy> networkTenancies = given()
+            .when()
+            .get("/corsSites/search/findByFourCharacterId?id=ALIC")
+            .then()
+            .statusCode(HttpStatus.OK.value())
+            .extract().jsonPath().getList("networkTenancies", NetworkTenancy.class);
 
-    @Test(dependsOnMethods = {"testPatchSiteStatus"})
-    @Rollback(false)
-    public void checkSiteStatus() throws Exception {
-        String response = mvc.perform(get("/corsSites/search/findByFourCharacterId?id=ALIC"))
-            .andExpect(status().isOk())
-            .andReturn().getResponse().getContentAsString();
-
-        assertThat(mapper.readValue(response, CorsSite.class).getSiteStatus(), is("PRIVATE"));
+        assertThat(networkTenancies.size(), is(1));
+        assertThat(networkTenancies.get(0).getCorsNetworkId(), is(this.gpsNetworkId));
+        assertThat(networkTenancies.get(0).getPeriod().getFrom(), is(equalTo(Instant.parse("2011-12-12T00:00:00Z"))));
     }
 }

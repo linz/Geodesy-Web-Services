@@ -83,6 +83,7 @@ public class PersistenceJpaConfig {
         properties.setProperty("hibernate.default_schema", "geodesy");
         properties.setProperty("hibernate.dialect", "org.hibernate.spatial.dialect.postgis.PostgisDialect");
         properties.setProperty("hibernate.hbm2ddl.auto", "validate");
+        properties.setProperty("hibernate.create_empty_composites.enabled", "true");
         /* properties.setProperty("hibernate.FlushMode", "commit"); */
         /* properties.setProperty("hibernate.show_sql", "true"); */
         /* properties.setProperty("hibernate.format_sql", "true"); */

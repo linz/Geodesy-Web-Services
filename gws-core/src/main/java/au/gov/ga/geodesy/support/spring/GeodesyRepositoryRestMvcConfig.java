@@ -11,6 +11,10 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
 import org.springframework.data.rest.webmvc.config.RepositoryRestConfigurerAdapter;
+import org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration;
+import org.springframework.hateoas.LinkBuilder;
+import org.springframework.hateoas.Resource;
+import org.springframework.hateoas.ResourceProcessor;
 import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -30,6 +34,7 @@ import com.fasterxml.jackson.databind.ser.impl.ObjectIdWriter;
 import com.fasterxml.jackson.databind.ser.std.BeanSerializerBase;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
+import au.gov.ga.geodesy.domain.model.CorsNetwork;
 import au.gov.ga.geodesy.domain.model.CorsSite;
 import au.gov.ga.geodesy.domain.model.EquipmentInUse;
 import au.gov.ga.geodesy.domain.model.Setup;
@@ -42,14 +47,36 @@ import au.gov.ga.geodesy.domain.model.sitelog.SiteLog;
 @Component
 public class GeodesyRepositoryRestMvcConfig extends RepositoryRestConfigurerAdapter {
 
+    @Autowired
+    private RepositoryRestMvcConfiguration configuration;
+
     @Bean
     public RootResourceProcessor getRootResourceProcessor() {
         return new RootResourceProcessor();
     }
 
+    @Bean
+    public ResourceProcessor<Resource<CorsSite>> corsSiteResourceProcessor() {
+
+        return new ResourceProcessor<Resource<CorsSite>>() {
+            @Override
+            public Resource<CorsSite> process(Resource<CorsSite> resource) {
+                LinkBuilder link =
+                    configuration.entityLinks().linkForSingleResource(
+                        CorsSite.class,
+                        resource.getContent().getId()
+                    )
+                    .slash("addToNetwork");
+
+                resource.add(link.withRel("addToNetwork"));
+                return resource;
+            }
+        };
+    }
+
     @Override
     public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config) {
-        config.exposeIdsFor(SiteLog.class, CorsSite.class, Setup.class);
+        config.exposeIdsFor(SiteLog.class, CorsSite.class, CorsNetwork.class, Setup.class);
     }
 
     // See: https://github.com/spring-projects/spring-hateoas/issues/134

@@ -53,16 +53,16 @@ public class NetworkTenancy {
         }
         NetworkTenancy other = (NetworkTenancy) x;
         return new EqualsBuilder()
-            .append(id, other.getId())
             .append(corsNetworkId, other.getCorsNetworkId())
+            .append(period, other.getPeriod())
             .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).
-            append(id).
             append(corsNetworkId).
+            append(period).
             toHashCode();
     }
 

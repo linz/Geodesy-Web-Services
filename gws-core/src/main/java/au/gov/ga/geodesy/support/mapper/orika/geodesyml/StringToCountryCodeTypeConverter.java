@@ -7,11 +7,8 @@ import ma.glasnost.orika.metadata.Type;
 
 public class StringToCountryCodeTypeConverter extends BidirectionalConverter<String, CountryCodeType> {
 
-    private String codeSpace;
-
-    public StringToCountryCodeTypeConverter(String codeSpace) {
-        this.codeSpace = codeSpace;
-    }
+    private static final String codeSpace = "ISO 3166-1 alpha-3";
+    private static final String codeList = "http://xml.gov.au/icsm/geodesyml/codelists/country-codes-codelist.xml#GeodesyML_CountryCode";
 
     @Override
     public String convertFrom(CountryCodeType code, Type<String> targetType, MappingContext ctx) {
@@ -20,9 +17,10 @@ public class StringToCountryCodeTypeConverter extends BidirectionalConverter<Str
 
     @Override
     public CountryCodeType convertTo(String str, Type<CountryCodeType> targetType, MappingContext ctx) {
-        CountryCodeType code = new CountryCodeType();
-        code.setValue(str);
-        code.setCodeSpace(codeSpace);
-        return code;
+        return (CountryCodeType) new CountryCodeType()
+            .withCodeSpace(codeSpace)
+            .withCodeList(codeList)
+            .withCodeListValue(str)
+            .withValue(str);
     }
 }

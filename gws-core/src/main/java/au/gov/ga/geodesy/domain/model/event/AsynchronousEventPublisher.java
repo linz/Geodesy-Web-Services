@@ -1,6 +1,7 @@
 package au.gov.ga.geodesy.domain.model.event;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
@@ -9,6 +10,12 @@ import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.jwt.JwtHelper;
+import org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationDetails;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import au.gov.ga.geodesy.exception.GeodesyRuntimeException;
 
@@ -31,9 +38,28 @@ public class AsynchronousEventPublisher implements EventPublisher {
         subscribers.add(s);
     }
 
+    private String getUser() {
+        try {
+            Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+            if (auth != null) {
+                Object authDetails = auth.getDetails();
+
+                if (authDetails instanceof OAuth2AuthenticationDetails) {
+                    String jwt = ((OAuth2AuthenticationDetails) authDetails).getTokenValue();
+                    String claims = JwtHelper.decode(jwt).getClaims();
+                    return (String) new ObjectMapper().readValue(claims, HashMap.class).get("sub");
+                }
+            } 
+        } catch (Exception e) {
+            log.error("Failed to extract username from spring security context", e);
+        }
+        return null;
+    }
+
     @Override
     public void publish(Event... es) {
         for (Event e : es) {
+            e.user = getUser();
             for (EventSubscriber<?> s : subscribers) {
                 try {
                     if (s.canHandle(e)) {

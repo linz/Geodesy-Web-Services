@@ -22,6 +22,7 @@ import org.springframework.beans.factory.annotation.Configurable;
 @Inheritance(strategy = InheritanceType.JOINED)
 @DiscriminatorColumn(name = "EVENT_NAME")
 @Configurable
+// TODO: make immutable
 public abstract class Event implements Cloneable {
 
     @Transient
@@ -34,6 +35,9 @@ public abstract class Event implements Cloneable {
 
     @Column(name = "TIME_RAISED", nullable = false)
     private Instant timeRaised = Instant.now();
+
+    @Column(name = "USERNAME")
+    public String user;
 
     @Column(name = "SUBSCRIBER", nullable = false)
     public @MonotonicNonNull String subscriber;

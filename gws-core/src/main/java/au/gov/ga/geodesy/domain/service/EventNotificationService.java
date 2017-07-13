@@ -54,7 +54,6 @@ public abstract class EventNotificationService<E extends Event>  implements Even
             public String getBody() {
                 try {
                     StringBuilder body = new StringBuilder();
-                    body.append("We have received a new event.\n\n");
                     body.append(json.writeValueAsString(event));
                     return body.toString();
                 } catch (JsonProcessingException e) {

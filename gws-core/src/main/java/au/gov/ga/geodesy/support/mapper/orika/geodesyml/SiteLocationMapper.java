@@ -39,7 +39,7 @@ public class SiteLocationMapper implements Iso<SiteLocationType, SiteLocation> {
 
         ConverterFactory converters = mapperFactory.getConverterFactory();
         converters.registerConverter("tectonicPlate", new StringToCodeTypeConverter("eGeodesy/tectonicPlate"));
-        converters.registerConverter("country", new StringToCountryCodeTypeConverter("country"));
+        converters.registerConverter("country", new StringToCountryCodeTypeConverter());
 
         converters.registerConverter("cartesianPosition", new CartesianPointTypeToPointConverter());
         converters.registerConverter("geodeticPosition", new GeodeticPointTypeToPointConverter());

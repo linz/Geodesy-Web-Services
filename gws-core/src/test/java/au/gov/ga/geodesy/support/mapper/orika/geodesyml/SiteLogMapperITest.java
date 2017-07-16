@@ -19,6 +19,7 @@ import java.util.TreeSet;
 
 import org.apache.commons.beanutils.PropertyUtils;
 import org.hamcrest.Matchers;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -88,12 +89,13 @@ import net.opengis.gml.v_3_2_1.TimePositionType;
 // TODO: Rewrite
 public class SiteLogMapperITest extends IntegrationTest {
 
+    @Autowired
     private SiteLogMapper mapper;
+
     private GeodesyMLMarshaller marshaller;
 
     @BeforeClass
     private void init() {
-        mapper = new SiteLogMapper();
         marshaller = new GeodesyMLMoxy();
     }
 

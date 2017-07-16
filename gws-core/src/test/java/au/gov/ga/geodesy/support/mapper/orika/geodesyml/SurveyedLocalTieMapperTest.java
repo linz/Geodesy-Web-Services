@@ -5,6 +5,7 @@ import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLMarshaller;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLUtils;
 import au.gov.ga.geodesy.support.TestResources;
 import au.gov.ga.geodesy.support.marshalling.moxy.GeodesyMLMoxy;
+import au.gov.ga.geodesy.support.spring.UnitTest;
 import au.gov.ga.geodesy.support.utils.GMLDateUtils;
 import au.gov.xml.icsm.geodesyml.v_0_4.GeodesyMLType;
 import au.gov.xml.icsm.geodesyml.v_0_4.SiteLogType;
@@ -14,14 +15,18 @@ import org.testng.annotations.Test;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 
 /**
  * Tests the mapping of a GeodesyML SurveyedLocalTieType element
  * to and from a SurveyedLocalTie domain object.
  */
-public class SurveyedLocalTieMapperTest {
+public class SurveyedLocalTieMapperTest extends UnitTest {
 
-    private SurveyedLocalTieMapper mapper = new SurveyedLocalTieMapper();
+    @Autowired
+    private SurveyedLocalTieMapper mapper;
+
     private GeodesyMLMarshaller marshaller = new GeodesyMLMoxy();
 
     @Test

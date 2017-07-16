@@ -3,6 +3,7 @@ package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.annotations.Test;
 
 import au.gov.ga.geodesy.domain.model.sitelog.SignalObstructionLogItem;
@@ -10,19 +11,23 @@ import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLMarshaller;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLUtils;
 import au.gov.ga.geodesy.support.TestResources;
 import au.gov.ga.geodesy.support.marshalling.moxy.GeodesyMLMoxy;
+import au.gov.ga.geodesy.support.spring.UnitTest;
 import au.gov.ga.geodesy.support.utils.GMLDateUtils;
 import au.gov.xml.icsm.geodesyml.v_0_4.GeodesyMLType;
 import au.gov.xml.icsm.geodesyml.v_0_4.SignalObstructionType;
 import au.gov.xml.icsm.geodesyml.v_0_4.SiteLogType;
+
 import net.opengis.gml.v_3_2_1.TimePeriodType;
 
 /**
  * Tests the mapping of a GeodesyML SignalObstructionsPropertyType element
  * to and from an SignalObstructionLogItem domain object.
  */
-public class SignalObstructionMapperTest {
+public class SignalObstructionMapperTest extends UnitTest {
 
-    private SignalObstructionMapper mapper = new SignalObstructionMapper();
+    @Autowired
+    private SignalObstructionMapper mapper;
+
     private GeodesyMLMarshaller marshaller = new GeodesyMLMoxy();
 
     @Test

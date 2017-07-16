@@ -8,13 +8,16 @@ import org.testng.annotations.Test;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 /**
  * Tests the mapping of a GeodesyML temperatureSensor element
  * to and from a TemperatureSensorLogItem domain object.
  */
 public class TemperatureSensorMapperTest extends SensorEquipmentMapperTest {
 
-    private TemperatureSensorMapper mapper = new TemperatureSensorMapper();
+    @Autowired
+    private TemperatureSensorMapper mapper;
 
     @Test
     public void testMapping() throws Exception {

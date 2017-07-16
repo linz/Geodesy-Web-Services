@@ -5,6 +5,7 @@ import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLMarshaller;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLUtils;
 import au.gov.ga.geodesy.support.TestResources;
 import au.gov.ga.geodesy.support.marshalling.moxy.GeodesyMLMoxy;
+import au.gov.ga.geodesy.support.spring.UnitTest;
 import au.gov.xml.icsm.geodesyml.v_0_4.GeodesyMLType;
 import au.gov.xml.icsm.geodesyml.v_0_4.MoreInformationType;
 import au.gov.xml.icsm.geodesyml.v_0_4.SiteLogType;
@@ -13,12 +14,17 @@ import org.testng.annotations.Test;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 /**
  * Tests the mapping of a GeodesyML moreInformation element
  * to and from a MoreInformation domain object.
  */
-public class MoreInformationMapperTest {
-    private MoreInformationMapper mapper = new MoreInformationMapper();
+public class MoreInformationMapperTest extends UnitTest {
+
+    @Autowired
+    private MoreInformationMapper mapper;
+
     private GeodesyMLMarshaller marshaller = new GeodesyMLMoxy();
 
     /**

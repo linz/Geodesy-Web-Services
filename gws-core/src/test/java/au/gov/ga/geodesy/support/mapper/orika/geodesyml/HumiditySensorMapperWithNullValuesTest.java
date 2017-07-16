@@ -1,17 +1,17 @@
 package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.testng.annotations.Test;
+
 import au.gov.ga.geodesy.domain.model.sitelog.HumiditySensorLogItem;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLUtils;
 import au.gov.ga.geodesy.support.TestResources;
-import au.gov.ga.geodesy.support.utils.MappingDirection;
 import au.gov.xml.icsm.geodesyml.v_0_4.GeodesyMLType;
-import au.gov.xml.icsm.geodesyml.v_0_4.SiteLogType;
 import au.gov.xml.icsm.geodesyml.v_0_4.HumiditySensorType;
-import org.testng.annotations.Test;
-
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.equalTo;
-import static org.hamcrest.Matchers.nullValue;
+import au.gov.xml.icsm.geodesyml.v_0_4.SiteLogType;
 
 /**
  * Tests the mapping of a GeodesyML humiditySensor element
@@ -21,7 +21,8 @@ import static org.hamcrest.Matchers.nullValue;
  */
 public class HumiditySensorMapperWithNullValuesTest extends SensorEquipmentMapperTest {
 
-    private HumiditySensorMapper mapper = new HumiditySensorMapper();
+    @Autowired
+    private HumiditySensorMapper mapper;
 
     @Test
     public void testMapping() throws Exception {

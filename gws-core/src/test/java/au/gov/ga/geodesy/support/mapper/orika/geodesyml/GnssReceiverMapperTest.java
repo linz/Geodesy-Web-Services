@@ -1,21 +1,26 @@
 package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 
-import java.util.Arrays;
-
-import org.testng.annotations.Test;
-
-import au.gov.ga.geodesy.domain.model.sitelog.GnssReceiverLogItem;
-import au.gov.ga.geodesy.support.utils.GMLDateUtils;
-import au.gov.xml.icsm.geodesyml.v_0_4.GnssReceiverType;
-import au.gov.xml.icsm.geodesyml.v_0_4.IgsReceiverModelCodeType;
-import net.opengis.gml.v_3_2_1.CodeType;
-import net.opengis.gml.v_3_2_1.TimePositionType;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 
-public class GnssReceiverMapperTest {
+import java.util.Arrays;
 
-    private GnssReceiverMapper mapper = new GnssReceiverMapper();
+import org.springframework.beans.factory.annotation.Autowired;
+import org.testng.annotations.Test;
+
+import au.gov.ga.geodesy.domain.model.sitelog.GnssReceiverLogItem;
+import au.gov.ga.geodesy.support.spring.UnitTest;
+import au.gov.ga.geodesy.support.utils.GMLDateUtils;
+import au.gov.xml.icsm.geodesyml.v_0_4.GnssReceiverType;
+import au.gov.xml.icsm.geodesyml.v_0_4.IgsReceiverModelCodeType;
+
+import net.opengis.gml.v_3_2_1.CodeType;
+import net.opengis.gml.v_3_2_1.TimePositionType;
+
+public class GnssReceiverMapperTest extends UnitTest {
+
+    @Autowired
+    private GnssReceiverMapper mapper;
 
     @Test
     public void testMappingToLogItem() {

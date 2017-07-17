@@ -240,6 +240,17 @@ public class GenericMapper {
             .fieldMap("antennaRadomeType", "antennaRadomeType").converter("codeWithAuthorityTypeConverter").add()
             .fieldMap("antennaReferencePoint", "antennaReferencePoint").converter("antennaReferencePointConverter").add()
             .byDefault()
+            .customize(new CustomMapper<GnssAntennaLogItem, GnssAntennaType>() {
+
+                @Override
+                public void mapAtoB(GnssAntennaLogItem antennaLogItem, GnssAntennaType antennaType, MappingContext ctx) {
+                    if (antennaLogItem.getDateRemoved() == null) {
+                        TimePositionType dateRemoved = new TimePositionType();
+                        dateRemoved.setIndeterminatePosition(TimeIndeterminateValueType.UNKNOWN);
+                        antennaType.setDateRemoved(dateRemoved);
+                    }
+                }
+            })
             .register();
 
         converters.registerConverter("antennaTypeConverter", new StringToCodeListValueConverter<IgsAntennaModelCodeType>(

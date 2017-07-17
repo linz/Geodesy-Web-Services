@@ -38,6 +38,7 @@ public class RoleToCodeListValueConverter extends BidirectionalConverter<Role, C
 
     public Role convertFrom(CodeListValueType codeListValue, Type<Role> destType,
             MappingContext ctx) {
-        return roles.get(codeListValue.getValue());
+
+        return roles.get(codeListValue.getCodeListValue());
     }
 }

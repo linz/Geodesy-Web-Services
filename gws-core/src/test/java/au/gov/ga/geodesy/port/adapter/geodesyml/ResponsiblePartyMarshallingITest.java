@@ -3,7 +3,6 @@ package au.gov.ga.geodesy.port.adapter.geodesyml;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 
-
 import java.io.StringWriter;
 import java.net.URI;
 import java.util.ArrayList;
@@ -27,9 +26,13 @@ import org.testng.annotations.Test;
 import com.jcabi.matchers.XhtmlMatchers;
 import com.jcabi.xml.XPathContext;
 
+import au.gov.ga.geodesy.support.TestResources;
 import au.gov.ga.geodesy.support.mapper.orika.ResponsiblePartyOrikaMapper;
 import au.gov.ga.geodesy.support.spring.IntegrationTest;
+import au.gov.xml.icsm.geodesyml.v_0_4.GeodesyMLType;
+import au.gov.xml.icsm.geodesyml.v_0_4.SiteLogType;
 
+import net.opengis.iso19139.gco.v_20070417.CodeListValueType;
 import net.opengis.iso19139.gmd.v_20070417.CIResponsiblePartyType;
 
 
@@ -43,6 +46,24 @@ public class ResponsiblePartyMarshallingITest extends IntegrationTest {
     private static final NamespaceContext namespaces = new XPathContext()
         .add("gco", "http://www.isotc211.org/2005/gco")
         .add("gmd", "http://www.isotc211.org/2005/gmd");
+
+    @Test
+    public void testUnmarshalling() throws Exception {
+
+        GeodesyMLType mobs = marshaller.unmarshal(TestResources.customGeodesyMLSiteLogReader("MOBS"), GeodesyMLType.class)
+            .getValue();
+
+        SiteLogType siteLog =
+            GeodesyMLUtils.getElementFromJAXBElements(mobs.getElements(), SiteLogType.class)
+            .findFirst()
+            .get();
+
+        // TODO: check all fields
+        CodeListValueType roleDto = siteLog.getSiteMetadataCustodian().getCIResponsibleParty().getRole().getCIRoleCode();
+        Role role = mapper.mapFromDto(siteLog.getSiteMetadataCustodian().getCIResponsibleParty()).getRole();
+        assertThat(roleDto.getCodeListValue(), is("pointOfContact"));
+        assertThat(role, is(Role.POINT_OF_CONTACT));
+    }
 
     @Test
     public void testMarshalling() throws Exception {

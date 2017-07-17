@@ -299,6 +299,18 @@ public class GenericMapper {
                 .field("localSiteTiesAccuracy", "localSiteTieAccuracy")
                 .field("dateMeasured", "dateMeasured")
                 .byDefault()
+                .customize(new CustomMapper<SurveyedLocalTieType, SurveyedLocalTieLogItem>() {
+
+                    @Override
+                    public void mapBtoA(SurveyedLocalTieLogItem logItem, SurveyedLocalTieType logItemDto, MappingContext ctx) {
+                        if (logItem.getDifferentialFromMarker() != null) {
+                            DifferentialFromMarker diff = logItem.getDifferentialFromMarker();
+                            if (diff.getDx() == null && diff.getDy() == null && diff.getDz() == null) {
+                                logItemDto.setDifferentialComponentsGNSSMarkerToTiedMonumentITRS(null);
+                            }
+                        }
+                    }
+                })
                 .register();
 
         mapperFactory.classMap(SurveyedLocalTieType.DifferentialComponentsGNSSMarkerToTiedMonumentITRS.class, DifferentialFromMarker.class)

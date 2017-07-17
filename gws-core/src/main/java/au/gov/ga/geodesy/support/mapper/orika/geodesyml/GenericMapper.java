@@ -161,6 +161,11 @@ public class GenericMapper {
 
                 @Override
                 public void mapBtoA(EffectiveDates dates, TimePeriodType period, MappingContext ctx) {
+                    if (dates.getFrom() == null) {
+                        TimePositionType begin = new TimePositionType();
+                        begin.setIndeterminatePosition(TimeIndeterminateValueType.UNKNOWN);
+                        period.setBeginPosition(begin);
+                    }
                     if (dates.getTo() == null) {
                         TimePositionType end = new TimePositionType();
                         end.setIndeterminatePosition(TimeIndeterminateValueType.UNKNOWN);

@@ -314,6 +314,10 @@ public class GenericMapper {
                                 logItemDto.setDifferentialComponentsGNSSMarkerToTiedMonumentITRS(null);
                             }
                         }
+                        if (logItem.getDateMeasured() == null) {
+                            logItemDto.setDateMeasured(new TimePositionType()
+                                    .withIndeterminatePosition(TimeIndeterminateValueType.UNKNOWN));
+                        }
                     }
                 })
                 .register();

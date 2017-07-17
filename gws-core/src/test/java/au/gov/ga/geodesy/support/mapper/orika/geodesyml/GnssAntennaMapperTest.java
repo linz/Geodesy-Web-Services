@@ -1,24 +1,30 @@
 package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 
-import au.gov.ga.geodesy.domain.model.sitelog.GnssAntennaLogItem;
-import au.gov.xml.icsm.geodesyml.v_0_4.GnssAntennaType;
-import au.gov.xml.icsm.geodesyml.v_0_4.IgsAntennaModelCodeType;
-import au.gov.xml.icsm.geodesyml.v_0_4.IgsRadomeModelCodeType;
-import net.opengis.gml.v_3_2_1.CodeType;
-import net.opengis.gml.v_3_2_1.TimePositionType;
-import org.testng.annotations.Test;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.core.Is.is;
 
 import java.time.Instant;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.core.Is.is;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.testng.annotations.Test;
 
-public class GnssAntennaMapperTest {
+import au.gov.ga.geodesy.domain.model.sitelog.GnssAntennaLogItem;
+import au.gov.ga.geodesy.support.spring.UnitTest;
+import au.gov.xml.icsm.geodesyml.v_0_4.GnssAntennaType;
+import au.gov.xml.icsm.geodesyml.v_0_4.IgsAntennaModelCodeType;
+import au.gov.xml.icsm.geodesyml.v_0_4.IgsRadomeModelCodeType;
 
-    private final GnssAntennaMapper mapper = new GnssAntennaMapper();
+import net.opengis.gml.v_3_2_1.CodeType;
+import net.opengis.gml.v_3_2_1.TimePositionType;
+
+public class GnssAntennaMapperTest extends UnitTest {
+
     private final DateTimeFormatter outputFormat = dateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSXXX");
+    
+    @Autowired
+    private GnssAntennaMapper mapper;
 
     @Test
     public void testMappingToLogItem() {

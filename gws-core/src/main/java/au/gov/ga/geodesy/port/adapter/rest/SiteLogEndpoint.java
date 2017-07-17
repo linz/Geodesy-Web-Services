@@ -59,6 +59,9 @@ public class SiteLogEndpoint {
     private static ObjectFactory geodesyMLFactory = new ObjectFactory();
 
     @Autowired
+    private SiteLogMapper mapper;
+
+    @Autowired
     private CorsSiteLogService service;
 
     @Autowired
@@ -89,7 +92,6 @@ public class SiteLogEndpoint {
         if (siteLog == null) {
             rsp.setStatus(HttpStatus.NOT_FOUND.value());
         } else {
-            SiteLogMapper mapper = new SiteLogMapper();
             SiteLogType siteLogType = mapper.from(siteLog);
 
             GeodesyMLType document = geodesyMLFactory.createGeodesyMLType()

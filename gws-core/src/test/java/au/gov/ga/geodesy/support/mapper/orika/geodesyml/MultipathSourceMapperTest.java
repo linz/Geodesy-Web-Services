@@ -3,6 +3,7 @@ package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.IsEqual.equalTo;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.annotations.Test;
 
 import au.gov.ga.geodesy.domain.model.sitelog.MultipathSourceLogItem;
@@ -10,19 +11,23 @@ import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLMarshaller;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLUtils;
 import au.gov.ga.geodesy.support.TestResources;
 import au.gov.ga.geodesy.support.marshalling.moxy.GeodesyMLMoxy;
+import au.gov.ga.geodesy.support.spring.UnitTest;
 import au.gov.ga.geodesy.support.utils.GMLDateUtils;
 import au.gov.xml.icsm.geodesyml.v_0_4.GeodesyMLType;
 import au.gov.xml.icsm.geodesyml.v_0_4.MultipathSourceType;
 import au.gov.xml.icsm.geodesyml.v_0_4.SiteLogType;
+
 import net.opengis.gml.v_3_2_1.TimePeriodType;
 
 /**
  * Tests the mapping of a GeodesyML MultipathSourcesType element
  * to and from an MultipathSourceLogItem domain object.
  */
-public class MultipathSourceMapperTest {
+public class MultipathSourceMapperTest extends UnitTest {
 
-    private MultipathSourceMapper mapper = new MultipathSourceMapper();
+    @Autowired
+    private MultipathSourceMapper mapper;
+
     private GeodesyMLMarshaller marshaller = new GeodesyMLMoxy();
 
     @Test

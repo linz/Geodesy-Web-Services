@@ -220,6 +220,11 @@ public class GenericMapper {
 
                 @Override
                 public void mapAtoB(GnssReceiverLogItem receiverLogItem, GnssReceiverType receiverType, MappingContext ctx) {
+                    if (receiverLogItem.getDateInstalled() == null) {
+                        TimePositionType dateInstalled = new TimePositionType();
+                        dateInstalled.setIndeterminatePosition(TimeIndeterminateValueType.UNKNOWN);
+                        receiverType.setDateInstalled(dateInstalled);
+                    }
                     if (receiverLogItem.getDateRemoved() == null) {
                         TimePositionType dateRemoved = new TimePositionType();
                         dateRemoved.setIndeterminatePosition(TimeIndeterminateValueType.UNKNOWN);
@@ -251,6 +256,11 @@ public class GenericMapper {
 
                 @Override
                 public void mapAtoB(GnssAntennaLogItem antennaLogItem, GnssAntennaType antennaType, MappingContext ctx) {
+                    if (antennaLogItem.getDateInstalled() == null) {
+                        TimePositionType dateInstalled = new TimePositionType();
+                        dateInstalled.setIndeterminatePosition(TimeIndeterminateValueType.UNKNOWN);
+                        antennaType.setDateInstalled(dateInstalled);
+                    }
                     if (antennaLogItem.getDateRemoved() == null) {
                         TimePositionType dateRemoved = new TimePositionType();
                         dateRemoved.setIndeterminatePosition(TimeIndeterminateValueType.UNKNOWN);

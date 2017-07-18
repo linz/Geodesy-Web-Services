@@ -26,6 +26,7 @@ import au.gov.ga.geodesy.domain.model.sitelog.MultipathSourceLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.OtherInstrumentationLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.PressureSensorLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.RadioInterference;
+import au.gov.ga.geodesy.domain.model.sitelog.SensorEquipmentLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.SignalObstructionLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteIdentification;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLocation;
@@ -35,6 +36,7 @@ import au.gov.ga.geodesy.domain.model.sitelog.TemperatureSensorLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.WaterVaporSensorLogItem;
 import au.gov.ga.geodesy.support.gml.LogItemPropertyType;
 import au.gov.ga.geodesy.support.java.util.Iso;
+import au.gov.xml.icsm.geodesyml.v_0_4.BaseSensorEquipmentType;
 import au.gov.xml.icsm.geodesyml.v_0_4.CollocationInformationType;
 import au.gov.xml.icsm.geodesyml.v_0_4.FormInformationType;
 import au.gov.xml.icsm.geodesyml.v_0_4.FrequencyStandardType;
@@ -334,10 +336,31 @@ public class GenericMapper {
                 .byDefault()
                 .register();
 
+        // Met Sensors
+        CustomMapper<BaseSensorEquipmentType, SensorEquipmentLogItem> indeterminateCalibrationDateMapper = new CustomMapper<BaseSensorEquipmentType, SensorEquipmentLogItem>() {
+
+            @Override
+            public void mapBtoA(SensorEquipmentLogItem sensorLogItem, BaseSensorEquipmentType sensorLogItemDto, MappingContext ctx) { 
+                if (sensorLogItem.getCalibrationDate() == null) {
+                    sensorLogItemDto.setCalibrationDate(new TimePositionType()
+                        .withIndeterminatePosition(TimeIndeterminateValueType.UNKNOWN)
+                    );
+                }
+            }
+        };
+
+        mapperFactory.classMap(BaseSensorEquipmentType.class, SensorEquipmentLogItem.class)
+                .fieldMap("validTime.abstractTimePrimitive", "effectiveDates").converter("validTimeConverter").add()
+                .byDefault()
+                .exclude("type")
+                .customize(indeterminateCalibrationDateMapper)
+                .register();
+
+
         // Humidity Sensor
         mapperFactory.classMap(HumiditySensorType.class, HumiditySensorLogItem.class)
+                .use(BaseSensorEquipmentType.class, SensorEquipmentLogItem.class)
                 .fieldMap("type", "type").converter("humiditySensorTypeConverter").add()
-                .fieldMap("validTime.abstractTimePrimitive", "effectiveDates").converter("validTimeConverter").add()
                 .byDefault()
                 .register();
 
@@ -345,8 +368,8 @@ public class GenericMapper {
 
         // Pressure Sensor
         mapperFactory.classMap(PressureSensorType.class, PressureSensorLogItem.class)
+                .use(BaseSensorEquipmentType.class, SensorEquipmentLogItem.class)
                 .fieldMap("type", "type").converter("pressureSensorTypeConverter").add()
-                .fieldMap("validTime.abstractTimePrimitive", "effectiveDates").converter("validTimeConverter").add()
                 .byDefault()
                 .register();
 
@@ -354,8 +377,8 @@ public class GenericMapper {
 
         // Temperature Sensor
         mapperFactory.classMap(TemperatureSensorType.class, TemperatureSensorLogItem.class)
+                .use(BaseSensorEquipmentType.class, SensorEquipmentLogItem.class)
                 .fieldMap("type", "type").converter("temperatureSensorTypeConverter").add()
-                .fieldMap("validTime.abstractTimePrimitive", "effectiveDates").converter("validTimeConverter").add()
                 .byDefault()
                 .register();
 
@@ -363,10 +386,11 @@ public class GenericMapper {
 
         // Water Vapor Sensor
         mapperFactory.classMap(WaterVaporSensorType.class, WaterVaporSensorLogItem.class)
+                .use(BaseSensorEquipmentType.class, SensorEquipmentLogItem.class)
                 .fieldMap("type", "type").converter("waterVaporSensorTypeConverter").add()
-                .fieldMap("validTime.abstractTimePrimitive", "effectiveDates").converter("validTimeConverter").add()
                 .byDefault()
                 .register();
+
         converters.registerConverter("waterVaporSensorTypeConverter", new StringToCodeTypeConverter("eGeodesy/type") {});
 
         // Other Instrumentation

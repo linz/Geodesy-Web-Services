@@ -35,7 +35,7 @@ import au.gov.ga.geodesy.domain.model.sitelog.LogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.MultipathSourceLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.OtherInstrumentationLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.PressureSensorLogItem;
-import au.gov.ga.geodesy.domain.model.sitelog.RadioInterference;
+import au.gov.ga.geodesy.domain.model.sitelog.RadioInterferenceLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.SignalObstructionLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLog;
 import au.gov.ga.geodesy.domain.model.sitelog.SurveyedLocalTieLogItem;
@@ -388,7 +388,7 @@ public class SiteLogMapperITest extends IntegrationTest {
 
         {
             int i = 0;
-            for (RadioInterference logItem : sortLogItems(siteLog.getRadioInterferences())) {
+            for (RadioInterferenceLogItem logItem : sortLogItems(siteLog.getRadioInterferences())) {
                 RadioInterferenceType xmlType = radioInterferencePropertyTypes.get(i++).getRadioInterference();
                 assertThat(logItem.getPossibleProblemSource(), equalTo(xmlType.getPossibleProblemSource()));
             }

@@ -11,7 +11,7 @@ import java.time.format.DateTimeFormatter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.annotations.Test;
 
-import au.gov.ga.geodesy.domain.model.sitelog.RadioInterference;
+import au.gov.ga.geodesy.domain.model.sitelog.RadioInterferenceLogItem;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLMarshaller;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLUtils;
 import au.gov.ga.geodesy.support.TestResources;
@@ -53,7 +53,7 @@ public class RadioInterferenceMapperTest extends UnitTest {
 
         RadioInterferenceType radioInterferenceDTO = logItem.getRadioInterferences().get(0).getRadioInterference();
 
-        RadioInterference radioInterferenceEntity = mapper.to(radioInterferenceDTO);
+        RadioInterferenceLogItem radioInterferenceEntity = mapper.to(radioInterferenceDTO);
 
         assertCommonFields(radioInterferenceDTO, radioInterferenceEntity, MappingDirection.FROM_DTO_TO_ENTITY);
 
@@ -89,7 +89,7 @@ public class RadioInterferenceMapperTest extends UnitTest {
 
         RadioInterferenceType radioInterferenceDTO = logItem.getRadioInterferences().get(0).getRadioInterference();
 
-        RadioInterference radioInterferenceEntity = mapper.to(radioInterferenceDTO);
+        RadioInterferenceLogItem radioInterferenceEntity = mapper.to(radioInterferenceDTO);
 
         assertCommonFields(radioInterferenceDTO, radioInterferenceEntity, MappingDirection.FROM_DTO_TO_ENTITY);
 
@@ -113,7 +113,7 @@ public class RadioInterferenceMapperTest extends UnitTest {
         return ((TimePeriodType) value.getValidTime().getAbstractTimePrimitive().getValue());
     }
 
-    private void assertCommonFields(RadioInterferenceType radioInterferenceDTO, RadioInterference radioInterferenceEntity,
+    private void assertCommonFields(RadioInterferenceType radioInterferenceDTO, RadioInterferenceLogItem radioInterferenceEntity,
                                     MappingDirection mappingDirection) {
         if (mappingDirection == MappingDirection.FROM_DTO_TO_ENTITY) {
             assertThat(radioInterferenceEntity.getNotes(), is(radioInterferenceDTO.getNotes()));

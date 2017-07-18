@@ -3,7 +3,7 @@ package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import au.gov.ga.geodesy.domain.model.sitelog.RadioInterference;
+import au.gov.ga.geodesy.domain.model.sitelog.RadioInterferenceLogItem;
 import au.gov.ga.geodesy.support.java.util.Iso;
 import au.gov.xml.icsm.geodesyml.v_0_4.RadioInterferenceType;
 
@@ -12,7 +12,7 @@ import au.gov.xml.icsm.geodesyml.v_0_4.RadioInterferenceType;
  * RadioInterference site log entity.
  */
 @Component
-public class RadioInterferenceMapper implements Iso<RadioInterferenceType, RadioInterference> {
+public class RadioInterferenceMapper implements Iso<RadioInterferenceType, RadioInterferenceLogItem> {
 
     @Autowired
     private GenericMapper mapper;
@@ -22,15 +22,15 @@ public class RadioInterferenceMapper implements Iso<RadioInterferenceType, Radio
     /**
      * {@inheritDoc}
      */
-    public RadioInterference to(RadioInterferenceType radioInterferenceType) {
-        return mapper.map(radioInterferenceType, RadioInterference.class);
+    public RadioInterferenceLogItem to(RadioInterferenceType radioInterferenceType) {
+        return mapper.map(radioInterferenceType, RadioInterferenceLogItem.class);
     }
 
     @Override
     /**
      * {@inheritDoc}
      */
-    public RadioInterferenceType from(RadioInterference radioInterference) {
+    public RadioInterferenceType from(RadioInterferenceLogItem radioInterference) {
         return mapper.map(radioInterference, RadioInterferenceType.class);
     }
 }

@@ -13,7 +13,7 @@ import javax.validation.constraints.Size;
  */
 @Entity
 @Table(name = "SITELOG_PRESSURESENSOR")
-public class PressureSensorLogItem extends SensorEquipmentLogItem {
+public class PressureSensorLogItem extends SensorEquipmentLogItem<PressureSensorLogItem> {
 
     @Id
     @GeneratedValue(generator = "surrogateKeyGenerator")

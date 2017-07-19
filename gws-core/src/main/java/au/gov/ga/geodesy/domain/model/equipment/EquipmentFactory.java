@@ -40,7 +40,7 @@ public class EquipmentFactory {
 
     private EquipmentCreator creator = new EquipmentCreator();
 
-    public Pair<? extends Equipment, ? extends EquipmentConfiguration> create(EquipmentLogItem logItem) {
+    public Pair<? extends Equipment, ? extends EquipmentConfiguration> create(EquipmentLogItem<?> logItem) {
         return logItem.accept(creator);
     }
 
@@ -126,7 +126,7 @@ public class EquipmentFactory {
         }
 
         @Override
-        public Pair<Equipment, EquipmentConfiguration> visit(PossibleProblemSourceLogItem logItem) {
+        public Pair<Equipment, EquipmentConfiguration> visit(PossibleProblemSourceLogItem<?> logItem) {
             throw new UnsupportedOperationException();
         }
 
@@ -145,7 +145,7 @@ public class EquipmentFactory {
             throw new UnsupportedOperationException();
         }
 
-        private <T extends Equipment> T getEquipment(Class<T> equipmentClass, EquipmentLogItem logItem) {
+        private <T extends Equipment> T getEquipment(Class<T> equipmentClass, EquipmentLogItem<?> logItem) {
             T e = equipment.findOne(equipmentClass, logItem.getType(), logItem.getSerialNumber());
             if (e == null) {
                 try {
@@ -164,7 +164,7 @@ public class EquipmentFactory {
         private <T extends EquipmentConfiguration> T getConfiguration(
                 Class<T> configClass,
                 Integer equipId,
-                EquipmentLogItem logItem) {
+                EquipmentLogItem<?> logItem) {
 
             EffectiveDates period = logItem.getEffectiveDates();
             Instant effectiveFrom = period == null ? null : period.getFrom();

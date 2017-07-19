@@ -576,7 +576,7 @@ public class GenericMapper {
      * bidirectional converter from a list of GML property types to a
      * set of domain model log items.
      */
-    private <P extends LogItemPropertyType, T extends AbstractGMLType, L extends LogItem>
+    private <P extends LogItemPropertyType, T extends AbstractGMLType, L extends LogItem<?>>
 
     BidirectionalConverter<List<P>, Set<L>> logItemsConverter(Iso<T, L> logItemsIso) {
 
@@ -584,10 +584,10 @@ public class GenericMapper {
     }
 
     /**
-     * Given an isomorphism from A to B, return an isomorphism from a set of A
-     * to a set B.
+     * Given an isomorphism from A to B, return an isomorphism from list of A
+     * to set B.
      */
-    private class ListToSet<A, B> implements Iso<List<A>, Set<B>> {
+    private class ListToSet<A, B extends LogItem<?>> implements Iso<List<A>, Set<B>> {
 
         private Iso<A, B> elementIso;
 
@@ -600,7 +600,7 @@ public class GenericMapper {
         }
 
         public List<A> from(Set<B> set) {
-            return set.stream().map(elementIso::from).collect(Collectors.toList());
+            return set.stream().sorted().map(elementIso::from).collect(Collectors.toList());
         }
     }
 

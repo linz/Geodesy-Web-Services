@@ -25,7 +25,7 @@ import au.gov.ga.geodesy.domain.model.sitelog.MoreInformation;
 import au.gov.ga.geodesy.domain.model.sitelog.MultipathSourceLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.OtherInstrumentationLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.PressureSensorLogItem;
-import au.gov.ga.geodesy.domain.model.sitelog.RadioInterference;
+import au.gov.ga.geodesy.domain.model.sitelog.RadioInterferenceLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.SensorEquipmentLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.SignalObstructionLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteIdentification;
@@ -410,7 +410,7 @@ public class GenericMapper {
                 .register();
 
         // Radio Interference
-        mapperFactory.classMap(RadioInterferenceType.class, RadioInterference.class)
+        mapperFactory.classMap(RadioInterferenceType.class, RadioInterferenceLogItem.class)
                 .fieldMap("validTime.abstractTimePrimitive", "effectiveDates").converter("validTimeConverter").add()
                 .byDefault()
                 .register();
@@ -517,7 +517,7 @@ public class GenericMapper {
         );
 
         converters.registerConverter("radioInterferences",
-                new BidirectionalConverterWrapper<List<RadioInterferencePropertyType>, Set<RadioInterference>>(
+                new BidirectionalConverterWrapper<List<RadioInterferencePropertyType>, Set<RadioInterferenceLogItem>>(
                         logItemsConverter(radioInterferenceMapper)
                 ) {}
         );

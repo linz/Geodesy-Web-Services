@@ -11,7 +11,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "SITELOG_MUTLIPATHSOURCE")
-public class MultipathSourceLogItem extends PossibleProblemSourceLogItem {
+public class MultipathSourceLogItem extends PossibleProblemSourceLogItem<MultipathSourceLogItem> {
 
     @Id
     @GeneratedValue(generator = "surrogateKeyGenerator")

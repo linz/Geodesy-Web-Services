@@ -13,7 +13,7 @@ import javax.validation.constraints.Size;
  */
 @Entity
 @Table(name = "SITELOG_RADIOINTERFERENCE")
-public class RadioInterferenceLogItem extends PossibleProblemSourceLogItem {
+public class RadioInterferenceLogItem extends PossibleProblemSourceLogItem<RadioInterferenceLogItem> {
 
     @Id
     @GeneratedValue(generator = "surrogateKeyGenerator")

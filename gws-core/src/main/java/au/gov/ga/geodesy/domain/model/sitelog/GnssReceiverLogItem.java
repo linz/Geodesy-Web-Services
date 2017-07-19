@@ -16,7 +16,7 @@ import javax.validation.constraints.Size;
  */
 @Entity
 @Table(name = "SITELOG_GNSSRECEIVER")
-public class GnssReceiverLogItem extends EquipmentLogItem {
+public class GnssReceiverLogItem extends EquipmentLogItem<GnssReceiverLogItem> {
 
     @Id
     @GeneratedValue(generator = "surrogateKeyGenerator")

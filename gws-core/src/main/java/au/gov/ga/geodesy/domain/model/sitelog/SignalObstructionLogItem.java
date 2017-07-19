@@ -11,7 +11,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "SITELOG_SIGNALOBSTRACTION")
-public class SignalObstructionLogItem extends PossibleProblemSourceLogItem {
+public class SignalObstructionLogItem extends PossibleProblemSourceLogItem<SignalObstructionLogItem> {
 
     @Id
     @GeneratedValue(generator = "surrogateKeyGenerator")

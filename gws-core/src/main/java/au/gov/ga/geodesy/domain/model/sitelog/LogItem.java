@@ -9,7 +9,7 @@ import javax.validation.constraints.Past;
 import org.checkerframework.checker.nullness.qual.MonotonicNonNull;
 
 @MappedSuperclass
-public abstract class LogItem {
+public abstract class LogItem<L extends LogItem<L>> implements Comparable<L> {
 
     @Past
     @Column(name = "DATE_INSERTED")
@@ -49,6 +49,11 @@ public abstract class LogItem {
 
     public void setDeletedReason(String deletedReason) {
         this.deletedReason = deletedReason;
+    }
+
+    @Override
+    public int compareTo(L x) {
+        return getEffectiveDates().compareTo(x.getEffectiveDates());
     }
 }
 

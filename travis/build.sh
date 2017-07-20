@@ -6,8 +6,10 @@ set -e
 # A local installation of maven prefers to run the global installation, if available.
 sudo rm -f /etc/mavenrc
 
+# We redirect maven test output to file, because Travis CI limits stdout log size to 4MB.
+
 if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then
-    mvn --settings ./travis/maven-settings.xml deploy -pl '!gws-system-test'
+    mvn --settings ./travis/maven-settings.xml deploy -pl '!gws-system-test' -DredirectTestOutputToFile
     mvn --settings ./travis/maven-settings.xml deploy -pl gws-system-test -DskipTests
     mvn --settings ./travis/maven-settings.xml site-deploy -DskipTests -pl gws-core
     cp ./gws-webapp/target/geodesy-web-services.war ./gws-system-test/target/gws-system-test.jar ./aws/codedeploy-WebServices/

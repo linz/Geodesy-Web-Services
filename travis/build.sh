@@ -17,7 +17,11 @@ if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then
     aws configure set aws_secret_access_key "${TRAVIS_AWS_SECRET_KEY_ID}" --profile geodesy
     aws configure set region ap-southeast-2 --profile geodesy
     aws configure set output json --profile geodesy
-    mkdir ./tmp && export TMPDIR=./tmp
+
+    # Default TMPDIR is in /run, which is in memory, so we change it to disk to
+    # avoid running out of space. `aws codedeploy push` writes the codedeploy
+    # zip bundle to $TMPDIR.
+    export TMPDIR=/tmp
     case "${TRAVIS_BRANCH}" in
         "next")
             ./aws/codedeploy-WebServices/deploy.sh dev

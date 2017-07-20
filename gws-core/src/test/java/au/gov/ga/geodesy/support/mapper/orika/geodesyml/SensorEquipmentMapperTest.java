@@ -5,11 +5,13 @@ import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLMarshaller;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLUtils;
 import au.gov.ga.geodesy.support.TestResources;
 import au.gov.ga.geodesy.support.marshalling.moxy.GeodesyMLMoxy;
+import au.gov.ga.geodesy.support.spring.UnitTest;
 import au.gov.ga.geodesy.support.utils.GMLDateUtils;
 import au.gov.ga.geodesy.support.utils.MappingDirection;
 import au.gov.xml.icsm.geodesyml.v_0_4.BaseSensorEquipmentType;
 import au.gov.xml.icsm.geodesyml.v_0_4.GeodesyMLType;
 import au.gov.xml.icsm.geodesyml.v_0_4.SiteLogType;
+
 import net.opengis.gml.v_3_2_1.TimePeriodType;
 
 import java.time.ZoneId;
@@ -21,7 +23,7 @@ import static org.hamcrest.Matchers.equalTo;
 /**
  * Common tests for mapping of sensor equipment XML types to domain objects
  */
-public class SensorEquipmentMapperTest {
+public class SensorEquipmentMapperTest extends UnitTest {
 
     protected GeodesyMLMarshaller marshaller = new GeodesyMLMoxy();
 

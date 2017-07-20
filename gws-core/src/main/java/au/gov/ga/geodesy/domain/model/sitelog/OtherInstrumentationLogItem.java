@@ -15,7 +15,7 @@ import javax.validation.constraints.Size;
  */
 @Entity
 @Table(name = "SITELOG_OTHERINSTRUMENTATION")
-public class OtherInstrumentationLogItem extends LogItem {
+public class OtherInstrumentationLogItem extends LogItem<OtherInstrumentationLogItem> {
 
     @Id
     @GeneratedValue(generator = "surrogateKeyGenerator")

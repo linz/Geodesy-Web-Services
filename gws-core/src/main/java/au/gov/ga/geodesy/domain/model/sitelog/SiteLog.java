@@ -120,7 +120,7 @@ public class SiteLog {
     @Valid
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     @JoinColumn(name = "SITE_ID", referencedColumnName = "ID", foreignKey = @ForeignKey(name="FK_SITELOG_SITE_SITELOG_RADIOINTERFERENCE"))
-    protected Set<RadioInterference> radioInterferences = new HashSet<>();
+    protected Set<RadioInterferenceLogItem> radioInterferences = new HashSet<>();
 
     @Valid
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
@@ -362,14 +362,14 @@ public class SiteLog {
     /**
      * Return radio interferences.
      */
-    public Set<RadioInterference> getRadioInterferences() {
+    public Set<RadioInterferenceLogItem> getRadioInterferences() {
         return this.radioInterferences;
     }
 
     /**
      * Set radio interferences.
      */
-    public void setRadioInterferences(Set<RadioInterference> rs) {
+    public void setRadioInterferences(Set<RadioInterferenceLogItem> rs) {
         radioInterferences = rs;
         /* CollectionUtils.filter(radioInterferences, NotNullPredicate.INSTANCE); */
     }

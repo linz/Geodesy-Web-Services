@@ -6,9 +6,11 @@ import static org.hamcrest.core.IsEqual.equalTo;
 
 import java.time.Instant;
 
-import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.testng.annotations.Test;
 
 import au.gov.ga.geodesy.domain.model.sitelog.GnssReceiverLogItem;
+import au.gov.ga.geodesy.support.spring.UnitTest;
 import au.gov.ga.geodesy.support.utils.DateTimeFormatDecorator;
 import au.gov.ga.geodesy.support.utils.GMLDateUtils;
 import au.gov.xml.icsm.geodesyml.v_0_4.GnssReceiverPropertyType;
@@ -16,10 +18,14 @@ import au.gov.xml.icsm.geodesyml.v_0_4.GnssReceiverType;
 
 import net.opengis.gml.v_3_2_1.TimePositionType;
 
-public class LogItemPropertyTypeMapperTest {
+public class LogItemPropertyTypeMapperTest extends UnitTest {
 
-    private LogItemPropertyTypeMapper<GnssReceiverPropertyType, GnssReceiverType, GnssReceiverLogItem> mapper
-        = new LogItemPropertyTypeMapper<>(new GnssReceiverMapper());
+    private LogItemPropertyTypeMapper<GnssReceiverPropertyType, GnssReceiverType, GnssReceiverLogItem> mapper;
+
+    @Autowired
+    public void setGnssReceiverMapper(GnssReceiverMapper gnssReceiverMapper) {
+        mapper = new LogItemPropertyTypeMapper<>(gnssReceiverMapper);
+    }
 
     @Test
     public void mapFromDto() {

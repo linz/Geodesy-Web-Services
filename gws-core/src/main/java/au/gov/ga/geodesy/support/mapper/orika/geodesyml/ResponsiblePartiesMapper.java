@@ -5,6 +5,7 @@ import java.util.List;
 import org.opengis.metadata.citation.ResponsibleParty;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
+import org.springframework.stereotype.Component;
 
 import au.gov.ga.geodesy.domain.model.ContactType;
 import au.gov.ga.geodesy.domain.model.ContactTypeRepository;
@@ -22,7 +23,7 @@ import net.opengis.iso19139.gmd.v_20070417.CIResponsiblePartyType;
 /**
  * Map GeodesyML SiteLogType DTO to SiteLog domain entity.
  */
-@Configurable(dependencyCheck = true)
+@Component
 public class ResponsiblePartiesMapper extends CustomMapper<SiteLogType, SiteLog> {
 
     @Autowired

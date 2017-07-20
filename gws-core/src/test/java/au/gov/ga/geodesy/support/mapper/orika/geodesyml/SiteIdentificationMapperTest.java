@@ -5,10 +5,13 @@ import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLMarshaller;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLUtils;
 import au.gov.ga.geodesy.support.TestResources;
 import au.gov.ga.geodesy.support.marshalling.moxy.GeodesyMLMoxy;
+import au.gov.ga.geodesy.support.spring.UnitTest;
 import au.gov.ga.geodesy.support.utils.GMLDateUtils;
 import au.gov.xml.icsm.geodesyml.v_0_4.GeodesyMLType;
 import au.gov.xml.icsm.geodesyml.v_0_4.SiteIdentificationType;
 import au.gov.xml.icsm.geodesyml.v_0_4.SiteLogType;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.annotations.Test;
 
 import java.io.Reader;
@@ -16,15 +19,17 @@ import java.io.Reader;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 
-public class SiteIdentificationMapperTest {
+public class SiteIdentificationMapperTest extends UnitTest {
 
-    private SiteIdentificationMapper mapper = new SiteIdentificationMapper();
+    @Autowired
+    private SiteIdentificationMapper mapper;
+
     private GeodesyMLMarshaller marshaller = new GeodesyMLMoxy();
 
     /**
      * Test mapping from SiteIdentificationType to SiteIdentification and back
      * to SiteIdentificationType.
-     **/
+     */
     @Test
     public void testMapping() throws Exception {
         try (Reader mobs = TestResources.customGeodesyMLSiteLogReader("MOBS")) {

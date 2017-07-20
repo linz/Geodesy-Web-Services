@@ -8,27 +8,33 @@ import java.time.Instant;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.annotations.Test;
 
-import au.gov.ga.geodesy.domain.model.sitelog.RadioInterference;
+import au.gov.ga.geodesy.domain.model.sitelog.RadioInterferenceLogItem;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLMarshaller;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLUtils;
 import au.gov.ga.geodesy.support.TestResources;
 import au.gov.ga.geodesy.support.marshalling.moxy.GeodesyMLMoxy;
+import au.gov.ga.geodesy.support.spring.UnitTest;
 import au.gov.ga.geodesy.support.utils.GMLDateUtils;
 import au.gov.ga.geodesy.support.utils.MappingDirection;
 import au.gov.xml.icsm.geodesyml.v_0_4.GeodesyMLType;
 import au.gov.xml.icsm.geodesyml.v_0_4.RadioInterferenceType;
 import au.gov.xml.icsm.geodesyml.v_0_4.SiteLogType;
+
+import net.opengis.gml.v_3_2_1.TimeIndeterminateValueType;
 import net.opengis.gml.v_3_2_1.TimePeriodType;
 import net.opengis.gml.v_3_2_1.TimePositionType;
 
 /**
  * Tests the mapping of a GeodesyML RadioInterference element to and from a RadioInterference domain object.
  */
-public class RadioInterferenceMapperTest {
+public class RadioInterferenceMapperTest extends UnitTest {
 
-    private RadioInterferenceMapper mapper = new RadioInterferenceMapper();
+    @Autowired
+    private RadioInterferenceMapper mapper;
+
     private GeodesyMLMarshaller marshaller = new GeodesyMLMoxy();
     private DateTimeFormatter format = dateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSXXX");
 
@@ -47,7 +53,7 @@ public class RadioInterferenceMapperTest {
 
         RadioInterferenceType radioInterferenceDTO = logItem.getRadioInterferences().get(0).getRadioInterference();
 
-        RadioInterference radioInterferenceEntity = mapper.to(radioInterferenceDTO);
+        RadioInterferenceLogItem radioInterferenceEntity = mapper.to(radioInterferenceDTO);
 
         assertCommonFields(radioInterferenceDTO, radioInterferenceEntity, MappingDirection.FROM_DTO_TO_ENTITY);
 
@@ -61,9 +67,10 @@ public class RadioInterferenceMapperTest {
 
         assertCommonFields(radioInterferenceDTO, radioInterferenceEntity, MappingDirection.FROM_ENTITY_TO_DTO);
 
-        // IRKJ_RadioInterference_NoToDate has no end/to date
-        assertThat(((TimePeriodType) radioInterferenceDTO2.getValidTime().getAbstractTimePrimitive().getValue()).getEndPosition(),
-            nullValue());
+        // IRKJ_RadioInterference_NoToDate has indeterminate end date 
+        TimePositionType endDate = ((TimePeriodType) radioInterferenceDTO2.getValidTime().getAbstractTimePrimitive().getValue()).getEndPosition();
+        assertThat(endDate.getIndeterminatePosition(), is(TimeIndeterminateValueType.UNKNOWN));
+        assertThat(endDate.getValue().size(), is(0));
     }
 
     /**
@@ -82,7 +89,7 @@ public class RadioInterferenceMapperTest {
 
         RadioInterferenceType radioInterferenceDTO = logItem.getRadioInterferences().get(0).getRadioInterference();
 
-        RadioInterference radioInterferenceEntity = mapper.to(radioInterferenceDTO);
+        RadioInterferenceLogItem radioInterferenceEntity = mapper.to(radioInterferenceDTO);
 
         assertCommonFields(radioInterferenceDTO, radioInterferenceEntity, MappingDirection.FROM_DTO_TO_ENTITY);
 
@@ -106,7 +113,7 @@ public class RadioInterferenceMapperTest {
         return ((TimePeriodType) value.getValidTime().getAbstractTimePrimitive().getValue());
     }
 
-    private void assertCommonFields(RadioInterferenceType radioInterferenceDTO, RadioInterference radioInterferenceEntity,
+    private void assertCommonFields(RadioInterferenceType radioInterferenceDTO, RadioInterferenceLogItem radioInterferenceEntity,
                                     MappingDirection mappingDirection) {
         if (mappingDirection == MappingDirection.FROM_DTO_TO_ENTITY) {
             assertThat(radioInterferenceEntity.getNotes(), is(radioInterferenceDTO.getNotes()));

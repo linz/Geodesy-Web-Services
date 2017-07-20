@@ -3,11 +3,14 @@ package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import au.gov.ga.geodesy.domain.model.sitelog.FormInformation;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLMarshaller;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLUtils;
 import au.gov.ga.geodesy.support.TestResources;
 import au.gov.ga.geodesy.support.marshalling.moxy.GeodesyMLMoxy;
+import au.gov.ga.geodesy.support.spring.UnitTest;
 import au.gov.ga.geodesy.support.utils.GMLDateUtils;
 import au.gov.xml.icsm.geodesyml.v_0_4.FormInformationType;
 import au.gov.xml.icsm.geodesyml.v_0_4.GeodesyMLType;
@@ -19,9 +22,11 @@ import org.testng.annotations.Test;
  * Tests the mapping of a GeodesyML FormInformationType element
  * to and from a FormInformation domain object.
  */
-public class FormInformationMapperTest {
+public class FormInformationMapperTest extends UnitTest {
 
-    private FormInformationMapper mapper = new FormInformationMapper();
+    @Autowired
+    private FormInformationMapper mapper;
+
     private GeodesyMLMarshaller marshaller = new GeodesyMLMoxy();
 
     @Test

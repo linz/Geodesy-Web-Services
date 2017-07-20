@@ -19,6 +19,7 @@ import java.util.TreeSet;
 
 import org.apache.commons.beanutils.PropertyUtils;
 import org.hamcrest.Matchers;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -34,7 +35,7 @@ import au.gov.ga.geodesy.domain.model.sitelog.LogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.MultipathSourceLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.OtherInstrumentationLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.PressureSensorLogItem;
-import au.gov.ga.geodesy.domain.model.sitelog.RadioInterference;
+import au.gov.ga.geodesy.domain.model.sitelog.RadioInterferenceLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.SignalObstructionLogItem;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLog;
 import au.gov.ga.geodesy.domain.model.sitelog.SurveyedLocalTieLogItem;
@@ -88,12 +89,13 @@ import net.opengis.gml.v_3_2_1.TimePositionType;
 // TODO: Rewrite
 public class SiteLogMapperITest extends IntegrationTest {
 
+    @Autowired
     private SiteLogMapper mapper;
+
     private GeodesyMLMarshaller marshaller;
 
     @BeforeClass
     private void init() {
-        mapper = new SiteLogMapper();
         marshaller = new GeodesyMLMoxy();
     }
 
@@ -386,7 +388,7 @@ public class SiteLogMapperITest extends IntegrationTest {
 
         {
             int i = 0;
-            for (RadioInterference logItem : sortLogItems(siteLog.getRadioInterferences())) {
+            for (RadioInterferenceLogItem logItem : sortLogItems(siteLog.getRadioInterferences())) {
                 RadioInterferenceType xmlType = radioInterferencePropertyTypes.get(i++).getRadioInterference();
                 assertThat(logItem.getPossibleProblemSource(), equalTo(xmlType.getPossibleProblemSource()));
             }

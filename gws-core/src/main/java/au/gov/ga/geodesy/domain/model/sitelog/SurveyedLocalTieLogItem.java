@@ -13,12 +13,14 @@ import javax.validation.Valid;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
 
+import org.apache.commons.lang3.builder.CompareToBuilder;
+
 /**
  * http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/equipment/2564/surveyedLocalTies.xsd:surveyedLocalTiesType
  */
 @Entity
 @Table(name = "SITELOG_SURVEYEDLOCALTIE")
-public class SurveyedLocalTieLogItem extends LogItem {
+public class SurveyedLocalTieLogItem extends LogItem<SurveyedLocalTieLogItem> {
 
     @Id
     @GeneratedValue(generator = "surrogateKeyGenerator")
@@ -203,5 +205,13 @@ public class SurveyedLocalTieLogItem extends LogItem {
 
     public <T> T accept(LogItemVisitor<T> v) {
         return v.visit(this);
+    }
+
+    @Override
+    public int compareTo(SurveyedLocalTieLogItem x) {
+        return new CompareToBuilder()
+            .appendSuper(super.compareTo(x))
+            .append(getTiedMarkerName(), x.getTiedMarkerName())
+            .toComparison();
     }
 }

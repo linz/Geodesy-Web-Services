@@ -13,7 +13,6 @@ import au.gov.ga.geodesy.domain.model.CorsNetwork;
 import au.gov.ga.geodesy.domain.model.CorsNetworkRepository;
 import au.gov.ga.geodesy.domain.model.CorsSiteRepository;
 import au.gov.ga.geodesy.domain.model.NetworkTenancy;
-import au.gov.ga.geodesy.domain.model.sitelog.SiteLog;
 
 @Component
 public class EndpointSecurity {

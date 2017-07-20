@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component;
 
 import au.gov.ga.geodesy.domain.model.CorsNetwork;
 import au.gov.ga.geodesy.domain.model.CorsNetworkRepository;
+import au.gov.ga.geodesy.domain.model.CorsSite;
 import au.gov.ga.geodesy.domain.model.CorsSiteRepository;
 import au.gov.ga.geodesy.domain.model.NetworkTenancy;
 
@@ -51,7 +52,11 @@ public class EndpointSecurity {
         if (hasAuthority(siteEditAuthority)) {
             return true;
         }
-        List<String> networkEditAuthorities = sites.findByFourCharacterId(fourCharId).getNetworkTenancies().stream()
+        CorsSite site = sites.findByFourCharacterId(fourCharId);
+        if (site == null) {
+            return false;
+        }
+        List<String> networkEditAuthorities = site.getNetworkTenancies().stream()
             .filter(NetworkTenancy::inEffect)
             .map(networkTenancy -> networks.findOne(networkTenancy.getCorsNetworkId()))
             .map(CorsNetwork::getName)

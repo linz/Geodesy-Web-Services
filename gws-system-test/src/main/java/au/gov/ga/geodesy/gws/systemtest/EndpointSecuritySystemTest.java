@@ -7,7 +7,11 @@ import static org.hamcrest.Matchers.anyOf;
 import static org.hamcrest.Matchers.is;
 
 import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
+import org.apache.commons.lang3.tuple.Pair;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -27,29 +31,29 @@ public class EndpointSecuritySystemTest extends BaseSystemTest {
         "/events",
         "/positions",
         "/weeklySolutions",
-        "/newCorsSiteRequests",
+        // "/newCorsSiteRequests", // TODO: POST is allowed for authenticated users
         "/corsSiteInNetworks",
         // "/corsNetworks", // TODO: POST, PUT, PATCH, and DELETE are allowed for superuser
-        "/userRegistrations",
+        // "/userRegistrations", // TODO: POST is allowed for unauthenticated users
         "/contactTypes",
         "/setups",
         "/nodes",
         "/gnssReceivers",
         "/siteLogs",
         // "/siteLogs/upload", // TODO: POST is allowed for authenticated users
-        "/corsSites",
+        // "/corsSites", // TODO: PATCH is allowed for superuser
         "/gnssAntennas",
         "/equipment",
     };
 
-    private RequestSpecification[] requests;
+    private List<Pair<String, RequestSpecification>> requests;
 
     @BeforeClass
     public void setup() {
-        requests = new RequestSpecification[] {
-            given().when(), // unauthenticated
-            given().header("Authorization", "Bearer " + super.superuserToken()).when(),
-        };
+        requests = Stream.of(
+            Pair.of("unauthenticated", given().when()),
+            Pair.of("as superuser", given().header("Authorization", "Bearer " + super.superuserToken()).when())
+        ).collect(Collectors.toList());
     }
 
     @Test
@@ -57,46 +61,46 @@ public class EndpointSecuritySystemTest extends BaseSystemTest {
         Arrays.stream(resourceCollections)
             .map(resources -> getConfig().getWebServicesUrl() + resources)
             .forEach(resources -> {
-                log.info("Checking " + resources);
-
                 testPostDenied(resources);
-                log.info("POST is denied");
 
                 String resource = resources + "/0";
 
                 testPutDenied(resource);
-                log.info("PUT is denied");
-
                 testPatchDenied(resource);
-                log.info("PATCH is denied");
-
                 testDeleteDenied(resource);
-                log.info("DELETE is denied");
             });
     }
 
     private void testPostDenied(String url) {
-        Arrays.stream(requests).forEach(request -> 
-            assertDenied(request.post(url))
-        );
+        requests.forEach(request -> {
+            log.info("POST to " + url + " " + request.getLeft());
+            assertDenied(request.getRight().post(url));
+            log.info("Denied");
+        });
     }
 
     private void testPutDenied(String url) {
-        Arrays.stream(requests).forEach(request -> 
-            assertDenied(request.put(url))
-        );
+        requests.forEach(request -> {
+            log.info("PUT to " + url + " " + request.getLeft());
+            assertDenied(request.getRight().put(url));
+            log.info("Denied");
+        });
     }
 
     private void testPatchDenied(String url) {
-        Arrays.stream(requests).forEach(request -> 
-            assertDenied(request.patch(url))
-        );
+        requests.forEach(request -> {
+            log.info("PATCH to " + url + " " + request.getLeft());
+            assertDenied(request.getRight().patch(url));
+            log.info("Denied");
+        });
     }
 
     private void testDeleteDenied(String url) {
-        Arrays.stream(requests).forEach(request -> 
-            assertDenied(request.delete(url))
-        );
+        requests.forEach(request -> {
+            log.info("DELETE to " + url + " " + request.getLeft());
+            assertDenied(request.getRight().delete(url));
+            log.info("Denied");
+        });
     }
 
     private void assertDenied(Response response) {

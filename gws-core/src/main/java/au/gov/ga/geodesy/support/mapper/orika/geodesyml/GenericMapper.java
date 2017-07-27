@@ -296,14 +296,14 @@ public class GenericMapper {
             .fieldMap("pressureSensors", "pressureSensors").converter("pressureSensors").add()
             .fieldMap("temperatureSensors", "temperatureSensors").converter("temperatureSensors").add()
             .fieldMap("waterVaporSensors", "waterVaporSensors").converter("waterVaporSensors").add()
-            .fieldMap("otherInstrumentations", "otherInstrumentationLogItem").converter("otherInstrumentations").add()
+            .fieldMap("otherInstrumentation", "otherInstrumentationLogItem").converter("otherInstrumentation").add()
             .fieldMap("signalObstructions", "signalObstructionLogItems").converter("signalObstructions").add()
             .fieldMap("multipathSources", "multipathSourceLogItems").converter("multipathSources").add()
             .fieldMap("localEpisodicEffects", "localEpisodicEffectLogItems").converter("localEpisodicEffects").add()
             .fieldMap("radioInterferences", "radioInterferences").converter("radioInterferences").add()
             .fieldMap("moreInformation", "moreInformation").converter("moreInformation").add()
             .fieldMap("formInformation", "formInformation").converter("formInformation").add()
-            .fieldMap("collocationInformation", "collocationInformation").converter("collocationInformations").add()
+            .fieldMap("collocationInformation", "collocationInformation").converter("collocationInformation").add()
             .fieldMap("surveyedLocalTies", "surveyedLocalTies").converter("surveyedLocalTies").add()
             .customize(responsiblePartiesMapper)
             .register();
@@ -491,7 +491,7 @@ public class GenericMapper {
                 ) {}
         );
 
-        converters.registerConverter("otherInstrumentations",
+        converters.registerConverter("otherInstrumentation",
                 new BidirectionalConverterWrapper<List<LogItemPropertyType>, Set<OtherInstrumentationLogItem>>(
                         logItemsConverter(otherInstrumentationMapper)
                 ) {}
@@ -533,7 +533,7 @@ public class GenericMapper {
         converters.registerConverter("formInformation",
                 new IsoConverter<FormInformationType, FormInformation>(formInformationMapper) {});
 
-        converters.registerConverter("collocationInformations",
+        converters.registerConverter("collocationInformation",
                 new BidirectionalConverterWrapper<List<LogItemPropertyType>, Set<CollocationInformationLogItem>>(
                         logItemsConverter(collocationInformationMapper)
                 ) {}

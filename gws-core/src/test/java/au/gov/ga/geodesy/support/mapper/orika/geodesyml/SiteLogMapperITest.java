@@ -151,7 +151,7 @@ public class SiteLogMapperITest extends IntegrationTest {
 
     /**
      * Test mapping from SiteLogType to SiteLog and back
-     * to SiteLogType. Based on the QIKI site with added otherInstrumentations.
+     * to SiteLogType. Based on the QIKI site with added otherInstrumentation.
      **/
     @Test
     public void testApproximatePositionMapping() throws Exception {
@@ -247,10 +247,10 @@ public class SiteLogMapperITest extends IntegrationTest {
 
     /**
      * Test mapping from SiteLogType to SiteLog and back
-     * to SiteLogType. Based on the QIKI site with added otherInstrumentations.
+     * to SiteLogType. Based on the QIKI site with added otherInstrumentation.
      **/
     @Test
-    public void testOtherInstrumentationsMapping() throws Exception {
+    public void testOtherInstrumentationMapping() throws Exception {
         GeodesyMLType mobs = marshaller
                 .unmarshal(TestResources.customGeodesyMLSiteLogReader("QIKI-otherInstrumentation"),
                         GeodesyMLType.class)
@@ -261,10 +261,10 @@ public class SiteLogMapperITest extends IntegrationTest {
 
         SiteLog siteLog = mapper.to(siteLogType);
 
-        List<OtherInstrumentationPropertyType> otherInstrumentationPropertyTypes = siteLogType.getOtherInstrumentations();
+        List<OtherInstrumentationPropertyType> otherInstrumentationPropertyTypes = siteLogType.getOtherInstrumentation();
         sortGMLPropertyTypes(otherInstrumentationPropertyTypes);
 
-        assertThat(siteLogType.getOtherInstrumentations().size(), equalTo(3));
+        assertThat(siteLogType.getOtherInstrumentation().size(), equalTo(3));
         assertThat(otherInstrumentationPropertyTypes.size(), equalTo(3));
 
         {

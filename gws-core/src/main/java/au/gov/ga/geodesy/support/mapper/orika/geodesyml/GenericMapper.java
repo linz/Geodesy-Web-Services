@@ -303,7 +303,7 @@ public class GenericMapper {
             .fieldMap("radioInterferences", "radioInterferences").converter("radioInterferences").add()
             .fieldMap("moreInformation", "moreInformation").converter("moreInformation").add()
             .fieldMap("formInformation", "formInformation").converter("formInformation").add()
-            .fieldMap("collocationInformations", "collocationInformation").converter("collocationInformations").add()
+            .fieldMap("collocationInformation", "collocationInformation").converter("collocationInformations").add()
             .fieldMap("surveyedLocalTies", "surveyedLocalTies").converter("surveyedLocalTies").add()
             .customize(responsiblePartiesMapper)
             .register();

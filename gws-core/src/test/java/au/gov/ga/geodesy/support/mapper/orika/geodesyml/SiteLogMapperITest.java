@@ -448,7 +448,7 @@ public class SiteLogMapperITest extends IntegrationTest {
                 .findFirst().get();
 
         SiteLog siteLog = mapper.to(siteLogType);
-        List<CollocationInformationPropertyType> collocationInfoProperties = siteLogType.getCollocationInformations();
+        List<CollocationInformationPropertyType> collocationInfoProperties = siteLogType.getCollocationInformation();
         sortGMLPropertyTypes(collocationInfoProperties);
 
         assertThat(siteLog.getCollocationInformation(), hasSize(1));

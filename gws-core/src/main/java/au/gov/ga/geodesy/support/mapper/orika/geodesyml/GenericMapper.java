@@ -303,7 +303,7 @@ public class GenericMapper {
             .fieldMap("radioInterferences", "radioInterferences").converter("radioInterferences").add()
             .fieldMap("moreInformation", "moreInformation").converter("moreInformation").add()
             .fieldMap("formInformation", "formInformation").converter("formInformation").add()
-            .fieldMap("collocationInformation", "collocationInformation").converter("collocationInformations").add()
+            .fieldMap("collocationInformation", "collocationInformation").converter("collocationInformation").add()
             .fieldMap("surveyedLocalTies", "surveyedLocalTies").converter("surveyedLocalTies").add()
             .customize(responsiblePartiesMapper)
             .register();
@@ -533,7 +533,7 @@ public class GenericMapper {
         converters.registerConverter("formInformation",
                 new IsoConverter<FormInformationType, FormInformation>(formInformationMapper) {});
 
-        converters.registerConverter("collocationInformations",
+        converters.registerConverter("collocationInformation",
                 new BidirectionalConverterWrapper<List<LogItemPropertyType>, Set<CollocationInformationLogItem>>(
                         logItemsConverter(collocationInformationMapper)
                 ) {}

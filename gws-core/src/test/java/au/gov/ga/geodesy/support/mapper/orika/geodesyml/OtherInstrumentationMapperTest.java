@@ -40,7 +40,7 @@ public class OtherInstrumentationMapperTest extends UnitTest {
         SiteLogType siteLog = GeodesyMLUtils.getElementFromJAXBElements(mobs.getElements(), SiteLogType.class)
                 .findFirst().get();
 
-        OtherInstrumentationType otherInstrumentationTypeA = siteLog.getOtherInstrumentations().get(0).getOtherInstrumentation();
+        OtherInstrumentationType otherInstrumentationTypeA = siteLog.getOtherInstrumentation().get(0).getOtherInstrumentation();
 
         OtherInstrumentationLogItem logItem = mapper.to(otherInstrumentationTypeA);
         assertThat(logItem.getInstrumentation(), equalTo(otherInstrumentationTypeA.getInstrumentation()));

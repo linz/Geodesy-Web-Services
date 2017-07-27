@@ -296,7 +296,7 @@ public class GenericMapper {
             .fieldMap("pressureSensors", "pressureSensors").converter("pressureSensors").add()
             .fieldMap("temperatureSensors", "temperatureSensors").converter("temperatureSensors").add()
             .fieldMap("waterVaporSensors", "waterVaporSensors").converter("waterVaporSensors").add()
-            .fieldMap("otherInstrumentations", "otherInstrumentationLogItem").converter("otherInstrumentations").add()
+            .fieldMap("otherInstrumentation", "otherInstrumentationLogItem").converter("otherInstrumentation").add()
             .fieldMap("signalObstructions", "signalObstructionLogItems").converter("signalObstructions").add()
             .fieldMap("multipathSources", "multipathSourceLogItems").converter("multipathSources").add()
             .fieldMap("localEpisodicEffects", "localEpisodicEffectLogItems").converter("localEpisodicEffects").add()
@@ -491,7 +491,7 @@ public class GenericMapper {
                 ) {}
         );
 
-        converters.registerConverter("otherInstrumentations",
+        converters.registerConverter("otherInstrumentation",
                 new BidirectionalConverterWrapper<List<LogItemPropertyType>, Set<OtherInstrumentationLogItem>>(
                         logItemsConverter(otherInstrumentationMapper)
                 ) {}

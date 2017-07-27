@@ -9,7 +9,7 @@ sudo rm -f /etc/mavenrc
 # We redirect maven test output to file, because Travis CI limits stdout log size to 4MB.
 
 # Get latest snapshot dependencies
-mvn dependency:resolve -U
+mvn --settings ./travis/maven-settings.xml dependency:resolve -U
 
 if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then
     mvn --settings ./travis/maven-settings.xml deploy -pl '!gws-system-test' -DredirectTestOutputToFile

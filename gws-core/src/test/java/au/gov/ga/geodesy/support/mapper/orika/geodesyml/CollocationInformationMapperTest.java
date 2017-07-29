@@ -47,7 +47,7 @@ public class CollocationInformationMapperTest extends UnitTest {
         SiteLogType siteLog = GeodesyMLUtils.getElementFromJAXBElements(mobs.getElements(), SiteLogType.class)
             .findFirst().get();
 
-        CollocationInformationType collocationInfoTypeA = siteLog.getCollocationInformations().get(0).getCollocationInformation();
+        CollocationInformationType collocationInfoTypeA = siteLog.getCollocationInformation().get(0).getCollocationInformation();
         CollocationInformationLogItem collocationInfo = mapper.to(collocationInfoTypeA);
 
         assertThat(collocationInfo.getInstrumentType(), is(collocationInfoTypeA.getInstrumentationType().getValue()));

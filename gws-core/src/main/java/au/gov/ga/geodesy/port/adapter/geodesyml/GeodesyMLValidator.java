@@ -28,7 +28,7 @@ public class GeodesyMLValidator {
     public GeodesyMLValidator(String catalogPath) {
 
         try {
-            URL schemaUrl = ResourceUtils.getURL("classpath:xsd/geodesyml-1.0.0-SNAPSHOT/geodesyML.xsd");
+            URL schemaUrl = ResourceUtils.getURL("classpath:xsd/geodesyml-1.0.0-SNAPSHOT/geodesyml/0.4/geodesyML.xsd");
             Source xsdSource = new StreamSource(schemaUrl.openStream());
             schemaValidator = new SchemaValidator(xsdSource, catalogPath);
         }

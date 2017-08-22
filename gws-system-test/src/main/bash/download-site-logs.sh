@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 
 outputDir=$1
-# gws=http://localhost:8081
-gws=https://test.geodesy.ga.gov.au
+gws=https://dev.geodesy.ga.gov.au
 
-fourCharIds=$(curl -s "${gws}/corsSites?size=2000" | jq ._embedded.corsSites[].fourCharacterId | tr -d '"' | xargs)
+fourCharIds=$(curl -s "${gws}/siteLogs?size=2000" | jq ._embedded.siteLogs[].siteIdentification.fourCharacterId | tr -d "'" | xargs)
 
 for fourCharId in ${fourCharIds}; do
     echo ${fourCharId}

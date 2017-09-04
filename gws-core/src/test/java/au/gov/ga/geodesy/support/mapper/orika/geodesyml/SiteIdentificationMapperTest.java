@@ -52,6 +52,7 @@ public class SiteIdentificationMapperTest extends UnitTest {
             assertThat(siteId.getFoundationDepth(), equalTo(String.valueOf(siteIdTypeA.getFoundationDepth())));
             assertThat(siteId.getMarkerDescription(), equalTo(siteIdTypeA.getMarkerDescription()));
             assertThat(siteId.getDateInstalled(), equalTo(GMLDateUtils.stringToDateMultiParsers(siteIdTypeA.getDateInstalled().getValue().get(0))));
+            // assertThat(siteId.getDateInstalled().getTime(), equalTo(GMLDateUtils.stringToDateMultiParsers(siteIdTypeA.getDateInstalled().getValue().get(0))));
             assertThat(siteId.getGeologicCharacteristic(), equalTo(siteIdTypeA.getGeologicCharacteristic().getValue()));
             assertThat(siteId.getBedrockType(), equalTo(siteIdTypeA.getBedrockType()));
             assertThat(siteId.getBedrockCondition(), equalTo(siteIdTypeA.getBedrockCondition()));
@@ -74,6 +75,7 @@ public class SiteIdentificationMapperTest extends UnitTest {
             assertThat(String.valueOf(siteIdTypeB.getFoundationDepth()), equalTo(siteId.getFoundationDepth()));
             assertThat(siteIdTypeB.getMarkerDescription(), equalTo(siteId.getMarkerDescription()));
             assertThat(GMLDateUtils.stringToDateMultiParsers(siteIdTypeB.getDateInstalled().getValue().get(0)), equalTo(siteId.getDateInstalled()));
+            // assertThat(GMLDateUtils.stringToDateMultiParsers(siteIdTypeB.getDateInstalled().getValue().get(0)), equalTo(siteId.getDateInstalled().getTime()));
             assertThat(siteIdTypeB.getGeologicCharacteristic().getValue(), equalTo(siteId.getGeologicCharacteristic()));
             assertThat(siteIdTypeB.getGeologicCharacteristic().getCodeSpace(), equalTo("eGeodesy/geologicCharacteristic"));
             assertThat(siteIdTypeB.getBedrockType(), equalTo(siteId.getBedrockType()));

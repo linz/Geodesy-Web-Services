@@ -2,11 +2,16 @@ package au.gov.ga.geodesy.domain.model.sitelog;
 
 import java.time.Instant;
 
+import javax.persistence.AttributeOverride;
+import javax.persistence.AttributeOverrides;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
+import javax.persistence.Embedded;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
+
+import au.gov.ga.geodesy.support.java.util.ImpreciseTime;
 
 /**
  * http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2564/siteIdentification.xsd:siteIdentificationType
@@ -59,7 +64,13 @@ public class SiteIdentification {
     @Column(name = "MARKER_DESCRIPTION", length = 256)
     protected String markerDescription;
 
-    @Past
+    // @Embedded
+    // @AttributeOverrides({
+    //     @AttributeOverride(name="time",
+    //                        column=@Column(name="DATE_INSTALLED")),
+    //     @AttributeOverride(name="precision",
+    //                        column=@Column(name="DATE_INSTALLED_PERCISION"))
+    // })
     @Column(name = "DATE_INSTALLED")
     protected Instant dateInstalled;
 

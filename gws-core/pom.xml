@@ -565,16 +565,16 @@
                           <goal>start</goal>
                       </goals>
                   </execution>
-                  <execution>
-                      <id>stop-db</id>
-                      <phase>post-integration-test</phase>
-                      <goals>
-                          <goal>stop</goal>
-                      </goals>
-                      <configuration>
-                         <skip>${skipIntegrationTests}</skip>
-                      </configuration>
-                  </execution>
+                  <!-- <execution> -->
+                  <!--     <id>stop-db</id> -->
+                  <!--     <phase>post-integration-test</phase> -->
+                  <!--     <goals> -->
+                  <!--         <goal>stop</goal> -->
+                  <!--     </goals> -->
+                  <!--     <configuration> -->
+                  <!--        <skip>${skipIntegrationTests}</skip> -->
+                  <!--     </configuration> -->
+                  <!-- </execution> -->
                   <execution>
                       <id>stop-site-db</id>
                       <phase>post-site</phase>

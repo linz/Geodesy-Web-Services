@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+   <changeSet author="lbodor (generated)" id="1504257277950-1">
+      <addColumn tableName="site">
+         <column name="date_installed_precision" type="varchar(255 BYTE)"/>
+      </addColumn>
+   </changeSet>
+   <changeSet author="lbodor (generated)" id="1504257277950-2">
+      <addColumn tableName="sitelog_site">
+         <column name="date_installed_percision" type="varchar(255 BYTE)"/>
+      </addColumn>
+   </changeSet>
+</databaseChangeLog>

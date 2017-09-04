@@ -154,6 +154,7 @@ public class GenericMapper {
         ConverterFactory converters = mapperFactory.getConverterFactory();
         mapperFactory.getConverterFactory().registerConverter(new PassThroughConverter(Instant.class));
         converters.registerConverter(new InstantToTimePositionConverter());
+        // converters.registerConverter(new ImpreciseTimeToTimePositionConverter());
         converters.registerConverter("validTimeConverter", new JAXBElementConverter<TimePeriodType, EffectiveDates>() {});
 
         mapperFactory.classMap(TimePeriodType.class, EffectiveDates.class)

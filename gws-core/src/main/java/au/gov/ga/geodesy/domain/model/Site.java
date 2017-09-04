@@ -2,7 +2,10 @@ package au.gov.ga.geodesy.domain.model;
 
 import java.time.Instant;
 
+import javax.persistence.AttributeOverride;
+import javax.persistence.AttributeOverrides;
 import javax.persistence.Column;
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -11,6 +14,8 @@ import javax.persistence.InheritanceType;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Version;
+
+import au.gov.ga.geodesy.support.java.util.ImpreciseTime;
 
 @Entity
 @Table(name = "SITE")
@@ -35,7 +40,15 @@ abstract public class Site {
     @Column(name = "DESCRIPTION")
     private String description;
 
-    @Column(name = "DATE_INSTALLED")
+    // @Embedded
+    // @AttributeOverrides({
+    //     @AttributeOverride(name="time",
+    //                        column=@Column(name="DATE_INSTALLED")),
+    //     @AttributeOverride(name="precision",
+    //                        column=@Column(name="DATE_INSTALLED_PRECISION"))
+    // })
+    // private ImpreciseTime dateInstalled;
+    @Column(name="DATE_INSTALLED")
     private Instant dateInstalled;
 
     public Integer getId() {

@@ -6,19 +6,24 @@ import javax.crypto.spec.SecretKeySpec;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.jwt.crypto.sign.MacSigner;
-import org.springframework.security.jwt.crypto.sign.SignatureVerifier;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
+import org.springframework.security.oauth2.config.annotation.web.configurers.ResourceServerSecurityConfigurer;
+import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
+import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
 
 @Configuration
 @EnableResourceServer
 public class ResourceServerTestConfig extends ResourceServerConfig {
 
-    // TODO: Move shared secret into environment-specific configuration files.
     public final static byte[] tokenSigningKey = Base64.getEncoder().encode("shared secret".getBytes());
     public final static MacSigner macSigner = new MacSigner(new SecretKeySpec(tokenSigningKey, "HS256"));
 
     @Override
-    protected SignatureVerifier getSignatureVerifier() {
-        return macSigner;
+    public void configure(ResourceServerSecurityConfigurer resources) throws Exception {
+        resources.tokenStore(new JwtTokenStore(new JwtAccessTokenConverter() {
+            {
+                this.setVerifier(macSigner);
+            }
+        }));
     }
 }

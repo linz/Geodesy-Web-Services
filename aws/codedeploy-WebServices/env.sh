@@ -20,6 +20,8 @@ DB_NAME=GeodesyDb
 RDS_INSTANCE_ID=${ENV,,}${DB_NAME,,}
 RDS_ENDPOINT=$(${AWS} rds describe-db-instances --db-instance-identifier ${RDS_INSTANCE_ID} | grep Address | awk -F'"' {'print $4'})
 
+OPENAM_ENDPOINT=https://${ENV,,}geodesy-openam.geodesy.ga.gov.au/openam
+
 CREDSTASH="/usr/local/bin/credstash -r ${AWS_DEFAULT_REGION}"
 
 RDS_MASTER_USERNAME_KEY=${ENV^}GeodesyDbMasterUsername

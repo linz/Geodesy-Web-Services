@@ -24,6 +24,7 @@ services:
             - AWS_SECRET_ACCESS_KEY
         depends_on:
             - db
+            - open-am
             - tomcat
         ports:
             - "8081:8080"

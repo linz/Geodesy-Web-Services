@@ -23,6 +23,7 @@ import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLValidator;
         "au.gov.ga.geodesy.java.util.service",
 })
 @Import({
+    Config.class,
     GeodesySupportConfig.class,
     GeodesyServiceConfig.class,
     GeodesyRestMvcConfig.class,

@@ -2,11 +2,13 @@ package au.gov.ga.geodesy.port.adapter.rest;
 
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.io.StringReader;
 import java.io.StringWriter;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -98,7 +100,7 @@ public class SiteLogEndpoint {
                 .withElements(geodesyMLFactory.createSiteLog(siteLogType));
 
             rsp.setContentType("application/xml");
-            marshaller.marshal(document, new PrintWriter(rsp.getOutputStream()));
+            marshaller.marshal(document, new PrintWriter(new OutputStreamWriter(rsp.getOutputStream(), StandardCharsets.UTF_8), true));
         }
     }
 
@@ -141,7 +143,7 @@ public class SiteLogEndpoint {
     @PreAuthorize("isAuthenticated()")
     @RequestMapping(value = "/upload", method = RequestMethod.POST)
     public ResponseEntity<String> secureUploadGeodesyMLSiteLog(HttpServletRequest req, HttpServletResponse rsp) throws IOException, InvalidSiteLogException {
-        SiteLogReader reader = new GeodesyMLSiteLogReader(new InputStreamReader(req.getInputStream()));
+        SiteLogReader reader = new GeodesyMLSiteLogReader(new InputStreamReader(req.getInputStream(), StandardCharsets.UTF_8));
         SiteLog siteLog = reader.getSiteLog();
 
         endpointSecurity.assertAuthorityToEditSiteLog(siteLog.getSiteIdentification().getFourCharacterId());

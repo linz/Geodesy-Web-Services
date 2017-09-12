@@ -18,6 +18,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Configuration
 @Import({
+        Config.class,
         GeodesySupportConfig.class,
         GeodesyRepositoryRestMvcConfig.class,
         GeodesyRestMvcConfig.class,

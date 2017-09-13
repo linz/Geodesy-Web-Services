@@ -3,6 +3,8 @@ package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.OffsetDateTime;
+import java.time.Year;
+import java.time.YearMonth;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
@@ -15,6 +17,7 @@ import org.apache.commons.lang3.StringUtils;
 import ma.glasnost.orika.MappingContext;
 import ma.glasnost.orika.converter.BidirectionalConverter;
 import ma.glasnost.orika.metadata.Type;
+
 import net.opengis.gml.v_3_2_1.TimePositionType;
 
 // TODO: swap type parameters, DTO first
@@ -29,7 +32,9 @@ public class InstantToTimePositionConverter extends BidirectionalConverter<Insta
         "uuuu-MM-dd'T'HH:mm:ss.SSSZ",
         "uuuu-MM-dd'T'HH:mm:ssX",
         "uuuu-MM-ddX",
-        "uuuu-MM-dd"
+        "uuuu-MM-dd",
+        "uuuu-MM",
+        "uuuu"
     };
 
     private DateTimeFormatter dateFormat(String pattern) {
@@ -49,22 +54,25 @@ public class InstantToTimePositionConverter extends BidirectionalConverter<Insta
         final String dateString = time.getValue().get(0);
         Optional<Instant> date = Arrays.stream(timePositionPatterns)
             .map(pattern -> {
-                    try {
-                        return Optional.of(
-                                OffsetDateTime.parse(dateString, dateFormat(pattern)).toInstant());
-                    }
-                    catch (DateTimeParseException e) {
-                        try {
-                            return Optional.of(
-                                    LocalDate.parse(dateString, dateFormat(pattern)).atStartOfDay(ZoneId.of("UTC")).toInstant());
-                        }
-                        catch (DateTimeParseException e2) {
-                            Optional<Instant> empty = Optional.empty(); // force target-type inference
-                            return empty;
-                        }
-                    }
+                try {
+                    return Optional.of(OffsetDateTime.parse(dateString, dateFormat(pattern)).toInstant());
                 }
-            )
+                catch (DateTimeParseException ok) {}
+                try {
+                    return Optional.of(LocalDate.parse(dateString, dateFormat(pattern)).atStartOfDay(ZoneId.of("UTC")).toInstant());
+                }
+                catch (DateTimeParseException ok) {}
+                try {
+                    return Optional.of(YearMonth.parse(dateString, dateFormat(pattern)).atDay(1).atStartOfDay(ZoneId.of("UTC")).toInstant());
+                }
+                catch (DateTimeParseException ok) {}
+                try {
+                    return Optional.of(Year.parse(dateString, dateFormat(pattern)).atDay(1).atStartOfDay(ZoneId.of("UTC")).toInstant());
+                }
+                catch (DateTimeParseException ok) {}
+                Optional<Instant> empty = Optional.empty(); // force target-type inference
+                return empty;
+            })
             .filter(Optional::isPresent).map(Optional::get).findFirst();
         if (date.isPresent()) {
             return date.get();

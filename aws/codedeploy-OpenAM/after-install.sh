@@ -104,6 +104,25 @@ else
   echo "Some or all import files could not be found for FQDN ${OPENAM_SERVER_FQDN}, nothing imported"
 fi
 
+# Generate a JWT signing key, if it doesn't already exist
+set +e
+sudo keytool -list \
+    -alias jwtSigningKey \
+    -storetype JCEKS \
+    -keystore "${OPENAM_BASE_DIR}/openam/keystore.jceks" \
+    -storepass changeit > /dev/null
+jwtSigningKeyExists=$?
+set -e
+
+if [ $jwtSigningKeyExists != 0 ]; then
+    sudo keytool -noprompt -genkeypair \
+        -alias jwtSigningKey \
+        -keyalg RSA \
+        -storetype JCEKS \
+        -keystore "${OPENAM_BASE_DIR}/openam/keystore.jceks" \
+        -dname "CN=*.geodesy.ga.gov.au, OU=[unknown], O=[unknown], L=[unknown], S=[unknown], C=[unknown]" \
+        -storepass changeit -keypass changeit
+fi
 
 # Ensure a cronjob for exporting the OpenAM backup files exists
 CRONTAB=$(crontab -l || :) # crontab -l returns non-zero when crontab is empty

@@ -84,11 +84,12 @@ sunKeyValue: sunidentityrepositoryservice-sunOrganizationStatus=Active
 ou: services
 sunxmlKeyValue: sunidentityrepositoryservice-sunOrganizationAliases=openam
 sunxmlKeyValue: sunidentityrepositoryservice-sunOrganizationAliases=localhost
-creatorsName: cn=Internal Client,cn=Root DNs,cn=config
-modifyTimestamp: 20170303012939Z
-modifiersName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: dc260445-c6c7-4ed1-bbc1-dbf60fc651bf
+sunxmlKeyValue: sunidentityrepositoryservice-sunOrganizationAliases=open-am
 createTimestamp: 20170303012935Z
+creatorsName: cn=Internal Client,cn=Root DNs,cn=config
+modifyTimestamp: 20170913051948Z
+modifiersName: cn=Internal Client,cn=Root DNs,cn=config
+entryUUID: dc260445-c6c7-4ed1-bbc1-dbf60fc651bf
 
 dn: ou=dashboardService,ou=services,dc=openam,dc=forgerock,dc=org
 objectClass: sunService
@@ -620,13 +621,22 @@ dn: ou=default,ou=OrganizationConfig,ou=1.0,ou=iPlanetAMAuthService,ou=services,
 objectClass: sunServiceComponent
 objectClass: top
 objectClass: organizationalUnit
+sunKeyValue: forgerockTwoFactorAuthMandatory=false
+sunKeyValue: sunAMUserStatusCallbackPlugins=
+sunKeyValue: sunAMIdentityType=agent
+sunKeyValue: sunAMIdentityType=user
+sunKeyValue: iplanet-am-auth-default-auth-level=0
 sunKeyValue: iplanet-am-auth-admin-auth-module=ldapService
 sunKeyValue: iplanet-am-auth-org-config=ldapService
+sunKeyValue: openam-auth-stateless-sessions=false
+sunKeyValue: iplanet-am-auth-locale=en_US
 sunKeyValue: iplanet-am-auth-alias-attr-name=uid
 ou: default
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: f88dcbe6-32a2-4502-bb09-5812f6ffc285
 createTimestamp: 20170303012936Z
+creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
+modifyTimestamp: 20170913051948Z
+modifiersName: cn=Internal Client,cn=Root DNs,cn=config
+entryUUID: f88dcbe6-32a2-4502-bb09-5812f6ffc285
 
 dn: ou=sunAMAuthADService,ou=services,dc=openam,dc=forgerock,dc=org
 objectClass: sunService
@@ -6404,66 +6414,4 @@ ou: OpenSSO
 creatorsName: cn=Internal Client,cn=Root DNs,cn=config
 entryUUID: a62726ac-d749-464c-83c1-5e5be58a07fc
 createTimestamp: 20170303013818Z
-
-dn: coreTokenId=696c2764-df0e-4635-b6dd-23f793d10e01,ou=famrecords,ou=openam-session,ou=tokens,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: frCoreToken
-coreTokenString11: 60d4aa4ea2914ee5bbe129e4fa677d3b
-coreTokenObject: {"redirectURI":["http://localhost:5555/auth.html"],"parent":[],"clientID":["GnssSiteManager"],"auditTrackingId":["6252d14d-2d39-45fb-9f1b-3bc4740ce75c-87"],"tokenName":["access_token"],"userName":["user.a"],"nonce":["60d4aa4ea2914ee5bbe129e4fa677d3b"],"expireTime":["1499391421040"],"grant_type":["token"],"scope":["openid","profile"],"realm":["/"],"id":["696c2764-df0e-4635-b6dd-23f793d10e01"],"tokenType":["Bearer"]}
-coreTokenString01: openid,profile
-coreTokenString12: token
-coreTokenString10: access_token
-coreTokenString04: http://localhost:5555/auth.html
-coreTokenString03: user.a
-coreTokenExpirationDate: 20170707013701.040Z
-coreTokenString08: /
-coreTokenString09: GnssSiteManager
-coreTokenId: 696c2764-df0e-4635-b6dd-23f793d10e01
-coreTokenString07: Bearer
-coreTokenType: OAUTH
-createTimestamp: 20170707003700Z
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: 70b00e40-05aa-4774-ac0d-e2eb2922521d
-
-dn: uid=user.apref,ou=people,dc=openam,dc=forgerock,dc=org
-objectClass: inetuser
-objectClass: iplanet-am-managed-person
-objectClass: kbaInfoContainer
-objectClass: iplanet-am-auth-configuration-service
-objectClass: devicePrintProfilesContainer
-objectClass: sunFederationManagerDataStore
-objectClass: inetorgperson
-objectClass: forgerock-am-dashboard-service
-objectClass: sunFMSAML2NameIdentifier
-objectClass: sunIdentityServerLibertyPPService
-objectClass: top
-objectClass: iPlanetPreferences
-objectClass: sunAMAuthAccountLockout
-objectClass: pushDeviceProfilesContainer
-objectClass: organizationalperson
-objectClass: person
-objectClass: iplanet-am-user-service
-objectClass: oathDeviceProfilesContainer
-sn: APREF
-cn: User APREF
-userPassword: {SSHA}sOoHrVHXHvlrskMdrXvnLQlzU/fYWf5DQOTl5w==
-uid: user.apref
-inetUserStatus: Active
-createTimestamp: 20170707004213Z
-pwdChangedTime: 20170707004213.883Z
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-modifyTimestamp: 20170707004300Z
-modifiersName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: 74c9d8d4-f6d7-4344-ad45-a3b258af93df
-
-dn: cn=edit-network:apref,ou=groups,dc=openam,dc=forgerock,dc=org
-objectClass: top
-objectClass: groupofuniquenames
-uniqueMember: uid=user.apref,ou=people,dc=openam,dc=forgerock,dc=org
-cn: edit-network:apref
-createTimestamp: 20170707004235Z
-creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
-modifyTimestamp: 20170707004308Z
-modifiersName: cn=Directory Manager,cn=Root DNs,cn=config
-entryUUID: 3c223c25-49ae-46d6-865d-00e4a2fe82f2
 

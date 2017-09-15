@@ -23,7 +23,7 @@ public class GeodesyServiceTestConfig extends GeodesyServiceConfig {
 
     @Bean
     public GeodesyMLValidator getGeodesyMLValidator() throws FileNotFoundException {
-        String catalog = ResourceUtils.getFile("file:target/generated-resources/xsd/geodesyml-1.0.0-SNAPSHOT/catalog.xml").getAbsolutePath();
+        String catalog = ResourceUtils.getFile("file:target/generated-resources/xsd/geodesyml-0.1.0/catalog.xml").getAbsolutePath();
         return new GeodesyMLValidator(catalog);
     }
 

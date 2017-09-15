@@ -5,7 +5,7 @@
     <name>Geodesy Web Services Core</name>
     <groupId>au.gov.ga.geodesy.gws</groupId>
     <artifactId>gws-core</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>0.1.0</version>
     <packaging>jar</packaging>
 
     <scm>
@@ -16,7 +16,7 @@
     <parent>
         <groupId>au.gov.ga.geodesy.gws</groupId>
         <artifactId>gws-parent</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
+        <version>0.1.0</version>
         <relativePath>../gws-parent</relativePath>
     </parent>
     <properties>
@@ -116,12 +116,12 @@
         <dependency>
             <groupId>au.gov.ga.geodesy</groupId>
             <artifactId>igssitelog-bindings</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>0.1.0</version>
         </dependency>
         <dependency>
             <groupId>au.gov.ga</groupId>
             <artifactId>xml-schemer</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <version>0.1.0</version>
             <exclusions>
                 <!-- TODO: should xml-schemer be exporting this? -->
                 <exclusion>
@@ -133,7 +133,7 @@
         <dependency>
             <groupId>au.gov.ga.geodesy</groupId>
             <artifactId>geodesyml</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <version>0.1.0</version>
             <classifier>xsd</classifier>
             <type>zip</type>
         </dependency>
@@ -325,7 +325,7 @@
         <dependency>
             <groupId>au.gov.ga.geodesy</groupId>
             <artifactId>geodesyml-bindings</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>0.1.0</version>
         </dependency>
         <dependency>
             <groupId>commons-cli</groupId>
@@ -426,7 +426,7 @@
                                 <artifactItem>
                                     <groupId>au.gov.ga.geodesy</groupId>
                                     <artifactId>geodesyml</artifactId>
-                                    <version>1.0.0-SNAPSHOT</version>
+                                    <version>0.1.0</version>
                                     <classifier>xsd</classifier>
                                     <type>zip</type>
                                 </artifactItem>

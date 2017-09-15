@@ -3765,6 +3765,7 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
     <Attribute name="sunOrganizationAliases"/>
     <Value>localhost</Value>
     <Value>openam</Value>
+    <Value>open-am</Value>
 </AttributeValuePair>
 </OrganizationAttributeValuePair>
 </OrganizationConfiguration><OrganizationConfiguration group="default" name="/sunamhiddenrealmdelegationservicepermissions"><SubConfiguration name="embedded" id="LDAPv3ForOpenDS"><AttributeValuePair>
@@ -4024,8 +4025,24 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
                 </AttributeSchema>
             </Organization>
         </Schema><Configuration><OrganizationConfiguration group="default" name="/"><AttributeValuePair>
+    <Attribute name="sunAMUserStatusCallbackPlugins"/>
+</AttributeValuePair>
+<AttributeValuePair>
+    <Attribute name="sunAMIdentityType"/>
+    <Value>agent</Value>
+    <Value>user</Value>
+</AttributeValuePair>
+<AttributeValuePair>
+    <Attribute name="iplanet-am-auth-locale"/>
+    <Value>en_US</Value>
+</AttributeValuePair>
+<AttributeValuePair>
     <Attribute name="iplanet-am-auth-org-config"/>
     <Value>ldapService</Value>
+</AttributeValuePair>
+<AttributeValuePair>
+    <Attribute name="openam-auth-stateless-sessions"/>
+    <Value>false</Value>
 </AttributeValuePair>
 <AttributeValuePair>
     <Attribute name="iplanet-am-auth-alias-attr-name"/>
@@ -4034,6 +4051,14 @@ PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
 <AttributeValuePair>
     <Attribute name="iplanet-am-auth-admin-auth-module"/>
     <Value>ldapService</Value>
+</AttributeValuePair>
+<AttributeValuePair>
+    <Attribute name="iplanet-am-auth-default-auth-level"/>
+    <Value>0</Value>
+</AttributeValuePair>
+<AttributeValuePair>
+    <Attribute name="forgerockTwoFactorAuthMandatory"/>
+    <Value>false</Value>
 </AttributeValuePair>
 </OrganizationConfiguration><OrganizationConfiguration group="default" name="/sunamhiddenrealmdelegationservicepermissions"><AttributeValuePair>
     <Attribute name="iplanet-am-auth-org-config"/>

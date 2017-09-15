@@ -23,6 +23,7 @@ import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLValidator;
         "au.gov.ga.geodesy.java.util.service",
 })
 @Import({
+    Config.class,
     GeodesySupportConfig.class,
     GeodesyServiceConfig.class,
     GeodesyRestMvcConfig.class,
@@ -47,7 +48,7 @@ public class WebAppConfig {
         try {
             // TODO: find the best way to load resources, javadoc says that ResourceUtils is
             // mosty a spring-internal utility class.
-            URL catalogURL = ResourceUtils.getURL("classpath:xsd/geodesyml-1.0.0-SNAPSHOT/catalog.xml");
+            URL catalogURL = ResourceUtils.getURL("classpath:xsd/geodesyml-0.1.0/catalog.xml");
             catalogPath = catalogURL.getPath();
         } catch (IOException e) {
             logger.error("Failed to find the catalog.xml file on the classpath. Check the package structure.", e);

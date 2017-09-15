@@ -44,7 +44,7 @@ case ${COMMAND} in
 esac
 
 python3 generate-infra-yaml.py -b infra-base.yaml -v ${ENV_FILE} -o infra.yaml
-python3 amazonia/amazonia/amz.py -y infra.yaml -d infra-defaults.yaml -c customise-stack-template.py -t infra.json
+python3 amazonia/amazonia/amz.py -y infra.yaml -d infra-defaults.yaml -v ${ENV_FILE} -c customise-stack-template.py -t infra.json
 
 aws --profile ${AWS_PROFILE} s3 cp infra.json s3://geodesy-stack-template/infra-${ENV}.json
 

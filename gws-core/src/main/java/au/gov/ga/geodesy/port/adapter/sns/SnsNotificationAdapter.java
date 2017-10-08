@@ -47,12 +47,16 @@ public class SnsNotificationAdapter implements NotificationPort {
         // An SNS topic ARN looks like this: arn:aws:sns:ap-southeast-2:094928090547:DevGeodesy-UserRegistrationReceived-K3F2UQVHG58F
         return sns.listTopics().getTopics().stream()
             .filter(topic -> {
-                String[] tmp = topic.getTopicArn().split(":")[5].split("-"); // { "DevGeodesy", "UserRegistrationReceived", "K3F2UQVHG58F }
-                String stackName = tmp[0];
-                String eventName = tmp[1];
+                try {
+                    String[] tmp = topic.getTopicArn().split(":")[5].split("-"); // { "DevGeodesy", "UserRegistrationReceived", "K3F2UQVHG58F }
+                    String stackName = tmp[0];
+                    String eventName = tmp[1];
 
-                return aws.getStackName().map(s -> s.equals(stackName)).orElse(false)
-                    && notification.getSubject().equals(eventName);
+                    return aws.getStackName().map(s -> s.equals(stackName)).orElse(false)
+                        && notification.getSubject().equals(eventName);
+                } catch (Exception ok) {
+                    return false;
+                }
             })
             .map(Topic::getTopicArn);
     }

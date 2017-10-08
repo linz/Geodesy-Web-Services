@@ -80,7 +80,6 @@ public abstract class LogItem<L extends LogItem<L>> implements Comparable<L> {
             }
             try {
                 if (Comparable.class.isAssignableFrom(field.getType())) {
-                    System.out.println("Comparing " + this.getClass() + " " + field.getName());
                     builder.append(field.get(this), field.get(x));
                 }
             } catch (IllegalAccessException ok) {

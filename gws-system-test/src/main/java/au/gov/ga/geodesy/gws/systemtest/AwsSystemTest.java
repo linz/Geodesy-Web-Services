@@ -16,12 +16,15 @@ public class AwsSystemTest extends BaseSystemTest {
 
     @Test
     public void testGetStackName() {
+
+        Aws aws = new Aws();
+
         ValidatableResponse response = given()
             .when()
             .get(getConfig().getWebServicesUrl() + "/aws/stackName")
             .then();
 
-        if (Aws.inAmazon()) {
+        if (aws.inAmazon()) {
             String stackName = response
                 .statusCode(HttpStatus.OK.value())
                 .extract().body().asString();

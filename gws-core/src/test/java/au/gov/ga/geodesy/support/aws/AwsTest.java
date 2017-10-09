@@ -11,7 +11,8 @@ public class AwsTest {
 
     @Test
     public void testInAmazon() {
-        assertThat(Aws.inAmazon(), is(false));
-        assertThat(Aws.getStackName(), is(Optional.empty()));
+        Aws aws = new Aws();
+        assertThat(aws.inAmazon(), is(false));
+        assertThat(aws.getStackName(), is(Optional.empty()));
     }
 }

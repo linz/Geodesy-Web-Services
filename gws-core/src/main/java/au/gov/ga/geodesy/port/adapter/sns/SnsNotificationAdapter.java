@@ -4,6 +4,8 @@ import java.util.stream.Stream;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.hateoas.config.EnableEntityLinks;
 
 import com.amazonaws.auth.AWSCredentialsProviderChain;
@@ -20,10 +22,14 @@ import au.gov.ga.geodesy.port.Notification;
 import au.gov.ga.geodesy.port.NotificationPort;
 import au.gov.ga.geodesy.support.aws.Aws;
 
+@Configurable
 @EnableEntityLinks
 public class SnsNotificationAdapter implements NotificationPort {
 
     private static final Logger log = LoggerFactory.getLogger(SnsNotificationAdapter.class);
+
+    @Autowired
+    private Aws aws;
 
     private AmazonSNS sns;
 
@@ -41,12 +47,16 @@ public class SnsNotificationAdapter implements NotificationPort {
         // An SNS topic ARN looks like this: arn:aws:sns:ap-southeast-2:094928090547:DevGeodesy-UserRegistrationReceived-K3F2UQVHG58F
         return sns.listTopics().getTopics().stream()
             .filter(topic -> {
-                String[] tmp = topic.getTopicArn().split(":")[5].split("-"); // { "DevGeodesy", "UserRegistrationReceived", "K3F2UQVHG58F }
-                String stackName = tmp[0];
-                String eventName = tmp[1];
+                try {
+                    String[] tmp = topic.getTopicArn().split(":")[5].split("-"); // { "DevGeodesy", "UserRegistrationReceived", "K3F2UQVHG58F }
+                    String stackName = tmp[0];
+                    String eventName = tmp[1];
 
-                return Aws.getStackName().map(s -> s.equals(stackName)).orElse(false)
-                    && notification.getSubject().equals(eventName);
+                    return aws.getStackName().map(s -> s.equals(stackName)).orElse(false)
+                        && notification.getSubject().equals(eventName);
+                } catch (Exception ok) {
+                    return false;
+                }
             })
             .map(Topic::getTopicArn);
     }

@@ -1,6 +1,7 @@
 package au.gov.ga.geodesy.domain.model.sitelog;
 
 import java.time.Instant;
+import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -11,6 +12,7 @@ import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
+import javax.persistence.EntityListeners;
 import javax.persistence.FetchType;
 import javax.persistence.ForeignKey;
 import javax.persistence.GeneratedValue;
@@ -27,6 +29,8 @@ import org.checkerframework.checker.nullness.qual.MonotonicNonNull;
 import org.checkerframework.checker.nullness.qual.Nullable;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
+import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import au.gov.ga.geodesy.domain.model.ContactType;
 import au.gov.ga.geodesy.domain.model.ContactTypeRepository;
@@ -37,6 +41,7 @@ import au.gov.ga.geodesy.domain.model.SiteResponsibleParty;
  */
 @Configurable
 @Entity
+@EntityListeners(AuditingEntityListener.class)
 @Table(name = "SITELOG_SITE")
 public class SiteLog {
 
@@ -51,6 +56,10 @@ public class SiteLog {
 
     // TODO: does every table need entryDate?
     private @MonotonicNonNull Instant entryDate;
+
+    @LastModifiedDate
+    @Column(name = "LAST_DATE_MODIFIED")
+    private @MonotonicNonNull ZonedDateTime lastModifiedDate;
 
     @Column(name = "SITE_LOG_TEXT", length = 500000 /* ~500KB */, nullable = false)
     private @MonotonicNonNull String siteLogText;
@@ -159,8 +168,8 @@ public class SiteLog {
         return entryDate;
     }
 
-    protected void setEntryDate(Instant d) {
-        this.entryDate = d;
+    public @Nullable ZonedDateTime getLastModifiedDate() {
+        return lastModifiedDate;
     }
 
     /**

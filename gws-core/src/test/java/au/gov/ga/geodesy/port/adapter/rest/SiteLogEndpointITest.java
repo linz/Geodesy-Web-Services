@@ -57,6 +57,21 @@ public class SiteLogEndpointITest extends IntegrationTest {
                 .body("siteIdentification.siteName", equalTo("Alice Springs AU012"));
     }
 
+    @Test(dependsOnMethods = "upload")
+    @Rollback(false)
+    public void testDatePreparedProjection() throws Exception {
+        given()
+            .when()
+            .get("/siteLogs/search/findByFourCharacterId?id=ALIC&format=json&projection=datePrepared")
+            .then()
+                .log().body()
+                .statusCode(HttpStatus.OK.value())
+                .contentType("application/json")
+                .body("fourCharacterId", equalTo("ALIC"))
+                .body("datePrepared", equalTo("2017-02-23T00:00:00Z"))
+                .body("lastModifiedDate", equalTo("1970-01-01T00:00:00Z"));
+   }
+
     @Test
     public void testNotFound() throws Exception {
         given()

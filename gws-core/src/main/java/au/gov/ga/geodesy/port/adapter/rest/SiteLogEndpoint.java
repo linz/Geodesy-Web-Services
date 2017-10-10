@@ -151,6 +151,10 @@ public class SiteLogEndpoint {
         service.upload(siteLog);
         try {
             String location = entityLinks.linkToSingleResource(SiteLog.class, siteLog.getId()).getHref();
+            int indexOfBrace = location.indexOf("{");
+            if (indexOfBrace != -1) {
+                location = location.substring(0, indexOfBrace);
+            }
             return ResponseEntity.created(new URI(location)).body("");
         }
         catch (URISyntaxException e) {

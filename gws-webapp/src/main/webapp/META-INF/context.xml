@@ -12,5 +12,13 @@
             password="${geodesy-db-password}"
             name="jdbc/GeodesyDB"
             maxActive="40"
-            maxWait="10000"/>
+            maxWait="10000"
+            removeAbandoned="true" 
+            removeAbandonedTimeout="120" 
+            testOnBorrow="true"
+            testOnReturn="false" 
+            testWhileIdle="true"
+            timeBetweenEvictionRunsMillis="5000" 
+            validationInterval="30000" 
+            validationQuery="SELECT 1" />
 </Context>

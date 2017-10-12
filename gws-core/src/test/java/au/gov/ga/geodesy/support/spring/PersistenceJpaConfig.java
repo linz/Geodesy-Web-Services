@@ -1,6 +1,8 @@
 package au.gov.ga.geodesy.support.spring;
 
+import java.util.Calendar;
 import java.util.Properties;
+import java.util.TimeZone;
 
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
@@ -10,6 +12,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.DependsOn;
 import org.springframework.context.annotation.Primary;
+import org.springframework.data.auditing.DateTimeProvider;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.jpa.JpaTransactionManager;
@@ -23,6 +27,7 @@ import liquibase.integration.spring.SpringLiquibase;
 
 @Configuration
 @EnableTransactionManagement
+@EnableJpaAuditing(dateTimeProviderRef = "dateTimeProvider")
 @EnableJpaRepositories(
     value = {"au.gov.ga.geodesy.domain.model"},
     entityManagerFactoryRef = "geodesyEntityManagerFactory",
@@ -32,6 +37,19 @@ public class PersistenceJpaConfig {
 
     @Autowired
     private IntegrationTestConfig testConfig;
+
+    @Bean
+    public DateTimeProvider dateTimeProvider() {
+        return new DateTimeProvider() {
+
+            @Override
+            public Calendar getNow() {
+                Calendar c = Calendar.getInstance(TimeZone.getTimeZone("UTC"));
+                c.setTimeInMillis(0L);
+                return c;
+            }
+        };
+    }
 
     @Bean
     @Primary

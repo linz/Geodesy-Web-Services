@@ -9,9 +9,9 @@ import org.testng.annotations.Test;
 import au.gov.ga.geodesy.domain.model.sitelog.HumiditySensorLogItem;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLUtils;
 import au.gov.ga.geodesy.support.TestResources;
-import au.gov.xml.icsm.geodesyml.v_0_4.GeodesyMLType;
-import au.gov.xml.icsm.geodesyml.v_0_4.HumiditySensorType;
-import au.gov.xml.icsm.geodesyml.v_0_4.SiteLogType;
+import au.gov.xml.icsm.geodesyml.v_0_5.GeodesyMLType;
+import au.gov.xml.icsm.geodesyml.v_0_5.HumiditySensorType;
+import au.gov.xml.icsm.geodesyml.v_0_5.SiteLogType;
 
 /**
  * Tests the mapping of a GeodesyML humiditySensor element

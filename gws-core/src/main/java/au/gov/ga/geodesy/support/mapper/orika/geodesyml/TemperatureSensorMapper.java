@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 
 import au.gov.ga.geodesy.domain.model.sitelog.TemperatureSensorLogItem;
 import au.gov.ga.geodesy.support.java.util.Iso;
-import au.gov.xml.icsm.geodesyml.v_0_4.TemperatureSensorType;
+import au.gov.xml.icsm.geodesyml.v_0_5.TemperatureSensorType;
 
 /**
  * Reversible mapping between GeodesyML TemperatureSensorType DTO and

@@ -12,9 +12,9 @@ import org.testng.annotations.Test;
 
 import au.gov.ga.geodesy.domain.model.sitelog.GnssAntennaLogItem;
 import au.gov.ga.geodesy.support.spring.UnitTest;
-import au.gov.xml.icsm.geodesyml.v_0_4.GnssAntennaType;
-import au.gov.xml.icsm.geodesyml.v_0_4.IgsAntennaModelCodeType;
-import au.gov.xml.icsm.geodesyml.v_0_4.IgsRadomeModelCodeType;
+import au.gov.xml.icsm.geodesyml.v_0_5.GnssAntennaType;
+import au.gov.xml.icsm.geodesyml.v_0_5.IgsAntennaModelCodeType;
+import au.gov.xml.icsm.geodesyml.v_0_5.IgsRadomeModelCodeType;
 
 import net.opengis.gml.v_3_2_1.CodeType;
 import net.opengis.gml.v_3_2_1.TimePositionType;

@@ -7,9 +7,9 @@ import au.gov.ga.geodesy.support.TestResources;
 import au.gov.ga.geodesy.support.marshalling.moxy.GeodesyMLMoxy;
 import au.gov.ga.geodesy.support.spring.UnitTest;
 import au.gov.ga.geodesy.support.utils.GMLDateUtils;
-import au.gov.xml.icsm.geodesyml.v_0_4.GeodesyMLType;
-import au.gov.xml.icsm.geodesyml.v_0_4.SiteLogType;
-import au.gov.xml.icsm.geodesyml.v_0_4.SurveyedLocalTieType;
+import au.gov.xml.icsm.geodesyml.v_0_5.GeodesyMLType;
+import au.gov.xml.icsm.geodesyml.v_0_5.SiteLogType;
+import au.gov.xml.icsm.geodesyml.v_0_5.SurveyedLocalTieType;
 import org.testng.annotations.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;

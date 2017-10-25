@@ -34,7 +34,7 @@ public class UploadWGTNLocalEpisodicEffectsSiteLogRestITest extends IntegrationT
     @Test(dependsOnMethods = "upload")
     public void checkLocalEpisodicEffectsGeodesyML() throws Exception {
         given()
-            .config(RestAssuredMockMvc.config().xmlConfig(xmlConfig().declareNamespace("geo", "urn:xml-gov-au:icsm:egeodesy:0.4")))
+            .config(RestAssuredMockMvc.config().xmlConfig(xmlConfig().declareNamespace("geo", "urn:xml-gov-au:icsm:egeodesy:0.5")))
             .when()
             .get("/siteLogs/search/findByFourCharacterId?id=WGTN&format=geodesyml")
             .then()

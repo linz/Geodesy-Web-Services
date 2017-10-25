@@ -2,7 +2,7 @@ package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 
 import au.gov.ga.geodesy.domain.model.sitelog.PressureSensorLogItem;
 import au.gov.ga.geodesy.support.utils.MappingDirection;
-import au.gov.xml.icsm.geodesyml.v_0_4.PressureSensorType;
+import au.gov.xml.icsm.geodesyml.v_0_5.PressureSensorType;
 import org.testng.annotations.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;

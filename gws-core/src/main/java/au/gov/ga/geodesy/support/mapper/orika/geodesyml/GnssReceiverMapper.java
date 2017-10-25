@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 
 import au.gov.ga.geodesy.domain.model.sitelog.GnssReceiverLogItem;
 import au.gov.ga.geodesy.support.java.util.Iso;
-import au.gov.xml.icsm.geodesyml.v_0_4.GnssReceiverType;
+import au.gov.xml.icsm.geodesyml.v_0_5.GnssReceiverType;
 
 @Component
 public class GnssReceiverMapper implements Iso<GnssReceiverType, GnssReceiverLogItem> {

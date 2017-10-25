@@ -19,9 +19,9 @@ import au.gov.ga.geodesy.support.marshalling.moxy.GeodesyMLMoxy;
 import au.gov.ga.geodesy.support.spring.UnitTest;
 import au.gov.ga.geodesy.support.utils.GMLDateUtils;
 import au.gov.ga.geodesy.support.utils.MappingDirection;
-import au.gov.xml.icsm.geodesyml.v_0_4.GeodesyMLType;
-import au.gov.xml.icsm.geodesyml.v_0_4.RadioInterferenceType;
-import au.gov.xml.icsm.geodesyml.v_0_4.SiteLogType;
+import au.gov.xml.icsm.geodesyml.v_0_5.GeodesyMLType;
+import au.gov.xml.icsm.geodesyml.v_0_5.RadioInterferenceType;
+import au.gov.xml.icsm.geodesyml.v_0_5.SiteLogType;
 
 import net.opengis.gml.v_3_2_1.TimeIndeterminateValueType;
 import net.opengis.gml.v_3_2_1.TimePeriodType;

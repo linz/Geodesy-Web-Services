@@ -20,8 +20,8 @@
                 <!-- This needs to also handle these extenders of CodeListValueType (either directly or indirectly via further 
                     inheritance) -->
                 <!-- and I do this inside the Converter -->
-                <!-- urn:xml-gov-au:icsm:egeodesy:0.4.IgsReceiverModelCodeType -->
-                <!-- urn:xml-gov-au:icsm:egeodesy:0.4.IgsAntennaModelCodeType -->
+                <!-- urn:xml-gov-au:icsm:egeodesy:0.5.IgsReceiverModelCodeType -->
+                <!-- urn:xml-gov-au:icsm:egeodesy:0.5.IgsAntennaModelCodeType -->
                 <class-a>net.opengis.iso19139.gco.v_20070417.CodeListValueType</class-a>
                 <class-b>java.lang.String</class-b>
             </converter>
@@ -29,7 +29,7 @@
                 <!-- This needs to also handle these extenders of CodeType (either directly or indirectly via further inheritance) -->
                 <!-- and I do this inside the Converter -->
                 <!-- net.opengis.gml.v_3_2_1.CodeWithAuthorityType -->
-                <!-- urn:xml-gov-au:icsm:egeodesy:0.4.IgsRadomeModelCodeType -->
+                <!-- urn:xml-gov-au:icsm:egeodesy:0.5.IgsRadomeModelCodeType -->
                 <class-a>net.opengis.gml.v_3_2_1.CodeType</class-a>
                 <class-b>java.lang.String</class-b>
             </converter>
@@ -47,7 +47,7 @@
             </converter>
             <converter type="au.gov.ga.geodesy.support.mapper.dozer.converter.AgencyAgencyPropertyTypeConverter">
                 <class-a>au.gov.ga.geodesy.igssitelog.domain.model.Agency</class-a>
-                <class-b>urn:xml-gov-au:icsm:egeodesy:0.4.AgencyPropertyType</class-b>
+                <class-b>urn:xml-gov-au:icsm:egeodesy:0.5.AgencyPropertyType</class-b>
             </converter>
             <converter type="au.gov.ga.geodesy.support.mapper.dozer.converter.StringDoubleConverter">
                 <class-a>java.lang.String</class-a>
@@ -59,7 +59,7 @@
             </converter>
             <converter type="au.gov.ga.geodesy.support.mapper.dozer.converter.ApproximatePositionITRFConverter">
                 <class-a>au.gov.ga.geodesy.igssitelog.domain.model.ApproximatePosition</class-a>
-                <class-b>urn:xml-gov-au:icsm:egeodesy:0.4.SiteLocationType.ApproximatePositionITRF</class-b>
+                <class-b>urn:xml-gov-au:icsm:egeodesy:0.5.SiteLocationType.ApproximatePositionITRF</class-b>
             </converter>
         </custom-converters>
     </configuration>

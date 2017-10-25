@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 
 import au.gov.ga.geodesy.domain.model.sitelog.MultipathSourceLogItem;
 import au.gov.ga.geodesy.support.java.util.Iso;
-import au.gov.xml.icsm.geodesyml.v_0_4.MultipathSourceType;
+import au.gov.xml.icsm.geodesyml.v_0_5.MultipathSourceType;
 
 /**
  * Reversible mapping between GeodesyML BasePossibleProblemSourcesType DTO and

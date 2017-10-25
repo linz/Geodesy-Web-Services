@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 
 import au.gov.ga.geodesy.domain.model.sitelog.CollocationInformationLogItem;
 import au.gov.ga.geodesy.support.java.util.Iso;
-import au.gov.xml.icsm.geodesyml.v_0_4.CollocationInformationType;
+import au.gov.xml.icsm.geodesyml.v_0_5.CollocationInformationType;
 
 /**
  * Reversible mapping between GeodesyML CollocationInformationType DTO and

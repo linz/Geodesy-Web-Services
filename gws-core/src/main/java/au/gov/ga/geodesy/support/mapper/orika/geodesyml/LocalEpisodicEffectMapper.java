@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 
 import au.gov.ga.geodesy.domain.model.sitelog.LocalEpisodicEffectLogItem;
 import au.gov.ga.geodesy.support.java.util.Iso;
-import au.gov.xml.icsm.geodesyml.v_0_4.LocalEpisodicEffectType;
+import au.gov.xml.icsm.geodesyml.v_0_5.LocalEpisodicEffectType;
 
 /**
  * Reversible mapping between GeodesyML LocalEpisodicEffectType DTO and

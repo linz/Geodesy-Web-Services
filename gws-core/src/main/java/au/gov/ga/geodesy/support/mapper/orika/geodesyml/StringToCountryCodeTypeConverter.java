@@ -1,6 +1,6 @@
 package au.gov.ga.geodesy.support.mapper.orika.geodesyml;
 
-import au.gov.xml.icsm.geodesyml.v_0_4.CountryCodeType;
+import au.gov.xml.icsm.geodesyml.v_0_5.CountryCodeType;
 import ma.glasnost.orika.MappingContext;
 import ma.glasnost.orika.converter.BidirectionalConverter;
 import ma.glasnost.orika.metadata.Type;

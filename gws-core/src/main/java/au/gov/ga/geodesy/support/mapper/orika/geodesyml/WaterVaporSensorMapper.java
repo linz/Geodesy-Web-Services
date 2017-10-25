@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 
 import au.gov.ga.geodesy.domain.model.sitelog.WaterVaporSensorLogItem;
 import au.gov.ga.geodesy.support.java.util.Iso;
-import au.gov.xml.icsm.geodesyml.v_0_4.WaterVaporSensorType;
+import au.gov.xml.icsm.geodesyml.v_0_5.WaterVaporSensorType;
 
 /**
  * Reversible mapping between GeodesyML WaterVaporSensorType DTO and

@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 
 import au.gov.ga.geodesy.domain.model.sitelog.RadioInterferenceLogItem;
 import au.gov.ga.geodesy.support.java.util.Iso;
-import au.gov.xml.icsm.geodesyml.v_0_4.RadioInterferenceType;
+import au.gov.xml.icsm.geodesyml.v_0_5.RadioInterferenceType;
 
 /**
  * Reversible mapping between GeodesyML RadioInterferencesType DTO and

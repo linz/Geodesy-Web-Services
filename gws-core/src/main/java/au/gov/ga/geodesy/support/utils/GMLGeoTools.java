@@ -2,7 +2,7 @@ package au.gov.ga.geodesy.support.utils;
 
 import java.math.BigDecimal;
 
-import au.gov.xml.icsm.geodesyml.v_0_4.SiteLocationType;
+import au.gov.xml.icsm.geodesyml.v_0_5.SiteLocationType;
 
 public class GMLGeoTools {
 

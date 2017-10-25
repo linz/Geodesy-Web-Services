@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 
 import au.gov.ga.geodesy.domain.model.sitelog.OtherInstrumentationLogItem;
 import au.gov.ga.geodesy.support.java.util.Iso;
-import au.gov.xml.icsm.geodesyml.v_0_4.OtherInstrumentationType;
+import au.gov.xml.icsm.geodesyml.v_0_5.OtherInstrumentationType;
 
 /**
  * Reversible mapping between GeodesyML OtherInstrumentationType DTO and

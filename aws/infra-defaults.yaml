@@ -96,21 +96,4 @@ asg_config:
   health_check_grace_period: '300'
   health_check_type: 'ELB'
   block_devices_config:
-  userdata: |
-    #cloud-config
-    repo_update: true
-    repo_upgrade: all
-    packages:
-     - httpd
-    write_files:
-     - content: |
-        <html>
-        <body>
-        <h1>Amazonia created this Geodesy stack!</h1>
-        </body>
-        </html>
-       path: /var/www/html/index.html
-       permissions: '0644'
-       owner: root:root
-    runcmd:
-     - service httpd start
+  userdata:

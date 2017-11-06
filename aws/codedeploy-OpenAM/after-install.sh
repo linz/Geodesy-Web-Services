@@ -84,7 +84,7 @@ if [ $SERVICE_CFG_FILE_COUNT -eq 1 ] && [ $DIRECTORY_DATA_FILE_COUNT -eq 1 ] && 
 
   # Restart required, wait until Tomcat startup has finished
   service tomcat8 restart
-  until [ "`curl --silent --connect-timeout 1 -I http://localhost:8080 | grep 'Coyote'`" != "" ];
+  until [ "`curl --silent --connect-timeout 1 -i -I http://localhost:8080/openam/ | grep 'HTTP/1.1 200'`" != "" ];
   do
     sleep 10
   done

@@ -4,6 +4,7 @@ import static io.restassured.config.XmlConfig.xmlConfig;
 import static io.restassured.module.mockmvc.RestAssuredMockMvc.given;
 
 import static org.hamcrest.Matchers.equalTo;
+import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.document;
 
 import org.apache.commons.io.IOUtils;
 import org.springframework.http.HttpStatus;
@@ -41,7 +42,8 @@ public class SiteLogEndpointITest extends IntegrationTest {
                 .log().body()
                 .statusCode(HttpStatus.OK.value())
                 .contentType("application/xml")
-                .body("geo:GeodesyML.geo:siteLog.geo:siteIdentification.geo:siteName.text()", equalTo("Alice Springs AU012"));
+                .body("geo:GeodesyML.geo:siteLog.geo:siteIdentification.geo:siteName.text()", equalTo("Alice Springs AU012"))
+                .apply(document("findSiteLogByFourCharacterId"));
     }
 
     @Test(dependsOnMethods = "upload")

@@ -23,7 +23,7 @@ import com.google.common.collect.Lists;
 import au.gov.ga.geodesy.domain.model.sitelog.EffectiveDates;
 import au.gov.ga.geodesy.domain.model.sitelog.SiteLog;
 import au.gov.ga.geodesy.domain.service.CorsSiteLogService;
-import au.gov.ga.geodesy.port.adapter.sopac.SopacSiteLogReader;
+import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLSiteLogReader;
 import au.gov.ga.geodesy.support.TestResources;
 import au.gov.ga.geodesy.support.spring.IntegrationTest;
 import au.gov.ga.geodesy.support.utils.GMLDateUtils;
@@ -51,10 +51,17 @@ public class SetupRepositoryITest extends IntegrationTest {
     @Rollback(false)
     @EnsuresNonNull("siteId")
     public void upload() throws Exception {
-        SiteLog alice = new SopacSiteLogReader(TestResources.originalSopacSiteLogReader("ALIC")).getSiteLog();
+        SiteLog alice = new GeodesyMLSiteLogReader(TestResources.customGeodesyMLSiteLogReader("ALIC")).getSiteLog();
+        SiteLog aliceWithNewReceiver = new GeodesyMLSiteLogReader(TestResources.customGeodesyMLSiteLogReader("ALIC-with-new-receiver")).getSiteLog();
         siteLogService.upload(alice);
+        siteLogService.upload(aliceWithNewReceiver);
         siteId = sites.findByFourCharacterId("ALIC").getId();
         assertThat(siteId, not(nullValue()));
+    }
+
+    @Test(dependsOnMethods = {"upload"})
+    public void findCurrentBySiteId() {
+        setups.findCurrentBySiteId(siteId); // this will throw if the current setup is not unique
     }
 
     @Test(dependsOnMethods = {"upload"})

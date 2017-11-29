@@ -33,7 +33,7 @@ public class SetupRepositoryImpl implements SetupRepositoryCustom {
     public Setup findCurrentBySiteId(Integer siteId) {
         // TODO: use query-dsl
         String queryString =
-            "select s from Setup s where s.siteId = :id and s.effectivePeriod.to is null";
+            "select s from Setup s where s.siteId = :id and s.effectivePeriod.to is null and s.invalidated = false";
 
         TypedQuery<Setup> query = entityManager.createQuery(queryString, Setup.class);
         query.setParameter("id", siteId);

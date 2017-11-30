@@ -60,7 +60,7 @@ public class IntegrationTest extends AbstractTransactionalTestNGSpringContextTes
             .webAppContextSetup(webApplicationContext)
             .apply(springSecurity())
             .apply(documentationConfiguration(restDocumentation)
-                .uris().withScheme("https").withHost("test.geodesy.ga.gov.au").withPort(443))
+                .uris().withScheme("https").withHost("gws.geodesy.ga.gov.au").withPort(443))
             .build();
         RestAssuredMockMvc.mockMvc(mvc);
     }

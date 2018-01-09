@@ -9,29 +9,29 @@
 
 # Stack values
 keypair: 'geodesy'
-code_deploy_service_role: 'arn:aws:iam::094928090547:role/CodeDeploy'
+code_deploy_service_role: 'arn:aws:iam::432193813149:role/CodeDeploy'
 availability_zones:
   - 'ap-southeast-2a'
   - 'ap-southeast-2b'
   - 'ap-southeast-2c'
 vpc_cidr:
   name: 'VPC'
-  cidr: '10.0.0.0/16'
+  cidr: '12.0.0.0/16'
 public_cidr:
   name: 'PublicIp'
   cidr: '0.0.0.0/0'
 jump_image_id: 'ami-dc361ebf'
 jump_instance_type: 't2.nano'
 nat_image_id: 'ami-53371f30'
-nat_instance_type: 't2.nano'
+nat_instance_type: 't2.micro'
 home_cidrs:
   - name: 'GA'
     cidr: '192.104.44.129/32'
-public_hosted_zone_name: 'geodesy.ga.gov.au.'
+public_hosted_zone_name: 'fsitelog.ga.'
 private_hosted_zone_name: 'private.lan'
 owner_emails:
 nat_highly_available: false
-iam_instance_profile_arn: 'arn:aws:iam::094928090547:instance-profile/GeodesyWebServicesD-WebServerRole'
+iam_instance_profile_arn: 'arn:aws:iam::432193813149:instance-profile/GeodesyWebServicesD-WebServerRole'
 zd_autoscaling_units:
 autoscaling_units:
 database_units:
@@ -90,7 +90,7 @@ block_devices_config:
 asg_config:
   image_id: 'ami-dc361ebf'
   instance_type: 't2.nano'
-  iam_instance_profile_arn: 'arn:aws:iam::094928090547:instance-profile/GeodesyWebServicesD-WebServerRole'
+  iam_instance_profile_arn: 'arn:aws:iam::432193813149:instance-profile/GeodesyWebServicesD-WebServerRole'
   minsize: '1'
   maxsize: '1'
   health_check_grace_period: '300'

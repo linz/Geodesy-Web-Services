@@ -6,7 +6,7 @@ autoscaling_units:
   -
     unit_title: WebServices
     asg_config:
-      image_id: "ami-851a11e6"
+      image_id: "ami-639e6d01"
       instance_type: 't2.small'
       health_check_grace_period: '480'
       health_check_type: 'EC2' # TODO: revert to ELB
@@ -17,7 +17,7 @@ autoscaling_units:
           instance_port: '8080'
           loadbalancer_protocol: 'HTTPS'
           loadbalancer_port: '443'
-      ssl_certificate_id: 'arn:aws:acm:ap-southeast-2:094928090547:certificate/07496dcd-6975-4dd4-8986-533488587f0e'
+      ssl_certificate_id: 'arn:aws:acm:ap-southeast-2:432193813149:certificate/126ac379-afc3-4ed3-beaa-c61719c77502'
       elb_health_check: 'TCP:8080'
       healthy_threshold: 2
       unhealthy_threshold: 2
@@ -28,7 +28,7 @@ autoscaling_units:
   -
     unit_title: GeoServer
     asg_config:
-       image_id: "ami-30586b53"
+       image_id: "ami-199c6f7b"
        instance_type: 't2.small'
        userdata: |
          #cloud-config
@@ -41,14 +41,14 @@ autoscaling_units:
           instance_port: '8080'
           loadbalancer_protocol: 'HTTPS'
           loadbalancer_port: '443'
-      ssl_certificate_id: 'arn:aws:acm:ap-southeast-2:094928090547:certificate/07496dcd-6975-4dd4-8986-533488587f0e'
+      ssl_certificate_id: 'arn:aws:acm:ap-southeast-2:432193813149:certificate/126ac379-afc3-4ed3-beaa-c61719c77502'
       elb_health_check: 'HTTP:8080/geoserver/web/'
     dependencies:
      - 'Db:5432'
   -
     unit_title: OpenAM
     asg_config:
-       image_id: "ami-ffba5d9d"
+       image_id: "ami-25986b47"
        instance_type: 't2.small'
 
     elb_config:
@@ -58,7 +58,7 @@ autoscaling_units:
           instance_port: '8443'
           loadbalancer_protocol: 'SSL'
           loadbalancer_port: '443'
-      ssl_certificate_id: 'arn:aws:acm:ap-southeast-2:094928090547:certificate/07496dcd-6975-4dd4-8986-533488587f0e'
+      ssl_certificate_id: 'arn:aws:acm:ap-southeast-2:432193813149:certificate/126ac379-afc3-4ed3-beaa-c61719c77502'
       elb_health_check: 'SSL:8443'
 
 #  -

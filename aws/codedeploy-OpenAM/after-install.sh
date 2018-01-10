@@ -49,7 +49,7 @@ echo ${OPENAM_ADMIN_PWD} > passwdfile
 chmod 400 passwdfile
 
 # Import OpenAM configuration and data
-S3_DIR=s3://geodesy-openam/exports/${OPENAM_SERVER_FQDN}
+S3_DIR=s3://linz-geodesy-openam/exports/${OPENAM_SERVER_FQDN}
 SERVICE_CFG_FILE=service_cfg.xml
 DIRECTORY_DATA_FILE=embedded_directory_data.ldif
 KEYS_DIRECTORY=keys
@@ -84,7 +84,7 @@ if [ $SERVICE_CFG_FILE_COUNT -eq 1 ] && [ $DIRECTORY_DATA_FILE_COUNT -eq 1 ] && 
 
   # Restart required, wait until Tomcat startup has finished
   service tomcat8 restart
-  until [ "`curl --silent --connect-timeout 1 -I http://localhost:8080 | grep 'Coyote'`" != "" ];
+  until [ "`curl --silent --connect-timeout 1 -i -I http://localhost:8080/openam/ | grep 'HTTP/1.1 200'`" != "" ];
   do
     sleep 10
   done
@@ -120,7 +120,7 @@ if [ $jwtSigningKeyExists != 0 ]; then
         -keyalg RSA \
         -storetype JCEKS \
         -keystore "${OPENAM_BASE_DIR}/openam/keystore.jceks" \
-        -dname "CN=*.geodesy.ga.gov.au, OU=[unknown], O=[unknown], L=[unknown], S=[unknown], C=[unknown]" \
+        -dname "CN=*.fsitelog.ga, OU=[unknown], O=[unknown], L=[unknown], S=[unknown], C=[unknown]" \
         -storepass changeit -keypass changeit
 fi
 

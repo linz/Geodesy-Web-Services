@@ -8,7 +8,7 @@ cd ${BASH_SOURCE%/*}
     --application Geodesy \
     --env ${ENV} \
     --deployment_config_name CodeDeployDefault.OneAtATime \
-    --s3_bucket geodesy-codedeploy \
+    --s3_bucket linz-geodesy-codedeploy \
     --artefact_ext zip \
     --unit OpenAM
 )

@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+# Tell cloud-init not to update anything
+sudo sed 's/^repo_upgrade: security/repo_upgrade: none/g' -i /etc/cloud/cloud.cfg
+sudo sed -e '/- package-update-upgrade-install/s/^/#/g' -i /etc/cloud/cloud.cfg.d/00_defaults.cfg
+
 sudo yum erase -y java-1.7.0*
 sudo yum update -y
 sudo yum install -y java-1.8.0-openjdk-devel tomcat8 perl-Switch perl-DateTime perl-Sys-Syslog \
@@ -71,7 +75,7 @@ function setupTomcatSelfSignedCertificate {
         -storepass changeit
 }
 
-setupTomcatSelfSignedCertificate "*.geodesy.ga.gov.au"
+setupTomcatSelfSignedCertificate "*.fsitelog.ga"
 
 # Set the Tomcat JVM memory required by OpenAM
 echo 'JAVA_OPTS="$JAVA_OPTS -Xmx1g -XX:MetaspaceSize=256m -XX:MaxMetaspaceSize=256m"' | sudo tee --append /usr/share/tomcat8/conf/tomcat8.conf

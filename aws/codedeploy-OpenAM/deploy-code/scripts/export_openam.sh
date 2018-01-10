@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-S3_BASE_DIR=s3://geodesy-openam/exports
+S3_BASE_DIR=s3://linz-geodesy-openam/exports
 FQDN=${OPENAM_SERVER_FQDN}
 SERVICE_CFG_FILE=service_cfg.xml
 DIRECTORY_DATA_FILE=embedded_directory_data.ldif

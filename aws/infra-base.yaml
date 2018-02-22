@@ -1,7 +1,7 @@
 #
 # Stack User Yaml for Geodesy
 #
-keypair: 'geodesy'
+keypair: 'sitelog'
 autoscaling_units:
   -
     unit_title: WebServices
@@ -17,7 +17,7 @@ autoscaling_units:
           instance_port: '8080'
           loadbalancer_protocol: 'HTTPS'
           loadbalancer_port: '443'
-      ssl_certificate_id: 'arn:aws:acm:ap-southeast-2:432193813149:certificate/126ac379-afc3-4ed3-beaa-c61719c77502'
+      ssl_certificate_id: 'arn:aws:acm:ap-southeast-2:432193813149:certificate/6f5bc021-45a2-48c8-a987-5724abd32098'
       elb_health_check: 'TCP:8080'
       healthy_threshold: 2
       unhealthy_threshold: 2
@@ -41,14 +41,14 @@ autoscaling_units:
           instance_port: '8080'
           loadbalancer_protocol: 'HTTPS'
           loadbalancer_port: '443'
-      ssl_certificate_id: 'arn:aws:acm:ap-southeast-2:432193813149:certificate/126ac379-afc3-4ed3-beaa-c61719c77502'
+      ssl_certificate_id: 'arn:aws:acm:ap-southeast-2:432193813149:certificate/6f5bc021-45a2-48c8-a987-5724abd32098'
       elb_health_check: 'HTTP:8080/geoserver/web/'
     dependencies:
      - 'Db:5432'
   -
     unit_title: OpenAM
     asg_config:
-       image_id: "ami-bce21fde"
+       image_id: "ami-55d92637"
        instance_type: 't2.small'
 
     elb_config:
@@ -58,7 +58,7 @@ autoscaling_units:
           instance_port: '8443'
           loadbalancer_protocol: 'SSL'
           loadbalancer_port: '443'
-      ssl_certificate_id: 'arn:aws:acm:ap-southeast-2:432193813149:certificate/126ac379-afc3-4ed3-beaa-c61719c77502'
+      ssl_certificate_id: 'arn:aws:acm:ap-southeast-2:432193813149:certificate/6f5bc021-45a2-48c8-a987-5724abd32098'
       elb_health_check: 'SSL:8443'
 
 #  -

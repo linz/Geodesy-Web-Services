@@ -8,7 +8,7 @@
 #   Multi line strings: can be used by establishing a literal block '|'
 
 # Stack values
-keypair: 'geodesy'
+keypair: 'sitelog'
 code_deploy_service_role: 'arn:aws:iam::432193813149:role/CodeDeploy'
 availability_zones:
   - 'ap-southeast-2a'
@@ -25,9 +25,9 @@ jump_instance_type: 't2.nano'
 nat_image_id: 'ami-53371f30'
 nat_instance_type: 't2.micro'
 home_cidrs:
-  - name: 'GA'
-    cidr: '192.104.44.129/32'
-public_hosted_zone_name: 'fsitelog.ga.'
+  - name: 'LINZ'
+    cidr: '222.153.0.0/16'
+public_hosted_zone_name: 'gnss.linz.io.'
 private_hosted_zone_name: 'private.lan'
 owner_emails:
 nat_highly_available: false

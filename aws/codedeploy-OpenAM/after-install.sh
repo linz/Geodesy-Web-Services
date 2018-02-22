@@ -120,7 +120,7 @@ if [ $jwtSigningKeyExists != 0 ]; then
         -keyalg RSA \
         -storetype JCEKS \
         -keystore "${OPENAM_BASE_DIR}/openam/keystore.jceks" \
-        -dname "CN=*.fsitelog.ga, OU=[unknown], O=[unknown], L=[unknown], S=[unknown], C=[unknown]" \
+        -dname "CN=*.gnss.linz.io, OU=[unknown], O=[unknown], L=[unknown], S=[unknown], C=[unknown]" \
         -storepass changeit -keypass changeit
 fi
 

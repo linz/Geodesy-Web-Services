@@ -75,7 +75,7 @@ function setupTomcatSelfSignedCertificate {
         -storepass changeit
 }
 
-setupTomcatSelfSignedCertificate "*.fsitelog.ga"
+setupTomcatSelfSignedCertificate "*.gnss.linz.io"
 
 # Set the Tomcat JVM memory required by OpenAM
 echo 'JAVA_OPTS="$JAVA_OPTS -Xmx1g -XX:MetaspaceSize=256m -XX:MaxMetaspaceSize=256m"' | sudo tee --append /usr/share/tomcat8/conf/tomcat8.conf

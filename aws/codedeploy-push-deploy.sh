@@ -5,25 +5,38 @@
 
 set -e
 
-## Assign arguments to variables
+# Reset
+Color_Off="\033[0m"      # Text Reset
+
+# Regular Colors
+Black='\033[0;30m'        # Black
+Red='\033[0;31m'          # Red
+Green='\033[0;32m'        # Green
+Yellow='\033[0;33m'       # Yellow
+Blue='\033[0;34m'         # Blue
+Purple='\033[0;35m'       # Purple
+Cyan='\033[0;36m'         # Cyan
+White='\033[0;37m'        # White
+
+# Assign arguments to variables
 while [ $# -ge 1 ]
 do
     key=$1
     case $key in
         -a|--application)
-        app=$2 && echo !! app=${app}
+        app="LI-Geodesy" && echo -e !! "${Red}"  app= "${app}" "$Color_Off" 
         shift
         ;;
         -e|--env)
-        env="${2^}" && echo !! env=$env
+        env="${2^}" && echo -e !! "${Blue}"  env=$env "$Color_Off"
         shift
         ;;
         -c|--deployment_config_name)
-        deployment_config_name=$2 && echo !! deployment_config_name=${deployment_config_name}
+        deployment_config_name=$2 && echo  -e !! "${Yellow}" deployment_config_name=${deployment_config_name} "$Color_Off"
         shift
         ;;
         -b|--s3_bucket)
-        s3_bucket=$2 && echo !! s3_bucket=${s3_bucket}
+        s3_bucket=$2 && echo -e !! "${Purple}" s3_bucket=${s3_bucket} "$Color_Off"
         shift
         ;;
         -u|--unit-title|--unit)
@@ -43,6 +56,7 @@ do
     shift
 done
 
+app="LI-Geodesy"
 
 ## Check variables
 if [ -z ${app} ] ; then
@@ -78,20 +92,20 @@ fi
 ## Declare variables
 date=$(date +%d_%m_%y) && echo !! date=${date}
 time=$(date +%H_%M_%S) && echo !! time=${time}
-deployment_group_name=${env}${app}-${unit}AsgCdg && echo !! deployment_group_name=${deployment_group_name}
-appenv=${env}${app}-${unit}AsgCda && echo !! appenv=${appenv}
+deployment_group_name=${env}-${app}-${unit}AsgCdg && echo -e !! "${Blue}" deployment_group_name=${deployment_group_name} "$Color_Off"
+appenv=${env}-${app}-${unit}AsgCda && echo -e !! "${Yellow}" appenv=${appenv} "$Color_Off"
 description_create_deployment="${deployment_group_name}-${date}-${time}" && echo !! description_create_deployment=${description_create_deployment}
-key=${app}/${appenv}.${artefact_ext} && echo !! key=${key}
-profile="${app,,}"
+key=${app}/${appenv}.${artefact_ext} && echo -e !! "${Red}" key=${key} "$Color_Off"
+profile="geodesy"
 
 ## Code Deploy Push Directory
+echo -e !! "${Blue}" Codedeploy push ${appenv} to s3://${s3_bucket}/${key} "$Color_Off"
 aws deploy push --application-name ${appenv} --s3-location s3://${s3_bucket}/${key} --source codedeploy-${unit} --description ${description_create_deployment} --profile ${profile}
-echo !! Codedeploy push ${appenv} to s3://${s3_bucket}/${key}
 
 
 ## Code Deploy Application from output
 create_deployment="$(aws deploy create-deployment --application-name ${appenv} --deployment-config-name ${deployment_config_name} --deployment-group-name ${deployment_group_name} --description ${description_create_deployment} --s3-location bucket=${s3_bucket},bundleType=${artefact_ext},key=${key} --profile ${profile})"
-echo !! create_deployment=${create_deployment}
+echo -e !! "${Red}" create_deployment=${create_deployment} "$Color_Off"
 
 # TEST
 # This is a small script to check to see if a code deploy deployment has finished creating in AWS

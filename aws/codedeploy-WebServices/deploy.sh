@@ -6,6 +6,8 @@ ENV=$1
 
 cd ${BASH_SOURCE%/*}/..
 
+
+
 ./codedeploy-push-deploy.sh \
     --application Geodesy \
     --env ${ENV} \

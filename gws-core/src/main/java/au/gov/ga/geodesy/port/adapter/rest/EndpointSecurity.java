@@ -4,6 +4,9 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import au.gov.ga.geodesy.domain.service.EventNotificationService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -17,7 +20,7 @@ import au.gov.ga.geodesy.domain.model.NetworkTenancy;
 
 @Component
 public class EndpointSecurity {
-
+    private static final Logger log = LoggerFactory.getLogger(EventNotificationService.class);
     @Autowired
     private CorsSiteRepository sites;
 
@@ -35,6 +38,11 @@ public class EndpointSecurity {
      * Return true if the currently authenticated user has any of the given authorities, false otherwise.
      */
     public boolean hasAnyAuthority(List<String> authorities) {
+
+        log.warn(">>>>>> hasAnyAuthority >>authorities");
+        authorities.forEach(System.out::println);
+        log.warn("<<<<<< hasAnyAuthority >>authorities");
+
         return SecurityContextHolder.getContext().getAuthentication().getAuthorities()
             .stream()
             .anyMatch(grantedAuthority -> authorities.contains(grantedAuthority.getAuthority()));
@@ -45,6 +53,8 @@ public class EndpointSecurity {
      * false otherwise.
      */
     public boolean hasAuthorityToEditSiteLog(String fourCharId) {
+//        new Exception().printStackTrace();
+
         if (hasAuthority("superuser")) {
             return true;
         }

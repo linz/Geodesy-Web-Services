@@ -22,6 +22,10 @@ import au.gov.ga.geodesy.port.Notification;
 import au.gov.ga.geodesy.port.NotificationPort;
 import au.gov.ga.geodesy.support.aws.Aws;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+
 @Configurable
 @EnableEntityLinks
 public class SnsNotificationAdapter implements NotificationPort {
@@ -44,16 +48,26 @@ public class SnsNotificationAdapter implements NotificationPort {
     }
 
     private Stream<String> snsTopics(Notification notification) {
-        // An SNS topic ARN looks like this: arn:aws:sns:ap-southeast-2:094928090547:DevGeodesy-UserRegistrationReceived-K3F2UQVHG58F
+        
+        // to capture SNS Topic Name like Dev-LI-Geodesy-SiteLogReceived-1FTL85NEZOFFZ, where Dev-LI-Geodesy 
+        // and SiteLogReceived should be matched and extracted
+        Pattern pattern = Pattern.compile("(.*?)-([^-]+)-[^-]+$");
+
         return sns.listTopics().getTopics().stream()
             .filter(topic -> {
                 try {
-                    String[] tmp = topic.getTopicArn().split(":")[5].split("-"); // { "DevGeodesy", "UserRegistrationReceived", "K3F2UQVHG58F }
-                    String stackName = tmp[0];
-                    String eventName = tmp[1];
+                    String TopicString = topic.getTopicArn().split(":")[5]; // { "DevGeodesy", "UserRegistrationReceived", "K3F2UQVHG58F }
+                    Matcher matcher = pattern.matcher(TopicString);
 
-                    return aws.getStackName().map(s -> s.equals(stackName)).orElse(false)
-                        && notification.getSubject().equals(eventName);
+                    if(matcher.find()) {
+                        String stackName = matcher.group(1);
+                        String eventName = matcher.group(2);
+
+                        return aws.getStackName().map(s -> s.equals(stackName)).orElse(false)
+                            && notification.getSubject().equals(eventName);
+                    } else {
+                        return false;
+                    }
                 } catch (Exception ok) {
                     return false;
                 }

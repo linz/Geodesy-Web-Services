@@ -90,6 +90,9 @@ public class SiteLogEndpoint {
         @RequestParam(required = true) String id) throws IOException, MarshallingException {
 
         SiteLog siteLog = siteLogs.findByFourCharacterId(id);
+        System.out.println("findByFourCharacterId/XML =======================================================");
+        System.out.println(id + " ==================");
+        System.out.println("findByFourCharacterId =======================================================");
 
         if (siteLog == null) {
             rsp.setStatus(HttpStatus.NOT_FOUND.value());
@@ -114,6 +117,11 @@ public class SiteLogEndpoint {
             PersistentEntityResourceAssembler assembler) {
 
         SiteLog siteLog = siteLogs.findByFourCharacterId(id);
+
+        System.out.println("findByFourCharacterId/JSON =======================================================");
+        System.out.println(id + " ==================");
+        System.out.println("findByFourCharacterId =======================================================");
+
         if (siteLog == null) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         } else {
@@ -155,6 +163,11 @@ public class SiteLogEndpoint {
             if (indexOfBrace != -1) {
                 location = location.substring(0, indexOfBrace);
             }
+            System.out.println("secureUpload =======================================================");
+            System.out.println(location + " ==================");
+            log.warn("secureUpload site log: " + location);
+            System.out.println("secureUpload =======================================================");
+
             return ResponseEntity.created(new URI(location)).body("");
         }
         catch (URISyntaxException e) {

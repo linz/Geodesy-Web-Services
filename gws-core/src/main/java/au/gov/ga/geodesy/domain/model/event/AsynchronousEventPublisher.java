@@ -40,7 +40,11 @@ public class AsynchronousEventPublisher implements EventPublisher {
 
     private String getUser() {
         try {
+
             Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+
+            System.out.println(">>>> SecurityContextHolder.getContext().getAuthentication >> " + SecurityContextHolder.getContext().getAuthentication());
+
             if (auth != null) {
                 Object authDetails = auth.getDetails();
 

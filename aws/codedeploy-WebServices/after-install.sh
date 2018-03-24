@@ -15,4 +15,4 @@ sed -i 's/${geodesy-db-url}/jdbc:postgresql:\/\/'"${RDS_ENDPOINT}\/GeodesyDb/" R
 sed -i 's/${geodesy-db-username}/'"${DB_USERNAME}/" ROOT/META-INF/context.xml
 sed -i 's/${geodesy-db-password}/'"${DB_PASSWORD}/" ROOT/META-INF/context.xml
 
-sed -i s,'${oauthProviderUrl}',"${OPENAM_ENDPOINT}"/oauth2, ROOT/WEB-INF/classes/config.properties
+sed -i s,'${oauthProviderUrl}',"${DEV_OAUTH_ENDPOINT}", ROOT/WEB-INF/classes/config.properties

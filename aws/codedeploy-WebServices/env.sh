@@ -24,7 +24,7 @@ STACK_APP_NAME="LI-Geodesy"
 RDS_INSTANCE_ID=${ENV,,}-${STACK_APP_NAME}db
 RDS_ENDPOINT=$(${AWS} rds describe-db-instances --db-instance-identifier ${RDS_INSTANCE_ID} | grep Address | awk -F'"' {'print $4'})
 OPENAM_ENDPOINT=https://${ENV,,}geodesy-openam.gnss.linz.io/openam
-
+DEV_OAUTH_ENDPOINT="https://cognito-idp.ap-southeast-2.amazonaws.com/ap-southeast-2_q0oHPJ0N5"
 
 CREDSTASH="/usr/local/bin/credstash -r ${AWS_DEFAULT_REGION}"
 
@@ -39,6 +39,7 @@ DB_USERNAME=$(${CREDSTASH} get ${DB_USERNAME_KEY})
 DB_PASSWORD=$(${CREDSTASH} get ${DB_PASSWORD_KEY})
 
 
+echo "using $AWS_PROFILE >>>>> >"
 echo "fetching $RDS_MASTER_USERNAME_KEY"
 echo "fetching $RDS_MASTER_PASSWORD_KEY"
 echo "fetching $DB_USERNAME_KEY"

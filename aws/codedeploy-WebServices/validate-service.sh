@@ -10,7 +10,7 @@ if [[ ${ENV,,} == "dev" ]]; then
     # Run system tests
     java \
         -DwebServicesUrl=http://localhost:8080 \
-        -DoauthProviderUrl=https://${ENV}geodesy-openam.gnss.linz.io/openam/oauth2 \
+        -DoauthProviderUrl=${DEV_OAUTH_ENDPOINT} \
         -jar gws-system-test.jar \
         -testjar gws-system-test.jar
 fi

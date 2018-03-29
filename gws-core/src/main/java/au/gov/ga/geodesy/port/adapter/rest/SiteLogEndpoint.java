@@ -163,8 +163,8 @@ public class SiteLogEndpoint {
             if (indexOfBrace != -1) {
                 location = location.substring(0, indexOfBrace);
             }
+            
             System.out.println("secureUpload =======================================================");
-            System.out.println(location + " ==================");
             log.warn("secureUpload site log: " + location);
             System.out.println("secureUpload =======================================================");
 

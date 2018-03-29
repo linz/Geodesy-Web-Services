@@ -16,9 +16,10 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 import org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfigurerAdapter;
 import org.springframework.security.oauth2.config.annotation.web.configurers.ResourceServerSecurityConfigurer;
 import org.springframework.security.oauth2.provider.token.DefaultAccessTokenConverter;
+import org.springframework.security.oauth2.provider.token.UserAuthenticationConverter;
+import org.springframework.security.oauth2.provider.token.AccessTokenConverter;
 import org.springframework.security.oauth2.provider.token.store.jwk.JwkTokenStore;
 import org.springframework.security.oauth2.provider.token.TokenStore;
-import org.springframework.security.oauth2.provider.token.AccessTokenConverter;
 import org.springframework.security.oauth2.provider.OAuth2Authentication;
 // import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -75,8 +76,8 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
     }
 
     public static class JwytConverter extends DefaultAccessTokenConverter {
-        private final String field_username = "username";
-        private final String field_authorities = "custom:sitelog";
+        public static final String USERNAME_FD = "cognito:username";
+        public static final String AUHTORITY_FD = "custom:sitelog";
 
         // TODO: testcase like 
         //  https://github.com/spring-projects/spring-security-oauth/blob/master/spring-security-oauth2/src/test/java/org/
@@ -97,9 +98,11 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
             Map<String, Object> userMap = new HashMap(hmap);
 
 
-            if(hmap.containsKey(field_authorities) && hmap.get(field_authorities) != null ) {
-                String[] authority_roles = ((String)hmap.get(field_authorities)).split(",");
-                // System.out.println("userMap | auhority_roles->" + authority_roles);
+            if(hmap.containsKey(JwytConverter.AUHTORITY_FD) 
+            && hmap.get(JwytConverter.AUHTORITY_FD) != null 
+            && ((String)hmap.get(JwytConverter.AUHTORITY_FD)).length() > 2 )  {
+
+                String[] authority_roles = ((String)hmap.get(JwytConverter.AUHTORITY_FD)).split(",");
 
                 List<String> authorities = new ArrayList<String>();
                 if (Arrays.asList(authority_roles).stream().anyMatch(p -> p.equals("superuser"))) {
@@ -107,23 +110,21 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
                 } else {
                     authorities  = Arrays.asList(authority_roles).stream().map(p -> "edit-" + p.toLowerCase()).collect(toList());
                 }
-
-
-                // List<String> authorities = Arrays.asList(authority_roles).stream().map(s -> "edit-" + s.toLowerCase()).collect(toList());
-                userMap.put("authorities", authorities);
+                userMap.put(AccessTokenConverter.AUTHORITIES, authorities);
             }
 
-            if(hmap.containsKey(field_username) && hmap.get(field_username) != null ) {
-                String subject = (String)hmap.get(field_username);
-                userMap.put("sub", subject);
-                userMap.remove(field_username);
+            if(hmap.containsKey(JwytConverter.USERNAME_FD) 
+            && hmap.get(JwytConverter.USERNAME_FD) != null 
+            && ((String)hmap.get(JwytConverter.USERNAME_FD)).length() > 2 ) {
+
+                String subject = (String)hmap.get(JwytConverter.USERNAME_FD);
+                userMap.put(UserAuthenticationConverter.USERNAME, subject);
+                userMap.remove(JwytConverter.USERNAME_FD);
             }
-            
-            System.out.println("Changed - userMap->" + Arrays.asList(userMap));
 
             OAuth2Authentication auth = super.extractAuthentication(userMap);
-            System.out.println( "extractAuthentication>>>>." + auth);
-
+            System.out.println( "extractAuthentication>>>>." + auth);            
+            SecurityContextHolder.getContext().setAuthentication(auth);
             return auth;
         }
     }
@@ -138,10 +139,6 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
             .getObject()
             .getString("jwks_uri");
 
-//        System.out.println("SiteLogMapper =======================================================");
-//        System.out.println(jwksUri + " ==================");
-//        System.out.println("SiteLogMapper =======================================================");
-
         TokenStore mts = new JwkTokenStore(jwksUri, new JwytConverter());
         resources.tokenStore(mts);
         resources.eventPublisher(new AuthenticationEventPublisher() {
@@ -155,7 +152,8 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
             public void publishAuthenticationSuccess(Authentication a) {
 //                new Exception().printStackTrace();
 //                log.warn(">>>>>> hasAnyAuthority", new Exception());
-                log.info("publishAuthenticationSuccess +++ Authentication:" + a.getDetails());
+                log.info("publishAuthenticationSuccess +++ getPrincipal:" + a.getPrincipal());
+                log.info("publishAuthenticationSuccess +++ getDetails:" + a.getDetails());
 
             }
 

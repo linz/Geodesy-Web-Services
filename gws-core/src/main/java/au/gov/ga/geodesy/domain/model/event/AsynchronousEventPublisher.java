@@ -43,16 +43,23 @@ public class AsynchronousEventPublisher implements EventPublisher {
 
             Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 
-            System.out.println(">>>> SecurityContextHolder.getContext().getAuthentication >> " + SecurityContextHolder.getContext().getAuthentication());
+            System.out.println("GetUser >>>> SecurityContextHolder >>>> " + SecurityContextHolder.getContext().getAuthentication());
 
             if (auth != null) {
+                StringBuilder userTitle= new StringBuilder();
                 Object authDetails = auth.getDetails();
+
+                if (auth.getPrincipal() != null)
+                    userTitle.append((String)auth.getPrincipal());
 
                 if (authDetails instanceof OAuth2AuthenticationDetails) {
                     String jwt = ((OAuth2AuthenticationDetails) authDetails).getTokenValue();
                     String claims = JwtHelper.decode(jwt).getClaims();
-                    return (String) new ObjectMapper().readValue(claims, HashMap.class).get("sub");
+                    userTitle.append("[");
+                    userTitle.append((String) new ObjectMapper().readValue(claims, HashMap.class).get("sub"));
+                    userTitle.append("]");
                 }
+                return userTitle.toString();
             } 
         } catch (Exception e) {
             log.error("Failed to extract username from spring security context", e);
@@ -93,13 +100,14 @@ public class AsynchronousEventPublisher implements EventPublisher {
                 while(true) {
                     Thread.sleep(3000);
                     List<Event> es = events.getPendingEvents();
-                    log.debug("Processing " + es.size() + " pending event(s)");
+                    // log.info("-- Processing " + es.size() + " pending event(s)");
                     for (Event e : events.getPendingEvents()) {
                         e.published();
                         events.saveAndFlush(e);
                         synchronized(subscribers) {
                             for (EventSubscriber<?> s : subscribers) {
                                 if (s.getClass().toString().equals(e.getSubscriber())) {
+                                    log.info("handling<" + s.getClass().toString() + "> from visitor:" + e.user);
                                     handle(s, e);
                                 }
                             }

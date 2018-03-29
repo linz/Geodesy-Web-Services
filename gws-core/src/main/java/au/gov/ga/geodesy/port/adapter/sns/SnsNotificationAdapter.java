@@ -80,7 +80,7 @@ public class SnsNotificationAdapter implements NotificationPort {
         snsTopics(notification).forEach(arn -> {
             String subject = notification.getSubject();
             sns.publish(arn, notification.getBody(), subject);
-            log.info("Published event " + subject + " to SNS topic " + arn);
+            log.info("Published event " + subject + "event_content:" + notification.getBody() + "to SNS topic " + arn);
         });
     }
 

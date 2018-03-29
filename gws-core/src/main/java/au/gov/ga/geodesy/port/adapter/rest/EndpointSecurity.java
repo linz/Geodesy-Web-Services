@@ -38,11 +38,6 @@ public class EndpointSecurity {
      * Return true if the currently authenticated user has any of the given authorities, false otherwise.
      */
     public boolean hasAnyAuthority(List<String> authorities) {
-
-        log.warn(">>>>>> hasAnyAuthority >>authorities");
-        authorities.forEach(System.out::println);
-        log.warn("<<<<<< hasAnyAuthority >>authorities");
-
         return SecurityContextHolder.getContext().getAuthentication().getAuthorities()
             .stream()
             .anyMatch(grantedAuthority -> authorities.contains(grantedAuthority.getAuthority()));

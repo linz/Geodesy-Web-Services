@@ -12,6 +12,7 @@ import com.amazonaws.auth.AWSCredentialsProviderChain;
 import com.amazonaws.auth.EnvironmentVariableCredentialsProvider;
 import com.amazonaws.auth.InstanceProfileCredentialsProvider;
 import com.amazonaws.auth.profile.ProfileCredentialsProvider;
+
 import com.amazonaws.regions.Regions;
 import com.amazonaws.services.sns.AmazonSNS;
 import com.amazonaws.services.sns.AmazonSNSClientBuilder;
@@ -77,6 +78,16 @@ public class SnsNotificationAdapter implements NotificationPort {
 
     @Override
     public void sendNotification(Notification notification) {
+        ProfileCredentialsProvider profile = new ProfileCredentialsProvider("GD-GeodesyWebServicesD-WebServerRole");
+        log.info("ProfileCredentialsProvider ID-> ");
+        if (profile != null) 
+            log.info(profile.getCredentials().getAWSAccessKeyId() + " Secrets:" + profile.getCredentials().getAWSSecretKey());
+
+        profile = new ProfileCredentialsProvider("geodesy");
+        log.info(">> ProfileCredentialsProvider ID->>> ");
+        if (profile != null)
+            log.info(profile.getCredentials().getAWSAccessKeyId() + " [U]Secrets:" + profile.getCredentials().getAWSSecretKey());
+
         snsTopics(notification).forEach(arn -> {
             String subject = notification.getSubject();
             sns.publish(arn, notification.getBody(), subject);

@@ -57,11 +57,11 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
             .antMatchers(HttpMethod.PATCH, "/corsSites/**").hasAuthority("superuser")
             .antMatchers(HttpMethod.PUT, "/corsSites/*/addToNetwork").hasAuthority("superuser")
 
-            .antMatchers(HttpMethod.POST, "/newCorsSiteRequests").authenticated()
-            .antMatchers(HttpMethod.POST, "/siteLogs/upload").authenticated()
+            .antMatchers(HttpMethod.POST, "/newCorsSiteRequests").hasAuthority("superuser")
+            .antMatchers(HttpMethod.POST, "/siteLogs/upload").hasAuthority("superuser")
             .antMatchers(HttpMethod.GET, "/siteLogs/isAuthorisedToUpload").authenticated()
 
-            .antMatchers(HttpMethod.POST, "/siteLogs/validate").permitAll()
+            .antMatchers(HttpMethod.POST, "/siteLogs/validate").hasAuthority("superuser")
             .antMatchers(HttpMethod.POST, "/userRegistrations").permitAll()
             .antMatchers(HttpMethod.GET, "/**").permitAll()
             .antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
@@ -152,8 +152,8 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
             public void publishAuthenticationSuccess(Authentication a) {
 //                new Exception().printStackTrace();
 //                log.warn(">>>>>> hasAnyAuthority", new Exception());
-                log.info("publishAuthenticationSuccess +++ getPrincipal:" + a.getPrincipal());
-                log.info("publishAuthenticationSuccess +++ getDetails:" + a.getDetails());
+                // log.info("publishAuthenticationSuccess +++ getPrincipal:" + a.getPrincipal());
+                // log.info("publishAuthenticationSuccess +++ getDetails:" + a.getDetails());
 
             }
 

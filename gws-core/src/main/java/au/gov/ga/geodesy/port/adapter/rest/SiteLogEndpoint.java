@@ -90,7 +90,9 @@ public class SiteLogEndpoint {
         @RequestParam(required = true) String id) throws IOException, MarshallingException {
 
         SiteLog siteLog = siteLogs.findByFourCharacterId(id);
-
+        System.out.println("findByFourCharacterId/XML =======================================================");
+        System.out.println(id + " ==================");
+        System.out.println("findByFourCharacterId =======================================================");
 
         if (siteLog == null) {
             rsp.setStatus(HttpStatus.NOT_FOUND.value());
@@ -115,6 +117,10 @@ public class SiteLogEndpoint {
             PersistentEntityResourceAssembler assembler) {
 
         SiteLog siteLog = siteLogs.findByFourCharacterId(id);
+
+        System.out.println("findByFourCharacterId/JSON =======================================================");
+        System.out.println(id + " ==================");
+        System.out.println("findByFourCharacterId =======================================================");
 
         if (siteLog == null) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
